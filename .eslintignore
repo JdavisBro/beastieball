@@ -1,2 +1,3 @@
 .eslintrc.cjs
 node_modules/
+flow_typed/

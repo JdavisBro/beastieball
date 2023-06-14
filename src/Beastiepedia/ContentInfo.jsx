@@ -1,11 +1,17 @@
 // @flow strict
 
-import TextIcon from "../utils/TextIcon";
+import TextTag from "../utils/TextTag";
 import styles from "./Content.module.css";
+import type { BeastieType } from "./data/BeastieType.js";
 
-export default function ContentInfo({ beastiedata }): React$Node {
+type Props = {
+  beastiedata: BeastieType,
+};
+
+export default function ContentInfo(props: Props): React$Node {
+  var beastiedata = props.beastiedata;
   var training = "";
-  new Map(Array(beastiedata.tyield)).forEach((value, key) => {
+  new Map(Array(beastiedata.tyield)).forEach((value: number, key: string) => {
     training += `+${value}`;
     switch (key[0]) {
       case "b": // body
@@ -45,13 +51,13 @@ export default function ContentInfo({ beastiedata }): React$Node {
         <div className={styles.varcontainer}>
           <div className={styles.header}>Recruit Condition:</div>
           <div className={styles.value}>
-            <TextIcon text={beastiedata.recruit.description}></TextIcon>
+            <TextTag text={beastiedata.recruit.description}></TextTag>
           </div>
         </div>
         <div className={styles.varcontainer}>
           <div className={styles.header}>Ally Training:</div>
           <div className={styles.value}>
-            <TextIcon text={training}></TextIcon>
+            <TextTag text={training}></TextTag>
           </div>
         </div>
       </div>

@@ -7,7 +7,12 @@ import BEASTIE_DATA from "./data/Beastiedata";
 import dummy from "../assets/dummy.png";
 import SidebarBeastie from "./SidebarBeastie";
 
-export default function Sidebar({ beastieid }): React$Node {
+type Props = {
+  beastieid: ?string,
+};
+
+export default function Sidebar(props: Props): React$Node {
+  var beastieid = props.beastieid;
   let beasties = [];
   BEASTIE_DATA.forEach((value, key) => {
     beasties.push(

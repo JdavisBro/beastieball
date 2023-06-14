@@ -1,91 +1,8 @@
 // @flow strict
 
-const BEASTIE_DATA: Map<
-  String,
-  {
-    ability: Array<String>,
-    ability_hidden: Boolean,
-    attklist: Array<String>,
-    attklist_randomize: number,
-    ba: number, // body atk / pow
-    bd: number, // body def
-    ha: number, // spirit (heart?) atk / pow
-    hd: number, // spirit def
-    ma: number, // mind atk / pow
-    md: number, // mind def
-    ball_impact_pos: { x: number, y: number },
-    ball_miss_pos: { x: number, y: number },
-    ball_ready_pos: { x: number, y: number },
-    base_exp: number,
-    body_color_index: number,
-    face_color_index: number,
-    colors: Array<{ array: Array<{ color: number, x: number }> }>, // array of objects with array key to an array of objs
-    shiny: Array<{ array: Array<{ color: number, x: number }> }>,
-    combos: Array<Array<number>>,
-    name: String,
-    desc: String,
-    designer: number,
-    evo_pose: Array<{ anim: String, scale: number, x: number, y: number }>,
-    evolution: null | String, // i assume it'll be the evo's id in the future but for now they're all null
-    first_frame: number,
-    foot_size: number,
-    foot_type: number,
-    growth: number,
-    id: String,
-    isBaby: Boolean,
-    learnset: number,
-    learnset_randomize: number,
-    loco: {
-      anim_min_speed: number,
-      char_width: number,
-      emote_hop_height: number,
-      float_dist: number,
-      float_wave: number,
-      float_wave_freq: number,
-      hop_height: number,
-      hop_length: number,
-      hop_min_speed: number,
-      hop_shake: number,
-      hop_wobble: number,
-      move_accel: number,
-      move_decel: number,
-      move_min_dist: number,
-      move_pause_frames: Array<number>,
-      move_speed: number,
-      move_speed_start: number,
-      move_to_idle_transition_anim: String,
-      move_to_idle_transition_frames: Array<number>,
-      randomize_idle: boolean,
-      squishiness: number,
-      stretchiness: number,
-    },
-    name: String,
-    number: number,
-    partner_impact: { angle: number, anim: String, x: number, y: number },
-    prev_ids: Array<String>,
-    recruit: {
-      conditions: {
-        effect_pow: ?string,
-        effect_type: ?number,
-        event: null,
-        freq: number,
-        func: null,
-        my_data: null,
-        player: number,
-        rel_color: number,
-        type: number,
-      },
-      description: String,
-    },
-    roamer_style: number,
-    scale: Array<number>,
-    splash_pos: { angle: number, anim: String, x: number, y: number },
-    spr: int,
-    tamecond: null,
-    tamelvl: number,
-    tyield: Array<String, number>,
-  }
-> = new Map();
+import type { BeastieType } from "./BeastieType.js";
+
+const BEASTIE_DATA: Map<string, BeastieType> = new Map();
 
 // Note: all the -1's are probably actually non existant lists/arrays
 BEASTIE_DATA.set("shroom1", {
@@ -206,7 +123,8 @@ BEASTIE_DATA.set("shroom1", {
     [49, 1, 1, 8, 1, 1],
     [49, 2, 1, 8, 2, 0.25],
   ],
-  desc: "Its body is covered in microscopic fungal feelers, making it feel sticky. They tend to all varieties of plant life.",
+  desc:
+    "Its body is covered in microscopic fungal feelers, making it feel sticky. They tend to all varieties of plant life.",
   designer: 2,
   evo_pose: [
     {
@@ -476,7 +394,8 @@ BEASTIE_DATA.set("shroom1", {
       [0, 2, 2, 3, 2, 2],
       [3, 2, 2],
     ],
-    desc: "Anytime they encounter something new, they kick it. Kicking is their way of understanding the world.",
+    desc:
+      "Anytime they encounter something new, they kick it. Kicking is their way of understanding the world.",
     designer: 256,
     evo_pose: [
       {
@@ -739,7 +658,8 @@ BEASTIE_DATA.set("shroom1", {
       [42, 2, 2, 1, 2, 1],
       [42, 2, 2],
     ],
-    desc: "They crave attention. They can hardly spend time with their own kind because they compete for an audience.",
+    desc:
+      "They crave attention. They can hardly spend time with their own kind because they compete for an audience.",
     designer: 9,
     evo_pose: [
       {
@@ -999,7 +919,8 @@ BEASTIE_DATA.set("shroom1", {
       [26, 0, 1, 20, 0, 1],
       [26, 2, 1],
     ],
-    desc: "Their busy mind is only at rest while they dig. They'll hyperfocus for days on a single burrow.",
+    desc:
+      "Their busy mind is only at rest while they dig. They'll hyperfocus for days on a single burrow.",
     designer: 32,
     evo_pose: [
       {
@@ -1277,7 +1198,8 @@ BEASTIE_DATA.set("shroom1", {
       [16, 2, 2],
       [16, 2, 2],
     ],
-    desc: "Their semitransparent ears shield their eyes from wind as they glide. They feel safest in large groups, especially with watchful Sefren.",
+    desc:
+      "Their semitransparent ears shield their eyes from wind as they glide. They feel safest in large groups, especially with watchful Sefren.",
     designer: 256,
     evo_pose: [
       {
@@ -1331,7 +1253,22 @@ BEASTIE_DATA.set("shroom1", {
       move_speed_start: 0,
       move_to_idle_transition_anim: "stop",
       move_to_idle_transition_frames: [
-        10, 11, 12, 13, 14, 15, 16, 17, 21, 22, 23, 24, 25, 26, 27, 28,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
       ],
       randomize_idle: true,
       squishiness: 0,
@@ -1548,7 +1485,8 @@ BEASTIE_DATA.set("shroom1", {
       [7, 2, 1],
       [7, 2, 0],
     ],
-    desc: "They are constantly in motion. Their colorful plumage is a point of pride and they sometimes accessorize it with flower petals.",
+    desc:
+      "They are constantly in motion. Their colorful plumage is a point of pride and they sometimes accessorize it with flower petals.",
     designer: 256,
     evo_pose: [
       {
@@ -1839,7 +1777,8 @@ BEASTIE_DATA.set("shroom1", {
       [12, 8, 2, 38, 8, 1],
       [12, 8, 2],
     ],
-    desc: "They are skilled at mimicry and can even learn human words. They especially favor sounds which get a rise out of others.",
+    desc:
+      "They are skilled at mimicry and can even learn human words. They especially favor sounds which get a rise out of others.",
     designer: 256,
     evo_pose: [
       {
@@ -2103,7 +2042,8 @@ BEASTIE_DATA.set("shroom1", {
       [10, 0, 2],
       [8, 2, 0.5],
     ],
-    desc: "Its fluff is made of incredibly thin strands of wax, bundled like wool. If a Cherrily makes you a pom, it considers you a treasured friend.",
+    desc:
+      "Its fluff is made of incredibly thin strands of wax, bundled like wool. If a Cherrily makes you a pom, it considers you a treasured friend.",
     designer: 4,
     evo_pose: [
       {
@@ -2364,7 +2304,8 @@ BEASTIE_DATA.set("shroom1", {
       [3, 2, 2, 8, 2, 0.2],
       [3, 2, 2, 8, 2, 0.2],
     ],
-    desc: "They enjoy basking in the sun, but this leaves them vulnerable. They stick out their tongue to intimidate predators.",
+    desc:
+      "They enjoy basking in the sun, but this leaves them vulnerable. They stick out their tongue to intimidate predators.",
     designer: 32,
     evo_pose: [
       {
@@ -2600,7 +2541,8 @@ BEASTIE_DATA.set("shroom1", {
       [53, 2, 0],
       [53, 2, 0],
     ],
-    desc: "They lack any aggression at all. Using their tail as a lure, they invite other Beasties into their burrow to offer them food.",
+    desc:
+      "They lack any aggression at all. Using their tail as a lure, they invite other Beasties into their burrow to offer them food.",
     designer: 2,
     evo_pose: [
       {
@@ -2862,7 +2804,8 @@ BEASTIE_DATA.set("shroom1", {
       [7, 2, 1, 15, 2, 1],
       [7, 2, 3],
     ],
-    desc: "Their leap is second to none. When hunting, they'll often allow prey to escape so that they can continue the chase and practice their pounce more.",
+    desc:
+      "Their leap is second to none. When hunting, they'll often allow prey to escape so that they can continue the chase and practice their pounce more.",
     designer: 8,
     evo_pose: [
       {

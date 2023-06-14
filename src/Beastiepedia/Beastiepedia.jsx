@@ -21,7 +21,9 @@ export default function Beastiepedia(): React$Node {
     <div>
       <div className={styles.container}>
         <Sidebar beastieid={beastieid}></Sidebar>
-        <Content beastiedata={BEASTIE_DATA.get(beastieid)}></Content>
+        <Content
+          beastiedata={beastieid != null ? BEASTIE_DATA.get(beastieid) : null}
+        ></Content>
       </div>
     </div>
   );

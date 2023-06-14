@@ -6,12 +6,18 @@ import styles from "./Sidebar.module.css";
 
 import dummy from "../assets/dummy.png";
 import { useCallback } from "react";
+import type { BeastieType } from "./data/BeastieType.js";
 
-export default function SidebarBeastie({
-  beastieid,
-  beastiedata,
-  selected,
-}): React$Node {
+type Props = {
+  beastieid: string,
+  beastiedata: BeastieType,
+  selected: boolean,
+};
+
+export default function SidebarBeastie(props: Props): React$Node {
+  var beastieid = props.beastieid;
+  var beastiedata = props.beastiedata;
+  var selected = props.selected;
   const navigate = useNavigate();
   var left = selected
     ? `${styles.beastiediagL} ${styles.selected}`

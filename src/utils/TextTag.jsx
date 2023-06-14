@@ -2,7 +2,12 @@
 
 import styles from "../Shared.module.css";
 
-export default function TextIcon({ text }): React$Node {
+type Props = {
+  text: string,
+};
+
+export default function TextTag(props: Props): React$Node {
+  var text = props.text;
   var out = [];
   var tag = "";
   var value = "";

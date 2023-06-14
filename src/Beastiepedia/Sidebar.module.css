@@ -1,0 +1,59 @@
+.sidebar {
+  float: left;
+  width: 23%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: grey;
+}
+
+.selected {
+  background-color: aqua !important;
+}
+
+.beastie {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+.beastiediagL,
+.beastiediagR {
+  width: 5%;
+  height: auto;
+  background-color: lightgrey;
+}
+
+.beastiediagL {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.beastiediagR {
+  clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
+}
+
+.beastiecontent {
+  width: 90%;
+  height: 100%;
+  background-color: lightgrey;
+}
+
+.beastiecontent > img {
+  float: left;
+  width: 33%;
+  height: 100%;
+}
+
+.beastiecontent > div {
+  float: left;
+  width: 67%;
+  height: 100%;
+}
+
+.beastiecontent > div > div {
+  display: block;
+  text-align: center;
+  font-size: 2vw;
+  width: 100%;
+}

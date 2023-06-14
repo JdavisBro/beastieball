@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import styles from "./Beastiepedia.module.css";
 
 import BEASTIE_DATA from "./data/Beastiedata";
+import Content from "./Content";
 
 export default function Beastiepedia(): React$Node {
   const { beastie } = useParams();
@@ -20,11 +21,7 @@ export default function Beastiepedia(): React$Node {
     <div>
       <div className={styles.container}>
         <Sidebar beastieid={beastieid}></Sidebar>
-        <div className={styles.content}>
-          <h1>
-            {beastieid}/{beastie}
-          </h1>
-        </div>
+        <Content beastiedata={BEASTIE_DATA.get(beastieid)}></Content>
       </div>
     </div>
   );

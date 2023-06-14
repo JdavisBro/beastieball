@@ -1,21 +1,16 @@
-.sidebar {
-  float: left;
-  width: 23%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  background-color: grey;
-}
-
 .selected {
   background-color: aqua !important;
 }
 
 .beastie {
-  margin-top: 20px;
+  margin-top: 10px;
   width: 100%;
   display: flex;
   cursor: pointer;
+}
+
+.beastie:last-child {
+  margin-bottom: 10px;
 }
 
 .beastiediagL,
@@ -26,11 +21,11 @@
 }
 
 .beastiediagL {
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 20% 100%);
 }
 
 .beastiediagR {
-  clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
+  clip-path: polygon(0 0, 80% 0, 0 100%, 0% 100%);
 }
 
 .beastiecontent {

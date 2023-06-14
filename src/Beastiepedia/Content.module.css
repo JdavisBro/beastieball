@@ -1,0 +1,39 @@
+.preview {
+  height: 100%;
+  width: 40%;
+  float: left;
+}
+
+.info {
+  height: 100%;
+  width: 60%;
+  float: left;
+}
+
+.inner {
+  width: 95%;
+  height: 95%;
+  margin-top: 2.5%;
+  margin-left: 2.5%;
+}
+
+.varcontainer {
+  width: fit-content;
+  background-color: teal;
+  padding-top: 4px;
+  padding-bottom: 6px;
+  clip-path: polygon(20px 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+  margin-bottom: 10px;
+}
+
+.header {
+  width: fit-content;
+  margin-left: 40px;
+  margin-right: 30px;
+}
+
+.value {
+  width: fit-content;
+  margin-left: 20px;
+  margin-right: 30px;
+}

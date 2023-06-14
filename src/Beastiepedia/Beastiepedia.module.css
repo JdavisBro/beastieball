@@ -3,8 +3,28 @@
   height: 100vh;
 }
 
+.sidebar {
+  float: left;
+  width: 23%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: grey;
+}
+
 .content {
   float: left;
   width: 77%;
   height: 100%;
+}
+
+.contentnotselected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notselectedtext {
+  width: auto;
+  text-align: center;
 }

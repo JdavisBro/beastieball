@@ -1,11 +1,10 @@
 // @flow strict
 
-import styles from "./Sidebar.module.css";
+import styles from "./Beastiepedia.module.css";
 
 import BEASTIE_DATA from "./data/Beastiedata";
 
 import dummy from "../assets/dummy.png";
-import Beastiepedia from "./Beastiepedia";
 import SidebarBeastie from "./SidebarBeastie";
 
 export default function Sidebar({ beastieid }): React$Node {
@@ -13,6 +12,7 @@ export default function Sidebar({ beastieid }): React$Node {
   BEASTIE_DATA.forEach((value, key) => {
     beasties.push(
       <SidebarBeastie
+        key={key}
         beastieid={key}
         beastiedata={value}
         selected={beastieid == key}

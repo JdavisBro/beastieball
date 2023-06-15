@@ -27,7 +27,7 @@ export default function TextTag(props: Props): React$Node {
             />
           );
           value = "";
-          break; // do tag handling
+          break;
         case ",":
           invalue = true;
           break;
@@ -42,6 +42,7 @@ export default function TextTag(props: Props): React$Node {
       if (text[i] != "[") {
         value += text[i];
       } else {
+        // Tag Begin
         out.push(<span key={i}>{value}</span>);
         tag = "";
         value = "";
@@ -50,7 +51,7 @@ export default function TextTag(props: Props): React$Node {
     }
   }
   if (value != "") {
-    out.push(<span key={i}>{value}</span>);
+    out.push(<span key={text.length}>{value}</span>);
   }
   return out;
 }

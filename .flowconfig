@@ -21,6 +21,7 @@ untyped-type-import=error
 unused-promise=error
 
 [options]
+enums=true
 emoji=true
 react.runtime=automatic
 use_mixed_in_catch_variables=true

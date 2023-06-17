@@ -12,6 +12,10 @@
   background-color: grey;
 }
 
+.sidebaroff {
+  display: none;
+}
+
 .content {
   float: left;
   width: 77%;
@@ -27,4 +31,14 @@
 .notselectedtext {
   width: auto;
   text-align: center;
+}
+
+@media all and (orientation: portrait) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+  }
 }

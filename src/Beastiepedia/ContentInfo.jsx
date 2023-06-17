@@ -1,5 +1,6 @@
 // @flow strict
 
+import StatDistribution from "./StatDistribution.jsx";
 import TextTag from "../utils/TextTag";
 import styles from "./Content.module.css";
 import type { BeastieType } from "./data/BeastieType.js";
@@ -11,20 +12,23 @@ type Props = {
 export default function ContentInfo(props: Props): React$Node {
   var beastiedata = props.beastiedata;
   var training = "";
-  new Map(Array(beastiedata.tyield)).forEach((value: number, key: string) => {
-    training += `+${value}`;
-    switch (key[0]) {
+  for (var i = 0; i < beastiedata.tyield.length; i += 2) {
+    // $FlowIgnore[incompatible-type] this is always string
+    var type: string = beastiedata.tyield[i];
+    var value = beastiedata.tyield[i + 1];
+    training += `${training == "" ? "" : "\n"}+${value}`;
+    switch (type[0]) {
       case "b": // body
         training += "[sprIcon,0]";
         break;
-      case "h": // spirit (heart?)
+      case "h": // spirit (heart)
         training += "[sprIcon,1]";
         break;
       case "m": // mind
         training += "[sprIcon,2]";
         break;
     }
-    switch (key[1]) {
+    switch (type[1]) {
       case "a":
         training += "POW";
         break;
@@ -32,7 +36,7 @@ export default function ContentInfo(props: Props): React$Node {
         training += "DEF";
         break;
     }
-  });
+  }
   return (
     <div className={styles.info}>
       <div className={styles.inner}>
@@ -60,6 +64,7 @@ export default function ContentInfo(props: Props): React$Node {
             <TextTag text={training}></TextTag>
           </div>
         </div>
+        <StatDistribution beastiedata={beastiedata}></StatDistribution>
       </div>
     </div>
   );

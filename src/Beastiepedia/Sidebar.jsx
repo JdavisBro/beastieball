@@ -9,11 +9,15 @@ import SidebarBeastie from "./SidebarBeastie";
 
 type Props = {
   beastieid: ?string,
+  visibility: boolean,
 };
 
 export default function Sidebar(props: Props): React$Node {
   var beastieid = props.beastieid;
   let beasties = [];
+  var style = props.visibility
+    ? styles.sidebar
+    : `${styles.sidebar} ${styles.sidebaroff}`;
   BEASTIE_DATA.forEach((value, key) => {
     beasties.push(
       <SidebarBeastie
@@ -24,5 +28,5 @@ export default function Sidebar(props: Props): React$Node {
       ></SidebarBeastie>
     );
   });
-  return <div className={styles.sidebar}>{beasties}</div>;
+  return <div className={style}>{beasties}</div>;
 }

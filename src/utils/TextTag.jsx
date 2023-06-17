@@ -8,7 +8,7 @@ type Props = {
 
 export default function TextTag(props: Props): React$Node {
   var text = props.text;
-  var out = [];
+  var out: Array<React$Node> = [];
   var tag = "";
   var value = "";
   var intag = false;
@@ -39,14 +39,24 @@ export default function TextTag(props: Props): React$Node {
           }
       }
     } else {
-      if (text[i] != "[") {
-        value += text[i];
-      } else {
-        // Tag Begin
-        out.push(<span key={i}>{value}</span>);
-        tag = "";
-        value = "";
-        intag = true;
+      switch (text[i]) {
+        case "[":
+          if (value != "") {
+            out.push(<span key={i}>{value}</span>);
+          }
+          tag = "";
+          value = "";
+          intag = true;
+          break;
+        case "\n":
+          if (value != "") {
+            out.push(<span key={i}>{value}</span>);
+          }
+          out.push(<br key={i + 1} />);
+          value = "";
+          break;
+        default:
+          value += text[i];
       }
     }
   }

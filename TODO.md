@@ -7,3 +7,6 @@
 - Beastie icons
 - Beastie sprites
 - Look into this https://jekyllrb.com/docs/permalinks/ for serving with github pages
+- Movelist
+  - Sorting by origin, target, effect.
+- Beastiepedia header to toggle sidebar.

@@ -1,0 +1,64 @@
+.container {
+  background-color: teal;
+  color: black;
+  width: 380px;
+  height: 170px;
+  padding-left: 10px;
+  padding-right: 10px;
+  clip-path: polygon(10px 0, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+}
+
+.statcontainer {
+  float: left;
+  height: 100%;
+  width: 170px;
+}
+
+.midblock {
+  float: left;
+  height: 100%;
+  width: 40px;
+}
+
+.barcontainer {
+  width: 100%;
+  height: 20%;
+  font-size: 1.4em;
+  margin-bottom: 8px;
+  text-align: right;
+}
+
+.statcontainer > .barcontainer:nth-child(n + 2) {
+  background-color: lightgray;
+  clip-path: polygon(10px 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.barcontainerright {
+  text-align: left;
+}
+
+.statcontainer > .barcontainerright:nth-child(n + 2) {
+  clip-path: polygon(0 0, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+}
+
+.barcontainer > img {
+  margin-top: 6%;
+  margin-right: 10%;
+  width: 80%;
+}
+
+.bar {
+  background-color: blue;
+  height: 100%;
+  float: right;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  clip-path: polygon(10px 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.barright {
+  float: left;
+  text-align: left;
+  clip-path: polygon(0 0, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+}

@@ -1,31 +1,31 @@
 {
-  "name": "beastieball",
+  "name": "beastiets",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "flow": "flow"
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "dependencies": {
+    "eslint-config-prettier": "^8.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.12.1"
+    "react-router-dom": "^6.13.0"
   },
   "devDependencies": {
-    "@bunchtogether/vite-plugin-flow": "^1.0.2",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
     "@vitejs/plugin-react": "^4.0.0",
-    "eslint": "^8.42.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-ft-flow": "^2.0.3",
-    "flow-bin": "^0.208.1",
-    "flow-typed": "^3.8.0",
-    "hermes-eslint": "^0.12.1",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "typescript": "^5.0.2",
+    "typescript-plugin-css-modules": "^5.0.1",
     "vite": "^4.3.9"
   }
 }

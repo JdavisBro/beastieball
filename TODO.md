@@ -10,3 +10,8 @@
 - Movelist
   - Sorting by origin, target, effect.
 - Beastiepedia header to toggle sidebar.
+
+# TO DO RIGHT NOW:
+
+- Beastie moves + learnset
+  - Hover shows preview like in game.

@@ -36,10 +36,17 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
     >
       <div className={left}></div>
       <div className={content}>
-        <img src={dummy} />
-        <div>
-          <div>#{beastiedata.number}</div>
-          <div>{beastiedata.name}</div>
+        <img className={styles.image} src={dummy} />
+        <div className={styles.name}>
+          <div>
+            <div>
+              <span className={styles.hash}>#</span>
+              <span className={styles.number}>
+                {String(beastiedata.number).padStart(2, "0")}
+              </span>
+            </div>
+            <div>{beastiedata.name}</div>
+          </div>
         </div>
       </div>
       <div className={right}></div>

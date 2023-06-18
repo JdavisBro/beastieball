@@ -1,5 +1,18 @@
+@font-face {
+  font-family: "Go Banana";
+  src: url("/fonts/Go Banana.woff2") format("woff2");
+  src: url("/fonts/Go Banana.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SportsJersey";
+  src: url("/fonts/SportsJersey.woff2") format("woff2");
+  src: url("/fonts/SportsJersey.woff") format("woff");
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Go Banana", sans-serif;
+  letter-spacing: 1px;
 
   color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);

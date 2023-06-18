@@ -5,6 +5,7 @@
 .beastie {
   margin-top: 10px;
   width: 100%;
+  height: 120px;
   display: flex;
   cursor: pointer;
 }
@@ -16,7 +17,7 @@
 .beastiediagL,
 .beastiediagR {
   width: 5%;
-  height: auto;
+  height: 100%;
   background-color: lightgrey;
 }
 
@@ -32,23 +33,34 @@
   width: 90%;
   height: 100%;
   background-color: lightgrey;
+  display: flex;
 }
 
-.beastiecontent > img {
-  float: left;
-  width: 33%;
+.image {
   height: 100%;
 }
 
-.beastiecontent > div {
-  float: left;
+.name {
   width: 67%;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.beastiecontent > div > div {
-  display: block;
-  text-align: center;
+.name > div {
+  display: inline-block;
   font-size: 2.3em;
   width: 100%;
+  text-align: center;
+}
+
+.hash {
+  /* Hash doesns't exist in sports jersey. It would seem greg added it. */
+  font-family: "Go Banana", sans-serif;
+  font-weight: 800;
+}
+
+.number {
+  font-family: SportsJersey, sans-serif;
+  font-size: 1.2em;
 }

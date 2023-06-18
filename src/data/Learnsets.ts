@@ -62,7 +62,7 @@ export const LEARN_SETS: Array<Record<string, number>> = [
     rocksmash: 6,
     cover: 9,
     libero: 12,
-    tagattk: 15,
+    tagattack: 15,
     recover: 19,
     dig: 23,
     body: 29,

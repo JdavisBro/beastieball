@@ -25,18 +25,27 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
   const right = selected
     ? `${styles.beastiediagR} ${styles.selected}`
     : styles.beastiediagR;
+  function handleInteract() {
+    navigate("/beastiepedia/" + beastiedata.name);
+    props.useToggleSidebarVisibility();
+  }
   return (
     // GET BEASTIE ICON IMG
     <div
       className={styles.beastie}
-      onClick={useCallback(() => {
-        navigate("/beastiepedia/" + beastiedata.name);
-        props.useToggleSidebarVisibility();
-      }, [navigate, beastiedata, props])}
+      tabIndex={0}
+      onClick={() => handleInteract()}
+      // prettier-ignore
+      onKeyDown={((event) => {if (event.key == "Enter") {handleInteract()}})}
+      role="button"
     >
       <div className={left}></div>
       <div className={content}>
-        <img className={styles.image} src={dummy} />
+        <img
+          className={styles.image}
+          src={dummy}
+          alt={`${beastiedata.name} Icon`}
+        />
         <div className={styles.name}>
           <div>
             <div>

@@ -1,4 +1,4 @@
-import ExternalLinks from "../ExternalLinks";
+import ExternalLinks from "../utils/ExternalLinks";
 import arrow from "../assets/arrow.svg";
 import styles from "./Header.module.css";
 
@@ -18,7 +18,16 @@ export default function ContentInfo(props: Props): React.ReactNode {
             : styles.toggleicon
         }
         src={arrow}
+        alt={
+          props.sidebarvisibility
+            ? "Enable Sidebar Arrow"
+            : "Disable Sidebar Arrow"
+        }
+        aria-haspopup="menu"
+        tabIndex={0}
         onClick={() => props.useSetSidebarVisibility(!props.sidebarvisibility)}
+        // prettier-ignore
+        onKeyDown={(event) => {if (event.key == "Enter") {props.useSetSidebarVisibility(!props.sidebarvisibility);}}}
       />
       <div className={styles.title}>
         {props.beastiename !== undefined ? `${props.beastiename} - ` : ""}

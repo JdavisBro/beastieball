@@ -73,6 +73,10 @@ export default function ContentInfo(props: Props): React.ReactNode {
           </div>
         </div>
         <StatDistribution beastiedata={beastiedata}></StatDistribution>
+        <MoveList
+          movelist={beastiedata.attklist}
+          learnset={beastiedata.learnset}
+        ></MoveList>
       </div>
     </div>
   );

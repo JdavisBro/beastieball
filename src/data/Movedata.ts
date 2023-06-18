@@ -103,7 +103,7 @@ MOVE_DATA.set("???", {
     type: Type.Body,
     power: 50,
   })
-  .set("tagattk", {
+  .set("tagattack", {
     name: "Momentum",
     desc: "POW x2 if user just TAGGED IN.",
     type: Type.Body,
@@ -292,6 +292,12 @@ MOVE_DATA.set("???", {
   .set("damagedattack", {
     name: "Counter",
     desc: "POW x1.5 if user received the ball.",
+    type: Type.Spirit,
+    power: 75,
+  })
+  .set("hearthitbody", {
+    name: "Bolt",
+    desc: "Auto-targets back row. Damages based on target's [sprIcon,0]DEF.",
     type: Type.Spirit,
     power: 75,
   })

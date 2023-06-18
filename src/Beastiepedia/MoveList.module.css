@@ -1,0 +1,25 @@
+.container {
+  width: 350px;
+  height: fit-content;
+  display: flex;
+  background-color: teal;
+  clip-path: polygon(10px 0, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+}
+
+.movelist {
+  width: 163px;
+  margin-top: 5px;
+  margin-left: 12px;
+  padding-bottom: 8px;
+}
+
+.movelist > div {
+  margin-left: 6px;
+}
+
+.movetext {
+  margin-left: 4px !important;
+  width: fit-content;
+  cursor: help;
+  text-decoration: underline dotted;
+}

@@ -2,9 +2,11 @@ import StatDistribution from "./StatDistribution";
 import TextTag from "../utils/TextTag";
 import styles from "./Content.module.css";
 import type { BeastieType } from "./data/BeastieType";
+
 type Props = {
   beastiedata: BeastieType;
 };
+
 export default function ContentInfo(props: Props): React.ReactNode {
   const beastiedata = props.beastiedata;
   let training = "";

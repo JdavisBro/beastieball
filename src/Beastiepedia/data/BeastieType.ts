@@ -1,5 +1,3 @@
-type Tyield = [string, number, Tyield[]]
-
 export type BeastieType = {
   ability: Array<string>;
   ability_hidden: boolean;
@@ -126,5 +124,5 @@ export type BeastieType = {
   spr: number;
   tamecond: null;
   tamelvl: number;
-  tyield: Tyield;
+  tyield: Array<string | number>;
 };

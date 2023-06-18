@@ -1,6 +1,7 @@
 import styles from "./StatDistribution.module.css";
 import TypeColor from "./data/TypeColor";
 import type { BeastieType } from "./data/BeastieType";
+
 type BarProps = {
   value: number;
   color: string | null | undefined;
@@ -15,17 +16,19 @@ function StatBar(props: BarProps): React.ReactElement {
   const barclass = props.right
     ? `${styles.bar} ${styles.barright}`
     : styles.bar;
+  const textclass = props.right
+    ? `${styles.text} ${styles.textright}`
+    : styles.text;
   return (
     <div className={containerclass}>
       <div
         className={barclass}
         style={{
-          width: String((value / 120) * 100) + "%",
+          width: String((value / 120) * 100) + "%", // I think 120 is max stats
           backgroundColor: props.color !== null ? props.color : "none",
         }}
-      >
-        {value}
-      </div>
+      ></div>
+      <div className={textclass}>{value}</div>
     </div>
   );
 }
@@ -33,6 +36,7 @@ function StatBar(props: BarProps): React.ReactElement {
 type Props = {
   beastiedata: BeastieType;
 };
+
 export default function StatDistribution(props: Props): React.ReactElement {
   const beastiedata = props.beastiedata;
   return (

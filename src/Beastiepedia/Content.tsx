@@ -2,7 +2,7 @@ import ContentInfo from "./ContentInfo";
 import ContentPreview from "./ContentPreview";
 import styles from "./Beastiepedia.module.css";
 // import MOVE_DATA from "./data/Movedata";
-import type { BeastieType } from "./data/BeastieType";
+import type { BeastieType } from "../data/BeastieType";
 
 type Props = {
   beastiedata: BeastieType | null | undefined;

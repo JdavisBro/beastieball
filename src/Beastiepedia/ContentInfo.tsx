@@ -1,7 +1,8 @@
 import StatDistribution from "./StatDistribution";
 import TextTag from "../utils/TextTag";
 import styles from "./Content.module.css";
-import type { BeastieType } from "./data/BeastieType";
+import type { BeastieType } from "../data/BeastieType";
+import MoveList from "./MoveList";
 
 type Props = {
   beastiedata: BeastieType;

@@ -1,6 +1,6 @@
 import SidebarBeastie from "./SidebarBeastie";
 import styles from "./Beastiepedia.module.css";
-import BEASTIE_DATA from "./data/Beastiedata";
+import BEASTIE_DATA from "../data/Beastiedata";
 
 type Props = {
   beastieid: string | null | undefined;

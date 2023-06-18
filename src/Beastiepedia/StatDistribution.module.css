@@ -5,6 +5,7 @@
   height: 170px;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 14px;
   clip-path: polygon(10px 0, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
 }
 

@@ -7,7 +7,7 @@ import Content from "./Content";
 import styles from "./Beastiepedia.module.css";
 import useTitle from "../utils/useTitle";
 import useScreenOrientation from "../utils/useScreenOrientation";
-import BEASTIE_DATA from "./data/Beastiedata";
+import BEASTIE_DATA from "../data/Beastiedata";
 
 export default function Beastiepedia(): React.ReactNode {
   const orientation = useScreenOrientation();

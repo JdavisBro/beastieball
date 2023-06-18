@@ -2010,22 +2010,7 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "stop",
       "move_to_idle_transition_frames": [
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28
+        10, 11, 12, 13, 14, 15, 16, 17, 21, 22, 23, 24, 25, 26, 27, 28
       ],
       "randomize_idle": true,
       "squishiness": 0,

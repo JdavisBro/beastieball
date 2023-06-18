@@ -11,7 +11,7 @@ import BEASTIE_DATA from "./data/Beastiedata";
 
 export default function Beastiepedia(): React.ReactNode {
   const orientation = useScreenOrientation();
-  const {beastie}: {beastie?: string} = useParams();
+  const { beastie }: { beastie?: string } = useParams();
   let beastieid = null;
 
   if (beastie !== null) {
@@ -21,17 +21,17 @@ export default function Beastiepedia(): React.ReactNode {
       }
     });
   }
-  
+
   const [sidebarvisible, setSidebarvisible] = useState(
     !(beastieid !== null && orientation)
   ); // Selected beastie & portrait automatically hides sidebar
 
-  let title = "Beastiepedia"
-  let path: null | string = null
+  let title = "Beastiepedia";
+  let path: null | string = null;
   if (beastieid !== null && beastie !== undefined) {
     title = `${beastie} - Beastiepedia`;
   } else {
-    path = "/beastiepedia/"
+    path = "/beastiepedia/";
   }
   useTitle(title, path);
 
@@ -40,13 +40,19 @@ export default function Beastiepedia(): React.ReactNode {
       <Header
         beastiename={beastie}
         sidebarvisibility={sidebarvisible}
-        useSetSidebarVisibility={(visible: boolean) => setSidebarvisible(visible)}
+        useSetSidebarVisibility={(visible: boolean) =>
+          setSidebarvisible(visible)
+        }
       ></Header>
       <div className={styles.belowheader}>
         <Sidebar
           beastieid={beastieid}
           visibility={sidebarvisible}
-          useToggleSidebarVisibility={() => {if (orientation) {setSidebarvisible(false)}}}
+          useToggleSidebarVisibility={() => {
+            if (orientation) {
+              setSidebarvisible(false);
+            }
+          }}
         ></Sidebar>
         <Content
           beastiedata={beastieid != null ? BEASTIE_DATA.get(beastieid) : null}

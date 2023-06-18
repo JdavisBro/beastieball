@@ -1,6 +1,6 @@
+import SidebarBeastie from "./SidebarBeastie";
 import styles from "./Beastiepedia.module.css";
 import BEASTIE_DATA from "./data/Beastiedata";
-import SidebarBeastie from "./SidebarBeastie";
 
 type Props = {
   beastieid: string | null | undefined;
@@ -11,7 +11,9 @@ type Props = {
 export default function Sidebar(props: Props): React.ReactElement {
   const beastieid = props.beastieid;
   const beasties: React.ReactElement[] = [];
-  const style = props.visibility ? styles.sidebar : `${styles.sidebar} ${styles.sidebaroff}`;
+  const style = props.visibility
+    ? styles.sidebar
+    : `${styles.sidebar} ${styles.sidebaroff}`;
   BEASTIE_DATA.forEach((value, key) => {
     beasties.push(
       <SidebarBeastie

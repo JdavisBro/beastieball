@@ -13,7 +13,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
 
   for (let i = 0; i < beastiedata.tyield.length; i += 2) {
     const type = String(beastiedata.tyield[i]);
-    const value = Number(beastiedata.tyield[i + 1]); 
+    const value = Number(beastiedata.tyield[i + 1]);
     training += `${training == "" ? "" : "\n"}+${value}`;
 
     switch (type[0]) {
@@ -44,7 +44,8 @@ export default function ContentInfo(props: Props): React.ReactNode {
     }
   }
 
-  return <div className={styles.info}>
+  return (
+    <div className={styles.info}>
       <div className={styles.inner}>
         <div className={styles.varcontainer}>
           <div className={styles.header}>Number:</div>
@@ -72,5 +73,6 @@ export default function ContentInfo(props: Props): React.ReactNode {
         </div>
         <StatDistribution beastiedata={beastiedata}></StatDistribution>
       </div>
-    </div>;
+    </div>
+  );
 }

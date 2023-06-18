@@ -16,7 +16,13 @@ export default function TextTag(props: Props): React.ReactElement[] {
         case "]":
           intag = false;
           invalue = false;
-          out.push(<img key={i} className={styles.smallimage} src={`/gameassets/${tag}/${value}.png`} />);
+          out.push(
+            <img
+              key={i}
+              className={styles.smallimage}
+              src={`/gameassets/${tag}/${value}.png`}
+            />
+          );
           value = "";
           break;
 
@@ -30,7 +36,6 @@ export default function TextTag(props: Props): React.ReactElement[] {
           } else {
             value += text[i];
           }
-
       }
     } else {
       switch (text[i]) {

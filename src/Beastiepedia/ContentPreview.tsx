@@ -7,7 +7,9 @@ type Props = {
 
 export default function ContentPreview(props: Props): React.ReactNode {
   const beastiedata = props.beastiedata;
-  return <div className={styles.preview}>
+  return (
+    <div className={styles.preview}>
       <div className={styles.inner}>{beastiedata.name}</div>
-    </div>;
+    </div>
+  );
 }

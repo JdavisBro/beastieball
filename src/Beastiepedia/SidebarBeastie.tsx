@@ -16,14 +16,24 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
   const beastiedata = props.beastiedata;
   const selected = props.selected;
   const navigate = useNavigate();
-  const left = selected ? `${styles.beastiediagL} ${styles.selected}` : styles.beastiediagL;
-  const content = selected ? `${styles.beastiecontent} ${styles.selected}` : styles.beastiecontent;
-  const right = selected ? `${styles.beastiediagR} ${styles.selected}` : styles.beastiediagR;
-  return (// GET BEASTIE ICON IMG
-    <div className={styles.beastie} onClick={useCallback(() => {
-      navigate("/beastiepedia/" + beastiedata.name);
-      props.useToggleSidebarVisibility();
-    }, [navigate, beastiedata, props])}>
+  const left = selected
+    ? `${styles.beastiediagL} ${styles.selected}`
+    : styles.beastiediagL;
+  const content = selected
+    ? `${styles.beastiecontent} ${styles.selected}`
+    : styles.beastiecontent;
+  const right = selected
+    ? `${styles.beastiediagR} ${styles.selected}`
+    : styles.beastiediagR;
+  return (
+    // GET BEASTIE ICON IMG
+    <div
+      className={styles.beastie}
+      onClick={useCallback(() => {
+        navigate("/beastiepedia/" + beastiedata.name);
+        props.useToggleSidebarVisibility();
+      }, [navigate, beastiedata, props])}
+    >
       <div className={left}></div>
       <div className={content}>
         <img src={dummy} />

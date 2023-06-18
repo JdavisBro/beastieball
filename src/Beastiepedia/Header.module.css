@@ -28,7 +28,10 @@
 .externallinkcontainer {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
-  width: 45px;
+  width: auto;
+  padding-left: 5px;
+  padding-right: 5px;
   margin-left: auto;
 }

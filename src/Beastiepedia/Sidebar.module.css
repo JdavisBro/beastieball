@@ -49,7 +49,7 @@
 
 .name > div {
   display: inline-block;
-  font-size: 2.3em;
+  font-size: 2vw;
   width: 100%;
   text-align: center;
 }
@@ -63,4 +63,14 @@
 .number {
   font-family: SportsJersey, sans-serif;
   font-size: 1.2em;
+}
+
+@media all and (orientation: portrait) {
+  .name > div {
+    font-size: 2.3em;
+  }
+
+  .beastie:last-child {
+    margin-bottom: 60px;
+  }
 }

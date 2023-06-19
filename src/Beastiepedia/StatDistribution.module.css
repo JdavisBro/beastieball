@@ -34,7 +34,7 @@
 .statcontainer > .barcontainer:nth-child(n + 2) {
   top: 0;
   margin-bottom: 8px;
-  background-color: lightgray;
+  background-color: rgb(180, 195, 177);
   clip-path: polygon(10px 0, 100% 0%, 100% 100%, 0% 100%);
 }
 

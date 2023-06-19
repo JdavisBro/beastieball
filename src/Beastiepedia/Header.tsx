@@ -8,7 +8,7 @@ type Props = {
   useSetSidebarVisibility: (visible: boolean) => void;
 };
 
-export default function ContentInfo(props: Props): React.ReactNode {
+export default function Header(props: Props): React.ReactNode {
   return (
     <div className={styles.header}>
       <img

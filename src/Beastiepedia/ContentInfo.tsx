@@ -60,6 +60,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
           <div className={styles.header}>Desciption:</div>
           <div className={styles.value}>{beastiedata.desc}</div>
         </div>
+        <StatDistribution beastiedata={beastiedata}></StatDistribution>
         <div className={styles.varcontainer}>
           <div className={styles.header}>Recruit Condition:</div>
           <div className={styles.value}>
@@ -72,7 +73,6 @@ export default function ContentInfo(props: Props): React.ReactNode {
             <TextTag text={training}></TextTag>
           </div>
         </div>
-        <StatDistribution beastiedata={beastiedata}></StatDistribution>
         <MoveList
           movelist={beastiedata.attklist}
           learnset={beastiedata.learnset}

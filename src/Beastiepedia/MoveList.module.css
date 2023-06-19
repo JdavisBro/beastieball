@@ -1,7 +1,12 @@
 .container {
+  padding-bottom: 10px;
+}
+
+.listcontainer {
   width: 350px;
   height: fit-content;
   display: flex;
+  margin-bottom: 8px;
   background-color: teal;
   clip-path: polygon(10px 0, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
 }
@@ -17,9 +22,17 @@
   margin-left: 6px;
 }
 
+.movecontainer {
+  position: relative;
+}
+
 .movetext {
   margin-left: 4px !important;
   width: fit-content;
-  cursor: help;
+  cursor: pointer;
   text-decoration: underline dotted;
+}
+
+.movetext.selected {
+  background-color: aqua;
 }

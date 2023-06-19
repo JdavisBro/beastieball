@@ -1,6 +1,8 @@
 import { Type } from "./MoveType";
 import type { MoveType } from "./MoveType";
+
 const MOVE_DATA: Map<string, MoveType> = new Map();
+
 MOVE_DATA.set("???", {
   name: "Unrevealed",
   desc: "",
@@ -949,4 +951,5 @@ MOVE_DATA.set("???", {
     type: Type.Defence,
     power: null,
   });
+
 export default MOVE_DATA;

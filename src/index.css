@@ -8,10 +8,11 @@
   font-family: "SportsJersey";
   src: url("/fonts/SportsJersey.woff2") format("woff2");
   src: url("/fonts/SportsJersey.woff") format("woff");
+  unicode-range: U+30-7A; /* sports jersey only supports 0 to z and so this makes it fallback on regular fonts */
 }
 
 :root {
-  font-family: "Go Banana", sans-serif;
+  font-family: var(--go-banana);
   font-size: 1.1em;
   letter-spacing: 1px;
 
@@ -19,6 +20,8 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
+  --go-banana: "Go Banana", sans-serif;
+  --sports-jersey: "SportsJersey", "Go Banana", sans-serif;
   --header-height: 50px;
 }
 

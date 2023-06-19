@@ -15,7 +15,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
   for (let i = 0; i < beastiedata.tyield.length; i += 2) {
     const type = String(beastiedata.tyield[i]);
     const value = Number(beastiedata.tyield[i + 1]);
-    training += `${training == "" ? "" : "\n"}+${value}`;
+    training += `${training == "" ? "" : "\n"}+${value} `;
 
     switch (type[0]) {
       case "b":

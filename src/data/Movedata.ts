@@ -701,7 +701,7 @@ MOVE_DATA.set("???", {
   })
   .set("followme", {
     name: "Whistle",
-    desc: "Feel 1 [sprIcon,3]NOISY (draws attacks).",
+    desc: "Feel 1 [sprStatus,3]NOISY (draws attacks).",
     type: Type.Support,
     power: null,
   })

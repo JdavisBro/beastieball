@@ -5,7 +5,7 @@ import BEASTIE_DATA from "../data/Beastiedata";
 type Props = {
   beastieid: string | null | undefined;
   visibility: boolean;
-  useToggleSidebarVisibility: () => void;
+  onToggleSidebarVisibility: () => void;
 };
 
 export default function Sidebar(props: Props): React.ReactElement {
@@ -21,7 +21,7 @@ export default function Sidebar(props: Props): React.ReactElement {
         beastieid={key}
         beastiedata={value}
         selected={beastieid == key}
-        useToggleSidebarVisibility={() => props.useToggleSidebarVisibility()}
+        onToggleSidebarVisibility={() => props.onToggleSidebarVisibility()}
       ></SidebarBeastie>
     );
   });

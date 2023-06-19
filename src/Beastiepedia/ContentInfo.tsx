@@ -1,5 +1,5 @@
 import StatDistribution from "./StatDistribution";
-import TextTag from "../utils/TextTag";
+import TextTag from "../shared/TextTag";
 import styles from "./Content.module.css";
 import type { BeastieType } from "../data/BeastieType";
 import MoveList from "./MoveList";

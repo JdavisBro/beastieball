@@ -1,5 +1,5 @@
 import TextTag from "./TextTag";
-import styles from "../Shared.module.css";
+import styles from "./Shared.module.css";
 import TypeColor from "../data/TypeColor";
 import { Type } from "../data/MoveType";
 import type { MoveType } from "../data/MoveType";

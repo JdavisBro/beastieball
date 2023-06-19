@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import MoveView from "../utils/MoveView";
+import MoveView from "../shared/MoveView";
 import styles from "./MoveList.module.css";
 import MOVE_DATA from "../data/Movedata";
 import { LEARN_SETS } from "../data/Learnsets";
@@ -10,7 +10,7 @@ type MoveTextProps = {
   level?: number;
   move: MoveType | undefined;
   selected: boolean;
-  handleSelect: () => void;
+  onSelect: () => void;
 };
 
 function MoveText(props: MoveTextProps): React.ReactElement {
@@ -32,10 +32,10 @@ function MoveText(props: MoveTextProps): React.ReactElement {
             ? `${styles.movetext} ${styles.selected}`
             : styles.movetext
         }
-        onClick={props.handleSelect}
+        onClick={props.onSelect}
         onKeyDown={(event) => {
           if (event.key == "Enter") {
-            props.handleSelect();
+            props.onSelect();
           }
         }}
       >
@@ -76,7 +76,7 @@ export default function MoveList(props: Props): React.ReactElement {
         level={level}
         move={MOVE_DATA.get(move)}
         selected={selected == move}
-        handleSelect={() => setSelected(move)}
+        onSelect={() => setSelected(move)}
         key={move}
       ></MoveText>
     );
@@ -92,7 +92,7 @@ export default function MoveList(props: Props): React.ReactElement {
         <MoveText
           move={MOVE_DATA.get(move)}
           selected={selected == move}
-          handleSelect={() => setSelected(move)}
+          onSelect={() => setSelected(move)}
           key={move}
         ></MoveText>
       );

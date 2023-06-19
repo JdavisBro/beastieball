@@ -40,7 +40,7 @@ export default function Beastiepedia(): React.ReactNode {
       <Header
         beastiename={beastie}
         sidebarvisibility={sidebarvisible}
-        useSetSidebarVisibility={(visible: boolean) =>
+        onSetSidebarVisibility={(visible: boolean) =>
           setSidebarvisible(visible)
         }
       ></Header>
@@ -48,7 +48,7 @@ export default function Beastiepedia(): React.ReactNode {
         <Sidebar
           beastieid={beastieid}
           visibility={sidebarvisible}
-          useToggleSidebarVisibility={() => {
+          onToggleSidebarVisibility={() => {
             if (orientation) {
               setSidebarvisible(false);
             }

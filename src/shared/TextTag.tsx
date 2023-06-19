@@ -1,4 +1,4 @@
-import styles from "../Shared.module.css";
+import styles from "./Shared.module.css";
 type Props = {
   text: string;
 };

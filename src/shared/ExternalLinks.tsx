@@ -1,4 +1,4 @@
-import styles from "../Shared.module.css";
+import styles from "./Shared.module.css";
 import githublogo from "../assets/github-mark-white.svg";
 
 export default function ExternalLinks(): React.ReactElement {

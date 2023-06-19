@@ -1,11 +1,11 @@
-import ExternalLinks from "../utils/ExternalLinks";
+import ExternalLinks from "../shared/ExternalLinks";
 import arrow from "../assets/arrow.svg";
 import styles from "./Header.module.css";
 
 type Props = {
   beastiename: string | undefined;
   sidebarvisibility: boolean;
-  useSetSidebarVisibility: (visible: boolean) => void;
+  onSetSidebarVisibility: (visible: boolean) => void;
 };
 
 export default function Header(props: Props): React.ReactNode {
@@ -25,9 +25,9 @@ export default function Header(props: Props): React.ReactNode {
         }
         aria-haspopup="menu"
         tabIndex={0}
-        onClick={() => props.useSetSidebarVisibility(!props.sidebarvisibility)}
+        onClick={() => props.onSetSidebarVisibility(!props.sidebarvisibility)}
         // prettier-ignore
-        onKeyDown={(event) => {if (event.key == "Enter") {props.useSetSidebarVisibility(!props.sidebarvisibility);}}}
+        onKeyDown={(event) => {if (event.key == "Enter") {props.onSetSidebarVisibility(!props.sidebarvisibility);}}}
       />
       <div className={styles.title}>
         {props.beastiename !== undefined ? `${props.beastiename} - ` : ""}

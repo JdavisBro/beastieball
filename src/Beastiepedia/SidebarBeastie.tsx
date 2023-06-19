@@ -8,7 +8,7 @@ type Props = {
   beastieid: string;
   beastiedata: BeastieType;
   selected: boolean;
-  useToggleSidebarVisibility: () => void;
+  onToggleSidebarVisibility: () => void;
 };
 
 export default function SidebarBeastie(props: Props): React.ReactElement {
@@ -26,7 +26,7 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
     : styles.beastiediagR;
   function handleInteract() {
     navigate("/beastiepedia/" + beastiedata.name);
-    props.useToggleSidebarVisibility();
+    props.onToggleSidebarVisibility();
   }
   return (
     // GET BEASTIE ICON IMG

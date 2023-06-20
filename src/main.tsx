@@ -18,8 +18,11 @@ createRoot(container).render(
     <Helmet>
       <title>Beastieball Info</title>
       <meta property="og:title" content="Beastieball Info" />
-      <meta property="og:image" content={`${import.meta.env.URL}/ball.png`} />
-      <meta property="og:url" content={import.meta.env.URL} />
+      <meta
+        property="og:image"
+        content={`${import.meta.env.VITE_NETLIFY_URL}/ball.png`}
+      />
+      <meta property="og:url" content={import.meta.env.VITE_NETLIFY_URL} />
       <meta
         property="og:description"
         content="A website with data on Beastieball!"

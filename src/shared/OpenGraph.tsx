@@ -11,11 +11,11 @@ export default function MoveView(props: Props): React.ReactElement {
   return (
     <Helmet>
       <meta property="og:title" content={props.title} />
+      <meta property="og:image" content={props.image} />
       <meta
-        property="og:image"
-        content={`${import.meta.env.URL}${props.image}`}
+        property="og:url"
+        content={`${import.meta.env.VITE_NETLIFY_URL}${props.url}`}
       />
-      <meta property="og:url" content={`${import.meta.env.URL}${props.url}`} />
       <meta property="og:description" content={props.description} />
     </Helmet>
   );

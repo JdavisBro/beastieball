@@ -9,7 +9,6 @@ import styles from "./Beastiepedia.module.css";
 import useTitle from "../utils/useTitle";
 import useScreenOrientation from "../utils/useScreenOrientation";
 import BEASTIE_DATA from "../data/Beastiedata";
-import dummy from "../assets/dummy.png";
 
 export default function Beastiepedia(): React.ReactNode {
   const orientation = useScreenOrientation();
@@ -43,7 +42,7 @@ export default function Beastiepedia(): React.ReactNode {
     <div className={styles.container}>
       <OpenGraph
         title={title}
-        image={dummy}
+        image={"dummy.png"}
         url={beastieid === null ? `beastiepedia/` : `beastiepedia/${beastie}`}
         description={
           beastiedata != null

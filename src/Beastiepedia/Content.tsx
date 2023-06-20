@@ -1,5 +1,5 @@
-import ContentInfo from "./ContentInfo";
-import ContentPreview from "./ContentPreview";
+import ContentInfo from "./Info/ContentInfo";
+import ContentPreview from "./Preview/ContentPreview";
 import styles from "./Beastiepedia.module.css";
 // import MOVE_DATA from "./data/Movedata";
 import type { BeastieType } from "../data/BeastieType";

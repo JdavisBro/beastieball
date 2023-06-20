@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import MoveView from "../shared/MoveView";
+import MoveView from "../../shared/MoveView";
 import styles from "./MoveList.module.css";
-import MOVE_DATA from "../data/Movedata";
-import { LEARN_SETS } from "../data/Learnsets";
-import { MoveType } from "../data/MoveType";
+import MOVE_DATA from "../../data/Movedata";
+import { LEARN_SETS } from "../../data/Learnsets";
+import { MoveType } from "../../data/MoveType";
 
 type MoveTextProps = {
   level?: number;
@@ -111,7 +111,9 @@ export default function MoveList(props: Props): React.ReactElement {
           {friendmoves}
         </div>
       </div>
-      <MoveView move={moveselected}></MoveView>
+      <div className={styles.viewcontainer}>
+        <MoveView move={moveselected}></MoveView>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import styles from "./StatDistribution.module.css";
-import TypeColor from "../data/TypeColor";
-import type { BeastieType } from "../data/BeastieType";
+import TypeColor from "../../data/TypeColor";
+import type { BeastieType } from "../../data/BeastieType";
 
 type BarProps = {
   value: number;

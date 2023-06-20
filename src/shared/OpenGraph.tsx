@@ -14,7 +14,7 @@ export default function MoveView(props: Props): React.ReactElement {
       <meta property="og:image" content={props.image} />
       <meta
         property="og:url"
-        content={`${import.meta.env.VITE_NETLIFY_URL}${props.url}`}
+        content={`${import.meta.env.VITE_NETLIFY_URL}/${props.url}`}
       />
       <meta property="og:description" content={props.description} />
     </Helmet>

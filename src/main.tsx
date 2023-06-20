@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Loading from "./Loading";
 import "./index.css";
 import { routes } from "./routes";
+import { Helmet } from "react-helmet";
 
 const container = document.getElementById("root");
 
@@ -14,6 +15,17 @@ if (container == null) {
 
 createRoot(container).render(
   <StrictMode>
+    <Helmet>
+      <title>Beastieball Info</title>
+      <meta property="og:title" content="Beastieball Info" />
+      <meta property="og:image" content={`${import.meta.env.URL}/ball.png`} />
+      <meta property="og:url" content={import.meta.env.URL} />
+      <meta
+        property="og:description"
+        content="A website with data on Beastieball!"
+      />
+      <meta property="og:type" content="website" />
+    </Helmet>
     <Suspense fallback={<Loading />}>
       <RouterProvider router={createBrowserRouter(routes)} />
     </Suspense>

@@ -18,8 +18,9 @@ export default function PageNotFound(): React.ReactElement {
     <div className="notfoundcontainer">
       <h1>Page Not Found</h1>
       <div
-        className="notfoundface"
+        className="notfoundfacecontainer"
         tabIndex={0}
+        role="button"
         style={style}
         onClick={handleRandomize}
         onKeyDown={(event) => {
@@ -27,7 +28,10 @@ export default function PageNotFound(): React.ReactElement {
             handleRandomize();
           }
         }}
-      ></div>
+      >
+        <div className="notfoundfacebg"></div>
+        <div className="notfoundface"></div>
+      </div>
       <h1>
         <Link to="/">Go to Home</Link>
       </h1>

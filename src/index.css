@@ -37,11 +37,32 @@ body {
   height: 90vh;
 }
 
-.notfoundface {
+.notfoundfacecontainer {
+  position: relative;
+  width: 156px;
+  height: 156px;
+  background-color: hsl(0, 0%, 95%);
+  background-size: 100% 100%;
+  border-radius: 50%;
+}
+
+.notfoundfacebg {
+  position: absolute;
+  top: 12px;
+  left: 12px;
   width: 120px;
   height: 120px;
-  background: var(--notfoundface-col) var(--notfoundface-spr);
-  background-size: 100% 100%;
+  background: var(--notfoundface-col);
   border: 6px solid black;
   border-radius: 50%;
+}
+
+.notfoundface {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  height: 130px;
+  width: 130px;
+  background: var(--notfoundface-spr);
+  background-size: 100% 100%;
 }

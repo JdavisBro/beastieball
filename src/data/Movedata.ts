@@ -950,6 +950,18 @@ MOVE_DATA.set("???", {
     desc: "Only used from net. Feel 1 [sprStatus,3]NOISY (draws attacks).",
     type: Type.Defence,
     power: null,
+  })
+  .set("chill", {
+    name: "Chill Out",
+    desc: "[sprIcon,1]POW[sprBoost,3] to target.",
+    type: Type.Support,
+    power: null,
+  })
+  .set("sweatup", {
+    name: "",
+    desc: "",
+    type: 0,
+    power: null,
   });
 
 export default MOVE_DATA;

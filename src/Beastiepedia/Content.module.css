@@ -14,9 +14,14 @@
 
 .inner {
   width: 95%;
-  height: 95%;
+  /* height: 95%; */
   margin-top: 2.5%;
   margin-left: 2.5%;
+}
+
+.previewcanvas {
+  width: 100%;
+  height: auto;
 }
 
 .varcontainer {

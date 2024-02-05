@@ -1,6 +1,8 @@
 export type BeastieType = {
   ability: Array<string>;
   ability_hidden: boolean;
+  allowedInPromo: boolean;
+  animator: number;
   attklist: Array<string>;
   attklist_randomize: number;
   ba: number;
@@ -15,21 +17,24 @@ export type BeastieType = {
   // mind atk / pow
   md: number;
   // mind def
-  ball_impact_pos: {
-    x: number;
-    y: number;
-  };
-  ball_miss_pos: {
-    x: number;
-    y: number;
-  };
-  ball_ready_pos: {
-    x: number;
-    y: number;
-  };
+
+  // moved
+  // ball_impact_pos: {
+  //   x: number;
+  //   y: number;
+  // };
+  // ball_miss_pos: {
+  //   x: number;
+  //   y: number;
+  // };
+  // ball_ready_pos: {
+  //   x: number;
+  //   y: number;
+  // };
   base_exp: number;
   body_color_index: number;
   face_color_index: number;
+  colormeta: null;
   colors: Array<{
     array: Array<{
       color: number;
@@ -45,7 +50,7 @@ export type BeastieType = {
   }>;
   combos: Array<Array<number>>;
   desc: string;
-  designer: number;
+  designer: number | number[];
   evo_pose: Array<{
     anim: string;
     scale: number;
@@ -58,6 +63,7 @@ export type BeastieType = {
   foot_size: number;
   foot_type: number;
   growth: number;
+  hidden: boolean;
   id: string;
   isBaby: boolean;
   learnset: number;
@@ -82,18 +88,19 @@ export type BeastieType = {
     move_speed_start: number;
     move_to_idle_transition_anim: string;
     move_to_idle_transition_frames: Array<number>;
-    randomize_idle: boolean;
+    randomize_idle: boolean | number;
     squishiness: number;
     stretchiness: number;
   };
   name: string;
   number: number;
-  partner_impact: {
-    angle: number;
-    anim: string;
-    x: number;
-    y: number;
-  };
+  // moved
+  // partner_impact: {
+  //   angle: number;
+  //   anim: string;
+  //   x: number;
+  //   y: number;
+  // };
   prev_ids: Array<string>;
   recruit: {
     conditions: Array<
@@ -113,14 +120,29 @@ export type BeastieType = {
     >;
     description: string;
   };
-  roamer_style: number;
-  scale: Array<number>;
-  splash_pos: {
-    angle: number;
-    anim: string;
-    x: number;
-    y: number;
+  roamer_style: {
+    _name: string,
+    can_react: boolean,
+    can_socialize: boolean,
+    can_volley: boolean,
+    cancel_on_player_invincible: boolean,
+    checking_player_distance: boolean,
+    colliding: boolean,
+    default_locomote: boolean,
+    flying: boolean,
+    interact_force: boolean,
+    render_go_direction: boolean,
+    render_guard_radius: boolean,
+    seeking_interact: boolean
   };
+  scale: Array<number>;
+  // moved
+  // splash_pos: {
+  //   angle: number;
+  //   anim: string;
+  //   x: number;
+  //   y: number;
+  // };
   spr: number;
   tamecond: null;
   tamelvl: number;

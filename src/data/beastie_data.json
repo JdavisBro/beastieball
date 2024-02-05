@@ -2,6 +2,8 @@
   "bestie": {
     "ability": ["friendguard"],
     "ability_hidden": false,
+    "allowedInPromo": true,
+    "animator": 8,
     "attklist": [
       "jazzpass",
       "lifedew",
@@ -26,25 +28,15 @@
       "protect",
       "set",
       "introduction",
-      "construct"
+      "construct",
+      "chill"
     ],
     "attklist_randomize": -1,
     "ba": 25,
-    "ball_impact_pos": {
-      "x": 303,
-      "y": -246.5024630542
-    },
-    "ball_miss_pos": {
-      "x": 360,
-      "y": -97
-    },
-    "ball_ready_pos": {
-      "x": 349,
-      "y": -390
-    },
     "base_exp": 216.91,
     "bd": 90,
     "body_color_index": 0,
+    "colormeta": null,
     "colors": [
       {
         "array": [
@@ -93,12 +85,12 @@
     ],
     "combos": [
       [8, 2, 0.2],
-      [49, 1, 1, 8, 1, 0.25],
+      [49, 1, 1, 8, 1, 0.3],
       [53, 2, 0],
       [53, 2, 0]
     ],
     "desc": "They lack any aggression at all. Using their tail as a lure, they invite other Beasties into their burrow to offer them food.",
-    "designer": 2,
+    "designer": 1,
     "evo_pose": [
       {
         "anim": "good",
@@ -127,9 +119,10 @@
     "growth": 1.09,
     "ha": 60,
     "hd": 100,
+    "hidden": false,
     "id": "bestie",
     "isBaby": false,
-    "learnset": 8,
+    "learnset": 27,
     "learnset_randomize": -1,
     "loco": {
       "anim_min_speed": 0.2,
@@ -159,12 +152,6 @@
     "md": 75,
     "name": "Diggum",
     "number": 9,
-    "partner_impact": {
-      "angle": 358.6322937012,
-      "anim": "spike",
-      "x": 413,
-      "y": -333
-    },
     "prev_ids": ["caretaker", "bestie"],
     "recruit": {
       "conditions": [
@@ -177,7 +164,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 32
+          "type": 37
         },
         {
           "effect_pow": ">0",
@@ -188,12 +175,26 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 32
+          "type": 37
         }
       ],
       "description": "Heal 2+ times"
     },
-    "roamer_style": 1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -229,13 +230,8 @@
         ]
       }
     ],
-    "splash_pos": {
-      "angle": 346.5042724609,
-      "anim": "ready",
-      "x": 91,
-      "y": -142
-    },
-    "spr": 236,
+    "spr": 283,
+    "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
     "tyield": ["hd", 2]
@@ -243,17 +239,19 @@
   "bilby1": {
     "ability": ["starter_m", "fwdpass"],
     "ability_hidden": true,
+    "allowedInPromo": true,
+    "animator": 8,
     "attklist": [
       "bounce",
       "set",
       "dump",
+      "tool",
       "mindup",
       "dropshot",
       "markattack",
       "mind",
       "rollshot",
       "mindbomb",
-      "body",
       "jazzpass",
       "superquick",
       "allycover",
@@ -268,28 +266,18 @@
       "serve",
       "trap",
       "construct",
-      "slipshot",
+      "nice",
+      "chill",
       "passattack",
       "startermind",
       "dig"
     ],
     "attklist_randomize": -1,
     "ba": 28,
-    "ball_impact_pos": {
-      "x": 192.75,
-      "y": -172.0197044335
-    },
-    "ball_miss_pos": {
-      "x": 234.75,
-      "y": -69.4159042928
-    },
-    "ball_ready_pos": {
-      "x": 84.75,
-      "y": -400.0281491907
-    },
     "base_exp": 112,
     "bd": 40,
     "body_color_index": 1,
+    "colormeta": null,
     "colors": [
       {
         "array": [
@@ -355,7 +343,7 @@
       [26, 2, 1]
     ],
     "desc": "Their busy mind is only at rest while they dig. They'll hyperfocus for days on a single burrow.",
-    "designer": 32,
+    "designer": [5, 8],
     "evo_pose": [
       {
         "anim": "good",
@@ -384,9 +372,10 @@
     "growth": 1,
     "ha": 17,
     "hd": 50,
+    "hidden": false,
     "id": "bilby1",
     "isBaby": true,
-    "learnset": 3,
+    "learnset": 22,
     "learnset_randomize": -1,
     "loco": {
       "anim_min_speed": 0.2,
@@ -416,12 +405,6 @@
     "md": 70,
     "name": "Bildit",
     "number": 4,
-    "partner_impact": {
-      "angle": 341.1914978027,
-      "anim": "spike",
-      "x": 190.5,
-      "y": -342.2660098522
-    },
     "prev_ids": ["setter1"],
     "recruit": {
       "conditions": [
@@ -432,7 +415,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 35
+          "type": 40
         },
         {
           "event": null,
@@ -441,7 +424,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 35
+          "type": 40
         },
         {
           "event": null,
@@ -450,12 +433,26 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 35
+          "type": 40
         }
       ],
       "description": "Pass the ball 3+ times"
     },
-    "roamer_style": 1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -499,13 +496,8 @@
         ]
       }
     ],
-    "splash_pos": {
-      "angle": 343.3531494141,
-      "anim": "ready",
-      "x": 101.25,
-      "y": -146.9387755102
-    },
-    "spr": 287,
+    "spr": 345,
+    "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["md", 1]
@@ -513,6 +505,8 @@
   "cassowary1": {
     "ability": ["starter_b", "lifeorb"],
     "ability_hidden": true,
+    "allowedInPromo": true,
+    "animator": 8,
     "attklist": [
       "bounce",
       "healhit",
@@ -538,21 +532,10 @@
     ],
     "attklist_randomize": -1,
     "ba": 75,
-    "ball_impact_pos": {
-      "x": 145.1428571429,
-      "y": -84.5714285714
-    },
-    "ball_miss_pos": {
-      "x": 178,
-      "y": -94
-    },
-    "ball_ready_pos": {
-      "x": 153.1428571429,
-      "y": -291.4285714286
-    },
     "base_exp": 100.75,
     "bd": 65,
     "body_color_index": 0,
+    "colormeta": null,
     "colors": [
       {
         "array": [
@@ -614,7 +597,7 @@
       [3, 2, 2]
     ],
     "desc": "Anytime they encounter something new, they kick it. Kicking is their way of understanding the world.",
-    "designer": 256,
+    "designer": 8,
     "evo_pose": [
       {
         "anim": "good",
@@ -643,9 +626,10 @@
     "growth": 1,
     "ha": 40,
     "hd": 25,
+    "hidden": false,
     "id": "cassowary1",
     "isBaby": true,
-    "learnset": 1,
+    "learnset": 20,
     "learnset_randomize": -1,
     "loco": {
       "anim_min_speed": 0.2,
@@ -675,30 +659,35 @@
     "md": 45,
     "name": "Kichik",
     "number": 2,
-    "partner_impact": {
-      "angle": 350.4820556641,
-      "anim": "spike",
-      "x": 181.7142857143,
-      "y": -222.8571428571
-    },
     "prev_ids": ["bunny"],
     "recruit": {
       "conditions": [
         {
-          "damage": ">=80",
           "event": null,
           "freq": -1,
-          "func": null,
           "my_data": null,
-          "player": 2,
           "rel_color": -1,
-          "target": [0, 1],
-          "type": 11
+          "target": 0,
+          "type": 13
         }
       ],
-      "description": "Deal 80+ damage with an attack"
+      "description": "Hit this Beastie with an attack that has 60 POW or more"
     },
-    "roamer_style": 1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -746,13 +735,8 @@
         ]
       }
     ],
-    "splash_pos": {
-      "angle": 348.3026123047,
-      "anim": "ready",
-      "x": 106,
-      "y": -130
-    },
-    "spr": 252,
+    "spr": 301,
+    "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["ba", 1]
@@ -760,6 +744,8 @@
   "cheerleader": {
     "ability": ["cheer"],
     "ability_hidden": false,
+    "allowedInPromo": true,
+    "animator": 8,
     "attklist": [
       "freeball",
       "cheer",
@@ -782,28 +768,16 @@
       "crowd",
       "rhythm",
       "protect",
-      "noisytag",
       "dispel",
       "introduction",
       "starterbody"
     ],
     "attklist_randomize": -1,
     "ba": 65,
-    "ball_impact_pos": {
-      "x": 117,
-      "y": -346.8261787474
-    },
-    "ball_miss_pos": {
-      "x": 288,
-      "y": -4
-    },
-    "ball_ready_pos": {
-      "x": 130.5,
-      "y": -320.2251935257
-    },
     "base_exp": 137.25,
     "bd": 85,
     "body_color_index": 0,
+    "colormeta": null,
     "colors": [
       {
         "array": [
@@ -869,7 +843,7 @@
       [8, 2, 0.5]
     ],
     "desc": "Its fluff is made of incredibly thin strands of wax, bundled like wool. If a Cherrily makes you a pom, it considers you a treasured friend.",
-    "designer": 4,
+    "designer": 2,
     "evo_pose": [
       {
         "anim": "good",
@@ -898,9 +872,10 @@
     "growth": 0.9,
     "ha": 50,
     "hd": 105,
+    "hidden": false,
     "id": "cheerleader",
     "isBaby": false,
-    "learnset": 9,
+    "learnset": 28,
     "learnset_randomize": -1,
     "loco": {
       "anim_min_speed": 0.2,
@@ -930,28 +905,36 @@
     "md": 60,
     "name": "Cherrily",
     "number": 10,
-    "partner_impact": {
-      "angle": 337.6016540527,
-      "anim": "spike",
-      "x": 231.75,
-      "y": -248.0225193526
-    },
     "prev_ids": ["support"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 58,
+          "effect_type": 61,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 32
+          "type": 37
         }
       ],
-      "description": "Gain 4+ [sprBoost,2]BOOSTS on one Beastie"
+      "description": "Gain 5+ [sprBoost,2]BOOSTS on one Beastie"
     },
-    "roamer_style": 1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -995,22 +978,18 @@
         ]
       }
     ],
-    "splash_pos": {
-      "angle": 356.3109741211,
-      "anim": "spike",
-      "x": 61.5,
-      "y": -224.4616467277
-    },
-    "spr": 71,
+    "spr": 88,
+    "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["ha", 1, "hd", 1]
   },
   "frog1": {
-    "ability": ["starter_h", "allheart"],
+    "ability": ["starter_h", "allyheal"],
     "ability_hidden": true,
+    "allowedInPromo": true,
+    "animator": 8,
     "attklist": [
-      "hearthitbody",
       "pepshot",
       "heart",
       "commit",
@@ -1029,30 +1008,19 @@
       "noisytag",
       "set",
       "introduction",
-      "healhit",
+      "skillswap",
       "storedpower",
-      "serve",
+      "dragontail",
       "vigor",
-      "shakenmind",
-      "moon"
+      "healhit",
+      "jazzattack"
     ],
     "attklist_randomize": -1,
     "ba": 37,
-    "ball_impact_pos": {
-      "x": 103.5,
-      "y": -212.3011963406
-    },
-    "ball_miss_pos": {
-      "x": 102,
-      "y": -163
-    },
-    "ball_ready_pos": {
-      "x": 116.25,
-      "y": -331.6256157635
-    },
     "base_exp": 102.1,
     "bd": 45,
     "body_color_index": 0,
+    "colormeta": null,
     "colors": [
       {
         "array": [
@@ -1122,7 +1090,7 @@
       [42, 2, 2]
     ],
     "desc": "They crave attention. They can hardly spend time with their own kind because they compete for an audience.",
-    "designer": 9,
+    "designer": [0, 3],
     "evo_pose": [
       {
         "anim": "good",
@@ -1151,9 +1119,10 @@
     "growth": 1,
     "ha": 70,
     "hd": 60,
+    "hidden": false,
     "id": "frog1",
     "isBaby": true,
-    "learnset": 2,
+    "learnset": 21,
     "learnset_randomize": -1,
     "loco": {
       "anim_min_speed": 0.2,
@@ -1183,28 +1152,36 @@
     "md": 33,
     "name": "Axolati",
     "number": 3,
-    "partner_impact": {
-      "angle": 342.950958252,
-      "anim": "spike",
-      "x": 214,
-      "y": -238
-    },
     "prev_ids": ["tadpole"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 58,
+          "effect_type": 61,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 32
+          "type": 37
         }
       ],
-      "description": "Boost [sprIcon,1]POW +3 or more on a Beastie"
+      "description": "Boost any [sprIcon,0][sprIcon,1][sprIcon,2]POW +3 or more on a Beastie"
     },
-    "roamer_style": 1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -1256,13 +1233,8 @@
         ]
       }
     ],
-    "splash_pos": {
-      "angle": 348.5530395508,
-      "anim": "ready",
-      "x": 10,
-      "y": -95
-    },
-    "spr": 341,
+    "spr": 414,
+    "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["ha", 1]
@@ -1270,6 +1242,8 @@
   "kangaroo1": {
     "ability": ["prankster", "handsfree"],
     "ability_hidden": true,
+    "allowedInPromo": true,
+    "animator": 8,
     "attklist": [
       "bounce",
       "breakswipe",
@@ -1297,27 +1271,17 @@
       "lowattks",
       "threat",
       "stress",
-      "slipshot",
+      "nice",
       "spitball",
+      "tool",
       "startermind"
     ],
     "attklist_randomize": -1,
     "ba": 50,
-    "ball_impact_pos": {
-      "x": 77,
-      "y": -237
-    },
-    "ball_miss_pos": {
-      "x": 92,
-      "y": -94
-    },
-    "ball_ready_pos": {
-      "x": 79,
-      "y": -297
-    },
     "base_exp": 115.36,
     "bd": 55,
     "body_color_index": 0,
+    "colormeta": null,
     "colors": [
       {
         "array": [
@@ -1387,7 +1351,7 @@
       [12, 8, 2]
     ],
     "desc": "They are skilled at mimicry and can even learn human words. They especially favor sounds which get a rise out of others.",
-    "designer": 256,
+    "designer": 8,
     "evo_pose": [
       {
         "anim": "good",
@@ -1416,9 +1380,10 @@
     "growth": 1.03,
     "ha": 28,
     "hd": 25,
+    "hidden": false,
     "id": "kangaroo1",
     "isBaby": true,
-    "learnset": 6,
+    "learnset": 25,
     "learnset_randomize": -1,
     "loco": {
       "anim_min_speed": 0.2,
@@ -1448,12 +1413,6 @@
     "md": 80,
     "name": "Rookee",
     "number": 7,
-    "partner_impact": {
-      "angle": 316.4878540039,
-      "anim": "spike",
-      "x": 216,
-      "y": -144
-    },
     "prev_ids": ["rookee", "rookee1"],
     "recruit": {
       "conditions": [
@@ -1463,7 +1422,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 36
+          "type": 42
         },
         {
           "event": null,
@@ -1471,12 +1430,26 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 36
+          "type": 42
         }
       ],
       "description": "Use 2+ [sprIcon,4]SUPPORT plays"
     },
-    "roamer_style": 1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
     "scale": [0.9, 1],
     "shiny": [
       {
@@ -1528,13 +1501,8 @@
         ]
       }
     ],
-    "splash_pos": {
-      "angle": 323.9726257324,
-      "anim": "good",
-      "x": 57,
-      "y": -202
-    },
-    "spr": 200,
+    "spr": 241,
+    "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["md", 1]
@@ -1542,6 +1510,8 @@
   "lyrebird1": {
     "ability": ["moldbreaker", "unmarked"],
     "ability_hidden": true,
+    "allowedInPromo": true,
+    "animator": 8,
     "attklist": [
       "flyback",
       "tailwind",
@@ -1549,6 +1519,7 @@
       "heart",
       "desperate",
       "bomb",
+      "overheat",
       "rush",
       "heartpass",
       "switch",
@@ -1560,28 +1531,16 @@
       "cover",
       "basecover",
       "backswitch",
-      "hearthitbody",
       "dragontail",
       "noisytag",
       "starterheart"
     ],
     "attklist_randomize": -1,
     "ba": 23,
-    "ball_impact_pos": {
-      "x": -57.1428571429,
-      "y": -272
-    },
-    "ball_miss_pos": {
-      "x": 77,
-      "y": -117
-    },
-    "ball_ready_pos": {
-      "x": 94.8571428571,
-      "y": -348.5714285714
-    },
     "base_exp": 69.509,
     "bd": 20,
     "body_color_index": 1,
+    "colormeta": null,
     "colors": [
       {
         "array": [
@@ -1651,7 +1610,7 @@
       [7, 2, 0]
     ],
     "desc": "They are constantly in motion. Their colorful plumage is a point of pride and they sometimes accessorize it with flower petals.",
-    "designer": 256,
+    "designer": 8,
     "evo_pose": [
       {
         "anim": "good",
@@ -1680,9 +1639,10 @@
     "growth": 0.89,
     "ha": 68,
     "hd": 72,
+    "hidden": false,
     "id": "lyrebird1",
-    "isBaby": false,
-    "learnset": 5,
+    "isBaby": true,
+    "learnset": 24,
     "learnset_randomize": -1,
     "loco": {
       "anim_min_speed": 0.2,
@@ -1712,12 +1672,6 @@
     "md": 35,
     "name": "Sefren",
     "number": 6,
-    "partner_impact": {
-      "angle": 339.9590454102,
-      "anim": "spike",
-      "x": 194.2857142857,
-      "y": -293.7142857143
-    },
     "prev_ids": ["angel1"],
     "recruit": {
       "conditions": [
@@ -1728,7 +1682,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 34
+          "type": 39
         },
         {
           "event": null,
@@ -1737,7 +1691,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 34
+          "type": 39
         },
         {
           "event": null,
@@ -1746,12 +1700,26 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 34
+          "type": 39
         }
       ],
       "description": "Make 3+ MOVE actions"
     },
-    "roamer_style": 1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -1811,13 +1779,8 @@
         ]
       }
     ],
-    "splash_pos": {
-      "angle": 326.5792541504,
-      "anim": "volley",
-      "x": 30,
-      "y": -137
-    },
-    "spr": 348,
+    "spr": 425,
+    "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
     "tyield": ["ha", 1]
@@ -1825,6 +1788,8 @@
   "possum1": {
     "ability": ["regenerator"],
     "ability_hidden": false,
+    "allowedInPromo": true,
+    "animator": 8,
     "attklist": [
       "bounce",
       "body",
@@ -1849,21 +1814,10 @@
     ],
     "attklist_randomize": -1,
     "ba": 45,
-    "ball_impact_pos": {
-      "x": 13.7142857143,
-      "y": -141.7142857143
-    },
-    "ball_miss_pos": {
-      "x": 79,
-      "y": -62
-    },
-    "ball_ready_pos": {
-      "x": 74.2857142857,
-      "y": -235.4285714286
-    },
     "base_exp": 81.577,
     "bd": 65,
     "body_color_index": 0,
+    "colormeta": null,
     "colors": [
       {
         "array": [
@@ -1945,7 +1899,7 @@
       [16, 2, 2]
     ],
     "desc": "Their semitransparent ears shield their eyes from wind as they glide. They feel safest in large groups, especially with watchful Sefren.",
-    "designer": 256,
+    "designer": 8,
     "evo_pose": [
       {
         "anim": "good",
@@ -1974,9 +1928,10 @@
     "growth": 0.97,
     "ha": 18,
     "hd": 25,
+    "hidden": false,
     "id": "possum1",
     "isBaby": true,
-    "learnset": 4,
+    "learnset": 23,
     "learnset_randomize": -1,
     "loco": {
       "anim_min_speed": 0.2,
@@ -2008,12 +1963,6 @@
     "md": 57,
     "name": "Shooga",
     "number": 5,
-    "partner_impact": {
-      "angle": 334.698638916,
-      "anim": "move",
-      "x": 126.8571428571,
-      "y": -82.2857142857
-    },
     "prev_ids": [],
     "recruit": {
       "conditions": [
@@ -2024,12 +1973,26 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 18
+          "type": 22
         }
       ],
-      "description": "Land a free point"
+      "description": "Land a no-touch point"
     },
-    "roamer_style": 1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -2093,13 +2056,8 @@
         ]
       }
     ],
-    "splash_pos": {
-      "angle": -10,
-      "anim": "ready",
-      "x": 20.5714285714,
-      "y": -75.4285714286
-    },
-    "spr": 238,
+    "spr": 285,
+    "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
     "tyield": ["bd", 1]
@@ -2107,8 +2065,9 @@
   "rocklizard1": {
     "ability": ["heavy", "multiscale"],
     "ability_hidden": true,
+    "allowedInPromo": true,
+    "animator": 8,
     "attklist": [
-      "starterbody",
       "bounce",
       "rocksmash",
       "pushattack",
@@ -2132,21 +2091,10 @@
     ],
     "attklist_randomize": -1,
     "ba": 52,
-    "ball_impact_pos": {
-      "x": 20,
-      "y": -209
-    },
-    "ball_miss_pos": {
-      "x": 107,
-      "y": -109
-    },
-    "ball_ready_pos": {
-      "x": 53,
-      "y": -247
-    },
     "base_exp": 91.29,
     "bd": 85,
     "body_color_index": 0,
+    "colormeta": null,
     "colors": [
       {
         "array": [
@@ -2220,7 +2168,7 @@
       [3, 2, 2, 8, 2, 0.2]
     ],
     "desc": "They enjoy basking in the sun, but this leaves them vulnerable. They stick out their tongue to intimidate predators.",
-    "designer": 32,
+    "designer": 5,
     "evo_pose": [
       {
         "anim": "good",
@@ -2249,9 +2197,10 @@
     "growth": 1.02,
     "ha": 18,
     "hd": 57,
+    "hidden": false,
     "id": "rocklizard1",
     "isBaby": true,
-    "learnset": 10,
+    "learnset": 29,
     "learnset_randomize": -1,
     "loco": {
       "anim_min_speed": 0.2,
@@ -2281,28 +2230,36 @@
     "md": 23,
     "name": "Skibble",
     "number": 11,
-    "partner_impact": {
-      "angle": 329.6763916016,
-      "anim": "volley",
-      "x": 117,
-      "y": -130
-    },
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 58,
+          "effect_type": 61,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 32
+          "type": 37
         }
       ],
-      "description": "Boost [sprIcon,0]DEF +2 or more on a player"
+      "description": "Boost [sprIcon,0]DEF +2 or more on a Beastie"
     },
-    "roamer_style": 1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -2346,13 +2303,8 @@
         ]
       }
     ],
-    "splash_pos": {
-      "angle": -10,
-      "anim": "ready",
-      "x": 35,
-      "y": -28
-    },
-    "spr": 7,
+    "spr": 9,
+    "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
     "tyield": ["bd", 1]
@@ -2360,6 +2312,8 @@
   "serval": {
     "ability": ["spiker"],
     "ability_hidden": false,
+    "allowedInPromo": true,
+    "animator": 8,
     "attklist": [
       "bounce",
       "jump",
@@ -2369,6 +2323,7 @@
       "tagattack",
       "cut",
       "pepshot",
+      "snore",
       "overheat",
       "desperate",
       "damagedattack",
@@ -2389,21 +2344,10 @@
     ],
     "attklist_randomize": -1,
     "ba": 100,
-    "ball_impact_pos": {
-      "x": 164.4,
-      "y": -526.8
-    },
-    "ball_miss_pos": {
-      "x": 372,
-      "y": -64.5
-    },
-    "ball_ready_pos": {
-      "x": 174,
-      "y": -630
-    },
-    "base_exp": 147.8,
+    "base_exp": 124.64,
     "bd": 64,
     "body_color_index": 0,
+    "colormeta": null,
     "colors": [
       {
         "array": [
@@ -2432,7 +2376,7 @@
             "x": 0.5958333333
           },
           {
-            "color": 8869936,
+            "color": 8872016,
             "x": 1
           }
         ]
@@ -2456,7 +2400,7 @@
             "x": 0
           },
           {
-            "color": 4737279,
+            "color": 5132031,
             "x": 1
           }
         ]
@@ -2471,13 +2415,13 @@
       }
     ],
     "combos": [
-      [33, 0, 20, 47, 0, 0.75],
-      [16, 2, 1],
-      [16, 2, 2],
-      [16, 2, 2]
+      [-7, 0, 1],
+      [7, 1, 1],
+      [7, 2, 1],
+      [7, 2, 0]
     ],
     "desc": "They leap high enough to snatch birds straight out of the sky. They'll leave claw marks on high places as a form of competition.",
-    "designer": 8,
+    "designer": 3,
     "evo_pose": [
       {
         "anim": "good",
@@ -2506,9 +2450,10 @@
     "growth": 0.8,
     "ha": 88,
     "hd": 99,
+    "hidden": false,
     "id": "serval",
     "isBaby": false,
-    "learnset": 7,
+    "learnset": 26,
     "learnset_randomize": -1,
     "loco": {
       "anim_min_speed": 0.2,
@@ -2538,12 +2483,6 @@
     "md": 30,
     "name": "Servace",
     "number": 8,
-    "partner_impact": {
-      "angle": 324.9587097168,
-      "anim": "good",
-      "x": 400.5,
-      "y": -480
-    },
     "prev_ids": ["decoy", "hinata"],
     "recruit": {
       "conditions": [
@@ -2553,7 +2492,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 7
+          "type": 8
         },
         {
           "event": null,
@@ -2561,7 +2500,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 7
+          "type": 8
         },
         {
           "event": null,
@@ -2569,22 +2508,36 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 7
+          "type": 8
         }
       ],
-      "description": "Launch 3+ attacks from the net"
+      "description": "Attack 3+ times from the front lane"
     },
-    "roamer_style": 1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
     "scale": [0.85, 1],
     "shiny": [
       {
         "array": [
           {
-            "color": 6974207,
+            "color": 9540095,
             "x": 0
           },
           {
-            "color": 8026879,
+            "color": 8355839,
             "x": 1
           }
         ]
@@ -2600,23 +2553,19 @@
       {
         "array": [
           {
-            "color": 4576767,
+            "color": 14942091,
             "x": 0.2533333333
-          },
-          {
-            "color": 44799,
-            "x": 0.8108333333
           }
         ]
       },
       {
         "array": [
           {
-            "color": 6842579,
+            "color": 7477699,
             "x": 0
           },
           {
-            "color": 5599429,
+            "color": 16749779,
             "x": 1
           }
         ]
@@ -2630,20 +2579,17 @@
         ]
       }
     ],
-    "splash_pos": {
-      "angle": 338.2994689941,
-      "anim": "ready",
-      "x": -25.5,
-      "y": -202.5
-    },
-    "spr": 62,
+    "spr": 77,
+    "spr_alt": [],
     "tamecond": null,
-    "tamelvl": 4,
+    "tamelvl": 3,
     "tyield": ["ba", 2]
   },
   "shroom1": {
     "ability": ["tagheal", "fieldclear"],
     "ability_hidden": true,
+    "allowedInPromo": true,
+    "animator": 8,
     "attklist": [
       "careful",
       "bomb",
@@ -2659,30 +2605,21 @@
       "protect",
       "rest",
       "fieldclear",
-      "mark",
       "preblock",
       "substitute",
+      "mark",
       "lifepass",
       "callout",
-      "set"
+      "set",
+      "chill",
+      "sweatup"
     ],
     "attklist_randomize": -1,
     "ba": 45,
-    "ball_impact_pos": {
-      "x": 43.5,
-      "y": -177.3399014778
-    },
-    "ball_miss_pos": {
-      "x": 119,
-      "y": -121
-    },
-    "ball_ready_pos": {
-      "x": 214.5,
-      "y": -224.4616467277
-    },
     "base_exp": 117.4,
     "bd": 50,
     "body_color_index": 0,
+    "colormeta": null,
     "colors": [
       {
         "array": [
@@ -2755,12 +2692,12 @@
     ],
     "combos": [
       [46, 0, 12],
-      [49, 1, 1, 8, 1, 0.25],
+      [49, 1, 1, 8, 1, 0.3],
       [49, 1, 1, 8, 1, 1],
-      [49, 2, 1, 8, 2, 0.25]
+      [49, 2, 1, 8, 2, 0.3]
     ],
     "desc": "Its body is covered in microscopic fungal feelers, making it feel sticky. They tend to all varieties of plant life.",
-    "designer": 2,
+    "designer": 1,
     "evo_pose": [
       {
         "anim": "good",
@@ -2789,9 +2726,10 @@
     "growth": 1,
     "ha": 43,
     "hd": 67,
+    "hidden": false,
     "id": "shroom1",
     "isBaby": true,
-    "learnset": 0,
+    "learnset": 19,
     "learnset_randomize": -1,
     "loco": {
       "anim_min_speed": 0.2,
@@ -2813,7 +2751,7 @@
       "move_speed_start": -0.66,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [8, 9, 10, 11, 12, 13, 14, 15],
-      "randomize_idle": false,
+      "randomize_idle": 0,
       "squishiness": 0.2,
       "stretchiness": 0.2
     },
@@ -2821,12 +2759,6 @@
     "md": 55,
     "name": "Sprecko",
     "number": 1,
-    "partner_impact": {
-      "angle": 310.0793457031,
-      "anim": "volley",
-      "x": 120.75,
-      "y": -64.8557353976
-    },
     "prev_ids": ["tree1"],
     "recruit": {
       "conditions": [
@@ -2838,12 +2770,26 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 32
+          "type": 37
         }
       ],
       "description": "Create any type of field effect"
     },
-    "roamer_style": 1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -2915,13 +2861,8 @@
         ]
       }
     ],
-    "splash_pos": {
-      "angle": 339.3672485352,
-      "anim": "ready",
-      "x": 85,
-      "y": -112
-    },
-    "spr": 4,
+    "spr": 6,
+    "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["hd", 1]

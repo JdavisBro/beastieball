@@ -1,6 +1,5 @@
-export const LEARN_SETS: Array<Array<[string, number]>> = [
-  [
-    // Sprecko
+export const LEARN_SETS: {[key: number]: Array<[string, number]>} = {
+  19: [ // Sprecko
     ["callout", 1],
     ["careful", 1],
     ["refresh", 6],
@@ -14,8 +13,7 @@ export const LEARN_SETS: Array<Array<[string, number]>> = [
     ["allyrush", 39],
     ["healhit2", 43],
   ],
-  [
-    // Kichik
+  20: [ // Kichik
     ["rush", 1],
     ["starterbody", 1],
     ["defheal", 7],
@@ -29,8 +27,7 @@ export const LEARN_SETS: Array<Array<[string, number]>> = [
     ["preblock", 35],
     ["superpower", 41],
   ],
-  [
-    // Axolati
+  21: [ // Axolati
     ["cheer", 1],
     ["pepshot", 1],
     ["myheartpass", 7],
@@ -42,8 +39,8 @@ export const LEARN_SETS: Array<Array<[string, number]>> = [
     ["introduction", 32],
     ["commit", 36],
     ["healbell", 41],
-  ], // Bildit
-  [
+  ],
+  22: [ // Bildit
     ["dig", 1],
     ["startermind", 1],
     ["allyrush", 7],
@@ -55,8 +52,8 @@ export const LEARN_SETS: Array<Array<[string, number]>> = [
     ["jazzpass", 33],
     ["dump", 37],
     ["mindup", 41],
-  ], // Shooga
-  [
+  ],
+  23: [ // Shooga
     ["bench", 1],
     ["bounce", 1],
     ["rocksmash", 6],
@@ -69,8 +66,8 @@ export const LEARN_SETS: Array<Array<[string, number]>> = [
     ["construct", 33],
     ["vigor", 38],
     ["batonpass", 43],
-  ], // Sefren
-  [
+  ],
+  24: [ // Sefren
     ["tailwind", 1],
     ["starterheart", 1],
     ["protect", 6],
@@ -82,8 +79,8 @@ export const LEARN_SETS: Array<Array<[string, number]>> = [
     ["bellydrum", 37],
     ["backswitch", 43],
     ["cut", 48],
-  ], // Rookee
-  [
+  ],
+  25: [ // Rookee
     ["lowattks", 1],
     ["startermind", 1],
     ["taunt", 5],
@@ -97,8 +94,8 @@ export const LEARN_SETS: Array<Array<[string, number]>> = [
     ["trap", 37],
     ["spitball", 40],
     ["rollshot", 45],
-  ], // Servace
-  [
+  ],
+  26: [ // Servace
     ["feint", 1],
     ["bounce", 1],
     ["rush", 7],
@@ -110,8 +107,8 @@ export const LEARN_SETS: Array<Array<[string, number]>> = [
     ["switch", 41],
     ["mark", 47],
     ["rushattack", 52],
-  ], // Diggum
-  [
+  ],
+  27: [ // Diggum
     ["dig", 1],
     ["pepshot", 1],
     ["allyrush", 5],
@@ -123,8 +120,8 @@ export const LEARN_SETS: Array<Array<[string, number]>> = [
     ["followme", 36],
     ["lifepass", 40],
     ["libero", 46],
-  ], // Cherrily
-  [
+  ],
+  28: [ // Cherrily
     ["starterbody", 1],
     ["cheer", 1],
     ["crowd", 6],
@@ -136,8 +133,8 @@ export const LEARN_SETS: Array<Array<[string, number]>> = [
     ["introduction", 36],
     ["swordsdance", 40],
     ["batonpass", 47],
-  ], // Skibble
-  [
+  ],
+  29: [ // Skibble
     ["bdefup", 1],
     ["starterbody", 1],
     ["rocksmash", 5],
@@ -150,4 +147,4 @@ export const LEARN_SETS: Array<Array<[string, number]>> = [
     ["rocket", 38],
     ["distraction", 42],
   ],
-];
+};

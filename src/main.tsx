@@ -32,5 +32,5 @@ createRoot(container).render(
     <Suspense fallback={<Loading />}>
       <RouterProvider router={createBrowserRouter(routes)} />
     </Suspense>
-  </StrictMode>
+  </StrictMode>,
 );

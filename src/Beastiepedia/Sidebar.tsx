@@ -22,7 +22,7 @@ export default function Sidebar(props: Props): React.ReactElement {
         beastiedata={value}
         selected={beastieid == key}
         onToggleSidebarVisibility={() => props.onToggleSidebarVisibility()}
-      ></SidebarBeastie>
+      ></SidebarBeastie>,
     );
   });
   return <div className={style}>{beasties}</div>;

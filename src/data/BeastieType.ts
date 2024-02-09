@@ -121,19 +121,19 @@ export type BeastieType = {
     description: string;
   };
   roamer_style: {
-    _name: string,
-    can_react: boolean,
-    can_socialize: boolean,
-    can_volley: boolean,
-    cancel_on_player_invincible: boolean,
-    checking_player_distance: boolean,
-    colliding: boolean,
-    default_locomote: boolean,
-    flying: boolean,
-    interact_force: boolean,
-    render_go_direction: boolean,
-    render_guard_radius: boolean,
-    seeking_interact: boolean
+    _name: string;
+    can_react: boolean;
+    can_socialize: boolean;
+    can_volley: boolean;
+    cancel_on_player_invincible: boolean;
+    checking_player_distance: boolean;
+    colliding: boolean;
+    default_locomote: boolean;
+    flying: boolean;
+    interact_force: boolean;
+    render_go_direction: boolean;
+    render_guard_radius: boolean;
+    seeking_interact: boolean;
   };
   scale: Array<number>;
   // moved

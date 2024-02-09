@@ -78,7 +78,7 @@ export default function MoveList(props: Props): React.ReactElement {
         selected={selected == move}
         onSelect={() => setSelected(move)}
         key={move}
-      ></MoveText>
+      ></MoveText>,
     );
   }
 
@@ -94,7 +94,7 @@ export default function MoveList(props: Props): React.ReactElement {
           selected={selected == move}
           onSelect={() => setSelected(move)}
           key={move}
-        ></MoveText>
+        ></MoveText>,
       );
     }
   }

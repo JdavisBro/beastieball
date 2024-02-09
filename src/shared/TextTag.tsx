@@ -23,7 +23,7 @@ export default function TextTag(props: Props): React.ReactElement[] {
         out.push(
           <span className={styles.texttagnobreak} key={i}>
             {nobreakelem}
-          </span>
+          </span>,
         );
       }
     } else {
@@ -50,7 +50,7 @@ export default function TextTag(props: Props): React.ReactElement[] {
                 key={i}
                 className={styles.smallimage}
                 src={`/gameassets/${tag}/${value}.png`}
-              />
+              />,
             );
           } else {
             out.push(
@@ -58,7 +58,7 @@ export default function TextTag(props: Props): React.ReactElement[] {
                 key={i}
                 className={styles.smallimage}
                 src={`/gameassets/${tag}/${value}.png`}
-              />
+              />,
             );
           }
           value = "";

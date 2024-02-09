@@ -23,8 +23,10 @@
   width: 64px;
   height: 100%;
   align-items: flex-end;
-  background: linear-gradient(to right, var(--move-color), var(--move-color)),
-    no-repeat var(--move-url), linear-gradient(to right, #000000, #000000);
+  background:
+    linear-gradient(to right, var(--move-color), var(--move-color)),
+    no-repeat var(--move-url),
+    linear-gradient(to right, #000000, #000000);
   background-blend-mode: multiply, normal;
 }
 

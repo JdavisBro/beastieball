@@ -1,25 +1,16 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import setupWebGL, { setColorUniforms, setImage } from "./WebGL";
+import {getColorInBeastieColors, hexToRgb} from "../../utils/color"; 
 import styles from "../Content.module.css";
 import type { BeastieType } from "../../data/BeastieType";
 import vertex from "./vertex.glsl?raw";
 import fragment from "./fragment.glsl?raw";
+import ColorTabs from "./ColorTabs";
 
 type Props = {
   beastiedata: BeastieType;
 };
-
-function hexToRgb(hex: string) {
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result
-    ? [
-        parseInt(result[1], 16) / 255,
-        parseInt(result[2], 16) / 255,
-        parseInt(result[3], 16) / 255,
-      ]
-    : [0, 0, 0];
-}
 
 export default function ContentPreview(props: Props): React.ReactNode {
   const beastiedata = props.beastiedata;
@@ -53,7 +44,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
   }, [canvasRef.current]);
 
   useEffect(() => {
-    console.log(colors[0]);
     if (glRef.current && programRef.current) {
       setColorUniforms(glRef.current, programRef.current, colors);
     }
@@ -82,14 +72,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         height={1000}
         ref={canvasRef}
       />
-      {[0, 1, 2, 3, 4, 5].map((v) => (
-        <input
-          type="color"
-          onChange={(e) => {
-            colorChange(v, hexToRgb(e.target.value));
-          }}
-        />
-      ))}
+      <ColorTabs beastiedata={props.beastiedata} colorChange={colorChange} />
     </div>
   );
 }

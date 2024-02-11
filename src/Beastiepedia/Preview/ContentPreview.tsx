@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import setupWebGL, { setColorUniforms, setImage } from "./WebGL";
-import { getColorInBeastieColors, hexToRgb } from "../../utils/color";
 import styles from "../Content.module.css";
 import type { BeastieType } from "../../data/BeastieType";
 import vertex from "./vertex.glsl?raw";

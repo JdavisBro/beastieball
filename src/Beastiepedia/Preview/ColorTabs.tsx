@@ -20,7 +20,6 @@ export default function ColorTabs(props: Props): React.ReactNode {
     ]);
 
     const setBeastieColor = (tab_index: number, color_index: number, color: number) => {
-        console.log(color_index, color)
         tabValues.current[tab_index][color_index] = color;
         props.colorChange(color_index, getColorInBeastieColors(color, props.beastiedata.colors[color_index].array));
     }

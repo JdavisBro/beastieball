@@ -106,8 +106,6 @@ export default function TextTag(props: Props): React.ReactElement[] {
     }
   }
 
-  console.log(text);
-
   if (value != "") {
     addSpan(text.length, true);
   }

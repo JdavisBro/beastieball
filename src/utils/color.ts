@@ -24,9 +24,7 @@ export function getColorInBeastieColors(x: number, colorset: BeastieColorSet): n
     if (x == 0) {return bgrDecimalToRgb(colorset[0].color)}
     if (x == 1) {return bgrDecimalToRgb(colorset[colorset.length - 1].color)}
     let range: number[] = []
-    console.log(x)
     colorset.some((value, index) => {
-        console.log(value, index)
         if (x < value.x) {
             if (index == 0) {
                 range = [index]
@@ -44,8 +42,6 @@ export function getColorInBeastieColors(x: number, colorset: BeastieColorSet): n
     })
     if (range.length == 0) {return bgrDecimalToRgb(colorset[colorset.length-1].color);} // if we don't have a range then x is larger than all of the color.x's so use last
     if (range.length == 1) {return bgrDecimalToRgb(colorset[range[0]].color);}
-
-    console.log(range)
     const lowerColor = bgrDecimalToRgb(colorset[range[0]].color)
     const upperColor = bgrDecimalToRgb(colorset[range[1]].color)
     const w2 = (x - colorset[range[0]].x) / (colorset[range[1]].x - colorset[range[0]].x)

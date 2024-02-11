@@ -3,7 +3,7 @@ export default function setupWebGL(
   vertex: string,
   fragment: string,
 ) {
-  const gl = canvas.getContext("webgl");
+  const gl = canvas.getContext("webgl", {preserveDrawingBuffer: true});
   if (!gl) {
     throw Error("No WebGL.");
   }

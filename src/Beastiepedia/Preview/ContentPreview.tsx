@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import setupWebGL, { setColorUniforms, setImage } from "./WebGL";
-import {getColorInBeastieColors, hexToRgb} from "../../utils/color"; 
+import { getColorInBeastieColors, hexToRgb } from "../../utils/color";
 import styles from "../Content.module.css";
 import type { BeastieType } from "../../data/BeastieType";
 import vertex from "./vertex.glsl?raw";
@@ -63,6 +63,14 @@ export default function ContentPreview(props: Props): React.ReactNode {
     [setColors],
   );
 
+  const downloadImage = useCallback(() => {
+    if (!canvasRef.current) {return;}
+    const a = document.createElement("a");
+    a.download = `${props.beastiedata.name}.png`;
+    a.href = canvasRef.current.toDataURL("image/png");
+    a.click();
+  }, [props.beastiedata.name])
+
   return (
     <div className={styles.preview}>
       <div className={styles.inner}>{beastiedata.name}</div>
@@ -72,6 +80,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         height={1000}
         ref={canvasRef}
       />
+      <button onClick={downloadImage}>Save PNG</button>
       <ColorTabs beastiedata={props.beastiedata} colorChange={colorChange} />
     </div>
   );

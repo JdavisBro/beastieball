@@ -1,0 +1,60 @@
+.tabselect {
+    width: fit-content;
+    margin-left: 4%;
+    height: 32px;
+    position: relative;
+    background-color: red;
+    clip-path: polygon(4px 0, 100% 0, calc(100% - 4px) 100%, 0% 100%);
+    z-index: 1;
+}
+
+.tabselect > button {
+    background-color: transparent;
+    transition: background-color 0.2s;
+    border: none;
+    clip-path: polygon(4px 0, 100% 0, calc(100% - 4px) 100%, 0% 100%);
+    height: 100%;
+}
+
+.tabselect > button:hover {
+    background-color: rgba(0,0,0,0.6);
+}
+
+.selectedtab {
+    background-color: rgba(0, 191, 197, 0.4) !important;
+}
+.selectedtab:hover {
+    background-color: rgba(0, 191, 197, 0.8) !important;
+}
+
+.tab {
+    position: relative;
+    top: -12px;
+    background-color: teal;
+    clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);
+    width: 100%;
+    padding: 16px 0 1px 0;
+}
+
+.colorslider {
+    margin-left: 4%;
+    margin-bottom: 6px;
+    width: 92%;
+    border-radius: 6px;
+}
+
+.colorslider > input {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.colorslider > input::-ms-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.customcolor {
+    margin-left: 4%;
+}

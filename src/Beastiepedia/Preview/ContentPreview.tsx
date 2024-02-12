@@ -24,21 +24,24 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const glRef = useRef<WebGLRenderingContext | null>(null);
   const programRef = useRef<WebGLProgram | null>(null);
+  const [imageURL, setImageURL] = useState<string>(
+    "/gameassets/sprDefaultbeastie/0.png",
+  );
 
   useEffect(() => {
     if (canvasRef.current) {
-      var newGl = setupWebGL(canvasRef.current, vertex, fragment);
+      const newGl = setupWebGL(canvasRef.current, vertex, fragment);
       glRef.current = newGl.gl;
       programRef.current = newGl.program;
-      var im = new Image();
-      im.src = "/gameassets/sprDefaultbeastie/0.png";
+      const im = new Image();
+      im.src = imageURL;
       im.addEventListener("load", () => {
         if (glRef.current) {
           setImage(glRef.current, im);
         }
       });
     }
-  }, [canvasRef.current]);
+  }, [imageURL]);
 
   useEffect(() => {
     if (glRef.current && programRef.current) {

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import BeastieColorSlider from "./BeastieColorSlider";
 import styles from "./ColorTabs.module.css";
@@ -26,27 +26,32 @@ export default function ColorTabs(props: Props): React.ReactNode {
     ),
   ]);
 
-  const setBeastieColor = (
-    tab_index: number,
-    color_index: number,
-    color: number,
-  ) => {
-    tabValues.current[tab_index][color_index] = color;
-    props.colorChange(
-      color_index,
-      getColorInBeastieColors(
-        color,
-        tab_index == 0
-          ? props.beastiedata.colors[color_index].array
-          : props.beastiedata.shiny[color_index].array,
-      ),
-    );
-  };
+  const colorChange = props.colorChange;
+  const beastiedata = props.beastiedata;
 
-  const setCustomColor = (color_index: number, color: string) => {
-    tabValues.current[2][color_index] = color.replace(/^#/, "");
-    props.colorChange(color_index, hexToRgb(color));
-  };
+  const setBeastieColor = useCallback(
+    (tab_index: number, color_index: number, color: number) => {
+      tabValues.current[tab_index][color_index] = color;
+      colorChange(
+        color_index,
+        getColorInBeastieColors(
+          color,
+          tab_index == 0
+            ? beastiedata.colors[color_index].array
+            : beastiedata.shiny[color_index].array,
+        ),
+      );
+    },
+    [colorChange, beastiedata],
+  );
+
+  const setCustomColor = useCallback(
+    (color_index: number, color: string) => {
+      tabValues.current[2][color_index] = color.replace(/^#/, "");
+      colorChange(color_index, hexToRgb(color));
+    },
+    [colorChange],
+  );
 
   useEffect(() => {
     tabValues.current[currentTab].forEach((value, index) =>
@@ -54,7 +59,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
         ? setCustomColor(index, value)
         : setBeastieColor(currentTab, index, value),
     );
-  }, [currentTab, props.beastiedata.id]);
+  }, [currentTab, props.beastiedata.id, setCustomColor, setBeastieColor]);
 
   return (
     <>
@@ -84,6 +89,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
       >
         {colors.map((value) => (
           <BeastieColorSlider
+            key={value}
             colors={props.beastiedata.colors[value].array}
             value={tabValues.current[0][value]}
             handleColorChange={(color) => setBeastieColor(0, value, color)}
@@ -96,6 +102,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
       >
         {colors.map((value) => (
           <BeastieColorSlider
+            key={value}
             colors={props.beastiedata.shiny[value].array}
             value={tabValues.current[1][value]}
             handleColorChange={(color) => setBeastieColor(1, value, color)}
@@ -108,6 +115,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
       >
         {tabValues.current[2].map((value, index) => (
           <input
+            key={index}
             className={styles.customcolor}
             type="color"
             value={`#${value}`}

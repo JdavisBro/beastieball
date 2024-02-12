@@ -2,14 +2,14 @@
   height: 100%;
   width: 40%;
   float: left;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .info {
   height: 100%;
   width: 60%;
   float: left;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .inner {
@@ -26,11 +26,31 @@
 
 .varcontainer {
   width: fit-content;
-  background-color: teal;
+  color: black;
+  background-image: repeating-linear-gradient(
+    #ddd1bd,
+    #ddd1bd 4px,
+    #d5c9b5 4px,
+    #d5c9b5 8px
+  );
+  animation-name: bg-scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
   padding-top: 4px;
   padding-bottom: 6px;
-  clip-path: polygon(20px 0, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+  clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 100%, 5px 100%);
   margin-bottom: 10px;
+}
+
+@keyframes bg-scroll {
+  0% {
+    background-position-y: -2px;
+  }
+
+  100% {
+    background-position-y: -10px;
+  }
 }
 
 .header {

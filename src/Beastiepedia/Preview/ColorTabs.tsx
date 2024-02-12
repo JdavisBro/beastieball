@@ -2,7 +2,11 @@ import { useEffect, useRef, useState } from "react";
 
 import BeastieColorSlider from "./BeastieColorSlider";
 import styles from "./ColorTabs.module.css";
-import { bgrDecimalToHex, getColorInBeastieColors, hexToRgb } from "../../utils/color";
+import {
+  bgrDecimalToHex,
+  getColorInBeastieColors,
+  hexToRgb,
+} from "../../utils/color";
 import type { BeastieType } from "../../data/BeastieType";
 
 type Props = {
@@ -17,7 +21,9 @@ export default function ColorTabs(props: Props): React.ReactNode {
   const tabValues = useRef<[number[], number[], string[]]>([
     colors.map(() => 0.5),
     colors.map(() => 0.5),
-    colors.map((value) => bgrDecimalToHex(props.beastiedata.colors[value].array[0].color)),
+    colors.map((value) =>
+      bgrDecimalToHex(props.beastiedata.colors[value].array[0].color),
+    ),
   ]);
 
   const setBeastieColor = (
@@ -39,12 +45,16 @@ export default function ColorTabs(props: Props): React.ReactNode {
 
   const setCustomColor = (color_index: number, color: string) => {
     tabValues.current[2][color_index] = color.replace(/^#/, "");
-    props.colorChange(color_index, hexToRgb(color))
-  }
+    props.colorChange(color_index, hexToRgb(color));
+  };
 
   useEffect(() => {
-    tabValues.current[currentTab].forEach((value, index) => typeof value == "string" ? setCustomColor(index, value) : setBeastieColor(currentTab, index, value));
-  }, [currentTab])
+    tabValues.current[currentTab].forEach((value, index) =>
+      typeof value == "string"
+        ? setCustomColor(index, value)
+        : setBeastieColor(currentTab, index, value),
+    );
+  }, [currentTab, props.beastiedata.id]);
 
   return (
     <>
@@ -94,9 +104,16 @@ export default function ColorTabs(props: Props): React.ReactNode {
       </div>
       <div
         className={styles.tab}
-        style={{display: currentTab == 2 ? "block" : "none" }}
+        style={{ display: currentTab == 2 ? "block" : "none" }}
       >
-        {tabValues.current[2].map((value, index) => <input className={styles.customcolor} type="color" value={`#${value}`} onChange={(e) => setCustomColor(index, e.target.value)} />)}
+        {tabValues.current[2].map((value, index) => (
+          <input
+            className={styles.customcolor}
+            type="color"
+            value={`#${value}`}
+            onChange={(e) => setCustomColor(index, e.target.value)}
+          />
+        ))}
       </div>
     </>
   );

@@ -7,8 +7,28 @@
   height: fit-content;
   display: flex;
   margin-bottom: 8px;
-  background-color: teal;
-  clip-path: polygon(10px 0, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  color: black;
+  background-image: repeating-linear-gradient(
+    #ddd1bd,
+    #ddd1bd 4px,
+    #d5c9b5 4px,
+    #d5c9b5 8px
+  );
+  clip-path: polygon(0 0, calc(100% - 10px) 0%, 100% 100%, 10px 100%);
+  animation-name: bg-scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes bg-scroll {
+0% {
+  background-position-y: -2px;
+}
+
+100% {
+  background-position-y: -10px;
+}
 }
 
 .movelist {
@@ -34,7 +54,8 @@
 }
 
 .movetext.selected {
-  background-color: aqua;
+  background-color: rgba(34, 226, 226, 0.459);
+  border-radius: 4px;
 }
 
 .viewcontainer {

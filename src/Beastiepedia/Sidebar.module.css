@@ -1,5 +1,25 @@
 .selected {
-  background-color: aqua !important;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #ffaa55,
+    #ffaa55 10px,
+    #ff8e4a 10px,
+    #ff8e4a 20px
+  ) !important;
+  background-size: 200% 200%;
+  animation-name: selected-scroll;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes selected-scroll {
+  from {
+    background-position: -28px -28px;
+  }
+  to {
+    background-position: 0px 0px;
+  }
 }
 
 .beastie {
@@ -14,25 +34,13 @@
   margin-bottom: 10px;
 }
 
-.beastiediagL,
-.beastiediagR {
-  width: 5%;
-  height: 100%;
-  background-color: lightgrey;
-}
-
-.beastiediagL {
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 20% 100%);
-}
-
-.beastiediagR {
-  clip-path: polygon(0 0, 80% 0, 0 100%, 0% 100%);
-}
-
 .beastiecontent {
-  width: 90%;
+  width: 96%;
+  padding-left: 2%;
+  clip-path: polygon(0 0, 98% 1%, 100% 100%, 2% 99%);
   height: 100%;
-  background-color: lightgrey;
+  color: black;
+  background-color: white;
   display: flex;
 }
 

@@ -13,7 +13,14 @@ export default function BeastieColorSlider(props: Props) {
   );
   const gradient = `linear-gradient(90deg, ${gradient_args.join(", ")})`;
   return (
-    <div className={styles.colorslider} style={{ backgroundImage: gradient }}>
+    <div
+      className={styles.colorslider}
+      style={
+        props.colors.length > 1
+          ? { backgroundImage: gradient }
+          : { backgroundColor: `#${bgrDecimalToHex(props.colors[0].color)}` }
+      }
+    >
       <input
         type="range"
         min={0}

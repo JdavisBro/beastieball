@@ -15,15 +15,9 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
   const beastiedata = props.beastiedata;
   const selected = props.selected;
   const navigate = useNavigate();
-  const left = selected
-    ? `${styles.beastiediagL} ${styles.selected}`
-    : styles.beastiediagL;
   const content = selected
     ? `${styles.beastiecontent} ${styles.selected}`
     : styles.beastiecontent;
-  const right = selected
-    ? `${styles.beastiediagR} ${styles.selected}`
-    : styles.beastiediagR;
   function handleInteract() {
     navigate("/beastiepedia/" + beastiedata.name);
     props.onToggleSidebarVisibility();
@@ -38,7 +32,6 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
       onKeyDown={((event) => {if (event.key == "Enter") {handleInteract()}})}
       role="button"
     >
-      <div className={left}></div>
       <div className={content}>
         <img
           className={styles.image}
@@ -57,7 +50,6 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
           </div>
         </div>
       </div>
-      <div className={right}></div>
     </div>
   );
 }

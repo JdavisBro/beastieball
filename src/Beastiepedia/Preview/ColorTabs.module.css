@@ -1,60 +1,95 @@
 .tabselect {
-    width: fit-content;
-    margin-left: 4%;
-    height: 32px;
-    position: relative;
-    background-color: red;
-    clip-path: polygon(4px 0, 100% 0, calc(100% - 4px) 100%, 0% 100%);
-    z-index: 1;
+  width: fit-content;
+  margin-left: 2%;
+  height: 32px;
+  position: relative;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #000000,
+    #000000 10px,
+    #2e2e2e 10px,
+    #2e2e2e 20px
+  );
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+  z-index: 1;
 }
 
 .tabselect > button {
-    background-color: transparent;
-    transition: background-color 0.2s;
-    border: none;
-    clip-path: polygon(4px 0, 100% 0, calc(100% - 4px) 100%, 0% 100%);
-    height: 100%;
+  background-color: transparent;
+  transition: background-color 0.2s;
+  border: none;
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+  height: 100%;
 }
 
 .tabselect > button:hover {
-    background-color: rgba(0,0,0,0.6);
+  animation-name: button-hover;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes button-hover {
+  from {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  to {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }
 
 .selectedtab {
-    background-color: rgba(0, 191, 197, 0.4) !important;
-}
-.selectedtab:hover {
-    background-color: rgba(0, 191, 197, 0.8) !important;
+  background-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .tab {
-    position: relative;
-    top: -12px;
-    background-color: teal;
-    clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%);
-    width: 100%;
-    padding: 16px 0 1px 0;
+  position: relative;
+  top: -12px;
+  background-image: repeating-linear-gradient(
+    #ddd1bd,
+    #ddd1bd 4px,
+    #d5c9b5 4px,
+    #d5c9b5 8px
+  );
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 100%, 8px 100%);
+  width: 100%;
+  padding: 16px 0 1px 0;
+  animation-name: bg-scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes bg-scroll {
+  0% {
+    background-position-y: -2px;
+  }
+
+  100% {
+    background-position-y: -10px;
+  }
 }
 
 .colorslider {
-    margin-left: 4%;
-    margin-bottom: 6px;
-    width: 92%;
-    border-radius: 6px;
+  margin-left: 4%;
+  margin-bottom: 6px;
+  width: 92%;
+  padding: 0 4px 0 4px;
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
 }
 
 .colorslider > input {
-    margin: 0;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .colorslider > input::-ms-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .customcolor {
-    margin-left: 4%;
+  margin-left: 4%;
 }

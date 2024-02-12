@@ -63,16 +63,17 @@ export default function ContentPreview(props: Props): React.ReactNode {
   );
 
   const downloadImage = useCallback(() => {
-    if (!canvasRef.current) {return;}
+    if (!canvasRef.current) {
+      return;
+    }
     const a = document.createElement("a");
     a.download = `${props.beastiedata.name}.png`;
     a.href = canvasRef.current.toDataURL("image/png");
     a.click();
-  }, [props.beastiedata.name])
+  }, [props.beastiedata.name]);
 
   return (
     <div className={styles.preview}>
-      <div className={styles.inner}>{beastiedata.name}</div>
       <canvas
         className={styles.previewcanvas}
         width={1000}

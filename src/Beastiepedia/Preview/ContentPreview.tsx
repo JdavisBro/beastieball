@@ -12,8 +12,6 @@ type Props = {
 };
 
 export default function ContentPreview(props: Props): React.ReactNode {
-  const beastiedata = props.beastiedata;
-
   const [colors, setColors] = useState<number[][]>([
     [30 / 255, 80 / 255, 69 / 255],
     [32 / 255, 33 / 255, 79 / 255],

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 const getOrientation = (): boolean => {
-   
   return window.screen.height > window.screen.width;
 };
 
@@ -13,10 +12,8 @@ const useScreenOrientation = (): boolean => {
   };
 
   useEffect(() => {
-     
     window.addEventListener("resize", updateOrientation);
     return () => {
-       
       window.removeEventListener("resize", updateOrientation);
     };
   }, []);

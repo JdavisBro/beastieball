@@ -27,6 +27,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const [imageURL, setImageURL] = useState<string>(
     "/gameassets/sprDefaultbeastie/0.png",
   );
+  setImageURL; // see it's used :)
 
   useEffect(() => {
     if (canvasRef.current) {

@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
 import styles from "./Sidebar.module.css";
-import dummy from "../assets/dummy.png";
 import type { BeastieType } from "../data/BeastieType";
 
 type Props = {

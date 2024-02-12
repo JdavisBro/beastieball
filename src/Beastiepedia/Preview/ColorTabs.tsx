@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import BeastieColorSlider from "./BeastieColorSlider";
 import styles from "./ColorTabs.module.css";

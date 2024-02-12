@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const getOrientation = (): boolean => {
-  // eslint-disable-next-line no-undef
+   
   return window.screen.height > window.screen.width;
 };
 
@@ -13,10 +13,10 @@ const useScreenOrientation = (): boolean => {
   };
 
   useEffect(() => {
-    // eslint-disable-next-line no-undef
+     
     window.addEventListener("resize", updateOrientation);
     return () => {
-      // eslint-disable-next-line no-undef
+       
       window.removeEventListener("resize", updateOrientation);
     };
   }, []);

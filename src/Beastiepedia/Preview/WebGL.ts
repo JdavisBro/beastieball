@@ -36,7 +36,7 @@ export function setColorUniforms(
 }
 
 function createTexture(gl: WebGLRenderingContext) {
-  var texture = gl.createTexture();
+  const texture = gl.createTexture();
   gl.bindTexture(gl.TEXTURE_2D, texture);
 
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
@@ -52,9 +52,9 @@ export function setImage(gl: WebGLRenderingContext, image: HTMLImageElement) {
 }
 
 function draw(gl: WebGLRenderingContext) {
-  var primitiveType = gl.TRIANGLES;
-  var offset = 0;
-  var count = 6;
+  const primitiveType = gl.TRIANGLES;
+  const offset = 0;
+  const count = 6;
   gl.drawArrays(primitiveType, offset, count);
 }
 
@@ -67,11 +67,11 @@ function createPositionAttribute(
   const positions = [-1, -1, -1, 1, 1, 1, -1, -1, 1, 1, 1, -1];
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
   gl.enableVertexAttribArray(positionAttributeLocation);
-  var size = 2; // 2 components per iteration
-  var type = gl.FLOAT; // the data is 32bit floats
-  var normalize = false; // don't normalize the data
-  var stride = 0; // 0 = move forward size * sizeof(type) each iteration to get the next position
-  var offset = 0; // start at the beginning of the buffer
+  const size = 2; // 2 components per iteration
+  const type = gl.FLOAT; // the data is 32bit floats
+  const normalize = false; // don't normalize the data
+  const stride = 0; // 0 = move forward size * sizeof(type) each iteration to get the next position
+  const offset = 0; // start at the beginning of the buffer
   gl.vertexAttribPointer(
     positionAttributeLocation,
     size,
@@ -88,7 +88,7 @@ function createTexCoordAttribute(
   program: WebGLProgram,
 ) {
   const texCoordLocation = gl.getAttribLocation(program, "a_texCoord");
-  var texCoordBuffer = gl.createBuffer();
+  const texCoordBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, texCoordBuffer);
   gl.bufferData(
     gl.ARRAY_BUFFER,
@@ -99,11 +99,11 @@ function createTexCoordAttribute(
   );
   gl.enableVertexAttribArray(texCoordLocation);
   gl.bindBuffer(gl.ARRAY_BUFFER, texCoordBuffer);
-  var size = 2; // 2 components per iteration
-  var type = gl.FLOAT; // the data is 32bit floats
-  var normalize = false; // don't normalize the data
-  var stride = 0; // 0 = move forward size * sizeof(type) each iteration to get the next position
-  var offset = 0; // start at the beginning of the buffer
+  const size = 2; // 2 components per iteration
+  const type = gl.FLOAT; // the data is 32bit floats
+  const normalize = false; // don't normalize the data
+  const stride = 0; // 0 = move forward size * sizeof(type) each iteration to get the next position
+  const offset = 0; // start at the beginning of the buffer
   gl.vertexAttribPointer(
     texCoordLocation,
     size,
@@ -128,7 +128,7 @@ function createProgram(
   gl.attachShader(program, vertex_shader);
   gl.attachShader(program, fragment_shader);
   gl.linkProgram(program);
-  let success = gl.getProgramParameter(program, gl.LINK_STATUS);
+  const success = gl.getProgramParameter(program, gl.LINK_STATUS);
   if (!success) {
     gl.deleteProgram(program);
     throw Error(`Program link failed. ${gl.getProgramInfoLog(program)}`);
@@ -143,7 +143,7 @@ function createShader(gl: WebGLRenderingContext, type: number, source: string) {
   }
   gl.shaderSource(shader, source);
   gl.compileShader(shader);
-  let success = gl.getShaderParameter(shader, gl.COMPILE_STATUS);
+  const success = gl.getShaderParameter(shader, gl.COMPILE_STATUS);
   if (!success) {
     gl.deleteShader(shader);
     throw Error(`Shader compilation failed. ${gl.getShaderInfoLog(shader)}`);

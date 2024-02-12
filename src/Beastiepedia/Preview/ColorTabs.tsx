@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import BeastieColorSlider from "./BeastieColorSlider";
 import styles from "./ColorTabs.module.css";
@@ -30,7 +30,10 @@ function defaultColors(
 export default function ColorTabs(props: Props): React.ReactNode {
   const colorChange = props.colorChange;
   const beastiedata = props.beastiedata;
-  const colors = [...Array(beastiedata.colors.length).keys()];
+  const colors = useMemo(
+    () => [...Array(beastiedata.colors.length).keys()],
+    [beastiedata],
+  );
 
   const [currentTab, setCurrentTab] = useState(0);
   const tabValues = useRef<[number[], number[], string[]]>(
@@ -40,7 +43,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
   useEffect(() => {
     // reset colors on beastie change
     tabValues.current = defaultColors(colors, beastiedata);
-  }, [beastiedata]);
+  }, [beastiedata, colors]);
 
   const setBeastieColor = useCallback(
     (tab_index: number, color_index: number, color: number) => {

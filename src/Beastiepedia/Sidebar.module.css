@@ -6,11 +6,6 @@
     #ff8e4a 10px,
     #ff8e4a 20px
   ) !important;
-  background-size: 200% 200%;
-  animation-name: selected-scroll;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 
 @keyframes selected-scroll {
@@ -40,8 +35,19 @@
   clip-path: polygon(0 0, 98% 1%, 100% 100%, 2% 99%);
   height: 100%;
   color: black;
-  background-color: white;
   display: flex;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #ddd1bd,
+    #ddd1bd 10px,
+    #d5c9b5 10px,
+    #d5c9b5 20px
+  );
+  background-size: 200% 200%;
+  animation-name: selected-scroll;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .image {

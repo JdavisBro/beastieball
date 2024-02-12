@@ -1,3 +1,8 @@
+.scrollcontainer {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 .container {
   background-image: repeating-linear-gradient(
     #ddd1bd,

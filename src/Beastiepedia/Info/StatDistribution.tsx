@@ -40,56 +40,58 @@ type Props = {
 export default function StatDistribution(props: Props): React.ReactElement {
   const beastiedata = props.beastiedata;
   return (
-    <div className={styles.container}>
-      <div className={styles.statcontainer}>
-        <div className={styles.barcontainer}>POW</div>
-        <StatBar
-          value={beastiedata.ba}
-          right={false}
-          color={TypeColor.Body}
-        ></StatBar>
-        <StatBar
-          value={beastiedata.ha}
-          right={false}
-          color={TypeColor.Spirit}
-        ></StatBar>
-        <StatBar
-          value={beastiedata.ma}
-          right={false}
-          color={TypeColor.Mind}
-        ></StatBar>
-      </div>
-      <div className={styles.midblock}>
-        <div className={styles.barcontainer}></div>
-        <div className={styles.barcontainer}>
-          <img src="/gameassets/sprIcon/0.png" />
+    <div className={styles.scrollcontainer}>
+      <div className={styles.container}>
+        <div className={styles.statcontainer}>
+          <div className={styles.barcontainer}>POW</div>
+          <StatBar
+            value={beastiedata.ba}
+            right={false}
+            color={TypeColor.Body}
+          ></StatBar>
+          <StatBar
+            value={beastiedata.ha}
+            right={false}
+            color={TypeColor.Spirit}
+          ></StatBar>
+          <StatBar
+            value={beastiedata.ma}
+            right={false}
+            color={TypeColor.Mind}
+          ></StatBar>
         </div>
-        <div className={styles.barcontainer}>
-          <img src="/gameassets/sprIcon/1.png" />
+        <div className={styles.midblock}>
+          <div className={styles.barcontainer}></div>
+          <div className={styles.barcontainer}>
+            <img src="/gameassets/sprIcon/0.png" />
+          </div>
+          <div className={styles.barcontainer}>
+            <img src="/gameassets/sprIcon/1.png" />
+          </div>
+          <div className={styles.barcontainer}>
+            <img src="/gameassets/sprIcon/2.png" />
+          </div>
         </div>
-        <div className={styles.barcontainer}>
-          <img src="/gameassets/sprIcon/2.png" />
+        <div className={styles.statcontainer}>
+          <div className={`${styles.barcontainer} ${styles.barcontainerright}`}>
+            DEF
+          </div>
+          <StatBar
+            value={beastiedata.bd}
+            right={true}
+            color={TypeColor.Body}
+          ></StatBar>
+          <StatBar
+            value={beastiedata.hd}
+            right={true}
+            color={TypeColor.Spirit}
+          ></StatBar>
+          <StatBar
+            value={beastiedata.md}
+            right={true}
+            color={TypeColor.Mind}
+          ></StatBar>
         </div>
-      </div>
-      <div className={styles.statcontainer}>
-        <div className={`${styles.barcontainer} ${styles.barcontainerright}`}>
-          DEF
-        </div>
-        <StatBar
-          value={beastiedata.bd}
-          right={true}
-          color={TypeColor.Body}
-        ></StatBar>
-        <StatBar
-          value={beastiedata.hd}
-          right={true}
-          color={TypeColor.Spirit}
-        ></StatBar>
-        <StatBar
-          value={beastiedata.md}
-          right={true}
-          color={TypeColor.Mind}
-        ></StatBar>
       </div>
     </div>
   );

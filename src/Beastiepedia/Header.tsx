@@ -6,6 +6,8 @@ type Props = {
   beastiename: string | undefined;
   sidebarvisibility: boolean;
   onSetSidebarVisibility: (visible: boolean) => void;
+  noAnimations: boolean;
+  onSetNoAnimations: (noAnim: boolean) => void;
 };
 
 export default function Header(props: Props): React.ReactNode {
@@ -32,6 +34,19 @@ export default function Header(props: Props): React.ReactNode {
       <div className={styles.title}>
         {props.beastiename !== undefined ? `${props.beastiename} - ` : ""}
         Beastiepedia
+      </div>
+      <div className={styles.animationtoggle}>
+        <input
+          defaultChecked={props.noAnimations}
+          id="noAnim"
+          type="checkbox"
+          onChange={(e) => props.onSetNoAnimations(e.target.checked)}
+        />
+        <label htmlFor="noAnim">
+          Disable
+          <br />
+          Animations
+        </label>
       </div>
       <div className={styles.externallinkcontainer}>
         <ExternalLinks></ExternalLinks>

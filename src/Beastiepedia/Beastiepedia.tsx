@@ -9,10 +9,17 @@ import styles from "./Beastiepedia.module.css";
 import useTitle from "../utils/useTitle";
 import useScreenOrientation from "../utils/useScreenOrientation";
 import BEASTIE_DATA from "../data/Beastiedata";
+import { useLocalStorage } from "usehooks-ts";
 
 export default function Beastiepedia(): React.ReactNode {
   const orientation = useScreenOrientation();
   const { beastie }: { beastie?: string } = useParams();
+  const [noAnimations, setNoAnimations] = useLocalStorage(
+    "noAnimations",
+    false,
+    { serializer: String, deserializer: (value) => value == "true" },
+  );
+
   let beastieid: string | null = null;
 
   if (beastie !== null) {
@@ -39,7 +46,11 @@ export default function Beastiepedia(): React.ReactNode {
   const beastiedata = beastieid != null ? BEASTIE_DATA.get(beastieid) : null;
 
   return (
-    <div className={styles.container}>
+    <div
+      className={
+        noAnimations ? `${styles.container} ${styles.noanim}` : styles.container
+      }
+    >
       <OpenGraph
         title={title}
         image={"dummy.png"}
@@ -56,6 +67,8 @@ export default function Beastiepedia(): React.ReactNode {
         onSetSidebarVisibility={(visible: boolean) =>
           setSidebarvisible(visible)
         }
+        noAnimations={noAnimations}
+        onSetNoAnimations={(noAnim: boolean) => setNoAnimations(noAnim)}
       ></Header>
       <div className={styles.belowheader}>
         <Sidebar

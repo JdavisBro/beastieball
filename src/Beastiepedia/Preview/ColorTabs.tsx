@@ -14,20 +14,33 @@ type Props = {
   colorChange: (change_index: number, color: number[]) => void;
 };
 
-export default function ColorTabs(props: Props): React.ReactNode {
-  const colors = [...Array(props.beastiedata.colors.length).keys()];
-
-  const [currentTab, setCurrentTab] = useState(0);
-  const tabValues = useRef<[number[], number[], string[]]>([
+function defaultColors(
+  colors: number[],
+  beastiedata: BeastieType,
+): [number[], number[], string[]] {
+  return [
     colors.map(() => 0.5),
     colors.map(() => 0.5),
     colors.map((value) =>
-      bgrDecimalToHex(props.beastiedata.colors[value].array[0].color),
+      bgrDecimalToHex(beastiedata.colors[value].array[0].color),
     ),
-  ]);
+  ];
+}
 
+export default function ColorTabs(props: Props): React.ReactNode {
   const colorChange = props.colorChange;
   const beastiedata = props.beastiedata;
+  const colors = [...Array(beastiedata.colors.length).keys()];
+
+  const [currentTab, setCurrentTab] = useState(0);
+  const tabValues = useRef<[number[], number[], string[]]>(
+    defaultColors(colors, beastiedata),
+  );
+
+  useEffect(() => {
+    // reset colors on beastie change
+    tabValues.current = defaultColors(colors, beastiedata);
+  }, [beastiedata]);
 
   const setBeastieColor = useCallback(
     (tab_index: number, color_index: number, color: number) => {

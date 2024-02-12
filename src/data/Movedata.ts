@@ -958,10 +958,34 @@ MOVE_DATA.set("???", {
     power: null,
   })
   .set("sweatup", {
-    name: "",
-    desc: "",
-    type: 0,
+    name: "Heat Up",
+    desc: "Target feels +1 [sprStatus,6]SWEATY (losing stamina).",
+    type: Type.Defence,
     power: null,
+  })
+  .set("skillswap", {
+    name: "Trait Dance",
+    desc: "Swaps Trait with target.",
+    type: Type.Support,
+    power: null,
+  })
+  .set("tool", {
+    name: "Tool",
+    desc: "Auto-targets nearest opponent.",
+    type: Type.Mind,
+    power: 95,
+  })
+  .set("nice", {
+    name: "Nice Shot",
+    desc: "ATTACK. Easy recieve.",
+    type: Type.Body,
+    power: 95,
+  })
+  .set("snore", {
+    name: "Relentless",
+    desc: "ATTACK. Can use even when [sprStatus,10]TIRED.",
+    type: Type.Spirit,
+    power: 50,
   });
 
 export default MOVE_DATA;

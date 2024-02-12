@@ -35,7 +35,7 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
       <div className={content}>
         <img
           className={styles.image}
-          src={dummy}
+          src={`/icons/${beastiedata.name}.png`}
           alt={`${beastiedata.name} Icon`}
         />
         <div className={styles.name}>

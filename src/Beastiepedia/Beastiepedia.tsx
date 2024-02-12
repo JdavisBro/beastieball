@@ -53,7 +53,7 @@ export default function Beastiepedia(): React.ReactNode {
     >
       <OpenGraph
         title={title}
-        image={"dummy.png"}
+        image={beastiedata ? `icons/${beastiedata.name}.png` : "ball.png"}
         url={beastieid === null ? `beastiepedia/` : `beastiepedia/${beastie}`}
         description={
           beastiedata != null

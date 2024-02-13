@@ -9,10 +9,16 @@ export default function setupWebGL(
   canvas: HTMLCanvasElement,
   vertex: string,
   fragment: string,
+  oldgl: WebGLRenderingContext | null = null,
 ) {
-  const gl = canvas.getContext("webgl", { preserveDrawingBuffer: true });
-  if (!gl) {
-    throw new WebGLError("No WebGL.");
+  let gl;
+  if (oldgl) {
+    gl = oldgl;
+  } else {
+    gl = canvas.getContext("webgl", { preserveDrawingBuffer: true });
+    if (!gl) {
+      throw new WebGLError("No WebGL.");
+    }
   }
   const program = createProgram(gl, vertex, fragment);
 

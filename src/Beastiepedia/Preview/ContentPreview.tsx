@@ -38,10 +38,16 @@ export default function ContentPreview(props: Props): React.ReactNode {
   }, [props.beastiedata]);
 
   useEffect(() => {
-    if (canvasRef.current) {
+    if (
+      canvasRef.current &&
+      ((glRef.current &&
+        glRef.current.getError() == glRef.current.CONTEXT_LOST_WEBGL) ||
+        !glRef.current ||
+        !programRef.current)
+    ) {
       let newGl;
       try {
-        newGl = setupWebGL(canvasRef.current, vertex, fragment);
+        newGl = setupWebGL(canvasRef.current, vertex, fragment, glRef.current);
       } catch (error) {
         if (error instanceof WebGLError) {
           console.log(`WebGL Error: ${error.message}`);
@@ -53,6 +59,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
       }
       glRef.current = newGl.gl;
       programRef.current = newGl.program;
+    }
+    if (programRef.current) {
       const im = new Image();
       im.src = imageURL;
       im.addEventListener("load", () => {

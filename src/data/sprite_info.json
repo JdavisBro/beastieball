@@ -1,0 +1,2202 @@
+[
+  {
+    "name": "sprMap_ambestone_west_cliff",
+    "width": 157,
+    "height": 337
+  },
+  {
+    "name": "sprFanbro",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprBilby2",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "verbena",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprExclam",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprIbis",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprShroom1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMode",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprOutfitcategory",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprRocklizard1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprTex_tinysprig",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprTrent",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprCompass",
+    "width": 167,
+    "height": 164
+  },
+  {
+    "name": "sprCarlos",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprNo",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprMap_park_south",
+    "width": 302,
+    "height": 140
+  },
+  {
+    "name": "sprMap_city_seacave",
+    "width": 247,
+    "height": 314
+  },
+  {
+    "name": "spring_rider",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprTypecursor",
+    "width": 3,
+    "height": 50
+  },
+  {
+    "name": "sprCrown",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprTex_tinyfern",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprMap_seacave_side",
+    "width": 254,
+    "height": 110
+  },
+  {
+    "name": "sprKingarm",
+    "width": 889,
+    "height": 368
+  },
+  {
+    "name": "sprHypecrack",
+    "width": 224,
+    "height": 1080
+  },
+  {
+    "name": "sprVolleyA",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprPlayer_hat",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprWhooshlines",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprFrog2",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sptSweatdrop",
+    "width": 32,
+    "height": 64
+  },
+  {
+    "name": "sprSeabird1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprBunny",
+    "width": 600,
+    "height": 400
+  },
+  {
+    "name": "sprRocklizard2",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_pirate",
+    "width": 228,
+    "height": 275
+  },
+  {
+    "name": "sprTurtle1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMask",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprMap_forest_lake",
+    "width": 340,
+    "height": 226
+  },
+  {
+    "name": "sprStreamer",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprLyrebird",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_chartreuse",
+    "width": 434,
+    "height": 349
+  },
+  {
+    "name": "sprMap_shroom_path",
+    "width": 278,
+    "height": 332
+  },
+  {
+    "name": "sprMap_canyon_secret",
+    "width": 116,
+    "height": 280
+  },
+  {
+    "name": "sprMoney",
+    "width": 52,
+    "height": 64
+  },
+  {
+    "name": "sprHeart",
+    "width": 256,
+    "height": 225
+  },
+  {
+    "name": "sprAlien",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprFiredup",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "horseradish",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprMap_cliffs_railroad",
+    "width": 565,
+    "height": 169
+  },
+  {
+    "name": "sprMap_cliffs_rail_cave_east",
+    "width": 173,
+    "height": 141
+  },
+  {
+    "name": "sprHatguy",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprInspect",
+    "width": 164,
+    "height": 178
+  },
+  {
+    "name": "sprMap_jasper_cave_north_exit",
+    "width": 165,
+    "height": 120
+  },
+  {
+    "name": "sprMap_woods_north_rail",
+    "width": 190,
+    "height": 265
+  },
+  {
+    "name": "sprGiantTurtleLeg",
+    "width": 562,
+    "height": 632
+  },
+  {
+    "name": "sprMusicnote",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprOlm",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "spinwall_tall_standee",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprGymnast",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprVolleyB",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprShroom_s",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprTex_bush",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "sprYeti",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprEmoji_head",
+    "width": 81,
+    "height": 81
+  },
+  {
+    "name": "sprGrassstep",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprite0",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprClam",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_jasper_cave_west",
+    "width": 115,
+    "height": 202
+  },
+  {
+    "name": "sprSpeech",
+    "width": 1024,
+    "height": 1024
+  },
+  {
+    "name": "sprMap_reserve_loop",
+    "width": 165,
+    "height": 171
+  },
+  {
+    "name": "sprShark",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprBG_Railhouse",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "name": "sprMASTER_TEXTURE",
+    "width": 2048,
+    "height": 2048
+  },
+  {
+    "name": "sprMap_jasper_north",
+    "width": 258,
+    "height": 242
+  },
+  {
+    "name": "sprMillipede",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprHeadmaster",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprMap_beryl",
+    "width": 364,
+    "height": 241
+  },
+  {
+    "name": "sprMap_park_south_end",
+    "width": 216,
+    "height": 129
+  },
+  {
+    "name": "sprHitA",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprServal",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_park_edge",
+    "width": 215,
+    "height": 329
+  },
+  {
+    "name": "sprKettle1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprNoise_perlin",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprMap_wood_cave2",
+    "width": 220,
+    "height": 299
+  },
+  {
+    "name": "sprOptions",
+    "width": 130,
+    "height": 108
+  },
+  {
+    "name": "sprMap_beryl_railpath_south",
+    "width": 342,
+    "height": 177
+  },
+  {
+    "name": "sprBoost",
+    "width": 48,
+    "height": 64
+  },
+  {
+    "name": "sprFox1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMagpie1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_tiny_island",
+    "width": 248,
+    "height": 157
+  },
+  {
+    "name": "sprCheerleader",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprFankid",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprBall",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprite2",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprGfxtee",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprMap_wood_rail",
+    "width": 424,
+    "height": 171
+  },
+  {
+    "name": "sprMap_hometown_south_path",
+    "width": 392,
+    "height": 244
+  },
+  {
+    "name": "sprRiley",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprMap_central_station",
+    "width": 309,
+    "height": 136
+  },
+  {
+    "name": "sprMudskipper",
+    "width": 1000,
+    "height": 909
+  },
+  {
+    "name": "tree_mangrove",
+    "width": 423,
+    "height": 474
+  },
+  {
+    "name": "sprMap_cityhill",
+    "width": 223,
+    "height": 270
+  },
+  {
+    "name": "sprMap_park1",
+    "width": 246,
+    "height": 256
+  },
+  {
+    "name": "pandamus_tree",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprStatus",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprTame",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprJavier",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprRat",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMoth1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_city_rail_east",
+    "width": 341,
+    "height": 195
+  },
+  {
+    "name": "sprSwift",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_myth_forest1",
+    "width": 282,
+    "height": 251
+  },
+  {
+    "name": "sprFighter",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprMap_myth_forest2",
+    "width": 374,
+    "height": 230
+  },
+  {
+    "name": "sprGrade_tutorial",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprMap_park_north2",
+    "width": 243,
+    "height": 161
+  },
+  {
+    "name": "sprCycle",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprPsychic",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprDot",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprPlayer_hairb",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprSeal1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprType",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprNatalie",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprrubberplaque",
+    "width": 1980,
+    "height": 1080
+  },
+  {
+    "name": "sprMoth",
+    "width": 1000,
+    "height": 909
+  },
+  {
+    "name": "sprMap_canyon_3",
+    "width": 161,
+    "height": 290
+  },
+  {
+    "name": "sprBored1",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprTex_net",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprBG_TV",
+    "width": 2048,
+    "height": 1531
+  },
+  {
+    "name": "sprRewind",
+    "width": 511,
+    "height": 369
+  },
+  {
+    "name": "sprMap_beryl_railpath_west",
+    "width": 172,
+    "height": 167
+  },
+  {
+    "name": "sprRat_alt",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_reserve_1",
+    "width": 172,
+    "height": 305
+  },
+  {
+    "name": "sprGhost1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprKaz",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprCoral_b",
+    "width": 460,
+    "height": 462
+  },
+  {
+    "name": "sprMap_jasper_cave_south",
+    "width": 165,
+    "height": 170
+  },
+  {
+    "name": "tree_leaf_a_01",
+    "width": 2048,
+    "height": 2048
+  },
+  {
+    "name": "sprMap_seacave1",
+    "width": 193,
+    "height": 104
+  },
+  {
+    "name": "sprNatalia",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprDirtEff",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprTex_line",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprFrog",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprPossum2",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprPhone_hand_1_l",
+    "width": 406,
+    "height": 541
+  },
+  {
+    "name": "sprMap_shroomgrove",
+    "width": 219,
+    "height": 205
+  },
+  {
+    "name": "sprStump_icon",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "tree_rubber",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprMap_hometown_north",
+    "width": 374,
+    "height": 313
+  },
+  {
+    "name": "sprMap_dogpark",
+    "width": 311,
+    "height": 177
+  },
+  {
+    "name": "sprQuestion",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprPlatypus1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprValerie",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprStar",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprNoise_blue",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprCrownSeries",
+    "width": 1031,
+    "height": 613
+  },
+  {
+    "name": "sprCowboy",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprShy",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_rubberfarm",
+    "width": 471,
+    "height": 175
+  },
+  {
+    "name": "sprJoel",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprCaptain",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprMapX",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprTex_tinyleafy",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprMap_park_north3",
+    "width": 212,
+    "height": 144
+  },
+  {
+    "name": "sprMap_beryl_railpath_end",
+    "width": 192,
+    "height": 121
+  },
+  {
+    "name": "sprOlm1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_park_north4",
+    "width": 251,
+    "height": 140
+  },
+  {
+    "name": "sprMap_hometown_south_rail",
+    "width": 373,
+    "height": 281
+  },
+  {
+    "name": "sprGhost2",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_woods_east_cave",
+    "width": 186,
+    "height": 170
+  },
+  {
+    "name": "sprCoral_c",
+    "width": 1135,
+    "height": 1356
+  },
+  {
+    "name": "sprJackie",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprThought",
+    "width": 129,
+    "height": 120
+  },
+  {
+    "name": "sprScienceboss",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprClown1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_reserve_2",
+    "width": 197,
+    "height": 222
+  },
+  {
+    "name": "sprMap_park_north",
+    "width": 197,
+    "height": 207
+  },
+  {
+    "name": "sprSharkmon",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprJellyfish",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprQuestionInfo",
+    "width": 40,
+    "height": 40
+  },
+  {
+    "name": "sprKettle",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprPossum",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprLeagueman",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprMap_rockybeach",
+    "width": 482,
+    "height": 301
+  },
+  {
+    "name": "sprDiamond",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprMap_city_railalley",
+    "width": 173,
+    "height": 177
+  },
+  {
+    "name": "sprPlayer_collar",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprFlare",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprDaniel",
+    "width": 500,
+    "height": 479
+  },
+  {
+    "name": "sprDia",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprGrade_city",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprDot_double",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprMap_coral_island",
+    "width": 424,
+    "height": 229
+  },
+  {
+    "name": "sprMap_wood_east_rail",
+    "width": 332,
+    "height": 115
+  },
+  {
+    "name": "sprPhone_phone",
+    "width": 406,
+    "height": 541
+  },
+  {
+    "name": "sprSeal",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "mushroomnet",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprMap_myth_forest_side",
+    "width": 368,
+    "height": 118
+  },
+  {
+    "name": "sprPirate1",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "scribble_fallback_bulletpoint",
+    "width": 12,
+    "height": 12
+  },
+  {
+    "name": "sprDia_thick",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprCourt",
+    "width": 600,
+    "height": 310
+  },
+  {
+    "name": "sprBat",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprCheck",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprTex_casurina_5",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprMap_meadows_1",
+    "width": 247,
+    "height": 198
+  },
+  {
+    "name": "sprMap_myth_forest3",
+    "width": 212,
+    "height": 261
+  },
+  {
+    "name": "sprMantis",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprWatertrail",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprZorilla",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprCassowary",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprTurtleBoat",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_seacave4",
+    "width": 239,
+    "height": 230
+  },
+  {
+    "name": "sprUndo",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprPixel",
+    "width": 1,
+    "height": 1
+  },
+  {
+    "name": "sprRailman",
+    "width": 500,
+    "height": 479
+  },
+  {
+    "name": "sprBG_stadium_far",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "name": "sprWhite",
+    "width": 8,
+    "height": 8
+  },
+  {
+    "name": "sprMap_reserve_west",
+    "width": 228,
+    "height": 314
+  },
+  {
+    "name": "sprAnnabel",
+    "width": 500,
+    "height": 479
+  },
+  {
+    "name": "sprBilby",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprPirate2",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprRocklizard",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprDog",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_reserve_secret",
+    "width": 199,
+    "height": 210
+  },
+  {
+    "name": "sprRedd",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprMap_canyon_2",
+    "width": 267,
+    "height": 219
+  },
+  {
+    "name": "sprMap_city_market",
+    "width": 241,
+    "height": 208
+  },
+  {
+    "name": "merry_go_round",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprMitzi",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprGhost",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprShadowBlob",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprMap_sphinx",
+    "width": 306,
+    "height": 278
+  },
+  {
+    "name": "sprBored3",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprFanspike",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprMainmenu",
+    "width": 48,
+    "height": 48
+  },
+  {
+    "name": "sprInstructor",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprGrade_city_OLD",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprDragonfly1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_railtrail_3",
+    "width": 317,
+    "height": 138
+  },
+  {
+    "name": "sprPlatypus2",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprWater",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprClown",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprKangaroo1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "casurina_05",
+    "width": 2048,
+    "height": 2048
+  },
+  {
+    "name": "sprEmoji_harlow",
+    "width": 81,
+    "height": 81
+  },
+  {
+    "name": "sprMap_mangrove_end",
+    "width": 258,
+    "height": 195
+  },
+  {
+    "name": "sprMap_stadium",
+    "width": 232,
+    "height": 226
+  },
+  {
+    "name": "sprMap_city_neighborhood",
+    "width": 242,
+    "height": 323
+  },
+  {
+    "name": "tree_normal",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprShark1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprFootball1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_hometown_reserve",
+    "width": 284,
+    "height": 291
+  },
+  {
+    "name": "sprMap_beach_cliff1",
+    "width": 188,
+    "height": 240
+  },
+  {
+    "name": "sprMap_canyon_secret_2",
+    "width": 169,
+    "height": 120
+  },
+  {
+    "name": "sprSavanah",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprMillipede1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprJellyfish1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprBall_icon",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprMagpie",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprPhone_hand_2",
+    "width": 406,
+    "height": 541
+  },
+  {
+    "name": "sprTricky",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprJasperhiker",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprFeedback",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprMap_meadows_2",
+    "width": 396,
+    "height": 268
+  },
+  {
+    "name": "sprGrade_default",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprTex_grass",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "sprPlayer_hair",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprHitB",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprTricky1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "tree_trunk_a",
+    "width": 2048,
+    "height": 2048
+  },
+  {
+    "name": "sprMap_BG",
+    "width": 341,
+    "height": 251
+  },
+  {
+    "name": "sprMap_jasper_cave_connect",
+    "width": 107,
+    "height": 135
+  },
+  {
+    "name": "sprGrade_witch",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprFootball2",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprCroc",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "chrysanthemum",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprResearcher",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprMap_jasper_cave_1",
+    "width": 277,
+    "height": 183
+  },
+  {
+    "name": "sprMap_mythwood_town1",
+    "width": 284,
+    "height": 278
+  },
+  {
+    "name": "sprChar",
+    "width": 562,
+    "height": 504
+  },
+  {
+    "name": "sprNumberone",
+    "width": 595,
+    "height": 800
+  },
+  {
+    "name": "sprreserveplaque",
+    "width": 1980,
+    "height": 1080
+  },
+  {
+    "name": "sprSpin",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprDrop",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprBestie",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_wood_cave1",
+    "width": 178,
+    "height": 138
+  },
+  {
+    "name": "sprPossum1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprBeastieAnimIcons",
+    "width": 32,
+    "height": 32
+  },
+  {
+    "name": "sprKing",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprCityrailman",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprMap_mangrove_1",
+    "width": 211,
+    "height": 190
+  },
+  {
+    "name": "sprMap_mangrove_2",
+    "width": 263,
+    "height": 312
+  },
+  {
+    "name": "oxalis",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprDisruptor",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_reserve_shroom",
+    "width": 158,
+    "height": 193
+  },
+  {
+    "name": "sprMap_beach_station",
+    "width": 281,
+    "height": 187
+  },
+  {
+    "name": "sprBallman",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "bush_shrub_grass",
+    "width": 2048,
+    "height": 2048
+  },
+  {
+    "name": "sprSpirit1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_jasper_cave_west_exit",
+    "width": 158,
+    "height": 124
+  },
+  {
+    "name": "sprKeyboard_butts",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprMap_hometown_north_path",
+    "width": 209,
+    "height": 345
+  },
+  {
+    "name": "sprCassowary1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "mint",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprMap_canyon_cave",
+    "width": 170,
+    "height": 151
+  },
+  {
+    "name": "sprMoth2",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "spinwall_standee",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "disphyma",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprBored2",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprTurtle",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_city_suburb1",
+    "width": 459,
+    "height": 166
+  },
+  {
+    "name": "sprNetworkscene1",
+    "width": 341,
+    "height": 251
+  },
+  {
+    "name": "bush_tasmania",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprPlayer_nose",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprMap_railbridge",
+    "width": 170,
+    "height": 284
+  },
+  {
+    "name": "sprTex_eucalyptus",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "sprPlayer_body",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprRiven",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprMap_seacave3",
+    "width": 210,
+    "height": 208
+  },
+  {
+    "name": "sprMagpiemon",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_hometown_starters",
+    "width": 165,
+    "height": 130
+  },
+  {
+    "name": "sprMap_academy",
+    "width": 247,
+    "height": 369
+  },
+  {
+    "name": "sprTridash",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprNetworkscene2",
+    "width": 341,
+    "height": 251
+  },
+  {
+    "name": "sprLogo",
+    "width": 950,
+    "height": 311
+  },
+  {
+    "name": "sprSponsors",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprBestieTail",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "palm_tree",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprPhone_screen",
+    "width": 406,
+    "height": 541
+  },
+  {
+    "name": "fern",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "kangaroo_paw",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprSilhouettes",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprRaymond",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprMap_railtrail_2",
+    "width": 201,
+    "height": 100
+  },
+  {
+    "name": "tree_leaf_a_01_alpha",
+    "width": 2048,
+    "height": 2048
+  },
+  {
+    "name": "sprMap_jasper_cave_south_exit",
+    "width": 182,
+    "height": 278
+  },
+  {
+    "name": "sprMap_hometown",
+    "width": 373,
+    "height": 246
+  },
+  {
+    "name": "sprBG_Gym",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "name": "sprDog1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprRainbow",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprCheerleader1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprFootball",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprIcon",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprArrowIcon",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprSelection",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprMap_mangrove_3",
+    "width": 290,
+    "height": 261
+  },
+  {
+    "name": "sprBilby1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprGremlin",
+    "width": 304,
+    "height": 245
+  },
+  {
+    "name": "sprKangaroo",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprGhostbug",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_stadium_road",
+    "width": 451,
+    "height": 128
+  },
+  {
+    "name": "sprMayor",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprMap_pirate_island",
+    "width": 254,
+    "height": 226
+  },
+  {
+    "name": "sprTurtle2",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprPlayer_shoe",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprSeabird",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_city_trainyard",
+    "width": 159,
+    "height": 209
+  },
+  {
+    "name": "sprCircle",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprAudioButtons",
+    "width": 16,
+    "height": 16
+  },
+  {
+    "name": "sprDaredevil",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_seacave2",
+    "width": 179,
+    "height": 217
+  },
+  {
+    "name": "sprCheerleadermon",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprHatlady",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprRiley_kid",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprHalftone_double",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprBG_Boathouse",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "name": "sprMap_sunken_stadium",
+    "width": 277,
+    "height": 243
+  },
+  {
+    "name": "sprNerd",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprOptions_small",
+    "width": 77,
+    "height": 64
+  },
+  {
+    "name": "sprWishes",
+    "width": 960,
+    "height": 540
+  },
+  {
+    "name": "sprFlarebig",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprMap_park_south2",
+    "width": 356,
+    "height": 135
+  },
+  {
+    "name": "sprCoral_a",
+    "width": 200,
+    "height": 225
+  },
+  {
+    "name": "sprShroom_b",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprCrab",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprPixel2",
+    "width": 2,
+    "height": 2
+  },
+  {
+    "name": "sprDash",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprMap_mythwood_cave_east",
+    "width": 223,
+    "height": 173
+  },
+  {
+    "name": "sprFashion",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprBouncer",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "tree_euca",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprSnake",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprTex_tinysucculent",
+    "width": 64,
+    "height": 32
+  },
+  {
+    "name": "sprPlatypus",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprHalftone_line",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprWizard",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_citysquare",
+    "width": 337,
+    "height": 271
+  },
+  {
+    "name": "city_park_tree",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprMap_canyon_1",
+    "width": 256,
+    "height": 205
+  },
+  {
+    "name": "sprTex_tree_main",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "sprDemosplash",
+    "width": 1558,
+    "height": 788
+  },
+  {
+    "name": "sprPhone_hand_2_l",
+    "width": 406,
+    "height": 541
+  },
+  {
+    "name": "sprBG_championship",
+    "width": 1409,
+    "height": 1075
+  },
+  {
+    "name": "sprBoatman",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprMap_mainstreet",
+    "width": 192,
+    "height": 487
+  },
+  {
+    "name": "sprHorseshoe",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprCassowary2",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprBat1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_railtrail_1",
+    "width": 118,
+    "height": 257
+  },
+  {
+    "name": "sprMap_mangrove_4",
+    "width": 219,
+    "height": 380
+  },
+  {
+    "name": "sprMap_jasper_cave_2",
+    "width": 371,
+    "height": 116
+  },
+  {
+    "name": "tree_moreton",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprPortraits",
+    "width": 475,
+    "height": 240
+  },
+  {
+    "name": "sprEmoji",
+    "width": 81,
+    "height": 81
+  },
+  {
+    "name": "sprBarnes",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprHalftone",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprBestiemon",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprGrade_cliffs",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprDaredevil1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprPlayer_face",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprAutumn",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprGrade_island",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprTex_tinybush",
+    "width": 32,
+    "height": 64
+  },
+  {
+    "name": "sprDust",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprMap_myth_forest_secret",
+    "width": 253,
+    "height": 192
+  },
+  {
+    "name": "sprFrog1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprWeaver",
+    "width": 550,
+    "height": 500
+  },
+  {
+    "name": "sprMap_ocean",
+    "width": 964,
+    "height": 378
+  },
+  {
+    "name": "sprNerd1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprShroommon",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprPlayer_mask",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "name": "sprConstructionguy",
+    "width": 500,
+    "height": 479
+  },
+  {
+    "name": "sprGrade_woods",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprServal1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "chicory",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "sprGiantTurtleHead",
+    "width": 755,
+    "height": 636
+  },
+  {
+    "name": "sprLyrebird1",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprItems",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprPhone_hand_1",
+    "width": 406,
+    "height": 541
+  },
+  {
+    "name": "sprMap_park_south3",
+    "width": 158,
+    "height": 240
+  },
+  {
+    "name": "sprSpirit",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprShroom_m",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprThought_big",
+    "width": 547,
+    "height": 352
+  },
+  {
+    "name": "sprBG_Diner",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "name": "sprDefaultBeastie",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "name": "sprMap_park_side",
+    "width": 115,
+    "height": 186
+  },
+  {
+    "name": "sprSparkle",
+    "width": 64,
+    "height": 64
+  },
+  {
+    "name": "sprMap_jasper",
+    "width": 223,
+    "height": 306
+  },
+  {
+    "name": "sprTex_succulent",
+    "width": 128,
+    "height": 128
+  },
+  {
+    "name": "sprsunkenplaque",
+    "width": 1980,
+    "height": 1080
+  },
+  {
+    "name": "sprCeleb",
+    "width": 550,
+    "height": 500
+  }
+]

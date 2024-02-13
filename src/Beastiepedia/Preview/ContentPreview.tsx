@@ -6,6 +6,7 @@ import type { BeastieType } from "../../data/BeastieType";
 import vertex from "./vertex.glsl?raw";
 import fragment from "./fragment.glsl?raw";
 import ColorTabs from "./ColorTabs";
+import SPRITE_INFO from "../../data/SpriteInfo";
 
 type Props = {
   beastiedata: BeastieType;
@@ -25,13 +26,15 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const glRef = useRef<WebGLRenderingContext | null>(null);
   const programRef = useRef<WebGLProgram | null>(null);
   const [imageURL, setImageURL] = useState<string>(
-    "/gameassets/sprDefaultbeastie/0.png",
+    `/gameassets/beasties/${SPRITE_INFO[props.beastiedata.spr].name}/0.png`,
   );
 
   const [renderFailed, setRenderFailed] = useState(false);
 
   useEffect(() => {
-    setImageURL("/gameassets/sprDefaultbeastie/0.png");
+    setImageURL(
+      `/gameassets/beasties/${SPRITE_INFO[props.beastiedata.spr].name}/0.png`,
+    );
   }, [props.beastiedata]);
 
   useEffect(() => {

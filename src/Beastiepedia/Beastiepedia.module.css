@@ -67,7 +67,7 @@
   text-align: center;
 }
 
-@media all and (orientation: portrait) {
+@media all and (max-aspect-ratio: 4/6) {
   .sidebar {
     width: 100%;
   }

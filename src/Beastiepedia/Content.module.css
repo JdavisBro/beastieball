@@ -90,7 +90,7 @@
   margin-right: 30px;
 }
 
-@media all and (orientation: portrait) {
+@media all and (max-aspect-ratio: 4/6) {
   .preview {
     width: 100%;
     height: fit-content;

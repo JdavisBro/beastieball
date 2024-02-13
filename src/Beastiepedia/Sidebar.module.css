@@ -79,7 +79,7 @@
   font-size: 1.2em;
 }
 
-@media all and (orientation: portrait) {
+@media all and (max-aspect-ratio: 4/6) {
   .name > div {
     font-size: 2.3em;
   }

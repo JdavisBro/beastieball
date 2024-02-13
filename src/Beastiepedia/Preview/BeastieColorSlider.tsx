@@ -8,6 +8,10 @@ type Props = {
 };
 
 export default function BeastieColorSlider(props: Props) {
+  const same_color =
+    props.colors.length == 1 ||
+    props.colors.every((value) => value.color == props.colors[0].color);
+
   const gradient_args = props.colors.map(
     (value) => `#${bgrDecimalToHex(value.color)} ${Math.round(value.x * 100)}%`,
   );
@@ -16,13 +20,14 @@ export default function BeastieColorSlider(props: Props) {
     <div
       className={styles.colorslider}
       style={
-        props.colors.length > 1
-          ? { backgroundImage: gradient }
-          : { backgroundColor: `#${bgrDecimalToHex(props.colors[0].color)}` }
+        same_color
+          ? { backgroundColor: `#${bgrDecimalToHex(props.colors[0].color)}` }
+          : { backgroundImage: gradient }
       }
     >
       <input
         type="range"
+        disabled={same_color}
         min={0}
         max={1}
         step={0.01}

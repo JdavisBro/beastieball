@@ -84,10 +84,8 @@
   height: 100%;
 }
 
-.colorslider > input::-ms-thumb {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.colorslider > input:disabled {
+  visibility: hidden;
 }
 
 .customcolor {

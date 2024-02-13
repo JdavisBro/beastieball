@@ -23,23 +23,11 @@
 }
 
 .tabselect > button:hover {
-  animation-name: button-hover;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes button-hover {
-  from {
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-  to {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
+  background-color: #ffaa556b;
 }
 
 .selectedtab {
-  background-color: rgba(255, 255, 255, 0.4) !important;
+  background-color: #ffaa55a8 !important;
 }
 
 .tab {

@@ -1,5 +1,7 @@
 .container {
   padding-bottom: 10px;
+  position: relative;
+  top: -4px;
 }
 
 .listcontainer {
@@ -39,15 +41,15 @@
 }
 
 .movelist > div {
-  margin-left: 6px;
+  margin-left: 4px;
 }
 
 .movecontainer {
   position: relative;
+  margin-left: 10px !important;
 }
 
 .movetext {
-  margin-left: 4px !important;
   width: fit-content;
   cursor: pointer;
   text-decoration: underline dotted;

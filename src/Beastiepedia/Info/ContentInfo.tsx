@@ -48,31 +48,33 @@ export default function ContentInfo(props: Props): React.ReactNode {
   return (
     <div className={styles.info}>
       <div className={styles.inner}>
+        <div className={styles.header}>Number</div>
         <div className={styles.varcontainer}>
-          <div className={styles.header}>Number:</div>
           <div className={styles.value}>#{beastiedata.number}</div>
         </div>
+        <div className={styles.header}>Name</div>
         <div className={styles.varcontainer}>
-          <div className={styles.header}>Name:</div>
           <div className={styles.value}>{beastiedata.name}</div>
         </div>
+        <div className={styles.header}>Desciption</div>
         <div className={styles.varcontainer}>
-          <div className={styles.header}>Desciption:</div>
           <div className={styles.value}>{beastiedata.desc}</div>
         </div>
+        <div className={styles.header}>Stat Distribution</div>
         <StatDistribution beastiedata={beastiedata}></StatDistribution>
+        <div className={styles.header}>Recruit Condition</div>
         <div className={styles.varcontainer}>
-          <div className={styles.header}>Recruit Condition:</div>
           <div className={styles.value}>
             <TextTag text={beastiedata.recruit.description}></TextTag>
           </div>
         </div>
+        <div className={styles.header}>Ally Training</div>
         <div className={styles.varcontainer}>
-          <div className={styles.header}>Ally Training:</div>
           <div className={styles.value}>
             <TextTag text={training}></TextTag>
           </div>
         </div>
+        <div className={styles.header}>Moves</div>
         <MoveList
           movelist={beastiedata.attklist}
           learnset={beastiedata.learnset}

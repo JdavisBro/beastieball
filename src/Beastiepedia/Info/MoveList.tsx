@@ -103,11 +103,11 @@ export default function MoveList(props: Props): React.ReactElement {
     <div className={styles.container}>
       <div className={styles.listcontainer}>
         <div className={styles.movelist}>
-          <div>Moves from Levels:</div>
+          <div>From Levels:</div>
           {learnmoves}
         </div>
         <div className={styles.movelist}>
-          <div>Moves from Friends:</div>
+          <div>From Friends:</div>
           {friendmoves}
         </div>
       </div>

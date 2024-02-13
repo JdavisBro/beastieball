@@ -26,6 +26,8 @@
 
 .varcontainer {
   width: fit-content;
+  position: relative;
+  top: -4px;
   color: black;
   background-image: repeating-linear-gradient(
     #ddd1bd,
@@ -55,8 +57,19 @@
 
 .header {
   width: fit-content;
-  margin-left: 40px;
-  margin-right: 30px;
+  position: relative;
+  left: 10px;
+  color: white;
+  padding: 4px 12px 4px 12px;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #000000,
+    #000000 10px,
+    #2e2e2e 10px,
+    #2e2e2e 20px
+  );
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
+  z-index: 1;
 }
 
 .value {

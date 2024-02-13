@@ -1,6 +1,8 @@
 .scrollcontainer {
   max-width: 100%;
   overflow-x: auto;
+  position: relative;
+  top: -4px;
 }
 
 .container {

@@ -1,3 +1,10 @@
+export class WebGLError extends Error {
+  constructor(msg: string) {
+    super(msg);
+    Object.setPrototypeOf(this, WebGLError.prototype);
+  }
+}
+
 export default function setupWebGL(
   canvas: HTMLCanvasElement,
   vertex: string,
@@ -5,7 +12,7 @@ export default function setupWebGL(
 ) {
   const gl = canvas.getContext("webgl", { preserveDrawingBuffer: true });
   if (!gl) {
-    throw Error("No WebGL.");
+    throw new WebGLError("No WebGL.");
   }
   const program = createProgram(gl, vertex, fragment);
 
@@ -123,7 +130,7 @@ function createProgram(
   const fragment_shader = createShader(gl, gl.FRAGMENT_SHADER, fragment);
   const program = gl.createProgram();
   if (!program) {
-    throw Error("Couldn't create program.");
+    throw new WebGLError("Couldn't create program.");
   }
   gl.attachShader(program, vertex_shader);
   gl.attachShader(program, fragment_shader);
@@ -131,7 +138,9 @@ function createProgram(
   const success = gl.getProgramParameter(program, gl.LINK_STATUS);
   if (!success) {
     gl.deleteProgram(program);
-    throw Error(`Program link failed. ${gl.getProgramInfoLog(program)}`);
+    throw new WebGLError(
+      `Program link failed. ${gl.getProgramInfoLog(program)}`,
+    );
   }
   return program;
 }
@@ -139,14 +148,16 @@ function createProgram(
 function createShader(gl: WebGLRenderingContext, type: number, source: string) {
   const shader = gl.createShader(type);
   if (!shader) {
-    throw Error("Couldn't create shader.");
+    throw new WebGLError("Couldn't create shader.");
   }
   gl.shaderSource(shader, source);
   gl.compileShader(shader);
   const success = gl.getShaderParameter(shader, gl.COMPILE_STATUS);
   if (!success) {
     gl.deleteShader(shader);
-    throw Error(`Shader compilation failed. ${gl.getShaderInfoLog(shader)}`);
+    throw new WebGLError(
+      `Shader compilation failed. ${gl.getShaderInfoLog(shader)}`,
+    );
   }
   return shader;
 }

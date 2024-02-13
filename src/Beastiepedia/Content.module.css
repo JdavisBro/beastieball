@@ -87,7 +87,7 @@
 .value {
   width: fit-content;
   margin-left: 20px;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 @media all and (max-aspect-ratio: 4/6) {

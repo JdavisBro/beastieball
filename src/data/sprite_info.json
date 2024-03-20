@@ -2,2201 +2,2641 @@
   {
     "name": "sprMap_ambestone_west_cliff",
     "width": 157,
-    "height": 337
+    "height": 337,
+    "frames": 1
   },
   {
     "name": "sprFanbro",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 4
   },
   {
     "name": "sprBilby2",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "verbena",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprExclam",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 2
   },
   {
     "name": "sprIbis",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprShroom1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 36
   },
   {
     "name": "sprMode",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 4
   },
   {
     "name": "sprOutfitcategory",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 5
   },
   {
     "name": "sprRocklizard1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 40
   },
   {
     "name": "sprTex_tinysprig",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprTrent",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprCompass",
     "width": 167,
-    "height": 164
+    "height": 164,
+    "frames": 1
   },
   {
     "name": "sprCarlos",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprNo",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprMap_park_south",
     "width": 302,
-    "height": 140
+    "height": 140,
+    "frames": 1
   },
   {
     "name": "sprMap_city_seacave",
     "width": 247,
-    "height": 314
+    "height": 314,
+    "frames": 1
   },
   {
     "name": "spring_rider",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprTypecursor",
     "width": 3,
-    "height": 50
+    "height": 50,
+    "frames": 1
   },
   {
     "name": "sprCrown",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 2
   },
   {
     "name": "sprTex_tinyfern",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprMap_seacave_side",
     "width": 254,
-    "height": 110
+    "height": 110,
+    "frames": 1
   },
   {
     "name": "sprKingarm",
     "width": 889,
-    "height": 368
+    "height": 368,
+    "frames": 2
   },
   {
     "name": "sprHypecrack",
     "width": 224,
-    "height": 1080
+    "height": 1080,
+    "frames": 1
   },
   {
     "name": "sprVolleyA",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 3
   },
   {
     "name": "sprPlayer_hat",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 6
   },
   {
     "name": "sprWhooshlines",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 1
   },
   {
     "name": "sprFrog2",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sptSweatdrop",
     "width": 32,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprSeabird1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprBunny",
     "width": 600,
-    "height": 400
+    "height": 400,
+    "frames": 8
   },
   {
     "name": "sprRocklizard2",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_pirate",
     "width": 228,
-    "height": 275
+    "height": 275,
+    "frames": 1
   },
   {
     "name": "sprTurtle1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMask",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 10
   },
   {
     "name": "sprMap_forest_lake",
     "width": 340,
-    "height": 226
+    "height": 226,
+    "frames": 1
   },
   {
     "name": "sprStreamer",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 19
   },
   {
     "name": "sprLyrebird",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_chartreuse",
     "width": 434,
-    "height": 349
+    "height": 349,
+    "frames": 1
   },
   {
     "name": "sprMap_shroom_path",
     "width": 278,
-    "height": 332
+    "height": 332,
+    "frames": 1
   },
   {
     "name": "sprMap_canyon_secret",
     "width": 116,
-    "height": 280
+    "height": 280,
+    "frames": 1
   },
   {
     "name": "sprMoney",
     "width": 52,
-    "height": 64
+    "height": 64,
+    "frames": 2
   },
   {
     "name": "sprHeart",
     "width": 256,
-    "height": 225
+    "height": 225,
+    "frames": 2
   },
   {
     "name": "sprAlien",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprFiredup",
     "width": 128,
-    "height": 128
+    "height": 128,
+    "frames": 9
   },
   {
     "name": "horseradish",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprMap_cliffs_railroad",
     "width": 565,
-    "height": 169
+    "height": 169,
+    "frames": 1
   },
   {
     "name": "sprMap_cliffs_rail_cave_east",
     "width": 173,
-    "height": 141
+    "height": 141,
+    "frames": 1
   },
   {
     "name": "sprHatguy",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprInspect",
     "width": 164,
-    "height": 178
+    "height": 178,
+    "frames": 1
   },
   {
     "name": "sprMap_jasper_cave_north_exit",
     "width": 165,
-    "height": 120
+    "height": 120,
+    "frames": 1
   },
   {
     "name": "sprMap_woods_north_rail",
     "width": 190,
-    "height": 265
+    "height": 265,
+    "frames": 1
   },
   {
     "name": "sprGiantTurtleLeg",
     "width": 562,
-    "height": 632
+    "height": 632,
+    "frames": 1
   },
   {
     "name": "sprMusicnote",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 3
   },
   {
     "name": "sprOlm",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "spinwall_tall_standee",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprGymnast",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprVolleyB",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 4
   },
   {
     "name": "sprShroom_s",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprTex_bush",
     "width": 128,
-    "height": 128
+    "height": 128,
+    "frames": 1
   },
   {
     "name": "sprYeti",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprEmoji_head",
     "width": 81,
-    "height": 81
+    "height": 81,
+    "frames": 1
   },
   {
     "name": "sprGrassstep",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 4
   },
   {
     "name": "sprite0",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprClam",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_jasper_cave_west",
     "width": 115,
-    "height": 202
+    "height": 202,
+    "frames": 1
   },
   {
     "name": "sprSpeech",
     "width": 1024,
-    "height": 1024
+    "height": 1024,
+    "frames": 1
   },
   {
     "name": "sprMap_reserve_loop",
     "width": 165,
-    "height": 171
+    "height": 171,
+    "frames": 1
   },
   {
     "name": "sprShark",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 8
   },
   {
     "name": "sprBG_Railhouse",
     "width": 1920,
-    "height": 1080
+    "height": 1080,
+    "frames": 1
   },
   {
     "name": "sprMASTER_TEXTURE",
     "width": 2048,
-    "height": 2048
+    "height": 2048,
+    "frames": 1
   },
   {
     "name": "sprMap_jasper_north",
     "width": 258,
-    "height": 242
+    "height": 242,
+    "frames": 1
   },
   {
     "name": "sprMillipede",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprHeadmaster",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 7
   },
   {
     "name": "sprMap_beryl",
     "width": 364,
-    "height": 241
+    "height": 241,
+    "frames": 1
   },
   {
     "name": "sprMap_park_south_end",
     "width": 216,
-    "height": 129
+    "height": 129,
+    "frames": 1
   },
   {
     "name": "sprHitA",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 4
   },
   {
     "name": "sprServal",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 49
   },
   {
     "name": "sprMap_park_edge",
     "width": 215,
-    "height": 329
+    "height": 329,
+    "frames": 1
   },
   {
     "name": "sprKettle1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprNoise_perlin",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 1
   },
   {
     "name": "sprMap_wood_cave2",
     "width": 220,
-    "height": 299
+    "height": 299,
+    "frames": 1
   },
   {
     "name": "sprOptions",
     "width": 130,
-    "height": 108
+    "height": 108,
+    "frames": 1
   },
   {
     "name": "sprMap_beryl_railpath_south",
     "width": 342,
-    "height": 177
+    "height": 177,
+    "frames": 1
   },
   {
     "name": "sprBoost",
     "width": 48,
-    "height": 64
+    "height": 64,
+    "frames": 6
   },
   {
     "name": "sprFox1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMagpie1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 18
   },
   {
     "name": "sprMap_tiny_island",
     "width": 248,
-    "height": 157
+    "height": 157,
+    "frames": 1
   },
   {
     "name": "sprCheerleader",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 41
   },
   {
     "name": "sprFankid",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 6
   },
   {
     "name": "sprBall",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 3
   },
   {
     "name": "sprite2",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 3
   },
   {
     "name": "sprGfxtee",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprMap_wood_rail",
     "width": 424,
-    "height": 171
+    "height": 171,
+    "frames": 1
   },
   {
     "name": "sprMap_hometown_south_path",
     "width": 392,
-    "height": 244
+    "height": 244,
+    "frames": 1
   },
   {
     "name": "sprRiley",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 27
   },
   {
     "name": "sprMap_central_station",
     "width": 309,
-    "height": 136
+    "height": 136,
+    "frames": 1
   },
   {
     "name": "sprMudskipper",
     "width": 1000,
-    "height": 909
+    "height": 909,
+    "frames": 1
   },
   {
     "name": "tree_mangrove",
     "width": 423,
-    "height": 474
+    "height": 474,
+    "frames": 1
   },
   {
     "name": "sprMap_cityhill",
     "width": 223,
-    "height": 270
+    "height": 270,
+    "frames": 1
   },
   {
     "name": "sprMap_park1",
     "width": 246,
-    "height": 256
+    "height": 256,
+    "frames": 1
   },
   {
     "name": "pandamus_tree",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprStatus",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 50
   },
   {
     "name": "sprTame",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 9
   },
   {
     "name": "sprJavier",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprRat",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 83
   },
   {
     "name": "sprMoth1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 55
   },
   {
     "name": "sprMap_city_rail_east",
     "width": 341,
-    "height": 195
+    "height": 195,
+    "frames": 1
   },
   {
     "name": "sprSwift",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_myth_forest1",
     "width": 282,
-    "height": 251
+    "height": 251,
+    "frames": 1
   },
   {
     "name": "sprFighter",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 7
   },
   {
     "name": "sprMap_myth_forest2",
     "width": 374,
-    "height": 230
+    "height": 230,
+    "frames": 1
   },
   {
     "name": "sprGrade_tutorial",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 2
   },
   {
     "name": "sprMap_park_north2",
     "width": 243,
-    "height": 161
+    "height": 161,
+    "frames": 1
   },
   {
     "name": "sprCycle",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 9
   },
   {
     "name": "sprPsychic",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprDot",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprPlayer_hairb",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 9
   },
   {
     "name": "sprSeal1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprType",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 19
   },
   {
     "name": "sprNatalie",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 6
   },
   {
     "name": "sprrubberplaque",
     "width": 1980,
-    "height": 1080
+    "height": 1080,
+    "frames": 1
   },
   {
     "name": "sprMoth",
     "width": 1000,
-    "height": 909
+    "height": 909,
+    "frames": 1
   },
   {
     "name": "sprMap_canyon_3",
     "width": 161,
-    "height": 290
+    "height": 290,
+    "frames": 1
   },
   {
     "name": "sprBored1",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 4
   },
   {
     "name": "sprTex_net",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 1
   },
   {
     "name": "sprBG_TV",
     "width": 2048,
-    "height": 1531
+    "height": 1531,
+    "frames": 1
   },
   {
     "name": "sprRewind",
     "width": 511,
-    "height": 369
+    "height": 369,
+    "frames": 1
   },
   {
     "name": "sprMap_beryl_railpath_west",
     "width": 172,
-    "height": 167
+    "height": 167,
+    "frames": 1
   },
   {
     "name": "sprRat_alt",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 83
   },
   {
     "name": "sprMap_reserve_1",
     "width": 172,
-    "height": 305
+    "height": 305,
+    "frames": 1
   },
   {
     "name": "sprGhost1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 8
   },
   {
     "name": "sprKaz",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 15
   },
   {
     "name": "sprCoral_b",
     "width": 460,
-    "height": 462
+    "height": 462,
+    "frames": 2
   },
   {
     "name": "sprMap_jasper_cave_south",
     "width": 165,
-    "height": 170
+    "height": 170,
+    "frames": 1
   },
   {
     "name": "tree_leaf_a_01",
     "width": 2048,
-    "height": 2048
+    "height": 2048,
+    "frames": 1
   },
   {
     "name": "sprMap_seacave1",
     "width": 193,
-    "height": 104
+    "height": 104,
+    "frames": 1
   },
   {
     "name": "sprNatalia",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprDirtEff",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 3
   },
   {
     "name": "sprTex_line",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 1
   },
   {
     "name": "sprFrog",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprPossum2",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 16
   },
   {
     "name": "sprPhone_hand_1_l",
     "width": 406,
-    "height": 541
+    "height": 541,
+    "frames": 17
   },
   {
     "name": "sprMap_shroomgrove",
     "width": 219,
-    "height": 205
+    "height": 205,
+    "frames": 1
   },
   {
     "name": "sprStump_icon",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 5
   },
   {
     "name": "tree_rubber",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprMap_hometown_north",
     "width": 374,
-    "height": 313
+    "height": 313,
+    "frames": 1
   },
   {
     "name": "sprMap_dogpark",
     "width": 311,
-    "height": 177
+    "height": 177,
+    "frames": 1
   },
   {
     "name": "sprQuestion",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 2
   },
   {
     "name": "sprPlatypus1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 87
   },
   {
     "name": "sprValerie",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 12
   },
   {
     "name": "sprStar",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprNoise_blue",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 1
   },
   {
     "name": "sprCrownSeries",
     "width": 1031,
-    "height": 613
+    "height": 613,
+    "frames": 1
   },
   {
     "name": "sprCowboy",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 3
   },
   {
     "name": "sprShy",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 2
   },
   {
     "name": "sprMap_rubberfarm",
     "width": 471,
-    "height": 175
+    "height": 175,
+    "frames": 1
   },
   {
     "name": "sprJoel",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprCaptain",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 16
   },
   {
     "name": "sprMapX",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprTex_tinyleafy",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprMap_park_north3",
     "width": 212,
-    "height": 144
+    "height": 144,
+    "frames": 1
   },
   {
     "name": "sprMap_beryl_railpath_end",
     "width": 192,
-    "height": 121
+    "height": 121,
+    "frames": 1
   },
   {
     "name": "sprOlm1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_park_north4",
     "width": 251,
-    "height": 140
+    "height": 140,
+    "frames": 1
   },
   {
     "name": "sprMap_hometown_south_rail",
     "width": 373,
-    "height": 281
+    "height": 281,
+    "frames": 1
   },
   {
     "name": "sprGhost2",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_woods_east_cave",
     "width": 186,
-    "height": 170
+    "height": 170,
+    "frames": 1
   },
   {
     "name": "sprCoral_c",
     "width": 1135,
-    "height": 1356
+    "height": 1356,
+    "frames": 1
   },
   {
     "name": "sprJackie",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 6
   },
   {
     "name": "sprThought",
     "width": 129,
-    "height": 120
+    "height": 120,
+    "frames": 2
   },
   {
     "name": "sprScienceboss",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 10
   },
   {
     "name": "sprClown1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 48
   },
   {
     "name": "sprMap_reserve_2",
     "width": 197,
-    "height": 222
+    "height": 222,
+    "frames": 1
   },
   {
     "name": "sprMap_park_north",
     "width": 197,
-    "height": 207
+    "height": 207,
+    "frames": 1
   },
   {
     "name": "sprSharkmon",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 8
   },
   {
     "name": "sprJellyfish",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprQuestionInfo",
     "width": 40,
-    "height": 40
+    "height": 40,
+    "frames": 1
   },
   {
     "name": "sprKettle",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 8
   },
   {
     "name": "sprPossum",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 2
   },
   {
     "name": "sprLeagueman",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 8
   },
   {
     "name": "sprMap_rockybeach",
     "width": 482,
-    "height": 301
+    "height": 301,
+    "frames": 1
   },
   {
     "name": "sprDiamond",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprMap_city_railalley",
     "width": 173,
-    "height": 177
+    "height": 177,
+    "frames": 1
   },
   {
     "name": "sprPlayer_collar",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 7
   },
   {
     "name": "sprFlare",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprDaniel",
     "width": 500,
-    "height": 479
+    "height": 479,
+    "frames": 4
   },
   {
     "name": "sprDia",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprGrade_city",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprDot_double",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprMap_coral_island",
     "width": 424,
-    "height": 229
+    "height": 229,
+    "frames": 1
   },
   {
     "name": "sprMap_wood_east_rail",
     "width": 332,
-    "height": 115
+    "height": 115,
+    "frames": 1
   },
   {
     "name": "sprPhone_phone",
     "width": 406,
-    "height": 541
+    "height": 541,
+    "frames": 13
   },
   {
     "name": "sprSeal",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "mushroomnet",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprMap_myth_forest_side",
     "width": 368,
-    "height": 118
+    "height": 118,
+    "frames": 1
   },
   {
     "name": "sprPirate1",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 4
   },
   {
     "name": "scribble_fallback_bulletpoint",
     "width": 12,
-    "height": 12
+    "height": 12,
+    "frames": 1
   },
   {
     "name": "sprDia_thick",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprCourt",
     "width": 600,
-    "height": 310
+    "height": 310,
+    "frames": 2
   },
   {
     "name": "sprBat",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprCheck",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 2
   },
   {
     "name": "sprTex_casurina_5",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 1
   },
   {
     "name": "sprMap_meadows_1",
     "width": 247,
-    "height": 198
+    "height": 198,
+    "frames": 1
   },
   {
     "name": "sprMap_myth_forest3",
     "width": 212,
-    "height": 261
+    "height": 261,
+    "frames": 1
   },
   {
     "name": "sprMantis",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprWatertrail",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 1
   },
   {
     "name": "sprZorilla",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprCassowary",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprTurtleBoat",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_seacave4",
     "width": 239,
-    "height": 230
+    "height": 230,
+    "frames": 1
   },
   {
     "name": "sprUndo",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 2
   },
   {
     "name": "sprPixel",
     "width": 1,
-    "height": 1
+    "height": 1,
+    "frames": 1
   },
   {
     "name": "sprRailman",
     "width": 500,
-    "height": 479
+    "height": 479,
+    "frames": 8
   },
   {
     "name": "sprBG_stadium_far",
     "width": 1920,
-    "height": 1080
+    "height": 1080,
+    "frames": 5
   },
   {
     "name": "sprWhite",
     "width": 8,
-    "height": 8
+    "height": 8,
+    "frames": 1
   },
   {
     "name": "sprMap_reserve_west",
     "width": 228,
-    "height": 314
+    "height": 314,
+    "frames": 1
   },
   {
     "name": "sprAnnabel",
     "width": 500,
-    "height": 479
+    "height": 479,
+    "frames": 2
   },
   {
     "name": "sprBilby",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprPirate2",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 5
   },
   {
     "name": "sprRocklizard",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprDog",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_reserve_secret",
     "width": 199,
-    "height": 210
+    "height": 210,
+    "frames": 1
   },
   {
     "name": "sprRedd",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 10
   },
   {
     "name": "sprMap_canyon_2",
     "width": 267,
-    "height": 219
+    "height": 219,
+    "frames": 1
   },
   {
     "name": "sprMap_city_market",
     "width": 241,
-    "height": 208
+    "height": 208,
+    "frames": 1
   },
   {
     "name": "merry_go_round",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprMitzi",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprGhost",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprShadowBlob",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 2
   },
   {
     "name": "sprMap_sphinx",
     "width": 306,
-    "height": 278
+    "height": 278,
+    "frames": 1
   },
   {
     "name": "sprBored3",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprFanspike",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 4
   },
   {
     "name": "sprMainmenu",
     "width": 48,
-    "height": 48
+    "height": 48,
+    "frames": 27
   },
   {
     "name": "sprInstructor",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 7
   },
   {
     "name": "sprGrade_city_OLD",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprDragonfly1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_railtrail_3",
     "width": 317,
-    "height": 138
+    "height": 138,
+    "frames": 1
   },
   {
     "name": "sprPlatypus2",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprWater",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 3
   },
   {
     "name": "sprClown",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprKangaroo1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 26
   },
   {
     "name": "casurina_05",
     "width": 2048,
-    "height": 2048
+    "height": 2048,
+    "frames": 1
   },
   {
     "name": "sprEmoji_harlow",
     "width": 81,
-    "height": 81
+    "height": 81,
+    "frames": 10
   },
   {
     "name": "sprMap_mangrove_end",
     "width": 258,
-    "height": 195
+    "height": 195,
+    "frames": 1
   },
   {
     "name": "sprMap_stadium",
     "width": 232,
-    "height": 226
+    "height": 226,
+    "frames": 1
   },
   {
     "name": "sprMap_city_neighborhood",
     "width": 242,
-    "height": 323
+    "height": 323,
+    "frames": 1
   },
   {
     "name": "tree_normal",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprShark1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 15
   },
   {
     "name": "sprFootball1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 15
   },
   {
     "name": "sprMap_hometown_reserve",
     "width": 284,
-    "height": 291
+    "height": 291,
+    "frames": 1
   },
   {
     "name": "sprMap_beach_cliff1",
     "width": 188,
-    "height": 240
+    "height": 240,
+    "frames": 1
   },
   {
     "name": "sprMap_canyon_secret_2",
     "width": 169,
-    "height": 120
+    "height": 120,
+    "frames": 1
   },
   {
     "name": "sprSavanah",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprMillipede1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprJellyfish1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprBall_icon",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprMagpie",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprPhone_hand_2",
     "width": 406,
-    "height": 541
+    "height": 541,
+    "frames": 9
   },
   {
     "name": "sprTricky",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprJasperhiker",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprFeedback",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 5
   },
   {
     "name": "sprMap_meadows_2",
     "width": 396,
-    "height": 268
+    "height": 268,
+    "frames": 1
   },
   {
     "name": "sprGrade_default",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprTex_grass",
     "width": 128,
-    "height": 128
+    "height": 128,
+    "frames": 1
   },
   {
     "name": "sprPlayer_hair",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 42
   },
   {
     "name": "sprHitB",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 4
   },
   {
     "name": "sprTricky1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "tree_trunk_a",
     "width": 2048,
-    "height": 2048
+    "height": 2048,
+    "frames": 1
   },
   {
     "name": "sprMap_BG",
     "width": 341,
-    "height": 251
+    "height": 251,
+    "frames": 1
   },
   {
     "name": "sprMap_jasper_cave_connect",
     "width": 107,
-    "height": 135
+    "height": 135,
+    "frames": 1
   },
   {
     "name": "sprGrade_witch",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprFootball2",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprCroc",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "chrysanthemum",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprResearcher",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 10
   },
   {
     "name": "sprMap_jasper_cave_1",
     "width": 277,
-    "height": 183
+    "height": 183,
+    "frames": 1
   },
   {
     "name": "sprMap_mythwood_town1",
     "width": 284,
-    "height": 278
+    "height": 278,
+    "frames": 1
   },
   {
     "name": "sprChar",
     "width": 562,
-    "height": 504
+    "height": 504,
+    "frames": 16
   },
   {
     "name": "sprNumberone",
     "width": 595,
-    "height": 800
+    "height": 800,
+    "frames": 3
   },
   {
     "name": "sprreserveplaque",
     "width": 1980,
-    "height": 1080
+    "height": 1080,
+    "frames": 1
   },
   {
     "name": "sprSpin",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprDrop",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprBestie",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 34
   },
   {
     "name": "sprMap_wood_cave1",
     "width": 178,
-    "height": 138
+    "height": 138,
+    "frames": 1
   },
   {
     "name": "sprPossum1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 59
   },
   {
     "name": "sprBeastieAnimIcons",
     "width": 32,
-    "height": 32
+    "height": 32,
+    "frames": 2
   },
   {
     "name": "sprKing",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 19
   },
   {
     "name": "sprCityrailman",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 8
   },
   {
     "name": "sprMap_mangrove_1",
     "width": 211,
-    "height": 190
+    "height": 190,
+    "frames": 1
   },
   {
     "name": "sprMap_mangrove_2",
     "width": 263,
-    "height": 312
+    "height": 312,
+    "frames": 1
   },
   {
     "name": "oxalis",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprDisruptor",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_reserve_shroom",
     "width": 158,
-    "height": 193
+    "height": 193,
+    "frames": 1
   },
   {
     "name": "sprMap_beach_station",
     "width": 281,
-    "height": 187
+    "height": 187,
+    "frames": 1
   },
   {
     "name": "sprBallman",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 4
   },
   {
     "name": "bush_shrub_grass",
     "width": 2048,
-    "height": 2048
+    "height": 2048,
+    "frames": 1
   },
   {
     "name": "sprSpirit1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_jasper_cave_west_exit",
     "width": 158,
-    "height": 124
+    "height": 124,
+    "frames": 1
   },
   {
     "name": "sprKeyboard_butts",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 2
   },
   {
     "name": "sprMap_hometown_north_path",
     "width": 209,
-    "height": 345
+    "height": 345,
+    "frames": 1
   },
   {
     "name": "sprCassowary1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 40
   },
   {
     "name": "mint",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprMap_canyon_cave",
     "width": 170,
-    "height": 151
+    "height": 151,
+    "frames": 1
   },
   {
     "name": "sprMoth2",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "spinwall_standee",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "disphyma",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprBored2",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprTurtle",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_city_suburb1",
     "width": 459,
-    "height": 166
+    "height": 166,
+    "frames": 1
   },
   {
     "name": "sprNetworkscene1",
     "width": 341,
-    "height": 251
+    "height": 251,
+    "frames": 3
   },
   {
     "name": "bush_tasmania",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprPlayer_nose",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 21
   },
   {
     "name": "sprMap_railbridge",
     "width": 170,
-    "height": 284
+    "height": 284,
+    "frames": 1
   },
   {
     "name": "sprTex_eucalyptus",
     "width": 128,
-    "height": 128
+    "height": 128,
+    "frames": 1
   },
   {
     "name": "sprPlayer_body",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 14
   },
   {
     "name": "sprRiven",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 18
   },
   {
     "name": "sprMap_seacave3",
     "width": 210,
-    "height": 208
+    "height": 208,
+    "frames": 1
   },
   {
     "name": "sprMagpiemon",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_hometown_starters",
     "width": 165,
-    "height": 130
+    "height": 130,
+    "frames": 1
   },
   {
     "name": "sprMap_academy",
     "width": 247,
-    "height": 369
+    "height": 369,
+    "frames": 1
   },
   {
     "name": "sprTridash",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 2
   },
   {
     "name": "sprNetworkscene2",
     "width": 341,
-    "height": 251
+    "height": 251,
+    "frames": 3
   },
   {
     "name": "sprLogo",
     "width": 950,
-    "height": 311
+    "height": 311,
+    "frames": 1
   },
   {
     "name": "sprSponsors",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 11
   },
   {
     "name": "sprBestieTail",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 41
   },
   {
     "name": "palm_tree",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprPhone_screen",
     "width": 406,
-    "height": 541
+    "height": 541,
+    "frames": 12
   },
   {
     "name": "fern",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "kangaroo_paw",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprSilhouettes",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 11
   },
   {
     "name": "sprRaymond",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 4
   },
   {
     "name": "sprMap_railtrail_2",
     "width": 201,
-    "height": 100
+    "height": 100,
+    "frames": 1
   },
   {
     "name": "tree_leaf_a_01_alpha",
     "width": 2048,
-    "height": 2048
+    "height": 2048,
+    "frames": 1
   },
   {
     "name": "sprMap_jasper_cave_south_exit",
     "width": 182,
-    "height": 278
+    "height": 278,
+    "frames": 1
   },
   {
     "name": "sprMap_hometown",
     "width": 373,
-    "height": 246
+    "height": 246,
+    "frames": 1
   },
   {
     "name": "sprBG_Gym",
     "width": 1920,
-    "height": 1080
+    "height": 1080,
+    "frames": 1
   },
   {
     "name": "sprDog1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprRainbow",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprCheerleader1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprFootball",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprIcon",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 11
   },
   {
     "name": "sprArrowIcon",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 2
   },
   {
     "name": "sprSelection",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprMap_mangrove_3",
     "width": 290,
-    "height": 261
+    "height": 261,
+    "frames": 1
   },
   {
     "name": "sprBilby1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 50
   },
   {
     "name": "sprGremlin",
     "width": 304,
-    "height": 245
+    "height": 245,
+    "frames": 1
   },
   {
     "name": "sprKangaroo",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprGhostbug",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_stadium_road",
     "width": 451,
-    "height": 128
+    "height": 128,
+    "frames": 1
   },
   {
     "name": "sprMayor",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 16
   },
   {
     "name": "sprMap_pirate_island",
     "width": 254,
-    "height": 226
+    "height": 226,
+    "frames": 1
   },
   {
     "name": "sprTurtle2",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprPlayer_shoe",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 3
   },
   {
     "name": "sprSeabird",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_city_trainyard",
     "width": 159,
-    "height": 209
+    "height": 209,
+    "frames": 1
   },
   {
     "name": "sprCircle",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 1
   },
   {
     "name": "sprAudioButtons",
     "width": 16,
-    "height": 16
+    "height": 16,
+    "frames": 9
   },
   {
     "name": "sprDaredevil",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_seacave2",
     "width": 179,
-    "height": 217
+    "height": 217,
+    "frames": 1
   },
   {
     "name": "sprCheerleadermon",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprHatlady",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprRiley_kid",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 8
   },
   {
     "name": "sprHalftone_double",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprBG_Boathouse",
     "width": 1920,
-    "height": 1080
+    "height": 1080,
+    "frames": 1
   },
   {
     "name": "sprMap_sunken_stadium",
     "width": 277,
-    "height": 243
+    "height": 243,
+    "frames": 1
   },
   {
     "name": "sprNerd",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprOptions_small",
     "width": 77,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprWishes",
     "width": 960,
-    "height": 540
+    "height": 540,
+    "frames": 33
   },
   {
     "name": "sprFlarebig",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 1
   },
   {
     "name": "sprMap_park_south2",
     "width": 356,
-    "height": 135
+    "height": 135,
+    "frames": 1
   },
   {
     "name": "sprCoral_a",
     "width": 200,
-    "height": 225
+    "height": 225,
+    "frames": 1
   },
   {
     "name": "sprShroom_b",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprCrab",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprPixel2",
     "width": 2,
-    "height": 2
+    "height": 2,
+    "frames": 1
   },
   {
     "name": "sprDash",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprMap_mythwood_cave_east",
     "width": 223,
-    "height": 173
+    "height": 173,
+    "frames": 1
   },
   {
     "name": "sprFashion",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprBouncer",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "tree_euca",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprSnake",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprTex_tinysucculent",
     "width": 64,
-    "height": 32
+    "height": 32,
+    "frames": 1
   },
   {
     "name": "sprPlatypus",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprHalftone_line",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprWizard",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprMap_citysquare",
     "width": 337,
-    "height": 271
+    "height": 271,
+    "frames": 1
   },
   {
     "name": "city_park_tree",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprMap_canyon_1",
     "width": 256,
-    "height": 205
+    "height": 205,
+    "frames": 1
   },
   {
     "name": "sprTex_tree_main",
     "width": 256,
-    "height": 256
+    "height": 256,
+    "frames": 1
   },
   {
     "name": "sprDemosplash",
     "width": 1558,
-    "height": 788
+    "height": 788,
+    "frames": 1
   },
   {
     "name": "sprPhone_hand_2_l",
     "width": 406,
-    "height": 541
+    "height": 541,
+    "frames": 9
   },
   {
     "name": "sprBG_championship",
     "width": 1409,
-    "height": 1075
+    "height": 1075,
+    "frames": 1
   },
   {
     "name": "sprBoatman",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 8
   },
   {
     "name": "sprMap_mainstreet",
     "width": 192,
-    "height": 487
+    "height": 487,
+    "frames": 1
   },
   {
     "name": "sprHorseshoe",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprCassowary2",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 8
   },
   {
     "name": "sprBat1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 8
   },
   {
     "name": "sprMap_railtrail_1",
     "width": 118,
-    "height": 257
+    "height": 257,
+    "frames": 1
   },
   {
     "name": "sprMap_mangrove_4",
     "width": 219,
-    "height": 380
+    "height": 380,
+    "frames": 1
   },
   {
     "name": "sprMap_jasper_cave_2",
     "width": 371,
-    "height": 116
+    "height": 116,
+    "frames": 1
   },
   {
     "name": "tree_moreton",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprPortraits",
     "width": 475,
-    "height": 240
+    "height": 240,
+    "frames": 6
   },
   {
     "name": "sprEmoji",
     "width": 81,
-    "height": 81
+    "height": 81,
+    "frames": 128
   },
   {
     "name": "sprBarnes",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 7
   },
   {
     "name": "sprHalftone",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprBestiemon",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprGrade_cliffs",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprDaredevil1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprPlayer_face",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 22
   },
   {
     "name": "sprAutumn",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprGrade_island",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprTex_tinybush",
     "width": 32,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprDust",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 3
   },
   {
     "name": "sprMap_myth_forest_secret",
     "width": 253,
-    "height": 192
+    "height": 192,
+    "frames": 1
   },
   {
     "name": "sprFrog1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 40
   },
   {
     "name": "sprWeaver",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 2
   },
   {
     "name": "sprMap_ocean",
     "width": 964,
-    "height": 378
+    "height": 378,
+    "frames": 1
   },
   {
     "name": "sprNerd1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprShroommon",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprPlayer_mask",
     "width": 500,
-    "height": 500
+    "height": 500,
+    "frames": 17
   },
   {
     "name": "sprConstructionguy",
     "width": 500,
-    "height": 479
+    "height": 479,
+    "frames": 2
   },
   {
     "name": "sprGrade_woods",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 1
   },
   {
     "name": "sprServal1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "chicory",
     "width": 512,
-    "height": 512
+    "height": 512,
+    "frames": 1
   },
   {
     "name": "sprGiantTurtleHead",
     "width": 755,
-    "height": 636
+    "height": 636,
+    "frames": 2
   },
   {
     "name": "sprLyrebird1",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 50
   },
   {
     "name": "sprItems",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 41
   },
   {
     "name": "sprPhone_hand_1",
     "width": 406,
-    "height": 541
+    "height": 541,
+    "frames": 17
   },
   {
     "name": "sprMap_park_south3",
     "width": 158,
-    "height": 240
+    "height": 240,
+    "frames": 1
   },
   {
     "name": "sprSpirit",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprShroom_m",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 1
   },
   {
     "name": "sprThought_big",
     "width": 547,
-    "height": 352
+    "height": 352,
+    "frames": 2
   },
   {
     "name": "sprBG_Diner",
     "width": 1920,
-    "height": 1080
+    "height": 1080,
+    "frames": 1
   },
   {
     "name": "sprDefaultBeastie",
     "width": 1000,
-    "height": 1000
+    "height": 1000,
+    "frames": 36
   },
   {
     "name": "sprMap_park_side",
     "width": 115,
-    "height": 186
+    "height": 186,
+    "frames": 1
   },
   {
     "name": "sprSparkle",
     "width": 64,
-    "height": 64
+    "height": 64,
+    "frames": 2
   },
   {
     "name": "sprMap_jasper",
     "width": 223,
-    "height": 306
+    "height": 306,
+    "frames": 1
   },
   {
     "name": "sprTex_succulent",
     "width": 128,
-    "height": 128
+    "height": 128,
+    "frames": 1
   },
   {
     "name": "sprsunkenplaque",
     "width": 1980,
-    "height": 1080
+    "height": 1080,
+    "frames": 1
   },
   {
     "name": "sprCeleb",
     "width": 550,
-    "height": 500
+    "height": 500,
+    "frames": 15
   }
 ]

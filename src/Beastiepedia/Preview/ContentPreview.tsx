@@ -7,6 +7,8 @@ import vertex from "./vertex.glsl?raw";
 import fragment from "./fragment.glsl?raw";
 import ColorTabs from "./ColorTabs";
 import SPRITE_INFO from "../../data/SpriteInfo";
+import useLoadImages from "./useLoadImages";
+import BEASTIE_ANIMATIONS from "../../data/BeastieAnimations";
 
 type Props = {
   beastiedata: BeastieType;
@@ -25,17 +27,146 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const glRef = useRef<WebGLRenderingContext | null>(null);
   const programRef = useRef<WebGLProgram | null>(null);
-  const [imageURL, setImageURL] = useState<string>(
-    `/gameassets/beasties/${SPRITE_INFO[props.beastiedata.spr].name}/0.png`,
+
+  const [animation, setAnimation] = useState("idle");
+
+  const loadedImages = useLoadImages(
+    `/gameassets/beasties/${SPRITE_INFO[props.beastiedata.spr].name}`,
+    SPRITE_INFO[props.beastiedata.spr].frames,
+  );
+  const requestRef = useRef(0);
+  const frameIndexRef = useRef<number | null>(null); // if multiple beastieframe for animation
+  const frameNumRef = useRef<number | null>(null);
+  const frameTimeRef = useRef(0);
+  const prevTimeRef = useRef<DOMHighResTimeStamp | null>(null);
+  const holdRef = useRef<number | null>(null);
+
+  const [noDisplayRender, setNoDisplayRender] = useState(false);
+  const [noDisplayReasion, setNoDisplayReason] = useState(
+    "Beastie Preview Failed",
   );
 
-  const [renderFailed, setRenderFailed] = useState(false);
+  const step = useCallback(
+    (time: DOMHighResTimeStamp) => {
+      const anims = BEASTIE_ANIMATIONS.get(
+        `_${SPRITE_INFO[props.beastiedata.spr].name}`,
+      );
+      if (!anims || !anims.anim_data) {
+        console.log(`No animation data found for ${props.beastiedata.name}`);
+        return;
+      }
+      const anim = anims.anim_data[animation];
+      if (
+        anim === undefined ||
+        typeof anim == "string" ||
+        typeof anim == "number" ||
+        anim === undefined
+      ) {
+        console.log(`Incorrect Anim: ${animation}`);
+        return;
+      }
+      const beastie_anim_speed =
+        anims.anim_data.__anim_speed != undefined
+          ? anims.anim_data.__anim_speed
+          : 1;
+      const anim_speed = anim.speed ? anim.speed : 1;
+      let frames;
+      if (!Array.isArray(anim.frames)) {
+        frameIndexRef.current = null;
+        frames = anim.frames;
+      }
+      if (Array.isArray(anim.frames)) {
+        if (frameIndexRef.current === null) {
+          frameIndexRef.current = 0;
+        }
+        frames = anim.frames[frameIndexRef.current];
+      }
+      if (frames == undefined) {
+        return;
+      }
+      let startFrame = 0;
+      let endFrame = 0;
+      if (frames.startFrame != undefined) {
+        startFrame = frames.startFrame;
+        endFrame = frames.startFrame;
+      }
+      if (frames.endFrame != undefined) {
+        endFrame = frames.endFrame;
+      }
+      if (frameNumRef.current === null || frameNumRef.current < startFrame) {
+        if (glRef.current) {
+          if (loadedImages[startFrame]) {
+            setImage(glRef.current, loadedImages[startFrame]);
+            frameNumRef.current = startFrame;
+            setNoDisplayRender(false);
+          } else if (loadedImages[0]) {
+            setImage(glRef.current, loadedImages[0]);
+            frameNumRef.current = 0;
+            setNoDisplayRender(false);
+          } else {
+            setNoDisplayRender(true);
+            setNoDisplayReason("Loading.");
+          }
+        }
+      }
+      if (prevTimeRef.current && frameNumRef.current !== null) {
+        const delta = time - prevTimeRef.current;
+        frameTimeRef.current += delta;
+        if (holdRef.current == null) {
+          holdRef.current = 1;
+          if (frames.holds && frames.holds[frameNumRef.current]) {
+            const holds = frames.holds[frameNumRef.current];
+            if (Array.isArray(holds)) {
+              holdRef.current = holds[Math.floor(Math.random() * holds.length)];
+            } else if (typeof holds == "number") {
+              holdRef.current = holds;
+            }
+          }
+        }
+        const frameLength =
+          (1000 / (24 * beastie_anim_speed) / anim_speed) * holdRef.current * 2; // idk multiplied by 2 seems to match in game more...
+        console.log(frameLength, frameTimeRef.current);
+        if (frameTimeRef.current > frameLength) {
+          frameTimeRef.current = frameTimeRef.current % frameLength;
+          holdRef.current = null;
+          frameNumRef.current += 1;
+          if (frameNumRef.current > endFrame) {
+            if (frames.transitions && Array.isArray(anim.frames)) {
+              frameIndexRef.current =
+                frames.transitions[
+                  Math.floor(Math.random() * frames.transitions.length)
+                ];
+              const newstart = anim.frames[frameIndexRef.current].startFrame;
+              if (newstart != null) {
+                frameNumRef.current = newstart;
+              } else {
+                frameNumRef.current = 0;
+              }
+            } else {
+              frameNumRef.current = startFrame;
+            }
+          }
+          if (glRef.current && loadedImages[frameNumRef.current]) {
+            setImage(glRef.current, loadedImages[frameNumRef.current]);
+            setNoDisplayRender(false);
+          }
+        }
+      }
+      prevTimeRef.current = time;
+      requestRef.current = requestAnimationFrame(step);
+    },
+    [loadedImages, props.beastiedata, animation],
+  );
 
   useEffect(() => {
-    setImageURL(
-      `/gameassets/beasties/${SPRITE_INFO[props.beastiedata.spr].name}/0.png`,
-    );
-  }, [props.beastiedata]);
+    requestRef.current = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(requestRef.current);
+  }, [step, animation]);
+
+  useEffect(() => {
+    frameNumRef.current = null;
+    frameTimeRef.current = 0;
+  }, [loadedImages]);
 
   useEffect(() => {
     if (
@@ -51,7 +182,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
       } catch (error) {
         if (error instanceof WebGLError) {
           console.log(`WebGL Error: ${error.message}`);
-          setRenderFailed(true);
+          setNoDisplayRender(true);
+          setNoDisplayReason("Beastie Preview Failed");
           return;
         } else {
           throw error;
@@ -60,17 +192,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       glRef.current = newGl.gl;
       programRef.current = newGl.program;
     }
-    if (programRef.current) {
-      const im = new Image();
-      im.src = imageURL;
-      im.addEventListener("load", () => {
-        if (glRef.current) {
-          setImage(glRef.current, im);
-          setRenderFailed(false);
-        }
-      });
-    }
-  }, [imageURL]);
+  }, []);
 
   useEffect(() => {
     if (glRef.current && programRef.current) {
@@ -106,18 +228,36 @@ export default function ContentPreview(props: Props): React.ReactNode {
     <div className={styles.preview}>
       <canvas
         className={styles.previewcanvas}
-        style={{ display: renderFailed ? "none" : "block" }}
+        style={{ display: noDisplayRender ? "none" : "block" }}
         width={1000}
         height={1000}
         ref={canvasRef}
       />
       <div
         className={styles.canvasfailed}
-        style={{ display: renderFailed ? "flex" : "none" }}
+        style={{ display: noDisplayRender ? "flex" : "none" }}
       >
-        <div>Beastie Preview Failed</div>
+        <div>{noDisplayReasion}</div>
       </div>
       <button onClick={downloadImage}>Save PNG</button>
+      <br />
+      Animation:{" "}
+      <select onChange={(event) => setAnimation(event.target.value)}>
+        {[
+          "idle",
+          "move",
+          "ready",
+          "spike",
+          "volley",
+          "good",
+          "bad",
+          "fall",
+        ].map((value: string) => (
+          <option value={value}>
+            {value.charAt(0).toUpperCase() + value.slice(1)}
+          </option>
+        ))}
+      </select>
       <ColorTabs beastiedata={props.beastiedata} colorChange={colorChange} />
     </div>
   );

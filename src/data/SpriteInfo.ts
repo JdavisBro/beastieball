@@ -4,6 +4,7 @@ export type Sprite = {
   name: string;
   width: number;
   height: number;
+  frames: number;
 };
 
 const SPRITE_INFO: Sprite[] = sprite_info;

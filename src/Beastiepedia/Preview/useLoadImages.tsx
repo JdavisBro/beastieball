@@ -43,6 +43,7 @@ export default function useLoadImages(path: string, max_num: number) {
         if (currentIm.image) {
           delete currentIm.image;
         }
+        images.current = {};
       }
     };
   }, [path, max_num]);

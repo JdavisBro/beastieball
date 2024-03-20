@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const getOrientation = (): boolean => {
   // return window.screen.width / window.screen.height <= 4 / 6;
-  return window.screen.width > window.screen.height;
+  return window.screen.width < window.screen.height;
 };
 
 const useScreenOrientation = (): boolean => {

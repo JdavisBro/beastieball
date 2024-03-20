@@ -8,6 +8,7 @@ type BeastieFrames = {
     _: string;
     [index: string]: number | number[] | string | undefined; // has to be either or the class thing will make error...
   };
+  sounds?: { _: string; [index: string]: number | string | undefined };
   transitions?: number[];
 };
 

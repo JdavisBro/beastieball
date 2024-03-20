@@ -274,6 +274,15 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const [background, setBackground] = useState(false);
   const [backgroundColor, setBackgroundColor] = useState("#ffffff");
 
+  const [fitBeastie, setFitBeastie] = useState(true);
+
+  const beastiesprite = SPRITE_INFO[props.beastiedata.spr];
+
+  const beastiescale =
+    beastiesprite.bbox.width > beastiesprite.bbox.height
+      ? beastiesprite.width / beastiesprite.bbox.width
+      : beastiesprite.height / beastiesprite.bbox.height;
+
   return (
     <div className={styles.preview}>
       <div className={styles.canvasconcon}>
@@ -283,6 +292,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
             style={{
               display: noDisplayRender ? "none" : "block",
               backgroundColor: background ? backgroundColor : "transparent",
+              transform: fitBeastie
+                ? `scale(${beastiescale}) translate(${((-beastiesprite.bbox.x - beastiesprite.bbox.width / 2 + beastiesprite.width / 2) / beastiesprite.width) * 100}%, ${((-beastiesprite.bbox.y - beastiesprite.bbox.height / 2 + beastiesprite.height / 2) / beastiesprite.height) * 100}%)`
+                : "",
             }}
             width={1000}
             height={1000}
@@ -364,7 +376,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
         <div className={styles.value}>
           <button onClick={downloadImage}>Save PNG</button>
           <br />
-          <br />
           <div className={styles.middlealign}>
             <label htmlFor="sizeinput">Display Size: </label>
             <input
@@ -382,7 +393,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
               }}
             />
           </div>
-          <br />
           <div className={styles.middlealign}>
             <label htmlFor="whitebg" style={{ userSelect: "none" }}>
               Background:{" "}
@@ -403,6 +413,16 @@ export default function ContentPreview(props: Props): React.ReactNode {
               }}
             />
           </div>
+          <label htmlFor="fitbeastie">Zoom into Beastie</label>
+          <input
+            id="fitbeastie"
+            name="fitbeastie"
+            type="checkbox"
+            defaultChecked={fitBeastie}
+            onChange={(event) => {
+              setFitBeastie(event.target.checked);
+            }}
+          />
         </div>
       </div>
 

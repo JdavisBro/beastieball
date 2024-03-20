@@ -3,2640 +3,5280 @@
     "name": "sprMap_ambestone_west_cliff",
     "width": 157,
     "height": 337,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprFanbro",
     "width": 550,
     "height": 500,
-    "frames": 4
+    "frames": 4,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprBilby2",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "verbena",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprExclam",
     "width": 256,
     "height": 256,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 74,
+        "y": 8,
+        "width": 124,
+        "height": 241
+    }
   },
   {
     "name": "sprIbis",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprShroom1",
     "width": 1000,
     "height": 1000,
-    "frames": 36
+    "frames": 36,
+    "bbox": {
+        "x": 293,
+        "y": 696,
+        "width": 362,
+        "height": 303
+    }
   },
   {
     "name": "sprMode",
     "width": 256,
     "height": 256,
-    "frames": 4
+    "frames": 4,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+    }
   },
   {
     "name": "sprOutfitcategory",
     "width": 64,
     "height": 64,
-    "frames": 5
+    "frames": 5,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprRocklizard1",
     "width": 1000,
     "height": 1000,
-    "frames": 40
+    "frames": 40,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 602,
+        "height": 989
+    }
   },
   {
     "name": "sprTex_tinysprig",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprTrent",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCompass",
     "width": 167,
     "height": 164,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 1,
+        "y": 6,
+        "width": 156,
+        "height": 146
+    }
   },
   {
     "name": "sprCarlos",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprNo",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprMap_park_south",
     "width": 302,
     "height": 140,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_city_seacave",
     "width": 247,
     "height": 314,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "spring_rider",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprTypecursor",
     "width": 3,
     "height": 50,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 3,
+        "height": 50
+    }
   },
   {
     "name": "sprCrown",
     "width": 64,
     "height": 64,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 24,
+        "width": 64,
+        "height": 40
+    }
   },
   {
     "name": "sprTex_tinyfern",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 1,
+        "y": 0,
+        "width": 62,
+        "height": 64
+    }
   },
   {
     "name": "sprMap_seacave_side",
     "width": 254,
     "height": 110,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprKingarm",
     "width": 889,
     "height": 368,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprHypecrack",
     "width": 224,
     "height": 1080,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 224,
+        "height": 1080
+    }
   },
   {
     "name": "sprVolleyA",
     "width": 256,
     "height": 256,
-    "frames": 3
+    "frames": 3,
+    "bbox": {
+        "x": 48,
+        "y": 105,
+        "width": 161,
+        "height": 108
+    }
   },
   {
     "name": "sprPlayer_hat",
     "width": 500,
     "height": 500,
-    "frames": 6
+    "frames": 6,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 342,
+        "height": 188
+    }
   },
   {
     "name": "sprWhooshlines",
     "width": 256,
     "height": 256,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+    }
   },
   {
     "name": "sprFrog2",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sptSweatdrop",
     "width": 32,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 4,
+        "width": 31,
+        "height": 53
+    }
   },
   {
     "name": "sprSeabird1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprBunny",
     "width": 600,
     "height": 400,
-    "frames": 8
+    "frames": 8,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprRocklizard2",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_pirate",
     "width": 228,
     "height": 275,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprTurtle1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMask",
     "width": 500,
     "height": 500,
-    "frames": 10
+    "frames": 10,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_forest_lake",
     "width": 340,
     "height": 226,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprStreamer",
     "width": 550,
     "height": 500,
-    "frames": 19
+    "frames": 19,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprLyrebird",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_chartreuse",
     "width": 434,
     "height": 349,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_shroom_path",
     "width": 278,
     "height": 332,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_canyon_secret",
     "width": 116,
     "height": 280,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMoney",
     "width": 52,
     "height": 64,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 1,
+        "y": 0,
+        "width": 46,
+        "height": 53
+    }
   },
   {
     "name": "sprHeart",
     "width": 256,
     "height": 225,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 225
+    }
   },
   {
     "name": "sprAlien",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprFiredup",
     "width": 128,
     "height": 128,
-    "frames": 9
+    "frames": 9,
+    "bbox": {
+        "x": 0,
+        "y": 2,
+        "width": 128,
+        "height": 126
+    }
   },
   {
     "name": "horseradish",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprMap_cliffs_railroad",
     "width": 565,
     "height": 169,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_cliffs_rail_cave_east",
     "width": 173,
     "height": 141,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprHatguy",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 150,
+        "y": 74,
+        "width": 291,
+        "height": 425
+    }
   },
   {
     "name": "sprInspect",
     "width": 164,
     "height": 178,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 3,
+        "y": 2,
+        "width": 155,
+        "height": 174
+    }
   },
   {
     "name": "sprMap_jasper_cave_north_exit",
     "width": 165,
     "height": 120,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_woods_north_rail",
     "width": 190,
     "height": 265,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprGiantTurtleLeg",
     "width": 562,
     "height": 632,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMusicnote",
     "width": 64,
     "height": 64,
-    "frames": 3
+    "frames": 3,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprOlm",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "spinwall_tall_standee",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprGymnast",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 162,
+        "y": 121,
+        "width": 230,
+        "height": 378
+    }
   },
   {
     "name": "sprVolleyB",
     "width": 256,
     "height": 256,
-    "frames": 4
+    "frames": 4,
+    "bbox": {
+        "x": 51,
+        "y": 98,
+        "width": 179,
+        "height": 127
+    }
   },
   {
     "name": "sprShroom_s",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprTex_bush",
     "width": 128,
     "height": 128,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 128,
+        "height": 128
+    }
   },
   {
     "name": "sprYeti",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprEmoji_head",
     "width": 81,
     "height": 81,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 81,
+        "height": 81
+    }
   },
   {
     "name": "sprGrassstep",
     "width": 64,
     "height": 64,
-    "frames": 4
+    "frames": 4,
+    "bbox": {
+        "x": 10,
+        "y": 3,
+        "width": 48,
+        "height": 53
+    }
   },
   {
     "name": "sprite0",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 1,
+        "y": 0,
+        "width": 46,
+        "height": 62
+    }
   },
   {
     "name": "sprClam",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_jasper_cave_west",
     "width": 115,
     "height": 202,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprSpeech",
     "width": 1024,
     "height": 1024,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+    }
   },
   {
     "name": "sprMap_reserve_loop",
     "width": 165,
     "height": 171,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprShark",
     "width": 1000,
     "height": 1000,
-    "frames": 8
+    "frames": 8,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprBG_Railhouse",
     "width": 1920,
     "height": 1080,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+    }
   },
   {
     "name": "sprMASTER_TEXTURE",
     "width": 2048,
     "height": 2048,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 2048,
+        "height": 2048
+    }
   },
   {
     "name": "sprMap_jasper_north",
     "width": 258,
     "height": 242,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMillipede",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprHeadmaster",
     "width": 550,
     "height": 500,
-    "frames": 7
+    "frames": 7,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_beryl",
     "width": 364,
     "height": 241,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_park_south_end",
     "width": 216,
     "height": 129,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprHitA",
     "width": 256,
     "height": 256,
-    "frames": 4
+    "frames": 4,
+    "bbox": {
+        "x": 121,
+        "y": 76,
+        "width": 123,
+        "height": 106
+    }
   },
   {
     "name": "sprServal",
     "width": 1000,
     "height": 1000,
-    "frames": 49
+    "frames": 49,
+    "bbox": {
+        "x": 5,
+        "y": 199,
+        "width": 817,
+        "height": 798
+    }
   },
   {
     "name": "sprMap_park_edge",
     "width": 215,
     "height": 329,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprKettle1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprNoise_perlin",
     "width": 256,
     "height": 256,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+    }
   },
   {
     "name": "sprMap_wood_cave2",
     "width": 220,
     "height": 299,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprOptions",
     "width": 130,
     "height": 108,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 130,
+        "height": 108
+    }
   },
   {
     "name": "sprMap_beryl_railpath_south",
     "width": 342,
     "height": 177,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprBoost",
     "width": 48,
     "height": 64,
-    "frames": 6
+    "frames": 6,
+    "bbox": {
+        "x": 0,
+        "y": 1,
+        "width": 48,
+        "height": 62
+    }
   },
   {
     "name": "sprFox1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMagpie1",
     "width": 1000,
     "height": 1000,
-    "frames": 18
+    "frames": 18,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_tiny_island",
     "width": 248,
     "height": 157,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCheerleader",
     "width": 1000,
     "height": 1000,
-    "frames": 41
+    "frames": 41,
+    "bbox": {
+        "x": 154,
+        "y": 591,
+        "width": 607,
+        "height": 407
+    }
   },
   {
     "name": "sprFankid",
     "width": 550,
     "height": 500,
-    "frames": 6
+    "frames": 6,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprBall",
     "width": 256,
     "height": 256,
-    "frames": 3
+    "frames": 3,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+    }
   },
   {
     "name": "sprite2",
     "width": 64,
     "height": 64,
-    "frames": 3
+    "frames": 3,
+    "bbox": {
+        "x": 0,
+        "y": 2,
+        "width": 63,
+        "height": 61
+    }
   },
   {
     "name": "sprGfxtee",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 171,
+        "y": 69,
+        "width": 181,
+        "height": 431
+    }
   },
   {
     "name": "sprMap_wood_rail",
     "width": 424,
     "height": 171,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_hometown_south_path",
     "width": 392,
     "height": 244,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprRiley",
     "width": 500,
     "height": 500,
-    "frames": 27
+    "frames": 27,
+    "bbox": {
+        "x": 25,
+        "y": 33,
+        "width": 443,
+        "height": 467
+    }
   },
   {
     "name": "sprMap_central_station",
     "width": 309,
     "height": 136,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMudskipper",
     "width": 1000,
     "height": 909,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "tree_mangrove",
     "width": 423,
     "height": 474,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 423,
+        "height": 474
+    }
   },
   {
     "name": "sprMap_cityhill",
     "width": 223,
     "height": 270,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_park1",
     "width": 246,
     "height": 256,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "pandamus_tree",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprStatus",
     "width": 64,
     "height": 64,
-    "frames": 50
+    "frames": 50,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprTame",
     "width": 64,
     "height": 64,
-    "frames": 9
+    "frames": 9,
+    "bbox": {
+        "x": 0,
+        "y": 9,
+        "width": 64,
+        "height": 46
+    }
   },
   {
     "name": "sprJavier",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprRat",
     "width": 1000,
     "height": 1000,
-    "frames": 83
+    "frames": 83,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMoth1",
     "width": 1000,
     "height": 1000,
-    "frames": 55
+    "frames": 55,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_city_rail_east",
     "width": 341,
     "height": 195,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprSwift",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_myth_forest1",
     "width": 282,
     "height": 251,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprFighter",
     "width": 550,
     "height": 500,
-    "frames": 7
+    "frames": 7,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_myth_forest2",
     "width": 374,
     "height": 230,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprGrade_tutorial",
     "width": 64,
     "height": 64,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprMap_park_north2",
     "width": 243,
     "height": 161,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCycle",
     "width": 550,
     "height": 500,
-    "frames": 9
+    "frames": 9,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPsychic",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprDot",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprPlayer_hairb",
     "width": 500,
     "height": 500,
-    "frames": 9
+    "frames": 9,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 369,
+        "height": 337
+    }
   },
   {
     "name": "sprSeal1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprType",
     "width": 64,
     "height": 64,
-    "frames": 19
+    "frames": 19,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprNatalie",
     "width": 550,
     "height": 500,
-    "frames": 6
+    "frames": 6,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprrubberplaque",
     "width": 1980,
     "height": 1080,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1980,
+        "height": 1080
+    }
   },
   {
     "name": "sprMoth",
     "width": 1000,
     "height": 909,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_canyon_3",
     "width": 161,
     "height": 290,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprBored1",
     "width": 550,
     "height": 500,
-    "frames": 4
+    "frames": 4,
+    "bbox": {
+        "x": 65,
+        "y": 125,
+        "width": 368,
+        "height": 362
+    }
   },
   {
     "name": "sprTex_net",
     "width": 256,
     "height": 256,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+    }
   },
   {
     "name": "sprBG_TV",
     "width": 2048,
     "height": 1531,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 99,
+        "width": 2048,
+        "height": 1198
+    }
   },
   {
     "name": "sprRewind",
     "width": 511,
     "height": 369,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 511,
+        "height": 369
+    }
   },
   {
     "name": "sprMap_beryl_railpath_west",
     "width": 172,
     "height": 167,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprRat_alt",
     "width": 1000,
     "height": 1000,
-    "frames": 83
+    "frames": 83,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_reserve_1",
     "width": 172,
     "height": 305,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprGhost1",
     "width": 1000,
     "height": 1000,
-    "frames": 8
+    "frames": 8,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprKaz",
     "width": 500,
     "height": 500,
-    "frames": 15
+    "frames": 15,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCoral_b",
     "width": 460,
     "height": 462,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 460,
+        "height": 462
+    }
   },
   {
     "name": "sprMap_jasper_cave_south",
     "width": 165,
     "height": 170,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "tree_leaf_a_01",
     "width": 2048,
     "height": 2048,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 2048,
+        "height": 2048
+    }
   },
   {
     "name": "sprMap_seacave1",
     "width": 193,
     "height": 104,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprNatalia",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprDirtEff",
     "width": 64,
     "height": 64,
-    "frames": 3
+    "frames": 3,
+    "bbox": {
+        "x": 1,
+        "y": 2,
+        "width": 62,
+        "height": 61
+    }
   },
   {
     "name": "sprTex_line",
     "width": 256,
     "height": 256,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+    }
   },
   {
     "name": "sprFrog",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPossum2",
     "width": 1000,
     "height": 1000,
-    "frames": 16
+    "frames": 16,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPhone_hand_1_l",
     "width": 406,
     "height": 541,
-    "frames": 17
+    "frames": 17,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 316,
+        "height": 452
+    }
   },
   {
     "name": "sprMap_shroomgrove",
     "width": 219,
     "height": 205,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprStump_icon",
     "width": 64,
     "height": 64,
-    "frames": 5
+    "frames": 5,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "tree_rubber",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprMap_hometown_north",
     "width": 374,
     "height": 313,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 374,
+        "height": 313
+    }
   },
   {
     "name": "sprMap_dogpark",
     "width": 311,
     "height": 177,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprQuestion",
     "width": 256,
     "height": 256,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+    }
   },
   {
     "name": "sprPlatypus1",
     "width": 1000,
     "height": 1000,
-    "frames": 87
+    "frames": 87,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprValerie",
     "width": 550,
     "height": 500,
-    "frames": 12
+    "frames": 12,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprStar",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 1,
+        "width": 64,
+        "height": 61
+    }
   },
   {
     "name": "sprNoise_blue",
     "width": 256,
     "height": 256,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+    }
   },
   {
     "name": "sprCrownSeries",
     "width": 1031,
     "height": 613,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1031,
+        "height": 613
+    }
   },
   {
     "name": "sprCowboy",
     "width": 550,
     "height": 500,
-    "frames": 3
+    "frames": 3,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprShy",
     "width": 1000,
     "height": 1000,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_rubberfarm",
     "width": 471,
     "height": 175,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprJoel",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCaptain",
     "width": 550,
     "height": 500,
-    "frames": 16
+    "frames": 16,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMapX",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprTex_tinyleafy",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprMap_park_north3",
     "width": 212,
     "height": 144,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_beryl_railpath_end",
     "width": 192,
     "height": 121,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprOlm1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_park_north4",
     "width": 251,
     "height": 140,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_hometown_south_rail",
     "width": 373,
     "height": 281,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprGhost2",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_woods_east_cave",
     "width": 186,
     "height": 170,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCoral_c",
     "width": 1135,
     "height": 1356,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1135,
+        "height": 1356
+    }
   },
   {
     "name": "sprJackie",
     "width": 500,
     "height": 500,
-    "frames": 6
+    "frames": 6,
+    "bbox": {
+        "x": 110,
+        "y": 197,
+        "width": 264,
+        "height": 303
+    }
   },
   {
     "name": "sprThought",
     "width": 129,
     "height": 120,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 124,
+        "height": 120
+    }
   },
   {
     "name": "sprScienceboss",
     "width": 550,
     "height": 500,
-    "frames": 10
+    "frames": 10,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprClown1",
     "width": 1000,
     "height": 1000,
-    "frames": 48
+    "frames": 48,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_reserve_2",
     "width": 197,
     "height": 222,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_park_north",
     "width": 197,
     "height": 207,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprSharkmon",
     "width": 1000,
     "height": 1000,
-    "frames": 8
+    "frames": 8,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprJellyfish",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprQuestionInfo",
     "width": 40,
     "height": 40,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 40,
+        "height": 40
+    }
   },
   {
     "name": "sprKettle",
     "width": 1000,
     "height": 1000,
-    "frames": 8
+    "frames": 8,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPossum",
     "width": 1000,
     "height": 1000,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprLeagueman",
     "width": 550,
     "height": 500,
-    "frames": 8
+    "frames": 8,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_rockybeach",
     "width": 482,
     "height": 301,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprDiamond",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprMap_city_railalley",
     "width": 173,
     "height": 177,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPlayer_collar",
     "width": 500,
     "height": 500,
-    "frames": 7
+    "frames": 7,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 303,
+        "height": 317
+    }
   },
   {
     "name": "sprFlare",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 3,
+        "y": 2,
+        "width": 57,
+        "height": 58
+    }
   },
   {
     "name": "sprDaniel",
     "width": 500,
     "height": 479,
-    "frames": 4
+    "frames": 4,
+    "bbox": {
+        "x": 146,
+        "y": 5,
+        "width": 193,
+        "height": 474
+    }
   },
   {
     "name": "sprDia",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprGrade_city",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprDot_double",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprMap_coral_island",
     "width": 424,
     "height": 229,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_wood_east_rail",
     "width": 332,
     "height": 115,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPhone_phone",
     "width": 406,
     "height": 541,
-    "frames": 13
+    "frames": 13,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 402,
+        "height": 519
+    }
   },
   {
     "name": "sprSeal",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "mushroomnet",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprMap_myth_forest_side",
     "width": 368,
     "height": 118,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPirate1",
     "width": 550,
     "height": 500,
-    "frames": 4
+    "frames": 4,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "scribble_fallback_bulletpoint",
     "width": 12,
     "height": 12,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 1,
+        "y": 1,
+        "width": 9,
+        "height": 9
+    }
   },
   {
     "name": "sprDia_thick",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprCourt",
     "width": 600,
     "height": 310,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 1,
+        "width": 598,
+        "height": 305
+    }
   },
   {
     "name": "sprBat",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCheck",
     "width": 64,
     "height": 64,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 1,
+        "y": 2,
+        "width": 63,
+        "height": 61
+    }
   },
   {
     "name": "sprTex_casurina_5",
     "width": 256,
     "height": 256,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 6,
+        "y": 3,
+        "width": 238,
+        "height": 243
+    }
   },
   {
     "name": "sprMap_meadows_1",
     "width": 247,
     "height": 198,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_myth_forest3",
     "width": 212,
     "height": 261,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMantis",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprWatertrail",
     "width": 256,
     "height": 256,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+    }
   },
   {
     "name": "sprZorilla",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCassowary",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprTurtleBoat",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_seacave4",
     "width": 239,
     "height": 230,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprUndo",
     "width": 64,
     "height": 64,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 5,
+        "y": 5,
+        "width": 53,
+        "height": 53
+    }
   },
   {
     "name": "sprPixel",
     "width": 1,
     "height": 1,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1
+    }
   },
   {
     "name": "sprRailman",
     "width": 500,
     "height": 479,
-    "frames": 8
+    "frames": 8,
+    "bbox": {
+        "x": 90,
+        "y": 29,
+        "width": 286,
+        "height": 450
+    }
   },
   {
     "name": "sprBG_stadium_far",
     "width": 1920,
     "height": 1080,
-    "frames": 5
+    "frames": 5,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+    }
   },
   {
     "name": "sprWhite",
     "width": 8,
     "height": 8,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 8,
+        "height": 8
+    }
   },
   {
     "name": "sprMap_reserve_west",
     "width": 228,
     "height": 314,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 228,
+        "height": 314
+    }
   },
   {
     "name": "sprAnnabel",
     "width": 500,
     "height": 479,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 148,
+        "y": 19,
+        "width": 225,
+        "height": 460
+    }
   },
   {
     "name": "sprBilby",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPirate2",
     "width": 550,
     "height": 500,
-    "frames": 5
+    "frames": 5,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprRocklizard",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprDog",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_reserve_secret",
     "width": 199,
     "height": 210,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprRedd",
     "width": 500,
     "height": 500,
-    "frames": 10
+    "frames": 10,
+    "bbox": {
+        "x": 50,
+        "y": 120,
+        "width": 349,
+        "height": 380
+    }
   },
   {
     "name": "sprMap_canyon_2",
     "width": 267,
     "height": 219,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_city_market",
     "width": 241,
     "height": 208,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "merry_go_round",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprMitzi",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprGhost",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprShadowBlob",
     "width": 256,
     "height": 256,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 5,
+        "width": 256,
+        "height": 247
+    }
   },
   {
     "name": "sprMap_sphinx",
     "width": 306,
     "height": 278,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprBored3",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 131,
+        "y": 103,
+        "width": 201,
+        "height": 396
+    }
   },
   {
     "name": "sprFanspike",
     "width": 550,
     "height": 500,
-    "frames": 4
+    "frames": 4,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMainmenu",
     "width": 48,
     "height": 48,
-    "frames": 27
+    "frames": 27,
+    "bbox": {
+        "x": 3,
+        "y": 0,
+        "width": 43,
+        "height": 48
+    }
   },
   {
     "name": "sprInstructor",
     "width": 550,
     "height": 500,
-    "frames": 7
+    "frames": 7,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprGrade_city_OLD",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprDragonfly1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_railtrail_3",
     "width": 317,
     "height": 138,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPlatypus2",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprWater",
     "width": 512,
     "height": 512,
-    "frames": 3
+    "frames": 3,
+    "bbox": {
+        "x": 0,
+        "y": 22,
+        "width": 498,
+        "height": 475
+    }
   },
   {
     "name": "sprClown",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprKangaroo1",
     "width": 1000,
     "height": 1000,
-    "frames": 26
+    "frames": 26,
+    "bbox": {
+        "x": 273,
+        "y": 682,
+        "width": 354,
+        "height": 316
+    }
   },
   {
     "name": "casurina_05",
     "width": 2048,
     "height": 2048,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 2048,
+        "height": 2048
+    }
   },
   {
     "name": "sprEmoji_harlow",
     "width": 81,
     "height": 81,
-    "frames": 10
+    "frames": 10,
+    "bbox": {
+        "x": 0,
+        "y": 2,
+        "width": 80,
+        "height": 65
+    }
   },
   {
     "name": "sprMap_mangrove_end",
     "width": 258,
     "height": 195,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_stadium",
     "width": 232,
     "height": 226,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_city_neighborhood",
     "width": 242,
     "height": 323,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "tree_normal",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprShark1",
     "width": 1000,
     "height": 1000,
-    "frames": 15
+    "frames": 15,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprFootball1",
     "width": 1000,
     "height": 1000,
-    "frames": 15
+    "frames": 15,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_hometown_reserve",
     "width": 284,
     "height": 291,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 284,
+        "height": 291
+    }
   },
   {
     "name": "sprMap_beach_cliff1",
     "width": 188,
     "height": 240,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_canyon_secret_2",
     "width": 169,
     "height": 120,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprSavanah",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMillipede1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprJellyfish1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprBall_icon",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprMagpie",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPhone_hand_2",
     "width": 406,
     "height": 541,
-    "frames": 9
+    "frames": 9,
+    "bbox": {
+        "x": 42,
+        "y": 157,
+        "width": 346,
+        "height": 384
+    }
   },
   {
     "name": "sprTricky",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprJasperhiker",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 97,
+        "y": 91,
+        "width": 275,
+        "height": 408
+    }
   },
   {
     "name": "sprFeedback",
     "width": 64,
     "height": 64,
-    "frames": 5
+    "frames": 5,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprMap_meadows_2",
     "width": 396,
     "height": 268,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprGrade_default",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprTex_grass",
     "width": 128,
     "height": 128,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 2,
+        "width": 128,
+        "height": 124
+    }
   },
   {
     "name": "sprPlayer_hair",
     "width": 500,
     "height": 500,
-    "frames": 42
+    "frames": 42,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 365,
+        "height": 277
+    }
   },
   {
     "name": "sprHitB",
     "width": 256,
     "height": 256,
-    "frames": 4
+    "frames": 4,
+    "bbox": {
+        "x": 128,
+        "y": 80,
+        "width": 112,
+        "height": 113
+    }
   },
   {
     "name": "sprTricky1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "tree_trunk_a",
     "width": 2048,
     "height": 2048,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 2048,
+        "height": 2048
+    }
   },
   {
     "name": "sprMap_BG",
     "width": 341,
     "height": 251,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 341,
+        "height": 251
+    }
   },
   {
     "name": "sprMap_jasper_cave_connect",
     "width": 107,
     "height": 135,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprGrade_witch",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprFootball2",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCroc",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "chrysanthemum",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprResearcher",
     "width": 500,
     "height": 500,
-    "frames": 10
+    "frames": 10,
+    "bbox": {
+        "x": 91,
+        "y": 107,
+        "width": 342,
+        "height": 393
+    }
   },
   {
     "name": "sprMap_jasper_cave_1",
     "width": 277,
     "height": 183,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_mythwood_town1",
     "width": 284,
     "height": 278,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprChar",
     "width": 562,
     "height": 504,
-    "frames": 16
+    "frames": 16,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 2048,
+        "height": 2048
+    }
   },
   {
     "name": "sprNumberone",
     "width": 595,
     "height": 800,
-    "frames": 3
+    "frames": 3,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 595,
+        "height": 800
+    }
   },
   {
     "name": "sprreserveplaque",
     "width": 1980,
     "height": 1080,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1980,
+        "height": 1080
+    }
   },
   {
     "name": "sprSpin",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 1,
+        "y": 0,
+        "width": 510,
+        "height": 512
+    }
   },
   {
     "name": "sprDrop",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 15,
+        "width": 64,
+        "height": 19
+    }
   },
   {
     "name": "sprBestie",
     "width": 1000,
     "height": 1000,
-    "frames": 34
+    "frames": 34,
+    "bbox": {
+        "x": 51,
+        "y": 565,
+        "width": 785,
+        "height": 434
+    }
   },
   {
     "name": "sprMap_wood_cave1",
     "width": 178,
     "height": 138,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPossum1",
     "width": 1000,
     "height": 1000,
-    "frames": 59
+    "frames": 59,
+    "bbox": {
+        "x": 350,
+        "y": 650,
+        "width": 363,
+        "height": 346
+    }
   },
   {
     "name": "sprBeastieAnimIcons",
     "width": 32,
     "height": 32,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 32,
+        "height": 32
+    }
   },
   {
     "name": "sprKing",
     "width": 500,
     "height": 500,
-    "frames": 19
+    "frames": 19,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCityrailman",
     "width": 550,
     "height": 500,
-    "frames": 8
+    "frames": 8,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_mangrove_1",
     "width": 211,
     "height": 190,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_mangrove_2",
     "width": 263,
     "height": 312,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "oxalis",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprDisruptor",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_reserve_shroom",
     "width": 158,
     "height": 193,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_beach_station",
     "width": 281,
     "height": 187,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprBallman",
     "width": 550,
     "height": 500,
-    "frames": 4
+    "frames": 4,
+    "bbox": {
+        "x": 105,
+        "y": 71,
+        "width": 250,
+        "height": 428
+    }
   },
   {
     "name": "bush_shrub_grass",
     "width": 2048,
     "height": 2048,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 2048,
+        "height": 2048
+    }
   },
   {
     "name": "sprSpirit1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_jasper_cave_west_exit",
     "width": 158,
     "height": 124,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprKeyboard_butts",
     "width": 64,
     "height": 64,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 4,
+        "y": 18,
+        "width": 54,
+        "height": 36
+    }
   },
   {
     "name": "sprMap_hometown_north_path",
     "width": 209,
     "height": 345,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCassowary1",
     "width": 1000,
     "height": 1000,
-    "frames": 40
+    "frames": 40,
+    "bbox": {
+        "x": 297,
+        "y": 670,
+        "width": 431,
+        "height": 322
+    }
   },
   {
     "name": "mint",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprMap_canyon_cave",
     "width": 170,
     "height": 151,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMoth2",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "spinwall_standee",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "disphyma",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprBored2",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 183,
+        "y": 253,
+        "width": 198,
+        "height": 244
+    }
   },
   {
     "name": "sprTurtle",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_city_suburb1",
     "width": 459,
     "height": 166,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprNetworkscene1",
     "width": 341,
     "height": 251,
-    "frames": 3
+    "frames": 3,
+    "bbox": {
+        "x": 0,
+        "y": 23,
+        "width": 341,
+        "height": 228
+    }
   },
   {
     "name": "bush_tasmania",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprPlayer_nose",
     "width": 500,
     "height": 500,
-    "frames": 21
+    "frames": 21,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 231
+    }
   },
   {
     "name": "sprMap_railbridge",
     "width": 170,
     "height": 284,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprTex_eucalyptus",
     "width": 128,
     "height": 128,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 128,
+        "height": 128
+    }
   },
   {
     "name": "sprPlayer_body",
     "width": 500,
     "height": 500,
-    "frames": 14
+    "frames": 14,
+    "bbox": {
+        "x": 177,
+        "y": 257,
+        "width": 132,
+        "height": 123
+    }
   },
   {
     "name": "sprRiven",
     "width": 500,
     "height": 500,
-    "frames": 18
+    "frames": 18,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_seacave3",
     "width": 210,
     "height": 208,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMagpiemon",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_hometown_starters",
     "width": 165,
     "height": 130,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 165,
+        "height": 130
+    }
   },
   {
     "name": "sprMap_academy",
     "width": 247,
     "height": 369,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprTridash",
     "width": 64,
     "height": 64,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprNetworkscene2",
     "width": 341,
     "height": 251,
-    "frames": 3
+    "frames": 3,
+    "bbox": {
+        "x": 162,
+        "y": 81,
+        "width": 161,
+        "height": 170
+    }
   },
   {
     "name": "sprLogo",
     "width": 950,
     "height": 311,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 1,
+        "y": 0,
+        "width": 948,
+        "height": 307
+    }
   },
   {
     "name": "sprSponsors",
     "width": 256,
     "height": 256,
-    "frames": 11
+    "frames": 11,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+    }
   },
   {
     "name": "sprBestieTail",
     "width": 1000,
     "height": 1000,
-    "frames": 41
+    "frames": 41,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "palm_tree",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprPhone_screen",
     "width": 406,
     "height": 541,
-    "frames": 12
+    "frames": 12,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 353,
+        "height": 410
+    }
   },
   {
     "name": "fern",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "kangaroo_paw",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprSilhouettes",
     "width": 500,
     "height": 500,
-    "frames": 11
+    "frames": 11,
+    "bbox": {
+        "x": 21,
+        "y": 12,
+        "width": 468,
+        "height": 488
+    }
   },
   {
     "name": "sprRaymond",
     "width": 500,
     "height": 500,
-    "frames": 4
+    "frames": 4,
+    "bbox": {
+        "x": 43,
+        "y": 58,
+        "width": 414,
+        "height": 442
+    }
   },
   {
     "name": "sprMap_railtrail_2",
     "width": 201,
     "height": 100,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "tree_leaf_a_01_alpha",
     "width": 2048,
     "height": 2048,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 2048,
+        "height": 2048
+    }
   },
   {
     "name": "sprMap_jasper_cave_south_exit",
     "width": 182,
     "height": 278,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_hometown",
     "width": 373,
     "height": 246,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 373,
+        "height": 246
+    }
   },
   {
     "name": "sprBG_Gym",
     "width": 1920,
     "height": 1080,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+    }
   },
   {
     "name": "sprDog1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprRainbow",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCheerleader1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprFootball",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprIcon",
     "width": 64,
     "height": 64,
-    "frames": 11
+    "frames": 11,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprArrowIcon",
     "width": 64,
     "height": 64,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 10,
+        "width": 60,
+        "height": 46
+    }
   },
   {
     "name": "sprSelection",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 12,
+        "height": 12
+    }
   },
   {
     "name": "sprMap_mangrove_3",
     "width": 290,
     "height": 261,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprBilby1",
     "width": 1000,
     "height": 1000,
-    "frames": 50
+    "frames": 50,
+    "bbox": {
+        "x": 214,
+        "y": 585,
+        "width": 470,
+        "height": 411
+    }
   },
   {
     "name": "sprGremlin",
     "width": 304,
     "height": 245,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprKangaroo",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprGhostbug",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_stadium_road",
     "width": 451,
     "height": 128,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMayor",
     "width": 550,
     "height": 500,
-    "frames": 16
+    "frames": 16,
+    "bbox": {
+        "x": 0,
+        "y": 54,
+        "width": 535,
+        "height": 444
+    }
   },
   {
     "name": "sprMap_pirate_island",
     "width": 254,
     "height": 226,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprTurtle2",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPlayer_shoe",
     "width": 500,
     "height": 500,
-    "frames": 3
+    "frames": 3,
+    "bbox": {
+        "x": 195,
+        "y": 437,
+        "width": 65,
+        "height": 63
+    }
   },
   {
     "name": "sprSeabird",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_city_trainyard",
     "width": 159,
     "height": 209,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCircle",
     "width": 256,
     "height": 256,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+    }
   },
   {
     "name": "sprAudioButtons",
     "width": 16,
     "height": 16,
-    "frames": 9
+    "frames": 9,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 16
+    }
   },
   {
     "name": "sprDaredevil",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_seacave2",
     "width": 179,
     "height": 217,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCheerleadermon",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprHatlady",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 173,
+        "y": 38,
+        "width": 232,
+        "height": 462
+    }
   },
   {
     "name": "sprRiley_kid",
     "width": 500,
     "height": 500,
-    "frames": 8
+    "frames": 8,
+    "bbox": {
+        "x": 135,
+        "y": 226,
+        "width": 224,
+        "height": 274
+    }
   },
   {
     "name": "sprHalftone_double",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprBG_Boathouse",
     "width": 1920,
     "height": 1080,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+    }
   },
   {
     "name": "sprMap_sunken_stadium",
     "width": 277,
     "height": 243,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprNerd",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprOptions_small",
     "width": 77,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 77,
+        "height": 64
+    }
   },
   {
     "name": "sprWishes",
     "width": 960,
     "height": 540,
-    "frames": 33
+    "frames": 33,
+    "bbox": {
+        "x": 21,
+        "y": 14,
+        "width": 869,
+        "height": 474
+    }
   },
   {
     "name": "sprFlarebig",
     "width": 256,
     "height": 256,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 13,
+        "y": 5,
+        "width": 224,
+        "height": 242
+    }
   },
   {
     "name": "sprMap_park_south2",
     "width": 356,
     "height": 135,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCoral_a",
     "width": 200,
     "height": 225,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 200,
+        "height": 225
+    }
   },
   {
     "name": "sprShroom_b",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCrab",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPixel2",
     "width": 2,
     "height": 2,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 2,
+        "height": 2
+    }
   },
   {
     "name": "sprDash",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprMap_mythwood_cave_east",
     "width": 223,
     "height": 173,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprFashion",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 225,
+        "y": 23,
+        "width": 121,
+        "height": 477
+    }
   },
   {
     "name": "sprBouncer",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "tree_euca",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprSnake",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprTex_tinysucculent",
     "width": 64,
     "height": 32,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 63,
+        "height": 32
+    }
   },
   {
     "name": "sprPlatypus",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprHalftone_line",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprWizard",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_citysquare",
     "width": 337,
     "height": 271,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "city_park_tree",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprMap_canyon_1",
     "width": 256,
     "height": 205,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprTex_tree_main",
     "width": 256,
     "height": 256,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 1,
+        "y": 7,
+        "width": 253,
+        "height": 235
+    }
   },
   {
     "name": "sprDemosplash",
     "width": 1558,
     "height": 788,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1558,
+        "height": 788
+    }
   },
   {
     "name": "sprPhone_hand_2_l",
     "width": 406,
     "height": 541,
-    "frames": 9
+    "frames": 9,
+    "bbox": {
+        "x": 62,
+        "y": 170,
+        "width": 288,
+        "height": 339
+    }
   },
   {
     "name": "sprBG_championship",
     "width": 1409,
     "height": 1075,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1409,
+        "height": 1075
+    }
   },
   {
     "name": "sprBoatman",
     "width": 550,
     "height": 500,
-    "frames": 8
+    "frames": 8,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_mainstreet",
     "width": 192,
     "height": 487,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprHorseshoe",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprCassowary2",
     "width": 1000,
     "height": 1000,
-    "frames": 8
+    "frames": 8,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprBat1",
     "width": 1000,
     "height": 1000,
-    "frames": 8
+    "frames": 8,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_railtrail_1",
     "width": 118,
     "height": 257,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_mangrove_4",
     "width": 219,
     "height": 380,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_jasper_cave_2",
     "width": 371,
     "height": 116,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "tree_moreton",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprPortraits",
     "width": 475,
     "height": 240,
-    "frames": 6
+    "frames": 6,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 471,
+        "height": 230
+    }
   },
   {
     "name": "sprEmoji",
     "width": 81,
     "height": 81,
-    "frames": 128
+    "frames": 128,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 81,
+        "height": 81
+    }
   },
   {
     "name": "sprBarnes",
     "width": 550,
     "height": 500,
-    "frames": 7
+    "frames": 7,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprHalftone",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprBestiemon",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprGrade_cliffs",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprDaredevil1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPlayer_face",
     "width": 500,
     "height": 500,
-    "frames": 22
+    "frames": 22,
+    "bbox": {
+        "x": 186,
+        "y": 164,
+        "width": 101,
+        "height": 86
+    }
   },
   {
     "name": "sprAutumn",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprGrade_island",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprTex_tinybush",
     "width": 32,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 32,
+        "height": 64
+    }
   },
   {
     "name": "sprDust",
     "width": 64,
     "height": 64,
-    "frames": 3
+    "frames": 3,
+    "bbox": {
+        "x": 1,
+        "y": 4,
+        "width": 60,
+        "height": 57
+    }
   },
   {
     "name": "sprMap_myth_forest_secret",
     "width": 253,
     "height": 192,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprFrog1",
     "width": 1000,
     "height": 1000,
-    "frames": 40
+    "frames": 40,
+    "bbox": {
+        "x": 258,
+        "y": 619,
+        "width": 426,
+        "height": 372
+    }
   },
   {
     "name": "sprWeaver",
     "width": 550,
     "height": 500,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprMap_ocean",
     "width": 964,
     "height": 378,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprNerd1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprShroommon",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprPlayer_mask",
     "width": 500,
     "height": 500,
-    "frames": 17
+    "frames": 17,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 283
+    }
   },
   {
     "name": "sprConstructionguy",
     "width": 500,
     "height": 479,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 149,
+        "y": 51,
+        "width": 174,
+        "height": 428
+    }
   },
   {
     "name": "sprGrade_woods",
     "width": 64,
     "height": 64,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+    }
   },
   {
     "name": "sprServal1",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "chicory",
     "width": 512,
     "height": 512,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+    }
   },
   {
     "name": "sprGiantTurtleHead",
     "width": 755,
     "height": 636,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprLyrebird1",
     "width": 1000,
     "height": 1000,
-    "frames": 50
+    "frames": 50,
+    "bbox": {
+        "x": 241,
+        "y": 540,
+        "width": 520,
+        "height": 459
+    }
   },
   {
     "name": "sprItems",
     "width": 64,
     "height": 64,
-    "frames": 41
+    "frames": 41,
+    "bbox": {
+        "x": 1,
+        "y": 2,
+        "width": 61,
+        "height": 61
+    }
   },
   {
     "name": "sprPhone_hand_1",
     "width": 406,
     "height": 541,
-    "frames": 17
+    "frames": 17,
+    "bbox": {
+        "x": 47,
+        "y": 261,
+        "width": 298,
+        "height": 220
+    }
   },
   {
     "name": "sprMap_park_south3",
     "width": 158,
     "height": 240,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprSpirit",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprShroom_m",
     "width": 1000,
     "height": 1000,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprThought_big",
     "width": 547,
     "height": 352,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 547,
+        "height": 352
+    }
   },
   {
     "name": "sprBG_Diner",
     "width": 1920,
     "height": 1080,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+    }
   },
   {
     "name": "sprDefaultBeastie",
     "width": 1000,
     "height": 1000,
-    "frames": 36
+    "frames": 36,
+    "bbox": {
+        "x": 293,
+        "y": 696,
+        "width": 362,
+        "height": 303
+    }
   },
   {
     "name": "sprMap_park_side",
     "width": 115,
     "height": 186,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprSparkle",
     "width": 64,
     "height": 64,
-    "frames": 2
+    "frames": 2,
+    "bbox": {
+        "x": 0,
+        "y": 2,
+        "width": 61,
+        "height": 61
+    }
   },
   {
     "name": "sprMap_jasper",
     "width": 223,
     "height": 306,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   },
   {
     "name": "sprTex_succulent",
     "width": 128,
     "height": 128,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 128,
+        "height": 128
+    }
   },
   {
     "name": "sprsunkenplaque",
     "width": 1980,
     "height": 1080,
-    "frames": 1
+    "frames": 1,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1980,
+        "height": 1080
+    }
   },
   {
     "name": "sprCeleb",
     "width": 550,
     "height": 500,
-    "frames": 15
+    "frames": 15,
+    "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+    }
   }
 ]

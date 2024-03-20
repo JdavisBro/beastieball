@@ -32,19 +32,15 @@ export default function useLoadImages(path: string, max_num: number) {
     }
 
     return () => {
-      setLoaded({});
       for (let i = 0; i < max_num; i++) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
         const currentIm = images.current[i];
         if (currentIm.image && currentIm.onLoad) {
           currentIm.image.removeEventListener("load", currentIm.onLoad);
-          delete currentIm.onLoad;
         }
-        if (currentIm.image) {
-          delete currentIm.image;
-        }
-        images.current = {};
       }
+      setLoaded({});
+      images.current = {};
     };
   }, [path, max_num]);
 

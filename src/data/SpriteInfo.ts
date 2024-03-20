@@ -5,6 +5,12 @@ export type Sprite = {
   width: number;
   height: number;
   frames: number;
+  bbox: {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+  };
 };
 
 const SPRITE_INFO: Sprite[] = sprite_info;

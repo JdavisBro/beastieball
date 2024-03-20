@@ -75,12 +75,16 @@ export default function ContentPreview(props: Props): React.ReactNode {
         frames = anim.frames;
       }
       if (Array.isArray(anim.frames)) {
-        if (frameIndexRef.current === null) {
+        if (
+          frameIndexRef.current === null ||
+          frameIndexRef.current > anim.frames.length
+        ) {
           frameIndexRef.current = 0;
         }
         frames = anim.frames[frameIndexRef.current];
       }
       if (frames == undefined) {
+        console.log(`No Frames? ${props.beastiedata.name} ${animation}`);
         return;
       }
       let startFrame = 0;
@@ -162,6 +166,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   }, [step, animation]);
 
   useEffect(() => {
+    frameIndexRef.current = null;
     frameNumRef.current = null;
     frameTimeRef.current = 0;
   }, [loadedImages]);

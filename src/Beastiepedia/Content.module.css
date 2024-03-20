@@ -119,7 +119,7 @@
   align-items: center;
 }
 
-@media all and (max-aspect-ratio: 4/6) {
+@media all and (max-aspect-ratio: 1/1) {
   .preview {
     width: 100%;
     height: fit-content;

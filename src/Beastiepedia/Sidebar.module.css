@@ -79,7 +79,7 @@
   font-size: 1.2em;
 }
 
-@media all and (max-aspect-ratio: 4/6) {
+@media all and (max-aspect-ratio: 1/1) {
   .name > div {
     font-size: 2.3em;
   }

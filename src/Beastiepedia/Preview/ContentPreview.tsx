@@ -286,12 +286,17 @@ export default function ContentPreview(props: Props): React.ReactNode {
   return (
     <div className={styles.preview}>
       <div className={styles.canvasconcon}>
-        <div className={styles.canvascon}>
+        <div
+          className={styles.canvascon}
+          style={{
+            backgroundImage: background ? "none" : "",
+            backgroundColor: background ? backgroundColor : "transparent",
+          }}
+        >
           <canvas
             className={styles.previewcanvas}
             style={{
               display: noDisplayRender ? "none" : "block",
-              backgroundColor: background ? backgroundColor : "transparent",
               transform: fitBeastie
                 ? `scale(${beastiescale}) translate(${((-beastiesprite.bbox.x - beastiesprite.bbox.width / 2 + beastiesprite.width / 2) / beastiesprite.width) * 100}%, ${((-beastiesprite.bbox.y - beastiesprite.bbox.height / 2 + beastiesprite.height / 2) / beastiesprite.height) * 100}%)`
                 : "",

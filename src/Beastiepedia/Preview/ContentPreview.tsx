@@ -59,8 +59,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       if (
         anim === undefined ||
         typeof anim == "string" ||
-        typeof anim == "number" ||
-        anim === undefined
+        typeof anim == "number"
       ) {
         console.log(`Incorrect Anim: ${animation}`);
         return;
@@ -105,7 +104,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
             setNoDisplayRender(false);
           } else {
             setNoDisplayRender(true);
-            setNoDisplayReason("Loading.");
+            setNoDisplayReason("Loading...");
           }
         }
       }
@@ -252,7 +251,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
           "bad",
           "fall",
         ].map((value: string) => (
-          <option value={value}>
+          <option value={value} key={value}>
             {value.charAt(0).toUpperCase() + value.slice(1)}
           </option>
         ))}

@@ -8,6 +8,7 @@ import {
   hexToRgb,
 } from "../../utils/color";
 import type { BeastieType } from "../../data/BeastieType";
+import { useLocalStorage } from "usehooks-ts";
 
 type Props = {
   beastiedata: BeastieType;
@@ -30,6 +31,15 @@ function defaultColors(
 export default function ColorTabs(props: Props): React.ReactNode {
   const colorChange = props.colorChange;
   const beastiedata = props.beastiedata;
+
+  const [storedColors, setStoredColors] = useLocalStorage<{
+    [key: string]: [number[], number[], string[]];
+  }>(
+    "beastiecolors",
+    {},
+    { serializer: JSON.stringify, deserializer: JSON.parse },
+  );
+
   const colors = useMemo(
     () => [...Array(beastiedata.colors.length).keys()],
     [beastiedata],
@@ -40,14 +50,31 @@ export default function ColorTabs(props: Props): React.ReactNode {
     defaultColors(colors, beastiedata),
   );
 
+  const currentBeastie = useRef("");
+
   useEffect(() => {
     // reset colors on beastie change
-    tabValues.current = defaultColors(colors, beastiedata);
-  }, [beastiedata, colors]);
+    if (currentBeastie.current != beastiedata.id) {
+      currentBeastie.current = beastiedata.id;
+      if (storedColors[beastiedata.id]) {
+        tabValues.current = storedColors[beastiedata.id];
+      } else {
+        tabValues.current = defaultColors(colors, beastiedata);
+      }
+    }
+  }, [beastiedata, colors, storedColors]);
+
+  const saveStoredColor = useCallback(() => {
+    setStoredColors((old) => {
+      old[beastiedata.id] = tabValues.current;
+      return old;
+    });
+  }, [beastiedata, setStoredColors]);
 
   const setBeastieColor = useCallback(
     (tab_index: number, color_index: number, color: number) => {
       tabValues.current[tab_index][color_index] = color;
+      saveStoredColor();
       colorChange(
         color_index,
         getColorInBeastieColors(
@@ -58,15 +85,16 @@ export default function ColorTabs(props: Props): React.ReactNode {
         ),
       );
     },
-    [colorChange, beastiedata],
+    [colorChange, beastiedata, saveStoredColor],
   );
 
   const setCustomColor = useCallback(
     (color_index: number, color: string) => {
       tabValues.current[2][color_index] = color.replace(/^#/, "");
+      saveStoredColor();
       colorChange(color_index, hexToRgb(color));
     },
-    [colorChange],
+    [colorChange, saveStoredColor],
   );
 
   useEffect(() => {
@@ -139,6 +167,21 @@ export default function ColorTabs(props: Props): React.ReactNode {
           />
         ))}
       </div>
+      <button
+        onClick={() => {
+          tabValues.current[currentTab] = defaultColors(colors, beastiedata)[
+            currentTab
+          ];
+          saveStoredColor();
+          tabValues.current[currentTab].forEach((value, index) =>
+            typeof value == "string"
+              ? setCustomColor(index, value)
+              : setBeastieColor(currentTab, index, value),
+          );
+        }}
+      >
+        Reset Colors
+      </button>
     </>
   );
 }

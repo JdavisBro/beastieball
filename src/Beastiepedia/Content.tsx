@@ -37,7 +37,10 @@ export default function Content(props: Props): React.ReactNode {
         <h1 className={styles.notselectedtext}>
           No Beastie Selected
           <br />
-          Select a beastie on the left.
+          {props.sidebarvisible
+            ? "Select a beastie in the sidebar"
+            : "Select a beastie by toggling the menu in the top left"}
+          .
         </h1>
       </div>
     );

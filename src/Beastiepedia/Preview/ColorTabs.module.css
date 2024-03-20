@@ -50,6 +50,11 @@
   animation-timing-function: linear;
 }
 
+.tab > button {
+  margin-left: 4%;
+  margin-bottom: 6px;
+}
+
 @keyframes bg-scroll {
   0% {
     background-position-y: -2px;

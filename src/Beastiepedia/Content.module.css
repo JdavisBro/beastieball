@@ -39,6 +39,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   width: 100%;
+  overflow: hidden;
 }
 
 .previewcanvas {

@@ -42,9 +42,40 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const prevTimeRef = useRef<DOMHighResTimeStamp | null>(null);
   const holdRef = useRef<number | null>(null);
 
+  const animPausedRef = useRef<boolean>(false);
+
+  const frameInputRef = useRef<HTMLInputElement>(null);
+  const pausedButtonRef = useRef<HTMLButtonElement>(null);
+
   const [noDisplayRender, setNoDisplayRender] = useState(false);
   const [noDisplayReasion, setNoDisplayReason] = useState(
     "Beastie Preview Failed",
+  );
+
+  const setFrame = useCallback(
+    (frame: number) => {
+      frameNumRef.current = frame;
+      if (glRef.current && loadedImages[frame]) {
+        setImage(glRef.current, loadedImages[frame]);
+        setNoDisplayRender(false);
+      }
+    },
+    [loadedImages],
+  );
+
+  const changeFrame = useCallback(
+    (diff: number) => {
+      animPausedRef.current = true;
+      setFrame(
+        frameNumRef.current != null
+          ? Math.min(
+              SPRITE_INFO[props.beastiedata.spr].frames,
+              Math.max(0, frameNumRef.current + diff),
+            )
+          : 0,
+      );
+    },
+    [setFrame, props.beastiedata],
   );
 
   const step = useCallback(
@@ -98,7 +129,10 @@ export default function ContentPreview(props: Props): React.ReactNode {
       if (frames.endFrame != undefined) {
         endFrame = frames.endFrame;
       }
-      if (frameNumRef.current === null || frameNumRef.current < startFrame) {
+      if (
+        frameNumRef.current === null ||
+        (frameNumRef.current < startFrame && !animPausedRef.current)
+      ) {
         if (glRef.current) {
           if (loadedImages[startFrame]) {
             setImage(glRef.current, loadedImages[startFrame]);
@@ -116,7 +150,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
       }
       if (prevTimeRef.current && frameNumRef.current !== null) {
         const delta = time - prevTimeRef.current;
-        frameTimeRef.current += delta;
+        if (!animPausedRef.current) {
+          frameTimeRef.current += delta;
+        }
         if (holdRef.current == null) {
           holdRef.current = 1;
           if (frames.holds && frames.holds[frameNumRef.current]) {
@@ -156,6 +192,12 @@ export default function ContentPreview(props: Props): React.ReactNode {
           }
         }
       }
+      if (frameInputRef.current)
+        frameInputRef.current.value = String(frameNumRef.current);
+      if (pausedButtonRef.current)
+        pausedButtonRef.current.innerText = animPausedRef.current
+          ? "PLAY"
+          : "PAUSE";
       prevTimeRef.current = time;
       requestRef.current = requestAnimationFrame(step);
     },
@@ -264,13 +306,17 @@ export default function ContentPreview(props: Props): React.ReactNode {
           </div>
         </div>
       </div>
+
       <div className={styles.header}>Animation</div>
       <div className={styles.varcontainer}>
         <div className={styles.value}>
           <select
             name="anim"
             id="anim"
-            onChange={(event) => setAnimation(event.target.value)}
+            onChange={(event) => {
+              animPausedRef.current = false;
+              setAnimation(event.target.value);
+            }}
             value={animation}
           >
             {[
@@ -289,8 +335,30 @@ export default function ContentPreview(props: Props): React.ReactNode {
               </option>
             ))}
           </select>
+          <br />
+          <button onClick={() => changeFrame(-1)}>{"<-"}</button>
+          <button
+            ref={pausedButtonRef}
+            onClick={() => {
+              animPausedRef.current = !animPausedRef.current;
+            }}
+          >
+            PAUSE
+          </button>
+          <button onClick={() => changeFrame(1)}>{"->"}</button>
+          <input
+            ref={frameInputRef}
+            type="number"
+            min={0}
+            max={SPRITE_INFO[props.beastiedata.spr].frames}
+            onChange={(event) => {
+              animPausedRef.current = true;
+              setFrame(Number(event.target.value));
+            }}
+          />
         </div>
       </div>
+
       <div className={styles.header}>Settings</div>
       <div className={styles.varcontainer}>
         <div className={styles.value}>
@@ -337,6 +405,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
           </div>
         </div>
       </div>
+
       <ColorTabs beastiedata={props.beastiedata} colorChange={colorChange} />
     </div>
   );

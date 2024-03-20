@@ -35,11 +35,10 @@ export default function Beastiepedia(): React.ReactNode {
   ); // Selected beastie & portrait automatically hides sidebar
 
   let title = "Beastiepedia";
-  let path: null | string = null;
+  let path: null | string = "/beastiepedia/";
   if (beastieid !== null && beastie !== undefined) {
     title = `${beastie} - Beastiepedia`;
-  } else {
-    path = "/beastiepedia/";
+    path = `/beastiepedia/${beastie}`;
   }
   useTitle(title, path);
 

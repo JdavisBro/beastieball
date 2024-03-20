@@ -125,7 +125,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
         }
         const frameLength =
           (1000 / (24 * beastie_anim_speed) / anim_speed) * holdRef.current * 2; // idk multiplied by 2 seems to match in game more...
-        console.log(frameLength, frameTimeRef.current);
         if (frameTimeRef.current > frameLength) {
           frameTimeRef.current = frameTimeRef.current % frameLength;
           holdRef.current = null;

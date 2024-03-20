@@ -10,6 +10,7 @@ type Props = {
 export default function MoveView(props: Props): React.ReactElement {
   return (
     <Helmet>
+      <title>{props.title}</title>
       <meta property="og:title" content={props.title} />
       <meta
         property="og:image"

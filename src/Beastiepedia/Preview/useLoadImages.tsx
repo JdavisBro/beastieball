@@ -14,7 +14,6 @@ export default function useLoadImages(path: string, max_num: number) {
     for (let i = 0; i < max_num; i++) {
       const imElem = document.createElement("img");
       const imOnLoad = () => {
-        console.log(`loaded ${i}`);
         setLoaded((loaded) => {
           return {
             ...loaded,

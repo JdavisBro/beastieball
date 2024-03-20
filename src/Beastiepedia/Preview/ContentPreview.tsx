@@ -9,6 +9,7 @@ import ColorTabs from "./ColorTabs";
 import SPRITE_INFO from "../../data/SpriteInfo";
 import useLoadImages from "./useLoadImages";
 import BEASTIE_ANIMATIONS from "../../data/BeastieAnimations";
+import { hexToRgb } from "../../utils/color";
 
 type Props = {
   beastiedata: BeastieType;
@@ -227,25 +228,45 @@ export default function ContentPreview(props: Props): React.ReactNode {
     a.click();
   }, [props.beastiedata.name]);
 
+  const [background, setBackground] = useState(false);
+  const [backgroundColor, setBackgroundColor] = useState("#ffffff");
+
   return (
     <div className={styles.preview}>
       <canvas
         className={styles.previewcanvas}
-        style={{ display: noDisplayRender ? "none" : "block" }}
+        style={{
+          display: noDisplayRender ? "none" : "block",
+          backgroundColor: background ? backgroundColor : "transparent",
+        }}
         width={1000}
         height={1000}
         ref={canvasRef}
       />
       <div
         className={styles.canvasfailed}
-        style={{ display: noDisplayRender ? "flex" : "none" }}
+        style={{
+          display: noDisplayRender ? "flex" : "none",
+          backgroundColor: background ? backgroundColor : "transparent",
+          color: background
+            ? hexToRgb(backgroundColor).reduce<string>(
+                (accum, value) =>
+                  accum + (255 - 255 * value).toString(16).padStart(2, "0"),
+                "#",
+              )
+            : "white",
+        }}
       >
         <div>{noDisplayReasion}</div>
       </div>
       <button onClick={downloadImage}>Save PNG</button>
       <br />
-      Animation:{" "}
-      <select onChange={(event) => setAnimation(event.target.value)}>
+      <label htmlFor="anim">Animation: </label>
+      <select
+        name="anim"
+        id="anim"
+        onChange={(event) => setAnimation(event.target.value)}
+      >
         {[
           "idle",
           "move",
@@ -261,6 +282,25 @@ export default function ContentPreview(props: Props): React.ReactNode {
           </option>
         ))}
       </select>
+      <br />
+      <label htmlFor="whitebg" style={{ userSelect: "none" }}>
+        Background:{" "}
+      </label>
+      <input
+        name="whitebg"
+        id="whitebg"
+        type="checkbox"
+        onChange={(event) => {
+          setBackground(event.target.checked);
+        }}
+      />
+      <input
+        type="color"
+        defaultValue={"#ffffff"}
+        onChange={(event) => {
+          setBackgroundColor(event.target.value);
+        }}
+      />
       <ColorTabs beastiedata={props.beastiedata} colorChange={colorChange} />
     </div>
   );

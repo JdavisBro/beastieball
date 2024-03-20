@@ -58,9 +58,12 @@
   }
 }
 
-.colorslider {
+.tab * {
   margin-left: 4%;
   margin-bottom: 6px;
+}
+
+.colorslider {
   width: 92%;
   padding: 0 4px 0 4px;
   clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);

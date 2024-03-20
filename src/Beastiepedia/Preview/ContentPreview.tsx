@@ -63,6 +63,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         typeof anim == "number"
       ) {
         console.log(`Incorrect Anim: ${animation}`);
+        setAnimation("idle");
         return;
       }
       const beastie_anim_speed =
@@ -233,74 +234,109 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   return (
     <div className={styles.preview}>
-      <canvas
-        className={styles.previewcanvas}
-        style={{
-          display: noDisplayRender ? "none" : "block",
-          backgroundColor: background ? backgroundColor : "transparent",
-        }}
-        width={1000}
-        height={1000}
-        ref={canvasRef}
-      />
-      <div
-        className={styles.canvasfailed}
-        style={{
-          display: noDisplayRender ? "flex" : "none",
-          backgroundColor: background ? backgroundColor : "transparent",
-          color: background
-            ? hexToRgb(backgroundColor).reduce<string>(
-                (accum, value) =>
-                  accum + (255 - 255 * value).toString(16).padStart(2, "0"),
-                "#",
-              )
-            : "white",
-        }}
-      >
-        <div>{noDisplayReasion}</div>
+      <div className={styles.canvasconcon}>
+        <div>
+          <canvas
+            className={styles.previewcanvas}
+            style={{
+              display: noDisplayRender ? "none" : "block",
+              backgroundColor: background ? backgroundColor : "transparent",
+            }}
+            width={1000}
+            height={1000}
+            ref={canvasRef}
+          />
+          <div
+            className={styles.canvasfailed}
+            style={{
+              display: noDisplayRender ? "flex" : "none",
+              backgroundColor: background ? backgroundColor : "transparent",
+              color: background
+                ? hexToRgb(backgroundColor).reduce<string>(
+                    (accum, value) =>
+                      accum + (255 - 255 * value).toString(16).padStart(2, "0"),
+                    "#",
+                  )
+                : "white",
+            }}
+          >
+            <div>{noDisplayReasion}</div>
+          </div>
+        </div>
       </div>
-      <button onClick={downloadImage}>Save PNG</button>
-      <br />
-      <label htmlFor="anim">Animation: </label>
-      <select
-        name="anim"
-        id="anim"
-        onChange={(event) => setAnimation(event.target.value)}
-      >
-        {[
-          "idle",
-          "move",
-          "ready",
-          "spike",
-          "volley",
-          "good",
-          "bad",
-          "fall",
-        ].map((value: string) => (
-          <option value={value} key={value}>
-            {value.charAt(0).toUpperCase() + value.slice(1)}
-          </option>
-        ))}
-      </select>
-      <br />
-      <label htmlFor="whitebg" style={{ userSelect: "none" }}>
-        Background:{" "}
-      </label>
-      <input
-        name="whitebg"
-        id="whitebg"
-        type="checkbox"
-        onChange={(event) => {
-          setBackground(event.target.checked);
-        }}
-      />
-      <input
-        type="color"
-        defaultValue={"#ffffff"}
-        onChange={(event) => {
-          setBackgroundColor(event.target.value);
-        }}
-      />
+      <div className={styles.header}>Animation</div>
+      <div className={styles.varcontainer}>
+        <div className={styles.value}>
+          <select
+            name="anim"
+            id="anim"
+            onChange={(event) => setAnimation(event.target.value)}
+            value={animation}
+          >
+            {[
+              "idle",
+              "move",
+              "ready",
+              "spike",
+              "volley",
+              "good",
+              "bad",
+              "fall",
+              "stop",
+            ].map((value: string) => (
+              <option value={value} key={value}>
+                {value.charAt(0).toUpperCase() + value.slice(1)}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+      <div className={styles.header}>Settings</div>
+      <div className={styles.varcontainer}>
+        <div className={styles.value}>
+          <button onClick={downloadImage}>Save PNG</button>
+          <br />
+          <br />
+          <div className={styles.middlealign}>
+            <label htmlFor="sizeinput">Display Size: </label>
+            <input
+              name="sizeinput"
+              id="sizeinput"
+              type="range"
+              min={25}
+              max={100}
+              step={5}
+              defaultValue={100}
+              onChange={(event) => {
+                if (canvasRef.current && canvasRef.current.parentElement) {
+                  canvasRef.current.parentElement.style.width = `${event.target.value}%`;
+                }
+              }}
+            />
+          </div>
+          <br />
+          <div className={styles.middlealign}>
+            <label htmlFor="whitebg" style={{ userSelect: "none" }}>
+              Background:{" "}
+            </label>
+            <input
+              name="whitebg"
+              id="whitebg"
+              type="checkbox"
+              onChange={(event) => {
+                setBackground(event.target.checked);
+              }}
+            />
+            <input
+              type="color"
+              defaultValue={"#ffffff"}
+              onChange={(event) => {
+                setBackgroundColor(event.target.value);
+              }}
+            />
+          </div>
+        </div>
+      </div>
       <ColorTabs beastiedata={props.beastiedata} colorChange={colorChange} />
     </div>
   );

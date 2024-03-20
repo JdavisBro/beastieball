@@ -105,6 +105,27 @@ export default function ColorTabs(props: Props): React.ReactNode {
     );
   }, [currentTab, props.beastiedata.id, setCustomColor, setBeastieColor]);
 
+  const ResetColorButton = useCallback(
+    (props: { tab: number }) => (
+      <button
+        onClick={() => {
+          tabValues.current[props.tab] = defaultColors(colors, beastiedata)[
+            props.tab
+          ];
+          saveStoredColor();
+          tabValues.current[props.tab].forEach((value, index) =>
+            typeof value == "string"
+              ? setCustomColor(index, value)
+              : setBeastieColor(props.tab, index, value),
+          );
+        }}
+      >
+        Reset Colors
+      </button>
+    ),
+    [beastiedata, colors, saveStoredColor, setBeastieColor, setCustomColor],
+  );
+
   return (
     <>
       <div className={styles.tabselect}>
@@ -139,6 +160,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
             handleColorChange={(color) => setBeastieColor(0, value, color)}
           />
         ))}
+        <ResetColorButton tab={0} />
       </div>
       <div
         className={styles.tab}
@@ -152,6 +174,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
             handleColorChange={(color) => setBeastieColor(1, value, color)}
           />
         ))}
+        <ResetColorButton tab={1} />
       </div>
       <div
         className={styles.tab}
@@ -166,22 +189,9 @@ export default function ColorTabs(props: Props): React.ReactNode {
             onChange={(e) => setCustomColor(index, e.target.value)}
           />
         ))}
+        <br />
+        <ResetColorButton tab={2} />
       </div>
-      <button
-        onClick={() => {
-          tabValues.current[currentTab] = defaultColors(colors, beastiedata)[
-            currentTab
-          ];
-          saveStoredColor();
-          tabValues.current[currentTab].forEach((value, index) =>
-            typeof value == "string"
-              ? setCustomColor(index, value)
-              : setBeastieColor(currentTab, index, value),
-          );
-        }}
-      >
-        Reset Colors
-      </button>
     </>
   );
 }

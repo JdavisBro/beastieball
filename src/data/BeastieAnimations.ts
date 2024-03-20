@@ -38,6 +38,7 @@ type BeastieAnimList = {
     ready: BeastieAnimation;
     spike: BeastieAnimation;
     volley: BeastieAnimation;
+    stop?: BeastieAnimation;
     [key: string]: BeastieAnimation | string | number | undefined;
   };
   ball: BeastiePos;

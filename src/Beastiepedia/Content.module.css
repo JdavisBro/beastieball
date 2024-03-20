@@ -19,9 +19,16 @@
   margin-left: 2.5%;
 }
 
+.canvasconcon {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .previewcanvas {
   width: 100%;
   height: auto;
+  resize: horizontal;
 }
 
 .canvasfailed {
@@ -88,6 +95,11 @@
   width: fit-content;
   margin-left: 20px;
   margin-right: 20px;
+}
+
+.middlealign {
+  display: flex;
+  align-items: center;
 }
 
 @media all and (max-aspect-ratio: 4/6) {

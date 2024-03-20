@@ -25,6 +25,21 @@
   justify-content: center;
 }
 
+.canvascon {
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 20px 100%);
+  padding: 0 20px 0 20px;
+  background-image: repeating-linear-gradient(
+    #ddd1bd,
+    #ddd1bd 4px,
+    #d5c9b5 4px,
+    #d5c9b5 8px
+  );
+  animation-name: bg-scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
 .previewcanvas {
   width: 100%;
   height: auto;

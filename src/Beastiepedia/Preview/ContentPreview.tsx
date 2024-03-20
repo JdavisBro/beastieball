@@ -235,7 +235,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   return (
     <div className={styles.preview}>
       <div className={styles.canvasconcon}>
-        <div>
+        <div className={styles.canvascon}>
           <canvas
             className={styles.previewcanvas}
             style={{

@@ -15,6 +15,8 @@
 }
 
 .tabselect > button {
+  font-family: inherit;
+  font-size: 1em;
   background-color: transparent;
   transition: background-color 0.2s;
   border: none;
@@ -58,12 +60,9 @@
   }
 }
 
-.tab * {
+.colorslider {
   margin-left: 4%;
   margin-bottom: 6px;
-}
-
-.colorslider {
   width: 92%;
   padding: 0 4px 0 4px;
   clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);

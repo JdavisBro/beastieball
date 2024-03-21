@@ -31,7 +31,7 @@ export default function BeastieColorSlider(props: Props) {
         min={0}
         max={1}
         step={0.0001}
-        value={props.value}
+        value={props.value !== undefined ? props.value : 0.5}
         onChange={(e) => props.handleColorChange(Number(e.target.value))}
       />
     </div>

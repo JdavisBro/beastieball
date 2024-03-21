@@ -283,6 +283,30 @@ export default function ContentPreview(props: Props): React.ReactNode {
       ? beastiesprite.width / beastiesprite.bbox.width
       : beastiesprite.height / beastiesprite.bbox.height;
 
+  const animationlist = [
+    "idle",
+    "move",
+    "ready",
+    "spike",
+    "volley",
+    "good",
+    "bad",
+    "fall",
+    "stop",
+  ];
+
+  // Remove animations not in beastie
+  const animdata = BEASTIE_ANIMATIONS.get(
+    `_${SPRITE_INFO[props.beastiedata.spr].name}`,
+  )?.anim_data;
+  if (animdata) {
+    animationlist.forEach((value, index) => {
+      if (!(value in animdata)) {
+        animationlist.splice(index, 1);
+      }
+    });
+  }
+
   return (
     <div className={styles.preview}>
       <div className={styles.canvasconcon}>
@@ -336,17 +360,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
             }}
             value={animation}
           >
-            {[
-              "idle",
-              "move",
-              "ready",
-              "spike",
-              "volley",
-              "good",
-              "bad",
-              "fall",
-              "stop",
-            ].map((value: string) => (
+            {animationlist.map((value: string) => (
               <option value={value} key={value}>
                 {value.charAt(0).toUpperCase() + value.slice(1)}
               </option>

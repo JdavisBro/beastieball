@@ -22,7 +22,6 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
     props.onToggleSidebarVisibility();
   }
   return (
-    // GET BEASTIE ICON IMG
     <div
       className={styles.beastie}
       tabIndex={0}

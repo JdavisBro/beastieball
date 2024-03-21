@@ -1,7 +1,6 @@
 import { lazy } from "react";
 import type { RouteObject } from "react-router-dom";
 
-// eslint
 const Home = lazy(() => import("./Home/Home"));
 const PageNotFound = lazy(() => import("./PageNotFound"));
 const Beastiepedia = lazy(() => import("./Beastiepedia/Beastiepedia"));

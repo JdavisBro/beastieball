@@ -9,6 +9,7 @@ import {
 } from "../../utils/color";
 import type { BeastieType } from "../../data/BeastieType";
 import { useLocalStorage } from "usehooks-ts";
+import BEASTIE_DATA from "../../data/Beastiedata";
 
 type Props = {
   beastiedata: BeastieType;
@@ -30,7 +31,6 @@ function defaultColors(
 
 export default function ColorTabs(props: Props): React.ReactNode {
   const colorChange = props.colorChange;
-  const beastiedata = props.beastiedata;
 
   const [storedColors, setStoredColors] = useLocalStorage<{
     [key: string]: [number[], number[], string[]];
@@ -40,36 +40,80 @@ export default function ColorTabs(props: Props): React.ReactNode {
     { serializer: JSON.stringify, deserializer: JSON.parse },
   );
 
+  const [diffBeastieColors, setDiffBeastieColors] = useState<string | null>(
+    "none",
+  );
+
+  const DiffBeastieSetter = useCallback(
+    (props: { tab: number }) => (
+      <>
+        <label
+          htmlFor={`otherbeastiesel${props.tab}`}
+          style={{ color: "black" }}
+        >
+          {" "}
+          Other Beastie Colors:{" "}
+        </label>
+        <select
+          name={`otherbeastiesel${props.tab}`}
+          id={`otherbeastiesel${props.tab}`}
+          onChange={(event) => setDiffBeastieColors(event.target.value)}
+        >
+          <option value="none">None</option>
+          {Array.from(BEASTIE_DATA).map(([key, value]) => {
+            return (
+              <option key={key} value={key}>
+                {value.name}
+              </option>
+            );
+          })}
+        </select>
+      </>
+    ),
+    [],
+  );
+
+  let beastiedata = props.beastiedata;
+  if (diffBeastieColors && diffBeastieColors != "none") {
+    const newbeastiedata = BEASTIE_DATA.get(diffBeastieColors);
+    if (newbeastiedata != undefined) {
+      beastiedata = newbeastiedata;
+    }
+  }
+
   const colors = useMemo(
     () => [...Array(beastiedata.colors.length).keys()],
     [beastiedata],
   );
+
+  const currentBeastie = useRef("");
 
   const [currentTab, setCurrentTab] = useState(0);
   const tabValues = useRef<[number[], number[], string[]]>(
     defaultColors(colors, beastiedata),
   );
 
-  const currentBeastie = useRef("");
-
   useEffect(() => {
     // reset colors on beastie change
     if (currentBeastie.current != beastiedata.id) {
       currentBeastie.current = beastiedata.id;
-      if (storedColors[beastiedata.id]) {
+      if (storedColors[beastiedata.id] && diffBeastieColors == "none") {
         tabValues.current = storedColors[beastiedata.id];
       } else {
         tabValues.current = defaultColors(colors, beastiedata);
       }
     }
-  }, [beastiedata, colors, storedColors]);
+  }, [beastiedata, colors, storedColors, diffBeastieColors]);
 
   const saveStoredColor = useCallback(() => {
+    if (diffBeastieColors != "none") {
+      return;
+    }
     setStoredColors((old) => {
       old[beastiedata.id] = tabValues.current;
       return old;
     });
-  }, [beastiedata, setStoredColors]);
+  }, [beastiedata, setStoredColors, diffBeastieColors]);
 
   const setBeastieColor = useCallback(
     (tab_index: number, color_index: number, color: number) => {
@@ -103,7 +147,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
         ? setCustomColor(index, value)
         : setBeastieColor(currentTab, index, value),
     );
-  }, [currentTab, props.beastiedata.id, setCustomColor, setBeastieColor]);
+  }, [currentTab, beastiedata.id, setCustomColor, setBeastieColor]);
 
   const ResetColorButton = useCallback(
     (props: { tab: number }) => (
@@ -155,12 +199,13 @@ export default function ColorTabs(props: Props): React.ReactNode {
         {colors.map((value) => (
           <BeastieColorSlider
             key={value}
-            colors={props.beastiedata.colors[value].array}
+            colors={beastiedata.colors[value].array}
             value={tabValues.current[0][value]}
             handleColorChange={(color) => setBeastieColor(0, value, color)}
           />
         ))}
         <ResetColorButton tab={0} />
+        <DiffBeastieSetter tab={0} />
       </div>
       <div
         className={styles.tab}
@@ -169,7 +214,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
         {colors.map((value) => (
           <BeastieColorSlider
             key={value}
-            colors={props.beastiedata.shiny[value].array}
+            colors={beastiedata.shiny[value].array}
             value={tabValues.current[1][value]}
             handleColorChange={(color) => setBeastieColor(1, value, color)}
           />

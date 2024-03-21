@@ -10,6 +10,14 @@ import useTitle from "../utils/useTitle";
 import useScreenOrientation from "../utils/useScreenOrientation";
 import BEASTIE_DATA from "../data/Beastiedata";
 import { useLocalStorage } from "usehooks-ts";
+import { BeastieType } from "../data/BeastieType";
+
+declare global {
+  interface Window {
+    BEASTIE_DATA: Map<string, BeastieType>;
+    beastie: BeastieType | null | undefined;
+  }
+}
 
 export default function Beastiepedia(): React.ReactNode {
   const orientation = useScreenOrientation();
@@ -43,6 +51,9 @@ export default function Beastiepedia(): React.ReactNode {
   useTitle(title, path);
 
   const beastiedata = beastieid != null ? BEASTIE_DATA.get(beastieid) : null;
+
+  window.BEASTIE_DATA = BEASTIE_DATA;
+  window.beastie = beastiedata;
 
   return (
     <div

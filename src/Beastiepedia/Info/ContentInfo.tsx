@@ -71,7 +71,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
         <div className={styles.header}>Ally Training</div>
         <div className={styles.varcontainer}>
           <div className={styles.value}>
-            <TextTag>{beastiedata.recruit.description}</TextTag>
+            <TextTag>{training}</TextTag>
           </div>
         </div>
         <div className={styles.header}>Moves</div>

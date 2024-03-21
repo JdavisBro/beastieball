@@ -40,9 +40,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
     { serializer: JSON.stringify, deserializer: JSON.parse },
   );
 
-  const [diffBeastieColors, setDiffBeastieColors] = useState<string | null>(
-    "none",
-  );
+  const [diffBeastieColors, setDiffBeastieColors] = useState("none");
 
   const DiffBeastieSetter = useCallback(
     (props: { tab: number }) => (
@@ -57,6 +55,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
         <select
           name={`otherbeastiesel${props.tab}`}
           id={`otherbeastiesel${props.tab}`}
+          value={diffBeastieColors}
           onChange={(event) => setDiffBeastieColors(event.target.value)}
         >
           <option value="none">None</option>
@@ -70,7 +69,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
         </select>
       </>
     ),
-    [],
+    [diffBeastieColors],
   );
 
   let beastiedata = props.beastiedata;
@@ -94,9 +93,11 @@ export default function ColorTabs(props: Props): React.ReactNode {
   );
 
   useEffect(() => {
-    // reset colors on beastie change
-    if (currentBeastie.current != beastiedata.id) {
-      currentBeastie.current = beastiedata.id;
+    // diff beastie id for if colordiff changed
+    const diffbeastieid =
+      diffBeastieColors != "none" ? beastiedata.id + "DIFF" : beastiedata.id;
+    if (currentBeastie.current != diffbeastieid) {
+      currentBeastie.current = diffbeastieid;
       if (storedColors[beastiedata.id] && diffBeastieColors == "none") {
         tabValues.current = storedColors[beastiedata.id];
       } else {
@@ -220,6 +221,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
           />
         ))}
         <ResetColorButton tab={1} />
+        <DiffBeastieSetter tab={1} />
       </div>
       <div
         className={styles.tab}

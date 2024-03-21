@@ -1,9 +1,9 @@
 import styles from "./Shared.module.css";
 type Props = {
-  text: string;
+  children: string;
 };
 export default function TextTag(props: Props): React.ReactElement[] {
-  const text = props.text;
+  const text = props.children;
   const out: React.ReactElement[] = [];
   let tag = "";
   let value = "";

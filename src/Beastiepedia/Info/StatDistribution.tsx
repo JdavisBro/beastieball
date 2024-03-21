@@ -48,17 +48,17 @@ export default function StatDistribution(props: Props): React.ReactElement {
             value={beastiedata.ba}
             right={false}
             color={TypeColor.Body}
-          ></StatBar>
+          />
           <StatBar
             value={beastiedata.ha}
             right={false}
             color={TypeColor.Spirit}
-          ></StatBar>
+          />
           <StatBar
             value={beastiedata.ma}
             right={false}
             color={TypeColor.Mind}
-          ></StatBar>
+          />
         </div>
         <div className={styles.midblock}>
           <div className={styles.barcontainer}></div>
@@ -72,25 +72,24 @@ export default function StatDistribution(props: Props): React.ReactElement {
             <img src="/gameassets/sprIcon/2.png" />
           </div>
         </div>
+        {/* prettier-ignore */ /* (doesn't wrap 2 of the statbars) */}
         <div className={styles.statcontainer}>
-          <div className={`${styles.barcontainer} ${styles.barcontainerright}`}>
-            DEF
-          </div>
-          <StatBar
+          <div className={`${styles.barcontainer} ${styles.barcontainerright}`}>DEF</div>
+          <StatBar 
             value={beastiedata.bd}
             right={true}
             color={TypeColor.Body}
-          ></StatBar>
+          />
           <StatBar
             value={beastiedata.hd}
             right={true}
             color={TypeColor.Spirit}
-          ></StatBar>
+          />
           <StatBar
             value={beastiedata.md}
             right={true}
             color={TypeColor.Mind}
-          ></StatBar>
+          />
         </div>
       </div>
     </div>

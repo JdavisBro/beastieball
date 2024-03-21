@@ -36,7 +36,7 @@ export default function MoveView(props: Props): React.ReactElement {
       <div className={styles.movecontent}>
         <div className={styles.movename}>{props.move.name}</div>
         <div className={styles.movedesc}>
-          <TextTag text={props.move.desc}></TextTag>
+          <TextTag>{props.move.desc}</TextTag>
         </div>
       </div>
     </div>

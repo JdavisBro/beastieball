@@ -61,24 +61,24 @@ export default function ContentInfo(props: Props): React.ReactNode {
           <div className={styles.value}>{beastiedata.desc}</div>
         </div>
         <div className={styles.header}>Stat Distribution</div>
-        <StatDistribution beastiedata={beastiedata}></StatDistribution>
+        <StatDistribution beastiedata={beastiedata} />
         <div className={styles.header}>Recruit Condition</div>
         <div className={styles.varcontainer}>
           <div className={styles.value}>
-            <TextTag text={beastiedata.recruit.description}></TextTag>
+            <TextTag>{beastiedata.recruit.description}</TextTag>
           </div>
         </div>
         <div className={styles.header}>Ally Training</div>
         <div className={styles.varcontainer}>
           <div className={styles.value}>
-            <TextTag text={training}></TextTag>
+            <TextTag>{beastiedata.recruit.description}</TextTag>
           </div>
         </div>
         <div className={styles.header}>Moves</div>
         <MoveList
           movelist={beastiedata.attklist}
           learnset={beastiedata.learnset}
-        ></MoveList>
+        />
       </div>
     </div>
   );

@@ -63,7 +63,7 @@ export default function Beastiepedia(): React.ReactNode {
             ? beastiedata.desc
             : "View information on Beasties!"
         }
-      ></OpenGraph>
+      />
       <Header
         beastiename={beastie}
         sidebarvisibility={sidebarvisible}
@@ -72,7 +72,7 @@ export default function Beastiepedia(): React.ReactNode {
         }
         noAnimations={noAnimations}
         onSetNoAnimations={(noAnim: boolean) => setNoAnimations(noAnim)}
-      ></Header>
+      />
       <div className={styles.belowheader}>
         <Sidebar
           beastieid={beastieid}
@@ -82,11 +82,8 @@ export default function Beastiepedia(): React.ReactNode {
               setSidebarvisible(false);
             }
           }}
-        ></Sidebar>
-        <Content
-          beastiedata={beastiedata}
-          sidebarvisible={sidebarvisible}
-        ></Content>
+        />
+        <Content beastiedata={beastiedata} sidebarvisible={sidebarvisible} />
       </div>
     </div>
   );

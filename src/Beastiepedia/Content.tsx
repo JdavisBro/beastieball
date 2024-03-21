@@ -20,8 +20,8 @@ export default function Content(props: Props): React.ReactNode {
             : `${styles.content} ${styles.contentwide}`
         }
       >
-        <ContentPreview beastiedata={beastiedata}></ContentPreview>
-        <ContentInfo beastiedata={beastiedata}></ContentInfo>
+        <ContentPreview beastiedata={beastiedata} />
+        <ContentInfo beastiedata={beastiedata} />
       </div>
     );
   } else {

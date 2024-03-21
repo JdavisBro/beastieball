@@ -49,7 +49,7 @@ export default function Header(props: Props): React.ReactNode {
         </label>
       </div>
       <div className={styles.externallinkcontainer}>
-        <ExternalLinks></ExternalLinks>
+        <ExternalLinks />
       </div>
     </div>
   );

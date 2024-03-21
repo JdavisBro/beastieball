@@ -27,6 +27,7 @@ foreach (UndertaleSprite sprite in Data.Sprites) {
   bool firstdone = false;
   foreach (UndertaleSprite.TextureEntry entry in sprite.Textures) {
     if (entry.Texture == null) {continue;}
+    if (entry.Texture.TargetWidth <= 1 && entry.Texture.TargetHeight <= 1) {continue;}
     if (!firstdone) {
       firstdone = true;
       bboxX = entry.Texture.TargetX;

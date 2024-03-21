@@ -113,10 +113,10 @@
     "height": 1000,
     "frames": 40,
     "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 602,
-        "height": 989
+        "x": 346,
+        "y": 744,
+        "width": 256,
+        "height": 245
     }
   },
   {
@@ -305,10 +305,10 @@
     "height": 500,
     "frames": 6,
     "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 342,
-        "height": 188
+        "x": 161,
+        "y": 97,
+        "width": 181,
+        "height": 91
     }
   },
   {
@@ -1409,10 +1409,10 @@
     "height": 500,
     "frames": 9,
     "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 369,
-        "height": 337
+        "x": 126,
+        "y": 135,
+        "width": 226,
+        "height": 202
     }
   },
   {
@@ -1709,10 +1709,10 @@
     "height": 541,
     "frames": 17,
     "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 316,
-        "height": 452
+        "x": 98,
+        "y": 269,
+        "width": 218,
+        "height": 183
     }
   },
   {
@@ -2213,10 +2213,10 @@
     "height": 500,
     "frames": 7,
     "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 303,
-        "height": 317
+        "x": 184,
+        "y": 238,
+        "width": 106,
+        "height": 79
     }
   },
   {
@@ -2551,8 +2551,8 @@
     "bbox": {
         "x": 0,
         "y": 0,
-        "width": 1,
-        "height": 1
+        "width": 0,
+        "height": 0
     }
   },
   {
@@ -3185,10 +3185,10 @@
     "height": 500,
     "frames": 42,
     "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 365,
-        "height": 277
+        "x": 121,
+        "y": 86,
+        "width": 244,
+        "height": 191
     }
   },
   {
@@ -3749,10 +3749,10 @@
     "height": 500,
     "frames": 21,
     "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 240,
-        "height": 231
+        "x": 191,
+        "y": 197,
+        "width": 49,
+        "height": 34
     }
   },
   {
@@ -3929,10 +3929,10 @@
     "height": 541,
     "frames": 12,
     "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 353,
-        "height": 410
+        "x": 26,
+        "y": 39,
+        "width": 243,
+        "height": 371
     }
   },
   {
@@ -5033,10 +5033,10 @@
     "height": 500,
     "frames": 17,
     "bbox": {
-        "x": 0,
-        "y": 0,
-        "width": 305,
-        "height": 283
+        "x": 168,
+        "y": 166,
+        "width": 137,
+        "height": 117
     }
   },
   {

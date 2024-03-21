@@ -21,6 +21,8 @@ export default function MoveView(props: Props): React.ReactElement {
         content={`${import.meta.env.VITE_NETLIFY_URL}/${props.url}`}
       />
       <meta property="og:description" content={props.description} />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary" />
     </Helmet>
   );
 }

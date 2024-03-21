@@ -390,6 +390,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
         </div>
       </div>
 
+      <ColorTabs beastiedata={props.beastiedata} colorChange={colorChange} />
+
       <div className={styles.header}>Settings</div>
       <div className={styles.varcontainer}>
         <div className={styles.value}>
@@ -444,8 +446,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
           />
         </div>
       </div>
-
-      <ColorTabs beastiedata={props.beastiedata} colorChange={colorChange} />
     </div>
   );
 }

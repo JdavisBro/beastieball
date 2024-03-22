@@ -88,6 +88,26 @@ body {
   background-size: 100% 100%;
 }
 
+.loadingcontainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  color: black;
+  padding: 1% 5% 1% 5%;
+  height: fit-content;
+  font-size: 4em;
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+}
+
+.notvisible {
+  color: transparent;
+}
+
 .noanim,
 .noanim * {
   /* animation-duration: 0s !important; */

@@ -6,6 +6,8 @@
 }
 
 .container {
+  composes: animBoxBackground from global;
+
   color: black;
   width: 380px;
   height: 170px;
@@ -16,7 +18,6 @@
 }
 
 .statcontainer {
-  composes: animBoxBackground from global;
   float: left;
   height: 100%;
   width: 170px;

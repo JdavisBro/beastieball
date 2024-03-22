@@ -1,4 +1,4 @@
-import { Ref, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import setupWebGL, { WebGLError, setColorUniforms, setImage } from "./WebGL";
 import styles from "../Content.module.css";

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { Ref, useCallback, useEffect, useRef, useState } from "react";
 
 import setupWebGL, { WebGLError, setColorUniforms, setImage } from "./WebGL";
 import styles from "../Content.module.css";
@@ -28,6 +28,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const glRef = useRef<WebGLRenderingContext | null>(null);
   const programRef = useRef<WebGLProgram | null>(null);
+  const cropCanvasRef = useRef<HTMLCanvasElement>(null);
 
   const [animation, setAnimation] = useState("idle");
 
@@ -261,22 +262,37 @@ export default function ContentPreview(props: Props): React.ReactNode {
     [setColors],
   );
 
-  const downloadImage = useCallback(() => {
-    if (!canvasRef.current) {
-      return;
-    }
-    const a = document.createElement("a");
-    a.download = `${props.beastiedata.name}.png`;
-    a.href = canvasRef.current.toDataURL("image/png");
-    a.click();
-  }, [props.beastiedata.name]);
-
-  const [background, setBackground] = useState(false);
-  const [backgroundColor, setBackgroundColor] = useState("#ffffff");
+  const beastiesprite = SPRITE_INFO[props.beastiedata.spr];
 
   const [fitBeastie, setFitBeastie] = useState(true);
 
-  const beastiesprite = SPRITE_INFO[props.beastiedata.spr];
+  const downloadImage = useCallback(() => {
+    if (!canvasRef.current || !cropCanvasRef.current) {
+      return;
+    }
+    let canvas = canvasRef.current;
+    if (fitBeastie && frameNumRef.current) {
+      cropCanvasRef.current.width =
+        beastiesprite.bboxes[frameNumRef.current].width;
+      cropCanvasRef.current.height =
+        beastiesprite.bboxes[frameNumRef.current].height;
+      cropCanvasRef.current
+        .getContext("2d")
+        ?.drawImage(
+          canvasRef.current,
+          -beastiesprite.bboxes[frameNumRef.current].x,
+          -beastiesprite.bboxes[frameNumRef.current].y,
+        );
+      canvas = cropCanvasRef.current;
+    }
+    const a = document.createElement("a");
+    a.download = `${props.beastiedata.name}.png`;
+    a.href = canvas.toDataURL("image/png");
+    a.click();
+  }, [fitBeastie, beastiesprite, props.beastiedata.name]);
+
+  const [background, setBackground] = useState(false);
+  const [backgroundColor, setBackgroundColor] = useState("#ffffff");
 
   const beastiescale =
     beastiesprite.bbox.width > beastiesprite.bbox.height
@@ -309,6 +325,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   return (
     <div className={styles.preview}>
+      <canvas ref={cropCanvasRef} style={{ display: "none" }} />
       <div className={styles.canvasconcon}>
         <div
           className={styles.canvascon}
@@ -435,7 +452,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
               }}
             />
           </div>
-          <label htmlFor="fitbeastie">Zoom into Beastie</label>
+          <label htmlFor="fitbeastie">Crop to Beastie</label>
           <input
             id="fitbeastie"
             name="fitbeastie"

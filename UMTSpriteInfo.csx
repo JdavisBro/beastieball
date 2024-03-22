@@ -19,14 +19,26 @@ foreach (UndertaleSprite sprite in Data.Sprites) {
   output += "    \"width\": " + sprite.Width.ToString() + ",\n";
   output += "    \"height\": " + sprite.Height.ToString() + ",\n";
   output += "    \"frames\": " + sprite.Textures.Count.ToString() + ",\n";
-  output += "    \"bbox\": {\n";
+  output += "    \"bboxes\": [";
   ushort bboxX = 0;
   ushort bboxY = 0;
   int bboxEX = 0;
   int bboxEY = 0;
   bool firstdone = false;
+  bool arrayfirstdone = false;
   foreach (UndertaleSprite.TextureEntry entry in sprite.Textures) {
     if (entry.Texture == null) {continue;}
+    if (!arrayfirstdone) {
+      arrayfirstdone = true;
+      output += "\n      {\n";
+    } else {
+      output += ",\n      {\n";
+    }
+    output += "        \"x\": " + entry.Texture.TargetX.ToString() + ",\n";
+    output += "        \"y\": " + entry.Texture.TargetY.ToString() + ",\n";
+    output += "        \"width\": " + entry.Texture.TargetWidth.ToString() + ",\n";
+    output += "        \"height\": " + entry.Texture.TargetHeight.ToString() + "\n";
+    output += "      }";
     if (entry.Texture.TargetWidth <= 1 && entry.Texture.TargetHeight <= 1) {continue;}
     if (!firstdone) {
       firstdone = true;
@@ -45,10 +57,16 @@ foreach (UndertaleSprite sprite in Data.Sprites) {
         bboxEY = entry.Texture.TargetY + entry.Texture.TargetHeight;
     }
   }
-  output += "        \"x\": " + bboxX.ToString() + ",\n";
-  output += "        \"y\": " + bboxY.ToString() + ",\n";
-  output += "        \"width\": " + (bboxEX - bboxX).ToString() + ",\n";
-  output += "        \"height\": " + (bboxEY - bboxY).ToString() + "\n";
+  if (arrayfirstdone) {
+    output += "\n    ],\n";
+  } else {
+    output += "],\n";
+  }
+  output += "    \"bbox\": {\n";
+  output += "      \"x\": " + bboxX.ToString() + ",\n";
+  output += "      \"y\": " + bboxY.ToString() + ",\n";
+  output += "      \"width\": " + (bboxEX - bboxX).ToString() + ",\n";
+  output += "      \"height\": " + (bboxEY - bboxY).ToString() + "\n";
   output += "    }\n";
 }
 output += "  }\n]\n";

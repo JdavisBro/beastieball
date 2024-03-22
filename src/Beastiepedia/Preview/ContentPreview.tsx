@@ -348,6 +348,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         </div>
       </div>
 
+      <br />
       <div className={styles.header}>Animation</div>
       <div className={styles.varcontainer}>
         <div className={styles.value}>

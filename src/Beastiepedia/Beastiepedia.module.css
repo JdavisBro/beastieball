@@ -2,32 +2,6 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-image: repeating-linear-gradient(
-    rgb(7, 7, 7),
-    rgb(7, 7, 7) 4px,
-    black 4px,
-    black 8px
-  );
-  animation-name: bg-scroll;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.noanim,
-.noanim * {
-  /* animation-duration: 0s !important; */
-  animation-play-state: paused !important;
-}
-
-@keyframes bg-scroll {
-  0% {
-    background-position-y: 0px;
-  }
-
-  100% {
-    background-position-y: -8px;
-  }
 }
 
 .belowheader {

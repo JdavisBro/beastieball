@@ -26,18 +26,9 @@
 }
 
 .canvascon {
+  composes: animBoxBackground from global;
   clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 20px 100%);
   padding: 0 20px 0 20px;
-  background-image: repeating-linear-gradient(
-    #ddd1bd,
-    #ddd1bd 4px,
-    #d5c9b5 4px,
-    #d5c9b5 8px
-  );
-  animation-name: bg-scroll;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
   width: 100%;
   overflow: hidden;
 }
@@ -61,49 +52,24 @@
 }
 
 .varcontainer {
+  composes: animBoxBackground from global;
   width: fit-content;
   position: relative;
   top: -4px;
   color: black;
-  background-image: repeating-linear-gradient(
-    #ddd1bd,
-    #ddd1bd 4px,
-    #d5c9b5 4px,
-    #d5c9b5 8px
-  );
-  animation-name: bg-scroll;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
   padding-top: 4px;
   padding-bottom: 6px;
   clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 100%, 5px 100%);
   margin-bottom: 10px;
 }
 
-@keyframes bg-scroll {
-  0% {
-    background-position-y: -2px;
-  }
-
-  100% {
-    background-position-y: -10px;
-  }
-}
-
 .header {
+  composes: boxHeaderBackground from global;
   width: fit-content;
   position: relative;
   left: 10px;
   color: white;
   padding: 4px 12px 4px 12px;
-  background-image: repeating-linear-gradient(
-    135deg,
-    #000000,
-    #000000 10px,
-    #2e2e2e 10px,
-    #2e2e2e 20px
-  );
   clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
   z-index: 1;
 }

@@ -1,22 +1,3 @@
-.selected {
-  background-image: repeating-linear-gradient(
-    135deg,
-    #ffaa55,
-    #ffaa55 10px,
-    #ff8e4a 10px,
-    #ff8e4a 20px
-  ) !important;
-}
-
-@keyframes selected-scroll {
-  from {
-    background-position: -28px -28px;
-  }
-  to {
-    background-position: 0px 0px;
-  }
-}
-
 .beastie {
   margin-top: 10px;
   width: 100%;
@@ -30,24 +11,17 @@
 }
 
 .beastiecontent {
+  composes: animSelectableBackground from global;
   width: 96%;
   padding-left: 2%;
   clip-path: polygon(0 0, 98% 1%, 100% 100%, 2% 99%);
   height: 100%;
   color: black;
   display: flex;
-  background-image: repeating-linear-gradient(
-    135deg,
-    #ddd1bd,
-    #ddd1bd 10px,
-    #d5c9b5 10px,
-    #d5c9b5 20px
-  );
-  background-size: 200% 200%;
-  animation-name: selected-scroll;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+}
+
+.selected {
+  composes: animSelectedBackground from global;
 }
 
 .image {

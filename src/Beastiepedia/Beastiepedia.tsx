@@ -56,11 +56,7 @@ export default function Beastiepedia(): React.ReactNode {
   window.beastie = beastiedata;
 
   return (
-    <div
-      className={
-        noAnimations ? `${styles.container} ${styles.noanim}` : styles.container
-      }
-    >
+    <div className={styles.container}>
       <OpenGraph
         title={title}
         image={

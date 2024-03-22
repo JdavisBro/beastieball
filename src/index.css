@@ -29,6 +29,27 @@ body {
   margin: 0;
 }
 
+.container {
+  background-image: repeating-linear-gradient(
+    rgb(7, 7, 7),
+    rgb(7, 7, 7) 4px,
+    black 4px,
+    black 8px
+  );
+  animation-name: bg-scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
+}
+
 .notfoundcontainer {
   display: flex;
   flex-direction: column;
@@ -65,4 +86,108 @@ body {
   width: 130px;
   background: var(--notfoundface-spr);
   background-size: 100% 100%;
+}
+
+.noanim,
+.noanim * {
+  /* animation-duration: 0s !important; */
+  animation-play-state: paused !important;
+}
+
+.animBackground {
+  background-image: repeating-linear-gradient(
+    rgb(7, 7, 7),
+    rgb(7, 7, 7) 4px,
+    black 4px,
+    black 8px
+  );
+  animation-name: bg-scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes bg-scroll {
+  0% {
+    background-position-y: 0px;
+  }
+
+  100% {
+    background-position-y: -8px;
+  }
+}
+
+/*
+To use these add this to the top of the class you want to have it
+
+composes: className from global;
+
+(class name has no .)
+*/
+
+.animBoxBackground {
+  background-image: repeating-linear-gradient(
+    #ddd1bd,
+    #ddd1bd 4px,
+    #d5c9b5 4px,
+    #d5c9b5 8px
+  );
+  animation-name: alt-bg-scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes alt-bg-scroll {
+  0% {
+    background-position-y: -2px;
+  }
+
+  100% {
+    background-position-y: -10px;
+  }
+}
+
+.boxHeaderBackground {
+  background-image: repeating-linear-gradient(
+    135deg,
+    #000000,
+    #000000 10px,
+    #2e2e2e 10px,
+    #2e2e2e 20px
+  );
+}
+
+.animSelectableBackground {
+  background-image: repeating-linear-gradient(
+    135deg,
+    #ddd1bd,
+    #ddd1bd 10px,
+    #d5c9b5 10px,
+    #d5c9b5 20px
+  );
+  background-size: 200% 200%;
+  animation-name: selectable-scroll;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animSelectedBackground {
+  background-image: repeating-linear-gradient(
+    135deg,
+    #ffaa55,
+    #ffaa55 10px,
+    #ff8e4a 10px,
+    #ff8e4a 20px
+  ) !important;
+}
+
+@keyframes selectable-scroll {
+  from {
+    background-position: -28px -28px;
+  }
+  to {
+    background-position: 0px 0px;
+  }
 }

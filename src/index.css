@@ -94,6 +94,9 @@ body {
   height: 100%;
   align-items: center;
   justify-content: center;
+  animation-play-state: running !important;
+  animation-name: fadein;
+  animation-duration: 2s;
 }
 
 .loading {
@@ -102,6 +105,20 @@ body {
   height: fit-content;
   font-size: 4em;
   clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .notvisible {

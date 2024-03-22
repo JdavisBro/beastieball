@@ -20,6 +20,22 @@
   display: none;
 }
 
+.sidebarsearchcon {
+  composes: animBoxBackground from global;
+  position: sticky;
+  top: 1px;
+  margin-top: 5px;
+  z-index: 1;
+  padding: 5px 5px 5px 5px;
+  width: 96%;
+  display: flex;
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+}
+
+.sidebarsearch {
+  flex-grow: 1;
+}
+
 .content {
   float: left;
   width: 77%;
@@ -44,6 +60,10 @@
 @media all and (max-aspect-ratio: 1/1) {
   .sidebar {
     width: 100%;
+  }
+
+  .sidebarsearch {
+    width: 98.5%;
   }
 
   .content {

@@ -7,6 +7,7 @@ type Props = {
   beastieid: string;
   beastiedata: BeastieType;
   selected: boolean;
+  visible: boolean;
   onToggleSidebarVisibility: () => void;
 };
 
@@ -29,12 +30,14 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
       // prettier-ignore
       onKeyDown={((event) => {if (event.key == "Enter") {handleInteract()}})}
       role="button"
+      style={{ display: props.visible ? "block" : "none" }}
     >
       <div className={content}>
         <img
           className={styles.image}
           src={`/icons/${beastiedata.name}.png`}
           alt={`${beastiedata.name} Icon`}
+          loading="lazy"
         />
         <div className={styles.name}>
           <div>

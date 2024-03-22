@@ -35,10 +35,10 @@ createRoot(container).render(
       url=""
       description="A website with information on Beastieball!"
     />
-    <Suspense fallback={<Loading />}>
-      <Container>
+    <Container>
+      <Suspense fallback={<Loading />}>
         <RouterProvider router={createBrowserRouter(routes)} />
-      </Container>
-    </Suspense>
+      </Suspense>
+    </Container>
   </StrictMode>,
 );

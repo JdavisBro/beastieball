@@ -5,6 +5,7 @@
 }
 
 .listcontainer {
+  composes: animBoxBackground from global;
   width: 350px;
   height: fit-content;
   display: flex;
@@ -14,7 +15,6 @@
 }
 
 .movelist {
-  composes: animBoxBackground from global;
   width: 163px;
   margin-top: 5px;
   margin-left: 12px;

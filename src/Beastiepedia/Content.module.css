@@ -41,6 +41,7 @@
 
 .canvasfailed {
   width: 100%;
+  font-size: 2em;
   aspect-ratio: 1;
   display: flex;
   justify-content: center;

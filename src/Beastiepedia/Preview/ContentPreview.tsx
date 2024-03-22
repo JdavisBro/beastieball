@@ -357,7 +357,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
                       accum + (255 - 255 * value).toString(16).padStart(2, "0"),
                     "#",
                   )
-                : "white",
+                : "black",
             }}
           >
             <div>{noDisplayReasion}</div>

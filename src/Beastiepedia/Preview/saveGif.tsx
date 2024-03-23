@@ -4,6 +4,8 @@ import { BeastieAnimation } from "../../data/BeastieAnimations";
 import { setImage } from "./WebGL";
 import { BBox } from "../../data/SpriteInfo";
 
+const MAX_LOOPS = 500;
+
 export class GifError extends Error {
   constructor(msg: string) {
     super(msg);
@@ -46,7 +48,6 @@ export default function saveGif(
   const uniqueframes: number[] = [];
   const framelist: number[] = [];
   const delaylist = [];
-  let groupindex = 0;
   const bbox: { x?: number; y?: number; endx?: number; endy?: number } = crop
     ? { x: undefined, y: undefined, endx: undefined, endy: undefined }
     : { x: 0, y: 0, endx: 1000, endy: 1000 };
@@ -68,9 +69,36 @@ export default function saveGif(
       bbox.endy = Math.max(bbox.endy, framebbox.y + framebbox.height);
     }
   }
+  const transitionedto: { [key: number]: number } = {};
+  frames.forEach((value) => {
+    if (value?.transitions) {
+      value?.transitions.forEach((target) => {
+        transitionedto[target] =
+          transitionedto[target] != undefined ? transitionedto[target] + 1 : 1;
+      });
+    }
+  });
+  let basegroup = frames.findIndex(
+    (_value, index) => transitionedto[index] != undefined,
+  );
+  basegroup = basegroup != -1 ? basegroup : 0;
+  let groupindex = basegroup;
+  const grouptransition: { [key: number]: number } = {};
+  Object.keys(transitionedto).forEach(
+    (_value, index) => (grouptransition[index] = 0),
+  );
+  let loop = 0;
   /*eslint no-constant-condition: ["error", { "checkLoops": false }]*/
   while (true) {
+    loop++;
+    if (loop > MAX_LOOPS) {
+      throw new GifError("TOO MANY LOOPS!");
+    }
+    console.log(groupindex);
     const group = frames[groupindex];
+    if ((!group.transitions || group.transitions.length == 0) && loop != 1) {
+      break;
+    }
     const startFrame = group.startFrame != null ? group.startFrame : 0;
     const endFrame = group.endFrame != null ? group.endFrame : 0;
     for (let i = startFrame; i <= endFrame; i++) {
@@ -96,11 +124,25 @@ export default function saveGif(
       }
       delaylist.push(baseTime * hold);
     }
-    if (!group.transitions || group.transitions.length == 0) {
+    if (!group.transitions) {
       break;
-    } else {
+    }
+    if (groupindex == basegroup) {
       groupindex = group.transitions[0];
       group.transitions.splice(0, 1);
+    } else {
+      // im trying to prioritise getting to the other states before going to state 0 to possibly end the animation
+      // this stuff can probably not be fully done automatically and i might add an editor to the site that lets users sequence their own state order
+      grouptransition[groupindex] += 1;
+      if (grouptransition[groupindex] - 1 < group.transitions.length) {
+        groupindex = group.transitions.sort((a, b) =>
+          a != basegroup ? a - b : b - a,
+        )[grouptransition[groupindex] - 1];
+      } else {
+        groupindex = group.transitions.sort(
+          (a, b) => grouptransition[a] - grouptransition[b],
+        )[0];
+      }
     }
   }
   if (

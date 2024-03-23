@@ -1,6 +1,6 @@
 import beastie_animations from "./beastie_animations.json";
 
-type BeastieFrames = {
+export type BeastieFrames = {
   _: string;
   startFrame?: number;
   endFrame?: number;
@@ -12,13 +12,13 @@ type BeastieFrames = {
   transitions?: number[];
 };
 
-type BeastieAnimation = {
+export type BeastieAnimation = {
   _: string;
   frames: BeastieFrames | BeastieFrames[];
   speed?: number;
 };
 
-type BeastiePos = {
+export type BeastiePos = {
   angle?: number;
   anim?: string;
   scale?: number;
@@ -26,21 +26,23 @@ type BeastiePos = {
   y: number;
 };
 
-type BeastieAnimList = {
-  anim_data?: {
-    _: string;
-    __anim_speed?: number;
-    bad: BeastieAnimation;
-    fall: BeastieAnimation;
-    good: BeastieAnimation;
-    idle: BeastieAnimation;
-    move: BeastieAnimation;
-    ready: BeastieAnimation;
-    spike: BeastieAnimation;
-    volley: BeastieAnimation;
-    stop?: BeastieAnimation;
-    [key: string]: BeastieAnimation | string | number | undefined;
-  };
+export type BeastieAnimData = {
+  _: string;
+  __anim_speed?: number;
+  bad: BeastieAnimation;
+  fall: BeastieAnimation;
+  good: BeastieAnimation;
+  idle: BeastieAnimation;
+  move: BeastieAnimation;
+  ready: BeastieAnimation;
+  spike: BeastieAnimation;
+  volley: BeastieAnimation;
+  stop?: BeastieAnimation;
+  [key: string]: BeastieAnimation | string | number | undefined;
+};
+
+export type BeastieAnimList = {
+  anim_data?: BeastieAnimData;
   ball: BeastiePos;
   evo1: BeastiePos;
   evo2: BeastiePos;

@@ -10,6 +10,7 @@ import SPRITE_INFO from "../../data/SpriteInfo";
 import useLoadImages from "./useLoadImages";
 import BEASTIE_ANIMATIONS from "../../data/BeastieAnimations";
 import { hexToRgb } from "../../utils/color";
+import saveGif from "./saveGif";
 
 type Props = {
   beastiedata: BeastieType;
@@ -291,6 +292,32 @@ export default function ContentPreview(props: Props): React.ReactNode {
     a.click();
   }, [fitBeastie, beastiesprite, props.beastiedata.name]);
 
+  const downloadGif = useCallback(() => {
+    const anim_data = BEASTIE_ANIMATIONS.get(
+      `_${SPRITE_INFO[props.beastiedata.spr].name}`,
+    )?.anim_data;
+    if (!anim_data) {
+      return;
+    }
+    const anim = anim_data[animation];
+    if (
+      anim == undefined ||
+      typeof anim == "number" ||
+      typeof anim == "string"
+    ) {
+      return;
+    }
+    saveGif(
+      glRef.current,
+      fitBeastie,
+      props.beastiedata.name,
+      loadedImages,
+      structuredClone(anim),
+      anim_data.__anim_speed ? anim_data.__anim_speed : 1,
+      SPRITE_INFO[props.beastiedata.spr].bboxes,
+    );
+  }, [animation, fitBeastie, loadedImages, props.beastiedata]);
+
   const [background, setBackground] = useState(false);
   const [backgroundColor, setBackgroundColor] = useState("#ffffff");
 
@@ -414,6 +441,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       <div className={styles.varcontainer}>
         <div className={styles.value}>
           <button onClick={downloadImage}>Save PNG</button>
+          <button onClick={downloadGif}>Save GIF</button>
           <br />
           <div className={styles.middlealign}>
             <label htmlFor="sizeinput">Display Size: </label>

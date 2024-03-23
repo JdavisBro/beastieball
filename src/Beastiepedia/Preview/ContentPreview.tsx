@@ -294,7 +294,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   }, [fitBeastie, beastiesprite, props.beastiedata.name]);
 
   const downloadGif = useCallback(() => {
-    if (!animdata || !anim) {
+    if (!glRef.current || !loadedImages || !animdata || !anim) {
       return;
     }
     saveGif(

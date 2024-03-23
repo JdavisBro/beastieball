@@ -22,46 +22,34 @@ function flipImageData(non_clamped_data: Uint8Array, w: number, h: number) {
 }
 
 export default function saveGif(
-  gl: WebGLRenderingContext | null,
+  gl: WebGLRenderingContext,
   crop: boolean,
   name: string,
-  images: { [key: number]: HTMLImageElement } | null,
-  anim: BeastieAnimation | undefined,
-  anim_speed: number | null,
+  images: { [key: number]: HTMLImageElement },
+  anim: BeastieAnimation,
+  anim_speed: number,
   bboxes: BBox[],
 ) {
-  if (!gl) {
-    throw new GifError("No GL");
-  }
-  if (!images) {
-    throw new GifError("Images not Loaded");
-  }
-  if (!anim) {
-    throw new GifError("Incorrect Animation");
-  }
-  if (typeof anim_speed != "number") {
-    throw new GifError("Incorrect Animation Speed");
-  }
-  const baseTime =
-    (1000 / (24 * anim_speed) / (anim.speed ? anim.speed : 1)) * 2;
   const frames = Array.isArray(anim.frames) ? anim.frames : [anim.frames];
   const uniqueframes: number[] = [];
   const framelist: number[] = [];
   const delaylist = [];
-  const bbox: { x?: number; y?: number; endx?: number; endy?: number } = crop
-    ? { x: undefined, y: undefined, endx: undefined, endy: undefined }
-    : { x: 0, y: 0, endx: 1000, endy: 1000 };
+  const baseDelay =
+    (1000 / (24 * anim_speed) / (anim.speed ? anim.speed : 1)) * 2;
+
+  let bbox: { x: number; y: number; endx: number; endy: number } | undefined =
+    crop ? undefined : { x: 0, y: 0, endx: 1000, endy: 1000 };
   function setBbox(framebbox: BBox) {
-    if (
-      bbox.x == undefined ||
-      bbox.y == undefined ||
-      bbox.endx == undefined ||
-      bbox.endy == undefined
-    ) {
-      bbox.x = framebbox.x;
-      bbox.y = framebbox.y;
-      bbox.endx = framebbox.x + framebbox.width;
-      bbox.endy = framebbox.y + framebbox.height;
+    if (!crop) {
+      return;
+    }
+    if (bbox == undefined) {
+      bbox = {
+        x: framebbox.x,
+        y: framebbox.y,
+        endx: framebbox.x + framebbox.width,
+        endy: framebbox.y + framebbox.height,
+      };
     } else {
       bbox.x = Math.min(bbox.x, framebbox.x);
       bbox.y = Math.min(bbox.y, framebbox.y);
@@ -69,6 +57,7 @@ export default function saveGif(
       bbox.endy = Math.max(bbox.endy, framebbox.y + framebbox.height);
     }
   }
+
   const transitionedto: { [key: number]: number } = {};
   frames.forEach((value) => {
     if (value?.transitions) {
@@ -78,15 +67,19 @@ export default function saveGif(
       });
     }
   });
+
   let basegroup = frames.findIndex(
     (_value, index) => transitionedto[index] != undefined,
   );
   basegroup = basegroup != -1 ? basegroup : 0;
+
   let groupindex = basegroup;
+
   const grouptransition: { [key: number]: number } = {};
   Object.keys(transitionedto).forEach(
     (_value, index) => (grouptransition[index] = 0),
   );
+
   let loop = 0;
   /*eslint no-constant-condition: ["error", { "checkLoops": false }]*/
   while (true) {
@@ -94,10 +87,12 @@ export default function saveGif(
     if (loop > MAX_LOOPS) {
       throw new GifError("TOO MANY LOOPS!");
     }
+
     const group = frames[groupindex];
     if ((!group.transitions || group.transitions.length == 0) && loop != 1) {
       break;
     }
+
     const startFrame = group.startFrame != null ? group.startFrame : 0;
     const endFrame = group.endFrame != null ? group.endFrame : 0;
     for (let i = startFrame; i <= endFrame; i++) {
@@ -121,7 +116,7 @@ export default function saveGif(
           }
         }
       }
-      delaylist.push(baseTime * hold);
+      delaylist.push(baseDelay * hold);
     }
     if (!group.transitions) {
       break;
@@ -144,12 +139,7 @@ export default function saveGif(
       }
     }
   }
-  if (
-    bbox.x == undefined ||
-    bbox.y == undefined ||
-    bbox.endx == undefined ||
-    bbox.endy == undefined
-  ) {
+  if (bbox == undefined) {
     throw new GifError("Bbox unchanged.");
   }
   const width = bbox.endx - bbox.x;

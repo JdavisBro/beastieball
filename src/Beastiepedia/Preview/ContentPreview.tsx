@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import setupWebGL, { WebGLError, setColorUniforms, setImage } from "./WebGL";
 import styles from "../Content.module.css";
@@ -350,6 +350,29 @@ export default function ContentPreview(props: Props): React.ReactNode {
     });
   }
 
+  const gifDisabled = useMemo(() => {
+    if (animdata && animdata[animation]) {
+      const anim = animdata[animation];
+      if (
+        anim != undefined &&
+        typeof anim != "number" &&
+        typeof anim != "string"
+      ) {
+        if (anim.frames && !Array.isArray(anim.frames)) {
+          if (anim.frames.startFrame === anim.frames.endFrame) {
+            return true; // do not allow gifs of 1 frame animations
+          }
+        }
+      }
+    }
+    for (let i = 0; i < beastiesprite.frames; i++) {
+      if (loadedImages[i] === undefined) {
+        return true;
+      }
+    }
+    return false;
+  }, [loadedImages, beastiesprite, animation, animdata]);
+
   return (
     <div className={styles.preview}>
       <canvas ref={cropCanvasRef} style={{ display: "none" }} />
@@ -441,7 +464,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
       <div className={styles.varcontainer}>
         <div className={styles.value}>
           <button onClick={downloadImage}>Save PNG</button>
-          <button onClick={downloadGif}>Save GIF</button>
+          <button onClick={downloadGif} disabled={gifDisabled}>
+            Save GIF
+          </button>
           <br />
           <div className={styles.middlealign}>
             <label htmlFor="sizeinput">Display Size: </label>

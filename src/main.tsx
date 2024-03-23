@@ -7,6 +7,7 @@ import "./index.css";
 import { routes } from "./routes";
 import OpenGraph from "./shared/OpenGraph";
 import { useLocalStorage } from "usehooks-ts";
+import { HelmetProvider } from "react-helmet-async";
 
 const container = document.getElementById("root");
 
@@ -29,16 +30,18 @@ function Container(props: { children: React.ReactNode }): React.ReactNode {
 
 createRoot(container).render(
   <StrictMode>
-    <OpenGraph
-      title="Beastieball Info"
-      image="ball.png"
-      url=""
-      description="A website with information on Beastieball!"
-    />
-    <Container>
-      <Suspense fallback={<Loading />}>
-        <RouterProvider router={createBrowserRouter(routes)} />
-      </Suspense>
-    </Container>
+    <HelmetProvider>
+      <OpenGraph
+        title="Beastieball Info"
+        image="ball.png"
+        url=""
+        description="A website with information on Beastieball!"
+      />
+      <Container>
+        <Suspense fallback={<Loading />}>
+          <RouterProvider router={createBrowserRouter(routes)} />
+        </Suspense>
+      </Container>
+    </HelmetProvider>
   </StrictMode>,
 );

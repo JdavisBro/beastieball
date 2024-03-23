@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 type Props = {
   title: string;
@@ -7,19 +7,17 @@ type Props = {
   description: string;
 };
 
-export default function MoveView(props: Props): React.ReactElement {
+export default function OpenGraph(props: Props): React.ReactElement {
+  const url =
+    import.meta.env.URL != undefined
+      ? import.meta.env.URL
+      : window.location.origin;
   return (
     <Helmet>
       <title>{props.title}</title>
       <meta property="og:title" content={props.title} />
-      <meta
-        property="og:image"
-        content={`${import.meta.env.VITE_NETLIFY_URL}/${props.image}`}
-      />
-      <meta
-        property="og:url"
-        content={`${import.meta.env.VITE_NETLIFY_URL}/${props.url}`}
-      />
+      <meta property="og:image" content={`${url}/${props.image}`} />
+      <meta property="og:url" content={`${url}/${props.url}`} />
       <meta property="og:description" content={props.description} />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />

@@ -8,7 +8,9 @@ import fragment from "./fragment.glsl?raw";
 import ColorTabs from "./ColorTabs";
 import SPRITE_INFO from "../../data/SpriteInfo";
 import useLoadImages from "./useLoadImages";
-import BEASTIE_ANIMATIONS from "../../data/BeastieAnimations";
+import BEASTIE_ANIMATIONS, {
+  BeastieAnimation,
+} from "../../data/BeastieAnimations";
 import { hexToRgb } from "../../utils/color";
 import saveGif from "./saveGif";
 
@@ -32,6 +34,19 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const cropCanvasRef = useRef<HTMLCanvasElement>(null);
 
   const [animation, setAnimation] = useState("idle");
+  const animdata = BEASTIE_ANIMATIONS.get(
+    `_${SPRITE_INFO[props.beastiedata.spr].name}`,
+  )?.anim_data;
+
+  let anim: BeastieAnimation | undefined = undefined;
+  const tempanim = animdata ? animdata[animation] : undefined;
+  if (
+    tempanim != undefined &&
+    typeof tempanim != "number" &&
+    typeof tempanim != "string"
+  ) {
+    anim = tempanim;
+  }
 
   const loadedImages = useLoadImages(
     `/gameassets/beasties/${SPRITE_INFO[props.beastiedata.spr].name}`,
@@ -82,27 +97,13 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   const step = useCallback(
     (time: DOMHighResTimeStamp) => {
-      const anims = BEASTIE_ANIMATIONS.get(
-        `_${SPRITE_INFO[props.beastiedata.spr].name}`,
-      );
-      if (!anims || !anims.anim_data) {
-        console.log(`No animation data found for ${props.beastiedata.name}`);
-        return;
-      }
-      const anim = anims.anim_data[animation];
-      if (
-        anim === undefined ||
-        typeof anim == "string" ||
-        typeof anim == "number"
-      ) {
+      if (anim === undefined) {
         console.log(`Incorrect Anim: ${animation}`);
         setAnimation("idle");
         return;
       }
       const beastie_anim_speed =
-        anims.anim_data.__anim_speed != undefined
-          ? anims.anim_data.__anim_speed
-          : 1;
+        animdata?.__anim_speed != undefined ? animdata.__anim_speed : 1;
       const anim_speed = anim.speed ? anim.speed : 1;
       let frames;
       if (!Array.isArray(anim.frames)) {
@@ -203,7 +204,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       prevTimeRef.current = time;
       requestRef.current = requestAnimationFrame(step);
     },
-    [loadedImages, props.beastiedata, animation],
+    [loadedImages, props.beastiedata, animation, anim, animdata],
   );
 
   useEffect(() => {
@@ -293,30 +294,19 @@ export default function ContentPreview(props: Props): React.ReactNode {
   }, [fitBeastie, beastiesprite, props.beastiedata.name]);
 
   const downloadGif = useCallback(() => {
-    const anim_data = BEASTIE_ANIMATIONS.get(
-      `_${SPRITE_INFO[props.beastiedata.spr].name}`,
-    )?.anim_data;
-    if (!anim_data) {
-      return;
-    }
-    const anim = anim_data[animation];
-    if (
-      anim == undefined ||
-      typeof anim == "number" ||
-      typeof anim == "string"
-    ) {
+    if (!animdata || !anim) {
       return;
     }
     saveGif(
       glRef.current,
       fitBeastie,
-      props.beastiedata.name,
+      `${props.beastiedata.name}_${animation}`,
       loadedImages,
       structuredClone(anim),
-      anim_data.__anim_speed ? anim_data.__anim_speed : 1,
+      animdata.__anim_speed ? animdata.__anim_speed : 1,
       SPRITE_INFO[props.beastiedata.spr].bboxes,
     );
-  }, [animation, fitBeastie, loadedImages, props.beastiedata]);
+  }, [animation, fitBeastie, loadedImages, props.beastiedata, anim, animdata]);
 
   const [background, setBackground] = useState(false);
   const [backgroundColor, setBackgroundColor] = useState("#ffffff");
@@ -339,9 +329,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
   ];
 
   // Remove animations not in beastie
-  const animdata = BEASTIE_ANIMATIONS.get(
-    `_${SPRITE_INFO[props.beastiedata.spr].name}`,
-  )?.anim_data;
   if (animdata) {
     animationlist.forEach((value, index) => {
       if (!(value in animdata)) {

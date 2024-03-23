@@ -42,7 +42,7 @@ export type BeastieAnimData = {
 };
 
 export type BeastieAnimList = {
-  anim_data?: BeastieAnimData;
+  anim_data: BeastieAnimData;
   ball: BeastiePos;
   evo1: BeastiePos;
   evo2: BeastiePos;
@@ -70,13 +70,11 @@ export type BeastieAnimList = {
 const BEASTIE_ANIMATIONS: Map<string, BeastieAnimList> = new Map();
 
 Object.keys(beastie_animations).forEach((key) => {
-  if (key == "_sprDefaultBeastie") {
+  const anims = beastie_animations[key as keyof typeof beastie_animations];
+  if (key == "_sprDefaultBeastie" || !("anim_data" in anims)) {
     return;
   }
-  BEASTIE_ANIMATIONS.set(
-    key,
-    beastie_animations[key as keyof typeof beastie_animations],
-  );
+  BEASTIE_ANIMATIONS.set(key, anims);
 });
 
 export default BEASTIE_ANIMATIONS;

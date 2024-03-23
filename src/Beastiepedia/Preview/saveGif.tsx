@@ -94,7 +94,6 @@ export default function saveGif(
     if (loop > MAX_LOOPS) {
       throw new GifError("TOO MANY LOOPS!");
     }
-    console.log(groupindex);
     const group = frames[groupindex];
     if ((!group.transitions || group.transitions.length == 0) && loop != 1) {
       break;

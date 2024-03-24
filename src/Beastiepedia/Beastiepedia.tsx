@@ -9,7 +9,6 @@ import styles from "./Beastiepedia.module.css";
 import useTitle from "../utils/useTitle";
 import useScreenOrientation from "../utils/useScreenOrientation";
 import BEASTIE_DATA from "../data/Beastiedata";
-import { useLocalStorage } from "usehooks-ts";
 import { BeastieType } from "../data/BeastieType";
 
 declare global {
@@ -22,11 +21,6 @@ declare global {
 export default function Beastiepedia(): React.ReactNode {
   const orientation = useScreenOrientation();
   const { beastie }: { beastie?: string } = useParams();
-  const [noAnimations, setNoAnimations] = useLocalStorage(
-    "noAnimations",
-    false,
-    { serializer: String, deserializer: (value) => value == "true" },
-  );
 
   let beastieid: string | null = null;
 
@@ -77,8 +71,6 @@ export default function Beastiepedia(): React.ReactNode {
         onSetSidebarVisibility={(visible: boolean) =>
           setSidebarvisible(visible)
         }
-        noAnimations={noAnimations}
-        onSetNoAnimations={(noAnim: boolean) => setNoAnimations(noAnim)}
       />
       <div className={styles.belowheader}>
         <Sidebar

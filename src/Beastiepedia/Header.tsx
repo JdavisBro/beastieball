@@ -1,13 +1,12 @@
 import ExternalLinks from "../shared/ExternalLinks";
 import arrow from "../assets/arrow.svg";
 import styles from "./Header.module.css";
+import AnimationToggle from "../shared/AnimationToggle";
 
 type Props = {
   beastiename: string | undefined;
   sidebarvisibility: boolean;
   onSetSidebarVisibility: (visible: boolean) => void;
-  noAnimations: boolean;
-  onSetNoAnimations: (noAnim: boolean) => void;
 };
 
 export default function Header(props: Props): React.ReactNode {
@@ -35,18 +34,8 @@ export default function Header(props: Props): React.ReactNode {
         {props.beastiename !== undefined ? `${props.beastiename} - ` : ""}
         Beastiepedia
       </div>
-      <div className={styles.animationtoggle}>
-        <input
-          defaultChecked={props.noAnimations}
-          id="noAnim"
-          type="checkbox"
-          onChange={(e) => props.onSetNoAnimations(e.target.checked)}
-        />
-        <label htmlFor="noAnim">
-          Disable
-          <br />
-          Animations
-        </label>
+      <div className={styles.animationtogglecontainer}>
+        <AnimationToggle break={true} />
       </div>
       <div className={styles.externallinkcontainer}>
         <ExternalLinks />

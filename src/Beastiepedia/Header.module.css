@@ -25,10 +25,8 @@
   line-height: var(--header-height);
 }
 
-.animationtoggle {
+.animationtogglecontainer {
   margin-left: auto;
-  display: flex;
-  user-select: none;
 }
 
 .externallinkcontainer {

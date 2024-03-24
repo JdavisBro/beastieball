@@ -476,11 +476,20 @@ export default function ContentPreview(props: Props): React.ReactNode {
       <div className={styles.header}>Settings</div>
       <div className={styles.varcontainer}>
         <div className={styles.value}>
-          <button onClick={downloadImage}>Save PNG</button>
-          <button onClick={downloadGif} disabled={gifDisabled}>
-            Save GIF
-          </button>
-          <br />
+          <div className={styles.middlealign}>
+            <button onClick={downloadImage}>Save PNG</button>
+            <button onClick={downloadGif} disabled={gifDisabled}>
+              Save GIF
+            </button>
+            {userSpeed > 1.2 ? (
+              <span
+                title="When using a high speed, GIFs might not save the speed correctly."
+                style={{ cursor: "help", userSelect: "none" }}
+              >
+                ⚠
+              </span>
+            ) : null}
+          </div>
           <div className={styles.middlealign}>
             <label htmlFor="sizeinput">Display Size: </label>
             <input

@@ -184,7 +184,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
           className={currentTab == 1 ? styles.selectedtab : ""}
           onClick={() => setCurrentTab(1)}
         >
-          Shiny
+          Raremorph
         </button>
         <button
           className={currentTab == 2 ? styles.selectedtab : ""}

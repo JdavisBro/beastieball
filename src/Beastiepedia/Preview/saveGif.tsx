@@ -27,6 +27,7 @@ export default function saveGif(
   name: string,
   images: { [key: number]: HTMLImageElement },
   anim: BeastieAnimation,
+  user_speed: number,
   anim_speed: number,
   bboxes: BBox[],
 ) {
@@ -35,7 +36,7 @@ export default function saveGif(
   const framelist: number[] = [];
   const delaylist = [];
   const baseDelay =
-    (1000 / (24 * anim_speed) / (anim.speed ? anim.speed : 1)) * 2;
+    1000 / (24 * anim_speed) / (anim.speed ? anim.speed : 1) / user_speed;
 
   let bbox: { x: number; y: number; endx: number; endy: number } | undefined =
     crop ? undefined : { x: 0, y: 0, endx: 1000, endy: 1000 };

@@ -95,6 +95,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
     [setFrame, props.beastiedata],
   );
 
+  const [userSpeed, setUserSpeed] = useState(0.5); // default 0.5 seems to match in game more...
+
   const step = useCallback(
     (time: DOMHighResTimeStamp) => {
       if (anim === undefined) {
@@ -168,7 +170,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
           }
         }
         const frameLength =
-          (1000 / (24 * beastie_anim_speed) / anim_speed) * holdRef.current * 2; // idk multiplied by 2 seems to match in game more...
+          ((1000 / (24 * beastie_anim_speed) / anim_speed) * holdRef.current) /
+          userSpeed;
         if (frameTimeRef.current > frameLength) {
           frameTimeRef.current = frameTimeRef.current % frameLength;
           holdRef.current = null;
@@ -204,7 +207,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       prevTimeRef.current = time;
       requestRef.current = requestAnimationFrame(step);
     },
-    [loadedImages, props.beastiedata, animation, anim, animdata],
+    [loadedImages, props.beastiedata, animation, anim, animdata, userSpeed],
   );
 
   useEffect(() => {
@@ -303,10 +306,19 @@ export default function ContentPreview(props: Props): React.ReactNode {
       `${props.beastiedata.name}_${animation}`,
       loadedImages,
       structuredClone(anim),
+      userSpeed,
       animdata.__anim_speed ? animdata.__anim_speed : 1,
       SPRITE_INFO[props.beastiedata.spr].bboxes,
     );
-  }, [animation, fitBeastie, loadedImages, props.beastiedata, anim, animdata]);
+  }, [
+    animation,
+    fitBeastie,
+    loadedImages,
+    props.beastiedata,
+    anim,
+    userSpeed,
+    animdata,
+  ]);
 
   const [background, setBackground] = useState(false);
   const [backgroundColor, setBackgroundColor] = useState("#ffffff");
@@ -442,6 +454,20 @@ export default function ContentPreview(props: Props): React.ReactNode {
               setFrame(Number(event.target.value));
             }}
           />
+          <div className={styles.middlealign}>
+            <label htmlFor="speed">Speed: x</label>
+            <input
+              type="number"
+              name="speed"
+              id="speed"
+              step={0.1}
+              min={0}
+              value={userSpeed}
+              style={{ width: "4em" }}
+              onChange={(event) => setUserSpeed(Number(event.target.value))}
+            />
+            <button onClick={() => setUserSpeed(0.5)}>Reset</button>
+          </div>
         </div>
       </div>
 

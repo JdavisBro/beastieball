@@ -12,9 +12,10 @@ import {
 
 import styles from "./Map.module.css";
 import WORLD_DATA, { MapIcon } from "../data/WorldData";
-import { renderToStaticMarkup } from "react-dom/server";
 import OpenGraph from "../shared/OpenGraph";
 import { useState } from "react";
+import { flushSync } from "react-dom";
+import { createRoot } from "react-dom/client";
 
 function getKey(icon: MapIcon) {
   if (icon.is_cave) {
@@ -112,6 +113,9 @@ export default function Map(): React.ReactNode {
     popup?: React.ReactElement;
     zindex: number;
   }) {
+    const div = document.createElement("div");
+    const root = createRoot(div);
+    flushSync(() => root.render(props.markerup));
     const value = props.value;
     return (
       <Marker
@@ -121,7 +125,7 @@ export default function Map(): React.ReactNode {
         zIndexOffset={props.zindex}
         icon={L.divIcon({
           className: styles.hidemarker,
-          html: renderToStaticMarkup(props.markerup),
+          html: div.innerHTML,
         })}
       >
         <Popup>{props.popup ? props.popup : null}</Popup>

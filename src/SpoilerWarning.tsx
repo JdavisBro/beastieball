@@ -8,7 +8,8 @@ export default function SpoilerWarning(props: {
     deserializer: (value) => value == "true",
   });
 
-  return spoilersOk ? (
+  return spoilersOk ||
+    window.navigator.userAgent.toLowerCase().includes("prerender") ? (
     props.children
   ) : (
     <div className="notfoundcontainer">

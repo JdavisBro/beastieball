@@ -8,6 +8,7 @@ import { routes } from "./routes";
 import OpenGraph from "./shared/OpenGraph";
 import { useLocalStorage } from "usehooks-ts";
 import { HelmetProvider } from "react-helmet-async";
+import SpoilerWarning from "./SpoilerWarning";
 
 const container = document.getElementById("root");
 
@@ -38,9 +39,11 @@ createRoot(container).render(
         description="A website with information on Beastieball!"
       />
       <Container>
-        <Suspense fallback={<Loading />}>
-          <RouterProvider router={createBrowserRouter(routes)} />
-        </Suspense>
+        <SpoilerWarning>
+          <Suspense fallback={<Loading />}>
+            <RouterProvider router={createBrowserRouter(routes)} />
+          </Suspense>
+        </SpoilerWarning>
       </Container>
     </HelmetProvider>
   </StrictMode>,

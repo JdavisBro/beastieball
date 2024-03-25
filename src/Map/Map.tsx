@@ -13,6 +13,7 @@ import WORLD_DATA from "../data/WorldData";
 import styles from "./Map.module.css";
 import OpenGraph from "../shared/OpenGraph";
 import { createMarkers } from "./createMarkers";
+import Header from "../shared/Header";
 
 function MapEvents(props: {
   setCurrentMapLayer: React.Dispatch<React.SetStateAction<number>>;
@@ -89,6 +90,7 @@ export default function Map(): React.ReactNode {
         url="map"
         description="A map of the world of Beastieball"
       />
+      <Header title="Beastieball Map" />
       <MapContainer
         className={styles.map}
         minZoom={-7.25}
@@ -103,7 +105,6 @@ export default function Map(): React.ReactNode {
         wheelPxPerZoomLevel={90}
         bounds={bounds}
         crs={L.CRS.Simple}
-        style={{ height: "100%" }}
       >
         <MapEvents setCurrentMapLayer={setCurrentMapLayer} />
         <LayersControl>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-import Header from "./Header";
+import Header from "../shared/Header";
 import Sidebar from "./Sidebar";
 import Content from "./Content";
 import OpenGraph from "../shared/OpenGraph";
@@ -59,11 +59,10 @@ export default function Beastiepedia(): React.ReactNode {
         }
       />
       <Header
-        beastiename={beastie}
-        sidebarvisibility={sidebarvisible}
-        onSetSidebarVisibility={(visible: boolean) =>
-          setSidebarvisible(visible)
-        }
+        title={(beastie !== undefined ? `${beastie} - ` : "") + "Beastiepedia"}
+        menuButton={true}
+        menuButtonState={sidebarvisible}
+        onMenuButtonChange={(visible: boolean) => setSidebarvisible(visible)}
       />
       <div className={styles.belowheader}>
         <Sidebar

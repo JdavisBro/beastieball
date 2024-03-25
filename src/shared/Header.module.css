@@ -1,7 +1,7 @@
 .header {
+  composes: animPageHeaderBackground from global;
   height: var(--header-height);
   display: flex;
-  background-color: #1a1a1a;
 }
 
 .toggleicon {
@@ -23,6 +23,11 @@
   white-space: nowrap;
   overflow: hidden;
   line-height: var(--header-height);
+}
+
+.titlenomenu {
+  composes: title;
+  padding-left: 12px;
 }
 
 .animationtogglecontainer {

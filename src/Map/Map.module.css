@@ -1,5 +1,7 @@
 .map {
+  background-color: transparent;
   font-family: var(--go-banana);
+  height: calc(100% - var(--header-height));
 }
 
 .hidemarker {

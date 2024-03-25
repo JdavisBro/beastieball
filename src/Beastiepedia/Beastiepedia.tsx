@@ -36,14 +36,6 @@ export default function Beastiepedia(): React.ReactNode {
     !(beastieid !== null && orientation),
   ); // Selected beastie & portrait automatically hides sidebar
 
-  let title = "Beastiepedia";
-  let path: null | string = "/beastiepedia/";
-  if (beastieid !== null && beastie !== undefined) {
-    title = `${beastie} - Beastiepedia`;
-    path = `/beastiepedia/${beastie}`;
-  }
-  useTitle(title, path);
-
   const beastiedata = beastieid != null ? BEASTIE_DATA.get(beastieid) : null;
 
   window.BEASTIE_DATA = BEASTIE_DATA;
@@ -52,7 +44,7 @@ export default function Beastiepedia(): React.ReactNode {
   return (
     <div className={styles.container}>
       <OpenGraph
-        title={title}
+        title={beastieid === null ? "Beastiepedia" : `${beastie} - Beastiepedia`}
         image={
           beastiedata
             ? `icons/${beastiedata.name}.png`

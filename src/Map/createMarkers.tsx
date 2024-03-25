@@ -2,8 +2,18 @@ import * as L from "leaflet";
 import { Popup } from "react-leaflet";
 import styles from "./Map.module.css";
 import WORLD_DATA, { MapIcon } from "../data/WorldData";
-import { getKey } from "./Map";
 import DivIconMarker from "./DivIconMarker";
+
+function getKey(icon: MapIcon) {
+  if (icon.is_cave) {
+    return icon.from_level + icon.cave_loc_a + icon.cave_loc_b;
+  }
+  return (
+    icon.from_level +
+    (icon.text ? icon.text : "") +
+    (icon.from_object_guid ? icon.from_object_guid : "")
+  );
+}
 
 export function createMarkers() {
   const bigtitleheaders: React.ReactElement[] = [];
@@ -29,31 +39,10 @@ export function createMarkers() {
     Other: [],
   };
 
-  function GameMarker(props: {
-    value: MapIcon;
-    markerup: React.ReactElement;
-    popup?: React.ReactElement;
-    zindex: number;
-  }) {
-    const value = props.value;
-    return (
-      <DivIconMarker
-        markerprops={{
-          position: new L.LatLng(-value.world_y, value.world_x),
-          alt: value.revealed_text ? value.revealed_text : value.text,
-          zIndexOffset: props.zindex,
-        }}
-        container={{ tagName: "div", className: styles.hidemarker }}
-      >
-        {props.markerup}
-        {props.popup ? <Popup>{props.popup}</Popup> : null}
-      </DivIconMarker>
-    );
-  }
-
   function createMarker(value: MapIcon) {
+    let containerclass = styles.imgmarker;
     let markertype = value.superheader == 1 ? bigtitleheaders : titleheaders;
-    let markerup: React.ReactElement;
+    let markerup: React.ReactElement | null;
     let popup = undefined;
     let zindex = 0;
     if (value.img) {
@@ -66,33 +55,29 @@ export function createMarkers() {
       if (markertype == undefined) {
         markertype = imgheaders["Other"];
       }
-      markerup = (
-        <div className={styles.imgmarker}>
-          <img src={`/gameassets/sprSponsors/${value.img}.png`} />
-        </div>
-      );
+      markerup = <img src={`/gameassets/sprSponsors/${value.img}.png`} />;
       popup = <>{value.revealed_text ? value.revealed_text : value.text}</>;
     } else {
-      markerup = (
-        <div
-          className={
-            value.superheader == 1 ? styles.bigtextmarker : styles.textmarker
-          }
-        >
-          {value.text}
-        </div>
-      );
+      containerclass =
+        value.superheader == 1 ? styles.bigtextmarker : styles.textmarker;
+      markerup = value.text ? <>{value.text}</> : null;
       zindex = value.superheader == 1 ? 1100 : 1000;
     }
 
     markertype.push(
-      <GameMarker
+      <DivIconMarker
         key={getKey(value)}
-        value={value}
-        markerup={markerup}
-        popup={popup}
-        zindex={zindex}
-      />,
+        markerprops={{
+          position: new L.LatLng(-value.world_y, value.world_x),
+          alt: value.revealed_text ? value.revealed_text : value.text,
+          zIndexOffset: zindex,
+        }}
+        container={{ tagName: "div", className: containerclass }}
+        icon={{ className: styles.hidemarker }}
+      >
+        {markerup}
+        {popup ? <Popup>{popup}</Popup> : null}
+      </DivIconMarker>,
     );
   }
 

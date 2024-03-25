@@ -1,3 +1,7 @@
+.map {
+  font-family: var(--go-banana);
+}
+
 .hidemarker {
   width: 0;
   height: 0;

@@ -9,20 +9,10 @@ import {
 } from "react-leaflet";
 import { useMemo, useState } from "react";
 
-import WORLD_DATA, { MapIcon } from "../data/WorldData";
+import WORLD_DATA from "../data/WorldData";
+import styles from "./Map.module.css";
 import OpenGraph from "../shared/OpenGraph";
 import { createMarkers } from "./createMarkers";
-
-export function getKey(icon: MapIcon) {
-  if (icon.is_cave) {
-    return icon.from_level + icon.cave_loc_a + icon.cave_loc_b;
-  }
-  return (
-    icon.from_level +
-    (icon.text ? icon.text : "") +
-    (icon.from_object_guid ? icon.from_object_guid : "")
-  );
-}
 
 function MapEvents(props: {
   setCurrentMapLayer: React.Dispatch<React.SetStateAction<number>>;
@@ -100,6 +90,7 @@ export default function Map(): React.ReactNode {
         description="A map of the world of Beastieball"
       />
       <MapContainer
+        className={styles.map}
         minZoom={-7.25}
         maxZoom={0}
         maxBounds={bounds.pad(0.25)}

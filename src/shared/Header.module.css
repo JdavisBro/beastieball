@@ -10,10 +10,20 @@
   height: 70%;
   transform-origin: 60% 50% 0;
   cursor: pointer;
+  transform: scaleX(-1);
 }
 
-.toggleiconvisible {
-  transform: scaleX(-1);
+.toggleicon:hover {
+  transform: scale(-1.1, 0.95);
+}
+
+.toggleiconOff {
+  composes: toggleicon;
+  transform: scale(-1.2, 0.9);
+}
+
+.toggleiconOff:hover {
+  transform: scale(-1.15, 0.925);
 }
 
 .homelink {
@@ -21,15 +31,18 @@
   aspect-ratio: 1;
   height: 100%;
   margin-left: 15px;
-  margin-right: 5px;
 }
 
 .homeicon {
-  filter: invert();
   aspect-ratio: 1;
-  margin-top: 2.5%;
-  margin-left: 2.5%;
-  height: 95%;
+  margin-top: 2%;
+  margin-left: 5%;
+  height: 90%;
+  background-image: url(/gameassets/sprMainmenu/14.png);
+}
+
+.homeicon:is(:hover, :focus) {
+  background-image: url(/gameassets/sprMainmenu/15.png);
 }
 
 .title {

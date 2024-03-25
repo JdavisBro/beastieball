@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
 import ExternalLinks from "./ExternalLinks";
-import arrow from "../assets/arrow.svg";
-import home from "../assets/home.svg";
 import styles from "./Header.module.css";
 import AnimationToggle from "./AnimationToggle";
 
@@ -19,17 +17,11 @@ export default function Header(props: Props): React.ReactNode {
       {props.menuButton ? (
         <img
           className={
-            props.menuButtonState
-              ? `${styles.toggleicon} ${styles.toggleiconvisible}`
-              : styles.toggleicon
+            props.menuButtonState ? styles.toggleicon : styles.toggleiconOff
           }
-          src={arrow}
-          title={
-            props.menuButtonState ? "Enable Menu Arrow" : "Disable Menu Arrow"
-          }
-          alt={
-            props.menuButtonState ? "Enable Menu Arrow" : "Disable Menu Arrow"
-          }
+          src={"/gameassets/sprOptions_small_0.png"}
+          title={props.menuButtonState ? "Enable Menu" : "Disable Menu"}
+          alt={props.menuButtonState ? "Enable Menu" : "Disable Menu"}
           aria-haspopup="menu"
           tabIndex={0}
           onClick={() => {
@@ -44,11 +36,7 @@ export default function Header(props: Props): React.ReactNode {
         className={styles.homelink}
         title="Return to Beastieball Info Home"
       >
-        <img
-          className={styles.homeicon}
-          alt="Return to Beastieball Info Home"
-          src={home}
-        />
+        <div className={styles.homeicon}></div>
       </Link>
       <div className={styles.title}>{props.title}</div>
       <div className={styles.animationtogglecontainer}>

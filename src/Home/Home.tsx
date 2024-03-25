@@ -35,6 +35,12 @@ export default function Home(): React.ReactNode {
       <h1 className={styles.header}>Beastieball Info</h1>
       <div className={styles.options}>
         <MenuOption
+          text={"Beastiepedia"}
+          image={"/gameassets/sprMainmenu/0.png"}
+          hoverImage={"/gameassets/sprMainmenu/1.png"}
+          location={"/beastiepedia/"}
+        />
+        <MenuOption
           text={"The Game"}
           image={"/gameassets/sprMainmenu/6.png"}
           hoverImage={"/gameassets/sprMainmenu/7.png"}
@@ -42,10 +48,10 @@ export default function Home(): React.ReactNode {
           target="_blank"
         />
         <MenuOption
-          text={"Beastiepedia"}
-          image={"/gameassets/sprMainmenu/0.png"}
-          hoverImage={"/gameassets/sprMainmenu/1.png"}
-          location={"/beastiepedia/"}
+          text={"Map"}
+          image={"/gameassets/sprMainmenu/2.png"}
+          hoverImage={"/gameassets/sprMainmenu/3.png"}
+          location={"/map/"}
         />
       </div>
       <div className={styles.sep}></div>

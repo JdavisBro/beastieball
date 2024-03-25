@@ -4,13 +4,20 @@ export type MapIcon = {
   _: string;
   cave_loc_a?: string;
   cave_loc_b?: string;
+  conditional?: {
+    _: string;
+    key: string;
+    value: number;
+  };
   from_level: string;
   from_object?: string;
   from_object_guid?: string;
+  has_conditional?: number;
   img?: number;
   is_cave?: number;
   object_y?: number;
   revealed_text?: string;
+  sprite?: number;
   superheader?: number;
   text?: string;
   transit?: number;

@@ -62,7 +62,7 @@ export default function Beastiepedia(): React.ReactNode {
         title={(beastie !== undefined ? `${beastie} - ` : "") + "Beastiepedia"}
         menuButton={true}
         menuButtonState={sidebarvisible}
-        onMenuButtonChange={(visible: boolean) => setSidebarvisible(visible)}
+        onMenuButtonPressed={() => setSidebarvisible((visible) => !visible)}
       />
       <div className={styles.belowheader}>
         <Sidebar

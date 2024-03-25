@@ -7,7 +7,7 @@ type Props = {
   title: string | undefined;
   menuButton?: boolean;
   menuButtonState?: boolean;
-  onMenuButtonChange?: (enabled: boolean) => void;
+  onMenuButtonPressed?: () => void;
 };
 
 export default function Header(props: Props): React.ReactNode {
@@ -27,12 +27,10 @@ export default function Header(props: Props): React.ReactNode {
           aria-haspopup="menu"
           tabIndex={0}
           onClick={() => {
-            props.onMenuButtonChange
-              ? props.onMenuButtonChange(!props.menuButtonState)
-              : null;
+            props.onMenuButtonPressed ? props.onMenuButtonPressed() : null;
           }}
           // prettier-ignore
-          onKeyDown={(event) => {if (event.key == "Enter") {props.onMenuButtonChange ? props.onMenuButtonChange(!props.menuButtonState) : null;}}}
+          onKeyDown={(event) => {if (event.key == "Enter") {props.onMenuButtonPressed ? props.onMenuButtonPressed() : null;}}}
         />
       ) : null}
       <div className={props.menuButton ? styles.title : styles.titlenomenu}>

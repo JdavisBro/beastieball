@@ -63,52 +63,53 @@ export default function Map(): React.ReactNode {
     Other: [],
   };
 
+  function GameMarker(props: {
+    value: MapIcon;
+    markerup: React.ReactElement;
+    popup?: React.ReactElement;
+  }) {
+    const value = props.value;
+    return (
+      <Marker
+        key={getKey(value)}
+        position={new L.LatLng(-value.world_y, value.world_x)}
+        alt={value.revealed_text ? value.revealed_text : value.text}
+        zIndexOffset={100}
+        icon={L.divIcon({
+          className: styles.hidemarker,
+          html: renderToStaticMarkup(props.markerup),
+        })}
+      >
+        <Popup>{props.popup ? props.popup : null}</Popup>
+      </Marker>
+    );
+  }
   function createMarker(value: MapIcon) {
+    let markertype = titleheaders;
+    let markerup;
+    let popup = undefined;
     if (value.img) {
-      let type =
+      markertype =
         value.is_cave == 1
           ? imgheaders["Caves"]
           : value.from_object
             ? imgheaders[objtypes[value.from_object]]
             : imgheaders["Other"];
-      if (type == undefined) {
-        type = imgheaders["Other"];
+      if (markertype == undefined) {
+        markertype = imgheaders["Other"];
       }
-      type.push(
-        <Marker
-          key={getKey(value)}
-          position={new L.LatLng(-value.world_y, value.world_x)}
-          alt={value.revealed_text ? value.revealed_text : value.text}
-          icon={L.divIcon({
-            className: styles.hidemarker,
-            html: renderToStaticMarkup(
-              <div className={styles.imgmarker}>
-                <img src={`/gameassets/sprSponsors/${value.img}.png`} />
-              </div>,
-            ),
-          })}
-        >
-          <Popup>
-            {value.revealed_text ? value.revealed_text : value.text}
-          </Popup>
-        </Marker>,
+      markerup = (
+        <div className={styles.imgmarker}>
+          <img src={`/gameassets/sprSponsors/${value.img}.png`} />
+        </div>
       );
+      popup = <>{value.revealed_text ? value.revealed_text : value.text}</>;
     } else {
-      titleheaders.push(
-        <Marker
-          key={getKey(value)}
-          position={new L.LatLng(-value.world_y, value.world_x)}
-          alt={value.revealed_text ? value.revealed_text : value.text}
-          zIndexOffset={100}
-          icon={L.divIcon({
-            className: styles.hidemarker,
-            html: renderToStaticMarkup(
-              <div className={styles.textmarker}>{value.text}</div>,
-            ),
-          })}
-        />,
-      );
+      markerup = <div className={styles.textmarker}>{value.text}</div>;
     }
+    markertype.push(
+      <GameMarker value={value} markerup={markerup} popup={popup} />,
+    );
   }
 
   WORLD_DATA.icons_array.forEach(createMarker);

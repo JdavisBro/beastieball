@@ -87,6 +87,7 @@ export default function Map(): React.ReactNode {
     value: MapIcon;
     markerup: React.ReactElement;
     popup?: React.ReactElement;
+    zindex: number;
   }) {
     const value = props.value;
     return (
@@ -94,7 +95,7 @@ export default function Map(): React.ReactNode {
         key={getKey(value)}
         position={new L.LatLng(-value.world_y, value.world_x)}
         alt={value.revealed_text ? value.revealed_text : value.text}
-        zIndexOffset={100}
+        zIndexOffset={props.zindex}
         icon={L.divIcon({
           className: styles.hidemarker,
           html: renderToStaticMarkup(props.markerup),
@@ -104,10 +105,12 @@ export default function Map(): React.ReactNode {
       </Marker>
     );
   }
+
   function createMarker(value: MapIcon) {
     let markertype = titleheaders;
     let markerup;
     let popup = undefined;
+    let zindex = 0;
     if (value.img) {
       markertype =
         value.is_cave == 1
@@ -126,9 +129,15 @@ export default function Map(): React.ReactNode {
       popup = <>{value.revealed_text ? value.revealed_text : value.text}</>;
     } else {
       markerup = <div className={styles.textmarker}>{value.text}</div>;
+      zindex = 1000;
     }
     markertype.push(
-      <GameMarker value={value} markerup={markerup} popup={popup} />,
+      <GameMarker
+        value={value}
+        markerup={markerup}
+        popup={popup}
+        zindex={zindex}
+      />,
     );
   }
 

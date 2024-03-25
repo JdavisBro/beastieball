@@ -22,6 +22,7 @@ export default function PageNotFound(): React.ReactElement {
         image="ball.png"
         url=""
         description="A website with data on Beastieball!"
+        notfound={true}
       />
       <div className="notfoundcontainer">
         <h1>Page Not Found</h1>

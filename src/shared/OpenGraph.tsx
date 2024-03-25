@@ -5,6 +5,7 @@ type Props = {
   image: string;
   url: string;
   description: string;
+  notfound?: boolean;
 };
 
 export default function OpenGraph(props: Props): React.ReactElement {
@@ -21,6 +22,10 @@ export default function OpenGraph(props: Props): React.ReactElement {
       <meta property="og:description" content={props.description} />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
+      <meta
+        name="prerender-status-code"
+        content={props.notfound ? "404" : "200"}
+      ></meta>
     </Helmet>
   );
 }

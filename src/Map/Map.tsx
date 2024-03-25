@@ -27,20 +27,40 @@ function getKey(icon: MapIcon) {
 export default function Map(): React.ReactNode {
   // these are estimates based on comparing the map to a screenshot but they should be about right for now
   const bounds = new L.LatLngBounds([83000, -160000], [-42333, 14762]);
-  const level_overlays = WORLD_DATA.level_stumps_array.map((level) => {
+  const level_overlays: { [key: number]: React.ReactElement[] } = {};
+
+  WORLD_DATA.level_stumps_array.forEach((level) => {
     const level_bounds = new L.LatLngBounds(
       [-level.world_y1, level.world_x1],
       [-level.world_y2, level.world_x2],
     );
+    const layer = level.world_layer ? level.world_layer : 0;
+    let overlays = level_overlays[layer];
+    if (!overlays) {
+      level_overlays[layer] = [];
+      overlays = level_overlays[layer];
+    }
 
-    return (
+    overlays.push(
       <ImageOverlay
         bounds={level_bounds}
         url={`/gameassets/maps/sprMap_${level.name}_0.png`}
         key={level.name}
-      />
+      />,
     );
   });
+
+  const mapoverlay = (
+    <ImageOverlay
+      key="background"
+      url={"/gameassets/maps/sprMap_BG_0.png"}
+      bounds={bounds}
+    />
+  );
+
+  level_overlays[0]
+    ? level_overlays[0].unshift(mapoverlay)
+    : (level_overlays[0] = [mapoverlay]);
 
   const titleheaders: React.ReactElement[] = [];
 
@@ -132,9 +152,16 @@ export default function Map(): React.ReactNode {
       crs={L.CRS.Simple}
       style={{ height: "100%" }}
     >
-      <ImageOverlay url={"/gameassets/maps/sprMap_BG_0.png"} bounds={bounds} />
-      {level_overlays}
       <LayersControl>
+        {Object.keys(level_overlays).map((key, index) => (
+          <LayersControl.BaseLayer
+            key={key}
+            checked={index == 0}
+            name={index == 0 ? "Surface" : `Layer ${index}`}
+          >
+            <LayerGroup>{level_overlays[Number(key)]}</LayerGroup>
+          </LayersControl.BaseLayer>
+        ))}
         <LayersControl.Overlay checked name="Area Titles">
           <LayerGroup>{titleheaders}</LayerGroup>
         </LayersControl.Overlay>

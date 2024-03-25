@@ -84,6 +84,7 @@ export default function Map(): React.ReactNode {
     ? level_overlays[0].unshift(mapoverlay)
     : (level_overlays[0] = [mapoverlay]);
 
+  const bigtitleheaders: React.ReactElement[] = [];
   const titleheaders: React.ReactElement[] = [];
 
   const objtypes: { [key: string]: string } = {
@@ -129,7 +130,7 @@ export default function Map(): React.ReactNode {
   }
 
   function createMarker(value: MapIcon) {
-    let markertype = titleheaders;
+    let markertype = value.superheader == 1 ? bigtitleheaders : titleheaders;
     let markerup;
     let popup = undefined;
     let zindex = 0;
@@ -150,8 +151,16 @@ export default function Map(): React.ReactNode {
       );
       popup = <>{value.revealed_text ? value.revealed_text : value.text}</>;
     } else {
-      markerup = <div className={styles.textmarker}>{value.text}</div>;
-      zindex = 1000;
+      markerup = (
+        <div
+          className={
+            value.superheader == 1 ? styles.bigtextmarker : styles.textmarker
+          }
+        >
+          {value.text}
+        </div>
+      );
+      zindex = value.superheader == 1 ? 1100 : 1000;
     }
     markertype.push(
       <GameMarker
@@ -204,7 +213,12 @@ export default function Map(): React.ReactNode {
               <LayerGroup>{level_overlays[Number(key)]}</LayerGroup>
             </LayersControl.BaseLayer>
           ))}
-          <LayersControl.Overlay checked name="Area Titles">
+          <LayersControl.Overlay checked name="Region Names">
+            <LayerGroup>
+              {currentMapLayer == 0 ? bigtitleheaders : null}
+            </LayerGroup>
+          </LayersControl.Overlay>
+          <LayersControl.Overlay checked name="Area Names">
             <LayerGroup>
               {currentMapLayer == 0 ? titleheaders : null}
             </LayerGroup>

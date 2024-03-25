@@ -11,7 +11,13 @@
   height: fit-content;
   color: white;
   padding: 5px 10px 5px 10px;
+  clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 100%, 5px 100%);
   transform: translateX(-50%);
+}
+
+.bigtextmarker {
+  composes: textmarker;
+  font-size: 2em;
 }
 
 .imgmarker {

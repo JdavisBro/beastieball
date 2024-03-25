@@ -179,11 +179,12 @@ export default function Map(): React.ReactNode {
         description="A map of the world of Beastieball"
       />
       <MapContainer
-        minZoom={-7}
+        minZoom={-7.25}
         maxZoom={0}
-        maxBounds={bounds}
+        maxBounds={bounds.pad(0.25)}
         maxBoundsViscosity={0.7}
-        zoom={-5}
+        zoom={-6}
+        center={[0, 0]}
         zoomAnimation={false} // there are seams between the tiles when animating
         zoomSnap={0}
         zoomDelta={0.5}

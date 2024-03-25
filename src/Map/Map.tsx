@@ -5,19 +5,15 @@ import {
   LayerGroup,
   LayersControl,
   MapContainer,
-  Marker,
-  Popup,
   useMapEvents,
 } from "react-leaflet";
+import { useMemo, useState } from "react";
 
-import styles from "./Map.module.css";
 import WORLD_DATA, { MapIcon } from "../data/WorldData";
 import OpenGraph from "../shared/OpenGraph";
-import { useState } from "react";
-import { flushSync } from "react-dom";
-import { createRoot } from "react-dom/client";
+import { createMarkers } from "./createMarkers";
 
-function getKey(icon: MapIcon) {
+export function getKey(icon: MapIcon) {
   if (icon.is_cave) {
     return icon.from_level + icon.cave_loc_a + icon.cave_loc_b;
   }
@@ -85,103 +81,15 @@ export default function Map(): React.ReactNode {
     ? level_overlays[0].unshift(mapoverlay)
     : (level_overlays[0] = [mapoverlay]);
 
-  const bigtitleheaders: React.ReactElement[] = [];
-  const titleheaders: React.ReactElement[] = [];
-
-  const objtypes: { [key: string]: string } = {
-    objBallcenter: "Beastieball Center",
-    objRailhouse: "Railhouse/Boathouse/Camp",
-    objBoathouse: "Railhouse/Boathouse/Camp",
-    objCamp: "Railhouse/Boathouse/Camp",
-    objGymdoor: "Gym",
-    objClothesShop: "Clothes Shop",
-    objZipstation: "Zip Station",
-  };
-  const imgheaders: { [key: string]: React.ReactElement[] } = {
-    "Beastieball Center": [],
-    "Railhouse/Boathouse/Camp": [],
-    Gym: [],
-    "Clothes Shop": [],
-    "Zip Station": [],
-    Caves: [],
-    Other: [],
-  };
-
-  function GameMarker(props: {
-    value: MapIcon;
-    markerup: React.ReactElement;
-    popup?: React.ReactElement;
-    zindex: number;
-  }) {
-    const div = document.createElement("div");
-    const root = createRoot(div);
-    flushSync(() => root.render(props.markerup));
-    const value = props.value;
-    return (
-      <Marker
-        key={getKey(value)}
-        position={new L.LatLng(-value.world_y, value.world_x)}
-        alt={value.revealed_text ? value.revealed_text : value.text}
-        zIndexOffset={props.zindex}
-        icon={L.divIcon({
-          className: styles.hidemarker,
-          html: div.innerHTML,
-        })}
-      >
-        <Popup>{props.popup ? props.popup : null}</Popup>
-      </Marker>
-    );
-  }
-
-  function createMarker(value: MapIcon) {
-    let markertype = value.superheader == 1 ? bigtitleheaders : titleheaders;
-    let markerup;
-    let popup = undefined;
-    let zindex = 0;
-    if (value.img) {
-      markertype =
-        value.is_cave == 1
-          ? imgheaders["Caves"]
-          : value.from_object
-            ? imgheaders[objtypes[value.from_object]]
-            : imgheaders["Other"];
-      if (markertype == undefined) {
-        markertype = imgheaders["Other"];
-      }
-      markerup = (
-        <div className={styles.imgmarker}>
-          <img src={`/gameassets/sprSponsors/${value.img}.png`} />
-        </div>
-      );
-      popup = <>{value.revealed_text ? value.revealed_text : value.text}</>;
-    } else {
-      markerup = (
-        <div
-          className={
-            value.superheader == 1 ? styles.bigtextmarker : styles.textmarker
-          }
-        >
-          {value.text}
-        </div>
-      );
-      zindex = value.superheader == 1 ? 1100 : 1000;
-    }
-    markertype.push(
-      <GameMarker
-        value={value}
-        markerup={markerup}
-        popup={popup}
-        zindex={zindex}
-      />,
-    );
-  }
-
-  if (currentMapLayer == 0) {
-    WORLD_DATA.icons_array.forEach(createMarker);
-    WORLD_DATA.level_stumps_array.forEach((value) =>
-      value.icons_array.forEach(createMarker),
-    );
-  }
+  const {
+    bigtitleheaders,
+    titleheaders,
+    imgheaders,
+  }: {
+    bigtitleheaders: React.ReactElement[];
+    titleheaders: React.ReactElement[];
+    imgheaders: { [key: string]: React.ReactElement[] };
+  } = useMemo(createMarkers, []);
 
   return (
     <>

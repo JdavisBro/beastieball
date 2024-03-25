@@ -1,0 +1,31 @@
+.hidemarker {
+  width: 0;
+  height: 0;
+  cursor: inherit;
+}
+
+.textmarker {
+  composes: boxHeaderBackground from global;
+  white-space: nowrap;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  transform: translateX(-50%);
+}
+
+.imgmarker {
+  width: 30px;
+  height: 30px;
+  border: solid white 3px;
+  box-sizing: border-box;
+  background-color: black;
+  border-radius: 100%;
+  transform: translateX(-9px);
+}
+
+.imgmarker img {
+  margin: 10% 0 0 10%;
+  width: 80%;
+  height: 80%;
+}

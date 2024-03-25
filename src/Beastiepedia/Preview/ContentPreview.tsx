@@ -6,7 +6,7 @@ import type { BeastieType } from "../../data/BeastieType";
 import vertex from "./vertex.glsl?raw";
 import fragment from "./fragment.glsl?raw";
 import ColorTabs from "./ColorTabs";
-import SPRITE_INFO from "../../data/SpriteInfo";
+import SPRITE_INFO, { BBox } from "../../data/SpriteInfo";
 import useLoadImages from "./useLoadImages";
 import BEASTIE_ANIMATIONS, {
   BeastieAnimation,
@@ -97,8 +97,65 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   const [userSpeed, setUserSpeed] = useState(0.5); // default 0.5 seems to match in game more...
 
+  const beastiesprite = SPRITE_INFO[props.beastiedata.spr];
+
+  const getCrop = useCallback(
+    (bbox: BBox) => {
+      console.log(bbox);
+      const beastiescale =
+        bbox.width > bbox.height
+          ? beastiesprite.width / bbox.width
+          : beastiesprite.height / bbox.height;
+      return `scale(${beastiescale}) translate(${((-bbox.x - bbox.width / 2 + beastiesprite.width / 2) / beastiesprite.width) * 100}%, ${((-bbox.y - bbox.height / 2 + beastiesprite.height / 2) / beastiesprite.height) * 100}%)`;
+    },
+    [beastiesprite],
+  );
+
+  const getAnimBbox = useCallback(() => {
+    if (!anim || animPausedRef.current) {
+      return getCrop(beastiesprite.bbox);
+    }
+    let bbox: { x: number; y: number; endx: number; endy: number } | undefined =
+      undefined;
+    const frames = Array.isArray(anim.frames) ? anim.frames : [anim.frames];
+    for (const state of frames) {
+      const startFrame = state.startFrame || 0;
+      const endFrame = state.endFrame || 0;
+      for (let i = startFrame; i <= endFrame; i++) {
+        const framebbox = beastiesprite.bboxes[i];
+        console.log(framebbox);
+        if (bbox == undefined) {
+          bbox = {
+            x: framebbox.x,
+            y: framebbox.y,
+            endx: framebbox.x + framebbox.width,
+            endy: framebbox.y + framebbox.height,
+          };
+        } else {
+          bbox.x = Math.min(bbox.x, framebbox.x);
+          bbox.y = Math.min(bbox.y, framebbox.y);
+          bbox.endx = Math.max(bbox.endx, framebbox.x + framebbox.width);
+          bbox.endy = Math.max(bbox.endy, framebbox.y + framebbox.height);
+        }
+      }
+    }
+    if (!bbox) {
+      return getCrop(beastiesprite.bbox);
+    }
+    return getCrop({
+      x: bbox.x,
+      y: bbox.y,
+      width: bbox.endx - bbox.x,
+      height: bbox.endy - bbox.y,
+    });
+  }, [beastiesprite, getCrop, anim]);
+
+  const [fitBeastie, setFitBeastie] = useState(true);
+
   const step = useCallback(
     (time: DOMHighResTimeStamp) => {
+      if (fitBeastie && canvasRef.current)
+        canvasRef.current.style.transform = getAnimBbox();
       if (anim === undefined) {
         console.log(`Incorrect Anim: ${animation}`);
         setAnimation("idle");
@@ -207,7 +264,16 @@ export default function ContentPreview(props: Props): React.ReactNode {
       prevTimeRef.current = time;
       requestRef.current = requestAnimationFrame(step);
     },
-    [loadedImages, props.beastiedata, animation, anim, animdata, userSpeed],
+    [
+      loadedImages,
+      props.beastiedata,
+      animation,
+      anim,
+      animdata,
+      userSpeed,
+      getAnimBbox,
+      fitBeastie,
+    ],
   );
 
   useEffect(() => {
@@ -267,10 +333,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
     [setColors],
   );
 
-  const beastiesprite = SPRITE_INFO[props.beastiedata.spr];
-
-  const [fitBeastie, setFitBeastie] = useState(true);
-
   const downloadImage = useCallback(() => {
     if (!canvasRef.current || !cropCanvasRef.current) {
       return;
@@ -322,11 +384,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   const [background, setBackground] = useState(false);
   const [backgroundColor, setBackgroundColor] = useState("#ffffff");
-
-  const beastiescale =
-    beastiesprite.bbox.width > beastiesprite.bbox.height
-      ? beastiesprite.width / beastiesprite.bbox.width
-      : beastiesprite.height / beastiesprite.bbox.height;
 
   const animationlist = [
     "idle",
@@ -387,9 +444,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
             className={styles.previewcanvas}
             style={{
               display: noDisplayRender ? "none" : "block",
-              transform: fitBeastie
-                ? `scale(${beastiescale}) translate(${((-beastiesprite.bbox.x - beastiesprite.bbox.width / 2 + beastiesprite.width / 2) / beastiesprite.width) * 100}%, ${((-beastiesprite.bbox.y - beastiesprite.bbox.height / 2 + beastiesprite.height / 2) / beastiesprite.height) * 100}%)`
-                : "",
+              transform: fitBeastie ? getCrop(beastiesprite.bbox) : "",
             }}
             width={1000}
             height={1000}

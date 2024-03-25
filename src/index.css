@@ -148,10 +148,10 @@ body {
 
 .animPageHeaderBackground {
   background-image: repeating-linear-gradient(
-    rgb(43, 43, 43),
-    rgb(43, 43, 43) 4px,
-    rgb(36, 36, 36) 4px,
-    rgb(36, 36, 36) 8px
+    rgb(35, 35, 35),
+    rgb(35, 35, 35) 4px,
+    rgb(28, 28, 28) 4px,
+    rgb(28, 28, 28) 8px
   );
   background-size: 100% 200%;
   animation-name: alt-bg-scroll;

@@ -9,7 +9,6 @@
   top: 15%;
   height: 70%;
   transform-origin: 60% 50% 0;
-  margin-right: 25px;
   cursor: pointer;
 }
 
@@ -17,17 +16,29 @@
   transform: scaleX(-1);
 }
 
+.homelink {
+  width: fit-content;
+  aspect-ratio: 1;
+  height: 100%;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.homeicon {
+  filter: invert();
+  aspect-ratio: 1;
+  margin-top: 2.5%;
+  margin-left: 2.5%;
+  height: 95%;
+}
+
 .title {
   min-width: 0;
   font-size: 2em;
   white-space: nowrap;
   overflow: hidden;
-  line-height: var(--header-height);
-}
-
-.titlenomenu {
-  composes: title;
   padding-left: 12px;
+  line-height: var(--header-height);
 }
 
 .animationtogglecontainer {

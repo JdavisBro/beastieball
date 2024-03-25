@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
+
 import ExternalLinks from "./ExternalLinks";
 import arrow from "../assets/arrow.svg";
+import home from "../assets/home.svg";
 import styles from "./Header.module.css";
 import AnimationToggle from "./AnimationToggle";
 
@@ -21,6 +24,9 @@ export default function Header(props: Props): React.ReactNode {
               : styles.toggleicon
           }
           src={arrow}
+          title={
+            props.menuButtonState ? "Enable Menu Arrow" : "Disable Menu Arrow"
+          }
           alt={
             props.menuButtonState ? "Enable Menu Arrow" : "Disable Menu Arrow"
           }
@@ -33,9 +39,18 @@ export default function Header(props: Props): React.ReactNode {
           onKeyDown={(event) => {if (event.key == "Enter") {props.onMenuButtonPressed ? props.onMenuButtonPressed() : null;}}}
         />
       ) : null}
-      <div className={props.menuButton ? styles.title : styles.titlenomenu}>
-        {props.title}
-      </div>
+      <Link
+        to="/"
+        className={styles.homelink}
+        title="Return to Beastieball Info Home"
+      >
+        <img
+          className={styles.homeicon}
+          alt="Return to Beastieball Info Home"
+          src={home}
+        />
+      </Link>
+      <div className={styles.title}>{props.title}</div>
       <div className={styles.animationtogglecontainer}>
         <AnimationToggle break={true} />
       </div>

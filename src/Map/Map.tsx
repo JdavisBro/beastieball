@@ -7,11 +7,14 @@ import {
   MapContainer,
   Marker,
   Popup,
+  useMapEvents,
 } from "react-leaflet";
 
 import styles from "./Map.module.css";
 import WORLD_DATA, { MapIcon } from "../data/WorldData";
 import { renderToStaticMarkup } from "react-dom/server";
+import OpenGraph from "../shared/OpenGraph";
+import { useState } from "react";
 
 function getKey(icon: MapIcon) {
   if (icon.is_cave) {
@@ -24,9 +27,25 @@ function getKey(icon: MapIcon) {
   );
 }
 
+function MapEvents(props: {
+  setCurrentMapLayer: React.Dispatch<React.SetStateAction<number>>;
+}) {
+  useMapEvents({
+    baselayerchange: (event) =>
+      event.name == "Surface"
+        ? props.setCurrentMapLayer(0)
+        : props.setCurrentMapLayer(Number(event.name.replace("Layer ", ""))),
+  });
+
+  return null;
+}
+
 export default function Map(): React.ReactNode {
+  const [currentMapLayer, setCurrentMapLayer] = useState(0);
+
   // these are estimates based on comparing the map to a screenshot but they should be about right for now
   const bounds = new L.LatLngBounds([83000, -160000], [-42333, 14762]);
+  const map_bg_bounds = new L.LatLngBounds([83000, -160000], [-42333, 14762]);
   const level_overlays: { [key: number]: React.ReactElement[] } = {};
 
   WORLD_DATA.level_stumps_array.forEach((level) => {
@@ -35,6 +54,9 @@ export default function Map(): React.ReactNode {
       [-level.world_y2, level.world_x2],
     );
     const layer = level.world_layer ? level.world_layer : 0;
+    if (layer == currentMapLayer) {
+      bounds.extend(level_bounds);
+    }
     let overlays = level_overlays[layer];
     if (!overlays) {
       level_overlays[layer] = [];
@@ -54,7 +76,7 @@ export default function Map(): React.ReactNode {
     <ImageOverlay
       key="background"
       url={"/gameassets/maps/sprMap_BG_0.png"}
-      bounds={bounds}
+      bounds={map_bg_bounds}
     />
   );
 
@@ -141,45 +163,63 @@ export default function Map(): React.ReactNode {
     );
   }
 
-  WORLD_DATA.icons_array.forEach(createMarker);
-  WORLD_DATA.level_stumps_array.forEach((value) =>
-    value.icons_array.forEach(createMarker),
-  );
+  if (currentMapLayer == 0) {
+    WORLD_DATA.icons_array.forEach(createMarker);
+    WORLD_DATA.level_stumps_array.forEach((value) =>
+      value.icons_array.forEach(createMarker),
+    );
+  }
 
   return (
-    <MapContainer
-      minZoom={-7}
-      maxZoom={0}
-      maxBounds={bounds}
-      maxBoundsViscosity={0.7}
-      zoom={-5}
-      zoomAnimation={false} // there are seams between the tiles when animating
-      zoomSnap={0}
-      zoomDelta={0.5}
-      wheelPxPerZoomLevel={90}
-      bounds={bounds}
-      crs={L.CRS.Simple}
-      style={{ height: "100%" }}
-    >
-      <LayersControl>
-        {Object.keys(level_overlays).map((key, index) => (
-          <LayersControl.BaseLayer
-            key={key}
-            checked={index == 0}
-            name={index == 0 ? "Surface" : `Layer ${index}`}
-          >
-            <LayerGroup>{level_overlays[Number(key)]}</LayerGroup>
-          </LayersControl.BaseLayer>
-        ))}
-        <LayersControl.Overlay checked name="Area Titles">
-          <LayerGroup>{titleheaders}</LayerGroup>
-        </LayersControl.Overlay>
-        {Object.keys(imgheaders).map((key) => (
-          <LayersControl.Overlay key={key} checked name={key}>
-            <LayerGroup>{imgheaders[key]}</LayerGroup>
+    <>
+      <OpenGraph
+        title="Map - Beastieball Info"
+        image="gameassets/sprMainmenu/3.png"
+        url="map"
+        description="A map of the world of Beastieball"
+      />
+      <MapContainer
+        minZoom={-7}
+        maxZoom={0}
+        maxBounds={bounds}
+        maxBoundsViscosity={0.7}
+        zoom={-5}
+        zoomAnimation={false} // there are seams between the tiles when animating
+        zoomSnap={0}
+        zoomDelta={0.5}
+        wheelPxPerZoomLevel={90}
+        bounds={bounds}
+        crs={L.CRS.Simple}
+        style={{ height: "100%" }}
+      >
+        <MapEvents setCurrentMapLayer={setCurrentMapLayer} />
+        <LayersControl>
+          {Object.keys(level_overlays).map((key, index) => (
+            <LayersControl.BaseLayer
+              key={key}
+              checked={index == 0}
+              name={index == 0 ? "Surface" : `Layer ${index}`}
+            >
+              <LayerGroup>{level_overlays[Number(key)]}</LayerGroup>
+            </LayersControl.BaseLayer>
+          ))}
+          <LayersControl.Overlay checked name="Area Titles">
+            <LayerGroup>
+              {currentMapLayer == 0 ? titleheaders : null}
+            </LayerGroup>
           </LayersControl.Overlay>
-        ))}
-      </LayersControl>
-    </MapContainer>
+
+          {Object.keys(imgheaders).map((key) =>
+            key == "Other" && imgheaders[key].length == 0 ? null : (
+              <LayersControl.Overlay key={key} checked name={key}>
+                <LayerGroup>
+                  {currentMapLayer == 0 ? imgheaders[key] : null}
+                </LayerGroup>
+              </LayersControl.Overlay>
+            ),
+          )}
+        </LayersControl>
+      </MapContainer>
+    </>
   );
 }

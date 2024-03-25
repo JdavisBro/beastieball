@@ -6,7 +6,6 @@ import Sidebar from "./Sidebar";
 import Content from "./Content";
 import OpenGraph from "../shared/OpenGraph";
 import styles from "./Beastiepedia.module.css";
-import useTitle from "../utils/useTitle";
 import useScreenOrientation from "../utils/useScreenOrientation";
 import BEASTIE_DATA from "../data/Beastiedata";
 import { BeastieType } from "../data/BeastieType";
@@ -44,7 +43,9 @@ export default function Beastiepedia(): React.ReactNode {
   return (
     <div className={styles.container}>
       <OpenGraph
-        title={beastieid === null ? "Beastiepedia" : `${beastie} - Beastiepedia`}
+        title={
+          beastieid === null ? "Beastiepedia" : `${beastie} - Beastiepedia`
+        }
         image={
           beastiedata
             ? `icons/${beastiedata.name}.png`

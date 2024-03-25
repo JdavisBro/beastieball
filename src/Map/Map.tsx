@@ -11,7 +11,6 @@ import {
 
 import styles from "./Map.module.css";
 import WORLD_DATA, { MapIcon } from "../data/WorldData";
-import SPRITE_INFO from "../data/SpriteInfo";
 import { renderToStaticMarkup } from "react-dom/server";
 
 function getKey(icon: MapIcon) {
@@ -29,12 +28,6 @@ export default function Map(): React.ReactNode {
   // these are estimates based on comparing the map to a screenshot but they should be about right for now
   const bounds = new L.LatLngBounds([83000, -160000], [-42333, 14762]);
   const level_overlays = WORLD_DATA.level_stumps_array.map((level) => {
-    const sprite = SPRITE_INFO.find(
-      (value) => value.name == `sprMap_${level.name}`,
-    );
-    if (!sprite) {
-      return null;
-    }
     const level_bounds = new L.LatLngBounds(
       [-level.world_y1, level.world_x1],
       [-level.world_y2, level.world_x2],
@@ -50,11 +43,38 @@ export default function Map(): React.ReactNode {
   });
 
   const titleheaders: React.ReactElement[] = [];
-  const imgheaders: React.ReactElement[] = [];
+
+  const objtypes: { [key: string]: string } = {
+    objBallcenter: "Beastieball Center",
+    objRailhouse: "Railhouse/Boathouse/Camp",
+    objBoathouse: "Railhouse/Boathouse/Camp",
+    objCamp: "Railhouse/Boathouse/Camp",
+    objGymdoor: "Gym",
+    objClothesShop: "Clothes Shop",
+    objZipstation: "Zip Station",
+  };
+  const imgheaders: { [key: string]: React.ReactElement[] } = {
+    "Beastieball Center": [],
+    "Railhouse/Boathouse/Camp": [],
+    Gym: [],
+    "Clothes Shop": [],
+    "Zip Station": [],
+    Caves: [],
+    Other: [],
+  };
 
   function createMarker(value: MapIcon) {
     if (value.img) {
-      imgheaders.push(
+      let type =
+        value.is_cave == 1
+          ? imgheaders["Caves"]
+          : value.from_object
+            ? imgheaders[objtypes[value.from_object]]
+            : imgheaders["Other"];
+      if (type == undefined) {
+        type = imgheaders["Other"];
+      }
+      type.push(
         <Marker
           key={getKey(value)}
           position={new L.LatLng(-value.world_y, value.world_x)}
@@ -117,9 +137,11 @@ export default function Map(): React.ReactNode {
         <LayersControl.Overlay checked name="Area Titles">
           <LayerGroup>{titleheaders}</LayerGroup>
         </LayersControl.Overlay>
-        <LayersControl.Overlay checked name="Pins">
-          <LayerGroup>{imgheaders}</LayerGroup>
-        </LayersControl.Overlay>
+        {Object.keys(imgheaders).map((key) => (
+          <LayersControl.Overlay key={key} checked name={key}>
+            <LayerGroup>{imgheaders[key]}</LayerGroup>
+          </LayersControl.Overlay>
+        ))}
       </LayersControl>
     </MapContainer>
   );

@@ -9,6 +9,7 @@ import OpenGraph from "./shared/OpenGraph";
 import { useLocalStorage } from "usehooks-ts";
 import { HelmetProvider } from "react-helmet-async";
 import SpoilerWarning from "./SpoilerWarning";
+import CustomErrorBoundary from "./shared/CustomErrorBoundary";
 
 const container = document.getElementById("root");
 
@@ -24,7 +25,11 @@ function Container(props: { children: React.ReactNode }): React.ReactNode {
 
   return (
     <div className={noAnimations ? "container noanim" : "container"}>
-      {props.children}
+      <CustomErrorBoundary
+        fallbackClassName={noAnimations ? "container noanim" : "container"}
+      >
+        {props.children}
+      </CustomErrorBoundary>
     </div>
   );
 }

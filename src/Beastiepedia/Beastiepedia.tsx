@@ -9,6 +9,7 @@ import styles from "./Beastiepedia.module.css";
 import useScreenOrientation from "../utils/useScreenOrientation";
 import BEASTIE_DATA from "../data/Beastiedata";
 import { BeastieType } from "../data/BeastieType";
+import CustomErrorBoundary from "../shared/CustomErrorBoundary";
 
 declare global {
   interface Window {
@@ -65,16 +66,20 @@ export default function Beastiepedia(): React.ReactNode {
         onMenuButtonPressed={() => setSidebarvisible((visible) => !visible)}
       />
       <div className={styles.belowheader}>
-        <Sidebar
-          beastieid={beastieid}
-          visibility={sidebarvisible}
-          onToggleSidebarVisibility={() => {
-            if (orientation) {
-              setSidebarvisible(false);
-            }
-          }}
-        />
-        <Content beastiedata={beastiedata} sidebarvisible={sidebarvisible} />
+        <CustomErrorBoundary fallbackClassName={styles.sidebar}>
+          <Sidebar
+            beastieid={beastieid}
+            visibility={sidebarvisible}
+            onToggleSidebarVisibility={() => {
+              if (orientation) {
+                setSidebarvisible(false);
+              }
+            }}
+          />
+        </CustomErrorBoundary>
+        <CustomErrorBoundary fallbackClassName={styles.content}>
+          <Content beastiedata={beastiedata} sidebarvisible={sidebarvisible} />
+        </CustomErrorBoundary>
       </div>
     </div>
   );

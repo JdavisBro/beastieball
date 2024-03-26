@@ -1,7 +1,9 @@
 import ContentInfo from "./Info/ContentInfo";
 import ContentPreview from "./Preview/ContentPreview";
 import styles from "./Beastiepedia.module.css";
+import previewstyles from "./Content.module.css";
 import type { BeastieType } from "../data/BeastieType";
+import CustomErrorBoundary from "../shared/CustomErrorBoundary";
 
 type Props = {
   beastiedata: BeastieType | null | undefined;
@@ -20,8 +22,12 @@ export default function Content(props: Props): React.ReactNode {
             : `${styles.content} ${styles.contentwide}`
         }
       >
-        <ContentPreview beastiedata={beastiedata} />
-        <ContentInfo beastiedata={beastiedata} />
+        <CustomErrorBoundary fallbackClassName={previewstyles.preview}>
+          <ContentPreview beastiedata={beastiedata} />
+        </CustomErrorBoundary>
+        <CustomErrorBoundary fallbackClassName={previewstyles.info}>
+          <ContentInfo beastiedata={beastiedata} />
+        </CustomErrorBoundary>
       </div>
     );
   } else {

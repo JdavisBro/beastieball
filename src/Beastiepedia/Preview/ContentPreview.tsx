@@ -13,7 +13,7 @@ import BEASTIE_ANIMATIONS, {
 } from "../../data/BeastieAnimations";
 import { hexToRgb } from "../../utils/color";
 import saveGif from "./saveGif";
-import DevOpts from "../DevOpts";
+import DevUtil from "./DevUtil";
 
 type Props = {
   beastiedata: BeastieType;
@@ -599,7 +599,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         </div>
       </div>
       {import.meta.env.DEV ? (
-        <DevOpts
+        <DevUtil
           glRef={glRef}
           canvasRef={canvasRef}
           cropCanvasRef={cropCanvasRef}

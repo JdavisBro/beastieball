@@ -1,11 +1,11 @@
 import "jszip";
-import BEASTIE_DATA from "../data/Beastiedata";
-import BEASTIE_ANIMATIONS from "../data/BeastieAnimations";
-import SPRITE_INFO, { BBox } from "../data/SpriteInfo";
+import BEASTIE_DATA from "../../data/Beastiedata";
+import BEASTIE_ANIMATIONS from "../../data/BeastieAnimations";
+import SPRITE_INFO, { BBox } from "../../data/SpriteInfo";
 import { useRef } from "react";
 import JSZip from "jszip";
-import { setColorUniforms, setImage } from "./Preview/WebGL";
-import { getColorInBeastieColors } from "../utils/color";
+import { setColorUniforms, setImage } from "./WebGL";
+import { getColorInBeastieColors } from "../../utils/color";
 
 declare global {
   interface Window {
@@ -15,7 +15,7 @@ declare global {
 
 const ICON_SIZE = 256;
 
-export default function DevOpts(props: {
+export default function DevUtil(props: {
   glRef: React.MutableRefObject<WebGLRenderingContext | null>;
   programRef: React.MutableRefObject<WebGLProgram | null>;
   canvasRef: React.RefObject<HTMLCanvasElement>;

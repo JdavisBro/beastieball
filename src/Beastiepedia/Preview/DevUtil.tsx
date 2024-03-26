@@ -9,7 +9,7 @@ import { getColorInBeastieColors } from "../../utils/color";
 
 declare global {
   interface Window {
-    saveBeastieIcons: () => void;
+    saveBeastieImages: (icons: boolean) => void;
   }
 }
 
@@ -35,6 +35,7 @@ export default function DevUtil(props: {
   }>({});
   const loadedNumRef = useRef(0);
   const beastieCountRef = useRef(0);
+  const iconsRef = useRef(false);
 
   const allDone = () => {
     const gl = props.glRef.current;
@@ -61,19 +62,36 @@ export default function DevUtil(props: {
       setImage(gl, img);
       ctx.clearRect(0, 0, ICON_SIZE, ICON_SIZE);
 
-      const imscale = Math.max(crop.width, crop.height) / ICON_SIZE;
+      if (!iconsRef.current) {
+        cropCanvas.width = crop.width;
+        cropCanvas.height = crop.height;
 
-      ctx.drawImage(
-        canvas,
-        crop.x,
-        crop.y,
-        crop.width,
-        crop.height,
-        -(crop.width / imscale - ICON_SIZE) / 2,
-        -(crop.height / imscale - ICON_SIZE) / 2,
-        crop.width / imscale,
-        crop.height / imscale,
-      );
+        ctx.drawImage(
+          canvas,
+          crop.x,
+          crop.y,
+          crop.width,
+          crop.height,
+          0,
+          0,
+          crop.width,
+          crop.height,
+        );
+      } else {
+        const imscale = Math.max(crop.width, crop.height) / ICON_SIZE;
+
+        ctx.drawImage(
+          canvas,
+          crop.x,
+          crop.y,
+          crop.width,
+          crop.height,
+          -(crop.width / imscale - ICON_SIZE) / 2,
+          -(crop.height / imscale - ICON_SIZE) / 2,
+          crop.width / imscale,
+          crop.height / imscale,
+        );
+      }
       zip.file(
         `${name}.png`,
         cropCanvas.toDataURL("image/png").split("base64,")[1],
@@ -96,7 +114,10 @@ export default function DevUtil(props: {
     }
   };
 
-  window.saveBeastieIcons = () => {
+  // Use in developer console as just `saveBeastieImages( true | false )
+  // Saves zip of images of all beasties. If icons is true then it makes them ICON_SIZE square.
+  window.saveBeastieImages = (icons) => {
+    iconsRef.current = icons;
     loadedNumRef.current = 0;
     beastieCountRef.current = 0;
     loadingRef.current = {};

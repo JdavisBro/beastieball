@@ -13,6 +13,7 @@ import BEASTIE_ANIMATIONS, {
 } from "../../data/BeastieAnimations";
 import { hexToRgb } from "../../utils/color";
 import saveGif from "./saveGif";
+import DevOpts from "../DevOpts";
 
 type Props = {
   beastiedata: BeastieType;
@@ -101,7 +102,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   const getCrop = useCallback(
     (bbox: BBox) => {
-      console.log(bbox);
       const beastiescale =
         bbox.width > bbox.height
           ? beastiesprite.width / bbox.width
@@ -123,7 +123,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
       const endFrame = state.endFrame || 0;
       for (let i = startFrame; i <= endFrame; i++) {
         const framebbox = beastiesprite.bboxes[i];
-        console.log(framebbox);
         if (bbox == undefined) {
           bbox = {
             x: framebbox.x,
@@ -594,6 +593,14 @@ export default function ContentPreview(props: Props): React.ReactNode {
           />
         </div>
       </div>
+      {import.meta.env.DEV ? (
+        <DevOpts
+          glRef={glRef}
+          canvasRef={canvasRef}
+          cropCanvasRef={cropCanvasRef}
+          programRef={programRef}
+        />
+      ) : null}
     </div>
   );
 }

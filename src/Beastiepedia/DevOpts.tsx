@@ -13,6 +13,8 @@ declare global {
   }
 }
 
+const ICON_SIZE = 256;
+
 export default function DevOpts(props: {
   glRef: React.MutableRefObject<WebGLRenderingContext | null>;
   programRef: React.MutableRefObject<WebGLProgram | null>;
@@ -46,6 +48,8 @@ export default function DevOpts(props: {
     if (!ctx) {
       return;
     }
+    cropCanvas.width = ICON_SIZE;
+    cropCanvas.height = ICON_SIZE;
     const zip = new JSZip();
     Object.keys(loadingRef.current).forEach((name) => {
       const { img, crop, colors } = loadingRef.current[name];
@@ -55,10 +59,21 @@ export default function DevOpts(props: {
         colors.map((col) => getColorInBeastieColors(0.5, col.array)),
       );
       setImage(gl, img);
-      ctx.clearRect(0, 0, 1000, 1000);
-      cropCanvas.width = crop.width;
-      cropCanvas.height = crop.height;
-      ctx.drawImage(canvas, -crop.x, -crop.y);
+      ctx.clearRect(0, 0, ICON_SIZE, ICON_SIZE);
+
+      const imscale = Math.max(crop.width, crop.height) / ICON_SIZE;
+
+      ctx.drawImage(
+        canvas,
+        crop.x,
+        crop.y,
+        crop.width,
+        crop.height,
+        -(crop.width / imscale - ICON_SIZE) / 2,
+        -(crop.height / imscale - ICON_SIZE) / 2,
+        crop.width / imscale,
+        crop.height / imscale,
+      );
       zip.file(
         `${name}.png`,
         cropCanvas.toDataURL("image/png").split("base64,")[1],

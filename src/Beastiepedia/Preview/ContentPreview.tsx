@@ -431,40 +431,39 @@ export default function ContentPreview(props: Props): React.ReactNode {
   return (
     <div className={styles.preview}>
       <canvas ref={cropCanvasRef} style={{ display: "none" }} />
-      <div className={styles.canvasconcon}>
-        <div
-          className={styles.canvascon}
+      <div
+        className={styles.canvascon}
+        style={{
+          backgroundImage: background ? "none" : "",
+          backgroundColor: background ? backgroundColor : "transparent",
+          width: `70%`,
+        }}
+      >
+        <canvas
+          className={styles.previewcanvas}
           style={{
-            backgroundImage: background ? "none" : "",
+            display: noDisplayRender ? "none" : "block",
+            transform: fitBeastie ? getCrop(beastiesprite.bbox) : "",
+          }}
+          width={1000}
+          height={1000}
+          ref={canvasRef}
+        />
+        <div
+          className={styles.canvasfailed}
+          style={{
+            display: noDisplayRender ? "flex" : "none",
             backgroundColor: background ? backgroundColor : "transparent",
+            color: background
+              ? hexToRgb(backgroundColor).reduce<string>(
+                  (accum, value) =>
+                    accum + (255 - 255 * value).toString(16).padStart(2, "0"),
+                  "#",
+                )
+              : "black",
           }}
         >
-          <canvas
-            className={styles.previewcanvas}
-            style={{
-              display: noDisplayRender ? "none" : "block",
-              transform: fitBeastie ? getCrop(beastiesprite.bbox) : "",
-            }}
-            width={1000}
-            height={1000}
-            ref={canvasRef}
-          />
-          <div
-            className={styles.canvasfailed}
-            style={{
-              display: noDisplayRender ? "flex" : "none",
-              backgroundColor: background ? backgroundColor : "transparent",
-              color: background
-                ? hexToRgb(backgroundColor).reduce<string>(
-                    (accum, value) =>
-                      accum + (255 - 255 * value).toString(16).padStart(2, "0"),
-                    "#",
-                  )
-                : "black",
-            }}
-          >
-            <div>{noDisplayReasion}</div>
-          </div>
+          <div>{noDisplayReasion}</div>
         </div>
       </div>
 
@@ -553,7 +552,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
               min={25}
               max={100}
               step={5}
-              defaultValue={100}
+              defaultValue={70}
               onChange={(event) => {
                 if (canvasRef.current && canvasRef.current.parentElement) {
                   canvasRef.current.parentElement.style.width = `${event.target.value}%`;

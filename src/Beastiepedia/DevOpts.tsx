@@ -112,10 +112,10 @@ export default function DevOpts(props: {
       const frames = Array.isArray(anim.frames) ? anim.frames[0] : anim.frames;
       const frame = frames.startFrame != undefined ? frames.startFrame : 0;
       img.addEventListener("load", imgLoad);
-      img.src = `/gameassets/beasties/${sprite.name}/${frame}.png`;
+      img.src = `/gameassets/beasties/${sprite.name}/${frame % sprite.frames}.png`;
       loadingRef.current[beastie.name] = {
         img: img,
-        crop: sprite.bboxes[frame],
+        crop: sprite.bboxes[frame % sprite.frames],
         colors: beastie.colors,
       };
       beastieCountRef.current += 1;

@@ -122,7 +122,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       const startFrame = state.startFrame || 0;
       const endFrame = state.endFrame || 0;
       for (let i = startFrame; i <= endFrame; i++) {
-        const framebbox = beastiesprite.bboxes[i];
+        const framebbox = beastiesprite.bboxes[i % beastiesprite.frames];
         if (bbox == undefined) {
           bbox = {
             x: framebbox.x,
@@ -195,8 +195,11 @@ export default function ContentPreview(props: Props): React.ReactNode {
         (frameNumRef.current < startFrame && !animPausedRef.current)
       ) {
         if (glRef.current) {
-          if (loadedImages[startFrame]) {
-            setImage(glRef.current, loadedImages[startFrame]);
+          if (loadedImages[startFrame % beastiesprite.frames]) {
+            setImage(
+              glRef.current,
+              loadedImages[startFrame % beastiesprite.frames],
+            );
             frameNumRef.current = startFrame;
             setNoDisplayRender(false);
           } else if (loadedImages[0]) {
@@ -248,8 +251,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
               frameNumRef.current = startFrame;
             }
           }
-          if (glRef.current && loadedImages[frameNumRef.current]) {
-            setImage(glRef.current, loadedImages[frameNumRef.current]);
+          const frameN = frameNumRef.current % beastiesprite.frames;
+          if (glRef.current && loadedImages[frameN]) {
+            setImage(glRef.current, loadedImages[frameN]);
             setNoDisplayRender(false);
           }
         }
@@ -272,6 +276,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       userSpeed,
       getAnimBbox,
       fitBeastie,
+      beastiesprite,
     ],
   );
 
@@ -369,7 +374,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       structuredClone(anim),
       userSpeed,
       animdata.__anim_speed ? animdata.__anim_speed : 1,
-      SPRITE_INFO[props.beastiedata.spr].bboxes,
+      SPRITE_INFO[props.beastiedata.spr],
     );
   }, [
     animation,

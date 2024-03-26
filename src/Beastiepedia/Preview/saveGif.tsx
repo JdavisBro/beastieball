@@ -2,7 +2,7 @@ import { GIFEncoder, applyPalette, quantize } from "gifenc";
 
 import { BeastieAnimation } from "../../data/BeastieAnimations";
 import { setImage } from "./WebGL";
-import { BBox } from "../../data/SpriteInfo";
+import { BBox, Sprite } from "../../data/SpriteInfo";
 
 const MAX_LOOPS = 500;
 
@@ -29,7 +29,7 @@ export default function saveGif(
   anim: BeastieAnimation,
   user_speed: number,
   anim_speed: number,
-  bboxes: BBox[],
+  sprite: Sprite,
 ) {
   const frames = Array.isArray(anim.frames) ? anim.frames : [anim.frames];
   const uniqueframes: number[] = [];
@@ -97,14 +97,14 @@ export default function saveGif(
     const startFrame = group.startFrame != null ? group.startFrame : 0;
     const endFrame = group.endFrame != null ? group.endFrame : 0;
     for (let i = startFrame; i <= endFrame; i++) {
-      if (images[i] == undefined) {
+      if (images[i % sprite.frames] == undefined) {
         throw new GifError("Required image not loaded.");
       }
-      framelist.push(i);
-      if (!uniqueframes.includes(i)) {
-        uniqueframes.push(i);
+      framelist.push(i % sprite.frames);
+      if (!uniqueframes.includes(i % sprite.frames)) {
+        uniqueframes.push(i % sprite.frames);
       }
-      setBbox(bboxes[i]);
+      setBbox(sprite.bboxes[i % sprite.frames]);
       const holds = group.holds;
       let hold = 1;
       if (holds) {
@@ -151,7 +151,7 @@ export default function saveGif(
     [key: number]: { index?: Uint8Array; palette?: number[][] };
   } = {};
   for (const frame of uniqueframes) {
-    setImage(gl, images[frame]);
+    setImage(gl, images[frame % sprite.frames]);
     const data = new Uint8Array(width * height * 4);
     gl.readPixels(
       bbox.x,

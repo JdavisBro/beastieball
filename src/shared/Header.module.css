@@ -2,11 +2,10 @@
   composes: animPageHeaderBackground from global;
   height: var(--header-height);
   display: flex;
+  align-items: center;
 }
 
 .toggleicon {
-  position: relative;
-  top: 15%;
   height: 70%;
   transform-origin: 60% 50% 0;
   cursor: pointer;
@@ -51,7 +50,6 @@
   white-space: nowrap;
   overflow: hidden;
   padding-left: 12px;
-  line-height: var(--header-height);
 }
 
 .animationtogglecontainer {
@@ -67,4 +65,11 @@
   padding-left: 5px;
   padding-right: 5px;
   margin-left: 5px;
+}
+
+@media all and (max-aspect-ratio: 1/1) {
+  .title {
+    font-size: 1em;
+    white-space: wrap;
+  }
 }

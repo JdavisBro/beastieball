@@ -375,6 +375,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       userSpeed,
       animdata.__anim_speed ? animdata.__anim_speed : 1,
       SPRITE_INFO[props.beastiedata.spr],
+      frameNumRef.current != undefined ? frameNumRef.current : 0,
     );
   }, [
     animation,

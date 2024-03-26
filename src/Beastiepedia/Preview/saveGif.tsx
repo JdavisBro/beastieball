@@ -30,6 +30,7 @@ export default function saveGif(
   user_speed: number,
   anim_speed: number,
   sprite: Sprite,
+  return_frame: number,
 ) {
   const frames = Array.isArray(anim.frames) ? anim.frames : [anim.frames];
   const uniqueframes: number[] = [];
@@ -171,6 +172,8 @@ export default function saveGif(
     const index = applyPalette(pixelData, palette, "rgba4444");
     doneframes[frame] = { index: index, palette: palette };
   }
+
+  setImage(gl, images[return_frame % sprite.frames]);
 
   // put our frames together
   const encoder = GIFEncoder();

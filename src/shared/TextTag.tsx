@@ -1,7 +1,12 @@
 import styles from "./Shared.module.css";
+
 type Props = {
   children: string;
 };
+
+// Only sprite viewing is here rn but if any tags are added they're probably desribed here
+// https://www.jujuadams.com/Scribble/#/latest/text-formatting
+
 export default function TextTag(props: Props): React.ReactElement[] {
   const text = props.children;
   const out: React.ReactElement[] = [];

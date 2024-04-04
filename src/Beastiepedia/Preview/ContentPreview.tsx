@@ -21,12 +21,12 @@ type Props = {
 
 export default function ContentPreview(props: Props): React.ReactNode {
   const [colors, setColors] = useState<number[][]>([
-    [30 / 255, 80 / 255, 69 / 255],
-    [32 / 255, 33 / 255, 79 / 255],
-    [52 / 255, 62 / 255, 64 / 255],
-    [245 / 255, 208 / 255, 51 / 255],
-    [220 / 255, 156 / 255, 0],
-    [28 / 255, 84 / 255, 45 / 255],
+    [255, 255, 255],
+    [255, 255, 255],
+    [255, 255, 255],
+    [255, 255, 255],
+    [255, 255, 255],
+    [255, 255, 255],
   ]);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);

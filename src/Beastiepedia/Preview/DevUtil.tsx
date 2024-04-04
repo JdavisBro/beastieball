@@ -131,7 +131,7 @@ export default function DevUtil(props: {
       }
       const anim = anim_data.idle;
       const frames = Array.isArray(anim.frames) ? anim.frames[0] : anim.frames;
-      const frame = frames.startFrame != undefined ? frames.startFrame : 0;
+      const frame = frames.endFrame != undefined ? frames.endFrame : 0;
       img.addEventListener("load", imgLoad);
       img.src = `/gameassets/beasties/${sprite.name}/${frame % sprite.frames}.png`;
       loadingRef.current[beastie.name] = {

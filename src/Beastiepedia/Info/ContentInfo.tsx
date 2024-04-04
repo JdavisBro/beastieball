@@ -3,6 +3,10 @@ import TextTag from "../../shared/TextTag";
 import styles from "../Content.module.css";
 import type { BeastieType } from "../../data/BeastieType";
 import MoveList from "./MoveList";
+import untyped_research_data from "../../data/research_data.json";
+import designers from "../../data/designers.json";
+
+const research_data: { [key: string]: number } = untyped_research_data;
 
 type Props = {
   beastiedata: BeastieType;
@@ -45,6 +49,22 @@ export default function ContentInfo(props: Props): React.ReactNode {
     }
   }
 
+  const research: React.ReactElement[] = [];
+  for (let i = 0; i < research_data[beastiedata.id]; i++) {
+    research.push(
+      <a
+        key={`${beastiedata.id}_${i}`}
+        href={`/gameassets/research/${beastiedata.id}_${i}.png`}
+        target="_blank"
+      >
+        <img
+          className={styles.researchimage}
+          src={`/gameassets/research/${beastiedata.id}_${i}.png`}
+        />
+      </a>,
+    );
+  }
+
   return (
     <div className={styles.info}>
       <div className={styles.inner}>
@@ -79,6 +99,18 @@ export default function ContentInfo(props: Props): React.ReactNode {
           movelist={beastiedata.attklist}
           learnset={beastiedata.learnset}
         />
+        <div className={styles.header}>Research</div>
+        <div className={styles.varcontainer}>
+          <div className={styles.value}>
+            <div className={styles.research}>{research}</div>
+            Researcher{Array.isArray(beastiedata.designer) ? "s" : ""}:{" "}
+            {Array.isArray(beastiedata.designer)
+              ? beastiedata.designer.map((i) => designers[i]).join(", ")
+              : designers[beastiedata.designer]}
+            <br />
+            Videographer: {designers[beastiedata.animator]}
+          </div>
+        </div>
       </div>
     </div>
   );

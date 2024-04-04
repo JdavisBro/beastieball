@@ -81,6 +81,17 @@
   align-items: center;
 }
 
+.research {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.researchimage {
+  height: 200px;
+}
+
 @media all and (max-aspect-ratio: 1/1) {
   .preview {
     width: 100%;

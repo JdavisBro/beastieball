@@ -24,7 +24,7 @@ export default function PageNotFound(): React.ReactElement {
         description="A website with data on Beastieball!"
         notfound={true}
       />
-      <div className="notfoundcontainer">
+      <div className="commoncontainer">
         <h1>Page Not Found</h1>
         <div
           className="notfoundfacecontainer"

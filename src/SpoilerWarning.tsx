@@ -12,7 +12,7 @@ export default function SpoilerWarning(props: {
     window.navigator.userAgent.toLowerCase().includes("prerender") ? (
     props.children
   ) : (
-    <div className="notfoundcontainer">
+    <div className="commoncontainer">
       <img src="/gameassets/sprExclam_1.png" />
       <h1>Beastieball Spoiler Warning!!</h1>
       <p>

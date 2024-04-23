@@ -1,6 +1,3 @@
-import "photoswipe/dist/photoswipe.css";
-import { Gallery, Item } from "react-photoswipe-gallery";
-
 import StatDistribution from "./StatDistribution";
 import TextTag from "../../shared/TextTag";
 import styles from "../Content.module.css";
@@ -9,9 +6,7 @@ import MoveList from "./MoveList";
 import untyped_research_data from "../../data/research_data.json";
 import designers from "../../data/designers.json";
 
-const research_data: {
-  [key: string]: Array<{ width: number; height: number }>;
-} = untyped_research_data;
+const research_data: { [key: string]: number } = untyped_research_data;
 
 type Props = {
   beastiedata: BeastieType;
@@ -54,6 +49,22 @@ export default function ContentInfo(props: Props): React.ReactNode {
     }
   }
 
+  const research: React.ReactElement[] = [];
+  for (let i = 0; i < research_data[beastiedata.id]; i++) {
+    research.push(
+      <a
+        key={`${beastiedata.id}_${i}`}
+        href={`/gameassets/research/${beastiedata.id}_${i}.png`}
+        target="_blank"
+      >
+        <img
+          className={styles.researchimage}
+          src={`/gameassets/research/${beastiedata.id}_${i}.png`}
+        />
+      </a>,
+    );
+  }
+
   return (
     <div className={styles.info}>
       <div className={styles.inner}>
@@ -91,39 +102,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
         <div className={styles.header}>Research</div>
         <div className={styles.varcontainer}>
           <div className={styles.value}>
-            <div className={styles.research}>
-              <Gallery
-                options={{
-                  wheelToZoom: true,
-                  zoom: true,
-                  loop: false,
-                  initialZoomLevel: 0.5,
-                  secondaryZoomLevel: "fit",
-                  showHideAnimationType: "fade",
-                }}
-                withDownloadButton={true}
-              >
-                {research_data[beastiedata.id].map((value, i) => (
-                  <Item
-                    original={`/gameassets/research/${beastiedata.id}_${i}.png`}
-                    width={value.width}
-                    height={value.height}
-                    key={i}
-                  >
-                    {({ ref, open }) => (
-                      <div key={`${beastiedata.id}_${i}`}>
-                        <img
-                          className={styles.researchimage}
-                          ref={ref}
-                          onClick={open}
-                          src={`/gameassets/research/${beastiedata.id}_${i}.png`}
-                        />
-                      </div>
-                    )}
-                  </Item>
-                ))}
-              </Gallery>
-            </div>
+            <div className={styles.research}>{research}</div>
             Researcher{Array.isArray(beastiedata.designer) ? "s" : ""}:{" "}
             {Array.isArray(beastiedata.designer)
               ? beastiedata.designer.map((i) => designers[i]).join(", ")

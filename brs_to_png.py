@@ -28,6 +28,7 @@ def do_file(fp):
     i = 0
     image_count = 0
     imdata = []
+    imsizes = []
     while data.tell() != datalen:
         if i >= width*height:
             im.putdata(imdata)
@@ -35,20 +36,22 @@ def do_file(fp):
             i = 0
             imdata = []
             image_count += 1
+            imsizes.append({"width": width, "height": height})
             width = read_short(data)
             height = read_short(data)    
             im = Image.new("RGBA", (width, height))
         imdata.append(read_byte(data, 4))
         i += 1
+    imsizes.append({"width": width, "height": height})
     im.putdata(imdata)
     im.save(fp.parent / f"{fp.stem}_{image_count}.png")
-    return image_count
+    return imsizes
 
 def main(args):
     researchdata = {}
     for i in args:
         fp = Path(i)
-        researchdata[fp.stem] = do_file(fp) + 1
+        researchdata[fp.stem] = do_file(fp)
     with open("research_data.json", "w+") as f:
         json.dump(researchdata, f)
 

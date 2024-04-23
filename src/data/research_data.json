@@ -1,13 +1,33 @@
 {
-  "bestie": 3,
-  "bilby1": 3,
-  "cassowary1": 2,
-  "cheerleader": 1,
-  "frog1": 2,
-  "kangaroo1": 1,
-  "lyrebird1": 1,
-  "possum1": 2,
-  "rocklizard1": 2,
-  "serval": 1,
-  "shroom1": 1
+  "bestie": [
+    { "width": 1827, "height": 1620 },
+    { "width": 1860, "height": 1620 },
+    { "width": 1317, "height": 1620 }
+  ],
+  "bilby1": [
+    { "width": 1920, "height": 1080 },
+    { "width": 1567, "height": 1620 },
+    { "width": 2435, "height": 1620 }
+  ],
+  "cassowary1": [
+    { "width": 750, "height": 750 },
+    { "width": 2520, "height": 1620 }
+  ],
+  "cheerleader": [{ "width": 2880, "height": 1620 }],
+  "frog1": [
+    { "width": 928, "height": 1209 },
+    { "width": 1262, "height": 1319 }
+  ],
+  "kangaroo1": [{ "width": 1215, "height": 1620 }],
+  "lyrebird1": [{ "width": 2236, "height": 1500 }],
+  "possum1": [
+    { "width": 1620, "height": 1620 },
+    { "width": 2005, "height": 1620 }
+  ],
+  "rocklizard1": [
+    { "width": 1571, "height": 1620 },
+    { "width": 535, "height": 480 }
+  ],
+  "serval": [{ "width": 2554, "height": 1620 }],
+  "shroom1": [{ "width": 2292, "height": 1620 }]
 }

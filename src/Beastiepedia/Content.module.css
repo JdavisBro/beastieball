@@ -92,6 +92,40 @@
   height: 200px;
 }
 
+.previewOptions {
+  display: block;
+}
+
+.previewOptionsNotVisible {
+  display: none;
+}
+
+.previewOptionsButton {
+  composes: animSelectableBackground from global;
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
+  border: none;
+  padding: 6px;
+  margin-bottom: 10px;
+  color: black;
+  font-family: var(--go-banana);
+  font-size: 1em;
+}
+
+.previewOptionsButton:hover {
+  background-image: repeating-linear-gradient(
+    135deg,
+    #ffaa55,
+    #ffaa55 10px,
+    #ff8e4a 10px,
+    #ff8e4a 20px
+  ) !important;
+}
+
+.upArrow {
+  display: inline-block;
+  transform: scaleY(-1);
+}
+
 @media all and (max-aspect-ratio: 1/1) {
   .preview {
     width: 100%;

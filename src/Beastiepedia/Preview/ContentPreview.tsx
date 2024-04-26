@@ -14,6 +14,9 @@ import BEASTIE_ANIMATIONS, {
 import { hexToRgb } from "../../utils/color";
 import saveGif from "./saveGif";
 import DevUtil from "./DevUtil";
+import AnimationOptions from "./AnimationOptions";
+import PreviewSettings from "./PreviewSettings";
+import useScreenOrientation from "../../utils/useScreenOrientation";
 
 type Props = {
   beastiedata: BeastieType;
@@ -66,7 +69,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const pausedButtonRef = useRef<HTMLButtonElement>(null);
 
   const [noDisplayRender, setNoDisplayRender] = useState(false);
-  const [noDisplayReasion, setNoDisplayReason] = useState(
+  const [noDisplayReason, setNoDisplayReason] = useState(
     "Beastie Preview Failed",
   );
 
@@ -390,7 +393,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const [background, setBackground] = useState(false);
   const [backgroundColor, setBackgroundColor] = useState("#ffffff");
 
-  const animationlist = [
+  const animationList = [
     "idle",
     "move",
     "ready",
@@ -404,9 +407,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   // Remove animations not in beastie
   if (animdata) {
-    animationlist.forEach((value, index) => {
+    animationList.forEach((value, index) => {
       if (!(value in animdata)) {
-        animationlist.splice(index, 1);
+        animationList.splice(index, 1);
       }
     });
   }
@@ -433,6 +436,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
     }
     return false;
   }, [loadedImages, beastiesprite, animation, animdata]);
+
+  const portrait = useScreenOrientation();
+  const [previewOptionsVisible, setPreviewOptionsVisible] = useState(!portrait);
 
   return (
     <div className={styles.preview}>
@@ -469,135 +475,56 @@ export default function ContentPreview(props: Props): React.ReactNode {
               : "black",
           }}
         >
-          <div>{noDisplayReasion}</div>
+          <div>{noDisplayReason}</div>
         </div>
       </div>
 
       <br />
-      <div className={styles.header}>Animation</div>
-      <div className={styles.varcontainer}>
-        <div className={styles.value}>
-          <select
-            name="anim"
-            id="anim"
-            onChange={(event) => {
-              animPausedRef.current = false;
-              setAnimation(event.target.value);
-            }}
-            value={animation}
-          >
-            {animationlist.map((value: string) => (
-              <option value={value} key={value}>
-                {value.charAt(0).toUpperCase() + value.slice(1)}
-              </option>
-            ))}
-          </select>
-          <br />
-          <button onClick={() => changeFrame(-1)}>{"<-"}</button>
-          <button
-            ref={pausedButtonRef}
-            onClick={() => {
-              animPausedRef.current = !animPausedRef.current;
-            }}
-          >
-            PAUSE
-          </button>
-          <button onClick={() => changeFrame(1)}>{"->"}</button>
-          <input
-            ref={frameInputRef}
-            type="number"
-            min={0}
-            max={SPRITE_INFO[props.beastiedata.spr].frames}
-            onChange={(event) => {
-              animPausedRef.current = true;
-              setFrame(Number(event.target.value));
-            }}
-          />
-          <div className={styles.middlealign}>
-            <label htmlFor="speed">Speed: x</label>
-            <input
-              type="number"
-              name="speed"
-              id="speed"
-              step={0.1}
-              min={0}
-              value={userSpeed}
-              style={{ width: "4em" }}
-              onChange={(event) => setUserSpeed(Number(event.target.value))}
-            />
-            <button onClick={() => setUserSpeed(0.5)}>Reset</button>
-          </div>
-        </div>
+
+      <button
+        className={styles.previewOptionsButton}
+        onClick={() => setPreviewOptionsVisible((visible) => !visible)}
+      >
+        <span className={previewOptionsVisible ? "" : styles.upArrow}>V</span>{" "}
+        Preview Options
+      </button>
+
+      <div
+        className={
+          previewOptionsVisible
+            ? styles.previewOptions
+            : styles.previewOptionsNotVisible
+        }
+      >
+        <AnimationOptions
+          animPausedRef={animPausedRef}
+          pausedButtonRef={pausedButtonRef}
+          frameInputRef={frameInputRef}
+          animation={animation}
+          setAnimation={setAnimation}
+          animationList={animationList}
+          frameCount={beastiesprite.frames}
+          setFrame={setFrame}
+          changeFrame={changeFrame}
+          userSpeed={userSpeed}
+          setUserSpeed={setUserSpeed}
+        />
+
+        <ColorTabs beastiedata={props.beastiedata} colorChange={colorChange} />
+
+        <PreviewSettings
+          downloadImage={downloadImage}
+          downloadGif={downloadGif}
+          gifDisabled={gifDisabled}
+          userSpeed={userSpeed}
+          canvasRef={canvasRef}
+          setBackground={setBackground}
+          setBackgroundColor={setBackgroundColor}
+          fitBeastie={fitBeastie}
+          setFitBeastie={setFitBeastie}
+        />
       </div>
 
-      <ColorTabs beastiedata={props.beastiedata} colorChange={colorChange} />
-
-      <div className={styles.header}>Settings</div>
-      <div className={styles.varcontainer}>
-        <div className={styles.value}>
-          <div className={styles.middlealign}>
-            <button onClick={downloadImage}>Save PNG</button>
-            <button onClick={downloadGif} disabled={gifDisabled}>
-              Save GIF
-            </button>
-            {userSpeed > 1.2 ? (
-              <span
-                title="When using a high speed, GIFs might not save the speed correctly."
-                style={{ cursor: "help", userSelect: "none" }}
-              >
-                ⚠
-              </span>
-            ) : null}
-          </div>
-          <div className={styles.middlealign}>
-            <label htmlFor="sizeinput">Display Size: </label>
-            <input
-              name="sizeinput"
-              id="sizeinput"
-              type="range"
-              min={25}
-              max={100}
-              step={5}
-              defaultValue={70}
-              onChange={(event) => {
-                if (canvasRef.current && canvasRef.current.parentElement) {
-                  canvasRef.current.parentElement.style.width = `${event.target.value}%`;
-                }
-              }}
-            />
-          </div>
-          <div className={styles.middlealign}>
-            <label htmlFor="whitebg" style={{ userSelect: "none" }}>
-              Background:{" "}
-            </label>
-            <input
-              name="whitebg"
-              id="whitebg"
-              type="checkbox"
-              onChange={(event) => {
-                setBackground(event.target.checked);
-              }}
-            />
-            <input
-              type="color"
-              defaultValue={"#ffffff"}
-              onChange={(event) => {
-                setBackgroundColor(event.target.value);
-              }}
-            />
-          </div>
-          <label htmlFor="fitbeastie">Crop to Beastie</label>
-          <input
-            id="fitbeastie"
-            name="fitbeastie"
-            type="checkbox"
-            defaultChecked={fitBeastie}
-            onChange={(event) => {
-              setFitBeastie(event.target.checked);
-            }}
-          />
-        </div>
-      </div>
       {import.meta.env.DEV ? (
         <DevUtil
           glRef={glRef}

@@ -19,6 +19,8 @@ foreach (UndertaleSprite sprite in Data.Sprites) {
   output += "    \"width\": " + sprite.Width.ToString() + ",\n";
   output += "    \"height\": " + sprite.Height.ToString() + ",\n";
   output += "    \"frames\": " + sprite.Textures.Count.ToString() + ",\n";
+  output += "    \"originX\": " + sprite.OriginX.ToString() + ",\n";
+  output += "    \"originY\": " + sprite.OriginY.ToString() + ",\n";
   output += "    \"bboxes\": [";
   ushort bboxX = 0;
   ushort bboxY = 0;

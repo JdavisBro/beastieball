@@ -12,6 +12,20 @@ type Props = {
   beastiedata: BeastieType;
 };
 
+function InfoBox(props: {
+  header: string;
+  value: string | React.ReactNode;
+}): React.ReactNode {
+  return (
+    <div>
+      <div className={styles.header}>{props.header}</div>
+      <div className={styles.varcontainer}>
+        <div className={styles.value}>{props.value}</div>
+      </div>
+    </div>
+  );
+}
+
 export default function ContentInfo(props: Props): React.ReactNode {
   const beastiedata = props.beastiedata;
   let training = "";
@@ -68,49 +82,47 @@ export default function ContentInfo(props: Props): React.ReactNode {
   return (
     <div className={styles.info}>
       <div className={styles.inner}>
-        <div className={styles.header}>Number</div>
-        <div className={styles.varcontainer}>
-          <div className={styles.value}>#{beastiedata.number}</div>
+        <div className={styles.wrapinfoboxes}>
+          <InfoBox header="Number" value={`#${beastiedata.number}`} />
+          <InfoBox header="Name" value={beastiedata.name} />
         </div>
-        <div className={styles.header}>Name</div>
-        <div className={styles.varcontainer}>
-          <div className={styles.value}>{beastiedata.name}</div>
-        </div>
-        <div className={styles.header}>Desciption</div>
-        <div className={styles.varcontainer}>
-          <div className={styles.value}>{beastiedata.desc}</div>
-        </div>
+
+        <InfoBox header="Description" value={beastiedata.desc} />
+
         <div className={styles.header}>Stat Distribution</div>
         <StatDistribution beastiedata={beastiedata} />
-        <div className={styles.header}>Recruit Condition</div>
-        <div className={styles.varcontainer}>
-          <div className={styles.value}>
-            <TextTag>{beastiedata.recruit.description}</TextTag>
-          </div>
+
+        <div className={styles.wrapinfoboxes}>
+          <InfoBox
+            header="Recruit Condition"
+            value={<TextTag>{beastiedata.recruit.description}</TextTag>}
+          />
+          <InfoBox
+            header="Ally Training"
+            value={<TextTag>{training}</TextTag>}
+          />
         </div>
-        <div className={styles.header}>Ally Training</div>
-        <div className={styles.varcontainer}>
-          <div className={styles.value}>
-            <TextTag>{training}</TextTag>
-          </div>
-        </div>
+
         <div className={styles.header}>Moves</div>
         <MoveList
           movelist={beastiedata.attklist}
           learnset={beastiedata.learnset}
         />
-        <div className={styles.header}>Research</div>
-        <div className={styles.varcontainer}>
-          <div className={styles.value}>
-            <div className={styles.research}>{research}</div>
-            Researcher{Array.isArray(beastiedata.designer) ? "s" : ""}:{" "}
-            {Array.isArray(beastiedata.designer)
-              ? beastiedata.designer.map((i) => designers[i]).join(", ")
-              : designers[beastiedata.designer]}
-            <br />
-            Videographer: {designers[beastiedata.animator]}
-          </div>
-        </div>
+
+        <InfoBox
+          header="Research"
+          value={
+            <>
+              <div className={styles.research}>{research}</div>
+              Researcher{Array.isArray(beastiedata.designer) ? "s" : ""}:{" "}
+              {Array.isArray(beastiedata.designer)
+                ? beastiedata.designer.map((i) => designers[i]).join(", ")
+                : designers[beastiedata.designer]}
+              <br />
+              Videographer: {designers[beastiedata.animator]}
+            </>
+          }
+        />
       </div>
     </div>
   );

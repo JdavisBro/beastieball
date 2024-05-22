@@ -47,6 +47,12 @@
   text-align: center;
 }
 
+.wrapinfoboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 .varcontainer {
   composes: animBoxBackground from global;
   width: fit-content;

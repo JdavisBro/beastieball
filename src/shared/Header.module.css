@@ -1,8 +1,15 @@
+.staticheader {
+  height: var(--header-height);
+  width: 100%;
+}
+
 .header {
   composes: animPageHeaderBackground from global;
   height: var(--header-height);
   display: flex;
   align-items: center;
+  position: fixed;
+  width: 100%;
 }
 
 .toggleicon {

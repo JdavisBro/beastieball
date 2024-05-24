@@ -1,0 +1,10 @@
+.container {
+  composes: animBackground from global;
+  width: 100vw;
+  min-height: 100vh;
+  height: fit-content;
+}
+
+.belowheader {
+  min-height: calc(100% - var(--header-height));
+}

@@ -25,6 +25,28 @@
   padding: 4px 16px 4px 16px;
   clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 100%, 8px 100%);
   width: fit-content;
+  max-width: 100%;
   position: relative;
   top: -4px;
+}
+
+.datatable {
+  composes: varcontainer;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.datarow {
+  display: flex;
+  flex-direction: row;
+}
+
+.datarow div,
+.datarow textarea {
+  flex: 1 1;
+}
+.datarow textarea {
+  flex-grow: 3;
 }

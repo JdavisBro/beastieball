@@ -1,10 +1,30 @@
 .container {
   composes: animBackground from global;
-  width: 100vw;
+  min-width: 100vw;
   min-height: 100vh;
   height: fit-content;
 }
 
 .belowheader {
   min-height: calc(100% - var(--header-height));
+}
+
+.header {
+  composes: boxHeaderBackground from global;
+  width: fit-content;
+  z-index: 1;
+  padding: 4px 12px 4px 12px;
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
+  position: relative;
+  left: 10px;
+}
+
+.varcontainer {
+  composes: animBoxBackground from global;
+  color: black;
+  padding: 4px 16px 4px 16px;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 100%, 8px 100%);
+  width: fit-content;
+  position: relative;
+  top: -4px;
 }

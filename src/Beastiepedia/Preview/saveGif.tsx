@@ -1,7 +1,7 @@
 import { GIFEncoder, applyPalette, quantize } from "gifenc";
 
 import { BeastieAnimation } from "../../data/BeastieAnimations";
-import { setImage } from "./WebGL";
+import { setImage } from "../../shared/beastieRender/WebGL";
 import { BBox, Sprite } from "../../data/SpriteInfo";
 
 const MAX_LOOPS = 500;

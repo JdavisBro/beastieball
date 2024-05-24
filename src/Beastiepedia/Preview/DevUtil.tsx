@@ -4,7 +4,7 @@ import BEASTIE_ANIMATIONS from "../../data/BeastieAnimations";
 import SPRITE_INFO, { BBox } from "../../data/SpriteInfo";
 import { useRef } from "react";
 import JSZip from "jszip";
-import { setColorUniforms, setImage } from "./WebGL";
+import { setColorUniforms, setImage } from "../../shared/beastieRender/WebGL";
 import { getColorInBeastieColors } from "../../utils/color";
 
 declare global {

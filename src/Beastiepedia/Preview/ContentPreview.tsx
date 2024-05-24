@@ -1,13 +1,15 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import setupWebGL, { WebGLError, setColorUniforms, setImage } from "./WebGL";
+import setupWebGL, {
+  WebGLError,
+  setColorUniforms,
+  setImage,
+} from "../../shared/beastieRender/WebGL";
 import styles from "../Content.module.css";
 import type { BeastieType } from "../../data/BeastieType";
-import vertex from "./vertex.glsl?raw";
-import fragment from "./fragment.glsl?raw";
 import ColorTabs from "./ColorTabs";
 import SPRITE_INFO, { BBox } from "../../data/SpriteInfo";
-import useLoadImages from "./useLoadImages";
+import useLoadBeastieImages from "../../utils/useLoadBeastieImages";
 import BEASTIE_ANIMATIONS, {
   BeastieAnimation,
 } from "../../data/BeastieAnimations";
@@ -52,7 +54,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
     anim = tempanim;
   }
 
-  const loadedImages = useLoadImages(
+  const loadedImages = useLoadBeastieImages(
     `/gameassets/beasties/${SPRITE_INFO[props.beastiedata.spr].name}`,
     SPRITE_INFO[props.beastiedata.spr].frames,
   );
@@ -304,7 +306,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
     ) {
       let newGl;
       try {
-        newGl = setupWebGL(canvasRef.current, vertex, fragment, glRef.current);
+        newGl = setupWebGL(canvasRef.current, glRef.current);
       } catch (error) {
         if (error instanceof WebGLError) {
           console.log(`WebGL Error: ${error.message}`);

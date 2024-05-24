@@ -6,7 +6,7 @@ type Image = {
   onLoad?: (event: Event) => void;
 };
 
-export default function useLoadImages(path: string, max_num: number) {
+export default function useLoadBeastieImages(path: string, max_num: number) {
   const [loaded, setLoaded] = useState<{ [key: number]: HTMLImageElement }>({});
   const images = useRef<{ [key: number]: Image }>({});
 

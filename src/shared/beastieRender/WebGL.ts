@@ -1,3 +1,6 @@
+import vertex from "./vertex.glsl?raw";
+import fragment from "./fragment.glsl?raw";
+
 export class WebGLError extends Error {
   constructor(msg: string) {
     super(msg);
@@ -7,8 +10,6 @@ export class WebGLError extends Error {
 
 export default function setupWebGL(
   canvas: HTMLCanvasElement,
-  vertex: string,
-  fragment: string,
   oldgl: WebGLRenderingContext | null = null,
 ) {
   let gl;

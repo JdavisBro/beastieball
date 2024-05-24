@@ -1,7 +1,7 @@
 import { lazy } from "react";
 import type { RouteObject } from "react-router-dom";
 
-const Home = lazy(() => import("./Home/Home"));
+const Home = lazy(() => import("./Home"));
 const PageNotFound = lazy(() => import("./PageNotFound"));
 const Beastiepedia = lazy(() => import("./Beastiepedia/Beastiepedia"));
 const Map = lazy(() => import("./Map/Map"));

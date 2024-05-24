@@ -70,7 +70,7 @@ type BeastieStatistics = {
   tagged_out: number;
 };
 
-type SaveBeastie = {
+export type SaveBeastie = {
   _: string;
   ability: string;
   ability_index: number;

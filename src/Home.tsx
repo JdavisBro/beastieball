@@ -22,6 +22,12 @@ export default function Home(): React.ReactNode {
         hoverImage={"/gameassets/sprMainmenu/3.png"}
         location={"/map/"}
       />
+      <NavigationMenuOption
+        text={"Modding"}
+        image={"/gameassets/sprMainmenu/12.png"}
+        hoverImage={"/gameassets/sprMainmenu/13.png"}
+        location={"/modding/"}
+      />
     </NavigationMenu>
   );
 }

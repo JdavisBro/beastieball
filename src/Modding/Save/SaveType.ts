@@ -3,7 +3,7 @@ type ClassMap<T> = {
   [key: string]: T | string;
 };
 
-type BeastieLogEvent = {
+export type BeastieLogEvent = {
   _: string;
   args: Array<string | number>;
   date: number;

@@ -11,8 +11,16 @@ export default function LoadedFile(props: {
       <div className={styles.header}>Team Beasties</div>
       <div className={styles.varcontainer}>
         {props.save.team_party.map((value) => (
-          <Beastie beastie={value} />
+          <Beastie key={value.pid} beastie={value} />
         ))}
+      </div>
+      <div className={styles.header}>Reserve Beasties</div>
+      <div className={styles.varcontainer}>
+        {Object.values(props.save.team_registry).map((value) =>
+          typeof value != "string" ? (
+            <Beastie key={value.pid} beastie={value} />
+          ) : null,
+        )}
       </div>
       <div className={styles.header}>All Values</div>
       <div className={styles.datatable}>

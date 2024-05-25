@@ -45,6 +45,7 @@ export type Portal = {
 export type LevelStump = {
   _: string;
   color?: number;
+  display_name?: string;
   encounters: string[];
   has_spawns?: number | boolean;
   icons_array: MapIcon[];

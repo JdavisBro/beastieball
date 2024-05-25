@@ -1,0 +1,14 @@
+.beastie {
+  display: flex;
+  height: fit-content;
+}
+
+.beatieimage {
+  max-width: 25%;
+  height: 100%;
+}
+
+.beastieinfo {
+  display: flex;
+  flex-direction: column;
+}

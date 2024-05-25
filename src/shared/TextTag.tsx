@@ -12,11 +12,11 @@ const FONTS: { [key: string]: string } = {
 };
 
 const DEFAULT_STYLE: React.CSSProperties = {
-  fontSize: "100%",
-  fontStyle: "normal",
+  fontSize: undefined,
+  fontStyle: undefined,
   fontFamily: undefined,
   color: undefined,
-  opacity: 1,
+  opacity: undefined,
 };
 
 class TagBuilder {
@@ -81,19 +81,19 @@ class TagBuilder {
         break;
       case "/scale":
       case "/s":
-        this.style.fontSize = "100%";
+        this.style.fontSize = undefined;
         break;
       case "slant":
         this.style.fontStyle = "italic";
         break;
       case "/slant":
-        this.style.fontStyle = "normal";
+        this.style.fontStyle = undefined;
         break;
       case "alpha":
         this.style.opacity = Number(value ?? 1);
         break;
       case "/alpha":
-        this.style.opacity = 1;
+        this.style.opacity = undefined;
         break;
       default:
         console.log(`Tag Not Implemented ${tag}: ${value}`);

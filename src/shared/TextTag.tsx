@@ -5,8 +5,27 @@ import styles from "./Shared.module.css";
 // effects not added
 
 const COLORS: { [key: string]: string } = {
+  c_aqua: "#00ffff",
+  c_black: "#000000",
+  c_blue: "#0000ff",
+  c_dkgray: "#404040",
+  c_fuchsia: "#ff00ff",
   c_gray: "#808080",
+  c_green: "#008000",
+  c_lime: "#00ff00",
+  c_ltgray: "#c0c0c0",
+  c_maroon: "#800000",
+  c_navy: "#000080",
+  c_olive: "#808000",
+  c_orange: "#ffa040",
+  c_purple: "#800080",
+  c_red: "#ff0000",
+  c_silver: "#c0c0c0",
+  c_teal: "#008080",
+  c_white: "#ffffff",
+  c_yellow: "#ffff00",
 };
+
 const FONTS: { [key: string]: string } = {
   ftBold: "var(--sports-jersey)",
 };
@@ -117,6 +136,7 @@ type Props = {
 export default function TextTag(props: Props): React.ReactElement[] {
   const text = props.children;
   const builder = new TagBuilder();
+  // gets text before next tag or end of string (match[1]) + next tag (match[2]) + value (match[3])
   const regex = /([^[]*?)?(?:\[(.+?)(?:,(.+?))?\]|$)/g;
   let match = regex.exec(text);
   let i = 0;

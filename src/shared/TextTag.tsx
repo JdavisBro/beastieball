@@ -48,6 +48,7 @@ class TagBuilder {
         <img
           key={`${index}${tag}`}
           className={styles.smallimage}
+          style={{ ...this.style }}
           src={`/gameassets/${tag}/${value ?? "0"}.png`}
         />,
       );

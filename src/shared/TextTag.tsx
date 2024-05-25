@@ -134,7 +134,7 @@ type Props = {
   children: string;
 };
 
-export default function TextTag(props: Props): React.ReactElement[] {
+export default function TextTag(props: Props): React.ReactElement {
   const text = props.children;
   const builder = new TagBuilder();
   // gets text before next tag or end of string (match[1]) + next tag (match[2]) + value (match[3])
@@ -152,5 +152,5 @@ export default function TextTag(props: Props): React.ReactElement[] {
     }
     match = regex.exec(text);
   }
-  return builder.elements;
+  return <span className={styles.texttag}>{builder.elements}</span>;
 }

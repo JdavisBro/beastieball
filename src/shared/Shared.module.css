@@ -3,6 +3,12 @@
   height: 1em;
 }
 
+.texttag,
+.texttag span {
+  /* align smaller text vertically */
+  vertical-align: middle;
+}
+
 .texttagnobreak {
   white-space: nowrap;
 }

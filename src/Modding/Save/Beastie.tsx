@@ -33,7 +33,7 @@ export default function Beastie(props: {
         <div>Level: {save_beastie.level}</div>
         <div>{big ? "Too Big!" : ""}</div>
         {save_beastie.event_log.events.map((event) => (
-          <EventElement event={event} />
+          <EventElement key={`${event.date}-${event.event}`} event={event} />
         ))}
         <div>{save_beastie.pid}</div>
       </div>

@@ -7,7 +7,7 @@ export default function LoadedFile(props: {
 }): React.ReactElement {
   return (
     <>
-      <textarea>{JSON.stringify(props.save)}</textarea>
+      <textarea defaultValue={JSON.stringify(props.save)}></textarea>
       <div className={styles.header}>Team Beasties</div>
       <div className={styles.varcontainer}>
         {props.save.team_party.map((value) => (
@@ -27,9 +27,11 @@ export default function LoadedFile(props: {
         {Object.keys(props.save)
           .sort((a, b) => a.localeCompare(b))
           .map((key) => (
-            <div className={styles.datarow}>
+            <div key={key} className={styles.datarow}>
               <div>{key}</div>
-              <textarea>{JSON.stringify(props.save[key])}</textarea>
+              <textarea
+                defaultValue={JSON.stringify(props.save[key])}
+              ></textarea>
               <button
                 onClick={() =>
                   navigator.clipboard.writeText(JSON.stringify(props.save[key]))

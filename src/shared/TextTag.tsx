@@ -1,126 +1,135 @@
+import { bgrDecimalToHex } from "../utils/color";
 import styles from "./Shared.module.css";
 
 // https://www.jujuadams.com/Scribble/#/latest/text-formatting
+// effects not added
 
-let scale = 1;
-const const_colors: { [key: string]: string } = {
-  gray: "#808080",
+const COLORS: { [key: string]: string } = {
+  c_gray: "#808080",
 };
-const const_fonts: { [key: string]: string } = {
-  Bold: "var(--sports-jersey)",
+const FONTS: { [key: string]: string } = {
+  ftBold: "var(--sports-jersey)",
 };
 
-const rules: Array<{
-  match: RegExp;
-  replace: (matches: RegExpMatchArray) => React.ReactElement;
-}> = [
-  // spr (no index) usually this would animate through all frames but im not
-  {
-    match: /([\w\d]+)?\[(spr[\w\d]+?)(?:,(\d))?\]([\w\d]+)?/g,
-    replace: (matches) => {
-      return (
-        <span>
-          {doRule(matches[1]) ?? ""}
-          <img
-            className={styles.smallimage}
-            src={`/gameassets/${matches[2]}/${matches[3] ?? "0"}.png`}
-          />
-          {doRule(matches[4]) ?? ""}
-        </span>
+const DEFAULT_STYLE: React.CSSProperties = {
+  fontSize: "100%",
+  fontStyle: "normal",
+  fontFamily: undefined,
+  color: undefined,
+  opacity: 1,
+};
+
+class TagBuilder {
+  elements: React.ReactElement[] = [];
+  style: React.CSSProperties = { ...DEFAULT_STYLE };
+
+  applyTag(index: number, tag: string, value?: string) {
+    if (tag.startsWith("spr")) {
+      this.elements.push(
+        <img
+          key={`${index}${tag}`}
+          className={styles.smallimage}
+          src={`/gameassets/${tag}/${value ?? "0"}.png`}
+        />,
       );
-    },
-  },
-  {
-    match: /(\[nbsp\])/g,
-    replace: () => <> </>,
-  },
-  {
-    match: /\[i\](.+?)(?:\[\/i\]|$)/g,
-    replace: (matches) => <i>{doRule(matches[1])}</i>,
-  },
-  {
-    match: /\[scaleStack,(.+?)\](.+?)(?=\[scaleStack,.+?\]|$)/g,
-    replace: (matches) => {
-      scale *= Number(matches[1]);
-      return (
-        <span style={{ fontSize: `${scale * 100}%` }}>
-          {doRule(matches[2])}
-        </span>
-      );
-    },
-  },
-  {
-    match: /\[c_(.+?)\](.+?)(?:\[\/color]|\[\/colour]|\[\/c]|$)/g,
-    replace: (matches) => {
-      return (
-        <span style={{ color: const_colors[matches[1]] }}>
-          {doRule(matches[2])}
-        </span>
-      );
-    },
-  },
-  {
-    match: /\[ft(.+?)\](.+?)(?:\[\/font]|\[\/f]|$)/g,
-    replace: (matches) => {
-      return (
-        <span style={{ fontFamily: const_fonts[matches[1]] }}>
-          {doRule(matches[2])}
-        </span>
-      );
-    },
-  },
-  {
-    match: /\[\/.+?\]/g,
-    replace: () => {
-      return <></>;
-    },
-  },
-];
+      return;
+    }
+    if (tag.startsWith("ft")) {
+      this.style.fontFamily = FONTS[tag];
+      return;
+    }
+    if (tag.startsWith("c_")) {
+      this.style.color = COLORS[tag];
+      return;
+    }
+    if (tag.startsWith("#")) {
+      this.style.color = tag;
+      return;
+    }
+    if (tag.startsWith("d#")) {
+      this.style.color = bgrDecimalToHex(Number(tag.substring(2)));
+      return;
+    }
+
+    switch (tag) {
+      case "/":
+        this.style = { ...DEFAULT_STYLE };
+        break;
+      case "/font":
+        this.style.fontFamily = undefined;
+        break;
+      case "/c":
+      case "/color":
+      case "/colour":
+        this.style.color = undefined;
+        break;
+      case "scale":
+        this.style.fontSize = `${Number(value ?? 1) * 100}%`;
+        break;
+      case "scaleStack":
+        this.style.fontSize =
+          typeof this.style.fontSize == "string"
+            ? `${
+                Number(
+                  this.style.fontSize.substring(
+                    0,
+                    this.style.fontSize.length - 1,
+                  ),
+                ) * Number(value)
+              }%`
+            : `${Number(value) * 100}%`;
+        break;
+      case "/scale":
+      case "/s":
+        this.style.fontSize = "100%";
+        break;
+      case "slant":
+        this.style.fontStyle = "italic";
+        break;
+      case "/slant":
+        this.style.fontStyle = "normal";
+        break;
+      case "alpha":
+        this.style.opacity = Number(value ?? 1);
+        break;
+      case "/alpha":
+        this.style.opacity = 1;
+        break;
+      default:
+        console.log(`Tag Not Implemented ${tag}: ${value}`);
+        break;
+    }
+  }
+
+  addText(index: number, text: string) {
+    this.elements.push(
+      <span key={String(index)} style={{ ...this.style }}>
+        {text}
+      </span>,
+    );
+  }
+}
 
 type Props = {
   children: string;
 };
 
-function doRule(text: string): React.ReactElement[] {
-  for (const rule of rules) {
-    rule.match.lastIndex = 0;
-    const elements: Array<React.ReactElement | string> = [];
-    let match = rule.match.exec(text);
-    if (match == null) {
-      continue;
-    }
-    let i = 0;
-    while (match != null) {
-      if (i != match.index) {
-        elements.push(text.substring(i, match.index));
-      }
-      const lastIndex = rule.match.lastIndex;
-      elements.push(rule.replace(match));
-      rule.match.lastIndex = lastIndex;
-
-      i = match.index + match[0].length;
-      match = rule.match.exec(text);
-    }
-    if (i != text.length) {
-      elements.push(text.substring(i));
-    }
-
-    let newelements: React.ReactElement[] = [];
-    elements.forEach((element) => {
-      if (typeof element != "string") {
-        newelements.push(element);
-      } else {
-        newelements = newelements.concat(doRule(element as string));
-      }
-    });
-
-    return newelements;
-  }
-  return [<>{text}</>];
-}
-
 export default function TextTag(props: Props): React.ReactElement[] {
   const text = props.children;
-  scale = 1;
-  return doRule(text);
+  const builder = new TagBuilder();
+  const regex = /([^[]*?)?(?:\[(.+?)(?:,(.+?))?\]|$)/g;
+  let match = regex.exec(text);
+  let i = 0;
+  while (match != null && match.some((value) => !!value)) {
+    if (match[1]) {
+      builder.addText(i, match[1]);
+      i += match[1].length;
+    }
+    if (match[2]) {
+      builder.applyTag(i, match[2], match[3]);
+      i += match[2].length + (match[3]?.length ?? 0);
+    }
+    match = regex.exec(text);
+  }
+  return builder.elements;
 }

@@ -66,7 +66,7 @@ export default function EventElement({
   console.log(`!! Unknown Event Type: ${event.event} !!`);
   return (
     <BaseEvent date={date} level={event.level}>
-      {" "}
+      {event.args}
     </BaseEvent>
   );
 }

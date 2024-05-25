@@ -27,8 +27,9 @@ export default function Beastie(props: {
         className={styles.beatieimage}
       />
       <div className={styles.beastieinfo}>
-        <div>
-          {save_beastie.name}#{save_beastie.number}
+        <div className={styles.beastiename}>
+          <span>{save_beastie.name}</span>
+          <span className={styles.beastienumber}>#{save_beastie.number}</span>
         </div>
         <div>Level: {save_beastie.level}</div>
         <div>{big ? "Too Big!" : ""}</div>

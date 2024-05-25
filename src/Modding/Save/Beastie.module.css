@@ -12,3 +12,14 @@
   display: flex;
   flex-direction: column;
 }
+
+.beastienumber {
+  font-size: 62.5%;
+  font-family: var(--sports-jersey);
+  color: #808080;
+}
+
+.beastiename,
+.beastiename span {
+  vertical-align: middle;
+}

@@ -38,9 +38,16 @@ const DEFAULT_STYLE: React.CSSProperties = {
   opacity: undefined,
 };
 
+const ANIMATIONS: { [key: string]: string } = {
+  wave: `0.8s linear 0s infinite alternate ${styles.wave}`,
+  shake: `0.4s linear 0s infinite normal ${styles.shake}`,
+  blink: `1s linear 0s infinite normal ${styles.blink}`,
+};
+
 class TagBuilder {
   elements: React.ReactElement[] = [];
   style: React.CSSProperties = { ...DEFAULT_STYLE };
+  animations: string[] = [];
 
   applyTag(index: number, tag: string, value?: string) {
     if (tag.startsWith("spr")) {
@@ -70,6 +77,19 @@ class TagBuilder {
       this.style.color = `#${bgrDecimalToHex(Number(tag.substring(2)))}`;
       return;
     }
+
+    const ending = tag.startsWith("/");
+    const animtag = ending ? tag.slice(1) : tag;
+    console.log(animtag, animtag in ANIMATIONS);
+    if (animtag in ANIMATIONS) {
+      if (!ending && !this.animations.includes(ANIMATIONS[animtag])) {
+        this.animations.push(ANIMATIONS[animtag]);
+      } else if (ending && this.animations.includes(ANIMATIONS[animtag])) {
+        this.animations.splice(this.animations.indexOf(ANIMATIONS[animtag]), 1);
+      }
+      return;
+    }
+    console.log(this.animations);
 
     switch (tag) {
       case "/":
@@ -123,7 +143,10 @@ class TagBuilder {
 
   addText(index: number, text: string) {
     this.elements.push(
-      <span key={String(index)} style={{ ...this.style }}>
+      <span
+        key={String(index)}
+        style={{ animation: this.animations.join(", "), ...this.style }}
+      >
         {text.split("\n").map((value, index) =>
           index == 0 ? (
             <>{value}</>

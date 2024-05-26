@@ -67,7 +67,7 @@ class TagBuilder {
       return;
     }
     if (tag.startsWith("d#")) {
-      this.style.color = bgrDecimalToHex(Number(tag.substring(2)));
+      this.style.color = `#${bgrDecimalToHex(Number(tag.substring(2)))}`;
       return;
     }
 
@@ -124,7 +124,16 @@ class TagBuilder {
   addText(index: number, text: string) {
     this.elements.push(
       <span key={String(index)} style={{ ...this.style }}>
-        {text}
+        {text.split("\n").map((value, index) =>
+          index == 0 ? (
+            <>{value}</>
+          ) : (
+            <>
+              <br />
+              {value}
+            </>
+          ),
+        )}
       </span>,
     );
   }
@@ -137,18 +146,18 @@ type Props = {
 export default function TextTag(props: Props): React.ReactElement {
   const text = props.children;
   const builder = new TagBuilder();
-  // gets text before next tag or end of string (match[1]) + next tag (match[2]) + value (match[3])
-  const regex = /([^[]*?)?(?:\[(.+?)(?:,(.+?))?\]|$)/g;
+  // gets text before next tag or end of string (match[1]) (match[2] is [ when [[) + next tag (match[3]) + value (match[4])
+  const regex = /([^[]*?)?(?:\[(?:\]|$)|\[(?:(\[)|$)|\[(.+?)(?:,(.+?))?\]|$)/g;
   let match = regex.exec(text);
   let i = 0;
   while (match != null && match.some((value) => !!value)) {
     if (match[1]) {
-      builder.addText(i, match[1]);
+      builder.addText(i, match[1] + (match[2] ?? ""));
       i += match[1].length;
     }
-    if (match[2]) {
-      builder.applyTag(i, match[2], match[3]);
-      i += match[2].length + (match[3]?.length ?? 0);
+    if (match[3]) {
+      builder.applyTag(i, match[3], match[4]);
+      i += match[3].length + (match[4]?.length ?? 0);
     }
     match = regex.exec(text);
   }

@@ -3,6 +3,7 @@ import WORLD_DATA from "../../data/WorldData";
 import TextTag from "../../shared/TextTag";
 import parseDate from "../../utils/gmdate";
 import styles from "./Beastie.module.css";
+import { VIBES } from "./BeastieValues";
 import { BeastieLogEvent } from "./SaveType";
 
 enum EventType {
@@ -16,21 +17,6 @@ enum EventType {
 
 const RANKED_TEAMS: { [key: string]: string } = {
   redd: "The Rutile All-stars",
-};
-
-const VIBES: { [key: number]: string } = {
-  1: "Rude",
-
-  3: "Supportive",
-
-  13: "Pensive",
-
-  16: "Goofy",
-
-  19: "Serious",
-  20: "Energetic",
-
-  22: "Shy",
 };
 
 const FRIEND_TYPE: { [key: number]: string } = {
@@ -85,10 +71,10 @@ function EventText({ event }: Props): React.ReactElement | null {
 
     case EventType.NEW_RELATIONSHIP: {
       return (
-        <>
-          <TextTag>{event.args[0] as string}</TextTag> became their{" "}
+        <TextTag>
+          {event.args[0] as string} became their{" "}
           {FRIEND_TYPE[event.args[1] as number]}!
-        </>
+        </TextTag>
       );
     }
 
@@ -101,10 +87,9 @@ function EventText({ event }: Props): React.ReactElement | null {
       );
     }
   }
-  console.log(`!! Unknown Event Type: ${event.event} !!`);
   return (
     <>
-      Type: {event.event}
+      Unknown Type: {event.event}
       <br />
       Args: "{event.args.join('", "')}"
     </>

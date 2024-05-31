@@ -2,6 +2,7 @@ import BEASTIE_DATA from "../../data/Beastiedata";
 import { SaveBeastie } from "./SaveType";
 import styles from "./Beastie.module.css";
 import EventElement from "./EventElement";
+import { VIBES } from "./BeastieValues";
 
 export default function Beastie(props: {
   beastie: SaveBeastie;
@@ -40,6 +41,7 @@ export default function Beastie(props: {
           ) : null}
         </div>
         <div>Level: {save_beastie.level}</div>
+        <div>Vibe: {VIBES[save_beastie.vibe] ?? save_beastie.vibe}</div>
         <div className={styles.eventlist}>
           {save_beastie.event_log.events.map((event) => (
             <EventElement key={`${event.date}-${event.event}`} event={event} />

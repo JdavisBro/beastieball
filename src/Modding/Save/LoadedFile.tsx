@@ -22,6 +22,14 @@ export default function LoadedFile(props: {
           ) : null,
         )}
       </div>
+      <div className={styles.header}>Other Beasties</div>
+      <div className={styles.varcontainer}>
+        {Object.values(props.save.beastie_bank).map((value) =>
+          typeof value != "string" ? (
+            <Beastie key={value.pid} beastie={value} />
+          ) : null,
+        )}
+      </div>
       <div className={styles.header}>All Values</div>
       <div className={styles.datatable}>
         {Object.keys(props.save)

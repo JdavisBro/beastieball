@@ -1,6 +1,7 @@
 .beastie {
   display: flex;
   height: fit-content;
+  background-color: #808080;
 }
 
 .beatieimage {
@@ -22,4 +23,18 @@
 .beastiename,
 .beastiename span {
   vertical-align: middle;
+}
+
+.eventlist {
+  display: flex;
+  max-height: 200px;
+  overflow: scroll;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px 0 4px 0;
+}
+
+.event {
+  composes: animBoxBackground from global;
+  padding: 0 4px 0 4px;
 }

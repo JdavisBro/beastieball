@@ -36,6 +36,7 @@ const DEFAULT_STYLE: React.CSSProperties = {
   fontFamily: undefined,
   color: undefined,
   opacity: undefined,
+  textShadow: undefined,
 };
 
 const ANIMATIONS: { [key: string]: string } = {
@@ -80,7 +81,6 @@ class TagBuilder {
 
     const ending = tag.startsWith("/");
     const animtag = ending ? tag.slice(1) : tag;
-    console.log(animtag, animtag in ANIMATIONS);
     if (animtag in ANIMATIONS) {
       if (!ending && !this.animations.includes(ANIMATIONS[animtag])) {
         this.animations.push(ANIMATIONS[animtag]);
@@ -89,7 +89,6 @@ class TagBuilder {
       }
       return;
     }
-    console.log(this.animations);
 
     switch (tag) {
       case "/":
@@ -135,6 +134,12 @@ class TagBuilder {
       case "/alpha":
         this.style.opacity = undefined;
         break;
+      case "shadow": // might not be real BUT i think it is??
+        this.style.textShadow = "black 1px 1px";
+        break;
+      case "/shadow":
+        this.style.textShadow = undefined;
+        break;
       default:
         console.log(`Tag Not Implemented ${tag}: ${value}`);
         break;
@@ -163,11 +168,16 @@ class TagBuilder {
 }
 
 type Props = {
-  children: string;
+  children: string | Array<string | number | undefined | null>;
 };
 
 export default function TextTag(props: Props): React.ReactElement {
-  const text = props.children;
+  let text;
+  if (Array.isArray(props.children)) {
+    text = props.children.join("");
+  } else {
+    text = props.children;
+  }
   const builder = new TagBuilder();
   // gets text before next tag or end of string (match[1]) (match[2] is [ when [[) + next tag (match[3]) + value (match[4])
   const regex = /([^[]*?)?(?:\[(?:\]|$)|\[(?:(\[)|$)|\[(.+?)(?:,(.+?))?\]|$)/g;

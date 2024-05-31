@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TextTag from "./shared/TextTag";
+import TextTag, { tagEscape } from "./shared/TextTag";
 
 export default function Test(): React.ReactElement {
   const [text, setText] = useState(`
@@ -31,7 +31,14 @@ color test: [#2cb18c]aqua[/c] [d#9346814]luncheon red
         onChange={(event) => setText(event.target.value)}
       />
       <br />
-      <TextTag>{text}</TextTag>
+      <TextTag>
+        {text}
+        Escape Test: [c_red]
+        {tagEscape(
+          "[sprIcon,1] [1] [[2]] [[[3]]] [[[[4]]]] [[[[[[[[8]]]]]]]] working![/c_red]",
+        )}
+        red still?[/c] good [[]
+      </TextTag>
     </>
   );
 }

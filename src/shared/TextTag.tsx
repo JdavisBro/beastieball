@@ -167,6 +167,18 @@ class TagBuilder {
   }
 }
 
+export function tagEscape(
+  text: string | Array<string | number | undefined | null>,
+) {
+  console.log(
+    (Array.isArray(text) ? text.join("") : text).replace(/(\[{1,2})/g, "$1$1"),
+  );
+  return (Array.isArray(text) ? text.join("") : text).replace(
+    /(\[{1,2})/g,
+    "$1$1",
+  );
+}
+
 type Props = {
   children: string | Array<string | number | undefined | null>;
 };
@@ -183,16 +195,32 @@ export default function TextTag(props: Props): React.ReactElement {
   const regex = /([^[]*?)?(?:\[(?:\]|$)|\[(?:(\[)|$)|\[(.+?)(?:,(.+?))?\]|$)/g;
   let match = regex.exec(text);
   let i = 0;
+  let combine = "";
+  // match[0] will always be an empty string even at the end of the text
   while (match != null && match.some((value) => !!value)) {
-    if (match[1]) {
-      builder.addText(i, match[1] + (match[2] ?? ""));
-      i += match[1].length;
+    const current_text = match[1] ?? "";
+    const escape_bracket = match[2] ?? "";
+    const tag = match[3];
+    const value = match[4];
+    if (current_text || escape_bracket) {
+      if (!tag) {
+        // tag not changed (e.g only escape bracket) so combine with next match to reduce span tags
+        combine += current_text + escape_bracket;
+        i += current_text.length + escape_bracket.length;
+      } else {
+        builder.addText(i, combine + current_text + escape_bracket);
+        combine = "";
+        i += current_text.length + escape_bracket.length;
+      }
     }
-    if (match[3]) {
-      builder.applyTag(i, match[3], match[4]);
-      i += match[3].length + (match[4]?.length ?? 0);
+    if (tag) {
+      builder.applyTag(i, tag, value);
+      i += tag.length + (value?.length ?? 0);
     }
     match = regex.exec(text);
+  }
+  if (combine) {
+    builder.addText(i, combine);
   }
   return <span className={styles.texttag}>{builder.elements}</span>;
 }

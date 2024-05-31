@@ -70,11 +70,31 @@ export default function Save(): React.ReactElement {
               const files = event.target.files;
               if (files) {
                 const file = files[0];
-                file.arrayBuffer().then((data) => {
-                  const decompressed = pako.inflate(data, { to: "string" });
-                  setFilename(file.name);
-                  setSave(JSON.parse(decompressed));
-                });
+                file
+                  .arrayBuffer()
+                  .then((data) => {
+                    const decompressed = pako.inflate(data, { to: "string" });
+                    const parsed = JSON.parse(decompressed);
+                    if (
+                      !parsed ||
+                      typeof parsed != "object" ||
+                      Array.isArray(parsed)
+                    ) {
+                      alert("Invalid File. Contents are not a save file.");
+                      console.log(parsed);
+                      return;
+                    }
+                    setFilename(file.name);
+                    setSave(parsed);
+                  })
+                  .catch((reason) => {
+                    const issuetype =
+                      reason == "incorrect header check"
+                        ? "Decompression issue: "
+                        : "";
+                    console.log(reason);
+                    alert(`Invalid File. ${issuetype}${reason}`);
+                  });
               }
             }}
             onClick={(event) => ((event.target as HTMLInputElement).value = "")}

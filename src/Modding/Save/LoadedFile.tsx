@@ -38,6 +38,9 @@ export default function LoadedFile(props: {
             <div key={key} className={styles.datarow}>
               <div>{key}</div>
               <textarea
+                onChange={(event) =>
+                  (props.save[key] = JSON.parse(event.target.value))
+                }
                 defaultValue={JSON.stringify(props.save[key])}
               ></textarea>
               <button

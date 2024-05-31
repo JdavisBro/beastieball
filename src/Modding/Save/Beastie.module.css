@@ -4,7 +4,9 @@
   background-color: #808080;
 }
 
-.beatieimage {
+.beastiepreview {
+  display: flex;
+  flex-direction: column;
   max-width: 25%;
   height: 100%;
 }

@@ -5,6 +5,7 @@ import { setImage } from "../../shared/beastieRender/WebGL";
 import { BBox, Sprite } from "../../data/SpriteInfo";
 
 const MAX_LOOPS = 500;
+const DELAY_MIN = 20; // ms
 
 export class GifError extends Error {
   constructor(msg: string) {
@@ -118,7 +119,7 @@ export default function saveGif(
           }
         }
       }
-      delaylist.push(baseDelay * hold);
+      delaylist.push(Math.max(DELAY_MIN, baseDelay * hold));
     }
     if (!group.transitions) {
       break;

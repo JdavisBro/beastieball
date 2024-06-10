@@ -5,6 +5,7 @@ import type { BeastieType } from "../../data/BeastieType";
 import MoveList from "./MoveList";
 import untyped_research_data from "../../data/research_data.json";
 import designers from "../../data/designers.json";
+import abilities from "../../data/abilities";
 
 const research_data: { [key: string]: number } = untyped_research_data;
 
@@ -89,6 +90,18 @@ export default function ContentInfo(props: Props): React.ReactNode {
 
         <InfoBox header="Description" value={beastiedata.desc} />
 
+        <InfoBox
+          header="Abilities"
+          value={beastiedata.ability.map((value, index) => (
+            <div key={value}>
+              {abilities[value].name}
+              {beastiedata.ability_hidden && index > 0 ? " (hidden): " : ": "}
+              <TextTag>{abilities[value].desc}</TextTag>
+              <br />
+            </div>
+          ))}
+        />
+
         <div className={styles.header}>Stat Distribution</div>
         <StatDistribution beastiedata={beastiedata} />
 
@@ -119,7 +132,10 @@ export default function ContentInfo(props: Props): React.ReactNode {
                 ? beastiedata.designer.map((i) => designers[i]).join(", ")
                 : designers[beastiedata.designer]}
               <br />
-              Videographer: {designers[beastiedata.animator]}
+              Videographer{Array.isArray(beastiedata.animator) ? "s" : ""}:{" "}
+              {Array.isArray(beastiedata.animator)
+                ? beastiedata.animator.map((i) => designers[i]).join(", ")
+                : designers[beastiedata.animator]}
             </>
           }
         />

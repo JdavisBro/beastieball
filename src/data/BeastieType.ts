@@ -128,7 +128,7 @@ export type BeastieType = {
         my_data: null;
         player?: number;
         rel_color: number;
-        damage?: string;
+        damage?: string | number;
         target: number | Array<number>;
         type: number;
       }>

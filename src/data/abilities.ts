@@ -73,7 +73,7 @@ const abilities: { [key: string]: { name: string; desc: string } } = {
   },
   lightningrod_m: {
     name: "Neural Net",
-    desc: "Is a magnet for all [spricon,2] attacks",
+    desc: "Is a magnet for all [sprIcon,2] attacks",
   },
   spiker: {
     name: "Spiker",
@@ -126,6 +126,10 @@ const abilities: { [key: string]: { name: string; desc: string } } = {
   intimidate: {
     name: "Majesty",
     desc: "[sprIcon,1]Pow[sprBoost,3] to opponent team when tagged in",
+  },
+  sturdy: {
+    name: "Bunker",
+    desc: "Never takes more than 99 damage at once",
   },
 };
 

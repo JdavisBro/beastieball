@@ -86,9 +86,9 @@
     "colors2": null,
     "combos": [
       [8, 2, 0.15],
-      [52, 1, 1, 8, 1, 0.2],
-      [56, 2, 0],
-      [56, 2, 0]
+      [8, 2, 0.15],
+      [8, 0, -0.34, 56, 2, 0],
+      [8, 0, -0.34, 56, 2, 0]
     ],
     "desc": "They lack any aggression at all. Using their tail as a lure, they invite other Beasties into their burrow to offer them food.",
     "designer": 1,
@@ -236,7 +236,7 @@
         ]
       }
     ],
-    "spr": 324,
+    "spr": 331,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -343,10 +343,10 @@
     ],
     "colors2": null,
     "combos": [
-      [33, 0, 19, 50, 0, 0.75],
-      [7, 1, 1, 26, 1, 1],
-      [26, 0, 1, 20, 0, 1],
-      [26, 2, 1]
+      [33, 0, 19, 50, 0, 0.7],
+      [26, 2, 1],
+      [2, 0, 2],
+      [2, 0, 2]
     ],
     "desc": "Their busy mind is only at rest while they dig. They'll hyperfocus for days on a single burrow.",
     "designer": [5, 8],
@@ -513,7 +513,7 @@
         ]
       }
     ],
-    "spr": 398,
+    "spr": 406,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -562,20 +562,97 @@
     "colormeta": null,
     "colors": [
       {
+        "_": "class_gradient",
         "array": [
           {
-            "color": 255,
+            "color": 14848876,
             "x": 0
+          },
+          {
+            "color": 15703151,
+            "x": 0.4933333333
+          },
+          {
+            "color": 16760436,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 8278757,
+            "x": 0
+          },
+          {
+            "color": 8545532,
+            "x": 0.5
+          },
+          {
+            "color": 7434751,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 3099069,
+            "x": 0
+          },
+          {
+            "color": 1781213,
+            "x": 0.5
+          },
+          {
+            "color": 2827954,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 3514361,
+            "x": 0
+          },
+          {
+            "color": 2729470,
+            "x": 0.5
+          },
+          {
+            "color": 4306687,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 15983848,
+            "x": 0
+          },
+          {
+            "color": 15981275,
+            "x": 0.5
+          },
+          {
+            "color": 15985875,
+            "x": 1
           }
         ]
       }
     ],
     "colors2": null,
     "combos": [
-      [33, 0, 19, 50, 0, 0.75],
-      [7, 1, 1, 26, 1, 1],
-      [26, 0, 1, 20, 0, 1],
-      [26, 2, 1]
+      [33, 0, 19, 50, 0, 0.7],
+      [26, 2, 1],
+      [2, 0, 2],
+      [2, 0, 2]
     ],
     "desc": "Following fires, rockslides, or other natural disasters, Handicoots often appear and help out.",
     "designer": [5, 8],
@@ -696,15 +773,72 @@
     "scale": [0.85, 1],
     "shiny": [
       {
+        "_": "class_gradient",
         "array": [
           {
-            "color": 16738046,
+            "color": 11642608,
             "x": 0
+          },
+          {
+            "color": 12303350,
+            "x": 0.4866666667
+          },
+          {
+            "color": 12831487,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 7566335,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 20161,
+            "x": 0.0033333333
+          },
+          {
+            "color": 602796,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 9596159,
+            "x": 0
+          },
+          {
+            "color": 8224255,
+            "x": 0.5
+          },
+          {
+            "color": 8559103,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 13816575,
+            "x": 0.5
           }
         ]
       }
     ],
-    "spr": 2,
+    "spr": 3,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -800,9 +934,9 @@
     "colors2": null,
     "combos": [
       [50, 0, 1.2],
-      [0, 2, 1, 3, 2, 1],
-      [0, 2, 2, 3, 2, 2],
-      [3, 2, 2]
+      [0, 1, 1, 3, 1, 1],
+      [0, 0, 2],
+      [0, 0, 2]
     ],
     "desc": "Anytime they encounter something new, they kick it. Kicking is their way of understanding the world.",
     "designer": 8,
@@ -954,7 +1088,7 @@
         ]
       }
     ],
-    "spr": 344,
+    "spr": 352,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -1050,9 +1184,9 @@
     "colors2": null,
     "combos": [
       [50, 0, 1.2],
-      [0, 2, 1, 3, 2, 1],
-      [0, 2, 2, 3, 2, 2],
-      [3, 2, 2]
+      [0, 1, 1, 3, 1, 1],
+      [0, 0, 2],
+      [0, 0, 2]
     ],
     "desc": "Despite their powerful legs they insist on using their head for everything. As a result they have frequent headaches and are usually grumpy.",
     "designer": 8,
@@ -1202,7 +1336,7 @@
         ]
       }
     ],
-    "spr": 464,
+    "spr": 473,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -1303,10 +1437,10 @@
     ],
     "colors2": null,
     "combos": [
-      [15, 0, 1, 50, 0, 0.8],
-      [10, 1, 1],
-      [10, 0, 2],
-      [8, 2, 0.3]
+      [15, 0, 2, 50, 0, 0.8],
+      [15, 1, 1, 10, 1, 1, 8, 0, -0.34],
+      [32, 6, 1],
+      [32, 6, 1]
     ],
     "desc": "Its fluff is made of incredibly thin strands of wax, bundled like wool. If a Cherrily makes you a pom, it considers you a treasured friend.",
     "designer": 2,
@@ -1378,7 +1512,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 66,
+          "effect_type": 67,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -1449,7 +1583,7 @@
         ]
       }
     ],
-    "spr": 102,
+    "spr": 105,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -1566,10 +1700,10 @@
     ],
     "colors2": null,
     "combos": [
-      [15, 0, 1, 50, 0, 0.8],
-      [10, 1, 1],
-      [10, 0, 2],
-      [8, 2, 0.3]
+      [15, 0, 2, 50, 0, 0.8],
+      [15, 1, 1, 10, 1, 1, 8, 0, -0.34],
+      [32, 6, 1],
+      [32, 6, 1]
     ],
     "desc": "It's extremely light and drifts with air currents. Groups of Merrifly will hold onto each other so as not to drift apart.",
     "designer": 2,
@@ -1647,7 +1781,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 66,
+          "effect_type": 67,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -1738,7 +1872,7 @@
         ]
       }
     ],
-    "spr": 392,
+    "spr": 400,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -1907,9 +2041,9 @@
     ],
     "combos": [
       [-26, 0, 1, 50, 0, 0.75],
-      [26, 1, 1],
-      [26, 2, 1],
-      [26, 2, 1]
+      [26, 0, 3],
+      [14, 0, 3],
+      [26, 0, 3]
     ],
     "desc": "They are obsessed with chasing balls. It's said that they see the moon itself as a giant Beastieball which they yearn to chase.",
     "designer": [3, 8],
@@ -2086,7 +2220,7 @@
         ]
       }
     ],
-    "spr": 390,
+    "spr": 398,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -2214,10 +2348,10 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 1.3, 16, 0, -1],
-      [15, 1, 1, 16, 1, -1],
-      [15, 2, 1, 16, 0, -1],
-      [15, 2, 2, 16, 0, -1]
+      [50, 0, 1.4, 16, 0, -1],
+      [10, 1, 1],
+      [10, 1, 2],
+      [15, 2, 2, 16, 2, -1]
     ],
     "desc": "Their bodies are made from hard transluscent chitin. Depending on the arrangment of their cells, they refract light differently and can appear as vastly different colors.",
     "designer": [5, 8],
@@ -2410,7 +2544,7 @@
         ]
       }
     ],
-    "spr": 270,
+    "spr": 277,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -2517,8 +2651,8 @@
     ],
     "colors2": null,
     "combos": [
-      [1, 2, 2],
-      [15, 1, 1, 1, 2, 1],
+      [15, 2, 1],
+      [15, 0, 1],
       [44, 2, 6, 1, 2, 1],
       [44, 2, 6]
     ],
@@ -2598,7 +2732,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 66,
+          "effect_type": 67,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -2677,7 +2811,7 @@
         ]
       }
     ],
-    "spr": 486,
+    "spr": 496,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -2788,8 +2922,8 @@
     ],
     "colors2": null,
     "combos": [
-      [1, 2, 2],
-      [15, 1, 1, 1, 2, 1],
+      [15, 2, 1],
+      [15, 0, 1],
       [44, 2, 6, 1, 2, 1],
       [44, 2, 6]
     ],
@@ -2865,7 +2999,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 66,
+          "effect_type": 67,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -2948,11 +3082,300 @@
         ]
       }
     ],
-    "spr": 31,
+    "spr": 32,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
     "tyield": ["ha", 2]
+  },
+  "horseshoe": {
+    "ability": ["sturdy"],
+    "ability_hidden": false,
+    "allowedInPromo": false,
+    "animator": 8,
+    "attklist": [
+      "starterheart",
+      "steamattack",
+      "careful",
+      "snore",
+      "enemyboosts",
+      "scoreboosted",
+      "desperate",
+      "facade",
+      "damagedattack",
+      "dig",
+      "allyrush",
+      "allycover",
+      "rest",
+      "substitute",
+      "preblock",
+      "nettle",
+      "trap",
+      "rhythm",
+      "bdefup",
+      "lifepass",
+      "protect"
+    ],
+    "attklist_randomize": -1,
+    "ba": 20,
+    "base_exp": 187.2025,
+    "bd": 123,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 4157875,
+            "x": 0
+          },
+          {
+            "color": 3825078,
+            "x": 0.4833333333
+          },
+          {
+            "color": 4868778,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 15195607,
+            "x": 0
+          },
+          {
+            "color": 15067113,
+            "x": 0.4866666667
+          },
+          {
+            "color": 12766679,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 2766672,
+            "x": 0
+          },
+          {
+            "color": 471390,
+            "x": 0.5
+          },
+          {
+            "color": 2105453,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 7643050,
+            "x": 0
+          },
+          {
+            "color": 5610396,
+            "x": 0.5
+          },
+          {
+            "color": 5015974,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 8443368,
+            "x": 0
+          },
+          {
+            "color": 53247,
+            "x": 0.5
+          },
+          {
+            "color": 2734847,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [33, 0, 11],
+      [47, 1, 1, 29, 0, 4],
+      [16, 1, 3, 29, 0, 2],
+      [16, 1, 3, 29, 0, 3]
+    ],
+    "desc": "An ancient Beastie that has hardly changed in 400 million years. Their ability to play Beastieball both on land and deep undersea has allowed them to thrive through climate shifts.",
+    "designer": 5,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "horseshoe",
+    "first_frame": -1,
+    "foot_size": 67,
+    "foot_type": 1,
+    "growth": 1.03,
+    "ha": 55,
+    "hd": 85,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "horseshoe",
+    "isBaby": false,
+    "learnset": 43,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 86,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 30,
+    "md": 107,
+    "name": "Xiphosaur",
+    "number": 25,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "damage": 99,
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 13
+        }
+      ],
+      "description": "Deal 99 damage with an attack"
+    },
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16771174,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14719515,
+            "x": 0
+          },
+          {
+            "color": 13019128,
+            "x": 0.5033333333
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16751210,
+            "x": 0
+          },
+          {
+            "color": 16776880,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 11261439,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16514043,
+            "x": 0.44
+          }
+        ]
+      }
+    ],
+    "spr": 472,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["bd", 2, "md", 1]
   },
   "kangaroo1": {
     "ability": ["prankster", "handsfree"],
@@ -3061,9 +3484,9 @@
     ],
     "colors2": null,
     "combos": [
-      [38, 3, 2],
+      [12, 3, 1],
       [12, 8, 1],
-      [12, 8, 2, 38, 8, 1],
+      [8, 8, -0.2],
       [12, 8, 2]
     ],
     "desc": "They are skilled at mimicry and can even learn human words. They especially favor sounds which get a rise out of others.",
@@ -3222,7 +3645,7 @@
         ]
       }
     ],
-    "spr": 275,
+    "spr": 282,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -3326,10 +3749,10 @@
     ],
     "colors2": null,
     "combos": [
-      [-7, 0, 1],
-      [7, 1, 1],
+      [51, 0, 2, 50, 0, 1.4, 7, 0, 0],
       [7, 2, 1],
-      [7, 2, 0]
+      [7, 2, 1, 1, 2, 1],
+      [7, 2, 0, 4, 2, 1]
     ],
     "desc": "They are constantly in motion. Their colorful plumage is a point of pride and they sometimes accessorize it with flower petals.",
     "designer": 8,
@@ -3506,7 +3929,7 @@
         ]
       }
     ],
-    "spr": 498,
+    "spr": 508,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -3590,10 +4013,10 @@
     ],
     "colors2": null,
     "combos": [
-      [15, 0, 3, 50, 0, 0.5],
-      [15, 1, 1],
-      [10, 1, 1],
-      [42, 3, 2]
+      [50, 0, 0.9, 33, 0, 5],
+      [0, 1, 1, 2, 1, 1],
+      [2, 2, 1, 42, 3, 2],
+      [2, 2, 1, 42, 3, 2]
     ],
     "desc": "They identify themselves through song. Tight cliques will often form around a common melody.",
     "designer": 8,
@@ -3677,7 +4100,7 @@
           "type": 41
         }
       ],
-      "description": "Use a COMBO attack"
+      "description": "Use a COMBO play"
     },
     "roamer_style": {
       "_name": "STOP_AND_STARE",
@@ -3731,7 +4154,7 @@
         ]
       }
     ],
-    "spr": 97,
+    "spr": 100,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -3741,7 +4164,7 @@
     "ability": ["empath", "crowddef"],
     "ability_hidden": false,
     "allowedInPromo": false,
-    "animator": 8,
+    "animator": 10,
     "attklist": [
       "facade",
       "scoreboosted",
@@ -3818,12 +4241,12 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 1.4, 8, 0, -0.2],
-      [15, 1, 3, 39, 2, 2],
-      [15, 2, 3, 39, 2, 2],
-      [15, 1, 2]
+      [50, 0, 1.3, 8, 0, -0.2],
+      [15, 1, 2, 39, 1, 1],
+      [15, 2, 3, 39, 2, 1],
+      [4, 2, 2]
     ],
-    "desc": "They can manipulate emotions with potent phermones. Anyone who touches their mask, made from all the material they collected as a pupa, will face their wrath.",
+    "desc": "They can manipulate emotions with potent pheromones. Anyone who touches their mask, made from all the material they collected as a pupa, will face their wrath.",
     "designer": 0,
     "evo_pose": [
       {
@@ -3955,7 +4378,7 @@
         ]
       }
     ],
-    "spr": 144,
+    "spr": 148,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -4045,10 +4468,10 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 1.4, 8, 0, -0.2],
-      [15, 1, 3, 39, 2, 2],
-      [15, 2, 3, 39, 2, 2],
-      [15, 1, 2]
+      [50, 0, 1.3, 8, 0, -0.2],
+      [15, 1, 2, 39, 1, 1],
+      [15, 2, 3, 39, 2, 1],
+      [4, 2, 2]
     ],
     "desc": "Their spines naturally collect plant detritus as they move about, building up their protective coat.",
     "designer": 0,
@@ -4200,7 +4623,7 @@
         ]
       }
     ],
-    "spr": 122,
+    "spr": 125,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -4322,10 +4745,10 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 1.4, 8, 0, -0.2],
-      [15, 1, 3, 39, 2, 2],
-      [15, 2, 3, 39, 2, 2],
-      [15, 1, 2]
+      [50, 0, 1.3, 8, 0, -0.2],
+      [15, 1, 2, 39, 1, 1],
+      [15, 2, 3, 39, 2, 1],
+      [4, 2, 2]
     ],
     "desc": "This Beastie hides in its cocoon and pilots a constructed decoy. They build masks and experiment with personas they might grow into.",
     "designer": 0,
@@ -4485,7 +4908,7 @@
         ]
       }
     ],
-    "spr": 347,
+    "spr": 355,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -4577,10 +5000,10 @@
     ],
     "colors2": null,
     "combos": [
-      [16, 0, 1],
-      [16, 1, 1],
-      [16, 2, 1, 5, 0, 1],
-      [16, 0, 1]
+      [50, 0, 1.3, 49, 0, 13],
+      [2, 1, 1, 42, 3, 2],
+      [20, 0, 1, 2, 0, 2, 39, 0, 1],
+      [42, 3, 5]
     ],
     "desc": "They make their home in office desks where they can readily access their favorite food: paper. Math homework is especially enticing for them.",
     "designer": 0,
@@ -4717,7 +5140,7 @@
         ]
       }
     ],
-    "spr": 490,
+    "spr": 500,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -4817,10 +5240,10 @@
     ],
     "colors2": null,
     "combos": [
-      [33, 0, 14],
-      [5, 2, 2],
-      [5, 2, 2],
-      [23, 8, 1]
+      [50, 0, 0.8, 23, 3, 2, 49, 0, 8],
+      [2, 1, 1, 5, 1, 1],
+      [2, 2, 1, 5, 2, 2],
+      [23, 8, 2]
     ],
     "desc": "They use their bill to detect electrical fields. They heavily rely on this sense while the rest of their body develops.",
     "designer": [3, 4],
@@ -4898,7 +5321,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 66,
+          "effect_type": 67,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -4957,7 +5380,7 @@
         ]
       }
     ],
-    "spr": 176,
+    "spr": 180,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -5029,13 +5452,13 @@
     ],
     "colors2": null,
     "combos": [
-      [33, 0, 14],
-      [5, 2, 2],
-      [5, 2, 2],
-      [23, 8, 1]
+      [50, 0, 0.8, 23, 3, 2, 49, 0, 8],
+      [2, 1, 1, 5, 1, 1],
+      [2, 2, 1, 5, 2, 2],
+      [23, 8, 2]
     ],
-    "desc": "They have honed their bill's electroreceptive sensitivity, allowing them to foresee the movements of other Beasties.",
-    "designer": [3, 4],
+    "desc": "They have honed their electroreceptive sensitivity, allowing them to foresee the movements of other Beasties.",
+    "designer": [4, 3, 8],
     "evo_pose": [
       {
         "anim": "good",
@@ -5060,7 +5483,7 @@
     "face_color_index": 0,
     "family": "platypus1",
     "first_frame": -1,
-    "foot_size": 41,
+    "foot_size": 59,
     "foot_type": 0,
     "growth": 1.01,
     "ha": 66,
@@ -5074,7 +5497,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 77,
+      "char_width": 102.5,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -5104,7 +5527,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 66,
+          "effect_type": 67,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -5151,7 +5574,7 @@
         ]
       }
     ],
-    "spr": 272,
+    "spr": 279,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -5267,9 +5690,9 @@
     "colors2": null,
     "combos": [
       [33, 0, 20, 50, 0, 0.75],
+      [16, 1, 1],
       [16, 2, 1],
-      [16, 2, 2],
-      [16, 2, 2]
+      [16, 2, 1]
     ],
     "desc": "Their semitransparent ears shield their eyes from wind as they glide. They feel safest in large groups, especially with watchful Sefren.",
     "designer": 8,
@@ -5440,7 +5863,7 @@
         ]
       }
     ],
-    "spr": 326,
+    "spr": 333,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -5545,9 +5968,9 @@
     "colors2": null,
     "combos": [
       [33, 0, 20, 50, 0, 0.75],
+      [16, 1, 1],
       [16, 2, 1],
-      [16, 2, 2],
-      [16, 2, 2]
+      [16, 2, 1]
     ],
     "desc": "They can hear the footsteps of distant predators. They'll hide for as long as it takes for danger to pass.",
     "designer": 8,
@@ -5714,7 +6137,7 @@
         ]
       }
     ],
-    "spr": 167,
+    "spr": 171,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -5821,10 +6244,10 @@
     ],
     "colors2": null,
     "combos": [
-      [19, 0, 1],
-      [3, 2, 2],
-      [3, 2, 2, 8, 2, 0.15],
-      [3, 2, 2, 8, 2, 0.15]
+      [50, 0, 0.9, 19, 0, 1],
+      [8, 0, 0.3],
+      [51, 0, 2, 16, 0, 1, 14, 0, 1],
+      [8, 0, 0.5]
     ],
     "desc": "They enjoy basking in the sun, but this leaves them vulnerable. They stick out their tongue to intimidate predators.",
     "designer": 5,
@@ -5896,7 +6319,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 66,
+          "effect_type": 67,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -5967,7 +6390,7 @@
         ]
       }
     ],
-    "spr": 10,
+    "spr": 11,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -6082,9 +6505,9 @@
     "colors2": null,
     "combos": [
       [51, 0, 2, 50, 0, 1.3],
-      [7, 2, 1],
-      [7, 2, 1, 15, 2, 1],
-      [7, 2, 3]
+      [7, 0, 1, 26, 0, 1],
+      [16, 8, -1],
+      [16, 8, -2]
     ],
     "desc": "They leap high enough to snatch birds straight out of the sky. They'll leave claw marks on high places as a form of competition.",
     "designer": 3,
@@ -6250,7 +6673,7 @@
         ]
       }
     ],
-    "spr": 87,
+    "spr": 89,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -6361,9 +6784,9 @@
     "colors2": null,
     "combos": [
       [51, 0, 2, 50, 0, 1.3],
-      [7, 2, 1],
-      [7, 2, 1, 15, 2, 1],
-      [7, 2, 3]
+      [7, 0, 1, 26, 0, 1],
+      [16, 8, -1],
+      [16, 8, -2]
     ],
     "desc": "When on the hunt, they'll often allow prey to escape so that they can continue the chase and practice their pounce more.",
     "designer": 3,
@@ -6523,7 +6946,7 @@
         ]
       }
     ],
-    "spr": 495,
+    "spr": 505,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -6637,8 +7060,8 @@
     "colors2": null,
     "combos": [
       [49, 0, 12],
-      [52, 1, 1, 8, 1, 0.3],
-      [52, 1, 1, 8, 1, 1],
+      [52, 1, 1, 8, 1, 0.15],
+      [52, 1, 1, 8, 1, 0.5],
       [52, 2, 1, 8, 2, 0.3]
     ],
     "desc": "Its body is covered in microscopic fungal feelers, making it feel sticky. They tend to all varieties of plant life.",
@@ -6815,7 +7238,7 @@
         ]
       }
     ],
-    "spr": 7,
+    "spr": 8,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -6929,10 +7352,10 @@
       }
     ],
     "combos": [
-      [33, 0, 1, 50, 0, 2],
-      [1, 2, 1],
-      [1, 2, 2],
-      [1, 2, 1]
+      [33, 0, 15, 50, 0, 0.85],
+      [0, 1, 1, 1, 1, 1],
+      [15, 2, 1],
+      [15, 2, 1]
     ],
     "desc": "They fly tirelessly through any condition to find flowers to feed on. Seeing one is considered a lucky charm.",
     "designer": 3,
@@ -6969,7 +7392,7 @@
     "hidden_counter": null,
     "id": "spirit1",
     "isBaby": false,
-    "learnset": 43,
+    "learnset": 48,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6998,7 +7421,7 @@
     "ma": 15,
     "md": 55,
     "name": "Humflit",
-    "number": 25,
+    "number": 30,
     "palettes": 2,
     "prev_ids": [],
     "recruit": {
@@ -7070,7 +7493,7 @@
         ]
       }
     ],
-    "spr": 340,
+    "spr": 348,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -7202,10 +7625,10 @@
     ],
     "colors2": null,
     "combos": [
-      [-7, 0, 1],
-      [7, 1, 1],
-      [28, 1, 1],
-      [11, 0, 1]
+      [50, 0, 1.2, 11, 1, 1],
+      [20, 0, 1, 7, 0, 1, 0, 0, 1],
+      [28, 1, 1, 0, 0, 1],
+      [11, 0, 1, 16, 0, 1]
     ],
     "desc": "The fastest known flier of all. They use echolocation to rapidly navigate narrow cave systems.",
     "designer": 5,
@@ -7359,7 +7782,7 @@
         ]
       }
     ],
-    "spr": 125,
+    "spr": 128,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -7456,8 +7879,8 @@
     "colors2": null,
     "combos": [
       [50, 0, 0.8, 49, 0, 12, 6, 3, 1],
+      [6, 9, 1],
       [6, 8, 1],
-      [6, 8, 2],
       [6, 8, 1]
     ],
     "desc": "Their life cycle begins in caves, but they journey to the forest in adulthood. Each one selects a companion rock who they talk to as though it were alive.",
@@ -7600,7 +8023,7 @@
         ]
       }
     ],
-    "spr": 308,
+    "spr": 315,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -7739,7 +8162,7 @@
     ],
     "colors2": null,
     "combos": [
-      [8, 0, 0.15],
+      [50, 0, 2.2, 17, 0, 0, 41, 0, 1],
       [8, 1, 0.3],
       [8, 2, 0.2],
       [8, 2, 0.2]
@@ -7779,7 +8202,7 @@
     "hidden_counter": null,
     "id": "yeti",
     "isBaby": false,
-    "learnset": 48,
+    "learnset": 49,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -7808,7 +8231,7 @@
     "ma": 20,
     "md": 64,
     "name": "Yamyth",
-    "number": 30,
+    "number": 31,
     "palettes": 1,
     "prev_ids": ["snorlax"],
     "recruit": {
@@ -7900,7 +8323,7 @@
         ]
       }
     ],
-    "spr": 70,
+    "spr": 72,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,

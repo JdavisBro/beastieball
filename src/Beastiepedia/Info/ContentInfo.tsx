@@ -90,18 +90,25 @@ export default function ContentInfo(props: Props): React.ReactNode {
 
         <InfoBox header="Description" value={beastiedata.desc} />
 
-        <InfoBox
-          header="Abilities"
-          value={beastiedata.ability.map((value, index) => (
-            <div key={value}>
-              {abilities[value].name}
-              {beastiedata.ability_hidden && index > 0 ? " (hidden): " : ": "}
-              <TextTag>{abilities[value].desc}</TextTag>
-              <br />
-            </div>
-          ))}
-        />
-
+        {
+          <InfoBox
+            header="Abilities"
+            value={beastiedata.ability.map((value, index) =>
+              value in abilities ? (
+                <div key={value}>
+                  {abilities[value].name}
+                  {beastiedata.ability_hidden && index > 0
+                    ? " (hidden): "
+                    : ": "}
+                  <TextTag>{abilities[value].desc}</TextTag>
+                  <br />
+                </div>
+              ) : (
+                `Unknown ability ${value}`
+              ),
+            )}
+          />
+        }
         <div className={styles.header}>Stat Distribution</div>
         <StatDistribution beastiedata={beastiedata} />
 

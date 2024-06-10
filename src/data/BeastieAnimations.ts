@@ -59,6 +59,13 @@ export type BeastieAnimList = {
       x: number;
     }>;
   }>;
+  colors2: Array<{
+    _?: string;
+    array: Array<{
+      color: number;
+      x: number;
+    }>;
+  }> | null;
   shiny: Array<{
     _?: string;
     array: Array<{

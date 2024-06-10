@@ -57,7 +57,14 @@ export default function MoveList(props: Props): React.ReactElement {
     learnset ? learnset[0][0] : props.movelist[0],
   );
   if (!props.movelist.includes(selected)) {
-    setSelected(learnset ? learnset[0][0] : props.movelist[0]);
+    setSelected(
+      learnset &&
+        learnset.length > 0 &&
+        learnset[0].length > 0 &&
+        props.movelist.includes(learnset[0][0])
+        ? learnset[0][0]
+        : props.movelist[0],
+    );
   }
 
   const moveselected = MOVE_DATA.get(selected);

@@ -347,18 +347,19 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["dump", 44],
   ],
   43: [
-    // Humflit
-    ["myheartpass", 1],
+    //
+    ["protect", 1],
     ["starterheart", 1],
-    ["cheer", 8],
-    ["healhit", 12],
-    ["shieldbreaker", 17],
-    ["noisytag", 22],
-    ["serve", 25],
-    ["rush", 29],
-    ["scoreboosted", 33],
-    ["sweatup", 40],
-    ["substitute", 44],
+    ["dig", 6],
+    ["enemyboosts", 11],
+    ["preblock", 16],
+    ["allyrush", 21],
+    ["careful", 26],
+    ["rest", 30],
+    ["snore", 34],
+    ["trap", 37],
+    ["damagedattack", 41],
+    ["lifepass", 46],
   ],
   44: [
     // Skibble
@@ -416,6 +417,20 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["rushattack", 42],
   ],
   48: [
+    // Humflit
+    ["myheartpass", 1],
+    ["starterheart", 1],
+    ["cheer", 8],
+    ["healhit", 12],
+    ["shieldbreaker", 17],
+    ["noisytag", 22],
+    ["serve", 25],
+    ["rush", 29],
+    ["scoreboosted", 33],
+    ["sweatup", 40],
+    ["substitute", 44],
+  ],
+  49: [
     // Yamyth
     ["bdefup", 1],
     ["rocksmash", 1],

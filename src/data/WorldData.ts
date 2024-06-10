@@ -9,7 +9,7 @@ export type MapIcon = {
     key: string;
     value: number;
   };
-  from_level: string;
+  from_level?: string;
   from_object?: string;
   from_object_guid?: string;
   has_conditional?: number;

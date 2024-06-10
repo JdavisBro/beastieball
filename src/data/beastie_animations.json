@@ -2,6 +2,14 @@
   "_sprBestie": {
     "anim_data": {
       "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 30,
+          "startFrame": 30
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -31,40 +39,59 @@
         "frames": [
           {
             "_": "class_canim_frames",
-            "endFrame": 15,
+            "endFrame": 23,
             "holds": {
-              "11": 0.75,
-              "13": 1.5,
-              "14": 1.5,
-              "15": 1.5,
-              "8": [5, 8, 10],
+              "11": 2,
+              "13": 2,
+              "14": 2,
+              "15": 2,
+              "8": 2,
               "_": "class_map"
             },
             "startFrame": 8,
-            "transitions": [0, 0, 0, 0, 0, 1]
+            "transitions": [0, 0, 0, 0, 1]
           },
           {
             "_": "class_canim_frames",
-            "endFrame": 33,
+            "endFrame": 52,
             "holds": {
               "22": 0.75,
               "27": 1.5,
               "32": 1.5,
-              "33": 1.5,
+              "33": 2,
+              "34": 1,
+              "37": 3,
+              "38": 1,
+              "39": 1,
+              "42": 3,
+              "44": 6,
+              "48": 3,
+              "51": 3,
+              "52": 2,
               "_": "class_map"
             },
-            "startFrame": 25,
+            "startFrame": 33,
             "transitions": [0]
           }
-        ],
-        "speed": 0.6
+        ]
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
       },
       "move": {
         "_": "class_char_animationdata",
         "frames": {
           "_": "class_canim_frames",
-          "endFrame": 24,
-          "startFrame": 16
+          "endFrame": 32,
+          "sounds": {
+            "31": 0,
+            "32": 1,
+            "_": "class_map"
+          },
+          "startFrame": 24
         },
         "speed": 1.5
       },
@@ -146,6 +173,7 @@
         ]
       }
     ],
+    "colors2": null,
     "evo1": {
       "anim": "good",
       "scale": 2,
@@ -233,6 +261,14 @@
     "anim_data": {
       "_": "class_char_animation",
       "__anim_speed": 1.25,
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 11,
+          "startFrame": 11
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -348,6 +384,12 @@
         ],
         "speed": 0.8
       },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "move": {
         "_": "class_char_animationdata",
         "frames": {
@@ -451,6 +493,7 @@
         ]
       }
     ],
+    "colors2": null,
     "evo1": {
       "anim": "good",
       "scale": 2,
@@ -544,10 +587,167 @@
       "y": -138
     }
   },
+  "_sprBilby2": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 170.4,
+      "y": -255.6
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 255,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": 58.8,
+      "y": -358.8
+    },
+    "partner": {
+      "angle": 349.3150939941,
+      "anim": "good",
+      "x": 198,
+      "y": -169.2
+    },
+    "ready": {
+      "x": 134.4,
+      "y": -428.4
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16738046,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": 354.2256774902,
+      "anim": "ready",
+      "x": 70.8,
+      "y": -348
+    }
+  },
   "_sprCassowary1": {
     "anim_data": {
       "_": "class_char_animation",
       "__anim_speed": 1.25,
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 13,
+          "startFrame": 13
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -582,6 +782,11 @@
               "8": [5, 8, 10],
               "_": "class_map"
             },
+            "sounds": {
+              "22": -1,
+              "27": -1,
+              "_": "class_map"
+            },
             "startFrame": 19,
             "transitions": [0, 0, 0, 0, 0, 0, 0, 1]
           },
@@ -614,6 +819,14 @@
           }
         ],
         "speed": 0.6
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 27,
+          "startFrame": 27
+        }
       },
       "move": {
         "_": "class_char_animationdata",
@@ -710,6 +923,7 @@
         ]
       }
     ],
+    "colors2": null,
     "evo1": {
       "anim": "good",
       "scale": 2,
@@ -809,9 +1023,258 @@
       "y": -130
     }
   },
+  "_sprCassowary2": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 262,
+      "y": -215
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 11243123,
+            "x": 0
+          },
+          {
+            "color": 12822876,
+            "x": 0.5
+          },
+          {
+            "color": 12231777,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 6195630,
+            "x": 0
+          },
+          {
+            "color": 10997984,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 5332587,
+            "x": 0
+          },
+          {
+            "color": 10265772,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 4708847,
+            "x": 0
+          },
+          {
+            "color": 4242409,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "bad",
+      "scale": 2.156,
+      "x": 80,
+      "y": 125
+    },
+    "evo2": {
+      "anim": "fall",
+      "scale": 2.32315776,
+      "x": -277,
+      "y": 464
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2.519808,
+      "x": 183,
+      "y": 1036
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": 196,
+      "y": -136
+    },
+    "partner": {
+      "angle": 0,
+      "anim": "spike",
+      "x": 205,
+      "y": -483
+    },
+    "ready": {
+      "x": 199,
+      "y": -547
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 12174988,
+            "x": 0
+          },
+          {
+            "color": 11513253,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 5796261,
+            "x": 0
+          },
+          {
+            "color": 7902704,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 10268610,
+            "x": 0
+          },
+          {
+            "color": 6117962,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 12373231,
+            "x": 0
+          },
+          {
+            "color": 5858690,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": 349.2374572754,
+      "anim": "ready",
+      "x": 209,
+      "y": -117
+    }
+  },
   "_sprCheerleader": {
     "anim_data": {
       "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 14,
+          "startFrame": 8
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -867,6 +1330,14 @@
           }
         ],
         "speed": 0.6
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 15,
+          "startFrame": 15
+        }
       },
       "move": {
         "_": "class_char_animationdata",
@@ -967,6 +1438,7 @@
         ]
       }
     ],
+    "colors2": null,
     "evo1": {
       "anim": "good",
       "scale": 2,
@@ -1057,6 +1529,290 @@
       "anim": "spike",
       "x": 61.5,
       "y": -224.4616467277
+    }
+  },
+  "_sprCheerleader1": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "stop": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": -4,
+      "y": -148
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 10514943,
+            "x": 0
+          },
+          {
+            "color": 8678655,
+            "x": 0.5233333333
+          },
+          {
+            "color": 6974207,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 6513663,
+            "x": 0
+          },
+          {
+            "color": 6020095,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16759198,
+            "x": 0
+          },
+          {
+            "color": 16775579,
+            "x": 0.5
+          },
+          {
+            "color": 14745452,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 2406655,
+            "x": 0
+          },
+          {
+            "color": 5105151,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16777215,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16777215,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "float_dist": 40,
+      "float_wave": 5,
+      "hop_height": 0,
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": -99,
+      "y": -76
+    },
+    "partner": {
+      "angle": 295.5138549805,
+      "anim": "good",
+      "x": 146,
+      "y": -92
+    },
+    "ready": {
+      "x": 79,
+      "y": -243
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 6750131,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 6513663,
+            "x": 0
+          },
+          {
+            "color": 6020095,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16752182,
+            "x": 0
+          },
+          {
+            "color": 14069522,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 2406655,
+            "x": 0
+          },
+          {
+            "color": 5105151,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16777215,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16777215,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": -10,
+      "anim": "ready",
+      "x": 25,
+      "y": -128
     }
   },
   "_sprDefaultBeastie": {
@@ -1174,6 +1930,12 @@
   "_sprDog1": {
     "anim_data": {
       "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -1204,13 +1966,27 @@
           "_": "class_canim_frames"
         }
       },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "move": {
         "_": "class_char_animationdata",
         "frames": {
           "_": "class_canim_frames",
-          "endFrame": 1,
-          "startFrame": 1
-        }
+          "endFrame": 14,
+          "holds": {
+            "10": [2, 3],
+            "13": 2,
+            "14": 2,
+            "9": [2, 3],
+            "_": "class_map"
+          },
+          "startFrame": 8
+        },
+        "speed": 1.2
       },
       "ready": {
         "_": "class_char_animationdata",
@@ -1228,6 +2004,12 @@
           "startFrame": 7
         }
       },
+      "stop": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "volley": {
         "_": "class_char_animationdata",
         "frames": {
@@ -1238,23 +2020,23 @@
       }
     },
     "ball": {
-      "x": 158,
-      "y": -213
+      "x": 63,
+      "y": -339
     },
     "colors": [
       {
         "_": "class_gradient",
         "array": [
           {
-            "color": 15463423,
+            "color": 4345803,
             "x": 0
           },
           {
-            "color": 14084095,
-            "x": 0.1833333333
+            "color": 3824334,
+            "x": 0.6266666667
           },
           {
-            "color": 12446463,
+            "color": 4347829,
             "x": 1
           }
         ]
@@ -1263,15 +2045,11 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 5601253,
+            "color": 6260223,
             "x": 0
           },
           {
-            "color": 9408485,
-            "x": 0.58
-          },
-          {
-            "color": 7303141,
+            "color": 7697905,
             "x": 1
           }
         ]
@@ -1280,15 +2058,15 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 6077439,
+            "color": 4961535,
             "x": 0
           },
           {
-            "color": 8507903,
+            "color": 10608127,
             "x": 0.5133333333
           },
           {
-            "color": 7327999,
+            "color": 5880575,
             "x": 1
           }
         ]
@@ -1318,7 +2096,56 @@
             "x": 0
           },
           {
-            "color": 10658548,
+            "color": 6310857,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 11855102,
+            "x": 0
+          },
+          {
+            "color": 13425662,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 5413852,
+            "x": 0
+          },
+          {
+            "color": 5735140,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 9330060,
+            "x": 0
+          },
+          {
+            "color": 9335735,
+            "x": 0.2613333333
+          },
+          {
+            "color": 9098227,
+            "x": 0.3213333333
+          },
+          {
+            "color": 7647993,
             "x": 1
           }
         ]
@@ -1344,22 +2171,25 @@
     },
     "loco_data": {
       "_": "locomotor",
+      "hop_height": 0,
       "move_pause_frames": [],
-      "move_to_idle_transition_frames": []
+      "move_to_idle_transition_frames": [9, 10, 11],
+      "squishiness": 0,
+      "stretchiness": 0
     },
     "miss": {
-      "x": 158,
-      "y": -213
+      "x": 168,
+      "y": -192
     },
     "partner": {
-      "angle": 334.1556091309,
-      "anim": "good",
-      "x": 175,
-      "y": -143
+      "angle": 346.5042724609,
+      "anim": "volley",
+      "x": 123,
+      "y": -253
     },
     "ready": {
-      "x": 74,
-      "y": -271
+      "x": 285,
+      "y": -434
     },
     "shiny": [
       {
@@ -1428,13 +2258,340 @@
       "angle": 350.4346923828,
       "anim": "ready",
       "x": 98,
-      "y": -177
+      "y": -107
+    }
+  },
+  "_sprDragonfly": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "stop": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 28,
+      "y": -203
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 13762341,
+            "x": 0.21
+          },
+          {
+            "color": 16711827,
+            "x": 0.49
+          },
+          {
+            "color": 16729961,
+            "x": 0.7233333333
+          },
+          {
+            "color": 16756480,
+            "x": 0.9033333333
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16755456,
+            "x": 0
+          },
+          {
+            "color": 16733666,
+            "x": 0.4966666667
+          },
+          {
+            "color": 29695,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 36607,
+            "x": 0
+          },
+          {
+            "color": 6544127,
+            "x": 0.52
+          },
+          {
+            "color": 57087,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 9286655,
+            "x": 0
+          },
+          {
+            "color": 13802455,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 4607555,
+            "x": 0
+          },
+          {
+            "color": 5524033,
+            "x": 0.49
+          },
+          {
+            "color": 4668244,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "float_dist": 60,
+      "float_wave": 2,
+      "float_wave_freq": 500,
+      "hop_height": 0,
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": 48,
+      "y": -107
+    },
+    "partner": {
+      "angle": 316.2188720703,
+      "anim": "good",
+      "x": 125,
+      "y": -77
+    },
+    "ready": {
+      "x": 39,
+      "y": -204
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16771540,
+            "x": 0.4766666667
+          },
+          {
+            "color": 8867428,
+            "x": 0.5733333333
+          },
+          {
+            "color": 41444,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 8474444,
+            "x": 0.4266666667
+          },
+          {
+            "color": 16771547,
+            "x": 0.55
+          },
+          {
+            "color": 7587317,
+            "x": 0.83
+          },
+          {
+            "color": 2128836,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 5394234,
+            "x": 0
+          },
+          {
+            "color": 3836607,
+            "x": 0.4733333333
+          },
+          {
+            "color": 10928876,
+            "x": 0.6333333333
+          },
+          {
+            "color": 3878702,
+            "x": 0.8466666667
+          },
+          {
+            "color": 16764339,
+            "x": 0.9733333333
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 4479343,
+            "x": 0
+          },
+          {
+            "color": 6664191,
+            "x": 0.6866666667
+          },
+          {
+            "color": 15817471,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 3420470,
+            "x": 0
+          },
+          {
+            "color": 2370098,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": -10,
+      "anim": "ready",
+      "x": 37.2,
+      "y": -57.6
     }
   },
   "_sprFrog1": {
     "anim_data": {
       "_": "class_char_animation",
       "__anim_speed": 1.6666666667,
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 12,
+          "startFrame": 12
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -1464,9 +2621,10 @@
         "frames": [
           {
             "_": "class_canim_frames",
+            "bpm": 1,
             "endFrame": 21,
             "holds": {
-              "21": [7],
+              "21": 7,
               "_": "class_map"
             },
             "startFrame": 15,
@@ -1474,6 +2632,7 @@
           },
           {
             "_": "class_canim_frames",
+            "bpm": 1,
             "endFrame": 39,
             "holds": {
               "22": 1.7,
@@ -1486,16 +2645,30 @@
               "39": 7,
               "_": "class_map"
             },
+            "sounds": {
+              "28": 1,
+              "33": 1,
+              "_": "class_map"
+            },
             "startFrame": 22,
             "transitions": [0]
           }
         ],
         "speed": 0.45
       },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 21,
+          "startFrame": 21
+        }
+      },
       "move": {
         "_": "class_char_animationdata",
         "frames": {
           "_": "class_canim_frames",
+          "bpm": 1,
           "endFrame": 14,
           "holds": {
             "11": [2.5, 3, 3, 3, 3.5, 3.5],
@@ -1613,6 +2786,7 @@
         ]
       }
     ],
+    "colors2": null,
     "evo1": {
       "anim": "good",
       "scale": 2,
@@ -1714,9 +2888,392 @@
       "y": -95
     }
   },
+  "_sprFrog2": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 12,
+          "startFrame": 12
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": [
+          {
+            "_": "class_canim_frames",
+            "bpm": 1,
+            "endFrame": 35,
+            "holds": {
+              "24": 3,
+              "25": 4,
+              "26": 3,
+              "27": 4,
+              "28": 3,
+              "29": 3,
+              "30": 3,
+              "31": 4,
+              "32": 3,
+              "33": 4,
+              "34": 3,
+              "35": 3,
+              "_": "class_map"
+            },
+            "startFrame": 24,
+            "transitions": [0, 0, 0, 0, 1, 1, 2, 3]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 47,
+            "holds": {
+              "36": 1,
+              "38": 3,
+              "39": 4,
+              "40": 2,
+              "41": 3,
+              "42": 3,
+              "43": 4,
+              "44": [6, 8, 10, 12],
+              "45": 2,
+              "46": 3,
+              "47": 3,
+              "_": "class_map"
+            },
+            "startFrame": 36,
+            "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 62,
+            "holds": {
+              "49": 3,
+              "50": 3,
+              "51": 2,
+              "52": 3,
+              "53": 3,
+              "54": [6, 8, 8, 10],
+              "55": 2,
+              "56": 3,
+              "57": 3,
+              "58": 2,
+              "60": [6, 6, 9, 12],
+              "62": 3,
+              "_": "class_map"
+            },
+            "startFrame": 48,
+            "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 54,
+            "holds": {
+              "49": 3,
+              "50": 3,
+              "51": 2,
+              "52": 3,
+              "53": 3,
+              "54": [8, 10, 10, 12, 14],
+              "_": "class_map"
+            },
+            "startFrame": 48,
+            "transitions": [4]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 62,
+            "holds": {
+              "62": 3,
+              "_": "class_map"
+            },
+            "startFrame": 61,
+            "transitions": [0]
+          }
+        ]
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "bpm": 1,
+          "endFrame": 23,
+          "holds": {
+            "11": 3,
+            "12": 3,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "19": 3,
+            "20": 3,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "8": 2,
+            "_": "class_map"
+          },
+          "sounds": {
+            "13": 0,
+            "21": 0,
+            "_": "class_map"
+          },
+          "startFrame": 8
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "stop": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 195.6,
+      "y": -378
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 4214766,
+            "x": 0
+          },
+          {
+            "color": 4737256,
+            "x": 0.5053333333
+          },
+          {
+            "color": 7623400,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 7880935,
+            "x": 0
+          },
+          {
+            "color": 7027414,
+            "x": 0.4933333333
+          },
+          {
+            "color": 8662220,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 10194431,
+            "x": 0
+          },
+          {
+            "color": 6720767,
+            "x": 0.5
+          },
+          {
+            "color": 7437531,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 11590399,
+            "x": 0
+          },
+          {
+            "color": 12778239,
+            "x": 0.5
+          },
+          {
+            "color": 13172729,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "hop_height": 0,
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": [
+        13, 21, 20, 10, 11, 12, 18, 19, 8, 9, 16, 17
+      ],
+      "squishiness": 0.2,
+      "stretchiness": 0.2
+    },
+    "miss": {
+      "x": 249.6,
+      "y": -61.2
+    },
+    "partner": {
+      "angle": 341.8839416504,
+      "anim": "volley",
+      "x": 295,
+      "y": -249
+    },
+    "ready": {
+      "x": 262.8,
+      "y": -301.2
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 11182832,
+            "x": 0.0173333333
+          },
+          {
+            "color": 11184885,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14872319,
+            "x": 0
+          },
+          {
+            "color": 12966645,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 7829458,
+            "x": 0
+          },
+          {
+            "color": 7494333,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14925305,
+            "x": 0
+          },
+          {
+            "color": 13881596,
+            "x": 0.4973333333
+          },
+          {
+            "color": 11390463,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": -25,
+      "anim": "good",
+      "x": 94.8,
+      "y": -321.6
+    }
+  },
   "_sprKangaroo1": {
     "anim_data": {
       "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 14,
+          "startFrame": 14
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -1753,6 +3310,12 @@
           }
         },
         "speed": 0.8333333333
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
       },
       "move": {
         "_": "class_char_animationdata",
@@ -1870,6 +3433,7 @@
         ]
       }
     ],
+    "colors2": null,
     "evo1": {
       "anim": "good",
       "scale": 2,
@@ -1976,6 +3540,14 @@
     "anim_data": {
       "_": "class_char_animation",
       "__anim_speed": 2,
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 9,
+          "startFrame": 9
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -2081,6 +3653,12 @@
           }
         ],
         "speed": 0.5
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
       },
       "move": {
         "_": "class_char_animationdata",
@@ -2191,6 +3769,7 @@
         ]
       }
     ],
+    "colors2": null,
     "evo1": {
       "anim": "good",
       "scale": 2,
@@ -2305,6 +3884,12 @@
     "anim_data": {
       "_": "class_char_animation",
       "__anim_speed": 1.6666666667,
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -2330,6 +3915,12 @@
         }
       },
       "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
         "_": "class_char_animationdata",
         "frames": {
           "_": "class_canim_frames"
@@ -2418,6 +4009,7 @@
         ]
       }
     ],
+    "colors2": null,
     "evo1": {
       "anim": "good",
       "scale": 2,
@@ -2504,9 +4096,1581 @@
       "y": -155
     }
   },
+  "_sprMoth": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 90,
+      "y": -290
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 6792939,
+            "x": 0.4833333333
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 11578573,
+            "x": 0.48
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 2960895,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16747034,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "float_dist": 50,
+      "float_wave": 8,
+      "hop_height": 0,
+      "move_accel": 8,
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": -128,
+      "y": -376
+    },
+    "partner": {
+      "angle": 347.2344360352,
+      "anim": "volley",
+      "x": 136,
+      "y": -243
+    },
+    "ready": {
+      "x": 184,
+      "y": -575
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 11328487,
+            "x": 0.48
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 11642059,
+            "x": 0.4766666667
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16727463,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 6697471,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": -25,
+      "anim": "good",
+      "x": 150,
+      "y": -352
+    }
+  },
+  "_sprMoth1": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 8,
+          "startFrame": 8
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": [
+          {
+            "_": "class_canim_frames",
+            "endFrame": 20,
+            "holds": {
+              "12": 8,
+              "13": 8,
+              "14": [6, 8, 8, 12, 16],
+              "15": 4,
+              "16": 6,
+              "17": 6,
+              "18": [8, 10, 12, 12, 14, 16],
+              "19": 4,
+              "20": 6,
+              "_": "class_map"
+            },
+            "startFrame": 12,
+            "transitions": [0, 0, 0, 0, 1, 2]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 36,
+            "holds": {
+              "21": 2,
+              "22": 2,
+              "23": 4,
+              "24": 2,
+              "25": 1,
+              "26": 3,
+              "27": 4,
+              "28": 4,
+              "29": 1,
+              "30": 2,
+              "31": 3,
+              "32": 1,
+              "33": 3,
+              "34": 3,
+              "35": 2,
+              "_": "class_map"
+            },
+            "startFrame": 21,
+            "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 54,
+            "holds": {
+              "37": 2,
+              "38": 2,
+              "39": 2,
+              "40": 1,
+              "41": 2,
+              "42": 4,
+              "43": 2,
+              "44": 2,
+              "46": 2,
+              "48": 2,
+              "49": 2,
+              "50": 3,
+              "51": 3,
+              "52": 2,
+              "53": 4,
+              "_": "class_map"
+            },
+            "startFrame": 37,
+            "transitions": [0]
+          }
+        ]
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 11,
+          "startFrame": 8
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 87.6,
+      "y": -211.2
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16758293,
+            "x": 0
+          },
+          {
+            "color": 16754729,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 13565439,
+            "x": 0
+          },
+          {
+            "color": 16771543,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 7033556,
+            "x": 0
+          },
+          {
+            "color": 6715839,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "hop_height": 0,
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": 120,
+      "y": -183.6
+    },
+    "partner": {
+      "angle": 348.9247131348,
+      "anim": "volley",
+      "x": 104.4,
+      "y": -162
+    },
+    "ready": {
+      "x": 171.6,
+      "y": -238.8
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 8947967,
+            "x": 0
+          },
+          {
+            "color": 11236348,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14085877,
+            "x": 0
+          },
+          {
+            "color": 13099509,
+            "x": 0.4933333333
+          },
+          {
+            "color": 12177394,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 12739242,
+            "x": 0
+          },
+          {
+            "color": 12215953,
+            "x": 0.4853333333
+          },
+          {
+            "color": 11689589,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": -25,
+      "anim": "ready",
+      "x": 66,
+      "y": -48
+    }
+  },
+  "_sprMoth2": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 86,
+      "y": -361
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 12040140,
+            "x": 0
+          },
+          {
+            "color": 12239821,
+            "x": 0.3866666667
+          },
+          {
+            "color": 13416883,
+            "x": 0.9933333333
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 6898365,
+            "x": 0
+          },
+          {
+            "color": 3355572,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 2795744,
+            "x": 0
+          },
+          {
+            "color": 2726360,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 8295320,
+            "x": 0
+          },
+          {
+            "color": 7310221,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 15959636,
+            "x": 0
+          },
+          {
+            "color": 15755841,
+            "x": 0.5013333333
+          },
+          {
+            "color": 13848372,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": -3,
+      "y": -96
+    },
+    "partner": {
+      "angle": 327.5288085938,
+      "anim": "good",
+      "x": 236,
+      "y": -207
+    },
+    "ready": {
+      "x": 8,
+      "y": -422
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 13099764,
+            "x": 0
+          },
+          {
+            "color": 11782133,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 11817673,
+            "x": 0
+          },
+          {
+            "color": 12872889,
+            "x": 0.4973333333
+          },
+          {
+            "color": 11884951,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 10936305,
+            "x": 0.4853333333
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14199476,
+            "x": 0.4893333333
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 6440956,
+            "x": 0.4893333333
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": 348.0319213867,
+      "anim": "ready",
+      "x": 105,
+      "y": -235
+    }
+  },
+  "_sprNerd1": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 3,
+      "y": -217
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16758306,
+            "x": 0
+          },
+          {
+            "color": 16755753,
+            "x": 0.5
+          },
+          {
+            "color": 16746496,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14885396,
+            "x": 0
+          },
+          {
+            "color": 14027798,
+            "x": 0.5
+          },
+          {
+            "color": 12985414,
+            "x": 0.9966666667
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 5621247,
+            "x": 0
+          },
+          {
+            "color": 7973375,
+            "x": 0.5
+          },
+          {
+            "color": 9606399,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "move_pause_frames": [],
+      "move_speed": 1.2,
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": -36,
+      "y": -109
+    },
+    "partner": {
+      "angle": 315,
+      "anim": "spike",
+      "x": 172,
+      "y": -62
+    },
+    "ready": {
+      "x": 76,
+      "y": -195
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16750768,
+            "x": 0
+          },
+          {
+            "color": 16756213,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16739622,
+            "x": 0
+          },
+          {
+            "color": 16728064,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 13075967,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": -10,
+      "anim": "ready",
+      "x": 42,
+      "y": -109
+    }
+  },
+  "_sprPlatypus1": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 9,
+          "startFrame": 9
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": [
+          {
+            "_": "class_canim_frames",
+            "endFrame": 16,
+            "holds": {
+              "16": 0,
+              "_": "class_map"
+            },
+            "startFrame": 16,
+            "transitions": [1]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 27,
+            "holds": {
+              "16": [2, 2, 3, 4],
+              "17": 2,
+              "18": 3,
+              "19": 3,
+              "20": 3,
+              "21": 3,
+              "22": 3,
+              "23": 4,
+              "24": 4,
+              "25": 6,
+              "26": 6,
+              "27": [3, 5, 5, 8, 10],
+              "_": "class_map"
+            },
+            "startFrame": 16,
+            "transitions": [2, 2, 2, 2, 5]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 28,
+            "holds": {
+              "27": [3, 5, 5, 8, 10],
+              "28": 3,
+              "_": "class_map"
+            },
+            "startFrame": 28,
+            "transitions": [3]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 38,
+            "holds": {
+              "28": 3,
+              "29": 2,
+              "30": 2,
+              "31": 3,
+              "32": 4,
+              "33": 4,
+              "34": 4,
+              "35": 4,
+              "36": 6,
+              "37": 6,
+              "38": [6, 8, 8, 8, 10, 12],
+              "_": "class_map"
+            },
+            "startFrame": 29,
+            "transitions": [4, 4, 4, 4, 5]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 48,
+            "holds": {
+              "39": 2,
+              "40": 2,
+              "41": 3,
+              "42": 4,
+              "43": 4,
+              "44": 4,
+              "45": 6,
+              "46": 6,
+              "47": 4,
+              "48": [0, 0, 1, 2, 2, 3],
+              "_": "class_map"
+            },
+            "startFrame": 39,
+            "transitions": [1, 1, 1, 1, 5]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 54,
+            "holds": {
+              "51": 2,
+              "53": 3,
+              "54": [3, 3, 4, 5],
+              "_": "class_map"
+            },
+            "startFrame": 49,
+            "transitions": [6]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 61,
+            "holds": {
+              "56": 1,
+              "57": 0,
+              "58": 0,
+              "59": 2,
+              "60": 3,
+              "61": 3,
+              "_": "class_map"
+            },
+            "startFrame": 55,
+            "transitions": [7]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 62,
+            "holds": {
+              "61": [3, 3, 3, 4, 5],
+              "62": [3, 4, 4, 5, 6],
+              "_": "class_map"
+            },
+            "startFrame": 62,
+            "transitions": [8]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 65,
+            "holds": {
+              "64": 2,
+              "65": [3, 4, 5, 5, 6, 6],
+              "_": "class_map"
+            },
+            "startFrame": 63,
+            "transitions": [8, 9]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 69,
+            "holds": {
+              "66": 2,
+              "68": 3,
+              "69": 3,
+              "_": "class_map"
+            },
+            "startFrame": 66,
+            "transitions": [10]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 70,
+            "holds": {
+              "70": [3, 4, 4, 5, 6],
+              "_": "class_map"
+            },
+            "startFrame": 70,
+            "transitions": [11]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 77,
+            "holds": {
+              "72": 3,
+              "73": 2,
+              "75": 3,
+              "76": 5,
+              "77": [4, 4, 5, 6, 8],
+              "_": "class_map"
+            },
+            "startFrame": 71,
+            "transitions": [10, 12]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 86,
+            "holds": {
+              "79": 2,
+              "80": 4,
+              "81": 3,
+              "82": 3,
+              "83": 2,
+              "84": 3,
+              "85": 3,
+              "86": [6, 6, 8, 10],
+              "_": "class_map"
+            },
+            "startFrame": 78,
+            "transitions": [0]
+          }
+        ]
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 15,
+          "holds": {
+            "10": 1,
+            "11": 1,
+            "12": 2,
+            "13": 2,
+            "8": 2,
+            "9": 2,
+            "_": "class_map"
+          },
+          "sounds": {
+            "13": 0,
+            "9": 0,
+            "_": "class_map"
+          },
+          "startFrame": 8
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "stop": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 16,
+          "startFrame": 16
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 141,
+      "y": -147
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 3055355,
+            "x": 0
+          },
+          {
+            "color": 3454456,
+            "x": 0.500952381
+          },
+          {
+            "color": 6282229,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 13918277,
+            "x": 0
+          },
+          {
+            "color": 14899579,
+            "x": 0.500952381
+          },
+          {
+            "color": 13719484,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 10747768,
+            "x": 0
+          },
+          {
+            "color": 16775296,
+            "x": 0.4933333333
+          },
+          {
+            "color": 15925204,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "hop_height": 0,
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": [8, 9, 10, 11],
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "miss": {
+      "x": 108.5714285714,
+      "y": -169.1428571429
+    },
+    "partner": {
+      "angle": 9.7823925018,
+      "anim": "volley",
+      "x": 91.2,
+      "y": -96
+    },
+    "ready": {
+      "x": 83.4285714286,
+      "y": -269.7142857143
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 32496,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 8079486,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16775296,
+            "x": 0
+          },
+          {
+            "color": 10944495,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": -10,
+      "anim": "good",
+      "x": 33.1428571429,
+      "y": -116.5714285714
+    }
+  },
+  "_sprPlatypus2": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 152,
+      "y": -219
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 12211601,
+            "x": 0
+          },
+          {
+            "color": 12012648,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 65280,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": 108,
+      "y": -152
+    },
+    "partner": {
+      "angle": 330.4834594727,
+      "anim": "good",
+      "x": 186,
+      "y": -133
+    },
+    "ready": {
+      "x": 115,
+      "y": -247
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16739686,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 65280,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": 344.1789855957,
+      "anim": "ready",
+      "x": 139,
+      "y": -136
+    }
+  },
   "_sprPossum1": {
     "anim_data": {
       "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 15,
+          "startFrame": 15
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -2608,6 +5772,12 @@
             "transitions": [0]
           }
         ]
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
       },
       "move": {
         "_": "class_char_animationdata",
@@ -2779,6 +5949,7 @@
         ]
       }
     ],
+    "colors2": null,
     "evo1": {
       "anim": "good",
       "scale": 2,
@@ -2897,10 +6068,294 @@
       "y": -75.4285714286
     }
   },
+  "_sprPossum2": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "__anim_speed": 1.6666666667,
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 12,
+          "startFrame": 12
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 15,
+          "sounds": {
+            "14": 1,
+            "15": 0,
+            "_": "class_map"
+          },
+          "startFrame": 8
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 51,
+      "y": -269
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 7173296,
+            "x": 0
+          },
+          {
+            "color": 7636889,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 11783402,
+            "x": 0
+          },
+          {
+            "color": 10075341,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 7829185,
+            "x": 0
+          },
+          {
+            "color": 9930445,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 2328530,
+            "x": 0
+          },
+          {
+            "color": 6400987,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 12961191,
+            "x": 0
+          },
+          {
+            "color": 13817720,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "hop_height": 0,
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": [8, 12, 13, 14, 15],
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "miss": {
+      "x": 29,
+      "y": -53
+    },
+    "partner": {
+      "angle": 355.4860229492,
+      "anim": "spike",
+      "x": 80,
+      "y": -289
+    },
+    "ready": {
+      "x": 96,
+      "y": -276
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 5689852,
+            "x": 0
+          },
+          {
+            "color": 4758771,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 11650047,
+            "x": 0
+          },
+          {
+            "color": 12183039,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 11965940,
+            "x": 0
+          },
+          {
+            "color": 11839487,
+            "x": 0.5208333333
+          },
+          {
+            "color": 7895277,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 12376048,
+            "x": 0
+          },
+          {
+            "color": 8570623,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 9985779,
+            "x": 0
+          },
+          {
+            "color": 8410358,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": 17.9975852966,
+      "anim": "good",
+      "x": -18,
+      "y": -116
+    }
+  },
   "_sprRocklizard1": {
     "anim_data": {
       "_": "class_char_animation",
       "__anim_speed": 0.5,
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -2948,6 +6403,10 @@
               "23": 0.5,
               "_": "class_map"
             },
+            "sounds": {
+              "22": 0,
+              "_": "class_map"
+            },
             "startFrame": 17,
             "transitions": [0]
           },
@@ -2978,11 +6437,22 @@
         ],
         "speed": 0.8
       },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "move": {
         "_": "class_char_animationdata",
         "frames": {
           "_": "class_canim_frames",
           "endFrame": 15,
+          "sounds": {
+            "12": 0,
+            "8": 0,
+            "_": "class_map"
+          },
           "startFrame": 8
         },
         "speed": 2.5
@@ -3001,6 +6471,12 @@
           "_": "class_canim_frames",
           "endFrame": 7,
           "startFrame": 7
+        }
+      },
+      "stop": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "volley": {
@@ -3086,6 +6562,7 @@
         ]
       }
     ],
+    "colors2": null,
     "evo1": {
       "anim": "good",
       "scale": 2,
@@ -3181,6 +6658,14 @@
   "_sprServal": {
     "anim_data": {
       "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 36,
+          "startFrame": 36
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -3219,9 +6704,18 @@
             },
             "startFrame": 34,
             "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames"
           }
         ],
         "speed": 0.7
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
       },
       "move": {
         "_": "class_char_animationdata",
@@ -3331,6 +6825,7 @@
         ]
       }
     ],
+    "colors2": null,
     "evo1": {
       "anim": "good",
       "scale": 2,
@@ -3430,9 +6925,368 @@
       "y": -202.5
     }
   },
+  "_sprServal1": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 10,
+          "startFrame": 10
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": [
+          {
+            "_": "class_canim_frames",
+            "endFrame": 17,
+            "holds": {
+              "14": 3,
+              "15": 2,
+              "16": 3,
+              "17": 3,
+              "_": "class_map"
+            },
+            "startFrame": 14,
+            "transitions": [0, 0, 0, 1, 2, 2, 3, 3, 4]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 21,
+            "holds": {
+              "15": 2,
+              "16": 3,
+              "17": 3,
+              "18": 3,
+              "19": 2,
+              "20": 3,
+              "21": 3,
+              "_": "class_map"
+            },
+            "startFrame": 18,
+            "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 26,
+            "holds": {
+              "19": 2,
+              "20": 3,
+              "22": 2,
+              "24": 2,
+              "25": 3,
+              "26": 3,
+              "_": "class_map"
+            },
+            "startFrame": 22,
+            "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 34,
+            "holds": {
+              "27": 2,
+              "28": 2,
+              "29": 2,
+              "30": 2,
+              "33": 2,
+              "34": 3,
+              "_": "class_map"
+            },
+            "sounds": {
+              "29": 2,
+              "31": 3,
+              "32": 0,
+              "_": "class_map"
+            },
+            "startFrame": 27,
+            "transitions": [2]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 40,
+            "holds": {
+              "35": 2,
+              "36": 2,
+              "37": 2,
+              "38": 2,
+              "39": 2,
+              "40": 2,
+              "_": "class_map"
+            },
+            "sounds": {
+              "37": 1,
+              "40": 1,
+              "_": "class_map"
+            },
+            "startFrame": 35,
+            "transitions": [3, 4]
+          }
+        ]
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 13,
+          "holds": {
+            "10": 2,
+            "9": 2,
+            "_": "class_map"
+          },
+          "sounds": {
+            "11": 0,
+            "12": 0,
+            "8": 1,
+            "_": "class_map"
+          },
+          "startFrame": 8
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "stop": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 116,
+      "y": -462
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 4028927,
+            "x": 0
+          },
+          {
+            "color": 3651071,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 9796451,
+            "x": 0
+          },
+          {
+            "color": 9135731,
+            "x": 0.6133333333
+          },
+          {
+            "color": 10975106,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 15794036,
+            "x": 0
+          },
+          {
+            "color": 16756057,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 7540223,
+            "x": 0
+          },
+          {
+            "color": 3421439,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 12772095,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "hop_height": 0,
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": [],
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "miss": {
+      "x": 38,
+      "y": -75
+    },
+    "partner": {
+      "angle": 334.7222900391,
+      "anim": "volley",
+      "x": 314,
+      "y": -333
+    },
+    "ready": {
+      "x": 198,
+      "y": -291
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 10132223,
+            "x": 0
+          },
+          {
+            "color": 7829503,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 7263487,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14539584,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16747983,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 15138763,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": -10,
+      "anim": "ready",
+      "x": 67,
+      "y": -71
+    }
+  },
   "_sprShroom1": {
     "anim_data": {
       "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 10,
+          "startFrame": 10
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -3471,6 +7325,14 @@
           "startFrame": 16
         },
         "speed": 0.5
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 30,
+          "startFrame": 30
+        }
       },
       "move": {
         "_": "class_char_animationdata",
@@ -3595,6 +7457,7 @@
         ]
       }
     ],
+    "colors2": null,
     "evo1": {
       "anim": "good",
       "scale": 2,
@@ -3648,6 +7511,10 @@
           },
           {
             "color": 15528703,
+            "x": 0.8066666667
+          },
+          {
+            "color": 9021382,
             "x": 1
           }
         ]
@@ -3717,6 +7584,1039 @@
       "anim": "ready",
       "x": 85,
       "y": -112
+    }
+  },
+  "_sprSpirit1": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 101,
+      "y": -251
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 15162428,
+            "x": 0
+          },
+          {
+            "color": 15168315,
+            "x": 0.4733333333
+          },
+          {
+            "color": 13807664,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 5101055,
+            "x": 0
+          },
+          {
+            "color": 5094399,
+            "x": 0.4866666667
+          },
+          {
+            "color": 4763903,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14816,
+            "x": 0.0033333333
+          },
+          {
+            "color": 22783,
+            "x": 0.5
+          },
+          {
+            "color": 28671,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16763746,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16771477,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16777215,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "float_dist": 30,
+      "float_wave": 4,
+      "float_wave_freq": 600,
+      "hop_height": 0,
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": 18,
+      "y": -11
+    },
+    "partner": {
+      "angle": 308.0080871582,
+      "anim": "good",
+      "x": 190,
+      "y": -75
+    },
+    "ready": {
+      "x": 155,
+      "y": -241
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16758108,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16762738,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 8611327,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": -10,
+      "anim": "ready",
+      "x": 32,
+      "y": -76
+    }
+  },
+  "_sprSwift": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "stop": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 155,
+      "y": -338
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 13594187,
+            "x": 0
+          },
+          {
+            "color": 9920303,
+            "x": 0.4933333333
+          },
+          {
+            "color": 10717764,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 10332907,
+            "x": 0
+          },
+          {
+            "color": 9821951,
+            "x": 0.4966666667
+          },
+          {
+            "color": 8831231,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 5878015,
+            "x": 0
+          },
+          {
+            "color": 5865983,
+            "x": 0.5
+          },
+          {
+            "color": 7377151,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 2812671,
+            "x": 0
+          },
+          {
+            "color": 51199,
+            "x": 0.5
+          },
+          {
+            "color": 7326463,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 15633176,
+            "x": 0
+          },
+          {
+            "color": 16770048,
+            "x": 0.5
+          },
+          {
+            "color": 13165609,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "float_dist": 45,
+      "float_wave": 3,
+      "float_wave_freq": 400,
+      "hop_height": 0,
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": 34,
+      "y": -151
+    },
+    "partner": {
+      "angle": 326.3099365234,
+      "anim": "good",
+      "x": 207,
+      "y": -214
+    },
+    "ready": {
+      "x": 161,
+      "y": -394
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 8276254,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 12099914,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 4796941,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 5329382,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 1710670,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": 346.5347900391,
+      "anim": "ready",
+      "x": 47,
+      "y": -158
+    }
+  },
+  "_sprTricky1": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 32,
+      "y": -209
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 13667713,
+            "x": 0
+          },
+          {
+            "color": 9798056,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 10769542,
+            "x": 0
+          },
+          {
+            "color": 10506584,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14260598,
+            "x": 0
+          },
+          {
+            "color": 16749508,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16777215,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": 45,
+      "y": -111
+    },
+    "partner": {
+      "angle": 318.160369873,
+      "anim": "good",
+      "x": 131,
+      "y": -77
+    },
+    "ready": {
+      "x": 98,
+      "y": -165
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 7368937,
+            "x": 0
+          },
+          {
+            "color": 8104179,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 8634280,
+            "x": 0
+          },
+          {
+            "color": 6799292,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16777215,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16777215,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": -10,
+      "anim": "ready",
+      "x": 48,
+      "y": -98
+    }
+  },
+  "_sprYeti": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 427,
+      "y": -360
+    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 5722415,
+            "x": 0
+          },
+          {
+            "color": 6777148,
+            "x": 0.4966666667
+          },
+          {
+            "color": 5922373,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 13032627,
+            "x": 0
+          },
+          {
+            "color": 16774624,
+            "x": 0.4766666667
+          },
+          {
+            "color": 15850683,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 8096609,
+            "x": 0
+          },
+          {
+            "color": 7113569,
+            "x": 0.5
+          },
+          {
+            "color": 6392691,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 5395091,
+            "x": 0
+          },
+          {
+            "color": 4145004,
+            "x": 0.5
+          },
+          {
+            "color": 6244738,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14745559,
+            "x": 0
+          },
+          {
+            "color": 16252887,
+            "x": 0.5
+          },
+          {
+            "color": 16772055,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 9810943,
+            "x": 0
+          },
+          {
+            "color": 9934822,
+            "x": 0.5
+          },
+          {
+            "color": 13547263,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "hop_height": 30,
+      "hop_length": 2.2,
+      "hop_shake": 0.2,
+      "move_pause_frames": [],
+      "move_speed": 1.2,
+      "move_speed_start": -0.5,
+      "move_to_idle_transition_frames": [],
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "miss": {
+      "x": 266,
+      "y": -246
+    },
+    "partner": {
+      "angle": 11.1648797989,
+      "anim": "spike",
+      "x": 368,
+      "y": -623
+    },
+    "ready": {
+      "x": 449,
+      "y": -544
+    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 9985616,
+            "x": 0
+          },
+          {
+            "color": 12736601,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16249785,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14679960,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 7429964,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 15466455,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 15629804,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": 350.2104797363,
+      "anim": "ready",
+      "x": 127,
+      "y": -300
     }
   }
 }

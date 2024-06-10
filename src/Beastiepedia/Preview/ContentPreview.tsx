@@ -92,7 +92,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       setFrame(
         frameNumRef.current != null
           ? Math.min(
-              SPRITE_INFO[props.beastiedata.spr].frames,
+              SPRITE_INFO[props.beastiedata.spr].frames - 1,
               Math.max(0, frameNumRef.current + diff),
             )
           : 0,
@@ -405,6 +405,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
     "bad",
     "fall",
     "stop",
+    "menu",
   ];
 
   // Remove animations not in beastie

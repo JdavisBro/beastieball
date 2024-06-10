@@ -1,3 +1,4 @@
+import { Fragment } from "react/jsx-runtime";
 import { bgrDecimalToHex } from "../utils/color";
 import styles from "./Shared.module.css";
 
@@ -154,12 +155,12 @@ class TagBuilder {
       >
         {text.split("\n").map((value, index) =>
           index == 0 ? (
-            <>{value}</>
+            <Fragment key={index}>{value}</Fragment>
           ) : (
-            <>
+            <Fragment key={index}>
               <br />
               {value}
-            </>
+            </Fragment>
           ),
         )}
       </span>,
@@ -170,9 +171,6 @@ class TagBuilder {
 export function tagEscape(
   text: string | Array<string | number | undefined | null>,
 ) {
-  console.log(
-    (Array.isArray(text) ? text.join("") : text).replace(/(\[{1,2})/g, "$1$1"),
-  );
   return (Array.isArray(text) ? text.join("") : text).replace(
     /(\[{1,2})/g,
     "$1$1",

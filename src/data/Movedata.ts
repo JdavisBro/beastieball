@@ -65,7 +65,7 @@ MOVE_DATA.set("???", {
   })
   .set("storedpower", {
     name: "Energized",
-    desc: "POW +10 for each [sprBoost,0]BOOST on the user.",
+    desc: "ATTACK. POW +10 for each [sprBoost,0]BOOST on the user.",
     type: Type.Body,
     power: 15,
   })
@@ -77,7 +77,7 @@ MOVE_DATA.set("???", {
   })
   .set("bounce", {
     name: "Bump",
-    desc: "Can hit without volleying.",
+    desc: "ATTACK. Can hit without volleying.",
     type: Type.Body,
     power: 35,
   })
@@ -89,7 +89,7 @@ MOVE_DATA.set("???", {
   })
   .set("rocksmash", {
     name: "Breaker",
-    desc: "[sprIcon,0]DEF[sprBoost,3] to target.",
+    desc: "ATTACK. [sprIcon,0]DEF[sprBoost,3] to target.",
     type: Type.Body,
     power: 50,
   })
@@ -101,13 +101,13 @@ MOVE_DATA.set("???", {
   })
   .set("healhit", {
     name: "Relaxed Hit",
-    desc: "HEALs self +20.",
+    desc: "ATTACK. HEALs self +20.",
     type: Type.Body,
     power: 50,
   })
   .set("tagattack", {
     name: "Momentum",
-    desc: "POW x2 if user just TAGGED IN.",
+    desc: "ATTACK. POW x2 if user just TAGGED IN.",
     type: Type.Body,
     power: 50,
   })
@@ -119,19 +119,19 @@ MOVE_DATA.set("???", {
   })
   .set("breakswipe", {
     name: "Kneebender",
-    desc: "[sprIcon,0]POW[sprBoost,3] to target.",
+    desc: "ATTACK. [sprIcon,0]POW[sprBoost,3] to target.",
     type: Type.Body,
     power: 60,
   })
   .set("serve", {
     name: "Muscle Memory",
-    desc: "POW x1.5 if used to serve.",
+    desc: "ATTACK. POW x1.5 if used to serve.",
     type: Type.Body,
     power: 70,
   })
   .set("healhit2", {
     name: "Power Sap",
-    desc: "HEALs self +10.",
+    desc: "ATTACK. HEALs self +10.",
     type: Type.Body,
     power: 75,
   })
@@ -179,7 +179,7 @@ MOVE_DATA.set("???", {
   })
   .set("rushattack", {
     name: "Launch",
-    desc: "Only used from back row. SHIFTs self to front row after hitting.",
+    desc: "Only used from back row. SHIFTs self to front row.",
     type: Type.Body,
     power: 100,
   })
@@ -193,7 +193,7 @@ MOVE_DATA.set("???", {
     name: "Overpower",
     desc: "[sprIcon,0]POW[sprBoost,3] to self. [sprIcon,0]DEF[sprBoost,3] to self.",
     type: Type.Body,
-    power: 120,
+    power: 110,
   })
   .set("vigor", {
     name: "Vigor Beam",
@@ -211,7 +211,7 @@ MOVE_DATA.set("???", {
     name: "Ultimate Attack",
     desc: "Requires 3 ACTIONS.",
     type: Type.Body,
-    power: 160,
+    power: 200,
   })
   .set("steamattack", {
     name: "Steamer",
@@ -239,7 +239,7 @@ MOVE_DATA.set("???", {
   })
   .set("bomb", {
     name: "Bang",
-    desc: "Additional 50% damage to target ally.",
+    desc: "ATTACK. Additional 50% damage to target ally.",
     type: Type.Spirit,
     power: 55,
   })
@@ -251,7 +251,7 @@ MOVE_DATA.set("???", {
   })
   .set("scoreboosted", {
     name: "Comeback",
-    desc: "POW x1.5 if tied or behind on score.",
+    desc: "ATTACK. POW x1.5 if tied or behind on score.",
     type: Type.Spirit,
     power: 60,
   })
@@ -263,7 +263,7 @@ MOVE_DATA.set("???", {
   })
   .set("shieldbreaker", {
     name: "Raw Fury",
-    desc: "Ignores target shields and [sprBoost,2][sprBoost,5]BOOSTS.",
+    desc: "ATTACK. Ignores target shields and [sprBoost,2][sprBoost,5]BOOSTS.",
     type: Type.Spirit,
     power: 65,
   })
@@ -281,7 +281,7 @@ MOVE_DATA.set("???", {
   })
   .set("facade", {
     name: "Grit",
-    desc: "POW x2 if user has a bad FEELING.",
+    desc: "ATTACK. POW x2 when [sprStatus,6]SWEATY, [sprStatus,0]NERVOUS, [sprStatus,11]TENDER or [sprStatus,12]STRESSED.",
     type: Type.Spirit,
     power: 70,
   })
@@ -353,9 +353,9 @@ MOVE_DATA.set("???", {
   })
   .set("poisonhit", {
     name: "Cornershot",
-    desc: "Auto-targets back row. Always does 30 damage.",
+    desc: "Auto-targets back row. Target Feels +1 [sprStatus,6]SWEATY (losing stamina).",
     type: Type.Mind,
-    power: 30,
+    power: 25,
   })
   .set("stun", {
     name: "Freezer",
@@ -365,13 +365,13 @@ MOVE_DATA.set("???", {
   })
   .set("shakenmind", {
     name: "Twisted",
-    desc: "Target feels 1 [sprStatus,2]SHOOK (can't attack).",
+    desc: "ATTACK. Target feels 1 [sprStatus,2]SHOOK (can't attack).",
     type: Type.Mind,
     power: 40,
   })
   .set("markattack", {
     name: "Tracker",
-    desc: "Target feels 1 [sprStatus,9]BLOCKED (POW x0.5).",
+    desc: "ATTACK. Target feels 1 [sprStatus,9]BLOCKED (POW x2/3).",
     type: Type.Mind,
     power: 45,
   })
@@ -389,13 +389,13 @@ MOVE_DATA.set("???", {
   })
   .set("passattack", {
     name: "Zigzag",
-    desc: "POW +50% for each time the ball was passed.",
+    desc: "POW +50% for each volley.",
     type: Type.Mind,
     power: 50,
   })
   .set("dropshot", {
     name: "Lure Shot",
-    desc: "SHIFTs target to front row after hitting.",
+    desc: "ATTACK. SHIFTs target to front row after hitting.",
     type: Type.Mind,
     power: 55,
   })
@@ -419,13 +419,13 @@ MOVE_DATA.set("???", {
   })
   .set("heartd", {
     name: "Cold Calculation",
-    desc: "[sprIcon,1]DEF[sprBoost,0] to self.",
+    desc: "ATTACK. [sprIcon,1]DEF[sprBoost,0] to self.",
     type: Type.Mind,
     power: 60,
   })
   .set("hazeball", {
     name: "Numbshot",
-    desc: "Clears BOOSTS from target.",
+    desc: "ATTACK. Clears BOOSTS from target.",
     type: Type.Mind,
     power: 65,
   })
@@ -437,19 +437,19 @@ MOVE_DATA.set("???", {
   })
   .set("netattack", {
     name: "Sneak Attack",
-    desc: "SHIFTs self to front row after hitting.",
+    desc: "ATTACK. SHIFTs self to front row after hitting.",
     type: Type.Mind,
     power: 70,
   })
   .set("spitball", {
     name: "Spitball",
-    desc: "Target feels 1 [sprStatus,1]ANGRY (can't use support).",
+    desc: "Target feels 1 [sprStatus,1]ANGRY (only attacks).",
     type: Type.Mind,
     power: 75,
   })
   .set("heartdown", {
     name: "Heartbreaker",
-    desc: "[sprIcon,1]POW[sprBoost,3]",
+    desc: "ATTACK. [sprIcon,1]POW[sprBoost,3] to target.",
     type: Type.Mind,
     power: 75,
   })
@@ -461,7 +461,7 @@ MOVE_DATA.set("???", {
   })
   .set("dump", {
     name: "Dump",
-    desc: "Only used from net. Auto-targets front row.",
+    desc: "Used from net. Targets front row.",
     type: Type.Mind,
     power: 85,
   })
@@ -509,73 +509,73 @@ MOVE_DATA.set("???", {
   })
   .set("rush", {
     name: "Net Rush",
-    desc: "VOLLEY ball. SHIFTs self to front row.",
+    desc: "VOLLEY. SHIFTs self to front row.",
     type: Type.Pass,
     power: null,
   })
   .set("cover", {
     name: "Cover",
-    desc: "VOLLEY ball. SHIFTs self to back row.",
+    desc: "VOLLEY. SHIFTs self to back row.",
     type: Type.Pass,
     power: null,
   })
   .set("set", {
     name: "Set",
-    desc: "VOLLEY ball. Ally feels 1 [sprStatus,8]JAZZED (POW x1.5).",
+    desc: "VOLLEY. Ally feels 1 [sprStatus,8]JAZZED (POW x1.5).",
     type: Type.Pass,
     power: null,
   })
   .set("dig", {
     name: "Dig",
-    desc: "VOLLEY ball. Feel 1 [sprStatus,8]JAZZED (POW x1.5).",
+    desc: "VOLLEY. Feel 1 [sprStatus,8]JAZZED (POW x1.5).",
     type: Type.Pass,
     power: null,
   })
   .set("refresh", {
     name: "Refresh",
-    desc: "VOLLEY ball. HEALs ally +20.",
+    desc: "VOLLEY. HEALs ally +15.",
     type: Type.Pass,
     power: null,
   })
   .set("freeball", {
     name: "Updraft",
-    desc: "VOLLEY ball. +1 ACTIONs. -50 STMINA.",
+    desc: "VOLLEY. +1 ACTIONs. -34 STMINA.",
     type: Type.Pass,
     power: null,
   })
   .set("quickattack", {
     name: "Quick",
-    desc: "VOLLEY ball. [sprIcon,0]POW[sprBoost,0] to ally.",
+    desc: "VOLLEY. [sprIcon,0]POW[sprBoost,0] to ally.",
     type: Type.Pass,
     power: null,
   })
   .set("superquick", {
     name: "Super Quick",
-    desc: "Only used from net. VOLLEY ball. [sprIcon,0]POW[sprBoost,1] to ally.",
+    desc: "Only used from net. VOLLEY. [sprIcon,0]POW[sprBoost,1] to ally.",
     type: Type.Pass,
     power: null,
   })
   .set("heartpass", {
     name: "Faith",
-    desc: "VOLLEY ball. [sprIcon,1]POW[sprBoost,0] to ally.",
+    desc: "VOLLEY. [sprIcon,1]POW[sprBoost,0] to ally.",
     type: Type.Pass,
     power: null,
   })
   .set("mindpass", {
     name: "Tactical Pass",
-    desc: "VOLLEY ball. [sprIcon,2]POW[sprBoost,0] to ally.",
+    desc: "VOLLEY. [sprIcon,2]POW[sprBoost,0] to ally.",
     type: Type.Pass,
     power: null,
   })
   .set("allyrush", {
     name: "Forward Pass",
-    desc: "VOLLEY ball. SHIFTs ally to front row.",
+    desc: "VOLLEY. SHIFTs ally to front row.",
     type: Type.Pass,
     power: null,
   })
   .set("allycover", {
     name: "Pipe",
-    desc: "VOLLEY ball. SHIFTs ally to back row.",
+    desc: "VOLLEY. SHIFTs ally to back row.",
     type: Type.Pass,
     power: null,
   })
@@ -587,19 +587,19 @@ MOVE_DATA.set("???", {
   })
   .set("jazzpass", {
     name: "Perfect Pass",
-    desc: "Only used from net VOLLEY ball. SHIFTs ally to front row. Ally feels 1 [sprStatus,8]JAZZED (POW x1.5).",
+    desc: "Only used from net VOLLEY. SHIFTs ally to front row. Ally feels 1 [sprStatus,8]JAZZED (POW x1.5).",
     type: Type.Pass,
     power: null,
   })
   .set("myheartpass", {
     name: "Excited Pass",
-    desc: "VOLLEY ball. [sprIcon,1]POW[sprBoost,0] to self.",
+    desc: "VOLLEY. [sprIcon,1]POW[sprBoost,0] to self.",
     type: Type.Pass,
     power: null,
   })
   .set("stresspass", {
     name: "Demanding Set",
-    desc: "VOLLEY ball. [sprIcon,0][sprIcon,1][sprIcon,2]POW[sprBoost,1] to ally. Ally feels 1 [sprStatus,12]STRESSED (becomes [sprStatus,10]TIRED).",
+    desc: "VOLLEY. [sprIcon,0][sprIcon,1][sprIcon,2]POW[sprBoost,1] to ally. Ally feels 1 [sprStatus,12]STRESSED (becomes [sprStatus,10]TIRED).",
     type: Type.Pass,
     power: null,
   })
@@ -629,13 +629,13 @@ MOVE_DATA.set("???", {
   })
   .set("callout", {
     name: "Call Out",
-    desc: "[sprIcon,0][sprIcon,1][sprIcon,2]DEF[sprBoost,1] to ally.",
+    desc: "[sprIcon,0][sprIcon,1][sprIcon,2]DEF[sprBoost,0] to ally.",
     type: Type.Support,
     power: null,
   })
   .set("recover", {
     name: "Deep Breath",
-    desc: "HEALs self +50.",
+    desc: "HEALs self +30.",
     type: Type.Support,
     power: null,
   })
@@ -653,7 +653,7 @@ MOVE_DATA.set("???", {
   })
   .set("rest", {
     name: "Doze",
-    desc: "HEALS self +100. Feel 3 [sprStatus,10]TIRED (only basic actions).",
+    desc: "Fully restores stamina and FEELINGS. Feel 4 [sprStatus,10]TIRED (only basic actions).",
     type: Type.Support,
     power: null,
   })
@@ -665,7 +665,7 @@ MOVE_DATA.set("???", {
   })
   .set("taunt", {
     name: "Provoke",
-    desc: "Target feels 2 [sprStatus,1]ANGRY (can't use support).",
+    desc: "Target feels 2 [sprStatus,1]ANGRY (only attacks).",
     type: Type.Support,
     power: null,
   })
@@ -701,7 +701,7 @@ MOVE_DATA.set("???", {
   })
   .set("followme", {
     name: "Whistle",
-    desc: "Feel 1 [sprStatus,3]NOISY (draws attacks).",
+    desc: "Feel 1 [sprStatus,3]NOISY (attracts attacks).",
     type: Type.Support,
     power: null,
   })
@@ -731,7 +731,7 @@ MOVE_DATA.set("???", {
   })
   .set("bellydrum", {
     name: "Blaze",
-    desc: "[sprIcon,1]POW[sprBoost,2][sprBoost,2] to self. -50 STAMINA.",
+    desc: "[sprIcon,1]POW[sprBoost,2] to self. -34 STAMINA.",
     type: Type.Support,
     power: null,
   })
@@ -743,7 +743,7 @@ MOVE_DATA.set("???", {
   })
   .set("lockon", {
     name: "Lock Target",
-    desc: "Target feels 1 [sprStatus,3]NOISY (draws attacks).",
+    desc: "Target feels 1 [sprStatus,3]NOISY (attracts attacks).",
     type: Type.Support,
     power: null,
   })
@@ -761,7 +761,7 @@ MOVE_DATA.set("???", {
   })
   .set("mark", {
     name: "Mark",
-    desc: "Target feels 1 [sprStatus,9]BLOCKED (POW x0.5).",
+    desc: "Target feels 1 [sprStatus,9]BLOCKED (POW x2/3).",
     type: Type.Support,
     power: null,
   })
@@ -803,7 +803,7 @@ MOVE_DATA.set("???", {
   })
   .set("fieldclear", {
     name: "Clear Field",
-    desc: "Clears all FIELD EFFECTS.",
+    desc: "Clears all FIELD EFFECTS. HEALs enture team +5.",
     type: Type.Support,
     power: null,
   })
@@ -815,7 +815,7 @@ MOVE_DATA.set("???", {
   })
   .set("trap", {
     name: "Lay Trap",
-    desc: "Opponent field gets +1 TRAP (Tag-ins lose 10 stamina).",
+    desc: "Opponent field gets +2 TRAP (Tag-ins lose 8 stamina per trap).",
     type: Type.Support,
     power: null,
   })
@@ -833,19 +833,19 @@ MOVE_DATA.set("???", {
   })
   .set("defheal", {
     name: "Quick Breath",
-    desc: "HEALs self +33.",
+    desc: "HEALs self +30.",
     type: Type.Defence,
     power: null,
   })
   .set("protect", {
     name: "Shield",
-    desc: "Feel 1 [sprStatus,4]TOUGH (shielded) + 2 [sprStatus,1]ANGRY (can't use support).",
+    desc: "Feel 1 [sprStatus,4]TOUGH (shielded) + 2 [sprStatus,1]ANGRY (only attacks).",
     type: Type.Defence,
     power: null,
   })
   .set("allyprotect", {
     name: "Tough Talk",
-    desc: "Ally feels 1 [sprStatus,4]TOUGH (shielded). Active team feels 2 [sprStatus,1]ANGRY (can't use support).",
+    desc: "Ally feels 1 [sprStatus,4]TOUGH (shielded). Active team feels 2 [sprStatus,1]ANGRY (only attacks).",
     type: Type.Defence,
     power: null,
   })
@@ -887,7 +887,7 @@ MOVE_DATA.set("???", {
   })
   .set("lifepass", {
     name: "Torch Pass",
-    desc: "-100 STAMINA. TAG OUT. Restores benched ally's stamina and [sprStatus,5]WIPED.",
+    desc: "-100 STAMINA. Restores benched ally's stamina and FEELINGS. TAG OUT.",
     type: Type.Defence,
     power: null,
   })
@@ -941,19 +941,19 @@ MOVE_DATA.set("???", {
   })
   .set("noisytag", {
     name: "Dramatic Exit",
-    desc: "TAG OUT. Benched ally feels 1 [sprStatus,3]NOISY (draws attacks) + 2 [sprStatus,1]ANGRY (can't use support).",
+    desc: "TAG OUT. Benched ally feels 1 [sprStatus,3]NOISY (attracts attacks) + 2 [sprStatus,1]ANGRY (only attacks).",
     type: Type.Defence,
     power: null,
   })
   .set("distraction", {
     name: "Distraction",
-    desc: "Only used from net. Feel 1 [sprStatus,3]NOISY (draws attacks).",
+    desc: "Only used from net. Feel 1 [sprStatus,3]NOISY (attracts attacks).",
     type: Type.Defence,
     power: null,
   })
   .set("chill", {
     name: "Chill Out",
-    desc: "[sprIcon,1]POW[sprBoost,3] to target.",
+    desc: "[sprIcon,1]POW[sprBoost,4] to target.",
     type: Type.Support,
     power: null,
   })
@@ -986,6 +986,42 @@ MOVE_DATA.set("???", {
     desc: "ATTACK. Can use even when [sprStatus,10]TIRED.",
     type: Type.Spirit,
     power: 50,
+  })
+  .set("eerie", {
+    name: "Dreadful Mist",
+    desc: "SHIFTs self to front row. Entire field gets 6 DREAD (No good feelings).",
+    type: Type.Support,
+    power: null,
+  })
+  .set("steal", {
+    name: "Steal",
+    desc: "Ball goes to self. SHIFTs self to front row.",
+    type: Type.Support,
+    power: null,
+  })
+  .set("snipe", {
+    name: "Snipe",
+    desc: "ATTACK. Damages based on the target's weakest DEF.",
+    type: Type.Mind,
+    power: 60,
+  })
+  .set("enemylowered", {
+    name: "Pierce",
+    desc: "ATTACK. POW +25% for each [sprBoost,4]BOOST on target.",
+    type: Type.Mind,
+    power: 50,
+  })
+  .set("contest", {
+    name: "Contest",
+    desc: "ATTACK. Damages based on target's strongest DEF.",
+    type: Type.Spirit,
+    power: 110,
+  })
+  .set("stomp", {
+    name: "Stomp",
+    desc: "Feel 1 [sprStatus,1]ANGRY (only attacks). If ally field has RHYTHM: [sprIcon,0]POW[sprBoost,0] to self.",
+    type: Type.Body,
+    power: 85,
   });
 
 export default MOVE_DATA;

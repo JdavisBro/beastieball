@@ -46,8 +46,8 @@ foreach (UndertaleSprite sprite in Data.Sprites) {
       firstdone = true;
       bboxX = entry.Texture.TargetX;
       bboxY = entry.Texture.TargetY;
-      bboxEX = entry.Texture.TargetWidth;
-      bboxEY = entry.Texture.TargetHeight;
+      bboxEX = entry.Texture.TargetX + entry.Texture.TargetWidth;
+      bboxEY = entry.Texture.TargetX + entry.Texture.TargetHeight;
     } else {
       if (entry.Texture.TargetX < bboxX)
         bboxX = entry.Texture.TargetX;

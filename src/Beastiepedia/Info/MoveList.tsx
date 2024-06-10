@@ -53,41 +53,58 @@ type Props = {
 export default function MoveList(props: Props): React.ReactElement {
   const learnset = LEARN_SETS[props.learnset];
 
-  const [selected, setSelected] = useState(learnset[0][0]);
+  const [selected, setSelected] = useState(
+    learnset ? learnset[0][0] : props.movelist[0],
+  );
   if (!props.movelist.includes(selected)) {
-    setSelected(learnset[0][0]);
+    setSelected(learnset ? learnset[0][0] : props.movelist[0]);
   }
 
   const moveselected = MOVE_DATA.get(selected);
   if (moveselected === undefined) {
-    throw Error(`Move not found: "${selected}"`);
+    console.log(`Move not found: "${selected}"`);
   }
 
   const learnmoves: Array<React.ReactElement> = [];
   const friendmoves: Array<React.ReactElement> = [];
-  for (let move in learnset) {
-    const level = learnset[move][1];
-    move = learnset[move][0];
-    if (!MOVE_DATA.has(move)) {
-      throw Error(`Move not found: "${move}"`);
+  if (learnset) {
+    for (let move in learnset) {
+      const level = learnset[move][1];
+      move = learnset[move][0];
+      if (!MOVE_DATA.has(move)) {
+        console.log(`Move not found: "${move}"`);
+        continue;
+      }
+      learnmoves.push(
+        <MoveText
+          level={level}
+          move={MOVE_DATA.get(move)}
+          selected={selected == move}
+          onSelect={() => setSelected(move)}
+          key={move}
+        />,
+      );
     }
-    learnmoves.push(
-      <MoveText
-        level={level}
-        move={MOVE_DATA.get(move)}
-        selected={selected == move}
-        onSelect={() => setSelected(move)}
-        key={move}
-      />,
+  } else {
+    props.movelist.forEach((move) =>
+      friendmoves.push(
+        <MoveText
+          move={MOVE_DATA.get(move)}
+          selected={selected == move}
+          onSelect={() => setSelected(move)}
+          key={move}
+        />,
+      ),
     );
   }
 
   for (const move of props.movelist.values()) {
     if (!MOVE_DATA.has(move)) {
-      throw Error(`Move not found: "${move}"`);
+      console.log(`Move not found: "${move}"`);
+      continue;
     }
 
-    if (!learnset.some((m) => m[0] == move)) {
+    if (learnset && !learnset.some((m) => m[0] == move)) {
       friendmoves.push(
         <MoveText
           move={MOVE_DATA.get(move)}
@@ -112,7 +129,7 @@ export default function MoveList(props: Props): React.ReactElement {
         </div>
       </div>
       <div className={styles.viewcontainer}>
-        <MoveView move={moveselected} />
+        {moveselected ? <MoveView move={moveselected} /> : null}
       </div>
     </div>
   );

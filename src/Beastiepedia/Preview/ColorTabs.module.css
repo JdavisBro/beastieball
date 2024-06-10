@@ -32,7 +32,7 @@
   background-color: #ffaa55a8 !important;
 }
 
-.tab {
+.tabcontainer {
   composes: animBoxBackground from global;
   position: relative;
   top: -12px;
@@ -41,7 +41,7 @@
   padding: 16px 0 1px 0;
 }
 
-.tab > button {
+.tab > * {
   margin-left: 4%;
   margin-bottom: 6px;
 }

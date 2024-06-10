@@ -2,7 +2,7 @@ export type BeastieType = {
   ability: Array<string>;
   ability_hidden: boolean;
   allowedInPromo: boolean;
-  animator: number;
+  animator: number | number[];
   attklist: Array<string>;
   attklist_randomize: number;
   ba: number;
@@ -34,8 +34,14 @@ export type BeastieType = {
   base_exp: number;
   body_color_index: number;
   face_color_index: number;
-  colormeta: null;
+  colormeta: null | number[];
   colors: Array<{
+    array: Array<{
+      color: number;
+      x: number;
+    }>;
+  }>;
+  colors2: null | Array<{
     array: Array<{
       color: number;
       x: number;
@@ -57,17 +63,26 @@ export type BeastieType = {
     x: number;
     y: number;
   }>;
-  evolution: null | string;
+  evolution:
+    | null
+    | {
+        condition: number[];
+        specie: string;
+        value: number[];
+      }[];
   // i assume it'll be the evo's id in the future but for now they're all null
+  family: string;
   first_frame: number;
   foot_size: number;
   foot_type: number;
   growth: number;
   hidden: boolean;
+  hidden_counter: null;
   id: string;
   isBaby: boolean;
   learnset: number;
   learnset_randomize: number;
+  linked_colors: object;
   loco: {
     anim_min_speed: number;
     char_width: number;
@@ -82,7 +97,6 @@ export type BeastieType = {
     hop_wobble: number;
     move_accel: number;
     move_decel: number;
-    move_min_dist: number;
     move_pause_frames: Array<number>;
     move_speed: number;
     move_speed_start: number;
@@ -94,6 +108,7 @@ export type BeastieType = {
   };
   name: string;
   number: number;
+  palettes: number;
   // moved
   // partner_impact: {
   //   angle: number;
@@ -105,15 +120,15 @@ export type BeastieType = {
   recruit: {
     conditions: Array<
       Partial<{
-        effect_pow: string;
-        effect_type: number;
+        effect_pow?: string;
+        effect_type?: number | number[];
         event: null;
         freq: number;
-        func: null;
+        func?: null;
         my_data: null;
-        player: number;
+        player?: number;
         rel_color: number;
-        damage: string;
+        damage?: string;
         target: number | Array<number>;
         type: number;
       }>
@@ -129,12 +144,14 @@ export type BeastieType = {
     checking_player_distance: boolean;
     colliding: boolean;
     default_locomote: boolean;
+    default_physics: boolean;
     flying: boolean;
     interact_force: boolean;
     render_go_direction: boolean;
     render_guard_radius: boolean;
     seeking_interact: boolean;
   };
+  rougelvl?: -1;
   scale: Array<number>;
   // moved
   // splash_pos: {
@@ -144,6 +161,7 @@ export type BeastieType = {
   //   y: number;
   // };
   spr: number;
+  spr_alt: number[];
   tamecond: null;
   tamelvl: number;
   tyield: Array<string | number>;

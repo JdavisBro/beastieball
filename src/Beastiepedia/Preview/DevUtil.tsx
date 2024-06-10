@@ -129,10 +129,17 @@ export default function DevUtil(props: {
       if (anim_data === undefined) {
         return;
       }
-      const anim = anim_data.idle;
+      const anim = anim_data.menu ?? anim_data.idle;
       const frames = Array.isArray(anim.frames) ? anim.frames[0] : anim.frames;
       const frame = frames.endFrame != undefined ? frames.endFrame : 0;
       img.addEventListener("load", imgLoad);
+      img.addEventListener("error", () => {
+        console.log(`${sprite.name} not found`);
+        loadedNumRef.current += 1;
+        if (loadedNumRef.current >= beastieCountRef.current) {
+          allDone();
+        }
+      });
       img.src = `/gameassets/beasties/${sprite.name}/${frame % sprite.frames}.png`;
       loadingRef.current[beastie.name] = {
         img: img,
@@ -142,5 +149,6 @@ export default function DevUtil(props: {
       beastieCountRef.current += 1;
     });
   };
+
   return null;
 }

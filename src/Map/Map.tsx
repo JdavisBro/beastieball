@@ -5,15 +5,19 @@ import {
   LayerGroup,
   LayersControl,
   MapContainer,
+  Marker,
+  Popup,
   useMapEvents,
 } from "react-leaflet";
 import { useMemo, useState } from "react";
 
-import WORLD_DATA from "../data/WorldData";
+import WORLD_DATA, { SPAWNER_LEVELS } from "../data/WorldData";
 import styles from "./Map.module.css";
 import OpenGraph from "../shared/OpenGraph";
 import { createMarkers } from "./createMarkers";
 import Header from "../shared/Header";
+import SPAWN_DATA from "../data/SpawnData";
+import BEASTIE_DATA from "../data/Beastiedata";
 
 function MapEvents(props: {
   setCurrentMapLayer: React.Dispatch<React.SetStateAction<number>>;
@@ -35,6 +39,8 @@ export default function Map(): React.ReactNode {
   const bounds = new L.LatLngBounds([83000, -160000], [-42333, 14762]);
   const map_bg_bounds = new L.LatLngBounds([83000, -160000], [-42333, 14762]);
   const level_overlays: { [key: number]: React.ReactElement[] } = {};
+
+  const beastieSpawnsOverlays: { [key: number]: React.ReactElement[] } = {};
 
   WORLD_DATA.level_stumps_array.forEach((level) => {
     const level_bounds = new L.LatLngBounds(
@@ -58,6 +64,68 @@ export default function Map(): React.ReactNode {
         key={level.name}
       />,
     );
+
+    if (!SPAWNER_LEVELS.includes(level.name)) {
+      return;
+    }
+    let spawns = beastieSpawnsOverlays[layer];
+    if (!spawns) {
+      beastieSpawnsOverlays[layer] = [];
+      spawns = beastieSpawnsOverlays[layer];
+    }
+    const group = SPAWN_DATA[level.spawn_name[0]]?.group;
+    if (!group) {
+      return;
+    }
+    const overall_percent: { [key: string]: number } = {};
+    const non_dupe_beasties: string[] = [];
+    group.forEach((value) => {
+      if (overall_percent[value.specie]) {
+        overall_percent[value.specie] += value.percent;
+      } else {
+        non_dupe_beasties.push(value.specie);
+        overall_percent[value.specie] = value.percent;
+      }
+    });
+    const level_size = {
+      x: level.world_x2 - level.world_x1,
+      y: level.world_y2 - level.world_y1,
+    };
+    non_dupe_beasties.forEach((value, index) => {
+      const beastie = BEASTIE_DATA.get(value);
+      if (!beastie) {
+        return;
+      }
+      spawns.push(
+        <Marker
+          position={
+            level_size.x > level_size.y
+              ? [
+                  -(level.world_y1 + level_size.y / 2),
+                  level.world_x1 +
+                    (index + 0.5) * (level_size.x / non_dupe_beasties.length),
+                ]
+              : [
+                  -(
+                    level.world_y1 +
+                    (index + 0.5) * (level_size.y / non_dupe_beasties.length)
+                  ),
+                  level.world_x1 + level_size.x / 2,
+                ]
+          }
+          icon={L.icon({
+            iconUrl: `/icons/${beastie.name}.png`,
+            iconSize: [50, 50],
+          })}
+        >
+          <Popup>
+            {beastie.name}
+            <br />
+            {overall_percent[value]}%
+          </Popup>
+        </Marker>,
+      );
+    });
   });
 
   const mapoverlay = (
@@ -137,6 +205,13 @@ export default function Map(): React.ReactNode {
               </LayersControl.Overlay>
             ),
           )}
+          <LayersControl.Overlay checked name={"Beastie Spawns"}>
+            <LayerGroup>
+              {beastieSpawnsOverlays[currentMapLayer]
+                ? beastieSpawnsOverlays[currentMapLayer]
+                : null}
+            </LayerGroup>
+          </LayersControl.Overlay>
         </LayersControl>
       </MapContainer>
     </>

@@ -76,4 +76,23 @@ export type World = {
 
 const WORLD_DATA: World = world;
 
+export const SPAWNER_LEVELS = [
+  "cliffs_railroad",
+  "hometown_north_path",
+  "hometown_south_path",
+  "hometown_south_rail",
+  "jasper_north",
+  "railtrail_2",
+  "reserve_1",
+  "reserve_2",
+  "reserve_loop",
+  "seaside_cliff",
+  "seaside_path",
+  "seaside_trees",
+  "hometown_north",
+  "hometown_reserve",
+  "hometown_starters",
+  "reserve_west",
+];
+
 export default WORLD_DATA;

@@ -77,14 +77,28 @@ export default function Map(): React.ReactNode {
     if (!group) {
       return;
     }
-    const overall_percent: { [key: string]: number } = {};
+    const overall_percent: {
+      [key: string]: { percent: number; levelMin: number; levelMax: number };
+    } = {};
     const non_dupe_beasties: string[] = [];
     group.forEach((value) => {
       if (overall_percent[value.specie]) {
-        overall_percent[value.specie] += value.percent;
+        overall_percent[value.specie].percent += value.percent;
+        overall_percent[value.specie].levelMin = Math.min(
+          overall_percent[value.specie].levelMin,
+          value.lvlA,
+        );
+        overall_percent[value.specie].levelMax = Math.min(
+          overall_percent[value.specie].levelMax,
+          value.lvlB,
+        );
       } else {
         non_dupe_beasties.push(value.specie);
-        overall_percent[value.specie] = value.percent;
+        overall_percent[value.specie] = {
+          percent: value.percent,
+          levelMin: value.lvlA,
+          levelMax: value.lvlB,
+        };
       }
     });
     const level_size = {
@@ -121,7 +135,10 @@ export default function Map(): React.ReactNode {
           <Popup>
             {beastie.name}
             <br />
-            {overall_percent[value]}%
+            {overall_percent[value].percent}%
+            <br />
+            Level {overall_percent[value].levelMin} -{" "}
+            {overall_percent[value].levelMax}
           </Popup>
         </Marker>,
       );

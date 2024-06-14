@@ -38,7 +38,7 @@ export type BeastieAnimData = {
   spike: BeastieAnimation;
   volley: BeastieAnimation;
   stop?: BeastieAnimation;
-  menu?: BeastieAnimation;
+  menu: BeastieAnimation;
   [key: string]: BeastieAnimation | string | number | undefined;
 };
 

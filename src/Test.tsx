@@ -1,5 +1,7 @@
 import { useState } from "react";
 import TextTag, { tagEscape } from "./shared/TextTag";
+import { BeastieImage } from "./shared/beastieRender/BeastieRenderContext";
+import BeastieRenderProvider from "./shared/beastieRender/BeastieRenderProvider";
 
 export default function Test(): React.ReactElement {
   const [text, setText] = useState(`
@@ -16,6 +18,36 @@ color test: [#2cb18c]aqua[/c] [d#9346814]luncheon red
 
   return (
     <>
+      <h1>Beastie Rendering!!!</h1>
+      <BeastieRenderProvider>
+        <BeastieImage
+          defaultUrl="/icons/Sprecko.png"
+          beastie={{ id: "shroom1", colors: [0.5, 0.5, 0.5, 0.5] }}
+        />
+        <BeastieImage
+          defaultUrl="/icons/Sprecko.png"
+          beastie={{
+            id: "shroom1",
+            colors: [0.00001, 0.99999, 0.327746326569557, 0.5],
+            colorAlt: "shiny",
+          }}
+        />
+        <BeastieImage
+          defaultUrl="/icons/Axolati.png"
+          beastie={{ id: "frog1", colors: [0.5, 0.5, 0.5, 0.5] }}
+        />
+        <BeastieImage
+          defaultUrl="/icons/Hopsong.png"
+          beastie={{ id: "frog2", colors: [0.5, 0.5, 0.5, 0.5] }}
+        />
+        <BeastieImage
+          defaultUrl="/icons/Bildit.png"
+          beastie={{
+            id: "bilby1",
+            colors: [0.5, 0.5, 0.5, 0.5],
+          }}
+        />
+      </BeastieRenderProvider>
       <h1>TextTag test</h1>
       <br />
       <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm">

@@ -1,7 +1,8 @@
 import { useState } from "react";
+
 import TextTag, { tagEscape } from "./shared/TextTag";
-import { BeastieImage } from "./shared/beastieRender/BeastieRenderContext";
 import BeastieRenderProvider from "./shared/beastieRender/BeastieRenderProvider";
+import { BeastieImage } from "./shared/beastieRender/BeastieImage";
 
 export default function Test(): React.ReactElement {
   const [text, setText] = useState(`

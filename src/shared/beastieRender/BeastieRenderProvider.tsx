@@ -1,9 +1,10 @@
 import { PropsWithChildren, useCallback, useEffect, useRef } from "react";
+
+import setupWebGL, { setColorUniforms, setImage } from "./WebGL";
 import {
   BeastieRenderContext,
   RenderBeastieType,
 } from "./BeastieRenderContext";
-import setupWebGL, { setColorUniforms, setImage } from "./WebGL";
 import SPRITE_INFO from "../../data/SpriteInfo";
 import BEASTIE_DATA from "../../data/Beastiedata";
 import { getColorInBeastieColors } from "../../utils/color";
@@ -75,6 +76,7 @@ export default function BeastieRenderProvider(
           image.onload = () => resolve(image);
         });
         setImage(glRef.current.gl, img);
+        console.log(img);
 
         const beastieColors =
           beastie.colorAlt == "colors2" && beastie_data.colors2

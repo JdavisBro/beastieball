@@ -70,6 +70,14 @@
   top: -4px;
 }
 
+.varcontainer a {
+  color: blue;
+}
+
+.varcontainer a:visited {
+  color: darkblue;
+}
+
 .datatable {
   composes: varcontainer;
   display: flex;

@@ -6,11 +6,18 @@ import EventElement from "./EventElement";
 import { VIBES } from "./BeastieValues";
 import useBeastieRender from "../../shared/beastieRender/useBeastieRender";
 import { PropsWithChildren } from "react";
+import { Link } from "react-router-dom";
 
 const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
   0: "colors",
   1: "shiny",
   2: "colors2",
+};
+
+const altSearchMap: { [key: number]: string } = {
+  0: "color",
+  1: "raremorph",
+  2: "alt",
 };
 
 function InfoBox(
@@ -29,6 +36,8 @@ export default function Beastie(props: {
 }): React.ReactElement {
   const save_beastie = props.beastie;
   const beastiedata = BEASTIE_DATA.get(props.beastie.specie);
+
+  const searchParam = altSearchMap[Math.floor(props.beastie.color[0])];
 
   const beastieUrl = useBeastieRender(`/icons/${beastiedata?.name}.png`, {
     id: props.beastie.specie,
@@ -63,6 +72,15 @@ export default function Beastie(props: {
           {VIBES[save_beastie.vibe] ?? save_beastie.vibe}
         </InfoBox>
         <InfoBox title="PID">{save_beastie.pid}</InfoBox>
+        <InfoBox title="Beastiepedia">
+          <Link
+            to={`/beastiepedia/${beastiedata.name}?${searchParam}=${save_beastie.color.map((value) => value % 1.0).join(",")}`}
+            target="_blank"
+          >
+            Preview in the Beastipedia
+          </Link>
+        </InfoBox>
+
         <InfoBox title="Events">
           <div className={styles.eventlist}>
             {save_beastie.event_log.events.map((event) => (

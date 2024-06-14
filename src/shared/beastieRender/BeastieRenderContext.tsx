@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import BEASTIE_DATA from "../../data/Beastiedata";
 
 export type RenderBeastieType = {
   id: string;
@@ -43,5 +44,11 @@ export function BeastieImage(props: {
   beastie: RenderBeastieType;
 }): React.ReactElement {
   const beastieUrl = useBeastieRender(props.defaultUrl, props.beastie);
-  return <img src={beastieUrl} />;
+  let alt = "";
+  const beastie_data = BEASTIE_DATA.get(props.beastie.id);
+  if (beastie_data) {
+    alt = beastie_data.name;
+  }
+
+  return <img src={beastieUrl} alt={alt} />;
 }

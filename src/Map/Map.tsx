@@ -59,6 +59,7 @@ export default function Map(): React.ReactNode {
 
     overlays.push(
       <ImageOverlay
+        interactive={true}
         bounds={level_bounds}
         url={`/gameassets/maps/sprMap_${level.name}_0.png`}
         key={level.name}
@@ -112,20 +113,33 @@ export default function Map(): React.ReactNode {
       }
       spawns.push(
         <Marker
+          alt={`${beastie.name} spawn location.`}
           position={
-            level_size.x > level_size.y
-              ? [
-                  -(level.world_y1 + level_size.y / 2),
-                  level.world_x1 +
-                    (index + 0.5) * (level_size.x / non_dupe_beasties.length),
-                ]
-              : [
+            Math.max(level_size.x, level_size.y) /
+              Math.min(level_size.x, level_size.y) <
+            1.5
+              ? // square enough, diag
+                [
                   -(
                     level.world_y1 +
                     (index + 0.5) * (level_size.y / non_dupe_beasties.length)
                   ),
-                  level.world_x1 + level_size.x / 2,
+                  level.world_x1 +
+                    (index + 0.5) * (level_size.x / non_dupe_beasties.length),
                 ]
+              : level_size.x > level_size.y
+                ? [
+                    -(level.world_y1 + level_size.y / 2),
+                    level.world_x1 +
+                      (index + 0.5) * (level_size.x / non_dupe_beasties.length),
+                  ]
+                : [
+                    -(
+                      level.world_y1 +
+                      (index + 0.5) * (level_size.y / non_dupe_beasties.length)
+                    ),
+                    level.world_x1 + level_size.x / 2,
+                  ]
           }
           icon={L.icon({
             iconUrl: `/icons/${beastie.name}.png`,

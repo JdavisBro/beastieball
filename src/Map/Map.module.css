@@ -41,3 +41,9 @@
   width: 80%;
   height: 80%;
 }
+
+:global(.leaflet-image-layer:hover) {
+  z-index: 20 !important;
+  outline: white dashed 6px;
+  box-sizing: content-box;
+}

@@ -87,7 +87,6 @@ export default function BeastieRenderProvider(
           const x = colors.length < value ? 0.5 : colors[value];
           return getColorInBeastieColors(x, beastieColors[value].array);
         });
-        console.log(cols);
         setColorUniforms(glRef.current.gl, glRef.current.program, cols);
 
         const context = cropCanvasRef.current.getContext("2d");

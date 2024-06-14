@@ -191,6 +191,14 @@ composes: className from global;
   animation-timing-function: linear;
 }
 
+.animBoxBackground a {
+  color: blue;
+}
+
+.animBoxBackground a:visited {
+  color: darkblue;
+}
+
 @keyframes alt-bg-scroll {
   0% {
     background-position-y: -2px;

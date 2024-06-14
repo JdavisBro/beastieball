@@ -31,8 +31,10 @@ export function getColorInBeastieColors(
   x: number,
   colorset: BeastieColorSet,
 ): number[] {
-  if (x > 1 || x < 0) {
-    throw Error("Invalid beastie color params.");
+  if (x > 1) {
+    x = 1;
+  } else if (x < 0) {
+    x = 0;
   }
   if (x == 0) {
     return bgrDecimalToRgb(colorset[0].color);

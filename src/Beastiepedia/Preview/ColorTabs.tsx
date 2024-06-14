@@ -83,14 +83,61 @@ export default function ColorTabs(props: Props): React.ReactNode {
     { serializer: JSON.stringify, deserializer: JSON.parse },
   );
   if (
-    storedColors[props.beastiedata.id] &&
-    Array.isArray(storedColors[props.beastiedata.id])
+    (storedColors[props.beastiedata.id] &&
+      Array.isArray(storedColors[props.beastiedata.id])) ||
+    !storedColors[props.beastiedata.id]
   ) {
     storedColors[props.beastiedata.id] = defaultColor(
       colors,
       props.beastiedata.colors,
     );
   }
+
+  useEffect(() => {
+    // doesn't change tab automatically on dev because of double render
+    const url = new URL(window.location.href);
+    if (!url.search) {
+      return;
+    }
+    for (const [key, value] of url.searchParams) {
+      switch (key) {
+        case "color": {
+          url.searchParams.delete("color");
+          setCurrentTab("color");
+          storedColors[props.beastiedata.id].color = value
+            .split(",")
+            .map((v) => Number(v));
+          break;
+        }
+        case "alt": {
+          url.searchParams.delete("alt");
+          if (!props.beastiedata.colors2) {
+            break;
+          }
+          setCurrentTab("color2");
+          storedColors[props.beastiedata.id].color2 = value
+            .split(",")
+            .map((v) => Number(v));
+          break;
+        }
+        case "raremorph": {
+          setCurrentTab("shiny");
+          storedColors[props.beastiedata.id].shiny = value
+            .split(",")
+            .map((v) => Number(v));
+          console.log(storedColors[props.beastiedata.id].shiny);
+          break;
+        }
+        case "custom": {
+          setCurrentTab("custom");
+          storedColors[props.beastiedata.id].custom = value.split(",");
+        }
+      }
+    }
+    setStoredColors(storedColors);
+    url.search = "";
+    window.history.pushState(null, "", url.toString());
+  }, [props.beastiedata, setStoredColors, storedColors]);
 
   const [customColors, setCustomColors] = useState<string[]>(
     diffBeastieColors == "none" && storedColors[beastiedata.id]
@@ -238,8 +285,23 @@ export default function ColorTabs(props: Props): React.ReactNode {
           >
             Reset Colors
           </button>
+          <button
+            onClick={() => {
+              const url = new URL(window.location.href);
+              url.searchParams.set(
+                "custom",
+                storedColors[props.beastiedata.id].custom.join(","),
+              );
+              navigator.clipboard.writeText(url.toString());
+            }}
+          >
+            Copy Link with Colors
+          </button>
         </div>
-        <label htmlFor="otherbeastiesel" style={{ color: "black" }}>
+        <label
+          htmlFor="otherbeastiesel"
+          style={{ color: "black", marginLeft: "20px" }}
+        >
           {" "}
           Other Beastie Colors:{" "}
         </label>
@@ -262,6 +324,9 @@ export default function ColorTabs(props: Props): React.ReactNode {
     </>
   );
 }
+
+const TAB_SEARCH_ARG = { color: "color", color2: "alt", shiny: "raremorph" };
+
 function BeastieColorTabContent(props: {
   tab: "color" | "color2" | "shiny";
   currentTab: string;
@@ -390,6 +455,18 @@ function BeastieColorTabContent(props: {
         }}
       >
         Reset Colors
+      </button>
+      <button
+        onClick={() => {
+          const url = new URL(window.location.href);
+          url.searchParams.set(
+            TAB_SEARCH_ARG[props.tab],
+            colorValues.current.join(","),
+          );
+          navigator.clipboard.writeText(url.toString());
+        }}
+      >
+        Copy Link with Colors
       </button>
     </div>
   );

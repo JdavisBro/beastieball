@@ -9,6 +9,45 @@
   min-height: calc(100% - var(--header-height));
 }
 
+.foldableHeader {
+  composes: animSelectableBackground from global;
+  width: fit-content;
+  z-index: 1;
+  padding: 4px 12px 4px 12px;
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
+  position: relative;
+  left: 10px;
+  color: black;
+  user-select: none;
+}
+
+.foldableHeader:hover {
+  background-image: repeating-linear-gradient(
+    135deg,
+    #ffaa55,
+    #ffaa55 10px,
+    #ff8e4a 10px,
+    #ff8e4a 20px
+  ) !important;
+}
+
+.upArrow {
+  display: inline-block;
+  transform: scaleY(-1);
+}
+
+.foldable {
+}
+
+.folded {
+  display: none;
+}
+
+.beastiecontainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .header {
   composes: boxHeaderBackground from global;
   width: fit-content;
@@ -16,7 +55,8 @@
   padding: 4px 12px 4px 12px;
   clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
   position: relative;
-  left: 10px;
+  margin-left: 10px;
+  margin-right: 5px;
 }
 
 .varcontainer {

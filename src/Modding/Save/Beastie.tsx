@@ -1,8 +1,28 @@
 import BEASTIE_DATA from "../../data/Beastiedata";
 import { SaveBeastie } from "./SaveType";
+import savestyles from "./Save.module.css";
 import styles from "./Beastie.module.css";
 import EventElement from "./EventElement";
 import { VIBES } from "./BeastieValues";
+import useBeastieRender from "../../shared/beastieRender/useBeastieRender";
+import { PropsWithChildren } from "react";
+
+const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
+  0: "colors",
+  1: "shiny",
+  2: "colors2",
+};
+
+function InfoBox(
+  props: PropsWithChildren & { title: string },
+): React.ReactElement {
+  return (
+    <div>
+      <div className={savestyles.header}>{props.title}</div>
+      <div className={savestyles.varcontainer}>{props.children}</div>
+    </div>
+  );
+}
 
 export default function Beastie(props: {
   beastie: SaveBeastie;
@@ -10,44 +30,49 @@ export default function Beastie(props: {
   const save_beastie = props.beastie;
   const beastiedata = BEASTIE_DATA.get(props.beastie.specie);
 
+  const beastieUrl = useBeastieRender(`/icons/${beastiedata?.name}.png`, {
+    id: props.beastie.specie,
+    colors: props.beastie.color.map((value) => value % 1.0),
+    colorAlt: altMap[Math.floor(props.beastie.color[0])],
+  });
+
   if (!beastiedata) {
     throw Error(`Invalid Beastie? ${save_beastie.specie}`);
   }
-  const [min_scale, max_scale] = beastiedata.scale;
-  const beastie_scale =
-    (min_scale + save_beastie.scale * (max_scale - min_scale)) / max_scale;
-  const big = beastie_scale > 1.0;
+  // const [min_scale, max_scale] = beastiedata.scale;
+  // const beastie_scale =
+  //   (min_scale + save_beastie.scale * (max_scale - min_scale)) / max_scale;
 
   return (
     <div className={styles.beastie}>
       <div className={styles.beastiepreview}>
-        <img
-          src={`/icons/${beastiedata.name}.png`}
-          style={{
-            transform: `scale(${Math.min(beastie_scale, max_scale)})`,
-          }}
-          className={styles.beatieimage}
-        />
-        {save_beastie.color.some((value) => value != 0.5) ? (
-          <div>Displayed Colors Incorrect</div>
-        ) : null}
-        {big ? <div>Displayed Size Incorrect</div> : null}
+        <div className={savestyles.header}>Preview</div>
+        <div className={savestyles.varcontainer}>
+          <img src={beastieUrl} className={styles.beastieimage} />
+        </div>
       </div>
       <div className={styles.beastieinfo}>
-        <div className={styles.beastiename}>
+        <InfoBox title="Name">
           <span>{save_beastie.name}</span>
           {save_beastie.number != "" ? (
             <span className={styles.beastienumber}>#{save_beastie.number}</span>
           ) : null}
-        </div>
-        <div>Level: {save_beastie.level}</div>
-        <div>Vibe: {VIBES[save_beastie.vibe] ?? save_beastie.vibe}</div>
-        <div className={styles.eventlist}>
-          {save_beastie.event_log.events.map((event) => (
-            <EventElement key={`${event.date}-${event.event}`} event={event} />
-          ))}
-        </div>
-        <div>PID: {save_beastie.pid}</div>
+        </InfoBox>
+        <InfoBox title="Level">{save_beastie.level}</InfoBox>
+        <InfoBox title="Vibe">
+          {VIBES[save_beastie.vibe] ?? save_beastie.vibe}
+        </InfoBox>
+        <InfoBox title="PID">{save_beastie.pid}</InfoBox>
+        <InfoBox title="Events">
+          <div className={styles.eventlist}>
+            {save_beastie.event_log.events.map((event) => (
+              <EventElement
+                key={`${event.date}-${event.event}`}
+                event={event}
+              />
+            ))}
+          </div>
+        </InfoBox>
       </div>
     </div>
   );

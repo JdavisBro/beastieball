@@ -1,19 +1,27 @@
 .beastie {
   display: flex;
   height: fit-content;
-  background-color: #808080;
+  width: 50%;
 }
 
 .beastiepreview {
-  display: flex;
-  flex-direction: column;
-  max-width: 25%;
-  height: 100%;
+  /* aspect-ratio: 1; */
+  /* width: 15%; */
+  width: 40%;
+  height: fit-content;
+}
+
+.beastieimage {
+  aspect-ratio: 1;
+  width: 100%;
+  object-fit: contain;
+  /* max-width: 100%; */
+  /* max-height: 100%; */
 }
 
 .beastieinfo {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .beastienumber {
@@ -37,6 +45,6 @@
 }
 
 .event {
-  composes: animBoxBackground from global;
+  /* composes: animBoxBackground from global; */
   padding: 0 4px 0 4px;
 }

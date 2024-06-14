@@ -1,35 +1,61 @@
-import SaveData from "./SaveType";
+import SaveData, { SaveBeastie } from "./SaveType";
 import styles from "./Save.module.css";
 import Beastie from "./Beastie";
+import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider";
+import { PropsWithChildren, useState } from "react";
+
+function FoldableSection(
+  props: PropsWithChildren & { title: string; defaultOpen?: boolean },
+): React.ReactElement {
+  const [open, setOpen] = useState(props.defaultOpen ?? true);
+
+  return (
+    <>
+      <div onClick={() => setOpen(!open)} className={styles.foldableHeader}>
+        <span className={open ? styles.upArrow : ""}>V</span> {props.title}
+      </div>
+      <div className={open ? styles.foldable : styles.folded}>
+        {props.children}
+      </div>
+    </>
+  );
+}
 
 export default function LoadedFile(props: {
   save: SaveData;
 }): React.ReactElement {
+  const reserve = Object.values(props.save.team_registry).filter(
+    (value): value is SaveBeastie => typeof value != "string",
+  );
+  const others = Object.values(props.save.beastie_bank).filter(
+    (value): value is SaveBeastie => typeof value != "string",
+  );
+
   return (
-    <>
-      <textarea defaultValue={JSON.stringify(props.save)}></textarea>
-      <div className={styles.header}>Team Beasties</div>
-      <div className={styles.varcontainer}>
-        {props.save.team_party.map((value) => (
-          <Beastie key={value.pid} beastie={value} />
-        ))}
-      </div>
-      <div className={styles.header}>Reserve Beasties</div>
-      <div className={styles.varcontainer}>
-        {Object.values(props.save.team_registry).map((value) =>
-          typeof value != "string" ? (
+    <BeastieRenderProvider>
+      <FoldableSection title="Team Beasties">
+        <div className={styles.beastiecontainer}>
+          {props.save.team_party.map((value) => (
             <Beastie key={value.pid} beastie={value} />
-          ) : null,
-        )}
-      </div>
-      <div className={styles.header}>Other Beasties</div>
-      <div className={styles.varcontainer}>
-        {Object.values(props.save.beastie_bank).map((value) =>
-          typeof value != "string" ? (
+          ))}
+        </div>
+      </FoldableSection>
+      <FoldableSection title="Reserve Beasties" defaultOpen={false}>
+        <div className={styles.beastiecontainer}>
+          {reserve ? (
+            reserve.map((value) => <Beastie key={value.pid} beastie={value} />)
+          ) : (
+            <h1>No Reserve Beasties</h1>
+          )}
+        </div>
+      </FoldableSection>
+      <FoldableSection title="Other Beasties" defaultOpen={false}>
+        <div className={styles.beastiecontainer}>
+          {others.map((value) => (
             <Beastie key={value.pid} beastie={value} />
-          ) : null,
-        )}
-      </div>
+          ))}
+        </div>
+      </FoldableSection>
       <div className={styles.header}>All Values</div>
       <div className={styles.datatable}>
         {Object.keys(props.save)
@@ -53,6 +79,6 @@ export default function LoadedFile(props: {
             </div>
           ))}
       </div>
-    </>
+    </BeastieRenderProvider>
   );
 }

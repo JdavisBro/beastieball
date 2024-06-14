@@ -11,7 +11,7 @@ import {
 } from "react-leaflet";
 import { useMemo, useState } from "react";
 
-import WORLD_DATA, { SPAWNER_LEVELS } from "../data/WorldData";
+import WORLD_DATA from "../data/WorldData";
 import styles from "./Map.module.css";
 import OpenGraph from "../shared/OpenGraph";
 import { createMarkers } from "./createMarkers";
@@ -65,7 +65,7 @@ export default function Map(): React.ReactNode {
       />,
     );
 
-    if (!SPAWNER_LEVELS.includes(level.name)) {
+    if (!level.has_spawns) {
       return;
     }
     let spawns = beastieSpawnsOverlays[layer];

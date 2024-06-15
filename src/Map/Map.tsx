@@ -113,6 +113,7 @@ export default function Map(): React.ReactNode {
       }
       spawns.push(
         <Marker
+          key={`${level.name}-${beastie.id}`}
           alt={`${beastie.name} spawn location.`}
           position={
             Math.max(level_size.x, level_size.y) /

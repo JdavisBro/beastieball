@@ -7,7 +7,9 @@ import DivIconMarker from "./DivIconMarker";
 function getKey(icon: MapIcon) {
   if (icon.is_cave) {
     return (
-      icon.from_level ?? "?" + icon.cave_loc_a ?? "?" + icon.cave_loc_b ?? "?"
+      (icon.from_level ?? "?") +
+      (icon.cave_loc_a ?? "?") +
+      (icon.cave_loc_b ?? "?")
     );
   }
   return (

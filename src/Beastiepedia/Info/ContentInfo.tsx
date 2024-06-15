@@ -166,7 +166,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
                     }
                     const evolution = evolutions[index];
                     return (
-                      <div>
+                      <div key={beastie.id}>
                         Metamorphs into{" "}
                         <Link to={`/beastiepedia/${beastie.name}`}>
                           {beastie.name}

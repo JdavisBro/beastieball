@@ -251,7 +251,10 @@ export default function ColorTabs(props: Props): React.ReactNode {
                   return;
                 }
                 setStoredColors((oldColors) => {
-                  if (!oldColors[beastiedata.id]) {
+                  if (
+                    !oldColors[beastiedata.id] ||
+                    Array.isArray(oldColors[beastiedata.id])
+                  ) {
                     oldColors[beastiedata.id] = defaultColor(
                       colors,
                       beastiedata.colors,
@@ -422,7 +425,10 @@ function BeastieColorTabContent(props: {
               colorValues.current[value] = newColor;
               if (props.diffBeastie == "none") {
                 props.setStoredColors((oldStored) => {
-                  if (!oldStored[props.beastieid]) {
+                  if (
+                    !oldStored[props.beastieid] ||
+                    Array.isArray(oldStored[props.beastieid])
+                  ) {
                     oldStored[props.beastieid] = defaultColor(
                       props.colorMax,
                       props.colors,

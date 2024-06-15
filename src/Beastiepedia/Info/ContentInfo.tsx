@@ -153,7 +153,6 @@ export default function ContentInfo(props: Props): React.ReactNode {
   //   preEvolutionBeastie = null;
   // }
 
-  console.log(preEvo);
   return (
     <div className={styles.info}>
       <div className={styles.inner}>

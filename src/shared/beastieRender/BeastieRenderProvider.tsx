@@ -76,7 +76,6 @@ export default function BeastieRenderProvider(
           image.onload = () => resolve(image);
         });
         setImage(glRef.current.gl, img);
-        console.log(img);
 
         const beastieColors =
           beastie.colorAlt == "colors2" && beastie_data.colors2

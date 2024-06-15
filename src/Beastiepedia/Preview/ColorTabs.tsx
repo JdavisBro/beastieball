@@ -125,7 +125,6 @@ export default function ColorTabs(props: Props): React.ReactNode {
           storedColors[props.beastiedata.id].shiny = value
             .split(",")
             .map((v) => Number(v));
-          console.log(storedColors[props.beastiedata.id].shiny);
           break;
         }
         case "custom": {

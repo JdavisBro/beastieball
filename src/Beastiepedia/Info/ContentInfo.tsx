@@ -137,21 +137,6 @@ export default function ContentInfo(props: Props): React.ReactNode {
   const evolutionBeasties = evolutions?.map((value) =>
     BEASTIE_DATA.get(value.specie),
   );
-  // if (
-  //   preEvolutionBeastie &&
-  //   preEvolutionBeastie.evolution &&
-  //   preEvolutionBeastie.id != beastiedata.id
-  // ) {
-  //   while (preEvolutionData == undefined) {
-  //     preEvolutionData = preEvolutionBeastie.evolution.find(
-  //       (value) => value.specie == beastiedata.id,
-  //     );
-  //     preEvolutionBeastie.evolution.forEach((value) => )
-  //     // preEvolutionBeastie = BEASTIE_DATA.get(preEvolutionData.specie);
-  //   }
-  // } else {
-  //   preEvolutionBeastie = null;
-  // }
 
   return (
     <div className={styles.info}>

@@ -48,7 +48,6 @@ export default function Beastie(props: {
     colors: beastieColors,
     colorAlt: altMap[Math.ceil(props.beastie.color[0])],
   });
-  console.log(props.beastie.color.map((value) => value - Math.ceil(value) + 1));
 
   if (!beastiedata) {
     throw Error(`Invalid Beastie? ${save_beastie.specie}`);

@@ -9,15 +9,15 @@ import { PropsWithChildren } from "react";
 import { Link } from "react-router-dom";
 
 const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
-  0: "colors",
-  1: "shiny",
-  2: "colors2",
+  1: "colors",
+  2: "shiny",
+  3: "colors2",
 };
 
 const altSearchMap: { [key: number]: string } = {
-  0: "color",
-  1: "raremorph",
-  2: "alt",
+  1: "color",
+  2: "raremorph",
+  3: "alt",
 };
 
 function InfoBox(
@@ -37,13 +37,18 @@ export default function Beastie(props: {
   const save_beastie = props.beastie;
   const beastiedata = BEASTIE_DATA.get(props.beastie.specie);
 
-  const searchParam = altSearchMap[Math.floor(props.beastie.color[0])];
+  const searchParam = altSearchMap[Math.ceil(props.beastie.color[0])];
+
+  const beastieColors = save_beastie.color.map(
+    (value) => value - Math.ceil(value) + 1,
+  );
 
   const beastieUrl = useBeastieRender(`/icons/${beastiedata?.name}.png`, {
     id: props.beastie.specie,
-    colors: props.beastie.color.map((value) => value % 1.0),
-    colorAlt: altMap[Math.floor(props.beastie.color[0])],
+    colors: beastieColors,
+    colorAlt: altMap[Math.ceil(props.beastie.color[0])],
   });
+  console.log(props.beastie.color.map((value) => value - Math.ceil(value) + 1));
 
   if (!beastiedata) {
     throw Error(`Invalid Beastie? ${save_beastie.specie}`);
@@ -74,7 +79,7 @@ export default function Beastie(props: {
         <InfoBox title="PID">{save_beastie.pid}</InfoBox>
         <InfoBox title="Beastiepedia">
           <Link
-            to={`/beastiepedia/${beastiedata.name}?${searchParam}=${save_beastie.color.map((value) => value % 1.0).join(",")}`}
+            to={`/beastiepedia/${beastiedata.name}?${searchParam}=${beastieColors.join(",")}`}
             target="_blank"
           >
             Preview in the Beastipedia

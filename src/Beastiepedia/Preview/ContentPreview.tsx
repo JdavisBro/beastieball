@@ -347,7 +347,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       return;
     }
     let canvas = canvasRef.current;
-    if (fitBeastie && frameNumRef.current) {
+    if (fitBeastie && frameNumRef.current !== null) {
       cropCanvasRef.current.width =
         beastiesprite.bboxes[frameNumRef.current].width;
       cropCanvasRef.current.height =

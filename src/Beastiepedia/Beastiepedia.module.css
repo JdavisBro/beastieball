@@ -8,35 +8,6 @@
   height: calc(100% - var(--header-height));
 }
 
-.sidebar {
-  float: left;
-  width: 23%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.sidebaroff {
-  display: none;
-}
-
-.sidebarsearchcon {
-  composes: animBoxBackground from global;
-  position: sticky;
-  top: 1px;
-  margin-top: 5px;
-  z-index: 1;
-  padding: 5px 5px 5px 5px;
-  width: 86%;
-  margin-left: 5%;
-  display: flex;
-  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
-}
-
-.sidebarsearch {
-  flex-grow: 1;
-}
-
 .content {
   float: left;
   width: 77%;

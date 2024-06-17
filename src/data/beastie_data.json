@@ -161,7 +161,7 @@
       "conditions": [
         {
           "effect_pow": ">0",
-          "effect_type": 8,
+          "effect_type": [8, 55, 54],
           "event": null,
           "freq": -1,
           "func": null,
@@ -172,7 +172,7 @@
         },
         {
           "effect_pow": ">0",
-          "effect_type": 8,
+          "effect_type": [8, 55, 54],
           "event": null,
           "freq": -1,
           "func": null,
@@ -236,7 +236,7 @@
         ]
       }
     ],
-    "spr": 331,
+    "spr": 330,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -522,7 +522,7 @@
   "bilby2": {
     "ability": ["starter_m", "fwdpass"],
     "ability_hidden": true,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -565,7 +565,7 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 14848876,
+            "color": 13137229,
             "x": 0
           },
           {
@@ -573,7 +573,7 @@
             "x": 0.4933333333
           },
           {
-            "color": 16760436,
+            "color": 16761959,
             "x": 1
           }
         ]
@@ -582,15 +582,11 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 8278757,
+            "color": 6316284,
             "x": 0
           },
           {
-            "color": 8545532,
-            "x": 0.5
-          },
-          {
-            "color": 7434751,
+            "color": 7441407,
             "x": 1
           }
         ]
@@ -776,15 +772,15 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 11642608,
+            "color": 11707903,
             "x": 0
           },
           {
-            "color": 12303350,
+            "color": 13027071,
             "x": 0.4866666667
           },
           {
-            "color": 12831487,
+            "color": 12237567,
             "x": 1
           }
         ]
@@ -802,11 +798,11 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 20161,
+            "color": 16320,
             "x": 0.0033333333
           },
           {
-            "color": 602796,
+            "color": 1579168,
             "x": 1
           }
         ]
@@ -815,11 +811,11 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 9596159,
+            "color": 7122687,
             "x": 0
           },
           {
-            "color": 8224255,
+            "color": 6858751,
             "x": 0.5
           },
           {
@@ -832,7 +828,7 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 13816575,
+            "color": 15068415,
             "x": 0.5
           }
         ]
@@ -1088,7 +1084,7 @@
         ]
       }
     ],
-    "spr": 352,
+    "spr": 351,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -1097,7 +1093,7 @@
   "cassowary2": {
     "ability": ["starter_b", "lifeorb"],
     "ability_hidden": true,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -1126,7 +1122,7 @@
     "base_exp": 151,
     "bd": 85,
     "body_color_index": 0,
-    "colormeta": null,
+    "colormeta": [2, 1, 0, 3],
     "colors": [
       {
         "array": [
@@ -1592,7 +1588,7 @@
   "cheerleader1": {
     "ability": ["cheer"],
     "ability_hidden": false,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "freeball",
@@ -1881,7 +1877,7 @@
   "dog1": {
     "ability": ["fetch", "watcher"],
     "ability_hidden": true,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": [10, 8],
     "attklist": [
       "bounce",
@@ -2043,7 +2039,7 @@
       [-26, 0, 1, 50, 0, 0.75],
       [26, 0, 3],
       [14, 0, 3],
-      [26, 0, 3]
+      [26, 2, 3]
     ],
     "desc": "They are obsessed with chasing balls. It's said that they see the moon itself as a giant Beastieball which they yearn to chase.",
     "designer": [3, 8],
@@ -2229,7 +2225,7 @@
   "dragonfly": {
     "ability": ["nimble"],
     "ability_hidden": false,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "pepshot",
@@ -2544,7 +2540,7 @@
         ]
       }
     ],
-    "spr": 277,
+    "spr": 276,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -2820,7 +2816,7 @@
   "frog2": {
     "ability": ["starter_h", "allyheal"],
     "ability_hidden": true,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 10,
     "attklist": [
       "pepshot",
@@ -3091,7 +3087,7 @@
   "horseshoe": {
     "ability": ["sturdy"],
     "ability_hidden": false,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "starterheart",
@@ -3645,7 +3641,7 @@
         ]
       }
     ],
-    "spr": 282,
+    "spr": 281,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -3749,7 +3745,7 @@
     ],
     "colors2": null,
     "combos": [
-      [51, 0, 2, 50, 0, 1.4, 7, 0, 0],
+      [51, 0, 2, 50, 0, 1.35, 7, 0, 0],
       [7, 2, 1],
       [7, 2, 1, 1, 2, 1],
       [7, 2, 0, 4, 2, 1]
@@ -3938,7 +3934,7 @@
   "magpie1": {
     "ability": ["trust", "technician"],
     "ability_hidden": false,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "callout",
@@ -4163,7 +4159,7 @@
   "moth": {
     "ability": ["empath", "crowddef"],
     "ability_hidden": false,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 10,
     "attklist": [
       "facade",
@@ -4242,7 +4238,7 @@
     "colors2": null,
     "combos": [
       [50, 0, 1.3, 8, 0, -0.2],
-      [15, 1, 2, 39, 1, 1],
+      [15, 1, 2, 39, 2, 1],
       [15, 2, 3, 39, 2, 1],
       [4, 2, 2]
     ],
@@ -4469,7 +4465,7 @@
     "colors2": null,
     "combos": [
       [50, 0, 1.3, 8, 0, -0.2],
-      [15, 1, 2, 39, 1, 1],
+      [15, 1, 2, 39, 2, 1],
       [15, 2, 3, 39, 2, 1],
       [4, 2, 2]
     ],
@@ -4632,7 +4628,7 @@
   "moth2": {
     "ability": ["empath", "defiant_h"],
     "ability_hidden": false,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "facade",
@@ -4746,7 +4742,7 @@
     "colors2": null,
     "combos": [
       [50, 0, 1.3, 8, 0, -0.2],
-      [15, 1, 2, 39, 1, 1],
+      [15, 1, 2, 39, 2, 1],
       [15, 2, 3, 39, 2, 1],
       [4, 2, 2]
     ],
@@ -4908,7 +4904,7 @@
         ]
       }
     ],
-    "spr": 355,
+    "spr": 354,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -4917,7 +4913,7 @@
   "nerd1": {
     "ability": ["study"],
     "ability_hidden": false,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "startermind",
@@ -5389,7 +5385,7 @@
   "platypus2": {
     "ability": ["lightningrod_m"],
     "ability_hidden": false,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "markattack",
@@ -5574,7 +5570,7 @@
         ]
       }
     ],
-    "spr": 279,
+    "spr": 278,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -5863,7 +5859,7 @@
         ]
       }
     ],
-    "spr": 333,
+    "spr": 332,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -5872,7 +5868,7 @@
   "possum2": {
     "ability": ["regenerator"],
     "ability_hidden": false,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -6156,9 +6152,11 @@
       "stomp",
       "markattack",
       "dropshot",
+      "mind",
       "dig",
       "allyrush",
       "allycover",
+      "recover",
       "feint",
       "taunt",
       "curse",
@@ -6246,7 +6244,7 @@
     "combos": [
       [50, 0, 0.9, 19, 0, 1],
       [8, 0, 0.3],
-      [51, 0, 2, 16, 0, 1, 14, 0, 1],
+      [16, 0, 1, 14, 0, 1],
       [8, 0, 0.5]
     ],
     "desc": "They enjoy basking in the sun, but this leaves them vulnerable. They stick out their tongue to intimidate predators.",
@@ -7247,7 +7245,7 @@
   "spirit1": {
     "ability": ["avenger", "defender"],
     "ability_hidden": false,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "starterheart",
@@ -7493,7 +7491,7 @@
         ]
       }
     ],
-    "spr": 348,
+    "spr": 347,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -7502,7 +7500,7 @@
   "swift": {
     "ability": ["freemove"],
     "ability_hidden": false,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "starterbody",
@@ -7791,7 +7789,7 @@
   "tricky1": {
     "ability": ["static"],
     "ability_hidden": false,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "sidespin",
@@ -7878,7 +7876,7 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.8, 49, 0, 12, 6, 3, 1],
+      [50, 0, 0.8, 49, 0, 12, 6, 3, 3],
       [6, 9, 1],
       [6, 8, 1],
       [6, 8, 1]
@@ -8023,7 +8021,7 @@
         ]
       }
     ],
-    "spr": 315,
+    "spr": 314,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -8032,7 +8030,7 @@
   "yeti": {
     "ability": ["intimidate"],
     "ability_hidden": false,
-    "allowedInPromo": false,
+    "allowedInPromo": 1,
     "animator": 8,
     "attklist": [
       "allycover",
@@ -8163,9 +8161,9 @@
     "colors2": null,
     "combos": [
       [50, 0, 2.2, 17, 0, 0, 41, 0, 1],
-      [8, 1, 0.3],
-      [8, 2, 0.2],
-      [8, 2, 0.2]
+      [15, 1, 2, 8, 0, -0.33],
+      [15, 0, 3, 8, 0, -0.33],
+      [0, 2, 1, 1, 8, -2]
     ],
     "desc": "Once thought to be solitary creatures. It was discovered they communicate with one another across mountain peaks with reflected light from the lens on their head.",
     "designer": 0,

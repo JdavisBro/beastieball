@@ -8914,28 +8914,6 @@
     }
   },
   {
-    "name": "scribble_fallback_bulletpoint",
-    "width": 12,
-    "height": 12,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [
-      {
-        "x": 1,
-        "y": 1,
-        "width": 10,
-        "height": 10
-      }
-    ],
-    "bbox": {
-      "x": 1,
-      "y": 1,
-      "width": 10,
-      "height": 10
-    }
-  },
-  {
     "name": "sprDia_thick",
     "width": 64,
     "height": 64,
@@ -10753,13 +10731,13 @@
         "height": 84
       },
       {
-        "x": 30,
+        "x": 6,
         "y": 4,
         "width": 126,
         "height": 118
       },
       {
-        "x": 6,
+        "x": 30,
         "y": 4,
         "width": 126,
         "height": 118
@@ -11815,12 +11793,6 @@
         "height": 118
       },
       {
-        "x": 0,
-        "y": 0,
-        "width": 1,
-        "height": 1
-      },
-      {
         "x": 161,
         "y": 145,
         "width": 162,
@@ -12017,6 +11989,12 @@
         "y": 135,
         "width": 147,
         "height": 127
+      },
+      {
+        "x": 160,
+        "y": 154,
+        "width": 172,
+        "height": 109
       }
     ],
     "bbox": {
@@ -14545,6 +14523,28 @@
       "y": 0,
       "width": 0,
       "height": 0
+    }
+  },
+  {
+    "name": "scribble_fallback_bulletpoint",
+    "width": 12,
+    "height": 12,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 1,
+        "y": 1,
+        "width": 10,
+        "height": 10
+      }
+    ],
+    "bbox": {
+      "x": 1,
+      "y": 1,
+      "width": 10,
+      "height": 10
     }
   },
   {

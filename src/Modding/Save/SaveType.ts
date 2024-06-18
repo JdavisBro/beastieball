@@ -129,6 +129,14 @@ type OwnedItem = {
   num: number;
 };
 
+type PlayerTitle = {
+  _: string;
+  color: number;
+  gender: number;
+  wordA: string;
+  wordB: string;
+};
+
 type PlayerOutfit = {
   _: string;
   clothes: string;
@@ -185,6 +193,21 @@ type SpawnerSaveState = {
 };
 
 type SaveStructures = {
+  away_games?: {
+    _: string;
+    team: string[];
+    away: number;
+    opponent: PlayerTitle;
+  };
+  away_team: string;
+  away_team_requested_last: number;
+  away_teams_seen: {
+    _: string;
+    uid: string;
+    encounter: string;
+    team: SaveBeastie[];
+    title: PlayerTitle;
+  }[];
   beastie_bank: ClassMap<SaveBeastie>;
   beastie_last_seen: string[];
   beastie_research: ClassMap<number>;
@@ -214,13 +237,7 @@ type SaveStructures = {
   };
   player_outfit: PlayerOutfit;
   player_pos: number[];
-  player_title: {
-    _: string;
-    color: number;
-    gender: number;
-    wordA: string;
-    wordB: string;
-  };
+  player_title: PlayerTitle;
   relationships: {
     _: string;
     [key: string]: string | BeastieRelationship;

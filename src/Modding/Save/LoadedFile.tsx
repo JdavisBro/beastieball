@@ -24,12 +24,18 @@ function FoldableSection(
 export default function LoadedFile(props: {
   save: SaveData;
 }): React.ReactElement {
+  const awayteam = props.save.away_games?.team ?? [];
+
   const reserve = Object.values(props.save.team_registry).filter(
-    (value): value is SaveBeastie => typeof value != "string",
+    (value): value is SaveBeastie =>
+      typeof value != "string" &&
+      !awayteam.some((awayId) => awayId == value.pid),
   );
   const others = Object.values(props.save.beastie_bank).filter(
     (value): value is SaveBeastie => typeof value != "string",
   );
+
+  console.log(awayteam.map((pid) => props.save.beastie_bank[pid]));
 
   return (
     <BeastieRenderProvider>
@@ -38,6 +44,22 @@ export default function LoadedFile(props: {
           {props.save.team_party.map((value) => (
             <Beastie key={value.pid} beastie={value} />
           ))}
+        </div>
+      </FoldableSection>
+      <FoldableSection title="Away Team" defaultOpen={false}>
+        <div className={styles.beastiecontainer}>
+          {awayteam ? (
+            awayteam.map((pid) =>
+              props.save.beastie_bank[pid] ? (
+                <Beastie
+                  key={pid}
+                  beastie={props.save.beastie_bank[pid] as SaveBeastie}
+                />
+              ) : null,
+            )
+          ) : (
+            <h1>No Away Team</h1>
+          )}
         </div>
       </FoldableSection>
       <FoldableSection title="Reserve Beasties" defaultOpen={false}>

@@ -150,7 +150,10 @@ export default function Map(): React.ReactNode {
           <Popup>
             {beastie.name}
             <br />
-            {overall_percent[value].percent}%
+            {overall_percent[value].percent > 0
+              ? overall_percent[value].percent
+              : "???"}
+            %
             <br />
             Level {overall_percent[value].levelMin} -{" "}
             {overall_percent[value].levelMax}

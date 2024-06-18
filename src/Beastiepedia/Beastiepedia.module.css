@@ -30,14 +30,6 @@
 }
 
 @media all and (max-aspect-ratio: 1/1) {
-  .sidebar {
-    width: 100%;
-  }
-
-  .sidebarsearch {
-    width: 98.5%;
-  }
-
   .content {
     width: 100%;
     overflow: auto;

@@ -15,7 +15,7 @@ export default function Sidebar(props: Props): React.ReactElement {
 
   const [search, setSearch] = useState("");
 
-  const [grid, setGrid] = useState(true);
+  const [grid, setGrid] = useState(false);
 
   BEASTIE_DATA.forEach((value, key) => {
     beasties.push(

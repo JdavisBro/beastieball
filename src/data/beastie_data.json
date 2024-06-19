@@ -562,7 +562,6 @@
     "colormeta": null,
     "colors": [
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 13137229,
@@ -579,7 +578,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 6316284,
@@ -592,7 +590,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 3099069,
@@ -609,7 +606,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 3514361,
@@ -626,7 +622,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 15983848,
@@ -747,7 +742,7 @@
           "type": 44
         }
       ],
-      "description": "Pass the ball 3+ times"
+      "description": "Volley the ball 3+ times"
     },
     "roamer_style": {
       "_name": "STOP_AND_STARE",
@@ -769,7 +764,6 @@
     "scale": [0.85, 1],
     "shiny": [
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 11707903,
@@ -786,7 +780,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 7566335,
@@ -795,7 +788,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 16320,
@@ -808,7 +800,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 7122687,
@@ -825,7 +816,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 15068415,
@@ -864,6 +854,10 @@
       "bdefup",
       "storedpower",
       "protect",
+      "libero",
+      "rocksmash",
+      "switch",
+      "mark",
       "breakswipe",
       "starterbody"
     ],
@@ -1114,6 +1108,10 @@
       "bdefup",
       "storedpower",
       "protect",
+      "libero",
+      "rocksmash",
+      "switch",
+      "mark",
       "breakswipe",
       "starterbody"
     ],
@@ -1286,11 +1284,19 @@
       {
         "array": [
           {
-            "color": 12174988,
+            "color": 8419194,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6796799,
             "x": 0
           },
           {
-            "color": 11513253,
+            "color": 6470655,
             "x": 1
           }
         ]
@@ -1298,11 +1304,11 @@
       {
         "array": [
           {
-            "color": 5796261,
+            "color": 5658752,
             "x": 0
           },
           {
-            "color": 7902704,
+            "color": 9149109,
             "x": 1
           }
         ]
@@ -1310,23 +1316,11 @@
       {
         "array": [
           {
-            "color": 10268610,
+            "color": 8737777,
             "x": 0
           },
           {
-            "color": 6117962,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "array": [
-          {
-            "color": 12373231,
-            "x": 0
-          },
-          {
-            "color": 5858690,
+            "color": 10109666,
             "x": 1
           }
         ]
@@ -3120,7 +3114,6 @@
     "colormeta": null,
     "colors": [
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 4157875,
@@ -3137,7 +3130,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 15195607,
@@ -3154,7 +3146,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 2766672,
@@ -3171,7 +3162,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 7643050,
@@ -3188,7 +3178,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 8443368,
@@ -3257,7 +3246,7 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 25,
+      "hop_height": 0,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
@@ -3314,7 +3303,6 @@
     "scale": [0.85, 1],
     "shiny": [
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 16771174,
@@ -3323,7 +3311,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 14719515,
@@ -3336,7 +3323,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 16751210,
@@ -3349,7 +3335,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 11261439,
@@ -3358,7 +3343,6 @@
         ]
       },
       {
-        "_": "class_gradient",
         "array": [
           {
             "color": 16514043,
@@ -5046,21 +5030,21 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 25,
+      "hop_height": 0,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
-      "move_accel": 0.4444444444,
-      "move_decel": 0.6666666667,
+      "move_accel": 0.6,
+      "move_decel": 85,
       "move_pause_frames": [],
-      "move_speed": 1.2,
-      "move_speed_start": 0,
+      "move_speed": 1.4,
+      "move_speed_start": -85,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
       "randomize_idle": true,
-      "squishiness": 0.1,
-      "stretchiness": 0.1
+      "squishiness": 0,
+      "stretchiness": 0
     },
     "ma": 85,
     "md": 80,
@@ -5428,11 +5412,11 @@
       {
         "array": [
           {
-            "color": 12211601,
+            "color": 255,
             "x": 0
           },
           {
-            "color": 12012648,
+            "color": 3014911,
             "x": 1
           }
         ]
@@ -5566,6 +5550,14 @@
           {
             "color": 65280,
             "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7938889,
+            "x": 0.5
           }
         ]
       }
@@ -6426,6 +6418,7 @@
       "noisytag",
       "vigor",
       "contest",
+      "protectcheer",
       "pushattack"
     ],
     "attklist_randomize": -1,
@@ -6709,6 +6702,7 @@
       "noisytag",
       "vigor",
       "contest",
+      "protectcheer",
       "pushattack"
     ],
     "attklist_randomize": -1,
@@ -7742,7 +7736,7 @@
       {
         "array": [
           {
-            "color": 8276254,
+            "color": 9984036,
             "x": 0
           }
         ]
@@ -7750,7 +7744,7 @@
       {
         "array": [
           {
-            "color": 12099914,
+            "color": 5336046,
             "x": 0
           }
         ]
@@ -7758,7 +7752,7 @@
       {
         "array": [
           {
-            "color": 4796941,
+            "color": 4329484,
             "x": 0.5
           }
         ]
@@ -7766,16 +7760,28 @@
       {
         "array": [
           {
-            "color": 5329382,
-            "x": 0.5
+            "color": 4806399,
+            "x": 0.0033333333
+          },
+          {
+            "color": 6373094,
+            "x": 1
           }
         ]
       },
       {
         "array": [
           {
-            "color": 1710670,
-            "x": 0.5
+            "color": 2701414,
+            "x": 0
+          },
+          {
+            "color": 0,
+            "x": 0.5133333333
+          },
+          {
+            "color": 9921838,
+            "x": 1
           }
         ]
       }

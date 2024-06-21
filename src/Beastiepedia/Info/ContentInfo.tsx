@@ -9,6 +9,7 @@ import untyped_research_data from "../../data/research_data.json";
 import designers from "../../data/designers.json";
 import abilities from "../../data/abilities";
 import BEASTIE_DATA from "../../data/Beastiedata";
+import { PropsWithChildren } from "react";
 
 const research_data: { [key: string]: number } = untyped_research_data;
 
@@ -16,15 +17,16 @@ type Props = {
   beastiedata: BeastieType;
 };
 
-function InfoBox(props: {
-  header: string;
-  value: string | React.ReactNode;
-}): React.ReactNode {
+function InfoBox(
+  props: {
+    header: string;
+  } & PropsWithChildren,
+): React.ReactNode {
   return (
     <div>
       <div className={styles.header}>{props.header}</div>
       <div className={styles.varcontainer}>
-        <div className={styles.value}>{props.value}</div>
+        <div className={styles.value}>{props.children}</div>
       </div>
     </div>
   );
@@ -142,53 +144,47 @@ export default function ContentInfo(props: Props): React.ReactNode {
     <div className={styles.info}>
       <div className={styles.inner}>
         <div className={styles.wrapinfoboxes}>
-          <InfoBox header="Number" value={`#${beastiedata.number}`} />
-          <InfoBox header="Name" value={beastiedata.name} />
-          <InfoBox
-            header="Metamorphosis"
-            value={
-              <>
-                {preEvo ? (
-                  <div>
-                    Metamorphs from{" "}
-                    <Link to={`/beastiepedia/${preEvo.beastie.name}`}>
-                      {preEvo.beastie.name}
+          <InfoBox header="Number">#{beastiedata.number}</InfoBox>
+          <InfoBox header="Name">{beastiedata.name}</InfoBox>
+          <InfoBox header="Metamorphosis">
+            {preEvo ? (
+              <div>
+                Metamorphs from{" "}
+                <Link to={`/beastiepedia/${preEvo.beastie.name}`}>
+                  {preEvo.beastie.name}
+                </Link>{" "}
+                {getEvoConditionString(preEvo.evolution)}
+              </div>
+            ) : (
+              <div>Does not Metamorph from any Beastie</div>
+            )}
+            {evolutions ? (
+              evolutionBeasties?.map((beastie, index) => {
+                if (!beastie) {
+                  return null;
+                }
+                const evolution = evolutions[index];
+                return (
+                  <div key={beastie.id}>
+                    Metamorphs into{" "}
+                    <Link to={`/beastiepedia/${beastie.name}`}>
+                      {beastie.name}
                     </Link>{" "}
-                    {getEvoConditionString(preEvo.evolution)}
+                    {getEvoConditionString(evolution)}
                   </div>
-                ) : (
-                  <div>Does not Metamorph from any Beastie</div>
-                )}
-                {evolutions ? (
-                  evolutionBeasties?.map((beastie, index) => {
-                    if (!beastie) {
-                      return null;
-                    }
-                    const evolution = evolutions[index];
-                    return (
-                      <div key={beastie.id}>
-                        Metamorphs into{" "}
-                        <Link to={`/beastiepedia/${beastie.name}`}>
-                          {beastie.name}
-                        </Link>{" "}
-                        {getEvoConditionString(evolution)}
-                      </div>
-                    );
-                  })
-                ) : (
-                  <div>Does not Metamorph into any Beastie</div>
-                )}
-              </>
-            }
-          />
+                );
+              })
+            ) : (
+              <div>Does not Metamorph into any Beastie</div>
+            )}
+          </InfoBox>
         </div>
 
-        <InfoBox header="Description" value={beastiedata.desc} />
+        <InfoBox header="Description">{beastiedata.desc}</InfoBox>
 
         {
-          <InfoBox
-            header="Traits"
-            value={beastiedata.ability.map((value, index) =>
+          <InfoBox header="Traits">
+            {beastiedata.ability.map((value, index) =>
               value in abilities ? (
                 <div key={value}>
                   {abilities[value].name}
@@ -202,20 +198,18 @@ export default function ContentInfo(props: Props): React.ReactNode {
                 `Unknown trait ${value}`
               ),
             )}
-          />
+          </InfoBox>
         }
         <div className={styles.header}>Stat Distribution</div>
         <StatDistribution beastiedata={beastiedata} />
 
         <div className={styles.wrapinfoboxes}>
-          <InfoBox
-            header="Recruit Condition"
-            value={<TextTag>{beastiedata.recruit.description}</TextTag>}
-          />
-          <InfoBox
-            header="Ally Training"
-            value={<TextTag>{training}</TextTag>}
-          />
+          <InfoBox header="Recruit Condition">
+            <TextTag>{beastiedata.recruit.description}</TextTag>
+          </InfoBox>
+          <InfoBox header="Ally Training">
+            <TextTag>{training}</TextTag>
+          </InfoBox>
         </div>
 
         <div className={styles.header}>Moves</div>
@@ -224,23 +218,18 @@ export default function ContentInfo(props: Props): React.ReactNode {
           learnset={beastiedata.learnset}
         />
 
-        <InfoBox
-          header="Research"
-          value={
-            <>
-              <div className={styles.research}>{research}</div>
-              Researcher{Array.isArray(beastiedata.designer) ? "s" : ""}:{" "}
-              {Array.isArray(beastiedata.designer)
-                ? beastiedata.designer.map((i) => designers[i]).join(", ")
-                : designers[beastiedata.designer]}
-              <br />
-              Videographer{Array.isArray(beastiedata.animator) ? "s" : ""}:{" "}
-              {Array.isArray(beastiedata.animator)
-                ? beastiedata.animator.map((i) => designers[i]).join(", ")
-                : designers[beastiedata.animator]}
-            </>
-          }
-        />
+        <InfoBox header="Research">
+          <div className={styles.research}>{research}</div>
+          Researcher{Array.isArray(beastiedata.designer) ? "s" : ""}:{" "}
+          {Array.isArray(beastiedata.designer)
+            ? beastiedata.designer.map((i) => designers[i]).join(", ")
+            : designers[beastiedata.designer]}
+          <br />
+          Videographer{Array.isArray(beastiedata.animator) ? "s" : ""}:{" "}
+          {Array.isArray(beastiedata.animator)
+            ? beastiedata.animator.map((i) => designers[i]).join(", ")
+            : designers[beastiedata.animator]}
+        </InfoBox>
       </div>
     </div>
   );

@@ -187,19 +187,19 @@ export default function ContentInfo(props: Props): React.ReactNode {
 
         {
           <InfoBox
-            header="Abilities"
+            header="Traits"
             value={beastiedata.ability.map((value, index) =>
               value in abilities ? (
                 <div key={value}>
                   {abilities[value].name}
                   {beastiedata.ability_hidden && index > 0
-                    ? " (hidden): "
+                    ? " (recessive): "
                     : ": "}
                   <TextTag>{abilities[value].desc}</TextTag>
                   <br />
                 </div>
               ) : (
-                `Unknown ability ${value}`
+                `Unknown trait ${value}`
               ),
             )}
           />

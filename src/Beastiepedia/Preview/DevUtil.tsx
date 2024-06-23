@@ -1,15 +1,16 @@
-import "jszip";
 import BEASTIE_DATA from "../../data/Beastiedata";
 import BEASTIE_ANIMATIONS from "../../data/BeastieAnimations";
 import SPRITE_INFO, { BBox } from "../../data/SpriteInfo";
 import { useRef } from "react";
 import JSZip from "jszip";
 import { setColorUniforms, setImage } from "../../shared/beastieRender/WebGL";
-import { getColorInBeastieColors } from "../../utils/color";
+import { bgrDecimalToHex, getColorInBeastieColors } from "../../utils/color";
+import { BeastieType } from "../../data/BeastieType";
 
 declare global {
   interface Window {
     saveBeastieImages: (icons: boolean) => void;
+    getWikiColorArgs: (beastiedata: BeastieType) => string;
   }
 }
 
@@ -148,6 +149,46 @@ export default function DevUtil(props: {
       };
       beastieCountRef.current += 1;
     });
+  };
+
+  window.getWikiColorArgs = (beastiedata: BeastieType) => {
+    const normal = beastiedata.colors
+      .map(
+        (colors, index) =>
+          ` |color${index + 1}=${colors.array
+            .map(
+              (value) =>
+                `#${bgrDecimalToHex(value.color)} ${Math.round(value.x * 100)}%`,
+            )
+            .join(", ")}`,
+      )
+      .join("\n");
+    let alt = "";
+    if (beastiedata.colors2) {
+      alt = beastiedata.colors2
+        .map(
+          (colors, index) =>
+            ` |color${index + 1}alt=${colors.array
+              .map(
+                (value) =>
+                  `#${bgrDecimalToHex(value.color)} ${Math.round(value.x * 100)}%`,
+              )
+              .join(", ")}`,
+        )
+        .join("\n");
+    }
+    const rare = beastiedata.shiny
+      .map(
+        (colors, index) =>
+          ` |color${index + 1}rare=${colors.array
+            .map(
+              (value) =>
+                `#${bgrDecimalToHex(value.color)} ${Math.round(value.x * 100)}%`,
+            )
+            .join(", ")}`,
+      )
+      .join("\n");
+    return "\n" + normal + "\n" + alt + (alt ? "\n" : "") + rare;
   };
 
   return null;

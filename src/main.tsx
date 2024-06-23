@@ -38,7 +38,7 @@ createRoot(container).render(
   <StrictMode>
     <HelmetProvider>
       <OpenGraph
-        title="Beastieball Info"
+        title={import.meta.env.VITE_BRANDING}
         image="ball.png"
         url=""
         description="A website with information on Beastieball!"

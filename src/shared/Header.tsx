@@ -37,7 +37,7 @@ export default function Header(props: Props): React.ReactNode {
         <Link
           to={props.returnButtonTo ?? "/"}
           className={styles.homelink}
-          title={`Return to ${props.returnButtonTitle ?? "Beastieball Info Home"}`}
+          title={`Return to ${props.returnButtonTitle ?? `${import.meta.env.VITE_BRANDING} Home`}`}
         >
           <div className={styles.homeicon}></div>
         </Link>

@@ -12,7 +12,7 @@ export default function Modding(): React.ReactElement {
       />
       <NavigationMenu title="Beastieball Modding Tools">
         <NavigationMenuOption
-          text={"Beastieball Info"}
+          text={import.meta.env.VITE_BRANDING}
           image={"/gameassets/sprMainmenu/14.png"}
           hoverImage={"/gameassets/sprMainmenu/15.png"}
           location={"/"}

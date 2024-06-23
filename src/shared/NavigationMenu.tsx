@@ -35,7 +35,9 @@ export function NavigationMenu(props: {
   return (
     <div className={styles.navmenu}>
       <div className={styles.sep}></div>
-      <h1 className={styles.header}>{props.title ?? "Beastieball Info"}</h1>
+      <h1 className={styles.header}>
+        {props.title ?? import.meta.env.VITE_BRANDING}
+      </h1>
       <div className={styles.options}>{props.children}</div>
       <div className={styles.sep}></div>
       <div className={styles.footer}>

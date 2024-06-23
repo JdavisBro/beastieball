@@ -10,7 +10,7 @@ type Props = {
 
 export default function OpenGraph(props: Props): React.ReactElement {
   const url =
-    import.meta.env.URL != undefined
+    import.meta.env.VITE_URL != undefined
       ? import.meta.env.URL
       : window.location.origin;
   return (

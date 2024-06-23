@@ -185,10 +185,11 @@ export default function Map(): React.ReactNode {
     imgheaders: { [key: string]: React.ReactElement[] };
   } = useMemo(createMarkers, []);
 
+  console.log(import.meta.env);
   return (
     <>
       <OpenGraph
-        title="Map - Beastieball Info"
+        title={`Map - ${import.meta.env.VITE_BRANDING}`}
         image="gameassets/sprMainmenu/3.png"
         url="map"
         description="A map of the world of Beastieball"

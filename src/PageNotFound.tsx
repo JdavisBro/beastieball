@@ -18,7 +18,7 @@ export default function PageNotFound(): React.ReactElement {
   return (
     <>
       <OpenGraph
-        title={"Page Not Found - Beastieball Info"}
+        title={`Page Not Found - ${import.meta.env.VITE_BRANDING}`}
         image="ball.png"
         url=""
         description="A website with data on Beastieball!"

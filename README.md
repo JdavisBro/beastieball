@@ -2,7 +2,7 @@
 
 A work in progress website that shows information on [beastieball](https://beastieballgame.com/)!
 
-\>> [here](https://beastieball.netlify.app/) <<
+\>> [here](https://beastieball.info/) <<
 
 ## Building
 

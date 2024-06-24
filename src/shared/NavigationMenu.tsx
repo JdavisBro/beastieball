@@ -31,6 +31,7 @@ export function NavigationMenuOption(props: {
 export function NavigationMenu(props: {
   children: React.ReactElement | React.ReactElement[];
   title?: string;
+  note?: string;
 }): React.ReactNode {
   return (
     <div className={styles.navmenu}>
@@ -38,6 +39,7 @@ export function NavigationMenu(props: {
       <h1 className={styles.header}>
         {props.title ?? import.meta.env.VITE_BRANDING}
       </h1>
+      {props.note ? <h3>{props.note}</h3> : null}
       <div className={styles.options}>{props.children}</div>
       <div className={styles.sep}></div>
       <div className={styles.footer}>

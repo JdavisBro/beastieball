@@ -10,7 +10,10 @@ export default function Modding(): React.ReactElement {
         url="modding/"
         description="Modding Tools, like a save file viewer, for Beastieball"
       />
-      <NavigationMenu title="Beastieball Modding Tools">
+      <NavigationMenu
+        title="Beastieball Modding Tools"
+        note="Warning! Modding could mess up your save file! Please make backups and be careful!"
+      >
         <NavigationMenuOption
           text={"Save Viewer/Editor"}
           image={"/gameassets/sprMainmenu/10.png"}

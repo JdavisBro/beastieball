@@ -20,6 +20,7 @@
   animation-timing-function: linear;
   padding: 8px 16px 8px 16px;
   clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
+  text-align: center;
 }
 
 .options {

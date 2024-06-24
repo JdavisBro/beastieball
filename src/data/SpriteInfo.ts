@@ -16,6 +16,6 @@ export type Sprite = {
   bbox: BBox;
 };
 
-const SPRITE_INFO: Sprite[] = sprite_info;
+const SPRITE_INFO: Array<Sprite | null> = sprite_info;
 
 export default SPRITE_INFO;

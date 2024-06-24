@@ -124,6 +124,9 @@ export default function DevUtil(props: {
     loadingRef.current = {};
     BEASTIE_DATA.forEach((beastie) => {
       const sprite = SPRITE_INFO[beastie.spr];
+      if (!sprite) {
+        return;
+      }
       const img = document.createElement("img");
       const anims = BEASTIE_ANIMATIONS.get(`_${sprite.name}`);
       const anim_data = anims?.anim_data;

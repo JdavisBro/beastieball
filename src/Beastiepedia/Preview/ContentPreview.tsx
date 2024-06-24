@@ -8,7 +8,7 @@ import setupWebGL, {
 import styles from "../Content.module.css";
 import type { BeastieType } from "../../data/BeastieType";
 import ColorTabs from "./ColorTabs";
-import SPRITE_INFO, { BBox } from "../../data/SpriteInfo";
+import SPRITE_INFO, { BBox, Sprite } from "../../data/SpriteInfo";
 import useLoadBeastieImages from "../../utils/useLoadBeastieImages";
 import BEASTIE_ANIMATIONS, {
   BeastieAnimation,
@@ -34,15 +34,15 @@ export default function ContentPreview(props: Props): React.ReactNode {
     [255, 255, 255],
   ]);
 
+  const beastiesprite = SPRITE_INFO[props.beastiedata.spr] as Sprite;
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const glRef = useRef<WebGLRenderingContext | null>(null);
   const programRef = useRef<WebGLProgram | null>(null);
   const cropCanvasRef = useRef<HTMLCanvasElement>(null);
 
   const [animation, setAnimation] = useState("idle");
-  const animdata = BEASTIE_ANIMATIONS.get(
-    `_${SPRITE_INFO[props.beastiedata.spr].name}`,
-  )?.anim_data;
+  const animdata = BEASTIE_ANIMATIONS.get(`_${beastiesprite.name}`)?.anim_data;
 
   let anim: BeastieAnimation | undefined = undefined;
   const tempanim = animdata ? animdata[animation] : undefined;
@@ -55,8 +55,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
   }
 
   const loadedImages = useLoadBeastieImages(
-    `/gameassets/beasties/${SPRITE_INFO[props.beastiedata.spr].name}`,
-    SPRITE_INFO[props.beastiedata.spr].frames,
+    `/gameassets/beasties/${beastiesprite.name}`,
+    beastiesprite.frames,
   );
   const requestRef = useRef(0);
   const frameIndexRef = useRef<number | null>(null); // if multiple beastieframe for animation
@@ -92,18 +92,16 @@ export default function ContentPreview(props: Props): React.ReactNode {
       setFrame(
         frameNumRef.current != null
           ? Math.min(
-              SPRITE_INFO[props.beastiedata.spr].frames - 1,
+              beastiesprite.frames - 1,
               Math.max(0, frameNumRef.current + diff),
             )
           : 0,
       );
     },
-    [setFrame, props.beastiedata],
+    [setFrame, beastiesprite],
   );
 
   const [userSpeed, setUserSpeed] = useState(0.5); // default 0.5 seems to match in game more...
-
-  const beastiesprite = SPRITE_INFO[props.beastiedata.spr];
 
   const getCrop = useCallback(
     (bbox: BBox) => {
@@ -379,14 +377,15 @@ export default function ContentPreview(props: Props): React.ReactNode {
       structuredClone(anim),
       userSpeed,
       animdata.__anim_speed ? animdata.__anim_speed : 1,
-      SPRITE_INFO[props.beastiedata.spr],
+      beastiesprite,
       frameNumRef.current != undefined ? frameNumRef.current : 0,
     );
   }, [
     animation,
     fitBeastie,
     loadedImages,
-    props.beastiedata,
+    props.beastiedata.name,
+    beastiesprite,
     anim,
     userSpeed,
     animdata,

@@ -7,13 +7,24 @@ string exportDir = PromptChooseDirectory();
 
 string output = "[\n";
 bool first = true;
+bool last_null = false;
 
 foreach (UndertaleSprite sprite in Data.Sprites) {
   if (!first) {
-    output += "  },\n";
+    if (last_null) {
+      output += ",\n";
+    } else {
+      output += "  },\n";
+    }
   } else {
     first = false;
   }
+  if (sprite.Textures.Count == 0 || sprite.Textures[0].Texture == null) {
+    output += "  null";
+    last_null = true;
+    continue;
+  }
+  last_null = false;
   output += "  {\n";
   output += "    \"name\": " + sprite.Name.ToString() + ",\n";
   output += "    \"width\": " + sprite.Width.ToString() + ",\n";
@@ -71,6 +82,9 @@ foreach (UndertaleSprite sprite in Data.Sprites) {
   output += "      \"height\": " + (bboxEY - bboxY).ToString() + "\n";
   output += "    }\n";
 }
-output += "  }\n]\n";
-
+if (last_null) {
+  output += "\n]\n";
+} else {
+  output += "  }\n]\n";
+}
 File.WriteAllText(exportDir + "/sprite_info.json", output);

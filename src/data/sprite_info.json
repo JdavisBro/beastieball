@@ -1,19 +1,5 @@
 [
-  {
-    "name": "sprMap_ambestone_west_cliff",
-    "width": 157,
-    "height": 337,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprOffice_over_hr",
     "width": 256,
@@ -54,21 +40,7 @@
       "height": 205
     }
   },
-  {
-    "name": "sprFanbro",
-    "width": 550,
-    "height": 500,
-    "frames": 4,
-    "originX": 275,
-    "originY": 497,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprBilby2",
     "width": 1000,
@@ -133,21 +105,7 @@
       "height": 455
     }
   },
-  {
-    "name": "sprCraig",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 250,
-    "originY": 500,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "verbena",
     "width": 512,
@@ -198,21 +156,7 @@
       "height": 307
     }
   },
-  {
-    "name": "sprIbis",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 489,
-    "originY": 988,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprShroom1",
     "width": 1000,
@@ -937,36 +881,8 @@
       "height": 64
     }
   },
-  {
-    "name": "sprMap_park_south",
-    "width": 302,
-    "height": 140,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_mountain_8",
-    "width": 135,
-    "height": 165,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprNPC14",
     "width": 500,
@@ -995,21 +911,7 @@
       "height": 300
     }
   },
-  {
-    "name": "sprMap_city_seacave",
-    "width": 247,
-    "height": 314,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "spring_rider",
     "width": 512,
@@ -1104,51 +1006,9 @@
       "height": 65
     }
   },
-  {
-    "name": "sprMap_seacave_side",
-    "width": 254,
-    "height": 110,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprKingarm",
-    "width": 889,
-    "height": 368,
-    "frames": 2,
-    "originX": 814,
-    "originY": 244,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprHypecrack",
-    "width": 224,
-    "height": 1080,
-    "frames": 1,
-    "originX": 224,
-    "originY": 1080,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "sprVolleyA",
     "width": 256,
@@ -1737,66 +1597,10 @@
       "height": 53
     }
   },
-  {
-    "name": "sprSeabird1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 126,
-    "originX": 489,
-    "originY": 987,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprBunny",
-    "width": 600,
-    "height": 400,
-    "frames": 8,
-    "originX": 300,
-    "originY": 350,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprRocklizard2",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 502,
-    "originY": 964,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_pirate",
-    "width": 228,
-    "height": 275,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
+  null,
   {
     "name": "sprNPC13",
     "width": 500,
@@ -1825,81 +1629,11 @@
       "height": 340
     }
   },
-  {
-    "name": "sprTurtle1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 48,
-    "originX": 500,
-    "originY": 972,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMask",
-    "width": 500,
-    "height": 500,
-    "frames": 19,
-    "originX": 235,
-    "originY": 498,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_forest_lake",
-    "width": 340,
-    "height": 226,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprStreamer",
-    "width": 500,
-    "height": 500,
-    "frames": 19,
-    "originX": 250,
-    "originY": 500,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprLyrebird",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 484,
-    "originY": 975,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
+  null,
+  null,
   {
     "name": "sprNPC10",
     "width": 500,
@@ -1928,51 +1662,9 @@
       "height": 352
     }
   },
-  {
-    "name": "sprMap_chartreuse",
-    "width": 434,
-    "height": 349,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_shroom_path",
-    "width": 278,
-    "height": 332,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_canyon_secret",
-    "width": 116,
-    "height": 280,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "sprMoney",
     "width": 52,
@@ -2029,36 +1721,8 @@
       "height": 225
     }
   },
-  {
-    "name": "sprAlien",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 502,
-    "originY": 990,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_mountain_2",
-    "width": 273,
-    "height": 145,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprFiredup",
     "width": 128,
@@ -2173,21 +1837,7 @@
       "height": 169
     }
   },
-  {
-    "name": "sprMap_cliffs_rail_cave_east",
-    "width": 173,
-    "height": 141,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprHatguy",
     "width": 500,
@@ -2238,36 +1888,8 @@
       "height": 177
     }
   },
-  {
-    "name": "sprMap_jasper_cave_north_exit",
-    "width": 165,
-    "height": 120,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_woods_north_rail",
-    "width": 190,
-    "height": 265,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprOffice_over_sales",
     "width": 256,
@@ -2308,21 +1930,7 @@
       "height": 205
     }
   },
-  {
-    "name": "sprGiantTurtleLeg",
-    "width": 562,
-    "height": 632,
-    "frames": 1,
-    "originX": 299,
-    "originY": 556,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprMusicnote",
     "width": 64,
@@ -2379,21 +1987,7 @@
       "height": 512
     }
   },
-  {
-    "name": "sprOlm",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 460,
-    "originY": 999,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "spinwall_tall_standee",
     "width": 512,
@@ -2416,21 +2010,7 @@
       "height": 512
     }
   },
-  {
-    "name": "sprMap_mountain_5",
-    "width": 148,
-    "height": 182,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprGymnast",
     "width": 500,
@@ -2499,21 +2079,7 @@
       "height": 127
     }
   },
-  {
-    "name": "sprShroom_s",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 526,
-    "originY": 968,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprTex_bush",
     "width": 128,
@@ -2684,36 +2250,8 @@
       "height": 63
     }
   },
-  {
-    "name": "sprClam",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 487,
-    "originY": 971,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_jasper_cave_west",
-    "width": 115,
-    "height": 202,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprSpeech",
     "width": 1024,
@@ -2758,21 +2296,7 @@
       "height": 171
     }
   },
-  {
-    "name": "sprShark",
-    "width": 1000,
-    "height": 1000,
-    "frames": 8,
-    "originX": 500,
-    "originY": 958,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprBG_Railhouse",
     "width": 1920,
@@ -2839,36 +2363,8 @@
       "height": 242
     }
   },
-  {
-    "name": "sprMillipede",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 540,
-    "originY": 986,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprHeadmaster",
-    "width": 500,
-    "height": 500,
-    "frames": 6,
-    "originX": 235,
-    "originY": 493,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprMap_beryl",
     "width": 364,
@@ -2891,21 +2387,7 @@
       "height": 241
     }
   },
-  {
-    "name": "sprMap_park_south_end",
-    "width": 216,
-    "height": 129,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprHitA",
     "width": 256,
@@ -3256,36 +2738,8 @@
       "height": 798
     }
   },
-  {
-    "name": "sprMap_park_edge",
-    "width": 215,
-    "height": 329,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprKettle1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 539,
-    "originY": 966,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprNoise_perlin",
     "width": 256,
@@ -3308,21 +2762,7 @@
       "height": 256
     }
   },
-  {
-    "name": "sprMap_wood_cave2",
-    "width": 220,
-    "height": 299,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprNPC23",
     "width": 500,
@@ -3373,21 +2813,7 @@
       "height": 108
     }
   },
-  {
-    "name": "sprMap_beryl_railpath_south",
-    "width": 342,
-    "height": 177,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprJason",
     "width": 500,
@@ -3462,21 +2888,7 @@
       "height": 62
     }
   },
-  {
-    "name": "sprFox1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 459,
-    "originY": 887,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprMagpie1",
     "width": 1000,
@@ -3601,21 +3013,7 @@
       "height": 665
     }
   },
-  {
-    "name": "sprMap_BG_xtra",
-    "width": 341,
-    "height": 251,
-    "frames": 1,
-    "originX": 341,
-    "originY": 244,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprNPC12",
     "width": 500,
@@ -3644,21 +3042,7 @@
       "height": 243
     }
   },
-  {
-    "name": "sprMap_tiny_island",
-    "width": 248,
-    "height": 157,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "snow_grass",
     "width": 512,
@@ -3943,21 +3327,7 @@
       "height": 407
     }
   },
-  {
-    "name": "sprFankid",
-    "width": 550,
-    "height": 500,
-    "frames": 6,
-    "originX": 293,
-    "originY": 493,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprBall",
     "width": 256,
@@ -4082,21 +3452,7 @@
       "height": 630
     }
   },
-  {
-    "name": "sprMap_wood_rail",
-    "width": 424,
-    "height": 171,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprMap_hometown_south_path",
     "width": 392,
@@ -4321,36 +3677,8 @@
       "height": 542
     }
   },
-  {
-    "name": "sprMap_central_station",
-    "width": 309,
-    "height": 136,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMudskipper",
-    "width": 1000,
-    "height": 1000,
-    "frames": 8,
-    "originX": 490,
-    "originY": 986,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "tree_mangrove",
     "width": 423,
@@ -4373,36 +3701,8 @@
       "height": 474
     }
   },
-  {
-    "name": "sprMap_cityhill",
-    "width": 223,
-    "height": 270,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_park1",
-    "width": 246,
-    "height": 256,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "pandamus_tree",
     "width": 512,
@@ -4885,21 +4185,7 @@
       "height": 555
     }
   },
-  {
-    "name": "sprRat",
-    "width": 1000,
-    "height": 1000,
-    "frames": 83,
-    "originX": 465,
-    "originY": 986,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprMoth1",
     "width": 1000,
@@ -5246,21 +4532,7 @@
       "height": 325
     }
   },
-  {
-    "name": "sprMap_city_rail_east",
-    "width": 341,
-    "height": 195,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprNPC19",
     "width": 500,
@@ -5353,21 +4625,7 @@
       "height": 845
     }
   },
-  {
-    "name": "sprMap_myth_forest1",
-    "width": 282,
-    "height": 251,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprMap_seaside_path",
     "width": 314,
@@ -5390,36 +4648,8 @@
       "height": 131
     }
   },
-  {
-    "name": "sprFighter",
-    "width": 500,
-    "height": 500,
-    "frames": 7,
-    "originX": 244,
-    "originY": 494,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_myth_forest2",
-    "width": 374,
-    "height": 230,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprGrade_tutorial",
     "width": 64,
@@ -5476,51 +4706,9 @@
       "height": 613
     }
   },
-  {
-    "name": "sprMap_park_north2",
-    "width": 243,
-    "height": 161,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprCycle",
-    "width": 500,
-    "height": 500,
-    "frames": 8,
-    "originX": 236,
-    "originY": 498,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprPsychic",
-    "width": 1000,
-    "height": 1000,
-    "frames": 9,
-    "originX": 491,
-    "originY": 987,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "sprNPC17",
     "width": 500,
@@ -5599,21 +4787,7 @@
       "height": 64
     }
   },
-  {
-    "name": "sprMap_meadow_springs",
-    "width": 225,
-    "height": 151,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprPlayer_hairb",
     "width": 500,
@@ -5684,21 +4858,7 @@
       "height": 202
     }
   },
-  {
-    "name": "sprSeal1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 8,
-    "originX": 498,
-    "originY": 972,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprType",
     "width": 64,
@@ -6043,21 +5203,7 @@
       "height": 642
     }
   },
-  {
-    "name": "sprMap_canyon_3",
-    "width": 161,
-    "height": 290,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprBored1",
     "width": 500,
@@ -6164,21 +5310,7 @@
       "height": 369
     }
   },
-  {
-    "name": "sprMap_beryl_railpath_west",
-    "width": 172,
-    "height": 167,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprNPC01",
     "width": 500,
@@ -6207,21 +5339,7 @@
       "height": 600
     }
   },
-  {
-    "name": "sprRat_alt",
-    "width": 1000,
-    "height": 1000,
-    "frames": 83,
-    "originX": 465,
-    "originY": 986,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprMap_reserve_1",
     "width": 172,
@@ -6244,21 +5362,7 @@
       "height": 305
     }
   },
-  {
-    "name": "sprGhost1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 51,
-    "originX": 488,
-    "originY": 989,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprKaz",
     "width": 500,
@@ -6387,36 +5491,8 @@
       "height": 462
     }
   },
-  {
-    "name": "sprSnowspirit",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 475,
-    "originY": 999,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_jasper_cave_south",
-    "width": 165,
-    "height": 170,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "tree_leaf_a_01",
     "width": 2048,
@@ -6439,21 +5515,7 @@
       "height": 2048
     }
   },
-  {
-    "name": "sprMap_seacave1",
-    "width": 193,
-    "height": 104,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprNatalia",
     "width": 500,
@@ -6600,21 +5662,7 @@
       "height": 292
     }
   },
-  {
-    "name": "sprFrog",
-    "width": 1000,
-    "height": 1000,
-    "frames": 8,
-    "originX": 480,
-    "originY": 985,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprPossum2",
     "width": 1000,
@@ -6845,36 +5893,8 @@
       "height": 183
     }
   },
-  {
-    "name": "sprBeluga",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 508,
-    "originY": 932,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_shroomgrove",
-    "width": 219,
-    "height": 205,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprStump_icon",
     "width": 64,
@@ -6965,21 +5985,7 @@
       "height": 313
     }
   },
-  {
-    "name": "sprMap_dogpark",
-    "width": 311,
-    "height": 177,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprQuestion",
     "width": 256,
@@ -7700,111 +6706,13 @@
       "height": 48
     }
   },
-  {
-    "name": "sprCrownSeries",
-    "width": 1031,
-    "height": 613,
-    "frames": 1,
-    "originX": 515,
-    "originY": 490,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_mountain_4",
-    "width": 307,
-    "height": 129,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprCowboy",
-    "width": 550,
-    "height": 500,
-    "frames": 3,
-    "originX": 287,
-    "originY": 496,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprShy",
-    "width": 1000,
-    "height": 1000,
-    "frames": 2,
-    "originX": 497,
-    "originY": 959,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_rubberfarm",
-    "width": 471,
-    "height": 175,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprJoel",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 250,
-    "originY": 500,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprCaptain",
-    "width": 616,
-    "height": 500,
-    "frames": 16,
-    "originX": 253,
-    "originY": 499,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
   {
     "name": "sprMapX",
     "width": 64,
@@ -7889,66 +6797,10 @@
       "height": 205
     }
   },
-  {
-    "name": "sprMap_park_north3",
-    "width": 212,
-    "height": 144,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_beryl_railpath_end",
-    "width": 192,
-    "height": 121,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprOlm1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 476,
-    "originY": 992,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_park_north4",
-    "width": 251,
-    "height": 140,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
+  null,
   {
     "name": "sprMap_hometown_south_rail",
     "width": 373,
@@ -7993,36 +6845,8 @@
       "height": 556
     }
   },
-  {
-    "name": "sprGhost2",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 478,
-    "originY": 791,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_woods_east_cave",
-    "width": 186,
-    "height": 170,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprCoral_c",
     "width": 1135,
@@ -8149,51 +6973,9 @@
       "height": 120
     }
   },
-  {
-    "name": "sprScienceboss",
-    "width": 500,
-    "height": 500,
-    "frames": 9,
-    "originX": 279,
-    "originY": 494,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprOpossum",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 480,
-    "originY": 1000,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprClown1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 48,
-    "originX": 501,
-    "originY": 992,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "sprMap_reserve_2",
     "width": 197,
@@ -8216,51 +6998,9 @@
       "height": 222
     }
   },
-  {
-    "name": "sprMap_park_north",
-    "width": 197,
-    "height": 207,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprSharkmon",
-    "width": 1000,
-    "height": 1000,
-    "frames": 8,
-    "originX": 500,
-    "originY": 958,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprJellyfish",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 483,
-    "originY": 903,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "sprQuestionInfo",
     "width": 40,
@@ -8305,36 +7045,8 @@
       "height": 1080
     }
   },
-  {
-    "name": "sprKettle",
-    "width": 1000,
-    "height": 1000,
-    "frames": 8,
-    "originX": 527,
-    "originY": 954,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprPossum",
-    "width": 1000,
-    "height": 1000,
-    "frames": 2,
-    "originX": 476,
-    "originY": 992,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprLeagueman",
     "width": 500,
@@ -8433,21 +7145,7 @@
       "height": 40
     }
   },
-  {
-    "name": "sprMap_rockybeach",
-    "width": 482,
-    "height": 301,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprDiamond",
     "width": 64,
@@ -8470,21 +7168,7 @@
       "height": 64
     }
   },
-  {
-    "name": "sprMap_city_railalley",
-    "width": 173,
-    "height": 177,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprPlayer_collar",
     "width": 500,
@@ -8707,51 +7391,9 @@
       "height": 64
     }
   },
-  {
-    "name": "sprMap_coral_island",
-    "width": 424,
-    "height": 229,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_mountain_6",
-    "width": 146,
-    "height": 227,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_wood_east_rail",
-    "width": 332,
-    "height": 115,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "sprPhone_phone",
     "width": 406,
@@ -8846,21 +7488,7 @@
       "height": 519
     }
   },
-  {
-    "name": "sprSeal",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 504,
-    "originY": 957,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "mushroomnet",
     "width": 512,
@@ -8883,36 +7511,8 @@
       "height": 512
     }
   },
-  {
-    "name": "sprMap_myth_forest_side",
-    "width": 368,
-    "height": 118,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprPirate1",
-    "width": 550,
-    "height": 500,
-    "frames": 4,
-    "originX": 309,
-    "originY": 497,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprDia_thick",
     "width": 64,
@@ -8963,21 +7563,7 @@
       "height": 305
     }
   },
-  {
-    "name": "sprBat",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 496,
-    "originY": 947,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprCheck",
     "width": 64,
@@ -9028,51 +7614,9 @@
       "height": 249
     }
   },
-  {
-    "name": "sprMap_meadows_1",
-    "width": 247,
-    "height": 198,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_myth_forest3",
-    "width": 212,
-    "height": 261,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMantis",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 442,
-    "originY": 982,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "sprWatertrail",
     "width": 256,
@@ -9095,66 +7639,10 @@
       "height": 256
     }
   },
-  {
-    "name": "sprZorilla",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 497,
-    "originY": 970,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprCassowary",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 483,
-    "originY": 994,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprTurtleBoat",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 500,
-    "originY": 918,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_seacave4",
-    "width": 239,
-    "height": 230,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
+  null,
   {
     "name": "sprUndo",
     "width": 64,
@@ -9269,21 +7757,7 @@
       "height": 526
     }
   },
-  {
-    "name": "sprBG_stadium_far",
-    "width": 1920,
-    "height": 1080,
-    "frames": 5,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprHeartlock",
     "width": 64,
@@ -9448,81 +7922,11 @@
       "height": 590
     }
   },
-  {
-    "name": "sprBilby",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 517,
-    "originY": 993,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprPirate2",
-    "width": 500,
-    "height": 500,
-    "frames": 5,
-    "originX": 230,
-    "originY": 500,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprRocklizard",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 531,
-    "originY": 997,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprDog",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 502,
-    "originY": 979,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_reserve_secret",
-    "width": 199,
-    "height": 210,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
+  null,
+  null,
   {
     "name": "sprRedd",
     "width": 500,
@@ -9599,36 +8003,8 @@
       "height": 380
     }
   },
-  {
-    "name": "sprMap_canyon_2",
-    "width": 267,
-    "height": 219,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_city_market",
-    "width": 241,
-    "height": 208,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "merry_go_round",
     "width": 512,
@@ -9651,36 +8027,8 @@
       "height": 512
     }
   },
-  {
-    "name": "sprMitzi",
-    "width": 550,
-    "height": 500,
-    "frames": 2,
-    "originX": 263,
-    "originY": 493,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprGhost",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 488,
-    "originY": 841,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprShadowBlob",
     "width": 256,
@@ -9743,21 +8091,7 @@
       "height": 547
     }
   },
-  {
-    "name": "sprMap_sphinx",
-    "width": 306,
-    "height": 278,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprBored3",
     "width": 500,
@@ -9786,21 +8120,7 @@
       "height": 497
     }
   },
-  {
-    "name": "sprFanspike",
-    "width": 550,
-    "height": 500,
-    "frames": 4,
-    "originX": 255,
-    "originY": 498,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprMainmenu",
     "width": 48,
@@ -9991,21 +8311,7 @@
       "height": 48
     }
   },
-  {
-    "name": "sprInstructor",
-    "width": 550,
-    "height": 500,
-    "frames": 7,
-    "originX": 274,
-    "originY": 495,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprDragonfly",
     "width": 1000,
@@ -10028,21 +8334,7 @@
       "height": 645
     }
   },
-  {
-    "name": "sprMap_railtrail_3",
-    "width": 317,
-    "height": 138,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprPlatypus2",
     "width": 1000,
@@ -10099,21 +8391,7 @@
       "height": 475
     }
   },
-  {
-    "name": "sprClown",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 504,
-    "originY": 968,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprKangaroo1",
     "width": 1000,
@@ -11092,21 +9370,7 @@
       "height": 155
     }
   },
-  {
-    "name": "sprMap_mangrove_end",
-    "width": 258,
-    "height": 195,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprNPC09",
     "width": 500,
@@ -11135,51 +9399,9 @@
       "height": 563
     }
   },
-  {
-    "name": "sprMonkey",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 502,
-    "originY": 998,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_stadium",
-    "width": 232,
-    "height": 290,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_city_neighborhood",
-    "width": 242,
-    "height": 323,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "tree_normal",
     "width": 512,
@@ -11202,21 +9424,7 @@
       "height": 512
     }
   },
-  {
-    "name": "sprShark1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 15,
-    "originX": 487,
-    "originY": 993,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprNPC20",
     "width": 500,
@@ -11245,21 +9453,7 @@
       "height": 299
     }
   },
-  {
-    "name": "sprFootball1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 15,
-    "originX": 480,
-    "originY": 994,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprMap_hometown_reserve",
     "width": 284,
@@ -11282,81 +9476,11 @@
       "height": 291
     }
   },
-  {
-    "name": "sprMap_beach_cliff1",
-    "width": 188,
-    "height": 240,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_canyon_secret_2",
-    "width": 169,
-    "height": 120,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprSavanah",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 250,
-    "originY": 500,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMillipede1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 18,
-    "originX": 516,
-    "originY": 985,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprJellyfish1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 548,
-    "originY": 857,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
+  null,
+  null,
   {
     "name": "sprRing",
     "width": 64,
@@ -11401,21 +9525,7 @@
       "height": 64
     }
   },
-  {
-    "name": "sprMagpie",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 497,
-    "originY": 973,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprPhone_hand_2",
     "width": 406,
@@ -11530,21 +9640,7 @@
       "height": 295
     }
   },
-  {
-    "name": "sprTricky",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 495,
-    "originY": 966,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprJasperhiker",
     "width": 500,
@@ -11619,21 +9715,7 @@
       "height": 64
     }
   },
-  {
-    "name": "sprMap_meadows_2",
-    "width": 396,
-    "height": 268,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprGrade_default",
     "width": 64,
@@ -12110,21 +10192,7 @@
       "height": 251
     }
   },
-  {
-    "name": "sprMap_jasper_cave_connect",
-    "width": 107,
-    "height": 135,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprGrade_witch",
     "width": 64,
@@ -12147,36 +10215,8 @@
       "height": 64
     }
   },
-  {
-    "name": "sprFootball2",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 459,
-    "originY": 939,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprCroc",
-    "width": 1000,
-    "height": 1000,
-    "frames": 8,
-    "originX": 525,
-    "originY": 987,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "chrysanthemum",
     "width": 512,
@@ -12287,36 +10327,8 @@
       "height": 549
     }
   },
-  {
-    "name": "sprMap_jasper_cave_1",
-    "width": 277,
-    "height": 183,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_mythwood_town1",
-    "width": 284,
-    "height": 278,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprChar",
     "width": 562,
@@ -12863,21 +10875,7 @@
       "height": 432
     }
   },
-  {
-    "name": "sprMap_wood_cave1",
-    "width": 178,
-    "height": 138,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprPossum1",
     "width": 1000,
@@ -13434,51 +11432,9 @@
       "height": 275
     }
   },
-  {
-    "name": "sprCityrailman",
-    "width": 550,
-    "height": 500,
-    "frames": 8,
-    "originX": 303,
-    "originY": 485,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_mangrove_1",
-    "width": 211,
-    "height": 190,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_mangrove_2",
-    "width": 263,
-    "height": 312,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "oxalis",
     "width": 512,
@@ -13541,51 +11497,9 @@
       "height": 205
     }
   },
-  {
-    "name": "sprDisruptor",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 504,
-    "originY": 970,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_reserve_shroom",
-    "width": 158,
-    "height": 193,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_beach_station",
-    "width": 281,
-    "height": 187,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "sprBallman",
     "width": 500,
@@ -13728,21 +11642,7 @@
       "height": 353
     }
   },
-  {
-    "name": "sprMap_jasper_cave_west_exit",
-    "width": 158,
-    "height": 124,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprKeyboard_butts",
     "width": 64,
@@ -14071,21 +11971,7 @@
       "height": 512
     }
   },
-  {
-    "name": "sprMap_canyon_cave",
-    "width": 170,
-    "height": 151,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprMoth2",
     "width": 1000,
@@ -14214,21 +12100,7 @@
       "height": 282
     }
   },
-  {
-    "name": "sprTurtle",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 524,
-    "originY": 959,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprNPC07",
     "width": 500,
@@ -14257,21 +12129,7 @@
       "height": 482
     }
   },
-  {
-    "name": "sprMap_city_suburb1",
-    "width": 459,
-    "height": 166,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprNPC22",
     "width": 500,
@@ -14510,21 +12368,7 @@
       "height": 34
     }
   },
-  {
-    "name": "sprMap_railbridge",
-    "width": 170,
-    "height": 284,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "scribble_fallback_bulletpoint",
     "width": 12,
@@ -14717,21 +12561,7 @@
       "height": 121
     }
   },
-  {
-    "name": "sprOkapi",
-    "width": 1000,
-    "height": 1000,
-    "frames": 3,
-    "originX": 488,
-    "originY": 981,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprNPC11",
     "width": 500,
@@ -14884,36 +12714,8 @@
       "height": 619
     }
   },
-  {
-    "name": "sprMap_seacave3",
-    "width": 210,
-    "height": 208,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMagpiemon",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 510,
-    "originY": 999,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprMap_hometown_starters",
     "width": 165,
@@ -14936,21 +12738,7 @@
       "height": 130
     }
   },
-  {
-    "name": "sprMap_academy",
-    "width": 247,
-    "height": 369,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprTridash",
     "width": 64,
@@ -15779,21 +13567,7 @@
       "height": 442
     }
   },
-  {
-    "name": "sprJellyfish2",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 500,
-    "originY": 928,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprMap_railtrail_2",
     "width": 201,
@@ -15838,21 +13612,7 @@
       "height": 2048
     }
   },
-  {
-    "name": "sprMap_jasper_cave_south_exit",
-    "width": 182,
-    "height": 278,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprMap_hometown",
     "width": 373,
@@ -16003,21 +13763,7 @@
       "height": 498
     }
   },
-  {
-    "name": "sprRainbow",
-    "width": 1000,
-    "height": 1000,
-    "frames": 16,
-    "originX": 507,
-    "originY": 981,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprCheerleader1",
     "width": 1000,
@@ -16082,21 +13828,7 @@
       "height": 338
     }
   },
-  {
-    "name": "sprFootball",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 459,
-    "originY": 939,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprIcon",
     "width": 64,
@@ -16229,21 +13961,7 @@
       "height": 12
     }
   },
-  {
-    "name": "sprMap_mangrove_3",
-    "width": 290,
-    "height": 261,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprBilby1",
     "width": 1000,
@@ -16560,66 +14278,10 @@
       "height": 411
     }
   },
-  {
-    "name": "sprGremlin",
-    "width": 1000,
-    "height": 1000,
-    "frames": 8,
-    "originX": 502,
-    "originY": 979,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprKangaroo",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 429,
-    "originY": 970,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprGhostbug",
-    "width": 1000,
-    "height": 1000,
-    "frames": 10,
-    "originX": 488,
-    "originY": 989,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_stadium_road",
-    "width": 451,
-    "height": 128,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
+  null,
   {
     "name": "sprMayor",
     "width": 550,
@@ -16732,36 +14394,8 @@
       "height": 450
     }
   },
-  {
-    "name": "sprMap_pirate_island",
-    "width": 254,
-    "height": 226,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprTurtle2",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 492,
-    "originY": 982,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprPlayer_shoe",
     "width": 500,
@@ -16814,36 +14448,8 @@
       "height": 63
     }
   },
-  {
-    "name": "sprSeabird",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 513,
-    "originY": 993,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_city_trainyard",
-    "width": 159,
-    "height": 209,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprCircle",
     "width": 256,
@@ -16936,36 +14542,8 @@
       "height": 16
     }
   },
-  {
-    "name": "sprMap_mountain_7",
-    "width": 221,
-    "height": 143,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprDaredevil",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 495,
-    "originY": 964,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprBG_Clothes",
     "width": 1920,
@@ -16988,51 +14566,9 @@
       "height": 1080
     }
   },
-  {
-    "name": "sprMap_seacave2",
-    "width": 179,
-    "height": 217,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_begonia_south",
-    "width": 138,
-    "height": 105,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprCheerleadermon",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 492,
-    "originY": 994,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "sprHatlady",
     "width": 500,
@@ -17169,21 +14705,7 @@
       "height": 1080
     }
   },
-  {
-    "name": "sprAlien1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 500,
-    "originY": 995,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprBG_Zip",
     "width": 1920,
@@ -17206,36 +14728,8 @@
       "height": 1080
     }
   },
-  {
-    "name": "sprMap_sunken_stadium",
-    "width": 277,
-    "height": 243,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprNerd",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 510,
-    "originY": 974,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprOptions_small",
     "width": 77,
@@ -17522,21 +15016,7 @@
       "height": 255
     }
   },
-  {
-    "name": "sprMap_park_south2",
-    "width": 356,
-    "height": 135,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprRex",
     "width": 500,
@@ -17615,36 +15095,8 @@
       "height": 225
     }
   },
-  {
-    "name": "sprShroom_b",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 499,
-    "originY": 973,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprCrab",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 501,
-    "originY": 973,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprPixel2",
     "width": 2,
@@ -17689,36 +15141,8 @@
       "height": 64
     }
   },
-  {
-    "name": "sprMap_base_camp",
-    "width": 259,
-    "height": 159,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_mythwood_cave_east",
-    "width": 223,
-    "height": 173,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprFashion",
     "width": 500,
@@ -17817,21 +15241,7 @@
       "height": 92
     }
   },
-  {
-    "name": "sprBouncer",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 250,
-    "originY": 500,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprNPC05",
     "width": 500,
@@ -17860,36 +15270,8 @@
       "height": 581
     }
   },
-  {
-    "name": "sprRainbowmon",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 470,
-    "originY": 1000,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_mountain_1",
-    "width": 223,
-    "height": 176,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "tree_euca",
     "width": 512,
@@ -17912,21 +15294,7 @@
       "height": 512
     }
   },
-  {
-    "name": "sprSnake",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 502,
-    "originY": 979,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprTex_tinysucculent",
     "width": 64,
@@ -17949,21 +15317,7 @@
       "height": 32
     }
   },
-  {
-    "name": "sprPlatypus",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 477,
-    "originY": 985,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprHalftone_line",
     "width": 64,
@@ -17986,51 +15340,9 @@
       "height": 64
     }
   },
-  {
-    "name": "sprWizard",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 460,
-    "originY": 996,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprFox",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 459,
-    "originY": 951,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_citysquare",
-    "width": 337,
-    "height": 271,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "city_park_tree",
     "width": 512,
@@ -18053,21 +15365,7 @@
       "height": 512
     }
   },
-  {
-    "name": "sprMap_canyon_1",
-    "width": 256,
-    "height": 205,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprTex_tree_main",
     "width": 256,
@@ -18340,21 +15638,7 @@
       "height": 518
     }
   },
-  {
-    "name": "sprMap_mainstreet",
-    "width": 200,
-    "height": 487,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprHorseshoe",
     "width": 1000,
@@ -18483,51 +15767,9 @@
       "height": 563
     }
   },
-  {
-    "name": "sprBat1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 8,
-    "originX": 488,
-    "originY": 984,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_railtrail_1",
-    "width": 118,
-    "height": 257,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_mangrove_4",
-    "width": 219,
-    "height": 380,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "sprRain",
     "width": 64,
@@ -18550,21 +15792,7 @@
       "height": -15
     }
   },
-  {
-    "name": "sprMap_jasper_cave_2",
-    "width": 371,
-    "height": 116,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "tree_moreton",
     "width": 512,
@@ -19423,36 +16651,8 @@
       "height": 81
     }
   },
-  {
-    "name": "sprMap_mountain_9",
-    "width": 151,
-    "height": 273,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprBarnes",
-    "width": 500,
-    "height": 500,
-    "frames": 3,
-    "originX": 251,
-    "originY": 497,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprHalftone",
     "width": 64,
@@ -19475,21 +16675,7 @@
       "height": 64
     }
   },
-  {
-    "name": "sprBestiemon",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 475,
-    "originY": 992,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprOffice_over_finance",
     "width": 256,
@@ -19552,21 +16738,7 @@
       "height": 64
     }
   },
-  {
-    "name": "sprDaredevil1",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 493,
-    "originY": 982,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprSummit",
     "width": 48,
@@ -19843,21 +17015,7 @@
       "height": 57
     }
   },
-  {
-    "name": "sprMap_myth_forest_secret",
-    "width": 253,
-    "height": 192,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprFrog1",
     "width": 1000,
@@ -20148,36 +17306,8 @@
       "height": 64
     }
   },
-  {
-    "name": "sprWeaver",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 270,
-    "originY": 500,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprMap_ocean",
-    "width": 964,
-    "height": 378,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
   {
     "name": "sprNerd1",
     "width": 1000,
@@ -20338,21 +17468,7 @@
       "height": 322
     }
   },
-  {
-    "name": "sprShroommon",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 475,
-    "originY": 998,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprPlayer_mask",
     "width": 500,
@@ -20805,21 +17921,7 @@
       "height": 512
     }
   },
-  {
-    "name": "sprGiantTurtleHead",
-    "width": 755,
-    "height": 636,
-    "frames": 2,
-    "originX": 396,
-    "originY": 521,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprLyrebird1",
     "width": 1000,
@@ -21522,51 +18624,9 @@
       "height": 220
     }
   },
-  {
-    "name": "sprMap_park_south3",
-    "width": 158,
-    "height": 240,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprSpirit",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 453,
-    "originY": 958,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
-  {
-    "name": "sprShroom_m",
-    "width": 1000,
-    "height": 1000,
-    "frames": 1,
-    "originX": 473,
-    "originY": 975,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
+  null,
+  null,
   {
     "name": "sprThought_big",
     "width": 547,
@@ -21849,21 +18909,7 @@
       "height": 303
     }
   },
-  {
-    "name": "sprMap_park_side",
-    "width": 115,
-    "height": 186,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprSparkle",
     "width": 64,
@@ -21914,21 +18960,7 @@
       "height": 306
     }
   },
-  {
-    "name": "sprMap_mountain_3",
-    "width": 223,
-    "height": 207,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  },
+  null,
   {
     "name": "sprTex_succulent",
     "width": 128,
@@ -21995,19 +19027,5 @@
       "height": 1080
     }
   },
-  {
-    "name": "sprCeleb",
-    "width": 500,
-    "height": 500,
-    "frames": 15,
-    "originX": 245,
-    "originY": 500,
-    "bboxes": [],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 0,
-      "height": 0
-    }
-  }
+  null
 ]

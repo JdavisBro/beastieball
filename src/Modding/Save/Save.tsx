@@ -114,6 +114,8 @@ export default function Save(): React.ReactElement {
           >
             Save File
           </button>
+          Warning! This could mess up your save file! Please make backups and be
+          careful!
         </div>
         {save ? <LoadedFile save={save} /> : null}
       </div>

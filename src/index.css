@@ -182,11 +182,11 @@ composes: className from global;
   animation-timing-function: linear;
 }
 
-.animBoxBackground a {
+a {
   color: blue;
 }
 
-.animBoxBackground a:visited {
+a:visited {
   color: darkblue;
 }
 

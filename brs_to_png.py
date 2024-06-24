@@ -48,7 +48,11 @@ def main(args):
     researchdata = {}
     for i in args:
         fp = Path(i)
-        researchdata[fp.stem] = do_file(fp) + 1
+        if fp.is_dir():
+            for fp2 in fp.glob("**/*.brs"):
+                researchdata[fp2.stem] = do_file(fp2) + 1
+        else:
+            researchdata[fp.stem] = do_file(fp) + 1
     with open("research_data.json", "w+") as f:
         json.dump(researchdata, f)
 

@@ -35,7 +35,7 @@ MOVE_DATA.set("???", {
   })
   .set("defence", {
     name: "Block",
-    desc: "Only used from net. Target feels 1 [sprStatus,9]BLOCKED (POW x0.5).",
+    desc: "Only used from net. Target feels 1 [sprStatus,9]BLOCKED (POW x2/3).",
     type: Type.Defence,
     power: null,
   })
@@ -109,11 +109,11 @@ MOVE_DATA.set("???", {
     name: "Momentum",
     desc: "ATTACK. POW x2 if user just TAGGED IN.",
     type: Type.Body,
-    power: 50,
+    power: 60,
   })
   .set("brine", {
     name: "Finisher",
-    desc: "POW x2 if target STAMINA is under 50.",
+    desc: "ATTACK. POW x2 if target STAMINA is under 50.",
     type: Type.Body,
     power: 55,
   })
@@ -311,7 +311,7 @@ MOVE_DATA.set("???", {
   })
   .set("cut", {
     name: "Cut Shot",
-    desc: "Only used from net. Auto-targets front row. Feel 2 [sprStatus,9]BLOCKED (POW x0.5).",
+    desc: "Only used from net. Auto-targets front row. Feel 2 [sprStatus,9]BLOCKED (POW x2/3).",
     type: Type.Spirit,
     power: 95,
   })
@@ -827,7 +827,7 @@ MOVE_DATA.set("???", {
   })
   .set("libero", {
     name: "Hawkeye",
-    desc: "Target feels 1 [sprStatus,9]BLOCKED (POW x0.5). [sprIcon,0][sprIcon,1][sprIcon,2]DEF[sprBoost,3] to self.",
+    desc: "Target feels 1 [sprStatus,9]BLOCKED (POW x2/3). [sprIcon,0][sprIcon,1][sprIcon,2]DEF[sprBoost,3] to self.",
     type: Type.Defence,
     power: null,
   })
@@ -1022,6 +1022,12 @@ MOVE_DATA.set("???", {
     desc: "Feel 1 [sprStatus,1]ANGRY (only attacks). If ally field has RHYTHM: [sprIcon,0]POW[sprBoost,0] to self.",
     type: Type.Body,
     power: 85,
+  })
+  .set("protectcheer", {
+    name: "Inspiring Defence",
+    desc: "Feels 1[sprStatus,4]TOUGH (shielded) + 2[sprStatus,1]ANGRY (only attacks). [sprIcon,0][sprIcon,1][sprIcon,2]POW[sprBoost,0] to ally.",
+    type: Type.Defence,
+    power: 0,
   });
 
 export default MOVE_DATA;

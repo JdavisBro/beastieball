@@ -3,6 +3,7 @@ import styles from "./Save.module.css";
 import Beastie from "./Beastie";
 import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider";
 import { PropsWithChildren, useState } from "react";
+import { BoxHeader } from "../../shared/InfoBox";
 
 function FoldableSection(
   props: PropsWithChildren & { title: string; defaultOpen?: boolean },
@@ -78,7 +79,7 @@ export default function LoadedFile(props: {
           ))}
         </div>
       </FoldableSection>
-      <div className={styles.header}>All Values</div>
+      <BoxHeader>All Values</BoxHeader>
       <div className={styles.datatable}>
         {Object.keys(props.save)
           .sort((a, b) => a.localeCompare(b))

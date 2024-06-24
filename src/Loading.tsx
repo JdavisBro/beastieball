@@ -14,7 +14,7 @@ export default function Loading(): React.ReactElement {
   });
 
   return (
-    <div className="loadingcontainer">
+    <div className="commoncontainer">
       <div className="loading animSelectableBackground">
         Loading{".".repeat(dots)}
         <span className="notvisible">{".".repeat(MAX_DOTS - dots)}</span>

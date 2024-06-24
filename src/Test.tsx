@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import TextTag, { tagEscape } from "./shared/TextTag";
+import TextTag from "./shared/TextTag";
 import BeastieRenderProvider from "./shared/beastieRender/BeastieRenderProvider";
 import { BeastieImage } from "./shared/beastieRender/BeastieImage";
 
@@ -35,11 +35,11 @@ color test: [#2cb18c]aqua[/c] [d#9346814]luncheon red
         />
         <BeastieImage
           defaultUrl="/icons/Axolati.png"
-          beastie={{ id: "frog1", colors: [0.5, 0.5, 0.5, 0.5] }}
+          beastie={{ id: "frog1", colors: [0.1, 0.9, 0.5, 0.1] }}
         />
         <BeastieImage
           defaultUrl="/icons/Hopsong.png"
-          beastie={{ id: "frog2", colors: [0.5, 0.5, 0.5, 0.5] }}
+          beastie={{ id: "frog2", colors: [0.9, 0.1, 0.9, 0.5] }}
         />
         <BeastieImage
           defaultUrl="/icons/Bildit.png"
@@ -64,14 +64,7 @@ color test: [#2cb18c]aqua[/c] [d#9346814]luncheon red
         onChange={(event) => setText(event.target.value)}
       />
       <br />
-      <TextTag>
-        {text}
-        Escape Test: [c_red]
-        {tagEscape(
-          "[sprIcon,1] [1] [[2]] [[[3]]] [[[[4]]]] [[[[[[[[8]]]]]]]] working![/c_red]",
-        )}
-        red still?[/c] good [[]
-      </TextTag>
+      <TextTag>{text}</TextTag>
     </>
   );
 }

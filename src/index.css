@@ -45,9 +45,10 @@ body {
   left: 0;
   margin: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   width: 100dvw;
-  height: 100dvh;
+  min-height: 100dvh;
+  height: fit-content;
 }
 
 .commoncontainer {
@@ -56,6 +57,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  height: 100dvh;
   text-align: center;
 }
 
@@ -87,17 +89,6 @@ body {
   width: 130px;
   background: var(--notfoundface-spr);
   background-size: 100% 100%;
-}
-
-.loadingcontainer {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  animation-play-state: running !important;
-  animation-name: fadein;
-  animation-duration: 2s;
 }
 
 .loading {

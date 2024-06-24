@@ -1,12 +1,12 @@
+import { Link } from "react-router-dom";
+
 import BEASTIE_DATA from "../../data/Beastiedata";
 import { SaveBeastie } from "./SaveType";
-import savestyles from "./Save.module.css";
 import styles from "./Beastie.module.css";
 import EventElement from "./EventElement";
 import { VIBES } from "./BeastieValues";
 import useBeastieRender from "../../shared/beastieRender/useBeastieRender";
-import { PropsWithChildren } from "react";
-import { Link } from "react-router-dom";
+import InfoBox from "../../shared/InfoBox";
 
 const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
   1: "colors",
@@ -19,17 +19,6 @@ const altSearchMap: { [key: number]: string } = {
   2: "raremorph",
   3: "alt",
 };
-
-function InfoBox(
-  props: PropsWithChildren & { title: string },
-): React.ReactElement {
-  return (
-    <div>
-      <div className={savestyles.header}>{props.title}</div>
-      <div className={savestyles.varcontainer}>{props.children}</div>
-    </div>
-  );
-}
 
 export default function Beastie(props: {
   beastie: SaveBeastie;
@@ -59,24 +48,23 @@ export default function Beastie(props: {
   return (
     <div className={styles.beastie}>
       <div className={styles.beastiepreview}>
-        <div className={savestyles.header}>Preview</div>
-        <div className={savestyles.varcontainer}>
+        <InfoBox header="Preview">
           <img src={beastieUrl} className={styles.beastieimage} />
-        </div>
+        </InfoBox>
       </div>
       <div className={styles.beastieinfo}>
-        <InfoBox title="Name">
+        <InfoBox header="Name">
           <span>{save_beastie.name}</span>
           {save_beastie.number != "" ? (
             <span className={styles.beastienumber}>#{save_beastie.number}</span>
           ) : null}
         </InfoBox>
-        <InfoBox title="Level">{save_beastie.level}</InfoBox>
-        <InfoBox title="Vibe">
+        <InfoBox header="Level">{save_beastie.level}</InfoBox>
+        <InfoBox header="Vibe">
           {VIBES[save_beastie.vibe] ?? save_beastie.vibe}
         </InfoBox>
-        <InfoBox title="PID">{save_beastie.pid}</InfoBox>
-        <InfoBox title="Beastiepedia">
+        <InfoBox header="PID">{save_beastie.pid}</InfoBox>
+        <InfoBox header="Beastiepedia">
           <Link
             to={`/beastiepedia/${beastiedata.name}?${searchParam}=${beastieColors.join(",")}`}
             target="_blank"
@@ -85,7 +73,7 @@ export default function Beastie(props: {
           </Link>
         </InfoBox>
 
-        <InfoBox title="Events">
+        <InfoBox header="Events">
           <div className={styles.eventlist}>
             {save_beastie.event_log.events.map((event) => (
               <EventElement

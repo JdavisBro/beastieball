@@ -9,28 +9,13 @@ import untyped_research_data from "../../data/research_data.json";
 import designers from "../../data/designers.json";
 import abilities from "../../data/abilities";
 import BEASTIE_DATA from "../../data/Beastiedata";
-import { PropsWithChildren } from "react";
+import InfoBox, { BoxHeader } from "../../shared/InfoBox";
 
 const research_data: { [key: string]: number } = untyped_research_data;
 
 type Props = {
   beastiedata: BeastieType;
 };
-
-function InfoBox(
-  props: {
-    header: string;
-  } & PropsWithChildren,
-): React.ReactNode {
-  return (
-    <div>
-      <div className={styles.header}>{props.header}</div>
-      <div className={styles.varcontainer}>
-        <div className={styles.value}>{props.children}</div>
-      </div>
-    </div>
-  );
-}
 
 type EvolutionType = {
   condition: number[];
@@ -200,7 +185,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
             )}
           </InfoBox>
         }
-        <div className={styles.header}>Stat Distribution</div>
+        <BoxHeader>Stat Distribution</BoxHeader>
         <StatDistribution beastiedata={beastiedata} />
 
         <div className={styles.wrapinfoboxes}>
@@ -212,7 +197,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
           </InfoBox>
         </div>
 
-        <div className={styles.header}>Moves</div>
+        <BoxHeader>Moves</BoxHeader>
         <MoveList
           movelist={beastiedata.attklist}
           learnset={beastiedata.learnset}

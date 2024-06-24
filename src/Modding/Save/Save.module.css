@@ -48,30 +48,8 @@
   flex-wrap: wrap;
 }
 
-.header {
-  composes: boxHeaderBackground from global;
-  width: fit-content;
-  z-index: 1;
-  padding: 4px 12px 4px 12px;
-  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
-  position: relative;
-  margin-left: 10px;
-  margin-right: 5px;
-}
-
-.varcontainer {
-  composes: animBoxBackground from global;
-  color: black;
-  padding: 4px 16px 4px 16px;
-  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 100%, 8px 100%);
-  width: fit-content;
-  max-width: 100%;
-  position: relative;
-  top: -4px;
-}
-
 .datatable {
-  composes: varcontainer;
+  composes: infoBoxContentContainer from global;
   display: flex;
   flex-direction: column;
   width: 100%;

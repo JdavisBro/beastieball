@@ -6,6 +6,7 @@ import OpenGraph from "../../shared/OpenGraph";
 import styles from "./Save.module.css";
 import SaveData from "./SaveType";
 import LoadedFile from "./LoadedFile";
+import InfoBox from "../../shared/InfoBox";
 
 function CopyableString(props: { children: string }) {
   return (
@@ -45,8 +46,7 @@ export default function Save(): React.ReactElement {
       />
       <div className={styles.belowheader}>
         <br />
-        <div className={styles.header}>Save Locations</div>
-        <div className={styles.varcontainer}>
+        <InfoBox header="Save Locations">
           Windows:{" "}
           <CopyableString>%localappdata%\beastieball\save\</CopyableString>
           <br />
@@ -59,9 +59,8 @@ export default function Save(): React.ReactElement {
           <CopyableString>
             ~/.local/share/Steam/steamapps/compatdata/2404130/pfx/drive_c/users/steamuser/AppData/Local/beastieball/save/
           </CopyableString>
-        </div>
-        <div className={styles.header}>Load/Save File</div>
-        <div className={styles.varcontainer}>
+        </InfoBox>
+        <InfoBox header="Load/Save File">
           <button>New</button>
           <br />
           <input
@@ -116,7 +115,7 @@ export default function Save(): React.ReactElement {
           </button>
           Warning! This could mess up your save file! Please make backups and be
           careful!
-        </div>
+        </InfoBox>
         {save ? <LoadedFile save={save} /> : null}
       </div>
     </div>

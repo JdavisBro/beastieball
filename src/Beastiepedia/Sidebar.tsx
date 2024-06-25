@@ -41,7 +41,15 @@ export default function Sidebar(props: Props): React.ReactElement {
         <img
           className={styles.gridimage}
           src="/gameassets/sprOptions_small_0.png"
+          tabIndex={0}
+          alt="Toggle Grid View"
+          role="button"
           onClick={() => setGrid(!grid)}
+          onKeyDown={(event) => {
+            if (event.key == "Enter") {
+              setGrid(!grid);
+            }
+          }}
         />
       </div>
       <div

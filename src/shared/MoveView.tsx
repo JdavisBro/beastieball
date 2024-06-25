@@ -8,19 +8,20 @@ type Props = {
   move: MoveType;
 };
 
+const colors: Record<number, { color: string; alt: string }> = {
+  [Type.Body]: { color: TypeColor.Body, alt: "Mind Play" },
+  [Type.Spirit]: { color: TypeColor.Spirit, alt: "Spirit Play" },
+  [Type.Mind]: { color: TypeColor.Mind, alt: "Mind Play" },
+  [Type.Pass]: { color: TypeColor.Pass, alt: "Volley Play" },
+  [Type.Support]: { color: TypeColor.Support, alt: "Support Play" },
+  [Type.Defence]: { color: TypeColor.Defence, alt: "Defence Play" },
+  [Type.Unknown]: { color: TypeColor.Unknown, alt: "Unknown" },
+  [Type.Sparkle]: { color: TypeColor.Sparkle, alt: "Unknown" },
+  [Type.Movement]: { color: TypeColor.Movement, alt: "Move Play" },
+};
+
 export default function MoveView(props: Props): React.ReactElement {
-  const colors: Map<Type, string> = new Map([
-    [Type.Body, TypeColor.Body],
-    [Type.Spirit, TypeColor.Spirit],
-    [Type.Mind, TypeColor.Mind],
-    [Type.Pass, TypeColor.Pass],
-    [Type.Support, TypeColor.Support],
-    [Type.Defence, TypeColor.Defence],
-    [Type.Unknown, TypeColor.Unknown],
-    [Type.Sparkle, TypeColor.Sparkle],
-    [Type.Movement, TypeColor.Movement],
-  ]);
-  const color = colors.get(props.move.type);
+  const { color, alt } = colors[props.move.type];
   const style = {
     "--move-color": color,
     "--move-url": `url("/gameassets/sprType/${String(props.move.type)}.png")`,
@@ -31,7 +32,9 @@ export default function MoveView(props: Props): React.ReactElement {
   }
   return (
     <div className={styles.movecontainer} style={style}>
-      <div className={styles.moveviewimage}>{pow}</div>
+      <div className={styles.moveviewimage} role="image" title={alt}>
+        {pow}
+      </div>
       <div className={styles.moveseparator}></div>
       <div className={styles.movecontent}>
         <div className={styles.movename}>{props.move.name}</div>

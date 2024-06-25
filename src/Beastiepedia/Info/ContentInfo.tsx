@@ -114,6 +114,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
         <img
           className={styles.researchimage}
           src={`/gameassets/research/${beastiedata.id}_${i}.png`}
+          alt={`${beastiedata.name} Research Sample ${i + 1}`}
         />
       </a>,
     );

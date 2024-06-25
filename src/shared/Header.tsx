@@ -26,6 +26,7 @@ export default function Header(props: Props): React.ReactNode {
             title={props.menuButtonState ? "Enable Menu" : "Disable Menu"}
             alt={props.menuButtonState ? "Enable Menu" : "Disable Menu"}
             aria-haspopup="menu"
+            role="button"
             tabIndex={0}
             onClick={() => {
               props.onMenuButtonPressed ? props.onMenuButtonPressed() : null;

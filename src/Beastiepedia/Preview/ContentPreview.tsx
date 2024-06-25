@@ -462,7 +462,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
           width={1000}
           height={1000}
           ref={canvasRef}
-        />
+        >
+          Beastie Preview Image
+        </canvas>
         <div
           className={styles.canvasfailed}
           style={{

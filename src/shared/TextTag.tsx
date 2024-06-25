@@ -5,6 +5,18 @@ import styles from "./Shared.module.css";
 // https://www.jujuadams.com/Scribble/#/latest/text-formatting
 // effects not added
 
+const IMAGE_ALTS: Record<string, Record<number, string>> = {
+  sprIcon: { 0: "Body", 1: "Spirit", 2: "Mind" },
+  sprBoost: {
+    0: "1 up arrow boost",
+    1: "2 up arrow boost",
+    2: "3 up arrow boost",
+    3: "1 down arrow boost",
+    4: "2 down arrow boost",
+    5: "3 down arrow boost",
+  },
+};
+
 const COLORS: { [key: string]: string } = {
   c_aqua: "#00ffff",
   c_black: "#000000",
@@ -53,11 +65,19 @@ class TagBuilder {
 
   applyTag(index: number, tag: string, value?: string) {
     if (tag.startsWith("spr")) {
+      const alt =
+        tag in IMAGE_ALTS
+          ? IMAGE_ALTS[tag][Number(value ?? 0)] ?? undefined
+          : undefined;
+      if (!alt) {
+        console.log(`NO ALT TEXT: '${tag}' frame ${value}`);
+      }
       this.elements.push(
         <img
           key={`${index}${tag}`}
           className={styles.smallimage}
           style={{ ...this.style }}
+          alt={alt}
           src={`/gameassets/${tag}/${value ?? "0"}.png`}
         />,
       );

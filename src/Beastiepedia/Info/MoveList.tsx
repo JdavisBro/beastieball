@@ -32,6 +32,7 @@ function MoveText(props: MoveTextProps): React.ReactElement {
             ? `${styles.movetext} ${styles.selected}`
             : styles.movetext
         }
+        role="button"
         onClick={props.onSelect}
         onKeyDown={(event) => {
           if (event.key == "Enter") {

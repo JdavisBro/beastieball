@@ -63,13 +63,13 @@ export default function StatDistribution(props: Props): React.ReactElement {
         <div className={styles.midblock}>
           <div className={styles.barcontainer}></div>
           <div className={styles.barcontainer}>
-            <img src="/gameassets/sprIcon/0.png" />
+            <img src="/gameassets/sprIcon/0.png" alt="Body" />
           </div>
           <div className={styles.barcontainer}>
-            <img src="/gameassets/sprIcon/1.png" />
+            <img src="/gameassets/sprIcon/1.png" alt="Spirit" />
           </div>
           <div className={styles.barcontainer}>
-            <img src="/gameassets/sprIcon/2.png" />
+            <img src="/gameassets/sprIcon/2.png" alt="Mind" />
           </div>
         </div>
         {/* prettier-ignore */ /* (doesn't wrap 2 of the statbars) */}

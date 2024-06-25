@@ -19,6 +19,7 @@ export default function AnimationOptions(props: Props): React.ReactElement {
   return (
     <>
       <InfoBox header="Animation">
+        <label htmlFor="anim">Animation: </label>
         <select
           name="anim"
           id="anim"
@@ -45,9 +46,13 @@ export default function AnimationOptions(props: Props): React.ReactElement {
           PAUSE
         </button>
         <button onClick={() => props.changeFrame(1)}>{"->"}</button>
+        <br />
+        <label htmlFor="framenum">Frame: </label>
         <input
           ref={props.frameInputRef}
           type="number"
+          id="framenum"
+          name="framenum"
           min={0}
           max={props.frameCount}
           onChange={(event) => {

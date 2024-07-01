@@ -22,7 +22,6 @@
       "defheal",
       "libero",
       "lifepass",
-      "juggle",
       "facade",
       "charm",
       "protect",
@@ -160,30 +159,16 @@
     "recruit": {
       "conditions": [
         {
-          "effect_pow": ">0",
-          "effect_type": [8, 55, 54],
           "event": null,
           "freq": -1,
-          "func": null,
           "my_data": null,
-          "player": 2,
           "rel_color": -1,
-          "type": 41
-        },
-        {
-          "effect_pow": ">0",
-          "effect_type": [8, 55, 54],
-          "event": null,
-          "freq": -1,
-          "func": null,
-          "my_data": null,
-          "player": 2,
-          "rel_color": -1,
-          "type": 41
+          "type": 16
         }
       ],
-      "description": "Heal 2+ times"
+      "description": "Fulfill recruit conditions for 2+ of this Beasties' allies"
     },
+    "recruit_value": 5,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -259,7 +244,6 @@
       "rollshot",
       "mindbomb",
       "jazzpass",
-      "superquick",
       "allycover",
       "mindpass",
       "rush",
@@ -426,33 +410,23 @@
         {
           "event": null,
           "freq": -1,
-          "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 44
+          "type": 47
         },
         {
           "event": null,
           "freq": -1,
-          "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 44
-        },
-        {
-          "event": null,
-          "freq": -1,
-          "func": null,
-          "my_data": null,
-          "player": 2,
-          "rel_color": -1,
-          "type": 44
+          "type": 47
         }
       ],
-      "description": "Volley the ball 3+ times"
+      "description": "2+ times, use a special [sprIcon,3]Volley"
     },
+    "recruit_value": 4,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -742,7 +716,7 @@
           "type": 44
         }
       ],
-      "description": "Volley the ball 3+ times"
+      "description": "3+ times, use a special [sprIcon,3]Volley"
     },
     "roamer_style": {
       "_name": "STOP_AND_STARE",
@@ -838,7 +812,6 @@
     "attklist": [
       "bounce",
       "healhit",
-      "jump",
       "rush",
       "body",
       "rushattack",
@@ -1009,11 +982,12 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 13
+          "type": 14
         }
       ],
       "description": "Hit this Beastie with an attack that has 60 POW or more"
     },
+    "recruit_value": 4.5,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -1345,14 +1319,16 @@
       "healhit",
       "breakswipe",
       "set",
+      "dig",
       "heartpass",
-      "quickattack",
+      "jazzpass",
       "followme",
       "tailwind",
       "swordsdance",
       "healbell",
       "batonpass",
       "juggle",
+      "powswitch",
       "vigor",
       "crowd",
       "rhythm",
@@ -1427,10 +1403,10 @@
     ],
     "colors2": null,
     "combos": [
-      [15, 0, 2, 50, 0, 0.8],
-      [15, 1, 1, 10, 1, 1, 8, 0, -0.34],
-      [32, 6, 1],
-      [32, 6, 1]
+      [15, 0, 1, 50, 0, 0.8],
+      [10, 1, 1],
+      [10, 0, 2],
+      [8, 2, 0.3]
     ],
     "desc": "Its fluff is made of incredibly thin strands of wax, bundled like wool. If a Cherrily makes you a pom, it considers you a treasured friend.",
     "designer": 2,
@@ -1508,11 +1484,12 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "Gain 5+ [sprBoost,2]BOOSTS on one Beastie"
     },
+    "recruit_value": 10,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -2642,7 +2619,7 @@
     "colors2": null,
     "combos": [
       [15, 2, 1],
-      [15, 0, 1],
+      [1, 1, 1, 4, 1, 1],
       [44, 2, 6, 1, 2, 1],
       [44, 2, 6]
     ],
@@ -2728,11 +2705,12 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "Boost any [sprIcon,0][sprIcon,1][sprIcon,2]POW [sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
     },
+    "recruit_value": 6.4,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -3391,12 +3369,13 @@
       "stress",
       "nice",
       "spitball",
+      "chill",
       "tool",
       "startermind"
     ],
     "attklist_randomize": -1,
-    "ba": 50,
-    "base_exp": 115.36,
+    "ba": 55,
+    "base_exp": 116.7505,
     "bd": 55,
     "body_color_index": 0,
     "colormeta": null,
@@ -3498,13 +3477,13 @@
     "foot_size": 38,
     "foot_type": 1,
     "growth": 1.03,
-    "ha": 28,
-    "hd": 25,
+    "ha": 18,
+    "hd": 28,
     "hidden": false,
     "hidden_counter": null,
     "id": "kangaroo1",
     "isBaby": true,
-    "learnset": 33,
+    "learnset": 25,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -3530,10 +3509,10 @@
       "squishiness": 0,
       "stretchiness": 0
     },
-    "ma": 72,
+    "ma": 74,
     "md": 80,
     "name": "Rookee",
-    "number": 15,
+    "number": 7,
     "palettes": 1,
     "prev_ids": ["rookee", "rookee1"],
     "recruit": {
@@ -3544,7 +3523,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 46
+          "type": 47
         },
         {
           "event": null,
@@ -3552,11 +3531,12 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 46
+          "type": 47
         }
       ],
       "description": "Use 2+ [sprIcon,4]SUPPORT plays"
     },
+    "recruit_value": 4,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -3729,7 +3709,7 @@
     ],
     "colors2": null,
     "combos": [
-      [51, 0, 2, 50, 0, 1.35, 7, 0, 0],
+      [51, 0, 2, 50, 0, 1.4, 7, 0, 0],
       [7, 2, 1],
       [7, 2, 1, 1, 2, 1],
       [7, 2, 0, 4, 2, 1]
@@ -3810,7 +3790,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 43
+          "type": 44
         },
         {
           "event": null,
@@ -3819,7 +3799,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 43
+          "type": 44
         },
         {
           "event": null,
@@ -3828,11 +3808,12 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 43
+          "type": 44
         }
       ],
-      "description": "Make 3+ MOVE actions"
+      "description": "Make 3+ [sprIcon,8]MOVE actions"
     },
+    "recruit_value": 4.85,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -5771,6 +5752,7 @@
       ],
       "description": "Land a no-touch point"
     },
+    "recruit_value": 8.4,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -6133,7 +6115,7 @@
   },
   "rocklizard1": {
     "ability": ["heavy", "multiscale"],
-    "ability_hidden": false,
+    "ability_hidden": true,
     "allowedInPromo": true,
     "animator": 8,
     "attklist": [
@@ -6315,11 +6297,12 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "Boost [sprIcon,0]DEF [sprBoost,0][sprBoost,0] or more on a Beastie"
     },
+    "recruit_value": 4.2,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -6400,6 +6383,7 @@
       "tagattack",
       "cut",
       "pepshot",
+      "snore",
       "overheat",
       "desperate",
       "damagedattack",
@@ -6416,10 +6400,7 @@
       "reversal",
       "protect",
       "noisytag",
-      "vigor",
-      "contest",
-      "protectcheer",
-      "pushattack"
+      "vigor"
     ],
     "attklist_randomize": -1,
     "ba": 100,
@@ -6495,10 +6476,10 @@
     ],
     "colors2": null,
     "combos": [
-      [51, 0, 2, 50, 0, 1.3],
-      [7, 0, 1, 26, 0, 1],
-      [16, 8, -1],
-      [16, 8, -2]
+      [49, 0, 12],
+      [52, 1, 1, 8, 1, 0.15],
+      [52, 1, 1, 8, 1, 0.5],
+      [52, 2, 1, 8, 2, 0.3]
     ],
     "desc": "They leap high enough to snatch birds straight out of the sky. They'll leave claw marks on high places as a form of competition.",
     "designer": 3,
@@ -6596,6 +6577,7 @@
       ],
       "description": "Attack 3+ times from the front lane"
     },
+    "recruit_value": 7,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -7133,11 +7115,12 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "Create any type of field effect"
     },
+    "recruit_value": 2.8,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,

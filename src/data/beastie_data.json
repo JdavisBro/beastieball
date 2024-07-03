@@ -6786,7 +6786,7 @@
     ],
     "evolution": [
       {
-        "condition": [0],
+        "condition": [999999],
         "specie": "serval",
         "value": [38]
       }

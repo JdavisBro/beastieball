@@ -1,0 +1,3276 @@
+{
+  "cut": {
+    "id": "cut",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 19, 9],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": -7,
+        "targ": 0
+      }
+    ],
+    "use": 2,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 80,
+    "name": "Cut Shot"
+  },
+  "allycover": {
+    "id": "allycover",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 9],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 7,
+        "targ": 1
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Pipe"
+  },
+  "dare": {
+    "id": "dare",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 8, 30],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 0,
+        "targ": 3
+      },
+      {
+        "pow": 1,
+        "eff": 1,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 100,
+    "name": "Challenge"
+  },
+  "heartup": {
+    "id": "heartup",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [31, 6],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 26,
+        "targ": 2
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Battle Cry"
+  },
+  "dig": {
+    "id": "dig",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 31],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 26,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Dig"
+  },
+  "refresh": {
+    "id": "refresh",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 9, 16],
+    "eff": [
+      {
+        "pow": 0.15,
+        "eff": 8,
+        "targ": 1
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Refresh"
+  },
+  "sideshot": {
+    "id": "sideshot",
+    "targ": 12,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 9],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 7,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 35,
+    "name": "Sidewinder"
+  },
+  "crowd": {
+    "id": "crowd",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 12],
+    "eff": [
+      {
+        "pow": 3,
+        "eff": 43,
+        "targ": 7
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Rally"
+  },
+  "curse": {
+    "id": "curse",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 27, 28, 7],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 0,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 3,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Flex"
+  },
+  "overthink": {
+    "id": "overthink",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 27, 30],
+    "eff": [
+      {
+        "pow": 3,
+        "eff": 2,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 39,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Overthink"
+  },
+  "thunder": {
+    "id": "thunder",
+    "targ": 8,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 8, 19, 9],
+    "eff": [],
+    "use": 2,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 110,
+    "name": "Thunder"
+  },
+  "rush": {
+    "id": "rush",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 9],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 7,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Net Rush"
+  },
+  "whirlwind": {
+    "id": "whirlwind",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [9, 11],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 30,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Cyclone"
+  },
+  "construct": {
+    "id": "construct",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 20, 25, 30],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 56,
+        "targ": 0
+      },
+      {
+        "pow": -0.34,
+        "eff": 8,
+        "targ": 0
+      },
+      {
+        "pow": 0,
+        "eff": 57,
+        "targ": 0
+      }
+    ],
+    "use": 1,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Build"
+  },
+  "hazeball": {
+    "id": "hazeball",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 34,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 65,
+    "name": "Numbshot"
+  },
+  "spitball": {
+    "id": "spitball",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 14, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 12,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 75,
+    "name": "Spitball"
+  },
+  "targethp": {
+    "id": "targethp",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 8],
+    "eff": [
+      {
+        "pow": 8,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 120,
+    "name": "Soulcrusher"
+  },
+  "charm": {
+    "id": "charm",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9, 36],
+    "eff": [
+      {
+        "pow": -2,
+        "eff": 0,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Goo-Goo Eyes"
+  },
+  "allnervous": {
+    "id": "allnervous",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [19, 30, 29, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 6,
+        "targ": 7
+      }
+    ],
+    "use": 2,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Upsetting Comment"
+  },
+  "lifepass": {
+    "id": "lifepass",
+    "targ": 8,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [9, 30, 39, 18],
+    "eff": [
+      {
+        "pow": -1,
+        "eff": 8,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 47,
+        "targ": 3
+      },
+      {
+        "pow": 1,
+        "eff": 30,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Torch Pass"
+  },
+  "sweatup": {
+    "id": "sweatup",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [9, 35, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 23,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Heat Up"
+  },
+  "moon": {
+    "id": "moon",
+    "targ": 8,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 8, 20, 9],
+    "eff": [],
+    "use": 1,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 100,
+    "name": "Rainbow"
+  },
+  "netattack": {
+    "id": "netattack",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 7,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 70,
+    "name": "Sneak Attack"
+  },
+  "threat": {
+    "id": "threat",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [9, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 38,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Intimidate"
+  },
+  "heart": {
+    "id": "heart",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1],
+    "eff": [],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 85,
+    "name": "Bring the Heat"
+  },
+  "noisytag": {
+    "id": "noisytag",
+    "targ": 8,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [9, 18, 33, 30],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 30,
+        "targ": 3
+      },
+      {
+        "pow": 0,
+        "eff": 53,
+        "targ": 3
+      },
+      {
+        "pow": 1,
+        "eff": 14,
+        "targ": 3
+      },
+      {
+        "pow": 2,
+        "eff": 12,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Dramatic Exit"
+  },
+  "allyprotect": {
+    "id": "allyprotect",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [33],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 14,
+        "targ": 0
+      },
+      {
+        "pow": 2,
+        "eff": 12,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Mighty Yell"
+  },
+  "set": {
+    "id": "set",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 9, 31, 6],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 26,
+        "targ": 1
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Set"
+  },
+  "storedpower": {
+    "id": "storedpower",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0],
+    "eff": [
+      {
+        "pow": 10,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 15,
+    "name": "Energized"
+  },
+  "pepshot": {
+    "id": "pepshot",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 27],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 1,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 40,
+    "name": "Pepshot"
+  },
+  "stresspass": {
+    "id": "stresspass",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 9, 6, 30],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 15,
+        "targ": 1
+      },
+      {
+        "pow": 1,
+        "eff": 39,
+        "targ": 1
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Demanding Set"
+  },
+  "superpower": {
+    "id": "superpower",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 8],
+    "eff": [
+      {
+        "pow": -1,
+        "eff": 0,
+        "targ": 0
+      },
+      {
+        "pow": -1,
+        "eff": 3,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 110,
+    "name": "Overpower"
+  },
+  "tool": {
+    "id": "tool",
+    "targ": 13,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 9],
+    "eff": [],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 95,
+    "name": "Tool"
+  },
+  "rest": {
+    "id": "rest",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 39, 30],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 47,
+        "targ": 0
+      },
+      {
+        "pow": 4,
+        "eff": 29,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Doze"
+  },
+  "sidespin": {
+    "id": "sidespin",
+    "targ": 12,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 9],
+    "eff": [],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 60,
+    "name": "Slice"
+  },
+  "overheat": {
+    "id": "overheat",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 8],
+    "eff": [
+      {
+        "pow": -2,
+        "eff": 1,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 110,
+    "name": "Burnout"
+  },
+  "dropshot": {
+    "id": "dropshot",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 7,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 55,
+    "name": "Lure Shot"
+  },
+  "breakswipe": {
+    "id": "breakswipe",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 36],
+    "eff": [
+      {
+        "pow": -1,
+        "eff": 0,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 60,
+    "name": "Kneebender"
+  },
+  "poisonhit": {
+    "id": "poisonhit",
+    "targ": 8,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 9, 35, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 23,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 25,
+    "name": "Cornershot"
+  },
+  "enemyboosts": {
+    "id": "enemyboosts",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1],
+    "eff": [
+      {
+        "pow": 11,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 50,
+    "name": "Toppler"
+  },
+  "meditate": {
+    "id": "meditate",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 27, 28, 7],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 2,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 5,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 4,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Meditate"
+  },
+  "cover": {
+    "id": "cover",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 9],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 7,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Cover"
+  },
+  "freeball": {
+    "id": "freeball",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 9, 26, 30],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 10,
+        "targ": 1
+      },
+      {
+        "pow": -0.34,
+        "eff": 8,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Updraft"
+  },
+  "taunt": {
+    "id": "taunt",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9, 14, 37],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 12,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Provoke"
+  },
+  "???": {
+    "id": "???",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [],
+    "eff": [],
+    "use": 0,
+    "type": 6,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Unrevealed"
+  },
+  "snipe": {
+    "id": "snipe",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2],
+    "eff": [
+      {
+        "pow": 22,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 60,
+    "name": "Snipe"
+  },
+  "jazzpass": {
+    "id": "jazzpass",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 19, 9, 21, 31, 6],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 7,
+        "targ": 1
+      },
+      {
+        "pow": 1,
+        "eff": 26,
+        "targ": 1
+      }
+    ],
+    "use": 2,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Perfect Pass"
+  },
+  "substitute": {
+    "id": "substitute",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 30, 32],
+    "eff": [
+      {
+        "pow": -0.33,
+        "eff": 8,
+        "targ": 0
+      },
+      {
+        "pow": 2,
+        "eff": 19,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Tough Front"
+  },
+  "tagout": {
+    "id": "tagout",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [],
+    "eff": [],
+    "use": 0,
+    "type": 9,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Tag Out"
+  },
+  "lowattks": {
+    "id": "lowattks",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9, 36],
+    "eff": [
+      {
+        "pow": -1,
+        "eff": 0,
+        "targ": 3
+      },
+      {
+        "pow": -1,
+        "eff": 2,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Jeer"
+  },
+  "sensihit": {
+    "id": "sensihit",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 37],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 38,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 40,
+    "name": "Zinger"
+  },
+  "shakenmind": {
+    "id": "shakenmind",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 13,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 40,
+    "name": "Twisted"
+  },
+  "desperate": {
+    "id": "desperate",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 30],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 17,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 39,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 75,
+    "name": "Desperate Dive"
+  },
+  "minddown": {
+    "id": "minddown",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 36],
+    "eff": [
+      {
+        "pow": -1,
+        "eff": 2,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 70,
+    "name": "Jammer"
+  },
+  "contest": {
+    "id": "contest",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 8],
+    "eff": [
+      {
+        "pow": 23,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 110,
+    "name": "Contest"
+  },
+  "sting": {
+    "id": "sting",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [9, 37],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 29,
+        "targ": 3
+      },
+      {
+        "pow": -0.2,
+        "eff": 8,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Sting"
+  },
+  "body": {
+    "id": "body",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0],
+    "eff": [],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 90,
+    "name": "Thump"
+  },
+  "allyrush": {
+    "id": "allyrush",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 9, 21],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 7,
+        "targ": 1
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Forward Pass"
+  },
+  "meter": {
+    "id": "meter",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9, 14, 37],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 12,
+        "targ": 3
+      },
+      {
+        "pow": 1,
+        "eff": 60,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Rowdy"
+  },
+  "commit": {
+    "id": "commit",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 8, 30],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 6,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 100,
+    "name": "Supercommit"
+  },
+  "reversal": {
+    "id": "reversal",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 8],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 160,
+    "name": "Turnabout"
+  },
+  "stress": {
+    "id": "stress",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [9, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 39,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Frazzle"
+  },
+  "serve": {
+    "id": "serve",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0],
+    "eff": [
+      {
+        "pow": 7,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 70,
+    "name": "Muscle Memory"
+  },
+  "mindpass": {
+    "id": "mindpass",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 9, 5],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 2,
+        "targ": 1
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Tactical Pass"
+  },
+  "healhit2": {
+    "id": "healhit2",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0],
+    "eff": [
+      {
+        "pow": 0.1,
+        "eff": 8,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 75,
+    "name": "Power Sap"
+  },
+  "fieldclear": {
+    "id": "fieldclear",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 15, 16],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 46,
+        "targ": 7
+      },
+      {
+        "pow": 0.05,
+        "eff": 8,
+        "targ": 6
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Clear Field"
+  },
+  "superquick": {
+    "id": "superquick",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 19, 9, 3],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 0,
+        "targ": 1
+      }
+    ],
+    "use": 2,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Super Quick"
+  },
+  "distraction": {
+    "id": "distraction",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [19, 33],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 14,
+        "targ": 0
+      }
+    ],
+    "use": 2,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Distraction"
+  },
+  "tagattack": {
+    "id": "tagattack",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0],
+    "eff": [
+      {
+        "pow": 20,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 60,
+    "name": "Momentum"
+  },
+  "scoreboosted": {
+    "id": "scoreboosted",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1],
+    "eff": [
+      {
+        "pow": 15,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 60,
+    "name": "Comeback"
+  },
+  "mindbomb": {
+    "id": "mindbomb",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 38],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 36,
+        "targ": 5
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 45,
+    "name": "Mindfield"
+  },
+  "facade": {
+    "id": "facade",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1],
+    "eff": [
+      {
+        "pow": 12,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 65,
+    "name": "Grit"
+  },
+  "steal": {
+    "id": "steal",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 20,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 7,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Steal"
+  },
+  "topspin": {
+    "id": "topspin",
+    "targ": 12,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 9],
+    "eff": [],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 50,
+    "name": "Bounce"
+  },
+  "float": {
+    "id": "float",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 7,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 65,
+    "name": "Floater"
+  },
+  "startermind": {
+    "id": "startermind",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2],
+    "eff": [],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 40,
+    "name": "Practice Shot"
+  },
+  "steamattack": {
+    "id": "steamattack",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 35, 37],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 23,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 1,
+    "name": "Steamer"
+  },
+  "nettle": {
+    "id": "nettle",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9],
+    "eff": [
+      {
+        "pow": -0.2,
+        "eff": 8,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Nettle"
+  },
+  "jazzattack": {
+    "id": "jazzattack",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": -26,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 55,
+    "name": "Thriller"
+  },
+  "teleport": {
+    "id": "teleport",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 28,
+        "targ": 1
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Teleport"
+  },
+  "snore": {
+    "id": "snore",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 61,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 50,
+    "name": "Relentless"
+  },
+  "swordsdance": {
+    "id": "swordsdance",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [27],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 0,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Pump Up"
+  },
+  "pursuit": {
+    "id": "pursuit",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2],
+    "eff": [
+      {
+        "pow": 5,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 50,
+    "name": "Pressure"
+  },
+  "followme": {
+    "id": "followme",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 33],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 14,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Whistle"
+  },
+  "mdefup": {
+    "id": "mdefup",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [28, 7],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 5,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Mind Read"
+  },
+  "callout": {
+    "id": "callout",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9, 28, 7],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 16,
+        "targ": 1
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Call Out"
+  },
+  "hyperbeam": {
+    "id": "hyperbeam",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 8, 19, 30],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 29,
+        "targ": 0
+      }
+    ],
+    "use": 2,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 135,
+    "name": "Hyperspike"
+  },
+  "dragontail": {
+    "id": "dragontail",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 11],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 30,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 60,
+    "name": "Tornadoball"
+  },
+  "rocksmash": {
+    "id": "rocksmash",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 36, 3],
+    "eff": [
+      {
+        "pow": -1,
+        "eff": 3,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 50,
+    "name": "Breaker"
+  },
+  "damagedattack": {
+    "id": "damagedattack",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1],
+    "eff": [
+      {
+        "pow": 18,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 75,
+    "name": "Counter"
+  },
+  "heartdown": {
+    "id": "heartdown",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 36],
+    "eff": [
+      {
+        "pow": -1,
+        "eff": 1,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 75,
+    "name": "Heartbreaker"
+  },
+  "move": {
+    "id": "move",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [],
+    "eff": [
+      {
+        "pow": 3,
+        "eff": 57,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 8,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Move"
+  },
+  "brine": {
+    "id": "brine",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0],
+    "eff": [
+      {
+        "pow": 9,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 55,
+    "name": "Finisher"
+  },
+  "defense": {
+    "id": "defense",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [19, 9, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 27,
+        "targ": 3
+      }
+    ],
+    "use": 2,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Block"
+  },
+  "skillswap": {
+    "id": "skillswap",
+    "targ": 5,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 63,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Trait Dance"
+  },
+  "powswitch": {
+    "id": "powswitch",
+    "targ": 8,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [9, 18, 6],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 30,
+        "targ": 3
+      },
+      {
+        "pow": 1,
+        "eff": 15,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Smack"
+  },
+  "mark": {
+    "id": "mark",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 27,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Mark"
+  },
+  "tailwind": {
+    "id": "tailwind",
+    "targ": 3,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9, 21],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 7,
+        "targ": 2
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Tailwind"
+  },
+  "volley": {
+    "id": "volley",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 9],
+    "eff": [],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Volley"
+  },
+  "3actions": {
+    "id": "3actions",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 8, 30],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 41,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 200,
+    "name": "Ultimate Attack"
+  },
+  "hex": {
+    "id": "hex",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2],
+    "eff": [
+      {
+        "pow": 13,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 65,
+    "name": "Nerve Strike"
+  },
+  "feint": {
+    "id": "feint",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9, 36, 6],
+    "eff": [
+      {
+        "pow": -1,
+        "eff": 16,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Feint"
+  },
+  "heartpass": {
+    "id": "heartpass",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 9, 4],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 1,
+        "targ": 1
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Faith"
+  },
+  "bellydrum": {
+    "id": "bellydrum",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 27, 30],
+    "eff": [
+      {
+        "pow": 3,
+        "eff": 1,
+        "targ": 0
+      },
+      {
+        "pow": -0.34,
+        "eff": 8,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Blaze"
+  },
+  "inferno": {
+    "id": "inferno",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 38],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 36,
+        "targ": 5
+      },
+      {
+        "pow": 0.5,
+        "eff": 36,
+        "targ": 2
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 70,
+    "name": "Explosion"
+  },
+  "dispel": {
+    "id": "dispel",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 20,
+        "targ": 1
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Dispel"
+  },
+  "shaken": {
+    "id": "shaken",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [9, 37],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 13,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Stinky"
+  },
+  "xtra": {
+    "id": "xtra",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [],
+    "eff": [],
+    "use": 0,
+    "type": 6,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Bonus"
+  },
+  "bounce": {
+    "id": "bounce",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 17,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 35,
+    "name": "Bump"
+  },
+  "enemylowered": {
+    "id": "enemylowered",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2],
+    "eff": [
+      {
+        "pow": 21,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 50,
+    "name": "Pierce"
+  },
+  "mindup": {
+    "id": "mindup",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [27],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 2,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Assess"
+  },
+  "cheer": {
+    "id": "cheer",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9, 6],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 15,
+        "targ": 1
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Cheer"
+  },
+  "passattack": {
+    "id": "passattack",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2],
+    "eff": [
+      {
+        "pow": 19,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 50,
+    "name": "Zigzag"
+  },
+  "bdefup": {
+    "id": "bdefup",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [28, 7],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 3,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Body Ready"
+  },
+  "myheartpass": {
+    "id": "myheartpass",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 27],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 1,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Excited Pass"
+  },
+  "recover": {
+    "id": "recover",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 28],
+    "eff": [
+      {
+        "pow": 0.3,
+        "eff": 8,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Deep Breath"
+  },
+  "haze": {
+    "id": "haze",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 34,
+        "targ": 7
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Patience"
+  },
+  "juggle": {
+    "id": "juggle",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 27],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 20,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 0,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Juggle"
+  },
+  "heartd": {
+    "id": "heartd",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 28, 7],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 4,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 60,
+    "name": "Cold Calculation"
+  },
+  "rollshot": {
+    "id": "rollshot",
+    "targ": 8,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 19, 9],
+    "eff": [
+      {
+        "pow": 17,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 2,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 80,
+    "name": "Roll Shot"
+  },
+  "protect": {
+    "id": "protect",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [32],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 53,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 19,
+        "targ": 0
+      },
+      {
+        "pow": 2,
+        "eff": 12,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Shield"
+  },
+  "blockattack": {
+    "id": "blockattack",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 19],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 17,
+        "targ": 0
+      }
+    ],
+    "use": 2,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 80,
+    "name": "High Slam"
+  },
+  "wornout": {
+    "id": "wornout",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 30, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 13,
+        "targ": 7
+      },
+      {
+        "pow": 4,
+        "eff": 22,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Hex"
+  },
+  "libero": {
+    "id": "libero",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [9, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 27,
+        "targ": 3
+      },
+      {
+        "pow": -0.1,
+        "eff": 8,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Hawkeye"
+  },
+  "defheal": {
+    "id": "defheal",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [28],
+    "eff": [
+      {
+        "pow": 0.3,
+        "eff": 8,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Quick Breath"
+  },
+  "superfang": {
+    "id": "superfang",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0],
+    "eff": [],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": -0.5,
+    "name": "Grinder"
+  },
+  "markattack": {
+    "id": "markattack",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 27,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 45,
+    "name": "Tracker"
+  },
+  "telekinesis": {
+    "id": "telekinesis",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 27],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 20,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 2,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Telekinesis"
+  },
+  "careful": {
+    "id": "careful",
+    "targ": 12,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 9],
+    "eff": [],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 40,
+    "name": "Careful Shot"
+  },
+  "rhythm": {
+    "id": "rhythm",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 13],
+    "eff": [
+      {
+        "pow": 6,
+        "eff": 44,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Drum"
+  },
+  "hdefup": {
+    "id": "hdefup",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [28, 7],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 4,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Heart Harden"
+  },
+  "trap": {
+    "id": "trap",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 10],
+    "eff": [
+      {
+        "pow": 2,
+        "eff": 42,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Lay Trap"
+  },
+  "nice": {
+    "id": "nice",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 18,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 95,
+    "name": "Nice Shot"
+  },
+  "wornattack": {
+    "id": "wornattack",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 8, 30],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 40,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 125,
+    "name": "Perfect Shot"
+  },
+  "basecover": {
+    "id": "basecover",
+    "targ": 3,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [9],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 7,
+        "targ": 2
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Fall Back"
+  },
+  "nightshade": {
+    "id": "nightshade",
+    "targ": 8,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 9],
+    "eff": [],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": -30,
+    "name": "Precision"
+  },
+  "preblock": {
+    "id": "preblock",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 28, 7, 30],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 16,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 6,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Hunker"
+  },
+  "shieldbreaker": {
+    "id": "shieldbreaker",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1],
+    "eff": [
+      {
+        "pow": 14,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 65,
+    "name": "Raw Fury"
+  },
+  "shakenhit": {
+    "id": "shakenhit",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 9, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 13,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Reach Shot"
+  },
+  "vigor": {
+    "id": "vigor",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 8, 19],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 2,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 135,
+    "name": "Vigor Beam"
+  },
+  "starterbody": {
+    "id": "starterbody",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0],
+    "eff": [],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 50,
+    "name": "Basic Hit"
+  },
+  "dump": {
+    "id": "dump",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 19, 9],
+    "eff": [],
+    "use": 2,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 85,
+    "name": "Dump"
+  },
+  "bench": {
+    "id": "bench",
+    "targ": 8,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9, 18],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 30,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Quick Tag"
+  },
+  "chance": {
+    "id": "chance",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 17,
+        "targ": 0
+      },
+      {
+        "pow": 0,
+        "eff": 18,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": -1,
+    "name": "Free Ball"
+  },
+  "introduction": {
+    "id": "introduction",
+    "targ": 8,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9, 32],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 19,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Introduce"
+  },
+  "quickattack": {
+    "id": "quickattack",
+    "targ": 2,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [22, 9, 3],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 0,
+        "targ": 1
+      }
+    ],
+    "use": 0,
+    "type": 3,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Quick"
+  },
+  "starterside": {
+    "id": "starterside",
+    "targ": 12,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 9, 36, 5],
+    "eff": [
+      {
+        "pow": -1,
+        "eff": 5,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 35,
+    "name": "Trickspin"
+  },
+  "rushattack": {
+    "id": "rushattack",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 8, 20],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": -7,
+        "targ": 0
+      },
+      {
+        "pow": 0,
+        "eff": 57,
+        "targ": 0
+      }
+    ],
+    "use": 1,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 100,
+    "name": "Launch"
+  },
+  "lifedew": {
+    "id": "lifedew",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 16],
+    "eff": [
+      {
+        "pow": 0.15,
+        "eff": 8,
+        "targ": 2
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Calming Aura"
+  },
+  "backswitch": {
+    "id": "backswitch",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [],
+    "eff": [
+      {
+        "pow": 7,
+        "eff": 7,
+        "targ": 2
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Role Reverse"
+  },
+  "rocket": {
+    "id": "rocket",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0],
+    "eff": [
+      {
+        "pow": 16,
+        "eff": 33,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 70,
+    "name": "Rocket"
+  },
+  "starterheart": {
+    "id": "starterheart",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1],
+    "eff": [],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 45,
+    "name": "Beginner Effort"
+  },
+  "pushattack": {
+    "id": "pushattack",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 19],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": 7,
+        "targ": 3
+      }
+    ],
+    "use": 2,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 75,
+    "name": "Shove"
+  },
+  "chill": {
+    "id": "chill",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9, 36],
+    "eff": [
+      {
+        "pow": -2,
+        "eff": 1,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Chill Out"
+  },
+  "switch": {
+    "id": "switch",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 11,
+        "targ": 1
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Reposition"
+  },
+  "bomb": {
+    "id": "bomb",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 38],
+    "eff": [
+      {
+        "pow": 0.5,
+        "eff": 36,
+        "targ": 5
+      }
+    ],
+    "use": 0,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 55,
+    "name": "Bang"
+  },
+  "jump": {
+    "id": "jump",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 8, 19],
+    "eff": [],
+    "use": 2,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 100,
+    "name": "Spike"
+  },
+  "eerie": {
+    "id": "eerie",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 40],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 7,
+        "targ": 0
+      },
+      {
+        "pow": 6,
+        "eff": 45,
+        "targ": 7
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Dreadful Mist"
+  },
+  "flyback": {
+    "id": "flyback",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [1, 8, 19],
+    "eff": [
+      {
+        "pow": 0,
+        "eff": -7,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 57,
+        "targ": 0
+      }
+    ],
+    "use": 2,
+    "type": 1,
+    "desc_tags": [],
+    "pow": 130,
+    "name": "Airblast"
+  },
+  "stun": {
+    "id": "stun",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 29, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 6,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 40,
+    "name": "Freezer"
+  },
+  "lock": {
+    "id": "lock",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [9, 29, 37],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 7,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 6,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Staredown"
+  },
+  "healbell": {
+    "id": "healbell",
+    "targ": 1,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 16],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 32,
+        "targ": 6
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Team Chant"
+  },
+  "batonpass": {
+    "id": "batonpass",
+    "targ": 8,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [9, 17, 18],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 31,
+        "targ": 3
+      },
+      {
+        "pow": 1,
+        "eff": 30,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 5,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "High Five"
+  },
+  "mind": {
+    "id": "mind",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [2, 28, 7],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 5,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 2,
+    "desc_tags": [],
+    "pow": 70,
+    "name": "Prepared Attack"
+  },
+  "lockon": {
+    "id": "lockon",
+    "targ": 4,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [23, 9, 34],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 14,
+        "targ": 3
+      }
+    ],
+    "use": 0,
+    "type": 4,
+    "desc_tags": [],
+    "pow": 0,
+    "name": "Lock Target"
+  },
+  "stomp": {
+    "id": "stomp",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0, 27],
+    "eff": [
+      {
+        "pow": 1,
+        "eff": 12,
+        "targ": 0
+      },
+      {
+        "pow": 2,
+        "eff": 64,
+        "targ": 0
+      },
+      {
+        "pow": 1,
+        "eff": 0,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 85,
+    "name": "Stomp"
+  },
+  "healhit": {
+    "id": "healhit",
+    "targ": 0,
+    "desc_tagids": [],
+    "description": null,
+    "bt_tags": [0],
+    "eff": [
+      {
+        "pow": 0.2,
+        "eff": 8,
+        "targ": 0
+      }
+    ],
+    "use": 0,
+    "type": 0,
+    "desc_tags": [],
+    "pow": 50,
+    "name": "Relaxed Hit"
+  }
+}

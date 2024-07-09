@@ -1,6 +1,32 @@
 import { Type } from "./MoveType";
 import type { MoveType } from "./MoveType";
 
+import move_dic from "./move_dic.json";
+
+export type MoveEffect = {
+  pow: number;
+  eff: number;
+  targ: number;
+};
+
+export type Move = {
+  id: string;
+  targ: number;
+  desc_tagids: number[];
+  description: null;
+  bt_tags: number[];
+  eff: MoveEffect[];
+  use: number;
+  type: number;
+  desc_tags: number[];
+  pow: number;
+  name: string;
+};
+
+export const MOVE_DIC: {
+  [key: string]: Move;
+} = move_dic;
+
 const MOVE_DATA: Map<string, MoveType> = new Map();
 
 MOVE_DATA.set("???", {

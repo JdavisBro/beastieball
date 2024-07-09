@@ -137,7 +137,7 @@ export default function MoveList(props: Props): React.ReactElement {
         </div>
       </div>
       <div className={styles.viewcontainer}>
-        {moveselected ? <MoveView move={moveselected} /> : null}
+        {/* {moveselected ? <MoveView move={moveselected} /> : null} */}
       </div>
     </div>
   );

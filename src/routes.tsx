@@ -4,6 +4,7 @@ import type { RouteObject } from "react-router-dom";
 const Home = lazy(() => import("./Home"));
 const PageNotFound = lazy(() => import("./PageNotFound"));
 const Beastiepedia = lazy(() => import("./Beastiepedia/Beastiepedia"));
+const Playdex = lazy(() => import("./Playdex/Playdex"));
 const Map = lazy(() => import("./Map/Map"));
 const Modding = lazy(() => import("./Modding/Modding"));
 const Save = lazy(() => import("./Modding/Save/Save"));
@@ -21,6 +22,14 @@ const routes: Array<RouteObject> = [
   {
     element: <Beastiepedia />,
     path: "beastiepedia/:beastie",
+  },
+  {
+    element: <Playdex />,
+    path: "/playdex/",
+  },
+  {
+    element: <Playdex />,
+    path: "playdex/:move",
   },
   {
     element: <Map />,

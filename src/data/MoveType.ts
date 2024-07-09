@@ -41,7 +41,7 @@ export enum Type {
   Body = 0,
   Spirit = 1, // aka h/heart
   Mind = 2,
-  Pass = 3, // ball icon
+  Volley = 3, // ball icon
   Support = 4, // whistle
   Defence = 5,
   Unknown = 6,

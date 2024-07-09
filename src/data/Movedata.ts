@@ -38,13 +38,13 @@ MOVE_DATA.set("???", {
   .set("chance", {
     name: "Free Ball",
     desc: "PASS to an opponent and skip your attack. Can always be used.",
-    type: Type.Pass,
+    type: Type.Volley,
     power: 0,
   })
   .set("volley", {
     name: "Volley",
     desc: "A basic PASS",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("move", {
@@ -536,97 +536,97 @@ MOVE_DATA.set("???", {
   .set("rush", {
     name: "Net Rush",
     desc: "VOLLEY. SHIFTs self to front row.",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("cover", {
     name: "Cover",
     desc: "VOLLEY. SHIFTs self to back row.",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("set", {
     name: "Set",
     desc: "VOLLEY. Ally feels 1 [sprStatus,8]JAZZED (POW x1.5).",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("dig", {
     name: "Dig",
     desc: "VOLLEY. Feel 1 [sprStatus,8]JAZZED (POW x1.5).",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("refresh", {
     name: "Refresh",
     desc: "VOLLEY. HEALs ally +15.",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("freeball", {
     name: "Updraft",
     desc: "VOLLEY. +1 ACTIONs. -34 STMINA.",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("quickattack", {
     name: "Quick",
     desc: "VOLLEY. [sprIcon,0]POW[sprBoost,0] to ally.",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("superquick", {
     name: "Super Quick",
     desc: "Only used from net. VOLLEY. [sprIcon,0]POW[sprBoost,1] to ally.",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("heartpass", {
     name: "Faith",
     desc: "VOLLEY. [sprIcon,1]POW[sprBoost,0] to ally.",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("mindpass", {
     name: "Tactical Pass",
     desc: "VOLLEY. [sprIcon,2]POW[sprBoost,0] to ally.",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("allyrush", {
     name: "Forward Pass",
     desc: "VOLLEY. SHIFTs ally to front row.",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("allycover", {
     name: "Pipe",
     desc: "VOLLEY. SHIFTs ally to back row.",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("juggle", {
     name: "Juggle",
     desc: "Ball goes to self. [sprIcon,0]POW[sprBoost,0] to self.",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("jazzpass", {
     name: "Perfect Pass",
     desc: "Only used from net VOLLEY. SHIFTs ally to front row. Ally feels 1 [sprStatus,8]JAZZED (POW x1.5).",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("myheartpass", {
     name: "Excited Pass",
     desc: "VOLLEY. [sprIcon,1]POW[sprBoost,0] to self.",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("stresspass", {
     name: "Demanding Set",
     desc: "VOLLEY. [sprIcon,0][sprIcon,1][sprIcon,2]POW[sprBoost,1] to ally. Ally feels 1 [sprStatus,12]STRESSED (becomes [sprStatus,10]TIRED).",
-    type: Type.Pass,
+    type: Type.Volley,
     power: null,
   })
   .set("feint", {

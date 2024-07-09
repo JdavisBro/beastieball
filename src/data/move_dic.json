@@ -1,3276 +1,2319 @@
 {
   "cut": {
     "id": "cut",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 19, 9],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": -7,
-        "targ": 0
-      }
-    ],
-    "use": 2,
-    "type": 1,
+    "targ": 4,
+    "eff": [{ "eff": -7.0, "targ": 0, "pow": 2.0 }],
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 80,
+    "type": 1.0,
+    "bt_tags": [1, 19, 9],
+    "pow": 80.0,
     "name": "Cut Shot"
   },
   "allycover": {
     "id": "allycover",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 9],
-    "eff": [
-      {
-        "pow": 0,
-        "eff": 7,
-        "targ": 1
-      }
-    ],
-    "use": 0,
-    "type": 3,
+    "targ": 2,
+    "eff": [{ "eff": 7.0, "targ": 1.0, "pow": 0.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 9],
+    "pow": 0.0,
     "name": "Pipe"
   },
   "dare": {
     "id": "dare",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 8, 30],
+    "targ": 0,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 0,
-        "targ": 3
-      },
-      {
-        "pow": 1,
-        "eff": 1,
-        "targ": 3
-      }
+      { "eff": 0.0, "targ": 3.0, "pow": 1.0 },
+      { "eff": 1.0, "targ": 3.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 1,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 100,
+    "type": 1.0,
+    "bt_tags": [1, 8, 30],
+    "pow": 100.0,
     "name": "Challenge"
   },
   "heartup": {
     "id": "heartup",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [31, 6],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 26,
-        "targ": 2
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 1,
+    "eff": [{ "eff": 26, "targ": 2, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [31, 6],
+    "pow": 0.0,
     "name": "Battle Cry"
   },
   "dig": {
     "id": "dig",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 31],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 26,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 3,
+    "targ": 1,
+    "eff": [{ "eff": 26, "targ": 0.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 31],
+    "pow": 0.0,
     "name": "Dig"
   },
   "refresh": {
     "id": "refresh",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 9, 16],
-    "eff": [
-      {
-        "pow": 0.15,
-        "eff": 8,
-        "targ": 1
-      }
-    ],
-    "use": 0,
-    "type": 3,
+    "targ": 2,
+    "eff": [{ "eff": 8, "targ": 1.0, "pow": 0.14999999999999999 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 9, 16],
+    "pow": 0.0,
     "name": "Refresh"
   },
   "sideshot": {
     "id": "sideshot",
-    "targ": 12,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 9],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": 7,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 12,
+    "eff": [{ "eff": 7.0, "targ": 3.0, "pow": 2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 35,
+    "type": 0.0,
+    "bt_tags": [0, 9],
+    "pow": 35.0,
     "name": "Sidewinder"
   },
   "crowd": {
     "id": "crowd",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 12],
-    "eff": [
-      {
-        "pow": 3,
-        "eff": 43,
-        "targ": 7
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 0,
+    "eff": [{ "eff": 43, "targ": 7, "pow": 3.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 12],
+    "pow": 0.0,
     "name": "Rally"
   },
   "curse": {
     "id": "curse",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 27, 28, 7],
+    "targ": 1,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 0,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 3,
-        "targ": 0
-      }
+      { "eff": 0.0, "targ": 0.0, "pow": 1.0 },
+      { "eff": 3.0, "targ": 0.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 27, 28, 7],
+    "pow": 0.0,
     "name": "Flex"
   },
   "overthink": {
     "id": "overthink",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 27, 30],
+    "targ": 1,
     "eff": [
-      {
-        "pow": 3,
-        "eff": 2,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 39,
-        "targ": 0
-      }
+      { "eff": 2.0, "targ": 0.0, "pow": 3.0 },
+      { "eff": 39, "targ": 0.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 27, 30],
+    "pow": 0.0,
     "name": "Overthink"
   },
   "thunder": {
     "id": "thunder",
-    "targ": 8,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 8, 19, 9],
+    "targ": 8,
     "eff": [],
-    "use": 2,
-    "type": 0,
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 110,
+    "type": 0.0,
+    "bt_tags": [0, 8, 19, 9],
+    "pow": 110.0,
     "name": "Thunder"
   },
   "rush": {
     "id": "rush",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 9],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 7,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 3,
+    "targ": 2,
+    "eff": [{ "eff": 7.0, "targ": 0.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 9],
+    "pow": 0.0,
     "name": "Net Rush"
   },
   "whirlwind": {
     "id": "whirlwind",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [9, 11],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 30,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 4,
+    "eff": [{ "eff": 30, "targ": 3.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [9, 11],
+    "pow": 0.0,
     "name": "Cyclone"
   },
   "construct": {
     "id": "construct",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 20, 25, 30],
+    "targ": 0,
     "eff": [
-      {
-        "pow": 0,
-        "eff": 56,
-        "targ": 0
-      },
-      {
-        "pow": -0.34,
-        "eff": 8,
-        "targ": 0
-      },
-      {
-        "pow": 0,
-        "eff": 57,
-        "targ": 0
-      }
+      { "eff": 56, "targ": 0.0, "pow": 0.0 },
+      { "eff": 8.0, "targ": 0.0, "pow": -0.34000000000000002 },
+      { "eff": 57, "targ": 0.0, "pow": 0.0 }
     ],
-    "use": 1,
-    "type": 4,
+    "use": 1.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 20, 25, 30],
+    "pow": 0.0,
     "name": "Build"
   },
   "hazeball": {
     "id": "hazeball",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 34,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 34, "targ": 3, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 65,
+    "type": 2.0,
+    "bt_tags": [2],
+    "pow": 65.0,
     "name": "Numbshot"
   },
   "spitball": {
     "id": "spitball",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 14, 37],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 12,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 12, "targ": 3.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 75,
+    "type": 2.0,
+    "bt_tags": [2, 14, 37],
+    "pow": 75.0,
     "name": "Spitball"
   },
   "targethp": {
     "id": "targethp",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 8],
-    "eff": [
-      {
-        "pow": 8,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 33.0, "targ": 0.0, "pow": 8.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 120,
+    "type": 2.0,
+    "bt_tags": [2, 8],
+    "pow": 120.0,
     "name": "Soulcrusher"
   },
   "charm": {
     "id": "charm",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9, 36],
-    "eff": [
-      {
-        "pow": -2,
-        "eff": 0,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 4,
+    "eff": [{ "eff": 0.0, "targ": 3.0, "pow": -2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 36],
+    "pow": 0.0,
     "name": "Goo-Goo Eyes"
   },
   "allnervous": {
     "id": "allnervous",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [19, 30, 29, 37],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 6,
-        "targ": 7
-      }
-    ],
-    "use": 2,
-    "type": 5,
+    "targ": 1,
+    "eff": [{ "eff": 6.0, "targ": 7.0, "pow": 1.0 }],
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [19, 30, 29, 37],
+    "pow": 0.0,
     "name": "Upsetting Comment"
   },
   "lifepass": {
     "id": "lifepass",
-    "targ": 8,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [9, 30, 39, 18],
+    "targ": 8,
     "eff": [
-      {
-        "pow": -1,
-        "eff": 8,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 47,
-        "targ": 3
-      },
-      {
-        "pow": 1,
-        "eff": 30,
-        "targ": 3
-      }
+      { "eff": 8.0, "targ": 0.0, "pow": -1.0 },
+      { "eff": 47, "targ": 3.0, "pow": 1.0 },
+      { "eff": 30.0, "targ": 3.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 5,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [9, 30, 39, 18],
+    "pow": 0.0,
     "name": "Torch Pass"
   },
   "sweatup": {
     "id": "sweatup",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [9, 35, 37],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 23,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 4,
+    "eff": [{ "eff": 23, "targ": 3.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [9, 35, 37],
+    "pow": 0.0,
     "name": "Heat Up"
   },
   "moon": {
     "id": "moon",
-    "targ": 8,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 8, 20, 9],
+    "targ": 8,
     "eff": [],
-    "use": 1,
-    "type": 2,
+    "use": 1.0,
     "desc_tags": [],
-    "pow": 100,
+    "type": 2.0,
+    "bt_tags": [2, 8, 20, 9],
+    "pow": 100.0,
     "name": "Rainbow"
   },
   "netattack": {
     "id": "netattack",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 7,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 7.0, "targ": 0.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 70,
+    "type": 2.0,
+    "bt_tags": [2],
+    "pow": 70.0,
     "name": "Sneak Attack"
   },
   "threat": {
     "id": "threat",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [9, 37],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 38,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 4,
+    "eff": [{ "eff": 38.0, "targ": 3.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [9, 37],
+    "pow": 0.0,
     "name": "Intimidate"
   },
   "heart": {
     "id": "heart",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1],
+    "targ": 0,
     "eff": [],
-    "use": 0,
-    "type": 1,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 85,
+    "type": 1.0,
+    "bt_tags": [1],
+    "pow": 85.0,
     "name": "Bring the Heat"
   },
   "noisytag": {
     "id": "noisytag",
-    "targ": 8,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [9, 18, 33, 30],
+    "targ": 8,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 30,
-        "targ": 3
-      },
-      {
-        "pow": 0,
-        "eff": 53,
-        "targ": 3
-      },
-      {
-        "pow": 1,
-        "eff": 14,
-        "targ": 3
-      },
-      {
-        "pow": 2,
-        "eff": 12,
-        "targ": 3
-      }
+      { "eff": 30, "targ": 3.0, "pow": 1.0 },
+      { "eff": 53, "targ": 3.0, "pow": 0.0 },
+      { "eff": 14, "targ": 3.0, "pow": 1.0 },
+      { "eff": 12, "targ": 3.0, "pow": 2.0 }
     ],
-    "use": 0,
-    "type": 5,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [9, 18, 33, 30],
+    "pow": 0.0,
     "name": "Dramatic Exit"
   },
   "allyprotect": {
     "id": "allyprotect",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [33],
+    "targ": 1,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 14,
-        "targ": 0
-      },
-      {
-        "pow": 2,
-        "eff": 12,
-        "targ": 0
-      }
+      { "eff": 14, "targ": 0.0, "pow": 1.0 },
+      { "eff": 12, "targ": 0, "pow": 2.0 }
     ],
-    "use": 0,
-    "type": 5,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [33],
+    "pow": 0.0,
     "name": "Mighty Yell"
   },
   "set": {
     "id": "set",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 9, 31, 6],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 26,
-        "targ": 1
-      }
-    ],
-    "use": 0,
-    "type": 3,
+    "targ": 2,
+    "eff": [{ "eff": 26, "targ": 1.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 9, 31, 6],
+    "pow": 0.0,
     "name": "Set"
   },
   "storedpower": {
     "id": "storedpower",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0],
-    "eff": [
-      {
-        "pow": 10,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 33.0, "targ": 0.0, "pow": 10.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 15,
+    "type": 0.0,
+    "bt_tags": [0],
+    "pow": 15.0,
     "name": "Energized"
   },
   "pepshot": {
     "id": "pepshot",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 27],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 1,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 1.0, "targ": 0.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 40,
+    "type": 1.0,
+    "bt_tags": [1, 27],
+    "pow": 40.0,
     "name": "Pepshot"
   },
   "stresspass": {
     "id": "stresspass",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 9, 6, 30],
+    "targ": 2,
     "eff": [
-      {
-        "pow": 2,
-        "eff": 15,
-        "targ": 1
-      },
-      {
-        "pow": 1,
-        "eff": 39,
-        "targ": 1
-      }
+      { "eff": 15.0, "targ": 1.0, "pow": 2.0 },
+      { "eff": 39, "targ": 2, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 3,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 9, 6, 30],
+    "pow": 0.0,
     "name": "Demanding Set"
   },
   "superpower": {
     "id": "superpower",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 8],
+    "targ": 0,
     "eff": [
-      {
-        "pow": -1,
-        "eff": 0,
-        "targ": 0
-      },
-      {
-        "pow": -1,
-        "eff": 3,
-        "targ": 0
-      }
+      { "eff": 0.0, "targ": 0.0, "pow": -1.0 },
+      { "eff": 3.0, "targ": 0.0, "pow": -1.0 }
     ],
-    "use": 0,
-    "type": 0,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 110,
+    "type": 0.0,
+    "bt_tags": [0, 8],
+    "pow": 110.0,
     "name": "Overpower"
   },
   "tool": {
     "id": "tool",
-    "targ": 13,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 9],
+    "targ": 13,
     "eff": [],
-    "use": 0,
-    "type": 2,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 95,
+    "type": 2.0,
+    "bt_tags": [2, 9],
+    "pow": 95.0,
     "name": "Tool"
   },
   "rest": {
     "id": "rest",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 39, 30],
+    "targ": 1,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 47,
-        "targ": 0
-      },
-      {
-        "pow": 4,
-        "eff": 29,
-        "targ": 0
-      }
+      { "eff": 47, "targ": 0.0, "pow": 1.0 },
+      { "eff": 29.0, "targ": 0.0, "pow": 4.0 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 39, 30],
+    "pow": 0.0,
     "name": "Doze"
   },
   "sidespin": {
     "id": "sidespin",
-    "targ": 12,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 9],
+    "targ": 12,
     "eff": [],
-    "use": 0,
-    "type": 2,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 60,
+    "type": 2.0,
+    "bt_tags": [2, 9],
+    "pow": 60.0,
     "name": "Slice"
   },
   "overheat": {
     "id": "overheat",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 8],
-    "eff": [
-      {
-        "pow": -2,
-        "eff": 1,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 1.0, "targ": 0.0, "pow": -2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 110,
+    "type": 1.0,
+    "bt_tags": [1, 8],
+    "pow": 110.0,
     "name": "Burnout"
   },
   "dropshot": {
     "id": "dropshot",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 7,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 7.0, "targ": 3.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 55,
+    "type": 2.0,
+    "bt_tags": [2],
+    "pow": 55.0,
     "name": "Lure Shot"
   },
   "breakswipe": {
     "id": "breakswipe",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 36],
-    "eff": [
-      {
-        "pow": -1,
-        "eff": 0,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 0.0, "targ": 3.0, "pow": -1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 60,
+    "type": 0.0,
+    "bt_tags": [0, 36],
+    "pow": 60.0,
     "name": "Kneebender"
   },
   "poisonhit": {
     "id": "poisonhit",
-    "targ": 8,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 9, 35, 37],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 23,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 8,
+    "eff": [{ "eff": 23, "targ": 3, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 25,
+    "type": 2.0,
+    "bt_tags": [2, 9, 35, 37],
+    "pow": 25.0,
     "name": "Cornershot"
   },
   "enemyboosts": {
     "id": "enemyboosts",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1],
-    "eff": [
-      {
-        "pow": 11,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 33.0, "targ": 0.0, "pow": 11.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 50,
+    "type": 1.0,
+    "bt_tags": [1],
+    "pow": 50.0,
     "name": "Toppler"
   },
   "meditate": {
     "id": "meditate",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 27, 28, 7],
+    "targ": 1,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 2,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 5,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 4,
-        "targ": 0
-      }
+      { "eff": 2.0, "targ": 0.0, "pow": 1.0 },
+      { "eff": 5.0, "targ": 0.0, "pow": 1.0 },
+      { "eff": 4.0, "targ": 0.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 27, 28, 7],
+    "pow": 0.0,
     "name": "Meditate"
   },
   "cover": {
     "id": "cover",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 9],
-    "eff": [
-      {
-        "pow": 0,
-        "eff": 7,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 3,
+    "targ": 2,
+    "eff": [{ "eff": 7.0, "targ": 0.0, "pow": 0.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 9],
+    "pow": 0.0,
     "name": "Cover"
   },
   "freeball": {
     "id": "freeball",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 9, 26, 30],
+    "targ": 2,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 10,
-        "targ": 1
-      },
-      {
-        "pow": -0.34,
-        "eff": 8,
-        "targ": 0
-      }
+      { "eff": 10.0, "targ": 1.0, "pow": 1.0 },
+      { "eff": 8.0, "targ": 0.0, "pow": -0.34000000000000002 }
     ],
-    "use": 0,
-    "type": 3,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 9, 26, 30],
+    "pow": 0.0,
     "name": "Updraft"
   },
   "taunt": {
     "id": "taunt",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9, 14, 37],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": 12,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 4,
+    "eff": [{ "eff": 12.0, "targ": 3.0, "pow": 2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 14, 37],
+    "pow": 0.0,
     "name": "Provoke"
   },
   "???": {
     "id": "???",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [],
+    "targ": 0.0,
     "eff": [],
-    "use": 0,
-    "type": 6,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 6.0,
+    "bt_tags": [],
+    "pow": 0.0,
     "name": "Unrevealed"
   },
   "snipe": {
     "id": "snipe",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2],
-    "eff": [
-      {
-        "pow": 22,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 33, "targ": 0.0, "pow": 22 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 60,
+    "type": 2.0,
+    "bt_tags": [2],
+    "pow": 60.0,
     "name": "Snipe"
   },
   "jazzpass": {
     "id": "jazzpass",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 19, 9, 21, 31, 6],
+    "targ": 2,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 7,
-        "targ": 1
-      },
-      {
-        "pow": 1,
-        "eff": 26,
-        "targ": 1
-      }
+      { "eff": 7.0, "targ": 1.0, "pow": 1.0 },
+      { "eff": 26, "targ": 1.0, "pow": 1.0 }
     ],
-    "use": 2,
-    "type": 3,
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 19, 9, 21, 31, 6],
+    "pow": 0.0,
     "name": "Perfect Pass"
   },
   "substitute": {
     "id": "substitute",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 30, 32],
+    "targ": 1,
     "eff": [
-      {
-        "pow": -0.33,
-        "eff": 8,
-        "targ": 0
-      },
-      {
-        "pow": 2,
-        "eff": 19,
-        "targ": 0
-      }
+      { "eff": 8.0, "targ": 0.0, "pow": -0.33000000000000002 },
+      { "eff": 19.0, "targ": 0.0, "pow": 2.0 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 30, 32],
+    "pow": 0.0,
     "name": "Tough Front"
   },
   "tagout": {
     "id": "tagout",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [],
+    "targ": 0,
     "eff": [],
-    "use": 0,
-    "type": 9,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 9.0,
+    "bt_tags": [],
+    "pow": 0.0,
     "name": "Tag Out"
   },
   "lowattks": {
     "id": "lowattks",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9, 36],
+    "targ": 4,
     "eff": [
-      {
-        "pow": -1,
-        "eff": 0,
-        "targ": 3
-      },
-      {
-        "pow": -1,
-        "eff": 2,
-        "targ": 3
-      }
+      { "eff": 0.0, "targ": 3.0, "pow": -1.0 },
+      { "eff": 2.0, "targ": 3.0, "pow": -1.0 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 36],
+    "pow": 0.0,
     "name": "Jeer"
   },
   "sensihit": {
     "id": "sensihit",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 37],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": 38,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 38.0, "targ": 3.0, "pow": 2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 40,
+    "type": 0.0,
+    "bt_tags": [0, 37],
+    "pow": 40.0,
     "name": "Zinger"
   },
   "shakenmind": {
     "id": "shakenmind",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 37],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 13,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 13.0, "targ": 3.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 40,
+    "type": 2.0,
+    "bt_tags": [2, 37],
+    "pow": 40.0,
     "name": "Twisted"
   },
   "desperate": {
     "id": "desperate",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 30],
+    "targ": 0,
     "eff": [
-      {
-        "pow": 0,
-        "eff": 17,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 39,
-        "targ": 0
-      }
+      { "eff": 17.0, "targ": 0.0, "pow": 0.0 },
+      { "eff": 39.0, "targ": 0.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 1,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 75,
+    "type": 1.0,
+    "bt_tags": [1, 30],
+    "pow": 75.0,
     "name": "Desperate Dive"
   },
   "minddown": {
     "id": "minddown",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 36],
-    "eff": [
-      {
-        "pow": -1,
-        "eff": 2,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 2.0, "targ": 3.0, "pow": -1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 70,
+    "type": 1.0,
+    "bt_tags": [1, 36],
+    "pow": 70.0,
     "name": "Jammer"
   },
   "contest": {
     "id": "contest",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 8],
-    "eff": [
-      {
-        "pow": 23,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 33, "targ": 0.0, "pow": 23 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 110,
+    "type": 1.0,
+    "bt_tags": [1, 8],
+    "pow": 110.0,
     "name": "Contest"
+  },
+  "protectcheer": {
+    "id": "protectcheer",
+    "desc_tagids": [],
+    "description": null,
+    "targ": 1,
+    "eff": [
+      { "eff": 53, "targ": 0.0, "pow": 0.0 },
+      { "eff": 19, "targ": 0.0, "pow": 1.0 },
+      { "eff": 12, "targ": 0.0, "pow": 2.0 },
+      { "eff": 15, "targ": 1, "pow": 1.0 }
+    ],
+    "use": 0.0,
+    "desc_tags": [],
+    "type": 5.0,
+    "bt_tags": [32, 6],
+    "pow": 0.0,
+    "name": "Inspiring Defense"
   },
   "sting": {
     "id": "sting",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [9, 37],
+    "targ": 4,
     "eff": [
-      {
-        "pow": 2,
-        "eff": 29,
-        "targ": 3
-      },
-      {
-        "pow": -0.2,
-        "eff": 8,
-        "targ": 0
-      }
+      { "eff": 29, "targ": 3.0, "pow": 2.0 },
+      { "eff": 8, "targ": 0.0, "pow": -0.20000000000000001 }
     ],
-    "use": 0,
-    "type": 5,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [9, 37],
+    "pow": 0.0,
     "name": "Sting"
   },
   "body": {
     "id": "body",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0],
+    "targ": 0,
     "eff": [],
-    "use": 0,
-    "type": 0,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 90,
+    "type": 0.0,
+    "bt_tags": [0],
+    "pow": 90.0,
     "name": "Thump"
   },
   "allyrush": {
     "id": "allyrush",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 9, 21],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 7,
-        "targ": 1
-      }
-    ],
-    "use": 0,
-    "type": 3,
+    "targ": 2,
+    "eff": [{ "eff": 7.0, "targ": 1.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 9, 21],
+    "pow": 0.0,
     "name": "Forward Pass"
+  },
+  "sweatall": {
+    "id": "sweatall",
+    "desc_tagids": [],
+    "description": null,
+    "targ": 1,
+    "eff": [{ "eff": 23, "targ": 7, "pow": 1.0 }],
+    "use": 0.0,
+    "desc_tags": [],
+    "type": 5.0,
+    "bt_tags": [30, 35, 37],
+    "pow": 0.0,
+    "name": "Heat Wave"
   },
   "meter": {
     "id": "meter",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9, 14, 37],
+    "targ": 4,
     "eff": [
-      {
-        "pow": 2,
-        "eff": 12,
-        "targ": 3
-      },
-      {
-        "pow": 1,
-        "eff": 60,
-        "targ": 0
-      }
+      { "eff": 12.0, "targ": 3.0, "pow": 2.0 },
+      { "eff": 60, "targ": 0.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 14, 37],
+    "pow": 0.0,
     "name": "Rowdy"
   },
   "commit": {
     "id": "commit",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 8, 30],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 6,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 6.0, "targ": 0.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 100,
+    "type": 1.0,
+    "bt_tags": [1, 8, 30],
+    "pow": 100.0,
     "name": "Supercommit"
   },
   "reversal": {
     "id": "reversal",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 8],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 33.0, "targ": 0.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 160,
+    "type": 1.0,
+    "bt_tags": [1, 8],
+    "pow": 160.0,
     "name": "Turnabout"
   },
   "stress": {
     "id": "stress",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [9, 37],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 39,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 4,
+    "eff": [{ "eff": 39, "targ": 3.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [9, 37],
+    "pow": 0.0,
     "name": "Frazzle"
   },
   "serve": {
     "id": "serve",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0],
-    "eff": [
-      {
-        "pow": 7,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 33.0, "targ": 0.0, "pow": 7.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 70,
+    "type": 0.0,
+    "bt_tags": [0],
+    "pow": 70.0,
     "name": "Muscle Memory"
   },
   "mindpass": {
     "id": "mindpass",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 9, 5],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 2,
-        "targ": 1
-      }
-    ],
-    "use": 0,
-    "type": 3,
+    "targ": 2,
+    "eff": [{ "eff": 2.0, "targ": 1.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 9, 5],
+    "pow": 0.0,
     "name": "Tactical Pass"
   },
   "healhit2": {
     "id": "healhit2",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0],
-    "eff": [
-      {
-        "pow": 0.1,
-        "eff": 8,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 8.0, "targ": 0.0, "pow": 0.10000000000000001 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 75,
+    "type": 0.0,
+    "bt_tags": [0],
+    "pow": 75.0,
     "name": "Power Sap"
   },
   "fieldclear": {
     "id": "fieldclear",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 15, 16],
+    "targ": 0,
     "eff": [
-      {
-        "pow": 0,
-        "eff": 46,
-        "targ": 7
-      },
-      {
-        "pow": 0.05,
-        "eff": 8,
-        "targ": 6
-      }
+      { "eff": 46, "targ": 7, "pow": 0.0 },
+      { "eff": 8, "targ": 6, "pow": 0.080000000000000002 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 15, 16],
+    "pow": 0.0,
     "name": "Clear Field"
   },
   "superquick": {
     "id": "superquick",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 19, 9, 3],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": 0,
-        "targ": 1
-      }
-    ],
-    "use": 2,
-    "type": 3,
+    "targ": 2,
+    "eff": [{ "eff": 0.0, "targ": 1.0, "pow": 2.0 }],
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 19, 9, 3],
+    "pow": 0.0,
     "name": "Super Quick"
   },
   "distraction": {
     "id": "distraction",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [19, 33],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 14,
-        "targ": 0
-      }
-    ],
-    "use": 2,
-    "type": 5,
+    "targ": 1,
+    "eff": [{ "eff": 14.0, "targ": 0.0, "pow": 1.0 }],
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [19, 33],
+    "pow": 0.0,
     "name": "Distraction"
   },
   "tagattack": {
     "id": "tagattack",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0],
-    "eff": [
-      {
-        "pow": 20,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 33, "targ": 0.0, "pow": 20 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 60,
+    "type": 0.0,
+    "bt_tags": [0],
+    "pow": 60.0,
     "name": "Momentum"
   },
   "scoreboosted": {
     "id": "scoreboosted",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1],
-    "eff": [
-      {
-        "pow": 15,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 33.0, "targ": 0.0, "pow": 15.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 60,
+    "type": 1.0,
+    "bt_tags": [1],
+    "pow": 60.0,
     "name": "Comeback"
   },
   "mindbomb": {
     "id": "mindbomb",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 38],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 36,
-        "targ": 5
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 36, "targ": 5, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 45,
+    "type": 2.0,
+    "bt_tags": [2, 38],
+    "pow": 45.0,
     "name": "Mindfield"
   },
   "facade": {
     "id": "facade",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1],
-    "eff": [
-      {
-        "pow": 12,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 33.0, "targ": 0.0, "pow": 12 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 65,
+    "type": 1.0,
+    "bt_tags": [1],
+    "pow": 65.0,
     "name": "Grit"
   },
   "steal": {
     "id": "steal",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23],
+    "targ": 1,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 20,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 7,
-        "targ": 0
-      }
+      { "eff": 20, "targ": 0.0, "pow": 1.0 },
+      { "eff": 7.0, "targ": 0.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23],
+    "pow": 0.0,
     "name": "Steal"
   },
   "topspin": {
     "id": "topspin",
-    "targ": 12,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 9],
+    "targ": 12,
     "eff": [],
-    "use": 0,
-    "type": 0,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 50,
+    "type": 0.0,
+    "bt_tags": [0, 9],
+    "pow": 50.0,
     "name": "Bounce"
   },
   "float": {
     "id": "float",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2],
-    "eff": [
-      {
-        "pow": 0,
-        "eff": 7,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 7.0, "targ": 3.0, "pow": 0.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 65,
+    "type": 2.0,
+    "bt_tags": [2],
+    "pow": 65.0,
     "name": "Floater"
   },
   "startermind": {
     "id": "startermind",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2],
+    "targ": 0,
     "eff": [],
-    "use": 0,
-    "type": 2,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 40,
+    "type": 2.0,
+    "bt_tags": [2],
+    "pow": 40.0,
     "name": "Practice Shot"
   },
   "steamattack": {
     "id": "steamattack",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 35, 37],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": 23,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 1,
+    "eff": [{ "eff": 23, "targ": 3.0, "pow": 2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 1,
+    "type": 1.0,
+    "bt_tags": [1, 35, 37],
+    "pow": 1.0,
     "name": "Steamer"
   },
   "nettle": {
     "id": "nettle",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9],
-    "eff": [
-      {
-        "pow": -0.2,
-        "eff": 8,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 4,
+    "eff": [{ "eff": 8.0, "targ": 3.0, "pow": -0.20000000000000001 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9],
+    "pow": 0.0,
     "name": "Nettle"
   },
   "jazzattack": {
     "id": "jazzattack",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": -26,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": -26, "targ": 0.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 55,
+    "type": 1.0,
+    "bt_tags": [1],
+    "pow": 55.0,
     "name": "Thriller"
   },
   "teleport": {
     "id": "teleport",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 28,
-        "targ": 1
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 1,
+    "eff": [{ "eff": 28.0, "targ": 1.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23],
+    "pow": 0.0,
     "name": "Teleport"
   },
   "snore": {
     "id": "snore",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 61,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 61, "targ": 0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 50,
+    "type": 1.0,
+    "bt_tags": [1],
+    "pow": 50.0,
     "name": "Relentless"
   },
   "swordsdance": {
     "id": "swordsdance",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [27],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": 0,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 1,
+    "eff": [{ "eff": 0.0, "targ": 0.0, "pow": 2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [27],
+    "pow": 0.0,
     "name": "Pump Up"
   },
   "pursuit": {
     "id": "pursuit",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2],
-    "eff": [
-      {
-        "pow": 5,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 33, "targ": 0.0, "pow": 5 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 50,
+    "type": 2.0,
+    "bt_tags": [2],
+    "pow": 55.0,
     "name": "Pressure"
   },
   "followme": {
     "id": "followme",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 33],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 14,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 1,
+    "eff": [{ "eff": 14.0, "targ": 0.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 33],
+    "pow": 0.0,
     "name": "Whistle"
   },
   "mdefup": {
     "id": "mdefup",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [28, 7],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": 5,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 1,
+    "eff": [{ "eff": 5.0, "targ": 0.0, "pow": 2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [28, 7],
+    "pow": 0.0,
     "name": "Mind Read"
   },
   "callout": {
     "id": "callout",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9, 28, 7],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 16,
-        "targ": 1
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 2,
+    "eff": [{ "eff": 16.0, "targ": 1.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 28, 7],
+    "pow": 0.0,
     "name": "Call Out"
   },
   "hyperbeam": {
     "id": "hyperbeam",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 8, 19, 30],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": 29,
-        "targ": 0
-      }
-    ],
-    "use": 2,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 29.0, "targ": 0.0, "pow": 2.0 }],
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 135,
+    "type": 0.0,
+    "bt_tags": [0, 8, 19, 30],
+    "pow": 135.0,
     "name": "Hyperspike"
   },
   "dragontail": {
     "id": "dragontail",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 11],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 30,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 30, "targ": 3, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 60,
+    "type": 1.0,
+    "bt_tags": [1, 11],
+    "pow": 60.0,
     "name": "Tornadoball"
   },
   "rocksmash": {
     "id": "rocksmash",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 36, 3],
-    "eff": [
-      {
-        "pow": -1,
-        "eff": 3,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 3.0, "targ": 3.0, "pow": -1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 50,
+    "type": 0.0,
+    "bt_tags": [0, 36, 3],
+    "pow": 50.0,
     "name": "Breaker"
   },
   "damagedattack": {
     "id": "damagedattack",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1],
-    "eff": [
-      {
-        "pow": 18,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 33, "targ": 0.0, "pow": 18 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 75,
+    "type": 1.0,
+    "bt_tags": [1],
+    "pow": 75.0,
     "name": "Counter"
   },
   "heartdown": {
     "id": "heartdown",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 36],
-    "eff": [
-      {
-        "pow": -1,
-        "eff": 1,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 1.0, "targ": 3.0, "pow": -1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 75,
+    "type": 2.0,
+    "bt_tags": [2, 36],
+    "pow": 75.0,
     "name": "Heartbreaker"
   },
   "move": {
     "id": "move",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [],
-    "eff": [
-      {
-        "pow": 3,
-        "eff": 57,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 8,
+    "targ": 0,
+    "eff": [{ "eff": 57, "targ": 0.0, "pow": 3.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 8.0,
+    "bt_tags": [],
+    "pow": 0.0,
     "name": "Move"
   },
   "brine": {
     "id": "brine",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0],
-    "eff": [
-      {
-        "pow": 9,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 33.0, "targ": 0.0, "pow": 9.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 55,
+    "type": 0.0,
+    "bt_tags": [0],
+    "pow": 55.0,
     "name": "Finisher"
   },
   "defense": {
     "id": "defense",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [19, 9, 37],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 27,
-        "targ": 3
-      }
-    ],
-    "use": 2,
-    "type": 5,
+    "targ": 4,
+    "eff": [{ "eff": 27.0, "targ": 3.0, "pow": 1.0 }],
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [19, 9, 37],
+    "pow": 0.0,
     "name": "Block"
   },
   "skillswap": {
     "id": "skillswap",
-    "targ": 5,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 63,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 5,
+    "eff": [{ "eff": 63, "targ": 3, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9],
+    "pow": 0.0,
     "name": "Trait Dance"
   },
   "powswitch": {
     "id": "powswitch",
-    "targ": 8,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [9, 18, 6],
+    "targ": 8,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 30,
-        "targ": 3
-      },
-      {
-        "pow": 1,
-        "eff": 15,
-        "targ": 3
-      }
+      { "eff": 30, "targ": 3.0, "pow": 1.0 },
+      { "eff": 15.0, "targ": 3.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 5,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [9, 18, 6],
+    "pow": 0.0,
     "name": "Smack"
   },
   "mark": {
     "id": "mark",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9, 37],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 27,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 4,
+    "eff": [{ "eff": 27.0, "targ": 3.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 37],
+    "pow": 0.0,
     "name": "Mark"
   },
   "tailwind": {
     "id": "tailwind",
-    "targ": 3,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9, 21],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 7,
-        "targ": 2
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 3,
+    "eff": [{ "eff": 7.0, "targ": 2.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 21],
+    "pow": 0.0,
     "name": "Tailwind"
   },
   "volley": {
     "id": "volley",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 9],
+    "targ": 2,
     "eff": [],
-    "use": 0,
-    "type": 3,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 9],
+    "pow": 0.0,
     "name": "Volley"
   },
   "3actions": {
     "id": "3actions",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 8, 30],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 41,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 41.0, "targ": 0.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 200,
+    "type": 0.0,
+    "bt_tags": [0, 8, 30],
+    "pow": 200.0,
     "name": "Ultimate Attack"
   },
   "hex": {
     "id": "hex",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2],
-    "eff": [
-      {
-        "pow": 13,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 33.0, "targ": 0.0, "pow": 13 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 65,
+    "type": 2.0,
+    "bt_tags": [2],
+    "pow": 65.0,
     "name": "Nerve Strike"
   },
   "feint": {
     "id": "feint",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9, 36, 6],
-    "eff": [
-      {
-        "pow": -1,
-        "eff": 16,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 4,
+    "eff": [{ "eff": 16.0, "targ": 3.0, "pow": -1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 36, 6],
+    "pow": 0.0,
     "name": "Feint"
   },
   "heartpass": {
     "id": "heartpass",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 9, 4],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 1,
-        "targ": 1
-      }
-    ],
-    "use": 0,
-    "type": 3,
+    "targ": 2,
+    "eff": [{ "eff": 1.0, "targ": 1.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 9, 4],
+    "pow": 0.0,
     "name": "Faith"
   },
   "bellydrum": {
     "id": "bellydrum",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 27, 30],
+    "targ": 1,
     "eff": [
-      {
-        "pow": 3,
-        "eff": 1,
-        "targ": 0
-      },
-      {
-        "pow": -0.34,
-        "eff": 8,
-        "targ": 0
-      }
+      { "eff": 1.0, "targ": 0.0, "pow": 3.0 },
+      { "eff": 8.0, "targ": 0.0, "pow": -0.34000000000000002 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 27, 30],
+    "pow": 0.0,
     "name": "Blaze"
   },
   "inferno": {
     "id": "inferno",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 38],
+    "targ": 0,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 36,
-        "targ": 5
-      },
-      {
-        "pow": 0.5,
-        "eff": 36,
-        "targ": 2
-      }
+      { "eff": 36, "targ": 5, "pow": 1.0 },
+      { "eff": 36, "targ": 2, "pow": 0.5 }
     ],
-    "use": 0,
-    "type": 1,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 70,
+    "type": 1.0,
+    "bt_tags": [1, 38],
+    "pow": 70.0,
     "name": "Explosion"
   },
   "dispel": {
     "id": "dispel",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 20,
-        "targ": 1
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 2,
+    "eff": [{ "eff": 20, "targ": 1, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9],
+    "pow": 0.0,
     "name": "Dispel"
   },
   "shaken": {
     "id": "shaken",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [9, 37],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": 13,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 4,
+    "eff": [{ "eff": 13.0, "targ": 3.0, "pow": 2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [9, 37],
+    "pow": 0.0,
     "name": "Stinky"
   },
   "xtra": {
     "id": "xtra",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [],
+    "targ": 0.0,
     "eff": [],
-    "use": 0,
-    "type": 6,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 6.0,
+    "bt_tags": [],
+    "pow": 0.0,
     "name": "Bonus"
   },
   "bounce": {
     "id": "bounce",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0],
-    "eff": [
-      {
-        "pow": 0,
-        "eff": 17,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 17.0, "targ": 0.0, "pow": 0.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 35,
+    "type": 0.0,
+    "bt_tags": [0],
+    "pow": 35.0,
     "name": "Bump"
   },
   "enemylowered": {
     "id": "enemylowered",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2],
-    "eff": [
-      {
-        "pow": 21,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 33, "targ": 0.0, "pow": 21 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 50,
+    "type": 2.0,
+    "bt_tags": [2],
+    "pow": 50.0,
     "name": "Pierce"
   },
   "mindup": {
     "id": "mindup",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [27],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": 2,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 1,
+    "eff": [{ "eff": 2.0, "targ": 0.0, "pow": 2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [27],
+    "pow": 0.0,
     "name": "Assess"
   },
   "cheer": {
     "id": "cheer",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9, 6],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 15,
-        "targ": 1
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 2,
+    "eff": [{ "eff": 15.0, "targ": 1.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 6],
+    "pow": 0.0,
     "name": "Cheer"
   },
   "passattack": {
     "id": "passattack",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2],
-    "eff": [
-      {
-        "pow": 19,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 33, "targ": 0.0, "pow": 19 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 50,
+    "type": 2.0,
+    "bt_tags": [2],
+    "pow": 50.0,
     "name": "Zigzag"
   },
   "bdefup": {
     "id": "bdefup",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [28, 7],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": 3,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 1,
+    "eff": [{ "eff": 3.0, "targ": 0.0, "pow": 2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [28, 7],
+    "pow": 0.0,
     "name": "Body Ready"
   },
   "myheartpass": {
     "id": "myheartpass",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 27],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 1,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 3,
+    "targ": 1,
+    "eff": [{ "eff": 1.0, "targ": 0.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 27],
+    "pow": 0.0,
     "name": "Excited Pass"
   },
   "recover": {
     "id": "recover",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 28],
-    "eff": [
-      {
-        "pow": 0.3,
-        "eff": 8,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 1,
+    "eff": [{ "eff": 8, "targ": 0.0, "pow": 0.29999999999999999 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 28],
+    "pow": 0.0,
     "name": "Deep Breath"
   },
   "haze": {
     "id": "haze",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 34,
-        "targ": 7
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 1,
+    "eff": [{ "eff": 34.0, "targ": 7.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [],
+    "pow": 0.0,
     "name": "Patience"
   },
   "juggle": {
     "id": "juggle",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 27],
+    "targ": 1,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 20,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 0,
-        "targ": 0
-      }
+      { "eff": 20.0, "targ": 0.0, "pow": 1.0 },
+      { "eff": 0.0, "targ": 0.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 3,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 27],
+    "pow": 0.0,
     "name": "Juggle"
   },
   "heartd": {
     "id": "heartd",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 28, 7],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 4,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 4.0, "targ": 0.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 60,
+    "type": 2.0,
+    "bt_tags": [2, 28, 7],
+    "pow": 60.0,
     "name": "Cold Calculation"
   },
   "rollshot": {
     "id": "rollshot",
-    "targ": 8,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 19, 9],
-    "eff": [
-      {
-        "pow": 17,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 2,
-    "type": 2,
+    "targ": 8,
+    "eff": [{ "eff": 33.0, "targ": 0.0, "pow": 17.0 }],
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 80,
+    "type": 2.0,
+    "bt_tags": [2, 19, 9],
+    "pow": 80.0,
     "name": "Roll Shot"
   },
   "protect": {
     "id": "protect",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [32],
+    "targ": 1,
     "eff": [
-      {
-        "pow": 0,
-        "eff": 53,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 19,
-        "targ": 0
-      },
-      {
-        "pow": 2,
-        "eff": 12,
-        "targ": 0
-      }
+      { "eff": 53, "targ": 0.0, "pow": 0.0 },
+      { "eff": 19, "targ": 0.0, "pow": 1.0 },
+      { "eff": 12, "targ": 0.0, "pow": 2.0 }
     ],
-    "use": 0,
-    "type": 5,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [32],
+    "pow": 0.0,
     "name": "Shield"
   },
   "blockattack": {
     "id": "blockattack",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 19],
-    "eff": [
-      {
-        "pow": 0,
-        "eff": 17,
-        "targ": 0
-      }
-    ],
-    "use": 2,
-    "type": 0,
+    "targ": 1,
+    "eff": [{ "eff": 17.0, "targ": 0.0, "pow": 0.0 }],
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 80,
+    "type": 0.0,
+    "bt_tags": [0, 19],
+    "pow": 80.0,
     "name": "High Slam"
   },
   "wornout": {
     "id": "wornout",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 30, 37],
+    "targ": 4,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 13,
-        "targ": 7
-      },
-      {
-        "pow": 4,
-        "eff": 22,
-        "targ": 0
-      }
+      { "eff": 29, "targ": 3, "pow": 4.0 },
+      { "eff": 22, "targ": 0.0, "pow": 4.0 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 37, 30],
+    "pow": 0.0,
     "name": "Hex"
   },
   "libero": {
     "id": "libero",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [9, 37],
+    "targ": 4,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 27,
-        "targ": 3
-      },
-      {
-        "pow": -0.1,
-        "eff": 8,
-        "targ": 0
-      }
+      { "eff": 27.0, "targ": 3.0, "pow": 1.0 },
+      { "eff": 8, "targ": 0.0, "pow": -0.10000000000000001 }
     ],
-    "use": 0,
-    "type": 5,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [9, 37],
+    "pow": 0.0,
     "name": "Hawkeye"
   },
   "defheal": {
     "id": "defheal",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [28],
-    "eff": [
-      {
-        "pow": 0.3,
-        "eff": 8,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 1,
+    "eff": [{ "eff": 8.0, "targ": 0.0, "pow": 0.29999999999999999 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [28],
+    "pow": 0.0,
     "name": "Quick Breath"
   },
   "superfang": {
     "id": "superfang",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0],
+    "targ": 0,
     "eff": [],
-    "use": 0,
-    "type": 0,
+    "use": 0.0,
     "desc_tags": [],
+    "type": 0.0,
+    "bt_tags": [0],
     "pow": -0.5,
     "name": "Grinder"
   },
   "markattack": {
     "id": "markattack",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 37],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 27,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 27, "targ": 3, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 45,
+    "type": 2.0,
+    "bt_tags": [2, 37],
+    "pow": 45.0,
     "name": "Tracker"
   },
   "telekinesis": {
     "id": "telekinesis",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 27],
+    "targ": 1,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 20,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 2,
-        "targ": 0
-      }
+      { "eff": 20, "targ": 0.0, "pow": 1.0 },
+      { "eff": 2.0, "targ": 0.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 27],
+    "pow": 0.0,
     "name": "Telekinesis"
   },
   "careful": {
     "id": "careful",
-    "targ": 12,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 9],
+    "targ": 12,
     "eff": [],
-    "use": 0,
-    "type": 1,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 40,
+    "type": 1.0,
+    "bt_tags": [1, 9],
+    "pow": 40.0,
     "name": "Careful Shot"
   },
   "rhythm": {
     "id": "rhythm",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 13],
-    "eff": [
-      {
-        "pow": 6,
-        "eff": 44,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 0,
+    "eff": [{ "eff": 44, "targ": 0, "pow": 6.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 13],
+    "pow": 0.0,
     "name": "Drum"
   },
   "hdefup": {
     "id": "hdefup",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [28, 7],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": 4,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 1,
+    "eff": [{ "eff": 4.0, "targ": 0.0, "pow": 2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [28, 7],
+    "pow": 0.0,
     "name": "Heart Harden"
   },
   "trap": {
     "id": "trap",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 10],
-    "eff": [
-      {
-        "pow": 2,
-        "eff": 42,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 0,
+    "eff": [{ "eff": 42, "targ": 3, "pow": 2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 10],
+    "pow": 0.0,
     "name": "Lay Trap"
   },
   "nice": {
     "id": "nice",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0],
-    "eff": [
-      {
-        "pow": 0,
-        "eff": 18,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 18, "targ": 3, "pow": 0.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 95,
+    "type": 0.0,
+    "bt_tags": [0],
+    "pow": 95.0,
     "name": "Nice Shot"
   },
   "wornattack": {
     "id": "wornattack",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 8, 30],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 40,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 40.0, "targ": 0.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 125,
+    "type": 2.0,
+    "bt_tags": [2, 8, 30],
+    "pow": 125.0,
     "name": "Perfect Shot"
   },
   "basecover": {
     "id": "basecover",
-    "targ": 3,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [9],
-    "eff": [
-      {
-        "pow": 0,
-        "eff": 7,
-        "targ": 2
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 3,
+    "eff": [{ "eff": 7.0, "targ": 2.0, "pow": 0.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [9],
+    "pow": 0.0,
     "name": "Fall Back"
   },
   "nightshade": {
     "id": "nightshade",
-    "targ": 8,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 9],
+    "targ": 8,
     "eff": [],
-    "use": 0,
-    "type": 2,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": -30,
+    "type": 2.0,
+    "bt_tags": [2, 9],
+    "pow": -30.0,
     "name": "Precision"
   },
   "preblock": {
     "id": "preblock",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 28, 7, 30],
+    "targ": 1,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 16,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 6,
-        "targ": 0
-      }
+      { "eff": 16.0, "targ": 0.0, "pow": 1.0 },
+      { "eff": 6.0, "targ": 0.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 28, 7, 30],
+    "pow": 0.0,
     "name": "Hunker"
   },
   "shieldbreaker": {
     "id": "shieldbreaker",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1],
-    "eff": [
-      {
-        "pow": 14,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 33.0, "targ": 0.0, "pow": 14 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 65,
+    "type": 1.0,
+    "bt_tags": [1],
+    "pow": 65.0,
     "name": "Raw Fury"
   },
   "shakenhit": {
     "id": "shakenhit",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 9, 37],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 13,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 4,
+    "eff": [{ "eff": 13.0, "targ": 3.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 0.0,
+    "bt_tags": [0, 9, 37],
+    "pow": 0.0,
     "name": "Reach Shot"
   },
   "vigor": {
     "id": "vigor",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 8, 19],
-    "eff": [
-      {
-        "pow": 0,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 2,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 33.0, "targ": 0.0, "pow": 0.0 }],
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 135,
+    "type": 0.0,
+    "bt_tags": [0, 8, 19],
+    "pow": 135.0,
     "name": "Vigor Beam"
   },
   "starterbody": {
     "id": "starterbody",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0],
+    "targ": 0,
     "eff": [],
-    "use": 0,
-    "type": 0,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 50,
+    "type": 0.0,
+    "bt_tags": [0],
+    "pow": 50.0,
     "name": "Basic Hit"
   },
   "dump": {
     "id": "dump",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 19, 9],
+    "targ": 4,
     "eff": [],
-    "use": 2,
-    "type": 2,
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 85,
+    "type": 2.0,
+    "bt_tags": [2, 19, 9],
+    "pow": 85.0,
     "name": "Dump"
   },
   "bench": {
     "id": "bench",
-    "targ": 8,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9, 18],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 30,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 8,
+    "eff": [{ "eff": 30.0, "targ": 3.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 18],
+    "pow": 0.0,
     "name": "Quick Tag"
   },
   "chance": {
     "id": "chance",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0],
+    "targ": 0,
     "eff": [
-      {
-        "pow": 0,
-        "eff": 17,
-        "targ": 0
-      },
-      {
-        "pow": 0,
-        "eff": 18,
-        "targ": 0
-      }
+      { "eff": 17.0, "targ": 0.0, "pow": 0.0 },
+      { "eff": 18.0, "targ": 0.0, "pow": 0.0 }
     ],
-    "use": 0,
-    "type": 0,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": -1,
+    "type": 0.0,
+    "bt_tags": [0],
+    "pow": -1.0,
     "name": "Free Ball"
   },
   "introduction": {
     "id": "introduction",
-    "targ": 8,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9, 32],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 19,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 8,
+    "eff": [{ "eff": 19, "targ": 3, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 32],
+    "pow": 0.0,
     "name": "Introduce"
   },
   "quickattack": {
     "id": "quickattack",
-    "targ": 2,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [22, 9, 3],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 0,
-        "targ": 1
-      }
-    ],
-    "use": 0,
-    "type": 3,
+    "targ": 2,
+    "eff": [{ "eff": 0.0, "targ": 1.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 3.0,
+    "bt_tags": [22, 9, 3],
+    "pow": 0.0,
     "name": "Quick"
   },
   "starterside": {
     "id": "starterside",
-    "targ": 12,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 9, 36, 5],
-    "eff": [
-      {
-        "pow": -1,
-        "eff": 5,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 12,
+    "eff": [{ "eff": 5, "targ": 3, "pow": -1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 35,
+    "type": 2.0,
+    "bt_tags": [2, 9, 36, 5],
+    "pow": 35.0,
     "name": "Trickspin"
   },
   "rushattack": {
     "id": "rushattack",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 8, 20],
+    "targ": 0,
     "eff": [
-      {
-        "pow": 1,
-        "eff": -7,
-        "targ": 0
-      },
-      {
-        "pow": 0,
-        "eff": 57,
-        "targ": 0
-      }
+      { "eff": -7.0, "targ": 0.0, "pow": 1.0 },
+      { "eff": 57, "targ": 0.0, "pow": 0.0 }
     ],
-    "use": 1,
-    "type": 0,
+    "use": 1.0,
     "desc_tags": [],
-    "pow": 100,
+    "type": 0.0,
+    "bt_tags": [0, 8, 20],
+    "pow": 100.0,
     "name": "Launch"
   },
   "lifedew": {
     "id": "lifedew",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 16],
-    "eff": [
-      {
-        "pow": 0.15,
-        "eff": 8,
-        "targ": 2
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 1,
+    "eff": [{ "eff": 8, "targ": 2.0, "pow": 0.14999999999999999 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 16],
+    "pow": 0.0,
     "name": "Calming Aura"
   },
   "backswitch": {
     "id": "backswitch",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [],
-    "eff": [
-      {
-        "pow": 7,
-        "eff": 7,
-        "targ": 2
-      }
-    ],
-    "use": 0,
-    "type": 5,
+    "targ": 1,
+    "eff": [{ "eff": 7.0, "targ": 2.0, "pow": 7.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [],
+    "pow": 0.0,
     "name": "Role Reverse"
   },
   "rocket": {
     "id": "rocket",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0],
-    "eff": [
-      {
-        "pow": 16,
-        "eff": 33,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 33.0, "targ": 0.0, "pow": 16.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 70,
+    "type": 0.0,
+    "bt_tags": [0],
+    "pow": 70.0,
     "name": "Rocket"
   },
   "starterheart": {
     "id": "starterheart",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1],
+    "targ": 0,
     "eff": [],
-    "use": 0,
-    "type": 1,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 45,
+    "type": 1.0,
+    "bt_tags": [1],
+    "pow": 45.0,
     "name": "Beginner Effort"
   },
   "pushattack": {
     "id": "pushattack",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 19],
-    "eff": [
-      {
-        "pow": 0,
-        "eff": 7,
-        "targ": 3
-      }
-    ],
-    "use": 2,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 7, "targ": 3, "pow": 0.0 }],
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 75,
+    "type": 0.0,
+    "bt_tags": [0, 19],
+    "pow": 75.0,
     "name": "Shove"
   },
   "chill": {
     "id": "chill",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9, 36],
-    "eff": [
-      {
-        "pow": -2,
-        "eff": 1,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 4,
+    "eff": [{ "eff": 1, "targ": 3, "pow": -2.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 36],
+    "pow": 0.0,
     "name": "Chill Out"
   },
   "switch": {
     "id": "switch",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 11,
-        "targ": 1
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 1,
+    "eff": [{ "eff": 11.0, "targ": 1.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23],
+    "pow": 0.0,
     "name": "Reposition"
   },
   "bomb": {
     "id": "bomb",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 38],
-    "eff": [
-      {
-        "pow": 0.5,
-        "eff": 36,
-        "targ": 5
-      }
-    ],
-    "use": 0,
-    "type": 1,
+    "targ": 0,
+    "eff": [{ "eff": 36, "targ": 5, "pow": 0.5 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 55,
+    "type": 1.0,
+    "bt_tags": [1, 38],
+    "pow": 55.0,
     "name": "Bang"
   },
   "jump": {
     "id": "jump",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 8, 19],
+    "targ": 0,
     "eff": [],
-    "use": 2,
-    "type": 0,
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 100,
+    "type": 0.0,
+    "bt_tags": [0, 8, 19],
+    "pow": 100.0,
     "name": "Spike"
   },
   "eerie": {
     "id": "eerie",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 40],
+    "targ": 0,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 7,
-        "targ": 0
-      },
-      {
-        "pow": 6,
-        "eff": 45,
-        "targ": 7
-      }
+      { "eff": 7.0, "targ": 0.0, "pow": 1.0 },
+      { "eff": 45, "targ": 7, "pow": 6.0 }
     ],
-    "use": 0,
-    "type": 4,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 40],
+    "pow": 0.0,
     "name": "Dreadful Mist"
   },
   "flyback": {
     "id": "flyback",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [1, 8, 19],
+    "targ": 0,
     "eff": [
-      {
-        "pow": 0,
-        "eff": -7,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 57,
-        "targ": 0
-      }
+      { "eff": -7.0, "targ": 0.0, "pow": 0.0 },
+      { "eff": 57, "targ": 0.0, "pow": 1.0 }
     ],
-    "use": 2,
-    "type": 1,
+    "use": 2.0,
     "desc_tags": [],
-    "pow": 130,
+    "type": 1.0,
+    "bt_tags": [1, 8, 19],
+    "pow": 130.0,
     "name": "Airblast"
   },
   "stun": {
     "id": "stun",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 29, 37],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 6,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 6.0, "targ": 3.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 40,
+    "type": 2.0,
+    "bt_tags": [2, 29, 37],
+    "pow": 40.0,
     "name": "Freezer"
   },
   "lock": {
     "id": "lock",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [9, 29, 37],
+    "targ": 4,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 7,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 6,
-        "targ": 3
-      }
+      { "eff": 7.0, "targ": 0.0, "pow": 1.0 },
+      { "eff": 6.0, "targ": 3.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 5,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [9, 29, 37],
+    "pow": 0.0,
     "name": "Staredown"
   },
   "healbell": {
     "id": "healbell",
-    "targ": 1,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 16],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 32,
-        "targ": 6
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 1,
+    "eff": [{ "eff": 32, "targ": 6, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 16],
+    "pow": 0.0,
     "name": "Team Chant"
   },
   "batonpass": {
     "id": "batonpass",
-    "targ": 8,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [9, 17, 18],
+    "targ": 8,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 31,
-        "targ": 3
-      },
-      {
-        "pow": 1,
-        "eff": 30,
-        "targ": 3
-      }
+      { "eff": 31, "targ": 3.0, "pow": 1.0 },
+      { "eff": 30, "targ": 3.0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 5,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 5.0,
+    "bt_tags": [9, 17, 18],
+    "pow": 0.0,
     "name": "High Five"
   },
   "mind": {
     "id": "mind",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [2, 28, 7],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 5,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 2,
+    "targ": 0,
+    "eff": [{ "eff": 5.0, "targ": 0.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 70,
+    "type": 2.0,
+    "bt_tags": [2, 28, 7],
+    "pow": 70.0,
     "name": "Prepared Attack"
   },
   "lockon": {
     "id": "lockon",
-    "targ": 4,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [23, 9, 34],
-    "eff": [
-      {
-        "pow": 1,
-        "eff": 14,
-        "targ": 3
-      }
-    ],
-    "use": 0,
-    "type": 4,
+    "targ": 4,
+    "eff": [{ "eff": 14.0, "targ": 3.0, "pow": 1.0 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 0,
+    "type": 4.0,
+    "bt_tags": [23, 9, 34],
+    "pow": 0.0,
     "name": "Lock Target"
   },
   "stomp": {
     "id": "stomp",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0, 27],
+    "targ": 0,
     "eff": [
-      {
-        "pow": 1,
-        "eff": 12,
-        "targ": 0
-      },
-      {
-        "pow": 2,
-        "eff": 64,
-        "targ": 0
-      },
-      {
-        "pow": 1,
-        "eff": 0,
-        "targ": 0
-      }
+      { "eff": 12, "targ": 0, "pow": 1.0 },
+      { "eff": 64, "targ": 0, "pow": 2 },
+      { "eff": 0, "targ": 0, "pow": 1.0 }
     ],
-    "use": 0,
-    "type": 0,
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 85,
+    "type": 0.0,
+    "bt_tags": [0, 27],
+    "pow": 85.0,
     "name": "Stomp"
   },
   "healhit": {
     "id": "healhit",
-    "targ": 0,
     "desc_tagids": [],
     "description": null,
-    "bt_tags": [0],
-    "eff": [
-      {
-        "pow": 0.2,
-        "eff": 8,
-        "targ": 0
-      }
-    ],
-    "use": 0,
-    "type": 0,
+    "targ": 0,
+    "eff": [{ "eff": 8.0, "targ": 0.0, "pow": 0.20000000000000001 }],
+    "use": 0.0,
     "desc_tags": [],
-    "pow": 50,
+    "type": 0.0,
+    "bt_tags": [0],
+    "pow": 50.0,
     "name": "Relaxed Hit"
   }
 }

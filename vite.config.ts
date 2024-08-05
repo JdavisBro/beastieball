@@ -22,6 +22,7 @@ export default defineConfig(() => {
           const sitemap = `${url}/
 ${url}/beastiepedia/
 ${beasties.join("\n")}
+${url}/playdex/
 ${url}/map/
 ${url}/modding/
 ${url}/modding/save/`;

@@ -4,6 +4,12 @@ export default function Home(): React.ReactNode {
   return (
     <NavigationMenu>
       <NavigationMenuOption
+        text={"Playdex"}
+        image={"/gameassets/sprMainmenu/6.png"}
+        hoverImage={"/gameassets/sprMainmenu/7.png"}
+        location={"/playdex/"}
+      />
+      <NavigationMenuOption
         text={"Beastiepedia"}
         image={"/gameassets/sprMainmenu/0.png"}
         hoverImage={"/gameassets/sprMainmenu/1.png"}

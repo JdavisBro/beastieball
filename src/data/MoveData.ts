@@ -1,3 +1,5 @@
+import move_dic from "./move_dic.json";
+
 export enum Origin { // For sorting, currently this is not added to the moves.
   Net = 0,
   Back = 1,
@@ -41,7 +43,7 @@ export enum Type {
   Body = 0,
   Spirit = 1, // aka h/heart
   Mind = 2,
-  Pass = 3, // ball icon
+  Volley = 3, // ball icon
   Support = 4, // whistle
   Defence = 5,
   Unknown = 6,
@@ -51,12 +53,28 @@ export enum Type {
   Ice = 10, // idk what this one is either but the icon is ice
 }
 
-export type MoveType = {
-  name: string;
-  desc: string;
-  type: number;
-  power: number | null | undefined;
-  // origin: Origin;
-  // target: Target;
-  // effect: Effect;
+export type MoveEffect = {
+  pow: number;
+  eff: number;
+  targ: number;
 };
+
+export type Move = {
+  id: string;
+  targ: number;
+  desc_tagids: number[];
+  description: null;
+  bt_tags: number[];
+  eff: MoveEffect[];
+  use: number;
+  type: Type;
+  desc_tags: number[];
+  pow: number;
+  name: string;
+};
+
+export const MOVE_DIC: {
+  [key: string]: Move;
+} = move_dic;
+
+export default MOVE_DIC;

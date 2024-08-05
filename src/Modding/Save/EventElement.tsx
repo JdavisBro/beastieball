@@ -1,4 +1,4 @@
-import MOVE_DATA from "../../data/Movedata";
+import { MOVE_DIC } from "../../data/MoveData";
 import WORLD_DATA from "../../data/WorldData";
 import TextTag from "../../shared/TextTag";
 import parseDate from "../../utils/gmdate";
@@ -81,7 +81,7 @@ function EventText({ event }: Props): React.ReactElement | null {
     case EventType.LEARNED_FRIEND_MOVE: {
       return (
         <TextTag>
-          Learned how to {MOVE_DATA.get(event.args[0] as string)?.name} from{" "}
+          Learned how to {MOVE_DIC[event.args[0] as string]?.name} from{" "}
           {event.args[1]}, their {FRIEND_TYPE[event.args[2] as number]}.
         </TextTag>
       );

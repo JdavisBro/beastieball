@@ -17,6 +17,8 @@ const IMAGE_ALTS: Record<string, Record<number, string>> = {
   },
 };
 
+const ALT_EXCEPTIONS: string[] = ["sprStatus"];
+
 const COLORS: { [key: string]: string } = {
   c_aqua: "#00ffff",
   c_black: "#000000",
@@ -69,7 +71,7 @@ class TagBuilder {
         tag in IMAGE_ALTS
           ? IMAGE_ALTS[tag][Number(value ?? 0)] ?? undefined
           : undefined;
-      if (!alt) {
+      if (!alt && !ALT_EXCEPTIONS.includes(tag)) {
         console.log(`NO ALT TEXT: '${tag}' frame ${value}`);
       }
       this.elements.push(

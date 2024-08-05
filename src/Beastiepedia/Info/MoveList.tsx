@@ -2,13 +2,12 @@ import { useState } from "react";
 
 import MoveView from "../../shared/MoveView";
 import styles from "./MoveList.module.css";
-import MOVE_DATA from "../../data/Movedata";
+import MOVE_DIC, { Move } from "../../data/MoveData";
 import { LEARN_SETS } from "../../data/Learnsets";
-import { MoveType } from "../../data/MoveType";
 
 type MoveTextProps = {
   level?: number;
-  move: MoveType | undefined;
+  move: Move | undefined;
   selected: boolean;
   onSelect: () => void;
 };
@@ -68,7 +67,7 @@ export default function MoveList(props: Props): React.ReactElement {
     );
   }
 
-  const moveselected = MOVE_DATA.get(selected);
+  const moveselected = MOVE_DIC[selected];
   if (moveselected === undefined) {
     console.log(`Move not found: "${selected}"`);
   }
@@ -79,14 +78,14 @@ export default function MoveList(props: Props): React.ReactElement {
     for (let move in learnset) {
       const level = learnset[move][1];
       move = learnset[move][0];
-      if (!MOVE_DATA.has(move)) {
+      if (!MOVE_DIC[move]) {
         console.log(`Move not found: "${move}"`);
         continue;
       }
       learnmoves.push(
         <MoveText
           level={level}
-          move={MOVE_DATA.get(move)}
+          move={MOVE_DIC[move]}
           selected={selected == move}
           onSelect={() => setSelected(move)}
           key={move}
@@ -97,7 +96,7 @@ export default function MoveList(props: Props): React.ReactElement {
     props.movelist.forEach((move) =>
       friendmoves.push(
         <MoveText
-          move={MOVE_DATA.get(move)}
+          move={MOVE_DIC[move]}
           selected={selected == move}
           onSelect={() => setSelected(move)}
           key={move}
@@ -107,7 +106,7 @@ export default function MoveList(props: Props): React.ReactElement {
   }
 
   for (const move of props.movelist.values()) {
-    if (!MOVE_DATA.has(move)) {
+    if (!MOVE_DIC[move]) {
       console.log(`Move not found: "${move}"`);
       continue;
     }
@@ -115,7 +114,7 @@ export default function MoveList(props: Props): React.ReactElement {
     if (learnset && !learnset.some((m) => m[0] == move)) {
       friendmoves.push(
         <MoveText
-          move={MOVE_DATA.get(move)}
+          move={MOVE_DIC[move]}
           selected={selected == move}
           onSelect={() => setSelected(move)}
           key={move}
@@ -138,6 +137,13 @@ export default function MoveList(props: Props): React.ReactElement {
       </div>
       <div className={styles.viewcontainer}>
         {moveselected ? <MoveView move={moveselected} /> : null}
+      </div>
+      <div className={styles.issuetext}>
+        Incorrect or broken? Report on{" "}
+        <a target="_blank" href={import.meta.env.VITE_ISSUES_URL}>
+          GitHub issues
+        </a>
+        .
       </div>
     </div>
   );

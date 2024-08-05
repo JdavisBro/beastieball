@@ -10,13 +10,22 @@ For example: Rookee and Sefren's support bestie arrays are `[12, 8, 2]` and `[7,
 
 We currently don't know what determines bestie move type and rival move type.
 
+Values in combo corrospond to the move_dic values as such:
+
+`[eff, targ, pow]`
+
 ## Shared Arg Types:
 
 - Target
+
   - 0: `self`
   - 1: `ally`
   - 2: `team`
-  - 3: `enemyTeam` ? possibly
+  - 3: `target (enemy)`
+  - 5: `enemy team`
+
+  - 7: `every fielded player`
+
 - Effect
   - 1: `jazzed`
   - 3: `tender`
@@ -29,10 +38,18 @@ We currently don't know what determines bestie move type and rival move type.
 
 - POW/DEF change
 
-  - `[ 0 - 2, target, value ]`
+  - `[ 0 - 5, target, value ]`
   - 0 does body pow, 1 does spirit pow, 2 does mind pow
   - 3 does body def, 4 does spirit def, 5 does mind def
   - value is increase (eg -2, -1, +1, +2)
+
+> [sprIcon,0/1/2]POW/DEF[sprBoost,0/1/2/3/4/5] to TARGET.
+
+- Feel Nervous
+
+  - `[ 6, target, pow ]`
+
+> TARGET feels POW [spr]NERVOUS
 
 - Shift
 

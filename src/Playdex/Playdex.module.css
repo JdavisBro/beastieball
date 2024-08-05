@@ -1,5 +1,18 @@
 .container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.settings {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.movescontainer {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
+  padding-bottom: 20px;
 }

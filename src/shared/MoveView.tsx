@@ -202,7 +202,7 @@ function getEffectString(
       return "";
     }
     case 34:
-      return `Clear BOOSTS from ${target}`;
+      return `Clears BOOSTS from ${target}`;
     case 36:
       if (effect.targ == 5) {
         return "Damages both opponents.";
@@ -297,6 +297,12 @@ export default function MoveView(props: Props): React.ReactElement {
           desc_pre += " ";
         }
         desc_pre += attack ? "Auto-targets front row." : "Targets front row.";
+        break;
+      case 8:
+        if (desc_pre) {
+          desc_pre += " ";
+        }
+        desc_pre += attack ? "Auto-targets back row." : "Targets back row.";
         break;
       case 12:
         if (desc_pre) {

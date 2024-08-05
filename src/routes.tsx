@@ -28,10 +28,6 @@ const routes: Array<RouteObject> = [
     path: "/playdex/",
   },
   {
-    element: <Playdex />,
-    path: "playdex/:move",
-  },
-  {
     element: <Map />,
     path: "/map/",
   },

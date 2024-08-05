@@ -53,7 +53,7 @@ export default function PlayDex() {
   moves = moves.sort(SortFunctions[sort]);
 
   return (
-    <div className={styles.container}>
+    <>
       <OpenGraph
         title="PlayDex"
         image="gameassets/sprMainmenu/6.png"
@@ -99,6 +99,6 @@ export default function PlayDex() {
           <MoveView move={move} key={move.id} />
         ))}
       </div>
-    </div>
+    </>
   );
 }

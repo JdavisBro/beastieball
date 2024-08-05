@@ -1,5 +1,5 @@
 import styles from "./Playdex.module.css";
-import { MOVE_DIC, Move } from "../data/Movedata";
+import { MOVE_DIC, Move } from "../data/MoveData";
 import MoveView from "../shared/MoveView";
 
 declare global {

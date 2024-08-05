@@ -1,8 +1,7 @@
 import TextTag from "./TextTag";
 import styles from "./Shared.module.css";
 import TypeColor from "../data/TypeColor";
-import { Type } from "../data/MoveType";
-import type { Move, MoveEffect } from "../data/Movedata";
+import { Type, Move, MoveEffect } from "../data/MoveData";
 
 type Props = {
   move: Move;
@@ -89,7 +88,7 @@ function getEffectString(
     case 5:
       return `[sprIcon,2]DEF${boost} to ${target}.`;
     case 6:
-      return `${feels} ${effect.pow} [sprStatus,0]NERVOUS (can't move)${dot}`;
+      return `${feels} +${effect.pow} [sprStatus,0]NERVOUS (can't move)${dot}`;
     case -7:
     case 7:
       return `SHIFTs ${target} to ${["back row", "front row", "opposite lane", "3", "4", "5", "6", "opposite row"][effect.pow]}${attack ? " after hitting" : ""}.`;
@@ -99,14 +98,16 @@ function getEffectString(
       } else {
         return `HEALs ${target} +${effect.pow * 100}.`;
       }
+    case 10:
+      return "+1 ACTIONs.";
     case 11:
       return `Switch places with ${target}.`;
     case 12:
-      return `${feels} ${effect.pow} [sprStatus,1]ANGRY (only attacks)${dot}`;
+      return `${feels} +${effect.pow} [sprStatus,1]ANGRY (only attacks)${dot}`;
     case 13:
-      return `${feels} ${effect.pow} [sprStatus,2]SHOOK (can't attacks)${dot}`;
+      return `${feels} +${effect.pow} [sprStatus,2]SHOOK (can't attacks)${dot}`;
     case 14:
-      return `${feels} ${effect.pow} [sprStatus,3]NOISY (attracts attacks)${dot}`;
+      return `${feels} +${effect.pow} [sprStatus,3]NOISY (attracts attacks)${dot}`;
     case 15:
       return `[sprIcon,0][sprIcon,1][sprIcon,2]POW${boost} to ${target}.`;
     case 16:
@@ -117,10 +118,9 @@ function getEffectString(
       if (effect.targ == 3) {
         return "Easy recieve.";
       }
-
-      break;
+      return "Volley to an opponent and skip your attack. Can always be used";
     case 19:
-      return `${feels} ${effect.pow} [sprStatus,4]TOUGH (shielded)${dot}`;
+      return `${feels} +${effect.pow} [sprStatus,4]TOUGH (shielded)${dot}`;
     case 20:
       if (effect.targ == 0) {
         return `Ball goes to self.`;
@@ -128,18 +128,18 @@ function getEffectString(
         return `${targetStart}'s ball becomes VOLLEYed.`;
       }
     case 22:
-      return `${feels} ${effect.pow} [sprStatus,5]WIPED (must bench)${dot}`;
+      return `${feels} +${effect.pow} [sprStatus,5]WIPED (must bench)${dot}`;
     case 23:
-      return `${feels} ${effect.pow} [sprStatus,6]SWEATY (losing stamina)${dot}`;
+      return `${feels} +${effect.pow} [sprStatus,6]SWEATY (losing stamina)${dot}`;
     case -26:
     case 26:
-      return `${feels} ${effect.pow} [sprStatus,8]JAZZED (POW x1.5)${effect.eff < 0 && attack ? " before contact" : ""}${dot}`;
+      return `${feels} +${effect.pow} [sprStatus,8]JAZZED (POW x1.5)${effect.eff < 0 && attack ? " before contact" : ""}${dot}`;
     case 27:
-      return `${feels} ${effect.pow} [sprStatus,9]BLOCKED (POW x2/3)${dot}`;
+      return `${feels} +${effect.pow} [sprStatus,9]BLOCKED (POW x2/3)${dot}`;
     case 28:
       return `SWITCH places with ${target} without moving ball.`;
     case 29:
-      return `${feels} ${effect.pow} [sprStatus,10]TIRED (only basic actions)${dot}`;
+      return `${feels} +${effect.pow} [sprStatus,10]TIRED (only basic actions)${dot}`;
     case 30:
       if (!attack) {
         if (effect.targ == 3) {
@@ -152,6 +152,8 @@ function getEffectString(
       }
     case 31:
       return `Transfer [sprBoost,2][sprBoost,5]BOOSTS to ${target}.`;
+    case 32:
+      return `Clears FEELINGs (except [sprStatus,1]ANGRY) from ${target}.`;
     case 33: {
       switch (effect.pow) {
         case 0:
@@ -207,9 +209,9 @@ function getEffectString(
       }
       return `Additional ${effect.pow * 100}% damage to ${target}.`;
     case 38:
-      return `${feels} ${effect.pow} [sprStatus,11]TENDER (defenses[sprBoost,4])${dot}`;
+      return `${feels} +${effect.pow} [sprStatus,11]TENDER (defenses[sprBoost,4])${dot}`;
     case 39:
-      return `${feels} ${effect.pow} [sprStatus,12]STRESSED (becomes [sprStatus,10]TIRED)${dot}`;
+      return `${feels} +${effect.pow} [sprStatus,12]STRESSED (becomes [sprStatus,10]TIRED)${dot}`;
     case 40:
       return "Requires 2 ACTIONS.";
     case 41:
@@ -241,6 +243,8 @@ function getEffectString(
       return ""; // shows on a few that are only used on back row but not others?
     case 61:
       return "Can use even when [sprStatus,2]SHOOK or [sprStatus,10]TIRED.";
+    case 63:
+      return `Swaps traits with ${TARGET_STRINGS[effect.targ]}.`;
     case 64:
       return "If ally field has RHYTHM: ";
   }
@@ -302,7 +306,7 @@ export default function MoveView(props: Props): React.ReactElement {
         break;
     }
 
-    if (props.move.pow < -1) {
+    if (props.move.pow <= -1) {
       desc_pre += `Always does ${-props.move.pow} damage.`;
     } else if (props.move.pow < 0) {
       desc_pre += `Damage equals ${-props.move.pow * 100}% of target's remaining STAMINA.`;

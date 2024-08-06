@@ -126,7 +126,7 @@
 }
 
 .movename {
-  font-size: 2.8em;
+  font-size: 2.3em;
   height: 33%;
   display: flex;
   justify-content: end;
@@ -140,7 +140,7 @@
 }
 
 .movedesc {
-  font-size: 1.4em;
+  font-size: 1.3em;
   overflow-y: scroll;
   height: 67%;
   display: flex;

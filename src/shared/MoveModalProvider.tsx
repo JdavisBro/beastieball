@@ -55,7 +55,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
               <Link
                 to={`/beastiepedia/${name[0]}`}
                 key={name[0]}
-                onClick={() => dialogRef.current?.close()}
+                onClick={() => setMove(null)}
               >
                 <img src={`/icons/${name[0]}.png`} />
                 {name[0]} - {name[1]}
@@ -71,7 +71,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
               <Link
                 to={`/beastiepedia/${name}`}
                 key={name}
-                onClick={() => dialogRef.current?.close()}
+                onClick={() => setMove(null)}
               >
                 <img src={`/icons/${name}.png`} />
                 {name}

@@ -244,6 +244,26 @@ a:visited {
   }
 }
 
+::backdrop {
+  background-color: black;
+  opacity: 0.6;
+}
+
+:modal {
+  background-image: repeating-linear-gradient(
+    #ddd1bd,
+    #ddd1bd 4px,
+    #d5c9b5 4px,
+    #d5c9b5 8px
+  );
+  border: none;
+  color: black;
+}
+
+:modal h4 {
+  margin: 0 0 0.7em 0;
+}
+
 .infoboxHeader {
   background-image: repeating-linear-gradient(
     135deg,

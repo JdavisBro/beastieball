@@ -118,12 +118,36 @@
 
 .movename {
   font-size: 2.8em;
-  height: 50%;
+  height: 30%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.movelearnerbutton {
+  filter: invert();
+  height: 70%;
+  cursor: pointer;
 }
 
 .movedesc {
   font-size: 1.6em;
   overflow-y: scroll;
+}
+
+.movebeastielist {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.movebeastielist a {
+  display: flex;
+  align-items: center;
+}
+
+.movebeastielist img {
+  height: 3em;
 }
 
 .animationtoggle {

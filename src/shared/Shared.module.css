@@ -118,7 +118,7 @@
 
 .movename {
   font-size: 2.8em;
-  height: 30%;
+  height: 33%;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -126,13 +126,17 @@
 
 .movelearnerbutton {
   filter: invert();
-  height: 70%;
+  height: 50%;
   cursor: pointer;
 }
 
 .movedesc {
-  font-size: 1.6em;
+  font-size: 1.4em;
   overflow-y: scroll;
+  height: 67%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .movebeastielist {

@@ -47,6 +47,18 @@
   text-align: center;
 }
 
+.traittable {
+  border-collapse: collapse;
+}
+
+.traittable > tr > td {
+  padding: 0 6px 0 6px;
+}
+.traittable > tr > td:first-child {
+  text-align: right;
+  border-right: solid black 1px;
+}
+
 .wrapinfoboxes {
   display: flex;
   flex-wrap: wrap;

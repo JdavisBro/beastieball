@@ -408,7 +408,11 @@ export default function MoveView(props: Props): React.ReactElement {
           {levelBeasties.length ? "From Level" : ""}
           {levelBeasties.map((name) => (
             <>
-              <Link to={`/beastiepedia/${name[0]}`} key={name[0]}>
+              <Link
+                to={`/beastiepedia/${name[0]}`}
+                key={name[0]}
+                onClick={() => dialogRef.current?.close()}
+              >
                 <img src={`/icons/${name[0]}.png`} />
                 {name[0]} - {name[1]}
               </Link>
@@ -420,7 +424,11 @@ export default function MoveView(props: Props): React.ReactElement {
           {friendBeasties.length ? "From Friends" : ""}
           {friendBeasties.map((name) => (
             <>
-              <Link to={`/beastiepedia/${name}`} key={name}>
+              <Link
+                to={`/beastiepedia/${name}`}
+                key={name}
+                onClick={() => dialogRef.current?.close()}
+              >
                 <img src={`/icons/${name}.png`} />
                 {name}
               </Link>

@@ -74,7 +74,7 @@
 
 .moveviewimage {
   display: flex;
-  width: 64px;
+  width: 65px;
   height: 100%;
   align-items: flex-end;
   background:
@@ -85,13 +85,14 @@
 }
 
 .movepower {
-  width: 100%;
-  height: 64px;
+  width: 65px;
+  height: 65px;
   box-sizing: border-box;
   padding-top: 6px;
   background-image: linear-gradient(to right, #606060, #606060),
     url("/gameassets/sprite2_0.png"),
     linear-gradient(to right, #000000, #000000);
+  background-repeat: no-repeat;
   background-blend-mode: multiply, normal;
   text-align: center;
   font-size: 2.8em;

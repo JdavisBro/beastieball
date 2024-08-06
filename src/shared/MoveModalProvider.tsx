@@ -6,6 +6,7 @@ import MoveModalContext from "./MoveModalContext";
 import BEASTIE_DATA from "../data/Beastiedata";
 import { LEARN_SETS } from "../data/Learnsets";
 import { Move } from "../data/MoveData";
+import InfoBox from "./InfoBox";
 
 export default function MoveModalProvider(props: PropsWithChildren) {
   const [move, setMove] = useState<null | Move>(null);
@@ -47,38 +48,39 @@ export default function MoveModalProvider(props: PropsWithChildren) {
           }
         }}
       >
-        <h4>Beasties That Learn {move?.name}</h4>
-        <div className={styles.movebeastielist}>
-          {levelBeasties.length ? "From Level" : ""}
-          {levelBeasties.map((name) => (
-            <>
-              <Link
-                to={`/beastiepedia/${name[0]}`}
-                key={name[0]}
-                onClick={() => setMove(null)}
-              >
-                <img src={`/icons/${name[0]}.png`} />
-                {name[0]} - {name[1]}
-              </Link>
-            </>
-          ))}
-        </div>
-        {levelBeasties.length && friendBeasties.length ? <br /> : null}
-        <div className={styles.movebeastielist}>
-          {friendBeasties.length ? "From Friends" : ""}
-          {friendBeasties.map((name) => (
-            <>
-              <Link
-                to={`/beastiepedia/${name}`}
-                key={name}
-                onClick={() => setMove(null)}
-              >
-                <img src={`/icons/${name}.png`} />
-                {name}
-              </Link>
-            </>
-          ))}
-        </div>
+        <InfoBox header={`Beasties that learn ${move?.name}`}>
+          <div className={styles.movebeastielist}>
+            {levelBeasties.length ? "From Level" : ""}
+            {levelBeasties.map((name) => (
+              <>
+                <Link
+                  to={`/beastiepedia/${name[0]}`}
+                  key={name[0]}
+                  onClick={() => setMove(null)}
+                >
+                  <img src={`/icons/${name[0]}.png`} />
+                  {name[0]} - {name[1]}
+                </Link>
+              </>
+            ))}
+          </div>
+          {levelBeasties.length && friendBeasties.length ? <br /> : null}
+          <div className={styles.movebeastielist}>
+            {friendBeasties.length ? "From Friends" : ""}
+            {friendBeasties.map((name) => (
+              <>
+                <Link
+                  to={`/beastiepedia/${name}`}
+                  key={name}
+                  onClick={() => setMove(null)}
+                >
+                  <img src={`/icons/${name}.png`} />
+                  {name}
+                </Link>
+              </>
+            ))}
+          </div>
+        </InfoBox>
       </dialog>
       {props.children}
     </MoveModalContext.Provider>

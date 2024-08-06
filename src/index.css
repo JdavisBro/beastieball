@@ -183,11 +183,11 @@ composes: className from global;
 }
 
 a {
-  color: blue;
+  color: dodgerblue;
 }
 
 a:visited {
-  color: darkblue;
+  color: royalblue;
 }
 
 @keyframes alt-bg-scroll {
@@ -250,18 +250,17 @@ a:visited {
 }
 
 :modal {
-  background-image: repeating-linear-gradient(
-    #ddd1bd,
-    #ddd1bd 4px,
-    #d5c9b5 4px,
-    #d5c9b5 8px
-  );
+  background-color: transparent;
   border: none;
   color: black;
 }
 
-:modal h4 {
-  margin: 0 0 0.7em 0;
+:modal .infoBoxContentContainer {
+  width: 100%;
+  padding-right: 5%;
+}
+:modal .infoBoxContent {
+  width: auto;
 }
 
 .infoboxHeader {

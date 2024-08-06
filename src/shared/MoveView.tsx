@@ -97,10 +97,14 @@ function getEffectString(
     case 7:
       return `SHIFTs ${target} to ${["back row", "front row", "opposite lane", "3", "4", "5", "6", "opposite row"][effect.pow]}${attack && effect.eff > 0 ? " after hitting" : ""}.`;
     case 8:
-      if (effect.targ == 0 && effect.pow < 0) {
-        return `${effect.pow * 100} STAMINA.`;
+      if (effect.pow < 0) {
+        if (effect.targ == 0) {
+          return `${effect.pow * 100} STAMINA.`;
+        } else {
+          return `${effect.pow * 100} STAMINA to ${target}.`;
+        }
       } else {
-        return `HEALs ${target} ${effect.pow * 100}.`;
+        return `HEALs ${target} ${effect.pow > 0 ? "+" : ""}${effect.pow * 100}.`;
       }
     case 10:
       return "+1 ACTIONs.";
@@ -109,7 +113,7 @@ function getEffectString(
     case 12:
       return `${feels} ${effect.pow} [sprStatus,1]ANGRY (only attacks)${dot}`;
     case 13:
-      return `${feels} ${effect.pow} [sprStatus,2]SHOOK (can't attacks)${dot}`;
+      return `${feels} ${effect.pow} [sprStatus,2]SHOOK (can't attack)${dot}`;
     case 14:
       return `${feels} ${effect.pow} [sprStatus,3]NOISY (attracts attacks)${dot}`;
     case 15:
@@ -124,7 +128,7 @@ function getEffectString(
       }
       return "Volley to an opponent and skip your attack. Can always be used";
     case 19:
-      return `${feels} ${effect.pow} [sprStatus,4]TOUGH (shielded)${dot}`;
+      return `${feels} ${effect.pow} [sprStatus,4]TOUGH (1/4 damage)${dot}`;
     case 20:
       if (effect.targ == 0) {
         return `Ball goes to self.`;
@@ -145,14 +149,10 @@ function getEffectString(
     case 29:
       return `${feels} ${effect.pow} [sprStatus,10]TIRED (only basic actions)${dot}`;
     case 30:
-      if (!attack) {
-        if (alt_target) {
-          return `TAG OUT with ${target}.`;
-        } else {
-          return `Force ${target} to TAG OUT.`;
-        }
+      if (alt_target) {
+        return `TAG OUT with ${target}.`;
       } else {
-        return `TAG OUT.`;
+        return `Force ${target} to TAG OUT.`;
       }
     case 31:
       return `Transfer [sprBoost,2][sprBoost,5]BOOSTS to ${target}.`;
@@ -221,13 +221,13 @@ function getEffectString(
     case 41:
       return "Requires 3 ACTIONS.";
     case 42:
-      return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} TRAP (Tag-ins lose 8 stamina per trap).`;
+      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} TRAP (Tag-ins lose 8 stamina per trap).`;
     case 43:
-      return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW -25%).`;
+      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW -25%).`;
     case 44:
-      return `${targetStart} gets ${effect.pow} RHYTHM (Healing and protection).`;
+      return `${targetStart} gets +${effect.pow} RHYTHM (Healing and protection).`;
     case 45:
-      return `${targetStart} gets ${effect.pow} DREAD (No good feelings).`;
+      return `${targetStart} gets +${effect.pow} DREAD (No good feelings).`;
     case 46:
       if (effect.targ == 7) {
         return `Clears all FIELD EFFECTS.`;
@@ -316,12 +316,18 @@ export default function MoveView(props: Props): React.ReactElement {
         }
         desc_pre += "Targets SIDEWAYS.";
         break;
+      case 13:
+        if (desc_pre) {
+          desc_pre += " ";
+        }
+        desc_pre += "Auto-targets nearest opponent.";
+        break;
     }
 
     if (props.move.pow <= -1) {
-      desc_pre += `Always does ${-props.move.pow} damage.`;
+      desc_pre += `${desc_pre ? " " : ""}Always does ${-props.move.pow} damage.`;
     } else if (props.move.pow < 0) {
-      desc_pre += `Damage equals ${-props.move.pow * 100}% of target's remaining STAMINA.`;
+      desc_pre += `${desc_pre ? " " : ""}Damage equals ${-props.move.pow * 100}% of target's remaining STAMINA.`;
     }
 
     if (!desc_pre) {

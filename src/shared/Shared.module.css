@@ -72,23 +72,30 @@
   font-family: var(--sports-jersey);
 }
 
-.moveviewimage {
+.moveviewbar {
   display: flex;
-  width: 65px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 64px;
   height: 100%;
-  align-items: flex-end;
+  background-color: black;
+}
+
+.moveviewimage {
+  width: 64px;
+  height: 64px;
   background:
     linear-gradient(to right, var(--move-color), var(--move-color)),
     no-repeat var(--move-url),
-    linear-gradient(to right, #000000, #000000);
+    linear-gradient(black 0%, black 100%);
   background-blend-mode: multiply, normal;
 }
 
 .movepower {
-  width: 65px;
-  height: 65px;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
   box-sizing: border-box;
-  padding-top: 6px;
   background-image: linear-gradient(to right, #606060, #606060),
     url("/gameassets/sprite2_0.png"),
     linear-gradient(to right, #000000, #000000);
@@ -100,9 +107,9 @@
 }
 
 .moveseparator {
-  width: 18px;
+  width: 12px;
   background-color: black;
-  border-left: 10px solid var(--move-color);
+  border-left: 8px solid var(--move-color);
 }
 
 .movecontent {

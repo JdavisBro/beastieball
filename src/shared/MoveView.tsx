@@ -362,7 +362,8 @@ export default function MoveView(props: Props): React.ReactElement {
 
   return (
     <div className={styles.movecontainer} style={style}>
-      <div className={styles.moveviewimage} role="image" title={alt}>
+      <div className={styles.moveviewbar}>
+        <div className={styles.moveviewimage} title={alt}></div>
         {pow}
       </div>
       <div className={styles.moveseparator}></div>

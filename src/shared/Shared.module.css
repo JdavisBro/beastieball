@@ -67,7 +67,7 @@
 
 .movecontainer {
   display: flex;
-  width: 460px;
+  max-width: 460px;
   height: 160px;
   font-family: var(--sports-jersey);
 }
@@ -117,7 +117,8 @@
   flex-direction: column;
   box-sizing: border-box;
   padding-right: 4px;
-  width: 368px;
+  width: auto;
+  flex: 1 1;
   height: 100%;
   text-align: right;
   color: black;
@@ -145,6 +146,15 @@
   display: flex;
   justify-content: end;
   align-items: center;
+}
+
+@media all and (max-aspect-ratio: 1/1) {
+  .movename {
+    font-size: 1.6em;
+  }
+  .movedesc {
+    font-size: 1em;
+  }
 }
 
 .movebeastielist {

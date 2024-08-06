@@ -13,6 +13,5 @@
 }
 
 .movescontainer > div {
-  max-width: 95%;
-  font-size: 0.9em;
+  width: 95%;
 }

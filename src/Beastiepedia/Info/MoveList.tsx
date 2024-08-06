@@ -4,6 +4,7 @@ import MoveView from "../../shared/MoveView";
 import styles from "./MoveList.module.css";
 import MOVE_DIC, { Move } from "../../data/MoveData";
 import { LEARN_SETS } from "../../data/Learnsets";
+import MoveModalProvider from "../../shared/MoveModalProvider";
 
 type MoveTextProps = {
   level?: number;
@@ -136,7 +137,11 @@ export default function MoveList(props: Props): React.ReactElement {
         </div>
       </div>
       <div className={styles.viewcontainer}>
-        {moveselected ? <MoveView move={moveselected} /> : null}
+        {moveselected ? (
+          <MoveModalProvider>
+            <MoveView move={moveselected} />
+          </MoveModalProvider>
+        ) : null}
       </div>
       <div className={styles.issuetext}>
         Incorrect or broken? Report on{" "}

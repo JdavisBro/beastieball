@@ -4,6 +4,7 @@ import MoveView from "../shared/MoveView";
 import OpenGraph from "../shared/OpenGraph";
 import Header from "../shared/Header";
 import { useState } from "react";
+import MoveModalProvider from "../shared/MoveModalProvider";
 
 declare global {
   interface Window {
@@ -95,9 +96,11 @@ export default function PlayDex() {
         </select>
       </div>
       <div className={styles.movescontainer}>
-        {moves.map((move) => (
-          <MoveView move={move} key={move.id} />
-        ))}
+        <MoveModalProvider>
+          {moves.map((move) => (
+            <MoveView move={move} key={move.id} />
+          ))}
+        </MoveModalProvider>
       </div>
     </>
   );

@@ -13,9 +13,11 @@ def read_byte(f, count=1):
 def read_short(f):
     return struct.unpack("H", f.read(2))[0]
 
-def do_file(fp):
+def do_file(fp, outdir=None):
     if not fp.exists():
         raise FileNotFoundError(fp)
+    if not outdir:
+        outdir = fp.parent
     print(fp.stem)
     with fp.open("rb") as f:
         data = zlib.decompress(f.read())
@@ -31,7 +33,8 @@ def do_file(fp):
     while data.tell() != datalen:
         if i >= width*height:
             im.putdata(imdata)
-            im.save(fp.parent / f"{fp.stem}_{image_count}.png")
+            im.save(outdir / f"{fp.stem}_{image_count}.png", optimize=True)
+            im.save(outdir / f"{fp.stem}_{image_count}.webp", lossless=False, quality=75)
             i = 0
             imdata = []
             image_count += 1
@@ -41,7 +44,8 @@ def do_file(fp):
         imdata.append(read_byte(data, 4))
         i += 1
     im.putdata(imdata)
-    im.save(fp.parent / f"{fp.stem}_{image_count}.png")
+    im.save(outdir / f"{fp.stem}_{image_count}.png", optimize=True)
+    im.save(outdir / f"{fp.stem}_{image_count}.webp", lossless=False, quality=75)
     return image_count
 
 def main(args):
@@ -49,8 +53,10 @@ def main(args):
     for i in args:
         fp = Path(i)
         if fp.is_dir():
+            outdir = fp / "out/"
+            outdir.mkdir(exist_ok=True)
             for fp2 in fp.glob("**/*.brs"):
-                researchdata[fp2.stem] = do_file(fp2) + 1
+                researchdata[fp2.stem] = do_file(fp2, outdir=outdir) + 1
         else:
             researchdata[fp.stem] = do_file(fp) + 1
     with open("research_data.json", "w+") as f:

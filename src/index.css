@@ -270,6 +270,7 @@ a:visited {
   overscroll-behavior: contain;
   max-height: 90vh;
   max-height: 90dvh;
+  margin-right: 20px;
 }
 
 .infoboxHeader {
@@ -314,5 +315,5 @@ a:visited {
 .infoBoxContent {
   width: fit-content;
   margin-left: 20px;
-  margin-right: 5px;
+  margin-right: 20px;
 }

@@ -1,4 +1,10 @@
-import { PropsWithChildren, useEffect, useRef, useState } from "react";
+import {
+  PropsWithChildren,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./Shared.module.css";
@@ -8,10 +14,53 @@ import { LEARN_SETS } from "../data/Learnsets";
 import { Move } from "../data/MoveData";
 import InfoBox from "./InfoBox";
 
+const SCROLL_KEYS = [
+  "ArrowLeft",
+  "ArrowUp",
+  "ArrowRight",
+  "ArrowDown",
+  " ",
+  "PageUp",
+  "PageDown",
+  "Home",
+  "End",
+];
+
 export default function MoveModalProvider(props: PropsWithChildren) {
   const [move, setMove] = useState<null | Move>(null);
 
   const dialogRef = useRef<HTMLDialogElement>(null);
+
+  const preventDefault = useCallback((event: Event) => {
+    if (!event.cancelable) {
+      return;
+    }
+    event.preventDefault();
+    event.stopPropagation();
+  }, []);
+
+  const preventScrollKeys = useCallback(
+    (event: KeyboardEvent) => {
+      if (SCROLL_KEYS.includes(event.key)) {
+        preventDefault(event);
+      }
+    },
+    [preventDefault],
+  );
+
+  useEffect(() => {
+    if (dialogRef.current) {
+      dialogRef.current.addEventListener("wheel", preventDefault, {
+        passive: false,
+      });
+      dialogRef.current.addEventListener("touchmove", preventDefault, {
+        passive: false,
+      });
+      dialogRef.current.addEventListener("keydown", preventScrollKeys, {
+        passive: false,
+      });
+    }
+  }, [preventDefault, preventScrollKeys]);
 
   useEffect(() => {
     if (dialogRef.current) {
@@ -21,7 +70,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
         dialogRef.current.close();
       }
     }
-  });
+  }, [move, preventDefault]);
 
   const levelBeasties: [string, number][] = [];
   const friendBeasties: string[] = [];

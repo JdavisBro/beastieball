@@ -253,14 +253,23 @@ a:visited {
   background-color: transparent;
   border: none;
   color: black;
+  max-height: 100vh;
+  max-height: 100dvh;
 }
-
+:modal > div {
+  max-height: 100vh;
+  max-height: 100dvh;
+}
 :modal .infoBoxContentContainer {
   width: 100%;
   padding-right: 5%;
 }
 :modal .infoBoxContent {
   width: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  max-height: 90vh;
+  max-height: 90dvh;
 }
 
 .infoboxHeader {
@@ -305,5 +314,5 @@ a:visited {
 .infoBoxContent {
   width: fit-content;
   margin-left: 20px;
-  margin-right: 20px;
+  margin-right: 5px;
 }

@@ -32,11 +32,15 @@ export default function MoveModalProvider(props: PropsWithChildren) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   const preventDefault = useCallback((event: Event) => {
-    if (!event.cancelable) {
-      return;
+    let elem: HTMLElement | null = event.target as HTMLElement;
+    while (elem && elem != dialogRef.current) {
+      if (elem.scrollHeight > elem.clientHeight) {
+        return;
+      }
+      elem = elem.parentElement;
     }
-    event.preventDefault();
     event.stopPropagation();
+    event.preventDefault();
   }, []);
 
   const preventScrollKeys = useCallback(
@@ -49,16 +53,22 @@ export default function MoveModalProvider(props: PropsWithChildren) {
   );
 
   useEffect(() => {
-    if (dialogRef.current) {
-      dialogRef.current.addEventListener("wheel", preventDefault, {
+    const dialog = dialogRef.current;
+    if (dialog) {
+      dialog.addEventListener("wheel", preventDefault, {
         passive: false,
       });
-      dialogRef.current.addEventListener("touchmove", preventDefault, {
+      dialog.addEventListener("touchmove", preventDefault, {
         passive: false,
       });
-      dialogRef.current.addEventListener("keydown", preventScrollKeys, {
+      dialog.addEventListener("keydown", preventScrollKeys, {
         passive: false,
       });
+      return () => {
+        dialog.removeEventListener("wheel", preventDefault);
+        dialog.removeEventListener("touchmove", preventDefault);
+        dialog.removeEventListener("keydown", preventScrollKeys);
+      };
     }
   }, [preventDefault, preventScrollKeys]);
 
@@ -70,7 +80,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
         dialogRef.current.close();
       }
     }
-  }, [move, preventDefault]);
+  }, [move]);
 
   const levelBeasties: [string, number][] = [];
   const friendBeasties: string[] = [];

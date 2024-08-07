@@ -78,7 +78,8 @@
 }
 
 .researchimage {
-  height: max(200px, auto);
+  max-height: 200px;
+  width: auto;
   max-width: 100%;
 }
 

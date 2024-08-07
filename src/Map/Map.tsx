@@ -10,6 +10,7 @@ import {
   useMapEvents,
 } from "react-leaflet";
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 
 import WORLD_DATA from "../data/WorldData";
 import styles from "./Map.module.css";
@@ -148,7 +149,7 @@ export default function Map(): React.ReactNode {
           })}
         >
           <Popup>
-            {beastie.name}
+            <Link to={`/beastiepedia/${beastie.name}`}>{beastie.name}</Link>
             <br />
             {overall_percent[value].percent > 0
               ? overall_percent[value].percent

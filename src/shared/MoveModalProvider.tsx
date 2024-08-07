@@ -107,36 +107,35 @@ export default function MoveModalProvider(props: PropsWithChildren) {
           }
         }}
       >
-        <InfoBox header={`Beasties that learn ${move?.name}`}>
+        <InfoBox
+          key="MODALinfobox"
+          header={`Beasties that learn ${move?.name}`}
+        >
           <div className={styles.movebeastielist}>
             {levelBeasties.length ? "From Level" : ""}
             {levelBeasties.map((name) => (
-              <>
-                <Link
-                  to={`/beastiepedia/${name[0]}`}
-                  key={name[0]}
-                  onClick={() => setMove(null)}
-                >
-                  <img src={`/icons/${name[0]}.png`} />
-                  {name[0]} - {name[1]}
-                </Link>
-              </>
+              <Link
+                to={`/beastiepedia/${name[0]}`}
+                key={name[0]}
+                onClick={() => setMove(null)}
+              >
+                <img src={`/icons/${name[0]}.png`} />
+                {name[0]} - {name[1]}
+              </Link>
             ))}
           </div>
           {levelBeasties.length && friendBeasties.length ? <br /> : null}
           <div className={styles.movebeastielist}>
             {friendBeasties.length ? "From Friends" : ""}
             {friendBeasties.map((name) => (
-              <>
-                <Link
-                  to={`/beastiepedia/${name}`}
-                  key={name}
-                  onClick={() => setMove(null)}
-                >
-                  <img src={`/icons/${name}.png`} />
-                  {name}
-                </Link>
-              </>
+              <Link
+                to={`/beastiepedia/${name}`}
+                key={name}
+                onClick={() => setMove(null)}
+              >
+                <img src={`/icons/${name}.png`} />
+                {name}
+              </Link>
             ))}
           </div>
         </InfoBox>

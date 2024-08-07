@@ -175,8 +175,8 @@ class TagBuilder {
         key={String(index)}
         style={{ animation: this.animations.join(", "), ...this.style }}
       >
-        {text.split("\n").map((value, index) =>
-          index == 0 ? (
+        {text.split("\n").map((value, newlineindex) =>
+          newlineindex == 0 ? (
             <Fragment key={index}>{value}</Fragment>
           ) : (
             <Fragment key={index}>

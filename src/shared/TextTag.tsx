@@ -177,9 +177,9 @@ class TagBuilder {
       >
         {text.split("\n").map((value, newlineindex) =>
           newlineindex == 0 ? (
-            <Fragment key={index}>{value}</Fragment>
+            <Fragment key={`${index}${newlineindex}`}>{value}</Fragment>
           ) : (
-            <Fragment key={index}>
+            <Fragment key={`${index}${newlineindex}`}>
               <br />
               {value}
             </Fragment>

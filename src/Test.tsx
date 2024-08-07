@@ -5,8 +5,7 @@ import BeastieRenderProvider from "./shared/beastieRender/BeastieRenderProvider"
 import { BeastieImage } from "./shared/beastieRender/BeastieImage";
 
 export default function Test(): React.ReactElement {
-  const [text, setText] = useState(`
-size test:
+  const [text, setText] = useState(`size test:
 [scale,5]5.0 times [sprIcon]
 [scale,2.5]2.5 times [sprIcon]
 [scale,0.5]0.5 times [sprIcon]
@@ -19,6 +18,23 @@ color test: [#2cb18c]aqua[/c] [d#9346814]luncheon red
 
   return (
     <>
+      <h1>TextTag test</h1>
+      <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm">
+        Colors
+      </a>{" "}
+      -{" "}
+      <a href="https://www.jujuadams.com/Scribble/#/latest/text-formatting">
+        Tags (no effect tags)
+      </a>
+      <br />
+      <div style={{ display: "flex", gap: "20px" }}>
+        <textarea
+          value={text}
+          onChange={(event) => setText(event.target.value)}
+          style={{ resize: "horizontal", minHeight: "100%", width: "40%" }}
+        />
+        <TextTag>{text}</TextTag>
+      </div>
       <h1>Beastie Rendering!!!</h1>
       <BeastieRenderProvider>
         <BeastieImage
@@ -49,22 +65,6 @@ color test: [#2cb18c]aqua[/c] [d#9346814]luncheon red
           }}
         />
       </BeastieRenderProvider>
-      <h1>TextTag test</h1>
-      <br />
-      <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm">
-        Colors
-      </a>
-      <br />
-      <a href="https://www.jujuadams.com/Scribble/#/latest/text-formatting">
-        Tags (no effect tags)
-      </a>
-      <br />
-      <textarea
-        value={text}
-        onChange={(event) => setText(event.target.value)}
-      />
-      <br />
-      <TextTag>{text}</TextTag>
     </>
   );
 }

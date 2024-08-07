@@ -78,7 +78,8 @@
 }
 
 .researchimage {
-  height: 200px;
+  height: max(200px, auto);
+  max-width: 100%;
 }
 
 .previewOptions {

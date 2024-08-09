@@ -365,6 +365,8 @@ export default function MoveView(props: Props): React.ReactElement {
                 setMoveModal(props.move);
               }
             }}
+            role="button"
+            alt="View Beasties that learn this play."
             title="View Beasties that learn this play."
           />
         </div>

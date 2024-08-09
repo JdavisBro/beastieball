@@ -10,6 +10,7 @@ import designers from "../../data/designers.json";
 import abilities from "../../data/abilities";
 import BEASTIE_DATA from "../../data/Beastiedata";
 import InfoBox, { BoxHeader } from "../../shared/InfoBox";
+import ResearchCarousel from "./ResearchCarousel";
 
 const research_data: { [key: string]: number } = untyped_research_data;
 
@@ -103,21 +104,12 @@ export default function ContentInfo(props: Props): React.ReactNode {
     }
   }
 
-  const research: React.ReactElement[] = [];
+  const research: { link: string; url: string }[] = [];
   for (let i = 0; i < research_data[beastiedata.id]; i++) {
-    research.push(
-      <a
-        key={`${beastiedata.id}_${i}`}
-        href={`/gameassets/research/${beastiedata.id}_${i}.png`}
-        target="_blank"
-      >
-        <img
-          className={styles.researchimage}
-          src={`/gameassets/research/${beastiedata.id}_${i}.webp`}
-          alt={`${beastiedata.name} Research Sample ${i + 1}`}
-        />
-      </a>,
-    );
+    research.push({
+      link: `/gameassets/research/${beastiedata.id}_${i}.png`,
+      url: `/gameassets/research/${beastiedata.id}_${i}.webp`,
+    });
   }
 
   const preEvo = findBeastiePreevolution(beastiedata.family, beastiedata.id);
@@ -210,7 +202,9 @@ export default function ContentInfo(props: Props): React.ReactNode {
         />
 
         <InfoBox header="Research">
-          <div className={styles.research}>{research}</div>
+          <div className={styles.research}>
+            <ResearchCarousel images={research} />
+          </div>
           Researcher{Array.isArray(beastiedata.designer) ? "s" : ""}:{" "}
           {Array.isArray(beastiedata.designer)
             ? beastiedata.designer.map((i) => designers[i]).join(", ")

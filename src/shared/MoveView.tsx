@@ -359,7 +359,7 @@ export default function MoveView(props: Props): React.ReactElement {
           <img
             src="/gameassets/sprMainmenu/6.png"
             className={styles.movelearnerbutton}
-            tabIndex={-1}
+            tabIndex={0}
             onClick={() => {
               if (setMoveModal) {
                 setMoveModal(props.move);

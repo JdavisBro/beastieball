@@ -25,10 +25,11 @@ export default function ResearchCarousel({
           className={styles.stage}
           style={{ transform: `translateX(-${imageIndex * 100}%)` }}
         >
-          {images.map((data) => (
+          {images.map((data, index) => (
             <img
               src={data.url}
               key={data.link}
+              tabIndex={index == imageIndex ? 0 : -1}
               onClick={() => setBigImage(true)}
             />
           ))}

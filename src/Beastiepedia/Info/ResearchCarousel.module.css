@@ -23,6 +23,7 @@
   aspect-ratio: 2 / 1;
   object-fit: contain;
   float: left;
+  cursor: pointer;
 }
 
 .controls {

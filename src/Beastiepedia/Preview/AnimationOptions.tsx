@@ -1,5 +1,5 @@
 import InfoBox from "../../shared/InfoBox";
-import styles from "../Content.module.css";
+import styles from "./ContentPreview.module.css";
 
 type Props = {
   animPausedRef: React.MutableRefObject<boolean>;

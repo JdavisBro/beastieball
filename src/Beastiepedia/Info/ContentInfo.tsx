@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import StatDistribution from "./StatDistribution";
 import TextTag from "../../shared/TextTag";
-import styles from "../Content.module.css";
+import styles from "./ContentInfo.module.css";
 import type { BeastieType } from "../../data/BeastieType";
 import MoveList from "./MoveList";
 import untyped_research_data from "../../data/research_data.json";

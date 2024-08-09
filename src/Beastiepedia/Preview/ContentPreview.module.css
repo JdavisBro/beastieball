@@ -5,20 +5,6 @@
   overflow-y: auto;
 }
 
-.info {
-  height: 100%;
-  width: 60%;
-  float: left;
-  overflow-y: auto;
-}
-
-.inner {
-  width: 95%;
-  /* height: 95%; */
-  margin-top: 2.5%;
-  margin-left: 2.5%;
-}
-
 .canvascon {
   composes: animBoxBackground from global;
   clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 20px 100%);
@@ -47,40 +33,9 @@
   text-align: center;
 }
 
-.traittable {
-  border-collapse: collapse;
-}
-
-.traittable td {
-  padding: 0 6px 0 6px;
-}
-.traittable td:first-child {
-  text-align: right;
-  border-right: solid black 1px;
-}
-
-.wrapinfoboxes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.middlealign {
-  display: flex;
-  align-items: center;
-}
-
-.research {
-  display: flex;
-  max-width: 100%;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.researchimage {
-  max-height: 200px;
-  width: auto;
-  max-width: 100%;
+.upArrow {
+  display: inline-block;
+  transform: scaleY(-1);
 }
 
 .previewOptions {
@@ -112,20 +67,9 @@
   ) !important;
 }
 
-.upArrow {
-  display: inline-block;
-  transform: scaleY(-1);
-}
-
 @media all and (max-aspect-ratio: 1/1) {
   .preview {
     width: 100%;
     height: fit-content;
-  }
-
-  .info {
-    width: 100%;
-    height: fit-content;
-    margin-bottom: 60px;
   }
 }

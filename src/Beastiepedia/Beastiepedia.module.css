@@ -15,13 +15,20 @@
 }
 
 .contentwide {
+  composes: content;
   width: 100%;
 }
 
-.contentnotselected {
+.contentOff {
+  composes: content;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.contentOffWide {
+  composes: contentOff;
+  width: 100%;
 }
 
 .notselectedtext {

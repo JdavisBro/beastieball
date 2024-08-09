@@ -3,13 +3,14 @@ import { useParams } from "react-router-dom";
 
 import Header from "../shared/Header";
 import Sidebar from "./Sidebar";
-import Content from "./Content";
 import OpenGraph from "../shared/OpenGraph";
 import styles from "./Beastiepedia.module.css";
 import useScreenOrientation from "../utils/useScreenOrientation";
 import BEASTIE_DATA from "../data/Beastiedata";
 import { BeastieType } from "../data/BeastieType";
 import CustomErrorBoundary from "../shared/CustomErrorBoundary";
+import ContentPreview from "./Preview/ContentPreview";
+import ContentInfo from "./Info/ContentInfo";
 
 declare global {
   interface Window {
@@ -78,7 +79,37 @@ export default function Beastiepedia(): React.ReactNode {
           />
         </CustomErrorBoundary>
         <CustomErrorBoundary fallbackClassName={styles.content}>
-          <Content beastiedata={beastiedata} sidebarvisible={sidebarvisible} />
+          <div
+            className={
+              beastiedata
+                ? sidebarvisible
+                  ? styles.content
+                  : styles.contentwide
+                : sidebarvisible
+                  ? styles.contentOff
+                  : styles.contentOffWide
+            }
+          >
+            {beastiedata ? (
+              <>
+                <CustomErrorBoundary fallbackClassName={styles.preview}>
+                  <ContentPreview beastiedata={beastiedata} />
+                </CustomErrorBoundary>
+                <CustomErrorBoundary fallbackClassName={styles.info}>
+                  <ContentInfo beastiedata={beastiedata} />
+                </CustomErrorBoundary>
+              </>
+            ) : (
+              <h1 className={styles.notselectedtext}>
+                No Beastie Selected
+                <br />
+                {sidebarvisible
+                  ? "Select a beastie in the sidebar"
+                  : "Select a beastie by toggling the menu in the top left"}
+                .
+              </h1>
+            )}
+          </div>
         </CustomErrorBoundary>
       </div>
     </div>

@@ -49,15 +49,11 @@ export default function Modal(
       dialog.addEventListener("wheel", preventDefault, {
         passive: false,
       });
-      dialog.addEventListener("touchmove", preventDefault, {
-        passive: false,
-      });
       dialog.addEventListener("keydown", preventScrollKeys, {
         passive: false,
       });
       return () => {
         dialog.removeEventListener("wheel", preventDefault);
-        dialog.removeEventListener("touchmove", preventDefault);
         dialog.removeEventListener("keydown", preventScrollKeys);
       };
     }

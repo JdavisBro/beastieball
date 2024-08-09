@@ -20,6 +20,7 @@
 
 .stage > img {
   min-height: 100%;
+  max-width: 100%;
   aspect-ratio: 2 / 1;
   object-fit: contain;
   float: left;
@@ -36,20 +37,13 @@
 
 .big {
   display: flex;
-  height: 90vh;
-  height: 90dvh;
-  width: 90vw;
-  width: 90dvw;
-}
-
-.bigimagecon {
-  display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
-  flex: 1 1;
+  gap: 6px;
+  height: 80vh;
+  height: 80dvh;
+  width: calc(85vw - 44px);
+  width: calc(85dvw - 44px);
   align-items: center;
-  font-size: 1.2em;
 }
 
 .bigimage {

@@ -56,26 +56,24 @@ export default function ResearchCarousel({
         onClose={() => setBigImage(false)}
       >
         <div className={styles.big}>
-          <button
-            disabled={imageIndex == 0}
-            onClick={() => changeIndex(imageIndex - 1)}
-          >
-            {"<"}Prev
-          </button>
-          <div className={styles.bigimagecon}>
-            {bigImage ? (
-              <img className={styles.bigimage} src={images[imageIndex].link} />
-            ) : null}
-            <div>
-              {imageIndex + 1}/{images.length}
-            </div>
+          {bigImage ? (
+            <img className={styles.bigimage} src={images[imageIndex].link} />
+          ) : null}
+          <div className={styles.controls}>
+            <button
+              disabled={imageIndex == 0}
+              onClick={() => changeIndex(imageIndex - 1)}
+            >
+              {"<"}Prev
+            </button>
+            {imageIndex + 1}/{images.length}
+            <button
+              disabled={imageIndex == images.length - 1}
+              onClick={() => changeIndex(imageIndex + 1)}
+            >
+              Next{">"}
+            </button>
           </div>
-          <button
-            disabled={imageIndex == images.length - 1}
-            onClick={() => changeIndex(imageIndex + 1)}
-          >
-            Next{">"}
-          </button>
         </div>
       </Modal>
     </div>

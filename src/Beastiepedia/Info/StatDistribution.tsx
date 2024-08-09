@@ -40,40 +40,25 @@ type Props = {
 export default function StatDistribution(props: Props): React.ReactElement {
   const beastiedata = props.beastiedata;
   return (
-    <div className={styles.scrollcontainer}>
-      <div className={styles.container}>
-        <div className={styles.statcontainer}>
-          <div className={styles.barcontainer}>POW</div>
-          <StatBar
-            value={beastiedata.ba}
-            right={false}
-            color={TypeColor.Body}
-          />
-          <StatBar
-            value={beastiedata.ha}
-            right={false}
-            color={TypeColor.Spirit}
-          />
-          <StatBar
-            value={beastiedata.ma}
-            right={false}
-            color={TypeColor.Mind}
-          />
-        </div>
-        <div className={styles.midblock}>
-          <div className={styles.barcontainer}></div>
-          <div className={styles.barcontainer}>
-            <img src="/gameassets/sprIcon/0.png" alt="Body" />
-          </div>
-          <div className={styles.barcontainer}>
-            <img src="/gameassets/sprIcon/1.png" alt="Spirit" />
-          </div>
-          <div className={styles.barcontainer}>
-            <img src="/gameassets/sprIcon/2.png" alt="Mind" />
-          </div>
-        </div>
-        {/* prettier-ignore */ /* (doesn't wrap 2 of the statbars) */}
-        <div className={styles.statcontainer}>
+    <div className={styles.container}>
+      <div className={styles.statcontainer}>
+        <div className={styles.barcontainer}>POW</div>
+        <StatBar value={beastiedata.ba} right={false} color={TypeColor.Body} />
+        <StatBar
+          value={beastiedata.ha}
+          right={false}
+          color={TypeColor.Spirit}
+        />
+        <StatBar value={beastiedata.ma} right={false} color={TypeColor.Mind} />
+      </div>
+      <div className={styles.midblock}>
+        <div className={styles.barcontainer}></div>
+        <img src="/gameassets/sprIcon/0.png" alt="Body" />
+        <img src="/gameassets/sprIcon/1.png" alt="Spirit" />
+        <img src="/gameassets/sprIcon/2.png" alt="Mind" />
+      </div>
+      {/* prettier-ignore */ /* (doesn't wrap 2 of the statbars) */}
+      <div className={styles.statcontainer}>
           <div className={`${styles.barcontainer} ${styles.barcontainerright}`}>DEF</div>
           <StatBar 
             value={beastiedata.bd}
@@ -91,7 +76,6 @@ export default function StatDistribution(props: Props): React.ReactElement {
             color={TypeColor.Mind}
           />
         </div>
-      </div>
     </div>
   );
 }

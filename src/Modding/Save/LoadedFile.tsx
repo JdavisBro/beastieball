@@ -36,8 +36,6 @@ export default function LoadedFile(props: {
     (value): value is SaveBeastie => typeof value != "string",
   );
 
-  console.log(awayteam.map((pid) => props.save.beastie_bank[pid]));
-
   return (
     <BeastieRenderProvider>
       <FoldableSection title="Team Beasties">

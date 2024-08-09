@@ -26,8 +26,6 @@ export default function MoveModalProvider(props: PropsWithChildren) {
     });
   }
 
-  console.log(move);
-
   return (
     <MoveModalContext.Provider value={setMove}>
       <Modal

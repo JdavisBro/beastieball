@@ -186,7 +186,6 @@ export default function Map(): React.ReactNode {
     imgheaders: { [key: string]: React.ReactElement[] };
   } = useMemo(createMarkers, []);
 
-  console.log(import.meta.env);
   return (
     <>
       <OpenGraph

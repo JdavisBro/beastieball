@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import styles from "./ResearchCarousel.module.css";
 import Modal from "../../shared/Modal";
-import untyped_research_data from "../../data/research_data.json";
+import untyped_research_data from "../../data/raw/research_data.json";
 
 const research_data: { [key: string]: number } = untyped_research_data;
 

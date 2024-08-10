@@ -2,7 +2,7 @@ import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import * as fs from "fs";
 
-import beastie_data from "./src/data/beastie_data.json";
+import beastie_data from "./src/data/raw/beastie_data.json";
 
 const BEASTIE_DATA: Record<string, { name: string }> = beastie_data;
 

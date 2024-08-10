@@ -1,4 +1,4 @@
-import move_dic from "./move_dic.json";
+import move_dic from "./raw/move_dic.json";
 
 export enum Origin { // For sorting, currently this is not added to the moves.
   Net = 0,

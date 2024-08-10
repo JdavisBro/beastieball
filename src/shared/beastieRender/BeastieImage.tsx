@@ -1,6 +1,6 @@
 import useBeastieRender from "./useBeastieRender";
 import { RenderBeastieType } from "./BeastieRenderContext";
-import BEASTIE_DATA from "../../data/Beastiedata";
+import BEASTIE_DATA from "../../data/BeastieData";
 
 export function BeastieImage(props: {
   defaultUrl: string;

@@ -1,4 +1,4 @@
-import sprite_info from "./sprite_info.json";
+import sprite_info from "./raw/sprite_info.json";
 
 export type BBox = {
   x: number;

@@ -6,7 +6,7 @@ import {
   RenderBeastieType,
 } from "./BeastieRenderContext";
 import SPRITE_INFO from "../../data/SpriteInfo";
-import BEASTIE_DATA from "../../data/Beastiedata";
+import BEASTIE_DATA from "../../data/BeastieData";
 import { getColorInBeastieColors } from "../../utils/color";
 import BEASTIE_ANIMATIONS from "../../data/BeastieAnimations";
 

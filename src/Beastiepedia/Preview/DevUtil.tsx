@@ -1,11 +1,11 @@
-import BEASTIE_DATA from "../../data/Beastiedata";
+import BEASTIE_DATA from "../../data/BeastieData";
 import BEASTIE_ANIMATIONS from "../../data/BeastieAnimations";
 import SPRITE_INFO, { BBox } from "../../data/SpriteInfo";
 import { useRef } from "react";
 import JSZip from "jszip";
 import { setColorUniforms, setImage } from "../../shared/beastieRender/WebGL";
 import { bgrDecimalToHex, getColorInBeastieColors } from "../../utils/color";
-import { BeastieType } from "../../data/BeastieType";
+import { BeastieType } from "../../data/BeastieData";
 
 declare global {
   interface Window {

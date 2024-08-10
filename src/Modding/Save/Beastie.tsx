@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import BEASTIE_DATA from "../../data/Beastiedata";
+import BEASTIE_DATA from "../../data/BeastieData";
 import { SaveBeastie } from "./SaveType";
 import styles from "./Beastie.module.css";
 import EventElement from "./EventElement";

@@ -1,4 +1,4 @@
-import beastie_animations from "./beastie_animations.json";
+import beastie_animations from "./raw/beastie_animations.json";
 
 export type BeastieFrames = {
   _: string;

@@ -7,9 +7,9 @@ import {
   getColorInBeastieColors,
   hexToRgb,
 } from "../../utils/color";
-import type { BeastieType } from "../../data/BeastieType";
+import type { BeastieType } from "../../data/BeastieData";
 import { useLocalStorage } from "usehooks-ts";
-import BEASTIE_DATA from "../../data/Beastiedata";
+import BEASTIE_DATA from "../../data/BeastieData";
 
 function defaultColor(
   colors: number[],

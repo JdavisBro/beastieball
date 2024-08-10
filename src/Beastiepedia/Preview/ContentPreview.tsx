@@ -6,7 +6,7 @@ import setupWebGL, {
   setImage,
 } from "../../shared/beastieRender/WebGL";
 import styles from "./ContentPreview.module.css";
-import type { BeastieType } from "../../data/BeastieType";
+import type { BeastieType } from "../../data/BeastieData";
 import ColorTabs from "./ColorTabs";
 import SPRITE_INFO, { BBox, Sprite } from "../../data/SpriteInfo";
 import useLoadBeastieImages from "../../utils/useLoadBeastieImages";

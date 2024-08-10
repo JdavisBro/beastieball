@@ -1,4 +1,4 @@
-import spawn_data from "./spawn_data.json";
+import spawn_data from "./raw/spawn_data.json";
 
 const SPAWN_DATA: {
   [key: string]: {

@@ -18,7 +18,7 @@ import OpenGraph from "../shared/OpenGraph";
 import { createMarkers } from "./createMarkers";
 import Header from "../shared/Header";
 import SPAWN_DATA from "../data/SpawnData";
-import BEASTIE_DATA from "../data/Beastiedata";
+import BEASTIE_DATA from "../data/BeastieData";
 
 function MapEvents(props: {
   setCurrentMapLayer: React.Dispatch<React.SetStateAction<number>>;

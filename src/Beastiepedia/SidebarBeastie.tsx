@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import styles from "./Sidebar.module.css";
-import type { BeastieType } from "../data/BeastieType";
+import type { BeastieType } from "../data/BeastieData";
 import CustomErrorBoundary from "../shared/CustomErrorBoundary";
 
 type Props = {

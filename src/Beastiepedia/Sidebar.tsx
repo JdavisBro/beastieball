@@ -1,6 +1,6 @@
 import SidebarBeastie from "./SidebarBeastie";
 import styles from "./Sidebar.module.css";
-import BEASTIE_DATA from "../data/Beastiedata";
+import BEASTIE_DATA from "../data/BeastieData";
 import { useState } from "react";
 
 type Props = {

@@ -11,4 +11,5 @@ const TypeColor: Record<string, string> = {
   Swap: "#b8c3db",
   Ice: "??",
 };
+
 export default TypeColor;

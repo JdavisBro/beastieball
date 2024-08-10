@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import StatDistribution from "./StatDistribution";
 import TextTag from "../../shared/TextTag";
 import styles from "./ContentInfo.module.css";
-import type { BeastieType } from "../../data/BeastieType";
+import type { BeastieType } from "../../data/BeastieData";
 import MoveList from "./MoveList";
-import designers from "../../data/designers.json";
+import designers from "../../data/raw/designers.json";
 import abilities from "../../data/abilities";
-import BEASTIE_DATA from "../../data/Beastiedata";
+import BEASTIE_DATA from "../../data/BeastieData";
 import InfoBox, { BoxHeader } from "../../shared/InfoBox";
 import ResearchCarousel from "./ResearchCarousel";
 

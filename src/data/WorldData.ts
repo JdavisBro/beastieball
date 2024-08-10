@@ -1,4 +1,4 @@
-import world from "./world_data/world.json";
+import world from "./raw/world.json";
 
 export type MapIcon = {
   _: string;

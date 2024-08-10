@@ -1,5 +1,4 @@
 import { createContext } from "react";
-// import BEASTIE_DATA from "../../data/Beastiedata";
 
 export type RenderBeastieType = {
   id: string;

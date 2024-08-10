@@ -5,14 +5,11 @@ import TextTag from "../../shared/TextTag";
 import styles from "./ContentInfo.module.css";
 import type { BeastieType } from "../../data/BeastieType";
 import MoveList from "./MoveList";
-import untyped_research_data from "../../data/research_data.json";
 import designers from "../../data/designers.json";
 import abilities from "../../data/abilities";
 import BEASTIE_DATA from "../../data/Beastiedata";
 import InfoBox, { BoxHeader } from "../../shared/InfoBox";
 import ResearchCarousel from "./ResearchCarousel";
-
-const research_data: { [key: string]: number } = untyped_research_data;
 
 type Props = {
   beastiedata: BeastieType;
@@ -102,14 +99,6 @@ export default function ContentInfo(props: Props): React.ReactNode {
         training += "DEF";
         break;
     }
-  }
-
-  const research: { link: string; url: string }[] = [];
-  for (let i = 0; i < research_data[beastiedata.id]; i++) {
-    research.push({
-      link: `/gameassets/research/${beastiedata.id}_${i}.png`,
-      url: `/gameassets/research/${beastiedata.id}_${i}.webp`,
-    });
   }
 
   const preEvo = findBeastiePreevolution(beastiedata.family, beastiedata.id);
@@ -205,7 +194,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
 
         <InfoBox header="Research">
           <div className={styles.research}>
-            <ResearchCarousel images={research} />
+            <ResearchCarousel beastieid={beastiedata.id} />
           </div>
           Researcher{Array.isArray(beastiedata.designer) ? "s" : ""}:{" "}
           {Array.isArray(beastiedata.designer)

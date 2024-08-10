@@ -1,22 +1,60 @@
 import { useEffect, useState } from "react";
+
 import styles from "./ResearchCarousel.module.css";
 import Modal from "../../shared/Modal";
+import untyped_research_data from "../../data/research_data.json";
 
-export default function ResearchCarousel({
-  images,
+const research_data: { [key: string]: number } = untyped_research_data;
+
+function Controls({
+  imageIndex,
+  changeIndex,
+  totalImages,
 }: {
-  images: { url: string; link: string }[];
+  imageIndex: number;
+  changeIndex: (targetIndex: number) => void;
+  totalImages: number;
 }) {
+  return (
+    <div className={styles.controls}>
+      <button
+        disabled={imageIndex == 0}
+        onClick={() => changeIndex(imageIndex - 1)}
+      >
+        {"<"}Prev
+      </button>
+      {imageIndex + 1}/{totalImages}
+      <button
+        disabled={imageIndex == totalImages - 1}
+        onClick={() => changeIndex(imageIndex + 1)}
+      >
+        Next{">"}
+      </button>
+    </div>
+  );
+}
+
+export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
   const [imageIndex, setImageIndex] = useState(0);
   const [bigImage, setBigImage] = useState<boolean>(false);
 
+  const images: { link: string; url: string }[] = [];
+  for (let i = 0; i < research_data[beastieid]; i++) {
+    images.push({
+      link: `/gameassets/research/${beastieid}_${i}.png`,
+      url: `/gameassets/research/${beastieid}_${i}.webp`,
+    });
+  }
+
   useEffect(() => {
     setImageIndex(0);
-  }, [setImageIndex, images]);
+  }, [setImageIndex, beastieid]);
 
-  const changeIndex = (target_index: number) => {
-    setImageIndex(Math.min(Math.max(target_index, 0), images.length - 1));
+  const changeIndex = (targetIndex: number) => {
+    setImageIndex(Math.min(Math.max(targetIndex, 0), images.length - 1));
   };
+
+  const [biggerImage, setBiggerImage] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -35,46 +73,33 @@ export default function ResearchCarousel({
           ))}
         </div>
       </div>
-      <div className={styles.controls}>
-        <button
-          disabled={imageIndex == 0}
-          onClick={() => changeIndex(imageIndex - 1)}
-        >
-          {"<"}Prev
-        </button>
-        {imageIndex + 1}/{images.length}
-        <button
-          disabled={imageIndex == images.length - 1}
-          onClick={() => changeIndex(imageIndex + 1)}
-        >
-          Next{">"}
-        </button>
-      </div>
+      <Controls
+        imageIndex={imageIndex}
+        changeIndex={changeIndex}
+        totalImages={images.length}
+      />
       <Modal
         header="Research"
         open={bigImage}
-        onClose={() => setBigImage(false)}
+        onClose={() => {
+          setBigImage(false);
+          setBiggerImage(false);
+        }}
       >
         <div className={styles.big}>
           {bigImage ? (
-            <img className={styles.bigimage} src={images[imageIndex].link} />
+            <img
+              className={biggerImage ? styles.biggerimage : styles.bigimage}
+              src={images[imageIndex].link}
+              onClick={() => setBiggerImage(!biggerImage)}
+            />
           ) : null}
-          <div className={styles.controls}>
-            <button
-              disabled={imageIndex == 0}
-              onClick={() => changeIndex(imageIndex - 1)}
-            >
-              {"<"}Prev
-            </button>
-            {imageIndex + 1}/{images.length}
-            <button
-              disabled={imageIndex == images.length - 1}
-              onClick={() => changeIndex(imageIndex + 1)}
-            >
-              Next{">"}
-            </button>
-          </div>
         </div>
+        <Controls
+          imageIndex={imageIndex}
+          changeIndex={changeIndex}
+          totalImages={images.length}
+        />
       </Modal>
     </div>
   );

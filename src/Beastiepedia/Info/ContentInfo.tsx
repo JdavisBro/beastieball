@@ -149,31 +149,30 @@ export default function ContentInfo(props: Props): React.ReactNode {
 
         <InfoBox header="Description">{beastiedata.desc}</InfoBox>
 
-        {
-          <InfoBox header="Traits">
-            <table className={styles.traittable}>
-              <tbody>
-                {beastiedata.ability.map((value, index) =>
-                  value in abilities ? (
-                    <tr key={value}>
-                      <td>
-                        {abilities[value].name}
-                        {beastiedata.ability_hidden && index > 0
-                          ? " (recessive)"
-                          : ""}
-                      </td>
-                      <td>
-                        <TextTag>{abilities[value].desc}</TextTag>
-                      </td>
-                    </tr>
-                  ) : (
-                    `Unknown trait ${value}`
-                  ),
-                )}
-              </tbody>
-            </table>
-          </InfoBox>
-        }
+        <InfoBox header="Traits">
+          <table className={styles.traittable}>
+            <tbody>
+              {beastiedata.ability.map((value, index) =>
+                value in abilities ? (
+                  <tr key={value}>
+                    <td>
+                      {abilities[value].name}
+                      {beastiedata.ability_hidden && index > 0
+                        ? " (recessive)"
+                        : ""}
+                    </td>
+                    <td>
+                      <TextTag>{abilities[value].desc}</TextTag>
+                    </td>
+                  </tr>
+                ) : (
+                  `Unknown trait ${value}`
+                ),
+              )}
+            </tbody>
+          </table>
+        </InfoBox>
+
         <BoxHeader>Stat Distribution</BoxHeader>
         <StatDistribution beastiedata={beastiedata} />
 

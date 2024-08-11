@@ -28,6 +28,10 @@ function MapEvents(props: {
       event.name == "Surface"
         ? props.setCurrentMapLayer(0)
         : props.setCurrentMapLayer(Number(event.name.replace("Layer ", ""))),
+    popupopen: (event) =>
+      event.popup.getElement()?.classList.remove("leaflet-popup-closing"),
+    popupclose: (event) =>
+      event.popup.getElement()?.classList.add("leaflet-popup-closing"),
   });
 
   return null;

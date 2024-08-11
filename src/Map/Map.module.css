@@ -48,3 +48,50 @@
   outline: white dashed 6px;
   box-sizing: content-box;
 }
+
+@keyframes popupOpen {
+  from {
+    clip-path: polygon(0 0, 10px 100%, 10px 100%, 0 0);
+  }
+
+  to {
+    clip-path: polygon(0 0, 10px 100%, 100% 100%, calc(100% - 10px) 0);
+  }
+}
+
+:global(.leaflet-popup) {
+  animation-name: popupOpen;
+  animation-duration: 0.2s;
+  transition: clip-path 0.2s !important;
+  opacity: 1 !important;
+  font-size: 1.15em;
+  clip-path: polygon(0 0, 10px 100%, 100% 100%, calc(100% - 10px) 0);
+}
+
+:global(.leaflet-popup-content-wrapper) {
+  background-image: repeating-linear-gradient(
+    #ddd1bd,
+    #ddd1bd 4px,
+    #d5c9b5 4px,
+    #d5c9b5 8px
+  );
+  animation-name: alt-bg-scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border-radius: 0;
+}
+
+:global(.leaflet-popup-close-button) {
+  margin-right: 10px;
+  color: #111;
+}
+
+:global(.leaflet-popup-tip) {
+  background-color: transparent;
+}
+
+:global(.leaflet-popup-closing) {
+  /* not a regular leaflet thing but it's added in map onpopupclose event */
+  clip-path: polygon(0 0, 10px 100%, 10px 100%, 0 0);
+}

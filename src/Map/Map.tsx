@@ -9,7 +9,7 @@ import {
   Popup,
   useMapEvents,
 } from "react-leaflet";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
 
 import WORLD_DATA from "../data/WorldData";
@@ -20,14 +20,8 @@ import Header from "../shared/Header";
 import SPAWN_DATA from "../data/SpawnData";
 import BEASTIE_DATA from "../data/BeastieData";
 
-function MapEvents(props: {
-  setCurrentMapLayer: React.Dispatch<React.SetStateAction<number>>;
-}) {
+function MapEvents() {
   useMapEvents({
-    baselayerchange: (event) =>
-      event.name == "Surface"
-        ? props.setCurrentMapLayer(0)
-        : props.setCurrentMapLayer(Number(event.name.replace("Layer ", ""))),
     popupopen: (event) =>
       event.popup.getElement()?.classList.remove("leaflet-popup-closing"),
     popupclose: (event) =>
@@ -38,14 +32,12 @@ function MapEvents(props: {
 }
 
 export default function Map(): React.ReactNode {
-  const [currentMapLayer, setCurrentMapLayer] = useState(0);
-
   // these are estimates based on comparing the map to a screenshot but they should be about right for now
   const bounds = new L.LatLngBounds([83000, -160000], [-42333, 14762]);
   const map_bg_bounds = new L.LatLngBounds([83000, -160000], [-42333, 14762]);
-  const level_overlays: { [key: number]: React.ReactElement[] } = {};
+  const level_overlays: React.ReactElement[] = [];
 
-  const beastieSpawnsOverlays: { [key: number]: React.ReactElement[] } = {};
+  const beastieSpawnsOverlays: React.ReactElement[] = [];
 
   WORLD_DATA.level_stumps_array.forEach((level) => {
     const level_bounds = new L.LatLngBounds(
@@ -53,16 +45,12 @@ export default function Map(): React.ReactNode {
       [-level.world_y2, level.world_x2],
     );
     const layer = level.world_layer ? level.world_layer : 0;
-    if (layer == currentMapLayer) {
-      bounds.extend(level_bounds);
+    if (layer != 0) {
+      return;
     }
-    let overlays = level_overlays[layer];
-    if (!overlays) {
-      level_overlays[layer] = [];
-      overlays = level_overlays[layer];
-    }
+    bounds.extend(level_bounds);
 
-    overlays.push(
+    level_overlays.push(
       <ImageOverlay
         interactive={true}
         bounds={level_bounds}
@@ -73,11 +61,6 @@ export default function Map(): React.ReactNode {
 
     if (!level.has_spawns) {
       return;
-    }
-    let spawns = beastieSpawnsOverlays[layer];
-    if (!spawns) {
-      beastieSpawnsOverlays[layer] = [];
-      spawns = beastieSpawnsOverlays[layer];
     }
     const group = SPAWN_DATA[level.spawn_name[0]]?.group;
     if (!group) {
@@ -116,7 +99,7 @@ export default function Map(): React.ReactNode {
       if (!beastie) {
         return;
       }
-      spawns.push(
+      beastieSpawnsOverlays.push(
         <Marker
           key={`${level.name}-${beastie.id}`}
           alt={`${beastie.name} spawn location.`}
@@ -176,9 +159,7 @@ export default function Map(): React.ReactNode {
     />
   );
 
-  level_overlays[0]
-    ? level_overlays[0].unshift(mapoverlay)
-    : (level_overlays[0] = [mapoverlay]);
+  level_overlays.unshift(mapoverlay);
 
   const {
     bigtitleheaders,
@@ -214,45 +195,27 @@ export default function Map(): React.ReactNode {
         bounds={bounds}
         crs={L.CRS.Simple}
       >
-        <MapEvents setCurrentMapLayer={setCurrentMapLayer} />
+        <MapEvents />
         <LayersControl>
-          {Object.keys(level_overlays).map((key, index) => (
-            <LayersControl.BaseLayer
-              key={key}
-              checked={index == 0}
-              name={index == 0 ? "Surface" : `Layer ${index}`}
-            >
-              <LayerGroup>{level_overlays[Number(key)]}</LayerGroup>
-            </LayersControl.BaseLayer>
-          ))}
           <LayersControl.Overlay checked name="Region Names">
-            <LayerGroup>
-              {currentMapLayer == 0 ? bigtitleheaders : null}
-            </LayerGroup>
+            <LayerGroup>{bigtitleheaders}</LayerGroup>
           </LayersControl.Overlay>
           <LayersControl.Overlay checked name="Area Names">
-            <LayerGroup>
-              {currentMapLayer == 0 ? titleheaders : null}
-            </LayerGroup>
+            <LayerGroup>{titleheaders}</LayerGroup>
           </LayersControl.Overlay>
 
           {Object.keys(imgheaders).map((key) =>
             key == "Other" && imgheaders[key].length == 0 ? null : (
               <LayersControl.Overlay key={key} checked name={key}>
-                <LayerGroup>
-                  {currentMapLayer == 0 ? imgheaders[key] : null}
-                </LayerGroup>
+                <LayerGroup>{imgheaders[key]}</LayerGroup>
               </LayersControl.Overlay>
             ),
           )}
           <LayersControl.Overlay checked name={"Beastie Spawns"}>
-            <LayerGroup>
-              {beastieSpawnsOverlays[currentMapLayer]
-                ? beastieSpawnsOverlays[currentMapLayer]
-                : null}
-            </LayerGroup>
+            <LayerGroup>{beastieSpawnsOverlays}</LayerGroup>
           </LayersControl.Overlay>
         </LayersControl>
+        <LayerGroup>{level_overlays}</LayerGroup>
       </MapContainer>
     </>
   );

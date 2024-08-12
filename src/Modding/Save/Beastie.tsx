@@ -36,6 +36,7 @@ export default function Beastie(props: {
     id: props.beastie.specie,
     colors: beastieColors,
     colorAlt: altMap[Math.ceil(props.beastie.color[0])],
+    sprAlt: props.beastie.spr_index,
   });
 
   if (!beastiedata) {

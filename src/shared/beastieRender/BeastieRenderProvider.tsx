@@ -60,7 +60,11 @@ export default function BeastieRenderProvider(
           return null;
         }
         const sprite = SPRITE_INFO[beastie_data.spr];
-        if (!sprite) {
+        const drawn_sprite =
+          beastie.sprAlt == undefined || beastie.sprAlt == 0
+            ? sprite
+            : SPRITE_INFO[beastie_data.spr_alt[beastie.sprAlt - 1]];
+        if (!sprite || !drawn_sprite) {
           return null;
         }
         const animations = BEASTIE_ANIMATIONS.get(`_${sprite.name}`);
@@ -73,7 +77,7 @@ export default function BeastieRenderProvider(
 
         const img = await new Promise<HTMLImageElement>((resolve, reject) => {
           const image = document.createElement("img");
-          image.src = `/gameassets/beasties/${sprite.name}/${beastie_frame ?? 0}.png`;
+          image.src = `/gameassets/beasties/${drawn_sprite.name}/${beastie_frame ?? 0}.png`;
           image.onerror = () => reject();
           image.onload = () => resolve(image);
         });
@@ -96,7 +100,7 @@ export default function BeastieRenderProvider(
         if (!context) {
           return null;
         }
-        const sprite_bbox = sprite.bboxes[beastie_frame];
+        const sprite_bbox = drawn_sprite.bboxes[beastie_frame];
         cropCanvasRef.current.width = sprite_bbox.width;
         cropCanvasRef.current.height = sprite_bbox.height;
         context.drawImage(canvasRef.current, -sprite_bbox.x, -sprite_bbox.y);

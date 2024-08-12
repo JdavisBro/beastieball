@@ -119,7 +119,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         bbox.width > bbox.height
           ? drawnsprite.width / bbox.width
           : drawnsprite.height / bbox.height;
-      return `scale(${beastiescale}) translate(${((-bbox.x - bbox.width / 2 + beastiesprite.width / 2) / beastiesprite.width) * 100}%, ${((-bbox.y - bbox.height / 2 + beastiesprite.height / 2) / beastiesprite.height) * 100}%)`;
+      return `scale(${beastiescale}) translate(${((-bbox.x - bbox.width / 2 + drawnsprite.width / 2) / drawnsprite.width) * 100}%, ${((-bbox.y - bbox.height / 2 + drawnsprite.height / 2) / drawnsprite.height) * 100}%)`;
     },
     [drawnsprite],
   );

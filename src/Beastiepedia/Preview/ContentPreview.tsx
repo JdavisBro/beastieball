@@ -245,7 +245,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
           ((1000 / (24 * beastie_anim_speed) / anim_speed) * holdRef.current) /
           userSpeed;
         if (frameTimeRef.current > frameLength) {
-          frameTimeRef.current = frameTimeRef.current % frameLength;
+          if (frameLength > 0) {
+            frameTimeRef.current = frameTimeRef.current % frameLength;
+          }
           holdRef.current = null;
           frameNumRef.current += 1;
           if (frameNumRef.current > endFrame) {

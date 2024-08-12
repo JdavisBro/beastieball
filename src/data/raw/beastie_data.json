@@ -1,4 +1,261 @@
 {
+  "alien1": {
+    "ability": ["notag"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "animator": 8,
+    "attklist": [
+      "stun",
+      "markattack",
+      "mindbomb",
+      "heartd",
+      "float",
+      "tool",
+      "moon",
+      "freeball",
+      "mindpass",
+      "refresh",
+      "dispel",
+      "teleport",
+      "meditate",
+      "chill",
+      "taunt",
+      "mark",
+      "callout",
+      "lock",
+      "protect",
+      "rest"
+    ],
+    "attklist_randomize": -1,
+    "ba": 25,
+    "base_exp": 124.655,
+    "bd": 55,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 6474822,
+            "x": 0
+          },
+          {
+            "color": 4904026,
+            "x": 0.48
+          },
+          {
+            "color": 4380291,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 3488078,
+            "x": 0
+          },
+          {
+            "color": 3357515,
+            "x": 0.4966666667
+          },
+          {
+            "color": 3296550,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 4587007,
+            "x": 0
+          },
+          {
+            "color": 4587490,
+            "x": 0.5
+          },
+          {
+            "color": 4587446,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 8293782,
+            "x": 0
+          },
+          {
+            "color": 7570315,
+            "x": 0.5133333333
+          },
+          {
+            "color": 6713204,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 0.65, 36, 5, 1],
+      [2, 1, 1, 8, 1, 15],
+      [20, 1, 1, 2, 1, 1],
+      [2, 2, 1, 5, 2, 1, 4, 2, 1]
+    ],
+    "desc": "There are numerous reports of coaches seeing their Beasties swooped up by Yueffowl at night, only to find them returned unharmed in the morning.",
+    "designer": 0,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "alien1",
+    "first_frame": -1,
+    "foot_size": 50,
+    "foot_type": 1,
+    "growth": 1.07,
+    "ha": 36,
+    "hd": 85,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "alien1",
+    "isBaby": false,
+    "learnset": 45,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 74.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 20,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 8,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "randomize_idle": true,
+      "squishiness": 0.05,
+      "stretchiness": 0.05
+    },
+    "ma": 68,
+    "md": 30,
+    "name": "Yueffowl",
+    "number": 27,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "tag_in": 0,
+          "type": 19
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "tag_in": 0,
+          "type": 19
+        }
+      ],
+      "description": "2+ times, TAG OUT a Beastie"
+    },
+    "recruit_value": 4.65,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 7459028,
+            "x": 0.4833333333
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 20953,
+            "x": 0.49
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7921151,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6333357,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "spr": 464,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["hd", 1]
+  },
   "bestie": {
     "ability": ["friendguard"],
     "ability_hidden": false,
@@ -124,7 +381,7 @@
     "hidden_counter": null,
     "id": "bestie",
     "isBaby": false,
-    "learnset": 39,
+    "learnset": 42,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -153,7 +410,7 @@
     "ma": 50,
     "md": 75,
     "name": "Diggum",
-    "number": 21,
+    "number": 24,
     "palettes": 1,
     "prev_ids": ["caretaker", "bestie"],
     "recruit": {
@@ -221,7 +478,7 @@
         ]
       }
     ],
-    "spr": 330,
+    "spr": 356,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -373,7 +630,7 @@
     "hidden_counter": null,
     "id": "bilby1",
     "isBaby": true,
-    "learnset": 24,
+    "learnset": 25,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -402,7 +659,7 @@
     "ma": 65,
     "md": 70,
     "name": "Bildit",
-    "number": 6,
+    "number": 7,
     "palettes": 1,
     "prev_ids": ["setter1"],
     "recruit": {
@@ -487,7 +744,7 @@
         ]
       }
     ],
-    "spr": 406,
+    "spr": 437,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -497,7 +754,7 @@
     "ability": ["starter_m", "fwdpass"],
     "ability_hidden": true,
     "allowedInPromo": 1,
-    "animator": 8,
+    "animator": 10,
     "attklist": [
       "bounce",
       "set",
@@ -510,7 +767,6 @@
       "rollshot",
       "mindbomb",
       "jazzpass",
-      "superquick",
       "allycover",
       "mindpass",
       "rush",
@@ -654,7 +910,7 @@
     "hidden_counter": null,
     "id": "bilby2",
     "isBaby": false,
-    "learnset": 25,
+    "learnset": 26,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -683,7 +939,7 @@
     "ma": 75,
     "md": 95,
     "name": "Handicoot",
-    "number": 7,
+    "number": 8,
     "palettes": 1,
     "prev_ids": ["setter1"],
     "recruit": {
@@ -691,33 +947,31 @@
         {
           "event": null,
           "freq": -1,
-          "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 44
+          "type": 47
         },
         {
           "event": null,
           "freq": -1,
-          "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 44
+          "type": 47
         },
         {
           "event": null,
           "freq": -1,
-          "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 44
+          "type": 47
         }
       ],
       "description": "3+ times, use a special [sprIcon,3]Volley"
     },
+    "recruit_value": 5.35,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -816,7 +1070,6 @@
       "body",
       "rushattack",
       "pushattack",
-      "superpower",
       "recover",
       "curse",
       "defheal",
@@ -825,12 +1078,13 @@
       "cover",
       "callout",
       "bdefup",
-      "storedpower",
+      "stomp",
       "protect",
       "libero",
       "rocksmash",
       "switch",
       "mark",
+      "vigor",
       "breakswipe",
       "starterbody"
     ],
@@ -942,7 +1196,7 @@
     "hidden_counter": null,
     "id": "cassowary1",
     "isBaby": true,
-    "learnset": 20,
+    "learnset": 21,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -971,7 +1225,7 @@
     "ma": 20,
     "md": 45,
     "name": "Kichik",
-    "number": 2,
+    "number": 3,
     "palettes": 1,
     "prev_ids": ["bunny"],
     "recruit": {
@@ -1052,7 +1306,7 @@
         ]
       }
     ],
-    "spr": 351,
+    "spr": 380,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -1066,12 +1320,10 @@
     "attklist": [
       "bounce",
       "healhit",
-      "jump",
       "rush",
       "body",
       "rushattack",
       "pushattack",
-      "superpower",
       "recover",
       "curse",
       "defheal",
@@ -1080,12 +1332,13 @@
       "cover",
       "callout",
       "bdefup",
-      "storedpower",
+      "stomp",
       "protect",
       "libero",
       "rocksmash",
       "switch",
       "mark",
+      "vigor",
       "breakswipe",
       "starterbody"
     ],
@@ -1191,7 +1444,7 @@
     "hidden_counter": null,
     "id": "cassowary2",
     "isBaby": false,
-    "learnset": 21,
+    "learnset": 22,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -1220,7 +1473,7 @@
     "ma": 33,
     "md": 65,
     "name": "Ostrisigh",
-    "number": 3,
+    "number": 4,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -1231,11 +1484,12 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 13
+          "type": 14
         }
       ],
       "description": "Hit this Beastie with an attack that has 80 POW or more"
     },
+    "recruit_value": 5.05,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -1300,7 +1554,7 @@
         ]
       }
     ],
-    "spr": 473,
+    "spr": 513,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -1319,16 +1573,14 @@
       "healhit",
       "breakswipe",
       "set",
-      "dig",
       "heartpass",
-      "jazzpass",
+      "bodypass",
       "followme",
       "tailwind",
       "swordsdance",
       "healbell",
       "batonpass",
       "juggle",
-      "powswitch",
       "vigor",
       "crowd",
       "rhythm",
@@ -1403,13 +1655,13 @@
     ],
     "colors2": null,
     "combos": [
-      [15, 0, 1, 50, 0, 0.8],
-      [10, 1, 1],
-      [10, 0, 2],
-      [8, 2, 0.3]
+      [15, 0, 2, 50, 0, 0.8],
+      [15, 1, 1, 10, 1, 1, 8, 0, -0.34],
+      [32, 6, 1],
+      [32, 6, 1]
     ],
     "desc": "Its fluff is made of incredibly thin strands of wax, bundled like wool. If a Cherrily makes you a pom, it considers you a treasured friend.",
-    "designer": 2,
+    "designer": [2, 8],
     "evo_pose": [
       {
         "anim": "good",
@@ -1443,7 +1695,7 @@
     "hidden_counter": null,
     "id": "cheerleader",
     "isBaby": false,
-    "learnset": 41,
+    "learnset": 44,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -1472,7 +1724,7 @@
     "ma": 40,
     "md": 60,
     "name": "Cherrily",
-    "number": 23,
+    "number": 26,
     "palettes": 1,
     "prev_ids": ["support"],
     "recruit": {
@@ -1550,7 +1802,7 @@
         ]
       }
     ],
-    "spr": 105,
+    "spr": 114,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -1560,7 +1812,7 @@
     "ability": ["cheer"],
     "ability_hidden": false,
     "allowedInPromo": 1,
-    "animator": 8,
+    "animator": [10, 8],
     "attklist": [
       "freeball",
       "cheer",
@@ -1570,7 +1822,7 @@
       "breakswipe",
       "set",
       "heartpass",
-      "quickattack",
+      "bodypass",
       "followme",
       "tailwind",
       "swordsdance",
@@ -1673,7 +1925,7 @@
       [32, 6, 1]
     ],
     "desc": "It's extremely light and drifts with air currents. Groups of Merrifly will hold onto each other so as not to drift apart.",
-    "designer": 2,
+    "designer": 3,
     "evo_pose": [
       {
         "anim": "good",
@@ -1713,14 +1965,14 @@
     "hidden_counter": null,
     "id": "cheerleader1",
     "isBaby": true,
-    "learnset": 40,
+    "learnset": 43,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
       "char_width": 69.25,
       "emote_hop_height": 25,
-      "float_dist": 40,
+      "float_dist": 20,
       "float_wave": 5,
       "float_wave_freq": 1000,
       "hop_height": 0,
@@ -1734,7 +1986,9 @@
       "move_speed": 1,
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
-      "move_to_idle_transition_frames": [],
+      "move_to_idle_transition_frames": [
+        9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+      ],
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -1742,7 +1996,7 @@
     "ma": 30,
     "md": 40,
     "name": "Merrifly",
-    "number": 22,
+    "number": 25,
     "palettes": 1,
     "prev_ids": ["support1"],
     "recruit": {
@@ -1754,11 +2008,12 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "Gain 4+ [sprBoost,2]BOOSTS on one Beastie"
     },
+    "recruit_value": 8,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -1839,11 +2094,298 @@
         ]
       }
     ],
-    "spr": 400,
+    "spr": 431,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
     "tyield": ["hd", 1]
+  },
+  "daredevil1": {
+    "ability": ["acrobat", "unnervous"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "animator": 10,
+    "attklist": [
+      "dare",
+      "contest",
+      "damagedattack",
+      "bodypass",
+      "jump",
+      "tagattack",
+      "hyperbeam",
+      "snore",
+      "desperate",
+      "overheat",
+      "inferno",
+      "rush",
+      "allyrush",
+      "taunt",
+      "dig",
+      "substitute",
+      "bench",
+      "protect",
+      "rocket",
+      "storedpower",
+      "facade",
+      "rushattack",
+      "reversal",
+      "noisytag",
+      "backswitch",
+      "starterheart"
+    ],
+    "attklist_randomize": -1,
+    "ba": 68,
+    "base_exp": 83.3425,
+    "bd": 71,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 16768973,
+            "x": 0
+          },
+          {
+            "color": 16764370,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 4064719,
+            "x": 0
+          },
+          {
+            "color": 3684580,
+            "x": 0.15
+          },
+          {
+            "color": 2896363,
+            "x": 0.5033333333
+          },
+          {
+            "color": 2705919,
+            "x": 0.8966666667
+          },
+          {
+            "color": 344821,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 5296639,
+            "x": 0
+          },
+          {
+            "color": 2077695,
+            "x": 0.5
+          },
+          {
+            "color": 6466559,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 11498320,
+            "x": 0
+          },
+          {
+            "color": 11371603,
+            "x": 0.5
+          },
+          {
+            "color": 11905383,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 13827840,
+            "x": 0
+          },
+          {
+            "color": 16756514,
+            "x": 0.49
+          },
+          {
+            "color": 15307119,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 1.5, 15, 0, -2],
+      [19, 1, 2, 39, 0, 1],
+      [19, 0, 4, 8, 0, -0.25],
+      [1, 0, 2]
+    ],
+    "desc": "Hyper-competitive, they begin playing Beastieball at a much earlier age than most juvenile species. They will race against anything that moves near them, including trains.",
+    "designer": 3,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "daredevil1",
+    "first_frame": -1,
+    "foot_size": 27,
+    "foot_type": 0,
+    "growth": 0.85,
+    "ha": 75,
+    "hd": 25,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "daredevil1",
+    "isBaby": true,
+    "learnset": 41,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 53,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.03,
+      "move_decel": 0.33,
+      "move_pause_frames": [],
+      "move_speed": 1.3,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "randomize_idle": true,
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "ma": 21,
+    "md": 33,
+    "name": "Radillo",
+    "number": 23,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 2,
+          "type": 11
+        }
+      ],
+      "description": "MOVE or SHIFT a Beastie before they receive an attack"
+    },
+    "recruit_value": 4,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": 1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 6964028,
+            "x": 0.1366666667
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16743101,
+            "x": 0.9966666667
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16402943,
+            "x": 0
+          },
+          {
+            "color": 13204735,
+            "x": 0.5033333333
+          },
+          {
+            "color": 8413951,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 10075319,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 43263,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "spr": 531,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["ha", 1]
   },
   "dog1": {
     "ability": ["fetch", "watcher"],
@@ -2007,8 +2549,8 @@
       }
     ],
     "combos": [
-      [-26, 0, 1, 50, 0, 0.75],
-      [26, 0, 3],
+      [-26, 0, 1, 50, 0, 0.8],
+      [15, 0, 1],
       [14, 0, 3],
       [26, 2, 3]
     ],
@@ -2047,7 +2589,7 @@
     "hidden_counter": null,
     "id": "dog1",
     "isBaby": true,
-    "learnset": 32,
+    "learnset": 34,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -2076,7 +2618,7 @@
     "ma": 21,
     "md": 40,
     "name": "Wagdash",
-    "number": 14,
+    "number": 16,
     "palettes": 2,
     "prev_ids": [],
     "recruit": {
@@ -2088,7 +2630,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 13
+          "type": 14
         },
         {
           "event": null,
@@ -2097,7 +2639,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 13
+          "type": 14
         },
         {
           "event": null,
@@ -2106,11 +2648,12 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 13
+          "type": 14
         }
       ],
       "description": "Make this Beastie receive 3+ attacks"
     },
+    "recruit_value": 10.8,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -2187,7 +2730,7 @@
         ]
       }
     ],
-    "spr": 398,
+    "spr": 429,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -2226,9 +2769,9 @@
       "followme"
     ],
     "attklist_randomize": -1,
-    "ba": 8,
-    "base_exp": 107.91,
-    "bd": 62,
+    "ba": 18,
+    "base_exp": 103.455,
+    "bd": 57,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -2320,7 +2863,7 @@
       [10, 1, 2],
       [15, 2, 2, 16, 2, -1]
     ],
-    "desc": "Their bodies are made from hard transluscent chitin. Depending on the arrangment of their cells, they refract light differently and can appear as vastly different colors.",
+    "desc": "Their bodies are made from hard translucent chitin. Depending on the arrangment of their cells, they refract light differently and can appear as vastly different colors.",
     "designer": [5, 8],
     "evo_pose": [
       {
@@ -2350,12 +2893,12 @@
     "foot_type": 0,
     "growth": 0.99,
     "ha": 84,
-    "hd": 89,
+    "hd": 84,
     "hidden": false,
     "hidden_counter": null,
     "id": "dragonfly",
     "isBaby": false,
-    "learnset": 34,
+    "learnset": 36,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -2381,10 +2924,10 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 54,
-    "md": 79,
+    "ma": 59,
+    "md": 74,
     "name": "Kaleidarn",
-    "number": 16,
+    "number": 18,
     "palettes": 1,
     "prev_ids": ["dragonfly1"],
     "recruit": {
@@ -2398,11 +2941,12 @@
           "player": 2,
           "rel_color": -1,
           "target": [0, 1],
-          "type": 13
+          "type": 14
         }
       ],
       "description": "Deal 100+ damage with an attack"
     },
+    "recruit_value": 2.8,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -2511,11 +3055,469 @@
         ]
       }
     ],
-    "spr": 276,
+    "spr": 297,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
     "tyield": ["ha", 1]
+  },
+  "football1": {
+    "ability": ["shield", "unlazy"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "animator": 8,
+    "attklist": [
+      "bounce",
+      "rocksmash",
+      "allycover",
+      "allyrush",
+      "powswitch",
+      "rocket",
+      "tagattack",
+      "superpower",
+      "dig",
+      "hyperbeam",
+      "moon",
+      "nightshade",
+      "set",
+      "preblock",
+      "recover",
+      "backswitch",
+      "basecover",
+      "libero",
+      "juggle",
+      "pursuit",
+      "allyprotect",
+      "protect"
+    ],
+    "attklist_randomize": -1,
+    "ba": 48,
+    "base_exp": 90.395,
+    "bd": 80,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 2217605,
+            "x": 0
+          },
+          {
+            "color": 5221984,
+            "x": 0.5047619048
+          },
+          {
+            "color": 9217353,
+            "x": 0.859047619
+          },
+          {
+            "color": 8089608,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7191799,
+            "x": 0
+          },
+          {
+            "color": 8773363,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 3045101,
+            "x": 0
+          },
+          {
+            "color": 3822579,
+            "x": 0.9983333333
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [33, 0, 16],
+      [26, 1, 3],
+      [16, 0, 2, 6, 0, 1],
+      [16, 0, 3, 6, 0, 3]
+    ],
+    "desc": "They run head-first, full speed into anything they encounter. Their exoskeleton gradually hardens from repeated impacts.",
+    "designer": 2,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": [
+      {
+        "condition": [0],
+        "specie": "football2",
+        "value": [15]
+      }
+    ],
+    "face_color_index": 0,
+    "family": "football1",
+    "first_frame": -1,
+    "foot_size": 21,
+    "foot_type": 0,
+    "growth": 1.01,
+    "ha": 45,
+    "hd": 35,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "football1",
+    "isBaby": true,
+    "learnset": 46,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 41.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [6, 7, 8, 9, 10, 11, 12, 13],
+      "randomize_idle": true,
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "ma": 20,
+    "md": 50,
+    "name": "Scrubbub",
+    "number": 28,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 45
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 45
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 45
+        }
+      ],
+      "description": "Volley the ball 3+ times"
+    },
+    "recruit_value": 4,
+    "roamer_style": {
+      "_name": "DASH_IDLE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 12803439,
+            "x": 0
+          },
+          {
+            "color": 10500198,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 14018559,
+            "x": 0
+          },
+          {
+            "color": 3131135,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6585788,
+            "x": 0
+          },
+          {
+            "color": 9814527,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "spr": 315,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 1,
+    "tyield": ["bd", 1]
+  },
+  "football2": {
+    "ability": ["shield", "unlazy"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "animator": 8,
+    "attklist": [
+      "bounce",
+      "rocksmash",
+      "allycover",
+      "allyrush",
+      "powswitch",
+      "rocket",
+      "tagattack",
+      "superpower",
+      "dig",
+      "hyperbeam",
+      "moon",
+      "nightshade",
+      "set",
+      "preblock",
+      "recover",
+      "backswitch",
+      "basecover",
+      "libero",
+      "juggle",
+      "pursuit",
+      "allyprotect",
+      "protect"
+    ],
+    "attklist_randomize": -1,
+    "ba": 60,
+    "base_exp": 135.845,
+    "bd": 95,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 255,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 458496,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [33, 0, 16],
+      [26, 1, 3],
+      [16, 0, 2, 6, 0, 1],
+      [16, 0, 3, 6, 0, 3]
+    ],
+    "desc": "Their armor is as tough as steel. They settle their frequent territorial disputes with contests of strength.",
+    "designer": 2,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "spike",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "football1",
+    "first_frame": -1,
+    "foot_size": 34,
+    "foot_type": 0,
+    "growth": 1.01,
+    "ha": 35,
+    "hd": 45,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "football2",
+    "isBaby": true,
+    "learnset": 47,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 59.75,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 35,
+    "md": 70,
+    "name": "Grubiron",
+    "number": 29,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 45
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 45
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 45
+        }
+      ],
+      "description": "Volley the ball 3+ times"
+    },
+    "recruit_value": 4,
+    "roamer_style": {
+      "_name": "DASH_IDLE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 16748134,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 458496,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "spr": 345,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["bd", 2]
   },
   "frog1": {
     "ability": ["starter_h", "allyheal"],
@@ -2664,7 +3666,7 @@
     "hidden_counter": null,
     "id": "frog1",
     "isBaby": true,
-    "learnset": 22,
+    "learnset": 23,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -2693,7 +3695,7 @@
     "ma": 25,
     "md": 33,
     "name": "Axolati",
-    "number": 4,
+    "number": 5,
     "palettes": 1,
     "prev_ids": ["tadpole"],
     "recruit": {
@@ -2779,7 +3781,7 @@
         ]
       }
     ],
-    "spr": 496,
+    "spr": 539,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -2891,7 +3893,7 @@
     "colors2": null,
     "combos": [
       [15, 2, 1],
-      [15, 0, 1],
+      [1, 1, 1, 4, 1, 1],
       [44, 2, 6, 1, 2, 1],
       [44, 2, 6]
     ],
@@ -2930,7 +3932,7 @@
     "hidden_counter": null,
     "id": "frog2",
     "isBaby": false,
-    "learnset": 23,
+    "learnset": 24,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -2961,7 +3963,7 @@
     "ma": 27,
     "md": 50,
     "name": "Hopsong",
-    "number": 5,
+    "number": 6,
     "palettes": 1,
     "prev_ids": ["frogmid"],
     "recruit": {
@@ -2973,11 +3975,12 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "Boost any [sprIcon,0][sprIcon,1][sprIcon,2]POW [sprBoost,0][sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
     },
+    "recruit_value": 8.5,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -3050,7 +4053,7 @@
         ]
       }
     ],
-    "spr": 32,
+    "spr": 34,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -3060,7 +4063,7 @@
     "ability": ["sturdy"],
     "ability_hidden": false,
     "allowedInPromo": 1,
-    "animator": 8,
+    "animator": 10,
     "attklist": [
       "starterheart",
       "steamattack",
@@ -3174,10 +4177,10 @@
     ],
     "colors2": null,
     "combos": [
-      [33, 0, 11],
-      [47, 1, 1, 29, 0, 4],
+      [50, 0, 0.9, 33, 0, 11],
+      [47, 1, 1, 29, 0, 2],
       [16, 1, 3, 29, 0, 2],
-      [16, 1, 3, 29, 0, 3]
+      [16, 1, 3, 29, 0, 2]
     ],
     "desc": "An ancient Beastie that has hardly changed in 400 million years. Their ability to play Beastieball both on land and deep undersea has allowed them to thrive through climate shifts.",
     "designer": 5,
@@ -3214,7 +4217,7 @@
     "hidden_counter": null,
     "id": "horseshoe",
     "isBaby": false,
-    "learnset": 43,
+    "learnset": 52,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -3240,10 +4243,10 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 30,
+    "ma": 29,
     "md": 107,
     "name": "Xiphosaur",
-    "number": 25,
+    "number": 34,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -3256,11 +4259,12 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 13
+          "type": 14
         }
       ],
       "description": "Deal 99 damage with an attack"
     },
+    "recruit_value": 2.7,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -3329,11 +4333,219 @@
         ]
       }
     ],
-    "spr": 472,
+    "spr": 512,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["bd", 2, "md", 1]
+  },
+  "jellyfish2": {
+    "ability": ["nodie"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "animator": 8,
+    "attklist": [
+      "careful",
+      "bomb",
+      "hazeball",
+      "dropshot",
+      "rocksmash",
+      "healhit",
+      "healhit2",
+      "dig",
+      "allycover",
+      "allyrush",
+      "refresh",
+      "protect",
+      "rest",
+      "fieldclear",
+      "preblock",
+      "substitute",
+      "mark",
+      "lifepass",
+      "callout",
+      "set",
+      "chill",
+      "sweatup"
+    ],
+    "attklist_randomize": -1,
+    "ba": 14,
+    "base_exp": 136.3045,
+    "bd": 64,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 4849890,
+            "x": 0
+          },
+          {
+            "color": 7873007,
+            "x": 0.5
+          },
+          {
+            "color": 14432767,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 1535743,
+            "x": 0
+          },
+          {
+            "color": 3380735,
+            "x": 0.5
+          },
+          {
+            "color": 1628671,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [49, 0, 12],
+      [52, 1, 1, 8, 1, 0.15],
+      [52, 1, 1, 8, 1, 0.5],
+      [52, 2, 1, 8, 2, 0.3]
+    ],
+    "desc": "A collection of Petula working together as one. Once bonded, it's extremely rare for a Flowish to break up into its component Beasties again.",
+    "designer": 8,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "jellyfish2",
+    "first_frame": -1,
+    "foot_size": 16,
+    "foot_type": 0,
+    "growth": 1.09,
+    "ha": 74,
+    "hd": 73,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "jellyfish2",
+    "isBaby": false,
+    "learnset": 50,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 78,
+      "emote_hop_height": 25,
+      "float_dist": 50,
+      "float_wave": 5,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "randomize_idle": true,
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "ma": 35,
+    "md": 52,
+    "name": "Flowish",
+    "number": 32,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 39
+        }
+      ],
+      "description": "WIPE OUT this Beastie"
+    },
+    "recruit_value": 12,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 16748336,
+            "x": 0
+          },
+          {
+            "color": 16756247,
+            "x": 0.9466666667
+          },
+          {
+            "color": 16756502,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16762026,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "spr": 423,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["ha", 2]
   },
   "kangaroo1": {
     "ability": ["prankster", "handsfree"],
@@ -3483,7 +4695,7 @@
     "hidden_counter": null,
     "id": "kangaroo1",
     "isBaby": true,
-    "learnset": 25,
+    "learnset": 35,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -3512,7 +4724,7 @@
     "ma": 74,
     "md": 80,
     "name": "Rookee",
-    "number": 7,
+    "number": 17,
     "palettes": 1,
     "prev_ids": ["rookee", "rookee1"],
     "recruit": {
@@ -3605,11 +4817,321 @@
         ]
       }
     ],
-    "spr": 281,
+    "spr": 302,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["md", 1]
+  },
+  "lyrebird": {
+    "ability": ["moldbreaker", "unmarked"],
+    "ability_hidden": true,
+    "allowedInPromo": 1,
+    "animator": 8,
+    "attklist": [
+      "flyback",
+      "tailwind",
+      "cut",
+      "heart",
+      "desperate",
+      "bomb",
+      "overheat",
+      "rush",
+      "heartpass",
+      "switch",
+      "bench",
+      "heartup",
+      "bellydrum",
+      "protect",
+      "whirlwind",
+      "cover",
+      "basecover",
+      "backswitch",
+      "dragontail",
+      "noisytag",
+      "starterheart"
+    ],
+    "attklist_randomize": -1,
+    "ba": 40,
+    "base_exp": 132.521,
+    "bd": 44,
+    "body_color_index": 1,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 10455163,
+            "x": 0
+          },
+          {
+            "color": 10783094,
+            "x": 0.5066666667
+          },
+          {
+            "color": 10067574,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6751999,
+            "x": 0
+          },
+          {
+            "color": 8991463,
+            "x": 0.49
+          },
+          {
+            "color": 16745948,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16754532,
+            "x": 0.0033333333
+          },
+          {
+            "color": 15925079,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7662079,
+            "x": 0
+          },
+          {
+            "color": 7396863,
+            "x": 0.4233333333
+          },
+          {
+            "color": 9032697,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 13810093,
+            "x": 0
+          },
+          {
+            "color": 14931921,
+            "x": 0.5
+          },
+          {
+            "color": 15456206,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [51, 0, 2, 50, 0, 1.4, 7, 0, 0],
+      [7, 2, 1],
+      [7, 2, 1, 1, 2, 1],
+      [7, 2, 0, 4, 2, 1]
+    ],
+    "desc": "They protect forests from fire by raking soil to encourage plant decomposition. When fires do break out, they attentively manage them.",
+    "designer": 8,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 1,
+    "family": "lyrebird1",
+    "first_frame": -1,
+    "foot_size": 25,
+    "foot_type": 1,
+    "growth": 0.89,
+    "ha": 92,
+    "hd": 110,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "lyrebird",
+    "isBaby": false,
+    "learnset": 33,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 126.5,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 55,
+    "md": 88,
+    "name": "Zefyre",
+    "number": 15,
+    "palettes": 1,
+    "prev_ids": ["angel"],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 44
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 44
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 44
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 44
+        }
+      ],
+      "description": "Make 4+ [sprIcon,8]MOVE actions"
+    },
+    "recruit_value": 6.4,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 13153162,
+            "x": 0
+          },
+          {
+            "color": 12093296,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16711639,
+            "x": 0
+          },
+          {
+            "color": 16772042,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 12225393,
+            "x": 0
+          },
+          {
+            "color": 14656871,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16761934,
+            "x": 0.0033333333
+          },
+          {
+            "color": 16771660,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 15856113,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "spr": 48,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["ha", 2]
   },
   "lyrebird1": {
     "ability": ["moldbreaker", "unmarked"],
@@ -3693,7 +5215,7 @@
             "x": 0
           },
           {
-            "color": 14004735,
+            "color": 9815551,
             "x": 1
           }
         ]
@@ -3736,7 +5258,13 @@
         "y": 0
       }
     ],
-    "evolution": null,
+    "evolution": [
+      {
+        "condition": [0],
+        "specie": "lyrebird",
+        "value": [24]
+      }
+    ],
     "face_color_index": 1,
     "family": "lyrebird1",
     "first_frame": -1,
@@ -3749,7 +5277,7 @@
     "hidden_counter": null,
     "id": "lyrebird1",
     "isBaby": true,
-    "learnset": 31,
+    "learnset": 32,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -3778,7 +5306,7 @@
     "ma": 30,
     "md": 35,
     "name": "Sefren",
-    "number": 13,
+    "number": 14,
     "palettes": 1,
     "prev_ids": ["angel1"],
     "recruit": {
@@ -3890,7 +5418,7 @@
         ]
       }
     ],
-    "spr": 508,
+    "spr": 552,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -4014,7 +5542,7 @@
     "hidden_counter": null,
     "id": "magpie1",
     "isBaby": false,
-    "learnset": 45,
+    "learnset": 58,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -4045,7 +5573,7 @@
     "ma": 79,
     "md": 70,
     "name": "Punkchirp",
-    "number": 27,
+    "number": 40,
     "palettes": 1,
     "prev_ids": ["mindbody1"],
     "recruit": {
@@ -4058,11 +5586,12 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "Use a COMBO play"
     },
+    "recruit_value": 3.25,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -4115,11 +5644,248 @@
         ]
       }
     ],
-    "spr": 100,
+    "spr": 109,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
     "tyield": ["ma", 1, "ba", 1]
+  },
+  "millipede1": {
+    "ability": ["watcher"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "animator": 10,
+    "attklist": [
+      "starterbody",
+      "sideshot",
+      "rocksmash",
+      "rocket",
+      "blockattack",
+      "body",
+      "superpower",
+      "mindpass",
+      "allyrush",
+      "allycover",
+      "lockon",
+      "lowattks",
+      "rest",
+      "haze",
+      "protect",
+      "mdefup",
+      "hdefup",
+      "stress",
+      "distraction",
+      "mark"
+    ],
+    "attklist_randomize": -1,
+    "ba": 73,
+    "base_exp": 131.3025,
+    "bd": 64,
+    "body_color_index": 1,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 5536413,
+            "x": 0
+          },
+          {
+            "color": 10921638,
+            "x": 0.76
+          },
+          {
+            "color": 9339261,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 2673151,
+            "x": 0
+          },
+          {
+            "color": 2658303,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 27586,
+            "x": 0
+          },
+          {
+            "color": 34786,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 0.8, 49, 0, 12, 15, 3, -1],
+      [19, 0, 2, 12, 0, 2],
+      [39, 8, 2],
+      [39, 8, 1]
+    ],
+    "desc": "They are diligent excavators. They are often at work clearing away debris left over from Demolipede activity.",
+    "designer": 0,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 1,
+    "family": "millipede1",
+    "first_frame": -1,
+    "foot_size": 29,
+    "foot_type": 1,
+    "growth": 1.05,
+    "ha": 25,
+    "hd": 44,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "millipede1",
+    "isBaby": false,
+    "learnset": 56,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 76.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "randomize_idle": true,
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "ma": 30,
+    "md": 81,
+    "name": "Milimine",
+    "number": 38,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 2,
+          "type": 11
+        }
+      ],
+      "description": "TAG IN a Beastie to receive an attack"
+    },
+    "recruit_value": 4,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 9685930,
+            "x": 0
+          },
+          {
+            "color": 7064499,
+            "x": 0.29
+          },
+          {
+            "color": 6343617,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 2455644,
+            "x": 0
+          },
+          {
+            "color": 4290116,
+            "x": 0.5133333333
+          },
+          {
+            "color": 6254913,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 4277553,
+            "x": 0
+          },
+          {
+            "color": 4934978,
+            "x": 0.4966666667
+          },
+          {
+            "color": 5987412,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "spr": 321,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["md", 1]
   },
   "moth": {
     "ability": ["empath", "crowddef"],
@@ -4170,32 +5936,64 @@
       {
         "array": [
           {
+            "color": 7514870,
+            "x": 0
+          },
+          {
             "color": 6792939,
             "x": 0.4833333333
+          },
+          {
+            "color": 6589158,
+            "x": 1
           }
         ]
       },
       {
         "array": [
+          {
+            "color": 10791099,
+            "x": 0
+          },
           {
             "color": 11578573,
             "x": 0.48
+          },
+          {
+            "color": 12758465,
+            "x": 1
           }
         ]
       },
       {
         "array": [
+          {
+            "color": 7157485,
+            "x": 0
+          },
           {
             "color": 2960895,
             "x": 0.5
+          },
+          {
+            "color": 2043903,
+            "x": 1
           }
         ]
       },
       {
         "array": [
           {
+            "color": 16758597,
+            "x": 0
+          },
+          {
             "color": 16747034,
             "x": 0.5
+          },
+          {
+            "color": 15870008,
+            "x": 1
           }
         ]
       }
@@ -4242,7 +6040,7 @@
     "hidden_counter": null,
     "id": "moth",
     "isBaby": false,
-    "learnset": 28,
+    "learnset": 29,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -4271,7 +6069,7 @@
     "ma": 95,
     "md": 75,
     "name": "Plumask",
-    "number": 10,
+    "number": 11,
     "palettes": 1,
     "prev_ids": ["heartmind"],
     "recruit": {
@@ -4282,11 +6080,12 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 37
+          "type": 38
         }
       ],
       "description": "[sprBoost,1]BOOST any stat to +4 or more"
     },
+    "recruit_value": 6.45,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -4309,37 +6108,69 @@
       {
         "array": [
           {
+            "color": 11789554,
+            "x": 0
+          },
+          {
             "color": 11328487,
             "x": 0.48
+          },
+          {
+            "color": 10077919,
+            "x": 1
           }
         ]
       },
       {
         "array": [
+          {
+            "color": 12365772,
+            "x": 0
+          },
           {
             "color": 11642059,
             "x": 0.4766666667
+          },
+          {
+            "color": 10790855,
+            "x": 1
           }
         ]
       },
       {
         "array": [
+          {
+            "color": 16077512,
+            "x": 0
+          },
           {
             "color": 16727463,
             "x": 0.5
+          },
+          {
+            "color": 15483268,
+            "x": 1
           }
         ]
       },
       {
         "array": [
           {
+            "color": 6557927,
+            "x": 0
+          },
+          {
             "color": 6697471,
             "x": 0.5
+          },
+          {
+            "color": 1846015,
+            "x": 1
           }
         ]
       }
     ],
-    "spr": 148,
+    "spr": 158,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -4475,7 +6306,7 @@
     "hidden_counter": null,
     "id": "moth1",
     "isBaby": true,
-    "learnset": 26,
+    "learnset": 27,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -4504,7 +6335,7 @@
     "ma": 65,
     "md": 50,
     "name": "Collarva",
-    "number": 8,
+    "number": 9,
     "palettes": 1,
     "prev_ids": ["mindbug1"],
     "recruit": {
@@ -4515,11 +6346,12 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 37
+          "type": 38
         }
       ],
       "description": "[sprBoost,1]BOOST any stat [sprBoost,0][sprBoost,0] or more"
     },
+    "recruit_value": 3.85,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -4584,7 +6416,7 @@
         ]
       }
     ],
-    "spr": 125,
+    "spr": 135,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -4594,7 +6426,7 @@
     "ability": ["empath", "defiant_h"],
     "ability_hidden": false,
     "allowedInPromo": 1,
-    "animator": 8,
+    "animator": 10,
     "attklist": [
       "facade",
       "scoreboosted",
@@ -4752,7 +6584,7 @@
     "hidden_counter": null,
     "id": "moth2",
     "isBaby": true,
-    "learnset": 27,
+    "learnset": 28,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -4781,7 +6613,7 @@
     "ma": 70,
     "md": 60,
     "name": "Wormask",
-    "number": 9,
+    "number": 10,
     "palettes": 1,
     "prev_ids": ["mindbug2"],
     "recruit": {
@@ -4792,11 +6624,12 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 37
+          "type": 38
         }
       ],
       "description": "[sprBoost,1]BOOST any stat [sprBoost,0][sprBoost,0][sprBoost,0] or more"
     },
+    "recruit_value": 5.15,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -4863,13 +6696,21 @@
       {
         "array": [
           {
+            "color": 7616757,
+            "x": 0
+          },
+          {
             "color": 6440956,
             "x": 0.4893333333
+          },
+          {
+            "color": 2899196,
+            "x": 1
           }
         ]
       }
     ],
-    "spr": 354,
+    "spr": 383,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -4879,7 +6720,7 @@
     "ability": ["study"],
     "ability_hidden": false,
     "allowedInPromo": 1,
-    "animator": 8,
+    "animator": 10,
     "attklist": [
       "startermind",
       "shakenmind",
@@ -5001,7 +6842,7 @@
     "hidden_counter": null,
     "id": "nerd1",
     "isBaby": false,
-    "learnset": 46,
+    "learnset": 59,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -5030,7 +6871,7 @@
     "ma": 85,
     "md": 80,
     "name": "Calcroach",
-    "number": 28,
+    "number": 41,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -5044,11 +6885,12 @@
           "rel_color": -1,
           "target": 0,
           "target_post_hp": ">0",
-          "type": 13
+          "type": 14
         }
       ],
       "description": "Have this Beastie survive an attack with 50 POW or more"
     },
+    "recruit_value": 5.05,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -5101,7 +6943,7 @@
         ]
       }
     ],
-    "spr": 500,
+    "spr": 544,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -5247,7 +7089,7 @@
     "hidden_counter": null,
     "id": "platypus1",
     "isBaby": false,
-    "learnset": 35,
+    "learnset": 37,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -5276,7 +7118,7 @@
     "ma": 48,
     "md": 75,
     "name": "Platenna",
-    "number": 17,
+    "number": 19,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -5288,11 +7130,12 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "Boost [sprIcon,2]DEF [sprBoost,0][sprBoost,0] or more on a Beastie"
     },
+    "recruit_value": 4.2,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -5341,7 +7184,7 @@
         ]
       }
     ],
-    "spr": 180,
+    "spr": 193,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -5453,7 +7296,7 @@
     "hidden_counter": null,
     "id": "platypus2",
     "isBaby": false,
-    "learnset": 36,
+    "learnset": 38,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -5482,7 +7325,7 @@
     "ma": 99,
     "md": 115,
     "name": "Platypulse",
-    "number": 18,
+    "number": 20,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -5494,11 +7337,12 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "Boost [sprIcon,2]DEF [sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
     },
+    "recruit_value": 6.3,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -5543,7 +7387,7 @@
         ]
       }
     ],
-    "spr": 278,
+    "spr": 299,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -5704,7 +7548,7 @@
     "hidden_counter": null,
     "id": "possum1",
     "isBaby": true,
-    "learnset": 29,
+    "learnset": 30,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -5735,7 +7579,7 @@
     "ma": 22,
     "md": 57,
     "name": "Shooga",
-    "number": 11,
+    "number": 12,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -5747,7 +7591,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 22
+          "type": 23
         }
       ],
       "description": "Land a no-touch point"
@@ -5833,7 +7677,7 @@
         ]
       }
     ],
-    "spr": 332,
+    "spr": 359,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -5977,7 +7821,7 @@
     "hidden_counter": null,
     "id": "possum2",
     "isBaby": false,
-    "learnset": 30,
+    "learnset": 31,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6006,7 +7850,7 @@
     "ma": 32,
     "md": 75,
     "name": "Supassum",
-    "number": 12,
+    "number": 13,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -6018,11 +7862,12 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 22
+          "type": 23
         }
       ],
       "description": "Land a no-touch point"
     },
+    "recruit_value": 8.4,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -6107,15 +7952,420 @@
         ]
       }
     ],
-    "spr": 171,
+    "spr": 181,
     "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["bd", 2]
+  },
+  "rat": {
+    "ability": ["fieldclear", "prankster"],
+    "ability_hidden": false,
+    "allowedInPromo": true,
+    "animator": 10,
+    "attklist": [
+      "starterbody",
+      "superfang",
+      "shakenhit",
+      "bounce",
+      "healhit2",
+      "poisonhit",
+      "stun",
+      "tool",
+      "juggle",
+      "set",
+      "allyrush",
+      "cover",
+      "allycover",
+      "dig",
+      "trap",
+      "bench",
+      "switch",
+      "charm",
+      "fieldclear",
+      "construct",
+      "rest",
+      "stress",
+      "distraction",
+      "protect",
+      "dispel",
+      "skillswap",
+      "sweatup",
+      "steal"
+    ],
+    "attklist_randomize": -1,
+    "ba": 81,
+    "base_exp": 131.781,
+    "bd": 49,
+    "body_color_index": 3,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 1788927,
+            "x": 0
+          },
+          {
+            "color": 2631935,
+            "x": 0.4966666667
+          },
+          {
+            "color": 5124094,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 12637695,
+            "x": 0
+          },
+          {
+            "color": 11192063,
+            "x": 0.5
+          },
+          {
+            "color": 11854591,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16119777,
+            "x": 0
+          },
+          {
+            "color": 14869218,
+            "x": 0.5
+          },
+          {
+            "color": 12566494,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 4363499,
+            "x": 0
+          },
+          {
+            "color": 7388586,
+            "x": 0.12
+          },
+          {
+            "color": 11532208,
+            "x": 0.25
+          },
+          {
+            "color": 13759844,
+            "x": 0.37
+          },
+          {
+            "color": 15110714,
+            "x": 0.5
+          },
+          {
+            "color": 15031935,
+            "x": 0.62
+          },
+          {
+            "color": 13928915,
+            "x": 0.7533333333
+          },
+          {
+            "color": 9928162,
+            "x": 0.8766666667
+          },
+          {
+            "color": 3555918,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 14921851,
+            "x": 0
+          },
+          {
+            "color": 15068869,
+            "x": 0.2493333333
+          },
+          {
+            "color": 10610632,
+            "x": 0.5013333333
+          },
+          {
+            "color": 11331053,
+            "x": 0.7573333333
+          },
+          {
+            "color": 14475252,
+            "x": 0.8773333333
+          },
+          {
+            "color": 14659815,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 8284649,
+            "x": 0
+          },
+          {
+            "color": 7576816,
+            "x": 0.5
+          },
+          {
+            "color": 8178928,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [49, 0, 4, 50, 0, 0.7, 13, 3, 1],
+      [52, 1, 1, 26, 1, 1],
+      [8, 6, 0.15, 46, 7, 0],
+      [15, 8, -1]
+    ],
+    "desc": "They are often found in dumpsters. When they outgrow their can, Trats will gather with many others to exchange for larger cans.",
+    "designer": 1,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "rat",
+    "first_frame": -1,
+    "foot_size": 17,
+    "foot_type": 0,
+    "growth": 0.93,
+    "ha": 23,
+    "hd": 93,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "rat",
+    "isBaby": false,
+    "learnset": 57,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 58,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "stop",
+      "move_to_idle_transition_frames": [],
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 64,
+    "md": 84,
+    "name": "Trat",
+    "number": 39,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 47
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 47
+        }
+      ],
+      "description": "Use 2+ [sprIcon,5]DEFENSE plays"
+    },
+    "recruit_value": 5,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 16758960,
+            "x": 0
+          },
+          {
+            "color": 11708106,
+            "x": 0.4813333333
+          },
+          {
+            "color": 5600994,
+            "x": 0.7253333333
+          },
+          {
+            "color": 2776499,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 11573759,
+            "x": 0
+          },
+          {
+            "color": 9211135,
+            "x": 0.4853333333
+          },
+          {
+            "color": 9212671,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 15527148,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 5259334,
+            "x": 0
+          },
+          {
+            "color": 14408912,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 255,
+            "x": 0
+          },
+          {
+            "color": 43775,
+            "x": 0.1276190476
+          },
+          {
+            "color": 65405,
+            "x": 0.2571428571
+          },
+          {
+            "color": 5372672,
+            "x": 0.379047619
+          },
+          {
+            "color": 16774656,
+            "x": 0.5123809524
+          },
+          {
+            "color": 16729344,
+            "x": 0.6495238095
+          },
+          {
+            "color": 16711814,
+            "x": 0.779047619
+          },
+          {
+            "color": 11010303,
+            "x": 0.8895238095
+          },
+          {
+            "color": 255,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 14084330,
+            "x": 0
+          },
+          {
+            "color": 4076860,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "spr": 134,
+    "spr_alt": [166],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["bd", 2]
   },
   "rocklizard1": {
     "ability": ["heavy", "multiscale"],
-    "ability_hidden": true,
+    "ability_hidden": false,
     "allowedInPromo": true,
     "animator": 8,
     "attklist": [
@@ -6243,7 +8493,13 @@
         "y": 0
       }
     ],
-    "evolution": null,
+    "evolution": [
+      {
+        "condition": [0],
+        "specie": "rocklizard2",
+        "value": [22]
+      }
+    ],
     "face_color_index": 0,
     "family": "rocklizard1",
     "first_frame": -1,
@@ -6256,7 +8512,7 @@
     "hidden_counter": null,
     "id": "rocklizard1",
     "isBaby": true,
-    "learnset": 44,
+    "learnset": 54,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6285,7 +8541,7 @@
     "ma": 41,
     "md": 23,
     "name": "Skibble",
-    "number": 26,
+    "number": 36,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -6363,11 +8619,464 @@
         ]
       }
     ],
-    "spr": 11,
+    "spr": 12,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
     "tyield": ["bd", 1]
+  },
+  "rocklizard2": {
+    "ability": ["heavy", "multiscale"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "animator": 8,
+    "attklist": [
+      "bounce",
+      "rocksmash",
+      "pushattack",
+      "rocket",
+      "stomp",
+      "markattack",
+      "dropshot",
+      "mind",
+      "dig",
+      "allyrush",
+      "allycover",
+      "recover",
+      "feint",
+      "taunt",
+      "curse",
+      "substitute",
+      "preblock",
+      "bdefup",
+      "distraction",
+      "defheal",
+      "rest",
+      "protect"
+    ],
+    "attklist_randomize": -1,
+    "ba": 78,
+    "base_exp": 130.764,
+    "bd": 95,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 9334364,
+            "x": 0
+          },
+          {
+            "color": 9994085,
+            "x": 0.4933333333
+          },
+          {
+            "color": 12425605,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 14242462,
+            "x": 0
+          },
+          {
+            "color": 11364315,
+            "x": 0.49
+          },
+          {
+            "color": 5856214,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 11943257,
+            "x": 0.0366666667
+          },
+          {
+            "color": 14652672,
+            "x": 0.32
+          },
+          {
+            "color": 13562468,
+            "x": 0.7833333333
+          },
+          {
+            "color": 12437808,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 10266031,
+            "x": 0
+          },
+          {
+            "color": 8299209,
+            "x": 0.5
+          },
+          {
+            "color": 6329028,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 0.9, 19, 0, 1],
+      [8, 0, 0.3],
+      [16, 0, 1, 14, 0, 1],
+      [8, 0, 0.5]
+    ],
+    "desc": "Their decoy tail draws predators' attention away from their head. In a pinch, they'll drop their tail and quickly grow a new one.",
+    "designer": 5,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "rocklizard1",
+    "first_frame": -1,
+    "foot_size": 96,
+    "foot_type": 0,
+    "growth": 1.02,
+    "ha": 25,
+    "hd": 66,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "rocklizard2",
+    "isBaby": false,
+    "learnset": 55,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 96,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 57,
+    "md": 35,
+    "name": "Skorock",
+    "number": 37,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "effect_type": 67,
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 2,
+          "type": 42
+        }
+      ],
+      "description": "Boost [sprIcon,0]DEF [sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
+    },
+    "recruit_value": 6.3,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 16383945,
+            "x": 0
+          },
+          {
+            "color": 16580576,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 14534240,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 8531180,
+            "x": 0.0033333333
+          },
+          {
+            "color": 4795628,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 12895477,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "spr": 40,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["bd", 2]
+  },
+  "seal": {
+    "ability": ["strongchance"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "animator": 8,
+    "attklist": [
+      "careful",
+      "bomb",
+      "hazeball",
+      "dropshot",
+      "rocksmash",
+      "healhit",
+      "healhit2",
+      "dig",
+      "allycover",
+      "allyrush",
+      "refresh",
+      "protect",
+      "rest",
+      "fieldclear",
+      "preblock",
+      "substitute",
+      "mark",
+      "lifepass",
+      "callout",
+      "set",
+      "chill",
+      "sweatup"
+    ],
+    "attklist_randomize": -1,
+    "ba": 105,
+    "base_exp": 189.83,
+    "bd": 98,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 255,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 65280,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [49, 0, 12],
+      [52, 1, 1, 8, 1, 0.15],
+      [52, 1, 1, 8, 1, 0.5],
+      [52, 2, 1, 8, 2, 0.3]
+    ],
+    "desc": "They comb their hair with a special wax produced in their flippers. This keeps them incredibly smooth and able to glide over any surface.",
+    "designer": [3, 8],
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "seal",
+    "first_frame": -1,
+    "foot_size": 88,
+    "foot_type": 0,
+    "growth": 1.025,
+    "ha": 35,
+    "hd": 58,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "seal",
+    "isBaby": false,
+    "learnset": 51,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 104.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 63,
+    "md": 86,
+    "name": "Broslidon",
+    "number": 33,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 12
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 12
+        }
+      ],
+      "description": "2+ times, give this Beastie an Easy Receive"
+    },
+    "recruit_value": 7.2,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 6731519,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 65280,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "spr": 248,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 3,
+    "tyield": ["ba", 3]
   },
   "serval": {
     "ability": ["spiker"],
@@ -6383,7 +9092,6 @@
       "tagattack",
       "cut",
       "pepshot",
-      "snore",
       "overheat",
       "desperate",
       "damagedattack",
@@ -6400,7 +9108,10 @@
       "reversal",
       "protect",
       "noisytag",
-      "vigor"
+      "vigor",
+      "contest",
+      "protectcheer",
+      "pushattack"
     ],
     "attklist_randomize": -1,
     "ba": 100,
@@ -6476,10 +9187,10 @@
     ],
     "colors2": null,
     "combos": [
-      [49, 0, 12],
-      [52, 1, 1, 8, 1, 0.15],
-      [52, 1, 1, 8, 1, 0.5],
-      [52, 2, 1, 8, 2, 0.3]
+      [51, 0, 2, 50, 0, 1.3],
+      [7, 0, 1, 26, 0, 1],
+      [16, 8, -1],
+      [16, 8, -2]
     ],
     "desc": "They leap high enough to snatch birds straight out of the sky. They'll leave claw marks on high places as a form of competition.",
     "designer": 3,
@@ -6516,7 +9227,7 @@
     "hidden_counter": null,
     "id": "serval",
     "isBaby": false,
-    "learnset": 38,
+    "learnset": 40,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6545,7 +9256,7 @@
     "ma": 45,
     "md": 30,
     "name": "Servace",
-    "number": 20,
+    "number": 22,
     "palettes": 1,
     "prev_ids": ["decoy", "hinata"],
     "recruit": {
@@ -6646,7 +9357,7 @@
         ]
       }
     ],
-    "spr": 89,
+    "spr": 98,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -6786,7 +9497,7 @@
     ],
     "evolution": [
       {
-        "condition": [999999],
+        "condition": [0],
         "specie": "serval",
         "value": [38]
       }
@@ -6803,7 +9514,7 @@
     "hidden_counter": null,
     "id": "serval1",
     "isBaby": false,
-    "learnset": 37,
+    "learnset": 39,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6832,7 +9543,7 @@
     "ma": 29,
     "md": 21,
     "name": "Servitt",
-    "number": 19,
+    "number": 21,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -6856,6 +9567,7 @@
       ],
       "description": "Attack 2+ times from the front lane"
     },
+    "recruit_value": 5,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -6920,7 +9632,7 @@
         ]
       }
     ],
-    "spr": 505,
+    "spr": 549,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -7060,7 +9772,13 @@
         "y": 0
       }
     ],
-    "evolution": null,
+    "evolution": [
+      {
+        "condition": [2],
+        "specie": "shroom_m",
+        "value": [0]
+      }
+    ],
     "face_color_index": 0,
     "family": "shroom1",
     "first_frame": -1,
@@ -7219,11 +9937,509 @@
     "tamelvl": 2,
     "tyield": ["hd", 1]
   },
+  "shroom_m": {
+    "ability": ["trappow", "noredirect"],
+    "ability_hidden": true,
+    "allowedInPromo": 1,
+    "animator": 10,
+    "attklist": [
+      "careful",
+      "bomb",
+      "hazeball",
+      "dropshot",
+      "rocksmash",
+      "healhit",
+      "healhit2",
+      "dig",
+      "allycover",
+      "allyrush",
+      "refresh",
+      "protect",
+      "rest",
+      "fieldclear",
+      "preblock",
+      "substitute",
+      "mark",
+      "lifepass",
+      "callout",
+      "set",
+      "chill",
+      "sweatup",
+      "trap",
+      "markattack",
+      "netattack",
+      "dump",
+      "distraction",
+      "sting",
+      "starterside",
+      "snipe"
+    ],
+    "attklist_randomize": -1,
+    "ba": 60,
+    "base_exp": 187,
+    "bd": 75,
+    "body_color_index": 0,
+    "colormeta": [0, 1, 3],
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 14839898,
+            "x": 0
+          },
+          {
+            "color": 14118015,
+            "x": 0.4866666667
+          },
+          {
+            "color": 15163020,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 15131340,
+            "x": 0
+          },
+          {
+            "color": 15131340,
+            "x": 0.47
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 11058231,
+            "x": 0
+          },
+          {
+            "color": 9352764,
+            "x": 0.45
+          },
+          {
+            "color": 6664002,
+            "x": 0.93
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 2829120,
+            "x": 0.0783333333
+          },
+          {
+            "color": 3983871,
+            "x": 0.2433333333
+          },
+          {
+            "color": 7763680,
+            "x": 0.4358333333
+          },
+          {
+            "color": 6377894,
+            "x": 0.6158333333
+          },
+          {
+            "color": 6382059,
+            "x": 0.8133333333
+          },
+          {
+            "color": 13339273,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [33, 0, 22, 50, 0, 0.85],
+      [52, 1, 1, 8, 1, 0.15],
+      [52, 1, 1, 8, 1, 0.5],
+      [52, 2, 1, 8, 2, 0.3]
+    ],
+    "desc": "Though eerily quiet, they are constantly sending and receiving spore signals with nearby mycelia. As a result they have uncanny enviornmental awareness.",
+    "designer": 1,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "shroom1",
+    "first_frame": -1,
+    "foot_size": 52,
+    "foot_type": 0,
+    "growth": 1,
+    "ha": 40,
+    "hd": 60,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "shroom_m",
+    "isBaby": false,
+    "learnset": 20,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 89.5,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 85,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 3,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": -0.66,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "randomize_idle": true,
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "ma": 95,
+    "md": 110,
+    "name": "Illugus",
+    "number": 2,
+    "palettes": 1,
+    "prev_ids": ["tree_m"],
+    "recruit": {
+      "conditions": [
+        {
+          "effect_type": 42,
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 42
+        }
+      ],
+      "description": "Create a TRAP field effect"
+    },
+    "recruit_value": 3.05,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 10840687,
+            "x": 0
+          },
+          {
+            "color": 12422816,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 15003636,
+            "x": 0
+          },
+          {
+            "color": 15462900,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 3225919,
+            "x": 0
+          },
+          {
+            "color": 1975594,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 2829120,
+            "x": 0.0783333333
+          },
+          {
+            "color": 3983871,
+            "x": 0.2433333333
+          },
+          {
+            "color": 7763680,
+            "x": 0.4358333333
+          },
+          {
+            "color": 6377894,
+            "x": 0.6158333333
+          },
+          {
+            "color": 6382059,
+            "x": 0.8133333333
+          },
+          {
+            "color": 13339273,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "spr": 557,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 3,
+    "tyield": ["ma", 1, "md", 1]
+  },
+  "shy": {
+    "ability": ["shy"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "animator": 8,
+    "attklist": [
+      "starterheart",
+      "dragontail",
+      "shieldbreaker",
+      "heart",
+      "careful",
+      "enemyboosts",
+      "haze",
+      "libero",
+      "preblock",
+      "allycover",
+      "allyrush",
+      "heartpass",
+      "jazzpass",
+      "substitute",
+      "rest",
+      "charm",
+      "mark",
+      "bench",
+      "recover",
+      "lifepass",
+      "followme",
+      "fieldclear",
+      "protect"
+    ],
+    "attklist_randomize": -1,
+    "ba": 30,
+    "base_exp": 209.736,
+    "bd": 55,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 255,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 4651264,
+            "x": 0
+          },
+          {
+            "color": 65280,
+            "x": 0.5
+          },
+          {
+            "color": 524118,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [30, 3, 1],
+      [51, 0, 2, 7, 1, 1, 26, 1, 1],
+      [7, 0, 1, 27, 9, 3],
+      [34, 8, 1, 26, 2, 1]
+    ],
+    "desc": "Chloroplasts from the plants they eat are absorbed and stored in their tails. This provides them camoflauge as well as photosynthetic energy.",
+    "designer": 1,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "shy",
+    "first_frame": -1,
+    "foot_size": 24,
+    "foot_type": 0,
+    "growth": 1.08,
+    "ha": 75,
+    "hd": 90,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "shy",
+    "isBaby": false,
+    "learnset": 48,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 56.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 60,
+    "md": 112,
+    "name": "Wottle",
+    "number": 30,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "effect_type": 67,
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 2,
+          "type": 42
+        }
+      ],
+      "description": "Boost [sprIcon,1]DEF [sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
+    },
+    "recruit_value": 6.3,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 11429631,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 47606,
+            "x": 0
+          },
+          {
+            "color": 58111,
+            "x": 0.5
+          },
+          {
+            "color": 65526,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "spr": 202,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 3,
+    "tyield": ["md", 3]
+  },
   "spirit1": {
     "ability": ["avenger", "defender"],
     "ability_hidden": false,
     "allowedInPromo": 1,
-    "animator": 8,
+    "animator": 10,
     "attklist": [
       "starterheart",
       "healhit",
@@ -7304,24 +10520,48 @@
       {
         "array": [
           {
-            "color": 16763746,
+            "color": 14790277,
             "x": 0
+          },
+          {
+            "color": 16763746,
+            "x": 0.4833333333
+          },
+          {
+            "color": 16771211,
+            "x": 1
           }
         ]
       },
       {
         "array": [
+          {
+            "color": 16769690,
+            "x": 0
+          },
           {
             "color": 16771477,
-            "x": 0
+            "x": 0.4866666667
+          },
+          {
+            "color": 16380574,
+            "x": 1
           }
         ]
       },
       {
         "array": [
           {
+            "color": 15990742,
+            "x": 0
+          },
+          {
+            "color": 15988457,
+            "x": 0.4166666667
+          },
+          {
             "color": 16777215,
-            "x": 0.5
+            "x": 1
           }
         ]
       }
@@ -7367,7 +10607,7 @@
     "hidden_counter": null,
     "id": "spirit1",
     "isBaby": false,
-    "learnset": 48,
+    "learnset": 61,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -7396,20 +10636,20 @@
     "ma": 15,
     "md": 55,
     "name": "Humflit",
-    "number": 30,
+    "number": 43,
     "palettes": 2,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
-          "attack_type": 1,
+          "attack_type": 0,
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 13
+          "type": 14
         },
         {
           "attack_type": 1,
@@ -7419,11 +10659,12 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 13
+          "type": 14
         }
       ],
-      "description": "Land 2+ [sprIcon,1] attacks"
+      "description": "Land a [sprIcon,0] attack and a [sprIcon,1] attack"
     },
+    "recruit_value": 5,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -7446,29 +10687,53 @@
       {
         "array": [
           {
-            "color": 16758108,
+            "color": 15246677,
             "x": 0
+          },
+          {
+            "color": 16758108,
+            "x": 0.5133333333
+          },
+          {
+            "color": 16760678,
+            "x": 1
           }
         ]
       },
       {
         "array": [
           {
-            "color": 16762738,
+            "color": 16764794,
             "x": 0
+          },
+          {
+            "color": 16762738,
+            "x": 0.5
+          },
+          {
+            "color": 16693357,
+            "x": 1
           }
         ]
       },
       {
         "array": [
+          {
+            "color": 9463039,
+            "x": 0
+          },
           {
             "color": 8611327,
             "x": 0.5
+          },
+          {
+            "color": 9007103,
+            "x": 1
           }
         ]
       }
     ],
-    "spr": 347,
+    "spr": 375,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -7496,7 +10761,7 @@
       "cover",
       "refresh",
       "freeball",
-      "quickattack",
+      "bodypass",
       "feint",
       "swordsdance",
       "followme",
@@ -7508,11 +10773,13 @@
       "backswitch",
       "batonpass",
       "distraction",
-      "protect"
+      "protect",
+      "jazzpass",
+      "bench"
     ],
     "attklist_randomize": -1,
     "ba": 94,
-    "base_exp": 147.684,
+    "base_exp": 152.706,
     "bd": 68,
     "body_color_index": 0,
     "colormeta": null,
@@ -7634,13 +10901,13 @@
     "foot_size": 16,
     "foot_type": 1,
     "growth": 0.93,
-    "ha": 75,
-    "hd": 78,
+    "ha": 76,
+    "hd": 82,
     "hidden": false,
     "hidden_counter": null,
     "id": "swift",
     "isBaby": false,
-    "learnset": 47,
+    "learnset": 60,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -7667,9 +10934,9 @@
       "stretchiness": 0.1
     },
     "ma": 45,
-    "md": 52,
+    "md": 57,
     "name": "Blitzwift",
-    "number": 29,
+    "number": 42,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -7682,7 +10949,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 41
+          "type": 42
         },
         {
           "effect_type": [7, -7],
@@ -7692,11 +10959,12 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "SHIFT a Beastie 2+ times"
     },
+    "recruit_value": 5.6,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -7769,7 +11037,7 @@
         ]
       }
     ],
-    "spr": 128,
+    "spr": 138,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -7779,7 +11047,7 @@
     "ability": ["static"],
     "ability_hidden": false,
     "allowedInPromo": 1,
-    "animator": 8,
+    "animator": 10,
     "attklist": [
       "sidespin",
       "backswitch",
@@ -7821,7 +11089,7 @@
       {
         "array": [
           {
-            "color": 13667713,
+            "color": 8560348,
             "x": 0
           },
           {
@@ -7833,11 +11101,11 @@
       {
         "array": [
           {
-            "color": 10769542,
+            "color": 6320277,
             "x": 0
           },
           {
-            "color": 10506584,
+            "color": 7372475,
             "x": 1
           }
         ]
@@ -7845,7 +11113,7 @@
       {
         "array": [
           {
-            "color": 14260598,
+            "color": 11382271,
             "x": 0
           },
           {
@@ -7857,8 +11125,36 @@
       {
         "array": [
           {
-            "color": 16777215,
-            "x": 0.5
+            "color": 8165119,
+            "x": 0
+          },
+          {
+            "color": 9342688,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 8422260,
+            "x": 0
+          },
+          {
+            "color": 8610394,
+            "x": 0.21
+          },
+          {
+            "color": 6310988,
+            "x": 0.49
+          },
+          {
+            "color": 6041507,
+            "x": 0.7133333333
+          },
+          {
+            "color": 2763397,
+            "x": 1
           }
         ]
       }
@@ -7905,7 +11201,7 @@
     "hidden_counter": null,
     "id": "tricky1",
     "isBaby": true,
-    "learnset": 42,
+    "learnset": 49,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -7934,7 +11230,7 @@
     "ma": 73,
     "md": 57,
     "name": "Troglum",
-    "number": 24,
+    "number": 31,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -7944,12 +11240,13 @@
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
-          "target": 0,
-          "type": 38
+          "target": [0, 1],
+          "type": 39
         }
       ],
-      "description": "WIPE OUT this Beastie with a SIDEWAYS attack"
+      "description": "WIPE OUT a Beastie with a SIDEWAYS attack"
     },
+    "recruit_value": 5.65,
     "roamer_style": {
       "_name": "SKITTISH",
       "can_react": true,
@@ -7972,11 +11269,11 @@
       {
         "array": [
           {
-            "color": 7368937,
+            "color": 5789951,
             "x": 0
           },
           {
-            "color": 8104179,
+            "color": 6002943,
             "x": 1
           }
         ]
@@ -7984,11 +11281,11 @@
       {
         "array": [
           {
-            "color": 8634280,
+            "color": 4359655,
             "x": 0
           },
           {
-            "color": 6799292,
+            "color": 7256319,
             "x": 1
           }
         ]
@@ -7996,31 +11293,344 @@
       {
         "array": [
           {
-            "color": 16777215,
+            "color": 8454320,
             "x": 0
+          },
+          {
+            "color": 9437347,
+            "x": 0.98
           }
         ]
       },
       {
         "array": [
           {
-            "color": 16777215,
-            "x": 0.5
+            "color": 7578879,
+            "x": 0
+          },
+          {
+            "color": 10335999,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16514952,
+            "x": 0.3066666667
+          },
+          {
+            "color": 16769093,
+            "x": 0.6366666667
           }
         ]
       }
     ],
-    "spr": 314,
+    "spr": 340,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["ma", 1]
   },
+  "wizard": {
+    "ability": ["negation"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "animator": 8,
+    "attklist": [
+      "cut",
+      "blockattack",
+      "rush",
+      "lock",
+      "bomb",
+      "minddown",
+      "breakswipe",
+      "bodypass",
+      "set",
+      "shaken",
+      "feint",
+      "allyprotect",
+      "lowattks",
+      "allnervous",
+      "distraction",
+      "mark",
+      "enemyboosts",
+      "threat",
+      "fieldclear",
+      "protect",
+      "stress",
+      "dispel",
+      "taunt",
+      "skillswap",
+      "eerie",
+      "starterheart"
+    ],
+    "attklist_randomize": -1,
+    "ba": 60,
+    "base_exp": 208.436,
+    "bd": 110,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 5651580,
+            "x": 0
+          },
+          {
+            "color": 5452922,
+            "x": 0.4966666667
+          },
+          {
+            "color": 5909891,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 4417203,
+            "x": 0
+          },
+          {
+            "color": 5537721,
+            "x": 0.5033333333
+          },
+          {
+            "color": 5863871,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6271203,
+            "x": 0
+          },
+          {
+            "color": 6732003,
+            "x": 0.5
+          },
+          {
+            "color": 6271972,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6501856,
+            "x": 0
+          },
+          {
+            "color": 4798944,
+            "x": 0.5
+          },
+          {
+            "color": 4675046,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 10332866,
+            "x": 0
+          },
+          {
+            "color": 13686757,
+            "x": 0.5
+          },
+          {
+            "color": 14147565,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 1.4, 51, 0, 2, 49, 0, 1, 17, 0, 0],
+      [7, 1, 1, 45, 7, 6],
+      [7, 0, 1, 20, 0, 1, 45, 7, 6],
+      [16, 0, 1, 7, 0, 1]
+    ],
+    "desc": "Their feathers are exceptionally tough and lustrous. When they're loosed by ball impacts it makes Conjarr appear to sparkle.",
+    "designer": 1,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "wizard",
+    "first_frame": -1,
+    "foot_size": 22,
+    "foot_type": 1,
+    "growth": 1.07,
+    "ha": 80,
+    "hd": 63,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "wizard",
+    "isBaby": false,
+    "learnset": 53,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 49.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 36,
+    "md": 85,
+    "name": "Conjarr",
+    "number": 35,
+    "palettes": 1,
+    "prev_ids": ["netsupport"],
+    "recruit": {
+      "conditions": [
+        {
+          "effect_type": 9,
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 0,
+          "rel_color": -1,
+          "type": 37
+        }
+      ],
+      "description": "Make this Beastie feel [sprStatus,9]BLOCKED"
+    },
+    "recruit_value": 9,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 14609403,
+            "x": 0.48
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6983829,
+            "x": 0
+          },
+          {
+            "color": 6784668,
+            "x": 0.4933333333
+          },
+          {
+            "color": 7701928,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 13556704,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7706352,
+            "x": 0
+          },
+          {
+            "color": 7710960,
+            "x": 0.5
+          },
+          {
+            "color": 7714800,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 12438503,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "spr": 497,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 3,
+    "tyield": ["bd", 2]
+  },
   "yeti": {
     "ability": ["intimidate"],
     "ability_hidden": false,
     "allowedInPromo": 1,
-    "animator": 8,
+    "animator": 10,
     "attklist": [
       "allycover",
       "curse",
@@ -8150,8 +11760,8 @@
     "colors2": null,
     "combos": [
       [50, 0, 2.2, 17, 0, 0, 41, 0, 1],
-      [15, 1, 2, 8, 0, -0.33],
-      [15, 0, 3, 8, 0, -0.33],
+      [15, 1, 2, 8, 0, -0.34],
+      [15, 0, 3, 8, 0, -0.34],
       [0, 2, 1, 1, 8, -2]
     ],
     "desc": "Once thought to be solitary creatures. It was discovered they communicate with one another across mountain peaks with reflected light from the lens on their head.",
@@ -8189,7 +11799,7 @@
     "hidden_counter": null,
     "id": "yeti",
     "isBaby": false,
-    "learnset": 49,
+    "learnset": 62,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -8218,7 +11828,7 @@
     "ma": 20,
     "md": 64,
     "name": "Yamyth",
-    "number": 31,
+    "number": 44,
     "palettes": 1,
     "prev_ids": ["snorlax"],
     "recruit": {
@@ -8233,11 +11843,12 @@
           "player": 2,
           "rel_color": -1,
           "target": 0,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "Give this Beastie any [sprBoost,3]BOOST"
     },
+    "recruit_value": 5.05,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -8310,7 +11921,7 @@
         ]
       }
     ],
-    "spr": 72,
+    "spr": 78,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,

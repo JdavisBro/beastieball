@@ -1,8 +1,18 @@
 {
+  "notag": {
+    "id": "notag",
+    "name": "Tractor Beam",
+    "desc": "Prevents nearest non-[sprStatus,5]WIPED opponent from using \"Tag Out\""
+  },
   "allyheal": {
     "id": "allyheal",
     "name": "Rumpus",
     "desc": "Restores 6 STAMINA to ally each turn"
+  },
+  "negation": {
+    "id": "negation",
+    "name": "Cryptic",
+    "desc": "Ignores additional effects on received attacks"
   },
   "multiscale": {
     "id": "multiscale",
@@ -13,6 +23,11 @@
     "id": "lightningrod_m",
     "name": "Neural Net",
     "desc": "Is a magnet for all [sprIcon,2] attacks"
+  },
+  "shield": {
+    "id": "shield",
+    "name": "Helmet",
+    "desc": "Damage from non-SIDEWAYS attacks reduced 25%"
   },
   "freemove": {
     "id": "freemove",
@@ -32,22 +47,37 @@
   "lifeorb": {
     "id": "lifeorb",
     "name": "Overwork",
-    "desc": "Attacks are 30% stronger, but cost 10 STAMINA"
+    "desc": "Attacks do +20% damage, but cost 10 STAMINA"
   },
   "spiker": {
     "id": "spiker",
     "name": "Spiker",
     "desc": "Net attacks get additional +20% POW"
   },
+  "unlazy": {
+    "id": "unlazy",
+    "name": "Restless",
+    "desc": "Never feels [sprStatus,10]TIRED"
+  },
   "moldbreaker": {
     "id": "moldbreaker",
     "name": "Maverick",
     "desc": "Ball attacks ignore traits"
   },
+  "strongchance": {
+    "id": "strongchance",
+    "name": "Miracle Play",
+    "desc": "Free Ball is a 60POW attack"
+  },
   "trust": {
     "id": "trust",
     "name": "Trusting",
     "desc": "+1 to any [sprBoost,2]BOOSTs received from allies"
+  },
+  "acrobat": {
+    "id": "acrobat",
+    "name": "Acrobat",
+    "desc": "DEF +50% just after moving or tagging in"
   },
   "watcher": {
     "id": "watcher",
@@ -57,7 +87,7 @@
   "avenger": {
     "id": "avenger",
     "name": "Avenger",
-    "desc": "Attacks are 1.5x stronger while any ally is [sprStatus,5]WIPED"
+    "desc": "Attacks are 30% stronger while any ally is [sprStatus,5]WIPED"
   },
   "fieldclear": {
     "id": "fieldclear",
@@ -69,10 +99,20 @@
     "name": "Stirring",
     "desc": "Reflects negative FEELINGs back onto enemies"
   },
+  "nodie": {
+    "id": "nodie",
+    "name": "Superorganism",
+    "desc": "Restores instantly from [sprStatus,5]WIPED and just feels 2 [sprStatus,2]SHOOK"
+  },
   "starter_b": {
     "id": "starter_b",
     "name": "Power Up",
     "desc": "[sprIcon,0]Attacks are 50% stronger when STAMINA is below 34"
+  },
+  "noredirect": {
+    "id": "noredirect",
+    "name": "Precise",
+    "desc": "This Beastie's attacks always go where they are targeted"
   },
   "intimidate": {
     "id": "intimidate",
@@ -103,6 +143,11 @@
     "id": "cheer",
     "name": "Cheerleader",
     "desc": "Ally attacks do +10 damage"
+  },
+  "trappow": {
+    "id": "trappow",
+    "name": "Trapper",
+    "desc": "Sets +1 TRAP on the opponent field when they attack"
   },
   "study": {
     "id": "study",
@@ -141,8 +186,18 @@
   },
   "defender": {
     "id": "defender",
-    "name": "Guardian",
-    "desc": "Defenses are 1.5x stronger while any ally is [sprStatus,5]WIPED"
+    "name": "Survivor",
+    "desc": "Defenses are 30% stronger while any ally is [sprStatus,5]WIPED"
+  },
+  "shy": {
+    "id": "shy",
+    "name": "Shy",
+    "desc": "DEF bonus at the net and POW bonus at the back row"
+  },
+  "unnervous": {
+    "id": "unnervous",
+    "name": "Fearless",
+    "desc": "Immune to feeling [sprStatus,0]NERVOUS or [sprStatus,2]SHOOK"
   },
   "unmarked": {
     "id": "unmarked",

@@ -110,10 +110,12 @@
     },
     {
       "_": "class_mapicon",
+      "from_level": "shroomgrove",
       "from_object": "objCamp",
       "from_object_guid": "bc00e6da09f3f39dc20926a824313f30",
       "img": 8,
       "object_y": -300,
+      "revealed_text": "Campsite (Miconia Grove)",
       "text": "Campsite",
       "transit": 3,
       "world_x": -27950,
@@ -177,9 +179,9 @@
       "text": "Railhouse",
       "transit": 1,
       "world_x": -11263,
-      "world_y": 13651,
+      "world_y": 13671,
       "x": -11263,
-      "y": 14051,
+      "y": 14071,
       "zoom_view": 1
     },
     {
@@ -230,24 +232,12 @@
     },
     {
       "_": "class_mapicon",
-      "from_object": "objRailhouse",
-      "from_object_guid": "73933f32dcd7be1dca83544f4b76a7f0",
-      "img": 6,
-      "object_y": -400,
-      "text": "Railhouse",
-      "transit": 1,
-      "world_x": -37740,
-      "world_y": -10894,
-      "x": -37740,
-      "y": -10494,
-      "zoom_view": 1
-    },
-    {
-      "_": "class_mapicon",
+      "from_level": "jasper_cave_2",
       "from_object": "objCamp",
       "from_object_guid": "03e9a108db6f17ea9ca97122d3868cff",
       "img": 8,
       "object_y": -300,
+      "revealed_text": "Campsite (Jasper Mines)",
       "text": "Campsite",
       "transit": 3,
       "world_x": -12071,
@@ -272,10 +262,12 @@
     },
     {
       "_": "class_mapicon",
+      "from_level": "sphinx",
       "from_object": "objRailhouse",
       "from_object_guid": "456371c25af941659173d72698654aab",
       "img": 6,
       "object_y": -400,
+      "revealed_text": "Railhouse (Begonia)",
       "text": "Railhouse",
       "transit": 1,
       "world_x": -19746.5,
@@ -316,6 +308,7 @@
       "_": "class_mapicon",
       "cave_loc_a": "wood_rail",
       "cave_loc_b": "wood_cave1",
+      "from_level": "wood_rail",
       "img": 10,
       "is_cave": 1,
       "text": "Cave",
@@ -329,6 +322,7 @@
       "_": "class_mapicon",
       "cave_loc_a": "mythwood_cave_east",
       "cave_loc_b": "jasper_cave_west_exit",
+      "from_level": "mythwood_cave_east",
       "img": 10,
       "is_cave": 1,
       "text": "Cave",
@@ -540,6 +534,20 @@
       "world_y": 37824,
       "x": -21300,
       "y": 39160,
+      "zoom_view": 1
+    },
+    {
+      "_": "class_mapicon",
+      "from_object": "objMall",
+      "from_object_guid": "addebc6ac044ca7152b65c320f8d3cc9",
+      "img": 9,
+      "object_y": -400,
+      "text": "Zip Station",
+      "transit": 4,
+      "world_x": -37753,
+      "world_y": -10898,
+      "x": -37753,
+      "y": -10498,
       "zoom_view": 1
     }
   ],
@@ -1677,6 +1685,48 @@
     },
     {
       "_": "class_level_stump",
+      "area_id": 2,
+      "color": 5282300,
+      "display_name": "Jasper Mines",
+      "encounters": ["jasper_cave_1"],
+      "has_spawns": 1,
+      "icons_array": [],
+      "is_indoor": 1,
+      "name": "jasper_cave_1",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "jasper_north",
+          "direction": 0,
+          "x": 4986.25,
+          "x1": -96.75,
+          "x2": 290.25,
+          "y": 2725.5,
+          "y1": -167.5,
+          "y2": 167.5,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_2",
+          "ground_z": 300,
+          "x": 1003.5,
+          "x1": -194,
+          "x2": 194,
+          "y": 1038.75,
+          "y1": -249.75,
+          "y2": 130.25,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["jasper_cave"],
+      "world_x1": -9865.5,
+      "world_x2": -4309.5,
+      "world_y1": -25256,
+      "world_y2": -21591
+    },
+    {
+      "_": "class_level_stump",
       "area_id": 1,
       "color": 5282300,
       "display_name": "Rutile Preserve",
@@ -1832,6 +1882,693 @@
     },
     {
       "_": "class_level_stump",
+      "area_id": 2,
+      "color": 5282300,
+      "display_name": "Jasper Mines",
+      "encounters": [],
+      "has_spawns": 1,
+      "icons_array": [
+        {
+          "_": "class_mapicon",
+          "from_level": "jasper_cave_2",
+          "header": 1,
+          "header_size": 0.8,
+          "text": "Jasper Mines",
+          "world_x": -9887,
+          "world_y": -24966,
+          "x": 3589,
+          "y": 2629
+        }
+      ],
+      "is_indoor": 1,
+      "name": "jasper_cave_2",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_1",
+          "direction": 3,
+          "x": 4567.5,
+          "x1": -443.5,
+          "x2": 443.5,
+          "y": 2156.25,
+          "y1": -75.25,
+          "y2": 225.75,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_west",
+          "direction": 2,
+          "x": 238,
+          "x1": -282,
+          "x2": 94,
+          "y": 1771.5,
+          "y1": -290.5,
+          "y2": 290.5,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_south",
+          "direction": 3,
+          "index": 0,
+          "x": 1097.5,
+          "x1": -289.5,
+          "x2": 289.5,
+          "y": 2170.25,
+          "y1": -74.25,
+          "y2": 222.75,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_south",
+          "direction": 3,
+          "ground_z": 300,
+          "index": 1,
+          "x": 626,
+          "x1": -232,
+          "x2": 232,
+          "y": 2304.75,
+          "y1": -81.75,
+          "y2": 367.25,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_west_exit",
+          "index": 0,
+          "x": 2511,
+          "x1": -212,
+          "x2": 212,
+          "y": 828,
+          "y1": -192,
+          "y2": 64,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_west_exit",
+          "ground_z": 300,
+          "index": 1,
+          "x": 1775,
+          "x1": -236,
+          "x2": 236,
+          "y": 1009,
+          "y1": -180,
+          "y2": 60,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_connect",
+          "direction": 0,
+          "x": 6303.75,
+          "x1": 592.25,
+          "x2": 1230.25,
+          "y": 596,
+          "y1": -201,
+          "y2": 287,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["jasper_cave_inner"],
+      "world_x1": -13476,
+      "world_x2": -6043,
+      "world_y1": -27595,
+      "world_y2": -25256
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 5282300,
+      "display_name": "Jasper Mines",
+      "encounters": ["jasper_cave_n", "jasper_cave_north_exit"],
+      "has_spawns": 1,
+      "icons_array": [],
+      "is_indoor": 1,
+      "name": "jasper_cave_west_exit",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_south",
+          "x": 385,
+          "x1": -100,
+          "x2": 100,
+          "y": 6341,
+          "y1": -150,
+          "y2": 50,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_2",
+          "direction": 3,
+          "index": 0,
+          "x": 2428.5,
+          "x1": -262.5,
+          "x2": 262.5,
+          "y": 2308,
+          "y1": -72,
+          "y2": 216,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_2",
+          "direction": 3,
+          "ground_z": 300,
+          "index": 1,
+          "x": 1972,
+          "x1": -231,
+          "x2": 231,
+          "y": 2339.75,
+          "y1": -12.75,
+          "y2": 500.25,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "mythwood_cave_east",
+          "direction": 2,
+          "ground_z": 300,
+          "x": 722.25,
+          "x1": -353.25,
+          "x2": 117.75,
+          "y": 1211.5,
+          "y1": -193.5,
+          "y2": 193.5,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["jasper_cave_inner"],
+      "world_x1": -13475,
+      "world_x2": -10315,
+      "world_y1": -30075,
+      "world_y2": -27595
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 5282300,
+      "encounters": ["jasper_cave_south_exit_0"],
+      "icons_array": [],
+      "is_indoor": 1,
+      "name": "jasper_cave_south_exit",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "jasper_north",
+          "direction": 3,
+          "x": 2576.5,
+          "x1": -311.5,
+          "x2": 311.5,
+          "y": 5388.5,
+          "y1": -70.5,
+          "y2": 211.5,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_connect",
+          "direction": 2,
+          "ground_z": 350,
+          "x": 266.75,
+          "x1": -267.75,
+          "x2": 89.25,
+          "y": 4567.5,
+          "y1": -270.5,
+          "y2": 270.5,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_north_exit",
+          "x": 2587,
+          "x1": -267,
+          "x2": 242,
+          "y": 684,
+          "y1": -438,
+          "y2": 100,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["jasper_cave_north"],
+      "world_x1": -3879,
+      "world_x2": -226,
+      "world_y1": -30795,
+      "world_y2": -25216
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 5282300,
+      "display_name": "Jasper Mines",
+      "encounters": [],
+      "has_spawns": 1,
+      "icons_array": [],
+      "is_indoor": 1,
+      "name": "jasper_cave_south",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_west",
+          "direction": 2,
+          "ground_z": 600,
+          "x": 380.5,
+          "x1": -256.5,
+          "x2": 85.5,
+          "y": 1947.5,
+          "y1": -91.5,
+          "y2": 260.5,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_2",
+          "ground_z": 300,
+          "index": 0,
+          "x": 1200,
+          "x1": -233,
+          "x2": 251,
+          "y": 1441,
+          "y1": -515,
+          "y2": 61,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_2",
+          "ground_z": 600,
+          "index": 1,
+          "x": 641.5,
+          "x1": -262.5,
+          "x2": 262.5,
+          "y": 1395.5,
+          "y1": -424.5,
+          "y2": 141.5,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["jasper_cave_inner"],
+      "world_x1": -13478,
+      "world_x2": -10166,
+      "world_y1": -25256,
+      "world_y2": -21842
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 5282300,
+      "display_name": "Jasper Mines",
+      "encounters": [],
+      "has_spawns": 1,
+      "icons_array": [],
+      "is_indoor": 1,
+      "name": "jasper_cave_west",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_south",
+          "direction": 0,
+          "ground_z": 250,
+          "x": 2101.75,
+          "x1": -107.75,
+          "x2": 323.25,
+          "y": 3452.5,
+          "y1": -262.5,
+          "y2": 262.5,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_2",
+          "direction": 0,
+          "x": 2097,
+          "x1": -96,
+          "x2": 288,
+          "y": 733.5,
+          "y1": -359.5,
+          "y2": 359.5,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["jasper_cave_inner"],
+      "world_x1": -15793,
+      "world_x2": -13478,
+      "world_y1": -26626,
+      "world_y2": -22577
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 7916304,
+      "encounters": [],
+      "has_spawns": 1,
+      "icons_array": [],
+      "name": "mythwood_cave_east",
+      "palette_name": "woods",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_west_exit",
+          "direction": 0,
+          "ground_z": 200,
+          "x": 3823.75,
+          "x1": -147.75,
+          "x2": 443.25,
+          "y": 1695,
+          "y1": -196,
+          "y2": 156,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "sphinx",
+          "direction": 2,
+          "x": 453.5,
+          "x1": -588.5,
+          "x2": 141.5,
+          "y": 1553.5,
+          "y1": -425.5,
+          "y2": 601.5,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["mythwood1"],
+      "world_x1": -17938,
+      "world_x2": -13475,
+      "world_y1": -30087,
+      "world_y2": -26626
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 7916304,
+      "encounters": ["shroom_path1", "shroom_path2"],
+      "has_spawns": 1,
+      "icons_array": [],
+      "name": "wood_rail",
+      "palette_name": "woods",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "sphinx",
+          "direction": 0,
+          "ground_z": 150,
+          "x": 8326.75,
+          "x1": -104.75,
+          "x2": 314.25,
+          "y": 2951,
+          "y1": -375,
+          "y2": 375,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "shroom_path",
+          "x": 2374,
+          "x1": -465,
+          "x2": 633,
+          "y": 857,
+          "y1": -410,
+          "y2": 178,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "wood_cave1",
+          "direction": 2,
+          "ghost": 1,
+          "ground_z": 150,
+          "x": 616,
+          "x1": -536,
+          "x2": 100,
+          "y": 2981,
+          "y1": -187,
+          "y2": 187,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["mythwood1"],
+      "world_x1": -32573,
+      "world_x2": -24086,
+      "world_y1": -29387,
+      "world_y2": -25959
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 5282300,
+      "display_name": "Jasper Mines",
+      "encounters": [],
+      "icons_array": [],
+      "is_indoor": 1,
+      "name": "jasper_cave_connect",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_2",
+          "direction": 2,
+          "x": 293.25,
+          "x1": -326.25,
+          "x2": 108.75,
+          "y": 1011,
+          "y1": -250,
+          "y2": 250,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "jasper_cave_south_exit",
+          "direction": 0,
+          "x": 1909.25,
+          "x1": -94.25,
+          "x2": 282.75,
+          "y": 1742,
+          "y1": -275,
+          "y2": 275,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["default"],
+      "world_x1": -6043,
+      "world_x2": -3890,
+      "world_y1": -27969,
+      "world_y2": -25265
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 7916304,
+      "display_name": "Miconia Grove",
+      "encounters": ["shroom_path_boss"],
+      "has_spawns": 1,
+      "icons_array": [],
+      "name": "shroomgrove",
+      "palette_name": "woods",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "shroom_path",
+          "direction": 3,
+          "x": 2333.5,
+          "x1": -437.5,
+          "x2": 437.5,
+          "y": 3717.25,
+          "y1": -156.25,
+          "y2": 468.75,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["shroom_path"],
+      "world_x1": -30701,
+      "world_x2": -26314,
+      "world_y1": -40159,
+      "world_y2": -36041
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 7916304,
+      "display_name": "Miconia Grove",
+      "encounters": ["shroom_path3"],
+      "has_spawns": 1,
+      "icons_array": [
+        {
+          "_": "class_mapicon",
+          "from_level": "shroom_path",
+          "header": 1,
+          "header_size": 0.7,
+          "text": "Miconia Grove",
+          "world_x": -28986,
+          "world_y": -34182,
+          "x": 3016,
+          "y": 1859
+        }
+      ],
+      "name": "shroom_path",
+      "palette_name": "woods",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "wood_rail",
+          "direction": 3,
+          "x": 1240.5,
+          "x1": -620.5,
+          "x2": 620.5,
+          "y": 6419.5,
+          "y1": -158.5,
+          "y2": 475.5,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "shroomgrove",
+          "ground_z": 300,
+          "x": 3862,
+          "x1": -341,
+          "x2": 341,
+          "y": 987.5,
+          "y1": -547.5,
+          "y2": 182.5,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["shroom_path"],
+      "world_x1": -32002,
+      "world_x2": -26428,
+      "world_y1": -36041,
+      "world_y2": -29387
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 7916304,
+      "encounters": [],
+      "icons_array": [],
+      "is_indoor": 1,
+      "name": "sphinx_ballcenter",
+      "palette_name": "woods",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "sphinx",
+          "direction": 3,
+          "ghost": 1,
+          "x": 1958.5,
+          "x1": -168.5,
+          "x2": 168.5,
+          "y": 2246.25,
+          "y1": -62.25,
+          "y2": 186.75,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "allow_exit": 0,
+          "destination": "sphinx_lockerroom",
+          "door": 1,
+          "x": 1137,
+          "x1": -100,
+          "x2": 100,
+          "y": 1368,
+          "y1": -150,
+          "y2": 50,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "x": -5782,
+          "x1": -100,
+          "x2": 100,
+          "y": 10628,
+          "y1": -150,
+          "y2": 50,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["default"],
+      "world_layer": 1,
+      "world_x1": -21945.5,
+      "world_x2": -17950.5,
+      "world_y1": -29367,
+      "world_y2": -26805
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 7916304,
+      "encounters": [],
+      "icons_array": [],
+      "is_indoor": 1,
+      "name": "sphinx_lockerroom",
+      "palette_name": "woods",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "allow_enter": 0,
+          "destination": "sphinx_boss_court",
+          "direction": 0,
+          "x": 2037,
+          "x1": -50,
+          "x2": 150,
+          "y": 1613,
+          "y1": -434,
+          "y2": 348,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "x": -19139.5,
+          "x1": -100,
+          "x2": 100,
+          "y": -7924,
+          "y1": -150,
+          "y2": 50,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["default"],
+      "world_layer": 1,
+      "world_x1": -24527.5,
+      "world_x2": -21945.5,
+      "world_y1": -31283,
+      "world_y2": -27839
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 7916304,
+      "encounters": [],
+      "icons_array": [],
+      "is_indoor": 1,
+      "name": "sphinx_boss_court",
+      "palette_name": "woods",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "allow_exit": 0,
+          "destination": "sphinx_lockerroom",
+          "direction": 2,
+          "x": 489.25,
+          "x1": -149.25,
+          "x2": 49.75,
+          "y": 2547,
+          "y1": -115,
+          "y2": 115,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["mythwood1"],
+      "world_layer": 1,
+      "world_x1": -21945.5,
+      "world_x2": -18006.5,
+      "world_y1": -32542,
+      "world_y2": -29367
+    },
+    {
+      "_": "class_level_stump",
       "area_id": 1,
       "color": 5282300,
       "display_name": "Rutile Preserve",
@@ -1941,6 +2678,76 @@
     },
     {
       "_": "class_level_stump",
+      "area_id": 2,
+      "color": 7916304,
+      "encounters": [],
+      "icons_array": [],
+      "is_indoor": 1,
+      "name": "sphinx_ballcenter_test",
+      "palette_name": "woods",
+      "portals_array": [],
+      "spawn_name": ["default"],
+      "world_layer": 1,
+      "world_x1": -17950.5,
+      "world_x2": -13620.5,
+      "world_y1": -29361,
+      "world_y2": -26809
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 7916304,
+      "encounters": ["wood_cave1_0"],
+      "has_spawns": 1,
+      "icons_array": [],
+      "name": "wood_cave1",
+      "palette_name": "woods",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "wood_rail",
+          "direction": 0,
+          "x": 3082,
+          "x1": 32,
+          "x2": 634,
+          "y": 1169,
+          "y1": -384,
+          "y2": 333,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "wood_cave2",
+          "direction": 3,
+          "x": 1765,
+          "x1": -248,
+          "x2": 228,
+          "y": 2489,
+          "y1": -64,
+          "y2": 336,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "rubberfarm",
+          "direction": 2,
+          "x": 370,
+          "x1": -416,
+          "x2": 60,
+          "y": 1215,
+          "y1": -275,
+          "y2": 410,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["wood_cave1"],
+      "world_x1": -36150,
+      "world_x2": -32573,
+      "world_y1": -27902,
+      "world_y2": -25132
+    },
+    {
+      "_": "class_level_stump",
       "area_id": 0,
       "color": 5282300,
       "encounters": [],
@@ -1981,6 +2788,152 @@
       "world_x2": -5222,
       "world_y1": 2753,
       "world_y2": 4753
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 7916304,
+      "display_name": "Begonia",
+      "encounters": [],
+      "icons_array": [
+        {
+          "_": "class_mapicon",
+          "from_level": "sphinx",
+          "header": 1,
+          "text": "Begonia",
+          "world_x": -21070.5,
+          "world_y": -30919,
+          "x": 3016,
+          "y": 996
+        },
+        {
+          "_": "class_mapicon",
+          "from_level": "sphinx",
+          "from_object": "objGymdoor",
+          "from_object_guid": "cf0ad15771f0b1ad94b00964b29cc3ce",
+          "img": 1,
+          "object_y": -300,
+          "revealed_text": "Gym (Begonia)",
+          "text": "Gym",
+          "world_x": -21840,
+          "world_y": -27989,
+          "x": 2246.5,
+          "y": 4226
+        }
+      ],
+      "name": "sphinx",
+      "palette_name": "woods",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "mythwood_cave_east",
+          "direction": 0,
+          "x": 5702,
+          "x1": -147,
+          "x2": 441,
+          "y": 3378,
+          "y1": -517,
+          "y2": 517,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "wood_rail",
+          "direction": 2,
+          "x": 427,
+          "x1": -524,
+          "x2": 74,
+          "y": 5158.5,
+          "y1": -383.5,
+          "y2": 407.5,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "myth_forest1",
+          "x": 3746.5,
+          "x1": -540.5,
+          "x2": 540.5,
+          "y": 763.75,
+          "y1": -657.75,
+          "y2": 219.25,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "wood_east_rail",
+          "direction": 0,
+          "x": 4978,
+          "x1": -416,
+          "x2": 448,
+          "y": 1405,
+          "y1": -543,
+          "y2": 207,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "lab",
+          "door": 1,
+          "ground_z": 870,
+          "x": 2708.5,
+          "x1": -114,
+          "x2": 113,
+          "y": 2784,
+          "y1": -100,
+          "y2": 100,
+          "z1": -50,
+          "z_offset": 150
+        },
+        {
+          "_": "class_portal",
+          "destination": "begonia_south",
+          "direction": 3,
+          "ground_z": 300,
+          "x": 5699.5,
+          "x1": -363,
+          "x2": 369,
+          "y": 5532,
+          "y1": -100,
+          "y2": 423,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["mythwood1"],
+      "world_x1": -24086.5,
+      "world_x2": -17950.5,
+      "world_y1": -31915,
+      "world_y2": -26340
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 7916304,
+      "encounters": [],
+      "icons_array": [],
+      "is_indoor": 1,
+      "name": "lab",
+      "palette_name": "woods",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "sphinx",
+          "direction": 3,
+          "x": 1264,
+          "x1": -195,
+          "x2": 195,
+          "y": 1692,
+          "y1": -95,
+          "y2": 105,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["default"],
+      "world_layer": 1,
+      "world_x1": -29271,
+      "world_x2": -26050,
+      "world_y1": -31387,
+      "world_y2": -29387
     },
     {
       "_": "class_level_stump",
@@ -2033,6 +2986,48 @@
       "world_x2": -2115,
       "world_y1": -13611,
       "world_y2": -11606
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 7916304,
+      "display_name": "Crown Farms",
+      "encounters": [],
+      "icons_array": [
+        {
+          "_": "class_mapicon",
+          "from_level": "rubberfarm",
+          "header": 1,
+          "header_size": 0.9,
+          "text": "Crown Farms",
+          "world_x": -44876,
+          "world_y": -25476,
+          "x": 709,
+          "y": 3849
+        }
+      ],
+      "name": "rubberfarm",
+      "palette_name": "woods",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "wood_cave1",
+          "direction": 0,
+          "ground_z": 200,
+          "x": 9044,
+          "x1": -44,
+          "x2": 540,
+          "y": 2835,
+          "y1": -183,
+          "y2": 461,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["default"],
+      "world_x1": -45585,
+      "world_x2": -36150,
+      "world_y1": -29325,
+      "world_y2": -25823
     },
     {
       "_": "class_level_stump",
@@ -2161,13 +3156,41 @@
     },
     {
       "_": "class_level_stump",
-      "area_id": 1,
-      "color": 16620976,
+      "area_id": 2,
+      "color": 7916304,
+      "display_name": "Begonia",
+      "encounters": [],
+      "icons_array": [],
+      "name": "begonia_south",
+      "palette_name": "woods",
+      "portals_array": [
+        {
+          "_": "class_portal",
+          "destination": "sphinx",
+          "x": 2273,
+          "x1": -335,
+          "x2": 417,
+          "y": 452,
+          "y1": -544,
+          "y2": 85,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["default"],
+      "world_x1": -20698,
+      "world_x2": -17920,
+      "world_y1": -26340,
+      "world_y2": -24238
+    },
+    {
+      "_": "class_level_stump",
+      "area_id": 2,
+      "color": 7916304,
       "encounters": [],
       "icons_array": [],
       "is_indoor": 1,
       "name": "spectate_boss_court",
-      "palette_name": "city",
+      "palette_name": "woods",
       "portals_array": [
         {
           "_": "class_portal",
@@ -2229,6 +3252,10 @@
       "x": -12729,
       "y": 15818
     },
+    "beryl:objGymdoor": {
+      "x": -12544,
+      "y": 14347
+    },
     "beryl:objRiven": {
       "x": -13512,
       "y": 12652
@@ -2269,9 +3296,13 @@
       "x": -40609,
       "y": -10415
     },
+    "central_station:objMall": {
+      "x": -37753,
+      "y": -10498
+    },
     "central_station:objRailhouse": {
-      "x": -37740,
-      "y": -10494
+      "x": 0,
+      "y": 0
     },
     "chartreuse:objBallcenter": {
       "x": -33219,
@@ -2280,6 +3311,10 @@
     "chartreuse:objClub": {
       "x": -30419,
       "y": 26999
+    },
+    "chartreuse:objGymdoor": {
+      "x": -31604,
+      "y": 25215
     },
     "city_market:objBallcenter": {
       "x": -50359,
@@ -2296,6 +3331,10 @@
     "city_neighborhood:objBallcenter": {
       "x": -10010,
       "y": -14974
+    },
+    "city_neighborhood:objGymdoor": {
+      "x": -8792,
+      "y": -17736
     },
     "city_rail_east_0": {
       "x": -28764,
@@ -2425,6 +3464,10 @@
       "x": -5426,
       "y": 13600
     },
+    "hometown_south_path:objResearcher": {
+      "x": -2467,
+      "y": 12081
+    },
     "hometown_south_path_0": {
       "x": -1456,
       "y": 11032
@@ -2440,6 +3483,10 @@
     "jasper:objBallcenter": {
       "x": 564.5,
       "y": -15615
+    },
+    "jasper:objDiner": {
+      "x": -605.5,
+      "y": -18790
     },
     "jasper:objSteven": {
       "x": 390,
@@ -2510,8 +3557,8 @@
       "y": -11269
     },
     "mainstreet_0": {
-      "x": -45235,
-      "y": -15516
+      "x": -44589,
+      "y": -11523
     },
     "mangrove_1_0": {
       "x": -51413,
@@ -2769,6 +3816,10 @@
       "x": -32411,
       "y": 11126
     },
+    "rubberfarm:objScience": {
+      "x": -39755,
+      "y": -26922
+    },
     "seacave1_0": {
       "x": -43315,
       "y": 9261
@@ -2833,6 +3884,10 @@
       "x": -23032.5,
       "y": -28689
     },
+    "sphinx:objGymdoor": {
+      "x": -21840,
+      "y": -27689
+    },
     "sphinx:objKaz": {
       "x": -20543,
       "y": -28654
@@ -2848,6 +3903,10 @@
     "sunken_stadium:objGameplay": {
       "x": -20229,
       "y": 41184
+    },
+    "sunken_stadium:objResearcher": {
+      "x": -21670,
+      "y": 39049
     },
     "sunken_stadium_0": {
       "x": -22162,
@@ -2907,6 +3966,15 @@
       5282300, 2477823, 7055076, 5063839, 7098658, 3043922, 10131047, 13826256,
       15073263, 13560811, 13749626, 11836999
     ],
-    "default": [11724372, 4521119, 5542911, 6835447, 8755724, 6938420, 0]
+    "default": [11724372, 4521119, 5542911, 6835447, 8755724, 6938420, 0],
+    "island": [
+      9494518, 10664447, 7517695, 7242239, 13155072, 16737727, 12573440,
+      13828076, 11265531, 9294332, 14851584, 13335818, 1507277, 6576639,
+      8767094, 5686995, 0
+    ],
+    "woods": [
+      7916304, 5633201, 6078190, 7234541, 9607936, 5176022, 14926624, 13631269,
+      13367039, 10546175, 15817088
+    ]
   }
 }

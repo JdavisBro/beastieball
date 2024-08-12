@@ -105,7 +105,34 @@
       "height": 455
     }
   },
-  null,
+  {
+    "name": "sprCraig",
+    "width": 500,
+    "height": 500,
+    "frames": 2,
+    "originX": 250,
+    "originY": 500,
+    "bboxes": [
+      {
+        "x": 109,
+        "y": 55,
+        "width": 242,
+        "height": 445
+      },
+      {
+        "x": 110,
+        "y": 56,
+        "width": 241,
+        "height": 444
+      }
+    ],
+    "bbox": {
+      "x": 109,
+      "y": 55,
+      "width": 242,
+      "height": 499
+    }
+  },
   {
     "name": "verbena",
     "width": 512,
@@ -475,6 +502,7 @@
       "height": 71
     }
   },
+  null,
   {
     "name": "sprRocklizard1",
     "width": 1000,
@@ -803,34 +831,7 @@
       "height": 147
     }
   },
-  {
-    "name": "sprNPC02",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 273,
-    "originY": 500,
-    "bboxes": [
-      {
-        "x": 179,
-        "y": 79,
-        "width": 188,
-        "height": 421
-      },
-      {
-        "x": 178,
-        "y": 80,
-        "width": 191,
-        "height": 420
-      }
-    ],
-    "bbox": {
-      "x": 178,
-      "y": 79,
-      "width": 191,
-      "height": 521
-    }
-  },
+  null,
   {
     "name": "sprCarlos",
     "width": 500,
@@ -883,34 +884,7 @@
   },
   null,
   null,
-  {
-    "name": "sprNPC14",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 260,
-    "originY": 500,
-    "bboxes": [
-      {
-        "x": 183,
-        "y": 200,
-        "width": 162,
-        "height": 300
-      },
-      {
-        "x": 183,
-        "y": 200,
-        "width": 163,
-        "height": 300
-      }
-    ],
-    "bbox": {
-      "x": 183,
-      "y": 200,
-      "width": 163,
-      "height": 300
-    }
-  },
+  null,
   null,
   {
     "name": "spring_rider",
@@ -1007,7 +981,34 @@
     }
   },
   null,
-  null,
+  {
+    "name": "sprKingarm",
+    "width": 889,
+    "height": 368,
+    "frames": 2,
+    "originX": 814,
+    "originY": 244,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 54,
+        "width": 889,
+        "height": 314
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 889,
+        "height": 368
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 889,
+      "height": 368
+    }
+  },
   null,
   {
     "name": "sprVolleyA",
@@ -1129,6 +1130,34 @@
       "y": 89,
       "width": 236,
       "height": 175
+    }
+  },
+  {
+    "name": "sprHSmate",
+    "width": 500,
+    "height": 500,
+    "frames": 2,
+    "originX": 250,
+    "originY": 500,
+    "bboxes": [
+      {
+        "x": 117,
+        "y": 0,
+        "width": 267,
+        "height": 500
+      },
+      {
+        "x": 117,
+        "y": 2,
+        "width": 270,
+        "height": 498
+      }
+    ],
+    "bbox": {
+      "x": 117,
+      "y": 0,
+      "width": 270,
+      "height": 617
     }
   },
   {
@@ -1548,33 +1577,28 @@
     }
   },
   {
-    "name": "sprNPC03",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 250,
-    "originY": 500,
+    "name": "nastychair",
+    "width": 256,
+    "height": 256,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
     "bboxes": [
       {
-        "x": 132,
-        "y": 46,
-        "width": 236,
-        "height": 454
-      },
-      {
-        "x": 131,
-        "y": 47,
-        "width": 240,
-        "height": 453
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
       }
     ],
     "bbox": {
-      "x": 131,
-      "y": 46,
-      "width": 240,
-      "height": 540
+      "x": 0,
+      "y": 0,
+      "width": 256,
+      "height": 256
     }
   },
+  null,
   {
     "name": "sptSweatdrop",
     "width": 32,
@@ -1599,71 +1623,309 @@
   },
   null,
   null,
-  null,
-  null,
   {
-    "name": "sprNPC13",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 260,
-    "originY": 500,
+    "name": "sprRocklizard2",
+    "width": 1000,
+    "height": 1000,
+    "frames": 8,
+    "originX": 496,
+    "originY": 980,
     "bboxes": [
       {
-        "x": 180,
-        "y": 170,
-        "width": 166,
-        "height": 330
+        "x": 375,
+        "y": 795,
+        "width": 384,
+        "height": 185
       },
       {
-        "x": 179,
-        "y": 171,
-        "width": 168,
-        "height": 329
+        "x": 347,
+        "y": 797,
+        "width": 410,
+        "height": 185
+      },
+      {
+        "x": 344,
+        "y": 651,
+        "width": 244,
+        "height": 343
+      },
+      {
+        "x": 274,
+        "y": 660,
+        "width": 304,
+        "height": 334
+      },
+      {
+        "x": 221,
+        "y": 765,
+        "width": 378,
+        "height": 227
+      },
+      {
+        "x": 299,
+        "y": 785,
+        "width": 420,
+        "height": 200
+      },
+      {
+        "x": 342,
+        "y": 818,
+        "width": 417,
+        "height": 163
+      },
+      {
+        "x": 308,
+        "y": 697,
+        "width": 390,
+        "height": 265
       }
     ],
     "bbox": {
-      "x": 179,
-      "y": 170,
-      "width": 168,
-      "height": 340
+      "x": 221,
+      "y": 651,
+      "width": 538,
+      "height": 343
     }
   },
   null,
   null,
   null,
   null,
-  null,
   {
-    "name": "sprNPC10",
+    "name": "sprMask",
     "width": 500,
     "height": 500,
-    "frames": 2,
-    "originX": 260,
-    "originY": 500,
+    "frames": 17,
+    "originX": 235,
+    "originY": 498,
     "bboxes": [
       {
-        "x": 194,
-        "y": 171,
-        "width": 177,
-        "height": 329
+        "x": 139,
+        "y": 26,
+        "width": 265,
+        "height": 474
       },
       {
-        "x": 193,
+        "x": 138,
+        "y": 27,
+        "width": 269,
+        "height": 473
+      },
+      {
+        "x": 117,
+        "y": 1,
+        "width": 333,
+        "height": 476
+      },
+      {
+        "x": 116,
+        "y": 2,
+        "width": 336,
+        "height": 475
+      },
+      {
+        "x": 52,
+        "y": 95,
+        "width": 370,
+        "height": 360
+      },
+      {
+        "x": 49,
+        "y": 101,
+        "width": 378,
+        "height": 349
+      },
+      {
+        "x": 75,
+        "y": 301,
+        "width": 367,
+        "height": 199
+      },
+      {
+        "x": 77,
+        "y": 161,
+        "width": 362,
+        "height": 339
+      },
+      {
+        "x": 82,
+        "y": 163,
+        "width": 353,
+        "height": 337
+      },
+      {
+        "x": 119,
+        "y": 113,
+        "width": 302,
+        "height": 387
+      },
+      {
+        "x": 117,
+        "y": 116,
+        "width": 303,
+        "height": 384
+      },
+      {
+        "x": 99,
+        "y": 118,
+        "width": 341,
+        "height": 382
+      },
+      {
+        "x": 94,
+        "y": 117,
+        "width": 346,
+        "height": 383
+      },
+      {
+        "x": 116,
+        "y": 167,
+        "width": 330,
+        "height": 333
+      },
+      {
+        "x": 119,
         "y": 172,
-        "width": 177,
+        "width": 329,
         "height": 328
+      },
+      {
+        "x": 110,
+        "y": 21,
+        "width": 250,
+        "height": 479
+      },
+      {
+        "x": 115,
+        "y": 27,
+        "width": 253,
+        "height": 473
       }
     ],
     "bbox": {
-      "x": 193,
-      "y": 171,
-      "width": 178,
-      "height": 352
+      "x": 49,
+      "y": 1,
+      "width": 403,
+      "height": 612
     }
   },
   null,
   null,
+  {
+    "name": "sprLyrebird",
+    "width": 1000,
+    "height": 1000,
+    "frames": 9,
+    "originX": 480,
+    "originY": 979,
+    "bboxes": [
+      {
+        "x": 173,
+        "y": 495,
+        "width": 580,
+        "height": 495
+      },
+      {
+        "x": 264,
+        "y": 574,
+        "width": 572,
+        "height": 387
+      },
+      {
+        "x": 248,
+        "y": 538,
+        "width": 495,
+        "height": 452
+      },
+      {
+        "x": 96,
+        "y": 503,
+        "width": 705,
+        "height": 486
+      },
+      {
+        "x": 26,
+        "y": 623,
+        "width": 730,
+        "height": 374
+      },
+      {
+        "x": 233,
+        "y": 474,
+        "width": 520,
+        "height": 503
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1
+      },
+      {
+        "x": 7,
+        "y": 443,
+        "width": 718,
+        "height": 497
+      }
+    ],
+    "bbox": {
+      "x": 7,
+      "y": 443,
+      "width": 829,
+      "height": 554
+    }
+  },
+  null,
+  {
+    "name": "sprMap_chartreuse",
+    "width": 434,
+    "height": 349,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 434,
+        "height": 349
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 434,
+      "height": 349
+    }
+  },
+  {
+    "name": "sprMap_shroom_path",
+    "width": 278,
+    "height": 332,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 278,
+        "height": 332
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 278,
+      "height": 332
+    }
+  },
   null,
   {
     "name": "sprMoney",
@@ -1691,6 +1953,46 @@
       "y": 0,
       "width": 46,
       "height": 54
+    }
+  },
+  {
+    "name": "sprBee",
+    "width": 500,
+    "height": 500,
+    "frames": 4,
+    "originX": 250,
+    "originY": 500,
+    "bboxes": [
+      {
+        "x": 163,
+        "y": 22,
+        "width": 254,
+        "height": 478
+      },
+      {
+        "x": 163,
+        "y": 24,
+        "width": 256,
+        "height": 476
+      },
+      {
+        "x": 62,
+        "y": 24,
+        "width": 355,
+        "height": 476
+      },
+      {
+        "x": 63,
+        "y": 25,
+        "width": 357,
+        "height": 475
+      }
+    ],
+    "bbox": {
+      "x": 62,
+      "y": 22,
+      "width": 358,
+      "height": 619
     }
   },
   {
@@ -1839,10 +2141,32 @@
   },
   null,
   {
+    "name": "spiderplant",
+    "width": 512,
+    "height": 512,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 512
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 450,
+      "height": 512
+    }
+  },
+  {
     "name": "sprHatguy",
     "width": 500,
     "height": 500,
-    "frames": 2,
+    "frames": 3,
     "originX": 250,
     "originY": 500,
     "bboxes": [
@@ -1857,6 +2181,12 @@
         "y": 57,
         "width": 351,
         "height": 443
+      },
+      {
+        "x": 79,
+        "y": 54,
+        "width": 343,
+        "height": 446
       }
     ],
     "bbox": {
@@ -2189,6 +2519,34 @@
     }
   },
   {
+    "name": "sprHSgal",
+    "width": 500,
+    "height": 500,
+    "frames": 2,
+    "originX": 250,
+    "originY": 500,
+    "bboxes": [
+      {
+        "x": 154,
+        "y": 49,
+        "width": 233,
+        "height": 451
+      },
+      {
+        "x": 153,
+        "y": 51,
+        "width": 234,
+        "height": 449
+      }
+    ],
+    "bbox": {
+      "x": 153,
+      "y": 49,
+      "width": 234,
+      "height": 556
+    }
+  },
+  {
     "name": "sprGrassstep",
     "width": 64,
     "height": 64,
@@ -2251,7 +2609,28 @@
     }
   },
   null,
-  null,
+  {
+    "name": "sprMap_jasper_cave_west",
+    "width": 115,
+    "height": 202,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 115,
+        "height": 202
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 115,
+      "height": 202
+    }
+  },
   {
     "name": "sprSpeech",
     "width": 1024,
@@ -2297,6 +2676,28 @@
     }
   },
   null,
+  {
+    "name": "basil",
+    "width": 512,
+    "height": 512,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 4,
+        "y": 1,
+        "width": 501,
+        "height": 511
+      }
+    ],
+    "bbox": {
+      "x": 4,
+      "y": 1,
+      "width": 501,
+      "height": 514
+    }
+  },
   {
     "name": "sprBG_Railhouse",
     "width": 1920,
@@ -2385,6 +2786,28 @@
       "y": 0,
       "width": 364,
       "height": 241
+    }
+  },
+  {
+    "name": "uv_spiderplant",
+    "width": 512,
+    "height": 512,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 449,
+        "height": 512
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 449,
+      "height": 512
     }
   },
   null,
@@ -2763,34 +3186,7 @@
     }
   },
   null,
-  {
-    "name": "sprNPC23",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 250,
-    "originY": 500,
-    "bboxes": [
-      {
-        "x": 131,
-        "y": 65,
-        "width": 269,
-        "height": 435
-      },
-      {
-        "x": 131,
-        "y": 67,
-        "width": 269,
-        "height": 433
-      }
-    ],
-    "bbox": {
-      "x": 131,
-      "y": 65,
-      "width": 269,
-      "height": 501
-    }
-  },
+  null,
   {
     "name": "sprOptions",
     "width": 130,
@@ -3042,7 +3438,28 @@
       "height": 243
     }
   },
-  null,
+  {
+    "name": "sprMap_tiny_island",
+    "width": 248,
+    "height": 157,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 248,
+        "height": 157
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 248,
+      "height": 157
+    }
+  },
   {
     "name": "snow_grass",
     "width": 512,
@@ -3396,34 +3813,7 @@
       "height": 61
     }
   },
-  {
-    "name": "sprNPC18",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 260,
-    "originY": 500,
-    "bboxes": [
-      {
-        "x": 147,
-        "y": 98,
-        "width": 206,
-        "height": 402
-      },
-      {
-        "x": 148,
-        "y": 99,
-        "width": 206,
-        "height": 401
-      }
-    ],
-    "bbox": {
-      "x": 147,
-      "y": 98,
-      "width": 207,
-      "height": 451
-    }
-  },
+  null,
   {
     "name": "sprGfxtee",
     "width": 500,
@@ -3452,7 +3842,28 @@
       "height": 630
     }
   },
-  null,
+  {
+    "name": "sprMap_wood_rail",
+    "width": 424,
+    "height": 171,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 424,
+        "height": 171
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 424,
+      "height": 171
+    }
+  },
   {
     "name": "sprMap_hometown_south_path",
     "width": 392,
@@ -3479,7 +3890,7 @@
     "name": "sprRiley",
     "width": 500,
     "height": 500,
-    "frames": 31,
+    "frames": 29,
     "originX": 240,
     "originY": 499,
     "bboxes": [
@@ -3656,18 +4067,6 @@
         "y": 142,
         "width": 253,
         "height": 358
-      },
-      {
-        "x": 110,
-        "y": 51,
-        "width": 226,
-        "height": 449
-      },
-      {
-        "x": 109,
-        "y": 55,
-        "width": 225,
-        "height": 445
       }
     ],
     "bbox": {
@@ -3679,6 +4078,28 @@
   },
   null,
   null,
+  {
+    "name": "uv_basil",
+    "width": 512,
+    "height": 512,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 510,
+        "height": 512
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 510,
+      "height": 512
+    }
+  },
   {
     "name": "tree_mangrove",
     "width": 423,
@@ -4185,7 +4606,520 @@
       "height": 555
     }
   },
-  null,
+  {
+    "name": "sprRat",
+    "width": 1000,
+    "height": 1000,
+    "frames": 83,
+    "originX": 465,
+    "originY": 986,
+    "bboxes": [
+      {
+        "x": 386,
+        "y": 854,
+        "width": 235,
+        "height": 130
+      },
+      {
+        "x": 384,
+        "y": 900,
+        "width": 310,
+        "height": 87
+      },
+      {
+        "x": 399,
+        "y": 874,
+        "width": 135,
+        "height": 112
+      },
+      {
+        "x": 287,
+        "y": 832,
+        "width": 183,
+        "height": 146
+      },
+      {
+        "x": 236,
+        "y": 775,
+        "width": 173,
+        "height": 214
+      },
+      {
+        "x": 381,
+        "y": 831,
+        "width": 160,
+        "height": 155
+      },
+      {
+        "x": 399,
+        "y": 900,
+        "width": 135,
+        "height": 86
+      },
+      {
+        "x": 297,
+        "y": 711,
+        "width": 200,
+        "height": 248
+      },
+      {
+        "x": 371,
+        "y": 864,
+        "width": 302,
+        "height": 126
+      },
+      {
+        "x": 367,
+        "y": 890,
+        "width": 310,
+        "height": 99
+      },
+      {
+        "x": 374,
+        "y": 897,
+        "width": 320,
+        "height": 92
+      },
+      {
+        "x": 384,
+        "y": 894,
+        "width": 304,
+        "height": 93
+      },
+      {
+        "x": 369,
+        "y": 854,
+        "width": 296,
+        "height": 132
+      },
+      {
+        "x": 367,
+        "y": 893,
+        "width": 323,
+        "height": 93
+      },
+      {
+        "x": 373,
+        "y": 902,
+        "width": 331,
+        "height": 84
+      },
+      {
+        "x": 384,
+        "y": 900,
+        "width": 310,
+        "height": 87
+      },
+      {
+        "x": 388,
+        "y": 790,
+        "width": 232,
+        "height": 194
+      },
+      {
+        "x": 374,
+        "y": 841,
+        "width": 252,
+        "height": 143
+      },
+      {
+        "x": 382,
+        "y": 848,
+        "width": 244,
+        "height": 135
+      },
+      {
+        "x": 384,
+        "y": 849,
+        "width": 246,
+        "height": 135
+      },
+      {
+        "x": 384,
+        "y": 849,
+        "width": 252,
+        "height": 135
+      },
+      {
+        "x": 384,
+        "y": 849,
+        "width": 252,
+        "height": 135
+      },
+      {
+        "x": 384,
+        "y": 849,
+        "width": 252,
+        "height": 135
+      },
+      {
+        "x": 384,
+        "y": 849,
+        "width": 252,
+        "height": 135
+      },
+      {
+        "x": 379,
+        "y": 845,
+        "width": 233,
+        "height": 140
+      },
+      {
+        "x": 383,
+        "y": 863,
+        "width": 219,
+        "height": 121
+      },
+      {
+        "x": 386,
+        "y": 856,
+        "width": 220,
+        "height": 128
+      },
+      {
+        "x": 387,
+        "y": 855,
+        "width": 250,
+        "height": 129
+      },
+      {
+        "x": 387,
+        "y": 854,
+        "width": 229,
+        "height": 130
+      },
+      {
+        "x": 387,
+        "y": 855,
+        "width": 224,
+        "height": 129
+      },
+      {
+        "x": 387,
+        "y": 855,
+        "width": 224,
+        "height": 129
+      },
+      {
+        "x": 387,
+        "y": 855,
+        "width": 224,
+        "height": 129
+      },
+      {
+        "x": 387,
+        "y": 855,
+        "width": 224,
+        "height": 129
+      },
+      {
+        "x": 387,
+        "y": 855,
+        "width": 224,
+        "height": 129
+      },
+      {
+        "x": 387,
+        "y": 855,
+        "width": 224,
+        "height": 129
+      },
+      {
+        "x": 387,
+        "y": 855,
+        "width": 224,
+        "height": 129
+      },
+      {
+        "x": 379,
+        "y": 876,
+        "width": 247,
+        "height": 109
+      },
+      {
+        "x": 365,
+        "y": 808,
+        "width": 262,
+        "height": 176
+      },
+      {
+        "x": 368,
+        "y": 840,
+        "width": 290,
+        "height": 145
+      },
+      {
+        "x": 370,
+        "y": 862,
+        "width": 323,
+        "height": 123
+      },
+      {
+        "x": 370,
+        "y": 867,
+        "width": 334,
+        "height": 118
+      },
+      {
+        "x": 370,
+        "y": 867,
+        "width": 325,
+        "height": 118
+      },
+      {
+        "x": 370,
+        "y": 867,
+        "width": 295,
+        "height": 118
+      },
+      {
+        "x": 370,
+        "y": 854,
+        "width": 261,
+        "height": 131
+      },
+      {
+        "x": 370,
+        "y": 859,
+        "width": 230,
+        "height": 126
+      },
+      {
+        "x": 370,
+        "y": 867,
+        "width": 234,
+        "height": 118
+      },
+      {
+        "x": 370,
+        "y": 867,
+        "width": 237,
+        "height": 118
+      },
+      {
+        "x": 370,
+        "y": 854,
+        "width": 242,
+        "height": 131
+      },
+      {
+        "x": 370,
+        "y": 845,
+        "width": 263,
+        "height": 140
+      },
+      {
+        "x": 370,
+        "y": 844,
+        "width": 277,
+        "height": 141
+      },
+      {
+        "x": 370,
+        "y": 845,
+        "width": 275,
+        "height": 140
+      },
+      {
+        "x": 370,
+        "y": 844,
+        "width": 243,
+        "height": 141
+      },
+      {
+        "x": 370,
+        "y": 845,
+        "width": 243,
+        "height": 140
+      },
+      {
+        "x": 370,
+        "y": 846,
+        "width": 241,
+        "height": 139
+      },
+      {
+        "x": 377,
+        "y": 856,
+        "width": 249,
+        "height": 128
+      },
+      {
+        "x": 392,
+        "y": 865,
+        "width": 316,
+        "height": 119
+      },
+      {
+        "x": 388,
+        "y": 854,
+        "width": 258,
+        "height": 130
+      },
+      {
+        "x": 386,
+        "y": 853,
+        "width": 237,
+        "height": 131
+      },
+      {
+        "x": 386,
+        "y": 854,
+        "width": 235,
+        "height": 130
+      },
+      {
+        "x": 386,
+        "y": 854,
+        "width": 235,
+        "height": 130
+      },
+      {
+        "x": 386,
+        "y": 854,
+        "width": 235,
+        "height": 130
+      },
+      {
+        "x": 386,
+        "y": 854,
+        "width": 235,
+        "height": 130
+      },
+      {
+        "x": 386,
+        "y": 854,
+        "width": 235,
+        "height": 130
+      },
+      {
+        "x": 399,
+        "y": 848,
+        "width": 227,
+        "height": 125
+      },
+      {
+        "x": 405,
+        "y": 827,
+        "width": 140,
+        "height": 135
+      },
+      {
+        "x": 405,
+        "y": 834,
+        "width": 142,
+        "height": 99
+      },
+      {
+        "x": 404,
+        "y": 845,
+        "width": 144,
+        "height": 104
+      },
+      {
+        "x": 405,
+        "y": 875,
+        "width": 143,
+        "height": 106
+      },
+      {
+        "x": 392,
+        "y": 888,
+        "width": 140,
+        "height": 94
+      },
+      {
+        "x": 400,
+        "y": 897,
+        "width": 137,
+        "height": 89
+      },
+      {
+        "x": 400,
+        "y": 899,
+        "width": 134,
+        "height": 87
+      },
+      {
+        "x": 399,
+        "y": 900,
+        "width": 135,
+        "height": 86
+      },
+      {
+        "x": 388,
+        "y": 896,
+        "width": 159,
+        "height": 94
+      },
+      {
+        "x": 365,
+        "y": 881,
+        "width": 283,
+        "height": 112
+      },
+      {
+        "x": 374,
+        "y": 885,
+        "width": 252,
+        "height": 103
+      },
+      {
+        "x": 378,
+        "y": 886,
+        "width": 245,
+        "height": 100
+      },
+      {
+        "x": 380,
+        "y": 887,
+        "width": 241,
+        "height": 99
+      },
+      {
+        "x": 371,
+        "y": 896,
+        "width": 239,
+        "height": 91
+      },
+      {
+        "x": 396,
+        "y": 835,
+        "width": 282,
+        "height": 149
+      },
+      {
+        "x": 376,
+        "y": 848,
+        "width": 281,
+        "height": 136
+      },
+      {
+        "x": 385,
+        "y": 862,
+        "width": 237,
+        "height": 122
+      },
+      {
+        "x": 386,
+        "y": 855,
+        "width": 235,
+        "height": 129
+      },
+      {
+        "x": 386,
+        "y": 854,
+        "width": 235,
+        "height": 130
+      }
+    ],
+    "bbox": {
+      "x": 236,
+      "y": 711,
+      "width": 472,
+      "height": 282
+    }
+  },
   {
     "name": "sprMoth1",
     "width": 1000,
@@ -4533,34 +5467,7 @@
     }
   },
   null,
-  {
-    "name": "sprNPC19",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 260,
-    "originY": 500,
-    "bboxes": [
-      {
-        "x": 176,
-        "y": 128,
-        "width": 176,
-        "height": 372
-      },
-      {
-        "x": 176,
-        "y": 129,
-        "width": 176,
-        "height": 371
-      }
-    ],
-    "bbox": {
-      "x": 176,
-      "y": 128,
-      "width": 176,
-      "height": 420
-    }
-  },
+  null,
   {
     "name": "sprSwift",
     "width": 1000,
@@ -4678,93 +5585,75 @@
       "height": 64
     }
   },
+  null,
+  null,
   {
-    "name": "sprNPC24",
+    "name": "sprCycle",
     "width": 500,
     "height": 500,
-    "frames": 2,
-    "originX": 250,
-    "originY": 500,
+    "frames": 8,
+    "originX": 236,
+    "originY": 498,
     "bboxes": [
       {
-        "x": 147,
-        "y": 17,
-        "width": 228,
-        "height": 483
+        "x": 148,
+        "y": 37,
+        "width": 204,
+        "height": 463
       },
       {
-        "x": 147,
-        "y": 18,
-        "width": 229,
-        "height": 482
-      }
-    ],
-    "bbox": {
-      "x": 147,
-      "y": 17,
-      "width": 229,
-      "height": 613
-    }
-  },
-  null,
-  null,
-  null,
-  {
-    "name": "sprNPC17",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 260,
-    "originY": 500,
-    "bboxes": [
-      {
-        "x": 115,
-        "y": 5,
-        "width": 270,
-        "height": 495
+        "x": 148,
+        "y": 37,
+        "width": 204,
+        "height": 463
       },
       {
-        "x": 111,
-        "y": 6,
-        "width": 280,
-        "height": 494
-      }
-    ],
-    "bbox": {
-      "x": 111,
-      "y": 5,
-      "width": 280,
-      "height": 605
-    }
-  },
-  {
-    "name": "sprIndie",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 250,
-    "originY": 500,
-    "bboxes": [
+        "x": 142,
+        "y": 38,
+        "width": 193,
+        "height": 462
+      },
       {
-        "x": 106,
-        "y": 21,
-        "width": 289,
-        "height": 479
+        "x": 142,
+        "y": 39,
+        "width": 195,
+        "height": 461
+      },
+      {
+        "x": 95,
+        "y": 39,
+        "width": 281,
+        "height": 461
+      },
+      {
+        "x": 93,
+        "y": 40,
+        "width": 284,
+        "height": 460
       },
       {
         "x": 106,
-        "y": 22,
-        "width": 291,
-        "height": 478
+        "y": 95,
+        "width": 304,
+        "height": 405
+      },
+      {
+        "x": 106,
+        "y": 95,
+        "width": 304,
+        "height": 405
       }
     ],
     "bbox": {
-      "x": 106,
-      "y": 21,
-      "width": 291,
-      "height": 564
+      "x": 93,
+      "y": 37,
+      "width": 317,
+      "height": 574
     }
   },
+  null,
+  null,
+  null,
   {
     "name": "sprDot",
     "width": 64,
@@ -4810,9 +5699,9 @@
       },
       {
         "x": 175,
-        "y": 193,
+        "y": 150,
         "width": 152,
-        "height": 83
+        "height": 126
       },
       {
         "x": 190,
@@ -4834,15 +5723,15 @@
       },
       {
         "x": 137,
-        "y": 199,
+        "y": 158,
         "width": 215,
-        "height": 104
+        "height": 145
       },
       {
         "x": 167,
-        "y": 200,
+        "y": 164,
         "width": 154,
-        "height": 137
+        "height": 173
       },
       {
         "x": 156,
@@ -5311,35 +6200,521 @@
     }
   },
   null,
+  null,
   {
-    "name": "sprNPC01",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 273,
-    "originY": 500,
+    "name": "sprRat_alt",
+    "width": 1000,
+    "height": 1000,
+    "frames": 83,
+    "originX": 465,
+    "originY": 986,
     "bboxes": [
       {
-        "x": 134,
-        "y": 17,
-        "width": 218,
-        "height": 483
+        "x": 386,
+        "y": 775,
+        "width": 235,
+        "height": 209
       },
       {
-        "x": 135,
-        "y": 18,
-        "width": 218,
-        "height": 482
+        "x": 380,
+        "y": 812,
+        "width": 277,
+        "height": 174
+      },
+      {
+        "x": 397,
+        "y": 785,
+        "width": 138,
+        "height": 199
+      },
+      {
+        "x": 244,
+        "y": 760,
+        "width": 247,
+        "height": 214
+      },
+      {
+        "x": 245,
+        "y": 782,
+        "width": 255,
+        "height": 207
+      },
+      {
+        "x": 377,
+        "y": 744,
+        "width": 163,
+        "height": 240
+      },
+      {
+        "x": 397,
+        "y": 811,
+        "width": 138,
+        "height": 173
+      },
+      {
+        "x": 296,
+        "y": 714,
+        "width": 197,
+        "height": 246
+      },
+      {
+        "x": 369,
+        "y": 814,
+        "width": 304,
+        "height": 178
+      },
+      {
+        "x": 365,
+        "y": 809,
+        "width": 312,
+        "height": 182
+      },
+      {
+        "x": 372,
+        "y": 811,
+        "width": 322,
+        "height": 180
+      },
+      {
+        "x": 383,
+        "y": 810,
+        "width": 305,
+        "height": 177
+      },
+      {
+        "x": 366,
+        "y": 813,
+        "width": 299,
+        "height": 173
+      },
+      {
+        "x": 363,
+        "y": 810,
+        "width": 327,
+        "height": 176
+      },
+      {
+        "x": 369,
+        "y": 810,
+        "width": 335,
+        "height": 176
+      },
+      {
+        "x": 383,
+        "y": 810,
+        "width": 311,
+        "height": 177
+      },
+      {
+        "x": 388,
+        "y": 784,
+        "width": 232,
+        "height": 200
+      },
+      {
+        "x": 374,
+        "y": 758,
+        "width": 252,
+        "height": 226
+      },
+      {
+        "x": 382,
+        "y": 765,
+        "width": 244,
+        "height": 218
+      },
+      {
+        "x": 384,
+        "y": 766,
+        "width": 246,
+        "height": 218
+      },
+      {
+        "x": 384,
+        "y": 766,
+        "width": 252,
+        "height": 218
+      },
+      {
+        "x": 384,
+        "y": 766,
+        "width": 252,
+        "height": 218
+      },
+      {
+        "x": 384,
+        "y": 766,
+        "width": 252,
+        "height": 218
+      },
+      {
+        "x": 384,
+        "y": 766,
+        "width": 252,
+        "height": 218
+      },
+      {
+        "x": 379,
+        "y": 761,
+        "width": 233,
+        "height": 224
+      },
+      {
+        "x": 383,
+        "y": 778,
+        "width": 219,
+        "height": 206
+      },
+      {
+        "x": 386,
+        "y": 772,
+        "width": 220,
+        "height": 212
+      },
+      {
+        "x": 387,
+        "y": 771,
+        "width": 250,
+        "height": 213
+      },
+      {
+        "x": 387,
+        "y": 771,
+        "width": 229,
+        "height": 213
+      },
+      {
+        "x": 387,
+        "y": 771,
+        "width": 224,
+        "height": 213
+      },
+      {
+        "x": 387,
+        "y": 771,
+        "width": 224,
+        "height": 213
+      },
+      {
+        "x": 387,
+        "y": 771,
+        "width": 224,
+        "height": 213
+      },
+      {
+        "x": 387,
+        "y": 771,
+        "width": 224,
+        "height": 213
+      },
+      {
+        "x": 387,
+        "y": 771,
+        "width": 224,
+        "height": 213
+      },
+      {
+        "x": 387,
+        "y": 771,
+        "width": 224,
+        "height": 213
+      },
+      {
+        "x": 387,
+        "y": 771,
+        "width": 224,
+        "height": 213
+      },
+      {
+        "x": 379,
+        "y": 791,
+        "width": 247,
+        "height": 194
+      },
+      {
+        "x": 365,
+        "y": 777,
+        "width": 262,
+        "height": 207
+      },
+      {
+        "x": 368,
+        "y": 779,
+        "width": 290,
+        "height": 206
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 323,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 334,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 325,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 295,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 261,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 230,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 234,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 237,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 242,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 263,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 277,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 275,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 243,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 243,
+        "height": 205
+      },
+      {
+        "x": 370,
+        "y": 780,
+        "width": 241,
+        "height": 205
+      },
+      {
+        "x": 377,
+        "y": 771,
+        "width": 249,
+        "height": 213
+      },
+      {
+        "x": 392,
+        "y": 779,
+        "width": 316,
+        "height": 205
+      },
+      {
+        "x": 388,
+        "y": 777,
+        "width": 258,
+        "height": 207
+      },
+      {
+        "x": 386,
+        "y": 777,
+        "width": 237,
+        "height": 207
+      },
+      {
+        "x": 386,
+        "y": 777,
+        "width": 235,
+        "height": 207
+      },
+      {
+        "x": 386,
+        "y": 777,
+        "width": 235,
+        "height": 207
+      },
+      {
+        "x": 386,
+        "y": 777,
+        "width": 235,
+        "height": 207
+      },
+      {
+        "x": 386,
+        "y": 777,
+        "width": 235,
+        "height": 207
+      },
+      {
+        "x": 386,
+        "y": 777,
+        "width": 235,
+        "height": 207
+      },
+      {
+        "x": 391,
+        "y": 761,
+        "width": 235,
+        "height": 212
+      },
+      {
+        "x": 403,
+        "y": 741,
+        "width": 159,
+        "height": 221
+      },
+      {
+        "x": 403,
+        "y": 748,
+        "width": 166,
+        "height": 184
+      },
+      {
+        "x": 402,
+        "y": 760,
+        "width": 173,
+        "height": 189
+      },
+      {
+        "x": 403,
+        "y": 792,
+        "width": 173,
+        "height": 188
+      },
+      {
+        "x": 385,
+        "y": 802,
+        "width": 148,
+        "height": 181
+      },
+      {
+        "x": 398,
+        "y": 809,
+        "width": 146,
+        "height": 177
+      },
+      {
+        "x": 397,
+        "y": 811,
+        "width": 141,
+        "height": 176
+      },
+      {
+        "x": 397,
+        "y": 812,
+        "width": 140,
+        "height": 175
+      },
+      {
+        "x": 388,
+        "y": 808,
+        "width": 159,
+        "height": 182
+      },
+      {
+        "x": 365,
+        "y": 793,
+        "width": 283,
+        "height": 200
+      },
+      {
+        "x": 374,
+        "y": 797,
+        "width": 252,
+        "height": 191
+      },
+      {
+        "x": 378,
+        "y": 798,
+        "width": 245,
+        "height": 188
+      },
+      {
+        "x": 380,
+        "y": 799,
+        "width": 241,
+        "height": 187
+      },
+      {
+        "x": 371,
+        "y": 810,
+        "width": 239,
+        "height": 177
+      },
+      {
+        "x": 396,
+        "y": 763,
+        "width": 282,
+        "height": 221
+      },
+      {
+        "x": 376,
+        "y": 774,
+        "width": 281,
+        "height": 210
+      },
+      {
+        "x": 385,
+        "y": 777,
+        "width": 237,
+        "height": 207
+      },
+      {
+        "x": 386,
+        "y": 777,
+        "width": 235,
+        "height": 207
+      },
+      {
+        "x": 386,
+        "y": 777,
+        "width": 235,
+        "height": 207
       }
     ],
     "bbox": {
-      "x": 134,
-      "y": 17,
-      "width": 219,
-      "height": 600
+      "x": 244,
+      "y": 714,
+      "width": 464,
+      "height": 279
     }
   },
-  null,
   {
     "name": "sprMap_reserve_1",
     "width": 172,
@@ -5492,7 +6867,28 @@
     }
   },
   null,
-  null,
+  {
+    "name": "sprMap_jasper_cave_south",
+    "width": 165,
+    "height": 170,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 165,
+        "height": 170
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 165,
+      "height": 170
+    }
+  },
   {
     "name": "tree_leaf_a_01",
     "width": 2048,
@@ -5634,34 +7030,7 @@
       "height": 256
     }
   },
-  {
-    "name": "sprNPC16",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 260,
-    "originY": 500,
-    "bboxes": [
-      {
-        "x": 166,
-        "y": 208,
-        "width": 196,
-        "height": 292
-      },
-      {
-        "x": 167,
-        "y": 210,
-        "width": 195,
-        "height": 290
-      }
-    ],
-    "bbox": {
-      "x": 166,
-      "y": 208,
-      "width": 196,
-      "height": 292
-    }
-  },
+  null,
   null,
   {
     "name": "sprPossum2",
@@ -5893,8 +7262,51 @@
       "height": 183
     }
   },
+  {
+    "name": "uv_geranium",
+    "width": 128,
+    "height": 128,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 3,
+        "y": 4,
+        "width": 123,
+        "height": 120
+      }
+    ],
+    "bbox": {
+      "x": 3,
+      "y": 4,
+      "width": 123,
+      "height": 119
+    }
+  },
   null,
-  null,
+  {
+    "name": "sprMap_shroomgrove",
+    "width": 219,
+    "height": 205,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 219,
+        "height": 205
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 219,
+      "height": 205
+    }
+  },
   {
     "name": "sprStump_icon",
     "width": 64,
@@ -6012,6 +7424,35 @@
       "y": 0,
       "width": 256,
       "height": 286
+    }
+  },
+  null,
+  {
+    "name": "sprLena",
+    "width": 500,
+    "height": 500,
+    "frames": 2,
+    "originX": 250,
+    "originY": 500,
+    "bboxes": [
+      {
+        "x": 109,
+        "y": 61,
+        "width": 284,
+        "height": 439
+      },
+      {
+        "x": 107,
+        "y": 63,
+        "width": 284,
+        "height": 437
+      }
+    ],
+    "bbox": {
+      "x": 107,
+      "y": 61,
+      "width": 286,
+      "height": 487
     }
   },
   {
@@ -6707,10 +8148,114 @@
     }
   },
   null,
+  {
+    "name": "whiteboard",
+    "width": 256,
+    "height": 256,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 256,
+      "height": 256
+    }
+  },
   null,
+  {
+    "name": "sprCowboy",
+    "width": 550,
+    "height": 500,
+    "frames": 3,
+    "originX": 287,
+    "originY": 496,
+    "bboxes": [
+      {
+        "x": 163,
+        "y": 31,
+        "width": 256,
+        "height": 468
+      },
+      {
+        "x": 154,
+        "y": 37,
+        "width": 364,
+        "height": 462
+      },
+      {
+        "x": 154,
+        "y": 37,
+        "width": 364,
+        "height": 462
+      }
+    ],
+    "bbox": {
+      "x": 154,
+      "y": 31,
+      "width": 364,
+      "height": 600
+    }
+  },
+  {
+    "name": "sprShy",
+    "width": 1000,
+    "height": 1000,
+    "frames": 2,
+    "originX": 497,
+    "originY": 959,
+    "bboxes": [
+      {
+        "x": 362,
+        "y": 759,
+        "width": 226,
+        "height": 220
+      },
+      {
+        "x": 377,
+        "y": 801,
+        "width": 199,
+        "height": 198
+      }
+    ],
+    "bbox": {
+      "x": 362,
+      "y": 759,
+      "width": 226,
+      "height": 240
+    }
+  },
   null,
-  null,
-  null,
+  {
+    "name": "sprMap_rubberfarm",
+    "width": 471,
+    "height": 175,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 471,
+        "height": 175
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 471,
+      "height": 175
+    }
+  },
   null,
   null,
   {
@@ -6827,22 +8372,28 @@
     "name": "sprSteven",
     "width": 500,
     "height": 500,
-    "frames": 1,
+    "frames": 2,
     "originX": 250,
     "originY": 500,
     "bboxes": [
       {
-        "x": 136,
+        "x": 138,
         "y": 40,
-        "width": 228,
+        "width": 233,
         "height": 460
+      },
+      {
+        "x": 136,
+        "y": 41,
+        "width": 237,
+        "height": 459
       }
     ],
     "bbox": {
       "x": 136,
       "y": 40,
-      "width": 228,
-      "height": 556
+      "width": 237,
+      "height": 558
     }
   },
   null,
@@ -6973,8 +8524,99 @@
       "height": 120
     }
   },
+  {
+    "name": "sprScienceboss",
+    "width": 500,
+    "height": 500,
+    "frames": 9,
+    "originX": 279,
+    "originY": 494,
+    "bboxes": [
+      {
+        "x": 75,
+        "y": 4,
+        "width": 316,
+        "height": 496
+      },
+      {
+        "x": 76,
+        "y": 5,
+        "width": 314,
+        "height": 495
+      },
+      {
+        "x": 40,
+        "y": 5,
+        "width": 350,
+        "height": 495
+      },
+      {
+        "x": 40,
+        "y": 6,
+        "width": 348,
+        "height": 494
+      },
+      {
+        "x": 68,
+        "y": 1,
+        "width": 322,
+        "height": 499
+      },
+      {
+        "x": 70,
+        "y": 1,
+        "width": 320,
+        "height": 499
+      },
+      {
+        "x": 73,
+        "y": 2,
+        "width": 317,
+        "height": 498
+      },
+      {
+        "x": 73,
+        "y": 2,
+        "width": 317,
+        "height": 498
+      },
+      {
+        "x": 40,
+        "y": 5,
+        "width": 351,
+        "height": 495
+      }
+    ],
+    "bbox": {
+      "x": 40,
+      "y": 1,
+      "width": 351,
+      "height": 570
+    }
+  },
   null,
-  null,
+  {
+    "name": "sprDash",
+    "width": 64,
+    "height": 64,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 64,
+      "height": 64
+    }
+  },
   null,
   {
     "name": "sprMap_reserve_2",
@@ -7023,28 +8665,7 @@
       "height": 40
     }
   },
-  {
-    "name": "sprBG_Mall",
-    "width": 1920,
-    "height": 1080,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [
-      {
-        "x": 0,
-        "y": 0,
-        "width": 1920,
-        "height": 1080
-      }
-    ],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 1920,
-      "height": 1080
-    }
-  },
+  null,
   null,
   null,
   {
@@ -7145,7 +8766,28 @@
       "height": 40
     }
   },
-  null,
+  {
+    "name": "sprMap_rockybeach",
+    "width": 482,
+    "height": 301,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 482,
+        "height": 301
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 482,
+      "height": 301
+    }
+  },
   {
     "name": "sprDiamond",
     "width": 64,
@@ -7391,7 +9033,28 @@
       "height": 64
     }
   },
-  null,
+  {
+    "name": "sprMap_coral_island",
+    "width": 424,
+    "height": 229,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 424,
+        "height": 229
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 424,
+      "height": 229
+    }
+  },
   null,
   null,
   {
@@ -7488,7 +9151,28 @@
       "height": 519
     }
   },
-  null,
+  {
+    "name": "sprSeal",
+    "width": 1000,
+    "height": 1000,
+    "frames": 1,
+    "originX": 504,
+    "originY": 970,
+    "bboxes": [
+      {
+        "x": 294,
+        "y": 556,
+        "width": 446,
+        "height": 423
+      }
+    ],
+    "bbox": {
+      "x": 294,
+      "y": 556,
+      "width": 446,
+      "height": 161
+    }
+  },
   {
     "name": "mushroomnet",
     "width": 512,
@@ -7509,6 +9193,28 @@
       "y": 0,
       "width": 512,
       "height": 512
+    }
+  },
+  {
+    "name": "pal_mycology",
+    "width": 16,
+    "height": 2,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 2
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 16,
+      "height": 2
     }
   },
   null,
@@ -7805,6 +9511,28 @@
     }
   },
   {
+    "name": "sciencerug",
+    "width": 128,
+    "height": 128,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 128,
+      "height": 128
+    }
+  },
+  {
     "name": "sprWhite",
     "width": 8,
     "height": 8,
@@ -7848,28 +9576,7 @@
       "height": 314
     }
   },
-  {
-    "name": "sprLogan",
-    "width": 500,
-    "height": 500,
-    "frames": 1,
-    "originX": 238,
-    "originY": 500,
-    "bboxes": [
-      {
-        "x": 137,
-        "y": 102,
-        "width": 203,
-        "height": 398
-      }
-    ],
-    "bbox": {
-      "x": 137,
-      "y": 102,
-      "width": 203,
-      "height": 433
-    }
-  },
+  null,
   {
     "name": "sprAnnabel",
     "width": 500,
@@ -7927,6 +9634,80 @@
   null,
   null,
   null,
+  {
+    "name": "sprPlayer_facehair",
+    "width": 500,
+    "height": 500,
+    "frames": 6,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1
+      },
+      {
+        "x": 202,
+        "y": 217,
+        "width": 55,
+        "height": 19
+      },
+      {
+        "x": 175,
+        "y": 192,
+        "width": 127,
+        "height": 91
+      },
+      {
+        "x": 199,
+        "y": 221,
+        "width": 63,
+        "height": 9
+      },
+      {
+        "x": 186,
+        "y": 219,
+        "width": 107,
+        "height": 57
+      },
+      {
+        "x": 178,
+        "y": 223,
+        "width": 108,
+        "height": 81
+      }
+    ],
+    "bbox": {
+      "x": 175,
+      "y": 192,
+      "width": 127,
+      "height": 112
+    }
+  },
+  {
+    "name": "floormat",
+    "width": 640,
+    "height": 640,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 640
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 640,
+      "height": 640
+    }
+  },
   {
     "name": "sprRedd",
     "width": 500,
@@ -8027,8 +9808,57 @@
       "height": 512
     }
   },
+  {
+    "name": "sprMitzi",
+    "width": 550,
+    "height": 500,
+    "frames": 2,
+    "originX": 263,
+    "originY": 493,
+    "bboxes": [
+      {
+        "x": 174,
+        "y": 107,
+        "width": 198,
+        "height": 393
+      },
+      {
+        "x": 175,
+        "y": 108,
+        "width": 196,
+        "height": 392
+      }
+    ],
+    "bbox": {
+      "x": 174,
+      "y": 107,
+      "width": 198,
+      "height": 460
+    }
+  },
   null,
-  null,
+  {
+    "name": "geranium",
+    "width": 512,
+    "height": 512,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 8,
+        "y": 15,
+        "width": 497,
+        "height": 497
+      }
+    ],
+    "bbox": {
+      "x": 8,
+      "y": 15,
+      "width": 497,
+      "height": 490
+    }
+  },
   {
     "name": "sprShadowBlob",
     "width": 256,
@@ -8061,37 +9891,64 @@
     "name": "sprMiranda",
     "width": 500,
     "height": 500,
-    "frames": 3,
+    "frames": 4,
     "originX": 250,
     "originY": 500,
     "bboxes": [
       {
-        "x": 145,
-        "y": 58,
-        "width": 213,
-        "height": 442
+        "x": 121,
+        "y": 48,
+        "width": 259,
+        "height": 452
       },
       {
-        "x": 145,
-        "y": 58,
-        "width": 213,
-        "height": 442
+        "x": 121,
+        "y": 51,
+        "width": 259,
+        "height": 449
       },
       {
-        "x": 91,
+        "x": 69,
+        "y": 43,
+        "width": 352,
+        "height": 411
+      },
+      {
+        "x": 68,
         "y": 40,
-        "width": 341,
-        "height": 373
+        "width": 353,
+        "height": 412
       }
     ],
     "bbox": {
-      "x": 91,
+      "x": 68,
       "y": 40,
-      "width": 341,
-      "height": 547
+      "width": 353,
+      "height": 533
     }
   },
-  null,
+  {
+    "name": "sprMap_sphinx",
+    "width": 306,
+    "height": 278,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 306,
+        "height": 278
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 306,
+      "height": 278
+    }
+  },
   {
     "name": "sprBored3",
     "width": 500,
@@ -9371,37 +11228,33 @@
     }
   },
   null,
+  null,
+  null,
+  null,
+  null,
+  null,
   {
-    "name": "sprNPC09",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 260,
-    "originY": 500,
+    "name": "sprGrade_desat",
+    "width": 64,
+    "height": 64,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
     "bboxes": [
       {
-        "x": 121,
-        "y": 29,
-        "width": 285,
-        "height": 471
-      },
-      {
-        "x": 121,
-        "y": 31,
-        "width": 285,
-        "height": 469
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
       }
     ],
     "bbox": {
-      "x": 121,
-      "y": 29,
-      "width": 285,
-      "height": 563
+      "x": 0,
+      "y": 0,
+      "width": 64,
+      "height": 64
     }
   },
-  null,
-  null,
-  null,
   {
     "name": "tree_normal",
     "width": 512,
@@ -9425,35 +11278,113 @@
     }
   },
   null,
+  null,
   {
-    "name": "sprNPC20",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 250,
-    "originY": 500,
+    "name": "sprFootball1",
+    "width": 1000,
+    "height": 1000,
+    "frames": 15,
+    "originX": 480,
+    "originY": 994,
     "bboxes": [
       {
-        "x": 166,
-        "y": 201,
-        "width": 146,
-        "height": 299
+        "x": 386,
+        "y": 863,
+        "width": 163,
+        "height": 129
       },
       {
-        "x": 168,
-        "y": 202,
+        "x": 380,
+        "y": 875,
+        "width": 172,
+        "height": 121
+      },
+      {
+        "x": 425,
+        "y": 812,
+        "width": 146,
+        "height": 178
+      },
+      {
+        "x": 489,
+        "y": 833,
+        "width": 158,
+        "height": 155
+      },
+      {
+        "x": 432,
+        "y": 792,
         "width": 144,
-        "height": 298
+        "height": 192
+      },
+      {
+        "x": 373,
+        "y": 880,
+        "width": 188,
+        "height": 112
+      },
+      {
+        "x": 360,
+        "y": 863,
+        "width": 166,
+        "height": 132
+      },
+      {
+        "x": 387,
+        "y": 860,
+        "width": 164,
+        "height": 127
+      },
+      {
+        "x": 387,
+        "y": 861,
+        "width": 163,
+        "height": 126
+      },
+      {
+        "x": 389,
+        "y": 863,
+        "width": 158,
+        "height": 128
+      },
+      {
+        "x": 390,
+        "y": 864,
+        "width": 162,
+        "height": 128
+      },
+      {
+        "x": 391,
+        "y": 861,
+        "width": 165,
+        "height": 129
+      },
+      {
+        "x": 392,
+        "y": 859,
+        "width": 168,
+        "height": 128
+      },
+      {
+        "x": 392,
+        "y": 862,
+        "width": 166,
+        "height": 126
+      },
+      {
+        "x": 390,
+        "y": 862,
+        "width": 165,
+        "height": 126
       }
     ],
     "bbox": {
-      "x": 166,
-      "y": 201,
-      "width": 146,
-      "height": 299
+      "x": 360,
+      "y": 792,
+      "width": 287,
+      "height": 204
     }
   },
-  null,
   {
     "name": "sprMap_hometown_reserve",
     "width": 284,
@@ -9476,10 +11407,155 @@
       "height": 291
     }
   },
+  {
+    "name": "sprMap_beach_cliff1",
+    "width": 188,
+    "height": 240,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 188,
+        "height": 240
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 188,
+      "height": 240
+    }
+  },
   null,
   null,
   null,
-  null,
+  {
+    "name": "sprMillipede1",
+    "width": 1000,
+    "height": 1000,
+    "frames": 18,
+    "originX": 516,
+    "originY": 985,
+    "bboxes": [
+      {
+        "x": 353,
+        "y": 644,
+        "width": 246,
+        "height": 344
+      },
+      {
+        "x": 226,
+        "y": 847,
+        "width": 412,
+        "height": 139
+      },
+      {
+        "x": 304,
+        "y": 767,
+        "width": 296,
+        "height": 220
+      },
+      {
+        "x": 230,
+        "y": 724,
+        "width": 377,
+        "height": 262
+      },
+      {
+        "x": 154,
+        "y": 807,
+        "width": 456,
+        "height": 180
+      },
+      {
+        "x": 277,
+        "y": 568,
+        "width": 325,
+        "height": 419
+      },
+      {
+        "x": 341,
+        "y": 741,
+        "width": 278,
+        "height": 247
+      },
+      {
+        "x": 251,
+        "y": 564,
+        "width": 356,
+        "height": 423
+      },
+      {
+        "x": 225,
+        "y": 846,
+        "width": 413,
+        "height": 140
+      },
+      {
+        "x": 225,
+        "y": 847,
+        "width": 407,
+        "height": 139
+      },
+      {
+        "x": 225,
+        "y": 847,
+        "width": 407,
+        "height": 139
+      },
+      {
+        "x": 225,
+        "y": 846,
+        "width": 407,
+        "height": 140
+      },
+      {
+        "x": 227,
+        "y": 843,
+        "width": 400,
+        "height": 143
+      },
+      {
+        "x": 229,
+        "y": 838,
+        "width": 398,
+        "height": 148
+      },
+      {
+        "x": 229,
+        "y": 836,
+        "width": 394,
+        "height": 150
+      },
+      {
+        "x": 229,
+        "y": 836,
+        "width": 396,
+        "height": 150
+      },
+      {
+        "x": 229,
+        "y": 838,
+        "width": 411,
+        "height": 148
+      },
+      {
+        "x": 227,
+        "y": 840,
+        "width": 408,
+        "height": 146
+      }
+    ],
+    "bbox": {
+      "x": 154,
+      "y": 564,
+      "width": 486,
+      "height": 424
+    }
+  },
   null,
   {
     "name": "sprRing",
@@ -9618,6 +11694,7 @@
       "height": 50
     }
   },
+  null,
   {
     "name": "sprMap_seaside_cliff",
     "width": 178,
@@ -9717,6 +11794,424 @@
   },
   null,
   {
+    "name": "sprPetal",
+    "width": 250,
+    "height": 250,
+    "frames": 67,
+    "originX": 125,
+    "originY": 125,
+    "bboxes": [
+      {
+        "x": 70,
+        "y": 98,
+        "width": 33,
+        "height": 35
+      },
+      {
+        "x": 76,
+        "y": 105,
+        "width": 39,
+        "height": 30
+      },
+      {
+        "x": 101,
+        "y": 116,
+        "width": 38,
+        "height": 20
+      },
+      {
+        "x": 126,
+        "y": 95,
+        "width": 33,
+        "height": 26
+      },
+      {
+        "x": 140,
+        "y": 76,
+        "width": 28,
+        "height": 28
+      },
+      {
+        "x": 148,
+        "y": 70,
+        "width": 37,
+        "height": 18
+      },
+      {
+        "x": 154,
+        "y": 70,
+        "width": 36,
+        "height": 13
+      },
+      {
+        "x": 158,
+        "y": 71,
+        "width": 36,
+        "height": 11
+      },
+      {
+        "x": 159,
+        "y": 72,
+        "width": 38,
+        "height": 13
+      },
+      {
+        "x": 160,
+        "y": 75,
+        "width": 37,
+        "height": 19
+      },
+      {
+        "x": 159,
+        "y": 87,
+        "width": 37,
+        "height": 22
+      },
+      {
+        "x": 147,
+        "y": 104,
+        "width": 40,
+        "height": 24
+      },
+      {
+        "x": 111,
+        "y": 126,
+        "width": 39,
+        "height": 17
+      },
+      {
+        "x": 84,
+        "y": 116,
+        "width": 39,
+        "height": 26
+      },
+      {
+        "x": 74,
+        "y": 101,
+        "width": 31,
+        "height": 36
+      },
+      {
+        "x": 71,
+        "y": 96,
+        "width": 29,
+        "height": 36
+      },
+      {
+        "x": 73,
+        "y": 88,
+        "width": 26,
+        "height": 39
+      },
+      {
+        "x": 79,
+        "y": 83,
+        "width": 30,
+        "height": 44
+      },
+      {
+        "x": 92,
+        "y": 85,
+        "width": 25,
+        "height": 49
+      },
+      {
+        "x": 103,
+        "y": 89,
+        "width": 28,
+        "height": 52
+      },
+      {
+        "x": 123,
+        "y": 90,
+        "width": 30,
+        "height": 53
+      },
+      {
+        "x": 132,
+        "y": 79,
+        "width": 20,
+        "height": 48
+      },
+      {
+        "x": 133,
+        "y": 80,
+        "width": 25,
+        "height": 47
+      },
+      {
+        "x": 120,
+        "y": 81,
+        "width": 32,
+        "height": 48
+      },
+      {
+        "x": 108,
+        "y": 71,
+        "width": 37,
+        "height": 49
+      },
+      {
+        "x": 104,
+        "y": 70,
+        "width": 36,
+        "height": 48
+      },
+      {
+        "x": 99,
+        "y": 71,
+        "width": 35,
+        "height": 46
+      },
+      {
+        "x": 97,
+        "y": 73,
+        "width": 27,
+        "height": 49
+      },
+      {
+        "x": 93,
+        "y": 78,
+        "width": 33,
+        "height": 49
+      },
+      {
+        "x": 92,
+        "y": 89,
+        "width": 44,
+        "height": 49
+      },
+      {
+        "x": 103,
+        "y": 87,
+        "width": 39,
+        "height": 50
+      },
+      {
+        "x": 110,
+        "y": 84,
+        "width": 36,
+        "height": 53
+      },
+      {
+        "x": 117,
+        "y": 81,
+        "width": 38,
+        "height": 58
+      },
+      {
+        "x": 126,
+        "y": 81,
+        "width": 35,
+        "height": 57
+      },
+      {
+        "x": 135,
+        "y": 82,
+        "width": 20,
+        "height": 52
+      },
+      {
+        "x": 125,
+        "y": 85,
+        "width": 26,
+        "height": 47
+      },
+      {
+        "x": 112,
+        "y": 87,
+        "width": 34,
+        "height": 50
+      },
+      {
+        "x": 93,
+        "y": 91,
+        "width": 35,
+        "height": 50
+      },
+      {
+        "x": 81,
+        "y": 87,
+        "width": 31,
+        "height": 51
+      },
+      {
+        "x": 77,
+        "y": 95,
+        "width": 37,
+        "height": 45
+      },
+      {
+        "x": 70,
+        "y": 96,
+        "width": 45,
+        "height": 40
+      },
+      {
+        "x": 71,
+        "y": 89,
+        "width": 49,
+        "height": 40
+      },
+      {
+        "x": 81,
+        "y": 90,
+        "width": 52,
+        "height": 38
+      },
+      {
+        "x": 102,
+        "y": 89,
+        "width": 49,
+        "height": 37
+      },
+      {
+        "x": 121,
+        "y": 82,
+        "width": 41,
+        "height": 48
+      },
+      {
+        "x": 146,
+        "y": 88,
+        "width": 25,
+        "height": 47
+      },
+      {
+        "x": 132,
+        "y": 99,
+        "width": 37,
+        "height": 36
+      },
+      {
+        "x": 122,
+        "y": 111,
+        "width": 40,
+        "height": 27
+      },
+      {
+        "x": 95,
+        "y": 116,
+        "width": 52,
+        "height": 23
+      },
+      {
+        "x": 79,
+        "y": 106,
+        "width": 44,
+        "height": 31
+      },
+      {
+        "x": 75,
+        "y": 94,
+        "width": 43,
+        "height": 38
+      },
+      {
+        "x": 69,
+        "y": 96,
+        "width": 40,
+        "height": 40
+      },
+      {
+        "x": 71,
+        "y": 101,
+        "width": 39,
+        "height": 39
+      },
+      {
+        "x": 83,
+        "y": 101,
+        "width": 38,
+        "height": 37
+      },
+      {
+        "x": 89,
+        "y": 110,
+        "width": 41,
+        "height": 30
+      },
+      {
+        "x": 97,
+        "y": 120,
+        "width": 45,
+        "height": 22
+      },
+      {
+        "x": 112,
+        "y": 116,
+        "width": 39,
+        "height": 24
+      },
+      {
+        "x": 122,
+        "y": 112,
+        "width": 32,
+        "height": 25
+      },
+      {
+        "x": 128,
+        "y": 102,
+        "width": 28,
+        "height": 33
+      },
+      {
+        "x": 125,
+        "y": 94,
+        "width": 38,
+        "height": 38
+      },
+      {
+        "x": 120,
+        "y": 87,
+        "width": 38,
+        "height": 43
+      },
+      {
+        "x": 110,
+        "y": 81,
+        "width": 36,
+        "height": 43
+      },
+      {
+        "x": 86,
+        "y": 81,
+        "width": 33,
+        "height": 43
+      },
+      {
+        "x": 77,
+        "y": 87,
+        "width": 34,
+        "height": 30
+      },
+      {
+        "x": 74,
+        "y": 88,
+        "width": 32,
+        "height": 34
+      },
+      {
+        "x": 71,
+        "y": 84,
+        "width": 29,
+        "height": 42
+      },
+      {
+        "x": 70,
+        "y": 88,
+        "width": 28,
+        "height": 40
+      }
+    ],
+    "bbox": {
+      "x": 69,
+      "y": 70,
+      "width": 128,
+      "height": 73
+    }
+  },
+  {
     "name": "sprGrade_default",
     "width": 64,
     "height": 64,
@@ -9786,7 +12281,7 @@
     "name": "sprPlayer_hair",
     "width": 500,
     "height": 500,
-    "frames": 48,
+    "frames": 50,
     "originX": 0,
     "originY": 0,
     "bboxes": [
@@ -9797,10 +12292,10 @@
         "height": 1
       },
       {
-        "x": 176,
-        "y": 146,
-        "width": 128,
-        "height": 56
+        "x": 174,
+        "y": 144,
+        "width": 137,
+        "height": 70
       },
       {
         "x": 145,
@@ -9842,7 +12337,7 @@
         "x": 165,
         "y": 131,
         "width": 160,
-        "height": 82
+        "height": 103
       },
       {
         "x": 189,
@@ -9875,6 +12370,12 @@
         "height": 118
       },
       {
+        "x": 202,
+        "y": 152,
+        "width": 93,
+        "height": 54
+      },
+      {
         "x": 161,
         "y": 145,
         "width": 162,
@@ -9900,9 +12401,9 @@
       },
       {
         "x": 142,
-        "y": 133,
+        "y": 130,
         "width": 208,
-        "height": 84
+        "height": 87
       },
       {
         "x": 142,
@@ -9919,14 +12420,14 @@
       {
         "x": 162,
         "y": 153,
-        "width": 146,
-        "height": 58
+        "width": 293,
+        "height": 147
       },
       {
-        "x": 167,
-        "y": 118,
-        "width": 147,
-        "height": 129
+        "x": 166,
+        "y": 114,
+        "width": 151,
+        "height": 133
       },
       {
         "x": 169,
@@ -9935,9 +12436,9 @@
         "height": 89
       },
       {
-        "x": 179,
+        "x": 178,
         "y": 118,
-        "width": 125,
+        "width": 127,
         "height": 89
       },
       {
@@ -9989,9 +12490,9 @@
         "height": 104
       },
       {
-        "x": 168,
+        "x": 167,
         "y": 134,
-        "width": 150,
+        "width": 151,
         "height": 140
       },
       {
@@ -10032,9 +12533,9 @@
       },
       {
         "x": 180,
-        "y": 126,
+        "y": 124,
         "width": 128,
-        "height": 85
+        "height": 87
       },
       {
         "x": 167,
@@ -10068,9 +12569,15 @@
       },
       {
         "x": 166,
-        "y": 135,
-        "width": 147,
-        "height": 127
+        "y": 134,
+        "width": 148,
+        "height": 128
+      },
+      {
+        "x": 165,
+        "y": 141,
+        "width": 150,
+        "height": 91
       },
       {
         "x": 160,
@@ -10082,7 +12589,7 @@
     "bbox": {
       "x": 121,
       "y": 86,
-      "width": 278,
+      "width": 334,
       "height": 275
     }
   },
@@ -10130,22 +12637,64 @@
     "name": "sprTricky1",
     "width": 1000,
     "height": 1000,
-    "frames": 1,
+    "frames": 8,
     "originX": 493,
     "originY": 979,
     "bboxes": [
       {
         "x": 388,
-        "y": 793,
+        "y": 791,
         "width": 234,
-        "height": 193
+        "height": 195
+      },
+      {
+        "x": 345,
+        "y": 795,
+        "width": 248,
+        "height": 182
+      },
+      {
+        "x": 403,
+        "y": 755,
+        "width": 229,
+        "height": 228
+      },
+      {
+        "x": 387,
+        "y": 781,
+        "width": 237,
+        "height": 204
+      },
+      {
+        "x": 238,
+        "y": 817,
+        "width": 290,
+        "height": 168
+      },
+      {
+        "x": 398,
+        "y": 805,
+        "width": 266,
+        "height": 180
+      },
+      {
+        "x": 439,
+        "y": 824,
+        "width": 219,
+        "height": 163
+      },
+      {
+        "x": 419,
+        "y": 793,
+        "width": 241,
+        "height": 191
       }
     ],
     "bbox": {
-      "x": 388,
-      "y": 793,
-      "width": 234,
-      "height": -212
+      "x": 238,
+      "y": 755,
+      "width": 426,
+      "height": 232
     }
   },
   {
@@ -10192,7 +12741,28 @@
       "height": 251
     }
   },
-  null,
+  {
+    "name": "sprMap_jasper_cave_connect",
+    "width": 107,
+    "height": 135,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 107,
+        "height": 135
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 107,
+      "height": 135
+    }
+  },
   {
     "name": "sprGrade_witch",
     "width": 64,
@@ -10215,7 +12785,28 @@
       "height": 64
     }
   },
-  null,
+  {
+    "name": "sprFootball2",
+    "width": 1000,
+    "height": 1000,
+    "frames": 1,
+    "originX": 459,
+    "originY": 939,
+    "bboxes": [
+      {
+        "x": 322,
+        "y": 807,
+        "width": 212,
+        "height": 144
+      }
+    ],
+    "bbox": {
+      "x": 322,
+      "y": 807,
+      "width": 212,
+      "height": -341
+    }
+  },
   null,
   {
     "name": "chrysanthemum",
@@ -10243,7 +12834,7 @@
     "name": "sprResearcher",
     "width": 500,
     "height": 500,
-    "frames": 12,
+    "frames": 14,
     "originX": 236,
     "originY": 499,
     "bboxes": [
@@ -10318,17 +12909,71 @@
         "y": 66,
         "width": 249,
         "height": 434
+      },
+      {
+        "x": 70,
+        "y": 48,
+        "width": 286,
+        "height": 452
+      },
+      {
+        "x": 70,
+        "y": 50,
+        "width": 287,
+        "height": 450
       }
     ],
     "bbox": {
-      "x": 75,
+      "x": 70,
       "y": 48,
-      "width": 374,
+      "width": 379,
       "height": 549
     }
   },
-  null,
-  null,
+  {
+    "name": "sprMap_jasper_cave_1",
+    "width": 277,
+    "height": 183,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 277,
+        "height": 183
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 277,
+      "height": 183
+    }
+  },
+  {
+    "name": "sprMap_mythwood_town1",
+    "width": 284,
+    "height": 278,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 284,
+        "height": 278
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 284,
+      "height": 278
+    }
+  },
   {
     "name": "sprChar",
     "width": 562,
@@ -10875,6 +13520,28 @@
       "height": 432
     }
   },
+  {
+    "name": "sprMap_wood_cave1",
+    "width": 178,
+    "height": 138,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 178,
+        "height": 138
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 178,
+      "height": 138
+    }
+  },
   null,
   {
     "name": "sprPossum1",
@@ -11404,34 +14071,7 @@
       "height": 542
     }
   },
-  {
-    "name": "sprNPC21",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 250,
-    "originY": 500,
-    "bboxes": [
-      {
-        "x": 123,
-        "y": 225,
-        "width": 213,
-        "height": 275
-      },
-      {
-        "x": 123,
-        "y": 227,
-        "width": 216,
-        "height": 273
-      }
-    ],
-    "bbox": {
-      "x": 123,
-      "y": 225,
-      "width": 216,
-      "height": 275
-    }
-  },
+  null,
   null,
   null,
   null,
@@ -11500,6 +14140,28 @@
   null,
   null,
   null,
+  {
+    "name": "sprMap_beach_station",
+    "width": 281,
+    "height": 187,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 281,
+        "height": 187
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 281,
+      "height": 187
+    }
+  },
   {
     "name": "sprBallman",
     "width": 500,
@@ -11587,62 +14249,84 @@
     "originY": 909,
     "bboxes": [
       {
-        "x": 394,
-        "y": 665,
-        "width": 186,
-        "height": 187
-      },
-      {
-        "x": 343,
-        "y": 669,
-        "width": 220,
-        "height": 186
-      },
-      {
         "x": 396,
-        "y": 677,
-        "width": 214,
-        "height": 218
+        "y": 669,
+        "width": 181,
+        "height": 184
       },
       {
-        "x": 379,
-        "y": 681,
-        "width": 188,
+        "x": 351,
+        "y": 678,
+        "width": 201,
+        "height": 174
+      },
+      {
+        "x": 403,
+        "y": 699,
+        "width": 207,
+        "height": 190
+      },
+      {
+        "x": 355,
+        "y": 701,
+        "width": 210,
         "height": 154
       },
       {
-        "x": 400,
-        "y": 856,
-        "width": 183,
-        "height": 128
-      },
-      {
-        "x": 370,
-        "y": 631,
-        "width": 233,
-        "height": 210
-      },
-      {
-        "x": 398,
-        "y": 722,
+        "x": 401,
+        "y": 842,
         "width": 166,
-        "height": 164
+        "height": 141
       },
       {
-        "x": 314,
-        "y": 684,
-        "width": 250,
-        "height": 175
+        "x": 371,
+        "y": 648,
+        "width": 208,
+        "height": 177
+      },
+      {
+        "x": 406,
+        "y": 739,
+        "width": 164,
+        "height": 165
+      },
+      {
+        "x": 338,
+        "y": 687,
+        "width": 190,
+        "height": 158
       }
     ],
     "bbox": {
-      "x": 314,
-      "y": 631,
-      "width": 296,
-      "height": 353
+      "x": 338,
+      "y": 648,
+      "width": 272,
+      "height": 335
     }
   },
   null,
+  {
+    "name": "sprMap_jasper_cave_west_exit",
+    "width": 158,
+    "height": 124,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 158,
+        "height": 124
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 158,
+      "height": 124
+    }
+  },
   {
     "name": "sprKeyboard_butts",
     "width": 64,
@@ -12130,34 +14814,7 @@
     }
   },
   null,
-  {
-    "name": "sprNPC22",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 250,
-    "originY": 500,
-    "bboxes": [
-      {
-        "x": 128,
-        "y": 36,
-        "width": 241,
-        "height": 464
-      },
-      {
-        "x": 129,
-        "y": 36,
-        "width": 242,
-        "height": 464
-      }
-    ],
-    "bbox": {
-      "x": 128,
-      "y": 36,
-      "width": 243,
-      "height": 556
-    }
-  },
+  null,
   {
     "name": "sprNetworkscene1",
     "width": 341,
@@ -12254,8 +14911,8 @@
       },
       {
         "x": 219,
-        "y": 203,
-        "width": 9,
+        "y": 200,
+        "width": 12,
         "height": 26
       },
       {
@@ -12302,15 +14959,15 @@
       },
       {
         "x": 221,
-        "y": 199,
+        "y": 197,
         "width": 11,
         "height": 26
       },
       {
         "x": 220,
-        "y": 218,
+        "y": 215,
         "width": 13,
-        "height": 5
+        "height": 8
       },
       {
         "x": 216,
@@ -12332,9 +14989,9 @@
       },
       {
         "x": 216,
-        "y": 220,
+        "y": 217,
         "width": 9,
-        "height": 5
+        "height": 8
       },
       {
         "x": 216,
@@ -12368,6 +15025,7 @@
       "height": 34
     }
   },
+  null,
   null,
   {
     "name": "scribble_fallback_bulletpoint",
@@ -12562,34 +15220,7 @@
     }
   },
   null,
-  {
-    "name": "sprNPC11",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 260,
-    "originY": 500,
-    "bboxes": [
-      {
-        "x": 189,
-        "y": 199,
-        "width": 148,
-        "height": 301
-      },
-      {
-        "x": 190,
-        "y": 200,
-        "width": 149,
-        "height": 300
-      }
-    ],
-    "bbox": {
-      "x": 189,
-      "y": 199,
-      "width": 150,
-      "height": 301
-    }
-  },
+  null,
   {
     "name": "sprRiven",
     "width": 500,
@@ -12860,10 +15491,10 @@
         "height": 256
       },
       {
-        "x": 1,
-        "y": 59,
-        "width": 254,
-        "height": 151
+        "x": 0,
+        "y": 53,
+        "width": 256,
+        "height": 163
       },
       {
         "x": 0,
@@ -13567,7 +16198,128 @@
       "height": 442
     }
   },
-  null,
+  {
+    "name": "sprNPC31",
+    "width": 500,
+    "height": 500,
+    "frames": 2,
+    "originX": 250,
+    "originY": 500,
+    "bboxes": [
+      {
+        "x": 169,
+        "y": 69,
+        "width": 149,
+        "height": 431
+      },
+      {
+        "x": 169,
+        "y": 71,
+        "width": 150,
+        "height": 429
+      }
+    ],
+    "bbox": {
+      "x": 169,
+      "y": 69,
+      "width": 150,
+      "height": 531
+    }
+  },
+  {
+    "name": "sprJellyfish2",
+    "width": 1000,
+    "height": 1000,
+    "frames": 13,
+    "originX": 500,
+    "originY": 858,
+    "bboxes": [
+      {
+        "x": 383,
+        "y": 656,
+        "width": 238,
+        "height": 200
+      },
+      {
+        "x": 323,
+        "y": 23,
+        "width": 677,
+        "height": 977
+      },
+      {
+        "x": 382,
+        "y": 664,
+        "width": 240,
+        "height": 216
+      },
+      {
+        "x": 390,
+        "y": 664,
+        "width": 217,
+        "height": 184
+      },
+      {
+        "x": 338,
+        "y": 627,
+        "width": 383,
+        "height": 323
+      },
+      {
+        "x": 380,
+        "y": 690,
+        "width": 251,
+        "height": 146
+      },
+      {
+        "x": 380,
+        "y": 752,
+        "width": 243,
+        "height": 156
+      },
+      {
+        "x": 338,
+        "y": 588,
+        "width": 324,
+        "height": 230
+      },
+      {
+        "x": 381,
+        "y": 642,
+        "width": 168,
+        "height": 173
+      },
+      {
+        "x": 364,
+        "y": 632,
+        "width": 175,
+        "height": 176
+      },
+      {
+        "x": 370,
+        "y": 646,
+        "width": 223,
+        "height": 194
+      },
+      {
+        "x": 380,
+        "y": 653,
+        "width": 238,
+        "height": 201
+      },
+      {
+        "x": 400,
+        "y": 604,
+        "width": 236,
+        "height": 204
+      }
+    ],
+    "bbox": {
+      "x": 323,
+      "y": 23,
+      "width": 677,
+      "height": 977
+    }
+  },
   {
     "name": "sprMap_railtrail_2",
     "width": 201,
@@ -13612,7 +16364,28 @@
       "height": 2048
     }
   },
-  null,
+  {
+    "name": "sprMap_jasper_cave_south_exit",
+    "width": 182,
+    "height": 278,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 182,
+        "height": 278
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 182,
+      "height": 278
+    }
+  },
   {
     "name": "sprMap_hometown",
     "width": 373,
@@ -13768,7 +16541,7 @@
     "name": "sprCheerleader1",
     "width": 1000,
     "height": 1000,
-    "frames": 8,
+    "frames": 23,
     "originX": 483,
     "originY": 911,
     "bboxes": [
@@ -13779,53 +16552,143 @@
         "height": 156
       },
       {
-        "x": 416,
-        "y": 748,
-        "width": 100,
-        "height": 150
+        "x": 433,
+        "y": 709,
+        "width": 108,
+        "height": 165
       },
       {
-        "x": 432,
-        "y": 722,
-        "width": 107,
-        "height": 179
+        "x": 438,
+        "y": 724,
+        "width": 94,
+        "height": 169
       },
       {
         "x": 414,
-        "y": 718,
-        "width": 192,
-        "height": 199
+        "y": 776,
+        "width": 198,
+        "height": 126
       },
       {
-        "x": 494,
+        "x": 493,
         "y": 731,
-        "width": 194,
+        "width": 193,
         "height": 188
       },
       {
-        "x": 384,
-        "y": 716,
-        "width": 188,
-        "height": 144
+        "x": 413,
+        "y": 714,
+        "width": 136,
+        "height": 146
       },
       {
-        "x": 430,
-        "y": 779,
+        "x": 433,
+        "y": 777,
+        "width": 107,
+        "height": 168
+      },
+      {
+        "x": 368,
+        "y": 687,
+        "width": 179,
+        "height": 174
+      },
+      {
+        "x": 427,
+        "y": 806,
+        "width": 122,
+        "height": 142
+      },
+      {
+        "x": 437,
+        "y": 781,
+        "width": 100,
+        "height": 156
+      },
+      {
+        "x": 437,
+        "y": 754,
         "width": 111,
-        "height": 166
+        "height": 150
       },
       {
-        "x": 363,
-        "y": 607,
-        "width": 182,
-        "height": 256
+        "x": 435,
+        "y": 726,
+        "width": 113,
+        "height": 152
+      },
+      {
+        "x": 433,
+        "y": 709,
+        "width": 108,
+        "height": 165
+      },
+      {
+        "x": 433,
+        "y": 698,
+        "width": 110,
+        "height": 175
+      },
+      {
+        "x": 433,
+        "y": 690,
+        "width": 110,
+        "height": 180
+      },
+      {
+        "x": 433,
+        "y": 690,
+        "width": 112,
+        "height": 182
+      },
+      {
+        "x": 433,
+        "y": 689,
+        "width": 114,
+        "height": 179
+      },
+      {
+        "x": 432,
+        "y": 689,
+        "width": 116,
+        "height": 180
+      },
+      {
+        "x": 431,
+        "y": 689,
+        "width": 117,
+        "height": 182
+      },
+      {
+        "x": 432,
+        "y": 697,
+        "width": 116,
+        "height": 186
+      },
+      {
+        "x": 429,
+        "y": 708,
+        "width": 117,
+        "height": 186
+      },
+      {
+        "x": 432,
+        "y": 727,
+        "width": 111,
+        "height": 191
+      },
+      {
+        "x": 434,
+        "y": 745,
+        "width": 105,
+        "height": 198
       }
     ],
     "bbox": {
-      "x": 363,
-      "y": 607,
-      "width": 325,
-      "height": 338
+      "x": 368,
+      "y": 687,
+      "width": 318,
+      "height": 261
     }
   },
   null,
@@ -14282,6 +17145,7 @@
   null,
   null,
   null,
+  null,
   {
     "name": "sprMayor",
     "width": 550,
@@ -14567,7 +17431,51 @@
     }
   },
   null,
+  {
+    "name": "texture_gratealpga",
+    "width": 640,
+    "height": 640,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 640
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 640,
+      "height": 640
+    }
+  },
   null,
+  {
+    "name": "sprMap_begonia_south",
+    "width": 138,
+    "height": 105,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 138,
+        "height": 105
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 138,
+      "height": 105
+    }
+  },
   null,
   {
     "name": "sprHatlady",
@@ -14662,6 +17570,28 @@
     }
   },
   {
+    "name": "tex_chair_uv",
+    "width": 256,
+    "height": 256,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 1,
+        "y": 4,
+        "width": 231,
+        "height": 227
+      }
+    ],
+    "bbox": {
+      "x": 1,
+      "y": 4,
+      "width": 231,
+      "height": 224
+    }
+  },
+  {
     "name": "sprHalftone_double",
     "width": 64,
     "height": 64,
@@ -14705,29 +17635,71 @@
       "height": 1080
     }
   },
-  null,
   {
-    "name": "sprBG_Zip",
-    "width": 1920,
-    "height": 1080,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
+    "name": "sprAlien1",
+    "width": 1000,
+    "height": 1000,
+    "frames": 8,
+    "originX": 520,
+    "originY": 959,
     "bboxes": [
       {
-        "x": 0,
-        "y": 0,
-        "width": 1920,
-        "height": 1080
+        "x": 330,
+        "y": 671,
+        "width": 372,
+        "height": 289
+      },
+      {
+        "x": 261,
+        "y": 702,
+        "width": 391,
+        "height": 244
+      },
+      {
+        "x": 347,
+        "y": 716,
+        "width": 357,
+        "height": 252
+      },
+      {
+        "x": 304,
+        "y": 603,
+        "width": 336,
+        "height": 347
+      },
+      {
+        "x": 202,
+        "y": 783,
+        "width": 359,
+        "height": 177
+      },
+      {
+        "x": 365,
+        "y": 696,
+        "width": 386,
+        "height": 269
+      },
+      {
+        "x": 324,
+        "y": 597,
+        "width": 298,
+        "height": 366
+      },
+      {
+        "x": 250,
+        "y": 572,
+        "width": 425,
+        "height": 355
       }
     ],
     "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 1920,
-      "height": 1080
+      "x": 202,
+      "y": 572,
+      "width": 549,
+      "height": 396
     }
   },
+  null,
   null,
   null,
   {
@@ -14966,34 +17938,7 @@
       "height": 474
     }
   },
-  {
-    "name": "sprNPC08",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 250,
-    "originY": 500,
-    "bboxes": [
-      {
-        "x": 137,
-        "y": 80,
-        "width": 255,
-        "height": 420
-      },
-      {
-        "x": 136,
-        "y": 81,
-        "width": 259,
-        "height": 419
-      }
-    ],
-    "bbox": {
-      "x": 136,
-      "y": 80,
-      "width": 259,
-      "height": 477
-    }
-  },
+  null,
   {
     "name": "sprFlarebig",
     "width": 256,
@@ -15098,6 +18043,29 @@
   null,
   null,
   {
+    "name": "scienceposters",
+    "width": 256,
+    "height": 256,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 256,
+      "height": 256
+    }
+  },
+  null,
+  {
     "name": "sprPixel2",
     "width": 2,
     "height": 2,
@@ -15119,8 +18087,9 @@
       "height": 2
     }
   },
+  null,
   {
-    "name": "sprDash",
+    "name": "sprTractor_line",
     "width": 64,
     "height": 64,
     "frames": 1,
@@ -15142,7 +18111,28 @@
     }
   },
   null,
-  null,
+  {
+    "name": "sprMap_mythwood_cave_east",
+    "width": 223,
+    "height": 173,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 223,
+        "height": 173
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 223,
+      "height": 173
+    }
+  },
   {
     "name": "sprFashion",
     "width": 500,
@@ -15173,103 +18163,116 @@
   },
   {
     "name": "sprChar_icon",
-    "width": 114,
-    "height": 82,
-    "frames": 9,
-    "originX": 57,
-    "originY": 41,
+    "width": 124,
+    "height": 97,
+    "frames": 12,
+    "originX": 62,
+    "originY": 48,
     "bboxes": [
       {
-        "x": 14,
-        "y": 2,
-        "width": 82,
-        "height": 78
+        "x": 2,
+        "y": 5,
+        "width": 119,
+        "height": 86
       },
       {
-        "x": 25,
+        "x": 7,
+        "y": 1,
+        "width": 108,
+        "height": 96
+      },
+      {
+        "x": 15,
+        "y": 5,
+        "width": 91,
+        "height": 88
+      },
+      {
+        "x": 17,
         "y": 0,
-        "width": 68,
-        "height": 82
-      },
-      {
-        "x": 10,
-        "y": 2,
-        "width": 104,
-        "height": 74
-      },
-      {
-        "x": 22,
-        "y": 7,
-        "width": 82,
-        "height": 70
-      },
-      {
-        "x": 30,
-        "y": 8,
-        "width": 54,
-        "height": 66
-      },
-      {
-        "x": 23,
-        "y": 9,
-        "width": 59,
-        "height": 66
+        "width": 95,
+        "height": 96
       },
       {
         "x": 6,
-        "y": 4,
-        "width": 75,
-        "height": 74
-      },
-      {
-        "x": 22,
-        "y": 9,
-        "width": 64,
-        "height": 70
+        "y": 2,
+        "width": 112,
+        "height": 93
       },
       {
         "x": 0,
-        "y": 4,
-        "width": 108,
+        "y": 3,
+        "width": 124,
+        "height": 89
+      },
+      {
+        "x": 22,
+        "y": 6,
+        "width": 87,
+        "height": 85
+      },
+      {
+        "x": 11,
+        "y": 1,
+        "width": 101,
+        "height": 95
+      },
+      {
+        "x": 18,
+        "y": 15,
+        "width": 87,
         "height": 75
+      },
+      {
+        "x": 3,
+        "y": 5,
+        "width": 116,
+        "height": 87
+      },
+      {
+        "x": 15,
+        "y": 5,
+        "width": 99,
+        "height": 84
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "width": 116,
+        "height": 86
       }
     ],
     "bbox": {
       "x": 0,
       "y": 0,
-      "width": 114,
-      "height": 92
+      "width": 124,
+      "height": 97
     }
   },
-  null,
   {
-    "name": "sprNPC05",
-    "width": 500,
-    "height": 500,
-    "frames": 2,
-    "originX": 250,
-    "originY": 500,
+    "name": "sprTractor_node",
+    "width": 128,
+    "height": 128,
+    "frames": 1,
+    "originX": 64,
+    "originY": 64,
     "bboxes": [
       {
-        "x": 124,
-        "y": 23,
-        "width": 252,
-        "height": 477
-      },
-      {
-        "x": 124,
-        "y": 20,
-        "width": 252,
-        "height": 480
+        "x": 0,
+        "y": 0,
+        "width": 128,
+        "height": 128
       }
     ],
     "bbox": {
-      "x": 124,
-      "y": 20,
-      "width": 252,
-      "height": 581
+      "x": 0,
+      "y": 0,
+      "width": 128,
+      "height": 128
     }
   },
+  null,
+  null,
   null,
   null,
   {
@@ -15340,7 +18343,76 @@
       "height": 64
     }
   },
-  null,
+  {
+    "name": "sprWizard",
+    "width": 1000,
+    "height": 1000,
+    "frames": 9,
+    "originX": 470,
+    "originY": 979,
+    "bboxes": [
+      {
+        "x": 386,
+        "y": 719,
+        "width": 235,
+        "height": 264
+      },
+      {
+        "x": 351,
+        "y": 746,
+        "width": 281,
+        "height": 245
+      },
+      {
+        "x": 349,
+        "y": 720,
+        "width": 292,
+        "height": 266
+      },
+      {
+        "x": 280,
+        "y": 611,
+        "width": 371,
+        "height": 347
+      },
+      {
+        "x": 307,
+        "y": 777,
+        "width": 331,
+        "height": 209
+      },
+      {
+        "x": 381,
+        "y": 722,
+        "width": 275,
+        "height": 261
+      },
+      {
+        "x": 340,
+        "y": 742,
+        "width": 302,
+        "height": 243
+      },
+      {
+        "x": 246,
+        "y": 557,
+        "width": 364,
+        "height": 417
+      },
+      {
+        "x": 388,
+        "y": 759,
+        "width": 148,
+        "height": 224
+      }
+    ],
+    "bbox": {
+      "x": 246,
+      "y": 557,
+      "width": 410,
+      "height": 434
+    }
+  },
   null,
   null,
   {
@@ -15552,6 +18624,7 @@
       "height": 339
     }
   },
+  null,
   {
     "name": "sprBG_championship",
     "width": 1409,
@@ -15662,7 +18735,7 @@
       {
         "x": 295,
         "y": 678,
-        "width": 357,
+        "width": 358,
         "height": 306
       },
       {
@@ -15672,9 +18745,9 @@
         "height": 287
       },
       {
-        "x": 277,
+        "x": 276,
         "y": 735,
-        "width": 448,
+        "width": 449,
         "height": 245
       },
       {
@@ -15790,6 +18863,28 @@
       "y": 26,
       "width": 64,
       "height": -15
+    }
+  },
+  {
+    "name": "sprMap_jasper_cave_2",
+    "width": 371,
+    "height": 116,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 371,
+        "height": 116
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 371,
+      "height": 116
     }
   },
   null,
@@ -16652,7 +19747,40 @@
     }
   },
   null,
-  null,
+  {
+    "name": "sprBarnes",
+    "width": 500,
+    "height": 500,
+    "frames": 3,
+    "originX": 251,
+    "originY": 497,
+    "bboxes": [
+      {
+        "x": 156,
+        "y": 70,
+        "width": 189,
+        "height": 430
+      },
+      {
+        "x": 156,
+        "y": 71,
+        "width": 188,
+        "height": 429
+      },
+      {
+        "x": 113,
+        "y": 81,
+        "width": 258,
+        "height": 419
+      }
+    ],
+    "bbox": {
+      "x": 113,
+      "y": 70,
+      "width": 258,
+      "height": 516
+    }
+  },
   {
     "name": "sprHalftone",
     "width": 64,
@@ -16675,6 +19803,7 @@
       "height": 64
     }
   },
+  null,
   null,
   {
     "name": "sprOffice_over_finance",
@@ -16738,7 +19867,98 @@
       "height": 64
     }
   },
-  null,
+  {
+    "name": "sprHShero",
+    "width": 500,
+    "height": 500,
+    "frames": 2,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 112,
+        "y": 22,
+        "width": 255,
+        "height": 478
+      },
+      {
+        "x": 114,
+        "y": 22,
+        "width": 254,
+        "height": 478
+      }
+    ],
+    "bbox": {
+      "x": 112,
+      "y": 22,
+      "width": 256,
+      "height": 568
+    }
+  },
+  {
+    "name": "sprDaredevil1",
+    "width": 1000,
+    "height": 1000,
+    "frames": 8,
+    "originX": 480,
+    "originY": 978,
+    "bboxes": [
+      {
+        "x": 406,
+        "y": 793,
+        "width": 158,
+        "height": 184
+      },
+      {
+        "x": 381,
+        "y": 838,
+        "width": 147,
+        "height": 137
+      },
+      {
+        "x": 355,
+        "y": 822,
+        "width": 214,
+        "height": 154
+      },
+      {
+        "x": 329,
+        "y": 797,
+        "width": 210,
+        "height": 173
+      },
+      {
+        "x": 333,
+        "y": 859,
+        "width": 233,
+        "height": 120
+      },
+      {
+        "x": 424,
+        "y": 794,
+        "width": 181,
+        "height": 183
+      },
+      {
+        "x": 392,
+        "y": 814,
+        "width": 154,
+        "height": 164
+      },
+      {
+        "x": 311,
+        "y": 745,
+        "width": 174,
+        "height": 218
+      }
+    ],
+    "bbox": {
+      "x": 311,
+      "y": 745,
+      "width": 294,
+      "height": 234
+    }
+  },
   {
     "name": "sprSummit",
     "width": 48,
@@ -17307,7 +20527,50 @@
     }
   },
   null,
-  null,
+  {
+    "name": "moretonleaf",
+    "width": 256,
+    "height": 256,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 4,
+        "y": 1,
+        "width": 248,
+        "height": 251
+      }
+    ],
+    "bbox": {
+      "x": 4,
+      "y": 1,
+      "width": 248,
+      "height": 254
+    }
+  },
+  {
+    "name": "sprMap_ocean",
+    "width": 964,
+    "height": 378,
+    "frames": 1,
+    "originX": 0,
+    "originY": 0,
+    "bboxes": [
+      {
+        "x": 0,
+        "y": 0,
+        "width": 964,
+        "height": 378
+      }
+    ],
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 964,
+      "height": 378
+    }
+  },
   {
     "name": "sprNerd1",
     "width": 1000,
@@ -17473,7 +20736,7 @@
     "name": "sprPlayer_mask",
     "width": 500,
     "height": 500,
-    "frames": 17,
+    "frames": 13,
     "originX": 0,
     "originY": 0,
     "bboxes": [
@@ -17532,18 +20795,6 @@
         "height": 51
       },
       {
-        "x": 202,
-        "y": 217,
-        "width": 55,
-        "height": 19
-      },
-      {
-        "x": 175,
-        "y": 192,
-        "width": 127,
-        "height": 91
-      },
-      {
         "x": 187,
         "y": 221,
         "width": 20,
@@ -17562,18 +20813,6 @@
         "height": 12
       },
       {
-        "x": 199,
-        "y": 221,
-        "width": 63,
-        "height": 9
-      },
-      {
-        "x": 186,
-        "y": 219,
-        "width": 107,
-        "height": 57
-      },
-      {
         "x": 181,
         "y": 182,
         "width": 124,
@@ -17584,7 +20823,7 @@
       "x": 168,
       "y": 166,
       "width": 137,
-      "height": 117
+      "height": 96
     }
   },
   {
@@ -18626,7 +21865,238 @@
   },
   null,
   null,
-  null,
+  {
+    "name": "sprShroom_m",
+    "width": 1000,
+    "height": 1000,
+    "frames": 36,
+    "originX": 473,
+    "originY": 975,
+    "bboxes": [
+      {
+        "x": 297,
+        "y": 658,
+        "width": 401,
+        "height": 317
+      },
+      {
+        "x": 297,
+        "y": 658,
+        "width": 401,
+        "height": 317
+      },
+      {
+        "x": 153,
+        "y": 697,
+        "width": 475,
+        "height": 278
+      },
+      {
+        "x": 130,
+        "y": 659,
+        "width": 482,
+        "height": 315
+      },
+      {
+        "x": 273,
+        "y": 609,
+        "width": 416,
+        "height": 365
+      },
+      {
+        "x": 313,
+        "y": 641,
+        "width": 294,
+        "height": 331
+      },
+      {
+        "x": 246,
+        "y": 725,
+        "width": 328,
+        "height": 250
+      },
+      {
+        "x": 177,
+        "y": 647,
+        "width": 474,
+        "height": 332
+      },
+      {
+        "x": 272,
+        "y": 645,
+        "width": 422,
+        "height": 327
+      },
+      {
+        "x": 271,
+        "y": 652,
+        "width": 428,
+        "height": 294
+      },
+      {
+        "x": 272,
+        "y": 661,
+        "width": 421,
+        "height": 290
+      },
+      {
+        "x": 271,
+        "y": 654,
+        "width": 421,
+        "height": 317
+      },
+      {
+        "x": 272,
+        "y": 645,
+        "width": 416,
+        "height": 327
+      },
+      {
+        "x": 272,
+        "y": 645,
+        "width": 422,
+        "height": 328
+      },
+      {
+        "x": 271,
+        "y": 652,
+        "width": 428,
+        "height": 295
+      },
+      {
+        "x": 272,
+        "y": 661,
+        "width": 421,
+        "height": 290
+      },
+      {
+        "x": 271,
+        "y": 654,
+        "width": 421,
+        "height": 317
+      },
+      {
+        "x": 272,
+        "y": 645,
+        "width": 416,
+        "height": 326
+      },
+      {
+        "x": 297,
+        "y": 658,
+        "width": 401,
+        "height": 317
+      },
+      {
+        "x": 298,
+        "y": 657,
+        "width": 400,
+        "height": 318
+      },
+      {
+        "x": 296,
+        "y": 659,
+        "width": 405,
+        "height": 316
+      },
+      {
+        "x": 294,
+        "y": 662,
+        "width": 411,
+        "height": 313
+      },
+      {
+        "x": 281,
+        "y": 670,
+        "width": 400,
+        "height": 305
+      },
+      {
+        "x": 281,
+        "y": 671,
+        "width": 391,
+        "height": 304
+      },
+      {
+        "x": 279,
+        "y": 670,
+        "width": 389,
+        "height": 305
+      },
+      {
+        "x": 280,
+        "y": 669,
+        "width": 387,
+        "height": 306
+      },
+      {
+        "x": 279,
+        "y": 668,
+        "width": 387,
+        "height": 307
+      },
+      {
+        "x": 280,
+        "y": 668,
+        "width": 386,
+        "height": 307
+      },
+      {
+        "x": 279,
+        "y": 667,
+        "width": 386,
+        "height": 308
+      },
+      {
+        "x": 276,
+        "y": 671,
+        "width": 384,
+        "height": 304
+      },
+      {
+        "x": 281,
+        "y": 673,
+        "width": 385,
+        "height": 302
+      },
+      {
+        "x": 294,
+        "y": 666,
+        "width": 388,
+        "height": 309
+      },
+      {
+        "x": 297,
+        "y": 661,
+        "width": 390,
+        "height": 314
+      },
+      {
+        "x": 297,
+        "y": 659,
+        "width": 396,
+        "height": 316
+      },
+      {
+        "x": 298,
+        "y": 657,
+        "width": 399,
+        "height": 318
+      },
+      {
+        "x": 297,
+        "y": 658,
+        "width": 401,
+        "height": 317
+      }
+    ],
+    "bbox": {
+      "x": 130,
+      "y": 609,
+      "width": 575,
+      "height": 370
+    }
+  },
   {
     "name": "sprThought_big",
     "width": 547,
@@ -18655,6 +22125,7 @@
       "height": 352
     }
   },
+  null,
   {
     "name": "sprBG_Diner",
     "width": 1920,
@@ -18983,28 +22454,7 @@
       "height": 128
     }
   },
-  {
-    "name": "sprBG_Disco",
-    "width": 1920,
-    "height": 1080,
-    "frames": 1,
-    "originX": 0,
-    "originY": 0,
-    "bboxes": [
-      {
-        "x": 0,
-        "y": 0,
-        "width": 1920,
-        "height": 1080
-      }
-    ],
-    "bbox": {
-      "x": 0,
-      "y": 0,
-      "width": 1920,
-      "height": 1080
-    }
-  },
+  null,
   {
     "name": "sprsunkenplaque",
     "width": 1980,

@@ -1,3 +1,4 @@
+import { BeastieType } from "../../data/BeastieData";
 import InfoBox from "../../shared/InfoBox";
 import styles from "./ContentPreview.module.css";
 
@@ -13,12 +14,34 @@ type Props = {
   changeFrame: (diff: number) => void;
   userSpeed: number;
   setUserSpeed: React.Dispatch<React.SetStateAction<number>>;
+  beastiedata: BeastieType;
+  alt: number;
+  setAlt: React.Dispatch<React.SetStateAction<number>>;
 };
 
 export default function AnimationOptions(props: Props): React.ReactElement {
   return (
     <>
       <InfoBox header="Animation">
+        {props.beastiedata.spr_alt.length ? (
+          <>
+            <label htmlFor="altSprite">Alt Sprite: </label>
+            <select
+              name="altSprite"
+              id="altSprite"
+              onChange={(event) => props.setAlt(Number(event.target.value))}
+              value={props.alt}
+            >
+              <option value="-1">Normal</option>
+              {props.beastiedata.spr_alt.map((sprindex, index) => (
+                <option key={sprindex} value={index}>
+                  Alt {index + 1}
+                </option>
+              ))}
+            </select>
+            <br />
+          </>
+        ) : null}
         <label htmlFor="anim">Animation: </label>
         <select
           name="anim"

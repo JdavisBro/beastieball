@@ -43,8 +43,10 @@ export type BeastieAnimData = {
   [key: string]: BeastieAnimation | string | number | undefined;
 };
 
+export type Circular = { __Elephant_Circular_Ref__: number };
+
 export type BeastieAnimList = {
-  anim_data: BeastieAnimData;
+  anim_data: BeastieAnimData | Circular;
   ball: BeastiePos;
   evo1: BeastiePos;
   evo2: BeastiePos;
@@ -53,27 +55,34 @@ export type BeastieAnimList = {
   partner: BeastiePos;
   ready: BeastiePos;
   splash: BeastiePos;
-  colors: Array<{
-    _?: string;
-    array: Array<{
-      color: number;
-      x: number;
-    }>;
-  }>;
-  colors2: Array<{
-    _?: string;
-    array: Array<{
-      color: number;
-      x: number;
-    }>;
-  }> | null;
-  shiny: Array<{
-    _?: string;
-    array: Array<{
-      color: number;
-      x: number;
-    }>;
-  }>;
+  colors:
+    | Array<{
+        _?: string;
+        array: Array<{
+          color: number;
+          x: number;
+        }>;
+      }>
+    | Circular;
+  colors2:
+    | Array<{
+        _?: string;
+        array: Array<{
+          color: number;
+          x: number;
+        }>;
+      }>
+    | null
+    | Circular;
+  shiny:
+    | Array<{
+        _?: string;
+        array: Array<{
+          color: number;
+          x: number;
+        }>;
+      }>
+    | Circular;
 };
 
 const BEASTIE_ANIMATIONS: Map<string, BeastieAnimList> = new Map();

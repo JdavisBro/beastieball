@@ -12,6 +12,7 @@ import SPRITE_INFO, { BBox, Sprite } from "../../data/SpriteInfo";
 import useLoadBeastieImages from "../../utils/useLoadBeastieImages";
 import BEASTIE_ANIMATIONS, {
   BeastieAnimation,
+  BeastieAnimData,
 } from "../../data/BeastieAnimations";
 import { hexToRgb } from "../../utils/color";
 import saveGif from "./saveGif";
@@ -34,7 +35,14 @@ export default function ContentPreview(props: Props): React.ReactNode {
     [255, 255, 255],
   ]);
 
+  const [alt, setAlt] = useState(-1);
+
+  useEffect(() => setAlt(-1), [props.beastiedata.id]);
+
   const beastiesprite = SPRITE_INFO[props.beastiedata.spr] as Sprite;
+  const drawnsprite =
+    (alt >= 0 && (SPRITE_INFO[props.beastiedata.spr_alt[alt]] as Sprite)) ||
+    beastiesprite;
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const glRef = useRef<WebGLRenderingContext | null>(null);
@@ -42,7 +50,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const cropCanvasRef = useRef<HTMLCanvasElement>(null);
 
   const [animation, setAnimation] = useState("idle");
-  const animdata = BEASTIE_ANIMATIONS.get(`_${beastiesprite.name}`)?.anim_data;
+  const animdata: BeastieAnimData | undefined = BEASTIE_ANIMATIONS.get(
+    `_${beastiesprite.name}`,
+  )?.anim_data as BeastieAnimData;
 
   let anim: BeastieAnimation | undefined = undefined;
   const tempanim = animdata ? animdata[animation] : undefined;
@@ -55,7 +65,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   }
 
   const loadedImages = useLoadBeastieImages(
-    `/gameassets/beasties/${beastiesprite.name}`,
+    `/gameassets/beasties/${drawnsprite.name}`,
     beastiesprite.frames,
   );
   const requestRef = useRef(0);
@@ -107,16 +117,16 @@ export default function ContentPreview(props: Props): React.ReactNode {
     (bbox: BBox) => {
       const beastiescale =
         bbox.width > bbox.height
-          ? beastiesprite.width / bbox.width
-          : beastiesprite.height / bbox.height;
+          ? drawnsprite.width / bbox.width
+          : drawnsprite.height / bbox.height;
       return `scale(${beastiescale}) translate(${((-bbox.x - bbox.width / 2 + beastiesprite.width / 2) / beastiesprite.width) * 100}%, ${((-bbox.y - bbox.height / 2 + beastiesprite.height / 2) / beastiesprite.height) * 100}%)`;
     },
-    [beastiesprite],
+    [drawnsprite],
   );
 
   const getAnimBbox = useCallback(() => {
     if (!anim || animPausedRef.current) {
-      return getCrop(beastiesprite.bbox);
+      return getCrop(drawnsprite.bbox);
     }
     let bbox: { x: number; y: number; endx: number; endy: number } | undefined =
       undefined;
@@ -125,7 +135,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       const startFrame = state.startFrame || 0;
       const endFrame = state.endFrame || 0;
       for (let i = startFrame; i <= endFrame; i++) {
-        const framebbox = beastiesprite.bboxes[i % beastiesprite.frames];
+        const framebbox = drawnsprite.bboxes[i % drawnsprite.frames];
         if (bbox == undefined) {
           bbox = {
             x: framebbox.x,
@@ -142,7 +152,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       }
     }
     if (!bbox) {
-      return getCrop(beastiesprite.bbox);
+      return getCrop(drawnsprite.bbox);
     }
     return getCrop({
       x: bbox.x,
@@ -150,7 +160,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       width: bbox.endx - bbox.x,
       height: bbox.endy - bbox.y,
     });
-  }, [beastiesprite, getCrop, anim]);
+  }, [drawnsprite, getCrop, anim]);
 
   const [fitBeastie, setFitBeastie] = useState(true);
 
@@ -347,15 +357,15 @@ export default function ContentPreview(props: Props): React.ReactNode {
     let canvas = canvasRef.current;
     if (fitBeastie && frameNumRef.current !== null) {
       cropCanvasRef.current.width =
-        beastiesprite.bboxes[frameNumRef.current].width;
+        drawnsprite.bboxes[frameNumRef.current].width;
       cropCanvasRef.current.height =
-        beastiesprite.bboxes[frameNumRef.current].height;
+        drawnsprite.bboxes[frameNumRef.current].height;
       cropCanvasRef.current
         .getContext("2d")
         ?.drawImage(
           canvasRef.current,
-          -beastiesprite.bboxes[frameNumRef.current].x,
-          -beastiesprite.bboxes[frameNumRef.current].y,
+          -drawnsprite.bboxes[frameNumRef.current].x,
+          -drawnsprite.bboxes[frameNumRef.current].y,
         );
       canvas = cropCanvasRef.current;
     }
@@ -363,7 +373,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
     a.download = `${props.beastiedata.name}.png`;
     a.href = canvas.toDataURL("image/png");
     a.click();
-  }, [fitBeastie, beastiesprite, props.beastiedata.name]);
+  }, [fitBeastie, drawnsprite, props.beastiedata.name]);
 
   const downloadGif = useCallback(() => {
     if (!glRef.current || !loadedImages || !animdata || !anim) {
@@ -377,7 +387,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       structuredClone(anim),
       userSpeed,
       animdata.__anim_speed ? animdata.__anim_speed : 1,
-      beastiesprite,
+      drawnsprite,
       frameNumRef.current != undefined ? frameNumRef.current : 0,
     );
   }, [
@@ -385,7 +395,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
     fitBeastie,
     loadedImages,
     props.beastiedata.name,
-    beastiesprite,
+    drawnsprite,
     anim,
     userSpeed,
     animdata,
@@ -512,6 +522,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
           changeFrame={changeFrame}
           userSpeed={userSpeed}
           setUserSpeed={setUserSpeed}
+          beastiedata={props.beastiedata}
+          alt={alt}
+          setAlt={setAlt}
         />
 
         <ColorTabs beastiedata={props.beastiedata} colorChange={colorChange} />

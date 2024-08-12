@@ -1,5 +1,7 @@
 import BEASTIE_DATA from "../../data/BeastieData";
-import BEASTIE_ANIMATIONS from "../../data/BeastieAnimations";
+import BEASTIE_ANIMATIONS, {
+  BeastieAnimData,
+} from "../../data/BeastieAnimations";
 import SPRITE_INFO, { BBox } from "../../data/SpriteInfo";
 import { useRef } from "react";
 import JSZip from "jszip";
@@ -129,7 +131,7 @@ export default function DevUtil(props: {
       }
       const img = document.createElement("img");
       const anims = BEASTIE_ANIMATIONS.get(`_${sprite.name}`);
-      const anim_data = anims?.anim_data;
+      const anim_data = anims?.anim_data as BeastieAnimData;
       if (anim_data === undefined) {
         return;
       }

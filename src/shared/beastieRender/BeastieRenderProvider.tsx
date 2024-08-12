@@ -8,7 +8,9 @@ import {
 import SPRITE_INFO from "../../data/SpriteInfo";
 import BEASTIE_DATA from "../../data/BeastieData";
 import { getColorInBeastieColors } from "../../utils/color";
-import BEASTIE_ANIMATIONS from "../../data/BeastieAnimations";
+import BEASTIE_ANIMATIONS, {
+  BeastieAnimData,
+} from "../../data/BeastieAnimations";
 
 export default function BeastieRenderProvider(
   props: PropsWithChildren,
@@ -62,7 +64,7 @@ export default function BeastieRenderProvider(
           return null;
         }
         const animations = BEASTIE_ANIMATIONS.get(`_${sprite.name}`);
-        let frames = animations?.anim_data.menu.frames;
+        let frames = (animations?.anim_data as BeastieAnimData).menu.frames;
         if (frames && Array.isArray(frames)) {
           frames = frames[0];
         }

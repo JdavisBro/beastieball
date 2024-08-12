@@ -93,5 +93,10 @@
 
 :global(.leaflet-popup-closing) {
   /* not a regular leaflet thing but it's added in map onpopupclose event */
-  clip-path: polygon(0 0, 10px 100%, 10px 100%, 0 0);
+  clip-path: polygon(
+    calc(100% - 10px) 0,
+    100% 100%,
+    100% 100%,
+    calc(100% - 10px) 0
+  );
 }

@@ -15,6 +15,22 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["healhit2", 43],
   ],
   20: [
+    // Illugus
+    ["trap", 1],
+    ["dropshot", 1],
+    ["refresh", 5],
+    ["markattack", 9],
+    ["distraction", 12],
+    ["hazeball", 17],
+    ["protect", 20],
+    ["mark", 25],
+    ["netattack", 31],
+    ["allyrush", 36],
+    ["sting", 40],
+    ["dump", 44],
+    ["fieldclear", 48],
+  ],
+  21: [
     // Kichik
     ["rush", 1],
     ["starterbody", 1],
@@ -25,11 +41,11 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["recover", 20],
     ["body", 24],
     ["protect", 28],
-    ["jump", 31],
+    ["rushattack", 31],
     ["preblock", 35],
-    ["superpower", 41],
+    ["vigor", 41],
   ],
-  21: [
+  22: [
     // Ostrisigh
     ["rush", 1],
     ["starterbody", 1],
@@ -40,11 +56,11 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["recover", 24],
     ["body", 28],
     ["protect", 32],
-    ["jump", 35],
+    ["rushattack", 35],
     ["preblock", 39],
-    ["superpower", 45],
+    ["vigor", 45],
   ],
-  22: [
+  23: [
     // Axolati
     ["cheer", 1],
     ["pepshot", 1],
@@ -58,7 +74,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["commit", 36],
     ["healbell", 41],
   ],
-  23: [
+  24: [
     // Hopsong
     ["cheer", 1],
     ["pepshot", 1],
@@ -72,7 +88,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["commit", 40],
     ["healbell", 45],
   ],
-  24: [
+  25: [
     // Bildit
     ["dig", 1],
     ["startermind", 1],
@@ -83,10 +99,10 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["passattack", 23],
     ["construct", 28],
     ["jazzpass", 33],
-    ["dump", 37],
+    ["tool", 37],
     ["mindup", 41],
   ],
-  25: [
+  26: [
     // Handicoot
     ["dig", 1],
     ["startermind", 1],
@@ -97,10 +113,10 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["passattack", 27],
     ["construct", 32],
     ["jazzpass", 37],
-    ["dump", 41],
+    ["tool", 41],
     ["mindup", 45],
   ],
-  26: [
+  27: [
     // Collarva
     ["hdefup", 1],
     ["startermind", 1],
@@ -115,7 +131,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["stress", 40],
     ["eerie", 45],
   ],
-  27: [
+  28: [
     // Wormask
     ["hdefup", 1],
     ["startermind", 1],
@@ -130,7 +146,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["stress", 43],
     ["eerie", 48],
   ],
-  28: [
+  29: [
     // Wormask
     ["hdefup", 1],
     ["startermind", 1],
@@ -145,7 +161,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["stress", 46],
     ["eerie", 51],
   ],
-  29: [
+  30: [
     // Shooga
     ["bench", 1],
     ["bounce", 1],
@@ -160,7 +176,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["vigor", 38],
     ["batonpass", 43],
   ],
-  30: [
+  31: [
     // Supassum
     ["bench", 1],
     ["bounce", 1],
@@ -175,7 +191,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["vigor", 41],
     ["batonpass", 46],
   ],
-  31: [
+  32: [
     // Sefren
     ["tailwind", 1],
     ["starterheart", 1],
@@ -189,7 +205,21 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["backswitch", 43],
     ["cut", 48],
   ],
-  32: [
+  33: [
+    // Zefyre
+    ["tailwind", 1],
+    ["starterheart", 1],
+    ["protect", 10],
+    ["dragontail", 14],
+    ["whirlwind", 20],
+    ["heart", 24],
+    ["heartpass", 29],
+    ["flyback", 35],
+    ["bellydrum", 41],
+    ["backswitch", 47],
+    ["cut", 52],
+  ],
+  34: [
     // Wagdash
     ["dig", 1],
     ["pepshot", 1],
@@ -203,7 +233,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["recover", 39],
     ["damagedattack", 43],
   ],
-  33: [
+  35: [
     // Rookee
     ["lowattks", 1],
     ["startermind", 1],
@@ -211,16 +241,16 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["dropshot", 9],
     ["sensihit", 12],
     ["nettle", 16],
-    ["rest", 20],
-    ["netattack", 24],
-    ["followme", 29],
-    ["allnervous", 33],
-    ["spitball", 37],
-    ["trap", 40],
-    ["tool", 45],
+    ["netattack", 20],
+    ["rest", 24],
+    ["allnervous", 29],
+    ["spitball", 33],
+    ["followme", 37],
+    ["trap", 41],
+    ["tool", 46],
   ],
-  34: [
-    // Dragla
+  36: [
+    // Kaleidarn
     ["rush", 1],
     ["careful", 1],
     ["heartup", 6],
@@ -233,7 +263,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["freeball", 42],
     ["reversal", 47],
   ],
-  35: [
+  37: [
     // Platenna
     ["mdefup", 1],
     ["startermind", 1],
@@ -247,7 +277,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["telekinesis", 40],
     ["dump", 46],
   ],
-  36: [
+  38: [
     // Platypulse
     ["mdefup", 1],
     ["startermind", 1],
@@ -261,7 +291,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["telekinesis", 45],
     ["dump", 51],
   ],
-  37: [
+  39: [
     // Servitt
     ["feint", 1],
     ["bounce", 1],
@@ -269,14 +299,14 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["pepshot", 11],
     ["pushattack", 16],
     ["cut", 21],
-    ["protect", 25],
+    ["substitute", 25],
     ["jump", 29],
     ["mark", 33],
     ["protectcheer", 38],
     ["overheat", 43],
     ["rushattack", 48],
   ],
-  38: [
+  40: [
     // Servace
     ["feint", 1],
     ["bounce", 1],
@@ -284,14 +314,29 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["pepshot", 15],
     ["pushattack", 20],
     ["cut", 25],
-    ["protect", 29],
+    ["substitute", 29],
     ["jump", 33],
     ["mark", 37],
     ["protectcheer", 42],
     ["overheat", 47],
     ["rushattack", 52],
   ],
-  39: [
+  41: [
+    // Radillo
+    ["taunt", 1],
+    ["starterheart", 1],
+    ["facade", 9],
+    ["bodypass", 12],
+    ["desperate", 19],
+    ["substitute", 23],
+    ["tagattack", 27],
+    ["jump", 31],
+    ["damagedattack", 35],
+    ["backswitch", 38],
+    ["rush", 42],
+    ["overheat", 46],
+  ],
+  42: [
     // Diggum
     ["dig", 1],
     ["pepshot", 1],
@@ -306,7 +351,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["commit", 40],
     ["lifepass", 46],
   ],
-  40: [
+  43: [
     // Merrifly
     ["starterbody", 1],
     ["cheer", 1],
@@ -320,7 +365,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["swordsdance", 40],
     ["dispel", 47],
   ],
-  41: [
+  44: [
     // Cherrily
     ["starterbody", 1],
     ["cheer", 1],
@@ -334,7 +379,63 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["swordsdance", 43],
     ["dispel", 50],
   ],
-  42: [
+  45: [
+    // Yueffowl
+    ["dispel", 1],
+    ["stun", 1],
+    ["mindpass", 7],
+    ["mindbomb", 11],
+    ["meditate", 17],
+    ["taunt", 22],
+    ["float", 27],
+    ["refresh", 32],
+    ["teleport", 36],
+    ["tool", 41],
+    ["lock", 46],
+  ],
+  46: [
+    // Scrubbub
+    ["allyrush", 1],
+    ["rocksmash", 1],
+    ["set", 6],
+    ["nightshade", 10],
+    ["preblock", 14],
+    ["rocket", 18],
+    ["powswitch", 24],
+    ["moon", 30],
+    ["allyprotect", 34],
+    ["libero", 40],
+    ["hyperbeam", 46],
+  ],
+  47: [
+    // Grubiron
+    ["allyrush", 1],
+    ["rocksmash", 1],
+    ["set", 9],
+    ["nightshade", 13],
+    ["preblock", 17],
+    ["rocket", 21],
+    ["powswitch", 27],
+    ["moon", 33],
+    ["allyprotect", 37],
+    ["libero", 43],
+    ["hyperbeam", 49],
+  ],
+  48: [
+    // Wottle
+    ["charm", 1],
+    ["starterheart", 1],
+    ["allycover", 6],
+    ["careful", 10],
+    ["bench", 16],
+    ["libero", 21],
+    ["dragontail", 25],
+    ["allyrush", 31],
+    ["preblock", 36],
+    ["heart", 41],
+    ["haze", 47],
+  ],
+  49: [
     // Troglum
     ["backswitch", 1],
     ["shakenmind", 1],
@@ -348,7 +449,37 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["taunt", 40],
     ["dump", 44],
   ],
-  43: [
+  50: [
+    // Flowish
+    ["callout", 1],
+    ["careful", 1],
+    ["refresh", 6],
+    ["dropshot", 9],
+    ["rocksmash", 12],
+    ["protect", 15],
+    ["fieldclear", 19],
+    ["bomb", 24],
+    ["mark", 30],
+    ["hazeball", 35],
+    ["allyrush", 39],
+    ["healhit2", 43],
+  ],
+  51: [
+    // Broslidon
+    ["callout", 1],
+    ["careful", 1],
+    ["refresh", 6],
+    ["dropshot", 9],
+    ["rocksmash", 12],
+    ["protect", 15],
+    ["fieldclear", 19],
+    ["bomb", 24],
+    ["mark", 30],
+    ["hazeball", 35],
+    ["allyrush", 39],
+    ["healhit2", 43],
+  ],
+  52: [
     //
     ["protect", 1],
     ["starterheart", 1],
@@ -363,20 +494,80 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["damagedattack", 41],
     ["lifepass", 46],
   ],
-  44: [
+  53: [
+    // Conjarr
+    ["feint", 1],
+    ["starterheart", 1],
+    ["rush", 6],
+    ["enemyboosts", 10],
+    ["dispel", 15],
+    ["mark", 22],
+    ["blockattack", 26],
+    ["lock", 31],
+    ["distraction", 36],
+    ["bomb", 41],
+    ["eerie", 45],
+    ["threat", 49],
+  ],
+  54: [
     // Skibble
     ["bdefup", 1],
     ["rocksmash", 1],
     ["protect", 8],
     ["dig", 13],
-    ["pushattack", 20],
-    ["preblock", 25],
-    ["rocket", 29],
-    ["substitute", 34],
+    ["pushattack", 17],
+    ["defheal", 21],
+    ["rocket", 24],
+    ["preblock", 29],
+    ["substitute", 35],
     ["stomp", 38],
     ["distraction", 42],
   ],
-  45: [
+  55: [
+    // Skorock
+    ["bdefup", 1],
+    ["rocksmash", 1],
+    ["protect", 11],
+    ["dig", 16],
+    ["pushattack", 20],
+    ["defheal", 24],
+    ["rocket", 27],
+    ["preblock", 32],
+    ["substitute", 38],
+    ["stomp", 41],
+    ["distraction", 45],
+  ],
+  56: [
+    // Milimine
+    ["stress", 1],
+    ["starterbody", 1],
+    ["sideshot", 6],
+    ["allycover", 10],
+    ["blockattack", 15],
+    ["rest", 21],
+    ["protect", 26],
+    ["body", 32],
+    ["mark", 36],
+    ["lowattks", 40],
+    ["superpower", 44],
+  ],
+  57: [
+    // Trat
+    ["fieldclear", 1],
+    ["bounce", 1],
+    ["shakenhit", 5],
+    ["bench", 8],
+    ["charm", 11],
+    ["poisonhit", 13],
+    ["dispel", 19],
+    ["superfang", 23],
+    ["skillswap", 28],
+    ["switch", 33],
+    ["healhit2", 38],
+    ["rest", 42],
+    ["tool", 45],
+  ],
+  58: [
     // Punkchirp
     ["mindpass", 1],
     ["startermind", 1],
@@ -390,7 +581,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["tool", 42],
     ["jump", 46],
   ],
-  46: [
+  59: [
     // Calcroach
     ["mindpass", 1],
     ["startermind", 1],
@@ -404,21 +595,22 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["libero", 40],
     ["tool", 45],
   ],
-  47: [
+  60: [
     // Blitzwift
     ["feint", 1],
     ["starterbody", 1],
     ["rush", 5],
-    ["storedpower", 9],
+    ["brine", 9],
     ["tailwind", 12],
     ["teleport", 17],
     ["tagattack", 23],
     ["distraction", 29],
     ["rocket", 33],
     ["batonpass", 37],
-    ["rushattack", 42],
+    ["rushattack", 43],
+    ["jazzpass", 49],
   ],
-  48: [
+  61: [
     // Humflit
     ["myheartpass", 1],
     ["starterheart", 1],
@@ -429,10 +621,10 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["serve", 25],
     ["rush", 29],
     ["scoreboosted", 33],
-    ["sweatup", 40],
-    ["substitute", 44],
+    ["sweatup", 37],
+    ["substitute", 41],
   ],
-  49: [
+  62: [
     // Yamyth
     ["bdefup", 1],
     ["rocksmash", 1],

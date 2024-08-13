@@ -74,6 +74,7 @@ export default function BeastieSelect({
           <input
             type="text"
             onChange={(event) => setSearch(event.target.value)}
+            value={search}
           />
         </label>
         <div className={styles.beastieSelect}>{beasties}</div>

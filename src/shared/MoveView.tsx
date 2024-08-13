@@ -106,17 +106,21 @@ function getEffectString(
     case 8:
       if (effect.pow < 0) {
         if (effect.targ == 0) {
-          return `${effect.pow * 100} STAMINA.`;
+          return `${Math.floor(effect.pow * 100)} STAMINA.`;
         } else {
-          return `${effect.pow * 100} STAMINA to ${target}.`;
+          return `${Math.floor(effect.pow * 100)} STAMINA to ${target}.`;
         }
       } else {
-        return `HEALs ${target} ${effect.pow > 0 ? "+" : ""}${effect.pow * 100}.`;
+        return `HEALs ${target} ${effect.pow > 0 ? "+" : ""}${Math.floor(effect.pow * 100)}.`;
       }
     case 10:
       return `+${effect.pow} ACTIONs.`;
     case 11:
-      return `Switch places with ${target}.`;
+      if (effect.targ == 0) {
+        return "Switch places with fielded ally.";
+      } else {
+        return `Switch places with ${target}.`;
+      }
     case 12:
       return `${feels} ${effect.pow} [sprStatus,1]ANGRY (only attacks)${dot}`;
     case 13:
@@ -228,13 +232,13 @@ function getEffectString(
     case 41:
       return "Requires 3 ACTIONS.";
     case 42:
-      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} TRAP (Tag-ins lose 8 stamina per trap).`;
+      return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} TRAP (Tag-ins lose 8 stamina per trap).`;
     case 43:
-      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW -25%).`;
+      return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW -25%).`;
     case 44:
-      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RHYTHM (Healing and protection).`;
+      return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} RHYTHM (Healing and protection).`;
     case 45:
-      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} DREAD (No good feelings).`;
+      return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} DREAD (No good feelings).`;
     case 46:
       if (effect.targ == 7) {
         return `Clears all FIELD EFFECTS.`;

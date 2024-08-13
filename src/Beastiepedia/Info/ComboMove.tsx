@@ -7,7 +7,7 @@ import BeastieSelect from "../../shared/BeastieSelect";
 
 enum ComboType {
   Rivals,
-  Partner,
+  Partners,
   Support,
   Defense,
 }
@@ -33,7 +33,7 @@ export default function ComboMove({
   let target = 0;
   let use = 0;
   let moveType =
-    type == ComboType.Partner ? 3 : type == ComboType.Defense ? 5 : 4;
+    type == ComboType.Partners ? 3 : type == ComboType.Defense ? 5 : 4;
 
   const effects: MoveEffect[] = [];
   if (friend) {
@@ -91,8 +91,8 @@ export default function ComboMove({
   return (
     <InfoBox header="Combo Moves">
       <select onChange={(event) => setType(Number(event.target.value))}>
-        <option value={ComboType.Rivals}>Rivals</option>
-        <option value={ComboType.Partner}>Partner</option>
+        <option value={ComboType.Rivals}>Rivals Attack</option>
+        <option value={ComboType.Partners}>Partners Volley</option>
         <option value={ComboType.Support}>Bestie/Sweetheart Support</option>
         <option value={ComboType.Defense}>Bestie/Sweetheart Defense</option>
       </select>

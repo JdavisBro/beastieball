@@ -35,7 +35,6 @@ export default function ComboMove({
   let moveType =
     type == ComboType.Partner ? 3 : type == ComboType.Defense ? 5 : 4;
 
-  console.log("move");
   const effects: MoveEffect[] = [];
   if (friend) {
     if (type == ComboType.Rivals) {

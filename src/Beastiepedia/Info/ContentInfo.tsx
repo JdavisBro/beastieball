@@ -53,6 +53,7 @@ function findBeastiePreevolution(
 const EVOLUTION_CONDITIONS: { [key: number]: string } = {
   // "Evolves from/to BEASTIE (below strings with {N} replaced with value index)"
   0: "at level {0}",
+  2: "at Miconia Grove", // this could be a general one for sprecko's evolutions?? possibly with the value being which area
 };
 
 function getEvoConditionString(evo: EvolutionType) {

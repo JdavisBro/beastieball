@@ -3,6 +3,7 @@ import BEASTIE_DATA, { BeastieType } from "../../data/BeastieData";
 import InfoBox from "../../shared/InfoBox";
 import MoveView from "../../shared/MoveView";
 import { MoveEffect } from "../../data/MoveData";
+import BeastieSelect from "../../shared/BeastieSelect";
 
 enum ComboType {
   Rivals,
@@ -96,13 +97,7 @@ export default function ComboMove({
         <option value={ComboType.Support}>Bestie/Sweetheart Support</option>
         <option value={ComboType.Defense}>Bestie/Sweetheart Defense</option>
       </select>
-      <select
-        value={friendId}
-        onChange={(event) => setFriendId(event.target.value)}
-      >
-        <option value={undefined}>Unset</option>
-        {beasties}
-      </select>
+      <BeastieSelect beastieId={friendId} setBeastieId={setFriendId} />
       <br />
       {friend ? (
         <MoveView
@@ -124,6 +119,7 @@ export default function ComboMove({
                   : Math.round(((pows[0] + pows[1]) * 50) / 5) * 5,
             eff: effects,
           }}
+          noLearner={true}
         />
       ) : null}
     </InfoBox>

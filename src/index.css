@@ -264,7 +264,7 @@ a:visited {
   width: 100%;
 }
 :modal .infoBoxContent {
-  width: auto;
+  max-width: 90vw;
   overflow-y: auto;
   overscroll-behavior: contain;
   max-height: 90vh;

@@ -182,3 +182,43 @@
   display: flex;
   user-select: none;
 }
+
+.beastieSelect {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 80dvw;
+  height: 85dvh;
+  align-content: flex-start;
+}
+
+.beastieSelectBeastie {
+  display: flex;
+  width: 250px;
+  max-width: 49%;
+  height: 120px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.beastieSelectBeastieIm {
+  flex-shrink: 1;
+  max-height: 100%;
+  max-width: 50%;
+}
+
+.beastieSelectNameNum {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beastieSelectNum {
+  font-family: var(--sports-jersey);
+  font-size: 2em;
+}

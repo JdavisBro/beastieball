@@ -80,7 +80,7 @@ export default function Modal(
       }}
     >
       <InfoBox key="MODALinfobox" header={props.header}>
-        {props.children}
+        {props.open ? props.children : null}
       </InfoBox>
     </dialog>
   );

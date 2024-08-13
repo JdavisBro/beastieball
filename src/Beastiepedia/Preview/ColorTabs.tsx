@@ -10,6 +10,7 @@ import {
 import type { BeastieType } from "../../data/BeastieData";
 import { useLocalStorage } from "usehooks-ts";
 import BEASTIE_DATA from "../../data/BeastieData";
+import BeastieSelect from "../../shared/BeastieSelect";
 
 function defaultColor(
   colors: number[],
@@ -307,21 +308,12 @@ export default function ColorTabs(props: Props): React.ReactNode {
           {" "}
           Other Beastie Colors:{" "}
         </label>
-        <select
-          name="otherbeastiesel"
-          id="otherbeastiesel"
-          value={diffBeastieColors}
-          onChange={(event) => setDiffBeastieColors(event.target.value)}
-        >
-          <option value="none">None</option>
-          {Array.from(BEASTIE_DATA).map(([key, value]) => {
-            return (
-              <option key={key} value={key}>
-                {value.name}
-              </option>
-            );
-          })}
-        </select>
+        <BeastieSelect
+          beastieId={diffBeastieColors}
+          setBeastieId={(beastieId: undefined | string) =>
+            setDiffBeastieColors(beastieId ? beastieId : "none")
+          }
+        />
       </div>
     </>
   );

@@ -7,6 +7,7 @@ import { useContext } from "react";
 
 type Props = {
   move: Move;
+  noLearner?: boolean;
 };
 
 const colors: Record<number, { color: string; alt: string }> = {
@@ -365,19 +366,21 @@ export default function MoveView(props: Props): React.ReactElement {
           }
         >
           {props.move.name}{" "}
-          <img
-            src="/gameassets/sprMainmenu/6.png"
-            className={styles.movelearnerbutton}
-            tabIndex={0}
-            onClick={() => {
-              if (setMoveModal) {
-                setMoveModal(props.move);
-              }
-            }}
-            role="button"
-            alt="View Beasties that learn this play."
-            title="View Beasties that learn this play."
-          />
+          {props.noLearner ? null : (
+            <img
+              src="/gameassets/sprMainmenu/6.png"
+              className={styles.movelearnerbutton}
+              tabIndex={0}
+              onClick={() => {
+                if (setMoveModal) {
+                  setMoveModal(props.move);
+                }
+              }}
+              role="button"
+              alt="View Beasties that learn this play."
+              title="View Beasties that learn this play."
+            />
+          )}
         </div>
         <div className={styles.movedesc}>
           <TextTag>

@@ -210,6 +210,9 @@ export default function TextTag(props: Props): React.ReactElement {
   } else {
     text = props.children;
   }
+  if (!text.includes("[")) {
+    return <span className={styles.texttag}>{text}</span>;
+  }
   const builder = new TagBuilder();
   // gets text before next tag or end of string (match[1]) (match[2] is [ when [[) + next tag (match[3]) + value (match[4])
   const regex = /([^[]*?)?(?:\[(?:\]|$)|\[(?:(\[)|$)|\[(.+?)(?:,(.+?))?\]|$)/g;

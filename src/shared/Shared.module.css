@@ -133,6 +133,11 @@
   align-items: center;
 }
 
+.movenamelong {
+  composes: movename;
+  font-size: 1.6em;
+}
+
 .movelearnerbutton {
   filter: invert();
   height: 50%;

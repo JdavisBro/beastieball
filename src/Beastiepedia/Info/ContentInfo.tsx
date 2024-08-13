@@ -10,6 +10,7 @@ import abilities from "../../data/abilities";
 import BEASTIE_DATA from "../../data/BeastieData";
 import InfoBox, { BoxHeader } from "../../shared/InfoBox";
 import ResearchCarousel from "./ResearchCarousel";
+import ComboMove from "./ComboMove";
 
 type Props = {
   beastiedata: BeastieType;
@@ -206,6 +207,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
             ? beastiedata.animator.map((i) => designers[i]).join(", ")
             : designers[beastiedata.animator]}
         </InfoBox>
+        <ComboMove beastiedata={beastiedata} />
       </div>
     </div>
   );

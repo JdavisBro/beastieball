@@ -41,9 +41,12 @@ const ALT_TARGET_STRINGS: { [key: number]: string } = {
   3: "benched ally",
   6: "entire team",
   7: "entire field",
+  8: "other team",
 };
 
 const FIELD_TARGET: Record<number, string> = {
+  0: "Ally field",
+  2: "Ally field",
   3: "Opponent field",
   7: "Entire field",
 };
@@ -109,7 +112,7 @@ function getEffectString(
         return `HEALs ${target} ${effect.pow > 0 ? "+" : ""}${effect.pow * 100}.`;
       }
     case 10:
-      return "+1 ACTIONs.";
+      return `+${effect.pow} ACTIONs.`;
     case 11:
       return `Switch places with ${target}.`;
     case 12:
@@ -227,9 +230,9 @@ function getEffectString(
     case 43:
       return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW -25%).`;
     case 44:
-      return `${targetStart} gets +${effect.pow} RHYTHM (Healing and protection).`;
+      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RHYTHM (Healing and protection).`;
     case 45:
-      return `${targetStart} gets +${effect.pow} DREAD (No good feelings).`;
+      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} DREAD (No good feelings).`;
     case 46:
       if (effect.targ == 7) {
         return `Clears all FIELD EFFECTS.`;
@@ -240,6 +243,8 @@ function getEffectString(
         return "Fully restores stamina and FEELINGS.";
       }
       return `Fully restores ${target}'s stamina and FEELINGS.`; // doesn't happen but maybe
+    case 52:
+      return `Clears negative FEELINGs from ${target}.`;
     case 53:
       args.joiningEffects = 0;
       return "";
@@ -354,7 +359,11 @@ export default function MoveView(props: Props): React.ReactElement {
       </div>
       <div className={styles.moveseparator}></div>
       <div className={styles.movecontent}>
-        <div className={styles.movename}>
+        <div
+          className={
+            props.move.name.length > 18 ? styles.movenamelong : styles.movename
+          }
+        >
           {props.move.name}{" "}
           <img
             src="/gameassets/sprMainmenu/6.png"

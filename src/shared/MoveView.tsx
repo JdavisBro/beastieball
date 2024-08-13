@@ -43,6 +43,7 @@ const ALT_TARGET_STRINGS: { [key: number]: string } = {
   6: "entire team",
   7: "entire field",
   8: "other team",
+  9: "nearest enemy",
 };
 
 const FIELD_TARGET: Record<number, string> = {

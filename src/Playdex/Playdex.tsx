@@ -41,7 +41,11 @@ export default function PlayDex() {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState(0);
   const [typeFilter, setTypeFilter] = useState(-1);
+  const [friendFilter, setFriendFilter] = useState<string | undefined>(
+    undefined,
+  );
 
+  console.log(friendFilter);
   let moves = Object.keys(MOVE_DIC).map((id) => MOVE_DIC[id]);
   if (search) {
     moves = moves.filter((move) =>
@@ -93,12 +97,31 @@ export default function PlayDex() {
           <option value="3">Volley</option>
           <option value="4">Support</option>
           <option value="5">Defense</option>
+        </select>{" "}
+        <label htmlFor="friend">Favor: </label>
+        <select
+          id="friend"
+          onChange={(event) =>
+            setFriendFilter(
+              event.target.value == "undefined"
+                ? undefined
+                : event.target.value,
+            )
+          }
+          value={friendFilter}
+        >
+          <option value="undefined">None</option>
+          <option value="Riley">Riley</option>
+          <option value="Reese">Reese</option>
+          <option value="Kaz">Kaz</option>
+          <option value="Riven">Riven</option>
+          <option value="Celia">Celia</option>
         </select>
       </div>
       <div className={styles.movescontainer}>
         <MoveModalProvider>
           {moves.map((move) => (
-            <MoveView move={move} key={move.id} />
+            <MoveView move={move} key={move.id} friendFilter={friendFilter} />
           ))}
         </MoveModalProvider>
       </div>

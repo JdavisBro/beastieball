@@ -138,6 +138,19 @@
   font-size: 1.6em;
 }
 
+.movefriend {
+  text-align: right;
+  height: 60%;
+  background-size: 100% 100%;
+  aspect-ratio: 1;
+}
+
+.movefriend span {
+  font-size: 0.7em;
+  color: pink;
+  text-shadow: black 0px 0px 10px;
+}
+
 .movelearnerbutton {
   filter: invert();
   height: 50%;

@@ -4,11 +4,7 @@ import TypeColor from "../data/TypeColor";
 import { Type, Move, MoveEffect } from "../data/MoveData";
 import MoveModalContext from "./MoveModalContext";
 import { useContext } from "react";
-
-type Props = {
-  move: Move;
-  noLearner?: boolean;
-};
+import SOCIAL_DATA from "../data/SocialData";
 
 const colors: Record<number, { color: string; alt: string }> = {
   [Type.Body]: { color: TypeColor.Body, alt: "Mind Play" },
@@ -271,7 +267,34 @@ function getEffectString(
   return `E ${effect.eff} T ${effect.targ} P ${effect.pow}`;
 }
 
-export default function MoveView(props: Props): React.ReactElement {
+export default function MoveView(props: {
+  move: Move;
+  noLearner?: boolean;
+  friendFilter?: string;
+}): React.ReactElement | null {
+  const setMoveModal = useContext(MoveModalContext);
+
+  const friend = SOCIAL_DATA.find((friend) =>
+    friend.plays.includes(props.move.id),
+  );
+  if (props.friendFilter && (!friend || friend.name != props.friendFilter)) {
+    return null;
+  }
+  let friend_hearts = 0;
+  let learned_text;
+  if (friend) {
+    const friend_rank = Math.floor(friend.plays.indexOf(props.move.id) / 4) + 1;
+    let rank = 0;
+    friend.events.find((event) => {
+      friend_hearts += 1;
+      if (event.rankup) {
+        rank += 1;
+      }
+      return rank == friend_rank;
+    });
+    learned_text = `Learned from ${friend.name} at ${friend_hearts} hearts.`;
+  }
+
   const { color, alt } = colors[props.move.type]
     ? colors[props.move.type]
     : { color: "#ffffff", alt: "a" };
@@ -353,8 +376,6 @@ export default function MoveView(props: Props): React.ReactElement {
     );
   }
 
-  const setMoveModal = useContext(MoveModalContext);
-
   const args = { joiningEffects: null };
 
   return (
@@ -371,6 +392,17 @@ export default function MoveView(props: Props): React.ReactElement {
           }
         >
           {props.move.name}{" "}
+          {friend ? (
+            <span
+              title={learned_text}
+              className={styles.movefriend}
+              style={{
+                backgroundImage: `url("/gameassets/sprChar_icon/${friend.img}.png")`,
+              }}
+            >
+              <span className={styles.movefriendHeart}>{friend_hearts}</span>
+            </span>
+          ) : null}
           {props.noLearner ? null : (
             <img
               src="/gameassets/sprMainmenu/6.png"

@@ -20,6 +20,7 @@ export default function BeastieSelect({
 
   beasties.push(
     <div
+      key="unset"
       role="button"
       style={{
         display: "unset".includes(search.toLowerCase()) ? "flex" : "none",
@@ -37,6 +38,7 @@ export default function BeastieSelect({
   BEASTIE_DATA.forEach((beastie) => {
     beasties.push(
       <div
+        key={beastie.id}
         role="button"
         style={{
           display: beastie.name.toLowerCase().includes(search.toLowerCase())

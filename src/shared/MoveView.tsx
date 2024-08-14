@@ -303,71 +303,55 @@ export default function MoveView(props: {
     "--move-url": `url("/gameassets/sprType/${String(props.move.type)}.png")`,
   } as React.CSSProperties;
 
-  let desc_pre = "";
+  const desc = [];
   let pow = <></>;
 
   const attack = props.move.type < 3;
 
   if (props.move.type == Type.Volley) {
-    desc_pre = "VOLLEY.";
+    desc.push("VOLLEY.");
   }
   if (props.move.use) {
-    if (desc_pre) {
-      desc_pre += " ";
-    }
-    desc_pre += "Only used from ";
+    desc.push("Only used from ");
   }
   switch (props.move.use) {
     case 1:
-      desc_pre += "back row.";
+      desc.push("back row.");
       break;
     case 2:
-      desc_pre += "net.";
+      desc.push("net.");
       break;
   }
 
   if (attack) {
     switch (props.move.targ) {
       case 1:
-        if (desc_pre) {
-          desc_pre += " ";
-        }
-        desc_pre += "Targets straight ahead.";
+        desc.push("Targets straight ahead.");
         break;
       case 4:
-        if (desc_pre) {
-          desc_pre += " ";
-        }
-        desc_pre += attack ? "Auto-targets front row." : "Targets front row.";
+        desc.push(attack ? "Auto-targets front row." : "Targets front row.");
         break;
       case 8:
-        if (desc_pre) {
-          desc_pre += " ";
-        }
-        desc_pre += attack ? "Auto-targets back row." : "Targets back row.";
+        desc.push(attack ? "Auto-targets back row." : "Targets back row.");
         break;
       case 12:
-        if (desc_pre) {
-          desc_pre += " ";
-        }
-        desc_pre += "Targets SIDEWAYS.";
+        desc.push("Targets SIDEWAYS.");
         break;
       case 13:
-        if (desc_pre) {
-          desc_pre += " ";
-        }
-        desc_pre += "Auto-targets nearest opponent.";
+        desc.push("Auto-targets nearest opponent.");
         break;
     }
 
     if (props.move.pow <= -1) {
-      desc_pre += `${desc_pre ? " " : ""}Always does ${-props.move.pow} damage.`;
+      desc.push(`Always does ${-props.move.pow} damage.`);
     } else if (props.move.pow < 0) {
-      desc_pre += `${desc_pre ? " " : ""}Damage equals ${-props.move.pow * 100}% of target's remaining STAMINA.`;
+      desc.push(
+        `Damage equals ${-props.move.pow * 100}% of target's remaining STAMINA.`,
+      );
     }
 
-    if (!desc_pre) {
-      desc_pre = "ATTACK.";
+    if (!desc.length) {
+      desc.push("ATTACK.");
     }
     pow = (
       <div className={styles.movepower}>
@@ -377,6 +361,21 @@ export default function MoveView(props: {
   }
 
   const args = { joiningEffects: null };
+
+  const desc_str = desc
+    .concat(
+      props.move.eff
+        .map((effect) =>
+          getEffectString(
+            effect,
+            attack,
+            !attack && (props.move.targ == 0 || props.move.targ == 8),
+            args,
+          ),
+        )
+        .filter((effect) => !!effect),
+    )
+    .join(" ");
 
   return (
     <div className={styles.movecontainer} style={style}>
@@ -420,20 +419,7 @@ export default function MoveView(props: {
           )}
         </div>
         <div className={styles.movedesc}>
-          <TextTag>
-            {desc_pre ? desc_pre + " " : ""}
-            {props.move.eff
-              .map((effect) =>
-                getEffectString(
-                  effect,
-                  attack,
-                  !attack && (props.move.targ == 0 || props.move.targ == 8),
-                  args,
-                ),
-              )
-              .filter((effect) => !!effect)
-              .join(" ")}
-          </TextTag>
+          <TextTag>{desc_str}</TextTag>
         </div>
       </div>
     </div>

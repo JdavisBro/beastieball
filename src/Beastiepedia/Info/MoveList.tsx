@@ -40,6 +40,7 @@ function MoveText(props: MoveTextProps): React.ReactElement {
           }
         }}
       >
+        <img src={`/gameassets/sprIcon/${props.move.type}.png`} alt="" />
         {props.move.name}
       </span>
     </div>

@@ -26,14 +26,20 @@
 }
 
 .movecontainer {
+  display: flex;
   position: relative;
   margin-left: 10px !important;
 }
 
 .movetext {
+  display: flex;
   width: fit-content;
   cursor: pointer;
   text-decoration: underline dotted;
+}
+
+.movetext img {
+  height: 1em;
 }
 
 .movetext.selected {

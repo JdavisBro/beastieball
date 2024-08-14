@@ -157,6 +157,10 @@
   .movename {
     font-size: 1.6em;
   }
+  .movenamelong {
+    composes: movename;
+    font-size: 1.2em;
+  }
   .movedesc {
     font-size: 1em;
   }

@@ -18,13 +18,12 @@ function MoveText(props: MoveTextProps): React.ReactElement {
     // This can never happen?
     return <div>Move not found?</div>;
   }
-  let pretext = "";
-  if (props.level !== undefined) {
-    pretext = String(props.level) + " - ";
-  }
   return (
     <div className={styles.movecontainer}>
-      {pretext}
+      {props.level ? (
+        <span className={styles.movelevel}>{props.level}</span>
+      ) : null}
+
       <span
         tabIndex={0}
         className={

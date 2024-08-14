@@ -7,6 +7,7 @@
 .listcontainer {
   composes: animBoxBackground from global;
   width: 350px;
+  max-width: 100%;
   height: fit-content;
   display: flex;
   margin-bottom: 8px;
@@ -17,7 +18,7 @@
 .movelist {
   width: 163px;
   margin-top: 5px;
-  margin-left: 12px;
+  margin-left: 10px;
   padding-bottom: 8px;
 }
 
@@ -27,12 +28,20 @@
 
 .movecontainer {
   display: flex;
+  gap: 12px;
   position: relative;
   margin-left: 10px !important;
+  width: 100%;
+}
+
+.movelevel {
+  width: 10px;
+  text-align: right;
 }
 
 .movetext {
   display: flex;
+  flex-shrink: 1;
   width: fit-content;
   cursor: pointer;
   text-decoration: underline dotted;

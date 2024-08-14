@@ -167,6 +167,25 @@ export default function ColorTabs(props: Props): React.ReactNode {
     storedColors,
   ]);
 
+  const updateAllCustomColors = (newColors: string[]) => {
+    console.log(newColors);
+    newColors.forEach((col, index) => colorChange(index, hexToRgb(col)));
+    setCustomColors(newColors);
+    if (diffBeastieColors == "none") {
+      setStoredColors((oldColors) => {
+        if (
+          !oldColors[beastiedata.id] ||
+          Array.isArray(oldColors[beastiedata.id])
+        ) {
+          oldColors[beastiedata.id] = defaultColor(colors, beastiedata.colors);
+        }
+        oldColors[beastiedata.id].custom = newColors;
+
+        return oldColors;
+      });
+    }
+  };
+
   return (
     <>
       <div className={styles.tabselect}>
@@ -269,24 +288,30 @@ export default function ColorTabs(props: Props): React.ReactNode {
           ))}
           <br />
           <button
-            onClick={() => {
-              if (
-                diffBeastieColors != "none" ||
-                !storedColors[beastiedata.id]
-              ) {
-                return;
-              }
-              setStoredColors((oldStored) => {
-                oldStored[beastiedata.id].custom = defaultColor(
-                  colors,
-                  beastiedata.colors,
-                ).custom;
-                return oldStored;
-              });
-            }}
-            disabled={diffBeastieColors != "none"}
+            onClick={() =>
+              updateAllCustomColors(
+                defaultColor(colors, beastiedata.colors).custom,
+              )
+            }
           >
             Reset Colors
+          </button>
+          <button
+            onClick={() =>
+              updateAllCustomColors(
+                colors.map(() =>
+                  [0, 0, 0]
+                    .map(() => Math.round(Math.random() * 255))
+                    .reduce(
+                      (accum, value) =>
+                        accum + value.toString(16).padStart(2, "0"),
+                      "#",
+                    ),
+                ),
+              )
+            }
+          >
+            Randomize Colors
           </button>
           <button
             onClick={() => {
@@ -392,6 +417,27 @@ function BeastieColorTabContent(props: {
     colorChange,
   ]);
 
+  const setColors = (colors: number[]) => {
+    colorValues.current = colors;
+    colors.forEach((col, index) => {
+      colorChange(
+        index,
+        getColorInBeastieColors(
+          col,
+          index < props.colors.length
+            ? props.colors[index].array
+            : props.fallbackColors[index].array,
+        ),
+      );
+    });
+    if (diffBeastie == "none") {
+      props.setStoredColors((oldStored) => {
+        oldStored[props.beastieid][tab] = colorValues.current;
+        return oldStored;
+      });
+    }
+  };
+
   return (
     <div className={styles.tab} style={{ display: current ? "block" : "none" }}>
       {props.colorMax.map((value) =>
@@ -434,24 +480,11 @@ function BeastieColorTabContent(props: {
           />
         ) : null,
       )}
-      <button
-        onClick={() => {
-          if (
-            props.diffBeastie != "none" ||
-            !props.storedColors[props.beastieid]
-          ) {
-            return;
-          }
-          props.setStoredColors((oldStored) => {
-            oldStored[props.beastieid][tab] = defaultColor(
-              props.colorMax,
-              props.colors,
-            )[tab];
-            return oldStored;
-          });
-        }}
-      >
+      <button onClick={() => setColors(colorMax.map(() => 0.5))}>
         Reset Colors
+      </button>
+      <button onClick={() => setColors(colorMax.map(() => Math.random()))}>
+        Randomize Colors
       </button>
       <button
         onClick={() => {

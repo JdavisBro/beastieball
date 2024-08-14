@@ -1,4 +1,14 @@
 import world from "./raw/world.json";
+import extra_markers from "./raw/extra_markers.json";
+
+export type Gift = {
+  id: string;
+  items: Array<string | number>[];
+  x: number;
+  y: number;
+};
+
+export const EXTRA_MARKERS: { gifts: Gift[] } = extra_markers;
 
 export type MapIcon = {
   _: string;

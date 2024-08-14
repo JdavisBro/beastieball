@@ -12,13 +12,15 @@ import {
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 
-import WORLD_DATA from "../data/WorldData";
+import WORLD_DATA, { EXTRA_MARKERS } from "../data/WorldData";
 import styles from "./Map.module.css";
 import OpenGraph from "../shared/OpenGraph";
 import { createMarkers } from "./createMarkers";
 import Header from "../shared/Header";
 import SPAWN_DATA from "../data/SpawnData";
 import BEASTIE_DATA from "../data/BeastieData";
+import ITEM_DIC from "../data/ItemData";
+import TextTag from "../shared/TextTag";
 
 function MapEvents() {
   useMapEvents({
@@ -211,8 +213,41 @@ export default function Map(): React.ReactNode {
               </LayersControl.Overlay>
             ),
           )}
-          <LayersControl.Overlay checked name={"Beastie Spawns"}>
+          <LayersControl.Overlay checked name="Beastie Spawns">
             <LayerGroup>{beastieSpawnsOverlays}</LayerGroup>
+          </LayersControl.Overlay>
+          <LayersControl.Overlay checked name="Items">
+            <LayerGroup>
+              {EXTRA_MARKERS.gifts.map((gift) => (
+                <Marker
+                  key={gift.id}
+                  position={[-gift.y, gift.x]}
+                  icon={L.icon({
+                    iconUrl: `/gameassets/sprItems/${ITEM_DIC[gift.items[0][0]].img}.png`,
+                    iconSize: [30, 30],
+                    iconAnchor: [20, 20],
+                  })}
+                >
+                  <Popup>
+                    <div className={styles.itemList}>
+                      {gift.items.map(([item, count]) => (
+                        <div key={item} className={styles.item}>
+                          <img
+                            src={`/gameassets/sprItems/${ITEM_DIC[item].img}.png`}
+                          />
+                          <div>
+                            <span>
+                              {ITEM_DIC[item].name} x{count}
+                            </span>
+                            <TextTag>{ITEM_DIC[item].desc}</TextTag>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </Popup>
+                </Marker>
+              ))}
+            </LayerGroup>
           </LayersControl.Overlay>
         </LayersControl>
         <LayerGroup>{level_overlays}</LayerGroup>

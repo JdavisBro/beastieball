@@ -1,0 +1,151 @@
+{
+  "gifts": [
+    { "id": "beryl_gym", "items": [["train_md", 4]], "x": -13283, "y": 14566 },
+    {
+      "id": "hometown_west_b",
+      "items": [["status_b", 1]],
+      "x": -6834,
+      "y": 6954
+    },
+    {
+      "id": "hometown_north_a",
+      "items": [["heal_b", 1]],
+      "x": -1927,
+      "y": -8159
+    },
+    {
+      "id": "hometown_north_free",
+      "items": [["heal_a", 1]],
+      "x": -965,
+      "y": -9587
+    },
+    {
+      "id": "hometown_south_b",
+      "items": [["train_ba", 4]],
+      "x": -2938,
+      "y": 10544
+    },
+    {
+      "id": "gift_hometown_south_path_0",
+      "items": [["heal_max", 1]],
+      "x": -2970,
+      "y": 13368
+    },
+    { "id": "hometown_south_a", "items": [["sell1", 2]], "x": 867, "y": 7930 },
+    {
+      "id": "hometown_west_a",
+      "items": [["status_a", 1]],
+      "x": -1614,
+      "y": 5337
+    },
+    {
+      "id": "hometown_west_c",
+      "items": [["train_tame_2", 1]],
+      "x": -2205,
+      "y": 6712
+    },
+    {
+      "id": "hometown_secret_south",
+      "items": [["train_ma", 4]],
+      "x": 3580,
+      "y": 5802
+    },
+    {
+      "id": "gift_hometown_south_rail_0",
+      "items": [["heal_b", 1]],
+      "x": -904,
+      "y": 6517
+    },
+    {
+      "id": "gift_jasper_0",
+      "items": [["train_hd", 4]],
+      "x": 2356.0,
+      "y": -16124
+    },
+    {
+      "id": "hometown_north_b",
+      "items": [["lure_a", 1]],
+      "x": -3202,
+      "y": -12481
+    },
+    {
+      "id": "gift_reserve_1_0",
+      "items": [["sell1", 1]],
+      "x": -15627,
+      "y": 4340
+    },
+    {
+      "id": "gift_seaside_cliff_0",
+      "items": [["train_trait", 1]],
+      "x": 10567,
+      "y": -10085
+    },
+    {
+      "id": "gift_seaside_path_0",
+      "items": [["jersey", 1]],
+      "x": 2955,
+      "y": -11266
+    },
+    {
+      "id": "gift_begonia_south_0",
+      "items": [["trainspray_b", 1]],
+      "x": -19187,
+      "y": -25131
+    },
+    {
+      "id": "jasper_cave_s",
+      "items": [["status_b", 1]],
+      "x": -12673,
+      "y": -22736
+    },
+    {
+      "id": "jasper_cave_e",
+      "items": [["train_level", 1]],
+      "x": -2800,
+      "y": -26092
+    },
+    {
+      "id": "jasper_cave_w",
+      "items": [["heal_max", 1]],
+      "x": -14583,
+      "y": -24221
+    },
+    {
+      "id": "jasper_cave_n",
+      "items": [["train_ha", 4]],
+      "x": -12204,
+      "y": -29460
+    },
+    {
+      "id": "gift_myth_forest4_0",
+      "items": [["sell2", 1]],
+      "x": -14794,
+      "y": -29018
+    },
+    {
+      "id": "gift_shroom_path_1",
+      "items": [["lure_b", 1]],
+      "x": -31206,
+      "y": -31825
+    },
+    {
+      "id": "gift_shroom_path_0",
+      "items": [["heal_b", 1]],
+      "x": -27525,
+      "y": -31012
+    },
+    {
+      "id": "gift_sphinx_0",
+      "items": [["train_ma", 4]],
+      "x": -22376.0,
+      "y": -28421
+    },
+    { "id": "gift_hometown_0", "items": [["sell1", 1]], "x": -1647, "y": 1646 },
+    {
+      "id": "hometown_reserve",
+      "items": [["jersey2", 1]],
+      "x": -4597,
+      "y": 5267
+    }
+  ]
+}

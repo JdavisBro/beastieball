@@ -168,7 +168,6 @@ export default function ColorTabs(props: Props): React.ReactNode {
   ]);
 
   const updateAllCustomColors = (newColors: string[]) => {
-    console.log(newColors);
     newColors.forEach((col, index) => colorChange(index, hexToRgb(col)));
     setCustomColors(newColors);
     if (diffBeastieColors == "none") {

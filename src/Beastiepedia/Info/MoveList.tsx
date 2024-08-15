@@ -74,7 +74,7 @@ export default function MoveList(props: Props): React.ReactElement {
   }
 
   const learnmoves: Array<React.ReactElement> = [];
-  const friendmoves: Array<React.ReactElement> = [];
+  let friendmoves: Move[] = [];
   if (learnset) {
     for (let move in learnset) {
       const level = learnset[move][1];
@@ -94,16 +94,7 @@ export default function MoveList(props: Props): React.ReactElement {
       );
     }
   } else {
-    props.movelist.forEach((move) =>
-      friendmoves.push(
-        <MoveText
-          move={MOVE_DIC[move]}
-          selected={selected == move}
-          onSelect={() => setSelected(move)}
-          key={move}
-        />,
-      ),
-    );
+    friendmoves = props.movelist.map((move) => MOVE_DIC[move]);
   }
 
   for (const move of props.movelist.values()) {
@@ -113,14 +104,7 @@ export default function MoveList(props: Props): React.ReactElement {
     }
 
     if (learnset && !learnset.some((m) => m[0] == move)) {
-      friendmoves.push(
-        <MoveText
-          move={MOVE_DIC[move]}
-          selected={selected == move}
-          onSelect={() => setSelected(move)}
-          key={move}
-        />,
-      );
+      friendmoves.push(MOVE_DIC[move]);
     }
   }
 
@@ -133,7 +117,21 @@ export default function MoveList(props: Props): React.ReactElement {
         </div>
         <div className={styles.movelist}>
           <div>From Friends:</div>
-          {friendmoves}
+          {friendmoves
+            .sort(
+              (move1, move2) =>
+                move1.type - move2.type ||
+                move2.pow - move1.pow ||
+                move1.name.localeCompare(move2.name),
+            )
+            .map((move) => (
+              <MoveText
+                move={move}
+                selected={selected == move.id}
+                onSelect={() => setSelected(move.id)}
+                key={move.id}
+              />
+            ))}
         </div>
       </div>
       <div className={styles.viewcontainer}>

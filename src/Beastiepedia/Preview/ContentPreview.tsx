@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { lazy, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import setupWebGL, {
   WebGLError,
@@ -16,10 +16,13 @@ import BEASTIE_ANIMATIONS, {
 } from "../../data/BeastieAnimations";
 import { hexToRgb } from "../../utils/color";
 import saveGif from "./saveGif";
-import DevUtil from "./DevUtil";
 import AnimationOptions from "./AnimationOptions";
 import PreviewSettings from "./PreviewSettings";
 import useScreenOrientation from "../../utils/useScreenOrientation";
+
+const DevUtil = import.meta.env.DEV
+  ? lazy(() => import("./DevUtil.tsx"))
+  : () => null;
 
 type Props = {
   beastiedata: BeastieType;

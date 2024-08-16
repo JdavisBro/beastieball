@@ -159,7 +159,7 @@
 
 .movedesc {
   font-size: 1.3em;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 67%;
   display: flex;
   justify-content: end;

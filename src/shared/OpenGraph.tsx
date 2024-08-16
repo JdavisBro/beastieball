@@ -20,6 +20,7 @@ export default function OpenGraph(props: Props): React.ReactElement {
       <meta property="og:url" content={`${url}/${props.url}`} />
       <meta property="og:description" content={props.description} />
       <meta property="og:type" content="website" />
+      <link rel="canonical" href={`${url}/${props.url}`} />
       <meta name="twitter:card" content="summary" />
       <meta
         name="prerender-status-code"

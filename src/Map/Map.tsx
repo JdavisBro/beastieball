@@ -178,7 +178,7 @@ export default function Map(): React.ReactNode {
       <OpenGraph
         title={`Map - ${import.meta.env.VITE_BRANDING}`}
         image="gameassets/sprMainmenu/3.png"
-        url="map"
+        url="map/"
         description="A map of the world of Beastieball"
       />
       <Header title="Beastieball Map" />

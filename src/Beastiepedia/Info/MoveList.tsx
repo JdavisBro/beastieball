@@ -141,17 +141,6 @@ export default function MoveList(props: Props): React.ReactElement {
           </MoveModalProvider>
         ) : null}
       </div>
-      <div className={styles.issuetext}>
-        Incorrect or broken? Report on{" "}
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href={import.meta.env.VITE_ISSUES_URL}
-        >
-          GitHub issues
-        </a>
-        .
-      </div>
     </div>
   );
 }

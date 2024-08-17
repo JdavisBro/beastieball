@@ -31,6 +31,18 @@
 
 .gridimage {
   filter: invert(1);
+  height: 100%;
+  margin-left: 2px;
+  padding: 0 2px 0 2px;
+  aspect-ratio: 1;
+  background-image: url("/gameassets/sprOptions_small_0.png");
+  background-size: 100% 100%;
+  transform: scaleX(-1);
+}
+
+.gridimageGrid {
+  composes: gridimage;
+  background-size: 25% 100%;
 }
 
 .beastiecontainer {
@@ -50,20 +62,32 @@
   width: 100%;
   height: 120px;
   cursor: pointer;
+  position: relative;
 }
 
 .beastiecontainergrid > .beastie {
-  width: 33.3%;
+  width: 25%;
   height: fit-content;
 }
 
 .beastiecontainergrid > .beastie > .beastiecontent {
-  flex-direction: column;
+  clip-path: polygon(0 0, 95% 1%, 100% 100%, 5% 99%);
 }
 
 .beastiecontainergrid > .beastie > .beastiecontent > .image {
   width: 100%;
   height: auto;
+}
+
+.beastiecontainergrid > .beastie > .beastiecontent > .gridnumber {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 6px 0 6px;
+  font-family: SportsJersey, "Go Banana", sans-serif;
+  color: white;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 90% 0);
 }
 
 .beastiecontainergrid > .beastie > .beastiecontent > .name {
@@ -91,6 +115,11 @@
 .image {
   aspect-ratio: 1;
   height: 100%;
+}
+
+.gridnumber {
+  composes: boxHeaderBackground from global;
+  display: none;
 }
 
 .name {

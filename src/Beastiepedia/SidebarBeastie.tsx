@@ -41,6 +41,10 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
             alt={`${beastiedata.name} Icon`}
             loading="lazy"
           />
+          <span className={styles.gridnumber}>
+            <span className={styles.hash}>#</span>
+            {String(beastiedata.number).padStart(2, "0")}
+          </span>
           <div className={styles.name}>
             <div>
               <div>

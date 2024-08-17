@@ -2,6 +2,7 @@ import SidebarBeastie from "./SidebarBeastie";
 import styles from "./Sidebar.module.css";
 import BEASTIE_DATA from "../data/BeastieData";
 import { useState } from "react";
+import { useLocalStorage } from "usehooks-ts";
 
 type Props = {
   beastieid: string | null | undefined;
@@ -15,7 +16,7 @@ export default function Sidebar(props: Props): React.ReactElement {
 
   const [search, setSearch] = useState("");
 
-  const [grid, setGrid] = useState(false);
+  const [grid, setGrid] = useLocalStorage("beastiepediaGrid", false);
 
   BEASTIE_DATA.forEach((value, key) => {
     beasties.push(
@@ -38,11 +39,10 @@ export default function Sidebar(props: Props): React.ReactElement {
           className={styles.sidebarsearch}
           onChange={(event) => setSearch(event.target.value)}
         />
-        <img
-          className={styles.gridimage}
-          src="/gameassets/sprOptions_small_0.png"
+        <div
+          className={grid ? styles.gridimage : styles.gridimageGrid}
           tabIndex={0}
-          alt="Toggle Grid View"
+          title="Toggle Grid View"
           role="button"
           onClick={() => setGrid(!grid)}
           onKeyDown={(event) => {

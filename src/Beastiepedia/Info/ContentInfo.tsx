@@ -185,6 +185,9 @@ export default function ContentInfo(props: Props): React.ReactNode {
           <InfoBox header="Ally Training">
             <TextTag>{training}</TextTag>
           </InfoBox>
+          <InfoBox header="Exp For Level 100">
+            {(100 ** 3 * beastiedata.growth).toLocaleString()}
+          </InfoBox>
         </div>
 
         <BoxHeader>Moves</BoxHeader>

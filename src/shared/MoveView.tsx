@@ -55,13 +55,22 @@ function getEffectString(
   alt_target: boolean,
   args: { joiningEffects: null | number },
 ) {
-  const boost =
-    effect.pow > 0
-      ? `[sprBoost,${Math.floor(effect.pow) - 1}]`
-      : `[sprBoost,${3 + Math.abs(Math.floor(effect.pow)) - 1}]`;
+  let pow = Math.abs(Math.floor(effect.pow)) - 1;
+  let boost = "";
+  while (pow >= 0) {
+    boost +=
+      effect.pow > 0
+        ? `[sprBoost,${Math.min(2, pow)}]`
+        : `[sprBoost,${Math.min(2, pow) + 3}]`;
+    pow -= 3;
+  }
   const target = (alt_target ? ALT_TARGET_STRINGS : TARGET_STRINGS)[
     effect.targ
   ];
+
+  if (target == undefined) {
+    console.log(`Target ${effect.targ} undefined!! ${effect}`);
+  }
 
   const targetStart =
     target == undefined

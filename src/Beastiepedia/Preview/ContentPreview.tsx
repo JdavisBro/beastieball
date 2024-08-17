@@ -1,4 +1,12 @@
-import { lazy, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  lazy,
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
 import setupWebGL, {
   WebGLError,
@@ -548,12 +556,14 @@ export default function ContentPreview(props: Props): React.ReactNode {
       </div>
 
       {import.meta.env.DEV ? (
-        <DevUtil
-          glRef={glRef}
-          canvasRef={canvasRef}
-          cropCanvasRef={cropCanvasRef}
-          programRef={programRef}
-        />
+        <Suspense fallback={<></>}>
+          <DevUtil
+            glRef={glRef}
+            canvasRef={canvasRef}
+            cropCanvasRef={cropCanvasRef}
+            programRef={programRef}
+          />
+        </Suspense>
       ) : null}
     </div>
   );

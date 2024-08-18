@@ -88,6 +88,11 @@
   clip-path: polygon(0 0, 10px 100%, 100% 100%, calc(100% - 10px) 0);
 }
 
+:global(.noanim) :global(.leaflet-popup) {
+  animation: none !important;
+  transition: none !important;
+}
+
 :global(.leaflet-popup-content-wrapper) {
   background-image: repeating-linear-gradient(
     #ddd1bd,

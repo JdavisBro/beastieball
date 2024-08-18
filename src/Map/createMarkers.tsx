@@ -31,6 +31,7 @@ export function createMarkers() {
     objGymdoor: "Gym",
     objClothesShop: "Clothes Shop",
     objZipstation: "Zip Station",
+    objMall: "Zip Station",
   };
 
   const imgheaders: { [key: string]: React.ReactElement[] } = {

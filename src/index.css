@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Go Banana";
-  src: url("/fonts/Go Banana.woff2") format("woff2");
   src: url("/fonts/Go Banana.woff") format("woff");
+  src: url("/fonts/Go Banana.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "SportsJersey";
-  src: url("/fonts/SportsJersey.woff2") format("woff2");
   src: url("/fonts/SportsJersey.woff") format("woff");
+  src: url("/fonts/SportsJersey.woff2") format("woff2");
   unicode-range: U+30-7A; /* sports jersey only supports 0 to z and so this makes it fallback on regular fonts */
 }
 

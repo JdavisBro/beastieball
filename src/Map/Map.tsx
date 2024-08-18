@@ -137,7 +137,7 @@ export default function Map(): React.ReactNode {
             iconSize: [50, 50],
           })}
         >
-          <Popup offset={[0, -5]}>
+          <Popup>
             <Link to={`/beastiepedia/${beastie.name}`}>{beastie.name}</Link>
             <br />
             {overall_percent[value].percent > 0
@@ -228,7 +228,7 @@ export default function Map(): React.ReactNode {
                     iconAnchor: [20, 20],
                   })}
                 >
-                  <Popup offset={[0, -5]}>
+                  <Popup>
                     <div className={styles.itemList}>
                       {gift.items.map(([item, count]) => (
                         <div key={item} className={styles.item}>

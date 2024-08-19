@@ -175,7 +175,6 @@ export default function ContentInfo(props: Props): React.ReactNode {
           </InfoBox>
         </div>
 
-        <BoxHeader>Plays</BoxHeader>
         <MoveList
           movelist={beastiedata.attklist}
           learnset={beastiedata.learnset}

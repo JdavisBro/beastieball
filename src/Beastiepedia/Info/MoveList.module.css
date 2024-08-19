@@ -1,7 +1,16 @@
 .container {
-  padding-bottom: 10px;
-  position: relative;
-  top: -4px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.container > div {
+  max-width: 100%;
+}
+
+.container :global(.infoBoxContent) {
+  max-width: 100%;
+  margin: 0 10px 0 10px;
 }
 
 .listcontainer {
@@ -17,9 +26,6 @@
 
 .movelist {
   width: 163px;
-  margin-top: 5px;
-  margin-left: 10px;
-  padding-bottom: 8px;
 }
 
 .movelist > div {
@@ -58,5 +64,7 @@
 
 .viewcontainer {
   max-width: 100%;
-  overflow-x: auto;
+  margin: 6px 0 4px 0;
+  width: 460px;
+  flex: 1 1;
 }

@@ -5,6 +5,7 @@ import styles from "./MoveList.module.css";
 import MOVE_DIC, { Move } from "../../data/MoveData";
 import { LEARN_SETS } from "../../data/Learnsets";
 import MoveModalProvider from "../../shared/MoveModalProvider";
+import InfoBox from "../../shared/InfoBox";
 
 type MoveTextProps = {
   level?: number;
@@ -110,37 +111,41 @@ export default function MoveList(props: Props): React.ReactElement {
 
   return (
     <div className={styles.container}>
-      <div className={styles.listcontainer}>
-        <div className={styles.movelist}>
-          <div>From Levels:</div>
-          {learnmoves}
+      <InfoBox header="Plays">
+        <div className={styles.listcontainer}>
+          <div className={styles.movelist}>
+            <div>From Levels:</div>
+            {learnmoves}
+          </div>
+          <div className={styles.movelist}>
+            <div>From Friends:</div>
+            {friendmoves
+              .sort(
+                (move1, move2) =>
+                  move1.type - move2.type ||
+                  move2.pow - move1.pow ||
+                  move1.name.localeCompare(move2.name),
+              )
+              .map((move) => (
+                <MoveText
+                  move={move}
+                  selected={selected == move.id}
+                  onSelect={() => setSelected(move.id)}
+                  key={move.id}
+                />
+              ))}
+          </div>
         </div>
-        <div className={styles.movelist}>
-          <div>From Friends:</div>
-          {friendmoves
-            .sort(
-              (move1, move2) =>
-                move1.type - move2.type ||
-                move2.pow - move1.pow ||
-                move1.name.localeCompare(move2.name),
-            )
-            .map((move) => (
-              <MoveText
-                move={move}
-                selected={selected == move.id}
-                onSelect={() => setSelected(move.id)}
-                key={move.id}
-              />
-            ))}
+      </InfoBox>
+      <InfoBox header="Selected Play">
+        <div className={styles.viewcontainer}>
+          {moveselected ? (
+            <MoveModalProvider>
+              <MoveView move={moveselected} />
+            </MoveModalProvider>
+          ) : null}
         </div>
-      </div>
-      <div className={styles.viewcontainer}>
-        {moveselected ? (
-          <MoveModalProvider>
-            <MoveView move={moveselected} />
-          </MoveModalProvider>
-        ) : null}
-      </div>
+      </InfoBox>
     </div>
   );
 }

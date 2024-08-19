@@ -58,8 +58,9 @@
 }
 
 .combo > :global(.infoBoxContentContainer) > :global(.infoBoxContent) {
-  max-width: calc(100% - 40px);
+  max-width: calc(100% - 20px);
   width: 460px;
+  margin: 0 10px 4px 10px;
 }
 
 @media all and (max-aspect-ratio: 1/1) {

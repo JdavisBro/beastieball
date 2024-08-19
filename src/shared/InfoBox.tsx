@@ -7,10 +7,11 @@ export function BoxHeader({ children }: PropsWithChildren) {
 export default function InfoBox(
   props: PropsWithChildren & {
     header: string;
+    className?: string;
   },
 ): React.ReactNode {
   return (
-    <div>
+    <div className={props.className}>
       <div className="infoboxHeader">{props.header}</div>
       <div className="infoBoxContentContainer">
         <div className="infoBoxContent">{props.children}</div>

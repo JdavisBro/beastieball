@@ -57,6 +57,15 @@
   max-width: 100%;
 }
 
+.combo {
+  max-width: 100%;
+}
+
+.combo > :global(.infoBoxContentContainer) > :global(.infoBoxContent) {
+  max-width: 100%;
+  width: 460px;
+}
+
 @media all and (max-aspect-ratio: 1/1) {
   .info {
     width: 100%;

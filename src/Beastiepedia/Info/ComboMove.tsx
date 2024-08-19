@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+import styles from "./ContentInfo.module.css";
 import BEASTIE_DATA, { BeastieType } from "../../data/BeastieData";
 import InfoBox from "../../shared/InfoBox";
 import MoveView from "../../shared/MoveView";
@@ -36,60 +38,61 @@ export default function ComboMove({
     type == ComboType.Partners ? 3 : type == ComboType.Defense ? 5 : 4;
 
   const effects: MoveEffect[] = [];
-  if (friend) {
-    if (type == ComboType.Rivals) {
-      const attks = [
-        beastiedata.ba + friend.ba,
-        beastiedata.ha + friend.ha,
-        beastiedata.ma + friend.ma,
-      ];
-      moveType =
-        attks[2] > attks[1] && attks[2] > attks[0]
-          ? 2
-          : attks[1] > attks[0]
-            ? 1
-            : 0;
+
+  const attks = [beastiedata.ba, beastiedata.ha, beastiedata.ma];
+  if (type == ComboType.Rivals) {
+    if (friend) {
+      attks[0] += friend.ba;
+      attks[1] += friend.ha;
+      attks[2] += friend.ma;
     }
-    [beastiedata, friend]
-      .sort((beastie, beastie2) => beastie.number - beastie2.number)
-      .forEach((beastie) => {
-        for (let i = 0; i < beastie.combos[type].length; i += 3) {
-          const neweff = {
-            eff: beastie.combos[type][i],
-            targ: beastie.combos[type][i + 1],
-            pow: beastie.combos[type][i + 2],
-          };
-          switch (neweff.eff) {
-            case 49:
-              target = neweff.pow;
-              continue;
-            case 50:
-              pows.push(neweff.pow);
-              continue;
-            case 51:
-              use = neweff.pow;
-              continue;
-          }
-          let effExists = false;
-          effects.forEach((eff) => {
-            if (
-              eff.eff == neweff.eff &&
-              eff.targ == neweff.targ &&
-              !UNCOMBINABLE_EFFECTS.includes(eff.eff)
-            ) {
-              effExists = true;
-              eff.pow += neweff.pow;
-            }
-          });
-          if (!effExists) {
-            effects.push(neweff);
-          }
-        }
-      });
+    moveType =
+      attks[2] > attks[1] && attks[2] > attks[0]
+        ? 2
+        : attks[1] > attks[0]
+          ? 1
+          : 0;
   }
+  (friend ? [beastiedata, friend] : [beastiedata])
+    .sort((beastie, beastie2) => beastie.number - beastie2.number)
+    .forEach((beastie) => {
+      for (let i = 0; i < beastie.combos[type].length; i += 3) {
+        const neweff = {
+          eff: beastie.combos[type][i],
+          targ: beastie.combos[type][i + 1],
+          pow: beastie.combos[type][i + 2],
+        };
+        switch (neweff.eff) {
+          case 49:
+            target = neweff.pow;
+            continue;
+          case 50:
+            pows.push(neweff.pow);
+            continue;
+          case 51:
+            use = neweff.pow;
+            console.log(neweff);
+            continue;
+        }
+        let effExists = false;
+        effects.forEach((eff) => {
+          if (
+            eff.eff == neweff.eff &&
+            eff.targ == neweff.targ &&
+            !UNCOMBINABLE_EFFECTS.includes(eff.eff)
+          ) {
+            effExists = true;
+            eff.pow += neweff.pow;
+          }
+        });
+        if (!effExists) {
+          effects.push(neweff);
+        }
+      }
+    });
 
   return (
-    <InfoBox header="Combo Moves">
+    <InfoBox header="Combo Moves" className={styles.combo}>
       <select onChange={(event) => setType(Number(event.target.value))}>
         <option value={ComboType.Rivals}>Rivals Attack</option>
         <option value={ComboType.Partners}>Partners Volley</option>
@@ -98,29 +101,27 @@ export default function ComboMove({
       </select>
       <BeastieSelect beastieId={friendId} setBeastieId={setFriendId} />
       <br />
-      {friend ? (
-        <MoveView
-          move={{
-            id: "whatever",
-            targ: target,
-            desc_tagids: [],
-            description: null,
-            bt_tags: [],
-            use: use,
-            desc_tags: [],
-            name: `${beastiedata.name} + ${friend.name} ${ComboType[type]}`,
-            type: moveType,
-            pow:
-              pows.length == 0
-                ? 100
-                : pows.length == 1
-                  ? 100 * pows[0]
-                  : Math.round(((pows[0] + pows[1]) * 50) / 5) * 5,
-            eff: effects,
-          }}
-          noLearner={true}
-        />
-      ) : null}
+      <MoveView
+        move={{
+          id: "whatever",
+          targ: target,
+          desc_tagids: [],
+          description: null,
+          bt_tags: [],
+          use: use,
+          desc_tags: [],
+          name: `${beastiedata.name} + ${friend ? friend.name : "???"} ${ComboType[type]}`,
+          type: moveType,
+          pow:
+            pows.length == 0
+              ? 100
+              : pows.length == 1
+                ? 100 * pows[0]
+                : Math.round(((pows[0] + pows[1]) * 50) / 5) * 5,
+          eff: effects,
+        }}
+        noLearner={true}
+      />
     </InfoBox>
   );
 }

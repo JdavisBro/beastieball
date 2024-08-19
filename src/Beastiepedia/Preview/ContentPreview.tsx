@@ -363,30 +363,42 @@ export default function ContentPreview(props: Props): React.ReactNode {
     [setColors],
   );
 
-  const downloadImage = useCallback(() => {
-    if (!canvasRef.current || !cropCanvasRef.current) {
-      return;
-    }
-    let canvas = canvasRef.current;
-    if (fitBeastie && frameNumRef.current !== null) {
-      cropCanvasRef.current.width =
-        drawnsprite.bboxes[frameNumRef.current].width;
-      cropCanvasRef.current.height =
-        drawnsprite.bboxes[frameNumRef.current].height;
-      cropCanvasRef.current
-        .getContext("2d")
-        ?.drawImage(
-          canvasRef.current,
-          -drawnsprite.bboxes[frameNumRef.current].x,
-          -drawnsprite.bboxes[frameNumRef.current].y,
-        );
-      canvas = cropCanvasRef.current;
-    }
-    const a = document.createElement("a");
-    a.download = `${props.beastiedata.name}.png`;
-    a.href = canvas.toDataURL("image/png");
-    a.click();
-  }, [fitBeastie, drawnsprite, props.beastiedata.name]);
+  const downloadImage = useCallback(
+    (copy: boolean = false) => {
+      if (!canvasRef.current || !cropCanvasRef.current) {
+        return;
+      }
+      let canvas = canvasRef.current;
+      if (fitBeastie && frameNumRef.current !== null) {
+        cropCanvasRef.current.width =
+          drawnsprite.bboxes[frameNumRef.current].width;
+        cropCanvasRef.current.height =
+          drawnsprite.bboxes[frameNumRef.current].height;
+        cropCanvasRef.current
+          .getContext("2d")
+          ?.drawImage(
+            canvasRef.current,
+            -drawnsprite.bboxes[frameNumRef.current].x,
+            -drawnsprite.bboxes[frameNumRef.current].y,
+          );
+        canvas = cropCanvasRef.current;
+      }
+      if (!copy) {
+        const a = document.createElement("a");
+        a.download = `${props.beastiedata.name}.png`;
+        a.href = canvas.toDataURL("image/png");
+        a.click();
+      } else {
+        canvas.toBlob((blob) => {
+          if (!blob) {
+            return;
+          }
+          navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+        }, "image/png");
+      }
+    },
+    [fitBeastie, drawnsprite, props.beastiedata.name],
+  );
 
   const downloadGif = useCallback(() => {
     if (!glRef.current || !loadedImages || !animdata || !anim) {

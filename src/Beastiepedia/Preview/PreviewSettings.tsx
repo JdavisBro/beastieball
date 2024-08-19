@@ -2,7 +2,7 @@ import InfoBox from "../../shared/InfoBox";
 import styles from "./ContentPreview.module.css";
 
 type Props = {
-  downloadImage: () => void;
+  downloadImage: (copy?: boolean) => void;
   downloadGif: () => void;
   gifDisabled: boolean;
   userSpeed: number;
@@ -19,7 +19,8 @@ export default function PreviewSettings(props: Props): React.ReactElement {
       {" "}
       <InfoBox header="Settings">
         <div className={styles.middlealign}>
-          <button onClick={props.downloadImage}>Save PNG</button>
+          <button onClick={() => props.downloadImage()}>Save PNG</button>
+          <button onClick={() => props.downloadImage(true)}>Copy PNG</button>
           <button onClick={props.downloadGif} disabled={props.gifDisabled}>
             Save GIF
           </button>

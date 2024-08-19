@@ -43,7 +43,7 @@ export default function BeastieRenderProvider(
         const cancelled = await new Promise<boolean>((resolve) => {
           renderJobs.current.push(id);
           jobsRef.current[id] = resolve;
-        });
+        }).catch((error) => console.log(error));
         delete jobsRef.current[id];
         renderJobs.current.splice(renderJobs.current.indexOf(id), 1);
 
@@ -77,10 +77,13 @@ export default function BeastieRenderProvider(
 
         const img = await new Promise<HTMLImageElement>((resolve, reject) => {
           const image = document.createElement("img");
-          image.src = `/gameassets/beasties/${drawn_sprite.name}/${beastie_frame ?? 0}.png`;
+          image.src = `/gameassets/beasties/${drawn_sprite.name}/${beastie_frame ?? 0}.webp`;
           image.onerror = () => reject();
           image.onload = () => resolve(image);
-        });
+        }).catch((error) => console.log(error));
+        if (!img) {
+          return null;
+        }
         setImage(glRef.current.gl, img);
 
         const beastieColors =

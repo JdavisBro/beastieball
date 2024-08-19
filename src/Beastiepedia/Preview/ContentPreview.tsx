@@ -473,7 +473,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         style={{
           backgroundImage: background ? "none" : "",
           backgroundColor: background ? backgroundColor : "transparent",
-          width: `70%`,
+          width: `80%`,
         }}
       >
         <canvas

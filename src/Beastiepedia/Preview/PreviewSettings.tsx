@@ -41,7 +41,7 @@ export default function PreviewSettings(props: Props): React.ReactElement {
             min={25}
             max={100}
             step={5}
-            defaultValue={70}
+            defaultValue={80}
             onChange={(event) => {
               if (
                 props.canvasRef.current &&

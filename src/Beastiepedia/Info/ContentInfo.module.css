@@ -30,6 +30,15 @@
   gap: 8px;
 }
 
+.training span {
+  vertical-align: middle;
+}
+
+.trainingImage {
+  height: 1em;
+  vertical-align: middle;
+}
+
 .middlealign {
   display: flex;
   align-items: center;

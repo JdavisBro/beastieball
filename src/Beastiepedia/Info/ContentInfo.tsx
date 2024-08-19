@@ -66,42 +66,29 @@ function getEvoConditionString(evo: EvolutionType) {
     : "idk when though";
 }
 
+/* prettier-ignore */
+const TRAINING_TYPE: Record<string, React.ReactElement> = {
+  b: <img src="/gameassets/sprIcon/0.png" alt="Body" className={styles.trainingImage} />,
+  h: <img src="/gameassets/sprIcon/1.png" alt="Spirit" className={styles.trainingImage} />,
+  m: <img src="/gameassets/sprIcon/2.png" alt="Mind"className={styles.trainingImage} />,
+};
+
 export default function ContentInfo(props: Props): React.ReactNode {
   const beastiedata = props.beastiedata;
-  let training = "";
 
-  for (let i = 0; i < beastiedata.tyield.length; i += 2) {
-    const type = String(beastiedata.tyield[i]);
-    const value = Number(beastiedata.tyield[i + 1]);
-    training += `${training == "" ? "" : "\n"}+${value} `;
-
-    switch (type[0]) {
-      case "b":
-        // body
-        training += "[sprIcon,0]";
-        break;
-
-      case "h":
-        // spirit (heart)
-        training += "[sprIcon,1]";
-        break;
-
-      case "m":
-        // mind
-        training += "[sprIcon,2]";
-        break;
-    }
-
-    switch (type[1]) {
-      case "a":
-        training += "POW";
-        break;
-
-      case "d":
-        training += "DEF";
-        break;
-    }
-  }
+  const training = beastiedata.tyield
+    .map((type, index, array) => {
+      if (index % 2 != 0) return null;
+      return (
+        <span key={index} className={styles.training}>
+          {index != 0 ? <br /> : null}
+          <span>+{array[index + 1]} </span>
+          {TRAINING_TYPE[(type as string)[0]]}
+          <span>{(type as string)[1] == "a" ? "POW" : "DEF"}</span>
+        </span>
+      );
+    })
+    .filter((value) => !!value);
 
   const preEvo = findBeastiePreevolution(beastiedata.family, beastiedata.id);
   const evolutions = beastiedata.evolution;
@@ -182,15 +169,13 @@ export default function ContentInfo(props: Props): React.ReactNode {
           <InfoBox header="Recruit Condition">
             <TextTag>{beastiedata.recruit.description}</TextTag>
           </InfoBox>
-          <InfoBox header="Ally Training">
-            <TextTag>{training}</TextTag>
-          </InfoBox>
+          <InfoBox header="Ally Training">{training}</InfoBox>
           <InfoBox header="Exp For Level 100">
             {(100 ** 3 * beastiedata.growth).toLocaleString()}
           </InfoBox>
         </div>
 
-        <BoxHeader>Moves</BoxHeader>
+        <BoxHeader>Plays</BoxHeader>
         <MoveList
           movelist={beastiedata.attklist}
           learnset={beastiedata.learnset}

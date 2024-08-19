@@ -23,4 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
+public/gameassets/beasties_png
+
 .netlify

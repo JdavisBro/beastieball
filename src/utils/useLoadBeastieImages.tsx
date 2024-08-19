@@ -22,7 +22,7 @@ export default function useLoadBeastieImages(path: string, max_num: number) {
         });
       };
       const image: Image = {
-        src: `${path}/${i}.png`,
+        src: `${path}/${i}.webp`,
         image: imElem,
         onLoad: imOnLoad,
       };

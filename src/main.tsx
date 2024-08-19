@@ -1,4 +1,4 @@
-import { StrictMode, Suspense } from "react";
+import { StrictMode, Suspense, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -10,6 +10,7 @@ import { useLocalStorage } from "usehooks-ts";
 import { HelmetProvider } from "react-helmet-async";
 import SpoilerWarning from "./SpoilerWarning";
 import CustomErrorBoundary from "./shared/CustomErrorBoundary";
+import { ErrorBoundary } from "react-error-boundary";
 
 const container = document.getElementById("root");
 
@@ -21,6 +22,10 @@ function Container(props: { children: React.ReactNode }): React.ReactNode {
   const [noAnimations] = useLocalStorage("noAnimations", false, {
     serializer: String,
     deserializer: (value) => value == "true",
+  });
+
+  useEffect(() => {
+    sessionStorage.removeItem("reloadAttempted");
   });
 
   return (
@@ -46,7 +51,9 @@ createRoot(container).render(
       <Container>
         <SpoilerWarning>
           <Suspense fallback={<Loading />}>
-            <RouterProvider router={createBrowserRouter(routes)} />
+            <ErrorBoundary fallback={<></>}>
+              <RouterProvider router={createBrowserRouter(routes, {})} />
+            </ErrorBoundary>
           </Suspense>
         </SpoilerWarning>
       </Container>

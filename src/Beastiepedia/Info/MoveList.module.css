@@ -64,6 +64,7 @@
 
 .viewcontainer {
   max-width: 100%;
+  width: 460px;
   margin: 6px 0 4px 0;
   width: 460px;
   flex: 1 1;

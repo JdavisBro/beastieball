@@ -57,12 +57,8 @@
   max-width: 100%;
 }
 
-.combo {
-  max-width: 100%;
-}
-
 .combo > :global(.infoBoxContentContainer) > :global(.infoBoxContent) {
-  max-width: 100%;
+  max-width: calc(100% - 40px);
   width: 460px;
 }
 

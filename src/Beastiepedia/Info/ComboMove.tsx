@@ -100,7 +100,6 @@ export default function ComboMove({
         <option value={ComboType.Defense}>Bestie/Sweetheart Defense</option>
       </select>
       <BeastieSelect beastieId={friendId} setBeastieId={setFriendId} />
-      <br />
       <MoveView
         move={{
           id: "whatever",

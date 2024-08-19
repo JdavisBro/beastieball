@@ -83,16 +83,6 @@ export default function ColorTabs(props: Props): React.ReactNode {
     {},
     { serializer: JSON.stringify, deserializer: JSON.parse },
   );
-  if (
-    (storedColors[props.beastiedata.id] &&
-      Array.isArray(storedColors[props.beastiedata.id])) ||
-    !storedColors[props.beastiedata.id]
-  ) {
-    storedColors[props.beastiedata.id] = defaultColor(
-      colors,
-      props.beastiedata.colors,
-    );
-  }
 
   useEffect(() => {
     // doesn't change tab automatically on dev because of double render

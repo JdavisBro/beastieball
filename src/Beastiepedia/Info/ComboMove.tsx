@@ -71,7 +71,6 @@ export default function ComboMove({
             continue;
           case 51:
             use = neweff.pow;
-            console.log(neweff);
             continue;
         }
         let effExists = false;

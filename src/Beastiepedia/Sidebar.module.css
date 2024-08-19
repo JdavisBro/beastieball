@@ -55,6 +55,7 @@
   composes: beastiecontainer;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .beastie {
@@ -66,7 +67,8 @@
 }
 
 .beastiecontainergrid > .beastie {
-  width: 25%;
+  max-width: 25%;
+  width: 120px;
   height: fit-content;
 }
 

@@ -23,6 +23,7 @@ function RouteError() {
     UPDATED_ERRORS.some((text) => errorLower.includes(text))
   ) {
     location.href = location.href + "#";
+    location.reload();
 
     return (
       <div className="commoncontainer">

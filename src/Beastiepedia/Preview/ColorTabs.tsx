@@ -431,6 +431,15 @@ function BeastieColorTabContent(props: {
     });
     if (diffBeastie == "none") {
       props.setStoredColors((oldStored) => {
+        if (
+          !oldStored[props.beastieid] ||
+          Array.isArray(oldStored[props.beastieid])
+        ) {
+          oldStored[props.beastieid] = defaultColor(
+            props.colorMax,
+            props.colors,
+          );
+        }
         oldStored[props.beastieid][tab] = colorValues.current;
         return oldStored;
       });

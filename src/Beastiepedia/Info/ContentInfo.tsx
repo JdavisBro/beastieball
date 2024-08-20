@@ -68,7 +68,8 @@ function getEvoConditionString(evo: EvolutionType) {
 }
 
 function ExpForLevel({ growth }: { growth: number }) {
-  const [level, setLevel] = useState(100);
+  const [userLevel, setUserLevel] = useState(100);
+  const level = Math.min(Math.max(userLevel, 0), 100);
   return (
     <InfoBox
       header={
@@ -76,16 +77,22 @@ function ExpForLevel({ growth }: { growth: number }) {
           Exp for Level{" "}
           <input
             type="number"
-            min={1}
+            className={styles.levelInput}
+            min={0}
             max={100}
-            onChange={(event) => setLevel(Number(event.target.value))}
-            value={level}
-            style={{ height: "100%" }}
+            onChange={(event) => setUserLevel(Number(event.target.value))}
+            value={level || ""}
           />
+          <button onClick={() => setUserLevel(Math.max(1, level - 1))}>
+            -
+          </button>
+          <button onClick={() => setUserLevel(Math.min(100, level + 1))}>
+            +
+          </button>
         </>
       }
     >
-      {Math.floor(level ** 3 * growth).toLocaleString()}
+      {level ? Math.floor(level ** 3 * growth).toLocaleString() : "?"}
     </InfoBox>
   );
 }

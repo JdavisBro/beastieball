@@ -30,6 +30,19 @@
   gap: 8px;
 }
 
+.levelInput {
+  height: 100%;
+  width: 2em;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.levelInput::-webkit-inner-spin-button,
+.levelInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
 .training span {
   vertical-align: middle;
 }

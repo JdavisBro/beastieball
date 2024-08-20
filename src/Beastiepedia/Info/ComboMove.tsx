@@ -114,7 +114,7 @@ export default function ComboMove({
             pows.length == 0
               ? 100
               : pows.length == 1
-                ? 100 * pows[0]
+                ? Math.round((pows[0] * 100) / 5) * 5
                 : Math.round(((pows[0] + pows[1]) * 50) / 5) * 5,
           eff: effects,
         }}

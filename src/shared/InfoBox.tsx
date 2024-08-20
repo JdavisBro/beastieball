@@ -6,7 +6,7 @@ export function BoxHeader({ children }: PropsWithChildren) {
 
 export default function InfoBox(
   props: PropsWithChildren & {
-    header: string;
+    header: React.ReactNode;
     className?: string;
   },
 ): React.ReactNode {

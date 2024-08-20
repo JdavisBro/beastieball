@@ -11,6 +11,7 @@ import BEASTIE_DATA from "../../data/BeastieData";
 import InfoBox, { BoxHeader } from "../../shared/InfoBox";
 import ResearchCarousel from "./ResearchCarousel";
 import ComboMove from "./ComboMove";
+import { useState } from "react";
 
 type Props = {
   beastiedata: BeastieType;
@@ -64,6 +65,29 @@ function getEvoConditionString(evo: EvolutionType) {
         (match, index) => String(evo.value[Number(index)]) ?? match,
       )
     : "idk when though";
+}
+
+function ExpForLevel({ growth }: { growth: number }) {
+  const [level, setLevel] = useState(100);
+  return (
+    <InfoBox
+      header={
+        <>
+          Exp for Level{" "}
+          <input
+            type="number"
+            min={1}
+            max={100}
+            onChange={(event) => setLevel(Number(event.target.value))}
+            value={level}
+            style={{ height: "100%" }}
+          />
+        </>
+      }
+    >
+      {Math.floor(level ** 3 * growth).toLocaleString()}
+    </InfoBox>
+  );
 }
 
 /* prettier-ignore */
@@ -170,9 +194,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
             <TextTag>{beastiedata.recruit.description}</TextTag>
           </InfoBox>
           <InfoBox header="Ally Training">{training}</InfoBox>
-          <InfoBox header="Exp For Level 100">
-            {(100 ** 3 * beastiedata.growth).toLocaleString()}
-          </InfoBox>
+          <ExpForLevel growth={beastiedata.growth} />
         </div>
 
         <MoveList

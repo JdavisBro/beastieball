@@ -135,17 +135,21 @@ export default function ContentPreview(props: Props): React.ReactNode {
     [drawnsprite],
   );
 
-  const getAnimBbox = useCallback(() => {
+  const getAnimBboxAndLoaded = useCallback(() => {
     if (!anim || animPausedRef.current) {
-      return getCrop(drawnsprite.bbox);
+      return { bbox: getCrop(drawnsprite.bbox), loaded: false };
     }
     let bbox: { x: number; y: number; endx: number; endy: number } | undefined =
       undefined;
     const frames = Array.isArray(anim.frames) ? anim.frames : [anim.frames];
+    let allFramesLoaded = true;
     for (const state of frames) {
       const startFrame = state.startFrame || 0;
       const endFrame = state.endFrame || 0;
       for (let i = startFrame; i <= endFrame; i++) {
+        if (!loadedImages[i]) {
+          allFramesLoaded = false;
+        }
         const framebbox = drawnsprite.bboxes[i % drawnsprite.frames];
         if (bbox == undefined) {
           bbox = {
@@ -163,22 +167,26 @@ export default function ContentPreview(props: Props): React.ReactNode {
       }
     }
     if (!bbox) {
-      return getCrop(drawnsprite.bbox);
+      return { bbox: getCrop(drawnsprite.bbox), loaded: allFramesLoaded };
     }
-    return getCrop({
-      x: bbox.x,
-      y: bbox.y,
-      width: bbox.endx - bbox.x,
-      height: bbox.endy - bbox.y,
-    });
-  }, [drawnsprite, getCrop, anim]);
+    return {
+      bbox: getCrop({
+        x: bbox.x,
+        y: bbox.y,
+        width: bbox.endx - bbox.x,
+        height: bbox.endy - bbox.y,
+      }),
+      loaded: allFramesLoaded,
+    };
+  }, [drawnsprite, getCrop, anim, loadedImages]);
 
   const [fitBeastie, setFitBeastie] = useState(true);
 
   const step = useCallback(
     (time: DOMHighResTimeStamp) => {
+      const { bbox, loaded } = getAnimBboxAndLoaded();
       if (fitBeastie && canvasRef.current)
-        canvasRef.current.style.transform = getAnimBbox();
+        canvasRef.current.style.transform = bbox;
       if (anim === undefined) {
         console.log(`Incorrect Anim: ${animation}`);
         setAnimation("idle");
@@ -236,7 +244,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
           }
         }
       }
-      if (prevTimeRef.current && frameNumRef.current !== null) {
+      if (prevTimeRef.current && frameNumRef.current !== null && loaded) {
         const delta = time - prevTimeRef.current;
         if (!animPausedRef.current) {
           frameTimeRef.current += delta;
@@ -300,7 +308,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       anim,
       animdata,
       userSpeed,
-      getAnimBbox,
+      getAnimBboxAndLoaded,
       fitBeastie,
       beastiesprite,
     ],

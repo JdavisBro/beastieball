@@ -7,6 +7,7 @@ type Props = {
   gifDisabled: boolean;
   userSpeed: number;
   canvasRef: React.RefObject<HTMLCanvasElement>;
+  defaultSize: number;
   setBackground: React.Dispatch<React.SetStateAction<boolean>>;
   setBackgroundColor: React.Dispatch<React.SetStateAction<string>>;
   fitBeastie: boolean;
@@ -16,7 +17,6 @@ type Props = {
 export default function PreviewSettings(props: Props): React.ReactElement {
   return (
     <>
-      {" "}
       <InfoBox header="Settings">
         <div className={styles.middlealign}>
           <button onClick={() => props.downloadImage()}>Save PNG</button>
@@ -42,7 +42,7 @@ export default function PreviewSettings(props: Props): React.ReactElement {
             min={25}
             max={100}
             step={5}
-            defaultValue={80}
+            defaultValue={props.defaultSize}
             onChange={(event) => {
               if (
                 props.canvasRef.current &&

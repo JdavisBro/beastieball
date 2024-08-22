@@ -493,7 +493,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         style={{
           backgroundImage: background ? "none" : "",
           backgroundColor: background ? backgroundColor : "transparent",
-          width: `80%`,
+          width: portrait ? "70%" : "80%",
         }}
       >
         <canvas
@@ -526,11 +526,10 @@ export default function ContentPreview(props: Props): React.ReactNode {
         </div>
       </div>
 
-      <br />
-
       <button
         className={styles.previewOptionsButton}
         onClick={() => setPreviewOptionsVisible((visible) => !visible)}
+        style={{ display: portrait ? "block" : "none" }}
       >
         <span className={previewOptionsVisible ? "" : styles.upArrow}>V</span>{" "}
         Preview Options
@@ -538,7 +537,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
       <div
         className={
-          previewOptionsVisible
+          previewOptionsVisible || !portrait
             ? styles.previewOptions
             : styles.previewOptionsNotVisible
         }
@@ -568,6 +567,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
           gifDisabled={gifDisabled}
           userSpeed={userSpeed}
           canvasRef={canvasRef}
+          defaultSize={portrait ? 70 : 80}
           setBackground={setBackground}
           setBackgroundColor={setBackgroundColor}
           fitBeastie={fitBeastie}

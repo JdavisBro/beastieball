@@ -40,6 +40,8 @@
 
 .previewOptions {
   display: block;
+  margin-left: 2.5%;
+  width: 95%;
 }
 
 .previewOptionsNotVisible {
@@ -51,7 +53,7 @@
   clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
   border: none;
   padding: 6px;
-  margin-bottom: 10px;
+  margin: 10px 0 10px 2.5%;
   color: black;
   font-family: var(--go-banana);
   font-size: 1em;

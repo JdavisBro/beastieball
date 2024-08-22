@@ -12,6 +12,7 @@
   padding: 10px 30px 10px 30px;
   width: 100%;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 
 .previewcanvas {
@@ -53,7 +54,7 @@
   clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
   border: none;
   padding: 6px;
-  margin: 10px 0 10px 2.5%;
+  margin: 0 0 10px 2.5%;
   color: black;
   font-family: var(--go-banana);
   font-size: 1em;

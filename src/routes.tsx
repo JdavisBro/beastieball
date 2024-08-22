@@ -16,25 +16,24 @@ function RouteError() {
   const error = useRouteError();
 
   const errorLower = String(error).toLowerCase();
+  const updatedError = UPDATED_ERRORS.some((text) => errorLower.includes(text));
 
-  console.log(sessionStorage.getItem("reloadAttempted"));
-  if (
-    !location.href.endsWith("#") &&
-    UPDATED_ERRORS.some((text) => errorLower.includes(text))
-  ) {
-    location.href = location.href + "#";
+  if (!location.href.endsWith("#") && updatedError) {
+    location.href += "#";
     location.reload();
-
-    return (
-      <div className="commoncontainer">
-        <h2>Page Updated. Reloading.</h2>
-      </div>
-    );
   }
 
   return (
     <div className="commoncontainer">
-      <h2>{String(error)}</h2>
+      <h2>
+        {String(error)}
+        {updatedError ? (
+          <>
+            <br />
+            Page may have been updated. Attmepting to reload.
+          </>
+        ) : null}
+      </h2>
     </div>
   );
 }

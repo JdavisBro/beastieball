@@ -1,4 +1,4 @@
-import { StrictMode, Suspense, useEffect } from "react";
+import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -22,10 +22,6 @@ function Container(props: { children: React.ReactNode }): React.ReactNode {
   const [noAnimations] = useLocalStorage("noAnimations", false, {
     serializer: String,
     deserializer: (value) => value == "true",
-  });
-
-  useEffect(() => {
-    sessionStorage.removeItem("reloadAttempted");
   });
 
   return (

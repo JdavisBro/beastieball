@@ -8950,10 +8950,10 @@
     ],
     "colors2": null,
     "combos": [
-      [49, 0, 12],
-      [52, 1, 1, 8, 1, 0.15],
-      [52, 1, 1, 8, 1, 0.5],
-      [52, 2, 1, 8, 2, 0.3]
+      [50, 0.0, 1.3, 18, 3, 0.0],
+      [51, 0.0, 2.0, 0, 2, 2.0],
+      [51, 0.0, 2.0, 0, 2, 2.0],
+      [0, 2, 1.0, 3, 2, 1.0, 8, 2, 0.15]
     ],
     "desc": "They comb their hair with a special wax produced in their flippers. This keeps them incredibly smooth and able to glide over any surface.",
     "designer": [3, 8],

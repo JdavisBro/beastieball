@@ -2864,7 +2864,7 @@
       [10, 1, 2],
       [15, 2, 2, 16, 2, -1]
     ],
-    "desc": "Their bodies are made from hard translucent chitin. Depending on the arrangment of their cells, they refract light differently and can appear as vastly different colors.",
+    "desc": "Their bodies are made from hard translucent chitin. Depending on the arrangement of their cells, they refract light differently and can appear as vastly different colors.",
     "designer": [5, 8],
     "evo_pose": [
       {
@@ -2947,7 +2947,7 @@
       ],
       "description": "Deal 100+ damage with an attack"
     },
-    "recruit_value": 2.8,
+    "recruit_value": 2.35,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -4984,7 +4984,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 126.5,
+      "char_width": 128.25,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -8366,7 +8366,7 @@
     "spr_alt": [166],
     "tamecond": null,
     "tamelvl": 2,
-    "tyield": ["bd", 2]
+    "tyield": ["hd", 2]
   },
   "rocklizard1": {
     "ability": ["heavy", "multiscale"],
@@ -8950,10 +8950,10 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0.0, 1.3, 18, 3, 0.0],
-      [51, 0.0, 2.0, 0, 2, 2.0],
-      [51, 0.0, 2.0, 0, 2, 2.0],
-      [0, 2, 1.0, 3, 2, 1.0, 8, 2, 0.15]
+      [50, 0, 1.3, 18, 3, 0],
+      [51, 0, 2, 0, 2, 2],
+      [51, 0, 2, 0, 2, 2],
+      [0, 2, 1, 3, 2, 1, 8, 2, 0.15]
     ],
     "desc": "They comb their hair with a special wax produced in their flippers. This keeps them incredibly smooth and able to glide over any surface.",
     "designer": [3, 8],
@@ -10071,7 +10071,7 @@
       [52, 1, 1, 8, 1, 0.5],
       [52, 2, 1, 8, 2, 0.3]
     ],
-    "desc": "Though eerily quiet, they are constantly sending and receiving spore signals with nearby mycelia. As a result they have uncanny enviornmental awareness.",
+    "desc": "Though eerily quiet, they are constantly sending and receiving spore signals with nearby mycelia. As a result they have uncanny environmental awareness.",
     "designer": 1,
     "evo_pose": [
       {

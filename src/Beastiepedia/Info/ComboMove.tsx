@@ -21,11 +21,6 @@ export default function ComboMove({
 }: {
   beastiedata: BeastieType;
 }) {
-  const beasties: React.ReactNode[] = [];
-  BEASTIE_DATA.forEach((beastie) =>
-    beasties.push(<option value={beastie.id}>{beastie.name}</option>),
-  );
-
   const [type, setType] = useState<ComboType>(ComboType.Rivals);
 
   const [friendId, setFriendId] = useState<string | undefined>(undefined);

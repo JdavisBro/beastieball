@@ -14,14 +14,12 @@
 }
 
 .listcontainer {
-  composes: animBoxBackground from global;
   width: 350px;
   max-width: 100%;
   height: fit-content;
   display: flex;
   margin-bottom: 8px;
   color: black;
-  clip-path: polygon(0 0, calc(100% - 10px) 0%, 100% 100%, 10px 100%);
 }
 
 .movelist {

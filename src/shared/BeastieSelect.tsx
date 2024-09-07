@@ -7,9 +7,11 @@ import BEASTIE_DATA from "../data/BeastieData";
 export default function BeastieSelect({
   beastieId,
   setBeastieId,
+  textOverride,
 }: {
   beastieId: string | undefined;
   setBeastieId: (beastie: string | undefined) => void;
+  textOverride?: string;
 }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -68,7 +70,9 @@ export default function BeastieSelect({
   return (
     <>
       <button onClick={() => setOpen(true)}>
-        Select Beastie: {beastie?.name ?? "Unset"}
+        {textOverride
+          ? textOverride
+          : `Select Beastie: ${beastie?.name ?? "Unset"}`}
       </button>
       <Modal header="Select Beastie" open={open} onClose={() => setOpen(false)}>
         <label>

@@ -6,6 +6,7 @@ const PageNotFound = lazy(() => import("./PageNotFound"));
 const Beastiepedia = lazy(() => import("./Beastiepedia/Beastiepedia"));
 const Playdex = lazy(() => import("./Playdex/Playdex"));
 const Map = lazy(() => import("./Map/Map"));
+const Beastdle = lazy(() => import("./Beastdle/Beastdle"));
 const Modding = lazy(() => import("./Modding/Modding"));
 const Save = lazy(() => import("./Modding/Save/Save"));
 const Test = lazy(() => import("./Test"));
@@ -62,6 +63,10 @@ const routes: Array<RouteObject> = [
       {
         element: <Map />,
         path: "/map/",
+      },
+      {
+        element: <Beastdle />,
+        path: "/beastdle/",
       },
       {
         element: <Save />,

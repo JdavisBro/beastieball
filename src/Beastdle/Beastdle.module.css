@@ -46,3 +46,8 @@
   composes: guessSection;
   background-color: orange;
 }
+
+.guessSectionBlank {
+  composes: guessSection;
+  background-color: grey;
+}

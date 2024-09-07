@@ -39,7 +39,7 @@ export default function Beastdle() {
 
   const guess = (beastieId: string | undefined) => {
     if (beastieId && !guesses.includes(beastieId)) {
-      setGuesses([...guesses, beastieId]);
+      setGuesses([beastieId, ...guesses]);
     }
   };
 
@@ -82,7 +82,7 @@ export default function Beastdle() {
         )}
         Guesses: {guesses.length}
         <button
-          onClick={() => setGuesses([...guesses, target.id])}
+          onClick={() => setGuesses([target.id, ...guesses])}
           disabled={correct}
         >
           Give Up
@@ -90,6 +90,7 @@ export default function Beastdle() {
         <table className={styles.guesses}>
           <thead>
             <tr>
+              <th>Guess #</th>
               <th>Name</th>
               {TYPES.map((type) => (
                 <th key={type.name}>
@@ -115,9 +116,10 @@ export default function Beastdle() {
             </tr>
           </thead>
           <tbody>
-            {guesses.map((beastieId) => (
+            {guesses.map((beastieId, index) => (
               <BeastieGuess
                 key={beastieId}
+                num={guesses.length - index}
                 beastie={BEASTIE_DATA.get(beastieId)}
                 target={target}
               />

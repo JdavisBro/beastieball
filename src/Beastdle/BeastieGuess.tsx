@@ -13,9 +13,11 @@ const TRAINING_TYPE: Record<string, React.ReactElement> = {
 };
 
 export default function BeastieGuess({
+  num,
   beastie,
   target,
 }: {
+  num: number;
   beastie: BeastieType | undefined;
   target: BeastieType;
 }) {
@@ -84,6 +86,7 @@ export default function BeastieGuess({
     ) && beastie.tyield.length == target.tyield.length;
   return (
     <tr>
+      <td className={styles.guessSectionBlank}>{num}</td>
       <td className={correct ? styles.guessSection : styles.guessSectionWrong}>
         <img src={`/icons/${beastie.name}.png`} alt={`${beastie.name} Icon`} />
         {beastie.name}

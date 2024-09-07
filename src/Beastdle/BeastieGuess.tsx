@@ -71,9 +71,9 @@ export default function BeastieGuess({
       index % 2 == 0 &&
       target.tyield.some((val2, ind2) => ind2 % 2 == 0 && value == val2),
   );
-  const trainingFullMatch = beastie.tyield.some(
+  const trainingFullMatch = beastie.tyield.every(
     (value, index) =>
-      index % 2 == 0 &&
+      index % 2 != 0 ||
       target.tyield.some(
         (val2, ind2) =>
           ind2 % 2 == 0 &&

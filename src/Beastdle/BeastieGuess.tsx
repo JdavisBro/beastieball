@@ -71,16 +71,17 @@ export default function BeastieGuess({
       index % 2 == 0 &&
       target.tyield.some((val2, ind2) => ind2 % 2 == 0 && value == val2),
   );
-  const trainingFullMatch = beastie.tyield.every(
-    (value, index) =>
-      index % 2 != 0 ||
-      target.tyield.some(
-        (val2, ind2) =>
-          ind2 % 2 == 0 &&
-          value == val2 &&
-          beastie.tyield[index + 1] == target.tyield[ind2 + 1],
-      ),
-  );
+  const trainingFullMatch =
+    beastie.tyield.every(
+      (value, index) =>
+        index % 2 != 0 ||
+        target.tyield.some(
+          (val2, ind2) =>
+            ind2 % 2 == 0 &&
+            value == val2 &&
+            beastie.tyield[index + 1] == target.tyield[ind2 + 1],
+        ),
+    ) && beastie.tyield.length == target.tyield.length;
   return (
     <tr>
       <td className={correct ? styles.guessSection : styles.guessSectionWrong}>

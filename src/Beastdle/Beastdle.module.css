@@ -1,27 +1,57 @@
 .container {
+  composes: animBackground from global;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(100vh - var(--header-height));
-  height: calc(100dvh - var(--header-height));
+  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100dvh - var(--header-height));
   width: 100%;
   margin: auto;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container button {
+  width: 100px;
+  height: 40px;
+}
+
+.help {
+  display: flex;
+  max-width: 100%;
+}
+.help div {
+  flex-shrink: 1;
 }
 
 @media all and (max-aspect-ratio: 1/1) {
+  .container {
+    height: calc(100vh - var(--header-height));
+    height: calc(100dvh - var(--header-height));
+  }
+
+  .help {
+    font-size: 0.8em !important;
+  }
+
   .guesses {
     font-size: 1em !important;
   }
+
   .guesses tbody {
     font-size: 1em !important;
+  }
+
+  .guessesContainer {
+    overflow: auto !important;
   }
 }
 
 .guessesContainer {
   width: 100%;
   height: 100%;
-  flex-grow: 1;
-  overflow: auto;
+  flex: 1 0 0;
+  overflow: visible;
 }
 
 .guesses {
@@ -29,12 +59,16 @@
   padding: 16px;
 }
 
+.guesses thead {
+  position: sticky;
+}
+
 .guesses tbody {
-  overflow-y: auto;
   font-size: 1.6em;
 }
 
-.guesses img {
+.guesses img,
+.help img {
   height: 1em;
   vertical-align: middle;
 }

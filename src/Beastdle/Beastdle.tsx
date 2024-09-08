@@ -59,7 +59,27 @@ export default function Beastdle() {
       />
       <Header title="Beastdle" />
       <div className={styles.container}>
-        <h1>Guess The Beastie!</h1>
+        Guess a beastie and the table will show how that guessed beastie
+        compares to the target beastie
+        <div className={styles.help}>
+          <div className={styles.guessSectionWrong}>
+            Red: Guessed beastie's data does not match targets
+          </div>
+          <div className={styles.guessSectionMaybe}>
+            Orange: Guessed beastie's data partially matches targets
+          </div>
+          <div className={styles.guessSection}>
+            Green: Guessed beastie's data completely matches targets
+          </div>
+          <div className={styles.guessSectionBlank}>
+            <img src="/gameassets/sprBoost/0.png" alt="Up" /> Up Arrow: The
+            target's stat is greater than this beastie's
+          </div>
+          <div className={styles.guessSectionBlank}>
+            <img src="/gameassets/sprBoost/3.png" alt="Down" /> Down Arrow: The
+            target's stat is less than this beastie's
+          </div>
+        </div>
         <span>
           <button
             onClick={() => {
@@ -92,21 +112,25 @@ export default function Beastdle() {
           </>
         ) : null}
         Guesses: {guesses.length}
-        {correct ? (
-          ""
-        ) : (
-          <BeastieSelect
-            beastieId={undefined}
-            setBeastieId={guess}
-            textOverride="Select Beastie"
-          />
-        )}
-        <button
-          onClick={() => setGuesses([target.id, ...guesses])}
-          disabled={correct}
-        >
-          Give Up
-        </button>
+        <span>
+          {correct ? (
+            "Yay!"
+          ) : (
+            <>
+              <BeastieSelect
+                beastieId={undefined}
+                setBeastieId={guess}
+                textOverride="Select Beastie"
+              />
+              <button
+                onClick={() => setGuesses([target.id, ...guesses])}
+                disabled={correct}
+              >
+                Give Up
+              </button>
+            </>
+          )}
+        </span>
         <div className={styles.guessesContainer}>
           <table className={styles.guesses}>
             <thead>
@@ -131,7 +155,7 @@ export default function Beastdle() {
                     DEF
                   </th>
                 ))}
-                <th>Metamorphs Into A Beastie</th>
+                <th>Metamorphs</th>
                 <th>Lvl 100 Exp</th>
                 <th>Ally Training</th>
               </tr>

@@ -42,6 +42,12 @@ export default function Beastdle() {
       setGuesses([beastieId, ...guesses]);
     }
   };
+  const isDaily = seed == getDaySeed();
+  const date = new Date();
+  const reset = new Date();
+  reset.setUTCDate(date.getUTCDate() + 1);
+  reset.setUTCHours(0);
+  reset.setUTCMinutes(0);
 
   return (
     <>
@@ -53,24 +59,39 @@ export default function Beastdle() {
       />
       <Header title="Beastdle" />
       <div className={styles.container}>
-        <button
-          onClick={() => {
-            setSeed(getDaySeed());
-            setGuesses([]);
-          }}
-          disabled={seed == getDaySeed()}
-        >
-          Daily
-        </button>
-        <button
-          onClick={() => {
-            setSeed(Math.random() * 100000);
-            setGuesses([]);
-          }}
-        >
-          Random
-        </button>
         <h1>Guess The Beastie!</h1>
+        <span>
+          <button
+            onClick={() => {
+              setSeed(getDaySeed());
+              setGuesses([]);
+            }}
+            disabled={isDaily}
+          >
+            Daily
+          </button>
+          <button
+            onClick={() => {
+              setSeed(Math.random() * 100000);
+              setGuesses([]);
+            }}
+          >
+            Random
+          </button>
+        </span>
+        {isDaily ? (
+          <>
+            <span>
+              Daily:{" "}
+              {new Date(date.toUTCString().replace(" GMT", "")).toDateString()}
+            </span>
+            <span>
+              New at: {String(reset.getHours()).padStart(2, "0")}:
+              {String(reset.getMinutes()).padStart(2, "0")}
+            </span>
+          </>
+        ) : null}
+        Guesses: {guesses.length}
         {correct ? (
           ""
         ) : (
@@ -80,52 +101,53 @@ export default function Beastdle() {
             textOverride="Select Beastie"
           />
         )}
-        Guesses: {guesses.length}
         <button
           onClick={() => setGuesses([target.id, ...guesses])}
           disabled={correct}
         >
           Give Up
         </button>
-        <table className={styles.guesses}>
-          <thead>
-            <tr>
-              <th>Guess #</th>
-              <th>Name</th>
-              {TYPES.map((type) => (
-                <th key={type.name}>
-                  <img
-                    src={`/gameassets/sprIcon/${type.image}.png`}
-                    alt={type.name}
-                  />
-                  POW
-                </th>
+        <div className={styles.guessesContainer}>
+          <table className={styles.guesses}>
+            <thead>
+              <tr>
+                <th>Guess #</th>
+                <th>Name</th>
+                {TYPES.map((type) => (
+                  <th key={type.name}>
+                    <img
+                      src={`/gameassets/sprIcon/${type.image}.png`}
+                      alt={type.name}
+                    />
+                    POW
+                  </th>
+                ))}
+                {TYPES.map((type) => (
+                  <th key={type.name}>
+                    <img
+                      src={`/gameassets/sprIcon/${type.image}.png`}
+                      alt={type.name}
+                    />
+                    DEF
+                  </th>
+                ))}
+                <th>Metamorphs Into A Beastie</th>
+                <th>Lvl 100 Exp</th>
+                <th>Ally Training</th>
+              </tr>
+            </thead>
+            <tbody>
+              {guesses.map((beastieId, index) => (
+                <BeastieGuess
+                  key={beastieId}
+                  num={guesses.length - index}
+                  beastie={BEASTIE_DATA.get(beastieId)}
+                  target={target}
+                />
               ))}
-              {TYPES.map((type) => (
-                <th key={type.name}>
-                  <img
-                    src={`/gameassets/sprIcon/${type.image}.png`}
-                    alt={type.name}
-                  />
-                  DEF
-                </th>
-              ))}
-              <th>Metamorphs Into A Beastie</th>
-              <th>Lvl 100 Exp</th>
-              <th>Ally Training</th>
-            </tr>
-          </thead>
-          <tbody>
-            {guesses.map((beastieId, index) => (
-              <BeastieGuess
-                key={beastieId}
-                num={guesses.length - index}
-                beastie={BEASTIE_DATA.get(beastieId)}
-                target={target}
-              />
-            ))}
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
       </div>
     </>
   );

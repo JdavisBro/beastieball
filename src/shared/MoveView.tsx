@@ -263,6 +263,8 @@ function getEffectString(
       return `Build a WALL in front of ${target}.`;
     case 57:
       return ""; // shows on a few that are only used on back row but not others?
+    case 60:
+      return ""; // rowdy, displays as nothing, probably gives an extra rowdy point
     case 61:
       return "Can use even when [sprStatus,2]SHOOK or [sprStatus,10]TIRED.";
     case 63:

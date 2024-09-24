@@ -382,7 +382,10 @@ function BeastieColorTabContent(props: {
     } else {
       colorValues.current = colorMax.map(() => 0.5);
     }
-    colorValues.current.forEach((value, index) =>
+    colorValues.current.forEach((value, index) => {
+      if (index >= colorMax.length) {
+        return;
+      }
       colorChange(
         index,
         getColorInBeastieColors(
@@ -391,8 +394,8 @@ function BeastieColorTabContent(props: {
             ? colors[index].array
             : fallbackColors[index].array,
         ),
-      ),
-    );
+      );
+    });
   }, [
     changed,
     current,

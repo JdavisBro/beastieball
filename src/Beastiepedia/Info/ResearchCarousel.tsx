@@ -42,7 +42,7 @@ export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
   for (let i = 0; i < research_data[beastieid]; i++) {
     images.push({
       link: `/gameassets/research/${beastieid}_${i}.png`,
-      url: `/gameassets/research/${beastieid}_${i}.webp`,
+      url: `/gameassets/research/${beastieid}_${i}_small.webp`,
     });
   }
 

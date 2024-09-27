@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import styles from "./Sidebar.module.css";
 import type { BeastieType } from "../data/BeastieData";
@@ -15,24 +15,16 @@ type Props = {
 export default function SidebarBeastie(props: Props): React.ReactElement {
   const beastiedata = props.beastiedata;
   const selected = props.selected;
-  const navigate = useNavigate();
   const content = selected
     ? `${styles.beastiecontent} ${styles.selected}`
     : styles.beastiecontent;
-  function handleInteract() {
-    navigate("/beastiepedia/" + beastiedata.name);
-    props.onToggleSidebarVisibility();
-  }
   return (
     <CustomErrorBoundary fallbackClassName={styles.beastie}>
-      <div
+      <Link
+        to={`/beastiepedia/${beastiedata.name}`}
         className={styles.beastie}
-        tabIndex={0}
-        onClick={() => handleInteract()}
-        // prettier-ignore
-        onKeyDown={((event) => {if (event.key == "Enter") {handleInteract()}})}
-        role="button"
         style={{ display: props.visible ? "block" : "none" }}
+        onClick={props.onToggleSidebarVisibility}
       >
         <div className={content}>
           <img
@@ -57,7 +49,7 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
             </div>
           </div>
         </div>
-      </div>
+      </Link>
     </CustomErrorBoundary>
   );
 }

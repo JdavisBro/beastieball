@@ -7,7 +7,7 @@ import { useContext } from "react";
 import SOCIAL_DATA from "../data/SocialData";
 
 const colors: Record<number, { color: string; alt: string }> = {
-  [Type.Body]: { color: TypeColor.Body, alt: "Mind Play" },
+  [Type.Body]: { color: TypeColor.Body, alt: "Body Play" },
   [Type.Spirit]: { color: TypeColor.Spirit, alt: "Spirit Play" },
   [Type.Mind]: { color: TypeColor.Mind, alt: "Mind Play" },
   [Type.Volley]: { color: TypeColor.Pass, alt: "Volley Play" },

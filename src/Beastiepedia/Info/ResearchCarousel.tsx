@@ -85,6 +85,7 @@ export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
           setBigImage(false);
           setBiggerImage(false);
         }}
+        hashValue="Research"
       >
         <div className={styles.big}>
           {bigImage ? (

@@ -74,7 +74,12 @@ export default function BeastieSelect({
           ? textOverride
           : `Select Beastie: ${beastie?.name ?? "Unset"}`}
       </button>
-      <Modal header="Select Beastie" open={open} onClose={() => setOpen(false)}>
+      <Modal
+        header="Select Beastie"
+        open={open}
+        onClose={() => setOpen(false)}
+        hashValue="BeastieSelect"
+      >
         <label>
           Search:{" "}
           <input

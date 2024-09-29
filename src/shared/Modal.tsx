@@ -1,5 +1,6 @@
 import { PropsWithChildren, useCallback, useEffect, useRef } from "react";
 import InfoBox from "./InfoBox";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SCROLL_KEYS = [
   "ArrowLeft",
@@ -17,9 +18,12 @@ export default function Modal(
   props: PropsWithChildren & {
     header: string;
     open: boolean;
+    hashValue: string;
     onClose: () => void;
   },
 ) {
+  const location = useLocation();
+
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   const preventDefault = useCallback((event: Event) => {
@@ -59,23 +63,47 @@ export default function Modal(
     }
   }, [preventDefault, preventScrollKeys]);
 
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (props.open) {
+      navigate("#" + props.hashValue);
+    }
+  }, [props.open, props.hashValue, navigate]);
+
   useEffect(() => {
     if (!dialogRef.current) {
       return;
     }
-    if (props.open && !dialogRef.current.open) {
+    if (
+      props.open &&
+      !dialogRef.current.open &&
+      window.location.hash == "#" + props.hashValue
+    ) {
       dialogRef.current.showModal();
     } else if (!props.open && dialogRef.current.open) {
       dialogRef.current.close();
+    } else if (props.open && window.location.hash != "#" + props.hashValue) {
+      if (dialogRef.current.open) {
+        dialogRef.current.close();
+      } else {
+        props.onClose();
+      }
     }
-  }, [props.open]);
+  }, [props, navigate, location]);
 
   return (
     <dialog
       ref={dialogRef}
       onClick={(event) => {
         if (event.target == dialogRef.current) {
-          props.onClose();
+          dialogRef.current.close();
+        }
+      }}
+      onClose={() => {
+        props.onClose();
+        if (window.location.hash == "#" + props.hashValue) {
+          navigate(-1);
         }
       }}
     >

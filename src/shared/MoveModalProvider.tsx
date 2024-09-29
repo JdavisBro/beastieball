@@ -32,6 +32,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
         header={`Beasties that learn ${move?.name}`}
         open={move != null}
         onClose={() => setMove(null)}
+        hashValue="MoveLeaners"
       >
         <div className={styles.movebeastielist}>
           {levelBeasties.length ? "From Level" : ""}

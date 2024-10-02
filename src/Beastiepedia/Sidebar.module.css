@@ -59,11 +59,12 @@
 }
 
 .beastie {
-  margin-top: 10px;
+  margin-top: 6px;
   width: 100%;
-  height: 120px;
+  height: 106px;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
 }
 
 .beastiecontainergrid > .beastie {
@@ -130,25 +131,19 @@
   width: 67%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-}
-
-.name > div {
-  display: inline-block;
-  font-size: 2vw;
-  width: 100%;
-  text-align: center;
-}
-
-.hash {
-  /* Hash doesns't exist in sports jersey. It would seem greg added it. */
-  font-family: "Go Banana", sans-serif;
-  font-weight: 800;
+  justify-content: center;
+  font-size: 2em;
 }
 
 .number {
   font-family: SportsJersey, sans-serif;
-  font-size: 1.2em;
+}
+
+.hash {
+  font-weight: 800;
+  font-size: 0.8em;
 }
 
 @media all and (max-aspect-ratio: 1/1) {
@@ -160,7 +155,7 @@
     width: 98.5%;
   }
 
-  .name > div {
+  .name {
     font-size: 2.3em;
   }
 

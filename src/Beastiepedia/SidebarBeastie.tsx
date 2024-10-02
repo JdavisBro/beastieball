@@ -38,15 +38,11 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
             {String(beastiedata.number).padStart(2, "0")}
           </span>
           <div className={styles.name}>
-            <div>
-              <div>
-                <span className={styles.hash}>#</span>
-                <span className={styles.number}>
-                  {String(beastiedata.number).padStart(2, "0")}
-                </span>
-              </div>
-              <div>{beastiedata.name}</div>
+            <div className={styles.number}>
+              <span className={styles.hash}>#</span>
+              <span>{String(beastiedata.number).padStart(2, "0")}</span>
             </div>
+            <div>{beastiedata.name}</div>{" "}
           </div>
         </div>
       </Link>

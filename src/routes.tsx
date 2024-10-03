@@ -1,8 +1,8 @@
 import { lazy } from "react";
 import { useRouteError, type RouteObject } from "react-router-dom";
+import PageNotFound from "./PageNotFound";
 
 const Home = lazy(() => import("./Home"));
-const PageNotFound = lazy(() => import("./PageNotFound"));
 const Beastiepedia = lazy(() => import("./Beastiepedia/Beastiepedia"));
 const Playdex = lazy(() => import("./Playdex/Playdex"));
 const Map = lazy(() => import("./Map/Map"));

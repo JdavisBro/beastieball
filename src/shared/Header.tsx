@@ -28,11 +28,9 @@ export default function Header(props: Props): React.ReactNode {
             aria-haspopup="menu"
             role="button"
             tabIndex={0}
-            onClick={() => {
-              props.onMenuButtonPressed ? props.onMenuButtonPressed() : null;
-            }}
+            onClick={props.onMenuButtonPressed}
             // prettier-ignore
-            onKeyDown={(event) => {if (event.key == "Enter") {props.onMenuButtonPressed ? props.onMenuButtonPressed() : null;}}}
+            onKeyDown={(event) => {if (event.key == "Enter" && props.onMenuButtonPressed) {props.onMenuButtonPressed()}}}
           />
         ) : null}
         <Link

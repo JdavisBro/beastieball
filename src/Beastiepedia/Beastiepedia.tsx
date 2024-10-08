@@ -35,7 +35,7 @@ export default function Beastiepedia(): React.ReactNode {
   }, [beastie]);
 
   const [sidebarvisible, setSidebarvisible] = useState(
-    !(beastieid !== null && orientation),
+    !(beastieid !== undefined && orientation),
   ); // Selected beastie & portrait automatically hides sidebar
 
   window.BEASTIE_DATA = BEASTIE_DATA;

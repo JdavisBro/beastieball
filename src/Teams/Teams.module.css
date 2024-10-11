@@ -1,4 +1,4 @@
-.codeinput {
+.sectionheader {
   width: 100%;
   text-align: center;
   margin: 4px 0 4px 0;
@@ -34,6 +34,7 @@
 .column {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   text-align: center;
   width: 180px;
 }
@@ -110,7 +111,7 @@
     -1px 1px 0 var(--type-col);
 }
 
-.ability {
+.graytext {
   font-size: 0.9em;
   color: darkslategray;
 }
@@ -137,4 +138,18 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-blend-mode: multiply, normal;
+}
+
+.featuredTeam {
+  composes: animBoxBackground from global;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  text-decoration: none;
+  color: black !important;
+}
+
+.featuredIcon {
+  height: 40px;
 }

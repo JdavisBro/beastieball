@@ -8,6 +8,8 @@ import MoveModalProvider from "../shared/MoveModalProvider";
 import Header from "../shared/Header";
 import OpenGraph from "../shared/OpenGraph";
 import { useNavigate, useParams } from "react-router-dom";
+import featuredTeams from "./FeaturedTeams";
+import FeaturedTeam from "./FeaturedTeam";
 
 declare global {
   interface Window {
@@ -24,7 +26,7 @@ export default function Teams() {
 
   const navigate = useNavigate();
   const setCode = (code: string) => {
-    navigate(`/teams/${code}`);
+    navigate(`/teams/${code.replace(/#/g, "")}`);
     setError(false);
   };
 
@@ -35,12 +37,13 @@ export default function Teams() {
   useEffect(() => {
     if (
       team?.code == code ||
+      !code ||
       // Don't make request on prerender
       window.navigator.userAgent.toLowerCase().includes("prerender")
     ) {
       return;
     }
-    if (code?.split("").some((char) => !VALID_CHARACTERS.includes(char))) {
+    if (code.split("").some((char) => !VALID_CHARACTERS.includes(char))) {
       setError(true);
       return;
     }
@@ -70,7 +73,7 @@ export default function Teams() {
         url="teams/"
       />
       <Header title="Teams" />
-      <div className={styles.codeinput}>
+      <div className={styles.sectionheader}>
         <label>
           Team Code: <input type="text" ref={textInput} defaultValue={code} />
         </label>
@@ -92,6 +95,12 @@ export default function Teams() {
                 : null}
           </BeastieRenderProvider>
         </MoveModalProvider>
+      </div>
+      <div className={styles.sectionheader}>Featured Teams</div>
+      <div className={styles.team}>
+        {featuredTeams.map((team) => (
+          <FeaturedTeam key={team.name} team={team} />
+        ))}
       </div>
     </div>
   );

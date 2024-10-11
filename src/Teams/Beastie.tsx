@@ -55,6 +55,7 @@ export default function Beastie({ teamBeastie }: { teamBeastie: TeamBeastie }) {
               #{teamBeastie.number}
             </span> Lvl {Math.floor(Math.cbrt(teamBeastie.xp))}
           </span>
+          <span className={styles.graytext}>({beastiedata.name})</span>
           <Link
             to={`/beastiepedia/${beastiedata.name}?${searchParam}=${beastieColors.join(",")}`}
             target="_blank"
@@ -78,8 +79,10 @@ export default function Beastie({ teamBeastie }: { teamBeastie: TeamBeastie }) {
             beastiedata={beastiedata}
             level={level}
           />
-          <span className={styles.ability}>{ability.name}</span>
-          <TextTag>{ability.desc}</TextTag>
+          <div className={styles.column}>
+            <span className={styles.graytext}>{ability.name}</span>
+            <TextTag>{ability.desc}</TextTag>
+          </div>
         </div>
       </div>
       <div className={styles.moverow}>

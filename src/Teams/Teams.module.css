@@ -1,3 +1,9 @@
+.codeinput {
+  width: 100%;
+  text-align: center;
+  margin: 4px;
+}
+
 .team {
   display: flex;
   gap: 4px;

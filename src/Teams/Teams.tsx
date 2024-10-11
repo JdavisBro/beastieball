@@ -23,7 +23,10 @@ export default function Teams() {
   const [error, setError] = useState(false);
 
   const navigate = useNavigate();
-  const setCode = (code: string) => navigate(`/teams/${code}`);
+  const setCode = (code: string) => {
+    navigate(`/teams/${code}`);
+    setError(false);
+  };
 
   window.team = team;
 
@@ -67,14 +70,16 @@ export default function Teams() {
         url="teams/"
       />
       <Header title="Teams" />
-      <input type="text" ref={textInput} defaultValue={code} />
-      <button
-        onClick={() => textInput.current && setCode(textInput.current.value)}
-      >
-        Do
-      </button>
-      {error ? " Incorrect Code" : ""}
-      <br />
+      <div className={styles.codeinput}>
+        <label>
+          Team Code: <input type="text" ref={textInput} defaultValue={code} />
+        </label>
+        <button
+          onClick={() => textInput.current && setCode(textInput.current.value)}
+        >
+          Find
+        </button>
+      </div>
       <div className={styles.team}>
         <MoveModalProvider>
           <BeastieRenderProvider>
@@ -82,7 +87,9 @@ export default function Teams() {
               ? team.team.map((beastie) => (
                   <Beastie key={beastie.pid} teamBeastie={beastie} />
                 ))
-              : null}
+              : error
+                ? "Invalid Code - Team Not Found"
+                : null}
           </BeastieRenderProvider>
         </MoveModalProvider>
       </div>

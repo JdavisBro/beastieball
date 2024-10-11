@@ -65,19 +65,20 @@
 .statRow {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .statRow > div {
   min-width: 16px;
   flex: 1 0;
   text-align: center;
-  line-height: 1.7em;
   position: relative;
 }
 
 .statBar {
   composes: animPageHeaderBackground from global;
   flex: 1.5 0 !important;
+  align-self: stretch;
 }
 
 .barCol {

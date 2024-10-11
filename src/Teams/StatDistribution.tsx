@@ -4,8 +4,8 @@ import { TeamBeastie } from "./Types";
 
 const TypeColors = ["#ffdb5e", "#fb88b0", "#8ddcf5"];
 
-function round2Ceil(num: number) {
-  return Math.ceil(Math.round(num * 100) / 100);
+function round5Ceil(num: number) {
+  return Math.ceil(Math.round(num * 100000) / 100000);
 }
 
 function statCalc(
@@ -16,9 +16,9 @@ function statCalc(
 ) {
   return (
     5 +
-    round2Ceil(
-      (base_stat / 50) * level * (0.7 + 0.3 * coaching) +
-        Math.floor(training / 4) * (level / 50) * (0.7 + 0.3 * coaching),
+    round5Ceil(
+      ((base_stat / 50) * level + Math.floor(training / 4) * (level / 50)) *
+        (0.7 + 0.3 * coaching),
     )
   );
 }
@@ -32,7 +32,8 @@ function StatRow({
   coachingPow,
   coachingDef,
   level,
-  max_stat,
+  maxPow,
+  maxDef,
 }: {
   type: number;
   basePow: number;
@@ -42,7 +43,8 @@ function StatRow({
   coachingPow: number;
   coachingDef: number;
   level: number;
-  max_stat: number;
+  maxPow: number;
+  maxDef: number;
 }) {
   const pow = statCalc(basePow, level, coachingPow, trainingPow);
   const def = statCalc(baseDef, level, coachingDef, trainingDef);
@@ -59,7 +61,7 @@ function StatRow({
       >
         <div
           className={styles.barColRight}
-          style={{ width: `${(pow / max_stat) * 96}%` }}
+          style={{ width: `${(pow / maxPow) * 100}%` }}
         ></div>
         <div className={styles.barText}>{pow}</div>
       </div>
@@ -75,7 +77,7 @@ function StatRow({
       >
         <div
           className={styles.barCol}
-          style={{ width: `${(def / max_stat) * 96}%` }}
+          style={{ width: `${(def / maxDef) * 100}%` }}
         ></div>
         <div className={styles.barText}>{def}</div>
       </div>
@@ -93,15 +95,14 @@ export default function StatDistribution({
   beastiedata: BeastieType;
   level: number;
 }) {
-  const max_stat = statCalc(
-    Math.max(
-      beastiedata.ba,
-      beastiedata.bd,
-      beastiedata.ha,
-      beastiedata.hd,
-      beastiedata.ma,
-      beastiedata.md,
-    ),
+  const maxPow = statCalc(
+    Math.max(beastiedata.ba, beastiedata.ha, beastiedata.ma),
+    level,
+    1,
+    120,
+  );
+  const maxDef = statCalc(
+    Math.max(beastiedata.bd, beastiedata.hd, beastiedata.md),
     level,
     1,
     120,
@@ -121,7 +122,8 @@ export default function StatDistribution({
         trainingDef={teamBeastie.bd_t}
         coachingPow={teamBeastie.ba_r}
         coachingDef={teamBeastie.bd_r}
-        max_stat={max_stat}
+        maxPow={maxPow}
+        maxDef={maxDef}
         level={level}
       />
       <StatRow
@@ -132,7 +134,8 @@ export default function StatDistribution({
         trainingDef={teamBeastie.hd_t}
         coachingPow={teamBeastie.ha_r}
         coachingDef={teamBeastie.hd_r}
-        max_stat={max_stat}
+        maxPow={maxPow}
+        maxDef={maxDef}
         level={level}
       />
       <StatRow
@@ -143,7 +146,8 @@ export default function StatDistribution({
         trainingDef={teamBeastie.md_t}
         coachingPow={teamBeastie.ma_r}
         coachingDef={teamBeastie.md_r}
-        max_stat={max_stat}
+        maxPow={maxPow}
+        maxDef={maxDef}
         level={level}
       />
     </div>

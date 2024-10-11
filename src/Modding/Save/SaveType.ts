@@ -77,6 +77,9 @@ export type SaveBeastie = {
   attklist: string[];
   ba: number;
   ba_r: number;
+  ba_t: number;
+  bd: number;
+  bd_r: number;
   bd_t: number;
   color: number[];
   current_status: number;

@@ -179,6 +179,16 @@
   }
 }
 
+.movemodalview .movecontainer {
+  width: 460px;
+  max-width: 95%;
+  margin: 8px;
+}
+
+.movebeastierow {
+  display: flex;
+}
+
 .movebeastielist {
   display: flex;
   flex-direction: column;

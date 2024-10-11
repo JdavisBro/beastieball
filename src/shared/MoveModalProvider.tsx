@@ -7,6 +7,7 @@ import BEASTIE_DATA from "../data/BeastieData";
 import { LEARN_SETS } from "../data/Learnsets";
 import { Move } from "../data/MoveData";
 import Modal from "./Modal";
+import MoveView from "./MoveView";
 
 export default function MoveModalProvider(props: PropsWithChildren) {
   const [move, setMove] = useState<null | Move>(null);
@@ -29,37 +30,42 @@ export default function MoveModalProvider(props: PropsWithChildren) {
   return (
     <MoveModalContext.Provider value={setMove}>
       <Modal
-        header={`Beasties that learn ${move?.name}`}
+        header={`Play: ${move?.name}`}
         open={move != null}
         onClose={() => setMove(null)}
-        hashValue="MoveLeaners"
+        hashValue="Play"
       >
-        <div className={styles.movebeastielist}>
-          {levelBeasties.length ? "From Level" : ""}
-          {levelBeasties.map((name) => (
-            <Link
-              to={`/beastiepedia/${name[0]}`}
-              key={name[0]}
-              onClick={() => setMove(null)}
-            >
-              <img src={`/icons/${name[0]}.png`} />
-              {name[0]} - {name[1]}
-            </Link>
-          ))}
+        <div className={styles.movemodalview}>
+          {move ? <MoveView move={move} noLearner={true} /> : null}
         </div>
-        {levelBeasties.length && friendBeasties.length ? <br /> : null}
-        <div className={styles.movebeastielist}>
-          {friendBeasties.length ? "From Friends" : ""}
-          {friendBeasties.map((name) => (
-            <Link
-              to={`/beastiepedia/${name}`}
-              key={name}
-              onClick={() => setMove(null)}
-            >
-              <img src={`/icons/${name}.png`} />
-              {name}
-            </Link>
-          ))}
+        <div className={styles.movebeastierow}>
+          <div className={styles.movebeastielist}>
+            {levelBeasties.length ? "From Level" : ""}
+            {levelBeasties.map((name) => (
+              <Link
+                to={`/beastiepedia/${name[0]}`}
+                key={name[0]}
+                onClick={() => setMove(null)}
+              >
+                <img src={`/icons/${name[0]}.png`} />
+                {name[0]} - {name[1]}
+              </Link>
+            ))}
+          </div>
+          {levelBeasties.length && friendBeasties.length ? <br /> : null}
+          <div className={styles.movebeastielist}>
+            {friendBeasties.length ? "From Friends" : ""}
+            {friendBeasties.map((name) => (
+              <Link
+                to={`/beastiepedia/${name}`}
+                key={name}
+                onClick={() => setMove(null)}
+              >
+                <img src={`/icons/${name}.png`} />
+                {name}
+              </Link>
+            ))}
+          </div>
         </div>
       </Modal>
       {props.children}

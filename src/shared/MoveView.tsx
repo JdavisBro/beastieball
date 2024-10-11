@@ -1,23 +1,10 @@
 import TextTag from "./TextTag";
 import styles from "./Shared.module.css";
-import TypeColor from "../data/TypeColor";
+import { TypeData } from "../data/TypeColor";
 import { Type, Move, MoveEffect } from "../data/MoveData";
 import MoveModalContext from "./MoveModalContext";
 import { useContext } from "react";
 import SOCIAL_DATA from "../data/SocialData";
-
-const colors: Record<number, { color: string; alt: string }> = {
-  [Type.Body]: { color: TypeColor.Body, alt: "Body Play" },
-  [Type.Spirit]: { color: TypeColor.Spirit, alt: "Spirit Play" },
-  [Type.Mind]: { color: TypeColor.Mind, alt: "Mind Play" },
-  [Type.Volley]: { color: TypeColor.Pass, alt: "Volley Play" },
-  [Type.Support]: { color: TypeColor.Support, alt: "Support Play" },
-  [Type.Defence]: { color: TypeColor.Defence, alt: "Defence Play" },
-  [Type.Unknown]: { color: TypeColor.Unknown, alt: "Unknown" },
-  [Type.Sparkle]: { color: TypeColor.Sparkle, alt: "Unknown" },
-  [Type.Movement]: { color: TypeColor.Movement, alt: "Move Play" },
-  [Type.Swap]: { color: "#ffffff", alt: "???" },
-};
 
 // reuqired: targ=12 says Targets SIDEWAYS.
 
@@ -306,8 +293,8 @@ export default function MoveView(props: {
     learned_text = `Learned from ${friend.name} at ${friend_hearts} hearts.`;
   }
 
-  const { color, alt } = colors[props.move.type]
-    ? colors[props.move.type]
+  const { color, alt } = TypeData[props.move.type]
+    ? TypeData[props.move.type]
     : { color: "#ffffff", alt: "a" };
   const style = {
     "--move-color": color,

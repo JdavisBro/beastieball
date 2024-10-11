@@ -53,7 +53,10 @@ function StatRow({
       style={{ "--type-col": TypeColors[type] } as React.CSSProperties}
     >
       <div>+{Math.floor(trainingPow / 4)}</div>
-      <div className={styles.statBar}>
+      <div
+        className={styles.statBar}
+        title={`Coached: ${Math.round(coachingPow * 100)}%\nTraining: ${trainingPow}`}
+      >
         <div
           className={styles.barColRight}
           style={{ width: `${(pow / max_stat) * 96}%` }}
@@ -66,7 +69,10 @@ function StatRow({
           src={`/gameassets/sprIcon/${type}.png`}
         />
       </div>
-      <div className={styles.statBar}>
+      <div
+        className={styles.statBar}
+        title={`Coached: ${Math.round(coachingDef * 100)}%\nTraining: ${trainingDef}`}
+      >
         <div
           className={styles.barCol}
           style={{ width: `${(def / max_stat) * 96}%` }}

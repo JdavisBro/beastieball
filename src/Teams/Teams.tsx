@@ -26,7 +26,7 @@ export default function Teams() {
 
   const navigate = useNavigate();
   const setCode = (code: string) => {
-    navigate(`/teams/${code.replace(/#/g, "")}`);
+    navigate(`/teams/${code.toUpperCase().replace(/#/g, "")}`);
     setError(false);
   };
 
@@ -56,6 +56,8 @@ export default function Teams() {
             setTeam(json);
             setError(false);
           });
+        } else {
+          setError(true);
         }
       })
       .catch((error) => {
@@ -63,6 +65,8 @@ export default function Teams() {
         console.log(error);
       });
   }, [code, team?.code]);
+
+  const selectedFeatured = featuredTeams.find((team) => team.code == team.code);
 
   return (
     <div>
@@ -83,6 +87,14 @@ export default function Teams() {
           Find
         </button>
       </div>
+      <div className={styles.sectionheader}>
+        {error ? `Invalid Code: ${code}` : null}
+      </div>
+      <div className={styles.sectionheader}>
+        {team
+          ? `${team.code}${selectedFeatured ? ` - ${selectedFeatured.name}` : ""}`
+          : ""}
+      </div>
       <div className={styles.team}>
         <MoveModalProvider>
           <BeastieRenderProvider>
@@ -90,9 +102,7 @@ export default function Teams() {
               ? team.team.map((beastie) => (
                   <Beastie key={beastie.pid} teamBeastie={beastie} />
                 ))
-              : error
-                ? "Invalid Code - Team Not Found"
-                : null}
+              : null}
           </BeastieRenderProvider>
         </MoveModalProvider>
       </div>

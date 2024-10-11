@@ -90,6 +90,12 @@ export default function ColorTabs(props: Props): React.ReactNode {
     if (!url.search) {
       return;
     }
+    if (!storedColors[props.beastiedata.id]) {
+      storedColors[props.beastiedata.id] = defaultColor(
+        colors,
+        beastiedata.colors,
+      );
+    }
     for (const [key, value] of url.searchParams) {
       switch (key) {
         case "color": {

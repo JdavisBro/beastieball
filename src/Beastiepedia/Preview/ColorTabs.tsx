@@ -133,7 +133,13 @@ export default function ColorTabs(props: Props): React.ReactNode {
     setStoredColors(storedColors);
     url.search = "";
     window.history.pushState(null, "", url.toString());
-  }, [props.beastiedata, setStoredColors, storedColors]);
+  }, [
+    props.beastiedata,
+    setStoredColors,
+    storedColors,
+    beastiedata.colors,
+    colors,
+  ]);
 
   const validStoredColors =
     storedColors[beastiedata.id] &&

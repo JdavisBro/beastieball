@@ -74,6 +74,10 @@ const routes: Array<RouteObject> = [
         path: "/teams/",
       },
       {
+        element: <Teams />,
+        path: "/teams/:code",
+      },
+      {
         element: <Save />,
         path: "/modding/save/",
       },

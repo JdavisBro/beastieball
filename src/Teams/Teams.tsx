@@ -7,6 +7,7 @@ import BeastieRenderProvider from "../shared/beastieRender/BeastieRenderProvider
 import MoveModalProvider from "../shared/MoveModalProvider";
 import Header from "../shared/Header";
 import OpenGraph from "../shared/OpenGraph";
+import { useNavigate, useParams } from "react-router-dom";
 
 declare global {
   interface Window {
@@ -17,16 +18,23 @@ declare global {
 const VALID_CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 export default function Teams() {
-  const [code, setCode] = useState<string | null>(null);
+  const { code }: { code?: string } = useParams();
   const [team, setTeam] = useState<Team | null>(null);
   const [error, setError] = useState(false);
+
+  const navigate = useNavigate();
+  const setCode = (code: string) => navigate(`/teams/${code}`);
 
   window.team = team;
 
   const textInput = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (team?.code == code) {
+    if (
+      team?.code == code ||
+      // Don't make request on prerender
+      window.navigator.userAgent.toLowerCase().includes("prerender")
+    ) {
       return;
     }
     if (code?.split("").some((char) => !VALID_CHARACTERS.includes(char))) {
@@ -55,11 +63,11 @@ export default function Teams() {
       <OpenGraph
         title={`Teams - ${import.meta.env.VITE_BRANDING}`}
         description="Online Team Viewer for Beastieball"
-        image=""
-        url=""
+        image="gameassets/sprMainmenu/20.png"
+        url="teams/"
       />
       <Header title="Teams" />
-      <input type="text" ref={textInput} />
+      <input type="text" ref={textInput} defaultValue={code} />
       <button
         onClick={() => textInput.current && setCode(textInput.current.value)}
       >

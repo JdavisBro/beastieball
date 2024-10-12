@@ -17,7 +17,8 @@ function statCalc(
   return (
     5 +
     round5Ceil(
-      ((base_stat / 50) * level + Math.floor(training / 4) * (level / 50)) *
+      (base_stat + Math.floor(training / 4)) *
+        (level / 50) *
         (0.7 + 0.3 * coaching),
     )
   );

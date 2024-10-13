@@ -52,7 +52,6 @@ export default function MoveModalProvider(props: PropsWithChildren) {
               </Link>
             ))}
           </div>
-          {levelBeasties.length && friendBeasties.length ? <br /> : null}
           <div className={styles.movebeastielist}>
             {friendBeasties.length ? "From Friends" : ""}
             {friendBeasties.map((name) => (

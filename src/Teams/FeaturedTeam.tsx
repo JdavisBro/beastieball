@@ -17,7 +17,9 @@ export default function FeaturedTeam({ team }: { team: FeaturedTeamType }) {
           />
         ))}
       </div>
-      <div>{team.code}</div>
+      <div>
+        By {team.author} - #{team.code}
+      </div>
     </Link>
   );
 }

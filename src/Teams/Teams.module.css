@@ -115,6 +115,10 @@
     -1px 1px 0 var(--type-col);
 }
 
+.levelOverwritten {
+  color: darkblue;
+}
+
 .graytext {
   font-size: 0.9em;
   color: darkslategray;

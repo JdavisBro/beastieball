@@ -23,6 +23,8 @@ export default function Teams() {
   const { code }: { code?: string } = useParams();
   const [team, setTeam] = useState<Team | null>(null);
   const [error, setError] = useState(false);
+  const [isLevelOverwritten, setIsLevelOverwritten] = useState(false);
+  const [levelOverwrite, setLevelOverwrite] = useState(50);
 
   const navigate = useNavigate();
   const setCode = (code: string) => {
@@ -100,11 +102,33 @@ export default function Teams() {
           <BeastieRenderProvider>
             {team
               ? team.team.map((beastie) => (
-                  <Beastie key={beastie.pid} teamBeastie={beastie} />
+                  <Beastie
+                    key={beastie.pid}
+                    teamBeastie={beastie}
+                    levelOverwrite={
+                      isLevelOverwritten ? levelOverwrite : undefined
+                    }
+                  />
                 ))
               : null}
           </BeastieRenderProvider>
         </MoveModalProvider>
+      </div>
+      <div className={styles.sectionheader}>
+        <label>
+          <input
+            type="checkbox"
+            onChange={(event) => setIsLevelOverwritten(event.target.checked)}
+          />
+          At Level{" "}
+          <input
+            type="number"
+            onChange={(event) => setLevelOverwrite(Number(event.target.value))}
+            min={1}
+            max={100}
+            defaultValue={50}
+          />
+        </label>
       </div>
       <div className={styles.sectionheader}>Featured Teams</div>
       <div className={styles.team}>

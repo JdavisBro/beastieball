@@ -21,7 +21,13 @@ const altSearchMap: { [key: number]: string } = {
   3: "alt",
 };
 
-export default function Beastie({ teamBeastie }: { teamBeastie: TeamBeastie }) {
+export default function Beastie({
+  teamBeastie,
+  levelOverwrite,
+}: {
+  teamBeastie: TeamBeastie;
+  levelOverwrite?: number;
+}) {
   const beastiedata = BEASTIE_DATA.get(teamBeastie.specie);
   if (!beastiedata) {
     return null;
@@ -33,10 +39,12 @@ export default function Beastie({ teamBeastie }: { teamBeastie: TeamBeastie }) {
     (value) => value - Math.ceil(value) + 1,
   );
 
-  const level = Math.min(
-    100,
-    Math.floor(Math.cbrt(Math.ceil(teamBeastie.xp / beastiedata.growth))),
-  );
+  const level =
+    levelOverwrite ??
+    Math.min(
+      100,
+      Math.floor(Math.cbrt(Math.ceil(teamBeastie.xp / beastiedata.growth))),
+    );
   const level_exp = Math.floor(level ** 3 * beastiedata.growth);
   const next_level_exp = Math.floor((level + 1) ** 3 * beastiedata.growth);
 
@@ -56,10 +64,13 @@ export default function Beastie({ teamBeastie }: { teamBeastie: TeamBeastie }) {
             <span className={styles.number}>#{teamBeastie.number}</span>{" "}
             <span
               title={
-                level >= 100
-                  ? "Max Level"
-                  : `To next level: ${teamBeastie.xp - level_exp}/${next_level_exp - level_exp} (${next_level_exp - teamBeastie.xp} left)`
+                levelOverwrite
+                  ? ""
+                  : level >= 100
+                    ? "Max Level"
+                    : `To next level: ${teamBeastie.xp - level_exp}/${next_level_exp - level_exp} (${next_level_exp - teamBeastie.xp} left)`
               }
+              className={levelOverwrite ? styles.levelOverwritten : undefined}
             >
               Lvl {level}
             </span>

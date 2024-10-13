@@ -37,6 +37,8 @@ export default function Beastie({ teamBeastie }: { teamBeastie: TeamBeastie }) {
     100,
     Math.floor(Math.cbrt(Math.ceil(teamBeastie.xp / beastiedata.growth))),
   );
+  const level_exp = Math.floor(level ** 3 * beastiedata.growth);
+  const next_level_exp = Math.floor((level + 1) ** 3 * beastiedata.growth);
 
   const ability =
     abilities[
@@ -51,9 +53,16 @@ export default function Beastie({ teamBeastie }: { teamBeastie: TeamBeastie }) {
         <div className={styles.column}>
           <span>
             {teamBeastie.name}
-            <span className={styles.number}>
-              #{teamBeastie.number}
-            </span> Lvl {Math.floor(Math.cbrt(teamBeastie.xp))}
+            <span className={styles.number}>#{teamBeastie.number}</span>{" "}
+            <span
+              title={
+                level >= 100
+                  ? "Max Level"
+                  : `To next level: ${teamBeastie.xp - level_exp}/${next_level_exp - level_exp} (${next_level_exp - teamBeastie.xp} left)`
+              }
+            >
+              Lvl {level}
+            </span>
           </span>
           <span className={styles.graytext}>({beastiedata.name})</span>
           <Link

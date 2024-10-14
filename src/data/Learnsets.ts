@@ -449,7 +449,7 @@ export const LEARN_SETS: { [key: number]: Array<[string, number]> } = {
     ["taunt", 40],
     ["dump", 44],
   ],
-  57: [
+  62: [
     // Flowish
     ["nettle", 1],
     ["starterheart", 1],

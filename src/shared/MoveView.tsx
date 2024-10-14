@@ -141,7 +141,7 @@ function getEffectString(
     case 22:
       return `${feels} ${effect.pow} [sprStatus,5]WIPED (must bench)${dot}`;
     case 23:
-      return `${feels} ${effect.pow} [sprStatus,6]SWEATY (losing stamina)${dot}`;
+      return `${feels} +${effect.pow} [sprStatus,6]SWEATY (losing stamina)${dot}`;
     case -26:
     case 26:
       return `${feels} ${effect.pow} [sprStatus,8]JAZZED (POW x1.5)${effect.eff < 0 && attack ? " before contact" : ""}${dot}`;
@@ -190,7 +190,7 @@ function getEffectString(
         case 15:
           return "POW x1.5 if tied or behind on score.";
         case 16:
-          return "Stronger when recieved in the back.";
+          return "Does more damage to back-row targets.";
         case 17:
           return "Ignores [sprStatus,9]BLOCKED.";
         case 18:

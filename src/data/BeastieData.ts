@@ -72,7 +72,6 @@ export type BeastieType = {
         specie: string;
         value: number[];
       }[];
-  // i assume it'll be the evo's id in the future but for now they're all null
   family: string;
   first_frame: number;
   foot_size: number;

@@ -16,7 +16,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
   const friendBeasties: string[] = [];
   if (move) {
     BEASTIE_DATA.forEach((beastie) => {
-      const learnLevel = LEARN_SETS[beastie.learnset].find(
+      const learnLevel = LEARN_SETS[beastie.learnset]?.find(
         (value) => value[0] == move.id,
       );
       if (learnLevel) {

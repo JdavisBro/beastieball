@@ -180,14 +180,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -198,14 +190,6 @@
           "type": 19
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -473,14 +457,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -734,14 +710,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -750,14 +718,6 @@
           "type": 50
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -1034,14 +994,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -1050,14 +1002,6 @@
           "type": 50
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -1066,14 +1010,6 @@
           "type": 50
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -1348,14 +1284,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -1612,14 +1540,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -1875,14 +1795,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": 68,
           "event": null,
           "freq": -1,
@@ -2159,14 +2071,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": 68,
           "event": null,
           "freq": -1,
@@ -2450,14 +2354,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "damage": ">=60",
           "event": null,
           "freq": -1,
@@ -2666,14 +2562,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -2682,14 +2570,6 @@
           "type": 11
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -2955,14 +2835,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3293,14 +3165,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -3310,14 +3174,6 @@
           "type": 14
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -3327,14 +3183,6 @@
           "type": 14
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -3700,14 +3548,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -3717,14 +3557,6 @@
           "type": 14
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -3734,14 +3566,6 @@
           "type": 14
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -4045,14 +3869,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "damage": ">=100",
           "event": null,
           "freq": -1,
@@ -4366,14 +4182,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -4383,14 +4191,6 @@
           "type": 48
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -4400,14 +4200,6 @@
           "type": 48
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -4417,14 +4209,6 @@
           "type": 48
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -4699,14 +4483,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -4716,14 +4492,6 @@
           "type": 48
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -4733,14 +4501,6 @@
           "type": 48
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -4955,14 +4715,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -4972,14 +4724,6 @@
           "type": 48
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -4989,14 +4733,6 @@
           "type": 48
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -5237,14 +4973,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": 68,
           "event": null,
           "freq": -1,
@@ -5517,14 +5245,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": 68,
           "event": null,
           "freq": -1,
@@ -5812,14 +5532,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "damage": 99,
           "event": null,
           "freq": -1,
@@ -6029,14 +5741,6 @@
     "hd": 73,
     "hidden": false,
     "hidden_counter": {
-      "__Elephant_Schema__": {
-        "__Elephant_Verbose_Exclude__": [
-          "event",
-          "my_data",
-          "rel_color",
-          "func"
-        ]
-      },
       "event": null,
       "freq": -1,
       "my_data": null,
@@ -6083,14 +5787,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": [12, 25, 26, 27, 6, 14, 13, 23, 22, 29, 39, 19, 38],
           "event": null,
           "freq": -1,
@@ -6101,14 +5797,6 @@
           "type": 45
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": [12, 25, 26, 27, 6, 14, 13, 23, 22, 29, 39, 19, 38],
           "event": null,
           "freq": -1,
@@ -6319,14 +6007,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -6576,14 +6256,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -6592,14 +6264,6 @@
           "type": 50
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -6878,14 +6542,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -6895,14 +6551,6 @@
           "type": 47
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -6912,14 +6560,6 @@
           "type": 47
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -6929,14 +6569,6 @@
           "type": 47
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -7214,14 +6846,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -7231,14 +6855,6 @@
           "type": 47
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -7248,14 +6864,6 @@
           "type": 47
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -7509,14 +7117,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": 48,
           "event": null,
           "freq": -1,
@@ -7721,14 +7321,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7737,14 +7329,6 @@
           "type": 11
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7960,14 +7544,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -8246,14 +7822,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -8525,14 +8093,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -8816,14 +8376,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -9086,14 +8638,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "attack_pow": ">=50",
           "event": null,
           "freq": -1,
@@ -9345,14 +8889,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": 68,
           "event": null,
           "freq": -1,
@@ -9564,14 +9100,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": 68,
           "event": null,
           "freq": -1,
@@ -9830,14 +9358,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -10113,14 +9633,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -10414,14 +9926,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "attack_type": 2,
           "event": null,
           "freq": -1,
@@ -10433,14 +9937,6 @@
           "type": 14
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "attack_type": 2,
           "event": null,
           "freq": -1,
@@ -10822,14 +10318,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "attack_type": 0,
           "event": null,
           "freq": -1,
@@ -10840,14 +10328,6 @@
           "type": 14
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "attack_type": 1,
           "event": null,
           "freq": -1,
@@ -10858,14 +10338,6 @@
           "type": 14
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "attack_type": 2,
           "event": null,
           "freq": -1,
@@ -11225,14 +10697,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -11241,14 +10705,6 @@
           "type": 50
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -11582,14 +11038,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": 68,
           "event": null,
           "freq": -1,
@@ -11854,14 +11302,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": 68,
           "event": null,
           "freq": -1,
@@ -12156,14 +11596,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -12172,14 +11604,6 @@
           "type": 8
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -12475,14 +11899,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -12491,14 +11907,6 @@
           "type": 8
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -12775,14 +12183,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -12792,14 +12192,6 @@
           "type": 12
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -13063,14 +12455,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -13338,14 +12722,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -13354,14 +12730,6 @@
           "type": 8
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -13370,14 +12738,6 @@
           "type": 8
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -13654,14 +13014,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -13670,14 +13022,6 @@
           "type": 8
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -13908,14 +13252,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "damage": ">=30",
           "event": null,
           "freq": -1,
@@ -14185,14 +13521,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": [42, 43, 44, 45],
           "event": null,
           "freq": -1,
@@ -14502,14 +13830,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": 42,
           "event": null,
           "freq": -1,
@@ -14811,14 +14131,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": 43,
           "event": null,
           "freq": -1,
@@ -15065,14 +14377,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": 68,
           "event": null,
           "freq": -1,
@@ -15346,14 +14650,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "attack_type": 0,
           "event": null,
           "freq": -1,
@@ -15364,14 +14660,6 @@
           "type": 14
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "attack_type": 1,
           "event": null,
           "freq": -1,
@@ -15667,14 +14955,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": [7, -7],
           "event": null,
           "freq": -1,
@@ -15685,14 +14965,6 @@
           "type": 45
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": [7, -7],
           "event": null,
           "freq": -1,
@@ -15981,14 +15253,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -16272,14 +15536,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -16288,14 +15544,6 @@
           "type": 50
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -16573,14 +15821,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -16589,14 +15829,6 @@
           "type": 50
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -16605,14 +15837,6 @@
           "type": 50
         },
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -16908,14 +16132,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_type": 9,
           "event": null,
           "freq": -1,
@@ -17227,14 +16443,6 @@
     "recruit": {
       "conditions": [
         {
-          "__Elephant_Schema__": {
-            "__Elephant_Verbose_Exclude__": [
-              "event",
-              "my_data",
-              "rel_color",
-              "func"
-            ]
-          },
           "effect_pow": "<0",
           "effect_type": [0, 1, 2, 3, 4, 5, 15, 16],
           "event": null,

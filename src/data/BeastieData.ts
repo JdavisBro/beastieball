@@ -79,7 +79,13 @@ export type BeastieType = {
   foot_type: number;
   growth: number;
   hidden: boolean;
-  hidden_counter: null;
+  hidden_counter: null | {
+    event: null;
+    freq: number;
+    my_data: null;
+    rel_color: number;
+    type: number;
+  };
   id: string;
   isBaby: boolean;
   learnset: number;

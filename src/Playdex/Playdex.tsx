@@ -145,10 +145,10 @@ export default function PlayDex() {
           >
             <option value="undefined">None</option>
             <option value="Riley">Riley</option>
-            <option value="Reese">Reese</option>
             <option value="Kaz">Kaz</option>
             <option value="Riven">Riven</option>
             <option value="Celia">Celia</option>
+            <option value="Sunsoo">Sunsoo</option>
           </select>
         </label>
       </div>

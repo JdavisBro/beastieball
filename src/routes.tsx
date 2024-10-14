@@ -7,6 +7,7 @@ const Beastiepedia = lazy(() => import("./Beastiepedia/Beastiepedia"));
 const Playdex = lazy(() => import("./Playdex/Playdex"));
 const Map = lazy(() => import("./Map/Map"));
 const Beastdle = lazy(() => import("./Beastdle/Beastdle"));
+const Teams = lazy(() => import("./Teams/Teams"));
 const Modding = lazy(() => import("./Modding/Modding"));
 const Save = lazy(() => import("./Modding/Save/Save"));
 const Test = lazy(() => import("./Test"));
@@ -67,6 +68,14 @@ const routes: Array<RouteObject> = [
       {
         element: <Beastdle />,
         path: "/beastdle/",
+      },
+      {
+        element: <Teams />,
+        path: "/teams/",
+      },
+      {
+        element: <Teams />,
+        path: "/teams/:code",
       },
       {
         element: <Save />,

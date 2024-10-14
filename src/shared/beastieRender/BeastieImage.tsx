@@ -5,6 +5,7 @@ import BEASTIE_DATA from "../../data/BeastieData";
 export function BeastieImage(props: {
   defaultUrl: string;
   beastie: RenderBeastieType;
+  className?: string;
 }): React.ReactElement {
   const beastieUrl = useBeastieRender(props.defaultUrl, props.beastie);
   let alt = "";
@@ -13,5 +14,5 @@ export function BeastieImage(props: {
     alt = beastie_data.name;
   }
 
-  return <img src={beastieUrl} alt={alt} />;
+  return <img src={beastieUrl} alt={alt} className={props.className} />;
 }

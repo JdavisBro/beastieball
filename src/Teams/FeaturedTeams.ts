@@ -7,13 +7,13 @@ export type FeaturedTeamType = {
 };
 
 const featuredTeams: FeaturedTeamType[] = [
-  // {
-  //   code: "",
-  //   beasties: ["Servitt", "Cherrily", "Supassum", "Hopsong", "Zefyre"],
-  //   name: "The Future Flowers",
-  //   description: "Quick Tag + Dive",
-  //   author: "Jdavis",
-  // },
+  {
+    code: "HVERHZD62J",
+    beasties: ["Servitt", "Cherrily", "Supassum", "Hopsong", "Zefyre"],
+    name: "The Future Flowers",
+    description: "Quick Tag + Dive",
+    author: "Jdavis",
+  },
 ];
 
 export default featuredTeams;

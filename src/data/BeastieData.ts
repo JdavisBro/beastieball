@@ -4,6 +4,7 @@ export type BeastieType = {
   ability: Array<string>;
   ability_hidden: boolean;
   allowedInPromo: boolean | number;
+  anim_progress: number;
   animator: number | number[];
   attklist: Array<string>;
   attklist_randomize: number;

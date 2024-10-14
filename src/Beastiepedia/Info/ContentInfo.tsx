@@ -139,6 +139,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
         <div className={styles.wrapinfoboxes}>
           <InfoBox header="Number">#{beastiedata.number}</InfoBox>
           <InfoBox header="Name">{beastiedata.name}</InfoBox>
+          <InfoBox header="Development">{beastiedata.anim_progress}%</InfoBox>
           <InfoBox header="Metamorphosis">
             {preEvo ? (
               <div>

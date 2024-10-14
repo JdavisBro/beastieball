@@ -3,6 +3,7 @@
     "ability": ["notag"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 60,
     "animator": 8,
     "attklist": [
       "stun",
@@ -141,7 +142,7 @@
     "hidden_counter": null,
     "id": "alien1",
     "isBaby": false,
-    "learnset": 45,
+    "learnset": 50,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -163,6 +164,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.05,
       "stretchiness": 0.05
@@ -170,12 +174,20 @@
     "ma": 68,
     "md": 30,
     "name": "Yueffowl",
-    "number": 27,
+    "number": 30,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -186,6 +198,14 @@
           "type": 19
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -221,37 +241,69 @@
       {
         "array": [
           {
+            "color": 6276544,
+            "x": 0
+          },
+          {
             "color": 7459028,
             "x": 0.4833333333
+          },
+          {
+            "color": 8378331,
+            "x": 1
           }
         ]
       },
       {
         "array": [
           {
+            "color": 869323,
+            "x": 0
+          },
+          {
             "color": 20953,
-            "x": 0.49
+            "x": 0.6266666667
+          },
+          {
+            "color": 29138,
+            "x": 1
           }
         ]
       },
       {
         "array": [
+          {
+            "color": 5626623,
+            "x": 0
+          },
           {
             "color": 7921151,
             "x": 0.5
+          },
+          {
+            "color": 7785215,
+            "x": 1
           }
         ]
       },
       {
         "array": [
           {
+            "color": 7781049,
+            "x": 0
+          },
+          {
             "color": 6333357,
             "x": 0.5
+          },
+          {
+            "color": 6658986,
+            "x": 1
           }
         ]
       }
     ],
-    "spr": 464,
+    "spr": 474,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -261,6 +313,7 @@
     "ability": ["friendguard"],
     "ability_hidden": false,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "jazzpass",
@@ -382,7 +435,7 @@
     "hidden_counter": null,
     "id": "bestie",
     "isBaby": false,
-    "learnset": 42,
+    "learnset": 47,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -404,6 +457,9 @@
       "move_speed_start": -0.7,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -411,12 +467,20 @@
     "ma": 50,
     "md": 75,
     "name": "Diggum",
-    "number": 24,
+    "number": 27,
     "palettes": 1,
     "prev_ids": ["caretaker", "bestie"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -479,7 +543,7 @@
         ]
       }
     ],
-    "spr": 356,
+    "spr": 364,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -489,6 +553,7 @@
     "ability": ["starter_m", "fwdpass"],
     "ability_hidden": true,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -507,7 +572,6 @@
       "rush",
       "allyrush",
       "stresspass",
-      "recover",
       "protect",
       "refresh",
       "serve",
@@ -515,6 +579,7 @@
       "construct",
       "nice",
       "chill",
+      "shakeoff",
       "passattack",
       "startermind",
       "dig"
@@ -523,7 +588,7 @@
     "ba": 28,
     "base_exp": 112,
     "bd": 40,
-    "body_color_index": 1,
+    "body_color_index": 0,
     "colormeta": null,
     "colors": [
       {
@@ -631,7 +696,7 @@
     "hidden_counter": null,
     "id": "bilby1",
     "isBaby": true,
-    "learnset": 25,
+    "learnset": 28,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -653,6 +718,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [10, 11, 12, 13],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -660,26 +728,42 @@
     "ma": 65,
     "md": 70,
     "name": "Bildit",
-    "number": 7,
+    "number": 8,
     "palettes": 1,
     "prev_ids": ["setter1"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 50
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 50
         }
       ],
       "description": "2+ times, use a special [sprIcon,3]Volley"
@@ -745,7 +829,7 @@
         ]
       }
     ],
-    "spr": 437,
+    "spr": 447,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -755,6 +839,7 @@
     "ability": ["starter_m", "fwdpass"],
     "ability_hidden": true,
     "allowedInPromo": 1,
+    "anim_progress": 60,
     "animator": 10,
     "attklist": [
       "bounce",
@@ -773,7 +858,6 @@
       "rush",
       "allyrush",
       "stresspass",
-      "recover",
       "protect",
       "refresh",
       "serve",
@@ -781,6 +865,7 @@
       "construct",
       "nice",
       "chill",
+      "shakeoff",
       "passattack",
       "startermind",
       "dig"
@@ -911,7 +996,7 @@
     "hidden_counter": null,
     "id": "bilby2",
     "isBaby": false,
-    "learnset": 26,
+    "learnset": 29,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -921,8 +1006,8 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 25,
-      "hop_length": 1.5,
+      "hop_height": 35,
+      "hop_length": 1.7,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
@@ -933,41 +1018,68 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0.1,
-      "stretchiness": 0.1
+      "squishiness": 0.03,
+      "stretchiness": 0.03
     },
     "ma": 75,
     "md": 95,
     "name": "Handicoot",
-    "number": 8,
+    "number": 9,
     "palettes": 1,
     "prev_ids": ["setter1"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 50
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 50
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 50
         }
       ],
       "description": "3+ times, use a special [sprIcon,3]Volley"
@@ -1063,6 +1175,7 @@
     "ability": ["starter_b", "lifeorb"],
     "ability_hidden": true,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -1093,7 +1206,7 @@
     "ba": 75,
     "base_exp": 100.75,
     "bd": 65,
-    "body_color_index": 0,
+    "body_color_index": 1,
     "colormeta": null,
     "colors": [
       {
@@ -1185,7 +1298,7 @@
         "value": [16]
       }
     ],
-    "face_color_index": 1,
+    "face_color_index": 0,
     "family": "cassowary1",
     "first_frame": -1,
     "foot_size": 24,
@@ -1197,7 +1310,7 @@
     "hidden_counter": null,
     "id": "cassowary1",
     "isBaby": true,
-    "learnset": 21,
+    "learnset": 24,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -1219,6 +1332,9 @@
       "move_speed_start": -0.3,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [8, 9, 13, 14, 15, 18],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.2,
       "stretchiness": 0.2
@@ -1226,12 +1342,20 @@
     "ma": 20,
     "md": 45,
     "name": "Kichik",
-    "number": 3,
+    "number": 4,
     "palettes": 1,
     "prev_ids": ["bunny"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -1307,7 +1431,7 @@
         ]
       }
     ],
-    "spr": 380,
+    "spr": 389,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -1317,6 +1441,7 @@
     "ability": ["starter_b", "lifeorb"],
     "ability_hidden": true,
     "allowedInPromo": 1,
+    "anim_progress": 60,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -1393,11 +1518,15 @@
       {
         "array": [
           {
-            "color": 4708847,
+            "color": 766420,
             "x": 0
           },
           {
-            "color": 4242409,
+            "color": 4775167,
+            "x": 0.57
+          },
+          {
+            "color": 2194381,
             "x": 1
           }
         ]
@@ -1445,7 +1574,7 @@
     "hidden_counter": null,
     "id": "cassowary2",
     "isBaby": false,
-    "learnset": 22,
+    "learnset": 25,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -1467,6 +1596,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -1474,12 +1606,20 @@
     "ma": 33,
     "md": 65,
     "name": "Ostrisigh",
-    "number": 4,
+    "number": 5,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -1555,7 +1695,7 @@
         ]
       }
     ],
-    "spr": 513,
+    "spr": 523,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -1565,6 +1705,7 @@
     "ability": ["cheer"],
     "ability_hidden": false,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 8,
     "attklist": [
       "freeball",
@@ -1696,7 +1837,7 @@
     "hidden_counter": null,
     "id": "cheerleader",
     "isBaby": false,
-    "learnset": 44,
+    "learnset": 49,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -1718,6 +1859,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2500,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.25,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -1725,19 +1869,27 @@
     "ma": 40,
     "md": 60,
     "name": "Cherrily",
-    "number": 26,
+    "number": 29,
     "palettes": 1,
     "prev_ids": ["support"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 67,
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "effect_type": 68,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "Gain 5+ [sprBoost,2]BOOSTS on one Beastie"
@@ -1803,7 +1955,7 @@
         ]
       }
     ],
-    "spr": 114,
+    "spr": 115,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -1813,6 +1965,7 @@
     "ability": ["cheer"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 80,
     "animator": [10, 8],
     "attklist": [
       "freeball",
@@ -1966,7 +2119,7 @@
     "hidden_counter": null,
     "id": "cheerleader1",
     "isBaby": true,
-    "learnset": 43,
+    "learnset": 48,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -1990,6 +2143,9 @@
       "move_to_idle_transition_frames": [
         9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
       ],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -1997,19 +2153,27 @@
     "ma": 30,
     "md": 40,
     "name": "Merrifly",
-    "number": 25,
+    "number": 28,
     "palettes": 1,
     "prev_ids": ["support1"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 67,
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "effect_type": 68,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "Gain 4+ [sprBoost,2]BOOSTS on one Beastie"
@@ -2095,16 +2259,495 @@
         ]
       }
     ],
-    "spr": 431,
+    "spr": 440,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
     "tyield": ["hd", 1]
   },
+  "croc": {
+    "ability": ["ace", "taghit"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "anim_progress": 40,
+    "animator": 8,
+    "attklist": [
+      "lockon",
+      "lowattks",
+      "enemylowered",
+      "brine",
+      "feint",
+      "pursuit",
+      "serve",
+      "threat",
+      "snipe",
+      "rushattack",
+      "storedpower",
+      "rocksmash",
+      "healhit",
+      "healhit2",
+      "rocket",
+      "markattack",
+      "hazeball",
+      "cover",
+      "set",
+      "nettle",
+      "taunt",
+      "mindup",
+      "swordsdance",
+      "protect",
+      "netattack"
+    ],
+    "attklist_randomize": -1,
+    "ba": 80,
+    "base_exp": 169.1,
+    "bd": 90,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 11246162,
+            "x": 0
+          },
+          {
+            "color": 10921039,
+            "x": 0.4933333333
+          },
+          {
+            "color": 9872975,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 14076515,
+            "x": 0
+          },
+          {
+            "color": 12373361,
+            "x": 0.5
+          },
+          {
+            "color": 12564599,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 9858081,
+            "x": 0
+          },
+          {
+            "color": 9333798,
+            "x": 0.5
+          },
+          {
+            "color": 8942869,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6020607,
+            "x": 0
+          },
+          {
+            "color": 1157119,
+            "x": 0.5
+          },
+          {
+            "color": 2913791,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [33, 0, 7],
+      [38, 9, 1],
+      [38, 9, 3, 14, 9, 3],
+      [15, 9, -2]
+    ],
+    "desc": "An ambush predator. They lie perfectly still blending in with foliage and then snap with jaws that could shred metal.",
+    "designer": 7,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "croc",
+    "first_frame": -1,
+    "foot_size": 68,
+    "foot_type": 0,
+    "growth": 0.95,
+    "ha": 30,
+    "hd": 80,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "croc",
+    "isBaby": false,
+    "learnset": 66,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 166.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 90,
+    "md": 60,
+    "name": "Crawlurk",
+    "number": 46,
+    "palettes": 1,
+    "prev_ids": ["counter", "killa"],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "damage": ">=60",
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 14
+        }
+      ],
+      "description": "Deal 60+ damage with a SERVE"
+    },
+    "recruit_value": 2.8,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 13882354,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 15987711,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 8487408,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 9737471,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "spr": 354,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 3,
+    "tyield": ["bd", 2]
+  },
+  "daredevil": {
+    "ability": ["acrobat", "unnervous"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "anim_progress": 20,
+    "animator": 8,
+    "attklist": [
+      "dare",
+      "contest",
+      "damagedattack",
+      "bodypass",
+      "jump",
+      "tagattack",
+      "hyperbeam",
+      "snore",
+      "desperate",
+      "overheat",
+      "enemyboosts",
+      "rush",
+      "allyrush",
+      "taunt",
+      "dig",
+      "substitute",
+      "bench",
+      "protect",
+      "rocket",
+      "storedpower",
+      "facade",
+      "rushattack",
+      "reversal",
+      "noisytag",
+      "backswitch",
+      "starterheart"
+    ],
+    "attklist_randomize": -1,
+    "ba": 95,
+    "base_exp": 125.8,
+    "bd": 95,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 255,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6750066,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 1.5, 15, 0, -2],
+      [19, 1, 2, 39, 0, 1],
+      [19, 0, 4, 8, 0, -0.25],
+      [1, 0, 2]
+    ],
+    "desc": "Their top speed is over 100kmph. They race across the desert, then curl up into balls and cool off in any shadow they can find.",
+    "designer": 3,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "daredevil1",
+    "first_frame": -1,
+    "foot_size": 50,
+    "foot_type": 0,
+    "growth": 0.85,
+    "ha": 105,
+    "hd": 30,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "daredevil",
+    "isBaby": false,
+    "learnset": 46,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 66.5,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 25,
+    "md": 55,
+    "name": "Daredillo",
+    "number": 26,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 2,
+          "type": 11
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 2,
+          "type": 11
+        }
+      ],
+      "description": "2+ times, MOVE or SHIFT a Beastie to receive an attack"
+    },
+    "recruit_value": 8,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 16738020,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6750066,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "spr": 462,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 3,
+    "tyield": ["ha", 2]
+  },
   "daredevil1": {
     "ability": ["acrobat", "unnervous"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 40,
     "animator": 10,
     "attklist": [
       "dare",
@@ -2117,7 +2760,7 @@
       "snore",
       "desperate",
       "overheat",
-      "inferno",
+      "enemyboosts",
       "rush",
       "allyrush",
       "taunt",
@@ -2138,7 +2781,7 @@
     "ba": 68,
     "base_exp": 83.3425,
     "bd": 71,
-    "body_color_index": 0,
+    "body_color_index": 1,
     "colormeta": null,
     "colors": [
       {
@@ -2255,7 +2898,13 @@
         "y": 0
       }
     ],
-    "evolution": null,
+    "evolution": [
+      {
+        "condition": [0],
+        "specie": "daredevil",
+        "value": [26]
+      }
+    ],
     "face_color_index": 0,
     "family": "daredevil1",
     "first_frame": -1,
@@ -2268,7 +2917,7 @@
     "hidden_counter": null,
     "id": "daredevil1",
     "isBaby": true,
-    "learnset": 41,
+    "learnset": 45,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -2290,6 +2939,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -2297,12 +2949,20 @@
     "ma": 21,
     "md": 33,
     "name": "Radillo",
-    "number": 23,
+    "number": 25,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -2382,20 +3042,20 @@
         ]
       }
     ],
-    "spr": 531,
+    "spr": 541,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["ha", 1]
   },
-  "dog1": {
+  "dog": {
     "ability": ["fetch", "watcher"],
     "ability_hidden": true,
     "allowedInPromo": 1,
-    "animator": [10, 8],
+    "anim_progress": 40,
+    "animator": 8,
     "attklist": [
       "bounce",
-      "recover",
       "libero",
       "dig",
       "snore",
@@ -2421,7 +3081,389 @@
       "jazzattack",
       "tagattack",
       "spitball",
-      "steal"
+      "steal",
+      "shakeoff"
+    ],
+    "attklist_randomize": -1,
+    "ba": 70,
+    "base_exp": 159.344,
+    "bd": 85,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 5516740,
+            "x": 0
+          },
+          {
+            "color": 4143312,
+            "x": 0.49
+          },
+          {
+            "color": 5066181,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 4868763,
+            "x": 0
+          },
+          {
+            "color": 5713583,
+            "x": 0.5133333333
+          },
+          {
+            "color": 4331925,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6269421,
+            "x": 0
+          },
+          {
+            "color": 8905983,
+            "x": 0.4966666667
+          },
+          {
+            "color": 6471423,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 10897486,
+            "x": 0
+          },
+          {
+            "color": 10375487,
+            "x": 0.5
+          },
+          {
+            "color": 9204788,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": [
+      {
+        "array": [
+          {
+            "color": 13624831,
+            "x": 0
+          },
+          {
+            "color": 11984895,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 10014975,
+            "x": 0
+          },
+          {
+            "color": 6785493,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 10191274,
+            "x": 0
+          },
+          {
+            "color": 8351158,
+            "x": 0.3
+          },
+          {
+            "color": 11586526,
+            "x": 0.3766666667
+          },
+          {
+            "color": 9156844,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 9060893,
+            "x": 0
+          },
+          {
+            "color": 4807268,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "combos": [
+      [-26, 0, 1, 50, 0, 0.8],
+      [15, 0, 1],
+      [14, 0, 3],
+      [26, 2, 3]
+    ],
+    "desc": "They easily scale cliffsides with huge leaps. They're guardians who make sure small Beasties don't go astray in the mountains.",
+    "designer": 3,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": -19,
+        "y": 324
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 1,
+    "family": "dog1",
+    "first_frame": -1,
+    "foot_size": 72,
+    "foot_type": 2,
+    "growth": 0.92,
+    "ha": 80,
+    "hd": 95,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "dog",
+    "isBaby": false,
+    "learnset": 38,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 125.75,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 40,
+    "md": 42,
+    "name": "Fetcham",
+    "number": 18,
+    "palettes": 2,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 14
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 14
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 14
+        }
+      ],
+      "description": "Make this Beastie receive 3+ attacks"
+    },
+    "recruit_value": 10.8,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 16699281,
+            "x": 0
+          },
+          {
+            "color": 11009900,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 8570623,
+            "x": 0
+          },
+          {
+            "color": 10485698,
+            "x": 0.6333333333
+          },
+          {
+            "color": 12693503,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 8417023,
+            "x": 0.5
+          },
+          {
+            "color": 8624373,
+            "x": 0.72
+          },
+          {
+            "color": 12845027,
+            "x": 0.83
+          },
+          {
+            "color": 13500343,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 11975966,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "spr": 285,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 3,
+    "tyield": ["hd", 1, "bd", 1]
+  },
+  "dog1": {
+    "ability": ["fetch", "watcher"],
+    "ability_hidden": true,
+    "allowedInPromo": 1,
+    "anim_progress": 80,
+    "animator": [10, 8],
+    "attklist": [
+      "bounce",
+      "libero",
+      "dig",
+      "snore",
+      "desperate",
+      "damagedattack",
+      "rushattack",
+      "allyrush",
+      "pepshot",
+      "rush",
+      "cover",
+      "heartpass",
+      "lifepass",
+      "juggle",
+      "mark",
+      "protect",
+      "bench",
+      "storedpower",
+      "vigor",
+      "charm",
+      "followme",
+      "overheat",
+      "backswitch",
+      "jazzattack",
+      "tagattack",
+      "spitball",
+      "steal",
+      "shakeoff"
     ],
     "attklist_randomize": -1,
     "ba": 50,
@@ -2531,7 +3573,7 @@
       {
         "array": [
           {
-            "color": 9330060,
+            "color": 10321820,
             "x": 0
           },
           {
@@ -2545,6 +3587,30 @@
           {
             "color": 7647993,
             "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7759451,
+            "x": 0
+          },
+          {
+            "color": 4874352,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6975093,
+            "x": 0.1833333333
+          },
+          {
+            "color": 6716561,
+            "x": 0.8866666667
           }
         ]
       }
@@ -2577,7 +3643,13 @@
         "y": 0
       }
     ],
-    "evolution": null,
+    "evolution": [
+      {
+        "condition": [0],
+        "specie": "dog",
+        "value": [25]
+      }
+    ],
     "face_color_index": 0,
     "family": "dog1",
     "first_frame": -1,
@@ -2590,7 +3662,7 @@
     "hidden_counter": null,
     "id": "dog1",
     "isBaby": true,
-    "learnset": 34,
+    "learnset": 37,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -2612,6 +3684,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [9, 10, 11],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -2619,12 +3694,20 @@
     "ma": 21,
     "md": 40,
     "name": "Wagdash",
-    "number": 16,
+    "number": 17,
     "palettes": 2,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -2634,6 +3717,14 @@
           "type": 14
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -2643,6 +3734,14 @@
           "type": 14
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -2709,6 +3808,14 @@
             "x": 0.5
           },
           {
+            "color": 9608175,
+            "x": 0.7166666667
+          },
+          {
+            "color": 13369333,
+            "x": 0.8133333333
+          },
+          {
             "color": 13500345,
             "x": 1
           }
@@ -2731,7 +3838,7 @@
         ]
       }
     ],
-    "spr": 429,
+    "spr": 438,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -2741,6 +3848,7 @@
     "ability": ["nimble"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 60,
     "animator": 8,
     "attklist": [
       "pepshot",
@@ -2770,7 +3878,7 @@
       "followme"
     ],
     "attklist_randomize": -1,
-    "ba": 18,
+    "ba": 28,
     "base_exp": 103.455,
     "bd": 57,
     "body_color_index": 0,
@@ -2893,21 +4001,21 @@
     "foot_size": 0,
     "foot_type": 0,
     "growth": 0.99,
-    "ha": 84,
+    "ha": 74,
     "hd": 84,
     "hidden": false,
     "hidden_counter": null,
     "id": "dragonfly",
     "isBaby": false,
-    "learnset": 36,
+    "learnset": 40,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 42.25,
+      "char_width": 75.75,
       "emote_hop_height": 25,
-      "float_dist": 60,
-      "float_wave": 2,
+      "float_dist": 70,
+      "float_wave": 1,
       "float_wave_freq": 500,
       "hop_height": 0,
       "hop_length": 1.5,
@@ -2921,6 +4029,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 1500,
+      "offset_rand_range": 50,
+      "offset_seconds": 0.1,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -2928,12 +4039,20 @@
     "ma": 59,
     "md": 74,
     "name": "Kaleidarn",
-    "number": 18,
+    "number": 20,
     "palettes": 1,
     "prev_ids": ["dragonfly1"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "damage": ">=100",
           "event": null,
           "freq": -1,
@@ -3056,16 +4175,17 @@
         ]
       }
     ],
-    "spr": 297,
+    "spr": 304,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tyield": ["ha", 1]
+    "tyield": ["hd", 1]
   },
-  "football1": {
-    "ability": ["shield", "unlazy"],
+  "football": {
+    "ability": ["shield", "fwdpass"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -3082,7 +4202,357 @@
       "nightshade",
       "set",
       "preblock",
-      "recover",
+      "shakeoff",
+      "backswitch",
+      "basecover",
+      "libero",
+      "juggle",
+      "pursuit",
+      "allyprotect",
+      "protect",
+      "bodypass",
+      "mindpass",
+      "heartd"
+    ],
+    "attklist_randomize": -1,
+    "ba": 68,
+    "base_exp": 208.868,
+    "bd": 112,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 6356928,
+            "x": 0
+          },
+          {
+            "color": 8846221,
+            "x": 0.5866666667
+          },
+          {
+            "color": 9690998,
+            "x": 0.9366666667
+          },
+          {
+            "color": 13024107,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7194623,
+            "x": 0
+          },
+          {
+            "color": 6939391,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 3448831,
+            "x": 0
+          },
+          {
+            "color": 4356351,
+            "x": 0.48
+          },
+          {
+            "color": 4674303,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 12779374,
+            "x": 0.0033333333
+          },
+          {
+            "color": 15597415,
+            "x": 0.5
+          },
+          {
+            "color": 16449362,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [33, 0, 16],
+      [26, 1, 3],
+      [16, 0, 2, 6, 0, 1],
+      [16, 0, 3, 6, 0, 3]
+    ],
+    "desc": "Compressed air in their joints gives them explosive power. They can aim a Beastieball at targets 300m away.",
+    "designer": 2,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "football1",
+    "first_frame": -1,
+    "foot_size": 47,
+    "foot_type": 1,
+    "growth": 1.01,
+    "ha": 28,
+    "hd": 62,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "football",
+    "isBaby": false,
+    "learnset": 53,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 120,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "ma": 60,
+    "md": 104,
+    "name": "Beetlback",
+    "number": 33,
+    "palettes": 1,
+    "prev_ids": ["quarterback"],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 48
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 48
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 48
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 48
+        }
+      ],
+      "description": "Volley the ball 4+ times"
+    },
+    "recruit_value": 5.35,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 15888845,
+            "x": 0
+          },
+          {
+            "color": 16279193,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 3917311,
+            "x": 0
+          },
+          {
+            "color": 1812479,
+            "x": 0.85
+          },
+          {
+            "color": 7706879,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 9872096,
+            "x": 0
+          },
+          {
+            "color": 8639994,
+            "x": 0.9
+          },
+          {
+            "color": 5636053,
+            "x": 0.96
+          },
+          {
+            "color": 5636053,
+            "x": 0.96
+          },
+          {
+            "color": 5636053,
+            "x": 0.96
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16772848,
+            "x": 0.0033333333
+          },
+          {
+            "color": 16646127,
+            "x": 0.5
+          },
+          {
+            "color": 16770547,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "spr": 441,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 3,
+    "tyield": ["bd", 3]
+  },
+  "football1": {
+    "ability": ["shield", "unlazy"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "anim_progress": 80,
+    "animator": 8,
+    "attklist": [
+      "bounce",
+      "rocksmash",
+      "allycover",
+      "allyrush",
+      "powswitch",
+      "rocket",
+      "tagattack",
+      "superpower",
+      "dig",
+      "hyperbeam",
+      "moon",
+      "nightshade",
+      "set",
+      "preblock",
+      "shakeoff",
       "backswitch",
       "basecover",
       "libero",
@@ -3191,7 +4661,7 @@
     "hidden_counter": null,
     "id": "football1",
     "isBaby": true,
-    "learnset": 46,
+    "learnset": 51,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -3213,6 +4683,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [6, 7, 8, 9, 10, 11, 12, 13],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -3220,37 +4693,61 @@
     "ma": 20,
     "md": 50,
     "name": "Scrubbub",
-    "number": 28,
+    "number": 31,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 48
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 48
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 48
         }
       ],
       "description": "Volley the ball 3+ times"
@@ -3312,7 +4809,7 @@
         ]
       }
     ],
-    "spr": 315,
+    "spr": 323,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -3322,6 +4819,7 @@
     "ability": ["shield", "unlazy"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 20,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -3338,7 +4836,7 @@
       "nightshade",
       "set",
       "preblock",
-      "recover",
+      "shakeoff",
       "backswitch",
       "basecover",
       "libero",
@@ -3400,7 +4898,13 @@
         "y": 0
       }
     ],
-    "evolution": null,
+    "evolution": [
+      {
+        "condition": [0],
+        "specie": "football",
+        "value": [27]
+      }
+    ],
     "face_color_index": 0,
     "family": "football1",
     "first_frame": -1,
@@ -3413,7 +4917,7 @@
     "hidden_counter": null,
     "id": "football2",
     "isBaby": true,
-    "learnset": 47,
+    "learnset": 52,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -3435,6 +4939,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -3442,37 +4949,61 @@
     "ma": 35,
     "md": 70,
     "name": "Grubiron",
-    "number": 29,
+    "number": 32,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 48
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 48
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 48
         }
       ],
       "description": "Volley the ball 3+ times"
@@ -3508,13 +5039,13 @@
       {
         "array": [
           {
-            "color": 458496,
+            "color": 16711830,
             "x": 0
           }
         ]
       }
     ],
-    "spr": 345,
+    "spr": 353,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -3524,6 +5055,7 @@
     "ability": ["starter_h", "allyheal"],
     "ability_hidden": true,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 8,
     "attklist": [
       "pepshot",
@@ -3667,7 +5199,7 @@
     "hidden_counter": null,
     "id": "frog1",
     "isBaby": true,
-    "learnset": 23,
+    "learnset": 26,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -3689,6 +5221,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [8, 12, 13, 14],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.2,
       "stretchiness": 0.2
@@ -3696,19 +5231,27 @@
     "ma": 25,
     "md": 33,
     "name": "Axolati",
-    "number": 5,
+    "number": 6,
     "palettes": 1,
     "prev_ids": ["tadpole"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 67,
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "effect_type": 68,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "Boost any [sprIcon,0][sprIcon,1][sprIcon,2]POW [sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
@@ -3782,7 +5325,7 @@
         ]
       }
     ],
-    "spr": 539,
+    "spr": 549,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -3792,6 +5335,7 @@
     "ability": ["starter_h", "allyheal"],
     "ability_hidden": true,
     "allowedInPromo": 1,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "pepshot",
@@ -3933,7 +5477,7 @@
     "hidden_counter": null,
     "id": "frog2",
     "isBaby": false,
-    "learnset": 24,
+    "learnset": 27,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -3957,6 +5501,9 @@
       "move_to_idle_transition_frames": [
         13, 21, 20, 10, 11, 12, 18, 19, 8, 9, 16, 17
       ],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.2,
       "stretchiness": 0.2
@@ -3964,19 +5511,27 @@
     "ma": 27,
     "md": 50,
     "name": "Hopsong",
-    "number": 6,
+    "number": 7,
     "palettes": 1,
     "prev_ids": ["frogmid"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 67,
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "effect_type": 68,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "Boost any [sprIcon,0][sprIcon,1][sprIcon,2]POW [sprBoost,0][sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
@@ -4064,6 +5619,7 @@
     "ability": ["sturdy"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 40,
     "animator": 10,
     "attklist": [
       "starterheart",
@@ -4218,7 +5774,7 @@
     "hidden_counter": null,
     "id": "horseshoe",
     "isBaby": false,
-    "learnset": 52,
+    "learnset": 67,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -4240,6 +5796,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -4247,12 +5806,20 @@
     "ma": 29,
     "md": 107,
     "name": "Xiphosaur",
-    "number": 34,
+    "number": 47,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "damage": 99,
           "event": null,
           "freq": -1,
@@ -4334,16 +5901,278 @@
         ]
       }
     ],
-    "spr": 512,
+    "spr": 522,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["bd", 2, "md", 1]
   },
+  "jellyfish1": {
+    "ability": ["traitless"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "anim_progress": 40,
+    "animator": 8,
+    "attklist": [
+      "starterheart",
+      "careful",
+      "facade",
+      "cut",
+      "reversal",
+      "shieldbreaker",
+      "rush",
+      "snore",
+      "cover",
+      "refresh",
+      "myheartpass",
+      "preblock",
+      "dispel",
+      "bellydrum",
+      "trap",
+      "haze",
+      "nettle",
+      "sting",
+      "protect",
+      "minddown",
+      "teleport",
+      "allycover",
+      "substitute"
+    ],
+    "attklist_randomize": -1,
+    "ba": 14,
+    "base_exp": 105.403,
+    "bd": 64,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 2228479,
+            "x": 0
+          },
+          {
+            "color": 7018751,
+            "x": 0.4766666667
+          },
+          {
+            "color": 10569215,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 2324223,
+            "x": 0
+          },
+          {
+            "color": 3458815,
+            "x": 0.5
+          },
+          {
+            "color": 2740479,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [61, 0, 1],
+      [8, 1, 0.5, 13, 0, 2],
+      [47, 0, 1, 13, 0, 2],
+      [29, 8, 2, 8, 0, -0.2]
+    ],
+    "desc": "They're extraordinarily simple and underdeveloped. They swim with single-minded desire to join with other Petula.",
+    "designer": 8,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": [
+      {
+        "condition": [10],
+        "specie": "jellyfish2",
+        "value": [18]
+      },
+      {
+        "condition": [8],
+        "specie": "jellyfish2",
+        "value": [4]
+      }
+    ],
+    "face_color_index": 0,
+    "family": "jellyfish1",
+    "first_frame": -1,
+    "foot_size": 8,
+    "foot_type": 0,
+    "growth": 1.09,
+    "ha": 74,
+    "hd": 73,
+    "hidden": false,
+    "hidden_counter": {
+      "__Elephant_Schema__": {
+        "__Elephant_Verbose_Exclude__": [
+          "event",
+          "my_data",
+          "rel_color",
+          "func"
+        ]
+      },
+      "event": null,
+      "freq": -1,
+      "my_data": null,
+      "rel_color": -1,
+      "type": 32
+    },
+    "id": "jellyfish1",
+    "isBaby": false,
+    "learnset": 61,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 67.25,
+      "emote_hop_height": 25,
+      "float_dist": 75,
+      "float_wave": 7,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.04,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 35,
+    "md": 52,
+    "name": "Petula",
+    "number": 41,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "effect_type": [12, 25, 26, 27, 6, 14, 13, 23, 22, 29, 39, 19, 38],
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 45
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "effect_type": [12, 25, 26, 27, 6, 14, 13, 23, 22, 29, 39, 19, 38],
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 45
+        }
+      ],
+      "description": "2+ times, give any Beastie a FEELING"
+    },
+    "recruit_value": 5,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 15164734,
+            "x": 0
+          },
+          {
+            "color": 16767293,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16777215,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "spr": 330,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 1,
+    "tyield": ["ha", 1]
+  },
   "jellyfish2": {
     "ability": ["nodie"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "starterheart",
@@ -4380,7 +6209,7 @@
       {
         "array": [
           {
-            "color": 4849890,
+            "color": 1573090,
             "x": 0
           },
           {
@@ -4417,7 +6246,7 @@
       [47, 0, 1, 13, 0, 2],
       [29, 8, 2, 8, 0, -0.2]
     ],
-    "desc": "A collection of Petula working together as one. Once bonded, it's extremely rare for a Flowish to break up into its component Beasties again.",
+    "desc": "A collection of Petula working together as one. Each takes on a different function as part of the collective.",
     "designer": 8,
     "evo_pose": [
       {
@@ -4441,7 +6270,7 @@
     ],
     "evolution": null,
     "face_color_index": 0,
-    "family": "jellyfish2",
+    "family": "jellyfish1",
     "first_frame": -1,
     "foot_size": 16,
     "foot_type": 0,
@@ -4452,7 +6281,7 @@
     "hidden_counter": null,
     "id": "jellyfish2",
     "isBaby": false,
-    "learnset": 50,
+    "learnset": 62,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -4474,6 +6303,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -4481,19 +6313,27 @@
     "ma": 35,
     "md": 52,
     "name": "Flowish",
-    "number": 32,
+    "number": 42,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 39
+          "type": 42
         }
       ],
       "description": "WIPE OUT this Beastie"
@@ -4521,15 +6361,15 @@
       {
         "array": [
           {
-            "color": 16748336,
+            "color": 15761957,
             "x": 0
           },
           {
             "color": 16756247,
-            "x": 0.9466666667
+            "x": 0.5133333333
           },
           {
-            "color": 16756502,
+            "color": 16759062,
             "x": 1
           }
         ]
@@ -4543,16 +6383,17 @@
         ]
       }
     ],
-    "spr": 423,
+    "spr": 432,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["ha", 2]
   },
   "kangaroo1": {
-    "ability": ["prankster", "handsfree"],
+    "ability": ["prankster", "gloat"],
     "ability_hidden": true,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -4697,7 +6538,7 @@
     "hidden_counter": null,
     "id": "kangaroo1",
     "isBaby": true,
-    "learnset": 35,
+    "learnset": 39,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -4719,6 +6560,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [18, 19],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -4726,26 +6570,42 @@
     "ma": 74,
     "md": 80,
     "name": "Rookee",
-    "number": 17,
+    "number": 19,
     "palettes": 1,
     "prev_ids": ["rookee", "rookee1"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 50
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 50
         }
       ],
       "description": "Use 2+ [sprIcon,4]SUPPORT plays"
@@ -4819,7 +6679,7 @@
         ]
       }
     ],
-    "spr": 302,
+    "spr": 309,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -4829,6 +6689,7 @@
     "ability": ["moldbreaker", "unmarked"],
     "ability_hidden": true,
     "allowedInPromo": 1,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "flyback",
@@ -4979,7 +6840,7 @@
     "hidden_counter": null,
     "id": "lyrebird",
     "isBaby": false,
-    "learnset": 33,
+    "learnset": 36,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -5001,6 +6862,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -5008,46 +6872,78 @@
     "ma": 55,
     "md": 88,
     "name": "Zefyre",
-    "number": 15,
+    "number": 16,
     "palettes": 1,
     "prev_ids": ["angel"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 44
+          "type": 47
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 44
+          "type": 47
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 44
+          "type": 47
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 44
+          "type": 47
         }
       ],
       "description": "Make 4+ [sprIcon,8]MOVE actions"
@@ -5129,7 +7025,7 @@
         ]
       }
     ],
-    "spr": 48,
+    "spr": 49,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -5139,6 +7035,7 @@
     "ability": ["moldbreaker", "unmarked"],
     "ability_hidden": true,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 8,
     "attklist": [
       "flyback",
@@ -5279,7 +7176,7 @@
     "hidden_counter": null,
     "id": "lyrebird1",
     "isBaby": true,
-    "learnset": 32,
+    "learnset": 35,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -5301,6 +7198,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [11, 12, 13, 14],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -5308,37 +7208,61 @@
     "ma": 30,
     "md": 35,
     "name": "Sefren",
-    "number": 14,
+    "number": 15,
     "palettes": 1,
     "prev_ids": ["angel1"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 44
+          "type": 47
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 44
+          "type": 47
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 44
+          "type": 47
         }
       ],
       "description": "Make 3+ [sprIcon,8]MOVE actions"
@@ -5420,7 +7344,7 @@
         ]
       }
     ],
-    "spr": 552,
+    "spr": 562,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -5430,16 +7354,17 @@
     "ability": ["trust", "technician"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 60,
     "animator": 8,
     "attklist": [
       "callout",
       "switch",
       "batonpass",
       "healhit",
+      "healhit2",
       "heartd",
       "rocksmash",
       "jump",
-      "tool",
       "float",
       "heartdown",
       "markattack",
@@ -5459,8 +7384,8 @@
       "startermind"
     ],
     "attklist_randomize": -1,
-    "ba": 72,
-    "base_exp": 77.372,
+    "ba": 70,
+    "base_exp": 76.544,
     "bd": 29,
     "body_color_index": 0,
     "colormeta": null,
@@ -5544,7 +7469,7 @@
     "hidden_counter": null,
     "id": "magpie1",
     "isBaby": false,
-    "learnset": 58,
+    "learnset": 75,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -5568,19 +7493,30 @@
       "move_to_idle_transition_frames": [
         10, 11, 12, 13, 14, 15, 16, 17, 18, 19
       ],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
     },
-    "ma": 79,
-    "md": 70,
+    "ma": 74,
+    "md": 67,
     "name": "Punkchirp",
-    "number": 40,
+    "number": 55,
     "palettes": 1,
     "prev_ids": ["mindbody1"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "effect_type": 48,
           "event": null,
           "freq": -1,
@@ -5588,7 +7524,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "Use a COMBO play"
@@ -5646,16 +7582,227 @@
         ]
       }
     ],
-    "spr": 109,
+    "spr": 110,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
     "tyield": ["ma", 1, "ba", 1]
   },
+  "millipede": {
+    "ability": ["watcher"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "anim_progress": 20,
+    "animator": 8,
+    "attklist": [
+      "starterbody",
+      "sideshot",
+      "rocksmash",
+      "rocket",
+      "blockattack",
+      "body",
+      "superpower",
+      "mindpass",
+      "allyrush",
+      "allycover",
+      "lockon",
+      "lowattks",
+      "rest",
+      "haze",
+      "protect",
+      "mdefup",
+      "hdefup",
+      "stress",
+      "distraction",
+      "mark",
+      "tagattack"
+    ],
+    "attklist_randomize": -1,
+    "ba": 88,
+    "base_exp": 189.42,
+    "bd": 78,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 255,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16737900,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 0.8, 49, 0, 12, 15, 3, -1],
+      [19, 0, 2, 12, 0, 2],
+      [39, 8, 2],
+      [39, 8, 1]
+    ],
+    "desc": "They swing their armored head at high velocities to break through rock. The tunnels they create often become homes for other cave-dwellers.",
+    "designer": [4, 0],
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "millipede1",
+    "first_frame": -1,
+    "foot_size": 81,
+    "foot_type": 1,
+    "growth": 1.05,
+    "ha": 38,
+    "hd": 58,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "millipede",
+    "isBaby": false,
+    "learnset": 73,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 74.5,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 48,
+    "md": 98,
+    "name": "Demolipede",
+    "number": 53,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 2,
+          "type": 11
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 2,
+          "type": 11
+        }
+      ],
+      "description": "2+ times, TAG IN a Beastie to receive an attack"
+    },
+    "recruit_value": 8,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 6804932,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16747110,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "spr": 93,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 3,
+    "tyield": ["md", 2]
+  },
   "millipede1": {
     "ability": ["watcher"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 80,
     "animator": 10,
     "attklist": [
       "starterbody",
@@ -5756,7 +7903,13 @@
         "y": 0
       }
     ],
-    "evolution": null,
+    "evolution": [
+      {
+        "condition": [0],
+        "specie": "millipede",
+        "value": [28]
+      }
+    ],
     "face_color_index": 1,
     "family": "millipede1",
     "first_frame": -1,
@@ -5769,7 +7922,7 @@
     "hidden_counter": null,
     "id": "millipede1",
     "isBaby": false,
-    "learnset": 56,
+    "learnset": 72,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -5791,6 +7944,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -5798,12 +7954,20 @@
     "ma": 30,
     "md": 81,
     "name": "Milimine",
-    "number": 38,
+    "number": 52,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -5883,7 +8047,7 @@
         ]
       }
     ],
-    "spr": 321,
+    "spr": 329,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -5893,6 +8057,7 @@
     "ability": ["empath", "crowddef"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 80,
     "animator": 10,
     "attklist": [
       "facade",
@@ -6031,7 +8196,7 @@
       }
     ],
     "evolution": null,
-    "face_color_index": 0,
+    "face_color_index": 2,
     "family": "moth1",
     "first_frame": -1,
     "foot_size": 14,
@@ -6043,7 +8208,7 @@
     "hidden_counter": null,
     "id": "moth",
     "isBaby": false,
-    "learnset": 29,
+    "learnset": 32,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6065,6 +8230,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -6072,18 +8240,26 @@
     "ma": 95,
     "md": 75,
     "name": "Plumask",
-    "number": 11,
+    "number": 12,
     "palettes": 1,
     "prev_ids": ["heartmind"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 38
+          "type": 41
         }
       ],
       "description": "[sprBoost,1]BOOST any stat to +4 or more"
@@ -6173,7 +8349,7 @@
         ]
       }
     ],
-    "spr": 158,
+    "spr": 160,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -6183,6 +8359,7 @@
     "ability": ["empath", "defiant_h"],
     "ability_hidden": false,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "facade",
@@ -6298,7 +8475,7 @@
         "value": [8]
       }
     ],
-    "face_color_index": 2,
+    "face_color_index": 1,
     "family": "moth1",
     "first_frame": -1,
     "foot_size": 7,
@@ -6310,7 +8487,7 @@
     "hidden_counter": null,
     "id": "moth1",
     "isBaby": true,
-    "learnset": 27,
+    "learnset": 30,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6332,6 +8509,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -6339,18 +8519,26 @@
     "ma": 65,
     "md": 50,
     "name": "Collarva",
-    "number": 9,
+    "number": 10,
     "palettes": 1,
     "prev_ids": ["mindbug1"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 38
+          "type": 41
         }
       ],
       "description": "[sprBoost,1]BOOST any stat [sprBoost,0][sprBoost,0] or more"
@@ -6420,7 +8608,7 @@
         ]
       }
     ],
-    "spr": 135,
+    "spr": 137,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -6430,6 +8618,7 @@
     "ability": ["empath", "defiant_h"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 40,
     "animator": 10,
     "attklist": [
       "facade",
@@ -6589,7 +8778,7 @@
     "hidden_counter": null,
     "id": "moth2",
     "isBaby": true,
-    "learnset": 28,
+    "learnset": 31,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6611,6 +8800,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -6618,18 +8810,26 @@
     "ma": 70,
     "md": 60,
     "name": "Wormask",
-    "number": 10,
+    "number": 11,
     "palettes": 1,
     "prev_ids": ["mindbug2"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 38
+          "type": 41
         }
       ],
       "description": "[sprBoost,1]BOOST any stat [sprBoost,0][sprBoost,0][sprBoost,0] or more"
@@ -6715,7 +8915,7 @@
         ]
       }
     ],
-    "spr": 383,
+    "spr": 392,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -6725,6 +8925,7 @@
     "ability": ["study"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 80,
     "animator": 10,
     "attklist": [
       "startermind",
@@ -6847,7 +9048,7 @@
     "hidden_counter": null,
     "id": "nerd1",
     "isBaby": false,
-    "learnset": 59,
+    "learnset": 76,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6869,6 +9070,9 @@
       "move_speed_start": -85,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -6876,12 +9080,20 @@
     "ma": 85,
     "md": 80,
     "name": "Calcroach",
-    "number": 41,
+    "number": 56,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "attack_pow": ">=50",
           "event": null,
           "freq": -1,
@@ -6948,7 +9160,7 @@
         ]
       }
     ],
-    "spr": 544,
+    "spr": 554,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -6958,6 +9170,7 @@
     "ability": ["lightningrod_m"],
     "ability_hidden": false,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "markattack",
@@ -7082,7 +9295,7 @@
         "value": [19]
       }
     ],
-    "face_color_index": 0,
+    "face_color_index": 1,
     "family": "platypus1",
     "first_frame": -1,
     "foot_size": 16,
@@ -7094,7 +9307,7 @@
     "hidden_counter": null,
     "id": "platypus1",
     "isBaby": false,
-    "learnset": 37,
+    "learnset": 41,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -7116,6 +9329,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [8, 9, 10, 11],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -7123,19 +9339,27 @@
     "ma": 48,
     "md": 75,
     "name": "Platenna",
-    "number": 19,
+    "number": 21,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 67,
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "effect_type": 68,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "Boost [sprIcon,2]DEF [sprBoost,0][sprBoost,0] or more on a Beastie"
@@ -7189,7 +9413,7 @@
         ]
       }
     ],
-    "spr": 193,
+    "spr": 196,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -7199,6 +9423,7 @@
     "ability": ["lightningrod_m"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 15,
     "animator": 8,
     "attklist": [
       "markattack",
@@ -7301,7 +9526,7 @@
     "hidden_counter": null,
     "id": "platypus2",
     "isBaby": false,
-    "learnset": 38,
+    "learnset": 42,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -7323,6 +9548,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -7330,19 +9558,27 @@
     "ma": 99,
     "md": 115,
     "name": "Platypulse",
-    "number": 20,
+    "number": 22,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 67,
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "effect_type": 68,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "Boost [sprIcon,2]DEF [sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
@@ -7392,7 +9628,7 @@
         ]
       }
     ],
-    "spr": 299,
+    "spr": 306,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -7402,6 +9638,7 @@
     "ability": ["regenerator"],
     "ability_hidden": false,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -7553,7 +9790,7 @@
     "hidden_counter": null,
     "id": "possum1",
     "isBaby": true,
-    "learnset": 30,
+    "learnset": 33,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -7577,6 +9814,9 @@
       "move_to_idle_transition_frames": [
         10, 11, 12, 13, 14, 15, 16, 17, 21, 22, 23, 24, 25, 26, 27, 28
       ],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -7584,12 +9824,20 @@
     "ma": 22,
     "md": 57,
     "name": "Shooga",
-    "number": 12,
+    "number": 13,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -7682,7 +9930,7 @@
         ]
       }
     ],
-    "spr": 359,
+    "spr": 367,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
@@ -7692,6 +9940,7 @@
     "ability": ["regenerator"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -7826,7 +10075,7 @@
     "hidden_counter": null,
     "id": "possum2",
     "isBaby": false,
-    "learnset": 31,
+    "learnset": 34,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -7848,6 +10097,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [8, 12, 13, 14, 15],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -7855,12 +10107,20 @@
     "ma": 32,
     "md": 75,
     "name": "Supassum",
-    "number": 13,
+    "number": 14,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -7957,16 +10217,763 @@
         ]
       }
     ],
-    "spr": 181,
+    "spr": 184,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["bd", 2]
   },
+  "psychic": {
+    "ability": ["galaxybrain", "superblock"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "anim_progress": 60,
+    "animator": 10,
+    "attklist": [
+      "sweatup",
+      "startermind",
+      "moon",
+      "telekinesis",
+      "markattack",
+      "teleport",
+      "mind",
+      "heartd",
+      "heartdown",
+      "wornattack",
+      "minddown",
+      "mindpass",
+      "meditate",
+      "taunt",
+      "lockon",
+      "mdefup",
+      "basecover",
+      "substitute",
+      "cover",
+      "nightshade",
+      "protect",
+      "rest",
+      "chill"
+    ],
+    "attklist_randomize": -1,
+    "ba": 30,
+    "base_exp": 136.5,
+    "bd": 30,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 11856721,
+            "x": 0
+          },
+          {
+            "color": 16767838,
+            "x": 0.14
+          },
+          {
+            "color": 16739986,
+            "x": 0.15
+          },
+          {
+            "color": 16740800,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16753319,
+            "x": 0
+          },
+          {
+            "color": 16753355,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16769369,
+            "x": 0.0066666667
+          },
+          {
+            "color": 12705122,
+            "x": 0.5
+          },
+          {
+            "color": 13303689,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 5687039,
+            "x": 0
+          },
+          {
+            "color": 2990847,
+            "x": 0.5
+          },
+          {
+            "color": 4094975,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 65522,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 1.6, 40, 0, 1],
+      [27, 9, 1],
+      [20, 0, 1, 15, 0, 1],
+      [5, 0, 4]
+    ],
+    "desc": "Scientists still don't understand how this Beastie adapted psychokinetic abilities. Psylusc are known to influence the tides to protect their precious coral reefs.",
+    "designer": 1,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "psychic",
+    "first_frame": -1,
+    "foot_size": 27,
+    "foot_type": 0,
+    "growth": 1.05,
+    "ha": 50,
+    "hd": 70,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "psychic",
+    "isBaby": false,
+    "learnset": 68,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 74.5,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.08,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "ma": 120,
+    "md": 100,
+    "name": "Psylusc",
+    "number": 48,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "attack_type": 2,
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "target": 0,
+          "type": 14
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "attack_type": 2,
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "target": 0,
+          "type": 14
+        }
+      ],
+      "description": "Land 2+ [sprIcon,2]MIND attacks on this Beastie"
+    },
+    "recruit_value": 9,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": 3,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 16736556,
+            "x": 0
+          },
+          {
+            "color": 16750650,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16769718,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16761196,
+            "x": 0
+          },
+          {
+            "color": 16765804,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 8051967,
+            "x": 0.35
+          },
+          {
+            "color": 16774332,
+            "x": 0.47
+          },
+          {
+            "color": 15430964,
+            "x": 0.58
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 37375,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "spr": 149,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["ma", 3]
+  },
+  "rainbow": {
+    "ability": ["mimic", "allpow"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "anim_progress": 100,
+    "animator": 10,
+    "attklist": [
+      "pepshot",
+      "commit",
+      "moon",
+      "protect",
+      "dare",
+      "contest",
+      "spitball",
+      "minddown",
+      "damagedattack",
+      "mind",
+      "hyperbeam",
+      "wornattack",
+      "dig",
+      "allyrush",
+      "libero",
+      "charm",
+      "whirlwind",
+      "mark",
+      "rest",
+      "callout",
+      "overthink",
+      "storedpower",
+      "superpower",
+      "distraction",
+      "breakswipe",
+      "steamattack",
+      "crowd",
+      "noisytag",
+      "jazzattack",
+      "skillswap",
+      "mindup"
+    ],
+    "attklist_randomize": -1,
+    "ba": 89,
+    "base_exp": 153.224,
+    "bd": 65,
+    "body_color_index": 3,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 6240511,
+            "x": 0
+          },
+          {
+            "color": 4397823,
+            "x": 0.4866666667
+          },
+          {
+            "color": 921343,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 14606079,
+            "x": 0
+          },
+          {
+            "color": 5350649,
+            "x": 0.1
+          },
+          {
+            "color": 4902143,
+            "x": 0.1733333333
+          },
+          {
+            "color": 4513535,
+            "x": 0.25
+          },
+          {
+            "color": 7798225,
+            "x": 0.3133333333
+          },
+          {
+            "color": 4583307,
+            "x": 0.3866666667
+          },
+          {
+            "color": 9371480,
+            "x": 0.4566666667
+          },
+          {
+            "color": 11665255,
+            "x": 0.5433333333
+          },
+          {
+            "color": 16645989,
+            "x": 0.6266666667
+          },
+          {
+            "color": 16750165,
+            "x": 0.69
+          },
+          {
+            "color": 14245482,
+            "x": 0.7666666667
+          },
+          {
+            "color": 16728478,
+            "x": 0.8366666667
+          },
+          {
+            "color": 12921538,
+            "x": 0.91
+          },
+          {
+            "color": 5115346,
+            "x": 0.99
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7143422,
+            "x": 0
+          },
+          {
+            "color": 7135743,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 11065599,
+            "x": 0
+          },
+          {
+            "color": 8245998,
+            "x": 0.09
+          },
+          {
+            "color": 56063,
+            "x": 0.1733333333
+          },
+          {
+            "color": 3468287,
+            "x": 0.2533333333
+          },
+          {
+            "color": 4259812,
+            "x": 0.3366666667
+          },
+          {
+            "color": 2161859,
+            "x": 0.3933333333
+          },
+          {
+            "color": 7862203,
+            "x": 0.4733333333
+          },
+          {
+            "color": 9172900,
+            "x": 0.5533333333
+          },
+          {
+            "color": 9434997,
+            "x": 0.63
+          },
+          {
+            "color": 16243832,
+            "x": 0.7066666667
+          },
+          {
+            "color": 16221614,
+            "x": 0.77
+          },
+          {
+            "color": 16229860,
+            "x": 0.8333333333
+          },
+          {
+            "color": 13010423,
+            "x": 0.9033333333
+          },
+          {
+            "color": 8690423,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 4470314,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [33, 0, 10, 50, 0, 0.7],
+      [1, 1, 1, 2, 1, 1],
+      [15, 0, 1, 16, 0, 1],
+      [16, 0, 2]
+    ],
+    "desc": "Each one has a unique ink color. They tend to form colonies of similar color and mark their territory with vivid graffiti.",
+    "designer": 4,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "rainbow",
+    "first_frame": -1,
+    "foot_size": 32,
+    "foot_type": 0,
+    "growth": 1.07,
+    "ha": 91,
+    "hd": 38,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "rainbow",
+    "isBaby": false,
+    "learnset": 63,
+    "learnset_randomize": -1,
+    "linked_colors": {
+      "_3": 1
+    },
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 71,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 75,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "ma": 90,
+    "md": 69,
+    "name": "Squimage",
+    "number": 43,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "attack_type": 0,
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 14
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "attack_type": 1,
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 14
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "attack_type": 2,
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 14
+        }
+      ],
+      "description": "Land a [sprIcon,0] attack, a [sprIcon,1] attack and a [sprIcon,2] attack"
+    },
+    "recruit_value": 9.1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 6573903,
+            "x": 0
+          },
+          {
+            "color": 8282979,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 3154723,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 8941680,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 3293234,
+            "x": 0
+          },
+          {
+            "color": 4665361,
+            "x": 0.24
+          },
+          {
+            "color": 4396052,
+            "x": 0.5
+          },
+          {
+            "color": 3739723,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 11272237,
+            "x": 0
+          },
+          {
+            "color": 14811144,
+            "x": 0.5
+          },
+          {
+            "color": 14827264,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "spr": 439,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 3,
+    "tyield": ["ha", 1, "ma", 1, "ba", 1]
+  },
   "rat": {
     "ability": ["fieldclear", "prankster"],
     "ability_hidden": false,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "starterbody",
@@ -8180,7 +11187,7 @@
     "hidden_counter": null,
     "id": "rat",
     "isBaby": false,
-    "learnset": 57,
+    "learnset": 74,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -8202,6 +11209,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "stop",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -8209,26 +11219,42 @@
     "ma": 64,
     "md": 84,
     "name": "Trat",
-    "number": 39,
+    "number": 54,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 50
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 50
         }
       ],
       "description": "Use 2+ [sprIcon,5]DEFENSE plays"
@@ -8362,8 +11388,8 @@
         ]
       }
     ],
-    "spr": 134,
-    "spr_alt": [166],
+    "spr": 136,
+    "spr_alt": [168],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["hd", 2]
@@ -8372,6 +11398,7 @@
     "ability": ["heavy", "multiscale"],
     "ability_hidden": false,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -8517,7 +11544,7 @@
     "hidden_counter": null,
     "id": "rocklizard1",
     "isBaby": true,
-    "learnset": 54,
+    "learnset": 70,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -8539,6 +11566,9 @@
       "move_speed_start": -0.6,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -8546,19 +11576,27 @@
     "ma": 41,
     "md": 23,
     "name": "Skibble",
-    "number": 36,
+    "number": 50,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 67,
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "effect_type": 68,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "Boost [sprIcon,0]DEF [sprBoost,0][sprBoost,0] or more on a Beastie"
@@ -8634,6 +11672,7 @@
     "ability": ["heavy", "multiscale"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -8777,7 +11816,7 @@
     "hidden_counter": null,
     "id": "rocklizard2",
     "isBaby": false,
-    "learnset": 55,
+    "learnset": 71,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -8799,6 +11838,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -8806,19 +11848,27 @@
     "ma": 57,
     "md": 35,
     "name": "Skorock",
-    "number": 37,
+    "number": 51,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 67,
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "effect_type": 68,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "Boost [sprIcon,0]DEF [sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
@@ -8890,10 +11940,655 @@
     "tamelvl": 2,
     "tyield": ["bd", 2]
   },
+  "seabird": {
+    "ability": ["bouncy", "blocker"],
+    "ability_hidden": true,
+    "allowedInPromo": 1,
+    "anim_progress": 60,
+    "animator": 8,
+    "attklist": [
+      "startermind",
+      "nightshade",
+      "markattack",
+      "float",
+      "passattack",
+      "rollshot",
+      "dump",
+      "bounce",
+      "facade",
+      "damagedattack",
+      "heart",
+      "rush",
+      "cover",
+      "callout",
+      "rest",
+      "taunt",
+      "substitute",
+      "tailwind",
+      "lowattks",
+      "mark",
+      "defheal",
+      "whirlwind",
+      "protect",
+      "followme"
+    ],
+    "attklist_randomize": -1,
+    "ba": 23,
+    "base_exp": 156.728,
+    "bd": 98,
+    "body_color_index": 0,
+    "colormeta": [0, 2, 1, 3, 4],
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 11235613,
+            "x": 0.0133333333
+          },
+          {
+            "color": 11822133,
+            "x": 0.4866666667
+          },
+          {
+            "color": 10702364,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 14996180,
+            "x": 0
+          },
+          {
+            "color": 15135487,
+            "x": 0.5066666667
+          },
+          {
+            "color": 13364219,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 14798801,
+            "x": 0
+          },
+          {
+            "color": 15134975,
+            "x": 0.5
+          },
+          {
+            "color": 12443632,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 2275327,
+            "x": 0
+          },
+          {
+            "color": 1235455,
+            "x": 0.53
+          },
+          {
+            "color": 5174271,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 3958271,
+            "x": 0
+          },
+          {
+            "color": 2960879,
+            "x": 0.5
+          },
+          {
+            "color": 6894068,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 26614,
+            "x": 0
+          },
+          {
+            "color": 35326,
+            "x": 0.4833333333
+          },
+          {
+            "color": 40447,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [33, 0, 18, 50, 0, 0.85],
+      [14, 1, 1],
+      [19, 0, 2],
+      [19, 0, 1, 8, 0, 0.15]
+    ],
+    "desc": "Known to travel vast distances and through any weather, they can stay airborne for a week without rest and then float on the water's surface.",
+    "designer": 5,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "seabird1",
+    "first_frame": -1,
+    "foot_size": 26,
+    "foot_type": 1,
+    "growth": 1.04,
+    "ha": 77,
+    "hd": 88,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "seabird",
+    "isBaby": false,
+    "learnset": 60,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 106.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.2,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 3.5,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.07,
+      "stretchiness": 0.07
+    },
+    "ma": 85,
+    "md": 60,
+    "name": "Skiffrig",
+    "number": 40,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 8
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 8
+        }
+      ],
+      "description": "2+ times, attack with the Beastie who last received the ball"
+    },
+    "recruit_value": 5,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 9336177,
+            "x": 0
+          },
+          {
+            "color": 9803157,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 48127,
+            "x": 0.02
+          },
+          {
+            "color": 40447,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 5000268,
+            "x": 0.4733333333
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7648255,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 8743679,
+            "x": 0.3966666667
+          },
+          {
+            "color": 5997311,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7572210,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "spr": 457,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["hd", 2]
+  },
+  "seabird1": {
+    "ability": ["bouncy", "blocker"],
+    "ability_hidden": true,
+    "allowedInPromo": 1,
+    "anim_progress": 100,
+    "animator": 10,
+    "attklist": [
+      "startermind",
+      "nightshade",
+      "markattack",
+      "float",
+      "passattack",
+      "rollshot",
+      "dump",
+      "bounce",
+      "facade",
+      "damagedattack",
+      "heart",
+      "rush",
+      "cover",
+      "callout",
+      "rest",
+      "taunt",
+      "substitute",
+      "tailwind",
+      "lowattks",
+      "mark",
+      "defheal",
+      "whirlwind",
+      "protect",
+      "followme"
+    ],
+    "attklist_randomize": -1,
+    "ba": 19,
+    "base_exp": 96.512,
+    "bd": 75,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 9600075,
+            "x": 0
+          },
+          {
+            "color": 11637363,
+            "x": 0.5233333333
+          },
+          {
+            "color": 10641738,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16750592,
+            "x": 0
+          },
+          {
+            "color": 16755574,
+            "x": 0.4966666667
+          },
+          {
+            "color": 16766208,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 13025464,
+            "x": 0
+          },
+          {
+            "color": 11248545,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 50175,
+            "x": 0
+          },
+          {
+            "color": 3137279,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 343273,
+            "x": 0
+          },
+          {
+            "color": 3355647,
+            "x": 0.5066666667
+          },
+          {
+            "color": 5513983,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [33, 0, 18, 50, 0, 0.85],
+      [14, 1, 1],
+      [19, 0, 2],
+      [19, 0, 1, 8, 0, 0.15]
+    ],
+    "desc": "Juveniles will float on the ocean with their mouth open skyward awaiting food from their parents. Their bright-colored neck makes them visible from afar.",
+    "designer": 5,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": [
+      {
+        "condition": [0],
+        "specie": "seabird",
+        "value": [24]
+      }
+    ],
+    "face_color_index": 0,
+    "family": "seabird1",
+    "first_frame": -1,
+    "foot_size": 8,
+    "foot_type": 1,
+    "growth": 1.04,
+    "ha": 59,
+    "hd": 61,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "seabird1",
+    "isBaby": false,
+    "learnset": 59,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 61.5,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 1,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 1,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "ma": 65,
+    "md": 40,
+    "name": "Gullit",
+    "number": 39,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 8
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 8
+        }
+      ],
+      "description": "2+ times, attack with the Beastie who last received the ball"
+    },
+    "recruit_value": 5,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 15459547,
+            "x": 0
+          },
+          {
+            "color": 16777215,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 2728959,
+            "x": 0
+          },
+          {
+            "color": 2723327,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 11181981,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 10541567,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 10329343,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "spr": 38,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 1,
+    "tyield": ["hd", 1]
+  },
   "seal": {
     "ability": ["strongchance"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -8934,16 +12629,68 @@
       {
         "array": [
           {
-            "color": 255,
+            "color": 3950847,
             "x": 0
+          },
+          {
+            "color": 3826921,
+            "x": 0.4933333333
+          },
+          {
+            "color": 4610495,
+            "x": 1
           }
         ]
       },
       {
         "array": [
           {
-            "color": 65280,
+            "color": 1293823,
             "x": 0
+          },
+          {
+            "color": 827135,
+            "x": 0.5033333333
+          },
+          {
+            "color": 2660863,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 8139775,
+            "x": 0
+          },
+          {
+            "color": 5254655,
+            "x": 0.1033333333
+          },
+          {
+            "color": 3604695,
+            "x": 0.29
+          },
+          {
+            "color": 2687206,
+            "x": 0.5166666667
+          },
+          {
+            "color": 16754811,
+            "x": 0.61
+          },
+          {
+            "color": 16760702,
+            "x": 0.72
+          },
+          {
+            "color": 15509504,
+            "x": 0.85
+          },
+          {
+            "color": 13500160,
+            "x": 0.9833333333
           }
         ]
       }
@@ -8979,7 +12726,7 @@
     ],
     "evolution": null,
     "face_color_index": 0,
-    "family": "seal",
+    "family": "seal1",
     "first_frame": -1,
     "foot_size": 88,
     "foot_type": 0,
@@ -8990,41 +12737,52 @@
     "hidden_counter": null,
     "id": "seal",
     "isBaby": false,
-    "learnset": 51,
+    "learnset": 65,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 104.25,
+      "char_width": 137.5,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 25,
+      "hop_height": 0,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
-      "move_accel": 0.4444444444,
-      "move_decel": 0.6666666667,
+      "move_accel": 0.15,
+      "move_decel": 100,
       "move_pause_frames": [],
-      "move_speed": 1,
-      "move_speed_start": 0,
+      "move_speed": 1.5,
+      "move_speed_start": -40,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0.1,
-      "stretchiness": 0.1
+      "squishiness": 0,
+      "stretchiness": 0
     },
     "ma": 63,
     "md": 86,
     "name": "Broslidon",
-    "number": 33,
+    "number": 45,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -9034,6 +12792,14 @@
           "type": 12
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "func": null,
@@ -9068,7 +12834,19 @@
       {
         "array": [
           {
-            "color": 6731519,
+            "color": 12170467,
+            "x": 0
+          },
+          {
+            "color": 12238307,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 13289727,
             "x": 0
           }
         ]
@@ -9076,22 +12854,306 @@
       {
         "array": [
           {
-            "color": 65280,
-            "x": 0
+            "color": 16765620,
+            "x": 0.1133333333
+          },
+          {
+            "color": 14145535,
+            "x": 0.5
+          },
+          {
+            "color": 16777215,
+            "x": 0.89
           }
         ]
       }
     ],
-    "spr": 248,
+    "spr": 253,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
     "tyield": ["ba", 3]
   },
+  "seal1": {
+    "ability": ["strongchance"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "anim_progress": 40,
+    "animator": 10,
+    "attklist": [
+      "bounce",
+      "healhit",
+      "serve",
+      "dump",
+      "allycover",
+      "allyrush",
+      "batonpass",
+      "superpower",
+      "hyperbeam",
+      "set",
+      "dig",
+      "jazzpass",
+      "bodypass",
+      "recover",
+      "libero",
+      "bdefup",
+      "callout",
+      "meditate",
+      "curse",
+      "defheal",
+      "substitute",
+      "swordsdance",
+      "protect",
+      "spitball",
+      "nice",
+      "skillswap",
+      "starterbody"
+    ],
+    "attklist_randomize": -1,
+    "ba": 74,
+    "base_exp": 130.94375,
+    "bd": 78,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 2716898,
+            "x": 0
+          },
+          {
+            "color": 805307,
+            "x": 0.5066666667
+          },
+          {
+            "color": 1527184,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 55039,
+            "x": 0
+          },
+          {
+            "color": 2725631,
+            "x": 0.5166666667
+          },
+          {
+            "color": 6603263,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7501795,
+            "x": 0
+          },
+          {
+            "color": 1716394,
+            "x": 0.2666666667
+          },
+          {
+            "color": 4080492,
+            "x": 0.5266666667
+          },
+          {
+            "color": 9525094,
+            "x": 0.6166666667
+          },
+          {
+            "color": 16765756,
+            "x": 0.7366666667
+          },
+          {
+            "color": 13893522,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 1.3, 18, 3, 0],
+      [51, 0, 2, 0, 2, 2],
+      [51, 0, 2, 0, 2, 2],
+      [0, 2, 1, 3, 2, 1, 8, 2, 0.15]
+    ],
+    "desc": "Their incredibly dense hair keeps them well insulated even in cold ocean waters. Their actual body is quite small.",
+    "designer": [3, 8],
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": [
+      {
+        "condition": [0],
+        "specie": "seal",
+        "value": [29]
+      }
+    ],
+    "face_color_index": 1,
+    "family": "seal1",
+    "first_frame": -1,
+    "foot_size": 55,
+    "foot_type": 0,
+    "growth": 1.025,
+    "ha": 29,
+    "hd": 49,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "seal1",
+    "isBaby": true,
+    "learnset": 64,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 62.75,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 49,
+    "md": 68,
+    "name": "Leobro",
+    "number": 44,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 12
+        }
+      ],
+      "description": "Give this Beastie an Easy Receive"
+    },
+    "recruit_value": 3.6,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": 1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 8964863,
+            "x": 0
+          },
+          {
+            "color": 7582975,
+            "x": 0.4866666667
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7908067,
+            "x": 0
+          },
+          {
+            "color": 6926335,
+            "x": 0.4833333333
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16747153,
+            "x": 0
+          },
+          {
+            "color": 543623,
+            "x": 0.5
+          },
+          {
+            "color": 14545919,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "spr": 155,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["ba", 2]
+  },
   "serval": {
     "ability": ["spiker"],
     "ability_hidden": false,
     "allowedInPromo": true,
+    "anim_progress": 60,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -9120,6 +13182,7 @@
       "noisytag",
       "vigor",
       "contest",
+      "basecover",
       "protectcheer",
       "pushattack"
     ],
@@ -9237,7 +13300,7 @@
     "hidden_counter": null,
     "id": "serval",
     "isBaby": false,
-    "learnset": 40,
+    "learnset": 44,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -9259,6 +13322,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -9266,12 +13332,20 @@
     "ma": 45,
     "md": 30,
     "name": "Servace",
-    "number": 22,
+    "number": 24,
     "palettes": 1,
     "prev_ids": ["decoy", "hinata"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -9280,6 +13354,14 @@
           "type": 8
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -9288,6 +13370,14 @@
           "type": 8
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -9367,7 +13457,7 @@
         ]
       }
     ],
-    "spr": 98,
+    "spr": 99,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -9377,6 +13467,7 @@
     "ability": ["spiker"],
     "ability_hidden": false,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "bounce",
@@ -9405,6 +13496,7 @@
       "noisytag",
       "vigor",
       "contest",
+      "basecover",
       "protectcheer",
       "pushattack"
     ],
@@ -9524,7 +13616,7 @@
     "hidden_counter": null,
     "id": "serval1",
     "isBaby": false,
-    "learnset": 39,
+    "learnset": 43,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -9546,6 +13638,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -9553,12 +13648,20 @@
     "ma": 29,
     "md": 21,
     "name": "Servitt",
-    "number": 21,
+    "number": 23,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -9567,6 +13670,14 @@
           "type": 8
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -9642,7 +13753,236 @@
         ]
       }
     ],
-    "spr": 549,
+    "spr": 559,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["ba", 1]
+  },
+  "shark1": {
+    "ability": ["straightshot", "dauntless"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "anim_progress": 15,
+    "animator": 8,
+    "attklist": [
+      "body",
+      "rocksmash",
+      "rocket",
+      "hyperbeam",
+      "vigor",
+      "serve",
+      "pushattack",
+      "rest",
+      "curse",
+      "defheal",
+      "preblock",
+      "bdefup",
+      "protect",
+      "dig",
+      "swordsdance",
+      "whirlwind",
+      "batonpass",
+      "powswitch",
+      "lowattks",
+      "shakeoff",
+      "starterbody"
+    ],
+    "attklist_randomize": -1,
+    "ba": 70,
+    "base_exp": 123.42,
+    "bd": 40,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 10865407,
+            "x": 0
+          },
+          {
+            "color": 9684479,
+            "x": 0.5066666667
+          },
+          {
+            "color": 8505855,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 9345981,
+            "x": 0
+          },
+          {
+            "color": 9216719,
+            "x": 0.5033333333
+          },
+          {
+            "color": 8169167,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 1.3, 49, 0, 1],
+      [0, 1, 2, 3, 1, -2],
+      [0, 2, 2, 3, 2, -1],
+      [3, 2, 2]
+    ],
+    "desc": "Their ball-mimic pattern is speculated to serve a dual purpose of camoflauge from animal predators and a lure for Beastie opponents.",
+    "designer": [8, 3, 11],
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "shark1",
+    "first_frame": -1,
+    "foot_size": 29,
+    "foot_type": 0,
+    "growth": 1.02,
+    "ha": 30,
+    "hd": 65,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "shark1",
+    "isBaby": true,
+    "learnset": 58,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 78.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 35,
+    "md": 75,
+    "name": "Pubber",
+    "number": 38,
+    "palettes": 1,
+    "prev_ids": ["lilshark"],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "damage": ">=30",
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 0,
+          "rel_color": -1,
+          "target": 2,
+          "type": 14
+        }
+      ],
+      "description": "Take 30+ damage from an attack from this Beastie"
+    },
+    "recruit_value": 7.05,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 5942007,
+            "x": 0
+          },
+          {
+            "color": 5750007,
+            "x": 0.5166666667
+          },
+          {
+            "color": 3520759,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7824895,
+            "x": 0
+          },
+          {
+            "color": 5342719,
+            "x": 0.5133333333
+          },
+          {
+            "color": 7641855,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "spr": 320,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -9652,6 +13992,7 @@
     "ability": ["regenerator", "fieldclear"],
     "ability_hidden": true,
     "allowedInPromo": true,
+    "anim_progress": 100,
     "animator": 8,
     "attklist": [
       "careful",
@@ -9785,6 +14126,11 @@
     "evolution": [
       {
         "condition": [2],
+        "specie": "shroom_s",
+        "value": [0]
+      },
+      {
+        "condition": [2],
         "specie": "shroom_m",
         "value": [0]
       }
@@ -9801,7 +14147,7 @@
     "hidden_counter": null,
     "id": "shroom1",
     "isBaby": true,
-    "learnset": 19,
+    "learnset": 21,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -9823,6 +14169,9 @@
       "move_speed_start": -0.66,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [8, 9, 10, 11, 12, 13, 14, 15],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": 0,
       "squishiness": 0.2,
       "stretchiness": 0.2
@@ -9836,6 +14185,14 @@
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "effect_type": [42, 43, 44, 45],
           "event": null,
           "freq": -1,
@@ -9843,7 +14200,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "Create any type of field effect"
@@ -9951,6 +14308,7 @@
     "ability": ["trappow", "noredirect"],
     "ability_hidden": true,
     "allowedInPromo": 1,
+    "anim_progress": 95,
     "animator": 10,
     "attklist": [
       "careful",
@@ -10106,7 +14464,7 @@
     "hidden_counter": null,
     "id": "shroom_m",
     "isBaby": false,
-    "learnset": 20,
+    "learnset": 23,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -10128,6 +14486,9 @@
       "move_speed_start": -0.66,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -10135,12 +14496,20 @@
     "ma": 95,
     "md": 110,
     "name": "Illugus",
-    "number": 2,
+    "number": 3,
     "palettes": 1,
     "prev_ids": ["tree_m"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "effect_type": 42,
           "event": null,
           "freq": -1,
@@ -10148,7 +14517,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "Create a TRAP field effect"
@@ -10238,16 +14607,326 @@
         ]
       }
     ],
-    "spr": 557,
+    "spr": 567,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
     "tyield": ["ma", 1, "md", 1]
   },
+  "shroom_s": {
+    "ability": ["crowddef", "defiant_h"],
+    "ability_hidden": true,
+    "allowedInPromo": 1,
+    "anim_progress": 95,
+    "animator": 8,
+    "attklist": [
+      "careful",
+      "bomb",
+      "hazeball",
+      "dropshot",
+      "rocksmash",
+      "healhit",
+      "healhit2",
+      "dig",
+      "allycover",
+      "allyrush",
+      "refresh",
+      "protect",
+      "rest",
+      "fieldclear",
+      "preblock",
+      "substitute",
+      "mark",
+      "lifepass",
+      "callout",
+      "set",
+      "chill",
+      "sweatup",
+      "crowd",
+      "heart",
+      "minddown",
+      "cut",
+      "snore",
+      "taunt",
+      "batonpass",
+      "contest"
+    ],
+    "attklist_randomize": -1,
+    "ba": 60,
+    "base_exp": 157,
+    "bd": 40,
+    "body_color_index": 0,
+    "colormeta": [0, 1, 3],
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 16751135,
+            "x": 0
+          },
+          {
+            "color": 14155609,
+            "x": 0.4833333333
+          },
+          {
+            "color": 12910395,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 9132543,
+            "x": 0
+          },
+          {
+            "color": 5777407,
+            "x": 0.49
+          },
+          {
+            "color": 2184191,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 13107151,
+            "x": 0
+          },
+          {
+            "color": 13107172,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 2829120,
+            "x": 0.0783333333
+          },
+          {
+            "color": 47359,
+            "x": 0.2433333333
+          },
+          {
+            "color": 8816383,
+            "x": 0.4358333333
+          },
+          {
+            "color": 8147366,
+            "x": 0.6158333333
+          },
+          {
+            "color": 7558651,
+            "x": 0.8133333333
+          },
+          {
+            "color": 13343099,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [33, 0, 23, 50, 0, 1.4],
+      [52, 1, 1, 8, 1, 0.15],
+      [52, 1, 1, 8, 1, 0.5],
+      [52, 2, 1, 8, 2, 0.3]
+    ],
+    "desc": "This Beastie can lie in meditation for days, then suddenly fly into action. They are deeply attuned to the feelings of other Beasties.",
+    "designer": 1,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "shroom1",
+    "first_frame": -1,
+    "foot_size": 43,
+    "foot_type": 0,
+    "growth": 1,
+    "ha": 110,
+    "hd": 95,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "shroom_s",
+    "isBaby": false,
+    "learnset": 22,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 96.5,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 85,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 3,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": -0.66,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "ma": 75,
+    "md": 60,
+    "name": "Surgus",
+    "number": 2,
+    "palettes": 1,
+    "prev_ids": ["tree_s"],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "effect_type": 43,
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 45
+        }
+      ],
+      "description": "Create a RALLY field effect"
+    },
+    "recruit_value": 3.05,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 3661055,
+            "x": 0
+          },
+          {
+            "color": 7393535,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16773940,
+            "x": 0
+          },
+          {
+            "color": 15639601,
+            "x": 0.88
+          },
+          {
+            "color": 1851285,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 31710,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 2829120,
+            "x": 0.0783333333
+          },
+          {
+            "color": 3983871,
+            "x": 0.2433333333
+          },
+          {
+            "color": 7763680,
+            "x": 0.4358333333
+          },
+          {
+            "color": 6377894,
+            "x": 0.6158333333
+          },
+          {
+            "color": 6382059,
+            "x": 0.8133333333
+          },
+          {
+            "color": 13339273,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "spr": 76,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 3,
+    "tyield": ["ha", 1, "hd", 1]
+  },
   "shy": {
     "ability": ["shy"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 15,
     "animator": 8,
     "attklist": [
       "starterheart",
@@ -10313,7 +14992,7 @@
       [7, 0, 1, 27, 9, 3],
       [34, 8, 1, 26, 2, 1]
     ],
-    "desc": "Chloroplasts from the plants they eat are absorbed and stored in their tails. This provides them camoflauge as well as photosynthetic energy.",
+    "desc": "Chloroplasts from the plants they eat are absorbed and stored in their tails. This provides them camouflage as well as photosynthetic energy.",
     "designer": 1,
     "evo_pose": [
       {
@@ -10348,7 +15027,7 @@
     "hidden_counter": null,
     "id": "shy",
     "isBaby": false,
-    "learnset": 48,
+    "learnset": 54,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -10370,6 +15049,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -10377,19 +15059,27 @@
     "ma": 60,
     "md": 112,
     "name": "Wottle",
-    "number": 30,
+    "number": 34,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 67,
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "effect_type": 68,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "Boost [sprIcon,1]DEF [sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
@@ -10439,7 +15129,7 @@
         ]
       }
     ],
-    "spr": 202,
+    "spr": 205,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -10449,6 +15139,7 @@
     "ability": ["avenger", "defender"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 60,
     "animator": 10,
     "attklist": [
       "starterheart",
@@ -10617,15 +15308,15 @@
     "hidden_counter": null,
     "id": "spirit1",
     "isBaby": false,
-    "learnset": 61,
+    "learnset": 78,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 40.5,
+      "char_width": 66.5,
       "emote_hop_height": 25,
       "float_dist": 30,
-      "float_wave": 4,
+      "float_wave": 6,
       "float_wave_freq": 600,
       "hop_height": 0,
       "hop_length": 1.5,
@@ -10639,6 +15330,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 1800,
+      "offset_rand_range": 20,
+      "offset_seconds": 0.75,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -10646,12 +15340,20 @@
     "ma": 15,
     "md": 55,
     "name": "Humflit",
-    "number": 43,
+    "number": 58,
     "palettes": 2,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "attack_type": 0,
           "event": null,
           "freq": -1,
@@ -10662,6 +15364,14 @@
           "type": 14
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "attack_type": 1,
           "event": null,
           "freq": -1,
@@ -10743,7 +15453,7 @@
         ]
       }
     ],
-    "spr": 375,
+    "spr": 384,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
@@ -10753,6 +15463,7 @@
     "ability": ["freemove"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "starterbody",
@@ -10785,7 +15496,8 @@
       "distraction",
       "protect",
       "jazzpass",
-      "bench"
+      "bench",
+      "basecover"
     ],
     "attklist_randomize": -1,
     "ba": 94,
@@ -10917,7 +15629,7 @@
     "hidden_counter": null,
     "id": "swift",
     "isBaby": false,
-    "learnset": 60,
+    "learnset": 77,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -10939,6 +15651,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -10946,12 +15661,20 @@
     "ma": 45,
     "md": 57,
     "name": "Blitzwift",
-    "number": 42,
+    "number": 57,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "effect_type": [7, -7],
           "event": null,
           "freq": -1,
@@ -10959,9 +15682,17 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 42
+          "type": 45
         },
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "effect_type": [7, -7],
           "event": null,
           "freq": -1,
@@ -10969,7 +15700,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "SHIFT a Beastie 2+ times"
@@ -11047,7 +15778,7 @@
         ]
       }
     ],
-    "spr": 138,
+    "spr": 140,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -11057,6 +15788,7 @@
     "ability": ["static"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 60,
     "animator": 10,
     "attklist": [
       "sidespin",
@@ -11211,7 +15943,7 @@
     "hidden_counter": null,
     "id": "tricky1",
     "isBaby": true,
-    "learnset": 49,
+    "learnset": 55,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -11233,6 +15965,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -11240,18 +15975,26 @@
     "ma": 73,
     "md": 57,
     "name": "Troglum",
-    "number": 31,
+    "number": 35,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": [0, 1],
-          "type": 39
+          "type": 42
         }
       ],
       "description": "WIPE OUT a Beastie with a SIDEWAYS attack"
@@ -11337,16 +16080,637 @@
         ]
       }
     ],
-    "spr": 340,
+    "spr": 348,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["ma", 1]
   },
+  "turtle1": {
+    "ability": ["rhythmpow", "flee"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "anim_progress": 100,
+    "animator": 10,
+    "attklist": [
+      "preblock",
+      "recover",
+      "mind",
+      "heartdown",
+      "hazeball",
+      "nightshade",
+      "poisonhit",
+      "moon",
+      "stomp",
+      "healhit",
+      "cover",
+      "refresh",
+      "heartpass",
+      "allyprotect",
+      "rhythm",
+      "callout",
+      "defheal",
+      "taunt",
+      "vigor",
+      "protect",
+      "stress",
+      "set",
+      "introduction",
+      "nice",
+      "skillswap",
+      "steal",
+      "haze",
+      "dump"
+    ],
+    "attklist_randomize": -1,
+    "ba": 45,
+    "base_exp": 96.758,
+    "bd": 63,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 15193688,
+            "x": 0
+          },
+          {
+            "color": 10804315,
+            "x": 0.5033333333
+          },
+          {
+            "color": 5760359,
+            "x": 0.9966666667
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 3487163,
+            "x": 0
+          },
+          {
+            "color": 3687373,
+            "x": 0.5
+          },
+          {
+            "color": 16847,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6223103,
+            "x": 0.0033333333
+          },
+          {
+            "color": 1754879,
+            "x": 0.5
+          },
+          {
+            "color": 765430,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7102644,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [16, 2, 1],
+      [8, 1, 0.3],
+      [44, 2, 6, 16, 2, 1],
+      [19, 2, 1, 12, 2, 2]
+    ],
+    "desc": "A group of Turogue is called a \"crew.\" When they're together they will turn anything into a competition.",
+    "designer": 2,
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": [
+      {
+        "condition": [0],
+        "specie": "turtle2",
+        "value": [18]
+      }
+    ],
+    "face_color_index": 0,
+    "family": "turtle1",
+    "first_frame": -1,
+    "foot_size": 45,
+    "foot_type": 0,
+    "growth": 1.01,
+    "ha": 25,
+    "hd": 40,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "turtle1",
+    "isBaby": false,
+    "learnset": 56,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 64.75,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0,
+      "stretchiness": 0
+    },
+    "ma": 55,
+    "md": 83,
+    "name": "Turogue",
+    "number": 36,
+    "palettes": 1,
+    "prev_ids": ["tank1"],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 50
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 50
+        }
+      ],
+      "description": "2+ times, use a play this Beastie knows"
+    },
+    "recruit_value": 6.1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 1144319,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 13682276,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 6766082,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7102644,
+            "x": 0.5
+          }
+        ]
+      }
+    ],
+    "spr": 45,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 1,
+    "tyield": ["md", 1]
+  },
+  "turtle2": {
+    "ability": ["rhythmpow", "flee"],
+    "ability_hidden": false,
+    "allowedInPromo": 1,
+    "anim_progress": 40,
+    "animator": 8,
+    "attklist": [
+      "preblock",
+      "recover",
+      "mind",
+      "heartdown",
+      "hazeball",
+      "nightshade",
+      "poisonhit",
+      "moon",
+      "stomp",
+      "healhit",
+      "cover",
+      "refresh",
+      "heartpass",
+      "allyprotect",
+      "rhythm",
+      "callout",
+      "defheal",
+      "taunt",
+      "vigor",
+      "protect",
+      "stress",
+      "set",
+      "introduction",
+      "nice",
+      "skillswap",
+      "steal",
+      "haze",
+      "dump"
+    ],
+    "attklist_randomize": -1,
+    "ba": 55,
+    "base_exp": 139.9355,
+    "bd": 80,
+    "body_color_index": 0,
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 11194931,
+            "x": 0
+          },
+          {
+            "color": 6804531,
+            "x": 0.4833333333
+          },
+          {
+            "color": 3856964,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7761648,
+            "x": 0
+          },
+          {
+            "color": 7568383,
+            "x": 0.5
+          },
+          {
+            "color": 9880063,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 3662591,
+            "x": 0
+          },
+          {
+            "color": 3322879,
+            "x": 0.5
+          },
+          {
+            "color": 4100835,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 3680941,
+            "x": 0
+          },
+          {
+            "color": 3947719,
+            "x": 0.5
+          },
+          {
+            "color": 3164103,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 4418632,
+            "x": 0
+          },
+          {
+            "color": 4678451,
+            "x": 0.2166666667
+          },
+          {
+            "color": 5599531,
+            "x": 0.5
+          },
+          {
+            "color": 4476691,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [16, 2, 1],
+      [8, 1, 0.3],
+      [44, 2, 6, 16, 2, 1],
+      [19, 2, 1, 12, 2, 2]
+    ],
+    "desc": "They aren't great swimmers, but their bouyant shell keeps them afloat when they're in the water.",
+    "designer": [2, 9],
+    "evo_pose": [
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "anim": "good",
+        "scale": 2,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "turtle1",
+    "first_frame": -1,
+    "foot_size": 64,
+    "foot_type": 0,
+    "growth": 1.01,
+    "ha": 28,
+    "hd": 45,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "turtle2",
+    "isBaby": false,
+    "learnset": 57,
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 74.75,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 70,
+    "md": 94,
+    "name": "Turtaneer",
+    "number": 37,
+    "palettes": 1,
+    "prev_ids": ["tank2"],
+    "recruit": {
+      "conditions": [
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 50
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 50
+        },
+        {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 50
+        }
+      ],
+      "description": "3+ times, use a play this Beastie knows"
+    },
+    "recruit_value": 9.1,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 26356,
+            "x": 0
+          },
+          {
+            "color": 1381870,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 16767232,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 3645416,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 7817478,
+            "x": 0.52
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 8110231,
+            "x": 0.0033333333
+          },
+          {
+            "color": 6142880,
+            "x": 0.5
+          },
+          {
+            "color": 7386043,
+            "x": 0.7766666667
+          },
+          {
+            "color": 5399110,
+            "x": 1
+          }
+        ]
+      }
+    ],
+    "spr": 455,
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["md", 2]
+  },
   "wizard": {
     "ability": ["negation"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 60,
     "animator": 8,
     "attklist": [
       "cut",
@@ -11494,7 +16858,7 @@
       }
     ],
     "evolution": null,
-    "face_color_index": 0,
+    "face_color_index": 2,
     "family": "wizard",
     "first_frame": -1,
     "foot_size": 22,
@@ -11506,7 +16870,7 @@
     "hidden_counter": null,
     "id": "wizard",
     "isBaby": false,
-    "learnset": 53,
+    "learnset": 69,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -11516,7 +16880,7 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 25,
+      "hop_height": 5,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
@@ -11528,19 +16892,30 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0.1,
-      "stretchiness": 0.1
+      "squishiness": 0.05,
+      "stretchiness": 0.05
     },
     "ma": 36,
     "md": 85,
     "name": "Conjarr",
-    "number": 35,
+    "number": 49,
     "palettes": 1,
     "prev_ids": ["netsupport"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "effect_type": 9,
           "event": null,
           "freq": -1,
@@ -11548,7 +16923,7 @@
           "my_data": null,
           "player": 0,
           "rel_color": -1,
-          "type": 37
+          "type": 40
         }
       ],
       "description": "Make this Beastie feel [sprStatus,9]BLOCKED"
@@ -11624,13 +16999,17 @@
       {
         "array": [
           {
-            "color": 12438503,
+            "color": 11189719,
             "x": 0.5
+          },
+          {
+            "color": 3888247,
+            "x": 0.5566666667
           }
         ]
       }
     ],
-    "spr": 497,
+    "spr": 507,
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
@@ -11640,6 +17019,7 @@
     "ability": ["intimidate"],
     "ability_hidden": false,
     "allowedInPromo": 1,
+    "anim_progress": 40,
     "animator": 10,
     "attklist": [
       "allycover",
@@ -11809,7 +17189,7 @@
     "hidden_counter": null,
     "id": "yeti",
     "isBaby": false,
-    "learnset": 62,
+    "learnset": 79,
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -11831,6 +17211,9 @@
       "move_speed_start": -0.5,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
       "stretchiness": 0
@@ -11838,12 +17221,20 @@
     "ma": 20,
     "md": 64,
     "name": "Yamyth",
-    "number": 44,
+    "number": 59,
     "palettes": 1,
     "prev_ids": ["snorlax"],
     "recruit": {
       "conditions": [
         {
+          "__Elephant_Schema__": {
+            "__Elephant_Verbose_Exclude__": [
+              "event",
+              "my_data",
+              "rel_color",
+              "func"
+            ]
+          },
           "effect_pow": "<0",
           "effect_type": [0, 1, 2, 3, 4, 5, 15, 16],
           "event": null,
@@ -11853,7 +17244,7 @@
           "player": 2,
           "rel_color": -1,
           "target": 0,
-          "type": 42
+          "type": 45
         }
       ],
       "description": "Give this Beastie any [sprBoost,3]BOOST"

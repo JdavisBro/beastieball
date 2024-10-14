@@ -1,202 +1,202 @@
 {
   "heal_max": {
     "id": "heal_max",
-    "desc": "Revives a [sprStatus,5]WIPED Beastie and restores 100% STAMINA outside of games",
-    "value": 25.0,
-    "points": 1.0,
-    "img": 5.0,
     "type": 0,
+    "desc": "Revives a [sprStatus,5]WIPED Beastie and restores 100% STAMINA outside of games",
+    "eff": [1, 1.0, 2.0, 0, 1.0, 1.0],
     "name": "Smoothie",
-    "eff": [1, 1.0, 2.0, 0, 1.0, 1.0]
+    "img": 5.0,
+    "value": 25.0,
+    "points": 1.0
   },
   "sell1": {
     "id": "sell1",
-    "desc": "A shiny thing that can be sold.",
-    "value": 80.0,
-    "points": 1.0,
-    "img": 30.0,
     "type": 0,
+    "desc": "A shiny thing that can be sold.",
+    "eff": [11, 0.0, 0.0],
     "name": "Shiny Object",
-    "eff": [11, 0.0, 0.0]
+    "img": 30.0,
+    "value": 80.0,
+    "points": 1.0
   },
   "heal_a": {
     "id": "heal_a",
-    "desc": "Restores a Beastie's STAMINA by 25% outside of games",
-    "value": 6.0,
-    "points": 1.0,
-    "img": 0.0,
     "type": 0,
+    "desc": "Restores a Beastie's STAMINA by 25% outside of games",
+    "eff": [0, 1.0, 0.25],
     "name": "Snack",
-    "eff": [0, 1.0, 0.25]
+    "img": 0.0,
+    "value": 6.0,
+    "points": 1.0
   },
   "train_level": {
     "id": "train_level",
-    "desc": "Bring to a GYM to raise a Beastie's Level by 1",
-    "value": 120.0,
-    "points": 12.0,
-    "img": 39.0,
     "type": 1,
+    "desc": "Bring to a GYM to raise a Beastie's Level by 1",
+    "eff": [3, 9.0, 1.0],
     "name": "Exercise Video",
-    "eff": [3, 9.0, 1.0]
+    "img": 39.0,
+    "value": 120.0,
+    "points": 12.0
   },
   "train_md": {
     "id": "train_md",
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,2]DEF +4pt",
-    "value": 10.0,
-    "points": 1.0,
-    "img": 19.0,
     "type": 1,
+    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,2]DEF +4pt",
+    "eff": [3, 5.0, 4.0],
     "name": "Meditation token",
-    "eff": [3, 5.0, 4.0]
+    "img": 19.0,
+    "value": 10.0,
+    "points": 1.0
   },
   "jersey": {
     "id": "jersey",
-    "desc": "Recruit a Beastie that's level 10 or under. Woven from special mycelium.",
-    "value": 20.0,
-    "points": 1.0,
-    "img": 6.0,
     "type": 2,
+    "desc": "Recruit a Beastie that's level 10 or under. Woven from special mycelium.",
+    "eff": [4, 0.0, 0.0],
     "name": "Jersey",
-    "eff": [4, 0.0, 0.0]
+    "img": 6.0,
+    "value": 20.0,
+    "points": 1.0
   },
   "lure_a": {
     "id": "lure_a",
-    "desc": "Temporarily lures out rarer, stronger Beasties.",
-    "value": 20.0,
-    "points": 1.0,
-    "img": 25.0,
     "type": 0,
+    "desc": "Temporarily lures out rarer, stronger Beasties.",
+    "eff": [2, 1.0, 60.0],
     "name": "Attract Spray",
-    "eff": [2, 1.0, 60.0]
+    "img": 25.0,
+    "value": 20.0,
+    "points": 1.0
   },
   "status_b": {
     "id": "status_b",
-    "desc": "Revives a [sprStatus,5]WIPED Beastie and restores 50% STAMINA outside of games",
-    "value": 14.0,
-    "points": 1.0,
-    "img": 4.0,
     "type": 0,
+    "desc": "Revives a [sprStatus,5]WIPED Beastie and restores 50% STAMINA outside of games",
+    "eff": [1, 1.0, 2.0, 0, 1.0, 0.5],
     "name": "Electrolytes",
-    "eff": [1, 1.0, 2.0, 0, 1.0, 0.5]
+    "img": 4.0,
+    "value": 14.0,
+    "points": 1.0
   },
   "train_ba": {
     "id": "train_ba",
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,0]POW +4pt",
-    "value": 10.0,
-    "points": 1.0,
-    "img": 14.0,
     "type": 1,
+    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,0]POW +4pt",
+    "eff": [3, 0.0, 4.0],
     "name": "Strength token",
-    "eff": [3, 0.0, 4.0]
+    "img": 14.0,
+    "value": 10.0,
+    "points": 1.0
   },
   "train_tame_2": {
     "id": "train_tame_2",
-    "desc": "Exchange at a GYM to raise a Beastie's COACHED % for improved stats",
-    "value": 120.0,
-    "points": 1.0,
-    "img": 34.0,
     "type": 1,
-    "name": "Conditioning token",
-    "eff": [3, 6.0, 0.4]
+    "desc": "Exchange at a GYM to raise a Beastie's COACHED % for improved stats",
+    "eff": [3, 6.0, 0.4],
+    "name": "Conditioning ticket",
+    "img": 35.0,
+    "value": 120.0,
+    "points": 1.0
   },
   "train_hd": {
     "id": "train_hd",
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,1]DEF +4pt",
-    "value": 10.0,
-    "points": 1.0,
-    "img": 18.0,
     "type": 1,
+    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,1]DEF +4pt",
+    "eff": [3, 4.0, 4.0],
     "name": "Dance token",
-    "eff": [3, 4.0, 4.0]
+    "img": 18.0,
+    "value": 10.0,
+    "points": 1.0
   },
   "heal_b": {
     "id": "heal_b",
-    "desc": "Restores a Beastie's STAMINA by 50% outside of games",
-    "value": 10.0,
-    "points": 1.0,
-    "img": 1.0,
     "type": 0,
+    "desc": "Restores a Beastie's STAMINA by 50% outside of games",
+    "eff": [0, 1.0, 0.5],
     "name": "Protein Bar",
-    "eff": [0, 1.0, 0.5]
+    "img": 1.0,
+    "value": 10.0,
+    "points": 1.0
   },
   "trainspray_b": {
     "id": "trainspray_b",
-    "desc": "A refreshing spray that makes Beasties earn 2x EXP and Training values for a bit.",
-    "value": 35.0,
-    "points": 6.0,
-    "img": 12.0,
     "type": 0,
+    "desc": "A refreshing spray that makes Beasties earn 2x EXP and Training values for a bit.",
+    "eff": [9, 2.0, 300.0],
     "name": "Super Athletic Spray",
-    "eff": [9, 2.0, 300.0]
+    "img": 12.0,
+    "value": 35.0,
+    "points": 6.0
   },
   "sell2": {
     "id": "sell2",
-    "desc": "A shiny thing that can be sold at a high price.",
-    "value": 240.0,
-    "points": 1.0,
-    "img": 31.0,
     "type": 0,
+    "desc": "A shiny thing that can be sold at a high price.",
+    "eff": [11, 0.0, 0.0],
     "name": "Sparkling Object",
-    "eff": [11, 0.0, 0.0]
+    "img": 31.0,
+    "value": 240.0,
+    "points": 1.0
   },
   "train_ma": {
     "id": "train_ma",
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,2]POW +4pt",
-    "value": 10.0,
-    "points": 1.0,
-    "img": 16.0,
     "type": 1,
+    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,2]POW +4pt",
+    "eff": [3, 2.0, 4.0],
     "name": "Study token",
-    "eff": [3, 2.0, 4.0]
+    "img": 16.0,
+    "value": 10.0,
+    "points": 1.0
   },
   "status_a": {
     "id": "status_a",
-    "desc": "Cures a Beastie of feeling [sprStatus,6]SWEATY outside of games",
-    "value": 4.0,
-    "points": 1.0,
-    "img": 3.0,
     "type": 0,
+    "desc": "Cures a Beastie of feeling [sprStatus,6]SWEATY outside of games",
+    "eff": [1, 1.0, 1.0],
     "name": "Water",
-    "eff": [1, 1.0, 1.0]
+    "img": 3.0,
+    "value": 4.0,
+    "points": 1.0
   },
   "train_ha": {
     "id": "train_ha",
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,1]POW +4pt",
-    "value": 10.0,
-    "points": 1.0,
-    "img": 15.0,
     "type": 1,
+    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,1]POW +4pt",
+    "eff": [3, 1.0, 4.0],
     "name": "Cardio token",
-    "eff": [3, 1.0, 4.0]
+    "img": 15.0,
+    "value": 10.0,
+    "points": 1.0
   },
   "jersey2": {
     "id": "jersey2",
-    "desc": "Recruit a Beastie that's level 20 or under. Its denser weave magnifies its bonding power.",
-    "value": 50.0,
-    "points": 1.0,
-    "img": 20.0,
     "type": 2,
+    "desc": "Recruit a Beastie that's level 20 or under. Its denser weave magnifies its bonding power.",
+    "eff": [4, 0.0, 1.0],
     "name": "Club Jersey",
-    "eff": [4, 0.0, 1.0]
+    "img": 20.0,
+    "value": 50.0,
+    "points": 1.0
   },
   "train_trait": {
     "id": "train_trait",
-    "desc": "Exchange at a GYM to give your Beastie an extra-special, rejuvenating bath that changes their Trait",
-    "value": 300.0,
-    "points": 50.0,
-    "img": 38.0,
     "type": 1,
+    "desc": "Exchange at a GYM to give your Beastie an extra-special, rejuvenating bath that changes their Trait",
+    "eff": [3, 7.0, 1.0],
     "name": "Spa salts",
-    "eff": [3, 7.0, 1.0]
+    "img": 38.0,
+    "value": 300.0,
+    "points": 50.0
   },
   "lure_b": {
     "id": "lure_b",
-    "desc": "Lures out rarer, stronger Beasties. Longer lasting than Attract Spray.",
-    "value": 35.0,
-    "points": 1.0,
-    "img": 26.0,
     "type": 0,
+    "desc": "Lures out rarer, stronger Beasties. Longer lasting than Attract Spray.",
+    "eff": [2, 1.0, 120.0],
     "name": "Super Attract Spray",
-    "eff": [2, 1.0, 120.0]
+    "img": 26.0,
+    "value": 35.0,
+    "points": 1.0
   }
 }

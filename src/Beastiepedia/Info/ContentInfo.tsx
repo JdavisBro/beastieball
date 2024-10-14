@@ -59,6 +59,12 @@ const EVOLUTION_CONDITIONS: { [key: number]: string } = {
 };
 
 function getEvoConditionString(evo: EvolutionType) {
+  switch (evo.condition[0]) {
+    case 0:
+      return `at level ${evo.value[0]}`;
+    case 2:
+      return `at ${evo.specie == "shroom_m" ? "Miconia Grove" : "somewhere"}`;
+  }
   return EVOLUTION_CONDITIONS[evo.condition[0]]
     ? EVOLUTION_CONDITIONS[evo.condition[0]].replace(
         /{(\d+)}/g,

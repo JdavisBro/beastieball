@@ -19,6 +19,8 @@ for level in (gamedir / "world_data").glob("**/*.json"):
     continue
   with level.open() as f:
     level_data = json.load(f)
+  if level_data["name"] not in level_stumps:
+    continue
   stump = level_stumps[level_data["name"]]
   for obj in level_data["objects_array"]:
     if obj["object"] == "objGift":

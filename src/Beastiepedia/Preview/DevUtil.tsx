@@ -146,7 +146,7 @@ export default function DevUtil(props: {
           allDone();
         }
       });
-      img.src = `/gameassets/beasties/${sprite.name}/${frame % sprite.frames}.png`;
+      img.src = `/gameassets/beasties/${sprite.name}/${frame % sprite.frames}.webp`;
       loadingRef.current[beastie.name] = {
         img: img,
         crop: sprite.bboxes[frame % sprite.frames],

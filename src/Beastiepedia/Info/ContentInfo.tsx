@@ -52,25 +52,14 @@ function findBeastiePreevolution(
   }
 }
 
-const EVOLUTION_CONDITIONS: { [key: number]: string } = {
-  // "Evolves from/to BEASTIE (below strings with {N} replaced with value index)"
-  0: "at level {0}",
-  2: "at Miconia Grove", // this could be a general one for sprecko's evolutions?? possibly with the value being which area
-};
-
 function getEvoConditionString(evo: EvolutionType) {
   switch (evo.condition[0]) {
     case 0:
       return `at level ${evo.value[0]}`;
     case 2:
-      return `at ${evo.specie == "shroom_m" ? "Miconia Grove" : "somewhere"}`;
+      return `at ${evo.specie == "shroom_m" ? "Miconia Grove" : evo.specie == "shroom_s" ? "Cerise Atoll" : "somewhere"}`;
   }
-  return EVOLUTION_CONDITIONS[evo.condition[0]]
-    ? EVOLUTION_CONDITIONS[evo.condition[0]].replace(
-        /{(\d+)}/g,
-        (match, index) => String(evo.value[Number(index)]) ?? match,
-      )
-    : "idk when though";
+  return "idk when though";
 }
 
 function ExpForLevel({ growth }: { growth: number }) {

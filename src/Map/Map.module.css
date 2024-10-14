@@ -63,10 +63,19 @@
   flex-direction: column;
 }
 
+.mapBg {
+  z-index: -2 !important;
+}
+
 :global(.leaflet-image-layer:hover) {
   z-index: 20 !important;
   outline: white dashed 6px;
   box-sizing: content-box;
+}
+
+.bigLevel,
+.bigLevel:hover {
+  z-index: -1 !important;
 }
 
 @keyframes popupOpen {

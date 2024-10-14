@@ -54,6 +54,7 @@ export default function Map(): React.ReactNode {
 
     level_overlays.push(
       <ImageOverlay
+        className={level.name == "ocean" ? styles.bigLevel : undefined}
         interactive={true}
         bounds={level_bounds}
         url={`/gameassets/maps/sprMap_${level.name}_0.png`}
@@ -155,6 +156,7 @@ export default function Map(): React.ReactNode {
 
   const mapoverlay = (
     <ImageOverlay
+      className={styles.mapBg}
       key="background"
       url={"/gameassets/maps/sprMap_BG_0.png"}
       bounds={map_bg_bounds}

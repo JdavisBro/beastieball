@@ -6,6 +6,7 @@ const vec3 color_tolorance = vec3(0.0833,0.99,0.99);
 // our texture
 uniform sampler2D u_image;
 uniform vec3 colorOut[max_colors];
+uniform int unfinished;
 
 // the texCoords passed in from the vertex shader.
 varying vec2 v_texCoord;
@@ -36,6 +37,16 @@ vec3 hsv_to_rgb(vec3 c) {
 }
 
 void main() {
+    vec4 initialColor = texture2D(u_image, v_texCoord);
+    if (unfinished == 1) {
+        if (initialColor.a == 0.0) {
+            gl_FragColor = vec4(0, 0, 0, 0);
+        } else { 
+            gl_FragColor = initialColor;
+        }
+        return;
+    }
+    vec3 color = initialColor.rgb;
     vec3 colorIn[max_colors];
     colorIn[0] = vec3(0.0, 1.0, 1.0);
     colorIn[1] = vec3(0.33, 1.0, 1.0);
@@ -43,8 +54,6 @@ void main() {
     colorIn[3] = vec3(0.166, 1.0, 1.0);
     colorIn[4] = vec3(0.5, 1.0, 1.0);
     colorIn[5] = vec3(0.833, 1.0, 1.0);
-    vec4 initialColor = texture2D(u_image, v_texCoord);
-    vec3 color = initialColor.rgb;
     vec3 colorHSV = rgb_to_hsv(color);
     for (int i=0; i < max_colors; i+=1) {
         vec3 colorDelta = colorHSV - colorIn[i];

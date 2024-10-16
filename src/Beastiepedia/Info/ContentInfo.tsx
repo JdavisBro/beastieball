@@ -35,7 +35,8 @@ function findBeastiePreevolution(
     return null;
   }
   const evolution = beastie.evolution.find(
-    (value) => value.specie == targetBeastieId,
+    // Ignores Petula's second condition?
+    (value) => value.specie == targetBeastieId && value.condition[0] != 10,
   );
   if (evolution) {
     return { beastie, evolution };
@@ -52,12 +53,14 @@ function findBeastiePreevolution(
   }
 }
 
-function getEvoConditionString(evo: EvolutionType) {
+function getEvoConditionString(evo: EvolutionType, beastie: BeastieType) {
   switch (evo.condition[0]) {
     case 0:
       return `at level ${evo.value[0]}`;
     case 2:
       return `at ${evo.specie == "shroom_m" ? "Miconia Grove" : evo.specie == "shroom_s" ? "Cerise Atoll" : "somewhere"}`;
+    case 8:
+      return `after beating ${evo.value[0]} ${beastie.name}.`;
   }
   return "idk when though";
 }
@@ -136,7 +139,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
                 <Link to={`/beastiepedia/${preEvo.beastie.name}`}>
                   {preEvo.beastie.name}
                 </Link>{" "}
-                {getEvoConditionString(preEvo.evolution)}
+                {getEvoConditionString(preEvo.evolution, preEvo.beastie)}
               </div>
             ) : (
               <div>Does not Metamorph from any Beastie</div>
@@ -147,13 +150,16 @@ export default function ContentInfo(props: Props): React.ReactNode {
                   return null;
                 }
                 const evolution = evolutions[index];
+                if (evolution.condition[0] == 10) {
+                  return null;
+                }
                 return (
                   <div key={beastie.id + index}>
                     Metamorphs into{" "}
                     <Link to={`/beastiepedia/${beastie.name}`}>
                       {beastie.name}
                     </Link>{" "}
-                    {getEvoConditionString(evolution)}
+                    {getEvoConditionString(evolution, beastiedata)}
                   </div>
                 );
               })

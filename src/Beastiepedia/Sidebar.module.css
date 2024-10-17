@@ -94,6 +94,15 @@
   clip-path: polygon(0 0, 0 100%, 100% 100%, 90% 0);
 }
 
+.gridnumberright {
+  composes: gridnumber;
+  composes: boxHeaderBackground from global;
+  left: auto !important;
+  right: 0 !important;
+  clip-path: polygon(0 0, 10% 100%, 100% 100%, 100% 0) !important;
+  font-size: 0.9em;
+}
+
 .beastiecontainergrid > .beastie > .beastiecontent > .name {
   display: none;
 }

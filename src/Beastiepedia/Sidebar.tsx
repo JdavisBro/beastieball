@@ -6,24 +6,6 @@ import { useLocalStorage } from "usehooks-ts";
 
 const BEASTIES = [...BEASTIE_DATA.values()];
 
-function statCmp(stat: keyof BeastieType) {
-  return (beastie1: BeastieType, beastie2: BeastieType) =>
-    (beastie1[stat] as number) - (beastie2[stat] as number);
-}
-
-const SORT_FUNCTIONS: ((
-  beastie1: BeastieType,
-  beastie2: BeastieType,
-) => number)[] = [
-  statCmp("number"),
-  statCmp("ba"),
-  statCmp("bd"),
-  statCmp("ha"),
-  statCmp("hd"),
-  statCmp("ma"),
-  statCmp("md"),
-];
-
 type Props = {
   beastieid: string | null | undefined;
   visibility: boolean;
@@ -32,29 +14,18 @@ type Props = {
 
 export default function Sidebar(props: Props): React.ReactElement {
   const beastieid = props.beastieid;
-  const beasties: React.ReactElement[] = [];
 
   const [search, setSearch] = useState("");
 
-  const [sort, setSort] = useState(0);
+  const [sort, setSort] = useState("number");
   const [sortDec, setSortDec] = useState(false);
   const sortFunc = (beastie1: BeastieType, beastie2: BeastieType) =>
-    SORT_FUNCTIONS[sort](beastie1, beastie2) * (sortDec ? -1 : 1);
+    ((beastie1[sort as keyof BeastieType] as number) -
+      (beastie2[sort as keyof BeastieType] as number)) *
+    (sortDec ? -1 : 1);
 
   const [grid, setGrid] = useLocalStorage("beastiepediaGrid", false);
 
-  BEASTIE_DATA.forEach((value, key) => {
-    beasties.push(
-      <SidebarBeastie
-        key={key}
-        beastieid={key}
-        beastiedata={value}
-        selected={beastieid == key}
-        visible={value.name.toLowerCase().includes(search.toLowerCase())}
-        onToggleSidebarVisibility={() => props.onToggleSidebarVisibility()}
-      />,
-    );
-  });
   return (
     <div className={props.visibility ? styles.sidebar : styles.sidebaroff}>
       <div className={styles.sidebarsearchcon}>
@@ -64,14 +35,14 @@ export default function Sidebar(props: Props): React.ReactElement {
           className={styles.sidebarsearch}
           onChange={(event) => setSearch(event.target.value)}
         />
-        <select onChange={(event) => setSort(Number(event.target.value))}>
-          <option value="0">Number</option>
-          <option value="1">Body POW</option>
-          <option value="2">Body DEF</option>
-          <option value="3">Spirit POW</option>
-          <option value="4">Spirit DEF</option>
-          <option value="5">Mind POW</option>
-          <option value="6">Mind DEF</option>
+        <select onChange={(event) => setSort(event.target.value)}>
+          <option value="number">Number</option>
+          <option value="ba">Body POW</option>
+          <option value="bd">Body DEF</option>
+          <option value="ha">Spirit POW</option>
+          <option value="hd">Spirit DEF</option>
+          <option value="ma">Mind POW</option>
+          <option value="md">Mind DEF</option>
         </select>
         <button onClick={() => setSortDec(!sortDec)}>
           {sortDec ? "↓" : "↑"}
@@ -97,6 +68,11 @@ export default function Sidebar(props: Props): React.ReactElement {
             key={beastie.id}
             beastieid={beastie.id}
             beastiedata={beastie}
+            statDisplay={
+              sort != "number"
+                ? (beastie[sort as keyof BeastieType] as string)
+                : ""
+            }
             selected={beastieid == beastie.id}
             visible={beastie.name.toLowerCase().includes(search.toLowerCase())}
             onToggleSidebarVisibility={() => props.onToggleSidebarVisibility()}

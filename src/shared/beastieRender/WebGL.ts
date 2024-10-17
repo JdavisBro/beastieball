@@ -42,10 +42,13 @@ export function setColorUniforms(
   gl: WebGLRenderingContext,
   program: WebGLProgram,
   colors: number[][],
+  colorCount?: number,
 ) {
-  for (let i = 0; i < (6 < colors.length ? 6 : colors.length); i++) {
+  const count = Math.min(6, colorCount ?? colors.length);
+  for (let i = 0; i < count; i++) {
     gl.uniform3fv(gl.getUniformLocation(program, `colorOut[${i}]`), colors[i]);
   }
+  gl.uniform1i(gl.getUniformLocation(program, "colorCount"), count);
   draw(gl);
 }
 

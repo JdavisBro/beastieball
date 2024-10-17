@@ -326,16 +326,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
   }, [loadedImages]);
 
   useEffect(() => {
-    if (glRef.current && programRef.current) {
-      glRef.current.uniform1i(
-        glRef.current.getUniformLocation(programRef.current, "unfinished"),
-        Number(props.beastiedata.colors[0].array[0].color == 255),
-      );
-      console.log(Number(props.beastiedata.colors[0].array[0].color == 255));
-    }
-  }, [props.beastiedata.colors]);
-
-  useEffect(() => {
     if (
       canvasRef.current &&
       ((glRef.current &&
@@ -363,9 +353,14 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   useEffect(() => {
     if (glRef.current && programRef.current) {
-      setColorUniforms(glRef.current, programRef.current, colors);
+      setColorUniforms(
+        glRef.current,
+        programRef.current,
+        colors,
+        props.beastiedata.colors.length,
+      );
     }
-  }, [colors]);
+  }, [colors, props.beastiedata.colors.length]);
 
   const colorChange = useCallback(
     (change_index: number, color: number[]) => {

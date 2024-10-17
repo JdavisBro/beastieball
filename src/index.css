@@ -31,10 +31,10 @@ body {
 
 button {
   background-color: #2b2a33;
+  border: 1px solid gray;
   border-radius: 4px;
   margin: 0 1px;
-  border: 0;
-  padding: 3px 4px;
+  padding: 2px 4px;
 }
 
 button:hover {

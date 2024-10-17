@@ -143,6 +143,7 @@ export type BeastieType = {
     >;
     description: string;
   };
+  recruit_value: number;
   roamer_style: {
     _name: string;
     can_react: boolean;

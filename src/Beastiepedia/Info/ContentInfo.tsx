@@ -201,6 +201,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
         <div className={styles.wrapinfoboxes}>
           <InfoBox header="Recruit Condition">
             <TextTag>{beastiedata.recruit.description}</TextTag>
+            <br />${beastiedata.recruit_value} from gym sponsorship.
           </InfoBox>
           <InfoBox header="Ally Training">{training}</InfoBox>
           <ExpForLevel growth={beastiedata.growth} />

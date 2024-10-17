@@ -2,9 +2,19 @@ import { Link } from "react-router-dom";
 import { FeaturedTeamType } from "./FeaturedTeams";
 import styles from "./Teams.module.css";
 
-export default function FeaturedTeam({ team }: { team: FeaturedTeamType }) {
+export default function FeaturedTeam({
+  team,
+  clearTeam,
+}: {
+  team: FeaturedTeamType;
+  clearTeam: () => void;
+}) {
   return (
-    <Link to={`/teams/${team.code}`} className={styles.featuredTeam}>
+    <Link
+      to={`/teams/${team.code}`}
+      onClick={clearTeam}
+      className={styles.featuredTeam}
+    >
       <div>{team.name}</div>
       <div className={styles.graytext}>{team.description}</div>
       <div className={styles.row}>

@@ -68,7 +68,7 @@ export default function Teams() {
       });
   }, [code, team?.code]);
 
-  const selectedFeatured = featuredTeams.find((team) => team.code == team.code);
+  const selectedFeatured = featuredTeams.find((team) => code == team.code);
 
   return (
     <div>
@@ -84,7 +84,12 @@ export default function Teams() {
           Team Code: <input type="text" ref={textInput} defaultValue={code} />
         </label>
         <button
-          onClick={() => textInput.current && setCode(textInput.current.value)}
+          onClick={() => {
+            if (textInput.current && code != textInput.current.value) {
+              setCode(textInput.current.value);
+              setTeam(null);
+            }
+          }}
         >
           Find
         </button>
@@ -133,7 +138,15 @@ export default function Teams() {
       <div className={styles.sectionheader}>Featured Teams</div>
       <div className={styles.team}>
         {featuredTeams.map((team) => (
-          <FeaturedTeam key={team.name} team={team} />
+          <FeaturedTeam
+            key={team.name}
+            team={team}
+            clearTeam={() => {
+              if (code != team.code) {
+                setTeam(null);
+              }
+            }}
+          />
         ))}
       </div>
     </div>

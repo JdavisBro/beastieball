@@ -29,6 +29,18 @@ body {
   margin: 0;
 }
 
+button {
+  background-color: #2b2a33;
+  border-radius: 4px;
+  margin: 0 1px;
+  border: 0;
+  padding: 3px 4px;
+}
+
+button:hover {
+  background-color: #52525e;
+}
+
 .container {
   background-image: repeating-linear-gradient(
     rgb(7, 7, 7),

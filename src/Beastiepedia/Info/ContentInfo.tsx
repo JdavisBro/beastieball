@@ -23,6 +23,12 @@ type EvolutionType = {
   value: number[];
 };
 
+const NUMBER_FORMAT = Intl.NumberFormat(undefined, {
+  style: "currency",
+  currency: "USD",
+  currencyDisplay: "narrowSymbol",
+});
+
 function findBeastiePreevolution(
   beastieId: string,
   targetBeastieId: string,
@@ -201,7 +207,9 @@ export default function ContentInfo(props: Props): React.ReactNode {
         <div className={styles.wrapinfoboxes}>
           <InfoBox header="Recruit Condition">
             <TextTag>{beastiedata.recruit.description}</TextTag>
-            <br />${beastiedata.recruit_value} from gym sponsorship.
+            <br />
+            {NUMBER_FORMAT.format(beastiedata.recruit_value)} from gym
+            sponsorship.
           </InfoBox>
           <InfoBox header="Ally Training">{training}</InfoBox>
           <ExpForLevel growth={beastiedata.growth} />

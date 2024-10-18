@@ -52,6 +52,13 @@
   vertical-align: middle;
 }
 
+.gymLogo {
+  height: 1.3em;
+  vertical-align: middle;
+  background-color: black;
+  padding: 0 2px;
+}
+
 .middlealign {
   display: flex;
   align-items: center;

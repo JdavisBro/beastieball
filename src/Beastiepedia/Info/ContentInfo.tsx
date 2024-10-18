@@ -210,8 +210,14 @@ export default function ContentInfo(props: Props): React.ReactNode {
           <InfoBox header="Recruit Condition">
             <TextTag>{beastiedata.recruit.description}</TextTag>
             <br />
-            {NUMBER_FORMAT.format(beastiedata.recruit_value)} from gym
-            sponsorship.
+            <span className={styles.training}>
+              <img
+                src="/gameassets/sprSponsors/1.png"
+                alt="Staying Power Fitness Sponsor"
+                className={styles.gymLogo}
+              />
+              <span>{NUMBER_FORMAT.format(beastiedata.recruit_value)}</span>
+            </span>
           </InfoBox>
           <InfoBox header="Ally Training">{training}</InfoBox>
           <ExpForLevel growth={beastiedata.growth} />

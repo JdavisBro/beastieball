@@ -24,8 +24,7 @@ ${url}/beastiepedia/
 ${beasties.join("\n")}
 ${url}/playdex/
 ${url}/map/
-${url}/modding/
-${url}/modding/save/`;
+${url}/teams/`;
           fs.writeFile("dist/sitemap.txt", sitemap, () => {});
           fs.writeFile(
             "dist/robots.txt",

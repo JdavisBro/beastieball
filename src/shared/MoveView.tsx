@@ -95,16 +95,18 @@ function getEffectString(
     case -7:
     case 7:
       return `SHIFTs ${target} to ${["back row", "front row", "opposite lane", "3", "4", "5", "6", "opposite row"][effect.pow]}${attack && effect.eff > 0 ? " after hitting" : ""}.`;
-    case 8:
+    case 8: {
+      const hp = Math.floor(Math.round(effect.pow * 10000000) / 100000); // rounds to 5dp then floors because funny float imprecision
       if (effect.pow < 0) {
         if (effect.targ == 0) {
-          return `${Math.floor(effect.pow * 100)} STAMINA.`;
+          return `${hp} STAMINA.`;
         } else {
-          return `${Math.floor(effect.pow * 100)} STAMINA to ${target}.`;
+          return `${hp} STAMINA to ${target}.`;
         }
       } else {
-        return `HEALs ${target} ${effect.pow > 0 ? "+" : ""}${Math.floor(effect.pow * 100)}.`;
+        return `HEALs ${target} ${effect.pow > 0 ? "+" : ""}${hp}.`;
       }
+    }
     case 10:
       return `+${effect.pow} ACTIONs.`;
     case 11:

@@ -52,7 +52,7 @@ void main() {
     colorIn[5] = vec3(0.833, 1.0, 1.0);
     vec3 colorHSV = rgb_to_hsv(color);
     for (int i=0; i < max_colors; i+=1) {
-        if (i >= colorCount) {continue;}
+        if (i >= colorCount) {break;}
         vec3 colorDelta = colorHSV - colorIn[i];
         if (abs(colorDelta.r) > 0.5) colorDelta.r -= sign(colorDelta.r);
         if (

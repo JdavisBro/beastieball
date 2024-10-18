@@ -323,7 +323,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
     frameIndexRef.current = null;
     frameNumRef.current = null;
     frameTimeRef.current = 0;
-  }, [loadedImages]);
+  }, [loadedImages, animation]);
 
   useEffect(() => {
     if (

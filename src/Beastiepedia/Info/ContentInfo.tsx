@@ -190,7 +190,9 @@ export default function ContentInfo(props: Props): React.ReactNode {
                         : ""}
                     </td>
                     <td>
-                      <TextTag>{abilities[value].desc}</TextTag>
+                      <TextTag>
+                        {abilities[value].desc.replace(/\|/g, "")}
+                      </TextTag>
                     </td>
                   </tr>
                 ) : (

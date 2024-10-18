@@ -80,7 +80,7 @@ export default function BeastieSelect({
         onClose={() => setOpen(false)}
         hashValue="BeastieSelect"
       >
-        <label>
+        <label tabIndex={0}>
           Search:{" "}
           <input
             type="text"

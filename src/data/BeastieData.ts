@@ -90,7 +90,7 @@ export type BeastieType = {
   isBaby: boolean;
   learnset: number;
   learnset_randomize: number;
-  linked_colors: object;
+  linked_colors: Record<string, number>;
   loco: {
     anim_min_speed: number;
     char_width: number;

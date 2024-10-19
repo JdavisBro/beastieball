@@ -234,6 +234,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
           storedColors={storedColors}
           setStoredColors={setStoredColors}
           colorChange={colorChange}
+          linkedColors={beastiedata.linked_colors}
         />
         {beastiedata.colors2 != null ? (
           <BeastieColorTabContent
@@ -247,6 +248,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
             storedColors={storedColors}
             setStoredColors={setStoredColors}
             colorChange={colorChange}
+            linkedColors={beastiedata.linked_colors}
           />
         ) : null}
         <BeastieColorTabContent
@@ -260,6 +262,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
           storedColors={storedColors}
           setStoredColors={setStoredColors}
           colorChange={colorChange}
+          linkedColors={beastiedata.linked_colors}
         />
         <div
           className={styles.tab}
@@ -363,6 +366,7 @@ function BeastieColorTabContent(props: {
   storedColors: StoredType;
   setStoredColors: React.Dispatch<React.SetStateAction<StoredType>>;
   colorChange: (change_index: number, color: number[]) => void;
+  linkedColors: Record<string, number>;
 }) {
   const current = props.tab == props.currentTab;
 
@@ -426,9 +430,21 @@ function BeastieColorTabContent(props: {
     colorChange,
   ]);
 
+  const linkedColors: Record<number, number> = {};
+  colorMax.forEach((index) => {
+    if (props.linkedColors[`_${index}`] != undefined) {
+      linkedColors[props.linkedColors[`_${index}`]] = index;
+      linkedColors[index] = props.linkedColors[`_${index}`];
+    }
+  });
+
   const setColors = (colors: number[]) => {
-    colorValues.current = colors;
-    colors.forEach((col, index) => {
+    colorValues.current = colors.map((col, index) =>
+      linkedColors[index] == undefined || linkedColors[index] > index
+        ? col
+        : colors[linkedColors[index]],
+    );
+    colorValues.current.forEach((col, index) => {
       colorChange(
         index,
         getColorInBeastieColors(
@@ -456,6 +472,41 @@ function BeastieColorTabContent(props: {
     }
   };
 
+  const changeColor = (
+    index: number,
+    newColor: number,
+    linkedColor: boolean = false,
+  ) => {
+    props.colorChange(
+      index,
+      getColorInBeastieColors(
+        newColor,
+        index < props.colors.length
+          ? props.colors[index].array
+          : props.fallbackColors[index].array,
+      ),
+    );
+    colorValues.current[index] = newColor;
+    if (props.diffBeastie == "none") {
+      props.setStoredColors((oldStored) => {
+        if (
+          !oldStored[props.beastieid] ||
+          Array.isArray(oldStored[props.beastieid])
+        ) {
+          oldStored[props.beastieid] = defaultColor(
+            props.colorMax,
+            props.colors,
+          );
+        }
+        oldStored[props.beastieid][props.tab] = colorValues.current;
+        return oldStored;
+      });
+    }
+    if (!linkedColor && linkedColors[index] != undefined) {
+      changeColor(linkedColors[index], newColor, true);
+    }
+  };
+
   return (
     <div className={styles.tab} style={{ display: current ? "block" : "none" }}>
       {props.colorMax.map((value) =>
@@ -468,33 +519,7 @@ function BeastieColorTabContent(props: {
                 : props.fallbackColors[value].array
             }
             value={colorValues.current[value]}
-            handleColorChange={(newColor) => {
-              props.colorChange(
-                value,
-                getColorInBeastieColors(
-                  newColor,
-                  value < props.colors.length
-                    ? props.colors[value].array
-                    : props.fallbackColors[value].array,
-                ),
-              );
-              colorValues.current[value] = newColor;
-              if (props.diffBeastie == "none") {
-                props.setStoredColors((oldStored) => {
-                  if (
-                    !oldStored[props.beastieid] ||
-                    Array.isArray(oldStored[props.beastieid])
-                  ) {
-                    oldStored[props.beastieid] = defaultColor(
-                      props.colorMax,
-                      props.colors,
-                    );
-                  }
-                  oldStored[props.beastieid][props.tab] = colorValues.current;
-                  return oldStored;
-                });
-              }
-            }}
+            handleColorChange={(newColor) => changeColor(value, newColor)}
           />
         ) : null,
       )}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./Shared.module.css";
 import MoveModalContext from "./MoveModalContext";
 import BEASTIE_DATA from "../data/BeastieData";
-import { LEARN_SETS } from "../data/Learnsets";
+import LEARN_SETS from "../data/Learnsets";
 import { Move } from "../data/MoveData";
 import Modal from "./Modal";
 import MoveView from "./MoveView";

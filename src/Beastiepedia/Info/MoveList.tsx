@@ -3,7 +3,7 @@ import { useState } from "react";
 import MoveView from "../../shared/MoveView";
 import styles from "./MoveList.module.css";
 import MOVE_DIC, { Move } from "../../data/MoveData";
-import { LEARN_SETS } from "../../data/Learnsets";
+import LEARN_SETS from "../../data/Learnsets";
 import MoveModalProvider from "../../shared/MoveModalProvider";
 import InfoBox from "../../shared/InfoBox";
 
@@ -86,7 +86,7 @@ export default function MoveList(props: Props): React.ReactElement {
       }
       learnmoves.push(
         <MoveText
-          level={level}
+          level={level || 1}
           move={MOVE_DIC[move]}
           selected={selected == move}
           onSelect={() => setSelected(move)}

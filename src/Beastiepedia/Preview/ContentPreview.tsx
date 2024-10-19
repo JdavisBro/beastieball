@@ -50,15 +50,10 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   useEffect(() => setAlt(-1), [props.beastiedata.id]);
 
-  const beastiesprite = SPRITE_INFO.find(
-    (spr) => spr && spr.name == props.beastiedata.spr,
-  ) as Sprite;
-  const drawnsprite =
-    (alt >= 0 &&
-      (SPRITE_INFO.find(
-        (spr) => spr && spr.name == props.beastiedata.spr_alt[alt],
-      ) as Sprite)) ||
-    beastiesprite;
+  const beastiesprite = SPRITE_INFO[props.beastiedata.spr] as Sprite;
+  const drawnname =
+    alt == -1 ? props.beastiedata.spr : props.beastiedata.spr_alt[alt];
+  const drawnsprite = SPRITE_INFO[drawnname];
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const glRef = useRef<WebGLRenderingContext | null>(null);
@@ -67,7 +62,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   const [animation, setAnimation] = useState("idle");
   const animdata: BeastieAnimData | undefined = BEASTIE_ANIMATIONS.get(
-    `_${beastiesprite.name}`,
+    `_${props.beastiedata.spr}`,
   )?.anim_data as BeastieAnimData;
 
   let anim: BeastieAnimation | undefined = undefined;
@@ -81,7 +76,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   }
 
   const loadedImages = useLoadBeastieImages(
-    `/gameassets/beasties/${drawnsprite.name}`,
+    `/gameassets/beasties/${drawnname}`,
     beastiesprite.frames,
   );
   const requestRef = useRef(0);

@@ -59,19 +59,16 @@ export default function BeastieRenderProvider(
         if (!beastie_data) {
           return null;
         }
-        const sprite = SPRITE_INFO.find(
-          (spr) => spr && spr.name == beastie_data.spr,
-        );
+        const sprite = SPRITE_INFO[beastie_data.spr];
         const sprAlt = beastie.sprAlt;
-        const drawn_sprite = !sprAlt
-          ? sprite
-          : SPRITE_INFO.find(
-              (spr) => spr && spr.name == beastie_data.spr_alt[sprAlt - 1],
-            );
+        const drawn_name = !sprAlt
+          ? beastie_data.spr
+          : beastie_data.spr_alt[sprAlt - 1];
+        const drawn_sprite = SPRITE_INFO[drawn_name];
         if (!sprite || !drawn_sprite) {
           return null;
         }
-        const animations = BEASTIE_ANIMATIONS.get(`_${sprite.name}`);
+        const animations = BEASTIE_ANIMATIONS.get(`_${beastie_data.spr}`);
         let frames = (animations?.anim_data as BeastieAnimData).menu.frames;
         if (frames && Array.isArray(frames)) {
           frames = frames[0];
@@ -81,7 +78,7 @@ export default function BeastieRenderProvider(
 
         const img = await new Promise<HTMLImageElement>((resolve, reject) => {
           const image = document.createElement("img");
-          image.src = `/gameassets/beasties/${drawn_sprite.name}/${beastie_frame ?? 0}.webp`;
+          image.src = `/gameassets/beasties/${drawn_name}/${beastie_frame ?? 0}.webp`;
           image.onerror = () => reject();
           image.onload = () => resolve(image);
         }).catch((error) => console.log(error));

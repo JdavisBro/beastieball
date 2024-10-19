@@ -5,28 +5,26 @@ EnsureDataLoaded();
 
 string exportDir = PromptChooseDirectory();
 
-string output = "[\n";
+string output = "{\n";
 bool first = true;
 bool last_null = false;
 
 foreach (UndertaleSprite sprite in Data.Sprites) {
   if (!first) {
-    if (last_null) {
-      output += ",\n";
-    } else {
+    if (!last_null) {
       output += "  },\n";
     }
   } else {
     first = false;
   }
   if (sprite.Textures.Count == 0 || sprite.Textures[0].Texture == null) {
-    output += "  null";
+    output += "";
     last_null = true;
     continue;
   }
   last_null = false;
-  output += "  {\n";
-  output += "    \"name\": " + sprite.Name.ToString() + ",\n";
+  output += "  " + sprite.Name.ToString() + ": {\n";
+  // output += "    \"name\": " + sprite.Name.ToString() + ",\n";
   output += "    \"width\": " + sprite.Width.ToString() + ",\n";
   output += "    \"height\": " + sprite.Height.ToString() + ",\n";
   output += "    \"frames\": " + sprite.Textures.Count.ToString() + ",\n";
@@ -83,8 +81,8 @@ foreach (UndertaleSprite sprite in Data.Sprites) {
   output += "    }\n";
 }
 if (last_null) {
-  output += "\n]\n";
+  output += "\n}\n";
 } else {
-  output += "  }\n]\n";
+  output += "  }\n}\n";
 }
 File.WriteAllText(exportDir + "/sprite_info.json", output);

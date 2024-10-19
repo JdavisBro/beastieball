@@ -125,12 +125,12 @@ export default function DevUtil(props: {
     beastieCountRef.current = 0;
     loadingRef.current = {};
     BEASTIE_DATA.forEach((beastie) => {
-      const sprite = SPRITE_INFO.find((spr) => spr && spr.name == beastie.spr);
+      const sprite = SPRITE_INFO[beastie.spr];
       if (!sprite) {
         return;
       }
       const img = document.createElement("img");
-      const anims = BEASTIE_ANIMATIONS.get(`_${sprite.name}`);
+      const anims = BEASTIE_ANIMATIONS.get(`_${beastie.spr}`);
       const anim_data = anims?.anim_data as BeastieAnimData;
       if (anim_data === undefined) {
         return;
@@ -140,13 +140,13 @@ export default function DevUtil(props: {
       const frame = frames.endFrame != undefined ? frames.endFrame : 0;
       img.addEventListener("load", imgLoad);
       img.addEventListener("error", () => {
-        console.log(`${sprite.name} not found`);
+        console.log(`${beastie.spr} not found`);
         loadedNumRef.current += 1;
         if (loadedNumRef.current >= beastieCountRef.current) {
           allDone();
         }
       });
-      img.src = `/gameassets/beasties/${sprite.name}/${frame % sprite.frames}.webp`;
+      img.src = `/gameassets/beasties/${beastie.spr}/${frame % sprite.frames}.webp`;
       loadingRef.current[beastie.name] = {
         img: img,
         crop: sprite.bboxes[frame % sprite.frames],

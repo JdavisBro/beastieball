@@ -59,11 +59,15 @@ export default function BeastieRenderProvider(
         if (!beastie_data) {
           return null;
         }
-        const sprite = SPRITE_INFO[beastie_data.spr];
-        const drawn_sprite =
-          beastie.sprAlt == undefined || beastie.sprAlt == 0
-            ? sprite
-            : SPRITE_INFO[beastie_data.spr_alt[beastie.sprAlt - 1]];
+        const sprite = SPRITE_INFO.find(
+          (spr) => spr && spr.name == beastie_data.spr,
+        );
+        const sprAlt = beastie.sprAlt;
+        const drawn_sprite = !sprAlt
+          ? sprite
+          : SPRITE_INFO.find(
+              (spr) => spr && spr.name == beastie_data.spr_alt[sprAlt - 1],
+            );
         if (!sprite || !drawn_sprite) {
           return null;
         }
@@ -73,7 +77,7 @@ export default function BeastieRenderProvider(
           frames = frames[0];
         }
         const beastie_frame =
-          beastie.frame ?? frames ? frames?.startFrame ?? 0 : 0;
+          (beastie.frame ?? frames) ? (frames?.startFrame ?? 0) : 0;
 
         const img = await new Promise<HTMLImageElement>((resolve, reject) => {
           const image = document.createElement("img");

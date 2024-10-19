@@ -169,8 +169,8 @@ export type BeastieType = {
   //   x: number;
   //   y: number;
   // };
-  spr: number;
-  spr_alt: number[];
+  spr: string;
+  spr_alt: string[];
   tamecond: null;
   tamelvl: number;
   tyield: Array<string | number>;

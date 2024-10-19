@@ -50,9 +50,14 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   useEffect(() => setAlt(-1), [props.beastiedata.id]);
 
-  const beastiesprite = SPRITE_INFO[props.beastiedata.spr] as Sprite;
+  const beastiesprite = SPRITE_INFO.find(
+    (spr) => spr && spr.name == props.beastiedata.spr,
+  ) as Sprite;
   const drawnsprite =
-    (alt >= 0 && (SPRITE_INFO[props.beastiedata.spr_alt[alt]] as Sprite)) ||
+    (alt >= 0 &&
+      (SPRITE_INFO.find(
+        (spr) => spr && spr.name == props.beastiedata.spr_alt[alt],
+      ) as Sprite)) ||
     beastiesprite;
 
   const canvasRef = useRef<HTMLCanvasElement>(null);

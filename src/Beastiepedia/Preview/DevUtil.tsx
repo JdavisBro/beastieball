@@ -125,7 +125,7 @@ export default function DevUtil(props: {
     beastieCountRef.current = 0;
     loadingRef.current = {};
     BEASTIE_DATA.forEach((beastie) => {
-      const sprite = SPRITE_INFO[beastie.spr];
+      const sprite = SPRITE_INFO.find((spr) => spr && spr.name == beastie.spr);
       if (!sprite) {
         return;
       }

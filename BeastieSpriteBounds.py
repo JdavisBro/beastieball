@@ -22,7 +22,12 @@ for beastie in beasties.iterdir():
     if pilbbox:
       bbox = {"x": pilbbox[0], "y": pilbbox[1], "width": pilbbox[2] - pilbbox[0], "height": pilbbox[3] - pilbbox[1]}
       for spr in spriteinfo:
-        if spr and spr["name"] == beastie.name and spr["bboxes"][frame] != bbox:
+        if spr and spr["name"] == beastie.name:
+          if len(spr["bboxes"]) <= frame:
+            print(f"TOO MANY FRAMES!! {beastie.name}")
+            continue
+          if spr["bboxes"][frame] == bbox:
+            continue
           if beastie.name not in donesprites: donesprites.append(beastie.name)
           spr["bboxes"][frame] = bbox
 

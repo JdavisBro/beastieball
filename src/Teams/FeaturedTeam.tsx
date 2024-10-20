@@ -1,34 +1,50 @@
 import { Link } from "react-router-dom";
 import { FeaturedTeamType } from "./FeaturedTeams";
 import styles from "./Teams.module.css";
+import BEASTIE_DATA from "../data/BeastieData";
+
+const DESCRIPTION_MAX = 90;
 
 export default function FeaturedTeam({
   team,
-  clearTeam,
+  setTeam,
 }: {
   team: FeaturedTeamType;
-  clearTeam: () => void;
+  setTeam: () => void;
 }) {
+  const longDesc = team.description.length > DESCRIPTION_MAX;
+
   return (
     <Link
-      to={`/teams/${team.code}`}
-      onClick={clearTeam}
+      to={`/teams/${team.team.code}`}
+      onClick={setTeam}
       className={styles.featuredTeam}
     >
       <div>{team.name}</div>
-      <div className={styles.graytext}>{team.description}</div>
-      <div className={styles.row}>
-        {team.beasties.map((beastie, index) => (
-          <img
-            key={beastie + String(index)}
-            src={`/icons/${beastie}.png`}
-            alt={`${beastie} icon`}
-            className={styles.featuredIcon}
-          />
-        ))}
+      <div className={styles.featuredDesc}>
+        <div>
+          {team.description.slice(0, DESCRIPTION_MAX)}
+          {longDesc ? "..." : ""}
+        </div>
+        {longDesc ? (
+          <div className={styles.featuredHoverDesc}>{team.description}</div>
+        ) : null}
+      </div>
+      <div className={styles.featuredIcons}>
+        {team.team.team.map((beastie, index) => {
+          const beastieName = BEASTIE_DATA.get(beastie.specie)?.name;
+          return (
+            <img
+              key={beastieName + String(index)}
+              src={`/icons/${beastieName}.png`}
+              alt={`${beastieName} icon`}
+              className={styles.featuredIcon}
+            />
+          );
+        })}
       </div>
       <div>
-        By {team.author} - #{team.code}
+        By {team.author} - #{team.team.code}
       </div>
     </Link>
   );

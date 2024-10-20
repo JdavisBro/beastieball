@@ -8,13 +8,25 @@ import MoveModalProvider from "../shared/MoveModalProvider";
 import Header from "../shared/Header";
 import OpenGraph from "../shared/OpenGraph";
 import { useNavigate, useParams } from "react-router-dom";
-import featuredTeams from "./FeaturedTeams";
+import type { FeaturedTeamType } from "./FeaturedTeams";
 import FeaturedTeam from "./FeaturedTeam";
 
 declare global {
   interface Window {
     team: Team | null;
   }
+}
+
+function useFeaturedTeams() {
+  const [featuredTeams, setFeaturedTeams] = useState<FeaturedTeamType[]>([]);
+
+  useEffect(() => {
+    import("./FeaturedTeams.ts").then((module) =>
+      setFeaturedTeams(module.default),
+    );
+  });
+
+  return featuredTeams;
 }
 
 const VALID_CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -68,7 +80,10 @@ export default function Teams() {
       });
   }, [code, team?.code]);
 
-  const selectedFeatured = featuredTeams.find((team) => code == team.code);
+  // Lazy Load Featured Teams.
+  const featuredTeams = useFeaturedTeams();
+
+  const selectedFeatured = featuredTeams.find((team) => code == team.team.code);
 
   return (
     <div>
@@ -136,14 +151,14 @@ export default function Teams() {
         </label>
       </div>
       <div className={styles.sectionheader}>Featured Teams</div>
-      <div className={styles.team}>
+      <div className={styles.featuredList}>
         {featuredTeams.map((team) => (
           <FeaturedTeam
             key={team.name}
             team={team}
-            clearTeam={() => {
-              if (code != team.code) {
-                setTeam(null);
+            setTeam={() => {
+              if (code != team.team.code) {
+                setTeam(team.team);
               }
             }}
           />

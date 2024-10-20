@@ -148,14 +148,50 @@
   background-blend-mode: multiply, normal;
 }
 
+.featuredList {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
 .featuredTeam {
   composes: animBoxBackground from global;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 240px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 8px;
   text-decoration: none;
   color: black !important;
+}
+
+.featuredDesc {
+  composes: graytext;
+  position: relative;
+  align-self: stretch;
+}
+
+.featuredDesc:hover > .featuredHoverDesc {
+  display: block;
+}
+
+.featuredHoverDesc {
+  composes: animBoxBackground from global;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  display: none;
+  padding: 2px;
+  width: 100%;
+  box-shadow: 0 0 5px black;
+}
+
+.featuredIcons {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .featuredIcon {

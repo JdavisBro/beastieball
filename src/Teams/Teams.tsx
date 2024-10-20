@@ -152,18 +152,40 @@ export default function Teams() {
       </div>
       <div className={styles.sectionheader}>Featured Teams</div>
       <div className={styles.featuredList}>
-        {featuredTeams.map((team) => (
+        {featuredTeams.map((featuredteam) => (
           <FeaturedTeam
-            key={team.name}
-            team={team}
+            key={featuredteam.name}
+            team={featuredteam}
+            selected={team?.code == featuredteam.team.code}
             setTeam={() => {
-              if (code != team.team.code) {
-                setTeam(team.team);
+              if (code != featuredteam.team.code) {
+                setTeam(featuredteam.team);
               }
             }}
           />
         ))}
       </div>
+      <div className={styles.addTeamText}>
+        Want your team added?{" "}
+        <a
+          target={"_blank"}
+          rel="noreferrer"
+          href={
+            import.meta.env.VITE_ISSUES_URL +
+            `new?title=New Featured Team&body=${FEATURED_TEAM_ISSUE_TEXT}`
+          }
+        >
+          Make an issue on GitHub
+        </a>
+      </div>
     </div>
   );
 }
+
+const FEATURED_TEAM_ISSUE_TEXT = `Name: Insert Team Name Here
+Description: Insert Team Description Here
+Code: Insert Team Code Here (shared from in game)
+Author: Insert Author Name Here (how you'd like to be credited)`.replace(
+  /\n/g,
+  "%0A",
+);

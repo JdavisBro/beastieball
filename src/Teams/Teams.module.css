@@ -157,7 +157,7 @@
 }
 
 .featuredTeam {
-  composes: animBoxBackground from global;
+  composes: animSelectableBackground from global;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -170,14 +170,21 @@
   color: black !important;
 }
 
+.featuredTeamSelected {
+  composes: featuredTeam;
+  composes: animSelectedBackground from global;
+}
+
 .featuredDesc {
-  composes: graytext;
+  font-size: 0.9em;
+  color: rgb(25, 25, 25);
   position: relative;
   align-self: stretch;
 }
 
 .featuredDesc:hover > .featuredHoverDesc {
   display: block;
+  cursor: default;
 }
 
 .featuredHoverDesc {
@@ -198,4 +205,9 @@
 
 .featuredIcon {
   height: 40px;
+}
+
+.addTeamText {
+  font-size: 0.9em;
+  text-align: center;
 }

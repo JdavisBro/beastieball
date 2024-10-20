@@ -7,9 +7,11 @@ const DESCRIPTION_MAX = 90;
 
 export default function FeaturedTeam({
   team,
+  selected,
   setTeam,
 }: {
   team: FeaturedTeamType;
+  selected: boolean;
   setTeam: () => void;
 }) {
   const longDesc = team.description.length > DESCRIPTION_MAX;
@@ -18,10 +20,18 @@ export default function FeaturedTeam({
     <Link
       to={`/teams/${team.team.code}`}
       onClick={setTeam}
-      className={styles.featuredTeam}
+      className={selected ? styles.featuredTeamSelected : styles.featuredTeam}
     >
       <div>{team.name}</div>
-      <div className={styles.featuredDesc}>
+      <div
+        className={styles.featuredDesc}
+        onClick={(event) => {
+          if (longDesc) {
+            event.stopPropagation();
+            event.preventDefault();
+          }
+        }}
+      >
         <div>
           {team.description.slice(0, DESCRIPTION_MAX)}
           {longDesc ? "..." : ""}

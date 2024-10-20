@@ -53,6 +53,7 @@
   composes: animSelectableBackground from global;
   clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
   border: none;
+  border-radius: 0;
   padding: 6px;
   margin: 0 0 10px 2.5%;
   color: black;

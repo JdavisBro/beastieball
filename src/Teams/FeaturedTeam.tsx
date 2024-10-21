@@ -23,21 +23,26 @@ export default function FeaturedTeam({
       className={selected ? styles.featuredTeamSelected : styles.featuredTeam}
     >
       <div>{team.name}</div>
-      <div
-        className={styles.featuredDesc}
-        onClick={(event) => {
-          if (longDesc) {
-            event.stopPropagation();
-            event.preventDefault();
-          }
-        }}
-      >
+      <div className={styles.featuredDesc}>
         <div>
           {team.description.slice(0, DESCRIPTION_MAX)}
           {longDesc ? "..." : ""}
         </div>
         {longDesc ? (
-          <div className={styles.featuredHoverDesc}>{team.description}</div>
+          <div
+            className={styles.featuredHover}
+            onClick={(event) => {
+              if (longDesc) {
+                event.stopPropagation();
+                event.preventDefault();
+              }
+            }}
+          >
+            <div className={styles.featuredHoverCollapsed}>
+              V Hover / Tap to Expand V
+            </div>
+            <div className={styles.featuredHoverDesc}>{team.description}</div>
+          </div>
         ) : null}
       </div>
       <div className={styles.featuredIcons}>

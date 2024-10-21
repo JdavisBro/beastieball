@@ -182,20 +182,28 @@
   align-self: stretch;
 }
 
-.featuredDesc:hover > .featuredHoverDesc {
+.featuredHoverCollapsed {
   display: block;
-  cursor: default;
+  padding: 2px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: lightgray;
+  font-size: 0.9em;
 }
 
 .featuredHoverDesc {
   composes: animBoxBackground from global;
   position: absolute;
+  box-shadow: 0 0 5px black;
+  display: none;
   top: -2px;
   left: -2px;
-  display: none;
   padding: 2px;
   width: 100%;
-  box-shadow: 0 0 5px black;
+}
+
+.featuredHover:hover .featuredHoverDesc {
+  display: block;
+  cursor: default;
 }
 
 .featuredIcons {

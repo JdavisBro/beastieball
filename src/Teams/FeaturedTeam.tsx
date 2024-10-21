@@ -25,7 +25,7 @@ export default function FeaturedTeam({
       <div>{team.name}</div>
       <div className={styles.featuredDesc}>
         <div>
-          {team.description.slice(0, DESCRIPTION_MAX)}
+          {team.description.slice(0, DESCRIPTION_MAX).trimEnd()}
           {longDesc ? "..." : ""}
         </div>
         {longDesc ? (

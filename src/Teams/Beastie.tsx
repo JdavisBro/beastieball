@@ -75,7 +75,9 @@ export default function Beastie({
               Lvl {level}
             </span>
           </span>
-          <span className={styles.graytext}>({beastiedata.name})</span>
+          {beastiedata.name != teamBeastie.name ? (
+            <span className={styles.graytext}>({beastiedata.name})</span>
+          ) : null}
           <Link
             to={`/beastiepedia/${beastiedata.name}?${searchParam}=${beastieColors.join(",")}`}
             target="_blank"

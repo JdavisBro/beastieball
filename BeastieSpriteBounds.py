@@ -22,34 +22,38 @@ for beastie in beasties.iterdir():
     if pilbbox:
       bbox = {"x": pilbbox[0], "y": pilbbox[1], "width": pilbbox[2] - pilbbox[0], "height": pilbbox[3] - pilbbox[1]}
       for spr in spriteinfo:
-        if spr and spr["name"] == beastie.name:
-          if len(spr["bboxes"]) <= frame:
-            print(f"TOO MANY FRAMES!! {beastie.name}")
-            continue
-          if spr["bboxes"][frame] == bbox:
-            continue
-          if beastie.name not in donesprites: donesprites.append(beastie.name)
-          spr["bboxes"][frame] = bbox
+        spr = spriteinfo[beastie.name]
+        if not spr:
+          continue
+        if len(spr["bboxes"]) <= frame:
+          print(f"TOO MANY FRAMES!! {beastie.name}")
+          continue
+        if spr["bboxes"][frame] == bbox:
+          continue
+        if beastie.name not in donesprites:
+          donesprites.append(beastie.name)
+        spr["bboxes"][frame] = bbox
 
 print("Updating main bboxes.")
 for beastie in donesprites:
-  for spr in spriteinfo:
-    if spr and spr["name"] == beastie:
-      bbox = spr["bbox"]
-      bbox = {
-        "x": bbox["x"], "y": bbox["y"],
-        "x2": bbox["x"] + bbox["width"], "y2": bbox["y"] + bbox["height"]
-      }
-      for framebbox in spr["bboxes"]:
-        if framebbox["x"] < bbox["x"]: bbox["x"] = framebbox["x"]
-        if framebbox["y"] < bbox["y"]: bbox["y"] = framebbox["y"]
-        if framebbox["x"] + framebbox["width"] > bbox["x2"]: bbox["x2"] = framebbox["x"] + framebbox["width"]
-        if framebbox["y"] + framebbox["height"] > bbox["y2"]: bbox["y2"] = framebbox["y"] + framebbox["height"]
-      spr["bbox"] = {
-        "x": bbox["x"], "y": bbox["y"],
-        "width": bbox["x2"] - bbox["x"],
-        "height": bbox["y2"] - bbox["y"]
-      }
+  spr = spriteinfo[beastie]
+  if not spr:
+    continue
+  bbox = spr["bbox"]
+  bbox = {
+    "x": bbox["x"], "y": bbox["y"],
+    "x2": bbox["x"] + bbox["width"], "y2": bbox["y"] + bbox["height"]
+  }
+  for framebbox in spr["bboxes"]:
+    if framebbox["x"] < bbox["x"]: bbox["x"] = framebbox["x"]
+    if framebbox["y"] < bbox["y"]: bbox["y"] = framebbox["y"]
+    if framebbox["x"] + framebbox["width"] > bbox["x2"]: bbox["x2"] = framebbox["x"] + framebbox["width"]
+    if framebbox["y"] + framebbox["height"] > bbox["y2"]: bbox["y2"] = framebbox["y"] + framebbox["height"]
+  spr["bbox"] = {
+    "x": bbox["x"], "y": bbox["y"],
+    "width": bbox["x2"] - bbox["x"],
+    "height": bbox["y2"] - bbox["y"]
+  }
 
 with spriteinfofp.open("w+") as f:
   json.dump(spriteinfo, f)

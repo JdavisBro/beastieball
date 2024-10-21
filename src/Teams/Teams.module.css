@@ -199,6 +199,7 @@
   left: -2px;
   padding: 2px;
   width: 100%;
+  z-index: 1;
 }
 
 .featuredHover:hover .featuredHoverDesc {

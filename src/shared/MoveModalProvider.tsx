@@ -20,7 +20,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
         (value) => value[0] == move.id,
       );
       if (learnLevel) {
-        levelBeasties.push([beastie.name, learnLevel[1]]);
+        levelBeasties.push([beastie.name, learnLevel[1] || 1]);
       } else if (beastie.attklist.includes(move.id)) {
         friendBeasties.push(beastie.name);
       }

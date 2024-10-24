@@ -95,7 +95,7 @@ export default function AnimationOptions(props: Props): React.ReactElement {
             style={{ width: "4em" }}
             onChange={(event) => props.setUserSpeed(Number(event.target.value))}
           />
-          <button onClick={() => props.setUserSpeed(0.5)}>Reset</button>
+          <button onClick={() => props.setUserSpeed(1)}>Reset</button>
         </div>
       </InfoBox>
     </>

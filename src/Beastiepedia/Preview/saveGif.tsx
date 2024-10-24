@@ -108,7 +108,7 @@ export default function saveGif(
       }
       setBbox(sprite.bboxes[i % sprite.frames]);
       const holds = group.holds;
-      let hold = 1;
+      let hold = 2;
       if (holds) {
         if (holds[String(i)] != undefined) {
           const temphold = holds[String(i)];

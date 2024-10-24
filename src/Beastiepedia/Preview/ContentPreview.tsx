@@ -86,7 +86,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const frameNumRef = useRef<number | null>(null);
   const frameTimeRef = useRef(0);
   const prevTimeRef = useRef<DOMHighResTimeStamp | null>(null);
-  const holdRef = useRef<number | null>(null);
+  const frameLengthRef = useRef<number | null>(null);
 
   const animPausedRef = useRef<boolean>(false);
 
@@ -124,7 +124,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
     [setFrame, beastiesprite],
   );
 
-  const [userSpeed, setUserSpeed] = useState(0.5); // default 0.5 seems to match in game more...
+  const [userSpeed, setUserSpeed] = useState(1);
 
   const getCrop = useCallback(
     (bbox: BBox) => {
@@ -194,9 +194,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
         setAnimation("idle");
         return;
       }
-      const beastie_anim_speed =
-        animdata?.__anim_speed != undefined ? animdata.__anim_speed : 1;
-      const anim_speed = anim.speed ? anim.speed : 1;
+      const beastie_anim_speed = animdata.__anim_speed ?? 1;
+      const anim_speed = anim.speed ?? 1;
       let frames;
       if (!Array.isArray(anim.frames)) {
         frameIndexRef.current = null;
@@ -251,25 +250,26 @@ export default function ContentPreview(props: Props): React.ReactNode {
         if (!animPausedRef.current) {
           frameTimeRef.current += delta;
         }
-        if (holdRef.current == null) {
-          holdRef.current = 1;
+        if (frameLengthRef.current == null) {
+          let hold = 2;
           if (frames.holds && frames.holds[frameNumRef.current]) {
             const holds = frames.holds[frameNumRef.current];
             if (Array.isArray(holds)) {
-              holdRef.current = holds[Math.floor(Math.random() * holds.length)];
+              hold = holds[Math.floor(Math.random() * holds.length)];
             } else if (typeof holds == "number") {
-              holdRef.current = holds;
+              hold = holds;
             }
           }
+          frameLengthRef.current =
+            ((1000 / (24 * beastie_anim_speed * anim_speed)) * hold) /
+            userSpeed;
         }
-        const frameLength =
-          ((1000 / (24 * beastie_anim_speed) / anim_speed) * holdRef.current) /
-          userSpeed;
-        if (frameTimeRef.current > frameLength) {
-          if (frameLength > 0) {
-            frameTimeRef.current = frameTimeRef.current % frameLength;
+        if (frameTimeRef.current > frameLengthRef.current) {
+          if (frameLengthRef.current > 0) {
+            frameTimeRef.current =
+              frameTimeRef.current % frameLengthRef.current;
           }
-          holdRef.current = null;
+          frameLengthRef.current = null;
           frameNumRef.current += 1;
           if (frameNumRef.current > endFrame) {
             if (frames.transitions && Array.isArray(anim.frames)) {

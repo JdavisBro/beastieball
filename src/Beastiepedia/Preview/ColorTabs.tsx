@@ -206,7 +206,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
             className={currentTab == "color2" ? styles.selectedtab : ""}
             onClick={() => setCurrentTab("color2")}
           >
-            Alt Colors
+            Variant
           </button>
         ) : null}
         <button

@@ -125,8 +125,9 @@ export default function saveGif(
       break;
     }
     if (groupindex == basegroup) {
-      groupindex = group.transitions[0];
-      group.transitions.splice(0, 1);
+      groupindex =
+        group.transitions[Math.floor(Math.random() * group.transitions.length)];
+      group.transitions.splice(group.transitions.indexOf(groupindex), 1);
     } else {
       // im trying to prioritise getting to the other states before going to state 0 to possibly end the animation
       // this stuff can probably not be fully done automatically and i might add an editor to the site that lets users sequence their own state order

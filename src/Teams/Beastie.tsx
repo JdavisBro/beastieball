@@ -80,7 +80,6 @@ export default function Beastie({
           ) : null}
           <Link
             to={`/beastiepedia/${beastiedata.name}?${searchParam}=${beastieColors.join(",")}`}
-            target="_blank"
             title={`Open ${beastiedata.name} with these colors in Beastiepedia`}
           >
             <BeastieImage

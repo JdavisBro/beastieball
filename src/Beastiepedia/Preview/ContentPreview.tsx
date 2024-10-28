@@ -334,9 +334,10 @@ export default function ContentPreview(props: Props): React.ReactNode {
         !glRef.current ||
         !programRef.current)
     ) {
-      let newGl;
       try {
-        newGl = setupWebGL(canvasRef.current, glRef.current);
+        const newGl = setupWebGL(canvasRef.current);
+        glRef.current = newGl.gl;
+        programRef.current = newGl.program;
       } catch (error) {
         if (error instanceof WebGLError) {
           console.log(`WebGL Error: ${error.message}`);
@@ -347,8 +348,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
           throw error;
         }
       }
-      glRef.current = newGl.gl;
-      programRef.current = newGl.program;
     }
   }, []);
 

@@ -8,19 +8,12 @@ export class WebGLError extends Error {
   }
 }
 
-export default function setupWebGL(
-  canvas: HTMLCanvasElement,
-  oldgl: WebGLRenderingContext | null = null,
-) {
-  let gl;
-  if (oldgl) {
-    gl = oldgl;
-  } else {
-    gl = canvas.getContext("webgl", { preserveDrawingBuffer: true });
-    if (!gl) {
-      throw new WebGLError("No WebGL.");
-    }
+export default function setupWebGL(canvas: HTMLCanvasElement) {
+  const gl = canvas.getContext("webgl", { preserveDrawingBuffer: true });
+  if (!gl) {
+    throw new WebGLError("No WebGL.");
   }
+
   const program = createProgram(gl, vertex, fragment);
 
   createTexCoordAttribute(gl, program);

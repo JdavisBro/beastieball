@@ -132,7 +132,7 @@ export default function BeastieRenderProvider(
     if (!canvasRef.current || glRef.current) {
       return;
     }
-    glRef.current = setupWebGL(canvasRef.current, null);
+    glRef.current = setupWebGL(canvasRef.current);
   }, []);
 
   return (

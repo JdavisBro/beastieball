@@ -21,7 +21,7 @@ export default function setupWebGL(canvas: HTMLCanvasElement) {
 
   createTexture(gl);
 
-  gl.viewport(-1000, -1000, 2000, 2000);
+  gl.viewport(0, 0, 1000, 1000);
 
   gl.clearColor(0, 0, 0, 0);
   gl.clear(gl.COLOR_BUFFER_BIT);

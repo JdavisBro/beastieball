@@ -12,6 +12,7 @@ import InfoBox, { BoxHeader } from "../../shared/InfoBox";
 import ResearchCarousel from "./ResearchCarousel";
 import ComboMove from "./ComboMove";
 import { useState } from "react";
+import Sfx from "./Sfx";
 
 type Props = {
   beastiedata: BeastieType;
@@ -227,6 +228,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
           movelist={beastiedata.attklist}
           learnset={beastiedata.learnset}
         />
+        <ComboMove beastiedata={beastiedata} />
 
         <InfoBox header="Research">
           <div className={styles.research}>
@@ -242,7 +244,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
             ? beastiedata.animator.map((i) => designers[i]).join(", ")
             : designers[beastiedata.animator]}
         </InfoBox>
-        <ComboMove beastiedata={beastiedata} />
+        <Sfx beastiedata={beastiedata} />
       </div>
     </div>
   );

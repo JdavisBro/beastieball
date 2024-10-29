@@ -28,6 +28,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  width: 100%;
 }
 
 .levelInput {
@@ -77,10 +78,29 @@
   max-width: 100%;
 }
 
+.combo {
+  flex: 1 1 0;
+}
+
 .combo > :global(.infoBoxContentContainer) > :global(.infoBoxContent) {
   max-width: calc(100% - 20px);
   width: 460px;
   margin: 0 10px 4px 10px;
+}
+
+.voiceType {
+  float: left;
+  width: 50px;
+}
+.voiceButton {
+  width: 30px;
+}
+.voiceButtonSelected {
+  width: 30px;
+  background-color: gray;
+}
+.voiceButtonSelected:hover {
+  background-color: rgb(168, 168, 168);
 }
 
 @media all and (max-aspect-ratio: 1/1) {

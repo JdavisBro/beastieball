@@ -49,7 +49,7 @@
 }
 
 .datatable {
-  composes: infoBoxContentContainer from global;
+  composes: infoBoxContent from global;
   display: flex;
   flex-direction: column;
   width: 100%;

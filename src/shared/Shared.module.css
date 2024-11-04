@@ -214,15 +214,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  width: 80dvw;
-  height: 85dvh;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
   align-content: flex-start;
 }
 
 .beastieSelectBeastie {
   display: flex;
-  width: 250px;
-  max-width: 49%;
+  width: 240px;
+  max-width: 48%;
   height: 120px;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
@@ -234,7 +235,8 @@
 
 .beastieSelectBeastieIm {
   flex-shrink: 1;
-  max-height: 100%;
+  max-height: calc(100% - 10px);
+  margin-left: 5px;
   max-width: 50%;
 }
 

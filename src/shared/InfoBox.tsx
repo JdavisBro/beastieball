@@ -13,9 +13,7 @@ export default function InfoBox(
   return (
     <div className={props.className}>
       <div className="infoboxHeader">{props.header}</div>
-      <div className="infoBoxContentContainer">
-        <div className="infoBoxContent">{props.children}</div>
-      </div>
+      <div className="infoBoxContent">{props.children}</div>
     </div>
   );
 }

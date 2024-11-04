@@ -264,9 +264,6 @@ a:visited {
   max-height: 100vh;
   max-height: 100dvh;
 }
-:modal .infoBoxContentContainer {
-  width: 100%;
-}
 :modal .infoBoxContent {
   max-width: 90vw;
   overflow-y: auto;
@@ -294,7 +291,7 @@ a:visited {
   z-index: 1;
 }
 
-.infoBoxContentContainer {
+.infoBoxContent {
   background-image: repeating-linear-gradient(
     #ddd1bd,
     #ddd1bd 4px,
@@ -302,22 +299,15 @@ a:visited {
     #d5c9b5 8px
   );
   background-size: 100% 200%;
+  clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 100%, 5px 100%);
+  color: black;
   animation-name: bg-scroll;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   max-width: fit-content;
+  margin-bottom: 10px;
+  padding: 4px 20px 6px 20px;
   position: relative;
   top: -4px;
-  color: black;
-  padding-top: 4px;
-  padding-bottom: 6px;
-  clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 100%, 5px 100%);
-  margin-bottom: 10px;
-}
-
-.infoBoxContent {
-  max-width: fit-content;
-  margin-left: 20px;
-  margin-right: 20px;
 }

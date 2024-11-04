@@ -235,10 +235,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
             );
             frameNumRef.current = startFrame;
             setNoDisplayRender(false);
-          } else if (loadedImages[0]) {
-            setImage(glRef.current, loadedImages[0]);
-            frameNumRef.current = 0;
-            setNoDisplayRender(false);
           } else {
             setNoDisplayRender(true);
             setNoDisplayReason("Loading...");

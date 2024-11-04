@@ -55,7 +55,10 @@
   composes: beastiecontainer;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  min-width: min(100%, 480px);
+  width: 100%; /* if round not supported */
+  width: round(down, 100%, 120px);
+  margin: 0 auto;
 }
 
 .beastie {

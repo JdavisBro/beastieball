@@ -9,7 +9,7 @@
 }
 
 .content {
-  float: left;
+  display: flex;
   width: 77%;
   height: 100%;
 }
@@ -39,6 +39,7 @@
 @media all and (max-aspect-ratio: 1/1) {
   .content {
     width: 100%;
+    flex-wrap: wrap;
     overflow: auto;
   }
 }

@@ -134,118 +134,116 @@ export default function ContentInfo(props: Props): React.ReactNode {
 
   return (
     <div className={styles.info}>
-      <div className={styles.inner}>
-        <div className={styles.wrapinfoboxes}>
-          <InfoBox header="Number">#{beastiedata.number}</InfoBox>
-          <InfoBox header="Name">{beastiedata.name}</InfoBox>
-          <InfoBox header="Development">{beastiedata.anim_progress}%</InfoBox>
-          <InfoBox header="Metamorphosis">
-            {preEvo ? (
-              <div>
-                Metamorphs from{" "}
-                <Link to={`/beastiepedia/${preEvo.beastie.name}`}>
-                  {preEvo.beastie.name}
-                </Link>{" "}
-                {getEvoConditionString(preEvo.evolution, preEvo.beastie)}
-              </div>
-            ) : (
-              <div>Does not Metamorph from any Beastie</div>
-            )}
-            {evolutions ? (
-              evolutionBeasties?.map((beastie, index) => {
-                if (!beastie) {
-                  return null;
-                }
-                const evolution = evolutions[index];
-                if (evolution.condition[0] == 10) {
-                  return null;
-                }
-                return (
-                  <div key={beastie.id + index}>
-                    Metamorphs into{" "}
-                    <Link to={`/beastiepedia/${beastie.name}`}>
-                      {beastie.name}
-                    </Link>{" "}
-                    {getEvoConditionString(evolution, beastiedata)}
-                  </div>
-                );
-              })
-            ) : (
-              <div>Does not Metamorph into any Beastie</div>
-            )}
-          </InfoBox>
-        </div>
-
-        <InfoBox header="Description">{beastiedata.desc}</InfoBox>
-
-        <InfoBox header="Traits">
-          <table className={styles.traittable}>
-            <tbody>
-              {beastiedata.ability.map((value, index) =>
-                value in abilities ? (
-                  <tr key={value}>
-                    <td>
-                      {abilities[value].name}
-                      {beastiedata.ability_hidden && index > 0
-                        ? " (recessive)"
-                        : ""}
-                    </td>
-                    <td>
-                      <TextTag>
-                        {abilities[value].desc.replace(/\|/g, "")}
-                      </TextTag>
-                    </td>
-                  </tr>
-                ) : (
-                  `Unknown trait ${value}`
-                ),
-              )}
-            </tbody>
-          </table>
+      <div className={styles.wrapinfoboxes}>
+        <InfoBox header="Number">#{beastiedata.number}</InfoBox>
+        <InfoBox header="Name">{beastiedata.name}</InfoBox>
+        <InfoBox header="Development">{beastiedata.anim_progress}%</InfoBox>
+        <InfoBox header="Metamorphosis">
+          {preEvo ? (
+            <div>
+              Metamorphs from{" "}
+              <Link to={`/beastiepedia/${preEvo.beastie.name}`}>
+                {preEvo.beastie.name}
+              </Link>{" "}
+              {getEvoConditionString(preEvo.evolution, preEvo.beastie)}
+            </div>
+          ) : (
+            <div>Does not Metamorph from any Beastie</div>
+          )}
+          {evolutions ? (
+            evolutionBeasties?.map((beastie, index) => {
+              if (!beastie) {
+                return null;
+              }
+              const evolution = evolutions[index];
+              if (evolution.condition[0] == 10) {
+                return null;
+              }
+              return (
+                <div key={beastie.id + index}>
+                  Metamorphs into{" "}
+                  <Link to={`/beastiepedia/${beastie.name}`}>
+                    {beastie.name}
+                  </Link>{" "}
+                  {getEvoConditionString(evolution, beastiedata)}
+                </div>
+              );
+            })
+          ) : (
+            <div>Does not Metamorph into any Beastie</div>
+          )}
         </InfoBox>
-
-        <BoxHeader>Stat Distribution</BoxHeader>
-        <StatDistribution beastiedata={beastiedata} />
-
-        <div className={styles.wrapinfoboxes}>
-          <InfoBox header="Recruit Condition">
-            <TextTag>{beastiedata.recruit.description}</TextTag>
-            <br />
-            <span className={styles.training}>
-              <img
-                src="/gameassets/sprSponsors/1.png"
-                alt="Staying Power Fitness Sponsor"
-                className={styles.gymLogo}
-              />
-              <span>{NUMBER_FORMAT.format(beastiedata.recruit_value)}</span>
-            </span>
-          </InfoBox>
-          <InfoBox header="Ally Training">{training}</InfoBox>
-          <ExpForLevel growth={beastiedata.growth} />
-        </div>
-
-        <MoveList
-          movelist={beastiedata.attklist}
-          learnset={beastiedata.learnset}
-        />
-        <ComboMove beastiedata={beastiedata} />
-
-        <InfoBox header="Research">
-          <div className={styles.research}>
-            <ResearchCarousel beastieid={beastiedata.id} />
-          </div>
-          Researcher{Array.isArray(beastiedata.designer) ? "s" : ""}:{" "}
-          {Array.isArray(beastiedata.designer)
-            ? beastiedata.designer.map((i) => designers[i]).join(", ")
-            : designers[beastiedata.designer]}
-          <br />
-          Videographer{Array.isArray(beastiedata.animator) ? "s" : ""}:{" "}
-          {Array.isArray(beastiedata.animator)
-            ? beastiedata.animator.map((i) => designers[i]).join(", ")
-            : designers[beastiedata.animator]}
-        </InfoBox>
-        <Sfx beastiedata={beastiedata} />
       </div>
+
+      <InfoBox header="Description">{beastiedata.desc}</InfoBox>
+
+      <InfoBox header="Traits">
+        <table className={styles.traittable}>
+          <tbody>
+            {beastiedata.ability.map((value, index) =>
+              value in abilities ? (
+                <tr key={value}>
+                  <td>
+                    {abilities[value].name}
+                    {beastiedata.ability_hidden && index > 0
+                      ? " (recessive)"
+                      : ""}
+                  </td>
+                  <td>
+                    <TextTag>
+                      {abilities[value].desc.replace(/\|/g, "")}
+                    </TextTag>
+                  </td>
+                </tr>
+              ) : (
+                `Unknown trait ${value}`
+              ),
+            )}
+          </tbody>
+        </table>
+      </InfoBox>
+
+      <BoxHeader>Stat Distribution</BoxHeader>
+      <StatDistribution beastiedata={beastiedata} />
+
+      <div className={styles.wrapinfoboxes}>
+        <InfoBox header="Recruit Condition">
+          <TextTag>{beastiedata.recruit.description}</TextTag>
+          <br />
+          <span className={styles.training}>
+            <img
+              src="/gameassets/sprSponsors/1.png"
+              alt="Staying Power Fitness Sponsor"
+              className={styles.gymLogo}
+            />
+            <span>{NUMBER_FORMAT.format(beastiedata.recruit_value)}</span>
+          </span>
+        </InfoBox>
+        <InfoBox header="Ally Training">{training}</InfoBox>
+        <ExpForLevel growth={beastiedata.growth} />
+      </div>
+
+      <MoveList
+        movelist={beastiedata.attklist}
+        learnset={beastiedata.learnset}
+      />
+      <ComboMove beastiedata={beastiedata} />
+
+      <InfoBox header="Research">
+        <div className={styles.research}>
+          <ResearchCarousel beastieid={beastiedata.id} />
+        </div>
+        Researcher{Array.isArray(beastiedata.designer) ? "s" : ""}:{" "}
+        {Array.isArray(beastiedata.designer)
+          ? beastiedata.designer.map((i) => designers[i]).join(", ")
+          : designers[beastiedata.designer]}
+        <br />
+        Videographer{Array.isArray(beastiedata.animator) ? "s" : ""}:{" "}
+        {Array.isArray(beastiedata.animator)
+          ? beastiedata.animator.map((i) => designers[i]).join(", ")
+          : designers[beastiedata.animator]}
+      </InfoBox>
+      <Sfx beastiedata={beastiedata} />
     </div>
   );
 }

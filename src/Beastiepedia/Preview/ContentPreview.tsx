@@ -573,7 +573,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
           gifDisabled={gifDisabled}
           userSpeed={userSpeed}
           canvasRef={canvasRef}
-          defaultSize={portrait ? 70 : 80}
+          defaultSize={80}
           setBackground={setBackground}
           setBackgroundColor={setBackgroundColor}
           fitBeastie={fitBeastie}

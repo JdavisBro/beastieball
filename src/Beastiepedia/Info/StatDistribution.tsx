@@ -6,29 +6,29 @@ type BarProps = {
   value: number;
   color: string | null | undefined;
   right: boolean;
+  verticalPos?: number;
 };
 
 function StatBar(props: BarProps): React.ReactElement {
-  const value = props.value;
-  const containerclass = props.right
-    ? `${styles.barcontainer} ${styles.barcontainerright}`
-    : styles.barcontainer;
-  const barclass = props.right
-    ? `${styles.bar} ${styles.barright}`
-    : styles.bar;
-  const textclass = props.right
-    ? `${styles.text} ${styles.textright}`
-    : styles.text;
   return (
-    <div className={containerclass}>
+    <div
+      className={props.right ? styles.barcontainerright : styles.barcontainer}
+      style={
+        {
+          "--bar-offset": `${(props.verticalPos ?? 0) * 5}px`,
+        } as React.CSSProperties
+      }
+    >
       <div
-        className={barclass}
+        className={props.right ? styles.barright : styles.bar}
         style={{
-          width: String((value / 120) * 100) + "%", // I think 120 is max stats
-          backgroundColor: props.color !== null ? props.color : "none",
+          width: `${(props.value / 125) * 100}%`, // I think 125 is max stats
+          backgroundColor: props.color ?? "none",
         }}
       ></div>
-      <div className={textclass}>{value}</div>
+      <div className={props.right ? styles.textright : styles.text}>
+        {props.value}
+      </div>
     </div>
   );
 }
@@ -48,8 +48,14 @@ export default function StatDistribution(props: Props): React.ReactElement {
           value={beastiedata.ha}
           right={false}
           color={TypeColor.Spirit}
+          verticalPos={1}
         />
-        <StatBar value={beastiedata.ma} right={false} color={TypeColor.Mind} />
+        <StatBar
+          value={beastiedata.ma}
+          right={false}
+          color={TypeColor.Mind}
+          verticalPos={2}
+        />
       </div>
       <div className={styles.midblock}>
         <div className={styles.barcontainer}></div>
@@ -57,25 +63,24 @@ export default function StatDistribution(props: Props): React.ReactElement {
         <img src="/gameassets/sprIcon/1.png" alt="Spirit" />
         <img src="/gameassets/sprIcon/2.png" alt="Mind" />
       </div>
-      {/* prettier-ignore */ /* (doesn't wrap 2 of the statbars) */}
       <div className={styles.statcontainer}>
-          <div className={`${styles.barcontainer} ${styles.barcontainerright}`}>DEF</div>
-          <StatBar 
-            value={beastiedata.bd}
-            right={true}
-            color={TypeColor.Body}
-          />
-          <StatBar
-            value={beastiedata.hd}
-            right={true}
-            color={TypeColor.Spirit}
-          />
-          <StatBar
-            value={beastiedata.md}
-            right={true}
-            color={TypeColor.Mind}
-          />
+        <div className={`${styles.barcontainer} ${styles.barcontainerright}`}>
+          DEF
         </div>
+        <StatBar
+          value={beastiedata.bd}
+          right={true}
+          color={TypeColor.Body}
+          verticalPos={2}
+        />
+        <StatBar
+          value={beastiedata.hd}
+          right={true}
+          color={TypeColor.Spirit}
+          verticalPos={1}
+        />
+        <StatBar value={beastiedata.md} right={true} color={TypeColor.Mind} />
+      </div>
     </div>
   );
 }

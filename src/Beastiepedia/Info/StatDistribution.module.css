@@ -8,8 +8,7 @@
   width: 420px;
   height: 170px;
   box-sizing: border-box;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 18px 4px 21px;
   margin-bottom: 10px;
   clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 20px 100%);
   display: flex;
@@ -40,20 +39,32 @@
   position: relative;
   text-align: right;
   top: 4px;
+  --bar-offset: 0px;
 }
 
 .statcontainer > .barcontainer:nth-child(n + 2) {
   top: 0;
   background-color: rgba(117, 117, 117, 0.5);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 10px 100%);
+  clip-path: polygon(
+    var(--bar-offset) 0,
+    100% 0,
+    100% 100%,
+    calc(4px + var(--bar-offset)) 100%
+  );
 }
 
 .barcontainerright {
+  composes: barcontainer;
   text-align: left;
 }
 
 .statcontainer > .barcontainerright:nth-child(n + 2) {
-  clip-path: polygon(0 0, calc(100% - 10px) 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 4px - var(--bar-offset)) 0%,
+    calc(100% - var(--bar-offset)) 100%,
+    0% 100%
+  );
 }
 
 .midblock > img {
@@ -66,17 +77,26 @@
   position: absolute;
   background-color: blue;
   height: 100%;
-  right: 0;
+  right: -1px;
   box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 10px 100%);
+  clip-path: polygon(
+    var(--bar-offset) 0,
+    100% 0,
+    100% 100%,
+    calc(4px + var(--bar-offset)) 100%
+  );
 }
 
 .barright {
+  composes: bar;
   left: 0;
   text-align: left;
-  clip-path: polygon(0 0, calc(100% - 10px) 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 4px - var(--bar-offset)) 0%,
+    calc(100% - var(--bar-offset)) 100%,
+    0% 100%
+  );
 }
 
 .text {
@@ -88,5 +108,6 @@
 }
 
 .textright {
+  composes: text;
   left: 10px;
 }

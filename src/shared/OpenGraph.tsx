@@ -14,7 +14,10 @@ export default function OpenGraph(props: Props): React.ReactElement {
     : window.location.origin;
   return (
     <Helmet>
-      <title>{props.title}</title>
+      <title>
+        {import.meta.env.DEV ? "🔧" : ""}
+        {props.title}
+      </title>
       <meta property="og:title" content={props.title} />
       <meta property="og:image" content={`${url}/${props.image}`} />
       <meta property="og:url" content={`${url}/${props.url}`} />

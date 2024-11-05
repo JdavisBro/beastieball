@@ -89,7 +89,7 @@ export default function Teams() {
     <div>
       <OpenGraph
         title={`Teams - ${import.meta.env.VITE_BRANDING}`}
-        description="Online Team Viewer for Beastieball"
+        description="Online Team Viewer for Beastieball!"
         image="gameassets/sprMainmenu/20.png"
         url="teams/"
       />

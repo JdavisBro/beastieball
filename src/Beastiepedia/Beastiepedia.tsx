@@ -52,7 +52,9 @@ export default function Beastiepedia(): React.ReactNode {
         }
         url={beastiedata ? `beastiepedia/${beastiedata.name}` : `beastiepedia/`}
         description={
-          beastiedata ? beastiedata.desc : "View information on Beasties!"
+          beastiedata
+            ? beastiedata.desc
+            : "View information and previews of the Beasties from Beastieball!"
         }
       />
       <Header

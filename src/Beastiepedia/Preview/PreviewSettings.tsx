@@ -17,7 +17,7 @@ type Props = {
 export default function PreviewSettings(props: Props): React.ReactElement {
   return (
     <>
-      <InfoBox header="Settings">
+      <InfoBox header="Settings" className={styles.previewSettings}>
         <div className={styles.middlealign}>
           <button onClick={() => props.downloadImage()}>Save PNG</button>
           <button onClick={() => props.downloadImage(true)}>Copy PNG</button>
@@ -33,11 +33,9 @@ export default function PreviewSettings(props: Props): React.ReactElement {
             </span>
           ) : null}
         </div>
-        <div className={styles.middlealign}>
-          <label htmlFor="sizeinput">Display Size: </label>
+        <label>
+          Display Size:{" "}
           <input
-            name="sizeinput"
-            id="sizeinput"
             type="range"
             min={25}
             max={100}
@@ -52,37 +50,36 @@ export default function PreviewSettings(props: Props): React.ReactElement {
               }
             }}
           />
-        </div>
+        </label>
         <div className={styles.middlealign}>
           <label htmlFor="whitebg" style={{ userSelect: "none" }}>
-            Background:{" "}
+            Background:
+            <input
+              id="whitebg"
+              type="checkbox"
+              onChange={(event) => {
+                props.setBackground(event.target.checked);
+              }}
+            />
+            <input
+              type="color"
+              defaultValue={"#ffffff"}
+              onChange={(event) => {
+                props.setBackgroundColor(event.target.value);
+              }}
+            />
           </label>
-          <input
-            name="whitebg"
-            id="whitebg"
-            type="checkbox"
-            onChange={(event) => {
-              props.setBackground(event.target.checked);
-            }}
-          />
-          <input
-            type="color"
-            defaultValue={"#ffffff"}
-            onChange={(event) => {
-              props.setBackgroundColor(event.target.value);
-            }}
-          />
         </div>
-        <label htmlFor="fitbeastie">Crop to Beastie</label>
-        <input
-          id="fitbeastie"
-          name="fitbeastie"
-          type="checkbox"
-          defaultChecked={props.fitBeastie}
-          onChange={(event) => {
-            props.setFitBeastie(event.target.checked);
-          }}
-        />
+        <label>
+          Crop to Beastie:
+          <input
+            type="checkbox"
+            defaultChecked={props.fitBeastie}
+            onChange={(event) => {
+              props.setFitBeastie(event.target.checked);
+            }}
+          />
+        </label>
       </InfoBox>
     </>
   );

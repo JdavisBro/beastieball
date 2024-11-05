@@ -335,19 +335,15 @@ export default function ColorTabs(props: Props): React.ReactNode {
             Copy Link with Colors
           </button>
         </div>
-        <label
-          htmlFor="otherbeastiesel"
-          style={{ color: "black", marginLeft: "20px" }}
-        >
-          {" "}
+        <label>
           Other Beastie Colors:{" "}
+          <BeastieSelect
+            beastieId={diffBeastieColors}
+            setBeastieId={(beastieId: undefined | string) =>
+              setDiffBeastieColors(beastieId ? beastieId : "none")
+            }
+          />{" "}
         </label>
-        <BeastieSelect
-          beastieId={diffBeastieColors}
-          setBeastieId={(beastieId: undefined | string) =>
-            setDiffBeastieColors(beastieId ? beastieId : "none")
-          }
-        />
       </div>
     </>
   );

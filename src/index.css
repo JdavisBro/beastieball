@@ -35,6 +35,7 @@ button {
   border-radius: 4px;
   margin: 0 1px;
   padding: 2px 4px;
+  font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
 }
 
 button:hover {

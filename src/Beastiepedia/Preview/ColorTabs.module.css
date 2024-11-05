@@ -1,6 +1,6 @@
 .tabselect {
   width: fit-content;
-  margin-left: 2%;
+  margin-left: 10px;
   height: 32px;
   position: relative;
   background-image: repeating-linear-gradient(
@@ -39,19 +39,19 @@
   top: -4px;
   margin-bottom: 10px;
   clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 100%, 8px 100%);
+  box-sizing: border-box;
   width: 100%;
-  padding: 10px 0 1px 0;
+  padding: 10px 16px 7px 16px;
+  color: black;
 }
 
-.tab > * {
-  margin-left: 4%;
-  margin-bottom: 6px;
+.tab {
+  width: 100%;
 }
 
 .colorslider {
-  margin-left: 4%;
   margin-bottom: 6px;
-  width: 92%;
+  width: 100%;
   /* clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%); */
 }
 
@@ -101,6 +101,6 @@
   visibility: hidden;
 }
 
-.customcolor {
-  margin-left: 4%;
+.customcolor:not(:first-child) {
+  margin-left: 16px;
 }

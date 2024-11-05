@@ -1,6 +1,7 @@
 .preview {
   width: 35%;
   overflow-y: auto;
+  scrollbar-gutter: stable;
   padding: 8px;
   padding-top: 16px;
   box-sizing: border-box;

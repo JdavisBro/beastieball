@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import { FeaturedTeamType } from "./FeaturedTeams";
 import styles from "./Teams.module.css";
 import BEASTIE_DATA from "../data/BeastieData";
+import {
+  SpoilerMode,
+  useSpoilerMode,
+  useSpoilerSeen,
+} from "../shared/useSpoiler";
 
 const DESCRIPTION_MAX = 90;
 
@@ -16,10 +21,27 @@ export default function FeaturedTeam({
 }) {
   const longDesc = team.description.length > DESCRIPTION_MAX;
 
+  const [spoilerMode] = useSpoilerMode();
+  const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
+
+  const handleClick = () => {
+    let seenChanged = false;
+    team.team.team.forEach((beastie) => {
+      if (!seenBeasties[beastie.specie]) {
+        seenBeasties[beastie.specie] = true;
+        seenChanged = true;
+      }
+    });
+    if (seenChanged) {
+      setSeenBeasties(seenBeasties);
+    }
+    setTeam();
+  };
+
   return (
     <Link
       to={`/teams/${team.team.code}`}
-      onClick={setTeam}
+      onClick={handleClick}
       className={selected ? styles.featuredTeamSelected : styles.featuredTeam}
     >
       <div>{team.name}</div>
@@ -46,13 +68,23 @@ export default function FeaturedTeam({
         ) : null}
       </div>
       <div className={styles.featuredIcons}>
-        {team.team.team.map((beastie, index) => {
-          const beastieName = BEASTIE_DATA.get(beastie.specie)?.name;
+        {team.team.team.map((teamBeastie, index) => {
+          const beastie = BEASTIE_DATA.get(teamBeastie.specie);
+          if (!beastie) {
+            return null;
+          }
+          const isSpoiler =
+            spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
           return (
             <img
-              key={beastieName + String(index)}
-              src={`/icons/${beastieName}.png`}
-              alt={`${beastieName} icon`}
+              key={beastie.id + String(index)}
+              src={
+                isSpoiler
+                  ? "/gameassets/sprExclam_1.png"
+                  : `/icons/${beastie.name}.png`
+              }
+              alt={`${isSpoiler ? "Hidden beastie" : beastie.name} icon`}
+              style={isSpoiler ? { filter: "brightness(50%)" } : undefined}
               className={styles.featuredIcon}
             />
           );

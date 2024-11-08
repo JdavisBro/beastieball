@@ -11,6 +11,10 @@
   cursor: inherit;
 }
 
+.spoilerBeastie {
+  filter: brightness(50%);
+}
+
 .textmarker {
   composes: boxHeaderBackground from global;
   white-space: nowrap;

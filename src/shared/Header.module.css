@@ -60,10 +60,6 @@
   padding-left: 12px;
 }
 
-.animationtogglecontainer {
-  margin-left: auto;
-}
-
 .externallinkcontainer {
   display: flex;
   align-items: center;
@@ -72,7 +68,7 @@
   width: auto;
   padding-left: 5px;
   padding-right: 5px;
-  margin-left: 5px;
+  margin-left: auto;
 }
 
 @media all and (max-aspect-ratio: 1/1) {

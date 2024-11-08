@@ -3,29 +3,41 @@ import { Link } from "react-router-dom";
 
 import styles from "./Shared.module.css";
 import MoveModalContext from "./MoveModalContext";
-import BEASTIE_DATA from "../data/BeastieData";
+import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import LEARN_SETS from "../data/Learnsets";
 import { Move } from "../data/MoveData";
 import Modal from "./Modal";
 import MoveView from "./MoveView";
+import { SpoilerMode, useSpoilerMode, useSpoilerSeen } from "./useSpoiler";
 
 export default function MoveModalProvider(props: PropsWithChildren) {
   const [move, setMove] = useState<null | Move>(null);
 
-  const levelBeasties: [string, number][] = [];
-  const friendBeasties: string[] = [];
+  const levelBeasties: [BeastieType, number][] = [];
+  const friendBeasties: BeastieType[] = [];
   if (move) {
     BEASTIE_DATA.forEach((beastie) => {
       const learnLevel = LEARN_SETS[beastie.learnset]?.find(
         (value) => value[0] == move.id,
       );
       if (learnLevel) {
-        levelBeasties.push([beastie.name, learnLevel[1] || 1]);
+        levelBeasties.push([beastie, learnLevel[1] || 1]);
       } else if (beastie.attklist.includes(move.id)) {
-        friendBeasties.push(beastie.name);
+        friendBeasties.push(beastie);
       }
     });
   }
+
+  const [spoilerMode] = useSpoilerMode();
+  const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
+
+  const handleClick = (spoilerBeastie: string | undefined = undefined) => {
+    if (!spoilerBeastie) {
+      return setMove(null);
+    }
+    seenBeasties[spoilerBeastie] = true;
+    setSeenBeasties(seenBeasties);
+  };
 
   return (
     <MoveModalContext.Provider value={setMove}>
@@ -41,29 +53,61 @@ export default function MoveModalProvider(props: PropsWithChildren) {
         <div className={styles.movebeastierow}>
           <div className={styles.movebeastielist}>
             {levelBeasties.length ? "From Level" : ""}
-            {levelBeasties.map((name) => (
-              <Link
-                to={`/beastiepedia/${name[0]}`}
-                key={name[0]}
-                onClick={() => setMove(null)}
-              >
-                <img src={`/icons/${name[0]}.png`} />
-                {name[0]} - {name[1]}
-              </Link>
-            ))}
+            {levelBeasties.map((beastie) => {
+              const isSpoiler =
+                spoilerMode == SpoilerMode.OnlySeen &&
+                !seenBeasties[beastie[0].id];
+              return (
+                <Link
+                  to={isSpoiler ? "#Play" : `/beastiepedia/${beastie[0].name}`}
+                  key={beastie[0].id}
+                  onClick={() =>
+                    handleClick(isSpoiler ? beastie[0].id : undefined)
+                  }
+                >
+                  <img
+                    src={
+                      isSpoiler
+                        ? "/gameassets/sprExclam_1.png"
+                        : `/icons/${beastie[0].name}.png`
+                    }
+                    style={
+                      isSpoiler ? { filter: "brightness(50%)" } : undefined
+                    }
+                  />
+                  {isSpoiler ? "???" : beastie[0].name} - {beastie[1]}
+                </Link>
+              );
+            })}
           </div>
           <div className={styles.movebeastielist}>
             {friendBeasties.length ? "From Friends" : ""}
-            {friendBeasties.map((name) => (
-              <Link
-                to={`/beastiepedia/${name}`}
-                key={name}
-                onClick={() => setMove(null)}
-              >
-                <img src={`/icons/${name}.png`} />
-                {name}
-              </Link>
-            ))}
+            {friendBeasties.map((beastie) => {
+              const isSpoiler =
+                spoilerMode == SpoilerMode.OnlySeen &&
+                !seenBeasties[beastie.id];
+              return (
+                <Link
+                  to={isSpoiler ? "#Play" : `/beastiepedia/${beastie.name}`}
+                  key={beastie.id}
+                  onClick={() =>
+                    handleClick(isSpoiler ? beastie.id : undefined)
+                  }
+                >
+                  <img
+                    src={
+                      isSpoiler
+                        ? "/gameassets/sprExclam_1.png"
+                        : `/icons/${beastie.name}.png`
+                    }
+                    style={
+                      isSpoiler ? { filter: "brightness(50%)" } : undefined
+                    }
+                  />
+                  {isSpoiler ? "???" : beastie.name}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </Modal>

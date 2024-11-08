@@ -31,7 +31,7 @@ export default function Settings({
 }) {
   return (
     <Modal
-      header="Settings"
+      header={`${import.meta.env.VITE_BRANDING} Settings`}
       open={open}
       hashValue={"Settings"}
       onClose={onClose}

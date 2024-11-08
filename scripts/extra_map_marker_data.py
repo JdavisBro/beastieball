@@ -36,5 +36,5 @@ for level in (gamedir / "world_data").glob("**/*.json"):
         "y": stump["world_y1"] + obj["y"],
       })
 
-with Path("src/data/raw/extra_markers.json").open("w+") as f:
+with Path("../src/data/raw/extra_markers.json").open("w+") as f:
   json.dump(out_data, f)

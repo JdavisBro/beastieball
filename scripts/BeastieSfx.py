@@ -11,7 +11,7 @@ gameDir = Path(sys.argv[1])
 voDir = gameDir / "audio" / "vo"
 
 outDir = Path("public/gameassets/audio/")
-outFile = Path("src/data/raw/beastieSfx.json")
+outFile = Path("../src/data/raw/beastieSfx.json")
 
 with (gameDir / "area03_audio_data.json").open() as f:
   audio_data = {i["name"]: i for i in json.load(f)[0]}

@@ -4,7 +4,7 @@ from pathlib import Path
 
 from PIL import Image, ImageFilter
 
-spriteinfofp = Path("src/data/raw/sprite_info.json")
+spriteinfofp = Path("../src/data/raw/sprite_info.json")
 
 with spriteinfofp.open() as f:
   spriteinfo = json.load(f)

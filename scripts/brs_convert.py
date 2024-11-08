@@ -60,7 +60,7 @@ def do_file(fp, outdir=None):
 
 def main(args):
     researchdata = {}
-    outdir = Path("public/gameassets/research/")
+    outdir = Path("../public/gameassets/research/")
     for i in args:
         fp = Path(i)
         if fp.is_dir():

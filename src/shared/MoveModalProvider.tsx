@@ -75,7 +75,10 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                       isSpoiler ? { filter: "brightness(50%)" } : undefined
                     }
                   />
-                  {isSpoiler ? "???" : beastie[0].name} - {beastie[1]}
+                  {isSpoiler
+                    ? `Beastie #${beastie[0].number}`
+                    : beastie[0].name}{" "}
+                  - {beastie[1]}
                 </Link>
               );
             })}
@@ -104,7 +107,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                       isSpoiler ? { filter: "brightness(50%)" } : undefined
                     }
                   />
-                  {isSpoiler ? "???" : beastie.name}
+                  {isSpoiler ? `Beastie #${beastie.number}` : beastie.name}
                 </Link>
               );
             })}

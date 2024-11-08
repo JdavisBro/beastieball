@@ -112,10 +112,12 @@ export default function Map(): React.ReactNode {
       }
       const isSpoiler =
         spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
+      const alt = `${isSpoiler ? `Beastie #${beastie.number}` : beastie.name} spawn location.`;
       beastieSpawnsOverlays.push(
         <Marker
           key={`${level.name}-${beastie.id}`}
-          alt={`${isSpoiler ? "Hidden beastie" : beastie.name} spawn location.`}
+          alt={alt}
+          title={alt}
           position={
             Math.max(level_size.x, level_size.y) /
               Math.min(level_size.x, level_size.y) <

@@ -75,6 +75,7 @@ export default function FeaturedTeam({
           }
           const isSpoiler =
             spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
+          const alt = `${isSpoiler ? `Beastie #${beastie.number}` : beastie.name} icon`;
           return (
             <img
               key={beastie.id + String(index)}
@@ -83,7 +84,8 @@ export default function FeaturedTeam({
                   ? "/gameassets/sprExclam_1.png"
                   : `/icons/${beastie.name}.png`
               }
-              alt={`${isSpoiler ? "Hidden beastie" : beastie.name} icon`}
+              alt={alt}
+              title={alt}
               style={isSpoiler ? { filter: "brightness(50%)" } : undefined}
               className={styles.featuredIcon}
             />

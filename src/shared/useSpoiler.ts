@@ -13,7 +13,12 @@ export const DEFAULT_SEEN = {
 };
 
 export function useSpoilerMode() {
-  return useLocalStorage<SpoilerMode>("spoilerMode", SpoilerMode.OnlySeen);
+  return useLocalStorage<SpoilerMode>(
+    "spoilerMode",
+    window.navigator.userAgent.toLowerCase().includes("prerender")
+      ? SpoilerMode.All
+      : SpoilerMode.OnlySeen,
+  );
 }
 
 export function useSpoilerSeen() {

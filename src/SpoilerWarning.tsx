@@ -8,6 +8,7 @@ export default function SpoilerWarning(props: {
     serializer: String,
     deserializer: (value) => value == "true",
   });
+  const site = import.meta.env.VITE_BRANDING;
 
   return spoilersOk ||
     window.navigator.userAgent.toLowerCase().includes("prerender") ? (
@@ -15,17 +16,17 @@ export default function SpoilerWarning(props: {
   ) : (
     <div className="commoncontainer">
       <img src="/gameassets/sprExclam_1.png" />
-      <h1>Beastieball Spoiler Warning!!</h1>
+      <h1>Notice!</h1>
       <p>
-        This website includes spoilers for the full game of Beastieball!!
+        {site} is an unofficial resource for Beastieball!
         <br />
-        In order to avoid spoilers you can set {
-          import.meta.env.VITE_BRANDING
-        }{" "}
-        to only show beasties you've clicked on.
+        It may contain content that doesn't appear in the game, posting of this
+        content in official Wishes Unlimited channels (e.g Wishes Unlimited
+        Discord) is not allowed as per Wishes Unlimited's rules.
         <br />
-        All other beasties will have images and names hidden until you click on
-        them.
+        {site} will also contain spoilers for the full game, in order to avoid
+        spoilers you can set to only show beasties you've clicked on. All other
+        beasties will have images and names hidden until you click on them.
       </p>
       <SpoilerOptions />
       <br />

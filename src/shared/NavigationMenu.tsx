@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 
 import styles from "./NavigationMenu.module.css";
-import AnimationToggle from "./AnimationToggle";
-import ExternalLinks from "./ExternalLinks";
+import NavIcons from "./NavIcons";
 
 export function NavigationMenuOption(props: {
   text: string;
@@ -43,8 +42,7 @@ export function NavigationMenu(props: {
       <div className={styles.options}>{props.children}</div>
       <div className={styles.sep}></div>
       <div className={styles.footer}>
-        <AnimationToggle />
-        <ExternalLinks />
+        <NavIcons />
       </div>
     </div>
   );

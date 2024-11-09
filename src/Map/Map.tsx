@@ -21,6 +21,11 @@ import SPAWN_DATA from "../data/SpawnData";
 import BEASTIE_DATA from "../data/BeastieData";
 import ITEM_DIC from "../data/ItemData";
 import TextTag from "../shared/TextTag";
+import {
+  SpoilerMode,
+  useSpoilerMode,
+  useSpoilerSeen,
+} from "../shared/useSpoiler";
 
 function MapEvents() {
   useMapEvents({
@@ -40,6 +45,9 @@ export default function Map(): React.ReactNode {
   const level_overlays: React.ReactElement[] = [];
 
   const beastieSpawnsOverlays: React.ReactElement[] = [];
+
+  const [spoilerMode] = useSpoilerMode();
+  const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
 
   WORLD_DATA.level_stumps_array.forEach((level) => {
     const level_bounds = new L.LatLngBounds(
@@ -102,10 +110,14 @@ export default function Map(): React.ReactNode {
       if (!beastie) {
         return;
       }
+      const isSpoiler =
+        spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
+      const alt = `${isSpoiler ? `Beastie #${beastie.number}` : beastie.name} spawn location.`;
       beastieSpawnsOverlays.push(
         <Marker
           key={`${level.name}-${beastie.id}`}
-          alt={`${beastie.name} spawn location.`}
+          alt={alt}
+          title={alt}
           position={
             Math.max(level_size.x, level_size.y) /
               Math.min(level_size.x, level_size.y) <
@@ -134,9 +146,18 @@ export default function Map(): React.ReactNode {
                   ]
           }
           icon={L.icon({
-            iconUrl: `/icons/${beastie.name}.png`,
+            iconUrl: isSpoiler
+              ? "/gameassets/sprExclam_1.png"
+              : `/icons/${beastie.name}.png`,
+            className: isSpoiler ? styles.spoilerBeastie : undefined,
             iconSize: [50, 50],
           })}
+          eventHandlers={{
+            click: () => {
+              seenBeasties[beastie.id] = true;
+              setSeenBeasties(seenBeasties);
+            },
+          }}
         >
           <Popup offset={[0, -5]}>
             <Link to={`/beastiepedia/${beastie.name}`}>{beastie.name}</Link>

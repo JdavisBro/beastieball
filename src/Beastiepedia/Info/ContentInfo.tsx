@@ -13,6 +13,11 @@ import ResearchCarousel from "./ResearchCarousel";
 import ComboMove from "./ComboMove";
 import { useState } from "react";
 import Sfx from "./Sfx";
+import {
+  SpoilerMode,
+  useSpoilerMode,
+  useSpoilerSeen,
+} from "../../shared/useSpoiler";
 
 type Props = {
   beastiedata: BeastieType;
@@ -132,6 +137,9 @@ export default function ContentInfo(props: Props): React.ReactNode {
     BEASTIE_DATA.get(value.specie),
   );
 
+  const [spoilerMode] = useSpoilerMode();
+  const [beastieSeen] = useSpoilerSeen();
+
   return (
     <div className={styles.info}>
       <div className={styles.wrapinfoboxes}>
@@ -143,7 +151,10 @@ export default function ContentInfo(props: Props): React.ReactNode {
             <div>
               Metamorphs from{" "}
               <Link to={`/beastiepedia/${preEvo.beastie.name}`}>
-                {preEvo.beastie.name}
+                {spoilerMode == SpoilerMode.All ||
+                beastieSeen[preEvo.beastie.id]
+                  ? preEvo.beastie.name
+                  : "???"}
               </Link>{" "}
               {getEvoConditionString(preEvo.evolution, preEvo.beastie)}
             </div>
@@ -163,7 +174,9 @@ export default function ContentInfo(props: Props): React.ReactNode {
                 <div key={beastie.id + index}>
                   Metamorphs into{" "}
                   <Link to={`/beastiepedia/${beastie.name}`}>
-                    {beastie.name}
+                    {spoilerMode == SpoilerMode.All || beastieSeen[beastie.id]
+                      ? beastie.name
+                      : "???"}
                   </Link>{" "}
                   {getEvoConditionString(evolution, beastiedata)}
                 </div>

@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 
-import ExternalLinks from "./ExternalLinks";
+import NavIcons from "./NavIcons";
 import styles from "./Header.module.css";
-import AnimationToggle from "./AnimationToggle";
 
 type Props = {
   title: string | undefined;
@@ -41,11 +40,8 @@ export default function Header(props: Props): React.ReactNode {
           <div className={styles.homeicon}></div>
         </Link>
         <div className={styles.title}>{props.title}</div>
-        <div className={styles.animationtogglecontainer}>
-          <AnimationToggle break={true} />
-        </div>
         <div className={styles.externallinkcontainer}>
-          <ExternalLinks />
+          <NavIcons />
         </div>
       </div>
       <div className={styles.staticheader}></div>

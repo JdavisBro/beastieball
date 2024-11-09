@@ -59,10 +59,33 @@
 .externallinks {
   display: flex;
   justify-content: center;
+  align-items: stretch;
 }
 
 .externallinklogo {
   height: 25px;
+  margin: 2px;
+}
+
+.navIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.settingsButton {
+  composes: navIcon;
+  cursor: pointer;
+}
+
+.settingslogo {
+  height: 30px;
+}
+
+.settingsContainer {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .movecontainer {
@@ -208,6 +231,7 @@
 .animationtoggle {
   display: flex;
   user-select: none;
+  align-items: center;
 }
 
 .beastieSelect {

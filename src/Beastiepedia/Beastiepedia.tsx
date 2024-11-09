@@ -11,6 +11,7 @@ import { BeastieType } from "../data/BeastieData";
 import CustomErrorBoundary from "../shared/CustomErrorBoundary";
 import ContentPreview from "./Preview/ContentPreview";
 import ContentInfo from "./Info/ContentInfo";
+import { useSpoilerSeen } from "../shared/useSpoiler";
 
 declare global {
   interface Window {
@@ -37,6 +38,12 @@ export default function Beastiepedia(): React.ReactNode {
   const [sidebarvisible, setSidebarvisible] = useState(
     !(beastieid !== undefined && orientation),
   ); // Selected beastie & portrait automatically hides sidebar
+
+  const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
+  if (beastiedata && !seenBeasties[beastiedata.id]) {
+    seenBeasties[beastiedata.id] = true;
+    setSeenBeasties(seenBeasties);
+  }
 
   window.BEASTIE_DATA = BEASTIE_DATA;
   window.beastie = beastiedata;

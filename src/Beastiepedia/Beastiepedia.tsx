@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import Header from "../shared/Header";
@@ -40,10 +40,12 @@ export default function Beastiepedia(): React.ReactNode {
   ); // Selected beastie & portrait automatically hides sidebar
 
   const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
-  if (beastiedata && !seenBeasties[beastiedata.id]) {
-    seenBeasties[beastiedata.id] = true;
-    setSeenBeasties(seenBeasties);
-  }
+  useEffect(() => {
+    if (beastiedata && !seenBeasties[beastiedata.id]) {
+      seenBeasties[beastiedata.id] = true;
+      setSeenBeasties(seenBeasties);
+    }
+  }, [beastiedata, seenBeasties, setSeenBeasties]);
 
   window.BEASTIE_DATA = BEASTIE_DATA;
   window.beastie = beastiedata;

@@ -11,6 +11,7 @@ export default defineConfig(() => {
   const env = loadEnv("mock", process.cwd(), "");
   const url = env.VITE_URL != "" ? env.VITE_URL : "https://beastieball.info";
   return {
+    build: { sourcemap: true },
     plugins: [
       react(),
       {

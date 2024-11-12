@@ -1,296 +1,1106 @@
 [
   {
-    "id": "riley",
-    "plays": ["steal", "protect", "rush", "cover"],
-    "loneliness": 1,
-    "tired_scene": "function",
-    "object": 30,
-    "max_hearts": 6,
     "collision_scene": "function",
-    "img": 7,
-    "spr": 123,
-    "unavailable_func": "function",
-    "teach_scene": "function",
-    "name": "Riley",
-    "same_screen_scene": "function",
     "events": [
       {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "hometown",
+        "dest_object": "ref object 175",
         "id": "rpg1",
-        "alt_complete_flag": -1,
-        "dest_level": "hometown",
-        "dest_object": 30,
-        "parent": "Warning: recursive struct found",
-        "cost": 1,
-        "rankup": 1,
         "invite_scene": "function",
-        "prereq": { "field": 0, "type": [0] },
-        "collides": 1
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 1
       },
       {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "hometown",
+        "dest_object": "ref object 172",
         "id": "match",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
+      },
+      {
         "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
         "dest_level": "hometown",
-        "dest_object": 1,
-        "parent": "Warning: recursive struct found",
-        "cost": 1,
-        "rankup": 0,
+        "dest_object": "ref object 175",
+        "id": "rpg2",
         "invite_scene": "function",
-        "prereq": { "field": 0, "type": [0] },
-        "collides": 1
-      }
-    ]
-  },
-  {
-    "id": "reese",
-    "plays": ["_FIREUP", "_TRACK"],
-    "loneliness": 1.3,
-    "tired_scene": "function",
-    "object": 210,
-    "max_hearts": 6,
-    "collision_scene": "function",
-    "img": 6,
-    "spr": 356,
-    "unavailable_func": "function",
-    "teach_scene": "function",
-    "name": "Reese",
-    "same_screen_scene": "function",
-    "events": [
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
+      },
       {
-        "id": "reserve",
-        "alt_complete_flag": -1,
+        "alt_complete_flag": [
+          "datacheck(class_datacheck)",
+          "datacheck(class_datacheck)"
+        ],
+        "collides": 1,
+        "cost": 0,
         "dest_level": "reserve_west",
-        "dest_object": 210,
-        "parent": "Warning: recursive struct found",
-        "cost": 1,
-        "rankup": 0,
+        "dest_object": "ref object 175",
+        "id": "reserve",
         "invite_scene": "function",
-        "prereq": { "field": 0, "type": [0] },
-        "collides": 1
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "datacheck(class_datacheck)",
+          "type": [2]
+        },
+        "rankup": 0
       },
       {
-        "id": "hungry",
         "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "hometown",
+        "dest_object": "ref object 175",
+        "id": "rpg3",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [4]
+        },
+        "rankup": 1
+      },
+      {
+        "alt_complete_flag": "datacheck(class_datacheck)",
+        "collides": 1,
+        "cost": 0,
+        "dest_level": "hometown",
+        "dest_object": "ref object 21",
+        "id": "mask",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "datacheck(class_datacheck)",
+          "type": [2, 4]
+        },
+        "rankup": 1
+      },
+      {
+        "alt_complete_flag": "datacheck(class_datacheck)",
+        "collides": 1,
+        "cost": 0,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": "mtn",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "datacheck(class_datacheck)",
+          "type": [2, 4]
+        },
+        "rankup": 1
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "mountain_9",
+        "dest_object": "ref object 135",
+        "id": "rematch",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [4]
+        },
+        "rankup": 0
+      }
+    ],
+    "id": "riley",
+    "img": 7,
+    "loneliness": 1,
+    "max_hearts": 7,
+    "name": "Riley",
+    "object": "ref object 175",
+    "plays": [
+      "steal",
+      "protect",
+      "rush",
+      "cover",
+      "pipe",
+      "allyrush",
+      "juggle",
+      "freeball"
+    ],
+    "same_screen_scene": "function",
+    "spr": "ref sprite 494",
+    "teach_scene": "function",
+    "tired_scene": "function",
+    "unavailable_func": "function"
+  },
+  {
+    "collision_scene": "function",
+    "events": [
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "reserve_west",
+        "dest_object": "ref object 171",
+        "id": "reserve",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
         "dest_level": "hometown_south_path",
-        "dest_object": 210,
-        "parent": "Warning: recursive struct found",
-        "cost": 1,
-        "rankup": 1,
+        "dest_object": "ref object 171",
+        "id": "hungry",
         "invite_scene": "function",
-        "prereq": { "field": "hometown_south_path", "type": [3] },
-        "collides": 1
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "hometown_south_path",
+          "type": [3]
+        },
+        "rankup": 1
       },
       {
-        "id": "mine",
         "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
         "dest_level": "jasper_cave_2",
-        "dest_object": 210,
-        "parent": "Warning: recursive struct found",
-        "cost": 1,
-        "rankup": 0,
+        "dest_object": "ref object 171",
+        "id": "mine",
         "invite_scene": "function",
-        "prereq": { "field": "jasper_cave_2", "type": [3] },
-        "collides": 1
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "jasper_cave_2",
+          "type": [3]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "sunken_stadium",
+        "dest_object": "ref object 171",
+        "id": "sunken",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "sunken_stadium",
+          "type": [3]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "cityhill",
+        "dest_object": "ref object 171",
+        "id": "park",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "city_neighborhood",
+          "type": [3]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": "datacheck(class_datacheck)",
+        "collides": 1,
+        "cost": 0,
+        "dest_level": "dogpark",
+        "dest_object": "ref object 171",
+        "id": "dog",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "datacheck(class_datacheck)",
+          "type": [2]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "dogpark",
+        "dest_object": "ref object 171",
+        "id": "match",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "datacheck(class_datacheck)",
+          "type": [2, 4]
+        },
+        "rankup": 1
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "dogpark",
+        "dest_object": "ref object 171",
+        "id": "rematch",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [4]
+        },
+        "rankup": 0
       }
-    ]
-  },
-  {
-    "id": "riven",
-    "plays": ["rest", "mindpass", "dropshot", "chillout"],
+    ],
+    "id": "reese",
+    "img": 6,
     "loneliness": 1.3,
-    "tired_scene": "function",
-    "object": 164,
-    "max_hearts": 5,
-    "collision_scene": "function",
-    "img": 8,
-    "spr": 411,
-    "unavailable_func": "function",
-    "teach_scene": "function",
-    "name": "Riven",
+    "max_hearts": 7,
+    "name": "Reese",
+    "object": "ref object 171",
+    "plays": ["_FIREUP", "_TRACK"],
     "same_screen_scene": "function",
+    "spr": "ref sprite 489",
+    "teach_scene": "function",
+    "tired_scene": "function",
+    "unavailable_func": "function"
+  },
+  {
+    "collision_scene": "function",
     "events": [
       {
-        "id": "default",
         "alt_complete_flag": "datacheck(class_datacheck)",
+        "collides": 0,
+        "cost": 0,
         "dest_level": "",
         "dest_object": -1,
-        "parent": "Warning: recursive struct found",
-        "cost": 0,
-        "rankup": 0,
+        "id": "default",
         "invite_scene": "function",
-        "prereq": { "field": 0, "type": [0] },
-        "collides": 0
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
       },
       {
-        "id": "bench",
         "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
         "dest_level": "beryl",
-        "dest_object": 164,
-        "parent": "Warning: recursive struct found",
-        "cost": 1,
-        "rankup": 1,
+        "dest_object": "ref object 177",
+        "id": "bench",
         "invite_scene": "function",
-        "prereq": { "field": 0, "type": [0] },
-        "collides": 1
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 1
       },
       {
-        "id": "beach",
         "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
         "dest_level": "beach_cliff1",
-        "dest_object": 164,
-        "parent": "Warning: recursive struct found",
-        "cost": 1,
-        "rankup": 0,
+        "dest_object": "ref object 177",
+        "id": "beach",
         "invite_scene": "function",
-        "prereq": { "field": "rockybeach", "type": [3, 4] },
-        "collides": 1
-      }
-    ]
-  },
-  {
-    "id": "kaz",
-    "plays": ["crowd", "set", "shieldbreaker", "heartpass"],
-    "loneliness": 0.7,
-    "tired_scene": "function",
-    "object": 109,
-    "max_hearts": 6,
-    "collision_scene": "function",
-    "img": 3,
-    "spr": 171,
-    "unavailable_func": "function",
-    "teach_scene": "function",
-    "name": "Kaz",
-    "same_screen_scene": "function",
-    "events": [
-      {
-        "id": "default",
-        "alt_complete_flag": "datacheck(class_datacheck)",
-        "dest_level": "",
-        "dest_object": -1,
         "parent": "Warning: recursive struct found",
-        "cost": 0,
-        "rankup": 0,
-        "invite_scene": "function",
-        "prereq": { "field": 0, "type": [0] },
-        "collides": 0
+        "prereq": {
+          "field": "rockybeach",
+          "type": [3, 4]
+        },
+        "rankup": 0
       },
       {
-        "id": "volley",
+        "alt_complete_flag": "datacheck(class_datacheck)",
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "mainstreet",
+        "dest_object": "ref object 177",
+        "id": "city",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "central_station",
+          "type": [3, 4]
+        },
+        "rankup": 0
+      },
+      {
         "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": "",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [1]
+        },
+        "rankup": 0
+      }
+    ],
+    "id": "riven",
+    "img": 8,
+    "loneliness": 1.3,
+    "max_hearts": 5,
+    "name": "Riven",
+    "object": "ref object 177",
+    "plays": [
+      "rest",
+      "mindpass",
+      "dropshot",
+      "chillout",
+      "meditate",
+      "mindup",
+      "moon",
+      "telekinesis"
+    ],
+    "same_screen_scene": "function",
+    "spr": "ref sprite 496",
+    "teach_scene": "function",
+    "tired_scene": "function",
+    "unavailable_func": "function"
+  },
+  {
+    "collision_scene": "function",
+    "events": [
+      {
+        "alt_complete_flag": -1,
+        "collides": 0,
+        "cost": 1,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": "apology",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 0,
+        "cost": 1,
+        "dest_level": "pirate",
+        "dest_object": "ref object 129",
+        "id": "logan",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "pirate",
+          "type": [1, 4]
+        },
+        "rankup": 1
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 0,
+        "cost": 1,
+        "dest_level": "central_station",
+        "dest_object": "ref object 165",
+        "id": "shop",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "central_station",
+          "type": [3, 4]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": "",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [1]
+        },
+        "rankup": 0
+      }
+    ],
+    "id": "pirate",
+    "img": 5,
+    "loneliness": 0.5,
+    "max_hearts": 4,
+    "name": "Marcy",
+    "object": "ref object 158",
+    "plays": [
+      "rhythm",
+      "lifedew",
+      "healhit",
+      "refresh",
+      "stomp",
+      "allyprotect",
+      "healbell",
+      "vigor"
+    ],
+    "same_screen_scene": "function",
+    "spr": "ref sprite 84",
+    "teach_scene": "function",
+    "tired_scene": "function",
+    "unavailable_func": "function"
+  },
+  {
+    "collision_scene": "function",
+    "events": [
+      {
+        "alt_complete_flag": "datacheck(class_datacheck)",
+        "collides": 0,
+        "cost": 0,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": "default",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
         "dest_level": "hometown_north_path",
-        "dest_object": 109,
-        "parent": "Warning: recursive struct found",
-        "cost": 1,
-        "rankup": 1,
+        "dest_object": "ref object 113",
+        "id": "volley",
         "invite_scene": "function",
-        "prereq": { "field": 0, "type": [0] },
-        "collides": 1
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 1
       },
       {
-        "id": "celia",
         "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
         "dest_level": "sphinx",
-        "dest_object": 109,
-        "parent": "Warning: recursive struct found",
-        "cost": 1,
-        "rankup": 0,
+        "dest_object": "ref object 113",
+        "id": "celia",
         "invite_scene": "function",
-        "prereq": { "field": "datacheck(class_datacheck)", "type": [2, 4] },
-        "collides": 1
-      }
-    ]
-  },
-  {
-    "id": "celeb",
-    "plays": ["serve", "bodypass", "batonpass", "preblock"],
-    "loneliness": 0.6,
-    "tired_scene": "function",
-    "object": 82,
-    "max_hearts": 5,
-    "collision_scene": "function",
-    "img": 10,
-    "spr": 579,
-    "unavailable_func": "function",
-    "teach_scene": "function",
-    "name": "Sunsoo",
-    "same_screen_scene": "function",
-    "events": [
-      {
-        "id": "default",
-        "alt_complete_flag": "datacheck(class_datacheck)",
-        "dest_level": "",
-        "dest_object": -1,
         "parent": "Warning: recursive struct found",
-        "cost": 0,
-        "rankup": 0,
-        "invite_scene": "function",
-        "prereq": { "field": 0, "type": [0] },
-        "collides": 0
+        "prereq": {
+          "field": "datacheck(class_datacheck)",
+          "type": [2, 4]
+        },
+        "rankup": 0
       },
       {
-        "id": "club1",
         "alt_complete_flag": -1,
-        "dest_level": "chartreuse",
-        "dest_object": 107,
-        "parent": "Warning: recursive struct found",
+        "collides": 1,
         "cost": 1,
-        "rankup": 1,
+        "dest_level": "academy",
+        "dest_object": "ref object 113",
+        "id": "woods",
         "invite_scene": "function",
-        "prereq": { "field": 0, "type": [0] },
-        "collides": 0
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "academy",
+          "type": [3, 4]
+        },
+        "rankup": 0
       },
       {
-        "id": "club2",
         "alt_complete_flag": -1,
-        "dest_level": "chartreuse",
-        "dest_object": 107,
-        "parent": "Warning: recursive struct found",
+        "collides": 1,
         "cost": 1,
-        "rankup": 0,
+        "dest_level": "hometown_north_path",
+        "dest_object": "ref object 113",
+        "id": "cry",
         "invite_scene": "function",
-        "prereq": { "field": 0, "type": [0] },
-        "collides": 0
-      }
-    ]
-  },
-  {
-    "id": "science",
-    "plays": ["trap", "dig", "callout", "markattack"],
-    "loneliness": 1.6,
-    "tired_scene": "function",
-    "object": 159,
-    "max_hearts": 5,
-    "collision_scene": "function",
-    "img": 1,
-    "spr": 225,
-    "unavailable_func": "function",
-    "teach_scene": "function",
-    "name": "Celia",
-    "same_screen_scene": "function",
-    "events": [
-      {
-        "id": "default",
-        "alt_complete_flag": "datacheck(class_datacheck)",
-        "dest_level": "",
-        "dest_object": -1,
         "parent": "Warning: recursive struct found",
-        "cost": 0,
-        "rankup": 0,
-        "invite_scene": "function",
-        "prereq": { "field": 0, "type": [0] },
-        "collides": 0
+        "prereq": {
+          "field": 0,
+          "type": [0, 4]
+        },
+        "rankup": 1
       },
       {
-        "id": "diner",
         "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "academy",
+        "dest_object": "ref object 3",
+        "id": "academy",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "datacheck(class_datacheck)",
+          "type": [2, 4]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
         "dest_level": "jasper",
-        "dest_object": 169,
-        "parent": "Warning: recursive struct found",
-        "cost": 1,
-        "rankup": 1,
+        "dest_object": "ref object 21",
+        "id": "rematch",
         "invite_scene": "function",
-        "prereq": { "field": "jasper", "type": [3, 4] },
-        "collides": 1
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [4]
+        },
+        "rankup": 0
       }
-    ]
+    ],
+    "id": "kaz",
+    "img": 3,
+    "loneliness": 0.7,
+    "max_hearts": 6,
+    "name": "Kaz",
+    "object": "ref object 113",
+    "plays": [
+      "crowd",
+      "set",
+      "shieldbreaker",
+      "heartpass",
+      "myheartpass",
+      "heart",
+      "bellydrum",
+      "overheat"
+    ],
+    "same_screen_scene": "function",
+    "spr": "ref sprite 211",
+    "teach_scene": "function",
+    "tired_scene": "function",
+    "unavailable_func": "function"
+  },
+  {
+    "collision_scene": "function",
+    "events": [
+      {
+        "alt_complete_flag": "datacheck(class_datacheck)",
+        "collides": 0,
+        "cost": 0,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": "default",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 0,
+        "cost": 1,
+        "dest_level": "chartreuse",
+        "dest_object": "ref object 53",
+        "id": "club1",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 1
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 0,
+        "cost": 1,
+        "dest_level": "chartreuse",
+        "dest_object": "ref object 53",
+        "id": "club2",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "chartreuse",
+        "dest_object": "ref object 47",
+        "id": "sunset",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": "",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [1]
+        },
+        "rankup": 0
+      }
+    ],
+    "id": "celeb",
+    "img": 10,
+    "loneliness": 0.6,
+    "max_hearts": 5,
+    "name": "Sunsoo",
+    "object": "ref object 47",
+    "plays": [
+      "serve",
+      "bodypass",
+      "batonpass",
+      "preblock",
+      "jazzpass",
+      "powswitch",
+      "swordsdance",
+      "superpower"
+    ],
+    "same_screen_scene": "function",
+    "spr": "ref sprite 89",
+    "teach_scene": "function",
+    "tired_scene": "function",
+    "unavailable_func": "function"
+  },
+  {
+    "collision_scene": "function",
+    "events": [
+      {
+        "alt_complete_flag": "datacheck(class_datacheck)",
+        "collides": 0,
+        "cost": 0,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": "default",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "jasper",
+        "dest_object": "ref object 63",
+        "id": "diner",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "jasper",
+          "type": [3, 4]
+        },
+        "rankup": 1
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "rubberfarm",
+        "dest_object": "ref object 187",
+        "id": "rubber",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "rubberfarm",
+          "type": [3]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": "datacheck(class_datacheck)",
+        "collides": 1,
+        "cost": 0,
+        "dest_level": "park_edge",
+        "dest_object": "ref object 187",
+        "id": "park",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "datacheck(class_datacheck)",
+          "type": [2, 4]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": "",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [1]
+        },
+        "rankup": 0
+      }
+    ],
+    "id": "science",
+    "img": 1,
+    "loneliness": 1.6,
+    "max_hearts": 5,
+    "name": "Celia",
+    "object": "ref object 187",
+    "plays": [
+      "trap",
+      "dig",
+      "callout",
+      "markattack",
+      "poisonhit",
+      "whirlwind",
+      "sting",
+      "tool"
+    ],
+    "same_screen_scene": "function",
+    "spr": "ref sprite 503",
+    "teach_scene": "function",
+    "tired_scene": "function",
+    "unavailable_func": "function"
+  },
+  {
+    "collision_scene": "function",
+    "events": [
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": "default",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [1]
+        },
+        "rankup": 0
+      }
+    ],
+    "id": "academy",
+    "img": 0,
+    "loneliness": 0.9,
+    "max_hearts": 1,
+    "name": "Callisto",
+    "object": "ref object 86",
+    "plays": [
+      "careful",
+      "sidespin",
+      "topspin",
+      "feint",
+      "lock",
+      "eerie",
+      "dump",
+      "cut"
+    ],
+    "same_screen_scene": "function",
+    "spr": "ref sprite 179",
+    "teach_scene": "function",
+    "tired_scene": "function",
+    "unavailable_func": "function"
+  },
+  {
+    "collision_scene": "function",
+    "events": [
+      {
+        "alt_complete_flag": "datacheck(class_datacheck)",
+        "collides": 0,
+        "cost": 0,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": "default",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 0,
+        "cost": 1,
+        "dest_level": "city_market",
+        "dest_object": "ref object 241",
+        "id": "stream1",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 1
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 0,
+        "cost": 1,
+        "dest_level": "central_station",
+        "dest_object": "ref object 132",
+        "id": "mall",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "city_market",
+        "dest_object": "ref object 203",
+        "id": "meme",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "academy",
+        "dest_object": "ref object 203",
+        "id": "academy",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": "datacheck(class_datacheck)",
+          "type": [2, 4]
+        },
+        "rankup": 1
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 0,
+        "cost": 1,
+        "dest_level": "city_market",
+        "dest_object": "ref object 241",
+        "id": "music",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [4]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "city_market",
+        "dest_object": "ref object 21",
+        "id": "rematch",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [4]
+        },
+        "rankup": 0
+      }
+    ],
+    "id": "streamer",
+    "img": 9,
+    "loneliness": 1.1,
+    "max_hearts": 6,
+    "name": "Elena",
+    "object": "ref object 203",
+    "plays": [
+      "sweatup",
+      "followme",
+      "dragontail",
+      "skillswap",
+      "taunt",
+      "dispel",
+      "introduce",
+      "noisytag"
+    ],
+    "same_screen_scene": "function",
+    "spr": "ref sprite 534",
+    "teach_scene": "function",
+    "tired_scene": "function",
+    "unavailable_func": "function"
+  },
+  {
+    "collision_scene": "function",
+    "events": [
+      {
+        "alt_complete_flag": "datacheck(class_datacheck)",
+        "collides": 0,
+        "cost": 0,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": "default",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [0]
+        },
+        "rankup": 0
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": "",
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [1]
+        },
+        "rankup": 0
+      }
+    ],
+    "id": "warrior",
+    "img": 2,
+    "loneliness": 1.8,
+    "max_hearts": 2,
+    "name": "Dominic",
+    "object": "ref object 232",
+    "plays": [
+      "substitute",
+      "fieldclear",
+      "rushattack",
+      "mark",
+      "bench",
+      "libero",
+      "haze",
+      "hyperbeam"
+    ],
+    "same_screen_scene": "function",
+    "spr": "ref sprite 143",
+    "teach_scene": "function",
+    "tired_scene": "function",
+    "unavailable_func": "function"
+  },
+  {
+    "collision_scene": "function",
+    "events": [
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": {
+          "field": 0,
+          "type": [1]
+        },
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [1]
+        },
+        "rankup": 0
+      }
+    ],
+    "id": "champion",
+    "img": 11,
+    "loneliness": 0.9,
+    "max_hearts": 1,
+    "name": "Valerie",
+    "object": "ref object 227",
+    "plays": [],
+    "same_screen_scene": "function",
+    "spr": "ref sprite 568",
+    "teach_scene": "function",
+    "tired_scene": "function",
+    "unavailable_func": "function"
+  },
+  {
+    "collision_scene": "function",
+    "events": [
+      {
+        "alt_complete_flag": -1,
+        "collides": 1,
+        "cost": 1,
+        "dest_level": "",
+        "dest_object": -1,
+        "id": {
+          "field": 0,
+          "type": [1]
+        },
+        "invite_scene": "function",
+        "parent": "Warning: recursive struct found",
+        "prereq": {
+          "field": 0,
+          "type": [1]
+        },
+        "rankup": 0
+      }
+    ],
+    "id": "king",
+    "img": 4,
+    "loneliness": 0.6,
+    "max_hearts": 1,
+    "name": "Sports King",
+    "object": "ref object 115",
+    "plays": [],
+    "same_screen_scene": "function",
+    "spr": "ref sprite 216",
+    "teach_scene": "function",
+    "tired_scene": "function",
+    "unavailable_func": "function"
   }
 ]

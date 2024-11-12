@@ -8,7 +8,7 @@ export type Item = {
   img: number;
   type: number;
   name: string;
-  eff: number[];
+  eff: Array<string | number>;
 };
 
 const ITEM_DIC: Record<string, Item> = item_dic;

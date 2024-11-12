@@ -70,7 +70,7 @@ def main(args):
                 researchdata[fp2.stem] = do_file(fp2, outdir=outdir) + 1
         else:
             researchdata[fp.stem] = do_file(fp, outdir=outdir) + 1
-    with open("src/data/raw/research_data.json", "w+") as f:
+    with open("../src/data/raw/research_data.json", "w+") as f:
         json.dump(researchdata, f)
 
 if __name__ == "__main__":

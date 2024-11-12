@@ -22,7 +22,7 @@ export type MapIcon = {
   from_level?: string;
   from_object?: string;
   from_object_guid?: string;
-  has_conditional?: number;
+  has_conditional?: boolean | number;
   img?: number;
   is_cave?: number;
   object_y?: number;
@@ -35,7 +35,7 @@ export type MapIcon = {
   world_y: number;
   x: number;
   y: number;
-  zoom_view?: number;
+  zoom_view?: number | boolean;
 };
 
 export type Portal = {

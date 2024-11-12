@@ -1,5 +1,24 @@
 import beastie_data from "./raw/beastie_data.json";
 
+export type Condition = {
+  conditions: Array<
+    Partial<{
+      effect_pow?: string;
+      effect_type?: number | number[];
+      event: null;
+      freq: number;
+      func?: null;
+      my_data: null;
+      player?: number | number[];
+      rel_color: number;
+      damage?: string | number;
+      target: number | Array<number>;
+      type: number;
+    }>
+  >;
+  description: string;
+};
+
 export type BeastieType = {
   ability: Array<string>;
   ability_hidden: boolean;
@@ -71,7 +90,7 @@ export type BeastieType = {
     | {
         condition: number[];
         specie: string;
-        value: number[];
+        value: number[] | Condition[];
       }[];
   family: string;
   first_frame: number;
@@ -125,24 +144,7 @@ export type BeastieType = {
   //   y: number;
   // };
   prev_ids: Array<string>;
-  recruit: {
-    conditions: Array<
-      Partial<{
-        effect_pow?: string;
-        effect_type?: number | number[];
-        event: null;
-        freq: number;
-        func?: null;
-        my_data: null;
-        player?: number;
-        rel_color: number;
-        damage?: string | number;
-        target: number | Array<number>;
-        type: number;
-      }>
-    >;
-    description: string;
-  };
+  recruit: Condition;
   recruit_value: number;
   roamer_style: {
     _name: string;

@@ -14,6 +14,21 @@
     ["healhit2", 43]
   ],
   "22": [
+    ["rhythm", 0],
+    ["rocksmash", 0],
+    ["refresh", 5],
+    ["lifedew", 9],
+    ["topspin", 12],
+    ["protect", 17],
+    ["mark", 20],
+    ["healhit2", 25],
+    ["fieldclear", 31],
+    ["stomp", 36],
+    ["allyrush", 40],
+    ["allyprotect", 44],
+    ["vigor", 48]
+  ],
+  "23": [
     ["crowd", 0],
     ["snore", 0],
     ["refresh", 5],
@@ -28,7 +43,7 @@
     ["lifepass", 44],
     ["contest", 48]
   ],
-  "23": [
+  "24": [
     ["trap", 0],
     ["dropshot", 0],
     ["refresh", 5],
@@ -43,7 +58,7 @@
     ["dump", 44],
     ["fieldclear", 48]
   ],
-  "24": [
+  "25": [
     ["rush", 0],
     ["starterbody", 0],
     ["defheal", 7],
@@ -57,7 +72,7 @@
     ["preblock", 35],
     ["vigor", 41]
   ],
-  "25": [
+  "26": [
     ["rush", 0],
     ["starterbody", 0],
     ["defheal", 11],
@@ -71,7 +86,21 @@
     ["preblock", 39],
     ["vigor", 45]
   ],
-  "26": [
+  "27": [
+    ["rush", 0],
+    ["starterbody", 0],
+    ["defheal", 15],
+    ["breakswipe", 18],
+    ["curse", 20],
+    ["pushattack", 23],
+    ["recover", 28],
+    ["body", 32],
+    ["protect", 36],
+    ["rushattack", 39],
+    ["preblock", 43],
+    ["vigor", 49]
+  ],
+  "28": [
     ["cheer", 0],
     ["pepshot", 0],
     ["myheartpass", 7],
@@ -84,7 +113,7 @@
     ["commit", 36],
     ["healbell", 41]
   ],
-  "27": [
+  "29": [
     ["cheer", 0],
     ["pepshot", 0],
     ["myheartpass", 11],
@@ -97,7 +126,20 @@
     ["commit", 40],
     ["healbell", 45]
   ],
-  "28": [
+  "30": [
+    ["cheer", 0],
+    ["pepshot", 0],
+    ["myheartpass", 15],
+    ["minddown", 19],
+    ["rhythm", 23],
+    ["noisytag", 27],
+    ["heart", 31],
+    ["heartup", 36],
+    ["introduction", 40],
+    ["commit", 44],
+    ["healbell", 49]
+  ],
+  "31": [
     ["dig", 0],
     ["startermind", 0],
     ["allyrush", 7],
@@ -110,7 +152,7 @@
     ["tool", 37],
     ["mindup", 41]
   ],
-  "29": [
+  "32": [
     ["dig", 0],
     ["startermind", 0],
     ["allyrush", 11],
@@ -123,7 +165,20 @@
     ["tool", 41],
     ["mindup", 45]
   ],
-  "30": [
+  "33": [
+    ["dig", 0],
+    ["startermind", 0],
+    ["allyrush", 15],
+    ["mind", 19],
+    ["set", 22],
+    ["stresspass", 26],
+    ["passattack", 31],
+    ["construct", 36],
+    ["jazzpass", 41],
+    ["tool", 45],
+    ["mindup", 49]
+  ],
+  "34": [
     ["hdefup", 0],
     ["startermind", 0],
     ["stun", 5],
@@ -137,7 +192,7 @@
     ["stress", 40],
     ["eerie", 45]
   ],
-  "31": [
+  "35": [
     ["hdefup", 0],
     ["startermind", 0],
     ["stun", 8],
@@ -151,21 +206,21 @@
     ["stress", 43],
     ["eerie", 48]
   ],
-  "32": [
+  "36": [
     ["hdefup", 0],
     ["startermind", 0],
     ["stun", 11],
     ["preblock", 14],
     ["facade", 20],
-    ["sweatup", 26],
-    ["hex", 29],
+    ["crowd", 26],
+    ["ego", 29],
     ["taunt", 33],
     ["overthink", 38],
     ["dare", 42],
     ["stress", 46],
     ["eerie", 51]
   ],
-  "33": [
+  "37": [
     ["bench", 0],
     ["bounce", 0],
     ["rocksmash", 6],
@@ -179,7 +234,7 @@
     ["vigor", 38],
     ["batonpass", 43]
   ],
-  "34": [
+  "38": [
     ["bench", 0],
     ["bounce", 0],
     ["rocksmash", 9],
@@ -193,7 +248,21 @@
     ["vigor", 41],
     ["batonpass", 46]
   ],
-  "35": [
+  "39": [
+    ["bench", 0],
+    ["bounce", 0],
+    ["rocksmash", 12],
+    ["cover", 15],
+    ["libero", 18],
+    ["tagattack", 21],
+    ["dig", 25],
+    ["curse", 29],
+    ["body", 35],
+    ["construct", 39],
+    ["vigor", 44],
+    ["batonpass", 49]
+  ],
+  "40": [
     ["tailwind", 0],
     ["starterheart", 0],
     ["protect", 6],
@@ -206,7 +275,7 @@
     ["backswitch", 43],
     ["cut", 48]
   ],
-  "36": [
+  "41": [
     ["tailwind", 0],
     ["starterheart", 0],
     ["protect", 10],
@@ -219,7 +288,7 @@
     ["backswitch", 47],
     ["cut", 52]
   ],
-  "37": [
+  "42": [
     ["dig", 0],
     ["pepshot", 0],
     ["charm", 8],
@@ -232,7 +301,7 @@
     ["shakeoff", 39],
     ["damagedattack", 43]
   ],
-  "38": [
+  "43": [
     ["dig", 0],
     ["pepshot", 0],
     ["charm", 13],
@@ -245,7 +314,7 @@
     ["shakeoff", 44],
     ["damagedattack", 48]
   ],
-  "39": [
+  "44": [
     ["lowattks", 0],
     ["startermind", 0],
     ["taunt", 5],
@@ -260,7 +329,22 @@
     ["trap", 41],
     ["tool", 46]
   ],
-  "40": [
+  "45": [
+    ["lowattks", 0],
+    ["startermind", 0],
+    ["taunt", 9],
+    ["dropshot", 13],
+    ["sensihit", 16],
+    ["nettle", 20],
+    ["netattack", 24],
+    ["rest", 28],
+    ["allnervous", 33],
+    ["spitball", 37],
+    ["followme", 41],
+    ["trap", 45],
+    ["tool", 50]
+  ],
+  "46": [
     ["rush", 0],
     ["careful", 0],
     ["heartup", 6],
@@ -273,7 +357,7 @@
     ["freeball", 42],
     ["reversal", 47]
   ],
-  "41": [
+  "47": [
     ["mdefup", 0],
     ["startermind", 0],
     ["poisonhit", 4],
@@ -286,7 +370,7 @@
     ["telekinesis", 40],
     ["dump", 46]
   ],
-  "42": [
+  "48": [
     ["mdefup", 0],
     ["startermind", 0],
     ["poisonhit", 9],
@@ -299,7 +383,7 @@
     ["telekinesis", 45],
     ["dump", 51]
   ],
-  "43": [
+  "49": [
     ["feint", 0],
     ["bounce", 0],
     ["rush", 7],
@@ -313,7 +397,7 @@
     ["overheat", 43],
     ["rushattack", 48]
   ],
-  "44": [
+  "50": [
     ["feint", 0],
     ["bounce", 0],
     ["rush", 11],
@@ -327,7 +411,7 @@
     ["overheat", 47],
     ["rushattack", 52]
   ],
-  "45": [
+  "51": [
     ["taunt", 0],
     ["starterheart", 0],
     ["facade", 9],
@@ -341,7 +425,7 @@
     ["rush", 42],
     ["overheat", 46]
   ],
-  "46": [
+  "52": [
     ["taunt", 0],
     ["starterheart", 0],
     ["facade", 13],
@@ -355,7 +439,20 @@
     ["rush", 46],
     ["overheat", 50]
   ],
-  "47": [
+  "53": [
+    ["distraction", 0],
+    ["nightshade", 0],
+    ["shaken", 9],
+    ["sidespin", 16],
+    ["noisytag", 19],
+    ["rush", 23],
+    ["poisonhit", 27],
+    ["lock", 31],
+    ["stun", 35],
+    ["stress", 40],
+    ["dump", 47]
+  ],
+  "54": [
     ["dig", 0],
     ["pepshot", 0],
     ["allyrush", 5],
@@ -369,7 +466,7 @@
     ["commit", 40],
     ["lifepass", 46]
   ],
-  "48": [
+  "55": [
     ["starterbody", 0],
     ["cheer", 0],
     ["crowd", 6],
@@ -382,7 +479,7 @@
     ["swordsdance", 40],
     ["dispel", 47]
   ],
-  "49": [
+  "56": [
     ["starterbody", 0],
     ["cheer", 0],
     ["crowd", 9],
@@ -395,7 +492,7 @@
     ["swordsdance", 43],
     ["dispel", 50]
   ],
-  "50": [
+  "57": [
     ["dispel", 0],
     ["stun", 0],
     ["mindpass", 7],
@@ -408,7 +505,20 @@
     ["tool", 41],
     ["lock", 46]
   ],
-  "51": [
+  "58": [
+    ["dispel", 0],
+    ["stun", 0],
+    ["mindpass", 10],
+    ["mindbomb", 14],
+    ["meditate", 20],
+    ["taunt", 25],
+    ["dropshot", 30],
+    ["refresh", 35],
+    ["teleport", 39],
+    ["tool", 44],
+    ["lock", 49]
+  ],
+  "59": [
     ["allyrush", 0],
     ["rocksmash", 0],
     ["set", 6],
@@ -421,7 +531,7 @@
     ["libero", 40],
     ["hyperbeam", 46]
   ],
-  "52": [
+  "60": [
     ["allyrush", 0],
     ["rocksmash", 0],
     ["set", 9],
@@ -434,7 +544,7 @@
     ["libero", 43],
     ["hyperbeam", 49]
   ],
-  "53": [
+  "61": [
     ["allyrush", 0],
     ["rocksmash", 0],
     ["set", 11],
@@ -447,7 +557,75 @@
     ["libero", 45],
     ["hyperbeam", 51]
   ],
-  "54": [
+  "62": [
+    ["cheer", 0],
+    ["starterside", 0],
+    ["set", 5],
+    ["sideshot", 10],
+    ["juggle", 14],
+    ["topspin", 19],
+    ["followme", 24],
+    ["sidespin", 30],
+    ["passattack", 36],
+    ["bodypass", 40],
+    ["moon", 44]
+  ],
+  "63": [
+    ["cheer", 0],
+    ["starterside", 0],
+    ["set", 9],
+    ["sideshot", 14],
+    ["juggle", 18],
+    ["topspin", 23],
+    ["followme", 28],
+    ["sidespin", 34],
+    ["passattack", 40],
+    ["bodypass", 44],
+    ["moon", 48]
+  ],
+  "64": [
+    ["cover", 0],
+    ["stun", 0],
+    ["poisonhit", 7],
+    ["shaken", 12],
+    ["hazeball", 17],
+    ["sweatup", 22],
+    ["wornout", 27],
+    ["hex", 30],
+    ["teleport", 33],
+    ["sweatall", 38],
+    ["targethp", 43],
+    ["eerie", 48]
+  ],
+  "65": [
+    ["cover", 0],
+    ["stun", 0],
+    ["poisonhit", 10],
+    ["shaken", 15],
+    ["hazeball", 20],
+    ["sweatup", 25],
+    ["wornout", 30],
+    ["hex", 33],
+    ["teleport", 36],
+    ["sweatall", 41],
+    ["targethp", 46],
+    ["eerie", 51]
+  ],
+  "66": [
+    ["cover", 0],
+    ["stun", 0],
+    ["poisonhit", 13],
+    ["shaken", 18],
+    ["hazeball", 23],
+    ["sweatup", 28],
+    ["wornout", 33],
+    ["hex", 36],
+    ["teleport", 39],
+    ["sweatall", 44],
+    ["targethp", 49],
+    ["eerie", 54]
+  ],
+  "67": [
     ["charm", 0],
     ["starterheart", 0],
     ["allycover", 6],
@@ -460,7 +638,7 @@
     ["heart", 41],
     ["haze", 47]
   ],
-  "55": [
+  "68": [
     ["backswitch", 0],
     ["shakenmind", 0],
     ["starterside", 6],
@@ -473,7 +651,90 @@
     ["taunt", 40],
     ["dump", 44]
   ],
-  "56": [
+  "69": [
+    ["backswitch", 0],
+    ["shakenmind", 0],
+    ["starterside", 10],
+    ["lockon", 14],
+    ["sideshot", 21],
+    ["skillswap", 24],
+    ["sidespin", 28],
+    ["rush", 33],
+    ["passattack", 39],
+    ["taunt", 44],
+    ["dump", 48]
+  ],
+  "70": [
+    ["rush", 0],
+    ["startermind", 0],
+    ["shakenmind", 5],
+    ["teleport", 10],
+    ["passattack", 15],
+    ["lock", 20],
+    ["netattack", 26],
+    ["feint", 31],
+    ["cut", 36],
+    ["threat", 42],
+    ["targethp", 48]
+  ],
+  "71": [
+    ["enemylowered", 0],
+    ["mark", 0],
+    ["breakswipe", 5],
+    ["float", 8],
+    ["rush", 11],
+    ["allyprotect", 17],
+    ["heartdown", 23],
+    ["lock", 30],
+    ["rollshot", 34],
+    ["protect", 38],
+    ["thunder", 42],
+    ["recover", 46]
+  ],
+  "72": [
+    ["starterheart", 0],
+    ["dig", 0],
+    ["careful", 6],
+    ["shaken", 9],
+    ["cheer", 13],
+    ["shieldbreaker", 18],
+    ["lock", 21],
+    ["crowd", 25],
+    ["facade", 30],
+    ["allyprotect", 33],
+    ["substitute", 36],
+    ["commit", 42],
+    ["heartup", 47]
+  ],
+  "73": [
+    ["startermind", 0],
+    ["rush", 0],
+    ["telekinesis", 9],
+    ["float", 14],
+    ["sting", 19],
+    ["recover", 22],
+    ["netattack", 26],
+    ["nettle", 31],
+    ["markattack", 35],
+    ["mark", 39],
+    ["rollshot", 43],
+    ["targethp", 48]
+  ],
+  "74": [
+    ["startermind", 0],
+    ["rush", 0],
+    ["telekinesis", 9],
+    ["float", 14],
+    ["sting", 19],
+    ["recover", 22],
+    ["netattack", 26],
+    ["nettle", 31],
+    ["markattack", 35],
+    ["mark", 39],
+    ["rollshot", 43],
+    ["targethp", 48]
+  ],
+  "75": [
     ["preblock", 0],
     ["healhit", 0],
     ["defheal", 4],
@@ -487,7 +748,7 @@
     ["haze", 40],
     ["stomp", 46]
   ],
-  "57": [
+  "76": [
     ["preblock", 0],
     ["healhit", 0],
     ["defheal", 7],
@@ -501,7 +762,21 @@
     ["haze", 43],
     ["stomp", 49]
   ],
-  "58": [
+  "77": [
+    ["preblock", 0],
+    ["healhit", 0],
+    ["defheal", 9],
+    ["rhythm", 13],
+    ["mind", 16],
+    ["protect", 23],
+    ["heartdown", 28],
+    ["allyprotect", 34],
+    ["dump", 37],
+    ["refresh", 42],
+    ["haze", 45],
+    ["stomp", 51]
+  ],
+  "78": [
     ["lowattks", 0],
     ["starterbody", 0],
     ["bdefup", 6],
@@ -515,7 +790,21 @@
     ["protect", 39],
     ["hyperbeam", 42]
   ],
-  "59": [
+  "79": [
+    ["lowattks", 0],
+    ["starterbody", 0],
+    ["bdefup", 11],
+    ["rocksmash", 15],
+    ["preblock", 19],
+    ["serve", 22],
+    ["curse", 26],
+    ["shakeoff", 30],
+    ["rocket", 35],
+    ["batonpass", 39],
+    ["protect", 44],
+    ["hyperbeam", 47]
+  ],
+  "80": [
     ["callout", 0],
     ["startermind", 0],
     ["defheal", 5],
@@ -529,7 +818,7 @@
     ["substitute", 38],
     ["rollshot", 43]
   ],
-  "60": [
+  "81": [
     ["callout", 0],
     ["startermind", 0],
     ["defheal", 9],
@@ -543,7 +832,7 @@
     ["substitute", 42],
     ["rollshot", 47]
   ],
-  "61": [
+  "82": [
     ["nettle", 0],
     ["starterheart", 0],
     ["careful", 7],
@@ -557,7 +846,7 @@
     ["haze", 40],
     ["reversal", 45]
   ],
-  "62": [
+  "83": [
     ["nettle", 0],
     ["starterheart", 0],
     ["careful", 7],
@@ -571,7 +860,21 @@
     ["haze", 40],
     ["reversal", 45]
   ],
-  "63": [
+  "84": [
+    ["nettle", 0],
+    ["starterheart", 0],
+    ["careful", 7],
+    ["sting", 11],
+    ["trap", 15],
+    ["snore", 19],
+    ["substitute", 23],
+    ["bellydrum", 27],
+    ["cut", 32],
+    ["refresh", 36],
+    ["haze", 40],
+    ["reversal", 45]
+  ],
+  "85": [
     ["callout", 0],
     ["pepshot", 0],
     ["breakswipe", 5],
@@ -585,7 +888,20 @@
     ["skillswap", 43],
     ["contest", 47]
   ],
-  "64": [
+  "86": [
+    ["rhythm", 0],
+    ["starterbody", 0],
+    ["followme", 6],
+    ["sensihit", 11],
+    ["skillswap", 16],
+    ["tagattack", 20],
+    ["juggle", 25],
+    ["damagedattack", 31],
+    ["stomp", 36],
+    ["noisytag", 41],
+    ["vigor", 47]
+  ],
+  "87": [
     ["curse", 0],
     ["starterbody", 0],
     ["set", 6],
@@ -598,7 +914,7 @@
     ["jazzpass", 40],
     ["superpower", 45]
   ],
-  "65": [
+  "88": [
     ["curse", 0],
     ["starterbody", 0],
     ["set", 6],
@@ -611,7 +927,20 @@
     ["jazzpass", 40],
     ["superpower", 45]
   ],
-  "66": [
+  "89": [
+    ["chill", 0],
+    ["stun", 0],
+    ["refresh", 5],
+    ["dig", 8],
+    ["poisonhit", 13],
+    ["lifedew", 19],
+    ["construct", 24],
+    ["float", 30],
+    ["preblock", 35],
+    ["spitball", 41],
+    ["fieldclear", 46]
+  ],
+  "90": [
     ["lockon", 0],
     ["enemylowered", 0],
     ["lowattks", 6],
@@ -625,7 +954,20 @@
     ["rushattack", 44],
     ["mindup", 49]
   ],
-  "67": [
+  "91": [
+    ["dig", 0],
+    ["bounce", 0],
+    ["curse", 4],
+    ["passattack", 13],
+    ["preblock", 17],
+    ["serve", 22],
+    ["substitute", 28],
+    ["body", 33],
+    ["rollshot", 37],
+    ["powswitch", 42],
+    ["superpower", 50]
+  ],
+  "92": [
     ["protect", 0],
     ["starterheart", 0],
     ["dig", 6],
@@ -639,7 +981,7 @@
     ["damagedattack", 41],
     ["lifepass", 46]
   ],
-  "68": [
+  "93": [
     ["startermind", 0],
     ["mdefup", 5],
     ["telekinesis", 12],
@@ -653,7 +995,7 @@
     ["mindpass", 43],
     ["wornattack", 48]
   ],
-  "69": [
+  "94": [
     ["feint", 0],
     ["starterheart", 0],
     ["rush", 6],
@@ -667,33 +1009,49 @@
     ["eerie", 45],
     ["threat", 49]
   ],
-  "70": [
+  "95": [
     ["bdefup", 0],
-    ["rocksmash", 0],
-    ["protect", 8],
-    ["dig", 13],
+    ["starterbody", 0],
+    ["dig", 6],
+    ["protect", 9],
+    ["rocksmash", 13],
     ["pushattack", 17],
     ["defheal", 21],
     ["rocket", 24],
     ["preblock", 29],
     ["substitute", 35],
-    ["stomp", 38],
+    ["body", 38],
     ["distraction", 42]
   ],
-  "71": [
+  "96": [
     ["bdefup", 0],
-    ["rocksmash", 0],
-    ["protect", 11],
-    ["dig", 16],
+    ["starterbody", 0],
+    ["dig", 9],
+    ["protect", 12],
+    ["rocksmash", 16],
     ["pushattack", 20],
     ["defheal", 24],
     ["rocket", 27],
     ["preblock", 32],
     ["substitute", 38],
-    ["stomp", 41],
+    ["body", 41],
     ["distraction", 45]
   ],
-  "72": [
+  "97": [
+    ["bdefup", 0],
+    ["starterbody", 0],
+    ["dig", 12],
+    ["protect", 15],
+    ["rocksmash", 19],
+    ["pushattack", 23],
+    ["defheal", 27],
+    ["rocket", 30],
+    ["preblock", 35],
+    ["substitute", 41],
+    ["body", 44],
+    ["distraction", 48]
+  ],
+  "98": [
     ["stress", 0],
     ["starterbody", 0],
     ["sideshot", 6],
@@ -706,7 +1064,7 @@
     ["lowattks", 40],
     ["superpower", 44]
   ],
-  "73": [
+  "99": [
     ["stress", 0],
     ["starterbody", 0],
     ["sideshot", 10],
@@ -719,7 +1077,7 @@
     ["lowattks", 44],
     ["superpower", 48]
   ],
-  "74": [
+  "100": [
     ["fieldclear", 0],
     ["bounce", 0],
     ["shakenhit", 5],
@@ -734,7 +1092,7 @@
     ["rest", 42],
     ["tool", 45]
   ],
-  "75": [
+  "101": [
     ["mindpass", 0],
     ["startermind", 0],
     ["healhit", 8],
@@ -747,7 +1105,20 @@
     ["heartd", 42],
     ["jump", 46]
   ],
-  "76": [
+  "102": [
+    ["mindpass", 0],
+    ["startermind", 0],
+    ["healhit", 12],
+    ["substitute", 18],
+    ["pursuit", 23],
+    ["mindup", 28],
+    ["heartdown", 33],
+    ["trap", 37],
+    ["protect", 42],
+    ["heartd", 46],
+    ["jump", 50]
+  ],
+  "103": [
     ["mindpass", 0],
     ["startermind", 0],
     ["mdefup", 7],
@@ -760,7 +1131,101 @@
     ["libero", 40],
     ["tool", 45]
   ],
-  "77": [
+  "104": [
+    ["mindpass", 0],
+    ["startermind", 0],
+    ["mdefup", 11],
+    ["shakenmind", 15],
+    ["trap", 20],
+    ["heartd", 25],
+    ["overthink", 30],
+    ["meditate", 34],
+    ["mind", 39],
+    ["libero", 44],
+    ["tool", 49]
+  ],
+  "105": [
+    ["defheal", 0],
+    ["starterbody", 0],
+    ["storedpower", 6],
+    ["refresh", 10],
+    ["sensihit", 14],
+    ["rest", 18],
+    ["rush", 23],
+    ["healhit2", 26],
+    ["recover", 30],
+    ["thunder", 34],
+    ["batonpass", 39],
+    ["substitute", 43],
+    ["vigor", 48]
+  ],
+  "106": [
+    ["bench", 0],
+    ["starterheart", 0],
+    ["rest", 8],
+    ["careful", 13],
+    ["refresh", 17],
+    ["tagattack", 20],
+    ["healhit2", 24],
+    ["lifedew", 29],
+    ["heart", 33],
+    ["set", 37],
+    ["commit", 41]
+  ],
+  "107": [
+    ["bench", 0],
+    ["starterheart", 0],
+    ["rest", 12],
+    ["careful", 17],
+    ["refresh", 21],
+    ["tagattack", 24],
+    ["healhit2", 28],
+    ["lifedew", 33],
+    ["heart", 37],
+    ["set", 41],
+    ["commit", 45]
+  ],
+  "108": [
+    ["dig", 0],
+    ["startermind", 0],
+    ["lowattks", 7],
+    ["enemylowered", 12],
+    ["steal", 17],
+    ["netattack", 23],
+    ["threat", 28],
+    ["mindup", 32],
+    ["rollshot", 35],
+    ["taunt", 40],
+    ["dump", 47]
+  ],
+  "109": [
+    ["cover", 0],
+    ["starterside", 0],
+    ["lowattks", 7],
+    ["float", 13],
+    ["steal", 18],
+    ["mindbomb", 24],
+    ["taunt", 29],
+    ["hazeball", 33],
+    ["stress", 38],
+    ["libero", 45],
+    ["heartdown", 49]
+  ],
+  "110": [
+    ["lowattks", 0],
+    ["starterbody", 0],
+    ["enemyboosts", 7],
+    ["shaken", 11],
+    ["facade", 16],
+    ["dig", 21],
+    ["scoreboosted", 25],
+    ["body", 29],
+    ["substitute", 33],
+    ["dare", 39],
+    ["allyprotect", 45],
+    ["contest", 49]
+  ],
+  "111": [
     ["feint", 0],
     ["starterbody", 0],
     ["rush", 5],
@@ -774,7 +1239,65 @@
     ["rushattack", 43],
     ["jazzpass", 49]
   ],
-  "78": [
+  "112": [
+    ["rest", 0],
+    ["startermind", 0],
+    ["chill", 5],
+    ["healhit", 9],
+    ["nightshade", 12],
+    ["recover", 16],
+    ["hazeball", 21],
+    ["mindup", 26],
+    ["healhit2", 32],
+    ["cover", 36],
+    ["moon", 41],
+    ["meditate", 46],
+    ["vigor", 51]
+  ],
+  "113": [
+    ["rest", 0],
+    ["startermind", 0],
+    ["chill", 8],
+    ["healhit", 12],
+    ["nightshade", 15],
+    ["recover", 19],
+    ["hazeball", 24],
+    ["mindup", 29],
+    ["healhit2", 35],
+    ["cover", 39],
+    ["moon", 44],
+    ["meditate", 49],
+    ["vigor", 54]
+  ],
+  "114": [
+    ["rest", 0],
+    ["steamattack", 0],
+    ["bomb", 7],
+    ["sweatup", 14],
+    ["protect", 19],
+    ["heart", 24],
+    ["substitute", 29],
+    ["inferno", 34],
+    ["followme", 38],
+    ["fieldclear", 42],
+    ["overheat", 45],
+    ["sweatall", 50]
+  ],
+  "115": [
+    ["rest", 0],
+    ["steamattack", 0],
+    ["bomb", 10],
+    ["sweatup", 17],
+    ["protect", 22],
+    ["heart", 27],
+    ["substitute", 32],
+    ["inferno", 37],
+    ["followme", 41],
+    ["fieldclear", 45],
+    ["overheat", 48],
+    ["sweatall", 53]
+  ],
+  "116": [
     ["myheartpass", 0],
     ["starterheart", 0],
     ["cheer", 8],
@@ -787,7 +1310,48 @@
     ["sweatup", 37],
     ["substitute", 41]
   ],
-  "79": [
+  "117": [
+    ["crowd", 0],
+    ["starterheart", 0],
+    ["cheer", 13],
+    ["healhit", 17],
+    ["noisytag", 21],
+    ["shieldbreaker", 27],
+    ["serve", 30],
+    ["rush", 34],
+    ["scoreboosted", 39],
+    ["dare", 44],
+    ["distraction", 48],
+    ["reversal", 53]
+  ],
+  "118": [
+    ["eerie", 0],
+    ["starterheart", 0],
+    ["cheer", 13],
+    ["healhit", 17],
+    ["noisytag", 21],
+    ["shieldbreaker", 27],
+    ["serve", 30],
+    ["rush", 34],
+    ["scoreboosted", 39],
+    ["healhit2", 44],
+    ["jump", 48],
+    ["lifepass", 53]
+  ],
+  "119": [
+    ["chill", 0],
+    ["sensihit", 0],
+    ["healhit", 7],
+    ["rest", 12],
+    ["refresh", 17],
+    ["blockattack", 21],
+    ["haze", 26],
+    ["thunder", 32],
+    ["libero", 36],
+    ["whirlwind", 41],
+    ["hyperbeam", 47]
+  ],
+  "120": [
     ["bdefup", 0],
     ["rocksmash", 0],
     ["bomb", 11],
@@ -799,5 +1363,86 @@
     ["superpower", 43],
     ["bellydrum", 46],
     ["3actions", 50]
+  ],
+  "121": [
+    ["mdefup", 0],
+    ["poisonhit", 0],
+    ["sweatup", 8],
+    ["markattack", 13],
+    ["threat", 16],
+    ["trap", 22],
+    ["hex", 28],
+    ["mark", 34],
+    ["snipe", 40],
+    ["mindup", 44],
+    ["dump", 50]
+  ],
+  "122": [
+    ["dig", 0],
+    ["pepshot", 0],
+    ["allyrush", 5],
+    ["charm", 10],
+    ["shieldbreaker", 13],
+    ["defheal", 17],
+    ["construct", 23],
+    ["heart", 27],
+    ["callout", 32],
+    ["protect", 36],
+    ["commit", 40],
+    ["libero", 46]
+  ],
+  "123": [
+    ["starterbody", 0],
+    ["cheer", 0],
+    ["rhythm", 7],
+    ["set", 13],
+    ["breakswipe", 19],
+    ["healbell", 24],
+    ["stomp", 29],
+    ["batonpass", 34],
+    ["swordsdance", 41],
+    ["vigor", 48]
+  ],
+  "124": [
+    ["callout", 0],
+    ["pepshot", 0],
+    ["breakswipe", 10],
+    ["mind", 14],
+    ["minddown", 17],
+    ["mindup", 23],
+    ["storedpower", 28],
+    ["noisytag", 34],
+    ["moon", 38],
+    ["superpower", 43],
+    ["skillswap", 48],
+    ["contest", 52]
+  ],
+  "125": [
+    ["rush", 0],
+    ["startermind", 0],
+    ["healhit", 11],
+    ["substitute", 17],
+    ["pursuit", 22],
+    ["mindup", 27],
+    ["heartdown", 32],
+    ["protect", 35],
+    ["stomp", 41],
+    ["tool", 45],
+    ["jump", 49]
+  ],
+  "126": [
+    ["rest", 0],
+    ["careful", 0],
+    ["refresh", 5],
+    ["distraction", 9],
+    ["blockattack", 12],
+    ["protect", 17],
+    ["mark", 20],
+    ["bomb", 25],
+    ["fieldclear", 31],
+    ["netattack", 36],
+    ["allyrush", 40],
+    ["lifepass", 44],
+    ["3actions", 48]
   ]
 }

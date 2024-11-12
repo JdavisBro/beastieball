@@ -9,7 +9,7 @@ spriteinfofp = Path("../src/data/raw/sprite_info.json")
 with spriteinfofp.open() as f:
   spriteinfo = json.load(f)
 
-beasties = Path("public/gameassets/beasties/")
+beasties = Path("../public/gameassets/beasties/")
 
 donesprites = []
 
@@ -27,7 +27,7 @@ for beastie in beasties.iterdir():
           continue
         if len(spr["bboxes"]) <= frame:
           print(f"TOO MANY FRAMES!! {beastie.name}")
-          continue
+          break
         if spr["bboxes"][frame] == bbox:
           continue
         if beastie.name not in donesprites:

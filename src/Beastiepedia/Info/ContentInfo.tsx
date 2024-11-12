@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import StatDistribution from "./StatDistribution";
 import TextTag from "../../shared/TextTag";
 import styles from "./ContentInfo.module.css";
-import type { BeastieType } from "../../data/BeastieData";
+import type { BeastieType, Condition } from "../../data/BeastieData";
 import MoveList from "./MoveList";
 import designers from "../../data/raw/designers.json";
 import abilities from "../../data/abilities";
@@ -26,7 +26,7 @@ type Props = {
 type EvolutionType = {
   condition: number[];
   specie: string;
-  value: number[];
+  value: number[] | Condition[];
 };
 
 const NUMBER_FORMAT = Intl.NumberFormat(undefined, {
@@ -65,12 +65,18 @@ function findBeastiePreevolution(
   }
 }
 
-function getEvoConditionString(evo: EvolutionType, beastie: BeastieType) {
+function getEvoConditionString(
+  evo: EvolutionType,
+  beastie: BeastieType,
+  notSpoiler: boolean,
+) {
   switch (evo.condition[0]) {
     case 0:
       return `at level ${evo.value[0]}`;
     case 2:
       return `at ${evo.specie == "shroom_m" ? "Miconia Grove" : evo.specie == "shroom_s" ? "Cerise Atoll" : "somewhere"}`;
+    case 7:
+      return notSpoiler ? "after communing with 3 mushroom colonies" : "???";
     case 8:
       return `after beating ${evo.value[0]} ${beastie.name}.`;
   }
@@ -156,7 +162,12 @@ export default function ContentInfo(props: Props): React.ReactNode {
                   ? preEvo.beastie.name
                   : "???"}
               </Link>{" "}
-              {getEvoConditionString(preEvo.evolution, preEvo.beastie)}
+              {getEvoConditionString(
+                preEvo.evolution,
+                preEvo.beastie,
+                spoilerMode == SpoilerMode.All ||
+                  beastieSeen[preEvo.beastie.id],
+              )}
             </div>
           ) : (
             <div>Does not Metamorph from any Beastie</div>
@@ -178,7 +189,11 @@ export default function ContentInfo(props: Props): React.ReactNode {
                       ? beastie.name
                       : "???"}
                   </Link>{" "}
-                  {getEvoConditionString(evolution, beastiedata)}
+                  {getEvoConditionString(
+                    evolution,
+                    beastiedata,
+                    spoilerMode == SpoilerMode.All || beastieSeen[beastie.id],
+                  )}
                 </div>
               );
             })

@@ -27,7 +27,7 @@ for level in (gamedir / "world_data").glob("**/*.json"):
       gift_id = f"gift_{level_data['name']}_{obj['gift_id_index']}" if obj["gift_id"] == "none" else obj['gift_id']
       if gift_id not in gift_data:
         print(f"GIFT NOT FOUND {gift_id}, {obj}")
-        exit()
+        continue
       gift = gift_data[gift_id]
       out_data["gifts"].append({
         "id": gift_id,

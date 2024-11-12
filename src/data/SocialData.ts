@@ -2,12 +2,12 @@ import social_data from "./raw/social_data.json";
 
 type SocialEvent = {
   cost: number;
-  id: string;
+  id: string | { field: number; type: number[] };
   dest_level: string;
-  dest_object: number;
+  dest_object: number | string;
   parent: string; // recursive struct!!!
   collides: number;
-  alt_complete_flag: number | string; // -1 or datacheck(class_datacheck)
+  alt_complete_flag: number | string | string[]; // -1 or datacheck(class_datacheck)
   rankup: number | boolean;
   invite_scene: string; // function!!!
   prereq: {
@@ -19,8 +19,8 @@ type SocialEvent = {
 type SocialFriend = {
   id: string;
   max_hearts: number;
-  spr: number;
-  object: number;
+  spr: string;
+  object: string;
   loneliness: number;
   events: SocialEvent[];
   img: number;

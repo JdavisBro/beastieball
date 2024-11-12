@@ -10,11 +10,11 @@ from pedalboard.io import AudioFile
 gameDir = Path(sys.argv[1])
 voDir = gameDir / "audio" / "vo"
 
-outDir = Path("public/gameassets/audio/")
+outDir = Path("../public/gameassets/audio/")
 outFile = Path("../src/data/raw/beastieSfx.json")
 
-with (gameDir / "area03_audio_data.json").open() as f:
-  audio_data = {i["name"]: i for i in json.load(f)[0]}
+with (gameDir / "audio_data.json").open() as f:
+  audio_data = {(i["name"] if "name" in i else ""): i for i in json.load(f)[0]}
 
 def percent_to_semitone(percent):
   if percent < 0:
@@ -24,20 +24,19 @@ def percent_to_semitone(percent):
 
 beastie_vo = {} # id: {hello: int, boo: int, cheer: int}
 for fp in voDir.glob("**/*.wav"):
-  if fp.name.startswith("vo_shroom_b"):
-    continue
-  # print(fp)
   num = int(fp.stem.split("_")[-1])
   fn = fp.parent.name.split("_")
   bid = "_".join(fn[1:-1])
   typ = fn[-1]
+  op = outDir / bid / f"{typ}_{num}.flac"
+  op.parent.mkdir(parents=True, exist_ok=True)
+  data = audio_data[f"vo_{bid}_{typ}"]
+  if not any([fp.name in p for p in data["contents_serialize"]]):
+    continue
   if bid in beastie_vo:
     beastie_vo[bid][typ] = max(typ in beastie_vo[bid] and beastie_vo[bid][typ] or 0, num)
   else:
     beastie_vo[bid] = {typ: num}
-  op = outDir / bid / f"{typ}_{num}.flac"
-  op.parent.mkdir(parents=True, exist_ok=True)
-  data = audio_data[f"vo_{bid}_{typ}"]
   pitch = data["pitch"] if "pitch" in data else 0
   shifter = PitchShift(semitones=percent_to_semitone(pitch))
   if pitch:

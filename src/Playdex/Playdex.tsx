@@ -164,7 +164,7 @@ export default function PlayDex() {
               <option key={friendId} value={CHAR_LIST[friendId]}>
                 {spoilerMode == SpoilerMode.OnlySeen &&
                 !spoilerFriends[friendId]
-                  ? "???"
+                  ? CHAR_LIST[friendId].slice(0, 2) + "..."
                   : CHAR_LIST[friendId]}
               </option>
             ))}

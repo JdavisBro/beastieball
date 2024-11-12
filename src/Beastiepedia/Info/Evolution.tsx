@@ -91,10 +91,12 @@ function EvoCondition({
 
 function EvoText({
   evo,
+  fromBeastie,
   direction,
   isSpoiler,
 }: {
   evo: { beastie: BeastieType; evolution: EvolutionType };
+  fromBeastie: BeastieType;
   direction: string;
   isSpoiler: boolean;
 }) {
@@ -104,7 +106,7 @@ function EvoText({
       <Link to={`/beastiepedia/${evo.beastie.name}`}>
         {isSpoiler ? "???" : evo.beastie.name}
       </Link>{" "}
-      <EvoCondition evolution={evo.evolution} beastie={evo.beastie} />
+      <EvoCondition evolution={evo.evolution} beastie={fromBeastie} />
     </div>
   );
 }
@@ -130,6 +132,7 @@ export default function Evolution({
           <EvoText
             key={`${evo.beastie.id}${index}`}
             evo={evo}
+            fromBeastie={evo.beastie}
             direction="from"
             isSpoiler={
               evo
@@ -156,6 +159,7 @@ export default function Evolution({
             <EvoText
               key={beastie.id + index}
               evo={{ beastie, evolution }}
+              fromBeastie={beastiedata}
               direction="to"
               isSpoiler={
                 spoilerMode == SpoilerMode.OnlySeen && !beastieSeen[beastie.id]

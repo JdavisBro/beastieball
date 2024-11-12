@@ -1,32 +1,19 @@
-import { Link } from "react-router-dom";
-
 import StatDistribution from "./StatDistribution";
 import TextTag from "../../shared/TextTag";
 import styles from "./ContentInfo.module.css";
-import type { BeastieType, Condition } from "../../data/BeastieData";
+import type { BeastieType } from "../../data/BeastieData";
 import MoveList from "./MoveList";
 import designers from "../../data/raw/designers.json";
 import abilities from "../../data/abilities";
-import BEASTIE_DATA from "../../data/BeastieData";
 import InfoBox, { BoxHeader } from "../../shared/InfoBox";
 import ResearchCarousel from "./ResearchCarousel";
 import ComboMove from "./ComboMove";
 import { useState } from "react";
 import Sfx from "./Sfx";
-import {
-  SpoilerMode,
-  useSpoilerMode,
-  useSpoilerSeen,
-} from "../../shared/useSpoiler";
+import Evolution from "./Evolution";
 
 type Props = {
   beastiedata: BeastieType;
-};
-
-type EvolutionType = {
-  condition: number[];
-  specie: string;
-  value: number[] | Condition[];
 };
 
 const NUMBER_FORMAT = Intl.NumberFormat(undefined, {
@@ -34,54 +21,6 @@ const NUMBER_FORMAT = Intl.NumberFormat(undefined, {
   currency: "USD",
   currencyDisplay: "narrowSymbol",
 });
-
-function findBeastiePreevolution(
-  beastieId: string,
-  targetBeastieId: string,
-): {
-  beastie: BeastieType;
-  evolution: EvolutionType;
-} | null {
-  const beastie = BEASTIE_DATA.get(beastieId);
-  if (!beastie || !beastie.evolution) {
-    return null;
-  }
-  const evolution = beastie.evolution.find(
-    // Ignores Petula's second condition?
-    (value) => value.specie == targetBeastieId && value.condition[0] != 10,
-  );
-  if (evolution) {
-    return { beastie, evolution };
-  } else {
-    const newEvolution = beastie.evolution
-      .map((value) => {
-        return findBeastiePreevolution(value.specie, targetBeastieId);
-      })
-      .find((value) => value);
-    if (newEvolution) {
-      return newEvolution;
-    }
-    return null;
-  }
-}
-
-function getEvoConditionString(
-  evo: EvolutionType,
-  beastie: BeastieType,
-  notSpoiler: boolean,
-) {
-  switch (evo.condition[0]) {
-    case 0:
-      return `at level ${evo.value[0]}`;
-    case 2:
-      return `at ${evo.specie == "shroom_m" ? "Miconia Grove" : evo.specie == "shroom_s" ? "Cerise Atoll" : "somewhere"}`;
-    case 7:
-      return notSpoiler ? "after communing with 3 mushroom colonies" : "???";
-    case 8:
-      return `after beating ${evo.value[0]} ${beastie.name}.`;
-  }
-  return "idk when though";
-}
 
 function ExpForLevel({ growth }: { growth: number }) {
   const [userLevel, setUserLevel] = useState(100);
@@ -137,70 +76,13 @@ export default function ContentInfo(props: Props): React.ReactNode {
     })
     .filter((value) => !!value);
 
-  const preEvo = findBeastiePreevolution(beastiedata.family, beastiedata.id);
-  const evolutions = beastiedata.evolution;
-  const evolutionBeasties = evolutions?.map((value) =>
-    BEASTIE_DATA.get(value.specie),
-  );
-
-  const [spoilerMode] = useSpoilerMode();
-  const [beastieSeen] = useSpoilerSeen();
-
   return (
     <div className={styles.info}>
       <div className={styles.wrapinfoboxes}>
         <InfoBox header="Number">#{beastiedata.number}</InfoBox>
         <InfoBox header="Name">{beastiedata.name}</InfoBox>
         <InfoBox header="Development">{beastiedata.anim_progress}%</InfoBox>
-        <InfoBox header="Metamorphosis">
-          {preEvo ? (
-            <div>
-              Metamorphs from{" "}
-              <Link to={`/beastiepedia/${preEvo.beastie.name}`}>
-                {spoilerMode == SpoilerMode.All ||
-                beastieSeen[preEvo.beastie.id]
-                  ? preEvo.beastie.name
-                  : "???"}
-              </Link>{" "}
-              {getEvoConditionString(
-                preEvo.evolution,
-                preEvo.beastie,
-                spoilerMode == SpoilerMode.All ||
-                  beastieSeen[preEvo.beastie.id],
-              )}
-            </div>
-          ) : (
-            <div>Does not Metamorph from any Beastie</div>
-          )}
-          {evolutions ? (
-            evolutionBeasties?.map((beastie, index) => {
-              if (!beastie) {
-                return null;
-              }
-              const evolution = evolutions[index];
-              if (evolution.condition[0] == 10) {
-                return null;
-              }
-              return (
-                <div key={beastie.id + index}>
-                  Metamorphs into{" "}
-                  <Link to={`/beastiepedia/${beastie.name}`}>
-                    {spoilerMode == SpoilerMode.All || beastieSeen[beastie.id]
-                      ? beastie.name
-                      : "???"}
-                  </Link>{" "}
-                  {getEvoConditionString(
-                    evolution,
-                    beastiedata,
-                    spoilerMode == SpoilerMode.All || beastieSeen[beastie.id],
-                  )}
-                </div>
-              );
-            })
-          ) : (
-            <div>Does not Metamorph into any Beastie</div>
-          )}
-        </InfoBox>
+        <Evolution beastiedata={beastiedata} />
       </div>
 
       <InfoBox header="Description">{beastiedata.desc}</InfoBox>

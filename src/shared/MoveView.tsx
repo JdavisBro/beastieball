@@ -5,6 +5,7 @@ import { Type, Move, MoveEffect } from "../data/MoveData";
 import MoveModalContext from "./MoveModalContext";
 import { useContext } from "react";
 import SOCIAL_DATA from "../data/SocialData";
+import { SpoilerMode, useFriendSpoiler, useSpoilerMode } from "./useSpoiler";
 
 // reuqired: targ=12 says Targets SIDEWAYS.
 
@@ -277,9 +278,15 @@ export default function MoveView(props: {
   const friend = SOCIAL_DATA.find((friend) =>
     friend.plays.includes(props.move.id),
   );
+
+  const [spoilerMode] = useSpoilerMode();
+  const [seenFriends, setSeenFriends] = useFriendSpoiler();
   if (props.friendFilter && (!friend || friend.name != props.friendFilter)) {
     return null;
   }
+  const friendSpoiler = friend
+    ? spoilerMode == SpoilerMode.OnlySeen && !seenFriends[friend.id]
+    : false;
   let friend_hearts = 0;
   let learned_text;
   if (friend) {
@@ -292,7 +299,7 @@ export default function MoveView(props: {
       }
       return rank == friend_rank;
     });
-    learned_text = `Learned from ${friend.name} at ${friend_hearts} hearts.`;
+    learned_text = `Learned from ${friendSpoiler ? "someone" : friend.name} at ${friend_hearts} hearts.`;
   }
 
   const { color, alt } = TypeData[props.move.type]
@@ -396,8 +403,20 @@ export default function MoveView(props: {
               title={learned_text}
               className={styles.movefriend}
               style={{
-                backgroundImage: `url("/gameassets/sprChar_icon/${friend.img}.png")`,
+                backgroundImage: `url(${
+                  friendSpoiler
+                    ? "/gameassets/sprExclam_1.png"
+                    : `/gameassets/sprChar_icon/${friend.img}.png`
+                })`,
               }}
+              onClick={
+                friendSpoiler
+                  ? () => {
+                      seenFriends[friend.id] = true;
+                      setSeenFriends(seenFriends);
+                    }
+                  : undefined
+              }
             >
               <span className={styles.movefriendHeart}>{friend_hearts}</span>
             </span>

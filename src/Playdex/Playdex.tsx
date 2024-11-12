@@ -6,6 +6,11 @@ import Header from "../shared/Header";
 import { useState } from "react";
 import MoveModalProvider from "../shared/MoveModalProvider";
 import EffectFilters from "./EffectFilters";
+import {
+  SpoilerMode,
+  useFriendSpoiler,
+  useSpoilerMode,
+} from "../shared/useSpoiler";
 
 declare global {
   interface Window {
@@ -35,6 +40,14 @@ const SortFunctions: ((move1: Move, move2: Move) => number)[] = [
     move2.pow - move1.pow ||
     move1.name.localeCompare(move2.name),
 ];
+
+const CHAR_LIST: Record<string, string> = {
+  riley: "Riley",
+  kaz: "Kaz",
+  riven: "Riven",
+  science: "Celia",
+  celeb: "Sunsoo",
+};
 
 export default function PlayDex() {
   window.MOVE_DIC = MOVE_DIC;
@@ -70,6 +83,9 @@ export default function PlayDex() {
     );
   }
   moves = moves.sort(SortFunctions[sort]);
+
+  const [spoilerFriends] = useFriendSpoiler();
+  const [spoilerMode] = useSpoilerMode();
 
   return (
     <>
@@ -144,11 +160,14 @@ export default function PlayDex() {
             value={friendFilter}
           >
             <option value="undefined">None</option>
-            <option value="Riley">Riley</option>
-            <option value="Kaz">Kaz</option>
-            <option value="Riven">Riven</option>
-            <option value="Celia">Celia</option>
-            <option value="Sunsoo">Sunsoo</option>
+            {Object.keys(CHAR_LIST).map((friendId) => (
+              <option key={friendId} value={CHAR_LIST[friendId]}>
+                {spoilerMode == SpoilerMode.OnlySeen &&
+                !spoilerFriends[friendId]
+                  ? "???"
+                  : CHAR_LIST[friendId]}
+              </option>
+            ))}
           </select>
         </label>
       </div>

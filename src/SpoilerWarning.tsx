@@ -25,8 +25,9 @@ export default function SpoilerWarning(props: {
         Discord) is not allowed as per Wishes Unlimited's rules.
         <br />
         {site} will also contain spoilers for the full game, in order to avoid
-        spoilers you can set to only show beasties you've clicked on. All other
-        beasties will have images and names hidden until you click on them.
+        spoilers you can set to only show beasties/characters you've clicked on.
+        All other beasties/characters will have images and names hidden until
+        you click on them.
       </p>
       <SpoilerOptions />
       <br />

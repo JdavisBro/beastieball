@@ -24,3 +24,14 @@ export function useSpoilerMode() {
 export function useSpoilerSeen() {
   return useLocalStorage<Record<string, boolean>>("spoilerSeen", DEFAULT_SEEN);
 }
+
+export const FRIEND_SPOILERS = {
+  riley: true,
+};
+
+export function useFriendSpoiler() {
+  return useLocalStorage<Record<string, boolean>>(
+    "spoilerFriends",
+    FRIEND_SPOILERS,
+  );
+}

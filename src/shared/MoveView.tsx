@@ -299,7 +299,7 @@ export default function MoveView(props: {
       }
       return rank == friend_rank;
     });
-    learned_text = `Learned from ${friendSpoiler ? "someone" : friend.name} at ${friend_hearts} hearts.`;
+    learned_text = `Learned from ${friendSpoiler ? friend.name.slice(0, 2) + "..." : friend.name} at ${friend_hearts} hearts.`;
   }
 
   const { color, alt } = TypeData[props.move.type]

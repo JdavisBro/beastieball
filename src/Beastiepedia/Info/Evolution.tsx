@@ -116,14 +116,16 @@ export default function Evolution({
 }: {
   beastiedata: BeastieType;
 }) {
+  const [spoilerMode] = useSpoilerMode();
+  const [beastieSeen] = useSpoilerSeen();
+
   const preEvos = findBeastiePreevolutions(beastiedata.family, beastiedata.id);
   const evolutions = beastiedata.evolution;
   const evolutionBeasties = evolutions?.map((value) =>
     BEASTIE_DATA.get(value.specie),
   );
 
-  const [spoilerMode] = useSpoilerMode();
-  const [beastieSeen] = useSpoilerSeen();
+  const [showEvolution, setShowEvolution] = useState("");
 
   return (
     <InfoBox header="Metamorphosis">
@@ -146,29 +148,36 @@ export default function Evolution({
         <div>Does not Metamorph from any Beastie</div>
       )}
 
-      {evolutions ? (
-        evolutionBeasties?.map((beastie, index) => {
-          if (!beastie) {
-            return null;
-          }
-          const evolution = evolutions[index];
-          if (evolution.condition[0] == 10) {
-            return null;
-          }
-          return (
-            <EvoText
-              key={beastie.id + index}
-              evo={{ beastie, evolution }}
-              fromBeastie={beastiedata}
-              direction="to"
-              isSpoiler={
-                spoilerMode == SpoilerMode.OnlySeen && !beastieSeen[beastie.id]
-              }
-            />
-          );
-        })
+      {showEvolution == beastiedata.id || spoilerMode == SpoilerMode.All ? (
+        evolutions ? (
+          evolutionBeasties?.map((beastie, index) => {
+            if (!beastie) {
+              return null;
+            }
+            const evolution = evolutions[index];
+            if (evolution.condition[0] == 10) {
+              return null;
+            }
+            return (
+              <EvoText
+                key={beastie.id + index}
+                evo={{ beastie, evolution }}
+                fromBeastie={beastiedata}
+                direction="to"
+                isSpoiler={
+                  spoilerMode == SpoilerMode.OnlySeen &&
+                  !beastieSeen[beastie.id]
+                }
+              />
+            );
+          })
+        ) : (
+          <div>Does not Metamorph into any Beastie</div>
+        )
       ) : (
-        <div>Does not Metamorph into any Beastie</div>
+        <div onClick={() => setShowEvolution(beastiedata.id)}>
+          Possible spoiler. Click to reveal.
+        </div>
       )}
     </InfoBox>
   );

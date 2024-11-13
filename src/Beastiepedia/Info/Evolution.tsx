@@ -12,7 +12,7 @@ import TextTag from "../../shared/TextTag";
 type EvolutionType = {
   condition: number[];
   specie: string;
-  value: number[] | Condition[];
+  value: Array<number | Condition>;
 };
 
 type Evo = {
@@ -23,17 +23,18 @@ type Evo = {
 function findBeastiePreevolutions(
   beastieId: string,
   targetBeastieId: string,
-): Evo[] | null {
+): Evo[] {
   const beastie = BEASTIE_DATA.get(beastieId);
   if (!beastie || !beastie.evolution) {
-    return null;
+    return [];
   }
-  const evolution = beastie.evolution.find(
-    // Ignores Petula's second condition?
-    (value) => value.specie == targetBeastieId && value.condition[0] != 10,
+  const evolutions = beastie.evolution.filter(
+    (value) => value.specie == targetBeastieId,
   );
-  if (evolution) {
-    return [{ beastie, evolution }];
+  if (evolutions.length) {
+    return evolutions.map((evolution) => {
+      return { beastie, evolution: structuredClone(evolution) };
+    });
   } else {
     const newEvolution = beastie.evolution
       .map((value) => {
@@ -44,7 +45,7 @@ function findBeastiePreevolutions(
     if (newEvolution) {
       return newEvolution;
     }
-    return null;
+    return [];
   }
 }
 
@@ -55,19 +56,21 @@ const LOCATION_CONDS: Record<string, string> = {
 };
 
 function EvoCondition({
-  evolution,
-  beastie,
+  condition,
+  value,
+  specie,
 }: {
-  evolution: EvolutionType;
-  beastie: BeastieType;
+  condition: number;
+  value: number | Condition;
+  specie: string;
 }): React.ReactNode {
   const [descShown, setDescShown] = useState(false);
 
-  switch (evolution.condition[0]) {
+  switch (condition) {
     case 0:
-      return `at level ${evolution.value[0]}`;
+      return `at level ${value}`;
     case 2:
-      return `at ${LOCATION_CONDS[evolution.specie] ?? "somewhere"}`;
+      return `at ${LOCATION_CONDS[specie] ?? "somewhere"}`;
     case 7:
       return (
         <>
@@ -79,36 +82,83 @@ function EvoCondition({
             🛈
           </span>
           <div style={{ display: descShown ? "block" : "none" }}>
-            <TextTag>- {(evolution.value[0] as Condition).description}</TextTag>
+            <TextTag>- {(value as Condition).description}</TextTag>
           </div>
         </>
       );
     case 8:
-      return `after beating ${evolution.value[0]} ${beastie.name}.`;
+      return `after beating ${value} Petula.`;
   }
   return "idk when though";
 }
 
 function EvoText({
   evo,
-  fromBeastie,
   direction,
   isSpoiler,
 }: {
   evo: { beastie: BeastieType; evolution: EvolutionType };
-  fromBeastie: BeastieType;
   direction: string;
   isSpoiler: boolean;
 }) {
+  const conds: React.ReactNode[] = [];
+  for (let i = 0; i < evo.evolution.condition.length; i++) {
+    if (i > 0) {
+      conds.push(" or ");
+    }
+    conds.push(
+      <EvoCondition
+        condition={evo.evolution.condition[i]}
+        value={evo.evolution.value[i]}
+        specie={evo.evolution.specie}
+      />,
+    );
+  }
+
   return (
     <div>
       Metamorphs {direction}{" "}
       <Link to={`/beastiepedia/${evo.beastie.name}`}>
         {isSpoiler ? "???" : evo.beastie.name}
       </Link>{" "}
-      <EvoCondition evolution={evo.evolution} beastie={fromBeastie} />
+      {conds}
     </div>
   );
+}
+
+const HIDDEN_CONDS = [9, 10];
+const HIDDEN_PRE_CONDS = [7];
+
+function squashEvolutions(evoList: Evo[] | undefined, into: boolean = false) {
+  if (!evoList) {
+    return [];
+  }
+  const newEvos: Evo[] = [];
+  evoList.forEach((curEvo, curIndex) => {
+    if (
+      HIDDEN_CONDS.includes(curEvo.evolution.condition[0]) ||
+      (into && HIDDEN_PRE_CONDS.includes(curEvo.evolution.condition[0]))
+    ) {
+      console.log(curEvo.evolution.condition[0]);
+      return;
+    }
+    const beastieEvo = newEvos.find(
+      (evo, index) => evo.beastie.id == curEvo.beastie.id && index != curIndex,
+    );
+    if (beastieEvo) {
+      beastieEvo.evolution.condition = [
+        ...beastieEvo.evolution.condition,
+        ...curEvo.evolution.condition,
+      ];
+      beastieEvo.evolution.value = [
+        ...beastieEvo.evolution.value,
+        ...curEvo.evolution.value,
+      ];
+    } else {
+      newEvos.push(curEvo);
+    }
+  });
+  return newEvos;
 }
 
 export default function Evolution({
@@ -119,10 +169,17 @@ export default function Evolution({
   const [spoilerMode] = useSpoilerMode();
   const [beastieSeen] = useSpoilerSeen();
 
-  const preEvos = findBeastiePreevolutions(beastiedata.family, beastiedata.id);
-  const evolutions = beastiedata.evolution;
-  const evolutionBeasties = evolutions?.map((value) =>
-    BEASTIE_DATA.get(value.specie),
+  const preEvos = squashEvolutions(
+    findBeastiePreevolutions(beastiedata.family, beastiedata.id),
+  );
+  const evolutions = squashEvolutions(
+    beastiedata.evolution?.map((evo) => {
+      return {
+        beastie: BEASTIE_DATA.get(evo.specie) as BeastieType,
+        evolution: structuredClone(evo),
+      };
+    }),
+    true,
   );
 
   const [showEvolution, setShowEvolution] = useState("");
@@ -134,7 +191,6 @@ export default function Evolution({
           <EvoText
             key={`${evo.beastie.id}${index}`}
             evo={evo}
-            fromBeastie={evo.beastie}
             direction="from"
             isSpoiler={
               evo
@@ -149,28 +205,18 @@ export default function Evolution({
       )}
 
       {showEvolution == beastiedata.id || spoilerMode == SpoilerMode.All ? (
-        evolutions ? (
-          evolutionBeasties?.map((beastie, index) => {
-            if (!beastie) {
-              return null;
-            }
-            const evolution = evolutions[index];
-            if (evolution.condition[0] == 10) {
-              return null;
-            }
-            return (
-              <EvoText
-                key={beastie.id + index}
-                evo={{ beastie, evolution }}
-                fromBeastie={beastiedata}
-                direction="to"
-                isSpoiler={
-                  spoilerMode == SpoilerMode.OnlySeen &&
-                  !beastieSeen[beastie.id]
-                }
-              />
-            );
-          })
+        evolutions.length ? (
+          evolutions.map((evo, index) => (
+            <EvoText
+              key={evo.beastie.id + index}
+              evo={evo}
+              direction="to"
+              isSpoiler={
+                spoilerMode == SpoilerMode.OnlySeen &&
+                !beastieSeen[evo.beastie.id]
+              }
+            />
+          ))
         ) : (
           <div>Does not Metamorph into any Beastie</div>
         )

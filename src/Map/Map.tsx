@@ -78,7 +78,12 @@ export default function Map(): React.ReactNode {
       return;
     }
     const overall_percent: {
-      [key: string]: { percent: number; levelMin: number; levelMax: number };
+      [key: string]: {
+        percent: number;
+        levelMin: number;
+        levelMax: number;
+        variant: number;
+      };
     } = {};
     const non_dupe_beasties: string[] = [];
     group.forEach((value) => {
@@ -98,6 +103,7 @@ export default function Map(): React.ReactNode {
           percent: value.percent,
           levelMin: value.lvlA,
           levelMax: value.lvlB,
+          variant: value.variant,
         };
       }
     });
@@ -169,6 +175,12 @@ export default function Map(): React.ReactNode {
             <br />
             Level {overall_percent[value].levelMin} -{" "}
             {overall_percent[value].levelMax}
+            {beastie.colors2 ? (
+              <>
+                <br />
+                Variant Chance: {overall_percent[value].variant * 100}%
+              </>
+            ) : null}
           </Popup>
         </Marker>,
       );

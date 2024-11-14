@@ -175,16 +175,21 @@ export default function Map(): React.ReactNode {
     });
   });
 
-  const mapoverlay = (
+  // BG images
+  level_overlays.unshift(
     <ImageOverlay
       className={styles.mapBg}
       key="background"
       url={"/gameassets/maps/sprMap_BG_0.png"}
       bounds={map_bg_bounds}
-    />
+    />,
+    <ImageOverlay
+      className={styles.mapBg}
+      key="backgroundXtra"
+      url={"/gameassets/maps/sprMap_BG_xtra_0.png"}
+      bounds={map_bg_bounds}
+    />,
   );
-
-  level_overlays.unshift(mapoverlay);
 
   const {
     bigtitleheaders,

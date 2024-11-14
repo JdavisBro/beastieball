@@ -87,9 +87,11 @@ export function createMarkers() {
   }
 
   WORLD_DATA.icons_array.forEach(createMarker);
-  WORLD_DATA.level_stumps_array.forEach((value) =>
-    value.icons_array.forEach(createMarker),
-  );
+  WORLD_DATA.level_stumps_array.forEach((value) => {
+    if (!value.world_layer) {
+      value.icons_array.forEach(createMarker);
+    }
+  });
 
   return { bigtitleheaders, titleheaders, imgheaders };
 }

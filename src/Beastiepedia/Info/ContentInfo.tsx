@@ -118,16 +118,22 @@ export default function ContentInfo(props: Props): React.ReactNode {
 
       <div className={styles.wrapinfoboxes}>
         <InfoBox header="Recruit Condition">
-          <TextTag>{beastiedata.recruit.description}</TextTag>
-          <br />
-          <span className={styles.training}>
-            <img
-              src="/gameassets/sprSponsors/1.png"
-              alt="Staying Power Fitness Sponsor"
-              className={styles.gymLogo}
-            />
-            <span>{NUMBER_FORMAT.format(beastiedata.recruit_value)}</span>
-          </span>
+          {beastiedata.recruit_value != 0.5 ? (
+            <>
+              <TextTag>{beastiedata.recruit.description}</TextTag>
+              <br />
+              <span className={styles.training}>
+                <img
+                  src="/gameassets/sprSponsors/1.png"
+                  alt="Staying Power Fitness Sponsor"
+                  className={styles.gymLogo}
+                />
+                <span>{NUMBER_FORMAT.format(beastiedata.recruit_value)}</span>
+              </span>
+            </>
+          ) : (
+            "Cannot be recruited from the wild."
+          )}
         </InfoBox>
         <InfoBox header="Ally Training">{training}</InfoBox>
         <ExpForLevel growth={beastiedata.growth} />

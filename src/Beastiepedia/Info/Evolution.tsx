@@ -51,8 +51,9 @@ function findBeastiePreevolutions(
 
 const LOCATION_CONDS: Record<string, string> = {
   shroom_b: "The Rutile Preserve",
-  shroom_m: "Miconia Grove",
   shroom_s: "Cerise Atoll",
+  shroom_m: "Miconia Grove",
+  tricky: "Solanum Weald",
 };
 
 function EvoCondition({
@@ -139,7 +140,6 @@ function squashEvolutions(evoList: Evo[] | undefined, into: boolean = false) {
       HIDDEN_CONDS.includes(curEvo.evolution.condition[0]) ||
       (into && HIDDEN_PRE_CONDS.includes(curEvo.evolution.condition[0]))
     ) {
-      console.log(curEvo.evolution.condition[0]);
       return;
     }
     const beastieEvo = newEvos.find(

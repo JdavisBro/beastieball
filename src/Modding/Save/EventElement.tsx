@@ -1,5 +1,5 @@
-import { MOVE_DIC } from "../../data/MoveData";
-import WORLD_DATA from "../../data/WorldData";
+// import { MOVE_DIC } from "../../data/MoveData";
+// import WORLD_DATA from "../../data/WorldData";
 import TextTag from "../../shared/TextTag";
 import parseDate from "../../utils/gmdate";
 import styles from "./Beastie.module.css";
@@ -29,10 +29,10 @@ const FRIEND_TYPE: { [key: number]: string } = {
 function EventText({ event }: Props): React.ReactElement | null {
   switch (event.event) {
     case EventType.RECRUIT: {
-      const level =
-        WORLD_DATA.level_stumps_array.find(
-          (value) => value.name == event.args[1],
-        )?.display_name ?? "somewhere";
+      const level = "somewhere";
+      // WORLD_DATA.level_stumps_array.find(
+      //   (value) => value.name == event.args[1],
+      // )?.display_name ?? "somewhere";
       return (
         <>
           Recruited by {event.args[0]} from {level}. Their vibe was{" "}
@@ -81,8 +81,8 @@ function EventText({ event }: Props): React.ReactElement | null {
     case EventType.LEARNED_FRIEND_MOVE: {
       return (
         <TextTag>
-          Learned how to {MOVE_DIC[event.args[0] as string]?.name} from{" "}
-          {event.args[1]}, their {FRIEND_TYPE[event.args[2] as number]}.
+          Learned how to PLAY from {event.args[1]}, their{" "}
+          {FRIEND_TYPE[event.args[2] as number]}.
         </TextTag>
       );
     }

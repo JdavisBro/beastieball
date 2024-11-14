@@ -53,6 +53,12 @@ const CHAR_LIST: Record<string, string> = {
   warrior: "Dominic",
 };
 
+const HIDDEN_MOVES = [
+  "userlowered", // Shrapnel, not in game.
+  "xtra", // Bonus.
+  "???", // Unrevealed.
+];
+
 export default function PlayDex() {
   window.MOVE_DIC = MOVE_DIC;
 
@@ -64,7 +70,9 @@ export default function PlayDex() {
     undefined,
   );
 
-  let moves = Object.keys(MOVE_DIC).map((id) => MOVE_DIC[id]);
+  let moves = Object.keys(MOVE_DIC)
+    .map((id) => MOVE_DIC[id])
+    .filter((move) => !HIDDEN_MOVES.includes(move.id));
   if (search) {
     moves = moves.filter((move) =>
       move.name.toLowerCase().includes(search.toLowerCase()),

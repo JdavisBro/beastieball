@@ -53,7 +53,7 @@ const LOCATION_CONDS: Record<string, string> = {
   shroom_b: "The Rutile Preserve",
   shroom_s: "Cerise Atoll",
   shroom_m: "Miconia Grove",
-  tricky: "Solanum Weald",
+  tricky: "Cordia Lake",
 };
 
 function EvoCondition({

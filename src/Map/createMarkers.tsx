@@ -63,6 +63,9 @@ export function createMarkers() {
       markerup = <img src={`/gameassets/sprSponsors/${value.img}.png`} />;
       popup = <>{value.revealed_text ? value.revealed_text : value.text}</>;
     } else {
+      if (value.from_object == "objHiddenObject") {
+        return;
+      }
       containerclass =
         value.superheader == 1 ? styles.bigtextmarker : styles.textmarker;
       markerup = value.text ? <>{value.text}</> : null;

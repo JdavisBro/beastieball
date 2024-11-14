@@ -41,7 +41,11 @@ function findBeastiePreevolutions(
         return findBeastiePreevolutions(value.specie, targetBeastieId);
       })
       .filter((value) => !!value)
-      .reduce((accum: Evo[], value: Evo[]) => [...accum, ...value], []);
+      .reduce((accum: Evo[], value: Evo[]) => [...accum, ...value], [])
+      .filter(
+        (evo, index, array) =>
+          array.findIndex((e) => evo.beastie.id == e.beastie.id) == index,
+      );
     if (newEvolution) {
       return newEvolution;
     }

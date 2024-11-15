@@ -40,7 +40,7 @@ function MapEvents() {
 
 export default function Map(): React.ReactNode {
   // these are estimates based on comparing the map to a screenshot but they should be about right for now
-  const bounds = new L.LatLngBounds([83000, -160000], [-42333, 14762]);
+  const bounds = new L.LatLngBounds([0, 0], [1, 1]);
   const map_bg_bounds = new L.LatLngBounds([83000, -160000], [-42333, 14762]);
   const level_overlays: React.ReactElement[] = [];
 
@@ -59,6 +59,7 @@ export default function Map(): React.ReactNode {
       return;
     }
     bounds.extend(level_bounds);
+    console.log(level.name, bounds.toBBoxString());
 
     level_overlays.push(
       <ImageOverlay
@@ -224,17 +225,17 @@ export default function Map(): React.ReactNode {
       <Header title="Beastieball Map" />
       <MapContainer
         className={styles.map}
-        minZoom={-7.25}
+        minZoom={-7}
         maxZoom={0}
         maxBounds={bounds.pad(0.25)}
-        maxBoundsViscosity={0.7}
-        zoom={-6}
+        maxBoundsViscosity={0.3}
+        zoom={-5.5}
         center={[0, 0]}
         zoomAnimation={false} // there are seams between the tiles when animating
         zoomSnap={0}
         zoomDelta={0.5}
         wheelPxPerZoomLevel={90}
-        bounds={bounds}
+        bounds={bounds.pad(1)}
         crs={L.CRS.Simple}
       >
         <MapEvents />

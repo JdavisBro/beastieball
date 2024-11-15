@@ -1,5 +1,5 @@
 .map {
-  background-color: transparent;
+  background-color: #10548c;
   font-family: var(--go-banana);
   height: calc(100vh - var(--header-height));
   height: calc(100dvh - var(--header-height));

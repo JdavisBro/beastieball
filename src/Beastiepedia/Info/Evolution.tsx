@@ -60,6 +60,23 @@ const LOCATION_CONDS: Record<string, string> = {
   tricky: "Cordia Lake",
 };
 
+function EvoCondInfo({ children }: { children: React.ReactNode }) {
+  const [descShown, setDescShown] = useState(false);
+
+  return (
+    <>
+      <span
+        style={{ cursor: "pointer", userSelect: "none" }}
+        onClick={() => setDescShown(!descShown)}
+        role="button"
+      >
+        🛈
+      </span>
+      <div style={{ display: descShown ? "block" : "none" }}>{children}</div>
+    </>
+  );
+}
+
 function EvoCondition({
   condition,
   value,
@@ -69,27 +86,28 @@ function EvoCondition({
   value: number | Condition;
   specie: string;
 }): React.ReactNode {
-  const [descShown, setDescShown] = useState(false);
-
   switch (condition) {
     case 0:
       return `at level ${value}`;
     case 2:
       return `at ${LOCATION_CONDS[specie] ?? "somewhere"}`;
-    case 7:
+    case 5:
+    case 6: {
+      const snow = condition == 6;
       return (
         <>
-          <span
-            style={{ cursor: "pointer", userSelect: "none" }}
-            onClick={() => setDescShown(!descShown)}
-            role="button"
-          >
-            🛈
-          </span>
-          <div style={{ display: descShown ? "block" : "none" }}>
-            <TextTag>- {(value as Condition).description}</TextTag>
-          </div>
+          at level {value} if {snow ? "variant" : "regular"} colors
+          <EvoCondInfo>
+            - or Raremorph while {snow ? "" : "not "}in the Alto Alps
+          </EvoCondInfo>
         </>
+      );
+    }
+    case 7:
+      return (
+        <EvoCondInfo>
+          <TextTag>- {(value as Condition).description}</TextTag>
+        </EvoCondInfo>
       );
     case 8:
       return `after beating ${value} Petula.`;
@@ -113,6 +131,7 @@ function EvoText({
     }
     conds.push(
       <EvoCondition
+        key={evo.beastie.id + i}
         condition={evo.evolution.condition[i]}
         value={evo.evolution.value[i]}
         specie={evo.evolution.specie}

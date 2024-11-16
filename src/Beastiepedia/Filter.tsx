@@ -79,7 +79,9 @@ export default function Filter({
             >
               <div>{abilities[abilityId].name}</div>
               <div className={styles.abilityDesc}>
-                <TextTag>{abilities[abilityId].desc}</TextTag>
+                <TextTag>
+                  {abilities[abilityId].desc.replace(/\|/g, "\n")}
+                </TextTag>
               </div>
             </div>
           ))}

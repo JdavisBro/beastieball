@@ -1,0 +1,35 @@
+.filterButton {
+  height: 100%;
+  background-image: url("/filter.png");
+  background-size: 100% 100%;
+  aspect-ratio: 1;
+}
+
+.abilityList {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ability {
+  composes: animSelectableBackground from global;
+  display: flex;
+  border: black 1px solid;
+  flex-direction: column;
+  flex: 0 0 250px;
+  height: 80px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.abilitySelected {
+  composes: ability;
+  composes: animSelectedBackground from global;
+}
+
+.abilityDesc {
+  flex: 1 0 auto;
+  overflow-y: auto;
+  font-size: 0.9em;
+}

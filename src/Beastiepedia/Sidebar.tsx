@@ -3,6 +3,7 @@ import styles from "./Sidebar.module.css";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import { useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
+import Filter, { FilterType } from "./Filter";
 
 const BEASTIES = [...BEASTIE_DATA.values()];
 
@@ -31,6 +32,16 @@ export default function Sidebar(props: Props): React.ReactElement {
 
   const [grid, setGrid] = useLocalStorage("beastiepediaGrid", false);
 
+  const [filter, setFilter] = useState<[FilterType, string]>([
+    FilterType.None,
+    "",
+  ]);
+
+  const filterFunc =
+    filter[0] == FilterType.Ability
+      ? (beastie: BeastieType) => beastie.ability.includes(filter[1])
+      : undefined;
+
   return (
     <div className={props.visibility ? styles.sidebar : styles.sidebaroff}>
       <div className={styles.sidebarsearchcon}>
@@ -53,6 +64,7 @@ export default function Sidebar(props: Props): React.ReactElement {
         <button onClick={() => setSortDec(!sortDec)}>
           {sortDec ? "↓" : "↑"}
         </button>
+        <Filter filter={filter} setFilter={setFilter} />
         <div
           className={grid ? styles.gridimage : styles.gridimageGrid}
           tabIndex={0}
@@ -81,7 +93,10 @@ export default function Sidebar(props: Props): React.ReactElement {
             }
             smallStatDisplay={sort == "name"}
             selected={beastieid == beastie.id}
-            visible={beastie.name.toLowerCase().includes(search.toLowerCase())}
+            visible={
+              beastie.name.toLowerCase().includes(search.toLowerCase()) &&
+              (!filterFunc || filterFunc(beastie))
+            }
             onToggleSidebarVisibility={() => props.onToggleSidebarVisibility()}
           />
         ))}

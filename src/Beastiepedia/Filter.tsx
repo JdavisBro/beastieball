@@ -60,31 +60,33 @@ export default function Filter({
           Clear Filter
         </button>
         <div>Abilities:</div>
-        <div
-          className={styles.abilityList}
-          onWheel={(event) => event.stopPropagation()}
-        >
-          {beastie_abilities.map((abilityId) => (
-            <div
-              key={abilityId}
-              role="button"
-              onClick={(event) =>
-                handleSetFilter(event, [FilterType.Ability, abilityId])
-              }
-              className={
-                filter[0] == FilterType.Ability && filter[1] == abilityId
-                  ? styles.abilitySelected
-                  : styles.ability
-              }
-            >
-              <div>{abilities[abilityId].name}</div>
-              <div className={styles.abilityDesc}>
-                <TextTag>
-                  {abilities[abilityId].desc.replace(/\|/g, "\n")}
-                </TextTag>
+        <div className={styles.listContainer}>
+          <div
+            className={styles.abilityList}
+            onWheel={(event) => event.stopPropagation()}
+          >
+            {beastie_abilities.map((abilityId) => (
+              <div
+                key={abilityId}
+                role="button"
+                onClick={(event) =>
+                  handleSetFilter(event, [FilterType.Ability, abilityId])
+                }
+                className={
+                  filter[0] == FilterType.Ability && filter[1] == abilityId
+                    ? styles.abilitySelected
+                    : styles.ability
+                }
+              >
+                <div>{abilities[abilityId].name}</div>
+                <div className={styles.abilityDesc}>
+                  <TextTag>
+                    {abilities[abilityId].desc.replace(/\|/g, "\n")}
+                  </TextTag>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </Modal>
     </div>

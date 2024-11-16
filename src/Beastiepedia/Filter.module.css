@@ -5,11 +5,14 @@
   aspect-ratio: 1;
 }
 
+.listContainer {
+  width: round(down, 90vw, 264px);
+}
+
 .abilityList {
   display: flex;
   gap: 4px;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .ability {

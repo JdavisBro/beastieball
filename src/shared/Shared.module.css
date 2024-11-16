@@ -234,6 +234,10 @@
   align-items: center;
 }
 
+.beastieSelectContainer {
+  width: round(down, 90vw, 245px);
+}
+
 .beastieSelect {
   display: flex;
   flex-wrap: wrap;

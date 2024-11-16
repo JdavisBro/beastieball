@@ -106,7 +106,9 @@ export default function BeastieSelect({
             value={search}
           />
         </label>
-        <div className={styles.beastieSelect}>{beasties}</div>
+        <div className={styles.beastieSelectContainer}>
+          <div className={styles.beastieSelect}>{beasties}</div>
+        </div>
       </Modal>
     </>
   );

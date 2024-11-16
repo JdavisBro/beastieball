@@ -19,10 +19,15 @@ export default function Sidebar(props: Props): React.ReactElement {
 
   const [sort, setSort] = useState("number");
   const [sortDec, setSortDec] = useState(false);
-  const sortFunc = (beastie1: BeastieType, beastie2: BeastieType) =>
-    ((beastie1[sort as keyof BeastieType] as number) -
-      (beastie2[sort as keyof BeastieType] as number)) *
-    (sortDec ? -1 : 1);
+  const sortMult = sortDec ? -1 : 1;
+  const sortFunc: (beastie1: BeastieType, beastie2: BeastieType) => number =
+    sort == "name"
+      ? (beastie1, beastie2) =>
+          beastie1.name.localeCompare(beastie2.name) * sortMult
+      : (beastie1, beastie2) =>
+          ((beastie1[sort as keyof BeastieType] as number) -
+            (beastie2[sort as keyof BeastieType] as number)) *
+          sortMult;
 
   const [grid, setGrid] = useLocalStorage("beastiepediaGrid", false);
 
@@ -37,6 +42,7 @@ export default function Sidebar(props: Props): React.ReactElement {
         />
         <select onChange={(event) => setSort(event.target.value)}>
           <option value="number">Number</option>
+          <option value="name">Name</option>
           <option value="ba">Body POW</option>
           <option value="bd">Body DEF</option>
           <option value="ha">Spirit POW</option>
@@ -69,10 +75,11 @@ export default function Sidebar(props: Props): React.ReactElement {
             beastieid={beastie.id}
             beastiedata={beastie}
             statDisplay={
-              sort != "number"
+              sort != "number" && !(!grid && sort == "name")
                 ? (beastie[sort as keyof BeastieType] as string)
                 : ""
             }
+            smallStatDisplay={sort == "name"}
             selected={beastieid == beastie.id}
             visible={beastie.name.toLowerCase().includes(search.toLowerCase())}
             onToggleSidebarVisibility={() => props.onToggleSidebarVisibility()}

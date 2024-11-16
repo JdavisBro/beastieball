@@ -94,7 +94,9 @@
   padding: 0 6px 0 6px;
   font-family: SportsJersey, "Go Banana", sans-serif;
   color: white;
-  clip-path: polygon(0 0, 0 100%, 100% 100%, 90% 0);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 4px) 0);
+  box-sizing: border-box;
+  z-index: 1;
 }
 
 .gridnumberright {
@@ -102,8 +104,14 @@
   composes: boxHeaderBackground from global;
   left: auto !important;
   right: 0 !important;
-  clip-path: polygon(0 0, 10% 100%, 100% 100%, 100% 0) !important;
+  clip-path: polygon(0 0, 4px 100%, 100% 100%, 100% 0) !important;
   font-size: 0.9em;
+  z-index: 0 !important;
+}
+
+.gridnumberrightsmall {
+  composes: gridnumberright;
+  font-size: 0.8em;
 }
 
 .beastiecontainergrid > .beastie > .beastiecontent > .name {

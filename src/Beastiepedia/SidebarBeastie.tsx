@@ -13,6 +13,7 @@ type Props = {
   beastieid: string;
   beastiedata: BeastieType;
   statDisplay: string;
+  smallStatDisplay: boolean;
   selected: boolean;
   visible: boolean;
   onToggleSidebarVisibility: () => void;
@@ -65,7 +66,13 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
             <span className={styles.hash}>#</span>
             {String(beastiedata.number).padStart(2, "0")}
           </span>
-          <span className={styles.gridnumberright}>
+          <span
+            className={
+              props.smallStatDisplay
+                ? styles.gridnumberrightsmall
+                : styles.gridnumberright
+            }
+          >
             {isSpoiler ? "" : props.statDisplay}
           </span>
           <div className={styles.name}>

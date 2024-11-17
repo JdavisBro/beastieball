@@ -91,6 +91,8 @@ function EvoCondition({
       return `at level ${value}`;
     case 2:
       return `at ${LOCATION_CONDS[specie] ?? "somewhere"}`;
+    case 3:
+      return `after forming ${value} relationships`;
     case 5:
     case 6: {
       const snow = condition == 6;

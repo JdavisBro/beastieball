@@ -277,7 +277,7 @@ export default function MoveView(props: {
 }): React.ReactElement | null {
   const setMoveModal = useContext(MoveModalContext);
 
-  const friend = SOCIAL_DATA.find((friend) =>
+  let friend = SOCIAL_DATA.find((friend) =>
     friend.plays.includes(props.move.id),
   );
 
@@ -294,14 +294,18 @@ export default function MoveView(props: {
   if (friend) {
     const friend_rank = Math.floor(friend.plays.indexOf(props.move.id) / 4) + 1;
     let rank = 0;
-    friend.events.find((event) => {
+    const found = friend.events.find((event) => {
       friend_hearts += 1;
       if (event.rankup) {
         rank += 1;
       }
       return rank == friend_rank;
     });
-    learned_text = `Learned from ${friendSpoiler ? friend.name.slice(0, 2) + "..." : friend.name} at ${friend_hearts} hearts.`;
+    if (!found) {
+      friend = undefined;
+    } else {
+      learned_text = `Learned from ${friendSpoiler ? friend.name.slice(0, 2) + "..." : friend.name} at ${friend_hearts} hearts.`;
+    }
   }
 
   const { color, alt } = TypeData[props.move.type]

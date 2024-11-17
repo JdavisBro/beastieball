@@ -13,6 +13,13 @@ type Props = {
   onToggleSidebarVisibility: () => void;
 };
 
+type StatType = "ba" | "bd" | "ha" | "hd" | "ma" | "md";
+const STATS: StatType[] = ["ba", "bd", "ha", "hd", "ma", "md"];
+
+function getBeastieStatTotal(beastie: BeastieType) {
+  return STATS.reduce((accum, stat) => accum + beastie[stat], 0);
+}
+
 export default function Sidebar(props: Props): React.ReactElement {
   const beastieid = props.beastieid;
 
@@ -25,10 +32,14 @@ export default function Sidebar(props: Props): React.ReactElement {
     sort == "name"
       ? (beastie1, beastie2) =>
           beastie1.name.localeCompare(beastie2.name) * sortMult
-      : (beastie1, beastie2) =>
-          ((beastie1[sort as keyof BeastieType] as number) -
-            (beastie2[sort as keyof BeastieType] as number)) *
-          sortMult;
+      : sort == "total"
+        ? (beastie1, beastie2) =>
+            (getBeastieStatTotal(beastie1) - getBeastieStatTotal(beastie2)) *
+            sortMult
+        : (beastie1, beastie2) =>
+            ((beastie1[sort as keyof BeastieType] as number) -
+              (beastie2[sort as keyof BeastieType] as number)) *
+            sortMult;
 
   const [grid, setGrid] = useLocalStorage("beastiepediaGrid", false);
 
@@ -54,6 +65,7 @@ export default function Sidebar(props: Props): React.ReactElement {
         <select onChange={(event) => setSort(event.target.value)}>
           <option value="number">Number</option>
           <option value="name">Name</option>
+          <option value="total">Stat Total</option>
           <option value="ba">Body POW</option>
           <option value="bd">Body DEF</option>
           <option value="ha">Spirit POW</option>
@@ -88,7 +100,9 @@ export default function Sidebar(props: Props): React.ReactElement {
             beastiedata={beastie}
             statDisplay={
               sort != "number" && !(!grid && sort == "name")
-                ? (beastie[sort as keyof BeastieType] as string)
+                ? sort == "total"
+                  ? String(getBeastieStatTotal(beastie))
+                  : (beastie[sort as keyof BeastieType] as string)
                 : ""
             }
             smallStatDisplay={sort == "name"}

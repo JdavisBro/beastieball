@@ -1,11 +1,11 @@
-import styles from "./Teams.module.css";
-import BEASTIE_DATA from "../data/BeastieData";
-import { BeastieImage } from "../shared/beastieRender/BeastieImage";
-import { TeamBeastie } from "./Types";
+import styles from "./Beastie.module.css";
+import BEASTIE_DATA from "../../data/BeastieData";
+import { BeastieImage } from "../../shared/beastieRender/BeastieImage";
+import { TeamBeastie } from "../Types";
 import StatDistribution from "./StatDistribution";
-import TextTag from "../shared/TextTag";
-import abilities from "../data/abilities";
-import MOVE_DIC from "../data/MoveData";
+import TextTag from "../../shared/TextTag";
+import abilities from "../../data/abilities";
+import MOVE_DIC from "../../data/MoveData";
 import BeastieMove from "./BeastieMove";
 import { Link } from "react-router-dom";
 
@@ -83,6 +83,7 @@ export default function Beastie({
             title={`Open ${beastiedata.name} with these colors in Beastiepedia`}
           >
             <BeastieImage
+              key={teamBeastie.pid + teamBeastie.specie}
               defaultUrl={`/icons/${beastiedata.name}.png`}
               beastie={{
                 id: beastiedata.id,
@@ -107,8 +108,8 @@ export default function Beastie({
         </div>
       </div>
       <div className={styles.moverow}>
-        {teamBeastie.attklist.map((moveId) => (
-          <BeastieMove key={moveId} move={MOVE_DIC[moveId]} />
+        {teamBeastie.attklist.map((moveId, index) => (
+          <BeastieMove key={moveId + index} move={MOVE_DIC[moveId]} />
         ))}
       </div>
     </div>

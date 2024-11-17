@@ -1,6 +1,6 @@
-import styles from "./Teams.module.css";
-import { BeastieType } from "../data/BeastieData";
-import { TeamBeastie } from "./Types";
+import styles from "./Beastie.module.css";
+import { BeastieType } from "../../data/BeastieData";
+import { TeamBeastie } from "../Types";
 
 const TypeColors = ["#ffdb5e", "#fb88b0", "#8ddcf5"];
 

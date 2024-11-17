@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.team {
+  flex: 0 1 auto;
+  display: flex;
+  padding-top: 10px;
+  gap: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team > div {
+  max-width: 350px;
+}
+
+.edit {
+  flex: 1 0 auto;
+  margin: 8px;
+}
+
+.editOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: start;
+}

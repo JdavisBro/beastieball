@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 import styles from "./Teams.module.css";
 import { Team } from "./Types";
-import Beastie from "./Beastie";
+import Beastie from "./Beastie/Beastie.tsx";
 import BeastieRenderProvider from "../shared/beastieRender/BeastieRenderProvider";
 import MoveModalProvider from "../shared/MoveModalProvider";
 import Header from "../shared/Header";

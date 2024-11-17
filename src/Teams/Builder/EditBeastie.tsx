@@ -106,6 +106,7 @@ export default function EditBeastie({
       <label>
         Trait:{" "}
         <select
+          defaultValue={beastie.ability_index}
           onChange={(event) =>
             changeValue("ability_index", Number(event.target.value))
           }

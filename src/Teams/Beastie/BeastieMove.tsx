@@ -24,7 +24,7 @@ export default function BeastieMove({ move }: { move: Move }) {
       }}
     >
       <div className={styles.moveblock}></div>
-      <div>{move.name}</div>
+      <div className={styles.movename}>{move.name}</div>
     </div>
   );
 }

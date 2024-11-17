@@ -133,4 +133,9 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-blend-mode: multiply, normal;
+  flex: 0 0 auto;
+}
+
+.movename {
+  word-break: break-word;
 }

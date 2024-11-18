@@ -427,11 +427,15 @@ function BeastieColorTabContent(props: {
     colorChange,
   ]);
 
-  const linkedColors: Record<number, number> = {};
+  let linkedColors: Record<number, number> = {};
   colorMax.forEach((index) => {
     if (props.linkedColors[`_${index}`] != undefined) {
-      linkedColors[props.linkedColors[`_${index}`]] = index;
-      linkedColors[index] = props.linkedColors[`_${index}`];
+      if (linkedColors[props.linkedColors[`_${index}`]] != undefined) {
+        linkedColors = {};
+      } else {
+        linkedColors[props.linkedColors[`_${index}`]] = index;
+        linkedColors[index] = props.linkedColors[`_${index}`];
+      }
     }
   });
 

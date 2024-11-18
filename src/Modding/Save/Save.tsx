@@ -66,7 +66,7 @@ export default function Save(): React.ReactElement {
           <input
             type="file"
             onChange={(event) => {
-              const files = event.target.files;
+              const files = event.currentTarget.files;
               if (files) {
                 const file = files[0];
                 file

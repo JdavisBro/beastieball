@@ -15,7 +15,7 @@ function AnimationToggle() {
       <input
         defaultChecked={noAnimations}
         type="checkbox"
-        onChange={(e) => setNoAnimations(e.target.checked)}
+        onChange={(event) => setNoAnimations(event.currentTarget.checked)}
       />
       Disable Animations
     </label>

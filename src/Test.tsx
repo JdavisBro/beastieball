@@ -30,7 +30,7 @@ color test: [#2cb18c]aqua[/c] [d#9346814]luncheon red
       <div style={{ display: "flex", gap: "20px" }}>
         <textarea
           value={text}
-          onChange={(event) => setText(event.target.value)}
+          onChange={(event) => setText(event.currentTarget.value)}
           style={{ resize: "horizontal", minHeight: "100%", width: "40%" }}
         />
         <TextTag>{text}</TextTag>

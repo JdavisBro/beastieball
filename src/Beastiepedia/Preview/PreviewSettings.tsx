@@ -46,7 +46,7 @@ export default function PreviewSettings(props: Props): React.ReactElement {
                 props.canvasRef.current &&
                 props.canvasRef.current.parentElement
               ) {
-                props.canvasRef.current.parentElement.style.width = `${event.target.value}%`;
+                props.canvasRef.current.parentElement.style.width = `${event.currentTarget.value}%`;
               }
             }}
           />
@@ -58,14 +58,14 @@ export default function PreviewSettings(props: Props): React.ReactElement {
               id="whitebg"
               type="checkbox"
               onChange={(event) => {
-                props.setBackground(event.target.checked);
+                props.setBackground(event.currentTarget.checked);
               }}
             />
             <input
               type="color"
               defaultValue={"#ffffff"}
               onChange={(event) => {
-                props.setBackgroundColor(event.target.value);
+                props.setBackgroundColor(event.currentTarget.value);
               }}
             />
           </label>
@@ -76,7 +76,7 @@ export default function PreviewSettings(props: Props): React.ReactElement {
             type="checkbox"
             defaultChecked={props.fitBeastie}
             onChange={(event) => {
-              props.setFitBeastie(event.target.checked);
+              props.setFitBeastie(event.currentTarget.checked);
             }}
           />
         </label>

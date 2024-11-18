@@ -57,7 +57,7 @@ export default function Sfx({ beastiedata }: { beastiedata: BeastieType }) {
       <audio
         onCanPlayThrough={(event) => {
           if (playSound == beastiedata.id) {
-            (event.target as HTMLAudioElement).play();
+            event.currentTarget.play();
           }
         }}
         controls

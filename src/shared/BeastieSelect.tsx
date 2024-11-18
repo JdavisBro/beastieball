@@ -95,7 +95,7 @@ export default function BeastieSelect({
           Search:{" "}
           <input
             type="text"
-            onChange={(event) => setSearch(event.target.value)}
+            onChange={(event) => setSearch(event.currentTarget.value)}
             value={search}
           />
         </label>

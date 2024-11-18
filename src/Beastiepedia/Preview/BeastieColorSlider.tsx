@@ -32,16 +32,19 @@ export default function BeastieColorSlider(props: Props) {
         max={1}
         step="any"
         value={props.value !== undefined ? props.value : 0.5}
-        onChange={(e) => props.handleColorChange(Number(e.target.value))}
-        onKeyDown={(e) => {
-          const dir = e.key == "ArrowLeft" ? -1 : e.key == "ArrowRight" ? 1 : 0;
+        onChange={(event) =>
+          props.handleColorChange(Number(event.currentTarget.value))
+        }
+        onKeyDown={(event) => {
+          const dir =
+            event.key == "ArrowLeft" ? -1 : event.key == "ArrowRight" ? 1 : 0;
           if (dir != 0) {
-            e.preventDefault();
+            event.preventDefault();
             const newnum =
-              Number((e.target as HTMLInputElement).value) +
-              dir * (e.shiftKey ? 0.01 : 0.1);
+              Number((event.currentTarget as HTMLInputElement).value) +
+              dir * (event.shiftKey ? 0.01 : 0.1);
 
-            (e.target as HTMLInputElement).value = String(newnum);
+            event.currentTarget.value = String(newnum);
             props.handleColorChange(newnum);
           }
         }}

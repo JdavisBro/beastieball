@@ -68,7 +68,7 @@ export default function TeamBuilder() {
               Editing Beastie:{" "}
               <select
                 onChange={(event) =>
-                  setEditingBeastie(Number(event.target.value))
+                  setEditingBeastie(Number(event.currentTarget.value))
                 }
               >
                 <option value={0}>1 - {team[0].name}</option>
@@ -96,7 +96,7 @@ export default function TeamBuilder() {
               <input
                 type="file"
                 onChange={(event) => {
-                  const files = event.target.files;
+                  const files = event.currentTarget.files;
                   if (files) {
                     files[0].text().then((text) => setTeam(JSON.parse(text)));
                   }

@@ -274,8 +274,8 @@ export default function ColorTabs(props: Props): React.ReactNode {
               className={styles.customcolor}
               type="color"
               value={`${value}`}
-              onChange={(e) => {
-                colorChange(index, hexToRgb(e.target.value));
+              onChange={(event) => {
+                colorChange(index, hexToRgb(event.currentTarget.value));
                 if (diffBeastieColors != "none") {
                   return;
                 }
@@ -289,7 +289,8 @@ export default function ColorTabs(props: Props): React.ReactNode {
                       beastiedata.colors,
                     );
                   }
-                  oldColors[beastiedata.id].custom[index] = e.target.value;
+                  oldColors[beastiedata.id].custom[index] =
+                    event.currentTarget.value;
                   return oldColors;
                 });
               }}

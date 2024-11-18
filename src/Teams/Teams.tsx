@@ -138,12 +138,16 @@ export default function Teams() {
         <label>
           <input
             type="checkbox"
-            onChange={(event) => setIsLevelOverwritten(event.target.checked)}
+            onChange={(event) =>
+              setIsLevelOverwritten(event.currentTarget.checked)
+            }
           />
           At Level{" "}
           <input
             type="number"
-            onChange={(event) => setLevelOverwrite(Number(event.target.value))}
+            onChange={(event) =>
+              setLevelOverwrite(Number(event.currentTarget.value))
+            }
             min={1}
             max={100}
             defaultValue={50}

@@ -86,7 +86,7 @@ export default function LoadedFile(props: {
               <div>{key}</div>
               <textarea
                 onChange={(event) =>
-                  (props.save[key] = JSON.parse(event.target.value))
+                  (props.save[key] = JSON.parse(event.currentTarget.value))
                 }
                 defaultValue={JSON.stringify(props.save[key])}
               ></textarea>

@@ -113,14 +113,14 @@ export default function PlayDex() {
           Search:{" "}
           <input
             type="text"
-            onChange={(event) => setSearch(event.target.value)}
+            onChange={(event) => setSearch(event.currentTarget.value)}
           />
         </label>{" "}
         <label>
           Sort by:{" "}
           <select
             id="sort"
-            onChange={(event) => setSort(Number(event.target.value))}
+            onChange={(event) => setSort(Number(event.currentTarget.value))}
             value={String(sort)}
           >
             <option value="0">Type</option>
@@ -133,7 +133,9 @@ export default function PlayDex() {
         <label>
           Type:{" "}
           <select
-            onChange={(event) => setTypeFilter(Number(event.target.value))}
+            onChange={(event) =>
+              setTypeFilter(Number(event.currentTarget.value))
+            }
             value={String(typeFilter)}
           >
             <option value="-1">All</option>
@@ -148,7 +150,9 @@ export default function PlayDex() {
         <label>
           Effect:{" "}
           <select
-            onChange={(event) => setEffectFilter(Number(event.target.value))}
+            onChange={(event) =>
+              setEffectFilter(Number(event.currentTarget.value))
+            }
             value={String(effectFilter)}
           >
             <option value={-1}>All</option>
@@ -164,9 +168,9 @@ export default function PlayDex() {
           <select
             onChange={(event) =>
               setFriendFilter(
-                event.target.value == "undefined"
+                event.currentTarget.value == "undefined"
                   ? undefined
-                  : event.target.value,
+                  : event.currentTarget.value,
               )
             }
             value={friendFilter}

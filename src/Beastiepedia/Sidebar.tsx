@@ -82,9 +82,9 @@ export default function Sidebar(props: Props): React.ReactElement {
           type="text"
           placeholder="Search Beasties.."
           className={styles.sidebarsearch}
-          onChange={(event) => setSearch(event.target.value)}
+          onChange={(event) => setSearch(event.currentTarget.value)}
         />
-        <select onChange={(event) => setSort(event.target.value)}>
+        <select onChange={(event) => setSort(event.currentTarget.value)}>
           <option value="number">Number</option>
           <option value="name">Name</option>
           <option value="total">Stat Total</option>

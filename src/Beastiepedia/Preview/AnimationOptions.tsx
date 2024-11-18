@@ -29,7 +29,9 @@ export default function AnimationOptions(props: Props): React.ReactElement {
             <select
               name="altSprite"
               id="altSprite"
-              onChange={(event) => props.setAlt(Number(event.target.value))}
+              onChange={(event) =>
+                props.setAlt(Number(event.currentTarget.value))
+              }
               value={props.alt}
             >
               <option value="-1">Normal</option>
@@ -48,7 +50,7 @@ export default function AnimationOptions(props: Props): React.ReactElement {
           id="anim"
           onChange={(event) => {
             props.animPausedRef.current = false;
-            props.setAnimation(event.target.value);
+            props.setAnimation(event.currentTarget.value);
           }}
           value={props.animation}
         >
@@ -80,7 +82,7 @@ export default function AnimationOptions(props: Props): React.ReactElement {
           max={props.frameCount}
           onChange={(event) => {
             props.animPausedRef.current = true;
-            props.setFrame(Number(event.target.value));
+            props.setFrame(Number(event.currentTarget.value));
           }}
         />
         <div className={styles.middlealign}>
@@ -93,7 +95,9 @@ export default function AnimationOptions(props: Props): React.ReactElement {
             min={0}
             value={props.userSpeed}
             style={{ width: "4em" }}
-            onChange={(event) => props.setUserSpeed(Number(event.target.value))}
+            onChange={(event) =>
+              props.setUserSpeed(Number(event.currentTarget.value))
+            }
           />
           <button onClick={() => props.setUserSpeed(1)}>Reset</button>
         </div>

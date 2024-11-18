@@ -35,7 +35,9 @@ function ExpForLevel({ growth }: { growth: number }) {
             className={styles.levelInput}
             min={0}
             max={100}
-            onChange={(event) => setUserLevel(Number(event.target.value))}
+            onChange={(event) =>
+              setUserLevel(Number(event.currentTarget.value))
+            }
             value={level || ""}
           />
           <button onClick={() => setUserLevel(Math.max(1, level - 1))}>

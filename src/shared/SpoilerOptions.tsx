@@ -18,7 +18,9 @@ export default function SpoilerOptions() {
         Show:{" "}
         <select
           value={spoilerMode || SpoilerMode.OnlySeen}
-          onChange={(event) => setSpoilerMode(Number(event.target.value))}
+          onChange={(event) =>
+            setSpoilerMode(Number(event.currentTarget.value))
+          }
         >
           <option value={SpoilerMode.OnlySeen}>Seen Beasties/Characters</option>
           <option value={SpoilerMode.All}>All Beasties/Characters</option>

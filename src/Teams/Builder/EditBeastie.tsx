@@ -73,7 +73,7 @@ export default function EditBeastie({
           type="text"
           maxLength={12}
           defaultValue={beastie.name}
-          onChange={(event) => changeValue("name", event.target.value)}
+          onChange={(event) => changeValue("name", event.currentTarget.value)}
         />
       </label>
       <label>
@@ -84,7 +84,7 @@ export default function EditBeastie({
           max={999}
           defaultValue={Number(beastie.number)}
           onChange={(event) =>
-            changeValue("number", event.target.value.padStart(2, "0"))
+            changeValue("number", event.currentTarget.value.padStart(2, "0"))
           }
         />
       </label>
@@ -98,7 +98,7 @@ export default function EditBeastie({
           onChange={(event) =>
             changeValue(
               "xp",
-              Number(event.target.value) ** 3 * beastiedata.growth,
+              Number(event.currentTarget.value) ** 3 * beastiedata.growth,
             )
           }
         />
@@ -108,7 +108,7 @@ export default function EditBeastie({
         <select
           defaultValue={beastie.ability_index}
           onChange={(event) =>
-            changeValue("ability_index", Number(event.target.value))
+            changeValue("ability_index", Number(event.currentTarget.value))
           }
         >
           {beastiedata.ability.map((abilityId, index) => (
@@ -128,7 +128,7 @@ export default function EditBeastie({
             max={100}
             defaultValue={beastie.ba_r * 100}
             onChange={(event) =>
-              changeValue("ba_r", Number(event.target.value) / 100)
+              changeValue("ba_r", Number(event.currentTarget.value) / 100)
             }
           />
           %
@@ -142,7 +142,7 @@ export default function EditBeastie({
             max={100}
             defaultValue={beastie.bd_r * 100}
             onChange={(event) =>
-              changeValue("bd_r", Number(event.target.value) / 100)
+              changeValue("bd_r", Number(event.currentTarget.value) / 100)
             }
           />
           %
@@ -157,7 +157,7 @@ export default function EditBeastie({
             max={30}
             defaultValue={beastie.ha_r * 100}
             onChange={(event) =>
-              changeValue("ha_r", Number(event.target.value) / 100)
+              changeValue("ha_r", Number(event.currentTarget.value) / 100)
             }
           />
           %
@@ -171,7 +171,7 @@ export default function EditBeastie({
             max={30}
             defaultValue={beastie.hd_r * 100}
             onChange={(event) =>
-              changeValue("hd_r", Number(event.target.value) / 100)
+              changeValue("hd_r", Number(event.currentTarget.value) / 100)
             }
           />
           %
@@ -186,7 +186,7 @@ export default function EditBeastie({
             max={30}
             defaultValue={beastie.ma_r * 100}
             onChange={(event) =>
-              changeValue("ma_r", Number(event.target.value) / 100)
+              changeValue("ma_r", Number(event.currentTarget.value) / 100)
             }
           />
           %
@@ -200,7 +200,7 @@ export default function EditBeastie({
             max={30}
             defaultValue={beastie.md_r * 100}
             onChange={(event) =>
-              changeValue("md_r", Number(event.target.value) / 100)
+              changeValue("md_r", Number(event.currentTarget.value) / 100)
             }
           />
           %
@@ -221,7 +221,7 @@ export default function EditBeastie({
                 Math.min(
                   Math.floor(beastie.ba_t / 4) + extraPoints,
                   30,
-                  Number(event.target.value),
+                  Number(event.currentTarget.value),
                 ) * 4,
               )
             }
@@ -241,7 +241,7 @@ export default function EditBeastie({
                 Math.min(
                   Math.floor(beastie.bd_t / 4) + extraPoints,
                   30,
-                  Number(event.target.value),
+                  Number(event.currentTarget.value),
                 ) * 4,
               )
             }
@@ -262,7 +262,7 @@ export default function EditBeastie({
                 Math.min(
                   Math.floor(beastie.ha_t / 4) + extraPoints,
                   30,
-                  Number(event.target.value),
+                  Number(event.currentTarget.value),
                 ) * 4,
               )
             }
@@ -282,7 +282,7 @@ export default function EditBeastie({
                 Math.min(
                   Math.floor(beastie.hd_t / 4) + extraPoints,
                   30,
-                  Number(event.target.value),
+                  Number(event.currentTarget.value),
                 ) * 4,
               )
             }
@@ -303,7 +303,7 @@ export default function EditBeastie({
                 Math.min(
                   Math.floor(beastie.ma_t / 4) + extraPoints,
                   30,
-                  Number(event.target.value),
+                  Number(event.currentTarget.value),
                 ) * 4,
               )
             }
@@ -323,7 +323,7 @@ export default function EditBeastie({
                 Math.min(
                   Math.floor(beastie.md_t / 4) + extraPoints,
                   30,
-                  Number(event.target.value),
+                  Number(event.currentTarget.value),
                 ) * 4,
               )
             }
@@ -372,7 +372,7 @@ function Plays({
   return (
     <select
       defaultValue={selected}
-      onChange={(event) => setMove(event.target.value)}
+      onChange={(event) => setMove(event.currentTarget.value)}
     >
       {attklist
         .sort((moveId, moveId2) =>

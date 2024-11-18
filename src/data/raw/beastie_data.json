@@ -2,7 +2,7 @@
   "alien": {
     "ability": ["notag"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -206,7 +206,7 @@
   "alien1": {
     "ability": ["notag"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
@@ -414,7 +414,7 @@
   "bat": {
     "ability": ["nurture", "mom"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -691,7 +691,7 @@
   "bat1": {
     "ability": ["regenerator"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 10,
     "attklist": [
@@ -886,7 +886,7 @@
   "beluga": {
     "ability": ["nofield"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -1265,7 +1265,7 @@
   "bestiemon": {
     "ability": ["magicguard", "lifeorb"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 10,
     "attklist": [
@@ -1457,7 +1457,7 @@
   "bilby": {
     "ability": ["starter_m", "fwdpass"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
@@ -1886,7 +1886,7 @@
   "bilby2": {
     "ability": ["starter_m", "fwdpass"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 80,
     "animator": 10,
     "attklist": [
@@ -2104,7 +2104,7 @@
   "cassowary": {
     "ability": ["starter_b", "lifeorb"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
@@ -2484,7 +2484,7 @@
   "cassowary2": {
     "ability": ["starter_b", "lifeorb"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
@@ -2874,7 +2874,7 @@
   "cheerleader1": {
     "ability": ["cheer"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 80,
     "animator": [10, 8],
     "attklist": [
@@ -3063,7 +3063,7 @@
   "cheerleadermon": {
     "ability": ["allyheal", "rhythmpow"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -3268,7 +3268,7 @@
   "clam": {
     "ability": ["mindless"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
@@ -3363,11 +3363,11 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 25,
-      "hop_length": 1.5,
+      "hop_height": 50,
+      "hop_length": 3,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 0,
+      "hop_wobble": 30,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
       "move_pause_frames": [],
@@ -3474,7 +3474,7 @@
   "clown": {
     "ability": ["vertical", "nostatus"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -3854,7 +3854,7 @@
   "crab": {
     "ability": ["novolley", "rhythmpow"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
@@ -4052,7 +4052,7 @@
   "croc": {
     "ability": ["ace", "taghit"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -4250,7 +4250,7 @@
   "daredevil": {
     "ability": ["acrobat", "unnervous"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -4457,7 +4457,7 @@
   "daredevil1": {
     "ability": ["acrobat", "unnervous"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 10,
     "attklist": [
@@ -4649,7 +4649,7 @@
   "disruptor": {
     "ability": ["redirection", "taunt"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -4865,7 +4865,7 @@
   "dog": {
     "ability": ["fetch", "watcher"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 10,
     "attklist": [
@@ -5109,7 +5109,7 @@
   "dog1": {
     "ability": ["fetch", "watcher"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 80,
     "animator": [10, 8],
     "attklist": [
@@ -5365,7 +5365,7 @@
   "dragonfly": {
     "ability": ["nimble"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": [10, 8],
     "attklist": [
@@ -5584,7 +5584,7 @@
   "football": {
     "ability": ["shield", "fwdpass"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -5814,7 +5814,7 @@
   "football1": {
     "ability": ["shield", "unlazy"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 80,
     "animator": 8,
     "attklist": [
@@ -6012,7 +6012,7 @@
   "football2": {
     "ability": ["shield", "unlazy"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -6112,11 +6112,11 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 25,
-      "hop_length": 1.5,
+      "hop_height": 0,
+      "hop_length": 0.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 0,
+      "hop_wobble": 5,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
       "move_pause_frames": [],
@@ -6220,7 +6220,7 @@
   "fox": {
     "ability": ["stingblock", "mindabsorb"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -6416,7 +6416,7 @@
   "fox1": {
     "ability": ["unlazy", "mindabsorb"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
@@ -6625,7 +6625,7 @@
   "frog": {
     "ability": ["starter_h", "allyheal"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 10,
     "attklist": [
@@ -7006,7 +7006,7 @@
   "frog2": {
     "ability": ["starter_h", "allyheal"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 10,
     "attklist": [
@@ -7205,7 +7205,7 @@
   "ghost": {
     "ability": ["ghost"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -7586,7 +7586,7 @@
   "ghost2": {
     "ability": ["ghost"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -7754,7 +7754,7 @@
   "gremlin": {
     "ability": ["sneaky"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 10,
     "attklist": [
@@ -7931,7 +7931,7 @@
   "horseshoe": {
     "ability": ["sturdy"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 10,
     "attklist": [
@@ -8038,10 +8038,10 @@
       "float_wave": 0,
       "float_wave_freq": 1000,
       "hop_height": 0,
-      "hop_length": 1.5,
+      "hop_length": 0.25,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 0,
+      "hop_wobble": 1,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
       "move_pause_frames": [],
@@ -8123,7 +8123,7 @@
   "ibis": {
     "ability": ["steal", "intimidate"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -8394,7 +8394,7 @@
   "jellyfish": {
     "ability": ["nodie"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -8557,7 +8557,7 @@
   "jellyfish1": {
     "ability": ["traitless"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
@@ -8741,7 +8741,7 @@
   "jellyfish2": {
     "ability": ["nodie"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
@@ -8906,7 +8906,7 @@
   "kangaroo": {
     "ability": ["prankster", "gloat"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 15,
     "animator": 8,
     "attklist": [
@@ -9324,7 +9324,7 @@
   "kettle": {
     "ability": ["oblivious", "sauna"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -9529,7 +9529,7 @@
   "kettle1": {
     "ability": ["oblivious", "sauna"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -9697,7 +9697,7 @@
   "lyrebird": {
     "ability": ["moldbreaker", "unmarked"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -10134,7 +10134,7 @@
   "magpie": {
     "ability": ["trust", "technician"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -10371,7 +10371,7 @@
   "magpie1": {
     "ability": ["trust", "technician"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 80,
     "animator": [8, 10],
     "attklist": [
@@ -10550,7 +10550,7 @@
   "magpiemon": {
     "ability": ["echo", "redirection"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -10742,7 +10742,7 @@
   "mantis": {
     "ability": ["blocker"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -10938,7 +10938,7 @@
   "millipede": {
     "ability": ["watcher"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -10968,7 +10968,7 @@
     "ba": 88,
     "base_exp": 189.42,
     "bd": 78,
-    "body_color_index": 0,
+    "body_color_index": 1,
     "colormeta": null,
     "colors": [
       {
@@ -11126,7 +11126,7 @@
   "millipede1": {
     "ability": ["watcher"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 80,
     "animator": 10,
     "attklist": [
@@ -11305,7 +11305,7 @@
   "monkey": {
     "ability": ["scary"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -11494,7 +11494,7 @@
   "moth": {
     "ability": ["empath", "crowddef"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 80,
     "animator": 10,
     "attklist": [
@@ -11893,7 +11893,7 @@
   "moth2": {
     "ability": ["empath", "defiant_h"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 10,
     "attklist": [
@@ -12099,7 +12099,7 @@
   "mudskipper": {
     "ability": ["unangry", "unsweaty"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -12286,7 +12286,7 @@
   "nerd": {
     "ability": ["study"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -12477,7 +12477,7 @@
   "nerd1": {
     "ability": ["study"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 80,
     "animator": 10,
     "attklist": [
@@ -12654,7 +12654,7 @@
   "okapi": {
     "ability": ["teleport"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -12831,7 +12831,7 @@
   "olm": {
     "ability": ["extraheal", "waiting"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -13018,7 +13018,7 @@
   "olm1": {
     "ability": ["extraheal", "waiting"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -13178,7 +13178,7 @@
   "opossum": {
     "ability": ["shrug", "competitive"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -13382,7 +13382,7 @@
   "platypus": {
     "ability": ["charge", "vicious"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -13745,7 +13745,7 @@
   "platypus2": {
     "ability": ["lightningrod_m"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 15,
     "animator": 8,
     "attklist": [
@@ -13971,7 +13971,7 @@
   "possum": {
     "ability": ["regenerator", "dauntless"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -14391,7 +14391,7 @@
   "possum2": {
     "ability": ["regenerator"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -14607,7 +14607,7 @@
   "psychic": {
     "ability": ["galaxybrain", "superblock"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 10,
     "attklist": [
@@ -14812,7 +14812,7 @@
   "rainbow": {
     "ability": ["mimic", "allpow"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 10,
     "attklist": [
@@ -15085,7 +15085,7 @@
   "rainbowmon": {
     "ability": ["overwrite"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 15,
     "animator": 8,
     "attklist": [
@@ -15525,7 +15525,7 @@
   "rocklizard": {
     "ability": ["heavy", "multiscale"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -15902,7 +15902,7 @@
   "rocklizard2": {
     "ability": ["heavy", "multiscale"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -16091,7 +16091,7 @@
   "seabird": {
     "ability": ["bouncy", "blocker"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
@@ -16305,7 +16305,7 @@
   "seabird1": {
     "ability": ["bouncy", "blocker"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 10,
     "attklist": [
@@ -16504,7 +16504,7 @@
   "seal": {
     "ability": ["strongchance"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -16700,7 +16700,7 @@
   "seal1": {
     "ability": ["strongchance"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 10,
     "attklist": [
@@ -17288,7 +17288,7 @@
   "shark": {
     "ability": ["straightshot", "dauntless"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -17471,7 +17471,7 @@
   "shark1": {
     "ability": ["straightshot", "dauntless"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -17848,7 +17848,7 @@
   "shroom_b": {
     "ability": ["rhythmblock", "technician"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
@@ -18089,7 +18089,7 @@
   "shroom_m": {
     "ability": ["trappow", "noredirect"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 95,
     "animator": 10,
     "attklist": [
@@ -18320,7 +18320,7 @@
   "shroom_s": {
     "ability": ["crowddef", "defiant_h"],
     "ability_hidden": true,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 95,
     "animator": 10,
     "attklist": [
@@ -18548,7 +18548,7 @@
   "shroommon": {
     "ability": ["wither"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 10,
     "attklist": [
@@ -18772,7 +18772,7 @@
   "shy": {
     "ability": ["shy"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -18953,7 +18953,7 @@
   "snake": {
     "ability": ["charge"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -19052,11 +19052,11 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 25,
-      "hop_length": 1.5,
+      "hop_height": 0,
+      "hop_length": 2,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 0,
+      "hop_wobble": 5,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
       "move_pause_frames": [],
@@ -19147,7 +19147,7 @@
   "snowspirit": {
     "ability": ["vampire", "defender"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -19340,7 +19340,7 @@
   "spirit": {
     "ability": ["avenger", "guts"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
@@ -19547,7 +19547,7 @@
   "spirit1": {
     "ability": ["avenger", "defender"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 10,
     "attklist": [
@@ -19762,7 +19762,7 @@
   "swift": {
     "ability": ["freemove"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -19976,7 +19976,7 @@
   "tricky": {
     "ability": ["static"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -20214,7 +20214,7 @@
   "tricky1": {
     "ability": ["static"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 10,
     "attklist": [
@@ -20457,7 +20457,7 @@
   "turtle": {
     "ability": ["rhythmpow", "fwdpass"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -20690,7 +20690,7 @@
   "turtle1": {
     "ability": ["rhythmpow", "flee"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 10,
     "attklist": [
@@ -20871,7 +20871,7 @@
   "turtle2": {
     "ability": ["rhythmpow", "flee"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
@@ -21087,7 +21087,7 @@
   "wizard": {
     "ability": ["negation"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
@@ -21291,7 +21291,7 @@
   "yeti": {
     "ability": ["intimidate"],
     "ability_hidden": false,
-    "allowedInPromo": 0,
+    "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 10,
     "attklist": [

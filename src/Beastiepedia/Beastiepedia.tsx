@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import Header from "../shared/Header";
@@ -39,6 +39,12 @@ export default function Beastiepedia(): React.ReactNode {
     !(beastieid !== undefined && orientation),
   ); // Selected beastie & portrait automatically hides sidebar
 
+  const handleDisableSidebar = useCallback(() => {
+    if (orientation) {
+      setSidebarvisible(false);
+    }
+  }, [orientation]);
+
   const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
   useEffect(() => {
     if (beastiedata && !seenBeasties[beastiedata.id]) {
@@ -77,11 +83,7 @@ export default function Beastiepedia(): React.ReactNode {
           <Sidebar
             beastieid={beastieid}
             visibility={sidebarvisible}
-            onToggleSidebarVisibility={() => {
-              if (orientation) {
-                setSidebarvisible(false);
-              }
-            }}
+            onToggleSidebarVisibility={handleDisableSidebar}
           />
         </CustomErrorBoundary>
         <CustomErrorBoundary fallbackClassName={styles.content}>

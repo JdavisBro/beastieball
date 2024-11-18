@@ -1,9 +1,15 @@
 import SidebarBeastie from "./SidebarBeastie";
 import styles from "./Sidebar.module.css";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 import Filter, { FilterType } from "./Filter";
+import {
+  SpoilerMode,
+  useSpoilerMode,
+  useSpoilerSeen,
+} from "../shared/useSpoiler";
+import { useNavigate } from "react-router-dom";
 
 const BEASTIES = [...BEASTIE_DATA.values()];
 
@@ -52,6 +58,22 @@ export default function Sidebar(props: Props): React.ReactElement {
     filter[0] == FilterType.Ability
       ? (beastie: BeastieType) => beastie.ability.includes(filter[1])
       : undefined;
+
+  const [spoilerMode] = useSpoilerMode();
+  const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
+
+  const navigate = useNavigate();
+
+  const handleSpoiler = useCallback(
+    (beastieId: string, name: string) => {
+      setSeenBeasties((prev) => {
+        prev[beastieId] = true;
+        return prev;
+      });
+      navigate(`/beastiepedia/${name}`);
+    },
+    [setSeenBeasties, navigate],
+  );
 
   return (
     <div className={props.visibility ? styles.sidebar : styles.sidebaroff}>
@@ -111,7 +133,11 @@ export default function Sidebar(props: Props): React.ReactElement {
               beastie.name.toLowerCase().includes(search.toLowerCase()) &&
               (!filterFunc || filterFunc(beastie))
             }
-            onToggleSidebarVisibility={() => props.onToggleSidebarVisibility()}
+            isSpoiler={
+              spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id]
+            }
+            handleClick={props.onToggleSidebarVisibility}
+            handleSpoilerClick={handleSpoiler}
           />
         ))}
       </div>

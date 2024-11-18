@@ -450,6 +450,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
     "air",
     "stop",
     "menu",
+    "hug", // troglum
   ];
 
   // Remove animations not in beastie

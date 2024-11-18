@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import styles from "./Sidebar.module.css";
 import type { BeastieType } from "../data/BeastieData";
+import { memo } from "react";
 
 type Props = {
   beastieid: string;
@@ -15,23 +16,12 @@ type Props = {
   handleSpoilerClick: (beastieId: string, name: string) => void;
 };
 
-export default function SidebarBeastie(props: Props): React.ReactElement {
+function SidebarBeastie(props: Props): React.ReactElement {
   const beastiedata = props.beastiedata;
   const selected = props.selected;
   const content = selected
     ? `${styles.beastiecontent} ${styles.selected}`
     : styles.beastiecontent;
-
-  // const navigate = useNavigate();
-
-  // const handleClick = () => {
-  //   seenBeasties[beastiedata.id] = true;
-  //   setSeenBeasties(seenBeasties);
-  //   props.onToggleSidebarVisibility();
-  //   if (props.isSpoiler) {
-  //     navigate(`/beastiepedia/${beastiedata.name}`);
-  //   }
-  // };
 
   return (
     <Link
@@ -84,3 +74,5 @@ export default function SidebarBeastie(props: Props): React.ReactElement {
     </Link>
   );
 }
+
+export default memo(SidebarBeastie);

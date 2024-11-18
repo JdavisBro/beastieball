@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import Modal from "../shared/Modal";
 import abilities from "../data/abilities";
@@ -23,6 +23,35 @@ beastie_abilities.sort((abilityId, abilityId2) =>
   abilities[abilityId].name.localeCompare(abilities[abilityId2].name),
 );
 
+function AbilityButton({
+  abilityId,
+  selected,
+  handleSetFilter,
+}: {
+  abilityId: string;
+  selected: boolean;
+  handleSetFilter: (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    value: [FilterType, string],
+  ) => void;
+}) {
+  return (
+    <div
+      key={abilityId}
+      role="button"
+      onClick={(event) =>
+        handleSetFilter(event, [FilterType.Ability, abilityId])
+      }
+      className={selected ? styles.abilitySelected : styles.ability}
+    >
+      <div>{abilities[abilityId].name}</div>
+      <div className={styles.abilityDesc}>
+        <TextTag>{abilities[abilityId].desc.replace(/\|/g, "\n")}</TextTag>
+      </div>
+    </div>
+  );
+}
+
 export default function Filter({
   filter,
   setFilter,
@@ -32,14 +61,17 @@ export default function Filter({
 }) {
   const [open, setOpen] = useState(false);
 
-  const handleSetFilter = (
+  const handleSetFilter: (
     event: React.MouseEvent,
     value: [FilterType, string],
-  ) => {
-    event.stopPropagation();
-    setOpen(false);
-    setFilter(value);
-  };
+  ) => void = useCallback(
+    (event, value) => {
+      event.stopPropagation();
+      setOpen(false);
+      setFilter(value);
+    },
+    [setFilter],
+  );
 
   return (
     <div
@@ -66,25 +98,14 @@ export default function Filter({
             onWheel={(event) => event.stopPropagation()}
           >
             {beastie_abilities.map((abilityId) => (
-              <div
+              <AbilityButton
                 key={abilityId}
-                role="button"
-                onClick={(event) =>
-                  handleSetFilter(event, [FilterType.Ability, abilityId])
-                }
-                className={
+                abilityId={abilityId}
+                selected={
                   filter[0] == FilterType.Ability && filter[1] == abilityId
-                    ? styles.abilitySelected
-                    : styles.ability
                 }
-              >
-                <div>{abilities[abilityId].name}</div>
-                <div className={styles.abilityDesc}>
-                  <TextTag>
-                    {abilities[abilityId].desc.replace(/\|/g, "\n")}
-                  </TextTag>
-                </div>
-              </div>
+                handleSetFilter={handleSetFilter}
+              />
             ))}
           </div>
         </div>

@@ -388,68 +388,7 @@
   },
   {
     "collision_scene": "function",
-    "events": [
-      {
-        "alt_complete_flag": -1,
-        "collides": 0,
-        "cost": 1,
-        "dest_level": "",
-        "dest_object": -1,
-        "id": "apology",
-        "invite_scene": "function",
-        "parent": "Warning: recursive struct found",
-        "prereq": {
-          "field": 0,
-          "type": [0]
-        },
-        "rankup": 0
-      },
-      {
-        "alt_complete_flag": -1,
-        "collides": 0,
-        "cost": 1,
-        "dest_level": "pirate",
-        "dest_object": "ref object 129",
-        "id": "logan",
-        "invite_scene": "function",
-        "parent": "Warning: recursive struct found",
-        "prereq": {
-          "field": "pirate",
-          "type": [1, 4]
-        },
-        "rankup": 1
-      },
-      {
-        "alt_complete_flag": -1,
-        "collides": 0,
-        "cost": 1,
-        "dest_level": "central_station",
-        "dest_object": "ref object 165",
-        "id": "shop",
-        "invite_scene": "function",
-        "parent": "Warning: recursive struct found",
-        "prereq": {
-          "field": "central_station",
-          "type": [3, 4]
-        },
-        "rankup": 0
-      },
-      {
-        "alt_complete_flag": -1,
-        "collides": 1,
-        "cost": 1,
-        "dest_level": "",
-        "dest_object": -1,
-        "id": "",
-        "invite_scene": "function",
-        "parent": "Warning: recursive struct found",
-        "prereq": {
-          "field": 0,
-          "type": [1]
-        },
-        "rankup": 0
-      }
-    ],
+    "events": [],
     "id": "pirate",
     "img": 5,
     "loneliness": 0.5,

@@ -77,6 +77,7 @@ export default function Filter({
     <div
       className={styles.filterButton}
       role="button"
+      title="Sort by Filters"
       tabIndex={0}
       onClick={() => setOpen(true)}
     >

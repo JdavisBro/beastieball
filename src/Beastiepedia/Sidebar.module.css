@@ -27,6 +27,14 @@
 
 .sidebarsearch {
   flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 20px;
+}
+
+.sidebarselect {
+  flex-grow: 0.5;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .gridimage {

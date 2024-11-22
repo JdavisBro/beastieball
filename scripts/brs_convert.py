@@ -9,6 +9,8 @@ from PIL import Image
 
 PREVIEW_SIZE = (600, 300)
 
+RESEARCH_DATA = Path("../src/data/raw/research_data.json")
+
 def read_byte(f, count=1):
     return struct.unpack("B"*count, f.read(count))
 
@@ -60,6 +62,9 @@ def do_file(fp, outdir=None):
 
 def main(args):
     researchdata = {}
+    if RESEARCH_DATA.is_file():
+        with RESEARCH_DATA.open() as f:
+            researchdata = json.load(f)
     outdir = Path("../public/gameassets/research/")
     for i in args:
         fp = Path(i)
@@ -70,7 +75,7 @@ def main(args):
                 researchdata[fp2.stem] = do_file(fp2, outdir=outdir) + 1
         else:
             researchdata[fp.stem] = do_file(fp, outdir=outdir) + 1
-    with open("../src/data/raw/research_data.json", "w+") as f:
+    with RESEARCH_DATA.open("w+") as f:
         json.dump(researchdata, f)
 
 if __name__ == "__main__":

@@ -243,8 +243,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
     setNoDisplayReason("Loading...");
   }, [props.beastiedata.id]);
 
-  console.log(noDisplayRender);
-
   useEffect(() => {
     if (
       canvasRef.current &&

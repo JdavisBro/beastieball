@@ -84,7 +84,7 @@ export default function Sidebar(props: Props): React.ReactElement {
           className={styles.sidebarsearch}
           onChange={(event) => setSearch(event.currentTarget.value)}
         />
-        <select 
+        <select
           onChange={(event) => setSort(event.currentTarget.value)}
           className={styles.sidebarselect}
         >

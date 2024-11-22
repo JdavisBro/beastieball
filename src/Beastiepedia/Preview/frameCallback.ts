@@ -11,6 +11,23 @@ export type AnimationState = {
   prevTime: number;
 };
 
+function updateHold(animState: AnimationState, beastieSpeed: number) {
+  if (!animState.anim || !animState.state || !animState.frame) {
+    return;
+  }
+  const animSpeed = animState.anim.speed ?? 1;
+  let hold = 2;
+  const holds = animState.state.holds?.[animState.frame];
+  if (holds) {
+    if (typeof holds == "number") {
+      hold = holds;
+    } else if (Array.isArray(holds)) {
+      hold = holds[Math.floor(Math.random() * holds.length)];
+    }
+  }
+  animState.frameLength = (1000 / (24 * beastieSpeed * animSpeed)) * hold;
+}
+
 export function setupFrameCallback(
   setFrame: (frame: number) => void,
   animStateRef: MutableRefObject<AnimationState>,
@@ -45,27 +62,9 @@ export function setupFrameCallback(
       animState.frame = startFrame;
     }
 
-    const updateHold = () => {
-      if (!animState.anim || !animState.state || !animState.frame) {
-        return;
-      }
-      const animSpeed = animState.anim.speed ?? 1;
-      let hold = 2;
-      const holds =
-        animState.state.holds && animState.state.holds[animState.frame];
-      if (holds) {
-        if (typeof holds == "number") {
-          hold = holds;
-        } else if (Array.isArray(holds)) {
-          hold = holds[Math.floor(Math.random() * holds.length)];
-        }
-      }
-      animState.frameLength = (1000 / (24 * beastieSpeed * animSpeed)) * hold;
-    };
-
     animState.frameTime += time - animState.prevTime;
     if (animState.frameLength == undefined) {
-      updateHold();
+      updateHold(animState, beastieSpeed);
     } else if (animState.frameTime > animState.frameLength / userSpeed) {
       animState.frameTime = animState.frameTime % (animState.frameLength || 1);
       animState.frame += 1;
@@ -82,7 +81,7 @@ export function setupFrameCallback(
         }
       }
       setFrame(animState.frame);
-      updateHold();
+      updateHold(animState, beastieSpeed);
     }
 
     animState.prevTime = time;

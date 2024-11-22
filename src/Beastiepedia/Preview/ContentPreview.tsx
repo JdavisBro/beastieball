@@ -104,7 +104,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const setFrame = useCallback(
     (frame: number) => {
       if (glRef.current && loadedImages[frame % drawnsprite.frames]) {
-        animStateRef.current.frame = frame % drawnsprite.frames;
+        animStateRef.current.frame = frame;
         setImage(glRef.current, loadedImages[frame % drawnsprite.frames]);
         setNoDisplayRender(false);
         if (frameInputRef.current) {

@@ -3,8 +3,8 @@ import InfoBox from "../../shared/InfoBox";
 import styles from "./ContentPreview.module.css";
 
 type Props = {
-  animPausedRef: React.MutableRefObject<boolean>;
-  pausedButtonRef: React.RefObject<HTMLButtonElement>;
+  paused: boolean;
+  setPaused: (paused: boolean) => void;
   frameInputRef: React.RefObject<HTMLInputElement>;
   animation: string;
   setAnimation: React.Dispatch<React.SetStateAction<string>>;
@@ -49,7 +49,7 @@ export default function AnimationOptions(props: Props): React.ReactElement {
           name="anim"
           id="anim"
           onChange={(event) => {
-            props.animPausedRef.current = false;
+            props.setPaused(false);
             props.setAnimation(event.currentTarget.value);
           }}
           value={props.animation}
@@ -63,12 +63,11 @@ export default function AnimationOptions(props: Props): React.ReactElement {
         <br />
         <button onClick={() => props.changeFrame(-1)}>{"<-"}</button>
         <button
-          ref={props.pausedButtonRef}
           onClick={() => {
-            props.animPausedRef.current = !props.animPausedRef.current;
+            props.setPaused(!props.paused);
           }}
         >
-          PAUSE
+          {props.paused ? "PLAY" : "PAUSE"}
         </button>
         <button onClick={() => props.changeFrame(1)}>{"->"}</button>
         <br />
@@ -81,7 +80,7 @@ export default function AnimationOptions(props: Props): React.ReactElement {
           min={0}
           max={props.frameCount}
           onChange={(event) => {
-            props.animPausedRef.current = true;
+            props.setPaused(true);
             props.setFrame(Number(event.currentTarget.value));
           }}
         />

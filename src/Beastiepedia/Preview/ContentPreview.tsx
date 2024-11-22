@@ -16,7 +16,7 @@ import setupWebGL, {
 import styles from "./ContentPreview.module.css";
 import type { BeastieType } from "../../data/BeastieData";
 import ColorTabs from "./ColorTabs";
-import SPRITE_INFO, { BBox, Sprite } from "../../data/SpriteInfo";
+import SPRITE_INFO, { Sprite } from "../../data/SpriteInfo";
 import useLoadBeastieImages from "../../utils/useLoadBeastieImages";
 import BEASTIE_ANIMATIONS, {
   BeastieAnimation,
@@ -27,6 +27,7 @@ import saveGif from "./saveGif";
 import AnimationOptions from "./AnimationOptions";
 import PreviewSettings from "./PreviewSettings";
 import useScreenOrientation from "../../utils/useScreenOrientation";
+import { AnimationState, setupFrameCallback } from "./frameCallback.ts";
 
 const DevUtil = import.meta.env.DEV
   ? lazy(() => import("./DevUtil.tsx"))
@@ -81,17 +82,19 @@ export default function ContentPreview(props: Props): React.ReactNode {
     `/gameassets/beasties/${drawnname}`,
     beastiesprite.frames,
   );
-  const requestRef = useRef(0);
-  const frameIndexRef = useRef<number | null>(null); // if multiple beastieframe for animation
-  const frameNumRef = useRef<number | null>(null);
-  const frameTimeRef = useRef(0);
-  const prevTimeRef = useRef<DOMHighResTimeStamp | null>(null);
-  const frameLengthRef = useRef<number | null>(null);
+  const animStateRef = useRef<AnimationState>({
+    request: 0,
+    frame: undefined,
+    anim: anim,
+    state: undefined,
+    frameTime: 0,
+    frameLength: undefined,
+    prevTime: 0,
+  });
 
-  const animPausedRef = useRef<boolean>(false);
+  const [paused, setPaused] = useState(false);
 
   const frameInputRef = useRef<HTMLInputElement>(null);
-  const pausedButtonRef = useRef<HTMLButtonElement>(null);
 
   const [noDisplayRender, setNoDisplayRender] = useState(false);
   const [noDisplayReason, setNoDisplayReason] = useState(
@@ -100,25 +103,29 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   const setFrame = useCallback(
     (frame: number) => {
-      frameNumRef.current = frame;
-      if (glRef.current && loadedImages[frame]) {
-        setImage(glRef.current, loadedImages[frame]);
+      if (glRef.current && loadedImages[frame % drawnsprite.frames]) {
+        animStateRef.current.frame = frame % drawnsprite.frames;
+        setImage(glRef.current, loadedImages[frame % drawnsprite.frames]);
         setNoDisplayRender(false);
+        if (frameInputRef.current) {
+          frameInputRef.current.value = String(frame);
+        }
+      } else if (!loadedImages[frame % drawnsprite.frames]) {
+        setNoDisplayRender(true);
+        setNoDisplayReason("Loading...");
       }
     },
-    [loadedImages],
+    [loadedImages, drawnsprite.frames],
   );
 
   const changeFrame = useCallback(
     (diff: number) => {
-      animPausedRef.current = true;
+      setPaused(true);
       setFrame(
-        frameNumRef.current != null
-          ? Math.min(
-              beastiesprite.frames - 1,
-              Math.max(0, frameNumRef.current + diff),
-            )
-          : 0,
+        Math.min(
+          beastiesprite.frames - 1,
+          Math.max(0, (animStateRef.current.frame ?? 0) + diff),
+        ),
       );
     },
     [setFrame, beastiesprite],
@@ -126,219 +133,117 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   const [userSpeed, setUserSpeed] = useState(1);
 
-  const getCrop = useCallback(
-    (bbox: BBox) => {
-      const beastiescale =
-        bbox.width > bbox.height
-          ? drawnsprite.width / bbox.width
-          : drawnsprite.height / bbox.height;
-      return `scale(${beastiescale}) translate(${((-bbox.x - bbox.width / 2 + drawnsprite.width / 2) / drawnsprite.width) * 100}%, ${((-bbox.y - bbox.height / 2 + drawnsprite.height / 2) / drawnsprite.height) * 100}%)`;
-    },
-    [drawnsprite],
-  );
-
-  const getAnimBboxAndLoaded = useCallback(() => {
-    if (!anim || animPausedRef.current) {
-      return { bbox: getCrop(drawnsprite.bbox), loaded: false };
-    }
-    let bbox: { x: number; y: number; endx: number; endy: number } | undefined =
-      undefined;
-    const frames = Array.isArray(anim.frames) ? anim.frames : [anim.frames];
+  const [bbox, allFramesLoaded] = useMemo(() => {
     let allFramesLoaded = true;
-    for (const state of frames) {
-      const startFrame = state.startFrame || 0;
-      const endFrame = state.endFrame || 0;
-      for (let i = startFrame; i <= endFrame; i++) {
-        if (!loadedImages[i % drawnsprite.frames]) {
-          allFramesLoaded = false;
-        }
-        const framebbox = drawnsprite.bboxes[i % drawnsprite.frames];
-        if (bbox == undefined) {
-          bbox = {
-            x: framebbox.x,
-            y: framebbox.y,
-            endx: framebbox.x + framebbox.width,
-            endy: framebbox.y + framebbox.height,
-          };
-        } else {
-          bbox.x = Math.min(bbox.x, framebbox.x);
-          bbox.y = Math.min(bbox.y, framebbox.y);
-          bbox.endx = Math.max(bbox.endx, framebbox.x + framebbox.width);
-          bbox.endy = Math.max(bbox.endy, framebbox.y + framebbox.height);
+    let edges:
+      | { x: number; y: number; endx: number; endy: number }
+      | undefined = undefined;
+    if (anim && !paused) {
+      const frames = Array.isArray(anim.frames) ? anim.frames : [anim.frames];
+      for (const state of frames) {
+        const startFrame = state.startFrame || 0;
+        const endFrame = state.endFrame || 0;
+        for (let i = startFrame; i <= endFrame; i++) {
+          if (!loadedImages[i % drawnsprite.frames]) {
+            allFramesLoaded = false;
+          }
+          const framebbox = drawnsprite.bboxes[i % drawnsprite.frames];
+          if (edges == undefined) {
+            edges = {
+              x: framebbox.x,
+              y: framebbox.y,
+              endx: framebbox.x + framebbox.width,
+              endy: framebbox.y + framebbox.height,
+            };
+          } else {
+            edges.x = Math.min(edges.x, framebbox.x);
+            edges.y = Math.min(edges.y, framebbox.y);
+            edges.endx = Math.max(edges.endx, framebbox.x + framebbox.width);
+            edges.endy = Math.max(edges.endy, framebbox.y + framebbox.height);
+          }
         }
       }
     }
-    if (!bbox) {
-      return { bbox: getCrop(drawnsprite.bbox), loaded: allFramesLoaded };
+    let bbox;
+    if (!edges) {
+      bbox = drawnsprite.bbox;
+    } else {
+      bbox = {
+        x: edges.x,
+        y: edges.y,
+        width: edges.endx - edges.x,
+        height: edges.endy - edges.y,
+      };
     }
-    return {
-      bbox: getCrop({
-        x: bbox.x,
-        y: bbox.y,
-        width: bbox.endx - bbox.x,
-        height: bbox.endy - bbox.y,
-      }),
-      loaded: allFramesLoaded,
-    };
-  }, [drawnsprite, getCrop, anim, loadedImages]);
+    return [bbox, allFramesLoaded];
+  }, [anim, drawnsprite, loadedImages, paused]);
+
+  const beastiescale =
+    bbox.width > bbox.height
+      ? drawnsprite.width / bbox.width
+      : drawnsprite.height / bbox.height;
+  const crop = `scale(${beastiescale}) translate(${((-bbox.x - bbox.width / 2 + drawnsprite.width / 2) / drawnsprite.width) * 100}%, ${((-bbox.y - bbox.height / 2 + drawnsprite.height / 2) / drawnsprite.height) * 100}%)`;
 
   const [fitBeastie, setFitBeastie] = useState(true);
 
-  const step = useCallback(
-    (time: DOMHighResTimeStamp) => {
-      const { bbox, loaded } = getAnimBboxAndLoaded();
-      if (fitBeastie && canvasRef.current)
-        canvasRef.current.style.transform = bbox;
-      if (anim === undefined) {
-        console.log(`Incorrect Anim: ${animation}`);
-        setAnimation("idle");
-        return;
+  useEffect(() => {
+    if (paused) {
+      if (animStateRef.current.frame) {
+        setFrame(animStateRef.current.frame);
       }
-      const beastie_anim_speed = animdata.__anim_speed ?? 1;
-      const anim_speed = anim.speed ?? 1;
-      let frames;
-      if (!Array.isArray(anim.frames)) {
-        frameIndexRef.current = null;
-        frames = anim.frames;
+      return;
+    }
+
+    if (anim && !animStateRef.current.anim) {
+      animStateRef.current.anim = anim;
+    }
+    if (!animStateRef.current.anim) {
+      return;
+    }
+
+    if (!allFramesLoaded) {
+      const state =
+        animStateRef.current.state ||
+        (Array.isArray(animStateRef.current.anim.frames)
+          ? animStateRef.current.anim.frames[0]
+          : animStateRef.current.anim.frames);
+      const startFrame = state.startFrame ?? 0;
+      if (animStateRef.current.frame != startFrame) {
+        setFrame(startFrame);
       }
-      if (Array.isArray(anim.frames)) {
-        if (
-          frameIndexRef.current === null ||
-          frameIndexRef.current > anim.frames.length
-        ) {
-          frameIndexRef.current = 0;
-        }
-        frames = anim.frames[frameIndexRef.current];
-      }
-      if (frames == undefined) {
-        console.log(`No Frames? ${props.beastiedata.name} ${animation}`);
-        return;
-      }
-      let startFrame = 0;
-      let endFrame = 0;
-      if (frames.startFrame != undefined) {
-        startFrame = frames.startFrame;
-        endFrame = frames.startFrame;
-      }
-      if (frames.endFrame != undefined) {
-        endFrame = frames.endFrame;
-      }
-      if (
-        frameNumRef.current === null ||
-        (frameNumRef.current < startFrame && !animPausedRef.current)
-      ) {
-        if (glRef.current) {
-          if (loadedImages[startFrame % beastiesprite.frames]) {
-            setImage(
-              glRef.current,
-              loadedImages[startFrame % beastiesprite.frames],
-            );
-            frameNumRef.current = startFrame;
-            setNoDisplayRender(false);
-          } else {
-            setNoDisplayRender(true);
-            setNoDisplayReason("Loading...");
-          }
-        }
-      }
-      if (startFrame == endFrame) {
-        if (
-          glRef.current &&
-          frameNumRef.current != startFrame &&
-          loadedImages[startFrame]
-        ) {
-          setImage(glRef.current, loadedImages[startFrame]);
-          frameNumRef.current = startFrame;
-        }
-        return;
-      }
-      if (prevTimeRef.current && frameNumRef.current !== null && loaded) {
-        const delta = time - prevTimeRef.current;
-        if (!animPausedRef.current) {
-          frameTimeRef.current += delta;
-        }
-        if (frameLengthRef.current == null) {
-          let hold = 2;
-          if (frames.holds && frames.holds[frameNumRef.current]) {
-            const holds = frames.holds[frameNumRef.current];
-            if (Array.isArray(holds)) {
-              hold = holds[Math.floor(Math.random() * holds.length)];
-            } else if (typeof holds == "number") {
-              hold = holds;
-            }
-          }
-          frameLengthRef.current =
-            (1000 / (24 * beastie_anim_speed * anim_speed)) * hold;
-        }
-        if (frameTimeRef.current > frameLengthRef.current / userSpeed) {
-          if (frameLengthRef.current > 0) {
-            frameTimeRef.current =
-              frameTimeRef.current % frameLengthRef.current;
-          }
-          frameLengthRef.current = null;
-          frameNumRef.current += 1;
-          if (frameNumRef.current > endFrame) {
-            if (frames.transitions && Array.isArray(anim.frames)) {
-              frameIndexRef.current =
-                frames.transitions[
-                  Math.floor(Math.random() * frames.transitions.length)
-                ];
-              const newstart = anim.frames[frameIndexRef.current].startFrame;
-              if (newstart != null) {
-                frameNumRef.current = newstart;
-              } else {
-                frameNumRef.current = 0;
-              }
-            } else {
-              frameNumRef.current = startFrame;
-            }
-          }
-          const frameN = frameNumRef.current % beastiesprite.frames;
-          if (glRef.current && loadedImages[frameN]) {
-            setImage(glRef.current, loadedImages[frameN]);
-            setNoDisplayRender(false);
-          }
-        }
-      }
-      if (
-        frameInputRef.current &&
-        frameInputRef.current.value != String(frameNumRef.current)
-      ) {
-        frameInputRef.current.value = String(frameNumRef.current);
-      }
-      const playPause = animPausedRef.current ? "PLAY" : "PAUSE";
-      if (
-        pausedButtonRef.current &&
-        pausedButtonRef.current.innerText != playPause
-      ) {
-        pausedButtonRef.current.innerText = playPause;
-      }
-      prevTimeRef.current = time;
-      requestRef.current = requestAnimationFrame(step);
-    },
-    [
-      loadedImages,
-      props.beastiedata,
-      animation,
-      anim,
-      animdata,
+    }
+
+    return setupFrameCallback(
+      setFrame,
+      animStateRef,
       userSpeed,
-      getAnimBboxAndLoaded,
-      fitBeastie,
-      beastiesprite,
-    ],
-  );
+      animdata.__anim_speed ?? 1,
+    );
+  }, [
+    setFrame,
+    anim,
+    allFramesLoaded,
+    userSpeed,
+    animdata.__anim_speed,
+    paused,
+  ]);
 
   useEffect(() => {
-    requestRef.current = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(requestRef.current);
-  }, [step, animation]);
+    animStateRef.current = {
+      ...animStateRef.current,
+      frame: undefined,
+      state: undefined,
+      frameLength: 0,
+      anim: anim,
+    };
+  }, [loadedImages, anim]);
 
   useEffect(() => {
-    frameIndexRef.current = null;
-    frameNumRef.current = null;
-    frameTimeRef.current = 0;
-  }, [loadedImages, animation]);
+    setNoDisplayRender(true);
+    setNoDisplayReason("Loading...");
+  }, [props.beastiedata.id]);
+
+  console.log(noDisplayRender);
 
   useEffect(() => {
     if (
@@ -396,17 +301,16 @@ export default function ContentPreview(props: Props): React.ReactNode {
         return;
       }
       let canvas = canvasRef.current;
-      if (fitBeastie && frameNumRef.current !== null) {
-        cropCanvasRef.current.width =
-          drawnsprite.bboxes[frameNumRef.current].width;
-        cropCanvasRef.current.height =
-          drawnsprite.bboxes[frameNumRef.current].height;
+      const frame = animStateRef.current.frame;
+      if (fitBeastie && frame) {
+        cropCanvasRef.current.width = drawnsprite.bboxes[frame].width;
+        cropCanvasRef.current.height = drawnsprite.bboxes[frame].height;
         cropCanvasRef.current
           .getContext("2d")
           ?.drawImage(
             canvasRef.current,
-            -drawnsprite.bboxes[frameNumRef.current].x,
-            -drawnsprite.bboxes[frameNumRef.current].y,
+            -drawnsprite.bboxes[frame].x,
+            -drawnsprite.bboxes[frame].y,
           );
         canvas = cropCanvasRef.current;
       }
@@ -440,7 +344,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       userSpeed,
       animdata.__anim_speed ? animdata.__anim_speed : 1,
       drawnsprite,
-      frameNumRef.current != undefined ? frameNumRef.current : 0,
+      animStateRef.current.frame ?? 0,
     );
   }, [
     animation,
@@ -521,7 +425,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
           className={styles.previewcanvas}
           style={{
             display: noDisplayRender ? "none" : "block",
-            transform: fitBeastie ? getCrop(beastiesprite.bbox) : "",
+            transform: fitBeastie ? crop : "",
           }}
           width={1000}
           height={1000}
@@ -564,8 +468,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
         }
       >
         <AnimationOptions
-          animPausedRef={animPausedRef}
-          pausedButtonRef={pausedButtonRef}
+          paused={paused}
+          setPaused={setPaused}
           frameInputRef={frameInputRef}
           animation={animation}
           setAnimation={setAnimation}

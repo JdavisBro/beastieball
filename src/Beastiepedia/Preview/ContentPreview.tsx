@@ -241,6 +241,17 @@ export default function ContentPreview(props: Props): React.ReactNode {
           }
         }
       }
+      if (startFrame == endFrame) {
+        if (
+          glRef.current &&
+          frameNumRef.current != startFrame &&
+          loadedImages[startFrame]
+        ) {
+          setImage(glRef.current, loadedImages[startFrame]);
+          frameNumRef.current = startFrame;
+        }
+        return;
+      }
       if (prevTimeRef.current && frameNumRef.current !== null && loaded) {
         const delta = time - prevTimeRef.current;
         if (!animPausedRef.current) {
@@ -289,12 +300,19 @@ export default function ContentPreview(props: Props): React.ReactNode {
           }
         }
       }
-      if (frameInputRef.current)
+      if (
+        frameInputRef.current &&
+        frameInputRef.current.value != String(frameNumRef.current)
+      ) {
         frameInputRef.current.value = String(frameNumRef.current);
-      if (pausedButtonRef.current)
-        pausedButtonRef.current.innerText = animPausedRef.current
-          ? "PLAY"
-          : "PAUSE";
+      }
+      const playPause = animPausedRef.current ? "PLAY" : "PAUSE";
+      if (
+        pausedButtonRef.current &&
+        pausedButtonRef.current.innerText != playPause
+      ) {
+        pausedButtonRef.current.innerText = playPause;
+      }
       prevTimeRef.current = time;
       requestRef.current = requestAnimationFrame(step);
     },

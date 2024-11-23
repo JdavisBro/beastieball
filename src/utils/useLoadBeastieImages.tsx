@@ -6,7 +6,11 @@ type Image = {
   onLoad?: (event: Event) => void;
 };
 
-export default function useLoadBeastieImages(path: string, max_num: number) {
+export default function useLoadBeastieImages(
+  path: string,
+  max_num: number,
+  justChanged: boolean,
+) {
   const [loaded, setLoaded] = useState<{ [key: number]: HTMLImageElement }>({});
   const images = useRef<{ [key: number]: Image }>({});
 
@@ -43,5 +47,5 @@ export default function useLoadBeastieImages(path: string, max_num: number) {
     };
   }, [path, max_num]);
 
-  return loaded;
+  return justChanged ? loaded : {};
 }

@@ -78,9 +78,12 @@ export default function ContentPreview(props: Props): React.ReactNode {
     anim = tempanim;
   }
 
+  const beastieIdRef = useRef(props.beastiedata.id);
+
   const loadedImages = useLoadBeastieImages(
     `/gameassets/beasties/${drawnname}`,
     beastiesprite.frames,
+    beastieIdRef.current == props.beastiedata.id,
   );
   const animStateRef = useRef<AnimationState>({
     request: 0,
@@ -96,7 +99,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   const frameInputRef = useRef<HTMLInputElement>(null);
 
-  const [noDisplayRender, setNoDisplayRender] = useState(false);
+  const [noDisplayRenderState, setNoDisplayRender] = useState(true);
+  const noDisplayRender =
+    beastieIdRef.current != props.beastiedata.id || noDisplayRenderState;
   const [noDisplayReason, setNoDisplayReason] = useState(
     "Beastie Preview Failed",
   );
@@ -194,7 +199,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       return;
     }
 
-    if (anim != animStateRef.current.anim) {
+    if (anim && anim != animStateRef.current.anim) {
       animStateRef.current.anim = anim;
     }
     if (!animStateRef.current.anim) {
@@ -240,6 +245,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   }, [loadedImages, anim]);
 
   useEffect(() => {
+    beastieIdRef.current = props.beastiedata.id;
     setNoDisplayRender(true);
     setNoDisplayReason("Loading...");
   }, [props.beastiedata.id]);

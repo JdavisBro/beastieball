@@ -235,7 +235,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
   useEffect(() => {
     animStateRef.current = {
       ...animStateRef.current,
-      frame: undefined,
       state: undefined,
       frameLength: 0,
       anim: anim,

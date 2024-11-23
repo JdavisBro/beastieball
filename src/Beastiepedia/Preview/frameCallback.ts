@@ -48,6 +48,7 @@ export function setupFrameCallback(
       animState.state = Array.isArray(animState.anim.frames)
         ? animState.anim.frames[0]
         : animState.anim.frames;
+      animState.frame = animState.state.startFrame ?? 0;
     }
 
     const startFrame = animState.state.startFrame ?? 0;

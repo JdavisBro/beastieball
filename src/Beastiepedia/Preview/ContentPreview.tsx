@@ -102,9 +102,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const [noDisplayRenderState, setNoDisplayRender] = useState(true);
   const noDisplayRender =
     beastieIdRef.current != props.beastiedata.id || noDisplayRenderState;
-  const [noDisplayReason, setNoDisplayReason] = useState(
-    "Beastie Preview Failed",
-  );
+  const [noDisplayReason, setNoDisplayReason] = useState("Loading...");
 
   const setFrame = useCallback(
     (frame: number) => {

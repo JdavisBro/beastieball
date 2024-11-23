@@ -242,7 +242,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       frameLength: 0,
       anim: anim,
     };
-  }, [loadedImages, anim]);
+  }, [anim]);
 
   useEffect(() => {
     beastieIdRef.current = props.beastiedata.id;

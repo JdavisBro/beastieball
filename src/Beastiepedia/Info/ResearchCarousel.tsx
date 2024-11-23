@@ -67,6 +67,7 @@ export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
             <img
               src={data.url}
               key={data.link}
+              loading="lazy"
               tabIndex={index == imageIndex ? 0 : -1}
               onClick={() => setBigImage(true)}
             />

@@ -194,7 +194,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       return;
     }
 
-    if (anim && !animStateRef.current.anim) {
+    if (anim != animStateRef.current.anim) {
       animStateRef.current.anim = anim;
     }
     if (!animStateRef.current.anim) {
@@ -211,6 +211,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       if (animStateRef.current.frame != startFrame) {
         setFrame(startFrame);
       }
+      return;
     }
 
     return setupFrameCallback(

@@ -191,7 +191,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   useEffect(() => {
     if (paused) {
-      if (animStateRef.current.frame) {
+      if (animStateRef.current.frame != undefined) {
         setFrame(animStateRef.current.frame);
       }
       return;

@@ -18,6 +18,7 @@ type EvolutionType = {
 type Evo = {
   beastie: BeastieType;
   evolution: EvolutionType;
+  seen?: boolean;
 };
 
 function findBeastiePreevolutions(
@@ -152,7 +153,7 @@ function EvoText({
   );
 }
 
-const HIDDEN_CONDS = [9, 10];
+const HIDDEN_CONDS = [9, 10, 11];
 const HIDDEN_PRE_CONDS = [7];
 
 function squashEvolutions(evoList: Evo[] | undefined, into: boolean = false) {
@@ -163,7 +164,9 @@ function squashEvolutions(evoList: Evo[] | undefined, into: boolean = false) {
   evoList.forEach((curEvo, curIndex) => {
     if (
       HIDDEN_CONDS.includes(curEvo.evolution.condition[0]) ||
-      (into && HIDDEN_PRE_CONDS.includes(curEvo.evolution.condition[0]))
+      (into &&
+        HIDDEN_PRE_CONDS.includes(curEvo.evolution.condition[0]) &&
+        !curEvo.seen)
     ) {
       return;
     }
@@ -202,6 +205,7 @@ export default function Evolution({
       return {
         beastie: BEASTIE_DATA.get(evo.specie) as BeastieType,
         evolution: structuredClone(evo),
+        seen: spoilerMode == SpoilerMode.All || beastieSeen[evo.specie],
       };
     }),
     true,

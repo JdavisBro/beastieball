@@ -4077,6 +4077,7 @@
       "set",
       "nettle",
       "taunt",
+      "mark",
       "mindup",
       "swordsdance",
       "protect",
@@ -10441,7 +10442,10 @@
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 }
     ],
-    "evolution": [{ "condition": [3], "specie": "magpie", "value": [3] }],
+    "evolution": [
+      { "condition": [11], "specie": "magpie", "value": [35] },
+      { "condition": [3], "specie": "magpie", "value": [3] }
+    ],
     "face_color_index": 0,
     "family": "magpie1",
     "first_frame": -1,
@@ -15303,6 +15307,7 @@
       "fieldclear",
       "construct",
       "rest",
+      "followme",
       "stress",
       "distraction",
       "protect",

@@ -271,6 +271,12 @@
       "y": -15181
     },
     {
+      "id": "gift_citysquare_4",
+      "items": [["heal_b", 1.0]],
+      "x": -38805,
+      "y": -18159
+    },
+    {
       "id": "gift_city_market_0",
       "items": [["lure_b", 1.0]],
       "x": -50890,
@@ -571,6 +577,12 @@
       "items": [["train_tame_3", 1.0]],
       "x": -32884,
       "y": 40051
+    },
+    {
+      "id": "gift_woods_east_cave_0",
+      "items": [["heal_max", 1.0]],
+      "x": -5158,
+      "y": -33685
     },
     {
       "id": "gift_woods_north_rail_0",

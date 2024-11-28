@@ -13,7 +13,7 @@ export type AnimationState = {
 };
 
 function updateHold(animState: AnimationState, beastieSpeed: number) {
-  if (!animState.anim || !animState.state || !animState.frame) {
+  if (!animState.anim || !animState.state || animState.frame === undefined) {
     return;
   }
   const animSpeed = animState.anim.speed ?? 1;

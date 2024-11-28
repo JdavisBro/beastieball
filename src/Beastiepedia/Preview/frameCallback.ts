@@ -9,6 +9,7 @@ export type AnimationState = {
   frameTime: number;
   frameLength?: number;
   prevTime: number;
+  userSpeed: number;
 };
 
 function updateHold(animState: AnimationState, beastieSpeed: number) {
@@ -31,7 +32,6 @@ function updateHold(animState: AnimationState, beastieSpeed: number) {
 export function setupFrameCallback(
   setFrame: (frame: number) => void,
   animStateRef: MutableRefObject<AnimationState>,
-  userSpeed: number,
   beastieSpeed: number,
 ) {
   animStateRef.current.frameTime = 0;
@@ -66,7 +66,10 @@ export function setupFrameCallback(
     animState.frameTime += time - animState.prevTime;
     if (animState.frameLength == undefined) {
       updateHold(animState, beastieSpeed);
-    } else if (animState.frameTime > animState.frameLength / userSpeed) {
+    } else if (
+      animState.frameTime >
+      animState.frameLength / animState.userSpeed
+    ) {
       animState.frameTime = animState.frameTime % (animState.frameLength || 1);
       animState.frame += 1;
       if (animState.frame > endFrame) {

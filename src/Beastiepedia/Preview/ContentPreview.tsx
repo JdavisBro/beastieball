@@ -78,6 +78,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
     anim = tempanim;
   }
 
+  const [userSpeed, setUserSpeed] = useState(1);
+
   const beastieIdRef = useRef(props.beastiedata.id);
 
   const loadedImages = useLoadBeastieImages(
@@ -93,7 +95,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
     frameTime: 0,
     frameLength: undefined,
     prevTime: 0,
+    userSpeed: userSpeed,
   });
+  animStateRef.current.userSpeed = userSpeed;
 
   const [paused, setPaused] = useState(false);
 
@@ -133,8 +137,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
     },
     [setFrame, beastiesprite],
   );
-
-  const [userSpeed, setUserSpeed] = useState(1);
 
   const [bbox, allFramesLoaded] = useMemo(() => {
     let allFramesLoaded = true;
@@ -220,17 +222,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
     return setupFrameCallback(
       setFrame,
       animStateRef,
-      userSpeed,
       animdata.__anim_speed ?? 1,
     );
-  }, [
-    setFrame,
-    anim,
-    allFramesLoaded,
-    userSpeed,
-    animdata.__anim_speed,
-    paused,
-  ]);
+  }, [setFrame, anim, allFramesLoaded, animdata.__anim_speed, paused]);
 
   useEffect(() => {
     animStateRef.current = {

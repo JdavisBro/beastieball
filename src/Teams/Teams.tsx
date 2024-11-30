@@ -40,7 +40,9 @@ export default function Teams() {
 
   const navigate = useNavigate();
   const setCode = (code: string) => {
-    navigate(`/teams/${code.toUpperCase().replace(/#/g, "")}`);
+    navigate(
+      `/teams/${code.toUpperCase().replace(/O/g, "0").replace(/#/g, "")}`,
+    );
     setError(false);
   };
 
@@ -61,9 +63,12 @@ export default function Teams() {
       setError(true);
       return;
     }
-    fetch(`https://api.beastieballgame.com/api/teams/${code}`, {
-      method: "GET",
-    })
+    fetch(
+      `https://api.beastieballgame.com/api/teams/${code.replace(/O/g, "0")}`,
+      {
+        method: "GET",
+      },
+    )
       .then((res) => {
         if (res.status == 200) {
           res.json().then((json) => {

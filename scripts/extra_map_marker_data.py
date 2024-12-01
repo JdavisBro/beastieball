@@ -4,6 +4,13 @@ from pathlib import Path
 
 gamedir = Path(sys.argv[1])
 
+OTHER_AREAS = [
+  {
+    "prefix": "sunken_stadium",
+    "offset": [0, 8000],
+  },
+]
+
 with (gamedir / "data_out" / "gift_table").open() as f:
   gift_data = json.load(f)
 
@@ -21,7 +28,10 @@ for level in (gamedir / "world_data").glob("**/*.json"):
     level_data = json.load(f)
   if level_data["name"] not in level_stumps:
     continue
-  stump = level_stumps[level_data["name"]]
+  level_name = level_data["name"]
+  stump = level_stumps[level_name]
+  layer = stump["world_layer"] if "world_layer" in stump else 0 
+  level_offset = ([area["offset"] for area in OTHER_AREAS if level_name.startswith(area["prefix"])] or [[0, 0]])[0] if layer != 0 else [0,0]
   for obj in level_data["objects_array"]:
     if obj["object"] == "objGift":
       gift_id = f"gift_{level_data['name']}_{obj['gift_id_index']}" if obj["gift_id"] == "none" else obj['gift_id']
@@ -32,8 +42,8 @@ for level in (gamedir / "world_data").glob("**/*.json"):
       out_data["gifts"].append({
         "id": gift_id,
         "items": [[gift[0], gift[1]] for i in range(0, len(gift), 2)],
-        "x": stump["world_x1"] + obj["x"],
-        "y": stump["world_y1"] + obj["y"],
+        "x": stump["world_x1"] + obj["x"] + level_offset[0],
+        "y": stump["world_y1"] + obj["y"] + level_offset[1],
       })
 
 with Path("../src/data/raw/extra_markers.json").open("w+") as f:

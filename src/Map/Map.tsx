@@ -372,14 +372,15 @@ export default function Map(): React.ReactNode {
                 extraOptionText="Show All"
                 extraOption="all"
               />
-              <label>
+              <div>
                 <input
                   type="checkbox"
                   checked={postgame}
                   onChange={(event) => setPostgame(event.currentTarget.checked)}
-                />{" "}
-                Postgame Spawns
-              </label>
+                  id="postgame"
+                />
+                <label htmlFor="postgame"> Postgame Spawns</label>
+              </div>
             </div>
           </div>
         </Control>

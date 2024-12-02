@@ -16,7 +16,7 @@ const TARGET_STRINGS: { [key: number]: string } = {
   3: "target",
   5: "target's ally",
   6: "entire team",
-  7: "Every fielded player",
+  7: "every fielded player",
 };
 
 const ALT_TARGET_STRINGS: { [key: number]: string } = {
@@ -42,6 +42,7 @@ function getEffectString(
   attack: boolean,
   alt_target: boolean,
   args: { joiningEffects: null | number },
+  effect_count: number,
 ) {
   let pow = Math.abs(Math.floor(effect.pow)) - 1;
   let boost = "";
@@ -111,7 +112,7 @@ function getEffectString(
     case 10:
       return `+${effect.pow} ACTIONs.`;
     case 11:
-      if (effect.targ == 0) {
+      if (effect.targ == 1) {
         return "Switch places with fielded ally.";
       } else {
         return `Switch places with ${target}.`;
@@ -156,7 +157,7 @@ function getEffectString(
       return `${feels} ${effect.pow} [sprStatus,10]TIRED (only basic actions)${dot}`;
     case 30:
       if (alt_target) {
-        return `TAG OUT with ${target}.`;
+        return effect_count < 3 ? `TAG OUT with ${target}.` : "TAG OUT.";
       } else {
         return `Force ${target} to TAG OUT.`;
       }
@@ -181,9 +182,9 @@ function getEffectString(
         case 9:
           return "POW x2 if target STAMINA is under 50.";
         case 10:
-          return "POW +10 for each [sprBoost,0] BOOST on the user.";
+          return "POW +10 for each [sprBoost,0]BOOST on the user.";
         case 11:
-          return "POW +50% for each [sprBoost,1] BOOST on target.";
+          return "POW +50% for each [sprBoost,1]BOOST on target.";
         case 12:
           return "POW x2 when [sprStatus,6]SWEATY, [sprStatus,0]NERVOUS, or [sprStatus,11]TENDER.";
         case 13:
@@ -229,9 +230,9 @@ function getEffectString(
     case 41:
       return "Requires 3 ACTIONS.";
     case 42:
-      return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} TRAP (Tag-ins lose 8 stamina per trap).`;
+      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} TRAP (Tag-ins lose 8 stamina per trap).`;
     case 43:
-      return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW -25%).`;
+      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW -25%).`;
     case 44:
       return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} RHYTHM (Healing and protection).`;
     case 45:
@@ -245,7 +246,7 @@ function getEffectString(
       if (effect.targ == 0) {
         return "Fully restores stamina and FEELINGS.";
       }
-      return `Fully restores ${target}'s stamina and FEELINGS.`; // doesn't happen but maybe
+      return `Restores ${target}'s stamina and FEELINGS.`;
     case 52:
       return `Clears negative FEELINGs from ${target}.`;
     case 53:
@@ -260,7 +261,7 @@ function getEffectString(
     case 61:
       return "Can use even when [sprStatus,2]SHOOK or [sprStatus,10]TIRED.";
     case 63:
-      return `Swaps traits with ${TARGET_STRINGS[effect.targ]}.`;
+      return `Swaps Trait with ${TARGET_STRINGS[effect.targ]}.`;
     case 64:
       return "If ally field has RHYTHM: ";
   }
@@ -321,19 +322,23 @@ export default function MoveView(props: {
 
   const attack = props.move.type < 3;
 
-  if (props.move.type == Type.Volley) {
-    desc.push("VOLLEY.");
-  }
-  if (props.move.use) {
-    desc.push("Only used from ");
-  }
   switch (props.move.use) {
     case 1:
-      desc.push("back row.");
+      desc.push("Only used from back row.");
       break;
     case 2:
-      desc.push("net.");
+      // If it auto targets front row and is Only used from net then ONLY is not included.
+      desc.push(
+        props.move.targ != 4 ? "Only used from net." : "Used from net.",
+      );
       break;
+  }
+
+  if (
+    props.move.type == Type.Volley &&
+    !props.move.eff.some((eff) => eff.eff == 20) // Eff 20: Ball goes to TARGET. Does not have volley text
+  ) {
+    desc.push("VOLLEY.");
   }
 
   if (attack) {
@@ -342,10 +347,15 @@ export default function MoveView(props: {
         desc.push("Targets straight ahead.");
         break;
       case 4:
-        desc.push(attack ? "Auto-targets front row." : "Targets front row.");
+        // If it is Only used from net and Auto targets front row then Auto- is not included.
+        desc.push(
+          props.move.use != 2
+            ? "Auto-targets front row."
+            : "Targets front row.",
+        );
         break;
       case 8:
-        desc.push(attack ? "Auto-targets back row." : "Targets back row.");
+        desc.push("Auto-targets back row.");
         break;
       case 12:
         desc.push("Targets SIDEWAYS.");
@@ -363,8 +373,12 @@ export default function MoveView(props: {
       );
     }
 
-    if (!desc.length) {
-      desc.push("ATTACK.");
+    if (!desc.length && props.move.eff.length < 2) {
+      if (props.move.eff.length == 0) {
+        desc.push(`A [sprIcon,${props.move.type}] ATTACK.`);
+      } else {
+        desc.push("ATTACK.");
+      }
     }
     pow = (
       <div className={styles.movepower}>
@@ -384,6 +398,7 @@ export default function MoveView(props: {
             attack,
             !attack && (props.move.targ == 0 || props.move.targ == 8),
             args,
+            props.move.eff.length,
           ),
         )
         .filter((effect) => !!effect),

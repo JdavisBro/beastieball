@@ -134,6 +134,10 @@
   z-index: -1 !important;
 }
 
+.insideOverlay {
+  z-index: 22 !important;
+}
+
 @keyframes popupOpen {
   from {
     clip-path: polygon(0 0, 10px 100%, 10px 100%, 0 0);

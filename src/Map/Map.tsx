@@ -129,7 +129,6 @@ export default function Map(): React.ReactNode {
               elem.classList.remove(styles.bigLevelSelected);
             }
             setBeastiesLevel(show_beasties ? "" : level.name);
-            console.log(event.target._image);
             if (!show_beasties) {
               event.target._image.classList.add(styles.levelSelected);
               if (level.name == "ocean") {

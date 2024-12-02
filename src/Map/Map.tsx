@@ -9,7 +9,7 @@ import {
   Popup,
   useMapEvents,
 } from "react-leaflet";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 import WORLD_DATA, { EXTRA_MARKERS } from "../data/WorldData";
@@ -66,6 +66,8 @@ export default function Map(): React.ReactNode {
   const [spoilerMode] = useSpoilerMode();
   const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
 
+  const [beastiesLevel, setBeastiesLevel] = useState("");
+
   WORLD_DATA.level_stumps_array.forEach((level) => {
     const level_size = {
       x: level.world_x2 - level.world_x1,
@@ -96,9 +98,19 @@ export default function Map(): React.ReactNode {
     );
     bounds.extend(level_bounds);
 
+    const show_beasties = beastiesLevel == level.name;
+
     level_overlays.push(
       <ImageOverlay
-        className={level.name == "ocean" ? styles.bigLevel : undefined}
+        className={
+          level.name == "ocean"
+            ? show_beasties
+              ? styles.bigLevelSelected
+              : styles.bigLevel
+            : show_beasties
+              ? styles.levelSelected
+              : undefined
+        }
         interactive={true}
         bounds={level_bounds}
         url={
@@ -108,10 +120,28 @@ export default function Map(): React.ReactNode {
         }
         key={level.name}
         alt={level.name}
+        eventHandlers={{
+          click: (event) => {
+            for (const elem of document.getElementsByClassName(
+              styles.levelSelected,
+            )) {
+              elem.classList.remove(styles.levelSelected);
+              elem.classList.remove(styles.bigLevelSelected);
+            }
+            setBeastiesLevel(show_beasties ? "" : level.name);
+            console.log(event.target._image);
+            if (!show_beasties) {
+              event.target._image.classList.add(styles.levelSelected);
+              if (level.name == "ocean") {
+                event.target._image.classList.add(styles.bigLevelSelected);
+              }
+            }
+          },
+        }}
       />,
     );
 
-    if (!level.has_spawns) {
+    if (!show_beasties || !level.has_spawns) {
       return;
     }
     const group = SPAWN_DATA[level.spawn_name[0]]?.group;

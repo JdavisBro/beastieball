@@ -82,6 +82,16 @@
   z-index: -1 !important;
 }
 
+.levelSelected {
+  z-index: 21 !important;
+  outline: aqua dashed 6px !important;
+  box-sizing: content-box;
+}
+
+.bigLevelSelected {
+  z-index: -1 !important;
+}
+
 @keyframes popupOpen {
   from {
     clip-path: polygon(0 0, 10px 100%, 10px 100%, 0 0);

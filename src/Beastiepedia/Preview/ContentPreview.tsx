@@ -69,7 +69,11 @@ export default function ContentPreview(props: Props): React.ReactNode {
   )?.anim_data as BeastieAnimData;
 
   let anim: BeastieAnimation | undefined = undefined;
-  const tempanim = animdata ? animdata[animation] : undefined;
+  const tempanim = animdata
+    ? animation in animdata
+      ? animdata[animation]
+      : animdata.idle
+    : undefined;
   if (
     tempanim != undefined &&
     typeof tempanim != "number" &&

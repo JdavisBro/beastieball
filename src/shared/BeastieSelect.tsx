@@ -50,10 +50,14 @@ export default function BeastieSelect({
   beastieId,
   setBeastieId,
   textOverride,
+  extraOptionText,
+  extraOption,
 }: {
   beastieId: string | undefined;
   setBeastieId: (beastie: string | undefined) => void;
   textOverride?: string;
+  extraOptionText?: string;
+  extraOption?: string;
 }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -83,7 +87,7 @@ export default function BeastieSelect({
       <button onClick={() => setOpen(true)}>
         {textOverride
           ? textOverride
-          : `Select Beastie: ${beastie?.name ?? "Unset"}`}
+          : `Select Beastie: ${beastie?.name ?? (beastieId == extraOption ? extraOptionText : "Unset")}`}
       </button>
       <Modal
         header="Select Beastie"
@@ -117,6 +121,26 @@ export default function BeastieSelect({
             >
               Unset
             </div>
+            {extraOption && extraOptionText ? (
+              <div
+                key={extraOption}
+                role="button"
+                style={{
+                  display: extraOptionText
+                    .toLowerCase()
+                    .includes(search.toLowerCase())
+                    ? "flex"
+                    : "none",
+                }}
+                className={styles.beastieSelectBeastie}
+                onClick={() => {
+                  setBeastieId(extraOption);
+                  setOpen(false);
+                }}
+              >
+                {extraOptionText}
+              </div>
+            ) : null}
             {BEASTIES.map((beastie) => (
               <BeastieButton
                 key={beastie.id}

@@ -27,6 +27,8 @@ import {
   useSpoilerSeen,
 } from "../shared/useSpoiler";
 import OTHER_AREAS from "./OtherLayerAreas";
+import Control from "react-leaflet-custom-control";
+import BeastieSelect from "../shared/BeastieSelect";
 
 function MapEvents() {
   useMapEvents({
@@ -66,6 +68,9 @@ export default function Map(): React.ReactNode {
   const [spoilerMode] = useSpoilerMode();
   const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
 
+  const [huntedBeastie, setHuntedBeastie] = useState<string | undefined>(
+    undefined,
+  );
   const [beastiesLevel, setBeastiesLevel] = useState("");
 
   WORLD_DATA.level_stumps_array.forEach((level) => {
@@ -99,18 +104,11 @@ export default function Map(): React.ReactNode {
     bounds.extend(level_bounds);
 
     const show_beasties = beastiesLevel == level.name;
+    const beastie_filter = beastiesLevel == level.name ? "all" : huntedBeastie;
 
     level_overlays.push(
       <ImageOverlay
-        className={
-          level.name == "ocean"
-            ? show_beasties
-              ? styles.bigLevelSelected
-              : styles.bigLevel
-            : show_beasties
-              ? styles.levelSelected
-              : undefined
-        }
+        className={level.name == "ocean" ? styles.bigLevel : undefined}
         interactive={true}
         bounds={level_bounds}
         url={
@@ -119,7 +117,6 @@ export default function Map(): React.ReactNode {
             : `/gameassets/maps/sprMap_${level.name}_0.png`
         }
         key={level.name}
-        alt={level.name}
         eventHandlers={{
           click: (event) => {
             for (const elem of document.getElementsByClassName(
@@ -140,7 +137,7 @@ export default function Map(): React.ReactNode {
       />,
     );
 
-    if (!show_beasties || !level.has_spawns) {
+    if ((!show_beasties && !beastie_filter) || !level.has_spawns) {
       return;
     }
     const group = SPAWN_DATA[level.spawn_name[0]]?.group;
@@ -157,6 +154,9 @@ export default function Map(): React.ReactNode {
     } = {};
     const non_dupe_beasties: string[] = [];
     group.forEach((value) => {
+      if (beastie_filter != "all" && beastie_filter != value.specie) {
+        return;
+      }
       if (overall_percent[value.specie]) {
         overall_percent[value.specie].percent += value.percent;
         overall_percent[value.specie].levelMin = Math.min(
@@ -185,6 +185,7 @@ export default function Map(): React.ReactNode {
       const isSpoiler =
         spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
       const alt = `${isSpoiler ? `Beastie #${beastie.number}` : beastie.name} spawn location.`;
+      const iconScale = beastie.id != huntedBeastie ? 1 : 1.5;
       beastieSpawnsOverlays.push(
         <Marker
           key={`${level.name}-${beastie.id}`}
@@ -221,7 +222,7 @@ export default function Map(): React.ReactNode {
               ? "/gameassets/sprExclam_1.png"
               : `/icons/${beastie.name}.png`,
             className: isSpoiler ? styles.spoilerBeastie : undefined,
-            iconSize: [50, 50],
+            iconSize: [50 * iconScale, 50 * iconScale],
           })}
           eventHandlers={{
             click: () => {
@@ -353,6 +354,16 @@ export default function Map(): React.ReactNode {
             <LayerGroup>{inside_overlays}</LayerGroup>
           </LayersControl.Overlay>
         </LayersControl>
+        <Control position="topright">
+          <div className={styles.controlBox}>
+            <BeastieSelect
+              beastieId={huntedBeastie}
+              setBeastieId={setHuntedBeastie}
+              extraOptionText="Show All"
+              extraOption="all"
+            />
+          </div>
+        </Control>
         <LayerGroup>{level_overlays}</LayerGroup>
       </MapContainer>
     </>

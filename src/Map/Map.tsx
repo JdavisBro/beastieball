@@ -361,20 +361,26 @@ export default function Map(): React.ReactNode {
         </LayersControl>
         <Control position="topright">
           <div className={styles.controlBox}>
-            <BeastieSelect
-              beastieId={huntedBeastie}
-              setBeastieId={setHuntedBeastie}
-              extraOptionText="Show All"
-              extraOption="all"
-            />
-            <label>
-              <input
-                type="checkbox"
-                checked={postgame}
-                onChange={(event) => setPostgame(event.currentTarget.checked)}
-              />{" "}
-              Postgame Spawns
-            </label>
+            <div className={styles.controlHidden}>
+              <img src="/icons/Sprecko.png" alt="Beastie Options" />
+            </div>
+            <div className={styles.controlContent}>
+              <h3>Beastie Options</h3>
+              <BeastieSelect
+                beastieId={huntedBeastie}
+                setBeastieId={setHuntedBeastie}
+                extraOptionText="Show All"
+                extraOption="all"
+              />
+              <label>
+                <input
+                  type="checkbox"
+                  checked={postgame}
+                  onChange={(event) => setPostgame(event.currentTarget.checked)}
+                />{" "}
+                Postgame Spawns
+              </label>
+            </div>
           </div>
         </Control>
         <LayerGroup>{level_overlays}</LayerGroup>

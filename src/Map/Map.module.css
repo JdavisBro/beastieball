@@ -7,14 +7,44 @@
 
 .controlBox {
   background-color: white;
-  border: white 6px solid;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
   border-radius: 8px;
-  box-shadow: 0 0 2px black;
   color: black;
+}
+
+.controlHidden {
+  display: none;
+}
+
+.controlBox:not(:hover) .controlHidden {
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+
+.controlHidden > img {
+  margin-top: 4px;
+  margin-left: 4px;
+  width: 36px;
+  height: 36px;
+}
+
+.controlContent {
+  display: none;
+}
+
+.controlBox:hover .controlContent {
   display: flex;
   flex-direction: column;
   font-size: 1.08333em;
   align-items: end;
+  margin: 6px;
+}
+
+.controlContent > h3 {
+  width: 100%;
+  text-align: center;
 }
 
 .hidemarker {

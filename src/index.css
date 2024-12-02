@@ -73,7 +73,8 @@ button:hover {
   height: 100vh;
   height: 100dvh;
   text-align: center;
-  margin: 1em;
+  padding: 1em;
+  box-sizing: border-box;
 }
 
 .notfoundfacecontainer {

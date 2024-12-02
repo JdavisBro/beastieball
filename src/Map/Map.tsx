@@ -257,6 +257,7 @@ export default function Map(): React.ReactNode {
   for (const area of OTHER_AREAS) {
     inside_overlays.push(
       <ImageOverlay
+        key={area.prefix}
         bounds={L.latLngBounds(area.overlay)}
         url={`/custom_maps/${area.prefix}_overlay.png`}
       />,

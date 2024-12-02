@@ -47,7 +47,7 @@ const CHAR_LIST: Record<string, string> = {
   riven: "Riven",
   science: "Celia",
   celeb: "Sunsoo",
-  pirate: "Marcy",
+  // pirate: "Marcy",
   streamer: "Elena",
   // academy: "Callisto",
   warrior: "Dominic",

@@ -10,6 +10,11 @@
   border: white 6px solid;
   border-radius: 8px;
   box-shadow: 0 0 2px black;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.08333em;
+  align-items: end;
 }
 
 .hidemarker {

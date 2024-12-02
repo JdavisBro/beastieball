@@ -68,6 +68,8 @@ export default function Map(): React.ReactNode {
   const [spoilerMode] = useSpoilerMode();
   const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
 
+  const [postgame, setPostgame] = useState(false);
+
   const [huntedBeastie, setHuntedBeastie] = useState<string | undefined>(
     undefined,
   );
@@ -140,7 +142,10 @@ export default function Map(): React.ReactNode {
     if ((!show_beasties && !beastie_filter) || !level.has_spawns) {
       return;
     }
-    const group = SPAWN_DATA[level.spawn_name[0]]?.group;
+    const group = (
+      (postgame && SPAWN_DATA[level.spawn_name[0] + "_postgame"]) ||
+      SPAWN_DATA[level.spawn_name[0]]
+    )?.group;
     if (!group) {
       return;
     }
@@ -362,6 +367,14 @@ export default function Map(): React.ReactNode {
               extraOptionText="Show All"
               extraOption="all"
             />
+            <label>
+              <input
+                type="checkbox"
+                checked={postgame}
+                onChange={(event) => setPostgame(event.currentTarget.checked)}
+              />{" "}
+              Postgame Spawns
+            </label>
           </div>
         </Control>
         <LayerGroup>{level_overlays}</LayerGroup>

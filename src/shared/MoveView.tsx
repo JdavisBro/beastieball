@@ -209,7 +209,7 @@ function getEffectString(
         case 23:
           return "Damages based on target's strongest DEF.";
         case 25:
-          return "POW x1.5 while field has RALLY.";
+          return "Boosted by RALLY instead of weakened.";
       }
       return `POW COND ${effect.pow}`;
     }

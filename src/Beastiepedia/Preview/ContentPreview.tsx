@@ -302,7 +302,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       }
       let canvas = canvasRef.current;
       const frame = animStateRef.current.frame;
-      if (fitBeastie && frame) {
+      if (fitBeastie && frame != undefined) {
         cropCanvasRef.current.width = drawnsprite.bboxes[frame].width;
         cropCanvasRef.current.height = drawnsprite.bboxes[frame].height;
         cropCanvasRef.current

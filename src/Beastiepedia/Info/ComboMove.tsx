@@ -26,7 +26,7 @@ export default function ComboMove({
   const [friendId, setFriendId] = useState<string | undefined>(undefined);
   const friend = friendId ? BEASTIE_DATA.get(friendId) : undefined;
 
-  const pows: number[] = [];
+  const powMults: number[] = [1, 1];
   let target = 0;
   let use = 0;
   let moveType =
@@ -50,7 +50,7 @@ export default function ComboMove({
   }
   (friend ? [beastiedata, friend] : [beastiedata])
     .sort((beastie, beastie2) => beastie.number - beastie2.number)
-    .forEach((beastie) => {
+    .forEach((beastie, beastieIndex) => {
       for (let i = 0; i < beastie.combos[type].length; i += 3) {
         const neweff = {
           eff: beastie.combos[type][i],
@@ -62,7 +62,7 @@ export default function ComboMove({
             target = neweff.pow;
             continue;
           case 50:
-            pows.push(neweff.pow);
+            powMults[beastieIndex] = neweff.pow;
             continue;
           case 51:
             use = neweff.pow;
@@ -105,12 +105,7 @@ export default function ComboMove({
           desc_tags: [],
           name: `${beastiedata.name} + ${friend ? friend.name : "???"} ${ComboType[type]}`,
           type: moveType,
-          pow:
-            pows.length == 0
-              ? 100
-              : pows.length == 1
-                ? Math.round((pows[0] * 100) / 5) * 5
-                : Math.round(((pows[0] + pows[1]) * 50) / 5) * 5,
+          pow: Math.ceil(((powMults[0] + powMults[1]) * 50) / 5) * 5,
           eff: effects,
         }}
         noLearner={true}

@@ -59,7 +59,7 @@ export type LevelStump = {
   encounters: string[];
   has_spawns?: number | boolean;
   icons_array: MapIcon[];
-  is_indoor?: number;
+  is_indoor?: number | boolean;
   name: string;
   portals_array: Portal[];
   spawn_name: string[];

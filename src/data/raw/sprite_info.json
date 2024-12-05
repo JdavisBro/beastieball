@@ -1183,7 +1183,7 @@
     "originX": 520,
     "originY": 969,
     "bboxes": [
-      { "x": 288, "y": 192, "width": 704, "height": 778 },
+      { "x": 288, "y": 601, "width": 479, "height": 369 },
       { "x": 218, "y": 620, "width": 547, "height": 357 },
       { "x": 274, "y": 597, "width": 524, "height": 376 },
       { "x": 254, "y": 471, "width": 504, "height": 502 },

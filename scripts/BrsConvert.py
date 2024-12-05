@@ -3,6 +3,7 @@ import json
 import struct
 import sys
 import zlib
+import subprocess
 from pathlib import Path
 
 from PIL import Image
@@ -66,6 +67,7 @@ def main(args):
         with RESEARCH_DATA.open() as f:
             researchdata = json.load(f)
     outdir = Path("../public/gameassets/research/")
+    new_images = []
     for i in args:
         fp = Path(i)
         if fp.is_dir():
@@ -73,10 +75,14 @@ def main(args):
             # outdir.mkdir(exist_ok=True)
             for fp2 in fp.glob("**/*.brs"):
                 researchdata[fp2.stem] = do_file(fp2, outdir=outdir) + 1
+            new_images += [outdir / f"{fp2.stem}_{i}.png" for i in range(researchdata[fp2.stem])]
         else:
             researchdata[fp.stem] = do_file(fp, outdir=outdir) + 1
+            new_images += [outdir / f"{fp.stem}_{i}.png" for i in range(researchdata[fp.stem])]
     with RESEARCH_DATA.open("w+") as f:
         json.dump(researchdata, f)
+    if new_images:
+        subprocess.run(["oxipng", "-o", "max", *new_images])
 
 if __name__ == "__main__":
     main(sys.argv[1:])

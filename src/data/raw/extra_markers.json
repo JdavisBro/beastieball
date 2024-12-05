@@ -1,1 +1,612 @@
-{"gifts": [{"id": "beryl_gym", "items": [["train_md", 4.0]], "x": -13283, "y": 14566}, {"id": "hometown_west_b", "items": [["status_b", 1.0]], "x": -6834, "y": 6954}, {"id": "hometown_north_a", "items": [["heal_b", 1.0]], "x": -1927, "y": -8159}, {"id": "hometown_north_free", "items": [["heal_a", 1.0]], "x": -965, "y": -9587}, {"id": "hometown_south_b", "items": [["train_ba", 4.0]], "x": -2938, "y": 10544}, {"id": "gift_hometown_south_path_0", "items": [["heal_max", 1.0]], "x": -2970, "y": 13368}, {"id": "hometown_south_a", "items": [["sell1", 2.0]], "x": 867, "y": 7930}, {"id": "hometown_west_a", "items": [["status_a", 1.0]], "x": -1614, "y": 5337}, {"id": "hometown_west_c", "items": [["train_tame_2", 1.0]], "x": -2205, "y": 6712}, {"id": "hometown_secret_south", "items": [["train_ma", 4.0]], "x": 3580, "y": 5802}, {"id": "gift_hometown_south_rail_0", "items": [["heal_b", 1.0]], "x": -904, "y": 6517}, {"id": "gift_jasper_0", "items": [["train_hd", 4.0]], "x": 2356.0, "y": -16124}, {"id": "hometown_north_b", "items": [["lure_a", 1.0]], "x": -3202, "y": -12481}, {"id": "gift_reserve_1_0", "items": [["sell1", 1.0]], "x": -15627, "y": 4340}, {"id": "gift_seaside_cliff_0", "items": [["train_trait", 1.0]], "x": 10567, "y": -10085}, {"id": "gift_seaside_path_0", "items": [["jersey", 1.0]], "x": 2955, "y": -11266}, {"id": "gift_begonia_south_0", "items": [["trainspray_b", 1.0]], "x": -19187, "y": -25131}, {"id": "jasper_cave_s", "items": [["status_b", 1.0]], "x": -12673, "y": -22736}, {"id": "jasper_cave_e", "items": [["train_level", 1.0]], "x": -2800, "y": -26092}, {"id": "jasper_cave_w", "items": [["heal_max", 1.0]], "x": -14583, "y": -24221}, {"id": "jasper_cave_n", "items": [["train_ha", 4.0]], "x": -12204, "y": -29460}, {"id": "gift_myth_forest4_0", "items": [["sell2", 1.0]], "x": -14794, "y": -29018}, {"id": "gift_shroom_path_1", "items": [["lure_b", 1.0]], "x": -31206, "y": -31825}, {"id": "gift_shroom_path_0", "items": [["heal_b", 1.0]], "x": -27525, "y": -31012}, {"id": "gift_sphinx_0", "items": [["train_ma", 4.0]], "x": -22376.0, "y": -28421}, {"id": "gift_beach_cliff1_0", "items": [["train_trait", 1.0]], "x": -40286, "y": 11910}, {"id": "gift_chartreuse_0", "items": [["sell1", 1.0]], "x": -30144, "y": 26269}, {"id": "gift_coral_island_0", "items": [["jersey2", 1.0]], "x": -48515, "y": 38364.0}, {"id": "gift_rockybeach_0", "items": [["sell2", 1.0]], "x": -31357, "y": 11195}, {"id": "gift_rockybeach_1", "items": [["jersey3", 1.0]], "x": -27737, "y": 13623}, {"id": "gift_academy_0", "items": [["lure_b", 1.0]], "x": -8661, "y": -41848}, {"id": "gift_academy_1", "items": [["train_level", 1.0]], "x": -7527, "y": -39677}, {"id": "gift_ambestone_west_cliff_1", "items": [["jersey3", 1.0]], "x": -19944.0, "y": 9700}, {"id": "gift_ambestone_west_cliff_0", "items": [["train_md", 4.0]], "x": -19798.0, "y": 5758}, {"id": "gift_beryl_railpath_end_0", "items": [["lure_b", 1.0]], "x": -7802.0, "y": 10576}, {"id": "gift_canyon_1_0", "items": [["heal_max", 1.0]], "x": -18006, "y": 2672}, {"id": "gift_canyon_2_0", "items": [["sell1", 1.0]], "x": -18362, "y": -526}, {"id": "gift_canyon_2_1", "items": [["train_ha", 4.0]], "x": -19683, "y": -1937}, {"id": "gift_canyon_2_2", "items": [["sell2", 1.0]], "x": -18083, "y": -2930}, {"id": "gift_canyon_3_0", "items": [["status_b", 1.0]], "x": -24837, "y": -2982}, {"id": "gift_canyon_secret_0", "items": [["train_level", 1.0]], "x": -20685, "y": -6430}, {"id": "gift_cityhill_0", "items": [["train_reset", 1.0]], "x": -14909, "y": -19161}, {"id": "gift_citysquare_0", "items": [["train_tame_2", 1.0]], "x": -38791, "y": -17270}, {"id": "gift_citysquare_2", "items": [["train_level", 1.0]], "x": -42218, "y": -13716}, {"id": "gift_citysquare_3", "items": [["status_b", 1.0]], "x": -38773, "y": -15181}, {"id": "gift_citysquare_4", "items": [["heal_b", 1.0]], "x": -38805, "y": -18159}, {"id": "gift_city_market_0", "items": [["lure_b", 1.0]], "x": -50890, "y": -19473}, {"id": "gift_city_neighborhood_0", "items": [["train_level", 1.0]], "x": -6607, "y": -12843}, {"id": "gift_city_neighborhood_1", "items": [["train_bd", 4.0], ["train_bd", 4.0], ["train_bd", 4.0]], "x": -7878, "y": -18360}, {"id": "gift_city_neighborhood_2", "items": [["sell3", 1.0]], "x": -6924, "y": -15497}, {"id": "gift_city_rail_east_0", "items": [["jersey3", 1.0]], "x": -31959, "y": -10616}, {"id": "gift_city_seacave_0", "items": [["train_trait", 1.0]], "x": -38538, "y": 2325}, {"id": "gift_city_trainyard_0", "items": [["train_level", 1.0]], "x": -35773, "y": -9358}, {"id": "gift_city_trainyard_1", "items": [["train_ma", 4.0]], "x": -34988, "y": -9488}, {"id": "gift_forest_lake_0", "items": [["train_md", 4.0]], "x": -13218, "y": -32654}, {"id": "gift_jasper_cave_north_exit_0", "items": [["train_bd", 4.0]], "x": -3188, "y": -31294}, {"id": "gift_mainstreet_0", "items": [["heal_c", 1.0]], "x": -45920, "y": -16420}, {"id": "gift_mangrove_2_0", "items": [["train_hd", 4.0]], "x": -49703, "y": 7581}, {"id": "gift_mangrove_3_0", "items": [["heal_b", 1.0]], "x": -57705, "y": 5434}, {"id": "gift_mangrove_3_2", "items": [["sell2", 1.0]], "x": -58947, "y": 5603}, {"id": "gift_mangrove_3_1", "items": [["train_bd", 4.0]], "x": -58593, "y": 1489}, {"id": "gift_mangrove_4_0", "items": [["status_b", 1.0]], "x": -62150, "y": 4235}, {"id": "gift_mangrove_4_2", "items": [["train_level", 1.0]], "x": -63246, "y": 3062}, {"id": "gift_mangrove_4_1", "items": [["sell3", 1.0]], "x": -62019, "y": 8005}, {"id": "gift_meadows_1_0", "items": [["sell2", 1.0]], "x": -34189, "y": -40599}, {"id": "gift_meadow_springs_0", "items": [["trainspray_b", 1.0]], "x": -43822, "y": -31860}, {"id": "gift_meadow_springs_1", "items": [["lure_b", 1.0]], "x": -43687, "y": -32715}, {"id": "gift_mountain_3_0", "items": [["sell3", 1.0]], "x": -48922, "y": -40467}, {"id": "gift_mountain_3_1", "items": [["trainspray_c", 1.0]], "x": -48937, "y": -40870}, {"id": "gift_mountain_4_0", "items": [["heal_max", 1.0]], "x": -54406, "y": -41536}, {"id": "gift_mountain_4_1", "items": [["jersey5", 1.0]], "x": -55290, "y": -40593}, {"id": "gift_mountain_6_0", "items": [["train_level", 3.0]], "x": -56890, "y": -44587}, {"id": "gift_mountain_7_0", "items": [["train_trait", 1.0]], "x": -60021, "y": -45808}, {"id": "gift_myth_forest1_0", "items": [["jersey2", 1.0]], "x": -18629, "y": -33998}, {"id": "gift_myth_forest2_0", "items": [["status_b", 1.0]], "x": -18367, "y": -37777}, {"id": "gift_myth_forest3_0", "items": [["train_tame_2", 1.0]], "x": -15145, "y": -41249}, {"id": "gift_park_north_0", "items": [["heal_max", 1.0]], "x": -26952, "y": -21957}, {"id": "gift_park_north2_0", "items": [["jersey5", 1.0]], "x": -22079, "y": -22395}, {"id": "gift_park_north3_0", "items": [["train_tame_2", 1.0]], "x": -19400, "y": -18394}, {"id": "gift_park_north4_0", "items": [["sell2", 1.0]], "x": -17603, "y": -16270}, {"id": "gift_park_north4_1", "items": [["train_ba", 4.0], ["train_ba", 4.0], ["train_ba", 4.0]], "x": -18499, "y": -16328}, {"id": "gift_park_side_0", "items": [["sell2", 1.0]], "x": -21975, "y": -17327}, {"id": "gift_park_south_0", "items": [["heal_b", 1.0]], "x": -24143, "y": -11832}, {"id": "gift_park_south2_0", "items": [["jersey4", 1.0]], "x": -19611, "y": -11514}, {"id": "gift_pirate_0", "items": [["sell1", 1.0]], "x": -62152, "y": 24506}, {"id": "gift_reserve_secret_0", "items": [["lure_b", 1.0]], "x": -6106, "y": -3196}, {"id": "gift_seacave3_0", "items": [["jersey4", 1.0]], "x": -45310, "y": 5396}, {"id": "gift_seacave3_1", "items": [["heal_c", 1.0]], "x": -47878, "y": 4262}, {"id": "gift_seacave4_0", "items": [["train_ba", 4.0]], "x": -44008, "y": 1267}, {"id": "gift_seacave_side_0", "items": [["sell3", 1.0]], "x": -39835, "y": 6001}, {"id": "gift_sunken_stadium_0", "items": [["heal_max", 1.0]], "x": -19977, "y": 37023}, {"id": "gift_sunken_stadium_1", "items": [["train_reset", 1.0]], "x": -20714, "y": 36884}, {"id": "gift_sunken_stadium_basement_1_0", "items": [["jersey5", 1.0]], "x": -25794, "y": 49099}, {"id": "gift_sunken_stadium_east_0", "items": [["elevatorkey", 1.0]], "x": -18498, "y": 44990}, {"id": "gift_sunken_stadium_west_3_0", "items": [["train_tame_3", 1.0]], "x": -32884, "y": 48051}, {"id": "gift_woods_east_cave_0", "items": [["heal_max", 1.0]], "x": -5158, "y": -33685}, {"id": "gift_woods_north_rail_0", "items": [["train_hd", 4.0]], "x": -8619, "y": -30464}, {"id": "gift_wood_cave2_0", "items": [["jersey3", 1.0]], "x": -33126, "y": -22765}, {"id": "gift_hometown_0", "items": [["sell1", 1.0]], "x": -1647, "y": 1646}, {"id": "hometown_reserve", "items": [["jersey2", 1.0]], "x": -4597, "y": 5267}]}
+{
+  "gifts": [
+    {
+      "id": "beryl_gym",
+      "items": [["train_md", 4.0]],
+      "x": -13283,
+      "y": 14566
+    },
+    {
+      "id": "hometown_west_b",
+      "items": [["status_b", 1.0]],
+      "x": -6834,
+      "y": 6954
+    },
+    {
+      "id": "hometown_north_a",
+      "items": [["heal_b", 1.0]],
+      "x": -1927,
+      "y": -8159
+    },
+    {
+      "id": "hometown_north_free",
+      "items": [["heal_a", 1.0]],
+      "x": -965,
+      "y": -9587
+    },
+    {
+      "id": "hometown_south_b",
+      "items": [["train_ba", 4.0]],
+      "x": -2938,
+      "y": 10544
+    },
+    {
+      "id": "gift_hometown_south_path_0",
+      "items": [["heal_max", 1.0]],
+      "x": -2970,
+      "y": 13368
+    },
+    {
+      "id": "hometown_south_a",
+      "items": [["sell1", 2.0]],
+      "x": 867,
+      "y": 7930
+    },
+    {
+      "id": "hometown_west_a",
+      "items": [["status_a", 1.0]],
+      "x": -1614,
+      "y": 5337
+    },
+    {
+      "id": "hometown_west_c",
+      "items": [["train_tame_2", 1.0]],
+      "x": -2205,
+      "y": 6712
+    },
+    {
+      "id": "hometown_secret_south",
+      "items": [["train_ma", 4.0]],
+      "x": 3580,
+      "y": 5802
+    },
+    {
+      "id": "gift_hometown_south_rail_0",
+      "items": [["heal_b", 1.0]],
+      "x": -904,
+      "y": 6517
+    },
+    {
+      "id": "gift_jasper_0",
+      "items": [["train_hd", 4.0]],
+      "x": 2356.0,
+      "y": -16124
+    },
+    {
+      "id": "hometown_north_b",
+      "items": [["lure_a", 1.0]],
+      "x": -3202,
+      "y": -12481
+    },
+    {
+      "id": "gift_reserve_1_0",
+      "items": [["sell1", 1.0]],
+      "x": -15627,
+      "y": 4340
+    },
+    {
+      "id": "gift_seaside_cliff_0",
+      "items": [["train_trait", 1.0]],
+      "x": 10567,
+      "y": -10085
+    },
+    {
+      "id": "gift_seaside_path_0",
+      "items": [["jersey", 1.0]],
+      "x": 2955,
+      "y": -11266
+    },
+    {
+      "id": "gift_begonia_south_0",
+      "items": [["trainspray_b", 1.0]],
+      "x": -19187,
+      "y": -25131
+    },
+    {
+      "id": "jasper_cave_s",
+      "items": [["status_b", 1.0]],
+      "x": -12673,
+      "y": -22736
+    },
+    {
+      "id": "jasper_cave_e",
+      "items": [["train_level", 1.0]],
+      "x": -2800,
+      "y": -26092
+    },
+    {
+      "id": "jasper_cave_w",
+      "items": [["heal_max", 1.0]],
+      "x": -14583,
+      "y": -24221
+    },
+    {
+      "id": "jasper_cave_n",
+      "items": [["train_ha", 4.0]],
+      "x": -12204,
+      "y": -29460
+    },
+    {
+      "id": "gift_myth_forest4_0",
+      "items": [["sell2", 1.0]],
+      "x": -14794,
+      "y": -29018
+    },
+    {
+      "id": "gift_shroom_path_1",
+      "items": [["lure_b", 1.0]],
+      "x": -31206,
+      "y": -31825
+    },
+    {
+      "id": "gift_shroom_path_0",
+      "items": [["heal_b", 1.0]],
+      "x": -27525,
+      "y": -31012
+    },
+    {
+      "id": "gift_sphinx_0",
+      "items": [["train_ma", 4.0]],
+      "x": -22376.0,
+      "y": -28421
+    },
+    {
+      "id": "gift_beach_cliff1_0",
+      "items": [["train_trait", 1.0]],
+      "x": -40286,
+      "y": 11910
+    },
+    {
+      "id": "gift_chartreuse_0",
+      "items": [["sell1", 1.0]],
+      "x": -30144,
+      "y": 26269
+    },
+    {
+      "id": "gift_coral_island_0",
+      "items": [["jersey2", 1.0]],
+      "x": -48515,
+      "y": 38364.0
+    },
+    {
+      "id": "gift_rockybeach_0",
+      "items": [["sell2", 1.0]],
+      "x": -31357,
+      "y": 11195
+    },
+    {
+      "id": "gift_rockybeach_1",
+      "items": [["jersey3", 1.0]],
+      "x": -27737,
+      "y": 13623
+    },
+    {
+      "id": "gift_academy_0",
+      "items": [["lure_b", 1.0]],
+      "x": -8661,
+      "y": -41848
+    },
+    {
+      "id": "gift_academy_1",
+      "items": [["train_level", 1.0]],
+      "x": -7527,
+      "y": -39677
+    },
+    {
+      "id": "gift_ambestone_west_cliff_1",
+      "items": [["jersey3", 1.0]],
+      "x": -19944.0,
+      "y": 9700
+    },
+    {
+      "id": "gift_ambestone_west_cliff_0",
+      "items": [["train_md", 4.0]],
+      "x": -19798.0,
+      "y": 5758
+    },
+    {
+      "id": "gift_beryl_railpath_end_0",
+      "items": [["lure_b", 1.0]],
+      "x": -7802.0,
+      "y": 10576
+    },
+    {
+      "id": "gift_canyon_1_0",
+      "items": [["heal_max", 1.0]],
+      "x": -18006,
+      "y": 2672
+    },
+    {
+      "id": "gift_canyon_2_0",
+      "items": [["sell1", 1.0]],
+      "x": -18362,
+      "y": -526
+    },
+    {
+      "id": "gift_canyon_2_1",
+      "items": [["train_ha", 4.0]],
+      "x": -19683,
+      "y": -1937
+    },
+    {
+      "id": "gift_canyon_2_2",
+      "items": [["sell2", 1.0]],
+      "x": -18083,
+      "y": -2930
+    },
+    {
+      "id": "gift_canyon_3_0",
+      "items": [["status_b", 1.0]],
+      "x": -24837,
+      "y": -2982
+    },
+    {
+      "id": "gift_canyon_secret_0",
+      "items": [["train_level", 1.0]],
+      "x": -20685,
+      "y": -6430
+    },
+    {
+      "id": "gift_cityhill_0",
+      "items": [["train_reset", 1.0]],
+      "x": -14909,
+      "y": -19161
+    },
+    {
+      "id": "gift_citysquare_0",
+      "items": [["train_tame_2", 1.0]],
+      "x": -38791,
+      "y": -17270
+    },
+    {
+      "id": "gift_citysquare_2",
+      "items": [["train_level", 1.0]],
+      "x": -42218,
+      "y": -13716
+    },
+    {
+      "id": "gift_citysquare_3",
+      "items": [["status_b", 1.0]],
+      "x": -38773,
+      "y": -15181
+    },
+    {
+      "id": "gift_citysquare_4",
+      "items": [["heal_b", 1.0]],
+      "x": -38805,
+      "y": -18159
+    },
+    {
+      "id": "gift_city_market_0",
+      "items": [["lure_b", 1.0]],
+      "x": -50890,
+      "y": -19473
+    },
+    {
+      "id": "gift_city_neighborhood_0",
+      "items": [["train_level", 1.0]],
+      "x": -6607,
+      "y": -12843
+    },
+    {
+      "id": "gift_city_neighborhood_1",
+      "items": [
+        ["train_bd", 4.0],
+        ["train_bd", 4.0],
+        ["train_bd", 4.0]
+      ],
+      "x": -7878,
+      "y": -18360
+    },
+    {
+      "id": "gift_city_neighborhood_2",
+      "items": [["sell3", 1.0]],
+      "x": -6924,
+      "y": -15497
+    },
+    {
+      "id": "gift_city_rail_east_0",
+      "items": [["jersey3", 1.0]],
+      "x": -31959,
+      "y": -10616
+    },
+    {
+      "id": "gift_city_seacave_0",
+      "items": [["train_trait", 1.0]],
+      "x": -38538,
+      "y": 2325
+    },
+    {
+      "id": "gift_city_trainyard_0",
+      "items": [["train_level", 1.0]],
+      "x": -35773,
+      "y": -9358
+    },
+    {
+      "id": "gift_city_trainyard_1",
+      "items": [["train_ma", 4.0]],
+      "x": -34988,
+      "y": -9488
+    },
+    {
+      "id": "gift_forest_lake_0",
+      "items": [["train_md", 4.0]],
+      "x": -13218,
+      "y": -32654
+    },
+    {
+      "id": "gift_jasper_cave_north_exit_0",
+      "items": [["train_bd", 4.0]],
+      "x": -3188,
+      "y": -31294
+    },
+    {
+      "id": "gift_mainstreet_0",
+      "items": [["heal_c", 1.0]],
+      "x": -45920,
+      "y": -16420
+    },
+    {
+      "id": "gift_mangrove_2_0",
+      "items": [["train_hd", 4.0]],
+      "x": -49703,
+      "y": 7581
+    },
+    {
+      "id": "gift_mangrove_3_0",
+      "items": [["heal_b", 1.0]],
+      "x": -57705,
+      "y": 5434
+    },
+    {
+      "id": "gift_mangrove_3_2",
+      "items": [["sell2", 1.0]],
+      "x": -58947,
+      "y": 5603
+    },
+    {
+      "id": "gift_mangrove_3_1",
+      "items": [["train_bd", 4.0]],
+      "x": -58593,
+      "y": 1489
+    },
+    {
+      "id": "gift_mangrove_4_0",
+      "items": [["status_b", 1.0]],
+      "x": -62150,
+      "y": 4235
+    },
+    {
+      "id": "gift_mangrove_4_2",
+      "items": [["train_level", 1.0]],
+      "x": -63246,
+      "y": 3062
+    },
+    {
+      "id": "gift_mangrove_4_1",
+      "items": [["sell3", 1.0]],
+      "x": -62019,
+      "y": 8005
+    },
+    {
+      "id": "gift_meadows_1_0",
+      "items": [["sell2", 1.0]],
+      "x": -34189,
+      "y": -40599
+    },
+    {
+      "id": "gift_meadow_springs_0",
+      "items": [["trainspray_b", 1.0]],
+      "x": -43822,
+      "y": -31860
+    },
+    {
+      "id": "gift_meadow_springs_1",
+      "items": [["lure_b", 1.0]],
+      "x": -43687,
+      "y": -32715
+    },
+    {
+      "id": "gift_mountain_3_0",
+      "items": [["sell3", 1.0]],
+      "x": -48922,
+      "y": -40467
+    },
+    {
+      "id": "gift_mountain_3_1",
+      "items": [["trainspray_c", 1.0]],
+      "x": -48937,
+      "y": -40870
+    },
+    {
+      "id": "gift_mountain_4_0",
+      "items": [["heal_max", 1.0]],
+      "x": -54406,
+      "y": -41536
+    },
+    {
+      "id": "gift_mountain_4_1",
+      "items": [["jersey5", 1.0]],
+      "x": -55290,
+      "y": -40593
+    },
+    {
+      "id": "gift_mountain_6_0",
+      "items": [["train_level", 3.0]],
+      "x": -56890,
+      "y": -44587
+    },
+    {
+      "id": "gift_mountain_7_0",
+      "items": [["train_trait", 1.0]],
+      "x": -60021,
+      "y": -45808
+    },
+    {
+      "id": "gift_myth_forest1_0",
+      "items": [["jersey2", 1.0]],
+      "x": -18629,
+      "y": -33998
+    },
+    {
+      "id": "gift_myth_forest2_0",
+      "items": [["status_b", 1.0]],
+      "x": -18367,
+      "y": -37777
+    },
+    {
+      "id": "gift_myth_forest3_0",
+      "items": [["train_tame_2", 1.0]],
+      "x": -15145,
+      "y": -41249
+    },
+    {
+      "id": "gift_park_north_0",
+      "items": [["heal_max", 1.0]],
+      "x": -26952,
+      "y": -21957
+    },
+    {
+      "id": "gift_park_north2_0",
+      "items": [["jersey5", 1.0]],
+      "x": -22079,
+      "y": -22395
+    },
+    {
+      "id": "gift_park_north3_0",
+      "items": [["train_tame_2", 1.0]],
+      "x": -19400,
+      "y": -18394
+    },
+    {
+      "id": "gift_park_north4_0",
+      "items": [["sell2", 1.0]],
+      "x": -17603,
+      "y": -16270
+    },
+    {
+      "id": "gift_park_north4_1",
+      "items": [
+        ["train_ba", 4.0],
+        ["train_ba", 4.0],
+        ["train_ba", 4.0]
+      ],
+      "x": -18499,
+      "y": -16328
+    },
+    {
+      "id": "gift_park_side_0",
+      "items": [["sell2", 1.0]],
+      "x": -21975,
+      "y": -17327
+    },
+    {
+      "id": "gift_park_south_0",
+      "items": [["heal_b", 1.0]],
+      "x": -24143,
+      "y": -11832
+    },
+    {
+      "id": "gift_park_south2_0",
+      "items": [["jersey4", 1.0]],
+      "x": -19611,
+      "y": -11514
+    },
+    {
+      "id": "gift_pirate_0",
+      "items": [["sell1", 1.0]],
+      "x": -62152,
+      "y": 24506
+    },
+    {
+      "id": "gift_reserve_secret_0",
+      "items": [["lure_b", 1.0]],
+      "x": -6106,
+      "y": -3196
+    },
+    {
+      "id": "gift_seacave3_0",
+      "items": [["jersey4", 1.0]],
+      "x": -45310,
+      "y": 5396
+    },
+    {
+      "id": "gift_seacave3_1",
+      "items": [["heal_c", 1.0]],
+      "x": -47878,
+      "y": 4262
+    },
+    {
+      "id": "gift_seacave4_0",
+      "items": [["train_ba", 4.0]],
+      "x": -44008,
+      "y": 1267
+    },
+    {
+      "id": "gift_seacave_side_0",
+      "items": [["sell3", 1.0]],
+      "x": -39835,
+      "y": 6001
+    },
+    {
+      "id": "gift_sunken_stadium_0",
+      "items": [["heal_max", 1.0]],
+      "x": -19977,
+      "y": 37023
+    },
+    {
+      "id": "gift_sunken_stadium_1",
+      "items": [["train_reset", 1.0]],
+      "x": -20714,
+      "y": 36884
+    },
+    {
+      "id": "gift_sunken_stadium_basement_1_0",
+      "items": [["jersey5", 1.0]],
+      "x": -25794,
+      "y": 49099
+    },
+    {
+      "id": "gift_sunken_stadium_east_0",
+      "items": [["elevatorkey", 1.0]],
+      "x": -18498,
+      "y": 44990
+    },
+    {
+      "id": "gift_sunken_stadium_west_3_0",
+      "items": [["train_tame_3", 1.0]],
+      "x": -32884,
+      "y": 48051
+    },
+    {
+      "id": "gift_woods_east_cave_0",
+      "items": [["heal_max", 1.0]],
+      "x": -5158,
+      "y": -33685
+    },
+    {
+      "id": "gift_woods_north_rail_0",
+      "items": [["train_hd", 4.0]],
+      "x": -8619,
+      "y": -30464
+    },
+    {
+      "id": "gift_wood_cave2_0",
+      "items": [["jersey3", 1.0]],
+      "x": -33126,
+      "y": -22765
+    },
+    {
+      "id": "gift_hometown_0",
+      "items": [["sell1", 1.0]],
+      "x": -1647,
+      "y": 1646
+    },
+    {
+      "id": "hometown_reserve",
+      "items": [["jersey2", 1.0]],
+      "x": -4597,
+      "y": 5267
+    }
+  ]
+}

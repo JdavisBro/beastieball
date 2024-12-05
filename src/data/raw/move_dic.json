@@ -7,7 +7,7 @@
     "eff": [{ "eff": 41.0, "pow": 1.0, "targ": 0.0 }],
     "id": "3actions",
     "name": "Ultimate Attack",
-    "pow": 200.0,
+    "pow": 220.0,
     "targ": 0,
     "type": 0.0,
     "use": 0.0
@@ -141,7 +141,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 1.0, "pow": 3.0, "targ": 0.0 },
+      { "eff": 1.0, "pow": 2.0, "targ": 0.0 },
       { "eff": 8.0, "pow": -0.34000000000000002, "targ": 0.0 }
     ],
     "id": "bellydrum",
@@ -464,7 +464,7 @@
     "use": 0.0
   },
   "defense": {
-    "bt_tags": [20, 9, 38],
+    "bt_tags": [20, 9, 42, 38],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
@@ -704,7 +704,7 @@
     ],
     "id": "flyback",
     "name": "Airblast",
-    "pow": 130.0,
+    "pow": 115.0,
     "targ": 0,
     "type": 1.0,
     "use": 2.0
@@ -739,11 +739,14 @@
     "use": 0.0
   },
   "haze": {
-    "bt_tags": [],
+    "bt_tags": [29, 7],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 34.0, "pow": 1.0, "targ": 7.0 }],
+    "eff": [
+      { "eff": 34.0, "pow": 1.0, "targ": 7.0 },
+      { "eff": 16, "pow": 1.0, "targ": 0 }
+    ],
     "id": "haze",
     "name": "Patience",
     "pow": 0.0,
@@ -899,7 +902,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 29.0, "pow": 2.0, "targ": 0.0 }],
+    "eff": [{ "eff": 29.0, "pow": 3.0, "targ": 0.0 }],
     "id": "hyperbeam",
     "name": "Hyperspike",
     "pow": 135.0,
@@ -995,7 +998,7 @@
     "use": 2.0
   },
   "libero": {
-    "bt_tags": [9, 38],
+    "bt_tags": [9, 42, 38],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
@@ -1086,7 +1089,7 @@
     "use": 0.0
   },
   "mark": {
-    "bt_tags": [24, 9, 38],
+    "bt_tags": [24, 9, 42, 38],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
@@ -1099,7 +1102,7 @@
     "use": 0.0
   },
   "markattack": {
-    "bt_tags": [2, 38],
+    "bt_tags": [2, 42, 38],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
@@ -1560,6 +1563,19 @@
     "type": 4.0,
     "use": 0.0
   },
+  "ricochet": {
+    "bt_tags": [2, 20],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 33, "pow": 18, "targ": 0.0 }],
+    "id": "ricochet",
+    "name": "Ricochet",
+    "pow": 80.0,
+    "targ": 0,
+    "type": 2.0,
+    "use": 2.0
+  },
   "rocket": {
     "bt_tags": [0],
     "desc_tagids": [],
@@ -1725,7 +1741,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 8, "pow": 0.14999999999999999, "targ": 0 },
+      { "eff": 8, "pow": 0.20000000000000001, "targ": 0 },
       { "eff": 52, "pow": 1.0, "targ": 0 }
     ],
     "id": "shakeoff",
@@ -2084,7 +2100,10 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 0.0, "pow": 2.0, "targ": 0.0 }],
+    "eff": [
+      { "eff": 0.0, "pow": 1.0, "targ": 0.0 },
+      { "eff": 7, "pow": 1.0, "targ": 0 }
+    ],
     "id": "swordsdance",
     "name": "Pump Up",
     "pow": 0.0,
@@ -2309,7 +2328,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 29, "pow": 4.0, "targ": 3 },
+      { "eff": 29, "pow": 8.0, "targ": 3 },
       { "eff": 22, "pow": 4.0, "targ": 0.0 }
     ],
     "id": "wornout",

@@ -271,9 +271,10 @@
     ["heart", 20],
     ["heartpass", 25],
     ["flyback", 31],
-    ["bellydrum", 37],
-    ["backswitch", 43],
-    ["cut", 48]
+    ["rush", 36],
+    ["bellydrum", 40],
+    ["backswitch", 45],
+    ["overheat", 49]
   ],
   "41": [
     ["tailwind", 0],
@@ -284,9 +285,10 @@
     ["heart", 24],
     ["heartpass", 29],
     ["flyback", 35],
-    ["bellydrum", 41],
-    ["backswitch", 47],
-    ["cut", 52]
+    ["rush", 40],
+    ["bellydrum", 44],
+    ["backswitch", 49],
+    ["overheat", 53]
   ],
   "42": [
     ["dig", 0],
@@ -683,10 +685,10 @@
     ["breakswipe", 5],
     ["float", 8],
     ["rush", 11],
-    ["allyprotect", 17],
+    ["distraction", 17],
     ["heartdown", 23],
     ["lock", 30],
-    ["rollshot", 34],
+    ["ricochet", 34],
     ["protect", 38],
     ["thunder", 42],
     ["recover", 46]

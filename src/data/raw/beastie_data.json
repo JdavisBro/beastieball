@@ -1128,7 +1128,7 @@
     ],
     "colors2": null,
     "combos": [
-      [8, 2, 0.15],
+      [8, 2, 0.15, 50, 0, 1],
       [8, 2, 0.15],
       [8, 0, -0.34, 56, 2, 0],
       [8, 0, -0.34, 56, 2, 0]
@@ -1326,7 +1326,7 @@
     ],
     "colors2": null,
     "combos": [
-      [8, 2, 0.15],
+      [8, 2, 0.15, 50, 0, 1],
       [8, 2, 0.15],
       [8, 0, -0.34, 56, 2, 0],
       [8, 0, -0.34, 56, 2, 0]
@@ -2128,6 +2128,7 @@
       "rocksmash",
       "switch",
       "mark",
+      "powswitch",
       "vigor",
       "breakswipe",
       "starterbody"
@@ -2322,6 +2323,7 @@
       "rocksmash",
       "switch",
       "mark",
+      "powswitch",
       "vigor",
       "breakswipe",
       "starterbody"
@@ -2508,6 +2510,7 @@
       "rocksmash",
       "switch",
       "mark",
+      "powswitch",
       "vigor",
       "breakswipe",
       "starterbody"
@@ -3287,14 +3290,15 @@
       "rush",
       "bodypass",
       "curse",
-      "swordsdance",
       "preblock",
       "substitute",
       "bdefup",
       "batonpass",
       "powswitch",
       "protect",
-      "rest"
+      "rest",
+      "haze",
+      "facade"
     ],
     "attklist_randomize": -1,
     "ba": 96,
@@ -3914,7 +3918,7 @@
     ],
     "colors2": null,
     "combos": [
-      [17, 0, 0, 38, 3, 2],
+      [17, 0, 0, 38, 3, 2, 50, 0, 1],
       [20, 0, 1, 0, 2, 1],
       [20, 1, 1, 0, 1, 1],
       [51, 0, 2, 14, 0, 1, 16, 0, 1]
@@ -4121,7 +4125,7 @@
     ],
     "colors2": null,
     "combos": [
-      [33, 0, 7],
+      [33, 0, 7, 50, 0, 1],
       [38, 9, 1],
       [38, 9, 3, 14, 9, 3],
       [15, 9, -2]
@@ -4252,7 +4256,7 @@
     "ability": ["acrobat", "unnervous"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 60,
     "animator": 8,
     "attklist": [
       "dare",
@@ -4651,7 +4655,7 @@
     "ability": ["redirection", "taunt"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 60,
     "animator": 8,
     "attklist": [
       "lockon",
@@ -4729,7 +4733,7 @@
     ],
     "colors2": null,
     "combos": [
-      [14, 3, 1],
+      [14, 3, 1, 50, 0, 1],
       [14, 0, 1],
       [12, 8, 2],
       [15, 8, -1]
@@ -4964,7 +4968,7 @@
       }
     ],
     "combos": [
-      [-26, 0, 1, 50, 0, 0.8],
+      [-26, 0, 1, 50, 0, 0.85],
       [15, 0, 1],
       [14, 0, 3],
       [26, 2, 3]
@@ -5219,7 +5223,7 @@
       }
     ],
     "combos": [
-      [-26, 0, 1, 50, 0, 0.8],
+      [-26, 0, 1, 50, 0, 0.85],
       [15, 0, 1],
       [14, 0, 3],
       [26, 2, 3]
@@ -5653,7 +5657,7 @@
     ],
     "colors2": null,
     "combos": [
-      [33, 0, 16],
+      [33, 0, 16, 50, 0, 1],
       [26, 1, 3],
       [16, 0, 2, 6, 0, 1],
       [16, 0, 3, 6, 0, 3]
@@ -5872,7 +5876,7 @@
     ],
     "colors2": null,
     "combos": [
-      [33, 0, 16],
+      [33, 0, 16, 50, 0, 1],
       [26, 1, 3],
       [16, 0, 2, 6, 0, 1],
       [16, 0, 3, 6, 0, 3]
@@ -6078,7 +6082,7 @@
     ],
     "colors2": null,
     "combos": [
-      [33, 0, 16],
+      [33, 0, 16, 50, 0, 1],
       [26, 1, 3],
       [16, 0, 2, 6, 0, 1],
       [16, 0, 3, 6, 0, 3]
@@ -6274,7 +6278,7 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.8, 27, 3, 1],
+      [50, 0, 0.85, 27, 3, 1],
       [2, 1, 1, 5, 1, 1, 4, 1, 1],
       [20, 0, 1, 2, 0, 1, 5, 0, 1, 4, 0, 1],
       [27, 8, 1]
@@ -6478,7 +6482,7 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.8, 27, 3, 1],
+      [50, 0, 0.85, 27, 3, 1],
       [2, 1, 1, 5, 1, 1, 4, 1, 1],
       [20, 0, 1, 2, 0, 1, 5, 0, 1, 4, 0, 1],
       [27, 8, 1]
@@ -6693,7 +6697,7 @@
     ],
     "colors2": null,
     "combos": [
-      [15, 2, 1],
+      [15, 2, 1, 50, 0, 1],
       [1, 1, 1, 4, 1, 1],
       [44, 2, 6, 1, 2, 1],
       [44, 2, 6]
@@ -6878,7 +6882,7 @@
     ],
     "colors2": null,
     "combos": [
-      [15, 2, 1],
+      [15, 2, 1, 50, 0, 1],
       [1, 1, 1, 4, 1, 1],
       [44, 2, 6, 1, 2, 1],
       [44, 2, 6]
@@ -7074,7 +7078,7 @@
     ],
     "colors2": null,
     "combos": [
-      [15, 2, 1],
+      [15, 2, 1, 50, 0, 1],
       [1, 1, 1, 4, 1, 1],
       [44, 2, 6, 1, 2, 1],
       [44, 2, 6]
@@ -7564,7 +7568,7 @@
       "render_guard_radius": false,
       "seeking_interact": false
     },
-    "roguelvl": 2,
+    "roguelvl": 1,
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -7822,7 +7826,7 @@
     ],
     "colors2": null,
     "combos": [
-      [34, 3, 1],
+      [34, 3, 1, 50, 0, 1],
       [15, 9, -1],
       [15, 9, -2],
       [39, 9, 1, 6, 9, 1]
@@ -8229,7 +8233,7 @@
     ],
     "colors2": null,
     "combos": [
-      [51, 0, 2, 49, 0, 4],
+      [51, 0, 2, 49, 0, 4, 50, 0, 1],
       [12, 9, 2],
       [7, 0, 1, 20, 0, 1, 2, 0, 1],
       [2, 2, 1, 1, 8, -2]
@@ -8446,7 +8450,7 @@
     ],
     "colors2": null,
     "combos": [
-      [61, 0, 1],
+      [61, 0, 1, 50, 0, 1],
       [8, 1, 0.5, 13, 0, 2],
       [47, 0, 1, 13, 0, 2],
       [29, 8, 2, 8, 0, -0.2]
@@ -8610,7 +8614,7 @@
     ],
     "colors2": null,
     "combos": [
-      [61, 0, 1],
+      [61, 0, 1, 50, 0, 1],
       [8, 1, 0.5, 13, 0, 2],
       [47, 0, 1, 13, 0, 2],
       [29, 8, 2, 8, 0, -0.2]
@@ -8794,7 +8798,7 @@
     ],
     "colors2": null,
     "combos": [
-      [61, 0, 1],
+      [61, 0, 1, 50, 0, 1],
       [8, 1, 0.5, 13, 0, 2],
       [47, 0, 1, 13, 0, 2],
       [29, 8, 2, 8, 0, -0.2]
@@ -8987,7 +8991,7 @@
     ],
     "colors2": null,
     "combos": [
-      [12, 3, 1],
+      [12, 3, 1, 50, 0, 1],
       [12, 8, 1],
       [8, 8, -0.2],
       [12, 8, 2]
@@ -9198,7 +9202,7 @@
     ],
     "colors2": null,
     "combos": [
-      [12, 3, 1],
+      [12, 3, 1, 50, 0, 1],
       [12, 8, 1],
       [8, 8, -0.2],
       [12, 8, 2]
@@ -9394,7 +9398,7 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.5, 23, 8, 3, 49, 0, 0],
+      [50, 0, 0.6, 23, 8, 3, 49, 0, 0],
       [23, 8, 1],
       [23, 8, 2],
       [34, 8, 1, 23, 8, 1]
@@ -9589,7 +9593,7 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.5, 23, 8, 3, 49, 0, 0],
+      [50, 0, 0.6, 23, 8, 3, 49, 0, 0],
       [23, 8, 1],
       [23, 8, 2],
       [34, 8, 1, 23, 8, 1]
@@ -9681,7 +9685,7 @@
       "render_guard_radius": false,
       "seeking_interact": false
     },
-    "roguelvl": -1,
+    "roguelvl": 1,
     "scale": [0.85, 1],
     "shiny": [
       { "array": [{ "color": 7448449, "x": 0 }] },
@@ -9704,7 +9708,6 @@
     "attklist": [
       "flyback",
       "tailwind",
-      "cut",
       "heart",
       "desperate",
       "bomb",
@@ -9931,7 +9934,6 @@
     "attklist": [
       "flyback",
       "tailwind",
-      "cut",
       "heart",
       "desperate",
       "bomb",
@@ -10744,13 +10746,12 @@
     "type_focus": 2
   },
   "mantis": {
-    "ability": ["blocker"],
+    "ability": ["monster"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
-      "rollshot",
       "blockattack",
       "thunder",
       "rush",
@@ -10760,9 +10761,7 @@
       "stomp",
       "breakswipe",
       "switch",
-      "shakeoff",
       "distraction",
-      "allyprotect",
       "taunt",
       "lowattks",
       "lock",
@@ -10773,13 +10772,16 @@
       "healhit2",
       "steal",
       "basecover",
+      "jazzpass",
+      "jump",
       "recover",
+      "ricochet",
       "enemylowered"
     ],
     "attklist_randomize": -1,
     "ba": 70,
-    "base_exp": 193.8,
-    "bd": 85,
+    "base_exp": 196.86,
+    "bd": 75,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -10815,7 +10817,7 @@
     ],
     "colors2": null,
     "combos": [
-      [17, 0, 1, 50, 0, 1, 51, 0, 2],
+      [17, 0, 1, 50, 0, 1.2, 51, 0, 2],
       [7, 0, 1, 14, 0, 1, 12, 0, 2],
       [27, 8, 1],
       [27, 9, 3]
@@ -10834,7 +10836,7 @@
     "foot_size": 59,
     "foot_type": 1,
     "growth": 1.02,
-    "ha": 27,
+    "ha": 23,
     "hd": 105,
     "hidden": false,
     "hidden_counter": null,
@@ -10870,7 +10872,7 @@
       "stretchiness": 0.1
     },
     "ma": 80,
-    "md": 60,
+    "md": 75,
     "name": "Armantis",
     "number": 51,
     "palettes": 1,
@@ -10937,7 +10939,7 @@
     "tamecond": null,
     "tamelvl": 3,
     "tyield": ["md", 2],
-    "type_focus": 0
+    "type_focus": 2
   },
   "millipede": {
     "ability": ["watcher"],
@@ -11575,7 +11577,7 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 1.3, 8, 0, -0.2],
+      [50, 0, 1.35, 8, 0, -0.2],
       [15, 1, 2, 39, 2, 1],
       [15, 2, 3, 39, 2, 1],
       [4, 2, 2]
@@ -11773,7 +11775,7 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 1.3, 8, 0, -0.2],
+      [50, 0, 1.35, 8, 0, -0.2],
       [15, 1, 2, 39, 2, 1],
       [15, 2, 3, 39, 2, 1],
       [4, 2, 2]
@@ -11977,7 +11979,7 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 1.3, 8, 0, -0.2],
+      [50, 0, 1.35, 8, 0, -0.2],
       [15, 1, 2, 39, 2, 1],
       [15, 2, 3, 39, 2, 1],
       [4, 2, 2]
@@ -12174,7 +12176,7 @@
     ],
     "colors2": null,
     "combos": [
-      [8, 0, 0.2, 52, 0, 1],
+      [8, 0, 0.2, 52, 0, 1, 50, 0, 1],
       [52, 1, 1, 4, 1, 2],
       [56, 0, 0],
       [56, 0, 0]
@@ -12301,13 +12303,13 @@
       "heartd",
       "mind",
       "moon",
+      "hazeball",
       "storedpower",
       "cover",
       "mindpass",
       "callout",
       "meditate",
       "rest",
-      "telekinesis",
       "overthink",
       "mark",
       "trap",
@@ -12492,13 +12494,13 @@
       "heartd",
       "mind",
       "moon",
+      "hazeball",
       "storedpower",
       "cover",
       "mindpass",
       "callout",
       "meditate",
       "rest",
-      "telekinesis",
       "overthink",
       "mark",
       "trap",
@@ -12715,7 +12717,7 @@
     ],
     "colors2": null,
     "combos": [
-      [-7, 0, 2, 51, 0, 2, 49, 0, 4],
+      [-7, 0, 2, 51, 0, 2, 49, 0, 4, 50, 0, 1],
       [28, 1, 1, 2, 0, 1],
       [38, 9, 1, 6, 9, 1],
       [38, 8, 1]
@@ -13183,7 +13185,7 @@
     "ability": ["shrug", "competitive"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 60,
     "animator": 8,
     "attklist": [
       "starterbody",
@@ -13250,8 +13252,20 @@
       },
       {
         "array": [
-          { "color": 2789061, "x": 0 },
-          { "color": 3570909, "x": 1 }
+          { "color": 8088063, "x": 0 },
+          { "color": 3370993, "x": 0.27 },
+          { "color": 4175359, "x": 0.49 },
+          { "color": 5752298, "x": 0.6933333333 },
+          { "color": 15184874, "x": 0.7366666667 },
+          { "color": 15765198, "x": 0.85 },
+          { "color": 15132415, "x": 0.9733333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 6922630, "x": 0 },
+          { "color": 6854272, "x": 0.5 },
+          { "color": 6588791, "x": 0.9933333333 }
         ]
       }
     ],
@@ -13287,7 +13301,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 108.75,
+      "char_width": 109.25,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -13371,10 +13385,12 @@
       },
       {
         "array": [
-          { "color": 16056064, "x": 0.5 },
-          { "color": 16515327, "x": 0.5666666667 }
+          { "color": 16514980, "x": 0 },
+          { "color": 16751980, "x": 0.4933333333 },
+          { "color": 14172927, "x": 0.9933333333 }
         ]
-      }
+      },
+      { "array": [{ "color": 6209504, "x": 0.5 }] }
     ],
     "spr": "sprOpossum",
     "spr_alt": [],
@@ -15543,6 +15559,7 @@
       "body",
       "markattack",
       "dropshot",
+      "ricochet",
       "heartd",
       "mind",
       "dig",
@@ -15732,6 +15749,7 @@
       "body",
       "markattack",
       "dropshot",
+      "ricochet",
       "heartd",
       "mind",
       "dig",
@@ -15920,6 +15938,7 @@
       "body",
       "markattack",
       "dropshot",
+      "ricochet",
       "heartd",
       "mind",
       "dig",
@@ -16532,7 +16551,6 @@
       "callout",
       "meditate",
       "curse",
-      "defheal",
       "substitute",
       "swordsdance",
       "protect",
@@ -16542,7 +16560,7 @@
       "starterbody"
     ],
     "attklist_randomize": -1,
-    "ba": 105,
+    "ba": 100,
     "base_exp": 179.99,
     "bd": 93,
     "body_color_index": 0,
@@ -16596,8 +16614,8 @@
     "foot_size": 88,
     "foot_type": 0,
     "growth": 1.025,
-    "ha": 45,
-    "hd": 53,
+    "ha": 50,
+    "hd": 58,
     "hidden": false,
     "hidden_counter": null,
     "id": "seal",
@@ -16632,7 +16650,7 @@
       "stretchiness": 0
     },
     "ma": 69,
-    "md": 80,
+    "md": 75,
     "name": "Broslidon",
     "number": 68,
     "palettes": 1,
@@ -16728,7 +16746,6 @@
       "callout",
       "meditate",
       "curse",
-      "defheal",
       "substitute",
       "swordsdance",
       "protect",
@@ -17269,7 +17286,7 @@
       "render_guard_radius": false,
       "seeking_interact": false
     },
-    "roguelvl": -1,
+    "roguelvl": 1,
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -17618,7 +17635,7 @@
       "render_guard_radius": false,
       "seeking_interact": false
     },
-    "roguelvl": -1,
+    "roguelvl": 1,
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -17713,7 +17730,7 @@
     ],
     "colors2": null,
     "combos": [
-      [49, 0, 12],
+      [49, 0, 12, 50, 0, 1],
       [52, 1, 1, 8, 1, 0.15],
       [52, 1, 1, 8, 1, 0.5],
       [52, 2, 1, 8, 2, 0.3]
@@ -18838,7 +18855,7 @@
     ],
     "colors2": null,
     "combos": [
-      [30, 3, 1],
+      [30, 3, 1, 50, 0, 1],
       [51, 0, 2, 7, 1, 1, 26, 1, 1],
       [7, 0, 1, 27, 9, 3],
       [34, 8, 1, 26, 2, 1]
@@ -19205,7 +19222,7 @@
     ],
     "colors2": null,
     "combos": [
-      [8, 0, 0.3],
+      [8, 0, 0.3, 50, 0, 1],
       [0, 2, 1],
       [45, 7, 6, 8, 2, 0.15],
       [45, 7, 6, 8, 2, 0.15]
@@ -20542,7 +20559,7 @@
     ],
     "colors2": null,
     "combos": [
-      [16, 2, 1],
+      [16, 2, 1, 50, 0, 1],
       [8, 1, 0.3],
       [44, 2, 6, 16, 2, 1],
       [19, 2, 1, 12, 2, 2]
@@ -20760,7 +20777,7 @@
     ],
     "colors2": null,
     "combos": [
-      [16, 2, 1],
+      [16, 2, 1, 50, 0, 1],
       [8, 1, 0.3],
       [44, 2, 6, 16, 2, 1],
       [19, 2, 1, 12, 2, 2]
@@ -20955,7 +20972,7 @@
     ],
     "colors2": null,
     "combos": [
-      [16, 2, 1],
+      [16, 2, 1, 50, 0, 1],
       [8, 1, 0.3],
       [44, 2, 6, 16, 2, 1],
       [19, 2, 1, 12, 2, 2]
@@ -21373,7 +21390,7 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 2.2, 17, 0, 0, 41, 0, 1],
+      [50, 0, 2.5, 17, 0, 0, 41, 0, 1],
       [15, 1, 2, 8, 0, -0.34],
       [15, 0, 3, 8, 0, -0.34],
       [0, 2, 1, 1, 8, -2]

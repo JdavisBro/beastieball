@@ -5867,8 +5867,8 @@
       }
     },
     "ball": {
-      "x": 50,
-      "y": -511
+      "x": 114,
+      "y": -494
     },
     "colors": [
       {
@@ -6543,8 +6543,8 @@
       }
     },
     "ball": {
-      "x": 149,
-      "y": -345
+      "x": 121,
+      "y": -358
     },
     "colors": [
       {
@@ -6658,8 +6658,8 @@
       "move_to_idle_transition_frames": []
     },
     "miss": {
-      "x": -35,
-      "y": -74
+      "x": -2,
+      "y": -73
     },
     "partner": {
       "angle": 342.9542541504,
@@ -17915,6 +17915,12 @@
   "_sprOpossum": {
     "anim_data": {
       "_": "class_char_animation",
+      "air": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "bad": {
         "_": "class_char_animationdata",
         "frames": {
@@ -17948,15 +17954,17 @@
       "menu": {
         "_": "class_char_animationdata",
         "frames": {
-          "_": "class_canim_frames"
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
         }
       },
       "move": {
         "_": "class_char_animationdata",
         "frames": {
           "_": "class_canim_frames",
-          "endFrame": 1,
-          "startFrame": 1
+          "endFrame": 2,
+          "startFrame": 2
         }
       },
       "ready": {
@@ -17975,6 +17983,12 @@
           "startFrame": 7
         }
       },
+      "stop": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "volley": {
         "_": "class_char_animationdata",
         "frames": {
@@ -17985,8 +17999,8 @@
       }
     },
     "ball": {
-      "x": 105,
-      "y": -304
+      "x": 239,
+      "y": -256
     },
     "colors": [
       {
@@ -18053,12 +18067,49 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 2789061,
+            "color": 8088063,
             "x": 0
           },
           {
-            "color": 3570909,
-            "x": 1
+            "color": 3370993,
+            "x": 0.27
+          },
+          {
+            "color": 4175359,
+            "x": 0.49
+          },
+          {
+            "color": 5752298,
+            "x": 0.6933333333
+          },
+          {
+            "color": 15184874,
+            "x": 0.7366666667
+          },
+          {
+            "color": 15765198,
+            "x": 0.85
+          },
+          {
+            "color": 15132415,
+            "x": 0.9733333333
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 6922630,
+            "x": 0
+          },
+          {
+            "color": 6854272,
+            "x": 0.5
+          },
+          {
+            "color": 6588791,
+            "x": 0.9933333333
           }
         ]
       }
@@ -18092,18 +18143,18 @@
       "stretchiness": 0.02
     },
     "miss": {
-      "x": 95,
-      "y": -267
+      "x": 60,
+      "y": -180
     },
     "partner": {
-      "angle": 50.1944274902,
-      "anim": "ready",
-      "x": 51,
-      "y": -112
+      "angle": 340.0442810059,
+      "anim": "volley",
+      "x": 337,
+      "y": -170
     },
     "ready": {
-      "x": 106,
-      "y": -312
+      "x": 131,
+      "y": -339
     },
     "shiny": [
       {
@@ -18158,12 +18209,25 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 16056064,
-            "x": 0.5
+            "color": 16514980,
+            "x": 0
           },
           {
-            "color": 16515327,
-            "x": 0.5666666667
+            "color": 16751980,
+            "x": 0.4933333333
+          },
+          {
+            "color": 14172927,
+            "x": 0.9933333333
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 6209504,
+            "x": 0.5
           }
         ]
       }
@@ -18171,8 +18235,8 @@
     "splash": {
       "angle": -10,
       "anim": "ready",
-      "x": 126,
-      "y": -235
+      "x": 228,
+      "y": -216
     }
   },
   "_sprPlatypus": {
@@ -21618,14 +21682,14 @@
   },
   "_sprRat_alt": {
     "anim_data": {
-      "__Elephant_Circular_Ref__": 4793
+      "__Elephant_Circular_Ref__": 4809
     },
     "ball": {
       "x": 154.8,
       "y": -261.6
     },
     "colors": {
-      "__Elephant_Circular_Ref__": 5934
+      "__Elephant_Circular_Ref__": 5952
     },
     "colors2": null,
     "evo1": {
@@ -21647,7 +21711,7 @@
       "y": 0
     },
     "loco_data": {
-      "__Elephant_Circular_Ref__": 4869
+      "__Elephant_Circular_Ref__": 4885
     },
     "miss": {
       "x": 222.8571428571,
@@ -21664,7 +21728,7 @@
       "y": -286.8571428571
     },
     "shiny": {
-      "__Elephant_Circular_Ref__": 5983
+      "__Elephant_Circular_Ref__": 6001
     },
     "splash": {
       "angle": 344.1231689453,

@@ -148,7 +148,7 @@ function getEffectString(
       return `${feels} +${effect.pow} [sprStatus,6]SWEATY (losing stamina)${dot}`;
     case -26:
     case 26:
-      return `${feels} ${effect.pow} [sprStatus,8]JAZZED (POW x1.5)${effect.eff < 0 && attack ? " before contact" : ""}${dot}`;
+      return `${feels} ${effect.pow} [sprStatus,8]JAZZED (POW +50%)${effect.eff < 0 && attack ? " before contact" : ""}${dot}`;
     case 27:
       return `${feels} ${effect.pow} [sprStatus,9]BLOCKED (POW x2/3)${dot}`;
     case 28:
@@ -184,7 +184,7 @@ function getEffectString(
         case 10:
           return "POW +10 for each [sprBoost,0]BOOST on the user.";
         case 11:
-          return "POW +50% for each [sprBoost,1]BOOST on target.";
+          return "POW +100% for each [sprBoost,1]BOOST on target.";
         case 12:
           return "POW x2 when [sprStatus,6]SWEATY, [sprStatus,0]NERVOUS, or [sprStatus,11]TENDER.";
         case 13:
@@ -232,7 +232,7 @@ function getEffectString(
     case 42:
       return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} TRAP (Tag-ins lose 8 stamina per trap).`;
     case 43:
-      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW -25%).`;
+      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW x3/4).`;
     case 44:
       return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} RHYTHM (Healing and protection).`;
     case 45:

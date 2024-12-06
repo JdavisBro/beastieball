@@ -410,13 +410,13 @@
       "id": "gift_mountain_3_0",
       "items": [["sell3", 1.0]],
       "x": -48922,
-      "y": -40467
+      "y": -40117
     },
     {
       "id": "gift_mountain_3_1",
       "items": [["trainspray_c", 1.0]],
       "x": -48937,
-      "y": -40870
+      "y": -40220
     },
     {
       "id": "gift_mountain_4_0",
@@ -446,7 +446,7 @@
       "id": "gift_myth_forest1_0",
       "items": [["jersey2", 1.0]],
       "x": -18629,
-      "y": -33998
+      "y": -33758
     },
     {
       "id": "gift_myth_forest2_0",
@@ -470,7 +470,7 @@
       "id": "gift_park_north2_0",
       "items": [["jersey5", 1.0]],
       "x": -22079,
-      "y": -22395
+      "y": -22110
     },
     {
       "id": "gift_park_north3_0",
@@ -482,7 +482,7 @@
       "id": "gift_park_north4_0",
       "items": [["sell2", 1.0]],
       "x": -17603,
-      "y": -16270
+      "y": -15455
     },
     {
       "id": "gift_park_north4_1",
@@ -558,7 +558,7 @@
       "id": "gift_sunken_stadium_1",
       "items": [["train_reset", 1.0]],
       "x": -20714,
-      "y": 36884
+      "y": 36414
     },
     {
       "id": "gift_sunken_stadium_basement_1_0",

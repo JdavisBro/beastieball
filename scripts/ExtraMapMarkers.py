@@ -43,7 +43,7 @@ for level in (gamedir / "world_data").glob("**/*.json"):
         "id": gift_id,
         "items": [[gift[0], gift[1]] for i in range(0, len(gift), 2)],
         "x": stump["world_x1"] + obj["x"] + level_offset[0],
-        "y": stump["world_y1"] + obj["y"] + level_offset[1],
+        "y": stump["world_y1"] + obj["y"] - (obj["z"] if "z" in obj else 0) + level_offset[1],
       })
 
 with Path("../src/data/raw/extra_markers.json").open("w+") as f:

@@ -340,7 +340,7 @@ export default function Map(): React.ReactNode {
                   icon={L.icon({
                     iconUrl: `/gameassets/sprItems/${ITEM_DIC[gift.items[0][0]].img}.png`,
                     iconSize: [30, 30],
-                    iconAnchor: [20, 20],
+                    iconAnchor: [15, 15],
                   })}
                 >
                   <Popup offset={[0, -5]}>

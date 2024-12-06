@@ -109,6 +109,32 @@
   flex-direction: column;
 }
 
+.specialBeastie {
+  display: flex;
+  align-items: center;
+}
+
+.specialBeastie > a > img {
+  height: 80px;
+}
+
+.metamorph {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+}
+
+.metamorphColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metamorphColumn img {
+  height: 40px;
+}
+
 .mapBg {
   z-index: -2 !important;
 }

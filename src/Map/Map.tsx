@@ -18,7 +18,7 @@ import OpenGraph from "../shared/OpenGraph";
 import { createMarkers } from "./createMarkers";
 import Header from "../shared/Header";
 import SPAWN_DATA from "../data/SpawnData";
-import BEASTIE_DATA from "../data/BeastieData";
+import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import ITEM_DIC from "../data/ItemData";
 import TextTag from "../shared/TextTag";
 import {
@@ -29,6 +29,8 @@ import {
 import OTHER_AREAS from "./OtherLayerAreas";
 import Control from "react-leaflet-custom-control";
 import BeastieSelect from "../shared/BeastieSelect";
+import SpecialBeastieMarker from "./SpecialBeastieMarker";
+import { EXTINCT_BEASTIES, METAMORPH_LOCATIONS } from "./SpecialBeasties";
 
 function MapEvents() {
   useMapEvents({
@@ -36,6 +38,7 @@ function MapEvents() {
       event.popup.getElement()?.classList.remove("leaflet-popup-closing"),
     popupclose: (event) =>
       event.popup.getElement()?.classList.add("leaflet-popup-closing"),
+    click: (event) => console.log(event.latlng),
   });
 
   return null;
@@ -280,6 +283,11 @@ export default function Map(): React.ReactNode {
     imgheaders: { [key: string]: React.ReactElement[] };
   } = useMemo(createMarkers, []);
 
+  const extinctIsSpoiler = !(
+    spoilerMode == SpoilerMode.All ||
+    EXTINCT_BEASTIES.some((extinct) => seenBeasties[extinct.beastieId])
+  );
+
   return (
     <>
       <OpenGraph
@@ -358,6 +366,35 @@ export default function Map(): React.ReactNode {
           </LayersControl.Overlay>
           <LayersControl.Overlay checked name="Inside Overlays">
             <LayerGroup>{inside_overlays}</LayerGroup>
+          </LayersControl.Overlay>
+          <LayersControl.Overlay
+            checked
+            name={`${extinctIsSpoiler ? "???" : "Extinct"} Beastie Locations`}
+          >
+            <LayerGroup>
+              {EXTINCT_BEASTIES.map((extinct) => (
+                <SpecialBeastieMarker
+                  key={extinct.beastieId}
+                  position={extinct.position}
+                  target={BEASTIE_DATA.get(extinct.beastieId) as BeastieType}
+                />
+              ))}
+            </LayerGroup>
+          </LayersControl.Overlay>
+          <LayersControl.Overlay checked name="Metamorphosis Locations">
+            <LayerGroup>
+              {METAMORPH_LOCATIONS.map((metamorph) => (
+                <SpecialBeastieMarker
+                  key={metamorph.to}
+                  position={metamorph.position}
+                  target={BEASTIE_DATA.get(metamorph.to) as BeastieType}
+                  metamorph={{
+                    from: BEASTIE_DATA.get(metamorph.from) as BeastieType,
+                    by: metamorph.by,
+                  }}
+                />
+              ))}
+            </LayerGroup>
           </LayersControl.Overlay>
         </LayersControl>
         <Control position="topright">

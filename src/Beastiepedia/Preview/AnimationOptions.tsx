@@ -1,6 +1,5 @@
 import { BeastieType } from "../../data/BeastieData";
 import InfoBox from "../../shared/InfoBox";
-import styles from "./ContentPreview.module.css";
 
 type Props = {
   paused: boolean;
@@ -20,6 +19,7 @@ type Props = {
 };
 
 export default function AnimationOptions(props: Props): React.ReactElement {
+  const alt_nums = props.beastiedata.spr_alt.length > 1;
   return (
     <>
       <InfoBox header="Animation">
@@ -37,7 +37,8 @@ export default function AnimationOptions(props: Props): React.ReactElement {
               <option value="-1">Normal</option>
               {props.beastiedata.spr_alt.map((sprindex, index) => (
                 <option key={sprindex} value={index}>
-                  Alt {index + 1}
+                  Alternate
+                  {alt_nums ? ` ${index + 1}` : ""}
                 </option>
               ))}
             </select>
@@ -84,7 +85,7 @@ export default function AnimationOptions(props: Props): React.ReactElement {
             props.setFrame(Number(event.currentTarget.value));
           }}
         />
-        <div className={styles.middlealign}>
+        <div>
           <label htmlFor="speed">Speed: x</label>
           <input
             type="number"

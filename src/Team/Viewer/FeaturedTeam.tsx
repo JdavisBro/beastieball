@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { FeaturedTeamType } from "./FeaturedTeams";
 import styles from "./Teams.module.css";
-import BEASTIE_DATA from "../data/BeastieData";
+import BEASTIE_DATA from "../../data/BeastieData";
 import {
   SpoilerMode,
   useSpoilerMode,
   useSpoilerSeen,
-} from "../shared/useSpoiler";
+} from "../../shared/useSpoiler";
 
 const DESCRIPTION_MAX = 90;
 
@@ -40,7 +40,7 @@ export default function FeaturedTeam({
 
   return (
     <Link
-      to={`/teams/${team.team.code}`}
+      to={`/team/viewer/${team.team.code}`}
       onClick={handleClick}
       className={selected ? styles.featuredTeamSelected : styles.featuredTeam}
     >

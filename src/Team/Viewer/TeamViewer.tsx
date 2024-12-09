@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 
 import styles from "./Teams.module.css";
-import { Team } from "./Types";
-import Beastie from "./Beastie/Beastie.tsx";
-import BeastieRenderProvider from "../shared/beastieRender/BeastieRenderProvider";
-import MoveModalProvider from "../shared/MoveModalProvider";
-import Header from "../shared/Header";
-import OpenGraph from "../shared/OpenGraph";
+import { Team } from "../Types.ts";
+import Beastie from "../Beastie/Beastie.tsx";
+import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider.tsx";
+import MoveModalProvider from "../../shared/MoveModalProvider.tsx";
+import Header from "../../shared/Header.tsx";
+import OpenGraph from "../../shared/OpenGraph.tsx";
 import { useNavigate, useParams } from "react-router-dom";
-import type { FeaturedTeamType } from "./FeaturedTeams";
-import FeaturedTeam from "./FeaturedTeam";
+import type { FeaturedTeamType } from "./FeaturedTeams.ts";
+import FeaturedTeam from "./FeaturedTeam.tsx";
 
 declare global {
   interface Window {
@@ -31,7 +31,7 @@ function useFeaturedTeams() {
 
 const VALID_CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-export default function Teams() {
+export default function Viewer() {
   const { code }: { code?: string } = useParams();
   const [team, setTeam] = useState<Team | null>(null);
   const [error, setError] = useState(false);
@@ -41,7 +41,7 @@ export default function Teams() {
   const navigate = useNavigate();
   const setCode = (code: string) => {
     navigate(
-      `/teams/${code.toUpperCase().replace(/O/g, "0").replace(/#/g, "")}`,
+      `/team/viewer/${code.toUpperCase().replace(/O/g, "0").replace(/#/g, "")}`,
     );
     setError(false);
   };
@@ -93,12 +93,16 @@ export default function Teams() {
   return (
     <div>
       <OpenGraph
-        title={`Teams - ${import.meta.env.VITE_BRANDING}`}
+        title={`Team Viewer - ${import.meta.env.VITE_BRANDING}`}
         description="Online Team Viewer for Beastieball!"
         image="gameassets/sprMainmenu/20.png"
-        url="teams/"
+        url="team/viewer"
       />
-      <Header title="Teams" />
+      <Header
+        title="Team Viewer"
+        returnButtonTo="/team/"
+        returnButtonTitle={`${import.meta.env.VITE_BRANDING} Team Page`}
+      />
       <div className={styles.sectionheader}>
         <label>
           Team Code: <input type="text" ref={textInput} defaultValue={code} />

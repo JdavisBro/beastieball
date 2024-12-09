@@ -40,7 +40,11 @@ export default function TeamBuilder() {
         image="gameassets/sprMainmenu/20.png"
         url="teams/builder/"
       />
-      <Header title="Team Builder" />
+      <Header
+        title="Team Builder"
+        returnButtonTo="/team/"
+        returnButtonTitle={`${import.meta.env.VITE_BRANDING} Team Page`}
+      />
       <div className={styles.container}>
         <MoveModalProvider>
           <div className={styles.team}>

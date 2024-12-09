@@ -1,5 +1,10 @@
 import { lazy } from "react";
-import { useRouteError, type RouteObject } from "react-router-dom";
+import {
+  Navigate,
+  useParams,
+  useRouteError,
+  type RouteObject,
+} from "react-router-dom";
 import PageNotFound from "./PageNotFound";
 
 const Home = lazy(() => import("./Home"));
@@ -7,8 +12,9 @@ const Beastiepedia = lazy(() => import("./Beastiepedia/Beastiepedia"));
 const Playdex = lazy(() => import("./Playdex/Playdex"));
 const Map = lazy(() => import("./Map/Map"));
 const Beastdle = lazy(() => import("./Beastdle/Beastdle"));
-const Teams = lazy(() => import("./Teams/Teams"));
-const TeamBuilder = lazy(() => import("./Teams/Builder/TeamBuilder"));
+const Team = lazy(() => import("./Team/Team"));
+const TeamViewer = lazy(() => import("./Team/Viewer/TeamViewer"));
+const TeamBuilder = lazy(() => import("./Team/Builder/TeamBuilder"));
 const Modding = lazy(() => import("./Modding/Modding"));
 const Save = lazy(() => import("./Modding/Save/Save"));
 const Test = lazy(() => import("./Test"));
@@ -70,18 +76,42 @@ const routes: Array<RouteObject> = [
         element: <Beastdle />,
         path: "/beastdle/",
       },
+
+      // OLD TEAM VIEWER REDIRECT
       {
-        element: <Teams />,
+        element: <Navigate to="/team/viewer/" />,
         path: "/teams/",
       },
       {
-        element: <TeamBuilder />,
-        path: "/teams/builder/",
+        element: <Navigate to="/team/viewer/" />,
+        path: "/teams/viewer/",
       },
       {
-        element: <Teams />,
+        Component: () => <Navigate to={`/team/viewer/${useParams().code}`} />,
         path: "/teams/:code",
       },
+      {
+        element: <Navigate to="/team/builder/" />,
+        path: "/teams/builder/",
+      },
+
+      {
+        element: <Team />,
+        path: "/team/",
+      },
+      {
+        element: <TeamViewer />,
+        path: "/team/viewer/:code",
+      },
+      {
+        element: <TeamViewer />,
+        path: "/team/viewer/",
+      },
+      {
+        element: <TeamBuilder />,
+        path: "/team/builder/",
+      },
+
       {
         element: <Save />,
         path: "/modding/save/",

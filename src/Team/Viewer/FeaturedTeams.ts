@@ -1,4 +1,4 @@
-import { Team } from "./Types";
+import { Team } from "../Types";
 
 export type FeaturedTeamType = {
   team: Team;

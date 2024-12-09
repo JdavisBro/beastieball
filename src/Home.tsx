@@ -25,7 +25,7 @@ export default function Home(): React.ReactNode {
         text={"Teams"}
         image={"/gameassets/sprMainmenu/20.png"}
         hoverImage={"/gameassets/sprMainmenu/21.png"}
-        location={"/teams/"}
+        location={"/team/"}
       />
       {/* <NavigationMenuOption
         text={"Modding"}

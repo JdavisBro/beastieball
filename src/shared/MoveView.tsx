@@ -9,7 +9,7 @@ import { SpoilerMode, useFriendSpoiler, useSpoilerMode } from "./useSpoiler";
 
 // reuqired: targ=12 says Targets SIDEWAYS.
 
-const TARGET_STRINGS: { [key: number]: string } = {
+const TARGET_STRINGS: Record<number, string> = {
   0: "self",
   1: "ally",
   2: "active team",
@@ -17,9 +17,10 @@ const TARGET_STRINGS: { [key: number]: string } = {
   5: "target's ally",
   6: "entire team",
   7: "every fielded player",
+  8: "other team",
 };
 
-const ALT_TARGET_STRINGS: { [key: number]: string } = {
+const ALT_TARGET_STRINGS: Record<number, string> = {
   0: "self",
   1: "ally",
   2: "active team",
@@ -439,7 +440,7 @@ export default function MoveView(props: {
                   : undefined
               }
             >
-              <span className={styles.movefriendHeart}>{friend_hearts}</span>
+              <span>{friend_hearts}</span>
             </span>
           ) : null}
           {props.noLearner ? null : (

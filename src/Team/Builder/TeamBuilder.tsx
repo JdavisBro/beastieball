@@ -37,8 +37,8 @@ export default function TeamBuilder() {
       <OpenGraph
         title={`Team Builder - ${import.meta.env.VITE_BRANDING}`}
         description="Team Builder for Beastieball!"
-        image="gameassets/sprMainmenu/20.png"
-        url="teams/builder/"
+        image="gameassets/sprMainmenu/18.png"
+        url="team/builder/"
       />
       <Header
         title="Team Builder"

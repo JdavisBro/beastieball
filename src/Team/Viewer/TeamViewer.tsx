@@ -94,9 +94,9 @@ export default function Viewer() {
     <div>
       <OpenGraph
         title={`Team Viewer - ${import.meta.env.VITE_BRANDING}`}
-        description="Online Team Viewer for Beastieball!"
-        image="gameassets/sprMainmenu/20.png"
-        url="team/viewer"
+        description="Online Team Viewer for SportsNet download codes from Beastieball!"
+        image="gameassets/sprMainmenu/8.png"
+        url="team/viewer/"
       />
       <Header
         title="Team Viewer"

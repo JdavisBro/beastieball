@@ -21,6 +21,15 @@ export default function MoveSelect({
     setSelecting(undefined);
   };
 
+  const possibleMoves = beastieMovelist
+    .map((moveId) => MOVE_DIC[moveId])
+    .sort(
+      (move1, move2) =>
+        move1.type - move2.type ||
+        move2.pow - move1.pow ||
+        move1.name.localeCompare(move2.name),
+    );
+
   return (
     <div>
       <Modal
@@ -30,13 +39,13 @@ export default function MoveSelect({
         hashValue="SelectPlay"
       >
         <div className={styles.moveSelectModal}>
-          {beastieMovelist.map((moveId) => (
+          {possibleMoves.map((move) => (
             <div
-              key={moveId}
+              key={move.id}
               className={styles.moveSelectMove}
-              onClick={() => selectMove(moveId)}
+              onClick={() => selectMove(move.id)}
             >
-              <MoveView move={MOVE_DIC[moveId]} noLearner={true} />
+              <MoveView move={move} noLearner={true} />
             </div>
           ))}
         </div>

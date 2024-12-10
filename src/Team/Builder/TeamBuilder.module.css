@@ -12,8 +12,20 @@
   justify-content: center;
 }
 
+.teamScroll {
+  composes: team;
+  flex-wrap: nowrap;
+  justify-content: start;
+  padding: 10px;
+  overflow-x: auto;
+}
+
 .team > div {
   max-width: 350px;
+}
+
+.teamScroll > div {
+  flex: 0 0 auto;
 }
 
 .edit {

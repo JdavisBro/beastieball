@@ -9,6 +9,7 @@ import createBeastie from "./createBeastie";
 import EditBeastie from "./EditBeastie";
 import { useLocalStorage } from "usehooks-ts";
 import MoveModalProvider from "../../shared/MoveModalProvider";
+import useScreenOrientation from "../../utils/useScreenOrientation";
 
 export default function TeamBuilder() {
   const [team, setTeam] = useLocalStorage<TeamBeastie[]>("teamBuilderTeam", [
@@ -30,6 +31,11 @@ export default function TeamBuilder() {
 
   const [editingBeastie, setEditingBeastie] = useState(0);
 
+  const [teamScroll, setTeamScroll] = useLocalStorage(
+    "teamBuilderScroll",
+    useScreenOrientation(),
+  );
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   return (
@@ -47,7 +53,7 @@ export default function TeamBuilder() {
       />
       <div className={styles.container}>
         <MoveModalProvider>
-          <div className={styles.team}>
+          <div className={teamScroll ? styles.teamScroll : styles.team}>
             {team.map((beastie, index) => (
               <Fragment key={beastie.pid}>
                 <Beastie teamBeastie={beastie} />
@@ -68,6 +74,14 @@ export default function TeamBuilder() {
         </MoveModalProvider>
         <div className={styles.edit}>
           <div className={styles.editOptions}>
+            <label>
+              <input
+                type="checkbox"
+                defaultChecked={teamScroll}
+                onChange={(event) => setTeamScroll(event.currentTarget.checked)}
+              />
+              Team Scrolls Horizontally
+            </label>
             <input
               type="file"
               onChange={(event) => {

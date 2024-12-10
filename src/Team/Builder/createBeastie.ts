@@ -12,12 +12,12 @@ export function createPid() {
   return pid;
 }
 
-export default function createBeastie(): TeamBeastie {
+export default function createBeastie(number: string): TeamBeastie {
   return {
     pid: createPid(),
     specie: "shroom1",
     date: 1,
-    number: "01",
+    number: number,
     color: [0.5, 0.5, 0.5, 0.5, 0.5],
     name: "Sprecko",
     spr_index: 0,

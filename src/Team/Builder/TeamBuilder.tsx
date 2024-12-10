@@ -13,11 +13,11 @@ import useScreenOrientation from "../../utils/useScreenOrientation";
 
 export default function TeamBuilder() {
   const [team, setTeam] = useLocalStorage<TeamBeastie[]>("teamBuilderTeam", [
-    createBeastie(),
-    createBeastie(),
-    createBeastie(),
-    createBeastie(),
-    createBeastie(),
+    createBeastie("01"),
+    createBeastie("02"),
+    createBeastie("03"),
+    createBeastie("04"),
+    createBeastie("05"),
   ]);
 
   const setBeastie = (teamIndex: number, beastie: TeamBeastie) => {
@@ -56,7 +56,15 @@ export default function TeamBuilder() {
           <div className={teamScroll ? styles.teamScroll : styles.team}>
             {team.map((beastie, index) => (
               <Fragment key={beastie.pid}>
-                <Beastie teamBeastie={beastie} />
+                <div className={styles.beastieContainer}>
+                  <Beastie teamBeastie={beastie} />
+                  <button
+                    disabled={editingBeastie == index}
+                    onClick={() => setEditingBeastie(index)}
+                  >
+                    {editingBeastie == index ? "Editing" : "Edit"}
+                  </button>
+                </div>
                 {index != 4 ? (
                   <button
                     onClick={() => {
@@ -116,20 +124,6 @@ export default function TeamBuilder() {
                 Load Team JSON
               </button>
             </div>
-            <label>
-              Editing Beastie:{" "}
-              <select
-                onChange={(event) =>
-                  setEditingBeastie(Number(event.currentTarget.value))
-                }
-              >
-                <option value={0}>1 - {team[0].name}</option>
-                <option value={1}>2 - {team[1].name}</option>
-                <option value={2}>3 - {team[2].name}</option>
-                <option value={3}>4 - {team[3].name}</option>
-                <option value={4}>5 - {team[4].name}</option>
-              </select>
-            </label>
             <EditBeastie
               key={team[editingBeastie].pid + team[editingBeastie].specie}
               beastie={team[editingBeastie]}

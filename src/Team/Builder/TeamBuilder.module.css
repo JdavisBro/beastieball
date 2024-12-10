@@ -6,7 +6,7 @@
 .team {
   flex: 0 1 auto;
   display: flex;
-  padding-top: 10px;
+  padding: 10px 0 10px 0;
   gap: 2px;
   flex-wrap: wrap;
   justify-content: center;
@@ -20,12 +20,18 @@
   overflow-x: auto;
 }
 
-.team > div {
+.beastieContainer {
   max-width: 350px;
+  display: flex;
+  flex-direction: column;
 }
 
-.teamScroll > div {
+.teamScroll > .beastieContainer {
   flex: 0 0 auto;
+}
+
+.beastieContainer > div {
+  flex: 1 0 auto;
 }
 
 .edit {

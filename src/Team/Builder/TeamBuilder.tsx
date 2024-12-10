@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 
 import styles from "./TeamBuilder.module.css";
 import type { TeamBeastie } from "../Types";
@@ -30,7 +30,7 @@ export default function TeamBuilder() {
 
   const [editingBeastie, setEditingBeastie] = useState(0);
 
-  console.log(team[0]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   return (
     <>
@@ -68,6 +68,40 @@ export default function TeamBuilder() {
         </MoveModalProvider>
         <div className={styles.edit}>
           <div className={styles.editOptions}>
+            <input
+              type="file"
+              onChange={(event) => {
+                const files = event.currentTarget.files;
+                if (files) {
+                  files[0].text().then((text) => setTeam(JSON.parse(text)));
+                }
+              }}
+              accept=".json"
+              style={{ display: "none" }}
+              ref={fileInputRef}
+            />
+            <div>
+              <button
+                onClick={() => {
+                  const a = document.createElement("a");
+                  const blob = new Blob([JSON.stringify(team)]);
+                  a.download = "team.json";
+                  a.href = URL.createObjectURL(blob);
+                  a.click();
+                }}
+              >
+                Save Team JSON
+              </button>
+              <button
+                onClick={() => {
+                  if (fileInputRef.current) {
+                    fileInputRef.current.click();
+                  }
+                }}
+              >
+                Load Team JSON
+              </button>
+            </div>
             <label>
               Editing Beastie:{" "}
               <select
@@ -94,30 +128,6 @@ export default function TeamBuilder() {
                 )
               }
             />
-            <br />
-            <label>
-              Load JSON{" "}
-              <input
-                type="file"
-                onChange={(event) => {
-                  const files = event.currentTarget.files;
-                  if (files) {
-                    files[0].text().then((text) => setTeam(JSON.parse(text)));
-                  }
-                }}
-              />
-            </label>
-            <button
-              onClick={() => {
-                const a = document.createElement("a");
-                const blob = new Blob([JSON.stringify(team)]);
-                a.download = "team.json";
-                a.href = URL.createObjectURL(blob);
-                a.click();
-              }}
-            >
-              Save JSON
-            </button>
           </div>
         </div>
       </div>

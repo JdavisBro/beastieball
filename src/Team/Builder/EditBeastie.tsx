@@ -1,8 +1,8 @@
 import abilities from "../../data/abilities";
 import BEASTIE_DATA from "../../data/BeastieData";
-import MOVE_DIC from "../../data/MoveData";
 import BeastieSelect from "../../shared/BeastieSelect";
 import type { TeamBeastie } from "../Types";
+import MoveSelect from "./MoveSelect";
 
 export default function EditBeastie({
   beastie,
@@ -334,59 +334,14 @@ export default function EditBeastie({
           />
         </label>
       </div>
-      <div>
-        <Plays
-          attklist={beastiedata.attklist}
-          selected={beastie.attklist[0]}
-          setMove={(move) => {
-            beastie.attklist[0] = move;
-            changeValue("attklist", beastie.attklist);
-          }}
-        />
-        <Plays
-          attklist={beastiedata.attklist}
-          selected={beastie.attklist[1]}
-          setMove={(move) => {
-            beastie.attklist[1] = move;
-            changeValue("attklist", beastie.attklist);
-          }}
-        />
-        <Plays
-          attklist={beastiedata.attklist}
-          selected={beastie.attklist[2]}
-          setMove={(move) => {
-            beastie.attklist[2] = move;
-            changeValue("attklist", beastie.attklist);
-          }}
-        />
-      </div>
+      <MoveSelect
+        beastieMovelist={beastiedata.attklist}
+        teamBeastieMovelist={beastie.attklist}
+        setMove={(index, move) => {
+          beastie.attklist[index] = move;
+          changeValue("attklist", beastie.attklist);
+        }}
+      />
     </>
-  );
-}
-
-function Plays({
-  attklist,
-  selected,
-  setMove,
-}: {
-  attklist: string[];
-  selected: string;
-  setMove: (move: string) => void;
-}) {
-  return (
-    <select
-      defaultValue={selected}
-      onChange={(event) => setMove(event.currentTarget.value)}
-    >
-      {attklist
-        .sort((moveId, moveId2) =>
-          MOVE_DIC[moveId].name.localeCompare(MOVE_DIC[moveId2].name),
-        )
-        .map((moveId) => (
-          <option key={moveId} value={moveId}>
-            {MOVE_DIC[moveId].name}
-          </option>
-        ))}
-    </select>
   );
 }

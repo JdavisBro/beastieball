@@ -27,3 +27,19 @@
   gap: 4px;
   align-items: start;
 }
+
+.moveSelectModal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 4px;
+  justify-content: center;
+  max-width: round(down, calc(90vw - 40px), min(calc(90vw - 40px), 468px));
+}
+
+.moveSelectMove {
+  flex: 0 0 95%;
+  max-width: 460px;
+  width: 95%;
+  cursor: pointer;
+}

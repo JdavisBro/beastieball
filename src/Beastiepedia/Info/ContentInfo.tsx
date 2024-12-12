@@ -151,12 +151,20 @@ export default function ContentInfo(props: Props): React.ReactNode {
         <div className={styles.research}>
           <ResearchCarousel beastieid={beastiedata.id} />
         </div>
-        Researcher{Array.isArray(beastiedata.designer) ? "s" : ""}:{" "}
+        Researcher
+        {Array.isArray(beastiedata.designer) && beastiedata.designer.length > 1
+          ? "s"
+          : ""}
+        :{" "}
         {Array.isArray(beastiedata.designer)
           ? beastiedata.designer.map((i) => designers[i]).join(", ")
           : designers[beastiedata.designer]}
         <br />
-        Videographer{Array.isArray(beastiedata.animator) ? "s" : ""}:{" "}
+        Videographer
+        {Array.isArray(beastiedata.animator) && beastiedata.animator.length > 1
+          ? "s"
+          : ""}
+        :{" "}
         {Array.isArray(beastiedata.animator)
           ? beastiedata.animator.map((i) => designers[i]).join(", ")
           : designers[beastiedata.animator]}

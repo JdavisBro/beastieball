@@ -10,6 +10,7 @@ import EditBeastie from "./EditBeastie";
 import { useLocalStorage } from "usehooks-ts";
 import MoveModalProvider from "../../shared/MoveModalProvider";
 import useScreenOrientation from "../../utils/useScreenOrientation";
+import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider";
 
 export default function TeamBuilder() {
   const [team, setTeam] = useLocalStorage<TeamBeastie[]>("teamBuilderTeam", [
@@ -52,34 +53,36 @@ export default function TeamBuilder() {
         returnButtonTitle={`${import.meta.env.VITE_BRANDING} Team Page`}
       />
       <div className={styles.container}>
-        <MoveModalProvider>
-          <div className={teamScroll ? styles.teamScroll : styles.team}>
-            {team.map((beastie, index) => (
-              <Fragment key={beastie.pid}>
-                <div className={styles.beastieContainer}>
-                  <Beastie teamBeastie={beastie} />
-                  <button
-                    disabled={editingBeastie == index}
-                    onClick={() => setEditingBeastie(index)}
-                  >
-                    {editingBeastie == index ? "Editing" : "Edit"}
-                  </button>
-                </div>
-                {index != 4 ? (
-                  <button
-                    onClick={() => {
-                      const target = team[index + 1];
-                      setBeastie(index, target);
-                      setBeastie(index + 1, beastie);
-                    }}
-                  >
-                    ⇄
-                  </button>
-                ) : undefined}
-              </Fragment>
-            ))}
-          </div>
-        </MoveModalProvider>
+        <BeastieRenderProvider>
+          <MoveModalProvider>
+            <div className={teamScroll ? styles.teamScroll : styles.team}>
+              {team.map((beastie, index) => (
+                <Fragment key={beastie.pid}>
+                  <div className={styles.beastieContainer}>
+                    <Beastie teamBeastie={beastie} />
+                    <button
+                      disabled={editingBeastie == index}
+                      onClick={() => setEditingBeastie(index)}
+                    >
+                      {editingBeastie == index ? "Editing" : "Edit"}
+                    </button>
+                  </div>
+                  {index != 4 ? (
+                    <button
+                      onClick={() => {
+                        const target = team[index + 1];
+                        setBeastie(index, target);
+                        setBeastie(index + 1, beastie);
+                      }}
+                    >
+                      ⇄
+                    </button>
+                  ) : undefined}
+                </Fragment>
+              ))}
+            </div>
+          </MoveModalProvider>
+        </BeastieRenderProvider>
         <div className={styles.edit}>
           <div className={styles.editOptions}>
             <label>

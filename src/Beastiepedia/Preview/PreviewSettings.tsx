@@ -18,7 +18,7 @@ export default function PreviewSettings(props: Props): React.ReactElement {
   return (
     <>
       <InfoBox header="Settings" className={styles.previewSettings}>
-        <div className={styles.middlealign}>
+        <div>
           <button onClick={() => props.downloadImage()}>Save PNG</button>
           <button onClick={() => props.downloadImage(true)}>Copy PNG</button>
           <button onClick={props.downloadGif} disabled={props.gifDisabled}>
@@ -51,7 +51,7 @@ export default function PreviewSettings(props: Props): React.ReactElement {
             }}
           />
         </label>
-        <div className={styles.middlealign}>
+        <div>
           <label htmlFor="whitebg" style={{ userSelect: "none" }}>
             Background:
             <input

@@ -38,6 +38,8 @@ function defaultColor(
 type Props = {
   beastiedata: BeastieType;
   colorChange: (change_index: number, color: number[]) => void;
+  rowdy: boolean;
+  setRowdy: (rowdy: boolean) => void;
 };
 
 type StoredType = {
@@ -336,15 +338,23 @@ export default function ColorTabs(props: Props): React.ReactNode {
             Copy Link with Colors
           </button>
         </div>
-        <label>
-          Other Beastie Colors:{" "}
+        <label className={styles.taboffset}>
+          Rowdy:{" "}
+          <input
+            type="checkbox"
+            onChange={(event) => props.setRowdy(event.currentTarget.checked)}
+            checked={props.rowdy}
+          />
+        </label>
+        <div className={styles.taboffset}>
+          Palette Swap:{" "}
           <BeastieSelect
             beastieId={diffBeastieColors}
             setBeastieId={(beastieId: undefined | string) =>
               setDiffBeastieColors(beastieId ? beastieId : "none")
             }
-          />{" "}
-        </label>
+          />
+        </div>
       </div>
     </>
   );

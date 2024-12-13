@@ -49,6 +49,10 @@
   width: 100%;
 }
 
+.taboffset {
+  margin-left: 4px;
+}
+
 .colorslider {
   margin-bottom: 6px;
   width: 100%;

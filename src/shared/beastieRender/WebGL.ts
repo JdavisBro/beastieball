@@ -1,5 +1,6 @@
 import vertex from "./vertex.glsl?raw";
 import fragment from "./fragment.glsl?raw";
+import rowdyFragment from "./rowdyFragment.glsl?raw";
 
 export class WebGLError extends Error {
   constructor(msg: string) {
@@ -8,13 +9,13 @@ export class WebGLError extends Error {
   }
 }
 
-export default function setupWebGL(canvas: HTMLCanvasElement) {
+export default function setupWebGL(canvas: HTMLCanvasElement, rowdy?: boolean) {
   const gl = canvas.getContext("webgl", { preserveDrawingBuffer: true });
   if (!gl) {
     throw new WebGLError("No WebGL.");
   }
 
-  const program = createProgram(gl, vertex, fragment);
+  const program = createProgram(gl, vertex, rowdy ? rowdyFragment : fragment);
 
   createTexCoordAttribute(gl, program);
   createPositionAttribute(gl, program);

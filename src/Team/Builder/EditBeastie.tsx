@@ -158,7 +158,7 @@ export default function EditBeastie({
           <input
             type="number"
             min={0}
-            max={30}
+            max={100}
             defaultValue={beastie.ha_r * 100}
             onChange={(event) =>
               changeValue("ha_r", Number(event.currentTarget.value) / 100)
@@ -172,7 +172,7 @@ export default function EditBeastie({
           <input
             type="number"
             min={0}
-            max={30}
+            max={100}
             defaultValue={beastie.hd_r * 100}
             onChange={(event) =>
               changeValue("hd_r", Number(event.currentTarget.value) / 100)
@@ -187,7 +187,7 @@ export default function EditBeastie({
           <input
             type="number"
             min={0}
-            max={30}
+            max={100}
             defaultValue={beastie.ma_r * 100}
             onChange={(event) =>
               changeValue("ma_r", Number(event.currentTarget.value) / 100)
@@ -201,7 +201,7 @@ export default function EditBeastie({
           <input
             type="number"
             min={0}
-            max={30}
+            max={100}
             defaultValue={beastie.md_r * 100}
             onChange={(event) =>
               changeValue("md_r", Number(event.currentTarget.value) / 100)

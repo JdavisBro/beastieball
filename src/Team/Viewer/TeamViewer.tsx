@@ -37,6 +37,7 @@ export default function Viewer() {
   const [error, setError] = useState(false);
   const [isLevelOverwritten, setIsLevelOverwritten] = useState(false);
   const [levelOverwrite, setLevelOverwrite] = useState(50);
+  const [maxCoaching, setMaxCoaching] = useState(false);
 
   const navigate = useNavigate();
   const setCode = (code: string) => {
@@ -137,6 +138,7 @@ export default function Viewer() {
                     levelOverwrite={
                       isLevelOverwritten ? levelOverwrite : undefined
                     }
+                    maxCoaching={maxCoaching}
                   />
                 ))
               : null}
@@ -162,6 +164,29 @@ export default function Viewer() {
             defaultValue={50}
           />
         </label>
+        {" - "}
+        <label>
+          <input
+            type="checkbox"
+            onChange={(event) => setMaxCoaching(event.currentTarget.checked)}
+          />
+          Max Coaching
+        </label>
+        {" - "}
+        <button
+          onClick={() => {
+            if (team) {
+              localStorage.setItem(
+                "teamBuilderTeam",
+                JSON.stringify(team.team),
+              );
+              navigate("/team/builder/");
+            }
+          }}
+          disabled={!team}
+        >
+          Open in Team Builder
+        </button>
       </div>
       <div className={styles.sectionheader}>Featured Teams</div>
       <div className={styles.featuredList}>

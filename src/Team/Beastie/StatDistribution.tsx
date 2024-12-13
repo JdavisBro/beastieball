@@ -91,10 +91,12 @@ export default function StatDistribution({
   teamBeastie,
   beastiedata,
   level,
+  maxCoaching,
 }: {
   teamBeastie: TeamBeastie;
   beastiedata: BeastieType;
   level: number;
+  maxCoaching?: boolean;
 }) {
   const maxPow = statCalc(
     Math.max(beastiedata.ba, beastiedata.ha, beastiedata.ma),
@@ -121,8 +123,8 @@ export default function StatDistribution({
         baseDef={beastiedata.bd}
         trainingPow={teamBeastie.ba_t}
         trainingDef={teamBeastie.bd_t}
-        coachingPow={teamBeastie.ba_r}
-        coachingDef={teamBeastie.bd_r}
+        coachingPow={maxCoaching ? 1 : teamBeastie.ba_r}
+        coachingDef={maxCoaching ? 1 : teamBeastie.bd_r}
         maxPow={maxPow}
         maxDef={maxDef}
         level={level}
@@ -133,8 +135,8 @@ export default function StatDistribution({
         baseDef={beastiedata.hd}
         trainingPow={teamBeastie.ha_t}
         trainingDef={teamBeastie.hd_t}
-        coachingPow={teamBeastie.ha_r}
-        coachingDef={teamBeastie.hd_r}
+        coachingPow={maxCoaching ? 1 : teamBeastie.ha_r}
+        coachingDef={maxCoaching ? 1 : teamBeastie.hd_r}
         maxPow={maxPow}
         maxDef={maxDef}
         level={level}
@@ -145,8 +147,8 @@ export default function StatDistribution({
         baseDef={beastiedata.md}
         trainingPow={teamBeastie.ma_t}
         trainingDef={teamBeastie.md_t}
-        coachingPow={teamBeastie.ma_r}
-        coachingDef={teamBeastie.md_r}
+        coachingPow={maxCoaching ? 1 : teamBeastie.ma_r}
+        coachingDef={maxCoaching ? 1 : teamBeastie.md_r}
         maxPow={maxPow}
         maxDef={maxDef}
         level={level}

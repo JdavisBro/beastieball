@@ -24,9 +24,11 @@ const altSearchMap: { [key: number]: string } = {
 export default function Beastie({
   teamBeastie,
   levelOverwrite,
+  maxCoaching,
 }: {
   teamBeastie: TeamBeastie;
   levelOverwrite?: number;
+  maxCoaching?: boolean;
 }) {
   const beastiedata = BEASTIE_DATA.get(teamBeastie.specie);
   if (!beastiedata) {
@@ -100,6 +102,7 @@ export default function Beastie({
             teamBeastie={teamBeastie}
             beastiedata={beastiedata}
             level={level}
+            maxCoaching={maxCoaching}
           />
           <div className={styles.column}>
             <span className={styles.graytext}>{ability.name}</span>

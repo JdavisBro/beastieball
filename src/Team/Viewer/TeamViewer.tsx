@@ -89,6 +89,13 @@ export default function Viewer() {
   // Lazy Load Featured Teams.
   const featuredTeams = useFeaturedTeams();
 
+  useEffect(() => {
+    const featuredTeam = featuredTeams.find((team) => code == team.team.code);
+    if (featuredTeam) {
+      setTeam(featuredTeam.team);
+    }
+  }, [featuredTeams, code]);
+
   const selectedFeatured = featuredTeams.find((team) => code == team.team.code);
 
   return (
@@ -120,7 +127,7 @@ export default function Viewer() {
         </button>
       </div>
       <div className={styles.sectionheader}>
-        {error ? `Invalid Code: ${code}` : null}
+        {error && !selectedFeatured ? `Invalid Code: ${code}` : null}
       </div>
       <div className={styles.sectionheader}>
         {team

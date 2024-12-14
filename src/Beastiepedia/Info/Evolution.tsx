@@ -94,6 +94,16 @@ function EvoCondition({
       return `at ${LOCATION_CONDS[specie] ?? "somewhere"}`;
     case 3:
       return `after forming ${value} relationships`;
+    case 4:
+      return (
+        <>
+          at level {value} after fulfilling the Yearning.
+          <EvoCondInfo>
+            - The yearning will appear after enough trust is reached.
+            <br />- Trust is raised when the Beastie is on-field during a game.
+          </EvoCondInfo>
+        </>
+      );
     case 5:
     case 6: {
       const snow = condition == 6;

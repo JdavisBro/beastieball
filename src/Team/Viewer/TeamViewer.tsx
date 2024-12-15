@@ -8,7 +8,7 @@ import MoveModalProvider from "../../shared/MoveModalProvider.tsx";
 import Header from "../../shared/Header.tsx";
 import OpenGraph from "../../shared/OpenGraph.tsx";
 import { useNavigate, useParams } from "react-router-dom";
-import type { FeaturedTeamType } from "./FeaturedTeams.ts";
+import type { FeaturedCategory, FeaturedTeamType } from "./FeaturedTeams";
 import FeaturedTeam from "./FeaturedTeam.tsx";
 
 declare global {
@@ -18,7 +18,7 @@ declare global {
 }
 
 function useFeaturedTeams() {
-  const [featuredTeams, setFeaturedTeams] = useState<FeaturedTeamType[]>([]);
+  const [featuredTeams, setFeaturedTeams] = useState<FeaturedCategory[]>([]);
 
   useEffect(() => {
     import("./FeaturedTeams.ts").then((module) =>
@@ -30,6 +30,22 @@ function useFeaturedTeams() {
 }
 
 const VALID_CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+function findFeatured(
+  code: string | undefined,
+  featuredTeams: FeaturedCategory[],
+): undefined[] | [string, FeaturedTeamType] {
+  if (!code) {
+    return [undefined, undefined];
+  }
+  for (const category of featuredTeams) {
+    const featuredTeam = category.teams.find((team) => code == team.team.code);
+    if (featuredTeam) {
+      return [category.header, featuredTeam];
+    }
+  }
+  return [undefined, undefined];
+}
 
 export default function Viewer() {
   const { code }: { code?: string } = useParams();
@@ -88,20 +104,22 @@ export default function Viewer() {
 
   // Lazy Load Featured Teams.
   const featuredTeams = useFeaturedTeams();
+  const [featuredTeamTab, setFeaturedTeamTab] = useState(0);
 
+  const [selectedCategoryName, selectedFeatured] = findFeatured(
+    code,
+    featuredTeams,
+  );
   useEffect(() => {
-    const featuredTeam = featuredTeams.find((team) => code == team.team.code);
-    if (featuredTeam) {
-      setTeam(featuredTeam.team);
+    if (selectedFeatured) {
+      setTeam(selectedFeatured.team);
     }
-  }, [featuredTeams, code]);
-
-  const selectedFeatured = featuredTeams.find((team) => code == team.team.code);
+  }, [selectedFeatured]);
 
   return (
     <div>
       <OpenGraph
-        title={`Team Viewer - ${import.meta.env.VITE_BRANDING}`}
+        title={`${selectedFeatured ? `${selectedFeatured.name} - ` : ""}Team Viewer - ${import.meta.env.VITE_BRANDING}`}
         description="Online Team Viewer for SportsNet download codes from Beastieball!"
         image="gameassets/sprMainmenu/8.png"
         url="team/viewer/"
@@ -131,7 +149,7 @@ export default function Viewer() {
       </div>
       <div className={styles.sectionheader}>
         {team
-          ? `${team.code}${selectedFeatured ? ` - ${selectedFeatured.name}` : ""}`
+          ? `${team.code}${selectedFeatured ? ` - ${selectedCategoryName} - ${selectedFeatured.name}` : ""}`
           : ""}
       </div>
       <div className={styles.team}>
@@ -195,9 +213,27 @@ export default function Viewer() {
           Open in Team Builder
         </button>
       </div>
-      <div className={styles.sectionheader}>Featured Teams</div>
+      <br />
+      <div className={styles.categorybg}>
+        {featuredTeams?.map((category, index) => (
+          <button
+            key={category.header}
+            className={
+              index == featuredTeamTab
+                ? styles.categorybuttonSelected
+                : styles.categorybutton
+            }
+            onClick={() => setFeaturedTeamTab(index)}
+          >
+            {category.header}
+          </button>
+        ))}
+      </div>
+      <div className={styles.sectionheader}>
+        {featuredTeams[featuredTeamTab]?.description ?? ""}
+      </div>
       <div className={styles.featuredList}>
-        {featuredTeams.map((featuredteam) => (
+        {featuredTeams[featuredTeamTab]?.teams.map((featuredteam) => (
           <FeaturedTeam
             key={featuredteam.name}
             team={featuredteam}

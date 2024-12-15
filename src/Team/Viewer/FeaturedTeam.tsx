@@ -8,7 +8,7 @@ import {
   useSpoilerSeen,
 } from "../../shared/useSpoiler";
 
-const DESCRIPTION_MAX = 90;
+const DESCRIPTION_MAX = 115;
 
 export default function FeaturedTeam({
   team,
@@ -93,7 +93,8 @@ export default function FeaturedTeam({
         })}
       </div>
       <div>
-        By {team.author} - #{team.team.code}
+        By {team.author}
+        {team.builder ? "" : ` - #${team.team.code}`}
       </div>
     </Link>
   );

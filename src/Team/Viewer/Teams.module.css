@@ -83,3 +83,33 @@
   font-size: 0.9em;
   text-align: center;
 }
+
+.categorybg {
+  composes: sectionheader;
+  composes: boxHeaderBackground from global;
+  width: fit-content;
+  margin: auto;
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+  margin-bottom: 6px;
+}
+
+.categorybutton {
+  font-family: inherit;
+  font-size: 1em;
+  background-color: transparent;
+  transition: background-color 0.2s;
+  border: none;
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+  height: 100%;
+  padding: 4px 8px 4px 8px;
+}
+
+.categorybutton:hover {
+  background-color: #ffaa556b;
+}
+
+.categorybuttonSelected {
+  composes: categorybutton;
+  background-color: #ffaa55a8 !important;
+}

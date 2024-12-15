@@ -949,7 +949,7 @@
       [47, 2, 1, 29, 0, 6],
       [52, 1, 1, 8, 1, 0.5]
     ],
-    "desc": "They live at high elevations, absorbing moisture from clouds. They communicate with flashes of light from their antenna.",
+    "desc": "They live at high elevations, absorbing moisture from clouds. They communicate with flashes of light from their antennae.",
     "designer": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -19395,7 +19395,7 @@
     "ba": 55,
     "base_exp": 208.75,
     "bd": 45,
-    "body_color_index": 0,
+    "body_color_index": 2,
     "colormeta": null,
     "colors": [
       {

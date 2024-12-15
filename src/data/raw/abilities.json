@@ -41,7 +41,7 @@
   },
   "multiscale": {
     "id": "multiscale",
-    "desc": "DEF x1.5 when STAMINA is 100",
+    "desc": "DEF x1.5 when STAMINA is filled",
     "name": "Armored"
   },
   "lightningrod_m": {
@@ -366,7 +366,7 @@
   },
   "technician": {
     "id": "technician",
-    "desc": "Moves with 60POW do 1.5x damage",
+    "desc": "Moves with 60POW or less do 1.5x damage",
     "name": "Crafty"
   },
   "wither": {
@@ -376,7 +376,7 @@
   },
   "crowddef": {
     "id": "crowddef",
-    "desc": "While field has RALLY, [sprIcon,0][sprIcon,1][sprIcon,2]DEF x1.3",
+    "desc": "DEF x1.3 while field has RALLY",
     "name": "Performer"
   },
   "fetch": {
@@ -436,7 +436,7 @@
   },
   "defender": {
     "id": "defender",
-    "desc": "Defenses are 1.3x stronger while any ally is [sprStatus,5]WIPED",
+    "desc": "DEF x1.3 while any ally is [sprStatus,5]WIPED",
     "name": "Survivor"
   },
   "shy": {

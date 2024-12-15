@@ -29,6 +29,9 @@ export default function BeastieRenderProvider(
   const frame = useCallback(() => {
     if (renderJobs.current.length > 0) {
       jobsRef.current[renderJobs.current[0]](false);
+      if (jobsRef.current) {
+        requestAnimationFrame(frame);
+      }
     }
   }, []);
 
@@ -57,15 +60,23 @@ export default function BeastieRenderProvider(
 
         const beastie_data = BEASTIE_DATA.get(beastie.id);
         if (!beastie_data) {
+          console.log("Beastie render failed. Fake beastie");
           return null;
         }
         const sprite = SPRITE_INFO[beastie_data.spr];
         const sprAlt = beastie.sprAlt;
-        const drawn_name = !sprAlt
-          ? beastie_data.spr
-          : beastie_data.spr_alt[sprAlt - 1];
+        const drawn_name =
+          !sprAlt || sprAlt > beastie_data.spr_alt.length
+            ? beastie_data.spr
+            : beastie_data.spr_alt[sprAlt - 1];
         const drawn_sprite = SPRITE_INFO[drawn_name];
         if (!sprite || !drawn_sprite) {
+          console.log(
+            "Beastie render failed. SPRITE: ",
+            !!sprite,
+            "DRAWN_SPRITE: ",
+            !!drawn_sprite,
+          );
           return null;
         }
         const animations = BEASTIE_ANIMATIONS.get(`_${beastie_data.spr}`);
@@ -110,9 +121,6 @@ export default function BeastieRenderProvider(
         context.drawImage(canvasRef.current, -sprite_bbox.x, -sprite_bbox.y);
         const url = cropCanvasRef.current.toDataURL();
 
-        if (jobsRef.current) {
-          requestAnimationFrame(frame);
-        }
         return url;
       };
 

@@ -8,6 +8,7 @@ import {
   useSpoilerSeen,
 } from "../../shared/useSpoiler";
 
+const LONG_NAME_LENGTH = 45;
 const DESCRIPTION_MAX = 115;
 
 export default function FeaturedTeam({
@@ -44,7 +45,13 @@ export default function FeaturedTeam({
       onClick={handleClick}
       className={selected ? styles.featuredTeamSelected : styles.featuredTeam}
     >
-      <div>{team.name}</div>
+      <div
+        style={{
+          fontSize: `${Math.min(1, LONG_NAME_LENGTH / team.name.length)}em`,
+        }}
+      >
+        {team.name}
+      </div>
       <div className={styles.featuredDesc}>
         <div>
           {team.description.slice(0, DESCRIPTION_MAX).trimEnd()}

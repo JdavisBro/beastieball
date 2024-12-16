@@ -32,14 +32,19 @@
 
 .controlContent {
   display: none;
-}
-
-.controlBox:hover .controlContent {
-  display: flex;
   flex-direction: column;
   font-size: 1.08333em;
   align-items: end;
   margin: 6px;
+}
+
+.controlContent:has(dialog[open]) {
+  /* if modal is open DO NOT go display: none otherwise everything breaks */
+  display: flex;
+}
+
+.controlBox:hover .controlContent {
+  display: flex;
 }
 
 .controlContent > h3 {

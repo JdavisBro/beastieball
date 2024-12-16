@@ -1,4 +1,4 @@
-import { FeaturedTeamType } from "../FeaturedTeams";
+import { FeaturedTeamType } from "../FeaturedCategories";
 
 const teams: FeaturedTeamType[] = [
   {

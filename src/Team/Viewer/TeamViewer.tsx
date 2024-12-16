@@ -8,7 +8,10 @@ import MoveModalProvider from "../../shared/MoveModalProvider.tsx";
 import Header from "../../shared/Header.tsx";
 import OpenGraph from "../../shared/OpenGraph.tsx";
 import { useNavigate, useParams } from "react-router-dom";
-import type { FeaturedCategory, FeaturedTeamType } from "./FeaturedTeams";
+import type {
+  FeaturedCategory,
+  FeaturedTeamType,
+} from "./FeaturedCategories.ts";
 import FeaturedTeam from "./FeaturedTeam.tsx";
 
 declare global {
@@ -17,28 +20,30 @@ declare global {
   }
 }
 
-function useFeaturedTeams() {
-  const [featuredTeams, setFeaturedTeams] = useState<FeaturedCategory[]>([]);
+function useFeaturedCategories() {
+  const [featuredCategories, setFeaturedCategories] = useState<
+    FeaturedCategory[]
+  >([]);
 
   useEffect(() => {
-    import("./FeaturedTeams.ts").then((module) =>
-      setFeaturedTeams(module.default),
+    import("./FeaturedCategories.ts").then((module) =>
+      setFeaturedCategories(module.default),
     );
   });
 
-  return featuredTeams;
+  return featuredCategories;
 }
 
 const VALID_CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 function findFeatured(
   code: string | undefined,
-  featuredTeams: FeaturedCategory[],
+  featuredCategories: FeaturedCategory[],
 ): undefined[] | [string, FeaturedTeamType] {
   if (!code) {
     return [undefined, undefined];
   }
-  for (const category of featuredTeams) {
+  for (const category of featuredCategories) {
     const featuredTeam = category.teams.find((team) => code == team.team.code);
     if (featuredTeam) {
       return [category.header, featuredTeam];
@@ -103,12 +108,12 @@ export default function Viewer() {
   }, [code, team?.code]);
 
   // Lazy Load Featured Teams.
-  const featuredTeams = useFeaturedTeams();
-  const [featuredTeamTab, setFeaturedTeamTab] = useState(0);
+  const featuredCategories = useFeaturedCategories();
+  const [featuredTab, setFeaturedTab] = useState(0);
 
   const [selectedCategoryName, selectedFeatured] = findFeatured(
     code,
-    featuredTeams,
+    featuredCategories,
   );
   useEffect(() => {
     if (selectedFeatured) {
@@ -215,25 +220,25 @@ export default function Viewer() {
       </div>
       <br />
       <div className={styles.categorybg}>
-        {featuredTeams?.map((category, index) => (
+        {featuredCategories?.map((category, index) => (
           <button
             key={category.header}
             className={
-              index == featuredTeamTab
+              index == featuredTab
                 ? styles.categorybuttonSelected
                 : styles.categorybutton
             }
-            onClick={() => setFeaturedTeamTab(index)}
+            onClick={() => setFeaturedTab(index)}
           >
             {category.header}
           </button>
         ))}
       </div>
       <div className={styles.sectionheader}>
-        {featuredTeams[featuredTeamTab]?.description ?? ""}
+        {featuredCategories[featuredTab]?.description ?? ""}
       </div>
       <div className={styles.featuredList}>
-        {featuredTeams[featuredTeamTab]?.teams.map((featuredteam) => (
+        {featuredCategories[featuredTab]?.teams.map((featuredteam) => (
           <FeaturedTeam
             key={featuredteam.name}
             team={featuredteam}

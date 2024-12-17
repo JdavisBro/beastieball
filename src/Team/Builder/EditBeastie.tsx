@@ -4,6 +4,15 @@ import BeastieSelect from "../../shared/BeastieSelect";
 import type { TeamBeastie } from "../Types";
 import MoveSelect from "./MoveSelect";
 
+const TYPES = [
+  ["b", "Body"],
+  ["h", "Spirit"],
+  ["m", "Mind"],
+];
+
+type COACHING = "ba_r" | "bd_r" | "ha_r" | "hd_r" | "ma_r" | "md_r";
+type TRAINING = "ba_t" | "bd_t" | "ha_t" | "hd_t" | "ma_t" | "md_t";
+
 export default function EditBeastie({
   beastie,
   setBeastie,
@@ -22,7 +31,6 @@ export default function EditBeastie({
     return null;
   }
   const extraPoints = Math.min(
-    30,
     Math.max(
       0,
       Math.ceil(
@@ -37,6 +45,13 @@ export default function EditBeastie({
       ),
     ),
   );
+
+  const setAllCoaching = (value: number) => {
+    TYPES.map(([char]) => {
+      changeValue((char + "a_r") as COACHING, value);
+      changeValue((char + "d_r") as COACHING, value);
+    });
+  };
 
   return (
     <>
@@ -122,218 +137,107 @@ export default function EditBeastie({
           ))}
         </select>
       </label>
-      <div>Coaching</div>
       <div>
-        <label>
-          Body POW{" "}
-          <input
-            type="number"
-            min={0}
-            max={100}
-            defaultValue={beastie.ba_r * 100}
-            onChange={(event) =>
-              changeValue("ba_r", Number(event.currentTarget.value) / 100)
-            }
-          />
-          %
-        </label>
-        {" - "}
-        <label>
-          Body DEF{" "}
-          <input
-            type="number"
-            min={0}
-            max={100}
-            defaultValue={beastie.bd_r * 100}
-            onChange={(event) =>
-              changeValue("bd_r", Number(event.currentTarget.value) / 100)
-            }
-          />
-          %
-        </label>
+        Coaching - <button onClick={() => setAllCoaching(0)}>All to 0%</button>{" "}
+        - <button onClick={() => setAllCoaching(1)}>All to 100%</button>
       </div>
+      {TYPES.map(([char, name]) => {
+        const pow_key = (char + "a_r") as COACHING;
+        const def_key = (char + "d_r") as COACHING;
+        return (
+          <div key={char}>
+            <label>
+              {name} POW{" "}
+              <input
+                type="number"
+                min={0}
+                max={100}
+                value={Math.round(beastie[pow_key] * 100000) / 1000}
+                onChange={(event) =>
+                  changeValue(pow_key, Number(event.currentTarget.value) / 100)
+                }
+              />
+              %
+            </label>
+            {" - "}
+            <label>
+              {name} DEF{" "}
+              <input
+                type="number"
+                min={0}
+                max={100}
+                value={Math.round(beastie[def_key] * 100000) / 1000}
+                onChange={(event) =>
+                  changeValue(def_key, Number(event.currentTarget.value) / 100)
+                }
+              />
+              %
+            </label>
+          </div>
+        );
+      })}
       <div>
-        <label>
-          Spirit POW{" "}
-          <input
-            type="number"
-            min={0}
-            max={100}
-            defaultValue={beastie.ha_r * 100}
-            onChange={(event) =>
-              changeValue("ha_r", Number(event.currentTarget.value) / 100)
-            }
-          />
-          %
-        </label>
-        {" - "}
-        <label>
-          Spirit DEF{" "}
-          <input
-            type="number"
-            min={0}
-            max={100}
-            defaultValue={beastie.hd_r * 100}
-            onChange={(event) =>
-              changeValue("hd_r", Number(event.currentTarget.value) / 100)
-            }
-          />
-          %
-        </label>
+        Training - {extraPoints} Point{extraPoints == 1 ? "" : "s"} Left -{" "}
+        <button
+          onClick={() => {
+            TYPES.map(([char]) => {
+              changeValue((char + "a_t") as TRAINING, 0);
+              changeValue((char + "d_t") as TRAINING, 0);
+            });
+          }}
+        >
+          Clear
+        </button>
       </div>
-      <div>
-        <label>
-          Mind POW{" "}
-          <input
-            type="number"
-            min={0}
-            max={100}
-            defaultValue={beastie.ma_r * 100}
-            onChange={(event) =>
-              changeValue("ma_r", Number(event.currentTarget.value) / 100)
-            }
-          />
-          %
-        </label>
-        {" - "}
-        <label>
-          Mind DEF{" "}
-          <input
-            type="number"
-            min={0}
-            max={100}
-            defaultValue={beastie.md_r * 100}
-            onChange={(event) =>
-              changeValue("md_r", Number(event.currentTarget.value) / 100)
-            }
-          />
-          %
-        </label>
-      </div>
-      <div>Training</div>
-      <div>
-        <label>
-          Body POW +
-          <input
-            type="number"
-            min={0}
-            max={Math.min(Math.floor(beastie.ba_t / 4) + extraPoints, 30)}
-            defaultValue={Math.floor(beastie.ba_t / 4)}
-            onChange={(event) =>
-              changeValue(
-                "ba_t",
-                Math.min(
-                  Math.floor(beastie.ba_t / 4) + extraPoints,
-                  30,
-                  Number(event.currentTarget.value),
-                ) * 4,
-              )
-            }
-          />
-        </label>
-        {" - "}
-        <label>
-          Body DEF +
-          <input
-            type="number"
-            min={0}
-            max={Math.min(Math.floor(beastie.bd_t / 4) + extraPoints, 30)}
-            defaultValue={Math.floor(beastie.bd_t / 4)}
-            onChange={(event) =>
-              changeValue(
-                "bd_t",
-                Math.min(
-                  Math.floor(beastie.bd_t / 4) + extraPoints,
-                  30,
-                  Number(event.currentTarget.value),
-                ) * 4,
-              )
-            }
-          />
-        </label>
-      </div>
-      <div>
-        <label>
-          Spirit POW +
-          <input
-            type="number"
-            min={0}
-            max={Math.min(Math.floor(beastie.ha_t / 4) + extraPoints, 30)}
-            defaultValue={Math.floor(beastie.ha_t / 4)}
-            onChange={(event) =>
-              changeValue(
-                "ha_t",
-                Math.min(
-                  Math.floor(beastie.ha_t / 4) + extraPoints,
-                  30,
-                  Number(event.currentTarget.value),
-                ) * 4,
-              )
-            }
-          />
-        </label>
-        {" - "}
-        <label>
-          Spirit DEF +
-          <input
-            type="number"
-            min={0}
-            max={Math.min(Math.floor(beastie.hd_t / 4) + extraPoints, 30)}
-            defaultValue={Math.floor(beastie.hd_t / 4)}
-            onChange={(event) =>
-              changeValue(
-                "hd_t",
-                Math.min(
-                  Math.floor(beastie.hd_t / 4) + extraPoints,
-                  30,
-                  Number(event.currentTarget.value),
-                ) * 4,
-              )
-            }
-          />
-        </label>
-      </div>
-      <div>
-        <label>
-          Mind POW +
-          <input
-            type="number"
-            min={0}
-            max={Math.min(Math.floor(beastie.ma_t / 4) + extraPoints, 30)}
-            defaultValue={Math.floor(beastie.ma_t / 4)}
-            onChange={(event) =>
-              changeValue(
-                "ma_t",
-                Math.min(
-                  Math.floor(beastie.ma_t / 4) + extraPoints,
-                  30,
-                  Number(event.currentTarget.value),
-                ) * 4,
-              )
-            }
-          />
-        </label>
-        {" - "}
-        <label>
-          Mind DEF +
-          <input
-            type="number"
-            min={0}
-            max={Math.min(Math.floor(beastie.md_t / 4) + extraPoints, 30)}
-            defaultValue={Math.floor(beastie.md_t / 4)}
-            onChange={(event) =>
-              changeValue(
-                "md_t",
-                Math.min(
-                  Math.floor(beastie.md_t / 4) + extraPoints,
-                  30,
-                  Number(event.currentTarget.value),
-                ) * 4,
-              )
-            }
-          />
-        </label>
-      </div>
+      {TYPES.map(([char, name]) => {
+        const pow_key = (char + "a_t") as TRAINING;
+        const pow_val = beastie[pow_key];
+        const def_key = (char + "d_t") as TRAINING;
+        const def_val = beastie[def_key];
+        return (
+          <div key={char}>
+            <label>
+              {name} POW +
+              <input
+                type="number"
+                min={0}
+                max={Math.min(Math.floor(pow_val / 4) + extraPoints, 30)}
+                value={Math.floor(pow_val / 4)}
+                onChange={(event) =>
+                  changeValue(
+                    pow_key,
+                    Math.min(
+                      Math.floor(pow_val / 4) + extraPoints,
+                      30,
+                      Number(event.currentTarget.value),
+                    ) * 4,
+                  )
+                }
+              />
+            </label>
+            {" - "}
+            <label>
+              {name} DEF +
+              <input
+                type="number"
+                min={0}
+                max={Math.min(Math.floor(def_val / 4) + extraPoints, 30)}
+                value={Math.floor(def_val / 4)}
+                onChange={(event) =>
+                  changeValue(
+                    def_key,
+                    Math.min(
+                      Math.floor(def_val / 4) + extraPoints,
+                      30,
+                      Number(event.currentTarget.value),
+                    ) * 4,
+                  )
+                }
+              />
+            </label>
+          </div>
+        );
+      })}
       <MoveSelect
         beastieMovelist={beastiedata.attklist}
         teamBeastieMovelist={beastie.attklist}

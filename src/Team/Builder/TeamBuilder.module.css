@@ -62,3 +62,33 @@
   width: 95%;
   cursor: pointer;
 }
+
+.savedTeams {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 6px;
+}
+
+.savedTeamName {
+  color: inherit;
+  border: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.savedTeamBeasties {
+  display: flex;
+}
+
+.savedTeamBeasties > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.savedTeamBeasties img {
+  width: 60px;
+}

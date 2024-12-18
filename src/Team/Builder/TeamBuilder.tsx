@@ -11,6 +11,7 @@ import { useLocalStorage } from "usehooks-ts";
 import MoveModalProvider from "../../shared/MoveModalProvider";
 import useScreenOrientation from "../../utils/useScreenOrientation";
 import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider";
+import SavedTeams from "./SavedTeams";
 
 export default function TeamBuilder() {
   const [team, setTeam] = useLocalStorage<TeamBeastie[]>("teamBuilderTeam", [
@@ -127,6 +128,13 @@ export default function TeamBuilder() {
                 Load Team JSON
               </button>
             </div>
+            <SavedTeams
+              currentTeam={team}
+              setCurrentTeam={setTeam}
+              setCurrentBeastie={(beastie: TeamBeastie) =>
+                setBeastie(editingBeastie, beastie)
+              }
+            />
             <EditBeastie
               key={team[editingBeastie].pid + team[editingBeastie].specie}
               beastie={team[editingBeastie]}

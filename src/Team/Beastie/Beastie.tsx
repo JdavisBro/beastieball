@@ -106,7 +106,7 @@ export default function Beastie({
           />
           <div className={styles.column}>
             <span className={styles.graytext}>{ability.name}</span>
-            <TextTag>{ability.desc}</TextTag>
+            <TextTag>{ability.desc.replace(/\|/, "")}</TextTag>
           </div>
         </div>
       </div>

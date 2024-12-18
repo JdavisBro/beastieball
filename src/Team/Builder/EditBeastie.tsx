@@ -13,6 +13,19 @@ const TYPES = [
 type COACHING = "ba_r" | "bd_r" | "ha_r" | "hd_r" | "ma_r" | "md_r";
 type TRAINING = "ba_t" | "bd_t" | "ha_t" | "hd_t" | "ma_t" | "md_t";
 
+const COLOR_TYPE: Record<number, "color" | "shiny" | "color2"> = {
+  0: "color",
+  1: "shiny",
+  2: "color2",
+};
+
+const MIN_BEASITE_COLOR = 0.000000000000001;
+const MAX_BEASITE_COLOR = 0.999999999999999;
+
+function clampColor(color: number) {
+  return Math.max(Math.min(color, MAX_BEASITE_COLOR), MIN_BEASITE_COLOR);
+}
+
 export default function EditBeastie({
   beastie,
   setBeastie,
@@ -60,7 +73,6 @@ export default function EditBeastie({
         <BeastieSelect
           beastieId={beastie.specie}
           setBeastieId={(beastieId) => {
-            console.log(beastieId);
             if (beastieId) {
               changeValue("specie", beastieId);
               const newBeastie = BEASTIE_DATA.get(beastieId);
@@ -107,6 +119,48 @@ export default function EditBeastie({
           }
         />
       </label>
+      <div>
+        <label>
+          Color:{" "}
+          <select
+            value={Math.floor(beastie.color[0])}
+            onChange={(event) =>
+              changeValue(
+                "color",
+                beastie.color.map(
+                  (color) =>
+                    clampColor(color - Math.ceil(color) + 1) +
+                    Number(event.target.value),
+                ),
+              )
+            }
+          >
+            <option value={0}>Regular</option>
+            {beastiedata.colors2 ? <option value={2}>Variant</option> : null}
+            <option value={1}>Raremorph</option>
+          </select>
+        </label>
+        <button
+          onClick={() => {
+            const colorAdd = Math.floor(beastie.color[0]);
+            const colorType = COLOR_TYPE[colorAdd];
+            const beastieColors:
+              | { color: number[]; shiny: number[]; color2: number[] }
+              | undefined = JSON.parse(
+              localStorage.getItem("beastiecolors") ?? "{}",
+            )[beastie.specie];
+            const colors =
+              (beastieColors && beastieColors[colorType]) ||
+              new Array(beastie.color.length).fill(0.5);
+            changeValue(
+              "color",
+              colors.map((color) => clampColor(color) + colorAdd),
+            );
+          }}
+        >
+          Copy from Beastiepedia
+        </button>
+      </div>
       <label>
         Level:{" "}
         <input

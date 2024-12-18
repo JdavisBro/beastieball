@@ -11,18 +11,27 @@
   display: none;
 }
 
-.sidebarsearchcon {
+.controlsContainer {
   composes: animBoxBackground from global;
-  position: sticky;
   top: 1px;
-  margin-top: 5px;
-  z-index: 1;
-  padding: 5px 5px 5px 5px;
+  position: sticky;
+  padding: 5px 5px 3px 5px;
   width: 86%;
-  height: 22px;
   margin-left: 5%;
-  display: flex;
+  margin-top: 5px;
   clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+}
+
+.controls {
+  display: flex;
+  z-index: 1;
+  height: 22px;
+}
+
+.filterText {
+  font-size: 0.9em;
+  color: black;
+  margin-left: 2px;
 }
 
 .sidebarsearch {

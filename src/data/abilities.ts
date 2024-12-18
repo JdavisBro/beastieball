@@ -1,6 +1,7 @@
 import raw_abilities from "./raw/abilities.json";
 
-const abilities: Record<string, { id: string; name: string; desc: string }> =
-  raw_abilities;
+export type Ability = { id: string; name: string; desc: string };
+
+const abilities: Record<string, Ability> = raw_abilities;
 
 export default abilities;

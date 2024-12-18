@@ -5,14 +5,57 @@
   aspect-ratio: 1;
 }
 
-.listContainer {
-  width: round(down, 90vw, 264px);
+.tabs {
+  width: fit-content;
+  height: 32px;
+  margin: 4px 0 4px 0;
+  position: relative;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #000000,
+    #000000 10px,
+    #2e2e2e 10px,
+    #2e2e2e 20px
+  );
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+  z-index: 1;
 }
 
+.tabs > button {
+  font-family: inherit;
+  font-size: 1em;
+  background-color: transparent;
+  transition: background-color 0.2s;
+  border: none;
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+  height: 100%;
+}
+
+.tabs > button:hover {
+  background-color: #ffaa556b;
+}
+
+.selectedtab {
+  background-color: #ffaa55a8 !important;
+}
+
+.moveList,
 .abilityList {
   display: flex;
   gap: 4px;
   flex-wrap: wrap;
+  max-height: 80dvh;
+  overflow-y: auto;
+  user-select: none;
+}
+
+.moveList {
+  width: round(down, calc(90vw - 40px), min(calc(90vw - 40px), 474px));
+}
+
+.abilityList {
+  width: round(down, calc(90vw - 40px), min(264px, calc(90vw - 40px)));
 }
 
 .ability {
@@ -21,7 +64,9 @@
   border: black 1px solid;
   flex-direction: column;
   flex: 0 0 250px;
-  height: 80px;
+  width: 264px;
+  max-width: 100%;
+  min-height: 80px;
   padding: 4px;
   cursor: pointer;
 }
@@ -35,4 +80,17 @@
   flex: 1 0 auto;
   overflow-y: auto;
   font-size: 0.9em;
+}
+
+.moveContainer {
+  padding: 5px;
+  flex: 0 0 95%;
+  max-width: 460px;
+  width: 95%;
+  cursor: pointer;
+}
+
+.moveSelected {
+  composes: moveContainer;
+  composes: animSelectedBackground from global;
 }

@@ -3,7 +3,7 @@ import styles from "./Sidebar.module.css";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import { useCallback, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
-import Filter, { FilterType } from "./Filter";
+import Filter, { createFilterString, FilterType, FilterTypes } from "./Filter";
 import {
   SpoilerMode,
   useSpoilerMode,
@@ -24,6 +24,21 @@ const STATS: StatType[] = ["ba", "bd", "ha", "hd", "ma", "md"];
 
 function getBeastieStatTotal(beastie: BeastieType) {
   return STATS.reduce((accum, stat) => accum + beastie[stat], 0);
+}
+
+function createFilterFunction(filters: FilterType[]) {
+  if (!filters) {
+    return undefined;
+  }
+  return (beastie: BeastieType) =>
+    filters.every(([type, value]) => {
+      switch (type) {
+        case FilterTypes.Ability:
+          return beastie.ability.includes(value.id);
+        case FilterTypes.Move:
+          return beastie.attklist.includes(value.id);
+      }
+    });
 }
 
 export default function Sidebar(props: Props): React.ReactElement {
@@ -49,15 +64,9 @@ export default function Sidebar(props: Props): React.ReactElement {
 
   const [grid, setGrid] = useLocalStorage("beastiepediaGrid", false);
 
-  const [filter, setFilter] = useState<[FilterType, string]>([
-    FilterType.None,
-    "",
-  ]);
+  const [filters, setFilters] = useState<FilterType[]>([]);
 
-  const filterFunc =
-    filter[0] == FilterType.Ability
-      ? (beastie: BeastieType) => beastie.ability.includes(filter[1])
-      : undefined;
+  const filterFunc = createFilterFunction(filters);
 
   const [spoilerMode] = useSpoilerMode();
   const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
@@ -77,43 +86,48 @@ export default function Sidebar(props: Props): React.ReactElement {
 
   return (
     <div className={props.visibility ? styles.sidebar : styles.sidebaroff}>
-      <div className={styles.sidebarsearchcon}>
-        <input
-          type="text"
-          placeholder="Search Beasties.."
-          className={styles.sidebarsearch}
-          onChange={(event) => setSearch(event.currentTarget.value)}
-        />
-        <select
-          onChange={(event) => setSort(event.currentTarget.value)}
-          className={styles.sidebarselect}
-        >
-          <option value="number">Number</option>
-          <option value="name">Name</option>
-          <option value="total">Stat Total</option>
-          <option value="ba">Body POW</option>
-          <option value="bd">Body DEF</option>
-          <option value="ha">Spirit POW</option>
-          <option value="hd">Spirit DEF</option>
-          <option value="ma">Mind POW</option>
-          <option value="md">Mind DEF</option>
-        </select>
-        <button onClick={() => setSortDec(!sortDec)}>
-          {sortDec ? "↓" : "↑"}
-        </button>
-        <Filter filter={filter} setFilter={setFilter} />
-        <div
-          className={grid ? styles.gridimage : styles.gridimageGrid}
-          tabIndex={0}
-          title="Toggle Grid View"
-          role="button"
-          onClick={() => setGrid(!grid)}
-          onKeyDown={(event) => {
-            if (event.key == "Enter") {
-              setGrid(!grid);
-            }
-          }}
-        />
+      <div className={styles.controlsContainer}>
+        <div className={styles.controls}>
+          <input
+            type="text"
+            placeholder="Search Beasties.."
+            className={styles.sidebarsearch}
+            onChange={(event) => setSearch(event.currentTarget.value)}
+          />
+          <select
+            onChange={(event) => setSort(event.currentTarget.value)}
+            className={styles.sidebarselect}
+          >
+            <option value="number">Number</option>
+            <option value="name">Name</option>
+            <option value="total">Stat Total</option>
+            <option value="ba">Body POW</option>
+            <option value="bd">Body DEF</option>
+            <option value="ha">Spirit POW</option>
+            <option value="hd">Spirit DEF</option>
+            <option value="ma">Mind POW</option>
+            <option value="md">Mind DEF</option>
+          </select>
+          <button onClick={() => setSortDec(!sortDec)}>
+            {sortDec ? "↓" : "↑"}
+          </button>
+          <Filter filters={filters} setFilters={setFilters} />
+          <div
+            className={grid ? styles.gridimage : styles.gridimageGrid}
+            tabIndex={0}
+            title="Toggle Grid View"
+            role="button"
+            onClick={() => setGrid(!grid)}
+            onKeyDown={(event) => {
+              if (event.key == "Enter") {
+                setGrid(!grid);
+              }
+            }}
+          />
+        </div>
+        <div className={styles.filterText}>
+          {filters ? createFilterString(filters) : null}
+        </div>
       </div>
       <div
         className={grid ? styles.beastiecontainergrid : styles.beastiecontainer}

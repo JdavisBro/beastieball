@@ -51,11 +51,11 @@
 }
 
 .moveList {
-  width: round(down, calc(90vw - 40px), min(calc(90vw - 40px), 474px));
+  width: round(down, calc(90vw - 60px), min(calc(90vw - 60px), 474px));
 }
 
 .abilityList {
-  width: round(down, calc(90vw - 40px), min(264px, calc(90vw - 40px)));
+  width: round(down, calc(90vw - 60px), min(calc(90vw - 60px), 264px));
 }
 
 .ability {
@@ -63,8 +63,7 @@
   display: flex;
   border: black 1px solid;
   flex-direction: column;
-  flex: 0 0 250px;
-  width: 264px;
+  width: 250px;
   max-width: 100%;
   min-height: 80px;
   padding: 4px;

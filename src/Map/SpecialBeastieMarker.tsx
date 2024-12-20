@@ -13,10 +13,12 @@ import styles from "./Map.module.css";
 export default function SpecialBeastieMarker({
   position,
   target,
+  open,
   metamorph,
 }: {
   position: L.LatLng;
   target: BeastieType;
+  open?: boolean;
   metamorph?: { from: BeastieType; by: string };
 }) {
   const [spoilerMode] = useSpoilerMode();
@@ -65,8 +67,17 @@ export default function SpecialBeastieMarker({
         iconUrl: targetUrl,
         iconSize: [55, 55],
       })}
+      eventHandlers={
+        open
+          ? {
+              add: (event) => {
+                event.target.openPopup();
+              },
+            }
+          : undefined
+      }
     >
-      <Popup>
+      <Popup offset={[0, -15]}>
         {metamorph ? (
           <>
             <div className={styles.metamorph}>

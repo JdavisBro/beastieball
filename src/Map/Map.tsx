@@ -288,6 +288,18 @@ export default function Map(): React.ReactNode {
     EXTINCT_BEASTIES.some((extinct) => seenBeasties[extinct.beastieId])
   );
 
+  const marker_name = new URL(window.location.href).searchParams.get("marker");
+  const marker = marker_name
+    ? METAMORPH_LOCATIONS.find(
+        (value) => BEASTIE_DATA.get(value.to)?.name == marker_name,
+      ) ||
+      EXTINCT_BEASTIES.find(
+        (value) => BEASTIE_DATA.get(value.beastieId)?.name == marker_name,
+      )
+    : undefined;
+  const center = marker ? marker.position : L.latLng(0, 0);
+  const zoom = marker ? -4 : -5.5;
+
   return (
     <>
       <OpenGraph
@@ -303,8 +315,8 @@ export default function Map(): React.ReactNode {
         maxZoom={0}
         maxBounds={bounds.pad(0.25)}
         maxBoundsViscosity={0.3}
-        zoom={-5.5}
-        center={[0, 0]}
+        zoom={zoom}
+        center={center}
         zoomAnimation={false} // there are seams between the tiles when animating
         zoomSnap={0}
         zoomDelta={0.5}
@@ -375,6 +387,12 @@ export default function Map(): React.ReactNode {
               {EXTINCT_BEASTIES.map((extinct) => (
                 <SpecialBeastieMarker
                   key={extinct.beastieId}
+                  open={
+                    extinct.beastieId ==
+                    (marker && "beastieId" in marker
+                      ? marker.beastieId
+                      : undefined)
+                  }
                   position={extinct.position}
                   target={BEASTIE_DATA.get(extinct.beastieId) as BeastieType}
                 />
@@ -386,6 +404,10 @@ export default function Map(): React.ReactNode {
               {METAMORPH_LOCATIONS.map((metamorph) => (
                 <SpecialBeastieMarker
                   key={metamorph.to}
+                  open={
+                    metamorph.to ==
+                    (marker && "to" in marker ? marker.to : undefined)
+                  }
                   position={metamorph.position}
                   target={BEASTIE_DATA.get(metamorph.to) as BeastieType}
                   metamorph={{

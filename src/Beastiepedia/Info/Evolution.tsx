@@ -90,8 +90,27 @@ function EvoCondition({
   switch (condition) {
     case 0:
       return `at level ${value}`;
-    case 2:
-      return `at ${LOCATION_CONDS[specie] ?? "somewhere"}`;
+    case 2: {
+      const beastie = BEASTIE_DATA.get(specie);
+      return (
+        <>
+          at {LOCATION_CONDS[specie] ?? "somewhere"}
+          <Link
+            to={`/map/?marker=${beastie?.name}`}
+            title="View Metamorphosis Location on the Map"
+          >
+            <img
+              src="/gameassets/sprMainmenu/2.png"
+              style={{
+                height: "1.2em",
+                verticalAlign: "middle",
+                filter: "brightness(0.3)",
+              }}
+            />
+          </Link>
+        </>
+      );
+    }
     case 3:
       return `after forming ${value} relationships`;
     case 4:

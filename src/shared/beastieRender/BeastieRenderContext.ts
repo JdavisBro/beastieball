@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import { BBox } from "../../data/SpriteInfo";
 
 export type RenderBeastieType = {
   id: string;
@@ -14,4 +15,7 @@ export const BeastieRenderContext = createContext<null | {
     url: Promise<string | null>;
   };
   cancel: (id: number) => void;
+  renderQuick: (
+    beastie: RenderBeastieType,
+  ) => Promise<[HTMLCanvasElement, BBox] | null>;
 }>(null);

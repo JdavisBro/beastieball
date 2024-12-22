@@ -5,7 +5,7 @@ import {
   BeastieRenderContext,
   RenderBeastieType,
 } from "./BeastieRenderContext";
-import SPRITE_INFO from "../../data/SpriteInfo";
+import SPRITE_INFO, { BBox } from "../../data/SpriteInfo";
 import BEASTIE_DATA from "../../data/BeastieData";
 import { getColorInBeastieColors } from "../../utils/color";
 import BEASTIE_ANIMATIONS, {
@@ -35,6 +35,67 @@ export default function BeastieRenderProvider(
     }
   }, []);
 
+  const renderQuick = useCallback(async (beastie: RenderBeastieType) => {
+    if (!canvasRef.current || !cropCanvasRef.current || !glRef.current) {
+      return null;
+    }
+
+    const beastie_data = BEASTIE_DATA.get(beastie.id);
+    if (!beastie_data) {
+      console.log("Beastie render failed. Fake beastie");
+      return null;
+    }
+    const sprite = SPRITE_INFO[beastie_data.spr];
+    const sprAlt = beastie.sprAlt;
+    const drawn_name =
+      !sprAlt || sprAlt > beastie_data.spr_alt.length
+        ? beastie_data.spr
+        : beastie_data.spr_alt[sprAlt - 1];
+    const drawn_sprite = SPRITE_INFO[drawn_name];
+    if (!sprite || !drawn_sprite) {
+      console.log(
+        "Beastie render failed. SPRITE: ",
+        !!sprite,
+        "DRAWN_SPRITE: ",
+        !!drawn_sprite,
+      );
+      return null;
+    }
+    const animations = BEASTIE_ANIMATIONS.get(`_${beastie_data.spr}`);
+    let frames = (animations?.anim_data as BeastieAnimData).menu.frames;
+    if (frames && Array.isArray(frames)) {
+      frames = frames[0];
+    }
+    const beastie_frame =
+      (beastie.frame ?? frames) ? (frames?.startFrame ?? 0) : 0;
+
+    const img = await new Promise<HTMLImageElement>((resolve, reject) => {
+      const image = document.createElement("img");
+      image.src = `/gameassets/beasties/${drawn_name}/${beastie_frame ?? 0}.webp`;
+      image.onerror = () => reject();
+      image.onload = () => resolve(image);
+    }).catch((error) => console.log(error));
+    if (!img) {
+      return null;
+    }
+    setImage(glRef.current.gl, img);
+
+    const beastieColors =
+      beastie.colorAlt == "colors2" && beastie_data.colors2
+        ? beastie_data.colors2
+        : beastie.colorAlt == "shiny"
+          ? beastie_data.shiny
+          : beastie_data.colors;
+    const colors = beastie.colors ?? [0.5, 0.5, 0.5, 0.5, 0.5];
+    const cols = [...Array(beastieColors.length).keys()].map((value) => {
+      const x = colors.length < value ? 0.5 : colors[value];
+      return getColorInBeastieColors(x, beastieColors[value].array);
+    });
+    setColorUniforms(glRef.current.gl, glRef.current.program, cols);
+    const sprite_bbox = drawn_sprite.bboxes[beastie_frame];
+    return [canvasRef.current, sprite_bbox] as [HTMLCanvasElement, BBox];
+  }, []);
+
   const render = useCallback(
     (beastie: RenderBeastieType) => {
       const id = nextIdRef.current;
@@ -54,71 +115,23 @@ export default function BeastieRenderProvider(
           return null;
         }
 
-        if (!canvasRef.current || !cropCanvasRef.current || !glRef.current) {
+        if (!cropCanvasRef.current) {
           return null;
         }
 
-        const beastie_data = BEASTIE_DATA.get(beastie.id);
-        if (!beastie_data) {
-          console.log("Beastie render failed. Fake beastie");
+        const result = await renderQuick(beastie);
+        if (!result) {
           return null;
         }
-        const sprite = SPRITE_INFO[beastie_data.spr];
-        const sprAlt = beastie.sprAlt;
-        const drawn_name =
-          !sprAlt || sprAlt > beastie_data.spr_alt.length
-            ? beastie_data.spr
-            : beastie_data.spr_alt[sprAlt - 1];
-        const drawn_sprite = SPRITE_INFO[drawn_name];
-        if (!sprite || !drawn_sprite) {
-          console.log(
-            "Beastie render failed. SPRITE: ",
-            !!sprite,
-            "DRAWN_SPRITE: ",
-            !!drawn_sprite,
-          );
-          return null;
-        }
-        const animations = BEASTIE_ANIMATIONS.get(`_${beastie_data.spr}`);
-        let frames = (animations?.anim_data as BeastieAnimData).menu.frames;
-        if (frames && Array.isArray(frames)) {
-          frames = frames[0];
-        }
-        const beastie_frame =
-          (beastie.frame ?? frames) ? (frames?.startFrame ?? 0) : 0;
-
-        const img = await new Promise<HTMLImageElement>((resolve, reject) => {
-          const image = document.createElement("img");
-          image.src = `/gameassets/beasties/${drawn_name}/${beastie_frame ?? 0}.webp`;
-          image.onerror = () => reject();
-          image.onload = () => resolve(image);
-        }).catch((error) => console.log(error));
-        if (!img) {
-          return null;
-        }
-        setImage(glRef.current.gl, img);
-
-        const beastieColors =
-          beastie.colorAlt == "colors2" && beastie_data.colors2
-            ? beastie_data.colors2
-            : beastie.colorAlt == "shiny"
-              ? beastie_data.shiny
-              : beastie_data.colors;
-        const colors = beastie.colors ?? [0.5, 0.5, 0.5, 0.5, 0.5];
-        const cols = [...Array(beastieColors.length).keys()].map((value) => {
-          const x = colors.length < value ? 0.5 : colors[value];
-          return getColorInBeastieColors(x, beastieColors[value].array);
-        });
-        setColorUniforms(glRef.current.gl, glRef.current.program, cols);
+        const [drawn_canvas, sprite_bbox] = result;
 
         const context = cropCanvasRef.current.getContext("2d");
         if (!context) {
           return null;
         }
-        const sprite_bbox = drawn_sprite.bboxes[beastie_frame];
         cropCanvasRef.current.width = sprite_bbox.width;
         cropCanvasRef.current.height = sprite_bbox.height;
-        context.drawImage(canvasRef.current, -sprite_bbox.x, -sprite_bbox.y);
+        context.drawImage(drawn_canvas, -sprite_bbox.x, -sprite_bbox.y);
         const url = cropCanvasRef.current.toDataURL();
 
         return url;
@@ -126,7 +139,7 @@ export default function BeastieRenderProvider(
 
       return { id: id, url: urlFunc() };
     },
-    [frame],
+    [frame, renderQuick],
   );
 
   const cancel = useCallback((id: number) => {
@@ -144,7 +157,7 @@ export default function BeastieRenderProvider(
   }, []);
 
   return (
-    <BeastieRenderContext.Provider value={{ render: render, cancel: cancel }}>
+    <BeastieRenderContext.Provider value={{ render, cancel, renderQuick }}>
       <canvas
         ref={canvasRef}
         style={{ display: "none" }}

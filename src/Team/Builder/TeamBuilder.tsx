@@ -12,6 +12,7 @@ import MoveModalProvider from "../../shared/MoveModalProvider";
 import useScreenOrientation from "../../utils/useScreenOrientation";
 import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider";
 import SavedTeams from "./SavedTeams";
+import TeamImageButton from "../TeamImageButton";
 
 export default function TeamBuilder() {
   const [team, setTeam] = useLocalStorage<TeamBeastie[]>("teamBuilderTeam", [
@@ -53,8 +54,8 @@ export default function TeamBuilder() {
         returnButtonTo="/team/"
         returnButtonTitle={`${import.meta.env.VITE_BRANDING} Team Page`}
       />
-      <div className={styles.container}>
-        <BeastieRenderProvider>
+      <BeastieRenderProvider>
+        <div className={styles.container}>
           <MoveModalProvider>
             <div className={teamScroll ? styles.teamScroll : styles.team}>
               {team.map((beastie, index) => (
@@ -83,73 +84,78 @@ export default function TeamBuilder() {
               ))}
             </div>
           </MoveModalProvider>
-        </BeastieRenderProvider>
-        <div className={styles.edit}>
-          <div className={styles.editOptions}>
-            <label>
+          <div className={styles.edit}>
+            <div className={styles.editOptions}>
+              <label>
+                <input
+                  type="checkbox"
+                  defaultChecked={teamScroll}
+                  onChange={(event) =>
+                    setTeamScroll(event.currentTarget.checked)
+                  }
+                />
+                Team Scrolls Horizontally
+              </label>
+              <div>
+                <TeamImageButton team={team} />
+              </div>
               <input
-                type="checkbox"
-                defaultChecked={teamScroll}
-                onChange={(event) => setTeamScroll(event.currentTarget.checked)}
-              />
-              Team Scrolls Horizontally
-            </label>
-            <input
-              type="file"
-              onChange={(event) => {
-                const files = event.currentTarget.files;
-                if (files) {
-                  files[0].text().then((text) => setTeam(JSON.parse(text)));
-                }
-              }}
-              accept=".json"
-              style={{ display: "none" }}
-              ref={fileInputRef}
-            />
-            <div>
-              <button
-                onClick={() => {
-                  const a = document.createElement("a");
-                  const blob = new Blob([JSON.stringify(team)]);
-                  a.download = "team.json";
-                  a.href = URL.createObjectURL(blob);
-                  a.click();
-                }}
-              >
-                Save Team JSON
-              </button>
-              <button
-                onClick={() => {
-                  if (fileInputRef.current) {
-                    fileInputRef.current.click();
+                type="file"
+                onChange={(event) => {
+                  const files = event.currentTarget.files;
+                  if (files) {
+                    files[0].text().then((text) => setTeam(JSON.parse(text)));
                   }
                 }}
-              >
-                Load Team JSON
-              </button>
+                accept=".json"
+                style={{ display: "none" }}
+                ref={fileInputRef}
+              />
+              <div>
+                <button
+                  onClick={() => {
+                    const a = document.createElement("a");
+                    const blob = new Blob([JSON.stringify(team)]);
+                    a.download = "team.json";
+                    a.href = URL.createObjectURL(blob);
+                    a.click();
+                  }}
+                >
+                  Save Team JSON
+                </button>
+                <button
+                  onClick={() => {
+                    if (fileInputRef.current) {
+                      fileInputRef.current.click();
+                    }
+                  }}
+                >
+                  Load Team JSON
+                </button>
+              </div>
+              <SavedTeams
+                currentTeam={team}
+                setCurrentTeam={setTeam}
+                setCurrentBeastie={(beastie: TeamBeastie) =>
+                  setBeastie(editingBeastie, beastie)
+                }
+              />
+              <EditBeastie
+                key={team[editingBeastie].pid + team[editingBeastie].specie}
+                beastie={team[editingBeastie]}
+                setBeastie={(beastie) =>
+                  setBeastie(
+                    editingBeastie,
+                    typeof beastie == "function"
+                      ? beastie(team[editingBeastie])
+                      : beastie,
+                  )
+                }
+              />
             </div>
-            <SavedTeams
-              currentTeam={team}
-              setCurrentTeam={setTeam}
-              setCurrentBeastie={(beastie: TeamBeastie) =>
-                setBeastie(editingBeastie, beastie)
-              }
-            />
-            <EditBeastie
-              key={team[editingBeastie].pid + team[editingBeastie].specie}
-              beastie={team[editingBeastie]}
-              setBeastie={(beastie) =>
-                setBeastie(
-                  editingBeastie,
-                  typeof beastie == "function"
-                    ? beastie(team[editingBeastie])
-                    : beastie,
-                )
-              }
-            />
           </div>
         </div>
-      </div>
+      </BeastieRenderProvider>
     </>
   );
 }

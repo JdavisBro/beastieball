@@ -13,6 +13,7 @@ import type {
   FeaturedTeamType,
 } from "./FeaturedCategories.ts";
 import FeaturedTeam from "./FeaturedTeam.tsx";
+import TeamImageButton from "../TeamImageButton.tsx";
 
 declare global {
   interface Window {
@@ -157,9 +158,9 @@ export default function Viewer() {
           ? `${team.code}${selectedFeatured ? ` - ${selectedCategoryName} - ${selectedFeatured.name}` : ""}`
           : ""}
       </div>
-      <div className={styles.team}>
-        <MoveModalProvider>
-          <BeastieRenderProvider>
+      <BeastieRenderProvider>
+        <div className={styles.team}>
+          <MoveModalProvider>
             {team
               ? team.team.map((beastie) => (
                   <Beastie
@@ -172,52 +173,58 @@ export default function Viewer() {
                   />
                 ))
               : null}
-          </BeastieRenderProvider>
-        </MoveModalProvider>
-      </div>
-      <div className={styles.sectionheader}>
-        <label>
-          <input
-            type="checkbox"
-            onChange={(event) =>
-              setIsLevelOverwritten(event.currentTarget.checked)
-            }
+          </MoveModalProvider>
+        </div>
+        <div className={styles.sectionheader}>
+          <label>
+            <input
+              type="checkbox"
+              onChange={(event) =>
+                setIsLevelOverwritten(event.currentTarget.checked)
+              }
+            />
+            At Level{" "}
+            <input
+              type="number"
+              onChange={(event) =>
+                setLevelOverwrite(Number(event.currentTarget.value))
+              }
+              min={1}
+              max={100}
+              defaultValue={50}
+            />
+          </label>
+          {" - "}
+          <label>
+            <input
+              type="checkbox"
+              onChange={(event) => setMaxCoaching(event.currentTarget.checked)}
+            />
+            Max Coaching
+          </label>
+          {" - "}
+          <button
+            onClick={() => {
+              if (team) {
+                localStorage.setItem(
+                  "teamBuilderTeam",
+                  JSON.stringify(team.team),
+                );
+                navigate("/team/builder/");
+              }
+            }}
+            disabled={!team}
+          >
+            Open in Team Builder
+          </button>
+          {" - "}
+          <TeamImageButton
+            team={team?.team}
+            atLevel={isLevelOverwritten ? levelOverwrite : undefined}
+            maxCoaching={maxCoaching}
           />
-          At Level{" "}
-          <input
-            type="number"
-            onChange={(event) =>
-              setLevelOverwrite(Number(event.currentTarget.value))
-            }
-            min={1}
-            max={100}
-            defaultValue={50}
-          />
-        </label>
-        {" - "}
-        <label>
-          <input
-            type="checkbox"
-            onChange={(event) => setMaxCoaching(event.currentTarget.checked)}
-          />
-          Max Coaching
-        </label>
-        {" - "}
-        <button
-          onClick={() => {
-            if (team) {
-              localStorage.setItem(
-                "teamBuilderTeam",
-                JSON.stringify(team.team),
-              );
-              navigate("/team/builder/");
-            }
-          }}
-          disabled={!team}
-        >
-          Open in Team Builder
-        </button>
-      </div>
+        </div>
+      </BeastieRenderProvider>
       <br />
       <div className={styles.categorybg}>
         {featuredCategories?.map((category, index) => (

@@ -14,14 +14,21 @@ import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvi
 import SavedTeams from "./SavedTeams";
 import TeamImageButton from "../TeamImageButton";
 
-export default function TeamBuilder() {
-  const [team, setTeam] = useLocalStorage<TeamBeastie[]>("teamBuilderTeam", [
+function createTeam() {
+  return [
     createBeastie("01"),
     createBeastie("02"),
     createBeastie("03"),
     createBeastie("04"),
     createBeastie("05"),
-  ]);
+  ];
+}
+
+export default function TeamBuilder() {
+  const [team, setTeam] = useLocalStorage<TeamBeastie[]>(
+    "teamBuilderTeam",
+    createTeam(),
+  );
 
   const setBeastie = (teamIndex: number, beastie: TeamBeastie) => {
     team[teamIndex] = beastie;
@@ -131,6 +138,9 @@ export default function TeamBuilder() {
                   }}
                 >
                   Load Team JSON
+                </button>
+                <button onClick={() => setTeam(createTeam())}>
+                  Reset Team
                 </button>
               </div>
               <SavedTeams

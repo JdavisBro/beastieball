@@ -190,7 +190,6 @@ function splitText(
           }
           tagging = false;
           newchar = "　";
-          console.log(lines, lines.length, lines[lines.length - 1].length);
           images.push({
             line: lines.length - 1,
             index: lines[lines.length - 1].length,

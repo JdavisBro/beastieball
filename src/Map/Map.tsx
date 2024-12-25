@@ -38,7 +38,7 @@ function MapEvents() {
       event.popup.getElement()?.classList.remove("leaflet-popup-closing"),
     popupclose: (event) =>
       event.popup.getElement()?.classList.add("leaflet-popup-closing"),
-    click: (event) => console.log(event.latlng),
+    // click: (event) => console.log(event.latlng),
   });
 
   return null;

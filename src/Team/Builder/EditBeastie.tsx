@@ -161,6 +161,24 @@ export default function EditBeastie({
           Copy from Beastiepedia
         </button>
       </div>
+      {beastiedata.spr_alt.length ? (
+        <label>
+          Sprite:{" "}
+          <select
+            value={beastie.spr_index}
+            onChange={(event) =>
+              changeValue("spr_index", Number(event.currentTarget.value))
+            }
+          >
+            <option value={0}>Normal</option>
+            {beastiedata.spr_alt.map((_, index) => (
+              <option key={index} value={index + 1}>
+                Alternate{beastiedata.spr_alt.length > 1 ? ` ${index}` : ""}
+              </option>
+            ))}
+          </select>
+        </label>
+      ) : null}
       <label>
         Level:{" "}
         <input

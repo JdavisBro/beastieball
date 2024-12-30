@@ -32,6 +32,14 @@ import BeastieSelect from "../shared/BeastieSelect";
 import SpecialBeastieMarker from "./SpecialBeastieMarker";
 import { EXTINCT_BEASTIES, METAMORPH_LOCATIONS } from "./SpecialBeasties";
 
+const BEASTIE_ARRAY = [...BEASTIE_DATA.values()];
+
+const SPAWNABLE_BEASTIES = Object.values(SPAWN_DATA)
+  .map((spawns) => spawns.group?.map((spawn) => spawn.specie))
+  .flat()
+  .filter((beastie) => typeof beastie === "string")
+  .filter((beastie, index, array) => index == array.indexOf(beastie));
+
 function MapEvents() {
   useMapEvents({
     popupopen: (event) =>
@@ -73,9 +81,31 @@ export default function Map(): React.ReactNode {
 
   const [postgame, setPostgame] = useState(false);
 
-  const [huntedBeastie, setHuntedBeastie] = useState<string | undefined>(
-    undefined,
+  const searchParams = new URL(window.location.href).searchParams;
+  const searchHuntedName = searchParams.get("track");
+  const searchHunted = BEASTIE_ARRAY.find(
+    (beastie) => beastie.name == searchHuntedName,
+  )?.id;
+
+  const [huntedBeastie, setHuntedBeastieState] = useState<string | undefined>(
+    searchHunted && SPAWNABLE_BEASTIES.includes(searchHunted)
+      ? searchHunted
+      : undefined,
   );
+  const setHuntedBeastie = (beastieId: string | undefined) => {
+    setHuntedBeastieState(beastieId);
+    const url = new URL(window.location.href);
+    const beastie = beastieId ? BEASTIE_DATA.get(beastieId)?.name : undefined;
+    if (beastie) {
+      url.searchParams.set("track", beastie);
+    } else {
+      url.searchParams.delete("track");
+    }
+    url.hash = "";
+    history.pushState({}, "", url.toString());
+  };
+  console.log(huntedBeastie);
+
   const [beastiesLevel, setBeastiesLevel] = useState("");
 
   WORLD_DATA.level_stumps_array.forEach((level) => {
@@ -288,7 +318,7 @@ export default function Map(): React.ReactNode {
     EXTINCT_BEASTIES.some((extinct) => seenBeasties[extinct.beastieId])
   );
 
-  const marker_name = new URL(window.location.href).searchParams.get("marker");
+  const marker_name = searchParams.get("marker");
   const marker = marker_name
     ? METAMORPH_LOCATIONS.find(
         (value) => BEASTIE_DATA.get(value.to)?.name == marker_name,
@@ -431,6 +461,10 @@ export default function Map(): React.ReactNode {
                 setBeastieId={setHuntedBeastie}
                 extraOptionText="Show All"
                 extraOption="all"
+                isSelectable={(beastie) =>
+                  SPAWNABLE_BEASTIES.includes(beastie.id)
+                }
+                nonSelectableReason="Beastie has no wild habitat."
               />
               <div>
                 <input

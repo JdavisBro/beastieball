@@ -261,6 +261,12 @@
   justify-content: center;
 }
 
+.beastieSelectBeastieNoSel {
+  composes: beastieSelectBeastie;
+  opacity: 0.5;
+  cursor: default;
+}
+
 .beastieSelectBeastieIm {
   flex-shrink: 1;
   max-height: calc(100% - 10px);

@@ -22,8 +22,6 @@ export default function Modal(
     onClose: () => void;
   },
 ) {
-  const location = useLocation();
-
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   const preventDefault = useCallback((event: Event) => {
@@ -64,31 +62,29 @@ export default function Modal(
   }, [preventDefault, preventScrollKeys]);
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (props.open) {
-      navigate("#" + props.hashValue);
-    }
-  }, [props.open, props.hashValue, navigate]);
+  const location = useLocation();
 
   useEffect(() => {
     if (!dialogRef.current) {
       return;
     }
-    if (
-      props.open &&
-      !dialogRef.current.open &&
-      window.location.hash == "#" + props.hashValue
-    ) {
-      dialogRef.current.showModal();
-    } else if (!props.open && dialogRef.current.open) {
-      dialogRef.current.close();
-    } else if (props.open && window.location.hash != "#" + props.hashValue) {
-      if (dialogRef.current.open) {
-        dialogRef.current.close();
-      } else {
-        props.onClose();
+    const dialogOpen = dialogRef.current.open;
+    const hashCorrect = window.location.hash == "#" + props.hashValue;
+    if (props.open) {
+      if (!dialogOpen) {
+        dialogRef.current.showModal();
+        if (!hashCorrect) {
+          navigate({
+            search: window.location.search,
+            hash: "#" + props.hashValue,
+          });
+        }
       }
+      if (dialogOpen && !hashCorrect) {
+        dialogRef.current.close();
+      }
+    } else if (dialogOpen) {
+      dialogRef.current.close();
     }
   }, [props, navigate, location]);
 
@@ -101,10 +97,10 @@ export default function Modal(
         }
       }}
       onClose={() => {
-        props.onClose();
         if (window.location.hash == "#" + props.hashValue) {
           navigate(-1);
         }
+        props.onClose();
       }}
     >
       <InfoBox key="MODALinfobox" header={props.header}>

@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
 import styles from "./Shared.module.css";
 import Modal from "./Modal";
@@ -11,11 +11,15 @@ function BeastieButton({
   beastie,
   isSpoiler,
   visible,
+  selectable,
+  nonSelectableReason,
   handleClick,
 }: {
   beastie: BeastieType;
   isSpoiler: boolean;
   visible: boolean;
+  selectable: boolean;
+  nonSelectableReason: string;
   handleClick: (beastieId: string, isSpoiler: boolean) => void;
 }) {
   return (
@@ -25,8 +29,16 @@ function BeastieButton({
       style={{
         display: visible ? "flex" : "none",
       }}
-      className={styles.beastieSelectBeastie}
-      onClick={() => handleClick(beastie.id, isSpoiler)}
+      tabIndex={selectable ? 0 : -1}
+      className={
+        selectable
+          ? styles.beastieSelectBeastie
+          : styles.beastieSelectBeastieNoSel
+      }
+      title={selectable ? undefined : nonSelectableReason}
+      onClick={
+        selectable ? () => handleClick(beastie.id, isSpoiler) : undefined
+      }
     >
       <img
         className={styles.beastieSelectBeastieIm}
@@ -52,12 +64,16 @@ export default function BeastieSelect({
   textOverride,
   extraOptionText,
   extraOption,
+  isSelectable,
+  nonSelectableReason,
 }: {
   beastieId: string | undefined;
   setBeastieId: (beastie: string | undefined) => void;
   textOverride?: string;
   extraOptionText?: string;
   extraOption?: string;
+  isSelectable?: (beastie: BeastieType) => boolean;
+  nonSelectableReason: string;
 }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -66,6 +82,8 @@ export default function BeastieSelect({
 
   const [spoilerMode] = useSpoilerMode();
   const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
+
+  const clickedRef = useRef<[boolean, string | undefined]>([false, undefined]);
 
   const handleClick = useCallback(
     (beastieId: string, isSpoiler: boolean) => {
@@ -76,11 +94,20 @@ export default function BeastieSelect({
         }));
         return;
       }
-      setBeastieId(beastieId);
+      clickedRef.current = [true, beastieId];
       setOpen(false);
     },
-    [setBeastieId, setSeenBeasties],
+    [setSeenBeasties],
   );
+
+  const onClose = () => {
+    setOpen(false);
+    const [clicked, clickedBeastie] = clickedRef.current;
+    if (clicked) {
+      setBeastieId(clickedBeastie);
+    }
+    clickedRef.current = [false, undefined];
+  };
 
   return (
     <>
@@ -92,7 +119,7 @@ export default function BeastieSelect({
       <Modal
         header="Select Beastie"
         open={open}
-        onClose={() => setOpen(false)}
+        onClose={onClose}
         hashValue="BeastieSelect"
       >
         <label tabIndex={0}>
@@ -113,6 +140,7 @@ export default function BeastieSelect({
                   ? "flex"
                   : "none",
               }}
+              tabIndex={0}
               className={styles.beastieSelectBeastie}
               onClick={() => {
                 setBeastieId(undefined);
@@ -132,6 +160,7 @@ export default function BeastieSelect({
                     ? "flex"
                     : "none",
                 }}
+                tabIndex={0}
                 className={styles.beastieSelectBeastie}
                 onClick={() => {
                   setBeastieId(extraOption);
@@ -150,6 +179,8 @@ export default function BeastieSelect({
                   spoilerMode == SpoilerMode.OnlySeen &&
                   !seenBeasties[beastie.id]
                 }
+                selectable={!isSelectable || isSelectable(beastie)}
+                nonSelectableReason={nonSelectableReason}
                 visible={beastie.name
                   .toLowerCase()
                   .includes(search.toLowerCase())}

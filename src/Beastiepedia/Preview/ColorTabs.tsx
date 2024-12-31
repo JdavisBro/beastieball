@@ -244,7 +244,11 @@ export default function ColorTabs(props: Props): React.ReactNode {
             currentTab={currentTab}
             colorMax={colors}
             colors={beastiedata.colors2}
-            fallbackColors={beastiedata.colors}
+            fallbackColors={
+              diffBeastieColors
+                ? (props.beastiedata.colors2 ?? props.beastiedata.colors)
+                : beastiedata.colors
+            }
             beastieid={props.beastiedata.id}
             diffBeastie={diffBeastieColors}
             storedColors={storedColors}
@@ -420,7 +424,7 @@ function BeastieColorTabContent(props: {
           value,
           index < colors.length
             ? colors[index].array
-            : fallbackColors[index].array,
+            : fallbackColors[index % fallbackColors.length].array,
         ),
       );
     });
@@ -462,7 +466,7 @@ function BeastieColorTabContent(props: {
           col,
           index < props.colors.length
             ? props.colors[index].array
-            : props.fallbackColors[index].array,
+            : props.fallbackColors[index % props.fallbackColors.length].array,
         ),
       );
     });
@@ -494,7 +498,7 @@ function BeastieColorTabContent(props: {
         newColor,
         index < props.colors.length
           ? props.colors[index].array
-          : props.fallbackColors[index].array,
+          : props.fallbackColors[index % props.fallbackColors.length].array,
       ),
     );
     colorValues.current[index] = newColor;
@@ -527,7 +531,8 @@ function BeastieColorTabContent(props: {
             colors={
               value < props.colors.length
                 ? props.colors[value].array
-                : props.fallbackColors[value].array
+                : props.fallbackColors[value % props.fallbackColors.length]
+                    .array
             }
             value={colorValues.current[value]}
             handleColorChange={(newColor) => changeColor(value, newColor)}

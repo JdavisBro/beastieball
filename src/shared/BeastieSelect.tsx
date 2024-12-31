@@ -19,7 +19,7 @@ function BeastieButton({
   isSpoiler: boolean;
   visible: boolean;
   selectable: boolean;
-  nonSelectableReason: string;
+  nonSelectableReason?: string;
   handleClick: (beastieId: string, isSpoiler: boolean) => void;
 }) {
   return (
@@ -73,7 +73,7 @@ export default function BeastieSelect({
   extraOptionText?: string;
   extraOption?: string;
   isSelectable?: (beastie: BeastieType) => boolean;
-  nonSelectableReason: string;
+  nonSelectableReason?: string;
 }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");

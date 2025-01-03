@@ -16,6 +16,7 @@ export default function OpenGraph(props: Props): React.ReactElement {
     <Helmet>
       <title>
         {import.meta.env.DEV ? "🔧" : ""}
+        {import.meta.env.VITE_EXPERIMENTAL == "true" ? "🧪" : ""}
         {props.title}
       </title>
       <meta property="og:title" content={props.title} />

@@ -39,7 +39,10 @@ export default function Header(props: Props): React.ReactNode {
         >
           <div className={styles.homeicon}></div>
         </Link>
-        <div className={styles.title}>{props.title}</div>
+        <div className={styles.title}>
+          {import.meta.env.VITE_EXPERIMENTAL == "true" ? "🧪 " : ""}
+          {props.title}
+        </div>
         <div className={styles.externallinkcontainer}>
           <NavIcons />
         </div>

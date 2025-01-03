@@ -13,14 +13,12 @@ export default function OpenGraph(props: Props): React.ReactElement {
   const url = import.meta.env.VITE_URL
     ? import.meta.env.VITE_URL
     : window.location.origin;
+
+  const title = `${import.meta.env.DEV ? "🔧" : ""}${import.meta.env.VITE_EXPERIMENTAL == "true" ? "🧪 " : ""}${props.title}`;
   return (
     <Helmet>
-      <title>
-        {import.meta.env.DEV ? "🔧" : ""}
-        {import.meta.env.VITE_EXPERIMENTAL == "true" ? "🧪" : ""}
-        {props.title}
-      </title>
-      <meta property="og:title" content={props.title} />
+      <title>{title}</title>
+      <meta property="og:title" content={title} />
       <meta property="og:image" content={`${url}/${props.image}`} />
       <meta property="og:url" content={`${url}/${props.url}`} />
       <meta property="og:description" content={props.description} />

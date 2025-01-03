@@ -947,7 +947,7 @@
     "eff": [{ "eff": -26, "pow": 1.0, "targ": 0.0 }],
     "id": "jazzattack",
     "name": "Thriller",
-    "pow": 55.0,
+    "pow": 60.0,
     "targ": 0,
     "type": 1.0,
     "use": 0.0
@@ -1688,7 +1688,10 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 26, "pow": 1.0, "targ": 1.0 }],
+    "eff": [
+      { "eff": 26, "pow": 1.0, "targ": 1.0 },
+      { "eff": 69, "pow": 1.0, "targ": 0.0 }
+    ],
     "id": "set",
     "name": "Set",
     "pow": 0.0,
@@ -1801,6 +1804,19 @@
     "pow": 0.0,
     "targ": 5,
     "type": 4.0,
+    "use": 0.0
+  },
+  "slide": {
+    "bt_tags": [0],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 33, "pow": 26, "targ": 0.0 }],
+    "id": "slide",
+    "name": "Slide",
+    "pow": 75.0,
+    "targ": 0,
+    "type": 0.0,
     "use": 0.0
   },
   "snipe": {
@@ -1964,7 +1980,7 @@
     "eff": [{ "eff": 33.0, "pow": 10.0, "targ": 0.0 }],
     "id": "storedpower",
     "name": "Energized",
-    "pow": 15.0,
+    "pow": 45.0,
     "targ": 0,
     "type": 0.0,
     "use": 0.0
@@ -2328,7 +2344,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 29, "pow": 8.0, "targ": 3 },
+      { "eff": 29, "pow": 6.0, "targ": 3 },
       { "eff": 22, "pow": 4.0, "targ": 0.0 }
     ],
     "id": "wornout",

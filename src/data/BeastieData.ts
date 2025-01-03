@@ -176,6 +176,7 @@ export type BeastieType = {
   tamecond: null;
   tamelvl: number;
   tyield: Array<string | number>;
+  type_focus: number;
 };
 
 const BEASTIE_DATA: Map<string, BeastieType> = new Map();

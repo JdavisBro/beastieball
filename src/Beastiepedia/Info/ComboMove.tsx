@@ -29,25 +29,18 @@ export default function ComboMove({
   const powMults: number[] = [1, 1];
   let target = 0;
   let use = 0;
-  let moveType =
-    type == ComboType.Partners ? 3 : type == ComboType.Defense ? 5 : 4;
+  const moveType =
+    type == ComboType.Partners
+      ? 3
+      : type == ComboType.Defense
+        ? 5
+        : type == ComboType.Support
+          ? 4
+          : // Rivals
+            beastiedata.type_focus;
 
   const effects: MoveEffect[] = [];
 
-  const attks = [beastiedata.ba, beastiedata.ha, beastiedata.ma];
-  if (type == ComboType.Rivals) {
-    if (friend) {
-      attks[0] += friend.ba;
-      attks[1] += friend.ha;
-      attks[2] += friend.ma;
-    }
-    moveType =
-      attks[2] > attks[1] && attks[2] > attks[0]
-        ? 2
-        : attks[1] > attks[0]
-          ? 1
-          : 0;
-  }
   (friend ? [beastiedata, friend] : [beastiedata])
     .sort((beastie, beastie2) => beastie.number - beastie2.number)
     .forEach((beastie, beastieIndex) => {
@@ -109,6 +102,11 @@ export default function ComboMove({
           eff: effects,
         }}
         noLearner={true}
+        typeText={
+          type == ComboType.Rivals
+            ? "Rivals Move type is the type with the highest POW on the user Beastie."
+            : undefined
+        }
       />
     </InfoBox>
   );

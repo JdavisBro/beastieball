@@ -276,6 +276,7 @@ export default function MoveView(props: {
   move: Move;
   noLearner?: boolean;
   friendFilter?: string;
+  typeText?: string;
 }): React.ReactElement | null {
   const setMoveModal = useContext(MoveModalContext);
 
@@ -409,7 +410,10 @@ export default function MoveView(props: {
   return (
     <div className={styles.movecontainer} style={style}>
       <div className={styles.moveviewbar}>
-        <div className={styles.moveviewimage} title={alt}></div>
+        <div
+          className={styles.moveviewimage}
+          title={props.typeText ? props.typeText : alt}
+        ></div>
         {pow}
       </div>
       <div className={styles.moveseparator}></div>

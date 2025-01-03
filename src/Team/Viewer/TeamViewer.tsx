@@ -129,6 +129,7 @@ export default function Viewer() {
         description="Online Team Viewer for SportsNet download codes from Beastieball!"
         image="gameassets/sprMainmenu/8.png"
         url="team/viewer/"
+        noindex={!!code}
       />
       <Header
         title="Team Viewer"

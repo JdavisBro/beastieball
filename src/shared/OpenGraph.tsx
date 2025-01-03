@@ -35,7 +35,9 @@ export default function OpenGraph(props: Props): React.ReactElement {
       <meta
         name="robots"
         content={
-          props.noindex || import.meta.env.VITE_EXPERIMENTAL ? "noindex" : ""
+          props.noindex || import.meta.env.VITE_EXPERIMENTAL == "true"
+            ? "noindex"
+            : ""
         }
       />
     </Helmet>

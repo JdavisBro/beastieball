@@ -117,7 +117,7 @@
     "name": "League Jersey",
     "points": 1.0,
     "type": 2,
-    "value": 125.0
+    "value": 100.0
   },
   "jersey4": {
     "desc": "Recruit a Beastie that's level 40 or under. Its hyperdense weave magnifies willpower.",
@@ -127,7 +127,7 @@
     "name": "Pro Jersey",
     "points": 1.0,
     "type": 2,
-    "value": 300.0
+    "value": 200.0
   },
   "jersey5": {
     "desc": "Recruit a Beastie at any level. The pinnacle of mycelial weaving.",
@@ -137,7 +137,7 @@
     "name": "Star Jersey",
     "points": 1.0,
     "type": 2,
-    "value": 750.0
+    "value": 300.0
   },
   "jersey_ex1": {
     "desc": "Exchange a Jersey for a Club Jersey (can recruit higher level Beasties).",
@@ -157,7 +157,7 @@
     "name": "Club Jersey Upgrade",
     "points": 1.0,
     "type": 2,
-    "value": 85.0
+    "value": 70.0
   },
   "jersey_ex3": {
     "desc": "Exchange a League Jersey for a Pro Jersey (can recruit higher level Beasties).",
@@ -167,7 +167,7 @@
     "name": "League Jersey Upgrade",
     "points": 1.0,
     "type": 2,
-    "value": 190.0
+    "value": 150.0
   },
   "jersey_ex4": {
     "desc": "Exchange a Pro Jersey for a Star Jersey (recruits any Beastie).",
@@ -177,7 +177,7 @@
     "name": "Pro Jersey Upgrade",
     "points": 1.0,
     "type": 2,
-    "value": 475.0
+    "value": 200.0
   },
   "jerseycharm": {
     "desc": "A mycelial thread charm that will let you temporarily recruit any Beastie.",

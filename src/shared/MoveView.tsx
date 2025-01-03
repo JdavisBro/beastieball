@@ -212,6 +212,8 @@ function getEffectString(
           return "Damages based on target's strongest DEF.";
         case 25:
           return "Boosted by RALLY instead of weakened.";
+        case 26:
+          return "POW x1.5 if user MOVEs or SHIFTs before the attack.";
       }
       return `POW COND ${effect.pow}`;
     }
@@ -265,6 +267,8 @@ function getEffectString(
       return `Swaps Trait with ${TARGET_STRINGS[effect.targ]}.`;
     case 64:
       return "If ally field has RHYTHM: ";
+    case 69:
+      return ""; // Only when hittable - i do this elsewhere since it needs to be first.
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,
@@ -337,7 +341,9 @@ export default function MoveView(props: {
       break;
   }
 
-  if (
+  if (props.move.eff.find((effect) => effect.eff == 69)) {
+    desc.push("Only used when ball is hittable.");
+  } else if (
     props.move.type == Type.Volley &&
     !props.move.eff.some((eff) => eff.eff == 20) // Eff 20: Ball goes to TARGET. Does not have volley text
   ) {

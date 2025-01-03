@@ -1,9 +1,4 @@
 {
-  "fragile": {
-    "id": "fragile",
-    "desc": "After receiving any [sprIcon,0][sprIcon,1][sprIcon,2]attack, [sprBoost,4]BOOSTs the corresponding DEF",
-    "name": "Fragile"
-  },
   "vampire": {
     "id": "vampire",
     "desc": "Restores STAMINA equal to 1/6 of damage dealt",
@@ -36,7 +31,7 @@
   },
   "mom": {
     "id": "mom",
-    "desc": "[sprIcon,1]Pow[sprBoost,0] when ally receives any attack",
+    "desc": "[sprIcon,1]Pow[sprBoost,2] when ally receives any attack",
     "name": "Protector"
   },
   "multiscale": {
@@ -146,7 +141,7 @@
   },
   "ace": {
     "id": "ace",
-    "desc": "Serve attacks are powered up 1.5x",
+    "desc": "Serve attacks are powered up 2x",
     "name": "Ambush"
   },
   "unlazy": {
@@ -226,7 +221,7 @@
   },
   "vertical": {
     "id": "vertical",
-    "desc": "SIDEWAYS attacks do 1.3x damage",
+    "desc": "SIDEWAYS attacks do 1.5x damage",
     "name": "Goofy"
   },
   "shrug": {
@@ -306,8 +301,8 @@
   },
   "heavy": {
     "id": "heavy",
-    "desc": "Can't be forced to move by opponents",
-    "name": "Heavy"
+    "desc": "Opponents can't [sprBoost,3]BOOST their stats or move them",
+    "name": "Steadfast"
   },
   "unangry": {
     "id": "unangry",
@@ -446,7 +441,7 @@
   },
   "unnervous": {
     "id": "unnervous",
-    "desc": "Immune to feeling [sprStatus,0]NERVOUS or [sprStatus,2]SHOOK",
+    "desc": "Immune to feeling [sprStatus,0]NERVOUS, [sprStatus,2]SHOOK, or [sprStatus,12]STRESSED",
     "name": "Fearless"
   },
   "unmarked": {
@@ -516,13 +511,18 @@
   },
   "allpow": {
     "id": "allpow",
-    "desc": "POW [sprBoost,1]BOOSTS to [sprIcon,0], [sprIcon,1] or [sprIcon,2] give +1[sprBoost,0] to the [sprIcon,0][sprIcon,1][sprIcon,2]other 2",
+    "desc": "POW or DEF [sprBoost,1]BOOSTS to [sprIcon,0], [sprIcon,1] or [sprIcon,2] give +1[sprBoost,0] to the [sprIcon,0][sprIcon,1][sprIcon,2]other 2",
     "name": "Protean"
   },
   "nofield": {
     "id": "nofield",
     "desc": "Ignores FIELD EFFECTS",
     "name": "In The Clouds"
+  },
+  "noboosts": {
+    "id": "noboosts",
+    "desc": "Stats can't be [sprBoost,3][sprBoost,0]BOOSTed",
+    "name": "Self-Assured"
   },
   "handsfree": {
     "id": "handsfree",

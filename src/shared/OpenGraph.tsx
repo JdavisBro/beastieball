@@ -6,6 +6,7 @@ type Props = {
   url: string;
   description: string;
   notfound?: boolean;
+  noindex?: boolean;
 };
 
 export default function OpenGraph(props: Props): React.ReactElement {
@@ -31,6 +32,12 @@ export default function OpenGraph(props: Props): React.ReactElement {
         name="prerender-status-code"
         content={props.notfound ? "404" : "200"}
       ></meta>
+      <meta
+        name="robots"
+        content={
+          props.noindex || import.meta.env.VITE_EXPERIMENTAL ? "noindex" : ""
+        }
+      />
     </Helmet>
   );
 }

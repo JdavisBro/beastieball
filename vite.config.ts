@@ -17,6 +17,7 @@ export default defineConfig(() => {
       {
         name: "Sitemap",
         closeBundle() {
+          if (process.env.VITE_EXPERIMENTAL == "true") return;
           const beasties: string[] = Object.keys(BEASTIE_DATA).map(
             (id) => `${url}/beastiepedia/${BEASTIE_DATA[id].name}`,
           );

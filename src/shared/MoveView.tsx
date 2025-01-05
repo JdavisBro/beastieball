@@ -213,7 +213,7 @@ function getEffectString(
         case 25:
           return "Boosted by RALLY instead of weakened.";
         case 26:
-          return "POW x1.5 if user MOVEs or SHIFTs before the attack.";
+          return "POW x1.5 if user changed row or lane this turn.";
       }
       return `POW COND ${effect.pow}`;
     }

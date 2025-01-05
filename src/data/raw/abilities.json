@@ -1,542 +1,542 @@
 {
-  "vampire": {
-    "id": "vampire",
-    "desc": "Restores STAMINA equal to 1/6 of damage dealt",
-    "name": "Vampire"
+  "ace": {
+    "desc": "Serve attacks are powered up 2x",
+    "id": "ace",
+    "name": "Ambush"
   },
-  "redirection": {
-    "id": "redirection",
-    "desc": "Feels [sprStatus,3]NOISY (attracts attacks) when tagging in",
-    "name": "Clamor"
+  "acidic": {
+    "desc": "When receiving an attack, attacker loses 10 STAMINA",
+    "id": "acidic",
+    "name": "Acidic"
   },
-  "notag": {
-    "id": "notag",
-    "desc": "Prevents nearest non-[sprStatus,5]WIPED opponent from using \"Tag Out\"",
-    "name": "Tractor Beam"
+  "acrobat": {
+    "desc": "DEF x1.5 just after moving or tagging in",
+    "id": "acrobat",
+    "name": "Acrobat"
   },
-  "monster": {
-    "id": "monster",
-    "desc": "When they use \"Block,\" target also feels 2 [sprStatus,2]SHOOK",
-    "name": "Monster Block"
+  "allheart": {
+    "desc": "All attacks become [sprIcon,1] type",
+    "id": "allheart",
+    "name": "From the Heart"
+  },
+  "allpow": {
+    "desc": "POW or DEF [sprBoost,1]BOOSTS to [sprIcon,0], [sprIcon,1] or [sprIcon,2] give +1[sprBoost,0] to the [sprIcon,0][sprIcon,1][sprIcon,2]other 2",
+    "id": "allpow",
+    "name": "Protean"
   },
   "allyheal": {
-    "id": "allyheal",
     "desc": "Restores 6 STAMINA to ally each turn",
+    "id": "allyheal",
     "name": "Rumpus"
   },
-  "negation": {
-    "id": "negation",
-    "desc": "Ignores additional effects on received attacks",
-    "name": "Cryptic"
+  "avenger": {
+    "desc": "Attacks do 1.2x damage while any ally is [sprStatus,5]WIPED",
+    "id": "avenger",
+    "name": "Avenger"
   },
-  "mom": {
-    "id": "mom",
-    "desc": "[sprIcon,1]Pow[sprBoost,2] when ally receives any attack",
-    "name": "Protector"
+  "blocker": {
+    "desc": "When receiving at the net, gets an EASY RECEIVE and feels [sprStatus,8]JAZZED",
+    "id": "blocker",
+    "name": "Power Forward"
   },
-  "multiscale": {
-    "id": "multiscale",
-    "desc": "DEF x1.5 when STAMINA is filled",
-    "name": "Armored"
+  "bouncy": {
+    "desc": "Volleys the ball to their ally after receiving any attack",
+    "id": "bouncy",
+    "name": "Bouncy"
   },
-  "lightningrod_m": {
-    "id": "lightningrod_m",
-    "desc": "Is a magnet for all [sprIcon,2] attacks",
-    "name": "Neural Net"
+  "charge": {
+    "desc": "[sprIcon,0][sprIcon,1][sprIcon,2]POW[sprBoost,0] at the end of each turn",
+    "id": "charge",
+    "name": "Charge"
   },
-  "ignorenoisy": {
-    "id": "ignorenoisy",
-    "desc": "Attacks are unaffected by [sprStatus,3]NOISY",
-    "name": "Noise Cancel"
+  "cheer": {
+    "desc": "Ally attacks do +10 damage",
+    "id": "cheer",
+    "name": "Cheerleader"
   },
-  "shield": {
-    "id": "shield",
-    "desc": "Damage from non-SIDEWAYS attacks reduced x3/4",
-    "name": "Helmet"
+  "competitive": {
+    "desc": "Copies any [sprBoost,0]BOOSTs that opponents get",
+    "id": "competitive",
+    "name": "Competitive"
   },
-  "freemove": {
-    "id": "freemove",
-    "desc": "Gets +1 ACTION after MOVE",
-    "name": "Jet"
+  "crowddef": {
+    "desc": "DEF x1.3 while field has RALLY",
+    "id": "crowddef",
+    "name": "Performer"
   },
-  "magicguard": {
-    "id": "magicguard",
-    "desc": "Only takes damage from attacks",
-    "name": "Unflappable"
+  "crowdheal": {
+    "desc": "Restores 6 STAMINA each turn while field has RALLY",
+    "id": "crowdheal",
+    "name": "Performer-1"
+  },
+  "crowdpow": {
+    "desc": "While field has RALLY, attacks are 1.5x stronger, but lose 15 STAMINA each turn",
+    "id": "crowdpow",
+    "name": "Performer-2"
+  },
+  "dauntless": {
+    "desc": "Stats can't be lowered",
+    "id": "dauntless",
+    "name": "Dauntless"
+  },
+  "defender": {
+    "desc": "DEF x1.3 while any ally is [sprStatus,5]WIPED",
+    "id": "defender",
+    "name": "Survivor"
+  },
+  "defiant_b": {
+    "desc": "[sprIcon,0]Pow[sprBoost,1] when stats are lowered",
+    "id": "defiant_b",
+    "name": "Challenger"
+  },
+  "defiant_h": {
+    "desc": "[sprIcon,1]Pow[sprBoost,1] when stats are lowered",
+    "id": "defiant_h",
+    "name": "Defiant"
+  },
+  "defiant_m": {
+    "desc": "[sprIcon,2]Pow[sprBoost,1] when stats are lowered",
+    "id": "defiant_m",
+    "name": "Thoughts Racing"
+  },
+  "dreadlock": {
+    "desc": "While field has DREAD, this Beastie's attacks make target [sprStatus,0]NERVOUS",
+    "id": "dreadlock",
+    "name": "Unsettling-1"
+  },
+  "echo": {
+    "desc": "Damage reduced 3/4x, but 50% splashes to target ally",
+    "id": "echo",
+    "name": "Echo"
+  },
+  "empath": {
+    "desc": "Reflects negative FEELINGs back onto enemies",
+    "id": "empath",
+    "name": "Stirring"
   },
   "extraheal": {
-    "id": "extraheal",
     "desc": "Receives 2x healing",
+    "id": "extraheal",
     "name": "Restoration"
   },
+  "fetch": {
+    "desc": "Feels [sprStatus,8]JAZZED (POW +50%) after receiving any attack",
+    "id": "fetch",
+    "name": "Fetch"
+  },
+  "fieldclear": {
+    "desc": "Clears FIELD EFFECTS when tagged out",
+    "id": "fieldclear",
+    "name": "Cleanup"
+  },
+  "flashfire": {
+    "desc": "[sprIcon,1]POW[sprBoost,0] when receiving a [sprIcon,1] attack",
+    "id": "flashfire",
+    "name": "Inspired"
+  },
+  "flee": {
+    "desc": "TAGS OUT when stamina falls below 50",
+    "id": "flee",
+    "name": "Flee"
+  },
+  "freemove": {
+    "desc": "Gets +1 ACTION after MOVE",
+    "id": "freemove",
+    "name": "Jet"
+  },
+  "friendguard": {
+    "desc": "Ally takes x3/4 damage",
+    "id": "friendguard",
+    "name": "Friendship"
+  },
+  "fwdpass": {
+    "desc": "When they volley, SHIFTs ally to the net",
+    "id": "fwdpass",
+    "name": "Captain"
+  },
+  "galaxybrain": {
+    "desc": "[sprIcon,2]Pow[sprBoost,0] when receiving a [sprIcon,2] attack",
+    "id": "galaxybrain",
+    "name": "Galaxy Brain"
+  },
+  "ghost": {
+    "desc": "Immune to [sprIcon,0] attacks",
+    "id": "ghost",
+    "name": "Intangible"
+  },
+  "gloat": {
+    "desc": "When an opponent is [sprStatus,5]WIPED,| this Beastie restores 50 STAMINA",
+    "id": "gloat",
+    "name": "Crowing"
+  },
+  "guts": {
+    "desc": "Does 1.3x damage when [sprStatus,6]SWEATY, [sprStatus,0]NERVOUS, or [sprStatus,11]TENDER",
+    "id": "guts",
+    "name": "Determination"
+  },
+  "handsfree": {
+    "desc": "Can use [sprIcon,4]SUPPORT plays while holding ball",
+    "id": "handsfree",
+    "name": "No-Hands"
+  },
+  "heavy": {
+    "desc": "Opponents can't [sprBoost,3]BOOST their stats or move them",
+    "id": "heavy",
+    "name": "Steadfast"
+  },
+  "ignorenoisy": {
+    "desc": "Attacks are unaffected by [sprStatus,3]NOISY",
+    "id": "ignorenoisy",
+    "name": "Noise Cancel"
+  },
+  "intimidate": {
+    "desc": "[sprIcon,1]Pow[sprBoost,3] to opponent team when tagged in",
+    "id": "intimidate",
+    "name": "Majesty"
+  },
+  "lifeorb": {
+    "desc": "Attacks do 1.2x damage, but cost 10 STAMINA",
+    "id": "lifeorb",
+    "name": "Overwork"
+  },
+  "lightningrod_m": {
+    "desc": "Is a magnet for all [sprIcon,2] attacks",
+    "id": "lightningrod_m",
+    "name": "Neural Net"
+  },
+  "magicguard": {
+    "desc": "Only takes damage from attacks",
+    "id": "magicguard",
+    "name": "Unflappable"
+  },
+  "mimic": {
+    "desc": "Copies nearest opponent's trait when TAGGED IN",
+    "id": "mimic",
+    "name": "Mimicry"
+  },
+  "mindabsorb": {
+    "desc": "Has 1.5x [sprIcon,2]MIND defense",
+    "id": "mindabsorb",
+    "name": "Absorption"
+  },
+  "mindless": {
+    "desc": "Non-[sprIcon,0] attacks become [sprIcon,0] and are 1.3x stronger",
+    "id": "mindless",
+    "name": "Musclebrain"
+  },
+  "moldbreaker": {
+    "desc": "Ball attacks ignore traits",
+    "id": "moldbreaker",
+    "name": "Maverick"
+  },
+  "mom": {
+    "desc": "[sprIcon,1]Pow[sprBoost,1] when ally receives any attack",
+    "id": "mom",
+    "name": "Protector"
+  },
+  "monster": {
+    "desc": "When they use \"Block,\" target also feels 2 [sprStatus,2]SHOOK",
+    "id": "monster",
+    "name": "Monster Block"
+  },
+  "multiscale": {
+    "desc": "DEF x1.5 when STAMINA is filled",
+    "id": "multiscale",
+    "name": "Armored"
+  },
+  "negation": {
+    "desc": "Ignores additional effects on received attacks",
+    "id": "negation",
+    "name": "Cryptic"
+  },
+  "nimble": {
+    "desc": "+1 ACTION after receiving any attack",
+    "id": "nimble",
+    "name": "Nimble"
+  },
+  "noboosts": {
+    "desc": "Stats can't be [sprBoost,3][sprBoost,0]BOOSTed",
+    "id": "noboosts",
+    "name": "Self-Assured"
+  },
+  "nodie": {
+    "desc": "Restores instantly from [sprStatus,5]WIPED and just feels 2 [sprStatus,2]SHOOK",
+    "id": "nodie",
+    "name": "Superorganism"
+  },
+  "nofield": {
+    "desc": "Ignores FIELD EFFECTS",
+    "id": "nofield",
+    "name": "In The Clouds"
+  },
+  "noredirect": {
+    "desc": "This Beastie's attacks always go where they are targeted",
+    "id": "noredirect",
+    "name": "Precise"
+  },
+  "nostatus": {
+    "desc": "Can't be given FEELINGs",
+    "id": "nostatus",
+    "name": "Plucky"
+  },
+  "notag": {
+    "desc": "Prevents nearest non-[sprStatus,5]WIPED opponent from using \"Tag Out\"",
+    "id": "notag",
+    "name": "Tractor Beam"
+  },
+  "notraits": {
+    "desc": "While on the field, nullfies other Beasties' traits",
+    "id": "notraits",
+    "name": "Nullify"
+  },
+  "novolley": {
+    "desc": "Can attack without volleying",
+    "id": "novolley",
+    "name": "Agile"
+  },
+  "nurture": {
+    "desc": "Restores 20 STAMINA to ally when TAGGED IN",
+    "id": "nurture",
+    "name": "Treat"
+  },
+  "oblivious": {
+    "desc": "Ignores opponent's [sprBoost,1][sprBoost,3]BOOSTs",
+    "id": "oblivious",
+    "name": "Foggy"
+  },
+  "overwrite": {
+    "desc": "Attacks change the target's trait to Overwrite",
+    "id": "overwrite",
+    "name": "Overwrite"
+  },
+  "prankster": {
+    "desc": "Can use [sprIcon,4]SUPPORT plays during Defense",
+    "id": "prankster",
+    "name": "Mischief"
+  },
+  "redirection": {
+    "desc": "Feels [sprStatus,3]NOISY (attracts attacks) when tagging in",
+    "id": "redirection",
+    "name": "Clamor"
+  },
+  "regenerator": {
+    "desc": "Restores 20 STAMINA when tagged out",
+    "id": "regenerator",
+    "name": "Scavenger"
+  },
+  "rhythmblock": {
+    "desc": "While on field with RHYTHM, allies can't be [sprStatus,9]BLOCKED",
+    "id": "rhythmblock",
+    "name": "Flow State"
+  },
+  "rhythmpow": {
+    "desc": "[sprIcon,0]Attacks do 1.3x damage while field has RHYTHM",
+    "id": "rhythmpow",
+    "name": "Groove"
+  },
+  "runner": {
+    "desc": "Does 1.3x damage just after moving or tagging in",
+    "id": "runner",
+    "name": "Momentum"
+  },
+  "sauna": {
+    "desc": "[sprStatus,6]SWEATY Beasties lose +10 STAMINA",
+    "id": "sauna",
+    "name": "Sauna"
+  },
+  "scary": {
+    "desc": "Attacks SHIFT their target back",
+    "id": "scary",
+    "name": "Scary Face"
+  },
+  "shield": {
+    "desc": "Damage from non-SIDEWAYS attacks reduced x3/4",
+    "id": "shield",
+    "name": "Helmet"
+  },
+  "shrug": {
+    "desc": "Restores 10 STAMINA after taking any damage",
+    "id": "shrug",
+    "name": "Hardy"
+  },
+  "shy": {
+    "desc": "DEF bonus at the net and POW bonus at the back row",
+    "id": "shy",
+    "name": "Shy"
+  },
+  "silencer": {
+    "desc": "Does 1.5x damage if the target is [sprStatus,3]NOISY",
+    "id": "silencer",
+    "name": "Silencer"
+  },
+  "sneaky": {
+    "desc": "Makes adjacent allies receive attacks in their place",
+    "id": "sneaky",
+    "name": "Slippery"
+  },
+  "spiker": {
+    "desc": "Net attacks do 1.2x damage",
+    "id": "spiker",
+    "name": "Spiker"
+  },
+  "starter_b": {
+    "desc": "[sprIcon,0]Attacks do 1.5x damage when STAMINA is below 34",
+    "id": "starter_b",
+    "name": "Power Up"
+  },
+  "starter_h": {
+    "desc": "[sprIcon,1]Attacks do 1.5x damage when STAMINA is below 34",
+    "id": "starter_h",
+    "name": "High Spirits"
+  },
+  "starter_m": {
+    "desc": "[sprIcon,2]Attacks do 1.5x damage when STAMINA is below 34",
+    "id": "starter_m",
+    "name": "Full Focus"
+  },
+  "static": {
+    "desc": "When receiving an attack, attacker feels 1 [sprStatus,0]NERVOUS (can't move)",
+    "id": "static",
+    "name": "Unpredictable"
+  },
+  "statkeeper": {
+    "desc": "Keeps [sprBoost,2][sprBoost,5]BOOSTS while benched and between points",
+    "id": "statkeeper",
+    "name": "Engaged"
+  },
+  "steal": {
+    "desc": "Whenever they MOVE or SHIFT, takes the ball from their ally",
+    "id": "steal",
+    "name": "Thief"
+  },
+  "stingblock": {
+    "desc": "Beasties they make [sprStatus,9]BLOCKED also lose 25% of their remaining STAMINA",
+    "id": "stingblock",
+    "name": "Venom Touch"
+  },
+  "straightshot": {
+    "desc": "Attacks do 1.3x damage and always target straight ahead",
+    "id": "straightshot",
+    "name": "Launcher"
+  },
+  "strongchance": {
+    "desc": "Free Ball is a 60POW attack",
+    "id": "strongchance",
+    "name": "Miracle Play"
+  },
+  "study": {
+    "desc": "After receiving any [sprIcon,0][sprIcon,1][sprIcon,2]attack, [sprBoost,0]BOOSTs the corresponding DEF",
+    "id": "study",
+    "name": "Study"
+  },
+  "sturdy": {
+    "desc": "Never takes more than 99 damage at once",
+    "id": "sturdy",
+    "name": "Bunker"
+  },
+  "superblock": {
+    "desc": "DEF x1.5 when the attacker is [sprStatus,9]BLOCKED",
+    "id": "superblock",
+    "name": "Anticipation"
+  },
+  "tagheal": {
+    "desc": "Restores 20 STAMINA to an ally that TAGS IN for them",
+    "id": "tagheal",
+    "name": "Supportive"
+  },
+  "taghit": {
+    "desc": "Does 1.5x damage when the target has just TAGGED IN",
+    "id": "taghit",
+    "name": "Hunter"
+  },
+  "taunt": {
+    "desc": "Attacks make the target [sprStatus,1]ANGRY",
+    "id": "taunt",
+    "name": "Annoying"
+  },
+  "technician": {
+    "desc": "Moves with 60POW or less do 1.5x damage",
+    "id": "technician",
+    "name": "Crafty"
+  },
+  "teleport": {
+    "desc": "Automatically SHIFTs to targeted empty lanes",
+    "id": "teleport",
+    "name": "Stealthy"
+  },
+  "traitless": {
+    "desc": "This Beastie is traitless",
+    "id": "traitless",
+    "name": "Primitive"
+  },
+  "trappow": {
+    "desc": "When they attack, sets +1 TRAP on the opponent field",
+    "id": "trappow",
+    "name": "Trapper"
+  },
+  "trust": {
+    "desc": "+1 to any [sprBoost,2]BOOSTs received from allies",
+    "id": "trust",
+    "name": "Trusting"
+  },
+  "unangry": {
+    "desc": "Opponents can't make them feel [sprStatus,1]ANGRY",
+    "id": "unangry",
+    "name": "Chill"
+  },
+  "unlazy": {
+    "desc": "Never feels [sprStatus,10]TIRED",
+    "id": "unlazy",
+    "name": "Restless"
+  },
+  "unmarked": {
+    "desc": "Can't be [sprStatus,9]BLOCKED",
+    "id": "unmarked",
+    "name": "Flitting"
+  },
+  "unnervous": {
+    "desc": "Immune to feeling [sprStatus,0]NERVOUS, [sprStatus,2]SHOOK, or [sprStatus,12]STRESSED",
+    "id": "unnervous",
+    "name": "Fearless"
+  },
   "unshaken": {
-    "id": "unshaken",
     "desc": "Can't be [sprStatus,2]SHOOK",
+    "id": "unshaken",
     "name": "Steady"
   },
   "unsweaty": {
-    "id": "unsweaty",
     "desc": "Immune to feeling [sprStatus,6]SWEATY",
+    "id": "unsweaty",
     "name": "Moist"
   },
-  "blocker": {
-    "id": "blocker",
-    "desc": "When receiving at the net, gets an EASY RECEIVE and feels [sprStatus,8]JAZZED",
-    "name": "Power Forward"
-  },
-  "oblivious": {
-    "id": "oblivious",
-    "desc": "Ignores opponent's [sprBoost,1][sprBoost,3]BOOSTs",
-    "name": "Foggy"
-  },
-  "dreadlock": {
-    "id": "dreadlock",
-    "desc": "While field has DREAD, this Beastie's attacks make target [sprStatus,0]NERVOUS",
-    "name": "Unsettling-1"
-  },
-  "nurture": {
-    "id": "nurture",
-    "desc": "Restores 20 STAMINA to ally when TAGGED IN",
-    "name": "Treat"
-  },
-  "taunt": {
-    "id": "taunt",
-    "desc": "Attacks make the target [sprStatus,1]ANGRY",
-    "name": "Annoying"
-  },
-  "vicious": {
-    "id": "vicious",
-    "desc": "Attacks always do at least 30 damage",
-    "name": "Vicious"
-  },
-  "stingblock": {
-    "id": "stingblock",
-    "desc": "Beasties they make [sprStatus,9]BLOCKED also lose 25% of their remaining STAMINA",
-    "name": "Venom Touch"
-  },
-  "starter_h": {
-    "id": "starter_h",
-    "desc": "[sprIcon,1]Attacks do 1.5x damage when STAMINA is below 34",
-    "name": "High Spirits"
-  },
-  "prankster": {
-    "id": "prankster",
-    "desc": "Can use [sprIcon,4]SUPPORT plays during Defense",
-    "name": "Mischief"
-  },
-  "lifeorb": {
-    "id": "lifeorb",
-    "desc": "Attacks do 1.2x damage, but cost 10 STAMINA",
-    "name": "Overwork"
-  },
-  "spiker": {
-    "id": "spiker",
-    "desc": "Net attacks do 1.2x damage",
-    "name": "Spiker"
-  },
-  "acidic": {
-    "id": "acidic",
-    "desc": "When receiving an attack, attacker loses 10 STAMINA",
-    "name": "Acidic"
-  },
-  "ace": {
-    "id": "ace",
-    "desc": "Serve attacks are powered up 2x",
-    "name": "Ambush"
-  },
-  "unlazy": {
-    "id": "unlazy",
-    "desc": "Never feels [sprStatus,10]TIRED",
-    "name": "Restless"
-  },
-  "flee": {
-    "id": "flee",
-    "desc": "TAGS OUT when stamina falls below 50",
-    "name": "Flee"
-  },
-  "moldbreaker": {
-    "id": "moldbreaker",
-    "desc": "Ball attacks ignore traits",
-    "name": "Maverick"
-  },
-  "strongchance": {
-    "id": "strongchance",
-    "desc": "Free Ball is a 60POW attack",
-    "name": "Miracle Play"
-  },
-  "trust": {
-    "id": "trust",
-    "desc": "+1 to any [sprBoost,2]BOOSTs received from allies",
-    "name": "Trusting"
-  },
-  "waiting": {
-    "id": "waiting",
-    "desc": "[sprIcon,0][sprIcon,1][sprIcon,2]POW[sprBoost,2] when they use Free Ball",
-    "name": "Torpor"
-  },
-  "acrobat": {
-    "id": "acrobat",
-    "desc": "DEF x1.5 just after moving or tagging in",
-    "name": "Acrobat"
-  },
-  "watcher": {
-    "id": "watcher",
-    "desc": "Receives attacks in place of adjacent allies",
-    "name": "Watchtower"
-  },
-  "defiant_m": {
-    "id": "defiant_m",
-    "desc": "[sprIcon,2]Pow[sprBoost,1] when stats are lowered",
-    "name": "Thoughts Racing"
-  },
-  "avenger": {
-    "id": "avenger",
-    "desc": "Attacks do 1.2x damage while any ally is [sprStatus,5]WIPED",
-    "name": "Avenger"
-  },
-  "fieldclear": {
-    "id": "fieldclear",
-    "desc": "Clears FIELD EFFECTS when tagged out",
-    "name": "Cleanup"
-  },
-  "empath": {
-    "id": "empath",
-    "desc": "Reflects negative FEELINGs back onto enemies",
-    "name": "Stirring"
-  },
-  "ghost": {
-    "id": "ghost",
-    "desc": "Immune to [sprIcon,0] attacks",
-    "name": "Intangible"
-  },
-  "nodie": {
-    "id": "nodie",
-    "desc": "Restores instantly from [sprStatus,5]WIPED and just feels 2 [sprStatus,2]SHOOK",
-    "name": "Superorganism"
-  },
-  "starter_b": {
-    "id": "starter_b",
-    "desc": "[sprIcon,0]Attacks do 1.5x damage when STAMINA is below 34",
-    "name": "Power Up"
+  "vampire": {
+    "desc": "Restores STAMINA equal to 1/6 of damage dealt",
+    "id": "vampire",
+    "name": "Vampire"
   },
   "vertical": {
-    "id": "vertical",
     "desc": "SIDEWAYS attacks do 1.5x damage",
+    "id": "vertical",
     "name": "Goofy"
   },
-  "shrug": {
-    "id": "shrug",
-    "desc": "Restores 10 STAMINA after taking any damage",
-    "name": "Hardy"
+  "vicious": {
+    "desc": "Attacks always do at least 30 damage",
+    "id": "vicious",
+    "name": "Vicious"
   },
-  "steal": {
-    "id": "steal",
-    "desc": "Whenever they MOVE or SHIFT, takes the ball from their ally",
-    "name": "Thief"
+  "waiting": {
+    "desc": "[sprIcon,0][sprIcon,1][sprIcon,2]POW[sprBoost,2] when they use Free Ball",
+    "id": "waiting",
+    "name": "Torpor"
   },
-  "traitless": {
-    "id": "traitless",
-    "desc": "This Beastie is traitless",
-    "name": "Primitive"
-  },
-  "crowdpow": {
-    "id": "crowdpow",
-    "desc": "While field has RALLY, attacks are 1.5x stronger, but lose 15 STAMINA each turn",
-    "name": "Performer-2"
-  },
-  "teleport": {
-    "id": "teleport",
-    "desc": "Automatically SHIFTs to targeted empty lanes",
-    "name": "Stealthy"
-  },
-  "mindabsorb": {
-    "id": "mindabsorb",
-    "desc": "Has 1.5x [sprIcon,2]MIND defense",
-    "name": "Absorption"
-  },
-  "silencer": {
-    "id": "silencer",
-    "desc": "Does 1.5x damage if the target is [sprStatus,3]NOISY",
-    "name": "Silencer"
-  },
-  "rhythmblock": {
-    "id": "rhythmblock",
-    "desc": "While on field with RHYTHM, allies can't be [sprStatus,9]BLOCKED",
-    "name": "Flow State"
-  },
-  "noredirect": {
-    "id": "noredirect",
-    "desc": "This Beastie's attacks always go where they are targeted",
-    "name": "Precise"
-  },
-  "intimidate": {
-    "id": "intimidate",
-    "desc": "[sprIcon,1]Pow[sprBoost,3] to opponent team when tagged in",
-    "name": "Majesty"
-  },
-  "fwdpass": {
-    "id": "fwdpass",
-    "desc": "When they volley, SHIFTs ally to the net",
-    "name": "Captain"
-  },
-  "guts": {
-    "id": "guts",
-    "desc": "Does 1.3x damage when [sprStatus,6]SWEATY, [sprStatus,0]NERVOUS, or [sprStatus,11]TENDER",
-    "name": "Determination"
-  },
-  "sturdy": {
-    "id": "sturdy",
-    "desc": "Never takes more than 99 damage at once",
-    "name": "Bunker"
-  },
-  "crowdheal": {
-    "id": "crowdheal",
-    "desc": "Restores 6 STAMINA each turn while field has RALLY",
-    "name": "Performer-1"
-  },
-  "taghit": {
-    "id": "taghit",
-    "desc": "Does 1.5x damage when the target has just TAGGED IN",
-    "name": "Hunter"
-  },
-  "heavy": {
-    "id": "heavy",
-    "desc": "Opponents can't [sprBoost,3]BOOST their stats or move them",
-    "name": "Steadfast"
-  },
-  "unangry": {
-    "id": "unangry",
-    "desc": "Opponents can't make them feel [sprStatus,1]ANGRY",
-    "name": "Chill"
-  },
-  "nimble": {
-    "id": "nimble",
-    "desc": "+1 ACTION after receiving any attack",
-    "name": "Nimble"
-  },
-  "tagheal": {
-    "id": "tagheal",
-    "desc": "Restores 20 STAMINA to an ally that TAGS IN for them",
-    "name": "Supportive"
-  },
-  "cheer": {
-    "id": "cheer",
-    "desc": "Ally attacks do +10 damage",
-    "name": "Cheerleader"
-  },
-  "galaxybrain": {
-    "id": "galaxybrain",
-    "desc": "[sprIcon,2]Pow[sprBoost,0] when receiving a [sprIcon,2] attack",
-    "name": "Galaxy Brain"
-  },
-  "nostatus": {
-    "id": "nostatus",
-    "desc": "Can't be given FEELINGs",
-    "name": "Plucky"
-  },
-  "mindless": {
-    "id": "mindless",
-    "desc": "Non-[sprIcon,0] attacks become [sprIcon,0] and are 1.3x stronger",
-    "name": "Musclebrain"
-  },
-  "superblock": {
-    "id": "superblock",
-    "desc": "DEF x1.5 when the attacker is [sprStatus,9]BLOCKED",
-    "name": "Anticipation"
-  },
-  "trappow": {
-    "id": "trappow",
-    "desc": "When they attack, sets +1 TRAP on the opponent field",
-    "name": "Trapper"
-  },
-  "study": {
-    "id": "study",
-    "desc": "After receiving any [sprIcon,0][sprIcon,1][sprIcon,2]attack, [sprBoost,0]BOOSTs the corresponding DEF",
-    "name": "Study"
-  },
-  "dauntless": {
-    "id": "dauntless",
-    "desc": "Stats can't be lowered",
-    "name": "Dauntless"
-  },
-  "technician": {
-    "id": "technician",
-    "desc": "Moves with 60POW or less do 1.5x damage",
-    "name": "Crafty"
+  "watcher": {
+    "desc": "Receives attacks in place of adjacent allies",
+    "id": "watcher",
+    "name": "Watchtower"
   },
   "wither": {
-    "id": "wither",
     "desc": "Loses 10 STAMINA each turn",
+    "id": "wither",
     "name": "Ancient"
-  },
-  "crowddef": {
-    "id": "crowddef",
-    "desc": "DEF x1.3 while field has RALLY",
-    "name": "Performer"
-  },
-  "fetch": {
-    "id": "fetch",
-    "desc": "Feels [sprStatus,8]JAZZED (POW +50%) after receiving any attack",
-    "name": "Fetch"
-  },
-  "runner": {
-    "id": "runner",
-    "desc": "Does 1.3x damage just after moving or tagging in",
-    "name": "Momentum"
-  },
-  "straightshot": {
-    "id": "straightshot",
-    "desc": "Attacks do 1.3x damage and always target straight ahead",
-    "name": "Launcher"
-  },
-  "defiant_b": {
-    "id": "defiant_b",
-    "desc": "[sprIcon,0]Pow[sprBoost,1] when stats are lowered",
-    "name": "Challenger"
-  },
-  "sauna": {
-    "id": "sauna",
-    "desc": "[sprStatus,6]SWEATY Beasties lose +10 STAMINA",
-    "name": "Sauna"
-  },
-  "friendguard": {
-    "id": "friendguard",
-    "desc": "Ally takes x3/4 damage",
-    "name": "Friendship"
-  },
-  "regenerator": {
-    "id": "regenerator",
-    "desc": "Restores 20 STAMINA when tagged out",
-    "name": "Scavenger"
-  },
-  "charge": {
-    "id": "charge",
-    "desc": "[sprIcon,0][sprIcon,1][sprIcon,2]POW[sprBoost,0] at the end of each turn",
-    "name": "Charge"
-  },
-  "sneaky": {
-    "id": "sneaky",
-    "desc": "Makes adjacent allies receive attacks in their place",
-    "name": "Slippery"
-  },
-  "echo": {
-    "id": "echo",
-    "desc": "Damage reduced 3/4x, but 50% splashes to target ally",
-    "name": "Echo"
-  },
-  "starter_m": {
-    "id": "starter_m",
-    "desc": "[sprIcon,2]Attacks do 1.5x damage when STAMINA is below 34",
-    "name": "Full Focus"
-  },
-  "defender": {
-    "id": "defender",
-    "desc": "DEF x1.3 while any ally is [sprStatus,5]WIPED",
-    "name": "Survivor"
-  },
-  "shy": {
-    "id": "shy",
-    "desc": "DEF bonus at the net and POW bonus at the back row",
-    "name": "Shy"
-  },
-  "unnervous": {
-    "id": "unnervous",
-    "desc": "Immune to feeling [sprStatus,0]NERVOUS, [sprStatus,2]SHOOK, or [sprStatus,12]STRESSED",
-    "name": "Fearless"
-  },
-  "unmarked": {
-    "id": "unmarked",
-    "desc": "Can't be [sprStatus,9]BLOCKED",
-    "name": "Flitting"
-  },
-  "rhythmpow": {
-    "id": "rhythmpow",
-    "desc": "[sprIcon,0]Attacks do 1.3x damage while field has RHYTHM",
-    "name": "Groove"
-  },
-  "novolley": {
-    "id": "novolley",
-    "desc": "Can attack without volleying",
-    "name": "Agile"
-  },
-  "notraits": {
-    "id": "notraits",
-    "desc": "While on the field, nullfies other Beasties' traits",
-    "name": "Nullify"
-  },
-  "static": {
-    "id": "static",
-    "desc": "When receiving an attack, attacker feels 1 [sprStatus,0]NERVOUS (can't move)",
-    "name": "Unpredictable"
-  },
-  "gloat": {
-    "id": "gloat",
-    "desc": "When an opponent is [sprStatus,5]WIPED,| this Beastie restores 50 STAMINA",
-    "name": "Crowing"
-  },
-  "defiant_h": {
-    "id": "defiant_h",
-    "desc": "[sprIcon,1]Pow[sprBoost,1] when stats are lowered",
-    "name": "Defiant"
-  },
-  "competitive": {
-    "id": "competitive",
-    "desc": "Copies any [sprBoost,0]BOOSTs that opponents get",
-    "name": "Competitive"
-  },
-  "statkeeper": {
-    "id": "statkeeper",
-    "desc": "Keeps [sprBoost,2][sprBoost,5]BOOSTS while benched and between points",
-    "name": "Engaged"
-  },
-  "mimic": {
-    "id": "mimic",
-    "desc": "Copies nearest opponent's trait when TAGGED IN",
-    "name": "Mimicry"
-  },
-  "bouncy": {
-    "id": "bouncy",
-    "desc": "Volleys the ball to their ally after receiving any attack",
-    "name": "Bouncy"
-  },
-  "flashfire": {
-    "id": "flashfire",
-    "desc": "[sprIcon,1]POW[sprBoost,0] when receiving a [sprIcon,1] attack",
-    "name": "Inspired"
-  },
-  "scary": {
-    "id": "scary",
-    "desc": "Attacks SHIFT their target back",
-    "name": "Scary Face"
-  },
-  "allpow": {
-    "id": "allpow",
-    "desc": "POW or DEF [sprBoost,1]BOOSTS to [sprIcon,0], [sprIcon,1] or [sprIcon,2] give +1[sprBoost,0] to the [sprIcon,0][sprIcon,1][sprIcon,2]other 2",
-    "name": "Protean"
-  },
-  "nofield": {
-    "id": "nofield",
-    "desc": "Ignores FIELD EFFECTS",
-    "name": "In The Clouds"
-  },
-  "noboosts": {
-    "id": "noboosts",
-    "desc": "Stats can't be [sprBoost,3][sprBoost,0]BOOSTed",
-    "name": "Self-Assured"
-  },
-  "handsfree": {
-    "id": "handsfree",
-    "desc": "Can use [sprIcon,4]SUPPORT plays while holding ball",
-    "name": "No-Hands"
-  },
-  "allheart": {
-    "id": "allheart",
-    "desc": "All attacks become [sprIcon,1] type",
-    "name": "From the Heart"
-  },
-  "overwrite": {
-    "id": "overwrite",
-    "desc": "Attacks change the target's trait to Overwrite",
-    "name": "Overwrite"
   }
 }

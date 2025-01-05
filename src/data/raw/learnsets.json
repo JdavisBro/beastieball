@@ -566,10 +566,10 @@
     ["sideshot", 10],
     ["followme", 14],
     ["topspin", 19],
-    ["set", 24],
+    ["bodypass", 24],
     ["sidespin", 30],
     ["passattack", 36],
-    ["bodypass", 40],
+    ["set", 40],
     ["moon", 44]
   ],
   "63": [
@@ -579,10 +579,10 @@
     ["sideshot", 14],
     ["followme", 18],
     ["topspin", 23],
-    ["set", 28],
+    ["bodypass", 28],
     ["sidespin", 34],
     ["passattack", 40],
-    ["bodypass", 44],
+    ["set", 44],
     ["moon", 48]
   ],
   "64": [
@@ -908,10 +908,10 @@
     ["starterbody", 0],
     ["dig", 6],
     ["healhit", 11],
-    ["set", 16],
+    ["swordsdance", 16],
     ["serve", 21],
-    ["swordsdance", 26],
-    ["batonpass", 31],
+    ["batonpass", 26],
+    ["set", 31],
     ["nice", 36],
     ["jazzpass", 40],
     ["slide", 44],
@@ -922,10 +922,10 @@
     ["starterbody", 0],
     ["dig", 6],
     ["healhit", 11],
-    ["set", 16],
+    ["swordsdance", 16],
     ["serve", 21],
-    ["swordsdance", 26],
-    ["batonpass", 31],
+    ["batonpass", 26],
+    ["set", 31],
     ["nice", 36],
     ["jazzpass", 40],
     ["slide", 44],
@@ -1173,7 +1173,7 @@
     ["healhit2", 24],
     ["lifedew", 29],
     ["heart", 33],
-    ["set", 37],
+    ["heartpass", 37],
     ["commit", 41]
   ],
   "107": [
@@ -1186,7 +1186,7 @@
     ["healhit2", 28],
     ["lifedew", 33],
     ["heart", 37],
-    ["set", 41],
+    ["heartpass", 41],
     ["commit", 45]
   ],
   "108": [

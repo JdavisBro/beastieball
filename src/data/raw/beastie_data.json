@@ -566,7 +566,7 @@
       "conditions": [
         {
           "effect_pow": ">0",
-          "effect_type": [8, 55],
+          "effect_type": [8, 55, 47],
           "event": null,
           "freq": -1,
           "func": null,
@@ -822,7 +822,7 @@
       "conditions": [
         {
           "effect_pow": ">0",
-          "effect_type": [8, 55],
+          "effect_type": [8, 55, 47],
           "event": null,
           "freq": -1,
           "func": null,

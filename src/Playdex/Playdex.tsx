@@ -82,17 +82,23 @@ export default function PlayDex() {
     moves = moves.filter((move) => move.type == typeFilter);
   }
   if (effectFilter != -1) {
-    const effects = EffectFilters[effectFilter].effects;
-    moves = moves.filter((move) =>
-      move.eff.some((moveEff) =>
-        effects.some((filterEff) =>
-          typeof filterEff == "number"
-            ? Math.abs(moveEff.eff) == filterEff
-            : Math.abs(moveEff.eff) == filterEff[0] &&
-              moveEff.pow == filterEff[1],
-        ),
-      ),
-    );
+    const { effects, use, target } = EffectFilters[effectFilter];
+    moves = moves.filter((move) => {
+      if (effects) {
+        return move.eff.some((moveEff) =>
+          effects.some((filterEff) =>
+            typeof filterEff == "number"
+              ? Math.abs(moveEff.eff) == filterEff
+              : Math.abs(moveEff.eff) == filterEff[0] &&
+                moveEff.pow == filterEff[1],
+          ),
+        );
+      } else if (use) {
+        return use.includes(move.use);
+      } else if (target) {
+        return move.type < 3 && target.includes(move.targ);
+      }
+    });
   }
   moves = moves.sort(SortFunctions[sort]);
 

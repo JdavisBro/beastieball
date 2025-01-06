@@ -367,9 +367,9 @@ export default function MoveView(props: {
         break;
     }
 
-    if (props.move.pow <= -1) {
+    if (props.move.pow < -1) {
       desc.push(`Always does ${-props.move.pow} damage.`);
-    } else if (props.move.pow < 0) {
+    } else if (props.move.pow > -1 && props.move.pow < 0) {
       desc.push(
         `Damage equals ${-props.move.pow * 100}% of target's remaining STAMINA.`,
       );

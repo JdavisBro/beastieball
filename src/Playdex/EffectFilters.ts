@@ -1,6 +1,8 @@
 const EffectFilters: {
   name: string;
-  effects: Array<number | [number, number]>; // eff | [eff, pow]
+  effects?: Array<number | [number, number]>; // eff | [eff, pow]
+  use?: Array<number>;
+  target?: Array<number>;
 }[] = [
   // POW/DEF
   { name: "Body POW", effects: [0, 15] },
@@ -11,6 +13,16 @@ const EffectFilters: {
   { name: "Mind DEF", effects: [5, 16] },
   { name: "All POW", effects: [15] },
   { name: "All DEF", effects: [16] },
+  // Use Conditions
+  { name: "Usage Condition: From Back", use: [1] },
+  { name: "Usage Condition: At Net", use: [2] },
+  { name: "Usage Condition: Ball Hittable", effects: [69] },
+  // Targets
+  { name: "Targets: Straight Ahead", target: [1] },
+  { name: "Targets: Front Row", target: [4] },
+  { name: "Targets: Back Row", target: [8] },
+  { name: "Targets: Sideways", target: [12] },
+  { name: "Targets: Nearest Opponent", target: [13] },
   // FEELINGS
   { name: "Feeling: NERVOUS", effects: [6, [33, 12]] },
   { name: "Feeling: ANGRY", effects: [12] },
@@ -22,7 +34,7 @@ const EffectFilters: {
   { name: "Feeling: JAZZED", effects: [26] },
   { name: "Feeling: BLOCKED", effects: [27] },
   { name: "Feeling: TIRED", effects: [29] },
-  { name: "Feeling: TENDER", effects: [38] },
+  { name: "Feeling: TENDER", effects: [38, [33, 12]] },
   { name: "Feeling: STRESSED", effects: [39] },
   // Field Effects
   { name: "Field: TRAP", effects: [42] },
@@ -59,7 +71,7 @@ const EffectFilters: {
   },
   // Conditional Boosts
   {
-    name: "Condition: STAMINA",
+    name: "Pow Condition: STAMINA",
     effects: [
       [33, 0],
       [33, 1],
@@ -68,18 +80,18 @@ const EffectFilters: {
     ],
   },
   {
-    name: "Condition: TAGGED IN",
+    name: "Pow Condition: TAGGED IN",
     effects: [
       [33, 5],
       [33, 20],
     ],
   },
   {
-    name: "Condition: Serve",
+    name: "Pow Condition: Serve",
     effects: [[33, 7]],
   },
   {
-    name: "Condition: Boost",
+    name: "Pow Condition: Boost",
     effects: [
       [33, 10],
       [33, 11],
@@ -87,16 +99,16 @@ const EffectFilters: {
     ],
   },
   {
-    name: "Condition: Bad Feeling",
+    name: "Pow Condition: Bad Feeling",
     effects: [
       [33, 12],
       [33, 13],
     ],
   },
-  { name: "Condition: Tied/Behind", effects: [[33, 15]] },
-  { name: "Condition: Recieved In Back", effects: [[33, 16]] },
-  { name: "Condition: Recieved", effects: [[33, 18]] },
-  { name: "Condition: Volley", effects: [[33, 19]] },
+  { name: "Pow Condition: Tied/Behind", effects: [[33, 15]] },
+  { name: "Pow Condition: Recieved In Back", effects: [[33, 16]] },
+  { name: "Pow Condition: Recieved", effects: [[33, 18]] },
+  { name: "Pow Condition: Volley", effects: [[33, 19]] },
 ];
 
 export default EffectFilters;

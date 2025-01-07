@@ -311,11 +311,12 @@ export default function MoveView(props: {
     }
   }
 
-  const { color, alt } = TypeData[props.move.type]
+  const { color, darkColor, alt } = TypeData[props.move.type]
     ? TypeData[props.move.type]
     : { color: "#ffffff", alt: "a" };
   const style = {
     "--move-color": color,
+    "--move-dark": darkColor,
     "--move-url": `url("/gameassets/sprType/${String(props.move.type)}.png")`,
   } as React.CSSProperties;
 
@@ -418,6 +419,9 @@ export default function MoveView(props: {
       </div>
       <div className={styles.moveseparator}></div>
       <div className={styles.movecontent}>
+        <div className={styles.moveothercolor}>
+          <div className={styles.movehalftone}></div>
+        </div>
         <div
           className={
             props.move.name.length > 18 ? styles.movenamelong : styles.movename

@@ -137,6 +137,7 @@
 
 .movecontent {
   display: flex;
+  position: relative;
   flex-direction: column;
   box-sizing: border-box;
   padding-right: 4px;
@@ -148,12 +149,38 @@
   background-color: var(--move-color);
 }
 
+.moveothercolor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--move-dark);
+  mix-blend-mode: darken;
+}
+
+.movehalftone {
+  width: 100%;
+  height: 100%;
+
+  /* https://frontendmasters.com/blog/pure-css-halftone-effect-in-3-declarations/ */
+  --dot: radial-gradient(closest-side, #666, #fff calc(100% / sqrt(2)));
+  --pattern: var(--dot) 0 0/ 1.5em 1.5em, var(--dot) 0.75em 0.75em/ 1.5em 1.5em;
+  background-color: white;
+  background: var(--pattern), var(--map, linear-gradient(330deg, #777, #fff));
+  background-blend-mode: multiply;
+  filter: contrast(16);
+  mix-blend-mode: screen;
+}
+
 .movename {
   font-size: 2.3em;
   height: 33%;
   display: flex;
   justify-content: end;
   align-items: center;
+  z-index: 1;
 }
 
 .movenamelong {
@@ -187,6 +214,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
+  z-index: 1;
 }
 
 @media all and (max-aspect-ratio: 1/1) {

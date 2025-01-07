@@ -282,6 +282,8 @@ export default function ColorTabs(props: Props): React.ReactNode {
               value={`${value}`}
               onChange={(event) => {
                 colorChange(index, hexToRgb(event.currentTarget.value));
+                customColors[index] = event.currentTarget.value;
+                setCustomColors(customColors);
                 if (diffBeastieColors != "none") {
                   return;
                 }

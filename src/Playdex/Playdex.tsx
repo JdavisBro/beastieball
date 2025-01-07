@@ -106,7 +106,7 @@ export default function PlayDex() {
   const [spoilerMode] = useSpoilerMode();
 
   return (
-    <>
+    <div className={styles.container}>
       <OpenGraph
         title="PlayDex"
         image="gameassets/sprMainmenu/6.png"
@@ -200,6 +200,6 @@ export default function PlayDex() {
           ))}
         </MoveModalProvider>
       </div>
-    </>
+    </div>
   );
 }

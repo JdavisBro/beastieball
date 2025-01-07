@@ -1,6 +1,7 @@
 .staticheader {
   height: var(--header-height);
   width: 100%;
+  flex: 0 0 var(--header-height);
 }
 
 .header {

@@ -286,9 +286,6 @@ export default function MoveView(props: {
 
   const [spoilerMode] = useSpoilerMode();
   const [seenFriends, setSeenFriends] = useFriendSpoiler();
-  if (props.friendFilter && (!friend || friend.name != props.friendFilter)) {
-    return null;
-  }
   const friendSpoiler = friend
     ? spoilerMode == SpoilerMode.OnlySeen && !seenFriends[friend.id]
     : false;
@@ -309,6 +306,9 @@ export default function MoveView(props: {
     } else {
       learned_text = `Learned from ${friendSpoiler ? friend.name.slice(0, 2) + "..." : friend.name} at ${friend_hearts} hearts.`;
     }
+  }
+  if (props.friendFilter && (!friend || friend.name != props.friendFilter)) {
+    return null;
   }
 
   const { color, darkColor, alt } = TypeData[props.move.type]

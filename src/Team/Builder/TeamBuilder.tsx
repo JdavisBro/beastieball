@@ -14,6 +14,8 @@ import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvi
 import SavedTeams from "./SavedTeams";
 import TeamImageButton from "../TeamImageButton";
 
+const BEASTIE_KEYS = Object.keys(createBeastie("01"));
+
 function createTeam() {
   return [
     createBeastie("01"),
@@ -22,6 +24,20 @@ function createTeam() {
     createBeastie("04"),
     createBeastie("05"),
   ];
+}
+
+function verifyTeamJson(json: unknown) {
+  if (!Array.isArray(json)) {
+    return false;
+  }
+  if (
+    !json.every((beastie) =>
+      BEASTIE_KEYS.every((key) => beastie[key] !== undefined),
+    )
+  ) {
+    return false;
+  }
+  return true;
 }
 
 export default function TeamBuilder() {
@@ -111,7 +127,19 @@ export default function TeamBuilder() {
                 onChange={(event) => {
                   const files = event.currentTarget.files;
                   if (files) {
-                    files[0].text().then((text) => setTeam(JSON.parse(text)));
+                    files[0].text().then((text) => {
+                      const newteam = JSON.parse(text);
+                      if (!verifyTeamJson(newteam)) {
+                        console.log("Invalid Team Loaded");
+                        return;
+                      }
+                      setTeam(
+                        [...new Array(5).keys()].map(
+                          (index) =>
+                            newteam[index] ?? createBeastie("0" + index),
+                        ),
+                      );
+                    });
                   }
                 }}
                 accept=".json"

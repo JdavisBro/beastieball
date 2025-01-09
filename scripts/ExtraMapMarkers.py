@@ -41,7 +41,7 @@ for level in (gamedir / "world_data").glob("**/*.json"):
       gift = gift_data[gift_id]
       out_data["gifts"].append({
         "id": gift_id,
-        "items": [[gift[0], gift[1]] for i in range(0, len(gift), 2)],
+        "items": [[gift[i+0], gift[i+1]] for i in range(0, len(gift), 2)],
         "x": stump["world_x1"] + obj["x"] + level_offset[0],
         "y": stump["world_y1"] + obj["y"] - (obj["z"] if "z" in obj else 0) + level_offset[1],
       })

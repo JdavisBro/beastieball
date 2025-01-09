@@ -292,8 +292,8 @@
       "id": "gift_city_neighborhood_1",
       "items": [
         ["train_bd", 4.0],
-        ["train_bd", 4.0],
-        ["train_bd", 4.0]
+        ["train_hd", 4.0],
+        ["train_md", 4.0]
       ],
       "x": -7878,
       "y": -18360
@@ -488,8 +488,8 @@
       "id": "gift_park_north4_1",
       "items": [
         ["train_ba", 4.0],
-        ["train_ba", 4.0],
-        ["train_ba", 4.0]
+        ["train_ha", 4.0],
+        ["train_ma", 4.0]
       ],
       "x": -18499,
       "y": -16328

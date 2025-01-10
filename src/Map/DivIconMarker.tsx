@@ -7,31 +7,27 @@ import L from "leaflet";
 import { createPortal } from "react-dom";
 import { useEffect } from "react";
 
-type ReactProps = {
-  children: Array<React.ReactElement | null>;
-};
-
-// https://github.com/DefinitelyTyped/DefinitelyTyped/blob/6e724310e0ed089cf4b8b261b8badf71206ad9e8/types/leaflet/index.d.ts#L75
-type ContainerProps = {
+type DivIconMarkerProps = {
+  children: React.ReactNode;
+  markerprops: MarkerProps;
   tagName: string;
-  className?: string;
-  container?: HTMLElement;
+  className: string;
+  icon?: L.DivIconOptions;
+  popup?: React.ReactElement;
 };
 
-type DivIconMarkerProps = ReactProps & { markerprops: MarkerProps } & {
-  container: ContainerProps;
-  icon?: L.DivIconOptions;
-};
 const DivIconMarker = ({
   children,
   markerprops,
-  container,
+  tagName,
+  className,
   icon,
+  popup,
 }: DivIconMarkerProps) => {
-  const { tagName, className } = container;
   const element = L.DomUtil.create(tagName, className);
   const divIcon = new DivIcon({ html: element, ...icon });
-  const portal = createPortal(children[0], element);
+
+  const portal = createPortal(children, element);
 
   useEffect(() => {
     return () => {
@@ -43,7 +39,7 @@ const DivIconMarker = ({
     <>
       <>{portal}</>
       <Marker icon={divIcon} {...markerprops}>
-        {children[1]}
+        {popup}
       </Marker>
     </>
   );

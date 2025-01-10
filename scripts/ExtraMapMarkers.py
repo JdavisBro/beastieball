@@ -14,7 +14,10 @@ OTHER_AREAS = [
 with (gamedir / "data_out" / "gift_table").open() as f:
   gift_data = json.load(f)
 
-out_data = {"gifts": []}
+out_data = {"gifts": [], "switches": []}
+
+switches = [] # [{position: [x,y], lever_id: blah}]
+walls = {} # {leverid: [x,y]}
 
 with list((gamedir / "world_data").glob("*world.json"))[0].open() as f:
   world_data = json.load(f)
@@ -33,6 +36,8 @@ for level in (gamedir / "world_data").glob("**/*.json"):
   layer = stump["world_layer"] if "world_layer" in stump else 0 
   level_offset = ([area["offset"] for area in OTHER_AREAS if level_name.startswith(area["prefix"])] or [[0, 0]])[0] if layer != 0 else [0,0]
   for obj in level_data["objects_array"]:
+    x = stump["world_x1"] + obj["x"] + level_offset[0]
+    y = stump["world_y1"] + obj["y"] - (obj["z"] if "z" in obj else 0) + level_offset[1]
     if obj["object"] == "objGift":
       gift_id = f"gift_{level_data['name']}_{obj['gift_id_index']}" if obj["gift_id"] == "none" else obj['gift_id']
       if gift_id not in gift_data:
@@ -42,9 +47,37 @@ for level in (gamedir / "world_data").glob("**/*.json"):
       out_data["gifts"].append({
         "id": gift_id,
         "items": [[gift[i+0], gift[i+1]] for i in range(0, len(gift), 2)],
-        "x": stump["world_x1"] + obj["x"] + level_offset[0],
-        "y": stump["world_y1"] + obj["y"] - (obj["z"] if "z" in obj else 0) + level_offset[1],
+        "x": x,
+        "y": y,
       })
+    elif obj["object"] == "objRailswitch":
+      if stump.get("world_layer", 0) != 0:
+        continue
+      if x < stump["world_x1"] or x > stump["world_x2"] or y < stump["world_y1"] or y > stump["world_y2"]:
+        continue
+      switches.append({
+        "lever_id": obj.get("lever_id", level_name),
+        "switch_pos": [x, y],
+      })
+    elif obj["object"] == "objRailwall":
+      if stump.get("world_layer", 0) != 0:
+        continue
+      if x < stump["world_x1"] or x > stump["world_x2"] or y < stump["world_y1"] or y > stump["world_y2"]:
+        continue
+      walls[obj.get("lever_id", level_name)] = {
+        "wall_pos": [x, y],
+        "wall_angle": obj.get("angle", 0),
+      }
+
+for switch in switches:
+  lever = switch["lever_id"]
+  switch.pop("lever_id")
+  if lever not in walls:
+    print("No corrosponding wall:", lever)
+    continue
+  switch["wall_pos"] = walls[lever]["wall_pos"]
+  switch["wall_angle"] = walls[lever]["wall_angle"]
+  out_data["switches"].append(switch)
 
 with Path("../src/data/raw/extra_markers.json").open("w+") as f:
   json.dump(out_data, f)

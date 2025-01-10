@@ -6,6 +6,7 @@ import {
   LayersControl,
   MapContainer,
   Marker,
+  Polyline,
   Popup,
   useMapEvents,
 } from "react-leaflet";
@@ -31,6 +32,7 @@ import Control from "react-leaflet-custom-control";
 import BeastieSelect from "../shared/BeastieSelect";
 import SpecialBeastieMarker from "./SpecialBeastieMarker";
 import { EXTINCT_BEASTIES, METAMORPH_LOCATIONS } from "./SpecialBeasties";
+import DivIconMarker from "./DivIconMarker";
 
 const BEASTIE_ARRAY = [...BEASTIE_DATA.values()];
 
@@ -46,7 +48,9 @@ function MapEvents() {
       event.popup.getElement()?.classList.remove("leaflet-popup-closing"),
     popupclose: (event) =>
       event.popup.getElement()?.classList.add("leaflet-popup-closing"),
-    // click: (event) => console.log(event.latlng),
+    click: import.meta.env.DEV
+      ? (event) => console.log(event.latlng)
+      : undefined,
   });
 
   return null;
@@ -404,6 +408,57 @@ export default function Map(): React.ReactNode {
                   </Popup>
                 </Marker>
               ))}
+            </LayerGroup>
+          </LayersControl.Overlay>
+          <LayersControl.Overlay checked name="Switches and Gates">
+            <LayerGroup>
+              {EXTRA_MARKERS.switches
+                .map((lever, index) => {
+                  const rad = ((lever.wall_angle - 180) * Math.PI) / 180;
+                  const leverPos = L.latLng(
+                    -lever.switch_pos[1],
+                    lever.switch_pos[0],
+                  );
+                  const gatePos = L.latLng(
+                    -lever.wall_pos[1] + Math.sin(rad) * 125,
+                    lever.wall_pos[0] + Math.cos(rad) * 250,
+                  );
+                  return [
+                    <DivIconMarker
+                      key={`${index}_lever`}
+                      tagName="div"
+                      className={styles.imgmarker}
+                      markerprops={{ position: leverPos }}
+                      icon={{
+                        className: styles.hidemarker,
+                        iconSize: [15, 30],
+                      }}
+                      popup={<Popup>Switch</Popup>}
+                    >
+                      <img src="/map_icon/switch.png" alt="Switch Marker" />
+                    </DivIconMarker>,
+                    <DivIconMarker
+                      key={`${index}_gate`}
+                      tagName="div"
+                      className={styles.imgmarker}
+                      markerprops={{ position: gatePos }}
+                      icon={{
+                        className: styles.hidemarker,
+                        iconSize: [15, 30],
+                      }}
+                      popup={<Popup>Gate</Popup>}
+                    >
+                      <img src="/map_icon/gate.png" alt="Gate Marker" />
+                    </DivIconMarker>,
+                    <Polyline
+                      key={`${index}_line`}
+                      positions={[leverPos, gatePos]}
+                      weight={6}
+                      color="#ff0000"
+                    />,
+                  ];
+                })
+                .flat()}
             </LayerGroup>
           </LayersControl.Overlay>
           <LayersControl.Overlay checked name="Inside Overlays">

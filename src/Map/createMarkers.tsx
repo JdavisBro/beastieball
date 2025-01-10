@@ -80,11 +80,12 @@ export function createMarkers() {
           alt: value.revealed_text ? value.revealed_text : value.text,
           zIndexOffset: zindex,
         }}
-        container={{ tagName: "div", className: containerclass }}
+        tagName="div"
+        className={containerclass}
         icon={{ className: styles.hidemarker }}
+        popup={<Popup>{popup}</Popup>}
       >
         {markerup}
-        {popup ? <Popup>{popup}</Popup> : null}
       </DivIconMarker>,
     );
   }

@@ -610,155 +610,102 @@
     }
   ],
   "switches": [
-    {
-      "switch_pos": [3131, 5453],
-      "wall_pos": [2183, 6057],
-      "wall_angle": 279.46
-    },
-    {
-      "switch_pos": [-805.0, -23364],
-      "wall_pos": [277.0, -21629],
-      "wall_angle": 0
-    },
-    {
-      "switch_pos": [-3701, -12501],
-      "wall_pos": [-3358, -12436],
-      "wall_angle": 77.1957321167
-    },
-    {
-      "switch_pos": [-6786, -25980],
-      "wall_pos": [-9466, -26103],
-      "wall_angle": 65.2248535156
-    },
-    {
-      "switch_pos": [-10314, -25618],
-      "wall_pos": [-9466, -26103],
-      "wall_angle": 65.2248535156
-    },
-    {
-      "switch_pos": [-13170, -22555],
-      "wall_pos": [-12328, -26153],
-      "wall_angle": 65.2248535156
-    },
-    {
-      "switch_pos": [-2118, -29287],
-      "wall_pos": [-1016, -26784],
-      "wall_angle": 0
-    },
-    {
-      "switch_pos": [-15107, -25867],
-      "wall_pos": [-15411, -24429],
-      "wall_angle": 180
-    },
-    {
-      "switch_pos": [-34376, -27061],
-      "wall_pos": [-31798, -26733],
-      "wall_angle": 87.6140518188
-    },
-    {
-      "switch_pos": [-31434, -27564],
-      "wall_pos": [-31798, -26733],
-      "wall_angle": 87.6140518188
-    },
-    {
-      "switch_pos": [-18998.0, 9189],
-      "wall_pos": [-18924.5, 8926],
-      "wall_angle": 0
-    },
-    {
-      "switch_pos": [-9952.0, 9972],
-      "wall_pos": [-12767.0, 11956],
-      "wall_angle": 0
-    },
-    {
-      "switch_pos": [-19628, 1286],
-      "wall_pos": [-19009, 2071],
-      "wall_angle": 0
-    },
-    {
-      "switch_pos": [-19562, -1841],
-      "wall_pos": [-18951, -2164],
-      "wall_angle": 0
-    },
-    {
-      "switch_pos": [-23308, -5238],
-      "wall_pos": [-23814, -7090],
-      "wall_angle": 0
-    },
-    {
-      "switch_pos": [-23599, -3463],
-      "wall_pos": [-23292, -5866],
-      "wall_angle": 351.8699035645
-    },
-    {
-      "switch_pos": [-24964, -10206],
-      "wall_pos": [-27592, -9539],
-      "wall_angle": 280.1246643066
-    },
-    {
-      "switch_pos": [-20731, -5430],
-      "wall_pos": [-19739, -6071],
-      "wall_angle": 292.17
-    },
-    {
-      "switch_pos": [-20646, -7267],
-      "wall_pos": [-19604, -6055],
-      "wall_angle": 292.1663513184
-    },
-    {
-      "switch_pos": [-36545, 2922],
-      "wall_pos": [-35607, 3653],
-      "wall_angle": 180
-    },
-    {
-      "switch_pos": [-27313, -12590],
-      "wall_pos": [-22106.5, -12156.5],
-      "wall_angle": 290.8544616699
-    },
-    {
-      "switch_pos": [-6070, -9495],
-      "wall_pos": [-18135, -9760],
-      "wall_angle": 116.5650405884
-    },
-    {
-      "switch_pos": [-48336, 10806],
-      "wall_pos": [-47285, 9985],
-      "wall_angle": 0
-    },
-    {
-      "switch_pos": [-43330, 3102],
-      "wall_pos": [-43308, 3483],
-      "wall_angle": 0
-    },
-    {
-      "switch_pos": [-42135, 2828],
-      "wall_pos": [-42222, 1783],
-      "wall_angle": 282.5288085938
-    },
-    {
-      "switch_pos": [-40327, 1886],
-      "wall_pos": [-39949, 2837],
-      "wall_angle": 321.9529418945
-    },
-    {
-      "switch_pos": [-43109, 6797],
-      "wall_pos": [-40319, 6207],
-      "wall_angle": 274.2363891602
-    },
-    {
-      "switch_pos": [-13783, -30211],
-      "wall_pos": [-17360, -31155],
-      "wall_angle": 75.6944656372
-    },
-    {
-      "switch_pos": [-15963, -31971],
-      "wall_pos": [-17237, -31147],
-      "wall_angle": 75.6944656372
-    },
-    {
-      "switch_pos": [-9880, 3668],
-      "wall_pos": [-11608, 4601],
-      "wall_angle": 76.8462905884
-    }
-  ]
+    { "lever_id": "hometown_railgate", "position": [3131, 5453] },
+    { "lever_id": "jasper_cave", "position": [-805.0, -23364] },
+    { "lever_id": "railtrail_jasper", "position": [-3701, -12501] },
+    { "lever_id": "mines_1", "position": [-6786, -25980] },
+    { "lever_id": "mines_1", "position": [-10314, -25618] },
+    { "lever_id": "mines_2", "position": [-13170, -22555] },
+    { "lever_id": "train_mine_east", "position": [-2118, -29287] },
+    { "lever_id": "mines_3", "position": [-15107, -25867] },
+    { "lever_id": "woods_west", "position": [-34376, -27061] },
+    { "lever_id": "woods_west", "position": [-31434, -27564] },
+    { "lever_id": "beryl_rail_north", "position": [-18998.0, 9189] },
+    { "lever_id": "beryl_rail", "position": [-9952.0, 9972] },
+    { "lever_id": "canyon_1", "position": [-19628, 1286] },
+    { "lever_id": "canyon_2", "position": [-19562, -1841] },
+    { "lever_id": "canyon_4", "position": [-23308, -5238] },
+    { "lever_id": "canyon_3", "position": [-23599, -3463] },
+    { "lever_id": "canyon_end", "position": [-24964, -10206] },
+    { "lever_id": "canyon_secret_1", "position": [-20731, -5430] },
+    { "lever_id": "canyon_secret_2", "position": [-20646, -7267] },
+    { "lever_id": "CITY_south", "position": [-36545, 2922] },
+    { "lever_id": "park_1", "position": [-27313, -12590] },
+    { "lever_id": "abandoned_rail", "position": [-6070, -9495] },
+    { "lever_id": "seacave1", "position": [-48336, 10806] },
+    { "lever_id": "seapuzzle1", "position": [-43330, 3102] },
+    { "lever_id": "seapuzzle2", "position": [-42135, 2828] },
+    { "lever_id": "seapuzzle3", "position": [-40327, 1886] },
+    { "lever_id": "seacave_side", "position": [-43109, 6797] },
+    { "lever_id": "wood_rail_central", "position": [-13783, -30211] },
+    { "lever_id": "wood_rail_central2", "position": [-15963, -31971] },
+    { "lever_id": "reserve_lake5", "position": [-9880, 3668] }
+  ],
+  "walls": {
+    "beryl_rail": [
+      { "position": [-12688, 13497], "angle": 0 },
+      { "position": [-12767.0, 11956], "angle": 0 }
+    ],
+    "hometown_railgate": [{ "position": [2183, 6057], "angle": 279.46 }],
+    "jasper_cave": [{ "position": [277.0, -21629], "angle": 0 }],
+    "railtrail_jasper": [
+      { "position": [-3358, -12436], "angle": 77.1957321167 }
+    ],
+    "mines_1": [{ "position": [-9466, -26103], "angle": 65.2248535156 }],
+    "mines_2": [{ "position": [-12328, -26153], "angle": 65.2248535156 }],
+    "train_mine_east": [{ "position": [-1016, -26784], "angle": 0 }],
+    "mines_3": [{ "position": [-15411, -24429], "angle": 180 }],
+    "wood_rail_central": [
+      { "position": [-18919.5, -30097], "angle": 357.3974304199 },
+      { "position": [-17360, -31155], "angle": 75.6944656372 }
+    ],
+    "wood_rail_central2": [
+      { "position": [-18918.5, -29940], "angle": 15 },
+      { "position": [-17237, -31147], "angle": 75.6944656372 }
+    ],
+    "woods_west": [
+      { "position": [-33083, -26447], "angle": 278.5307617188 },
+      { "position": [-31798, -26733], "angle": 87.6140518188 }
+    ],
+    "CITY_south": [
+      { "position": [-35063, 4940], "angle": 349.3803405762 },
+      { "position": [-35607, 3653], "angle": 180 }
+    ],
+    "beryl_rail_north": [{ "position": [-18924.5, 8926], "angle": 0 }],
+    "canyon_1": [{ "position": [-19009, 2071], "angle": 0 }],
+    "canyon_2": [{ "position": [-18951, -2164], "angle": 0 }],
+    "canyon_4": [{ "position": [-23814, -7090], "angle": 0 }],
+    "canyon_3": [{ "position": [-23292, -5866], "angle": 351.8699035645 }],
+    "canyon_end": [
+      { "position": [-26191, -9957], "angle": 85.6012878418 },
+      { "position": [-27592, -9539], "angle": 280.1246643066 }
+    ],
+    "canyon_secret_1": [
+      { "position": [-20129, -5882], "angle": 0 },
+      { "position": [-19739, -6071], "angle": 292.17 }
+    ],
+    "canyon_secret_2": [
+      { "position": [-20734, -6820], "angle": 180 },
+      { "position": [-19604, -6055], "angle": 292.1663513184 }
+    ],
+    "suburb_south": [
+      { "position": [-35033, -5983], "angle": 0 },
+      { "position": [-34967, -4500], "angle": 0 }
+    ],
+    "seapuzzle3": [
+      { "position": [-38429, 1848], "angle": 145.3840179443 },
+      { "position": [-39949, 2837], "angle": 321.9529418945 }
+    ],
+    "never_opened": [{ "position": [-36218, -11675], "angle": 90 }],
+    "mtn_windy": [{ "position": [-60218, -45900], "angle": 0 }],
+    "park_1": [{ "position": [-22106.5, -12156.5], "angle": 290.8544616699 }],
+    "abandoned_rail": [
+      { "position": [-18135, -9760], "angle": 116.5650405884 }
+    ],
+    "seacave1": [{ "position": [-47285, 9985], "angle": 0 }],
+    "seapuzzle1": [{ "position": [-43308, 3483], "angle": 0 }],
+    "seapuzzle2": [{ "position": [-42222, 1783], "angle": 282.5288085938 }],
+    "seacave_side": [{ "position": [-40319, 6207], "angle": 274.2363891602 }],
+    "reserve_lake5": [{ "position": [-11608, 4601], "angle": 76.8462905884 }]
+  }
 }

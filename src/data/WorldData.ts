@@ -9,13 +9,17 @@ export type Gift = {
 };
 
 export type Switch = {
-  switch_pos: number[];
-  wall_pos: number[];
-  wall_angle: number;
+  lever_id: string;
+  position: number[];
 };
 
-export const EXTRA_MARKERS: { gifts: Gift[]; switches: Switch[] } =
-  extra_markers;
+export type Wall = { position: number[]; angle: number };
+
+export const EXTRA_MARKERS: {
+  gifts: Gift[];
+  switches: Switch[];
+  walls: Record<string, Wall[]>;
+} = extra_markers;
 
 export type MapIcon = {
   _: string;

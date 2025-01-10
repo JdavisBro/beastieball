@@ -414,15 +414,11 @@ export default function Map(): React.ReactNode {
             <LayerGroup>
               {EXTRA_MARKERS.switches
                 .map((lever, index) => {
-                  const rad = ((lever.wall_angle - 180) * Math.PI) / 180;
                   const leverPos = L.latLng(
-                    -lever.switch_pos[1],
-                    lever.switch_pos[0],
+                    -lever.position[1],
+                    lever.position[0],
                   );
-                  const gatePos = L.latLng(
-                    -lever.wall_pos[1] + Math.sin(rad) * 125,
-                    lever.wall_pos[0] + Math.cos(rad) * 250,
-                  );
+                  const walls = EXTRA_MARKERS.walls[lever.lever_id];
                   return [
                     <DivIconMarker
                       key={`${index}_lever`}
@@ -437,6 +433,33 @@ export default function Map(): React.ReactNode {
                     >
                       <img src="/map_icon/switch.png" alt="Switch Marker" />
                     </DivIconMarker>,
+                    walls.map((wall) => {
+                      const rad = ((wall.angle - 180) * Math.PI) / 180;
+                      const gatePos = L.latLng(
+                        -wall.position[1] + Math.sin(rad) * 125,
+                        wall.position[0] + Math.cos(rad) * 250,
+                      );
+                      return (
+                        <Polyline
+                          key={`${index}_line`}
+                          positions={[leverPos, gatePos]}
+                          weight={6}
+                          color="#ff0000"
+                        />
+                      );
+                    }),
+                  ];
+                })
+                .flat()}
+              {Object.values(EXTRA_MARKERS.walls)
+                .flat()
+                .map((wall, index) => {
+                  const rad = ((wall.angle - 180) * Math.PI) / 180;
+                  const gatePos = L.latLng(
+                    -wall.position[1] + Math.sin(rad) * 125,
+                    wall.position[0] + Math.cos(rad) * 250,
+                  );
+                  return (
                     <DivIconMarker
                       key={`${index}_gate`}
                       tagName="div"
@@ -449,16 +472,9 @@ export default function Map(): React.ReactNode {
                       popup={<Popup>Gate</Popup>}
                     >
                       <img src="/map_icon/gate.png" alt="Gate Marker" />
-                    </DivIconMarker>,
-                    <Polyline
-                      key={`${index}_line`}
-                      positions={[leverPos, gatePos]}
-                      weight={6}
-                      color="#ff0000"
-                    />,
-                  ];
-                })
-                .flat()}
+                    </DivIconMarker>
+                  );
+                })}
             </LayerGroup>
           </LayersControl.Overlay>
           <LayersControl.Overlay checked name="Inside Overlays">

@@ -11,6 +11,9 @@ export default function useBeastieRender(
   const [beastieUrl, setBeastieUrl] = useState(defaultUrl);
   const renderContext = useContext(BeastieRenderContext);
 
+  const colorChecksum = beastie.colors?.reduce(
+    (prev, curr, index) => prev + curr * index * 4,
+  );
   useEffect(() => {
     if (!renderContext) {
       return;
@@ -22,7 +25,15 @@ export default function useBeastieRender(
       }
     });
     return () => renderContext.cancel(id);
-  }, [renderContext, beastie]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [
+    renderContext,
+    beastie.colorAlt,
+    beastie.frame,
+    beastie.sprAlt,
+    beastie.id,
+    colorChecksum,
+  ]);
 
   return beastieUrl;
 }

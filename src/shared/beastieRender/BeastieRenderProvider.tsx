@@ -1,4 +1,10 @@
-import { PropsWithChildren, useCallback, useEffect, useRef } from "react";
+import {
+  PropsWithChildren,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+} from "react";
 
 import setupWebGL, { setColorUniforms, setImage } from "./WebGL";
 import {
@@ -156,8 +162,13 @@ export default function BeastieRenderProvider(
     glRef.current = setupWebGL(canvasRef.current);
   }, []);
 
+  const value = useMemo(
+    () => ({ render, cancel, renderQuick }),
+    [render, cancel, renderQuick],
+  );
+
   return (
-    <BeastieRenderContext.Provider value={{ render, cancel, renderQuick }}>
+    <BeastieRenderContext.Provider value={value}>
       <canvas
         ref={canvasRef}
         style={{ display: "none" }}

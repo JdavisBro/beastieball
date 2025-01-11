@@ -132,6 +132,11 @@ export default function Filter({
   const [tab, setTab] = useState(0);
   const [search, setSearch] = useState("");
 
+  const changeTab = useCallback((value: number) => {
+    setTab(value);
+    setSearch("");
+  }, []);
+
   return (
     <div
       className={styles.filterButton}
@@ -159,13 +164,13 @@ export default function Filter({
           <div className={styles.tabs}>
             <button
               className={tab == 0 ? styles.selectedtab : undefined}
-              onClick={() => setTab(0)}
+              onClick={() => changeTab(0)}
             >
               Trait
             </button>
             <button
               className={tab == 1 ? styles.selectedtab : undefined}
-              onClick={() => setTab(1)}
+              onClick={() => changeTab(1)}
             >
               Plays
             </button>
@@ -175,6 +180,7 @@ export default function Filter({
             <input
               type="search"
               onChange={(event) => setSearch(event.currentTarget.value)}
+              value={search}
             />
           </label>
           <div onWheel={(event) => event.stopPropagation()}>
@@ -184,6 +190,11 @@ export default function Filter({
                   .filter(
                     (ability) =>
                       !search ||
+                      filters.find(
+                        (filter) =>
+                          filter[0] == FilterTypes.Ability &&
+                          filter[1].id == ability.id,
+                      ) ||
                       ability.name.toLowerCase().includes(search.toLowerCase()),
                   )
                   .map((ability) => (
@@ -210,6 +221,11 @@ export default function Filter({
                   .filter(
                     (move) =>
                       !search ||
+                      filters.find(
+                        (filter) =>
+                          filter[0] == FilterTypes.Move &&
+                          filter[1].id == move.id,
+                      ) ||
                       move.name.toLowerCase().includes(search.toLowerCase()),
                   )
                   .map((move) => (

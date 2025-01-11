@@ -46,6 +46,8 @@
   gap: 4px;
   flex-wrap: wrap;
   max-height: 80dvh;
+  height: 80dvh;
+  align-content: start;
   overflow-y: auto;
   user-select: none;
 }

@@ -52,7 +52,7 @@ export default function SavedTeams({
                   <input
                     type="text"
                     className={styles.savedTeamName}
-                    defaultValue={team.name}
+                    value={team.name}
                     onChange={(event) =>
                       setSavedTeam(index, undefined, event.currentTarget.value)
                     }

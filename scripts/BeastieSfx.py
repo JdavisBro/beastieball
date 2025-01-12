@@ -7,7 +7,7 @@ from pathlib import Path
 from pedalboard import PitchShift
 from pedalboard.io import AudioFile
 
-gameDir = Path(sys.argv[1])
+gameDir = Path(sys.argv[1] if len(sys.argv) > 1 else r"C:\Program Files (x86)\Steam\steamapps\common\Beastieball")
 voDir = gameDir / "audio" / "vo"
 
 outDir = Path("../public/gameassets/audio/")

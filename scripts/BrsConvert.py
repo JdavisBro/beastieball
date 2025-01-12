@@ -64,4 +64,4 @@ def main(args):
         subprocess.run(["oxipng", "-o", "max", *new_images])
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    main(sys.argv[1:] if len(sys.argv) > 1 else [r"C:\Program Files (x86)\Steam\steamapps\common\Beastieball"])

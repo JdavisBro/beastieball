@@ -4,7 +4,7 @@ from pathlib import Path
 
 import shapely
 
-gamedir = Path(sys.argv[1])
+gamedir = Path(sys.argv[1] if len(sys.argv) > 1 else r"C:\Program Files (x86)\Steam\steamapps\common\Beastieball")
 
 OTHER_AREAS = [
   {

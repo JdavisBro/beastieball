@@ -419,6 +419,7 @@ export default function Map(): React.ReactNode {
                     lever.position[0],
                   );
                   const walls = EXTRA_MARKERS.walls[lever.lever_id];
+                  const lineCol = `hsl(${Math.floor(Math.abs(lever.position[0] + lever.position[1]) % 360) & 0xaaaaaa}, 100%, 50%)`;
                   return [
                     <DivIconMarker
                       key={`${index}_lever`}
@@ -444,7 +445,7 @@ export default function Map(): React.ReactNode {
                           key={`${index}_line`}
                           positions={[leverPos, gatePos]}
                           weight={6}
-                          color="#ff0000"
+                          color={lineCol}
                         />
                       );
                     }),

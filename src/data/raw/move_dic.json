@@ -1814,7 +1814,7 @@
     "eff": [{ "eff": 33, "pow": 26, "targ": 0.0 }],
     "id": "slide",
     "name": "Slide",
-    "pow": 75.0,
+    "pow": 70.0,
     "targ": 0,
     "type": 0.0,
     "use": 0.0

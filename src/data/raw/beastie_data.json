@@ -1458,7 +1458,7 @@
     "ability": ["starter_m", "fwdpass"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 60,
+    "anim_progress": 80,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -2487,7 +2487,7 @@
     "ability": ["starter_b", "lifeorb"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 60,
+    "anim_progress": 80,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -2581,7 +2581,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 63.25,
+      "char_width": 86.25,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -2766,7 +2766,7 @@
                 "type": 45
               }
             ],
-            "description": "A Cherrily must have their [sprIcon,0]POW [sprBoost,1]BOOSTED to +6 or more while their field has RHYTHM"
+            "description": "[sprBoost,1]BOOST a Cherrily's [sprIcon,0]POW to +6 or more while their field has RHYTHM"
           }
         ]
       }
@@ -2878,7 +2878,7 @@
     "ability": ["cheer"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 80,
+    "anim_progress": 60,
     "animator": [10, 8],
     "attklist": [
       "freeball",
@@ -3478,7 +3478,7 @@
     "ability": ["vertical", "nostatus"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "topspin",
@@ -3512,23 +3512,23 @@
     "colors": [
       {
         "array": [
-          { "color": 377063, "x": 0 },
-          { "color": 1493759, "x": 0.4966666667 },
-          { "color": 3073279, "x": 1 }
+          { "color": 7006719, "x": 0 },
+          { "color": 2408191, "x": 0.42 },
+          { "color": 6018815, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 6369787, "x": 0 },
-          { "color": 2895103, "x": 0.5 },
-          { "color": 3951615, "x": 1 }
+          { "color": 4594132, "x": 0 },
+          { "color": 2829289, "x": 0.5 },
+          { "color": 2373119, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 12693779, "x": 0 },
-          { "color": 12569871, "x": 0.5 },
-          { "color": 11653673, "x": 1 }
+          { "color": 12890899, "x": 0 },
+          { "color": 13161520, "x": 0.5 },
+          { "color": 12180267, "x": 1 }
         ]
       }
     ],
@@ -3564,7 +3564,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 77.25,
+      "char_width": 84,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -3685,6 +3685,7 @@
         "array": [
           { "color": 3578623, "x": 0 },
           { "color": 3180287, "x": 0.5 },
+          { "color": 3702506, "x": 0.9466666667 },
           { "color": 3767783, "x": 1 }
         ]
       },
@@ -5609,12 +5610,12 @@
       "allyprotect",
       "protect",
       "heartup",
-      "freeball",
       "fieldclear",
       "callout",
       "bodypass",
       "mindpass",
-      "heartd"
+      "heartd",
+      "freeball"
     ],
     "attklist_randomize": -1,
     "ba": 68,
@@ -5841,7 +5842,6 @@
       "allyprotect",
       "protect",
       "heartup",
-      "freeball",
       "fieldclear",
       "callout"
     ],
@@ -6041,7 +6041,6 @@
       "allyprotect",
       "protect",
       "heartup",
-      "freeball",
       "fieldclear",
       "callout"
     ],
@@ -8912,7 +8911,7 @@
     "ability": ["prankster", "gloat"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 15,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -8963,15 +8962,15 @@
       {
         "array": [
           { "color": 11754633, "x": 0 },
-          { "color": 12018100, "x": 0.48 },
+          { "color": 12018356, "x": 0.48 },
           { "color": 11364286, "x": 1 }
         ]
       },
       {
         "array": [
           { "color": 6844025, "x": 0 },
-          { "color": 7038843, "x": 0.5 },
-          { "color": 6970736, "x": 1 }
+          { "color": 6117738, "x": 0.5 },
+          { "color": 6576234, "x": 1 }
         ]
       },
       {
@@ -8983,8 +8982,9 @@
       },
       {
         "array": [
-          { "color": 16755105, "x": 0 },
-          { "color": 16424877, "x": 0.5 },
+          { "color": 16757391, "x": 0 },
+          { "color": 16753048, "x": 0.32 },
+          { "color": 16424623, "x": 0.5833333333 },
           { "color": 16422330, "x": 1 }
         ]
       }
@@ -9021,7 +9021,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 70.25,
+      "char_width": 73,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -10162,7 +10162,6 @@
       "protect",
       "trap",
       "skillswap",
-      "slide",
       "breakswipe",
       "steal",
       "rush",
@@ -10400,7 +10399,6 @@
       "protect",
       "trap",
       "skillswap",
-      "slide",
       "breakswipe",
       "steal",
       "rush",
@@ -10583,7 +10581,6 @@
       "protect",
       "trap",
       "skillswap",
-      "slide",
       "breakswipe",
       "steal",
       "rush",
@@ -13767,7 +13764,7 @@
     "ability": ["lightningrod_m"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 15,
+    "anim_progress": 20,
     "animator": 8,
     "attklist": [
       "markattack",
@@ -15097,7 +15094,7 @@
     "ability": ["overwrite"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 15,
+    "anim_progress": 20,
     "animator": 8,
     "attklist": [
       "pepshot",

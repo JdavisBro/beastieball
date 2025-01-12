@@ -230,7 +230,7 @@
     "name": "Maverick"
   },
   "mom": {
-    "desc": "[sprIcon,1]Pow[sprBoost,1] when ally receives any attack",
+    "desc": "[sprIcon,1]Pow[sprBoost,0] when ally receives any attack",
     "id": "mom",
     "name": "Protector"
   },

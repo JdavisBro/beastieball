@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FeaturedTeamType } from "./FeaturedCategories";
-import styles from "./Teams.module.css";
+import styles from "./TeamViewer.module.css";
 import BEASTIE_DATA from "../../data/BeastieData";
 import {
   SpoilerMode,

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import styles from "./Teams.module.css";
+import styles from "./TeamViewer.module.css";
 import { Team } from "../Types.ts";
 import Beastie from "../Beastie/Beastie.tsx";
 import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider.tsx";
@@ -12,8 +12,9 @@ import type {
   FeaturedCategory,
   FeaturedTeamType,
 } from "./FeaturedCategories.ts";
-import FeaturedTeam from "./FeaturedTeam.tsx";
 import TeamImageButton from "../TeamImageButton.tsx";
+import FeaturedSection from "./FeaturedSection.tsx";
+import useScreenOrientation from "../../utils/useScreenOrientation.ts";
 
 declare global {
   interface Window {
@@ -60,6 +61,7 @@ export default function Viewer() {
   const [isLevelOverwritten, setIsLevelOverwritten] = useState(false);
   const [levelOverwrite, setLevelOverwrite] = useState(50);
   const [maxCoaching, setMaxCoaching] = useState(false);
+  const orientation = useScreenOrientation();
 
   const navigate = useNavigate();
   const setCode = (code: string) => {
@@ -122,8 +124,10 @@ export default function Viewer() {
     }
   }, [selectedFeatured]);
 
+  const [mobileFeatured, setMobileFeatured] = useState(false);
+
   return (
-    <div>
+    <>
       <OpenGraph
         title={`${selectedFeatured ? `${selectedFeatured.name} - ` : ""}Team Viewer - ${import.meta.env.VITE_BRANDING}`}
         description="Online Team Viewer for SportsNet download codes from Beastieball!"
@@ -135,151 +139,139 @@ export default function Viewer() {
         title="Team Viewer"
         returnButtonTo="/team/"
         returnButtonTitle={`${import.meta.env.VITE_BRANDING} Team Page`}
+        menuButton={orientation}
+        menuButtonState={mobileFeatured}
+        onMenuButtonPressed={() => setMobileFeatured(!mobileFeatured)}
       />
-      <div className={styles.sectionheader}>
-        <label>
-          Team Code: <input type="text" ref={textInput} defaultValue={code} />
-        </label>
-        <button
-          onClick={() => {
-            if (textInput.current && code != textInput.current.value) {
-              setCode(textInput.current.value);
-              setTeam(null);
-            }
-          }}
-        >
-          Find
-        </button>
-      </div>
-      <div className={styles.sectionheader}>
-        {error && !selectedFeatured ? `Invalid Code: ${code}` : null}
-      </div>
-      <div className={styles.sectionheader}>
-        {team
-          ? `${team.code}${selectedFeatured ? ` - ${selectedCategoryName} - ${selectedFeatured.name}` : ""}`
-          : ""}
-      </div>
-      <BeastieRenderProvider>
-        <div className={styles.team}>
-          <MoveModalProvider>
-            {team
-              ? team.team.map((beastie) => (
-                  <Beastie
-                    key={beastie.pid}
-                    teamBeastie={beastie}
-                    levelOverwrite={
-                      isLevelOverwritten ? levelOverwrite : undefined
-                    }
-                    maxCoaching={maxCoaching}
-                  />
-                ))
-              : null}
-          </MoveModalProvider>
-        </div>
-        <div className={styles.sectionheader}>
-          <label>
-            <input
-              type="checkbox"
-              onChange={(event) =>
-                setIsLevelOverwritten(event.currentTarget.checked)
-              }
-            />
-            At Level{" "}
-            <input
-              type="number"
-              onChange={(event) =>
-                setLevelOverwrite(Number(event.currentTarget.value))
-              }
-              min={1}
-              max={100}
-              defaultValue={50}
-            />
-          </label>
-          {" - "}
-          <label>
-            <input
-              type="checkbox"
-              onChange={(event) => setMaxCoaching(event.currentTarget.checked)}
-            />
-            Max Coaching
-          </label>
-          {" - "}
-          <button
-            onClick={() => {
-              if (team) {
-                localStorage.setItem(
-                  "teamBuilderTeam",
-                  JSON.stringify(team.team),
-                );
-                navigate("/team/builder/");
-              }
-            }}
-            disabled={!team}
-          >
-            Open in Team Builder
-          </button>
-          {" - "}
-          <TeamImageButton
-            team={team?.team}
-            atLevel={isLevelOverwritten ? levelOverwrite : undefined}
-            maxCoaching={maxCoaching}
-          />
-        </div>
-      </BeastieRenderProvider>
-      <br />
-      <div className={styles.categorybg}>
-        {featuredCategories?.map((category, index) => (
-          <button
-            key={category.header}
-            className={
-              index == featuredTab
-                ? styles.categorybuttonSelected
-                : styles.categorybutton
-            }
-            onClick={() => setFeaturedTab(index)}
-          >
-            {category.header}
-          </button>
-        ))}
-      </div>
-      <div className={styles.sectionheader}>
-        {featuredCategories[featuredTab]?.description ?? ""}
-      </div>
-      <div className={styles.featuredList}>
-        {featuredCategories[featuredTab]?.teams.map((featuredteam) => (
-          <FeaturedTeam
-            key={featuredteam.name}
-            team={featuredteam}
-            selected={team?.code == featuredteam.team.code}
-            setTeam={() => {
-              if (code != featuredteam.team.code) {
-                setTeam(featuredteam.team);
-              }
-            }}
-          />
-        ))}
-      </div>
-      <div className={styles.addTeamText}>
-        Want your team added?{" "}
-        <a
-          target={"_blank"}
-          rel="noreferrer"
-          href={
-            import.meta.env.VITE_ISSUES_URL +
-            `new?title=New Featured Team&body=${FEATURED_TEAM_ISSUE_TEXT}`
+      {orientation ? (
+        <div
+          className={
+            mobileFeatured ? styles.mobileFeatured : styles.mobileFeaturedHidden
           }
         >
-          Make an issue on GitHub
-        </a>
+          <FeaturedSection
+            featuredCategories={featuredCategories}
+            featuredTab={featuredTab}
+            setFeaturedTab={setFeaturedTab}
+            code={team?.code}
+            setTeam={(team) => {
+              setMobileFeatured(false);
+              setTeam(team);
+            }}
+          />
+        </div>
+      ) : null}
+      <div
+        className={
+          orientation && mobileFeatured ? styles.pageHidden : undefined
+        }
+      >
+        <div className={styles.sectionheader}>
+          <label>
+            Team Code: <input type="text" ref={textInput} defaultValue={code} />
+          </label>
+          <button
+            onClick={() => {
+              if (textInput.current && code != textInput.current.value) {
+                setCode(textInput.current.value);
+                setTeam(null);
+              }
+            }}
+          >
+            Find
+          </button>
+        </div>
+        <div className={styles.sectionheader}>
+          {error && !selectedFeatured ? `Invalid Code: ${code}` : null}
+        </div>
+        <div className={styles.sectionheader}>
+          {team
+            ? `${team.code}${selectedFeatured ? ` - ${selectedCategoryName} - ${selectedFeatured.name}` : ""}`
+            : ""}
+        </div>
+        <BeastieRenderProvider>
+          <div className={styles.team}>
+            <MoveModalProvider>
+              {team
+                ? team.team.map((beastie) => (
+                    <Beastie
+                      key={beastie.pid}
+                      teamBeastie={beastie}
+                      levelOverwrite={
+                        isLevelOverwritten ? levelOverwrite : undefined
+                      }
+                      maxCoaching={maxCoaching}
+                    />
+                  ))
+                : null}
+            </MoveModalProvider>
+          </div>
+          <div className={styles.sectionheader}>
+            <label>
+              <input
+                type="checkbox"
+                onChange={(event) =>
+                  setIsLevelOverwritten(event.currentTarget.checked)
+                }
+              />
+              At Level{" "}
+              <input
+                type="number"
+                onChange={(event) =>
+                  setLevelOverwrite(Number(event.currentTarget.value))
+                }
+                min={1}
+                max={100}
+                defaultValue={50}
+              />
+            </label>
+            {orientation ? <br /> : " - "}
+            <label>
+              <input
+                type="checkbox"
+                onChange={(event) =>
+                  setMaxCoaching(event.currentTarget.checked)
+                }
+              />
+              Max Coaching
+            </label>
+            {orientation ? <br /> : " - "}
+            <button
+              onClick={() => {
+                if (team) {
+                  localStorage.setItem(
+                    "teamBuilderTeam",
+                    JSON.stringify(team.team),
+                  );
+                  navigate("/team/builder/");
+                }
+              }}
+              disabled={!team}
+            >
+              Open in Team Builder
+            </button>
+            {orientation ? <br /> : " - "}
+            <TeamImageButton
+              team={team?.team}
+              atLevel={isLevelOverwritten ? levelOverwrite : undefined}
+              maxCoaching={maxCoaching}
+            />
+          </div>
+        </BeastieRenderProvider>
+        <div className={styles.sectionheader}>
+          {orientation ? (
+            "View Community Teams by toggling the menu in the top left."
+          ) : (
+            <FeaturedSection
+              featuredCategories={featuredCategories}
+              featuredTab={featuredTab}
+              setFeaturedTab={setFeaturedTab}
+              code={team?.code}
+              setTeam={setTeam}
+            />
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
-
-const FEATURED_TEAM_ISSUE_TEXT = `Name: Insert Team Name Here
-Description: Insert Team Description Here
-Code: Insert Team Code Here (shared from in game)
-Author: Insert Author Name Here (how you'd like to be credited)`.replace(
-  /\n/g,
-  "%0A",
-);

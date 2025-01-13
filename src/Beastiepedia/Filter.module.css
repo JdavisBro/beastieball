@@ -95,3 +95,10 @@
   composes: moveContainer;
   composes: animSelectedBackground from global;
 }
+
+.trainingSelected {
+  background-color: gray;
+}
+.trainingSelected:hover {
+  background-color: rgb(167, 167, 167);
+}

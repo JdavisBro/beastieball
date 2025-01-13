@@ -39,6 +39,8 @@ function createFilterFunction(filters: FilterType[]) {
           return beastie.ability.includes(value.id);
         case FilterTypes.Move:
           return beastie.attklist.includes(value.id);
+        case FilterTypes.Training:
+          return beastie.tyield.some((training) => training == value);
       }
     });
 }

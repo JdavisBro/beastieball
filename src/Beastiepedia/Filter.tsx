@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 
 import Modal from "../shared/Modal";
 import abilities, { Ability } from "../data/abilities";
@@ -11,11 +11,24 @@ import MoveView from "../shared/MoveView";
 export enum FilterTypes {
   Ability,
   Move,
+  Training,
 }
+
+type TrainingTypes = "ba" | "ha" | "ma" | "bd" | "hd" | "md";
+const STATS: TrainingTypes[] = ["ba", "bd", "ha", "hd", "ma", "md"];
+const TRAINING_TYPES = {
+  ba: "Body POW",
+  ha: "Spirit POW",
+  ma: "Mind POW",
+  bd: "Body DEF",
+  hd: "Spirit DEF",
+  md: "Mind DEF",
+};
 
 export type FilterType =
   | [FilterTypes.Ability, Ability]
-  | [FilterTypes.Move, Move];
+  | [FilterTypes.Move, Move]
+  | [FilterTypes.Training, TrainingTypes];
 
 const beastie_abilities: Ability[] = [];
 const beastie_moves: Move[] = [];
@@ -48,23 +61,34 @@ beastie_moves.sort(
 const FILTER_TYPE_PREFIX: Record<FilterTypes, string> = {
   [FilterTypes.Ability]: "Has Trait: ",
   [FilterTypes.Move]: "Learns Play(s): ",
+  [FilterTypes.Training]: "Trains Allies: ",
 };
+
+const FILTER_TYPES = [
+  FilterTypes.Ability,
+  FilterTypes.Move,
+  FilterTypes.Training,
+];
 
 export function createFilterString(filters: FilterType[]) {
   const types: Record<FilterTypes, FilterType[]> = {
     [FilterTypes.Ability]: [],
     [FilterTypes.Move]: [],
+    [FilterTypes.Training]: [],
   };
   for (const filter of filters) {
     types[filter[0]].push(filter);
   }
 
-  const FILTER_TYPES = [FilterTypes.Ability, FilterTypes.Move];
-
   return FILTER_TYPES.map<[FilterTypes, string]>((type) => [
     type,
     types[type].reduce(
-      (accum2, filter) => accum2 + (accum2 ? ", " : "") + filter[1].name,
+      (accum2, filter) =>
+        accum2 +
+        (accum2 ? ", " : "") +
+        (filter[0] == FilterTypes.Training
+          ? TRAINING_TYPES[filter[1]]
+          : filter[1].name),
       "",
     ),
   ]).reduce(
@@ -117,8 +141,14 @@ export default function Filter({
         exclusive ? filters[0] == value[0] : filters[1] == value[1],
       );
       if (index != -1) {
-        const removed = filters.splice(index, 1);
-        if (exclusive && removed[0][1].id != value[1].id) {
+        const removed = filters.splice(index, 1)[0];
+        const has_id =
+          value[0] != FilterTypes.Training &&
+          removed[0] != FilterTypes.Training;
+        if (
+          exclusive &&
+          (has_id ? removed[1].id != value[1].id : removed[1] != value[1])
+        ) {
           filters.push(value);
         }
       } else {
@@ -136,6 +166,10 @@ export default function Filter({
     setTab(value);
     setSearch("");
   }, []);
+
+  const training = filters.find(
+    (filter) => filter[0] == FilterTypes.Training,
+  )?.[1];
 
   return (
     <div
@@ -174,15 +208,23 @@ export default function Filter({
             >
               Plays
             </button>
+            <button
+              className={tab == 2 ? styles.selectedtab : undefined}
+              onClick={() => changeTab(2)}
+            >
+              Training
+            </button>
           </div>
-          <label>
-            Search:{" "}
-            <input
-              type="search"
-              onChange={(event) => setSearch(event.currentTarget.value)}
-              value={search}
-            />
-          </label>
+          {tab < 2 ? (
+            <label>
+              Search:{" "}
+              <input
+                type="search"
+                onChange={(event) => setSearch(event.currentTarget.value)}
+                value={search}
+              />
+            </label>
+          ) : null}
           <div onWheel={(event) => event.stopPropagation()}>
             {tab == 0 ? (
               <div className={styles.abilityList}>
@@ -248,6 +290,23 @@ export default function Filter({
                     </div>
                   ))}
               </div>
+            ) : null}
+            {tab == 2 ? (
+              <>
+                {STATS.map((type) => (
+                  <button
+                    key={type}
+                    className={
+                      training == type ? styles.trainingSelected : undefined
+                    }
+                    onClick={() =>
+                      handleToggleFilter([FilterTypes.Training, type], true)
+                    }
+                  >
+                    {TRAINING_TYPES[type]}
+                  </button>
+                ))}
+              </>
             ) : null}
           </div>
         </Modal>

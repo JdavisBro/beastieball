@@ -22,9 +22,11 @@ type Props = {
 type StatType = "ba" | "bd" | "ha" | "hd" | "ma" | "md";
 const STATS: StatType[] = ["ba", "bd", "ha", "hd", "ma", "md"];
 
-function getBeastieStatTotal(beastie: BeastieType) {
-  return STATS.reduce((accum, stat) => accum + beastie[stat], 0);
-}
+const OTHER_SORT_DATA: Record<string, (beastie: BeastieType) => number> = {
+  total: (beastie) => STATS.reduce((accum, stat) => accum + beastie[stat], 0),
+  pow: (beastie) => beastie.ba + beastie.ha + beastie.ma,
+  def: (beastie) => beastie.bd + beastie.hd + beastie.md,
+};
 
 function createFilterFunction(filters: FilterType[]) {
   if (!filters) {
@@ -53,9 +55,10 @@ export default function Sidebar(props: Props): React.ReactElement {
     sort == "name"
       ? (beastie1, beastie2) =>
           beastie1.name.localeCompare(beastie2.name) * sortMult
-      : sort == "total"
+      : OTHER_SORT_DATA[sort]
         ? (beastie1, beastie2) =>
-            (getBeastieStatTotal(beastie1) - getBeastieStatTotal(beastie2)) *
+            (OTHER_SORT_DATA[sort](beastie1) -
+              OTHER_SORT_DATA[sort](beastie2)) *
             sortMult
         : (beastie1, beastie2) =>
             ((beastie1[sort as keyof BeastieType] as number) -
@@ -101,6 +104,8 @@ export default function Sidebar(props: Props): React.ReactElement {
             <option value="number">Number</option>
             <option value="name">Name</option>
             <option value="total">Stat Total</option>
+            <option value="pow">POW Total</option>
+            <option value="def">DEF Total</option>
             <option value="ba">Body POW</option>
             <option value="bd">Body DEF</option>
             <option value="ha">Spirit POW</option>
@@ -139,8 +144,8 @@ export default function Sidebar(props: Props): React.ReactElement {
             beastiedata={beastie}
             statDisplay={
               sort != "number" && !(!grid && sort == "name")
-                ? sort == "total"
-                  ? String(getBeastieStatTotal(beastie))
+                ? OTHER_SORT_DATA[sort]
+                  ? String(OTHER_SORT_DATA[sort](beastie))
                   : (beastie[sort as keyof BeastieType] as string)
                 : ""
             }

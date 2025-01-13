@@ -73,12 +73,15 @@ export default function Modal(
     if (props.open) {
       if (!dialogOpen) {
         dialogRef.current.showModal();
-        if (!hashCorrect) {
-          navigate({
-            search: window.location.search,
-            hash: "#" + props.hashValue,
-          });
+        if (hashCorrect) {
+          const old = new URL(window.location.href);
+          old.hash = "";
+          history.replaceState({}, "", old.toString());
         }
+        navigate({
+          search: window.location.search,
+          hash: "#" + props.hashValue,
+        });
       }
       if (dialogOpen && !hashCorrect) {
         dialogRef.current.close();

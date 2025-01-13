@@ -210,10 +210,8 @@
 .movedesc {
   font-size: 1.3em;
   overflow-y: auto;
-  height: 67%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
+  margin: auto 0;
+  padding-bottom: 4px;
   z-index: 1;
 }
 

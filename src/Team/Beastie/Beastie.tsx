@@ -112,7 +112,11 @@ export default function Beastie({
       </div>
       <div className={styles.moverow}>
         {teamBeastie.attklist.map((moveId, index) => (
-          <BeastieMove key={moveId + index} move={MOVE_DIC[moveId]} />
+          <BeastieMove
+            key={moveId + index}
+            move={MOVE_DIC[moveId]}
+            impossible={!beastiedata.attklist.includes(moveId)}
+          />
         ))}
       </div>
     </div>

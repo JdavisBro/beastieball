@@ -5,7 +5,13 @@ import { Move } from "../../data/MoveData";
 import { TypeData } from "../../data/TypeColor";
 import MoveModalContext from "../../shared/MoveModalContext";
 
-export default function BeastieMove({ move }: { move: Move }) {
+export default function BeastieMove({
+  move,
+  impossible,
+}: {
+  move: Move;
+  impossible: boolean;
+}) {
   const setModalMove = useContext(MoveModalContext);
 
   return (
@@ -24,6 +30,9 @@ export default function BeastieMove({ move }: { move: Move }) {
       }}
     >
       <div className={styles.moveblock}></div>
+      {impossible ? (
+        <div title="This Beastie cannot learn this Play.">⚠️</div>
+      ) : null}
       <div className={styles.movename}>{move.name}</div>
     </div>
   );

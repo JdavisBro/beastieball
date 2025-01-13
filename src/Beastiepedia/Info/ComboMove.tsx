@@ -98,7 +98,7 @@ export default function ComboMove({
           desc_tags: [],
           name: `${beastiedata.name} + ${friend ? friend.name : "???"} ${ComboType[type]}`,
           type: moveType,
-          pow: Math.ceil(((powMults[0] + powMults[1]) * 50) / 5) * 5,
+          pow: Math.round(((powMults[0] + powMults[1]) * 50) / 5) * 5,
           eff: effects,
         }}
         noLearner={true}

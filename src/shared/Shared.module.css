@@ -334,6 +334,7 @@
   }
   .beastieSelectNum {
     font-size: 0.8em;
+    padding-top: 0.5px;
   }
   .beastieSelectNum::after {
     content: "-";

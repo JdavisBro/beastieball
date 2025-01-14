@@ -262,6 +262,10 @@
 
 .beastieSelectContainer {
   width: round(down, 90vw, 245px);
+  height: 90dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .beastieSelect {
@@ -269,9 +273,9 @@
   flex-wrap: wrap;
   gap: 5px;
   width: 100%;
-  height: 100%;
-  justify-content: center;
+  overflow-y: auto;
   align-content: flex-start;
+  padding-bottom: 8px;
 }
 
 .beastieSelectBeastie {
@@ -296,6 +300,7 @@
 .beastieSelectBeastieIm {
   flex-shrink: 1;
   max-height: calc(100% - 10px);
+  flex-shrink: 1;
   margin-left: 5px;
   max-width: 50%;
 }
@@ -310,4 +315,28 @@
 .beastieSelectNum {
   font-family: var(--sports-jersey);
   font-size: 2em;
+}
+
+.beastieSelectNum::first-letter {
+  font-size: 0.85em;
+}
+
+@media all and (max-width: 544px) {
+  .beastieSelectBeastie {
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    height: 110px;
+  }
+  .beastieSelectNameNum {
+    flex-direction: row;
+    flex-grow: 0;
+  }
+  .beastieSelectNum {
+    font-size: 0.8em;
+  }
+  .beastieSelectNum::after {
+    content: "-";
+    color: transparent;
+  }
 }

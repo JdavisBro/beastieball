@@ -122,16 +122,16 @@ export default function BeastieSelect({
         onClose={onClose}
         hashValue="BeastieSelect"
       >
-        <label tabIndex={0}>
-          Search:{" "}
-          <input
-            type="search"
-            onChange={(event) => setSearch(event.currentTarget.value)}
-            onFocus={(event) => event.currentTarget.select()}
-            value={search}
-          />
-        </label>
         <div className={styles.beastieSelectContainer}>
+          <label tabIndex={0}>
+            Search:{" "}
+            <input
+              type="search"
+              onChange={(event) => setSearch(event.currentTarget.value)}
+              onFocus={(event) => event.currentTarget.select()}
+              value={search}
+            />
+          </label>
           <div className={styles.beastieSelect}>
             <div
               key="unset"

@@ -165,10 +165,10 @@
   height: 100%;
 
   /* https://frontendmasters.com/blog/pure-css-halftone-effect-in-3-declarations/ */
-  --dot: radial-gradient(closest-side, #666, #fff calc(100% / sqrt(2)));
+  --dot: radial-gradient(closest-side, #666, #fff calc(100% / sqrt(1.2)));
   --pattern: var(--dot) 0 0/ 1.5em 1.5em, var(--dot) 0.75em 0.75em/ 1.5em 1.5em;
   background-color: white;
-  background: var(--pattern), var(--map, linear-gradient(330deg, #777, #fff));
+  background: var(--pattern), var(--map, linear-gradient(330deg, #777, #eee));
   background-blend-mode: multiply;
   filter: contrast(16);
   mix-blend-mode: screen;

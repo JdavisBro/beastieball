@@ -26,6 +26,8 @@ const OTHER_SORT_DATA: Record<string, (beastie: BeastieType) => number> = {
   total: (beastie) => STATS.reduce((accum, stat) => accum + beastie[stat], 0),
   pow: (beastie) => beastie.ba + beastie.ha + beastie.ma,
   def: (beastie) => beastie.bd + beastie.hd + beastie.md,
+  recruit: (beastie) =>
+    beastie.recruit_value != 0.5 ? beastie.recruit_value : 0,
 };
 
 function createFilterFunction(filters: FilterType[]) {
@@ -115,6 +117,7 @@ export default function Sidebar(props: Props): React.ReactElement {
             <option value="hd">Spirit DEF</option>
             <option value="ma">Mind POW</option>
             <option value="md">Mind DEF</option>
+            <option value="recruit">Recruit $</option>
           </select>
           <button onClick={() => setSortDec(!sortDec)}>
             {sortDec ? "↓" : "↑"}

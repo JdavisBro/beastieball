@@ -118,8 +118,9 @@ export default function PlayDex() {
         <label>
           Search:{" "}
           <input
-            type="text"
+            type="search"
             onChange={(event) => setSearch(event.currentTarget.value)}
+            onFocus={(event) => event.currentTarget.select()}
           />
         </label>{" "}
         <label>

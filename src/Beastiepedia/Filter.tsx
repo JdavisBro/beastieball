@@ -221,6 +221,7 @@ export default function Filter({
               <input
                 type="search"
                 onChange={(event) => setSearch(event.currentTarget.value)}
+                onFocus={(event) => event.currentTarget.select()}
                 value={search}
               />
             </label>

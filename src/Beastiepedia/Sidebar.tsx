@@ -94,10 +94,11 @@ export default function Sidebar(props: Props): React.ReactElement {
       <div className={styles.controlsContainer}>
         <div className={styles.controls}>
           <input
-            type="text"
+            type="search"
             placeholder="Search Beasties.."
             className={styles.sidebarsearch}
             onChange={(event) => setSearch(event.currentTarget.value)}
+            onFocus={(event) => event.currentTarget.select()}
           />
           <select
             onChange={(event) => setSort(event.currentTarget.value)}

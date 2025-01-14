@@ -125,8 +125,9 @@ export default function BeastieSelect({
         <label tabIndex={0}>
           Search:{" "}
           <input
-            type="text"
+            type="search"
             onChange={(event) => setSearch(event.currentTarget.value)}
+            onFocus={(event) => event.currentTarget.select()}
             value={search}
           />
         </label>

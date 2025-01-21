@@ -12,6 +12,7 @@ export enum FilterTypes {
   Ability,
   Move,
   Training,
+  Metamorphs,
 }
 
 type TrainingTypes = "ba" | "ha" | "ma" | "bd" | "hd" | "md";
@@ -28,7 +29,8 @@ const TRAINING_TYPES = {
 export type FilterType =
   | [FilterTypes.Ability, Ability]
   | [FilterTypes.Move, Move]
-  | [FilterTypes.Training, TrainingTypes];
+  | [FilterTypes.Training, TrainingTypes]
+  | [FilterTypes.Metamorphs, boolean];
 
 const beastie_abilities: Ability[] = [];
 const beastie_moves: Move[] = [];
@@ -62,12 +64,14 @@ const FILTER_TYPE_PREFIX: Record<FilterTypes, string> = {
   [FilterTypes.Ability]: "Has Trait: ",
   [FilterTypes.Move]: "Learns Play(s): ",
   [FilterTypes.Training]: "Trains Allies: ",
+  [FilterTypes.Metamorphs]: "Metamorphs: ",
 };
 
 const FILTER_TYPES = [
   FilterTypes.Ability,
   FilterTypes.Move,
   FilterTypes.Training,
+  FilterTypes.Metamorphs,
 ];
 
 export function createFilterString(filters: FilterType[]) {
@@ -75,6 +79,7 @@ export function createFilterString(filters: FilterType[]) {
     [FilterTypes.Ability]: [],
     [FilterTypes.Move]: [],
     [FilterTypes.Training]: [],
+    [FilterTypes.Metamorphs]: [],
   };
   for (const filter of filters) {
     types[filter[0]].push(filter);
@@ -88,7 +93,11 @@ export function createFilterString(filters: FilterType[]) {
         (accum2 ? ", " : "") +
         (filter[0] == FilterTypes.Training
           ? TRAINING_TYPES[filter[1]]
-          : filter[1].name),
+          : filter[0] == FilterTypes.Metamorphs
+            ? filter[1]
+              ? "Yes"
+              : "No"
+            : filter[1].name),
       "",
     ),
   ]).reduce(
@@ -144,7 +153,9 @@ export default function Filter({
         const removed = filters.splice(index, 1)[0];
         const has_id =
           value[0] != FilterTypes.Training &&
-          removed[0] != FilterTypes.Training;
+          removed[0] != FilterTypes.Training &&
+          value[0] != FilterTypes.Metamorphs &&
+          removed[0] != FilterTypes.Metamorphs;
         if (
           exclusive &&
           (has_id ? removed[1].id != value[1].id : removed[1] != value[1])
@@ -169,6 +180,9 @@ export default function Filter({
 
   const training = filters.find(
     (filter) => filter[0] == FilterTypes.Training,
+  )?.[1];
+  const metamorph = filters.find(
+    (filter) => filter[0] == FilterTypes.Metamorphs,
   )?.[1];
 
   return (
@@ -212,7 +226,7 @@ export default function Filter({
               className={tab == 2 ? styles.selectedtab : undefined}
               onClick={() => changeTab(2)}
             >
-              Training
+              Other
             </button>
           </div>
           {tab < 2 ? (
@@ -294,6 +308,8 @@ export default function Filter({
             ) : null}
             {tab == 2 ? (
               <>
+                Ally Training:
+                <br />
                 {STATS.map((type) => (
                   <button
                     key={type}
@@ -307,6 +323,31 @@ export default function Filter({
                     {TRAINING_TYPES[type]}
                   </button>
                 ))}
+                <br />
+                Metamorphosis:
+                <br />
+                <button
+                  className={
+                    metamorph === false ? styles.trainingSelected : undefined
+                  }
+                  onClick={() =>
+                    handleToggleFilter([FilterTypes.Metamorphs, false], true)
+                  }
+                >
+                  Does not Metamorph
+                </button>
+                <button
+                  className={
+                    metamorph === true ? styles.trainingSelected : undefined
+                  }
+                  onClick={() =>
+                    handleToggleFilter([FilterTypes.Metamorphs, true], true)
+                  }
+                >
+                  Does Metamorph
+                </button>
+                <br />
+                (Except for specific Metamorphosis types)
               </>
             ) : null}
           </div>

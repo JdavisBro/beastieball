@@ -43,6 +43,12 @@ function createFilterFunction(filters: FilterType[]) {
           return beastie.attklist.includes(value.id);
         case FilterTypes.Training:
           return beastie.tyield.some((training) => training == value);
+        case FilterTypes.Metamorphs: {
+          const metamorphs =
+            beastie.evolution?.length &&
+            beastie.evolution.some((evo) => evo.condition[0] != 7); // Not Extinct
+          return value ? metamorphs : !metamorphs;
+        }
       }
     });
 }

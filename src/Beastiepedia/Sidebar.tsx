@@ -3,7 +3,11 @@ import styles from "./Sidebar.module.css";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import { useCallback, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
-import Filter, { createFilterString, FilterType, FilterTypes } from "./Filter";
+import Filter, {
+  createFilterFunction,
+  createFilterString,
+  FilterType,
+} from "./Filter";
 import {
   SpoilerMode,
   useSpoilerMode,
@@ -29,29 +33,6 @@ const OTHER_SORT_DATA: Record<string, (beastie: BeastieType) => number> = {
   recruit: (beastie) =>
     beastie.recruit_value != 0.5 ? beastie.recruit_value : 0,
 };
-
-function createFilterFunction(filters: FilterType[]) {
-  if (!filters) {
-    return undefined;
-  }
-  return (beastie: BeastieType) =>
-    filters.every(([type, value]) => {
-      switch (type) {
-        case FilterTypes.Ability:
-          return beastie.ability.includes(value.id);
-        case FilterTypes.Move:
-          return beastie.attklist.includes(value.id);
-        case FilterTypes.Training:
-          return beastie.tyield.some((training) => training == value);
-        case FilterTypes.Metamorphs: {
-          const metamorphs =
-            beastie.evolution?.length &&
-            beastie.evolution.some((evo) => evo.condition[0] != 7); // Not Extinct
-          return value ? metamorphs : !metamorphs;
-        }
-      }
-    });
-}
 
 export default function Sidebar(props: Props): React.ReactElement {
   const beastieid = props.beastieid;

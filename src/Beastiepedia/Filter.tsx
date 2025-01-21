@@ -3,7 +3,7 @@ import { useCallback, useState } from "react";
 import Modal from "../shared/Modal";
 import abilities, { Ability } from "../data/abilities";
 import styles from "./Filter.module.css";
-import BEASTIE_DATA from "../data/BeastieData";
+import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import TextTag from "../shared/TextTag";
 import MOVE_DIC, { Move } from "../data/MoveData";
 import MoveView from "../shared/MoveView";
@@ -106,6 +106,29 @@ export function createFilterString(filters: FilterType[]) {
       (values ? (accum ? " + " : "") + FILTER_TYPE_PREFIX[type] + values : ""),
     "",
   );
+}
+
+export function createFilterFunction(filters: FilterType[]) {
+  if (!filters) {
+    return undefined;
+  }
+  return (beastie: BeastieType) =>
+    filters.every(([type, value]) => {
+      switch (type) {
+        case FilterTypes.Ability:
+          return beastie.ability.includes(value.id);
+        case FilterTypes.Move:
+          return beastie.attklist.includes(value.id);
+        case FilterTypes.Training:
+          return beastie.tyield.some((training) => training == value);
+        case FilterTypes.Metamorphs: {
+          const metamorphs =
+            beastie.evolution?.length &&
+            beastie.evolution.some((evo) => evo.condition[0] != 7); // Not Extinct
+          return value ? metamorphs : !metamorphs;
+        }
+      }
+    });
 }
 
 function AbilityButton({

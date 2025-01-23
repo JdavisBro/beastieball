@@ -453,7 +453,8 @@ async function createTeamImage(
         BEASTIE_SIZE[0] / 2,
         loadImage,
       );
-      const trait_height = (lines.length + 1) * 24;
+      const line_height = lines.length < 4 ? 24 : 20;
+      const trait_height = (lines.length + 1) * line_height;
       const right_gap =
         (BEASTIE_PLAY_BEGIN - BEASTIE_STAT_HEIGHT - trait_height) / 3;
       const trait_begin = right_gap * 2 + BEASTIE_STAT_HEIGHT;
@@ -466,7 +467,7 @@ async function createTeamImage(
         ctx.fillText(
           lines[i],
           startx + text_middle,
-          starty + trait_begin + 20 + 24 * i,
+          starty + trait_begin + 20 + line_height * i,
         );
       }
       for (const image of images) {
@@ -474,7 +475,7 @@ async function createTeamImage(
         ctx.drawImage(
           img,
           startx + text_middle + image.x,
-          starty + trait_begin + 19 + 24 * image.line,
+          starty + trait_begin + 19 + line_height * image.line,
           (18 / img.height) * img.width,
           18,
         );

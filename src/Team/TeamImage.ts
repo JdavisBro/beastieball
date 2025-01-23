@@ -281,7 +281,6 @@ async function createTeamImage(
     typeImages.push(await loadImage(`/gameassets/sprType/${i}.png`));
   }
 
-  // Draw background. 5 beasties, 4 gaps, drawing all beasties in 1 set and overwriting the gap areas would be faster.
   for (let i = 0; i < 5; i++) {
     const [startx, starty] = MODE_POS[mode][i];
     drawLines(

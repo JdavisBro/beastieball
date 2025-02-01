@@ -107,7 +107,7 @@ export type BeastieType = {
   };
   id: string;
   isBaby: boolean;
-  learnset: number;
+  learnset: (number | string)[][];
   learnset_randomize: number;
   linked_colors: Record<string, number>;
   loco: {

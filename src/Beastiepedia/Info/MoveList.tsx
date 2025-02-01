@@ -3,7 +3,6 @@ import { useState } from "react";
 import MoveView from "../../shared/MoveView";
 import styles from "./MoveList.module.css";
 import MOVE_DIC, { Move } from "../../data/MoveData";
-import LEARN_SETS from "../../data/Learnsets";
 import MoveModalProvider from "../../shared/MoveModalProvider";
 import InfoBox from "../../shared/InfoBox";
 
@@ -49,22 +48,22 @@ function MoveText(props: MoveTextProps): React.ReactElement {
 
 type Props = {
   movelist: Array<string>;
-  learnset: number;
+  learnset: Array<[number, string]>;
 };
 
 export default function MoveList(props: Props): React.ReactElement {
-  const learnset = LEARN_SETS[props.learnset];
+  const learnset = props.learnset;
 
   const [selected, setSelected] = useState(
-    learnset ? learnset[0][0] : props.movelist[0],
+    learnset ? learnset[0][1] : props.movelist[0],
   );
   if (!props.movelist.includes(selected)) {
     setSelected(
       learnset &&
         learnset.length > 0 &&
         learnset[0].length > 0 &&
-        props.movelist.includes(learnset[0][0])
-        ? learnset[0][0]
+        props.movelist.includes(learnset[0][1])
+        ? learnset[0][1]
         : props.movelist[0],
     );
   }
@@ -78,8 +77,8 @@ export default function MoveList(props: Props): React.ReactElement {
   let friendmoves: Move[] = [];
   if (learnset) {
     for (let move in learnset) {
-      const level = learnset[move][1];
-      move = learnset[move][0];
+      const level = learnset[move][0];
+      move = learnset[move][1];
       if (!MOVE_DIC[move]) {
         console.log(`Move not found: "${move}"`);
         continue;
@@ -104,7 +103,7 @@ export default function MoveList(props: Props): React.ReactElement {
       continue;
     }
 
-    if (learnset && !learnset.some((m) => m[0] == move)) {
+    if (learnset && !learnset.some((m) => m[1] == move)) {
       friendmoves.push(MOVE_DIC[move]);
     }
   }

@@ -60,7 +60,7 @@
     "name": "Competitive"
   },
   "crowddef": {
-    "desc": "DEF x1.3 while field has RALLY",
+    "desc": "DEF x1.5 while field has RALLY",
     "id": "crowddef",
     "name": "Performer"
   },
@@ -105,7 +105,7 @@
     "name": "Unsettling-1"
   },
   "echo": {
-    "desc": "Damage reduced 3/4x, but 50% splashes to target ally",
+    "desc": "Attacks do 0.75x damage and add +1 QUAKE to opponent field",
     "id": "echo",
     "name": "Echo"
   },
@@ -320,14 +320,14 @@
     "name": "Clamor"
   },
   "regenerator": {
-    "desc": "Restores 20 STAMINA when tagged out",
+    "desc": "Restores 25 STAMINA when tagged out",
     "id": "regenerator",
     "name": "Scavenger"
   },
   "rhythmblock": {
     "desc": "While on field with RHYTHM, allies can't be [sprStatus,9]BLOCKED",
     "id": "rhythmblock",
-    "name": "Flow State"
+    "name": "Flow"
   },
   "rhythmpow": {
     "desc": "[sprIcon,0]Attacks do 1.3x damage while field has RHYTHM",
@@ -440,9 +440,9 @@
     "name": "Anticipation"
   },
   "tagheal": {
-    "desc": "Restores 20 STAMINA to an ally that TAGS IN for them",
+    "desc": "Restores 40 STAMINA to an ally that TAGS IN for them",
     "id": "tagheal",
-    "name": "Supportive"
+    "name": "Welcoming"
   },
   "taghit": {
     "desc": "Does 1.5x damage when the target has just TAGGED IN",

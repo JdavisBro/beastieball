@@ -84,7 +84,19 @@
     "hidden_counter": null,
     "id": "alien",
     "isBaby": false,
-    "learnset": 58,
+    "learnset": [
+      [0, "stun"],
+      [0, "dispel"],
+      [10, "mindpass"],
+      [14, "mindbomb"],
+      [20, "meditate"],
+      [25, "taunt"],
+      [30, "dropshot"],
+      [35, "refresh"],
+      [39, "teleport"],
+      [44, "tool"],
+      [49, "lock"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -200,7 +212,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["hd", 2],
+    "tyield": ["ma", 2],
     "type_focus": 1
   },
   "alien1": {
@@ -295,7 +307,19 @@
     "hidden_counter": null,
     "id": "alien1",
     "isBaby": false,
-    "learnset": 57,
+    "learnset": [
+      [0, "stun"],
+      [0, "dispel"],
+      [7, "mindpass"],
+      [11, "mindbomb"],
+      [17, "meditate"],
+      [22, "taunt"],
+      [27, "dropshot"],
+      [32, "refresh"],
+      [36, "teleport"],
+      [41, "tool"],
+      [46, "lock"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -408,7 +432,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tyield": ["hd", 1],
+    "tyield": ["ma", 1],
     "type_focus": 1
   },
   "bat": {
@@ -527,7 +551,19 @@
     "hidden_counter": null,
     "id": "bat",
     "isBaby": false,
-    "learnset": 107,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "bench"],
+      [12, "rest"],
+      [17, "careful"],
+      [21, "refresh"],
+      [24, "tagattack"],
+      [28, "healhit2"],
+      [33, "lifedew"],
+      [37, "heart"],
+      [41, "heartpass"],
+      [45, "commit"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -685,7 +721,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["ha", 2],
+    "tyield": ["ha", 3],
     "type_focus": 1
   },
   "bat1": {
@@ -783,7 +819,19 @@
     "hidden_counter": null,
     "id": "bat1",
     "isBaby": true,
-    "learnset": 106,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "bench"],
+      [8, "rest"],
+      [13, "careful"],
+      [17, "refresh"],
+      [20, "tagattack"],
+      [24, "healhit2"],
+      [29, "lifedew"],
+      [33, "heart"],
+      [37, "heartpass"],
+      [41, "commit"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -969,7 +1017,19 @@
     "hidden_counter": null,
     "id": "beluga",
     "isBaby": false,
-    "learnset": 119,
+    "learnset": [
+      [0, "sensihit"],
+      [0, "chill"],
+      [7, "healhit"],
+      [12, "rest"],
+      [17, "refresh"],
+      [21, "blockattack"],
+      [26, "haze"],
+      [32, "thunder"],
+      [36, "libero"],
+      [41, "whirlwind"],
+      [47, "hyperbeam"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -1063,7 +1123,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["bd", 3],
+    "tyield": ["bd", 2, "md", 2],
     "type_focus": 0
   },
   "bestie": {
@@ -1174,7 +1234,20 @@
     "hidden_counter": null,
     "id": "bestie",
     "isBaby": false,
-    "learnset": 54,
+    "learnset": [
+      [0, "pepshot"],
+      [0, "dig"],
+      [5, "allyrush"],
+      [10, "chill"],
+      [13, "float"],
+      [17, "lifedew"],
+      [23, "construct"],
+      [27, "heart"],
+      [32, "callout"],
+      [36, "jazzpass"],
+      [40, "commit"],
+      [46, "lifepass"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -1298,8 +1371,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 54,
-    "base_exp": 239.8,
-    "bd": 95,
+    "base_exp": 227.5375,
+    "bd": 90,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -1346,12 +1419,25 @@
     "foot_type": 0,
     "growth": 1.09,
     "ha": 105,
-    "hd": 65,
+    "hd": 60,
     "hidden": true,
     "hidden_counter": null,
     "id": "bestiemon",
     "isBaby": false,
-    "learnset": 122,
+    "learnset": [
+      [0, "pepshot"],
+      [0, "dig"],
+      [5, "allyrush"],
+      [10, "charm"],
+      [13, "shieldbreaker"],
+      [17, "defheal"],
+      [23, "construct"],
+      [27, "heart"],
+      [32, "callout"],
+      [36, "protect"],
+      [40, "commit"],
+      [46, "libero"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -1381,7 +1467,7 @@
       "stretchiness": 0.1
     },
     "ma": 25,
-    "md": 80,
+    "md": 75,
     "name": "Duggout",
     "number": 102,
     "palettes": 1,
@@ -1465,10 +1551,10 @@
       "set",
       "dump",
       "tool",
-      "mindup",
       "dropshot",
       "markattack",
       "mind",
+      "mindup",
       "rollshot",
       "mindbomb",
       "jazzpass",
@@ -1486,12 +1572,12 @@
       "chill",
       "shakeoff",
       "passattack",
-      "startermind",
       "dig",
+      "startermind",
       "nightshade"
     ],
     "attklist_randomize": -1,
-    "ba": 60,
+    "ba": 67,
     "base_exp": 233.5,
     "bd": 65,
     "body_color_index": 0,
@@ -1562,7 +1648,19 @@
     "hidden_counter": null,
     "id": "bilby",
     "isBaby": false,
-    "learnset": 33,
+    "learnset": [
+      [0, "startermind"],
+      [0, "dig"],
+      [15, "allyrush"],
+      [19, "mind"],
+      [22, "set"],
+      [26, "stresspass"],
+      [31, "passattack"],
+      [36, "construct"],
+      [41, "jazzpass"],
+      [45, "tool"],
+      [49, "mindup"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -1591,7 +1689,7 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 92,
+    "ma": 85,
     "md": 118,
     "name": "Bandicraft",
     "number": 13,
@@ -1699,10 +1797,10 @@
       "set",
       "dump",
       "tool",
-      "mindup",
       "dropshot",
       "markattack",
       "mind",
+      "mindup",
       "rollshot",
       "mindbomb",
       "jazzpass",
@@ -1720,8 +1818,8 @@
       "chill",
       "shakeoff",
       "passattack",
-      "startermind",
-      "dig"
+      "dig",
+      "startermind"
     ],
     "attklist_randomize": -1,
     "ba": 28,
@@ -1785,7 +1883,19 @@
     "hidden_counter": null,
     "id": "bilby1",
     "isBaby": true,
-    "learnset": 31,
+    "learnset": [
+      [0, "startermind"],
+      [0, "dig"],
+      [7, "allyrush"],
+      [11, "mind"],
+      [14, "set"],
+      [18, "stresspass"],
+      [23, "passattack"],
+      [28, "construct"],
+      [33, "jazzpass"],
+      [37, "tool"],
+      [41, "mindup"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -1894,10 +2004,10 @@
       "set",
       "dump",
       "tool",
-      "mindup",
       "dropshot",
       "markattack",
       "mind",
+      "mindup",
       "rollshot",
       "mindbomb",
       "jazzpass",
@@ -1915,8 +2025,8 @@
       "chill",
       "shakeoff",
       "passattack",
-      "startermind",
-      "dig"
+      "dig",
+      "startermind"
     ],
     "attklist_randomize": -1,
     "ba": 43,
@@ -1987,7 +2097,19 @@
     "hidden_counter": null,
     "id": "bilby2",
     "isBaby": false,
-    "learnset": 32,
+    "learnset": [
+      [0, "startermind"],
+      [0, "dig"],
+      [11, "allyrush"],
+      [15, "mind"],
+      [18, "set"],
+      [22, "stresspass"],
+      [27, "passattack"],
+      [32, "construct"],
+      [37, "jazzpass"],
+      [41, "tool"],
+      [45, "mindup"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -2196,7 +2318,20 @@
     "hidden_counter": null,
     "id": "cassowary",
     "isBaby": false,
-    "learnset": 27,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "rush"],
+      [15, "defheal"],
+      [18, "breakswipe"],
+      [20, "curse"],
+      [23, "pushattack"],
+      [28, "recover"],
+      [32, "body"],
+      [36, "protect"],
+      [39, "rushattack"],
+      [43, "preblock"],
+      [49, "vigor"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -2388,7 +2523,20 @@
     "hidden_counter": null,
     "id": "cassowary1",
     "isBaby": true,
-    "learnset": 25,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "rush"],
+      [7, "defheal"],
+      [10, "breakswipe"],
+      [12, "curse"],
+      [15, "pushattack"],
+      [20, "recover"],
+      [24, "body"],
+      [28, "protect"],
+      [31, "rushattack"],
+      [35, "preblock"],
+      [41, "vigor"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -2576,7 +2724,20 @@
     "hidden_counter": null,
     "id": "cassowary2",
     "isBaby": false,
-    "learnset": 26,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "rush"],
+      [11, "defheal"],
+      [14, "breakswipe"],
+      [16, "curse"],
+      [19, "pushattack"],
+      [24, "recover"],
+      [28, "body"],
+      [32, "protect"],
+      [35, "rushattack"],
+      [39, "preblock"],
+      [45, "vigor"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -2757,7 +2918,7 @@
           {
             "conditions": [
               {
-                "effect_type": 70,
+                "effect_type": 72,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
@@ -2783,7 +2944,19 @@
     "hidden_counter": null,
     "id": "cheerleader",
     "isBaby": false,
-    "learnset": 56,
+    "learnset": [
+      [0, "cheer"],
+      [0, "starterbody"],
+      [9, "crowd"],
+      [14, "set"],
+      [21, "shakenhit"],
+      [25, "healbell"],
+      [29, "freeball"],
+      [33, "breakswipe"],
+      [39, "introduction"],
+      [43, "swordsdance"],
+      [50, "dispel"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -2821,7 +2994,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 70,
+          "effect_type": 72,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -2871,7 +3044,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tyield": ["ha", 1, "hd", 1],
+    "tyield": ["hd", 2],
     "type_focus": 0
   },
   "cheerleader1": {
@@ -2965,7 +3138,19 @@
     "hidden_counter": null,
     "id": "cheerleader1",
     "isBaby": true,
-    "learnset": 55,
+    "learnset": [
+      [0, "cheer"],
+      [0, "starterbody"],
+      [6, "crowd"],
+      [11, "set"],
+      [18, "shakenhit"],
+      [22, "healbell"],
+      [26, "freeball"],
+      [30, "breakswipe"],
+      [36, "introduction"],
+      [40, "swordsdance"],
+      [47, "dispel"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -3005,7 +3190,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 70,
+          "effect_type": 72,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3164,7 +3349,18 @@
     "hidden_counter": null,
     "id": "cheerleadermon",
     "isBaby": false,
-    "learnset": 123,
+    "learnset": [
+      [0, "cheer"],
+      [0, "starterbody"],
+      [7, "rhythm"],
+      [13, "set"],
+      [19, "breakswipe"],
+      [24, "healbell"],
+      [29, "stomp"],
+      [34, "batonpass"],
+      [41, "swordsdance"],
+      [48, "vigor"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -3202,7 +3398,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 70,
+          "effect_type": 72,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3356,7 +3552,19 @@
     "hidden_counter": null,
     "id": "clam",
     "isBaby": false,
-    "learnset": 91,
+    "learnset": [
+      [0, "bounce"],
+      [0, "dig"],
+      [4, "curse"],
+      [13, "passattack"],
+      [17, "preblock"],
+      [22, "serve"],
+      [28, "substitute"],
+      [33, "body"],
+      [37, "rollshot"],
+      [42, "powswitch"],
+      [50, "superpower"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -3471,7 +3679,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["ba", 3],
+    "tyield": ["ba", 2, "bd", 2],
     "type_focus": 0
   },
   "clown": {
@@ -3481,6 +3689,7 @@
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
+      "slide",
       "topspin",
       "moon",
       "juggle",
@@ -3504,7 +3713,7 @@
       "starterside"
     ],
     "attklist_randomize": -1,
-    "ba": 90,
+    "ba": 85,
     "base_exp": 169.28,
     "bd": 55,
     "body_color_index": 0,
@@ -3553,13 +3762,26 @@
     "foot_size": 31,
     "foot_type": 0,
     "growth": 0.92,
-    "ha": 30,
+    "ha": 25,
     "hd": 100,
     "hidden": false,
     "hidden_counter": null,
     "id": "clown",
     "isBaby": false,
-    "learnset": 63,
+    "learnset": [
+      [0, "starterside"],
+      [0, "cheer"],
+      [9, "juggle"],
+      [14, "sideshot"],
+      [18, "followme"],
+      [23, "sidespin"],
+      [28, "bodypass"],
+      [34, "passattack"],
+      [40, "topspin"],
+      [44, "set"],
+      [48, "slide"],
+      [52, "moon"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -3588,7 +3810,7 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 85,
+    "ma": 95,
     "md": 85,
     "name": "Goofsder",
     "number": 43,
@@ -3635,7 +3857,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["hd", 2],
+    "tyield": ["ba", 2, "ma", 2],
     "type_focus": 2
   },
   "clown1": {
@@ -3645,6 +3867,7 @@
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
+      "slide",
       "topspin",
       "moon",
       "juggle",
@@ -3745,7 +3968,20 @@
     "hidden_counter": null,
     "id": "clown1",
     "isBaby": true,
-    "learnset": 62,
+    "learnset": [
+      [0, "starterside"],
+      [0, "cheer"],
+      [5, "juggle"],
+      [10, "sideshot"],
+      [14, "followme"],
+      [19, "sidespin"],
+      [24, "bodypass"],
+      [30, "passattack"],
+      [36, "topspin"],
+      [40, "set"],
+      [44, "slide"],
+      [48, "moon"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -3852,7 +4088,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tyield": ["hd", 1],
+    "tyield": ["ba", 1, "ma", 1],
     "type_focus": 2
   },
   "crab": {
@@ -3943,7 +4179,19 @@
     "hidden_counter": null,
     "id": "crab",
     "isBaby": false,
-    "learnset": 86,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "rhythm"],
+      [6, "followme"],
+      [11, "sensihit"],
+      [16, "skillswap"],
+      [20, "tagattack"],
+      [25, "juggle"],
+      [31, "damagedattack"],
+      [36, "stomp"],
+      [41, "noisytag"],
+      [47, "vigor"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -4008,7 +4256,7 @@
           "type": 16
         }
       ],
-      "description": "Win using 2+ attacks, without volleying"
+      "description": "Win without volleying, using at least 2 attacks"
     },
     "recruit_value": 8.4,
     "roamer_style": {
@@ -4050,7 +4298,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["ba", 2],
+    "tyield": ["ba", 2, "ha", 1],
     "type_focus": 0
   },
   "croc": {
@@ -4149,7 +4397,20 @@
     "hidden_counter": null,
     "id": "croc",
     "isBaby": false,
-    "learnset": 90,
+    "learnset": [
+      [0, "enemylowered"],
+      [0, "lockon"],
+      [6, "lowattks"],
+      [11, "brine"],
+      [16, "pursuit"],
+      [20, "feint"],
+      [26, "netattack"],
+      [30, "serve"],
+      [36, "threat"],
+      [39, "snipe"],
+      [44, "rushattack"],
+      [49, "mindup"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -4283,8 +4544,8 @@
       "noisytag",
       "superpower",
       "backswitch",
-      "starterheart",
-      "taunt"
+      "taunt",
+      "starterheart"
     ],
     "attklist_randomize": -1,
     "ba": 95,
@@ -4359,7 +4620,20 @@
     "hidden_counter": null,
     "id": "daredevil",
     "isBaby": false,
-    "learnset": 52,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "taunt"],
+      [13, "facade"],
+      [16, "bodypass"],
+      [23, "desperate"],
+      [27, "substitute"],
+      [31, "tagattack"],
+      [35, "jump"],
+      [39, "damagedattack"],
+      [42, "backswitch"],
+      [46, "rush"],
+      [50, "overheat"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -4491,8 +4765,8 @@
       "noisytag",
       "superpower",
       "backswitch",
-      "starterheart",
-      "taunt"
+      "taunt",
+      "starterheart"
     ],
     "attklist_randomize": -1,
     "ba": 68,
@@ -4565,7 +4839,20 @@
     "hidden_counter": null,
     "id": "daredevil1",
     "isBaby": true,
-    "learnset": 51,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "taunt"],
+      [9, "facade"],
+      [12, "bodypass"],
+      [19, "desperate"],
+      [23, "substitute"],
+      [27, "tagattack"],
+      [31, "jump"],
+      [35, "damagedattack"],
+      [38, "backswitch"],
+      [42, "rush"],
+      [46, "overheat"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -4758,7 +5045,19 @@
     "hidden_counter": null,
     "id": "disruptor",
     "isBaby": false,
-    "learnset": 53,
+    "learnset": [
+      [0, "nightshade"],
+      [0, "distraction"],
+      [9, "shaken"],
+      [16, "sidespin"],
+      [19, "noisytag"],
+      [23, "rush"],
+      [27, "poisonhit"],
+      [31, "lock"],
+      [35, "stun"],
+      [40, "stress"],
+      [47, "dump"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -4992,7 +5291,19 @@
     "hidden_counter": null,
     "id": "dog",
     "isBaby": false,
-    "learnset": 43,
+    "learnset": [
+      [0, "pepshot"],
+      [0, "dig"],
+      [13, "charm"],
+      [17, "desperate"],
+      [21, "rush"],
+      [26, "jazzattack"],
+      [31, "libero"],
+      [35, "followme"],
+      [39, "rushattack"],
+      [44, "shakeoff"],
+      [48, "damagedattack"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -5246,7 +5557,19 @@
     "hidden_counter": null,
     "id": "dog1",
     "isBaby": true,
-    "learnset": 42,
+    "learnset": [
+      [0, "pepshot"],
+      [0, "dig"],
+      [8, "charm"],
+      [12, "desperate"],
+      [16, "rush"],
+      [21, "jazzattack"],
+      [26, "libero"],
+      [30, "followme"],
+      [34, "rushattack"],
+      [39, "shakeoff"],
+      [43, "damagedattack"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -5466,7 +5789,19 @@
     "hidden_counter": null,
     "id": "dragonfly",
     "isBaby": false,
-    "learnset": 46,
+    "learnset": [
+      [0, "careful"],
+      [0, "rush"],
+      [6, "heartup"],
+      [12, "dragontail"],
+      [17, "shieldbreaker"],
+      [23, "heartpass"],
+      [28, "followme"],
+      [33, "damagedattack"],
+      [38, "mindpass"],
+      [42, "freeball"],
+      [47, "reversal"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -5680,7 +6015,19 @@
     "hidden_counter": null,
     "id": "football",
     "isBaby": false,
-    "learnset": 61,
+    "learnset": [
+      [0, "rocksmash"],
+      [0, "allyrush"],
+      [11, "shakeoff"],
+      [15, "nightshade"],
+      [19, "powswitch"],
+      [23, "rocket"],
+      [29, "set"],
+      [35, "moon"],
+      [39, "allyprotect"],
+      [45, "libero"],
+      [51, "hyperbeam"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -5815,7 +6162,7 @@
     "type_focus": 0
   },
   "football1": {
-    "ability": ["shield", "unlazy"],
+    "ability": ["shield", "runner"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,
@@ -5900,7 +6247,19 @@
     "hidden_counter": null,
     "id": "football1",
     "isBaby": true,
-    "learnset": 59,
+    "learnset": [
+      [0, "rocksmash"],
+      [0, "allyrush"],
+      [6, "shakeoff"],
+      [10, "nightshade"],
+      [14, "powswitch"],
+      [18, "rocket"],
+      [24, "set"],
+      [30, "moon"],
+      [34, "allyprotect"],
+      [40, "libero"],
+      [46, "hyperbeam"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6014,7 +6373,7 @@
     "type_focus": 0
   },
   "football2": {
-    "ability": ["shield", "unlazy"],
+    "ability": ["shield", "runner"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
@@ -6107,7 +6466,19 @@
     "hidden_counter": null,
     "id": "football2",
     "isBaby": true,
-    "learnset": 60,
+    "learnset": [
+      [0, "rocksmash"],
+      [0, "allyrush"],
+      [9, "shakeoff"],
+      [13, "nightshade"],
+      [17, "powswitch"],
+      [21, "rocket"],
+      [27, "set"],
+      [33, "moon"],
+      [37, "allyprotect"],
+      [43, "libero"],
+      [49, "hyperbeam"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6303,7 +6674,20 @@
     "hidden_counter": null,
     "id": "fox",
     "isBaby": false,
-    "learnset": 74,
+    "learnset": [
+      [0, "rush"],
+      [0, "startermind"],
+      [9, "telekinesis"],
+      [14, "float"],
+      [19, "sting"],
+      [22, "recover"],
+      [26, "netattack"],
+      [31, "nettle"],
+      [35, "markattack"],
+      [39, "mark"],
+      [43, "rollshot"],
+      [48, "targethp"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6419,7 +6803,7 @@
     "type_focus": 2
   },
   "fox1": {
-    "ability": ["unlazy", "mindabsorb"],
+    "ability": ["taghit", "mindabsorb"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
@@ -6516,7 +6900,20 @@
     },
     "id": "fox1",
     "isBaby": true,
-    "learnset": 73,
+    "learnset": [
+      [0, "rush"],
+      [0, "startermind"],
+      [9, "telekinesis"],
+      [14, "float"],
+      [19, "sting"],
+      [22, "recover"],
+      [26, "netattack"],
+      [31, "nettle"],
+      [35, "markattack"],
+      [39, "mark"],
+      [43, "rollshot"],
+      [48, "targethp"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6722,7 +7119,19 @@
     "hidden_counter": null,
     "id": "frog",
     "isBaby": false,
-    "learnset": 30,
+    "learnset": [
+      [0, "pepshot"],
+      [0, "cheer"],
+      [15, "myheartpass"],
+      [19, "minddown"],
+      [23, "rhythm"],
+      [27, "noisytag"],
+      [31, "heart"],
+      [36, "heartup"],
+      [40, "introduction"],
+      [44, "commit"],
+      [49, "healbell"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6760,7 +7169,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 70,
+          "effect_type": 72,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -6907,7 +7316,19 @@
     "hidden_counter": null,
     "id": "frog1",
     "isBaby": true,
-    "learnset": 28,
+    "learnset": [
+      [0, "pepshot"],
+      [0, "cheer"],
+      [7, "myheartpass"],
+      [11, "minddown"],
+      [15, "rhythm"],
+      [19, "noisytag"],
+      [23, "heart"],
+      [28, "heartup"],
+      [32, "introduction"],
+      [36, "commit"],
+      [41, "healbell"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -6945,7 +7366,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 70,
+          "effect_type": 72,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7103,7 +7524,19 @@
     "hidden_counter": null,
     "id": "frog2",
     "isBaby": false,
-    "learnset": 29,
+    "learnset": [
+      [0, "pepshot"],
+      [0, "cheer"],
+      [11, "myheartpass"],
+      [15, "minddown"],
+      [19, "rhythm"],
+      [23, "noisytag"],
+      [27, "heart"],
+      [32, "heartup"],
+      [36, "introduction"],
+      [40, "commit"],
+      [45, "healbell"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -7143,7 +7576,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 70,
+          "effect_type": 72,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7301,7 +7734,20 @@
     "hidden_counter": null,
     "id": "ghost",
     "isBaby": false,
-    "learnset": 66,
+    "learnset": [
+      [0, "stun"],
+      [0, "cover"],
+      [13, "poisonhit"],
+      [18, "shaken"],
+      [23, "hazeball"],
+      [28, "sweatup"],
+      [33, "wornout"],
+      [36, "hex"],
+      [39, "teleport"],
+      [44, "sweatall"],
+      [49, "targethp"],
+      [54, "eerie"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -7500,7 +7946,20 @@
     "hidden_counter": null,
     "id": "ghost1",
     "isBaby": true,
-    "learnset": 64,
+    "learnset": [
+      [0, "stun"],
+      [0, "cover"],
+      [7, "poisonhit"],
+      [12, "shaken"],
+      [17, "hazeball"],
+      [22, "sweatup"],
+      [27, "wornout"],
+      [30, "hex"],
+      [33, "teleport"],
+      [38, "sweatall"],
+      [43, "targethp"],
+      [48, "eerie"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -7670,7 +8129,20 @@
     "hidden_counter": null,
     "id": "ghost2",
     "isBaby": false,
-    "learnset": 65,
+    "learnset": [
+      [0, "stun"],
+      [0, "cover"],
+      [10, "poisonhit"],
+      [15, "shaken"],
+      [20, "hazeball"],
+      [25, "sweatup"],
+      [30, "wornout"],
+      [33, "hex"],
+      [36, "teleport"],
+      [41, "sweatall"],
+      [46, "targethp"],
+      [51, "eerie"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -7850,7 +8322,19 @@
     "hidden_counter": null,
     "id": "gremlin",
     "isBaby": false,
-    "learnset": 109,
+    "learnset": [
+      [0, "starterside"],
+      [0, "cover"],
+      [7, "lowattks"],
+      [13, "float"],
+      [18, "steal"],
+      [24, "mindbomb"],
+      [29, "taunt"],
+      [33, "hazeball"],
+      [38, "stress"],
+      [45, "libero"],
+      [49, "heartdown"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -7929,7 +8413,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["ma", 1, "hd", 1],
+    "tyield": ["ma", 2],
     "type_focus": 2
   },
   "horseshoe": {
@@ -8031,7 +8515,20 @@
     "hidden_counter": null,
     "id": "horseshoe",
     "isBaby": false,
-    "learnset": 92,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "protect"],
+      [6, "dig"],
+      [11, "enemyboosts"],
+      [16, "preblock"],
+      [21, "allyrush"],
+      [26, "careful"],
+      [30, "rest"],
+      [34, "snore"],
+      [37, "trap"],
+      [41, "damagedattack"],
+      [46, "lifepass"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -8257,7 +8754,19 @@
     "hidden_counter": null,
     "id": "ibis",
     "isBaby": false,
-    "learnset": 108,
+    "learnset": [
+      [0, "startermind"],
+      [0, "dig"],
+      [7, "lowattks"],
+      [12, "enemylowered"],
+      [17, "steal"],
+      [23, "netattack"],
+      [28, "threat"],
+      [32, "mindup"],
+      [35, "rollshot"],
+      [40, "taunt"],
+      [47, "dump"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": { "_4": 3, "_5": 3 },
     "loco": {
@@ -8392,7 +8901,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["ma", 2],
+    "tyield": ["ma", 3],
     "type_focus": 2
   },
   "jellyfish": {
@@ -8474,7 +8983,20 @@
     "hidden_counter": null,
     "id": "jellyfish",
     "isBaby": false,
-    "learnset": 84,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "nettle"],
+      [7, "careful"],
+      [11, "sting"],
+      [15, "trap"],
+      [19, "snore"],
+      [23, "refresh"],
+      [27, "bellydrum"],
+      [32, "cut"],
+      [36, "shakeoff"],
+      [40, "haze"],
+      [45, "reversal"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -8555,7 +9077,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["ha", 2, "hd", 2],
+    "tyield": ["hd", 3],
     "type_focus": 1
   },
   "jellyfish1": {
@@ -8647,7 +9169,20 @@
     },
     "id": "jellyfish1",
     "isBaby": true,
-    "learnset": 82,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "nettle"],
+      [7, "careful"],
+      [11, "sting"],
+      [15, "trap"],
+      [19, "snore"],
+      [23, "refresh"],
+      [27, "bellydrum"],
+      [32, "cut"],
+      [36, "shakeoff"],
+      [40, "haze"],
+      [45, "reversal"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -8739,7 +9274,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tyield": ["ha", 1],
+    "tyield": ["hd", 1],
     "type_focus": 1
   },
   "jellyfish2": {
@@ -8822,7 +9357,20 @@
     "hidden_counter": null,
     "id": "jellyfish2",
     "isBaby": false,
-    "learnset": 83,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "nettle"],
+      [7, "careful"],
+      [11, "sting"],
+      [15, "trap"],
+      [19, "snore"],
+      [23, "refresh"],
+      [27, "bellydrum"],
+      [32, "cut"],
+      [36, "shakeoff"],
+      [40, "haze"],
+      [45, "reversal"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -8904,7 +9452,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tyield": ["ha", 2],
+    "tyield": ["hd", 2],
     "type_focus": 1
   },
   "kangaroo": {
@@ -9016,7 +9564,21 @@
     "hidden_counter": null,
     "id": "kangaroo",
     "isBaby": false,
-    "learnset": 45,
+    "learnset": [
+      [0, "startermind"],
+      [0, "lowattks"],
+      [9, "taunt"],
+      [13, "dropshot"],
+      [16, "sensihit"],
+      [20, "nettle"],
+      [24, "netattack"],
+      [28, "rest"],
+      [33, "allnervous"],
+      [37, "spitball"],
+      [41, "followme"],
+      [45, "trap"],
+      [50, "tool"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -9227,7 +9789,21 @@
     "hidden_counter": null,
     "id": "kangaroo1",
     "isBaby": true,
-    "learnset": 44,
+    "learnset": [
+      [0, "startermind"],
+      [0, "lowattks"],
+      [5, "taunt"],
+      [9, "dropshot"],
+      [12, "sensihit"],
+      [16, "nettle"],
+      [20, "netattack"],
+      [24, "rest"],
+      [29, "allnervous"],
+      [33, "spitball"],
+      [37, "followme"],
+      [41, "trap"],
+      [46, "tool"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -9360,8 +9936,8 @@
       "sweatall"
     ],
     "attklist_randomize": -1,
-    "ba": 35,
-    "base_exp": 250.6875,
+    "ba": 20,
+    "base_exp": 262.5,
     "bd": 95,
     "body_color_index": 1,
     "colormeta": null,
@@ -9423,7 +9999,20 @@
     "hidden_counter": null,
     "id": "kettle",
     "isBaby": false,
-    "learnset": 115,
+    "learnset": [
+      [0, "steamattack"],
+      [0, "rest"],
+      [10, "bomb"],
+      [17, "sweatup"],
+      [22, "protect"],
+      [27, "heart"],
+      [32, "substitute"],
+      [37, "inferno"],
+      [41, "followme"],
+      [45, "fieldclear"],
+      [48, "overheat"],
+      [53, "sweatall"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -9453,7 +10042,7 @@
       "stretchiness": 0.1
     },
     "ma": 65,
-    "md": 50,
+    "md": 65,
     "name": "Scauldra",
     "number": 95,
     "palettes": 1,
@@ -9618,7 +10207,20 @@
     "hidden_counter": null,
     "id": "kettle1",
     "isBaby": true,
-    "learnset": 114,
+    "learnset": [
+      [0, "steamattack"],
+      [0, "rest"],
+      [7, "bomb"],
+      [14, "sweatup"],
+      [19, "protect"],
+      [24, "heart"],
+      [29, "substitute"],
+      [34, "inferno"],
+      [38, "followme"],
+      [42, "fieldclear"],
+      [45, "overheat"],
+      [50, "sweatall"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -9796,7 +10398,20 @@
     "hidden_counter": null,
     "id": "lyrebird",
     "isBaby": false,
-    "learnset": 41,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "tailwind"],
+      [10, "protect"],
+      [14, "dragontail"],
+      [20, "whirlwind"],
+      [24, "heart"],
+      [29, "heartpass"],
+      [35, "flyback"],
+      [40, "rush"],
+      [44, "bellydrum"],
+      [49, "backswitch"],
+      [53, "overheat"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -10014,7 +10629,20 @@
     "hidden_counter": null,
     "id": "lyrebird1",
     "isBaby": true,
-    "learnset": 40,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "tailwind"],
+      [6, "protect"],
+      [10, "dragontail"],
+      [16, "whirlwind"],
+      [20, "heart"],
+      [25, "heartpass"],
+      [31, "flyback"],
+      [36, "rush"],
+      [40, "bellydrum"],
+      [45, "backswitch"],
+      [49, "overheat"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -10262,7 +10890,19 @@
     "hidden_counter": null,
     "id": "magpie",
     "isBaby": false,
-    "learnset": 102,
+    "learnset": [
+      [0, "startermind"],
+      [0, "mindpass"],
+      [12, "healhit"],
+      [18, "substitute"],
+      [23, "pursuit"],
+      [28, "mindup"],
+      [33, "heartdown"],
+      [37, "trap"],
+      [42, "protect"],
+      [46, "heartd"],
+      [50, "jump"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -10460,7 +11100,19 @@
     "hidden_counter": null,
     "id": "magpie1",
     "isBaby": false,
-    "learnset": 101,
+    "learnset": [
+      [0, "startermind"],
+      [0, "mindpass"],
+      [8, "healhit"],
+      [14, "substitute"],
+      [19, "pursuit"],
+      [24, "mindup"],
+      [29, "heartdown"],
+      [33, "trap"],
+      [38, "protect"],
+      [42, "heartd"],
+      [46, "jump"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -10653,7 +11305,19 @@
     "hidden_counter": null,
     "id": "magpiemon",
     "isBaby": false,
-    "learnset": 125,
+    "learnset": [
+      [0, "startermind"],
+      [0, "rush"],
+      [11, "healhit"],
+      [17, "substitute"],
+      [22, "pursuit"],
+      [27, "mindup"],
+      [32, "heartdown"],
+      [35, "protect"],
+      [41, "stomp"],
+      [45, "tool"],
+      [49, "jump"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -10786,8 +11450,8 @@
       {
         "array": [
           { "color": 44287, "x": 0 },
-          { "color": 45296, "x": 0.52 },
-          { "color": 5230847, "x": 1 }
+          { "color": 1290992, "x": 0.52 },
+          { "color": 6280447, "x": 1 }
         ]
       },
       {
@@ -10799,10 +11463,10 @@
       },
       {
         "array": [
-          { "color": 1191099, "x": 0 },
-          { "color": 2966987, "x": 0.2266666667 },
-          { "color": 3371228, "x": 0.73 },
-          { "color": 5605343, "x": 1 }
+          { "color": 10773107, "x": 0 },
+          { "color": 9989043, "x": 0.2266666667 },
+          { "color": 6711982, "x": 0.73 },
+          { "color": 8295869, "x": 1 }
         ]
       },
       {
@@ -10835,12 +11499,25 @@
     "foot_type": 1,
     "growth": 1.02,
     "ha": 23,
-    "hd": 105,
+    "hd": 70,
     "hidden": false,
     "hidden_counter": null,
     "id": "mantis",
     "isBaby": false,
-    "learnset": 71,
+    "learnset": [
+      [0, "mark"],
+      [0, "enemylowered"],
+      [5, "breakswipe"],
+      [8, "float"],
+      [11, "rush"],
+      [17, "distraction"],
+      [23, "heartdown"],
+      [30, "lock"],
+      [34, "ricochet"],
+      [38, "protect"],
+      [42, "thunder"],
+      [46, "recover"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -10870,7 +11547,7 @@
       "stretchiness": 0.1
     },
     "ma": 80,
-    "md": 70,
+    "md": 105,
     "name": "Armantis",
     "number": 51,
     "palettes": 1,
@@ -10957,6 +11634,7 @@
       "allyrush",
       "allycover",
       "lockon",
+      "quake",
       "lowattks",
       "rest",
       "haze",
@@ -11023,7 +11701,19 @@
     "hidden_counter": null,
     "id": "millipede",
     "isBaby": false,
-    "learnset": 99,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "stress"],
+      [10, "sideshot"],
+      [14, "allycover"],
+      [19, "blockattack"],
+      [25, "rest"],
+      [30, "protect"],
+      [36, "body"],
+      [40, "mark"],
+      [44, "quake"],
+      [48, "superpower"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -11145,6 +11835,7 @@
       "allyrush",
       "allycover",
       "lockon",
+      "quake",
       "lowattks",
       "rest",
       "haze",
@@ -11209,7 +11900,19 @@
     "hidden_counter": null,
     "id": "millipede1",
     "isBaby": false,
-    "learnset": 98,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "stress"],
+      [6, "sideshot"],
+      [10, "allycover"],
+      [15, "blockattack"],
+      [21, "rest"],
+      [26, "protect"],
+      [32, "body"],
+      [36, "mark"],
+      [40, "quake"],
+      [44, "superpower"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -11403,7 +12106,21 @@
     "hidden_counter": null,
     "id": "monkey",
     "isBaby": false,
-    "learnset": 72,
+    "learnset": [
+      [0, "dig"],
+      [0, "starterheart"],
+      [6, "careful"],
+      [9, "shaken"],
+      [13, "cheer"],
+      [18, "shieldbreaker"],
+      [21, "lock"],
+      [25, "crowd"],
+      [30, "facade"],
+      [33, "allyprotect"],
+      [36, "substitute"],
+      [42, "commit"],
+      [47, "heartup"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -11450,7 +12167,7 @@
           "type": 44
         }
       ],
-      "description": "Make this Beastie feel DRAINED (WIPED x8)"
+      "description": "Reduce this Beastie's STAMINA to 0, not via ball attack"
     },
     "recruit_value": 15.05,
     "roamer_style": {
@@ -11493,7 +12210,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["bd", 1, "ha", 1],
+    "tyield": ["ha", 2],
     "type_focus": 1
   },
   "moth": {
@@ -11601,7 +12318,20 @@
     "hidden_counter": null,
     "id": "moth",
     "isBaby": false,
-    "learnset": 36,
+    "learnset": [
+      [0, "startermind"],
+      [0, "hdefup"],
+      [11, "stun"],
+      [14, "preblock"],
+      [20, "facade"],
+      [26, "crowd"],
+      [29, "ego"],
+      [33, "taunt"],
+      [38, "overthink"],
+      [42, "dare"],
+      [46, "stress"],
+      [51, "eerie"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -11799,7 +12529,20 @@
     "hidden_counter": null,
     "id": "moth1",
     "isBaby": true,
-    "learnset": 34,
+    "learnset": [
+      [0, "startermind"],
+      [0, "hdefup"],
+      [5, "stun"],
+      [8, "preblock"],
+      [14, "facade"],
+      [20, "sweatup"],
+      [23, "hex"],
+      [27, "taunt"],
+      [32, "overthink"],
+      [36, "dare"],
+      [40, "stress"],
+      [45, "eerie"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -12003,7 +12746,20 @@
     "hidden_counter": null,
     "id": "moth2",
     "isBaby": true,
-    "learnset": 35,
+    "learnset": [
+      [0, "startermind"],
+      [0, "hdefup"],
+      [8, "stun"],
+      [11, "preblock"],
+      [17, "facade"],
+      [23, "sweatup"],
+      [26, "hex"],
+      [30, "taunt"],
+      [35, "overthink"],
+      [39, "dare"],
+      [43, "stress"],
+      [48, "eerie"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -12199,7 +12955,19 @@
     "hidden_counter": null,
     "id": "mudskipper",
     "isBaby": false,
-    "learnset": 89,
+    "learnset": [
+      [0, "stun"],
+      [0, "chill"],
+      [5, "refresh"],
+      [8, "dig"],
+      [13, "poisonhit"],
+      [19, "lifedew"],
+      [24, "construct"],
+      [30, "float"],
+      [35, "preblock"],
+      [41, "spitball"],
+      [46, "fieldclear"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -12318,7 +13086,7 @@
     ],
     "attklist_randomize": -1,
     "ba": 45,
-    "base_exp": 193.67,
+    "base_exp": 198.806,
     "bd": 79,
     "body_color_index": 0,
     "colormeta": null,
@@ -12379,7 +13147,19 @@
     "hidden_counter": null,
     "id": "nerd",
     "isBaby": false,
-    "learnset": 104,
+    "learnset": [
+      [0, "startermind"],
+      [0, "mindpass"],
+      [11, "mdefup"],
+      [15, "shakenmind"],
+      [20, "trap"],
+      [25, "heartd"],
+      [30, "overthink"],
+      [34, "meditate"],
+      [39, "mind"],
+      [44, "libero"],
+      [49, "tool"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -12409,7 +13189,7 @@
       "stretchiness": 0
     },
     "ma": 110,
-    "md": 91,
+    "md": 99,
     "name": "Debugly",
     "number": 84,
     "palettes": 1,
@@ -12563,7 +13343,19 @@
     "hidden_counter": null,
     "id": "nerd1",
     "isBaby": false,
-    "learnset": 103,
+    "learnset": [
+      [0, "startermind"],
+      [0, "mindpass"],
+      [7, "mdefup"],
+      [11, "shakenmind"],
+      [16, "trap"],
+      [21, "heartd"],
+      [26, "overthink"],
+      [30, "meditate"],
+      [35, "mind"],
+      [40, "libero"],
+      [45, "tool"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -12740,7 +13532,19 @@
     "hidden_counter": null,
     "id": "okapi",
     "isBaby": false,
-    "learnset": 70,
+    "learnset": [
+      [0, "startermind"],
+      [0, "rush"],
+      [5, "shakenmind"],
+      [10, "teleport"],
+      [15, "passattack"],
+      [20, "lock"],
+      [26, "netattack"],
+      [31, "feint"],
+      [36, "cut"],
+      [42, "threat"],
+      [48, "targethp"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -12921,7 +13725,21 @@
     "hidden_counter": null,
     "id": "olm",
     "isBaby": false,
-    "learnset": 113,
+    "learnset": [
+      [0, "startermind"],
+      [0, "rest"],
+      [8, "chill"],
+      [12, "healhit"],
+      [15, "nightshade"],
+      [19, "recover"],
+      [24, "hazeball"],
+      [29, "mindup"],
+      [35, "healhit2"],
+      [39, "cover"],
+      [44, "moon"],
+      [49, "meditate"],
+      [54, "vigor"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -13094,7 +13912,21 @@
     "hidden_counter": null,
     "id": "olm1",
     "isBaby": true,
-    "learnset": 112,
+    "learnset": [
+      [0, "startermind"],
+      [0, "rest"],
+      [5, "chill"],
+      [9, "healhit"],
+      [12, "nightshade"],
+      [16, "recover"],
+      [21, "hazeball"],
+      [26, "mindup"],
+      [32, "healhit2"],
+      [36, "cover"],
+      [41, "moon"],
+      [46, "meditate"],
+      [51, "vigor"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -13176,7 +14008,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["md", 2],
+    "tyield": ["md", 1],
     "type_focus": 2
   },
   "opossum": {
@@ -13294,7 +14126,20 @@
     "hidden_counter": null,
     "id": "opossum",
     "isBaby": false,
-    "learnset": 110,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "lowattks"],
+      [7, "enemyboosts"],
+      [11, "shaken"],
+      [16, "facade"],
+      [21, "dig"],
+      [25, "scoreboosted"],
+      [29, "body"],
+      [33, "substitute"],
+      [39, "dare"],
+      [45, "allyprotect"],
+      [49, "contest"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -13394,7 +14239,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["ba", 1, "ha", 1],
+    "tyield": ["ba", 2, "ha", 2],
     "type_focus": 0
   },
   "platypus": {
@@ -13492,7 +14337,19 @@
     "hidden_counter": null,
     "id": "platypus",
     "isBaby": false,
-    "learnset": 121,
+    "learnset": [
+      [0, "poisonhit"],
+      [0, "mdefup"],
+      [8, "sweatup"],
+      [13, "markattack"],
+      [16, "threat"],
+      [22, "trap"],
+      [28, "hex"],
+      [34, "mark"],
+      [40, "snipe"],
+      [44, "mindup"],
+      [50, "dump"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -13530,7 +14387,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 70,
+          "effect_type": 72,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -13675,7 +14532,19 @@
     "hidden_counter": null,
     "id": "platypus1",
     "isBaby": true,
-    "learnset": 47,
+    "learnset": [
+      [0, "startermind"],
+      [0, "mdefup"],
+      [4, "poisonhit"],
+      [9, "sweatup"],
+      [12, "markattack"],
+      [18, "trap"],
+      [24, "hex"],
+      [30, "mark"],
+      [36, "snipe"],
+      [40, "telekinesis"],
+      [46, "dump"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -13713,7 +14582,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 70,
+          "effect_type": 72,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -13891,7 +14760,19 @@
     "hidden_counter": null,
     "id": "platypus2",
     "isBaby": false,
-    "learnset": 48,
+    "learnset": [
+      [0, "startermind"],
+      [0, "mdefup"],
+      [9, "poisonhit"],
+      [14, "sweatup"],
+      [17, "markattack"],
+      [23, "trap"],
+      [29, "hex"],
+      [35, "mark"],
+      [41, "snipe"],
+      [45, "telekinesis"],
+      [51, "dump"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -13929,7 +14810,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 70,
+          "effect_type": 72,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -14076,7 +14957,20 @@
     "hidden_counter": null,
     "id": "possum",
     "isBaby": false,
-    "learnset": 39,
+    "learnset": [
+      [0, "bounce"],
+      [0, "bench"],
+      [12, "rocksmash"],
+      [15, "cover"],
+      [18, "libero"],
+      [21, "tagattack"],
+      [25, "dig"],
+      [29, "curse"],
+      [35, "body"],
+      [39, "construct"],
+      [44, "vigor"],
+      [49, "batonpass"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -14287,7 +15181,20 @@
     "hidden_counter": null,
     "id": "possum1",
     "isBaby": true,
-    "learnset": 37,
+    "learnset": [
+      [0, "bounce"],
+      [0, "bench"],
+      [6, "rocksmash"],
+      [9, "cover"],
+      [12, "libero"],
+      [15, "tagattack"],
+      [19, "dig"],
+      [23, "curse"],
+      [29, "body"],
+      [33, "construct"],
+      [38, "vigor"],
+      [43, "batonpass"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -14497,7 +15404,20 @@
     "hidden_counter": null,
     "id": "possum2",
     "isBaby": false,
-    "learnset": 38,
+    "learnset": [
+      [0, "bounce"],
+      [0, "bench"],
+      [9, "rocksmash"],
+      [12, "cover"],
+      [15, "libero"],
+      [18, "tagattack"],
+      [22, "dig"],
+      [26, "curse"],
+      [32, "body"],
+      [36, "construct"],
+      [41, "vigor"],
+      [46, "batonpass"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -14706,7 +15626,20 @@
     "hidden_counter": null,
     "id": "psychic",
     "isBaby": false,
-    "learnset": 93,
+    "learnset": [
+      [0, "startermind"],
+      [5, "mdefup"],
+      [12, "telekinesis"],
+      [14, "heartd"],
+      [19, "chill"],
+      [22, "teleport"],
+      [26, "heartdown"],
+      [31, "protect"],
+      [35, "meditate"],
+      [39, "moon"],
+      [43, "mindpass"],
+      [48, "wornattack"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -14962,7 +15895,20 @@
     "hidden_counter": null,
     "id": "rainbow",
     "isBaby": false,
-    "learnset": 85,
+    "learnset": [
+      [0, "pepshot"],
+      [0, "callout"],
+      [5, "breakswipe"],
+      [9, "mind"],
+      [12, "minddown"],
+      [18, "mindup"],
+      [23, "storedpower"],
+      [29, "noisytag"],
+      [33, "moon"],
+      [38, "superpower"],
+      [43, "skillswap"],
+      [47, "contest"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": { "_3": 1 },
     "loco": {
@@ -15183,7 +16129,20 @@
     "hidden_counter": null,
     "id": "rainbowmon",
     "isBaby": false,
-    "learnset": 124,
+    "learnset": [
+      [0, "pepshot"],
+      [0, "callout"],
+      [10, "breakswipe"],
+      [14, "mind"],
+      [17, "minddown"],
+      [23, "mindup"],
+      [28, "storedpower"],
+      [34, "noisytag"],
+      [38, "moon"],
+      [43, "superpower"],
+      [48, "skillswap"],
+      [52, "contest"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -15406,7 +16365,21 @@
     "hidden_counter": null,
     "id": "rat",
     "isBaby": false,
-    "learnset": 100,
+    "learnset": [
+      [0, "bounce"],
+      [0, "fieldclear"],
+      [5, "shakenhit"],
+      [8, "bench"],
+      [11, "charm"],
+      [13, "poisonhit"],
+      [19, "dispel"],
+      [23, "superfang"],
+      [28, "skillswap"],
+      [33, "switch"],
+      [38, "healhit2"],
+      [42, "rest"],
+      [45, "tool"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -15565,11 +16538,12 @@
       "rest",
       "protect",
       "swordsdance",
-      "starterbody"
+      "starterbody",
+      "quake"
     ],
     "attklist_randomize": -1,
-    "ba": 88,
-    "base_exp": 195.024,
+    "ba": 86,
+    "base_exp": 201.144,
     "bd": 125,
     "body_color_index": 0,
     "colormeta": null,
@@ -15625,13 +16599,26 @@
     "foot_size": 98,
     "foot_type": 0,
     "growth": 1.02,
-    "ha": 30,
-    "hd": 87,
+    "ha": 22,
+    "hd": 82,
     "hidden": false,
     "hidden_counter": null,
     "id": "rocklizard",
     "isBaby": false,
-    "learnset": 97,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "quake"],
+      [12, "dig"],
+      [15, "protect"],
+      [19, "rocksmash"],
+      [23, "pushattack"],
+      [27, "defheal"],
+      [30, "rocket"],
+      [35, "preblock"],
+      [41, "substitute"],
+      [44, "body"],
+      [48, "distraction"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -15661,7 +16648,7 @@
       "stretchiness": 0.1
     },
     "ma": 75,
-    "md": 40,
+    "md": 55,
     "name": "Boldlur",
     "number": 77,
     "palettes": 1,
@@ -15669,7 +16656,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 70,
+          "effect_type": 72,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15821,7 +16808,20 @@
     "hidden_counter": null,
     "id": "rocklizard1",
     "isBaby": true,
-    "learnset": 95,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "bdefup"],
+      [6, "dig"],
+      [9, "protect"],
+      [13, "rocksmash"],
+      [17, "pushattack"],
+      [21, "defheal"],
+      [24, "rocket"],
+      [29, "preblock"],
+      [35, "substitute"],
+      [38, "body"],
+      [42, "distraction"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -15859,7 +16859,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 70,
+          "effect_type": 72,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -16012,7 +17012,20 @@
     "hidden_counter": null,
     "id": "rocklizard2",
     "isBaby": false,
-    "learnset": 96,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "bdefup"],
+      [9, "dig"],
+      [12, "protect"],
+      [16, "rocksmash"],
+      [20, "pushattack"],
+      [24, "defheal"],
+      [27, "rocket"],
+      [32, "preblock"],
+      [38, "substitute"],
+      [41, "body"],
+      [45, "distraction"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -16050,7 +17063,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 70,
+          "effect_type": 72,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -16212,7 +17225,20 @@
     "hidden_counter": null,
     "id": "seabird",
     "isBaby": false,
-    "learnset": 81,
+    "learnset": [
+      [0, "startermind"],
+      [0, "callout"],
+      [9, "defheal"],
+      [12, "markattack"],
+      [16, "followme"],
+      [21, "damagedattack"],
+      [26, "float"],
+      [30, "rest"],
+      [34, "facade"],
+      [38, "whirlwind"],
+      [42, "substitute"],
+      [47, "rollshot"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -16314,7 +17340,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tyield": ["hd", 2],
+    "tyield": ["ha", 2, "ma", 2],
     "type_focus": 1
   },
   "seabird1": {
@@ -16417,7 +17443,20 @@
     "hidden_counter": null,
     "id": "seabird1",
     "isBaby": false,
-    "learnset": 80,
+    "learnset": [
+      [0, "startermind"],
+      [0, "callout"],
+      [5, "defheal"],
+      [8, "markattack"],
+      [12, "followme"],
+      [17, "damagedattack"],
+      [22, "float"],
+      [26, "rest"],
+      [30, "facade"],
+      [34, "whirlwind"],
+      [38, "substitute"],
+      [43, "rollshot"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -16513,7 +17552,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tyield": ["hd", 1],
+    "tyield": ["ha", 1, "ma", 1],
     "type_focus": 1
   },
   "seal": {
@@ -16612,7 +17651,20 @@
     "hidden_counter": null,
     "id": "seal",
     "isBaby": false,
-    "learnset": 88,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "curse"],
+      [6, "dig"],
+      [11, "healhit"],
+      [16, "swordsdance"],
+      [21, "serve"],
+      [26, "batonpass"],
+      [31, "set"],
+      [36, "nice"],
+      [40, "jazzpass"],
+      [44, "slide"],
+      [49, "superpower"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -16709,7 +17761,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["ba", 3],
+    "tyield": ["ba", 2, "bd", 2],
     "type_focus": 0
   },
   "seal1": {
@@ -16806,7 +17858,20 @@
     "hidden_counter": null,
     "id": "seal1",
     "isBaby": true,
-    "learnset": 87,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "curse"],
+      [6, "dig"],
+      [11, "healhit"],
+      [16, "swordsdance"],
+      [21, "serve"],
+      [26, "batonpass"],
+      [31, "set"],
+      [36, "nice"],
+      [40, "jazzpass"],
+      [44, "slide"],
+      [49, "superpower"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -16899,7 +17964,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tyield": ["ba", 2],
+    "tyield": ["ba", 1],
     "type_focus": 0
   },
   "serval": {
@@ -17000,7 +18065,20 @@
     "hidden_counter": null,
     "id": "serval",
     "isBaby": false,
-    "learnset": 50,
+    "learnset": [
+      [0, "bounce"],
+      [0, "feint"],
+      [11, "rush"],
+      [15, "pepshot"],
+      [20, "pushattack"],
+      [25, "cut"],
+      [29, "substitute"],
+      [33, "jump"],
+      [37, "mark"],
+      [42, "protectcheer"],
+      [47, "damagedattack"],
+      [52, "rushattack"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -17104,7 +18182,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["ba", 2],
+    "tyield": ["ba", 2, "ha", 1],
     "type_focus": 1
   },
   "serval1": {
@@ -17204,7 +18282,20 @@
     "hidden_counter": null,
     "id": "serval1",
     "isBaby": false,
-    "learnset": 49,
+    "learnset": [
+      [0, "bounce"],
+      [0, "feint"],
+      [7, "rush"],
+      [11, "pepshot"],
+      [16, "pushattack"],
+      [21, "cut"],
+      [25, "substitute"],
+      [29, "jump"],
+      [33, "mark"],
+      [38, "protectcheer"],
+      [43, "damagedattack"],
+      [48, "rushattack"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -17331,7 +18422,7 @@
     ],
     "attklist_randomize": -1,
     "ba": 105,
-    "base_exp": 187.68,
+    "base_exp": 190.74,
     "bd": 50,
     "body_color_index": 0,
     "colormeta": null,
@@ -17378,13 +18469,26 @@
     "foot_size": 76,
     "foot_type": 0,
     "growth": 1.02,
-    "ha": 30,
+    "ha": 29,
     "hd": 90,
     "hidden": false,
     "hidden_counter": null,
     "id": "shark",
     "isBaby": false,
-    "learnset": 79,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "lowattks"],
+      [11, "bdefup"],
+      [15, "rocksmash"],
+      [19, "preblock"],
+      [22, "serve"],
+      [26, "curse"],
+      [30, "shakeoff"],
+      [35, "rocket"],
+      [39, "protect"],
+      [44, "rushattack"],
+      [47, "hyperbeam"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -17414,7 +18518,7 @@
       "stretchiness": 0.1
     },
     "ma": 40,
-    "md": 100,
+    "md": 105,
     "name": "Riplash",
     "number": 59,
     "palettes": 1,
@@ -17562,7 +18666,20 @@
     "hidden_counter": null,
     "id": "shark1",
     "isBaby": true,
-    "learnset": 78,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "lowattks"],
+      [6, "bdefup"],
+      [10, "rocksmash"],
+      [14, "preblock"],
+      [17, "serve"],
+      [21, "curse"],
+      [25, "shakeoff"],
+      [30, "rocket"],
+      [34, "protect"],
+      [39, "rushattack"],
+      [42, "hyperbeam"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -17653,7 +18770,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tyield": ["ba", 1],
+    "tyield": ["ba", 2],
     "type_focus": 0
   },
   "shroom1": {
@@ -17753,7 +18870,20 @@
     "hidden_counter": null,
     "id": "shroom1",
     "isBaby": true,
-    "learnset": 21,
+    "learnset": [
+      [0, "careful"],
+      [0, "callout"],
+      [6, "refresh"],
+      [9, "dropshot"],
+      [12, "rocksmash"],
+      [15, "protect"],
+      [19, "fieldclear"],
+      [24, "bomb"],
+      [30, "mark"],
+      [35, "hazeball"],
+      [39, "allyrush"],
+      [43, "healhit2"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -17791,7 +18921,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": [42, 43, 44, 45],
+          "effect_type": [42, 43, 44, 45, 70, 56],
           "event": null,
           "freq": -1,
           "func": null,
@@ -17862,7 +18992,7 @@
     "type_focus": 1
   },
   "shroom_b": {
-    "ability": ["rhythmblock", "technician"],
+    "ability": ["rhythmblock", "tagheal"],
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 60,
@@ -17988,12 +19118,26 @@
     "foot_type": 0,
     "growth": 1,
     "ha": 60,
-    "hd": 95,
+    "hd": 90,
     "hidden": false,
     "hidden_counter": null,
     "id": "shroom_b",
     "isBaby": false,
-    "learnset": 22,
+    "learnset": [
+      [0, "rocksmash"],
+      [0, "rhythm"],
+      [5, "refresh"],
+      [9, "lifedew"],
+      [12, "healhit2"],
+      [17, "protect"],
+      [20, "mark"],
+      [25, "topspin"],
+      [31, "fieldclear"],
+      [36, "stomp"],
+      [40, "allyrush"],
+      [44, "allyprotect"],
+      [48, "vigor"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -18023,7 +19167,7 @@
       "stretchiness": 0.08
     },
     "ma": 40,
-    "md": 60,
+    "md": 65,
     "name": "Bongus",
     "number": 2,
     "palettes": 1,
@@ -18139,7 +19283,7 @@
       "snipe"
     ],
     "attklist_randomize": -1,
-    "ba": 60,
+    "ba": 65,
     "base_exp": 187,
     "bd": 75,
     "body_color_index": 0,
@@ -18225,7 +19369,21 @@
     "hidden_counter": null,
     "id": "shroom_m",
     "isBaby": false,
-    "learnset": 24,
+    "learnset": [
+      [0, "dropshot"],
+      [0, "trap"],
+      [5, "refresh"],
+      [9, "markattack"],
+      [12, "distraction"],
+      [17, "hazeball"],
+      [20, "protect"],
+      [25, "mark"],
+      [31, "netattack"],
+      [36, "allyrush"],
+      [40, "sting"],
+      [44, "dump"],
+      [48, "fieldclear"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -18254,7 +19412,7 @@
       "squishiness": 0,
       "stretchiness": 0
     },
-    "ma": 95,
+    "ma": 90,
     "md": 110,
     "name": "Illugus",
     "number": 4,
@@ -18450,12 +19608,26 @@
     "foot_type": 0,
     "growth": 1,
     "ha": 110,
-    "hd": 95,
+    "hd": 90,
     "hidden": false,
     "hidden_counter": null,
     "id": "shroom_s",
     "isBaby": false,
-    "learnset": 23,
+    "learnset": [
+      [0, "snore"],
+      [0, "crowd"],
+      [5, "refresh"],
+      [9, "taunt"],
+      [12, "minddown"],
+      [17, "protect"],
+      [20, "mark"],
+      [25, "bomb"],
+      [31, "fieldclear"],
+      [36, "heart"],
+      [40, "sweatup"],
+      [44, "lifepass"],
+      [48, "contest"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -18485,7 +19657,7 @@
       "stretchiness": 0
     },
     "ma": 75,
-    "md": 60,
+    "md": 65,
     "name": "Surgus",
     "number": 3,
     "palettes": 1,
@@ -18610,10 +19782,11 @@
       "snipe",
       "eerie",
       "3actions",
-      "snore"
+      "snore",
+      "quake"
     ],
     "attklist_randomize": -1,
-    "ba": 100,
+    "ba": 110,
     "base_exp": 220,
     "bd": 80,
     "body_color_index": 0,
@@ -18671,13 +19844,27 @@
     "foot_size": 98,
     "foot_type": 0,
     "growth": 1,
-    "ha": 100,
+    "ha": 110,
     "hd": 80,
     "hidden": true,
     "hidden_counter": null,
     "id": "shroommon",
     "isBaby": false,
-    "learnset": 126,
+    "learnset": [
+      [0, "careful"],
+      [0, "quake"],
+      [5, "rest"],
+      [9, "distraction"],
+      [12, "blockattack"],
+      [17, "protect"],
+      [20, "mark"],
+      [25, "bomb"],
+      [31, "fieldclear"],
+      [36, "netattack"],
+      [40, "allyrush"],
+      [44, "lifepass"],
+      [48, "3actions"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -18706,7 +19893,7 @@
       "squishiness": 0.05,
       "stretchiness": 0.02
     },
-    "ma": 100,
+    "ma": 110,
     "md": 80,
     "name": "Shloom",
     "number": 106,
@@ -18778,7 +19965,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tyield": ["bd", 1, "hd", 1, "md", 1],
+    "tyield": ["bd", 2, "hd", 2, "md", 2],
     "type_focus": 0
   },
   "shy": {
@@ -18870,7 +20057,19 @@
     "hidden_counter": null,
     "id": "shy",
     "isBaby": false,
-    "learnset": 67,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "charm"],
+      [6, "allycover"],
+      [10, "careful"],
+      [16, "bench"],
+      [21, "libero"],
+      [25, "dragontail"],
+      [31, "allyrush"],
+      [36, "preblock"],
+      [41, "heart"],
+      [47, "haze"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -18908,7 +20107,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 70,
+          "effect_type": 72,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -18959,7 +20158,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["md", 3],
+    "tyield": ["md", 2],
     "type_focus": 1
   },
   "snake": {
@@ -19054,7 +20253,21 @@
     "hidden_counter": null,
     "id": "snake",
     "isBaby": false,
-    "learnset": 105,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "defheal"],
+      [6, "storedpower"],
+      [10, "refresh"],
+      [14, "sensihit"],
+      [18, "rest"],
+      [23, "rush"],
+      [26, "healhit2"],
+      [30, "recover"],
+      [34, "thunder"],
+      [39, "batonpass"],
+      [43, "substitute"],
+      [48, "vigor"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -19237,7 +20450,20 @@
     "hidden_counter": null,
     "id": "snowspirit",
     "isBaby": false,
-    "learnset": 118,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "eerie"],
+      [13, "cheer"],
+      [17, "healhit"],
+      [21, "noisytag"],
+      [27, "shieldbreaker"],
+      [30, "serve"],
+      [34, "rush"],
+      [39, "scoreboosted"],
+      [44, "healhit2"],
+      [48, "jump"],
+      [53, "lifepass"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -19437,7 +20663,20 @@
     "hidden_counter": null,
     "id": "spirit",
     "isBaby": false,
-    "learnset": 117,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "crowd"],
+      [13, "cheer"],
+      [17, "healhit"],
+      [21, "noisytag"],
+      [27, "shieldbreaker"],
+      [30, "serve"],
+      [34, "rush"],
+      [39, "scoreboosted"],
+      [44, "dare"],
+      [48, "distraction"],
+      [53, "reversal"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -19662,7 +20901,19 @@
     "hidden_counter": null,
     "id": "spirit1",
     "isBaby": true,
-    "learnset": 116,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "myheartpass"],
+      [8, "cheer"],
+      [12, "healhit"],
+      [17, "shieldbreaker"],
+      [22, "noisytag"],
+      [25, "serve"],
+      [29, "rush"],
+      [33, "scoreboosted"],
+      [37, "sweatup"],
+      [41, "substitute"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -19814,8 +21065,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 94,
-    "base_exp": 152.706,
-    "bd": 68,
+    "base_exp": 143.778,
+    "bd": 62,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -19882,7 +21133,20 @@
     "hidden_counter": null,
     "id": "swift",
     "isBaby": false,
-    "learnset": 111,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "feint"],
+      [5, "rush"],
+      [9, "brine"],
+      [12, "tailwind"],
+      [17, "teleport"],
+      [23, "tagattack"],
+      [29, "distraction"],
+      [33, "rushattack"],
+      [37, "batonpass"],
+      [43, "slide"],
+      [49, "jazzpass"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -19912,7 +21176,7 @@
       "stretchiness": 0.1
     },
     "ma": 45,
-    "md": 57,
+    "md": 47,
     "name": "Blitzwift",
     "number": 91,
     "palettes": 1,
@@ -20025,8 +21289,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 60,
-    "base_exp": 167.31,
-    "bd": 55,
+    "base_exp": 170.28,
+    "bd": 60,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -20101,13 +21365,25 @@
     "foot_size": 37,
     "foot_type": 0,
     "growth": 0.99,
-    "ha": 55,
+    "ha": 50,
     "hd": 70,
     "hidden": false,
     "hidden_counter": null,
     "id": "tricky",
     "isBaby": false,
-    "learnset": 69,
+    "learnset": [
+      [0, "shakenmind"],
+      [0, "backswitch"],
+      [10, "starterside"],
+      [14, "lockon"],
+      [21, "sideshot"],
+      [24, "skillswap"],
+      [28, "sidespin"],
+      [33, "rush"],
+      [39, "passattack"],
+      [44, "taunt"],
+      [48, "dump"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -20221,7 +21497,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["ma", 2],
+    "tyield": ["ma", 3],
     "type_focus": 2
   },
   "tricky1": {
@@ -20345,7 +21621,19 @@
     "hidden_counter": null,
     "id": "tricky1",
     "isBaby": true,
-    "learnset": 68,
+    "learnset": [
+      [0, "shakenmind"],
+      [0, "backswitch"],
+      [6, "starterside"],
+      [10, "lockon"],
+      [17, "sideshot"],
+      [20, "skillswap"],
+      [24, "sidespin"],
+      [29, "rush"],
+      [35, "passattack"],
+      [40, "taunt"],
+      [44, "dump"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -20501,7 +21789,8 @@
       "skillswap",
       "steal",
       "haze",
-      "dump"
+      "dump",
+      "quake"
     ],
     "attklist_randomize": -1,
     "ba": 65,
@@ -20575,7 +21864,20 @@
     "hidden_counter": null,
     "id": "turtle",
     "isBaby": false,
-    "learnset": 77,
+    "learnset": [
+      [0, "healhit"],
+      [0, "preblock"],
+      [9, "defheal"],
+      [13, "rhythm"],
+      [16, "mind"],
+      [23, "protect"],
+      [28, "heartdown"],
+      [34, "allyprotect"],
+      [37, "dump"],
+      [42, "refresh"],
+      [45, "haze"],
+      [51, "stomp"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -20697,7 +21999,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["md", 3],
+    "tyield": ["hd", 3],
     "type_focus": 0
   },
   "turtle1": {
@@ -20793,7 +22095,20 @@
     "hidden_counter": null,
     "id": "turtle1",
     "isBaby": true,
-    "learnset": 75,
+    "learnset": [
+      [0, "healhit"],
+      [0, "preblock"],
+      [4, "defheal"],
+      [8, "rhythm"],
+      [11, "mind"],
+      [18, "protect"],
+      [23, "heartdown"],
+      [29, "allyprotect"],
+      [32, "dump"],
+      [37, "refresh"],
+      [40, "haze"],
+      [46, "stomp"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -20878,7 +22193,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tyield": ["md", 1],
+    "tyield": ["hd", 1],
     "type_focus": 0
   },
   "turtle2": {
@@ -20988,7 +22303,20 @@
     "hidden_counter": null,
     "id": "turtle2",
     "isBaby": false,
-    "learnset": 76,
+    "learnset": [
+      [0, "healhit"],
+      [0, "preblock"],
+      [7, "defheal"],
+      [11, "rhythm"],
+      [14, "mind"],
+      [21, "protect"],
+      [26, "heartdown"],
+      [32, "allyprotect"],
+      [35, "dump"],
+      [40, "refresh"],
+      [43, "haze"],
+      [49, "stomp"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -21094,7 +22422,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tyield": ["md", 2],
+    "tyield": ["hd", 2],
     "type_focus": 0
   },
   "wizard": {
@@ -21134,7 +22462,7 @@
     "attklist_randomize": -1,
     "ba": 60,
     "base_exp": 208.436,
-    "bd": 110,
+    "bd": 63,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -21196,12 +22524,25 @@
     "foot_type": 1,
     "growth": 1.07,
     "ha": 80,
-    "hd": 63,
+    "hd": 85,
     "hidden": false,
     "hidden_counter": null,
     "id": "wizard",
     "isBaby": false,
-    "learnset": 94,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "feint"],
+      [6, "rush"],
+      [10, "enemyboosts"],
+      [15, "dispel"],
+      [22, "mark"],
+      [26, "blockattack"],
+      [31, "lock"],
+      [36, "distraction"],
+      [41, "bomb"],
+      [45, "eerie"],
+      [49, "threat"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {
@@ -21231,7 +22572,7 @@
       "stretchiness": 0.05
     },
     "ma": 36,
-    "md": 85,
+    "md": 110,
     "name": "Conjarr",
     "number": 74,
     "palettes": 1,
@@ -21298,8 +22639,8 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tyield": ["bd", 2],
-    "type_focus": 0
+    "tyield": ["md", 3],
+    "type_focus": 1
   },
   "yeti": {
     "ability": ["intimidate"],
@@ -21329,6 +22670,7 @@
       "facade",
       "cover",
       "mark",
+      "quake",
       "snore"
     ],
     "attklist_randomize": -1,
@@ -21408,7 +22750,19 @@
     "hidden_counter": null,
     "id": "yeti",
     "isBaby": false,
-    "learnset": 120,
+    "learnset": [
+      [0, "rocksmash"],
+      [0, "bdefup"],
+      [11, "bomb"],
+      [17, "curse"],
+      [23, "protect"],
+      [27, "body"],
+      [33, "rest"],
+      [37, "snore"],
+      [43, "superpower"],
+      [46, "bellydrum"],
+      [50, "3actions"]
+    ],
     "learnset_randomize": -1,
     "linked_colors": {},
     "loco": {

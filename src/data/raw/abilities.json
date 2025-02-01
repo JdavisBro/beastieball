@@ -105,7 +105,7 @@
     "name": "Unsettling-1"
   },
   "echo": {
-    "desc": "Attacks do 0.75x damage and add +1 QUAKE to opponent field",
+    "desc": "Attacks do 3/4x damage and add +1 QUAKE to opponent field",
     "id": "echo",
     "name": "Echo"
   },

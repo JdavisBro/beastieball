@@ -35,6 +35,7 @@ const FIELD_TARGET: Record<number, string> = {
   0: "Ally field",
   2: "Ally field",
   3: "Opponent field",
+  5: "Opponent field",
   7: "Entire field",
 };
 
@@ -43,7 +44,7 @@ function getEffectString(
   attack: boolean,
   alt_target: boolean,
   args: { joiningEffects: null | number },
-  effect_count: number,
+  move: Move,
 ) {
   let pow = Math.abs(Math.floor(effect.pow)) - 1;
   let boost = "";
@@ -158,7 +159,7 @@ function getEffectString(
       return `${feels} ${effect.pow} [sprStatus,10]TIRED (only basic actions)${dot}`;
     case 30:
       if (alt_target) {
-        return effect_count < 3 ? `TAG OUT with ${target}.` : "TAG OUT.";
+        return move.eff.length < 3 ? `TAG OUT with ${target}.` : "TAG OUT.";
       } else {
         return `Force ${target} to TAG OUT.`;
       }
@@ -269,6 +270,10 @@ function getEffectString(
       return "If ally field has RHYTHM: ";
     case 69:
       return ""; // Only when hittable - i do this elsewhere since it needs to be first.
+    case 70:
+      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} QUAKE${move.eff.find((ieff) => ieff.eff == effect.eff) == effect ? " (Volleys deal 25 damage)" : ""}.`;
+    case 71:
+      return "Automatically VOLLEYs to target ally.";
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,
@@ -407,7 +412,7 @@ export default function MoveView(props: {
             attack,
             !attack && (props.move.targ == 0 || props.move.targ == 8),
             args,
-            props.move.eff.length,
+            props.move,
           ),
         )
         .filter((effect) => !!effect),

@@ -143,7 +143,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
 
       <MoveList
         movelist={beastiedata.attklist}
-        learnset={beastiedata.learnset}
+        learnset={beastiedata.learnset as [number, string][]}
       />
       <ComboMove beastiedata={beastiedata} />
 

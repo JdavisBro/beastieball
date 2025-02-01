@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import styles from "./Shared.module.css";
 import MoveModalContext from "./MoveModalContext";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
-import LEARN_SETS from "../data/Learnsets";
 import { Move } from "../data/MoveData";
 import Modal from "./Modal";
 import MoveView from "./MoveView";
@@ -17,11 +16,11 @@ export default function MoveModalProvider(props: PropsWithChildren) {
   const friendBeasties: BeastieType[] = [];
   if (move) {
     BEASTIE_DATA.forEach((beastie) => {
-      const learnLevel = LEARN_SETS[beastie.learnset]?.find(
-        (value) => value[0] == move.id,
+      const learnLevel = beastie.learnset.find(
+        ([, moveid]) => (moveid as string) == move.id,
       );
       if (learnLevel) {
-        levelBeasties.push([beastie, learnLevel[1] || 1]);
+        levelBeasties.push([beastie, (learnLevel[0] as number) || 1]);
       } else if (beastie.attklist.includes(move.id)) {
         friendBeasties.push(beastie);
       }

@@ -53,7 +53,12 @@
   gap: 10px;
   padding-top: 4px;
   justify-content: center;
-  max-width: round(down, calc(90vw - 40px), min(calc(90vw - 40px), 468px));
+  overflow-y: scroll;
+  height: 90vh;
+  max-width: calc(
+    round(down, calc(90vw - 40px), min(calc(90vw - 40px), 468px)) + 13px
+  );
+  box-sizing: border-box;
 }
 
 .moveSelectMove {

@@ -261,7 +261,7 @@
 }
 
 .beastieSelectContainer {
-  width: round(down, 90vw, 245px);
+  width: calc(round(down, 90vw, 245px) + 13px);
   height: 90dvh;
   display: flex;
   flex-direction: column;

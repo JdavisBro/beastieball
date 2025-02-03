@@ -53,11 +53,15 @@
 }
 
 .moveList {
-  width: round(down, calc(90vw - 60px), min(calc(90vw - 60px), 474px));
+  width: calc(
+    round(down, calc(90vw - 60px), min(calc(90vw - 60px), 474px)) + 13px
+  );
 }
 
 .abilityList {
-  width: round(down, calc(90vw - 60px), min(calc(90vw - 60px), 264px));
+  width: calc(
+    round(down, calc(90vw - 60px), min(calc(90vw - 60px), 264px)) + 13px
+  );
 }
 
 .ability {

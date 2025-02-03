@@ -19,6 +19,7 @@
   transform-origin: 60% 50% 0;
   cursor: pointer;
   transform: scaleX(-1);
+  image-rendering: pixelated;
 }
 
 .toggleicon:hover {
@@ -47,6 +48,7 @@
   margin-left: 5%;
   height: 90%;
   background-image: url(/gameassets/sprMainmenu/14.png);
+  image-rendering: pixelated;
 }
 
 .homeicon:is(:hover, :focus) {

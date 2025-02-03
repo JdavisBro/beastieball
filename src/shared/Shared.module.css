@@ -79,6 +79,7 @@
 
 .settingslogo {
   height: 30px;
+  image-rendering: pixelated;
 }
 
 .settingsContainer {

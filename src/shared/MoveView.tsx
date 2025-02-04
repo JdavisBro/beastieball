@@ -226,7 +226,7 @@ function getEffectString(
       }
       return `Additional ${effect.pow * 100}% damage to ${target}.`;
     case 38:
-      return `${feels} ${effect.pow} [sprStatus,11]TENDER (defenses[sprBoost,4])${dot}`;
+      return `${feels} ${effect.pow} [sprStatus,11]TENDER (DEF x1/2)${dot}`;
     case 39:
       return `${feels} ${effect.pow} [sprStatus,12]STRESSED (becomes [sprStatus,10]TIRED)${dot}`;
     case 40:

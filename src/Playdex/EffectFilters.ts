@@ -41,6 +41,7 @@ const EffectFilters: {
   { name: "Field: RALLY", effects: [43] },
   { name: "Field: RHYTHM", effects: [44, 64] },
   { name: "Field: DREAD", effects: [45] },
+  { name: "Field: QUAKE", effects: [70] },
   // Other
   { name: "Shift/Move", effects: [7] },
   { name: "Switch Places", effects: [11, 28] },
@@ -57,7 +58,7 @@ const EffectFilters: {
     name: "Ignores Shields/Boosts/Feelings",
     effects: [[33, 14], [33, 17], 61],
   },
-  { name: "Additional Damage", effects: [36] },
+  // { name: "Additional Damage", effects: [36] },
   { name: "Add Actions", effects: [10] },
   { name: "Requires More Actions", effects: [40, 41] },
   { name: "Wall", effects: [56] },

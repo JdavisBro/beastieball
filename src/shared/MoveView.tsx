@@ -271,7 +271,7 @@ function getEffectString(
     case 69:
       return ""; // Only when hittable - i do this elsewhere since it needs to be first.
     case 70:
-      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} QUAKE${move.eff.find((ieff) => ieff.eff == effect.eff) == effect ? " (Volleys deal 25 damage)" : ""}.`;
+      return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} QUAKE${move.eff.find((ieff) => ieff.eff == effect.eff) == effect ? " (Volleys deal 25 damage)" : ""}.`;
     case 71:
       return "Automatically VOLLEYs to target ally.";
   }

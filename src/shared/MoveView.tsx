@@ -238,9 +238,9 @@ function getEffectString(
     case 43:
       return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW x3/4).`;
     case 44:
-      return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} RHYTHM (Healing and protection).`;
+      return `${FIELD_TARGET[effect.targ]} fills with RHYTHM (Healing and protection).`;
     case 45:
-      return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} DREAD (No good feelings).`;
+      return `${FIELD_TARGET[effect.targ]} fills with DREAD (No good feelings).`;
     case 46:
       if (effect.targ == 7) {
         return `Clears all FIELD EFFECTS.`;

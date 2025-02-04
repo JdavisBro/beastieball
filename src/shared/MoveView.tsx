@@ -201,7 +201,7 @@ function getEffectString(
         case 18:
           return "POW x1.5 if user recieved the ball.";
         case 19:
-          return "POW +50% for each volley betweem allies.";
+          return "POW +50% for each volley between allies.";
         case 20:
           return "POW x2 if user just TAGGED IN.";
         case 21:

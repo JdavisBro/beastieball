@@ -204,16 +204,16 @@
     "use": 0
   },
   "bomb": {
-    "bt_tags": [1, 10, 43],
+    "bt_tags": [0, 43],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [{ "eff": 70, "pow": 1, "targ": 5 }],
     "id": "bomb",
-    "name": "Bang",
+    "name": "Boom",
     "pow": 55,
     "targ": 0,
-    "type": 1,
+    "type": 0,
     "use": 0
   },
   "bounce": {
@@ -276,7 +276,7 @@
     "eff": [],
     "id": "careful",
     "name": "Careful Shot",
-    "pow": 40,
+    "pow": 45,
     "targ": 12,
     "type": 1,
     "use": 0
@@ -916,12 +916,12 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 70, "pow": 2, "targ": 5 },
-      { "eff": 70, "pow": 1, "targ": 2 }
+      { "eff": 70, "pow": 3, "targ": 5 },
+      { "eff": 70, "pow": 2, "targ": 2 }
     ],
     "id": "inferno",
-    "name": "Explosion",
-    "pow": 70,
+    "name": "Eruption",
+    "pow": 60,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1182,7 +1182,7 @@
     "eff": [{ "eff": 70, "pow": 2, "targ": 5 }],
     "id": "mindbomb",
     "name": "Mindfield",
-    "pow": 35,
+    "pow": 30,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1501,10 +1501,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 70, "pow": 2, "targ": 3 },
-      { "eff": 12, "pow": 1, "targ": 0 }
-    ],
+    "eff": [{ "eff": 70, "pow": 2, "targ": 3 }],
     "id": "quake",
     "name": "Rumble",
     "pow": 0,
@@ -2285,7 +2282,7 @@
     "eff": [{ "eff": 71, "pow": 0, "targ": 0 }],
     "id": "topspin",
     "name": "Bounce",
-    "pow": 80,
+    "pow": 70,
     "targ": 12,
     "type": 0,
     "use": 0

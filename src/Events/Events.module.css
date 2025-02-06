@@ -1,0 +1,105 @@
+.events {
+  margin-bottom: 16px;
+  max-width: 95%;
+}
+
+.wahhhhwahhhh {
+  height: 40px;
+}
+
+.toggleButton {
+  composes: boxHeaderBackground from global;
+  border-radius: 0;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  width: fit-content;
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+}
+
+.toggleButtonOpen {
+  composes: toggleButton;
+  position: relative;
+  top: 4px;
+  left: 6px;
+  z-index: 1;
+}
+
+.openBox {
+  composes: animBoxBackground from global;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100px;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
+}
+
+.closedBox {
+  display: none;
+}
+
+@media all and (max-width: 400px) {
+  .eventBlock {
+    font-size: 0.8em;
+  }
+}
+@media all and (max-width: 380px) {
+  .eventBlock {
+    font-size: 0.7em;
+  }
+}
+@media all and (max-width: 340px) {
+  .eventBlock {
+    font-size: 0.6em;
+  }
+}
+
+.eventBlock {
+  width: 400px;
+  max-width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eventImage {
+  height: 100%;
+  flex: 0 1 0;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
+  z-index: 1;
+}
+
+.eventBar {
+  composes: animSelectableBackground from global;
+  left: -10px;
+  padding-left: 10px;
+  flex: 1 0 0;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.eventDoneBar {
+  composes: animSelectedBackground from global;
+  position: absolute;
+  z-index: 0 !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
+}
+
+.eventBar > * {
+  z-index: 1;
+}
+
+.eventBar > a {
+  color: darkblue;
+  font-size: 1.1em;
+}

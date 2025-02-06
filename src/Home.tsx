@@ -1,8 +1,9 @@
+import Events from "./Events/Events";
 import { NavigationMenu, NavigationMenuOption } from "./shared/NavigationMenu";
 
 export default function Home(): React.ReactNode {
   return (
-    <NavigationMenu>
+    <NavigationMenu note={<Events />}>
       <NavigationMenuOption
         text={"Playdex"}
         image={"/gameassets/sprMainmenu/6.png"}

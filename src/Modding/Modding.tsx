@@ -12,7 +12,12 @@ export default function Modding(): React.ReactElement {
       />
       <NavigationMenu
         title="Beastieball Modding Tools"
-        note="Warning! Modding could mess up your save file! Please make backups and be careful!"
+        note={
+          <h3>
+            Warning! Modding could mess up your save file! Please make backups
+            and be careful!
+          </h3>
+        }
       >
         <NavigationMenuOption
           text={"Save Viewer/Editor"}

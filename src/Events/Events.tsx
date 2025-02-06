@@ -89,7 +89,7 @@ function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
       <div
         className={styles.eventDoneBar}
         style={{
-          width: `calc(${done * 100}% + 10px)`,
+          width: `${done * 100}%`,
         }}
       ></div>
       <div>
@@ -99,7 +99,7 @@ function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
           : hours
             ? `${hourText}, ${minuteText}`
             : minutes
-              ? `${minuteText}, ${secondText}`
+              ? `${minuteText}, ${seconds}s`
               : secondText}
         {future ? "" : " ago"}
       </div>
@@ -120,10 +120,9 @@ function Bigmoon({ bigmoon }: { bigmoon: BallEvent }) {
   const endDate = new Date(bigmoon.times[0][1]);
   return (
     <EventBlock>
-      <img
-        className={styles.eventImage}
-        src={`https://dumbandfat.com/beastieball/${bigmoon.img_url}`}
-      />
+      <div className={styles.eventImage}>
+        <img src={`https://dumbandfat.com/beastieball/${bigmoon.img_url}`} />
+      </div>
       <div className={styles.eventBar}>
         <Link to={bigmoon.url} target="_blank" rel="noopener">
           Bigmoon Bash

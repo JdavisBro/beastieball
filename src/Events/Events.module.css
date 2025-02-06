@@ -64,16 +64,21 @@
 }
 
 .eventImage {
+  position: relative;
+  height: 100px;
+  flex: 0 1 178px;
+}
+
+.eventImage > img {
+  position: absolute;
   height: 100%;
-  flex: 0 1 0;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
+  width: calc(100% + 10px);
   z-index: 1;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
 }
 
 .eventBar {
   composes: animSelectableBackground from global;
-  left: -10px;
-  padding-left: 10px;
   flex: 1 0 0;
   height: 100%;
   position: relative;

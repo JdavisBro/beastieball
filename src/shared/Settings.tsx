@@ -3,6 +3,7 @@ import { useLocalStorage } from "usehooks-ts";
 import styles from "./Shared.module.css";
 import Modal from "./Modal";
 import SpoilerOptions from "./SpoilerOptions";
+import { Link } from "react-router-dom";
 
 function AnimationToggle() {
   const [noAnimations, setNoAnimations] = useLocalStorage(
@@ -29,6 +30,15 @@ export default function Settings({
   open: boolean;
   onClose: () => void;
 }) {
+  const experimental = import.meta.env.VITE_EXPERIMENTAL == "true";
+  const experimental_different =
+    import.meta.env.VITE_EXPERIMENTAL_DIFFERENT == "true";
+  const experimental_target = new URL(location.href);
+  experimental_target.hash = "";
+  experimental_target.hostname = experimental
+    ? import.meta.env.VITE_URL_NORMAL
+    : import.meta.env.VITE_URL_EXPERIMENTAL;
+
   return (
     <Modal
       header={`${import.meta.env.VITE_BRANDING} Settings`}
@@ -39,6 +49,12 @@ export default function Settings({
       <div className={styles.settingsContainer}>
         <AnimationToggle />
         <SpoilerOptions />
+        {experimental || experimental_different ? (
+          <Link to={experimental_target.href}>
+            Visit the {experimental ? "non-experimental" : "🧪experimental"}{" "}
+            site.
+          </Link>
+        ) : null}
       </div>
     </Modal>
   );

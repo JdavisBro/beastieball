@@ -2,11 +2,20 @@
   "sprAlien": {
     "width": 1000,
     "height": 1000,
-    "frames": 1,
+    "frames": 8,
     "originX": 502,
     "originY": 990,
-    "bboxes": [{ "x": 339, "y": 437, "width": 416, "height": 556 }],
-    "bbox": { "x": 339, "y": 437, "width": 416, "height": 556 }
+    "bboxes": [
+      { "x": 346, "y": 412, "width": 413, "height": 558 },
+      { "x": 346, "y": 412, "width": 413, "height": 558 },
+      { "x": 397, "y": 469, "width": 503, "height": 500 },
+      { "x": 344, "y": 392, "width": 395, "height": 550 },
+      { "x": 462, "y": 475, "width": 396, "height": 495 },
+      { "x": 277, "y": 448, "width": 429, "height": 507 },
+      { "x": 256, "y": 500, "width": 459, "height": 489 },
+      { "x": 292, "y": 345, "width": 469, "height": 590 }
+    ],
+    "bbox": { "x": 255, "y": 291, "width": 646, "height": 698 }
   },
   "sprAlien1": {
     "width": 1000,
@@ -1062,11 +1071,20 @@
   "sprGhost2": {
     "width": 1000,
     "height": 1000,
-    "frames": 1,
+    "frames": 8,
     "originX": 478,
-    "originY": 791,
-    "bboxes": [{ "x": 241, "y": 532, "width": 443, "height": 306 }],
-    "bbox": { "x": 241, "y": 532, "width": 443, "height": 15 }
+    "originY": 912,
+    "bboxes": [
+      { "x": 257, "y": 560, "width": 480, "height": 327 },
+      { "x": 360, "y": 581, "width": 447, "height": 419 },
+      { "x": 360, "y": 684, "width": 321, "height": 293 },
+      { "x": 365, "y": 592, "width": 319, "height": 376 },
+      { "x": 325, "y": 644, "width": 342, "height": 326 },
+      { "x": 223, "y": 493, "width": 540, "height": 307 },
+      { "x": 304, "y": 637, "width": 333, "height": 230 },
+      { "x": 231, "y": 477, "width": 316, "height": 473 }
+    ],
+    "bbox": { "x": 223, "y": 477, "width": 585, "height": 523 }
   },
   "sprGremlin": {
     "width": 1000,
@@ -1554,11 +1572,20 @@
   "sprNerd": {
     "width": 1000,
     "height": 1000,
-    "frames": 1,
+    "frames": 8,
     "originX": 510,
     "originY": 974,
-    "bboxes": [{ "x": 213, "y": 423, "width": 589, "height": 550 }],
-    "bbox": { "x": 213, "y": 423, "width": 589, "height": 340 }
+    "bboxes": [
+      { "x": 236, "y": 421, "width": 591, "height": 554 },
+      { "x": 236, "y": 421, "width": 591, "height": 554 },
+      { "x": 300, "y": 319, "width": 573, "height": 660 },
+      { "x": 214, "y": 342, "width": 470, "height": 637 },
+      { "x": 8, "y": 489, "width": 873, "height": 487 },
+      { "x": 162, "y": 360, "width": 626, "height": 614 },
+      { "x": 322, "y": 334, "width": 577, "height": 638 },
+      { "x": 234, "y": 341, "width": 609, "height": 638 }
+    ],
+    "bbox": { "x": 8, "y": 318, "width": 891, "height": 661 }
   },
   "sprNerd1": {
     "width": 1000,
@@ -1610,11 +1637,20 @@
   "sprOlm": {
     "width": 1000,
     "height": 1000,
-    "frames": 1,
-    "originX": 460,
-    "originY": 999,
-    "bboxes": [{ "x": 229, "y": 278, "width": 461, "height": 721 }],
-    "bbox": { "x": 229, "y": 278, "width": 461, "height": 672 }
+    "frames": 8,
+    "originX": 455,
+    "originY": 964,
+    "bboxes": [
+      { "x": 334, "y": 313, "width": 414, "height": 646 },
+      { "x": 334, "y": 313, "width": 414, "height": 646 },
+      { "x": 246, "y": 525, "width": 563, "height": 435 },
+      { "x": 341, "y": 501, "width": 565, "height": 459 },
+      { "x": 128, "y": 624, "width": 696, "height": 341 },
+      { "x": 139, "y": 332, "width": 681, "height": 624 },
+      { "x": 194, "y": 555, "width": 588, "height": 406 },
+      { "x": 168, "y": 401, "width": 627, "height": 560 }
+    ],
+    "bbox": { "x": 128, "y": 313, "width": 778, "height": 667 }
   },
   "sprOlm1": {
     "width": 1000,
@@ -2149,11 +2185,20 @@
   "sprRocklizard": {
     "width": 1000,
     "height": 1000,
-    "frames": 1,
+    "frames": 8,
     "originX": 531,
     "originY": 997,
-    "bboxes": [{ "x": 214, "y": 529, "width": 464, "height": 463 }],
-    "bbox": { "x": 213, "y": 529, "width": 465, "height": 463 }
+    "bboxes": [
+      { "x": 188, "y": 483, "width": 502, "height": 505 },
+      { "x": 270, "y": 420, "width": 455, "height": 566 },
+      { "x": 358, "y": 699, "width": 484, "height": 283 },
+      { "x": 298, "y": 582, "width": 527, "height": 393 },
+      { "x": 123, "y": 608, "width": 609, "height": 370 },
+      { "x": 286, "y": 467, "width": 417, "height": 512 },
+      { "x": 279, "y": 613, "width": 504, "height": 379 },
+      { "x": 120, "y": 196, "width": 557, "height": 788 }
+    ],
+    "bbox": { "x": 120, "y": 196, "width": 722, "height": 797 }
   },
   "sprRocklizard1": {
     "width": 1000,
@@ -2531,7 +2576,7 @@
     "originX": 500,
     "originY": 958,
     "bboxes": [
-      { "x": 284, "y": 456, "width": 402, "height": 523 },
+      { "x": 285, "y": 454, "width": 400, "height": 508 },
       { "x": 261, "y": 472, "width": 465, "height": 506 },
       { "x": 282, "y": 477, "width": 466, "height": 496 },
       { "x": 256, "y": 507, "width": 552, "height": 470 },
@@ -2540,7 +2585,7 @@
       { "x": 304, "y": 555, "width": 543, "height": 422 },
       { "x": 257, "y": 510, "width": 434, "height": 464 }
     ],
-    "bbox": { "x": 213, "y": 392, "width": 635, "height": 587 }
+    "bbox": { "x": 213, "y": 392, "width": 635, "height": 586 }
   },
   "sprShark1": {
     "width": 1000,
@@ -2755,11 +2800,20 @@
   "sprSnowspirit": {
     "width": 1000,
     "height": 1000,
-    "frames": 1,
-    "originX": 475,
-    "originY": 999,
-    "bboxes": [{ "x": 331, "y": 654, "width": 450, "height": 346 }],
-    "bbox": { "x": 330, "y": 653, "width": 451, "height": 347 }
+    "frames": 8,
+    "originX": 481,
+    "originY": 982,
+    "bboxes": [
+      { "x": 370, "y": 661, "width": 402, "height": 321 },
+      { "x": 369, "y": 660, "width": 403, "height": 322 },
+      { "x": 350, "y": 625, "width": 384, "height": 354 },
+      { "x": 0, "y": 468, "width": 737, "height": 451 },
+      { "x": 150, "y": 669, "width": 495, "height": 314 },
+      { "x": 287, "y": 353, "width": 395, "height": 559 },
+      { "x": 159, "y": 499, "width": 529, "height": 482 },
+      { "x": 116, "y": 460, "width": 521, "height": 431 }
+    ],
+    "bbox": { "x": 0, "y": 353, "width": 773, "height": 630 }
   },
   "sprSpirit": {
     "width": 1000,

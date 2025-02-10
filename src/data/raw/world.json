@@ -678,7 +678,7 @@
     {
       "_": "class_level_stump",
       "color": 5282300,
-      "encounters": ["shark1"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "testzone",
@@ -1564,12 +1564,7 @@
       "_": "class_level_stump",
       "area_id": 1,
       "color": 5282300,
-      "encounters": [
-        "cliff_train_cave_guard",
-        "reserve_west1",
-        "reserve_west3",
-        "reserve_west2"
-      ],
+      "encounters": ["cliff_train_cave_guard"],
       "has_spawns": true,
       "icons_array": [],
       "name": "cliffs_railroad",
@@ -1678,7 +1673,7 @@
       "area_id": 4,
       "color": 5282300,
       "display_name": "none",
-      "encounters": ["cliff_train_cave_guard"],
+      "encounters": [],
       "icons_array": [],
       "is_indoor": 1,
       "name": "cliffs_rail_cave_east",
@@ -1802,19 +1797,7 @@
       "area_id": 3,
       "color": 14851584,
       "display_name": "Chroma Sea",
-      "encounters": [
-        "ocean_0",
-        "ocean_1",
-        "ocean_3",
-        "ocean_2",
-        "ocean_4",
-        "ocean_5",
-        "ocean_6",
-        "ocean_7",
-        "ocean_8",
-        "ocean_9",
-        "ocean_10"
-      ],
+      "encounters": ["ocean_0", "ocean_1"],
       "has_spawns": true,
       "icons_array": [
         {
@@ -2080,7 +2063,7 @@
       "area_id": 2,
       "color": 5282300,
       "display_name": "Jasper Mines",
-      "encounters": ["jasper_cave_1"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "is_indoor": 1,
@@ -2122,7 +2105,7 @@
       "area_id": 1,
       "color": 5282300,
       "display_name": "Rutile Preserve",
-      "encounters": ["reserve1", "reserve2"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "reserve_1",
@@ -2395,7 +2378,7 @@
       "area_id": 2,
       "color": 5282300,
       "display_name": "Jasper Mines",
-      "encounters": ["jasper_cave_n", "jasper_cave_north_exit"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "is_indoor": 1,
@@ -2463,7 +2446,7 @@
       "_": "class_level_stump",
       "area_id": 2,
       "color": 5282300,
-      "encounters": ["jasper_cave_south_exit_0"],
+      "encounters": [],
       "icons_array": [],
       "is_indoor": 1,
       "name": "jasper_cave_south_exit",
@@ -2657,7 +2640,7 @@
       "_": "class_level_stump",
       "area_id": 2,
       "color": 7916304,
-      "encounters": ["shroom_path1", "shroom_path2"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "wood_rail",
@@ -2766,7 +2749,7 @@
       "area_id": 3,
       "color": 9494518,
       "display_name": "Periwinkle Islet",
-      "encounters": ["tiny_island_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [
         {
@@ -2836,7 +2819,7 @@
       "area_id": 4,
       "color": 7916304,
       "display_name": "Solanum Weald",
-      "encounters": ["myth_forest2", "myth_forest_west", "myth_forest3"],
+      "encounters": ["myth_forest2", "myth_forest_west"],
       "has_spawns": true,
       "icons_array": [],
       "name": "myth_forest2",
@@ -2890,7 +2873,7 @@
       "area_id": 4,
       "color": 7916304,
       "display_name": "Solanum Weald",
-      "encounters": ["myth_forest4", "myth_forest5"],
+      "encounters": ["myth_forest5"],
       "has_spawns": true,
       "icons_array": [],
       "name": "myth_forest3",
@@ -2977,7 +2960,7 @@
       "area_id": 4,
       "color": 9494518,
       "display_name": "Tawny Wilds",
-      "encounters": ["mangrove_2_0", "mangrove_2_1"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [
         {
@@ -3033,14 +3016,7 @@
       "area_id": 3,
       "color": 9494518,
       "display_name": "Coquelicot Beach",
-      "encounters": [
-        "rockybeach_0",
-        "rockybeach_2",
-        "rockybeach_5",
-        "rockybeach_4",
-        "rockybeach_3",
-        "ocean_1"
-      ],
+      "encounters": ["rockybeach_5", "rockybeach_4", "ocean_1"],
       "has_spawns": true,
       "icons_array": [],
       "name": "rockybeach",
@@ -3083,7 +3059,7 @@
       "area_id": 4,
       "color": 5282300,
       "display_name": "none",
-      "encounters": ["beryl_railpath_south_0", "beryl_railpath_west_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "beryl_railpath_south",
@@ -3183,7 +3159,7 @@
       "area_id": 4,
       "color": 5282300,
       "display_name": "Quartz Canyon",
-      "encounters": ["ambestone_west_cliff_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "ambestone_west_cliff",
@@ -3364,7 +3340,7 @@
       "area_id": 2,
       "color": 7916304,
       "display_name": "Miconia Grove",
-      "encounters": ["shroom_path_boss"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "shroomgrove",
@@ -3394,7 +3370,7 @@
       "area_id": 2,
       "color": 7916304,
       "display_name": "Miconia Grove",
-      "encounters": ["shroom_path3"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [
         {
@@ -3574,7 +3550,7 @@
       "area_id": 4,
       "color": 7916304,
       "display_name": "Attalea Path",
-      "encounters": ["wood_east_rail_0", "wood_east_rail_1"],
+      "encounters": ["wood_east_rail_1"],
       "has_spawns": true,
       "icons_array": [],
       "name": "wood_east_rail",
@@ -3697,7 +3673,7 @@
       "area_id": 1,
       "color": 5282300,
       "display_name": "Rutile Preserve",
-      "encounters": ["reserve4"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "reserve_loop",
@@ -3753,7 +3729,7 @@
       "area_id": 4,
       "color": 7916304,
       "display_name": "Solanum Weald",
-      "encounters": ["academy_0"],
+      "encounters": [],
       "icons_array": [
         {
           "_": "class_mapicon",
@@ -4178,7 +4154,7 @@
       "area_id": 3,
       "color": 9494518,
       "display_name": "Coquelicot Beach",
-      "encounters": ["rockybeach_4"],
+      "encounters": [],
       "icons_array": [],
       "name": "beach_station",
       "palette_name": "island",
@@ -4218,7 +4194,7 @@
       "area_id": 3,
       "color": 9494518,
       "display_name": "Cerise Atoll",
-      "encounters": ["coral_island_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [
         {
@@ -4261,7 +4237,7 @@
       "area_id": 4,
       "color": 7916304,
       "display_name": "Cordia Lake",
-      "encounters": ["forest_lake_0", "forest_lake_1"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [
         {
@@ -4401,7 +4377,7 @@
       "area_id": 4,
       "color": 9494518,
       "display_name": "Eburnean Cavern",
-      "encounters": ["seacave2_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [
         {
@@ -4456,7 +4432,7 @@
       "area_id": 4,
       "color": 7916304,
       "display_name": "Attalea Path",
-      "encounters": ["woods_north_rail_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [
         {
@@ -4552,7 +4528,7 @@
       "area_id": 4,
       "color": 7916304,
       "display_name": "Attalea Path",
-      "encounters": ["woods_east_cave_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "woods_east_cave",
@@ -4593,7 +4569,7 @@
       "_": "class_level_stump",
       "area_id": 3,
       "color": 9494518,
-      "encounters": ["coral_shroom_0"],
+      "encounters": [],
       "icons_array": [],
       "name": "coral_shroom",
       "palette_name": "island",
@@ -5419,7 +5395,7 @@
       "area_id": 4,
       "color": 5282300,
       "display_name": "Quartz Canyon",
-      "encounters": ["canyon_2_0", "canyon_2_1"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "canyon_2",
@@ -5472,7 +5448,7 @@
       "area_id": 4,
       "color": 5282300,
       "display_name": "Quartz Canyon",
-      "encounters": ["canyon_3_1", "korwin"],
+      "encounters": ["korwin"],
       "has_spawns": true,
       "icons_array": [],
       "name": "canyon_3",
@@ -5519,7 +5495,7 @@
       "area_id": 4,
       "color": 7916304,
       "display_name": "none",
-      "encounters": ["myth_forest_west", "myth_forest_side_0"],
+      "encounters": ["myth_forest_west"],
       "has_spawns": true,
       "icons_array": [],
       "name": "myth_forest_side",
@@ -5615,7 +5591,7 @@
       "area_id": 4,
       "color": 7916304,
       "display_name": "Garcinia Meadow",
-      "encounters": ["meadows_2_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "meadows_2",
@@ -5862,7 +5838,7 @@
       "area_id": 4,
       "color": 9494518,
       "display_name": "Eburnean Cavern",
-      "encounters": ["seacave3_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "is_indoor": 1,
@@ -5918,7 +5894,7 @@
       "area_id": 4,
       "color": 9494518,
       "display_name": "Eburnean Cavern",
-      "encounters": ["seacave4_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "is_indoor": 1,
@@ -6043,7 +6019,7 @@
       "area_id": 4,
       "color": 9494518,
       "display_name": "Eburnean Cavern",
-      "encounters": ["seacave_side_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "is_indoor": 1,
@@ -6074,7 +6050,7 @@
       "_": "class_level_stump",
       "area_id": 4,
       "color": 16620976,
-      "encounters": ["wood_cave1_0", "wood_cave2_1", "wood_cave2_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "is_indoor": 1,
@@ -6384,7 +6360,7 @@
       "_": "class_level_stump",
       "area_id": 4,
       "color": 16620976,
-      "encounters": ["city_railalley_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "city_railalley",
@@ -6456,7 +6432,7 @@
       "area_id": 4,
       "color": 16620976,
       "display_name": "none",
-      "encounters": ["cityhill_0", "cityhill_1"],
+      "encounters": ["cityhill_1"],
       "has_spawns": true,
       "icons_array": [],
       "name": "cityhill",
@@ -6499,7 +6475,7 @@
       "area_id": 4,
       "color": 16620976,
       "display_name": "Mainframe",
-      "encounters": ["mainstreet_0", "mainstreet_1", "mainstreet_2"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "mainstreet",
@@ -6616,7 +6592,7 @@
       "area_id": 4,
       "color": 16620976,
       "display_name": "Mainframe",
-      "encounters": ["citysquare_0", "citysquare_1"],
+      "encounters": ["citysquare_0"],
       "has_spawns": true,
       "icons_array": [],
       "name": "citysquare",
@@ -7297,7 +7273,7 @@
       "area_id": 4,
       "color": 9494518,
       "display_name": "Tawny Wilds",
-      "encounters": ["mangrove_3_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "mangrove_3",
@@ -7341,7 +7317,7 @@
       "area_id": 4,
       "color": 9494518,
       "display_name": "Tawny Wilds",
-      "encounters": ["mangrove_4_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "mangrove_4",
@@ -7432,7 +7408,7 @@
       "area_id": 4,
       "color": 16620976,
       "display_name": "Domain Park",
-      "encounters": ["park1_0", "park1_1"],
+      "encounters": ["park1_1"],
       "has_spawns": true,
       "icons_array": [
         {
@@ -7610,7 +7586,7 @@
       "area_id": 4,
       "color": 16620976,
       "display_name": "Domain Park",
-      "encounters": ["park_south2_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "park_south2",
@@ -7849,7 +7825,7 @@
       "area_id": 4,
       "color": 16620976,
       "display_name": "Domain Park",
-      "encounters": ["park_north3_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "park_north3",
@@ -8216,7 +8192,7 @@
       "_": "class_level_stump",
       "area_id": 4,
       "color": 5282300,
-      "encounters": ["railtrail_3_0", "railtrail_3_1"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "railtrail_3",
@@ -8286,7 +8262,7 @@
       "area_id": 4,
       "color": 9494518,
       "display_name": "Neptune Stadium",
-      "encounters": ["sunken_stadium_0", "sunken_stadium_1"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [
         {
@@ -8400,7 +8376,7 @@
       "area_id": 4,
       "color": 9494518,
       "display_name": "Neptune Stadium",
-      "encounters": ["sunken_stadium_west_2_0", "sunken_stadium_west_2_1"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "sunken_stadium_west_2",
@@ -8549,7 +8525,7 @@
       "area_id": 4,
       "color": 9494518,
       "display_name": "Neptune Stadium",
-      "encounters": ["sunken_stadium_stairs_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "sunken_stadium_stairs",
@@ -8608,7 +8584,7 @@
       "area_id": 4,
       "color": 9494518,
       "display_name": "Neptune Stadium",
-      "encounters": ["sunken_stadium_east_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "sunken_stadium_east",
@@ -8758,7 +8734,7 @@
       "_": "class_level_stump",
       "area_id": 4,
       "color": 16644576,
-      "encounters": ["mountain_2_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "mountain_2",
@@ -8869,7 +8845,7 @@
       "_": "class_level_stump",
       "area_id": 1,
       "color": 5282300,
-      "encounters": ["seaside_trees_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "seaside_trees",
@@ -8910,7 +8886,7 @@
       "_": "class_level_stump",
       "area_id": 1,
       "color": 5282300,
-      "encounters": ["seaside_path_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "seaside_path",
@@ -9066,10 +9042,7 @@
         },
         {
           "_": "class_portal",
-          "conditional": {
-            "_": "class_datacheck",
-            "key": "ending"
-          },
+          "conditional": { "_": "class_datacheck", "key": "ending" },
           "destination": "crown_atrium",
           "ground_z": 600,
           "has_conditional": true,
@@ -9119,7 +9092,7 @@
       "_": "class_level_stump",
       "area_id": 4,
       "color": 16644576,
-      "encounters": ["mountain_3_1", "mountain_3_0"],
+      "encounters": ["mountain_3_1"],
       "has_spawns": true,
       "icons_array": [],
       "name": "mountain_3",
@@ -9230,7 +9203,7 @@
       "_": "class_level_stump",
       "area_id": 4,
       "color": 16644576,
-      "encounters": ["mountain_5_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "mountain_5",
@@ -9297,7 +9270,7 @@
       "_": "class_level_stump",
       "area_id": 4,
       "color": 16644576,
-      "encounters": ["none", "mountain_6_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "mountain_6",
@@ -9596,7 +9569,7 @@
       "_": "class_level_stump",
       "area_id": 4,
       "color": 16620976,
-      "encounters": ["-28529_-5871_0"],
+      "encounters": [],
       "has_spawns": true,
       "icons_array": [],
       "name": "-28529_-5871",
@@ -9736,774 +9709,199 @@
   ],
   "map_position_data": {
     "_": "class_map",
-    "academy:objAcademymarker": {
-      "x": -8409,
-      "y": -41260
-    },
-    "academy:objKaz": {
-      "x": -8541,
-      "y": -37970
-    },
-    "academy:objNode": {
-      "x": -8342,
-      "y": -39615
-    },
-    "academy:objStreamer": {
-      "x": -8131,
-      "y": -40255
-    },
-    "academy_0": {
-      "x": -9787,
-      "y": -35981
-    },
-    "ambestone_west_cliff_0": {
-      "x": -19165,
-      "y": 6450
-    },
-    "beach_cliff1:objRiven": {
-      "x": -39938,
-      "y": 12602
-    },
-    "beach_cliff1_0": {
-      "x": -39182,
-      "y": 10476
-    },
-    "beryl:objBallcenter": {
-      "x": -8420,
-      "y": 16281
-    },
-    "beryl:objBoathouse": {
-      "x": -12729,
-      "y": 15818
-    },
-    "beryl:objGymdoor": {
-      "x": -12544,
-      "y": 14347
-    },
-    "beryl:objRiven": {
-      "x": -13512,
-      "y": 12652
-    },
-    "beryl:objSimge": {
-      "x": -9401,
-      "y": 15248
-    },
-    "beryl_railpath_end_0": {
-      "x": -8698,
-      "y": 10503
-    },
-    "beryl_railpath_south_0": {
-      "x": -16235,
-      "y": 10595
-    },
-    "canyon_1_0": {
-      "x": -19299,
-      "y": 2670
-    },
-    "canyon_2_0": {
-      "x": -20600,
-      "y": -1330
-    },
-    "canyon_3_0": {
-      "x": -24081,
-      "y": -4657
-    },
-    "canyon_cave_0": {
-      "x": -24982,
-      "y": -9311
-    },
-    "canyon_secret_2:objGameplay": {
-      "x": -17006,
-      "y": -7236
-    },
-    "central_station:objLeagueTower": {
-      "x": -40609,
-      "y": -10415
-    },
-    "central_station:objMall": {
-      "x": -37753,
-      "y": -10498
-    },
-    "central_station:objRailhouse": {
-      "x": 0,
-      "y": 0
-    },
-    "chartreuse:objBallcenter": {
-      "x": -33219,
-      "y": 24026
-    },
-    "chartreuse:objCeleb": {
-      "x": -30905,
-      "y": 24448
-    },
-    "chartreuse:objClub": {
-      "x": -30419,
-      "y": 26999
-    },
-    "chartreuse:objGymdoor": {
-      "x": -31604,
-      "y": 25215
-    },
-    "city_market:objBallcenter": {
-      "x": -50359,
-      "y": -17448
-    },
-    "city_market:objNaveen": {
-      "x": -48669,
-      "y": -17666
-    },
-    "city_market:objStreamer": {
-      "x": -48010,
-      "y": -20089
-    },
-    "city_market:objZipstation": {
-      "x": -48010,
-      "y": -20097
-    },
-    "city_neighborhood:objBallcenter": {
-      "x": -10010,
-      "y": -14974
-    },
-    "city_neighborhood:objGymdoor": {
-      "x": -8792,
-      "y": -17746
-    },
-    "city_rail_east_0": {
-      "x": -28764,
-      "y": -11372
-    },
-    "city_railalley_0": {
-      "x": -35337,
-      "y": -7416
-    },
-    "city_seacave_0": {
-      "x": -35522,
-      "y": 159
-    },
-    "city_suburb1_0": {
-      "x": -33812,
-      "y": -3830
-    },
-    "city_trainyard_0": {
-      "x": -35338,
-      "y": -10239
-    },
-    "cityhill:objResearcher": {
-      "x": -12474,
-      "y": -16559
-    },
-    "cityhill_0": {
-      "x": -14209,
-      "y": -18731
-    },
-    "cityhill_1": {
-      "x": -14756,
-      "y": -18886
-    },
-    "citysquare_0": {
-      "x": -37477,
-      "y": -14099
-    },
-    "cliff_train_cave_guard": {
-      "x": -14023,
-      "y": 8683
-    },
-    "cliffs_railroad_0": {
-      "x": -7227,
-      "y": 7386
-    },
-    "coral_island:objBeachedTurtle": {
-      "x": -45252,
-      "y": 36516.5
-    },
-    "coral_island:objResearcher": {
-      "x": -45930,
-      "y": 37067
-    },
-    "coral_island_0": {
-      "x": -45265,
-      "y": 36954
-    },
-    "dogpark:objResearcher": {
-      "x": -40198,
-      "y": -8176
-    },
-    "dogpark_0": {
-      "x": -39328,
-      "y": -7235
-    },
-    "forest_lake_0": {
-      "x": -15214,
-      "y": -34070
-    },
-    "hometown:objBallcenter": {
-      "x": 586,
-      "y": 203
-    },
-    "hometown:objReserveplaque": {
-      "x": 2004,
-      "y": 2721
-    },
-    "hometown:objRiley": {
-      "x": 829,
-      "y": 2211
-    },
-    "hometown:objTutorialtext": {
-      "x": 587,
-      "y": -167
-    },
-    "hometown_north": {
-      "x": -647,
-      "y": -3720
-    },
-    "hometown_north1": {
-      "x": -532,
-      "y": -9976
-    },
-    "hometown_north2": {
-      "x": -645,
-      "y": -10976
-    },
-    "hometown_north_0": {
-      "x": -1253,
-      "y": -2261
-    },
-    "hometown_north_path:objKaz": {
-      "x": 743,
-      "y": -12382
-    },
-    "hometown_north_path_0": {
-      "x": 340,
-      "y": -12247
-    },
-    "hometown_reserve:objGameplay": {
-      "x": -6079,
-      "y": 1845
-    },
-    "hometown_reserve_0": {
-      "x": -6087,
-      "y": 1870
-    },
-    "hometown_reserve_guard": {
-      "x": -6593,
-      "y": 3214
-    },
-    "hometown_south": {
-      "x": 668,
-      "y": 7162
-    },
-    "hometown_south1": {
-      "x": -1929,
-      "y": 10893
-    },
-    "hometown_south2": {
-      "x": -3684,
-      "y": 12686
-    },
-    "hometown_south3": {
-      "x": -5426,
-      "y": 13600
-    },
-    "hometown_south_path:objResearcher": {
-      "x": -2467,
-      "y": 12081
-    },
-    "hometown_south_path_0": {
-      "x": -1456,
-      "y": 11032
-    },
-    "hometown_south_rail_0": {
-      "x": 1012,
-      "y": 5160
-    },
-    "hometown_starters_0": {
-      "x": 5955,
-      "y": -3902
-    },
-    "jasper:objBallcenter": {
-      "x": 564.5,
-      "y": -15615
-    },
-    "jasper:objDiner": {
-      "x": -605.5,
-      "y": -18790
-    },
-    "jasper:objSteven": {
-      "x": 390,
-      "y": -18775
-    },
-    "jasper_cave_1": {
-      "x": -8849,
-      "y": -24129
-    },
-    "jasper_cave_1_0": {
-      "x": -6706,
-      "y": -22361
-    },
-    "jasper_cave_2:objCycle": {
-      "x": -11732,
-      "y": -26096
-    },
-    "jasper_cave_2:objResearcher": {
-      "x": -8523,
-      "y": -25826
-    },
-    "jasper_cave_2_0": {
-      "x": -10239,
-      "y": -25795
-    },
-    "jasper_cave_n": {
-      "x": -12197,
-      "y": -29312
-    },
-    "jasper_cave_north_exit": {
-      "x": -12796,
-      "y": -28272
-    },
-    "jasper_cave_north_exit_0": {
-      "x": -2345,
-      "y": -31758
-    },
-    "jasper_cave_south_0": {
-      "x": -11662,
-      "y": -23207
-    },
-    "jasper_cave_south_exit_0": {
-      "x": -1262,
-      "y": -28112
-    },
-    "jasper_cave_west_0": {
-      "x": -14745,
-      "y": -25433
-    },
-    "jasper_cave_west_exit_0": {
-      "x": -11309,
-      "y": -28734
-    },
-    "jasper_north": {
-      "x": -3179,
-      "y": -23097
-    },
-    "jasper_north_0": {
-      "x": -1543,
-      "y": -22340
-    },
-    "korwin": {
-      "x": -24085,
-      "y": -6825
-    },
-    "mainstreet:objRiven": {
-      "x": -43740,
-      "y": -11269
-    },
-    "mainstreet_0": {
-      "x": -44589,
-      "y": -11523
-    },
-    "mangrove_1_0": {
-      "x": -51413,
-      "y": 11458
-    },
-    "mangrove_2_0": {
-      "x": -50639,
-      "y": 6393
-    },
-    "mangrove_3_0": {
-      "x": -57172,
-      "y": 4171
-    },
-    "mangrove_4_0": {
-      "x": -61767,
-      "y": 6559
-    },
-    "mangrove_end:objGameplay": {
-      "x": -56772,
-      "y": 7477
-    },
-    "mangrove_end_0": {
-      "x": -56731,
-      "y": 7672
-    },
-    "meadow_springs_0": {
-      "x": -41399,
-      "y": -32585
-    },
-    "meadows_1_0": {
-      "x": -34981,
-      "y": -40237
-    },
-    "meadows_2_0": {
-      "x": -34966,
-      "y": -33576
-    },
-    "mountain_1_0": {
-      "x": -42172,
-      "y": -35534
-    },
-    "mountain_2_0": {
-      "x": -48341,
-      "y": -36459
-    },
-    "mountain_3_0": {
-      "x": -50011,
-      "y": -40086
-    },
-    "mountain_3_1": {
-      "x": -49474,
-      "y": -40884
-    },
-    "mountain_5_0": {
-      "x": -59388,
-      "y": -42530
-    },
-    "mountain_6_0": {
-      "x": -55229,
-      "y": -45484
-    },
-    "mountain_9:objMask": {
-      "x": -63483,
-      "y": -53388
-    },
-    "mountain_9_0": {
-      "x": -63662,
-      "y": -51689
-    },
-    "myth_forest1": {
-      "x": -22010,
-      "y": -35822
-    },
-    "myth_forest1_0": {
-      "x": -21045,
-      "y": -34691
-    },
-    "myth_forest2": {
-      "x": -21044,
-      "y": -37732
-    },
-    "myth_forest2_0": {
-      "x": -18695,
-      "y": -40465
-    },
-    "myth_forest3_0": {
-      "x": -13784,
-      "y": -40762
-    },
-    "myth_forest5": {
-      "x": -12265,
-      "y": -39390
-    },
-    "myth_forest_secret:objGameplay": {
-      "x": -11892,
-      "y": -44517
-    },
-    "myth_forest_secret_0": {
-      "x": -14455,
-      "y": -43508
-    },
-    "myth_forest_side_0": {
-      "x": -25695,
-      "y": -41045
-    },
-    "myth_forest_west": {
-      "x": -22847,
-      "y": -40376
-    },
-    "mythwood_cave_east_0": {
-      "x": -16069,
-      "y": -28308
-    },
-    "none": {
-      "x": -56066,
-      "y": -45737
-    },
-    "ocean_0": {
-      "x": -65210,
-      "y": 23421
-    },
-    "ocean_1": {
-      "x": -30320,
-      "y": 12943
-    },
-    "park1_0": {
-      "x": -24701.5,
-      "y": -16266.5
-    },
-    "park1_1": {
-      "x": -27076.5,
-      "y": -17828.5
-    },
-    "park_boss": {
-      "x": -16726,
-      "y": -9727
-    },
-    "park_edge:objIndie": {
-      "x": -30912,
-      "y": -17445
-    },
-    "park_edge:objScience": {
-      "x": -29171,
-      "y": -15848
-    },
-    "park_north2_0": {
-      "x": -22063,
-      "y": -22659
-    },
-    "park_north3_0": {
-      "x": -18241,
-      "y": -18635
-    },
-    "park_side_0": {
-      "x": -21957,
-      "y": -17507
-    },
-    "park_south2_0": {
-      "x": -16920,
-      "y": -12321
-    },
-    "park_south3:objScience": {
-      "x": -12644,
-      "y": -10188
-    },
-    "park_south_0": {
-      "x": -25995,
-      "y": -12607
-    },
-    "park_south_end:objGameplay": {
-      "x": -16726,
-      "y": -9630
-    },
-    "pirate:objBallcenter": {
-      "x": -60798,
-      "y": 21699
-    },
-    "pirate:objLogan": {
-      "x": -61757,
-      "y": 21592
-    },
-    "railbridge_0": {
-      "x": -34267,
-      "y": -16924
-    },
-    "railtrail_1_0": {
-      "x": -5002,
-      "y": -16046
-    },
-    "railtrail_2_0": {
-      "x": -5089,
-      "y": -11673
-    },
-    "railtrail_3_0": {
-      "x": -6975,
-      "y": -10268
-    },
-    "reserve2": {
-      "x": -14865,
-      "y": -636
-    },
-    "reserve_1_0": {
-      "x": -15934,
-      "y": 1689
-    },
-    "reserve_2_0": {
-      "x": -14670,
-      "y": -3664
-    },
-    "reserve_boss": {
-      "x": -11353,
-      "y": -7054
-    },
-    "reserve_loop_0": {
-      "x": -11378,
-      "y": -2443
-    },
-    "reserve_secret:objGameplay": {
-      "x": -7314,
-      "y": -4343
-    },
-    "reserve_secret_0": {
-      "x": -7291,
-      "y": -4101
-    },
-    "reserve_shroom:objEvolveshroom": {
-      "x": -11353,
-      "y": -7225
-    },
-    "reserve_west": {
-      "x": -10709,
-      "y": 3616
-    },
-    "reserve_west:objResearcher": {
-      "x": -9771,
-      "y": 4454
-    },
-    "reserve_west:objRiley": {
-      "x": -10786,
-      "y": 3918
-    },
-    "reserve_west_0": {
-      "x": -10651,
-      "y": 4556
-    },
-    "rockybeach:objBoathouse": {
-      "x": -28993,
-      "y": 12814
-    },
-    "rockybeach_0": {
-      "x": -32429,
-      "y": 11092
-    },
-    "rockybeach_4": {
-      "x": -34709,
-      "y": 10530
-    },
-    "rockybeach_5": {
-      "x": -32411,
-      "y": 11126
-    },
-    "rubberfarm:objScience": {
-      "x": -39991,
-      "y": -26906
-    },
-    "seacave1_0": {
-      "x": -43315,
-      "y": 9261
-    },
-    "seacave2_0": {
-      "x": -46746,
-      "y": 10724
-    },
-    "seacave3_0": {
-      "x": -47533,
-      "y": 5912
-    },
-    "seacave4_0": {
-      "x": -40338,
-      "y": 2789
-    },
-    "seacave_side_0": {
-      "x": -41316,
-      "y": 6001
-    },
-    "seaside_cliff_0": {
-      "x": 9291,
-      "y": -9411
-    },
-    "seaside_path_0": {
-      "x": 4842,
-      "y": -10740
-    },
-    "seaside_trees_0": {
-      "x": 6545,
-      "y": -6724
-    },
-    "shroom_path:objScience": {
-      "x": -30417,
-      "y": -30807
-    },
-    "shroom_path_0": {
-      "x": -28437,
-      "y": -33662
-    },
-    "shroom_path_boss": {
-      "x": -28574,
-      "y": -39053
-    },
-    "shroomgrove:objEvolveshroom": {
-      "x": -28560,
-      "y": -39026
-    },
-    "shroomgrove:objScience": {
-      "x": -28436,
-      "y": -38043
-    },
-    "shroomgrove_0": {
-      "x": -28626,
-      "y": -37870
-    },
-    "sphinx:objAcademymarker": {
-      "x": -21270,
-      "y": -30815
-    },
-    "sphinx:objBallcenter": {
-      "x": -23056.5,
-      "y": -28689
-    },
-    "sphinx:objGymdoor": {
-      "x": -21840,
-      "y": -27689
-    },
-    "sphinx:objKaz": {
-      "x": -20543,
-      "y": -28654
-    },
-    "stadium:objBallman": {
-      "x": -51395.5,
-      "y": -13537
-    },
-    "stadium_road_0": {
-      "x": -48668,
-      "y": -6773
-    },
-    "sunken_stadium:objGameplay": {
-      "x": -20229,
-      "y": 41184
-    },
-    "sunken_stadium:objResearcher": {
-      "x": -21670,
-      "y": 39049
-    },
-    "sunken_stadium_0": {
-      "x": -22162,
-      "y": 37437
-    },
-    "tiny_island:objCycle": {
-      "x": -10538,
-      "y": 30958
-    },
-    "tiny_island_0": {
-      "x": -10397,
-      "y": 32110
-    },
-    "wood_cave1_0": {
-      "x": -34403,
-      "y": -24369
-    },
-    "wood_cave2_0": {
-      "x": -34404,
-      "y": -22032
-    },
-    "wood_cave2_1": {
-      "x": -33193,
-      "y": -22314
-    },
-    "wood_east_rail_0": {
-      "x": -13528,
-      "y": -31371
-    },
-    "wood_east_rail_1": {
-      "x": -17155,
-      "y": -30799
-    },
-    "wood_rail:objMiranda": {
-      "x": -28333,
-      "y": -27703
-    },
-    "wood_rail_0": {
-      "x": -27692,
-      "y": -27951
-    },
-    "woods_east_cave_0": {
-      "x": -5436,
-      "y": -32780
-    },
-    "woods_north_rail_0": {
-      "x": -8667,
-      "y": -32409
-    }
+    "academy:objAcademymarker": { "x": -8409, "y": -41260 },
+    "academy:objKaz": { "x": -8541, "y": -37970 },
+    "academy:objNode": { "x": -8342, "y": -39615 },
+    "academy:objStreamer": { "x": -8131, "y": -40255 },
+    "academy_0": { "x": -9787, "y": -35981 },
+    "ambestone_west_cliff_0": { "x": -19165, "y": 6450 },
+    "beach_cliff1:objRiven": { "x": -39938, "y": 12602 },
+    "beach_cliff1_0": { "x": -39182, "y": 10476 },
+    "beryl:objBallcenter": { "x": -8420, "y": 16281 },
+    "beryl:objBoathouse": { "x": -12729, "y": 15818 },
+    "beryl:objGymdoor": { "x": -12544, "y": 14347 },
+    "beryl:objRiven": { "x": -13512, "y": 12652 },
+    "beryl:objSimge": { "x": -9401, "y": 15248 },
+    "beryl_railpath_end_0": { "x": -8698, "y": 10503 },
+    "beryl_railpath_south_0": { "x": -16235, "y": 10595 },
+    "canyon_1_0": { "x": -19299, "y": 2670 },
+    "canyon_2_0": { "x": -20600, "y": -1330 },
+    "canyon_3_0": { "x": -24081, "y": -4657 },
+    "canyon_cave_0": { "x": -24982, "y": -9311 },
+    "canyon_secret_2:objGameplay": { "x": -17006, "y": -7236 },
+    "central_station:objLeagueTower": { "x": -40609, "y": -10415 },
+    "central_station:objMall": { "x": -37753, "y": -10498 },
+    "central_station:objRailhouse": { "x": 0, "y": 0 },
+    "chartreuse:objBallcenter": { "x": -33219, "y": 24026 },
+    "chartreuse:objCeleb": { "x": -30905, "y": 24448 },
+    "chartreuse:objClub": { "x": -30419, "y": 26999 },
+    "chartreuse:objGymdoor": { "x": -31604, "y": 25215 },
+    "city_market:objBallcenter": { "x": -50359, "y": -17448 },
+    "city_market:objNaveen": { "x": -48669, "y": -17666 },
+    "city_market:objStreamer": { "x": -48010, "y": -20089 },
+    "city_market:objZipstation": { "x": -48010, "y": -20097 },
+    "city_neighborhood:objBallcenter": { "x": -10010, "y": -14974 },
+    "city_neighborhood:objGymdoor": { "x": -8792, "y": -17746 },
+    "city_rail_east_0": { "x": -28764, "y": -11372 },
+    "city_railalley_0": { "x": -35337, "y": -7416 },
+    "city_seacave_0": { "x": -35522, "y": 159 },
+    "city_suburb1_0": { "x": -33812, "y": -3830 },
+    "city_trainyard_0": { "x": -35338, "y": -10239 },
+    "cityhill:objResearcher": { "x": -12474, "y": -16559 },
+    "cityhill_0": { "x": -14209, "y": -18731 },
+    "cityhill_1": { "x": -14756, "y": -18886 },
+    "citysquare_0": { "x": -37477, "y": -14099 },
+    "cliff_train_cave_guard": { "x": -14023, "y": 8683 },
+    "cliffs_railroad_0": { "x": -7227, "y": 7386 },
+    "coral_island:objBeachedTurtle": { "x": -45252, "y": 36516.5 },
+    "coral_island:objResearcher": { "x": -45930, "y": 37067 },
+    "coral_island_0": { "x": -45265, "y": 36954 },
+    "dogpark:objResearcher": { "x": -40198, "y": -8176 },
+    "dogpark_0": { "x": -39328, "y": -7235 },
+    "forest_lake_0": { "x": -15214, "y": -34070 },
+    "hometown:objBallcenter": { "x": 586, "y": 203 },
+    "hometown:objReserveplaque": { "x": 2004, "y": 2721 },
+    "hometown:objRiley": { "x": 829, "y": 2211 },
+    "hometown:objTutorialtext": { "x": 587, "y": -167 },
+    "hometown_north": { "x": -647, "y": -3720 },
+    "hometown_north1": { "x": -532, "y": -9976 },
+    "hometown_north2": { "x": -645, "y": -10976 },
+    "hometown_north_0": { "x": -1253, "y": -2261 },
+    "hometown_north_path:objKaz": { "x": 743, "y": -12382 },
+    "hometown_north_path_0": { "x": 340, "y": -12247 },
+    "hometown_reserve:objGameplay": { "x": -6079, "y": 1845 },
+    "hometown_reserve_0": { "x": -6087, "y": 1870 },
+    "hometown_reserve_guard": { "x": -6593, "y": 3214 },
+    "hometown_south": { "x": 668, "y": 7162 },
+    "hometown_south1": { "x": -1929, "y": 10893 },
+    "hometown_south2": { "x": -3684, "y": 12686 },
+    "hometown_south3": { "x": -5426, "y": 13600 },
+    "hometown_south_path:objResearcher": { "x": -2467, "y": 12081 },
+    "hometown_south_path_0": { "x": -1456, "y": 11032 },
+    "hometown_south_rail_0": { "x": 1012, "y": 5160 },
+    "hometown_starters_0": { "x": 5955, "y": -3902 },
+    "jasper:objBallcenter": { "x": 564.5, "y": -15615 },
+    "jasper:objDiner": { "x": -605.5, "y": -18790 },
+    "jasper:objSteven": { "x": 390, "y": -18775 },
+    "jasper_cave_1": { "x": -8849, "y": -24129 },
+    "jasper_cave_1_0": { "x": -6706, "y": -22361 },
+    "jasper_cave_2:objCycle": { "x": -11732, "y": -26096 },
+    "jasper_cave_2:objResearcher": { "x": -8523, "y": -25826 },
+    "jasper_cave_2_0": { "x": -10239, "y": -25795 },
+    "jasper_cave_n": { "x": -12197, "y": -29312 },
+    "jasper_cave_north_exit": { "x": -12796, "y": -28272 },
+    "jasper_cave_north_exit_0": { "x": -2345, "y": -31758 },
+    "jasper_cave_south_0": { "x": -11662, "y": -23207 },
+    "jasper_cave_south_exit_0": { "x": -1262, "y": -28112 },
+    "jasper_cave_west_0": { "x": -14745, "y": -25433 },
+    "jasper_cave_west_exit_0": { "x": -11309, "y": -28734 },
+    "jasper_north": { "x": -3179, "y": -23097 },
+    "jasper_north_0": { "x": -1543, "y": -22340 },
+    "korwin": { "x": -24085, "y": -6825 },
+    "mainstreet:objRiven": { "x": -43740, "y": -11269 },
+    "mainstreet_0": { "x": -44589, "y": -11523 },
+    "mangrove_1_0": { "x": -51413, "y": 11458 },
+    "mangrove_2_0": { "x": -50639, "y": 6393 },
+    "mangrove_3_0": { "x": -57172, "y": 4171 },
+    "mangrove_4_0": { "x": -61767, "y": 6559 },
+    "mangrove_end:objGameplay": { "x": -56772, "y": 7477 },
+    "mangrove_end_0": { "x": -56731, "y": 7672 },
+    "meadow_springs_0": { "x": -41399, "y": -32585 },
+    "meadows_1_0": { "x": -34981, "y": -40237 },
+    "meadows_2_0": { "x": -34966, "y": -33576 },
+    "mountain_1_0": { "x": -42172, "y": -35534 },
+    "mountain_2_0": { "x": -48341, "y": -36459 },
+    "mountain_3_0": { "x": -50011, "y": -40086 },
+    "mountain_3_1": { "x": -49474, "y": -40884 },
+    "mountain_5_0": { "x": -59388, "y": -42530 },
+    "mountain_6_0": { "x": -55229, "y": -45484 },
+    "mountain_9:objMask": { "x": -63483, "y": -53388 },
+    "mountain_9_0": { "x": -63662, "y": -51689 },
+    "myth_forest1": { "x": -22010, "y": -35822 },
+    "myth_forest1_0": { "x": -21045, "y": -34691 },
+    "myth_forest2": { "x": -21044, "y": -37732 },
+    "myth_forest2_0": { "x": -18695, "y": -40465 },
+    "myth_forest3_0": { "x": -13784, "y": -40762 },
+    "myth_forest5": { "x": -12265, "y": -39390 },
+    "myth_forest_secret:objGameplay": { "x": -11892, "y": -44517 },
+    "myth_forest_secret_0": { "x": -14455, "y": -43508 },
+    "myth_forest_side_0": { "x": -25695, "y": -41045 },
+    "myth_forest_west": { "x": -22847, "y": -40376 },
+    "mythwood_cave_east_0": { "x": -16069, "y": -28308 },
+    "none": { "x": -56066, "y": -45737 },
+    "ocean_0": { "x": -65210, "y": 23421 },
+    "ocean_1": { "x": -30320, "y": 12943 },
+    "park1_0": { "x": -24701.5, "y": -16266.5 },
+    "park1_1": { "x": -27076.5, "y": -17828.5 },
+    "park_boss": { "x": -16726, "y": -9727 },
+    "park_edge:objIndie": { "x": -30912, "y": -17445 },
+    "park_edge:objScience": { "x": -29171, "y": -15848 },
+    "park_north2_0": { "x": -22063, "y": -22659 },
+    "park_north3_0": { "x": -18241, "y": -18635 },
+    "park_side_0": { "x": -21957, "y": -17507 },
+    "park_south2_0": { "x": -16920, "y": -12321 },
+    "park_south3:objScience": { "x": -12644, "y": -10188 },
+    "park_south_0": { "x": -25995, "y": -12607 },
+    "park_south_end:objGameplay": { "x": -16726, "y": -9630 },
+    "pirate:objBallcenter": { "x": -60798, "y": 21699 },
+    "pirate:objLogan": { "x": -61757, "y": 21592 },
+    "railbridge_0": { "x": -34267, "y": -16924 },
+    "railtrail_1_0": { "x": -5002, "y": -16046 },
+    "railtrail_2_0": { "x": -5089, "y": -11673 },
+    "railtrail_3_0": { "x": -6975, "y": -10268 },
+    "reserve2": { "x": -14865, "y": -636 },
+    "reserve_1_0": { "x": -15934, "y": 1689 },
+    "reserve_2_0": { "x": -14670, "y": -3664 },
+    "reserve_boss": { "x": -11353, "y": -7054 },
+    "reserve_loop_0": { "x": -11378, "y": -2443 },
+    "reserve_secret:objGameplay": { "x": -7314, "y": -4343 },
+    "reserve_secret_0": { "x": -7291, "y": -4101 },
+    "reserve_shroom:objEvolveshroom": { "x": -11353, "y": -7225 },
+    "reserve_west": { "x": -10709, "y": 3616 },
+    "reserve_west:objResearcher": { "x": -9771, "y": 4454 },
+    "reserve_west:objRiley": { "x": -10786, "y": 3918 },
+    "reserve_west_0": { "x": -10651, "y": 4556 },
+    "rockybeach:objBoathouse": { "x": -28993, "y": 12814 },
+    "rockybeach_0": { "x": -32429, "y": 11092 },
+    "rockybeach_4": { "x": -34709, "y": 10530 },
+    "rockybeach_5": { "x": -32411, "y": 11126 },
+    "rubberfarm:objScience": { "x": -39991, "y": -26906 },
+    "seacave1_0": { "x": -43315, "y": 9261 },
+    "seacave2_0": { "x": -46746, "y": 10724 },
+    "seacave3_0": { "x": -47533, "y": 5912 },
+    "seacave4_0": { "x": -40338, "y": 2789 },
+    "seacave_side_0": { "x": -41316, "y": 6001 },
+    "seaside_cliff_0": { "x": 9291, "y": -9411 },
+    "seaside_path_0": { "x": 4842, "y": -10740 },
+    "seaside_trees_0": { "x": 6545, "y": -6724 },
+    "shroom_path:objScience": { "x": -30417, "y": -30807 },
+    "shroom_path_0": { "x": -28437, "y": -33662 },
+    "shroom_path_boss": { "x": -28574, "y": -39053 },
+    "shroomgrove:objEvolveshroom": { "x": -28560, "y": -39026 },
+    "shroomgrove:objScience": { "x": -28436, "y": -38043 },
+    "shroomgrove_0": { "x": -28626, "y": -37870 },
+    "sphinx:objAcademymarker": { "x": -21270, "y": -30815 },
+    "sphinx:objBallcenter": { "x": -23056.5, "y": -28689 },
+    "sphinx:objGymdoor": { "x": -21840, "y": -27689 },
+    "sphinx:objKaz": { "x": -20543, "y": -28654 },
+    "stadium:objBallman": { "x": -51395.5, "y": -13537 },
+    "stadium_road_0": { "x": -48668, "y": -6773 },
+    "sunken_stadium:objGameplay": { "x": -20229, "y": 41184 },
+    "sunken_stadium:objResearcher": { "x": -21670, "y": 39049 },
+    "sunken_stadium_0": { "x": -22162, "y": 37437 },
+    "tiny_island:objCycle": { "x": -10538, "y": 30958 },
+    "tiny_island_0": { "x": -10397, "y": 32110 },
+    "wood_cave1_0": { "x": -34403, "y": -24369 },
+    "wood_cave2_0": { "x": -34404, "y": -22032 },
+    "wood_cave2_1": { "x": -33193, "y": -22314 },
+    "wood_east_rail_0": { "x": -13528, "y": -31371 },
+    "wood_east_rail_1": { "x": -17155, "y": -30799 },
+    "wood_rail:objMiranda": { "x": -28333, "y": -27703 },
+    "wood_rail_0": { "x": -27692, "y": -27951 },
+    "woods_east_cave_0": { "x": -5436, "y": -32780 },
+    "woods_north_rail_0": { "x": -8667, "y": -32409 }
   },
-  "model_data": {
-    "_": "class_map"
-  },
+  "model_data": { "_": "class_map" },
   "palettes": {
     "_": "class_map",
     "city": [

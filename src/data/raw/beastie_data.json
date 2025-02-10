@@ -3,7 +3,7 @@
     "ability": ["notag"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "stun",
@@ -3052,7 +3052,7 @@
     "ability": ["cheer"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 60,
+    "anim_progress": 80,
     "animator": [10, 8],
     "attklist": [
       "freeball",
@@ -8067,7 +8067,7 @@
     "ability": ["ghost"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "mind",
@@ -11462,8 +11462,8 @@
       {
         "array": [
           { "color": 44287, "x": 0 },
-          { "color": 1290992, "x": 0.52 },
-          { "color": 6280447, "x": 1 }
+          { "color": 45296, "x": 0.52 },
+          { "color": 5230847, "x": 1 }
         ]
       },
       {
@@ -11475,10 +11475,10 @@
       },
       {
         "array": [
-          { "color": 10773107, "x": 0 },
-          { "color": 9989043, "x": 0.2266666667 },
-          { "color": 6711982, "x": 0.73 },
-          { "color": 8295869, "x": 1 }
+          { "color": 1191099, "x": 0 },
+          { "color": 2966987, "x": 0.2266666667 },
+          { "color": 3371228, "x": 0.73 },
+          { "color": 5605343, "x": 1 }
         ]
       },
       {
@@ -13071,7 +13071,7 @@
     "ability": ["study"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "startermind",
@@ -13652,7 +13652,7 @@
     "ability": ["extraheal", "waiting"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "startermind",
@@ -16519,7 +16519,7 @@
     "ability": ["heavy", "multiscale"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -20400,7 +20400,7 @@
     "ability": ["vampire", "defender"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "starterheart",

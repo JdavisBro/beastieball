@@ -53,10 +53,10 @@ def main(args):
             # outdir = fp / "out/"
             # outdir.mkdir(exist_ok=True)
             for fp2 in fp.glob("**/*.brs"):
-                researchdata[fp2.stem] = do_file(fp2, outdir=outdir) + 1
+                researchdata[fp2.stem] = do_file(fp2, outdir=outdir)
             new_images += [outdir / f"{fp2.stem}_{i}.png" for i in range(researchdata[fp2.stem])]
         else:
-            researchdata[fp.stem] = do_file(fp, outdir=outdir) + 1
+            researchdata[fp.stem] = do_file(fp, outdir=outdir)
             new_images += [outdir / f"{fp.stem}_{i}.png" for i in range(researchdata[fp.stem])]
     with RESEARCH_DATA.open("w+") as f:
         json.dump(researchdata, f)

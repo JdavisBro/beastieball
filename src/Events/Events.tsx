@@ -71,18 +71,22 @@ function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
 
   const future = focusDate.valueOf() > now;
   let delta = Math.abs((focusDate.valueOf() - now) / 1000);
-  const days = Math.floor(delta / 86400);
-  delta -= days * 86400;
-  const hours = Math.floor(delta / 3600);
-  delta -= hours * 3600;
-  const minutes = Math.floor(delta / 60);
-  delta -= minutes * 60;
-  const seconds = Math.floor(delta);
+  const days = delta / 86400;
+  delta -= Math.floor(days) * 86400;
+  const hours = delta / 3600;
+  delta -= Math.floor(hours) * 3600;
+  const minutes = delta / 60;
+  delta -= Math.floor(minutes) * 60;
+  const seconds = delta + 1;
 
-  const dayText = days ? (days == 1 ? "1 day" : `${days} days`) : "";
-  const hourText = hours ? (hours == 1 ? "1 hour" : `${hours} hours`) : "";
-  const minuteText = minutes == 1 ? "1 minute" : `${minutes} minutes`;
-  const secondText = seconds == 1 ? "1 second" : `${seconds} seconds`;
+  const dayText =
+    days >= 1 ? (days == 1 ? "1 day" : `${Math.round(days)} days`) : "";
+  const hourText =
+    hours >= 1 ? (hours == 1 ? "1 hour" : `${Math.round(hours)} hours`) : "";
+  const minuteText =
+    minutes == 1 ? "1 minute" : `${Math.ceil(minutes)} minutes`;
+  const secondText =
+    seconds == 1 ? "1 second" : `${Math.ceil(seconds)} seconds`;
 
   return (
     <>
@@ -94,12 +98,12 @@ function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
       ></div>
       <div>
         {usingStartDate ? "Starts in " : future ? "Ends in " : "Ended "}
-        {days
+        {days >= 1
           ? `${dayText}${hours ? `, ${hourText}` : ""}`
-          : hours
+          : hours >= 1
             ? `${hourText}, ${minuteText}`
-            : minutes
-              ? `${minuteText}, ${seconds}s`
+            : minutes >= 1
+              ? `${minuteText}, ${Math.floor(seconds)}s`
               : secondText}
         {future ? "" : " ago"}
       </div>

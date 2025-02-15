@@ -69,7 +69,8 @@ export default function Modal(
       return;
     }
     const dialogOpen = dialogRef.current.open;
-    const hashCorrect = window.location.hash == "#" + props.hashValue;
+    const hashCorrect =
+      decodeURIComponent(window.location.hash) == "#" + props.hashValue;
     if (props.open) {
       if (!dialogOpen) {
         dialogRef.current.showModal();
@@ -100,7 +101,7 @@ export default function Modal(
         }
       }}
       onClose={() => {
-        if (window.location.hash == "#" + props.hashValue) {
+        if (decodeURIComponent(window.location.hash) == "#" + props.hashValue) {
           navigate(-1);
         }
         props.onClose();

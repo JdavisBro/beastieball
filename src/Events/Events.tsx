@@ -92,7 +92,7 @@ function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
       <div
         className={styles.eventDoneBar}
         style={{
-          width: `${done * 100}%`,
+          width: `calc(${done * 100}% + 10px)`,
         }}
       ></div>
       <div>

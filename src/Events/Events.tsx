@@ -71,16 +71,22 @@ function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
 
   const future = focusDate.valueOf() > now;
   let delta = Math.abs((focusDate.valueOf() - now) / 1000);
-  const days = Math.floor(delta / 86400);
-  delta -= days * 86400;
-  let hours = delta / 3600;
-  const hoursRounded = Math.round(hours * 10) / 10;
-  hours = Math.floor(hours);
-  delta -= hours * 3600;
-  const minutes = Math.floor(delta / 60);
-  delta -= minutes * 60;
-  const seconds = Math.ceil(delta);
+  const days = delta / 86400;
+  delta -= Math.floor(days) * 86400;
+  const hours = delta / 3600;
+  delta -= Math.floor(hours) * 3600;
+  const minutes = delta / 60;
+  delta -= Math.floor(minutes) * 60;
+  const seconds = delta;
 
+  const hoursRounded = Math.round(hours * 10) / 10;
+  const dayCount = Math.ceil(hours) == 24 ? Math.ceil(days) : Math.floor(days);
+  const minCeil = Math.ceil(minutes);
+  const hourCount =
+    Math.ceil(minutes) == 60 ? Math.ceil(hours) : Math.floor(hours);
+  const secCeil = Math.ceil(seconds);
+  const minCount = secCeil == 60 ? Math.ceil(minutes) : Math.floor(minutes);
+  const secCount = secCeil == 60 ? 0 : secCeil;
   return (
     <>
       <div
@@ -92,12 +98,12 @@ function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
       <div>
         {usingStartDate ? "Starts in " : future ? "Ends in " : "Ended "}
         {days >= 1
-          ? `${days} ${days == 1 ? "day" : "days"}${hoursRounded > 0 ? `, ${hoursRounded} ${hoursRounded == 1 ? "hour" : "hours"}` : ""}`
+          ? `${dayCount} day${dayCount == 1 ? "" : "s"}${hoursRounded != 0 && hoursRounded != 24 ? `, ${hoursRounded} hour${hoursRounded == 1 ? "" : "s"}` : ""}`
           : hours >= 1
-            ? `${hours} ${hours == 1 ? "hour" : "hours"}, ${minutes} ${minutes == 1 ? "minute" : "minutes"}`
+            ? `${hourCount} hour${hourCount == 1 ? "" : "s"}${minutes >= 1 && minCeil != 60 ? `, ${minCeil} minute${minCeil == 1 ? "" : "s"}` : ""}`
             : minutes >= 1
-              ? `${minutes} ${minutes == 1 ? "minute" : "minutes"}, ${seconds}s`
-              : `${seconds} ${seconds == 1 ? "second" : "seconds"}`}
+              ? `${minCount} minute${minCount == 1 ? "" : "s"}, ${secCount}s`
+              : `${secCeil} seconds`}
         {future ? "" : " ago"}
       </div>
     </>

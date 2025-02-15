@@ -58,7 +58,11 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                 !seenBeasties[beastie[0].id];
               return (
                 <Link
-                  to={isSpoiler ? "#Play" : `/beastiepedia/${beastie[0].name}`}
+                  to={
+                    isSpoiler
+                      ? "#Play"
+                      : `/beastiepedia/${beastie[0].name}?play=${move?.name}`
+                  }
                   key={beastie[0].id}
                   onClick={() =>
                     handleClick(isSpoiler ? beastie[0].id : undefined)

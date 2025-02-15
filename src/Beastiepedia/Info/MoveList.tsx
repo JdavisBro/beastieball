@@ -54,10 +54,18 @@ type Props = {
 export default function MoveList(props: Props): React.ReactElement {
   const learnset = props.learnset;
 
-  const [selected, setSelected] = useState(
-    learnset ? learnset[0][1] : props.movelist[0],
+  const url = new URL(window.location.href);
+  const searchParam = url.searchParams.get("play");
+  const searchMove = props.movelist.find(
+    (moveId) => MOVE_DIC[moveId].name == searchParam,
   );
-  if (!props.movelist.includes(selected)) {
+
+  const [selected, setSelected] = useState(
+    searchMove ?? (learnset ? learnset[0][1] : props.movelist[0]),
+  );
+  if (searchMove && selected != searchMove) {
+    setSelected(searchMove);
+  } else if (!props.movelist.includes(selected)) {
     setSelected(
       learnset &&
         learnset.length > 0 &&
@@ -66,6 +74,10 @@ export default function MoveList(props: Props): React.ReactElement {
         ? learnset[0][1]
         : props.movelist[0],
     );
+  }
+  if (searchParam) {
+    url.search = "";
+    history.replaceState(undefined, "", url);
   }
 
   const moveselected = MOVE_DIC[selected];

@@ -1,21 +1,27 @@
+import { useState } from "react";
 import { Team } from "../Types";
-import { FeaturedCategory } from "./FeaturedCategories";
+import { FeaturedCategoryRoot } from "./FeaturedCategories";
 import FeaturedTeam from "./FeaturedTeam";
 import styles from "./TeamViewer.module.css";
 
 export default function FeaturedSection({
   featuredCategories,
-  featuredTab,
-  setFeaturedTab,
   code,
   setTeam,
 }: {
-  featuredCategories: FeaturedCategory[];
-  featuredTab: number;
-  setFeaturedTab: (tab: number) => void;
+  featuredCategories: FeaturedCategoryRoot[];
   code?: string;
   setTeam: (team: Team) => void;
 }) {
+  const [tab, setTab] = useState(0);
+  const [subTab, setSubTab] = useState(0);
+
+  const selectedTab = featuredCategories[tab];
+
+  if (!selectedTab) {
+    return <div className={styles.categorybg}>Loading Community Teams...</div>;
+  }
+
   return (
     <>
       <div className={styles.categorybg}>
@@ -23,21 +29,44 @@ export default function FeaturedSection({
           <button
             key={category.header}
             className={
-              index == featuredTab
+              index == tab
                 ? styles.categorybuttonSelected
                 : styles.categorybutton
             }
-            onClick={() => setFeaturedTab(index)}
+            onClick={() => {
+              setTab(index);
+              setSubTab(0);
+            }}
           >
             {category.header}
           </button>
         ))}
       </div>
       <div className={styles.sectionheader}>
-        {featuredCategories[featuredTab]?.description ?? ""}
+        {featuredCategories[tab]?.description ?? ""}
       </div>
+      {selectedTab.categories ? (
+        <div className={styles.categorybg}>
+          {selectedTab.categories.map((category, index) => (
+            <button
+              key={category.header}
+              className={
+                index == subTab
+                  ? styles.categorybuttonSelected
+                  : styles.categorybutton
+              }
+              onClick={() => setSubTab(index)}
+            >
+              {category.header}
+            </button>
+          ))}
+        </div>
+      ) : null}
       <div className={styles.featuredList}>
-        {featuredCategories[featuredTab]?.teams.map((featuredteam) => (
+        {(selectedTab.categories
+          ? selectedTab.categories[subTab]
+          : selectedTab
+        )?.teams.map((featuredteam) => (
           <FeaturedTeam
             key={featuredteam.name}
             team={featuredteam}

@@ -9,7 +9,7 @@ import Header from "../../shared/Header.tsx";
 import OpenGraph from "../../shared/OpenGraph.tsx";
 import { useNavigate, useParams } from "react-router-dom";
 import type {
-  FeaturedCategory,
+  FeaturedCategoryRoot,
   FeaturedTeamType,
 } from "./FeaturedCategories.ts";
 import TeamImageButton from "../TeamImageButton.tsx";
@@ -24,7 +24,7 @@ declare global {
 
 function useFeaturedCategories() {
   const [featuredCategories, setFeaturedCategories] = useState<
-    FeaturedCategory[]
+    FeaturedCategoryRoot[]
   >([]);
 
   useEffect(() => {
@@ -40,13 +40,17 @@ const VALID_CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 function findFeatured(
   code: string | undefined,
-  featuredCategories: FeaturedCategory[],
+  featuredCategories: FeaturedCategoryRoot[],
 ): undefined[] | [string, FeaturedTeamType] {
   if (!code) {
     return [undefined, undefined];
   }
   for (const category of featuredCategories) {
-    const featuredTeam = category.teams.find((team) => code == team.team.code);
+    const featuredTeam = (
+      category.categories
+        ? category.categories.map((cat) => cat.teams).flat()
+        : category.teams
+    ).find((team) => code == team.team.code);
     if (featuredTeam) {
       return [category.header, featuredTeam];
     }
@@ -112,7 +116,6 @@ export default function Viewer() {
 
   // Lazy Load Featured Teams.
   const featuredCategories = useFeaturedCategories();
-  const [featuredTab, setFeaturedTab] = useState(0);
 
   const [selectedCategoryName, selectedFeatured] = findFeatured(
     code,
@@ -151,8 +154,6 @@ export default function Viewer() {
         >
           <FeaturedSection
             featuredCategories={featuredCategories}
-            featuredTab={featuredTab}
-            setFeaturedTab={setFeaturedTab}
             code={team?.code}
             setTeam={(team) => {
               setMobileFeatured(false);
@@ -264,8 +265,6 @@ export default function Viewer() {
           ) : (
             <FeaturedSection
               featuredCategories={featuredCategories}
-              featuredTab={featuredTab}
-              setFeaturedTab={setFeaturedTab}
               code={team?.code}
               setTeam={setTeam}
             />

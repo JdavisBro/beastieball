@@ -39,10 +39,10 @@ function useBigmoon(open: boolean): [NoEvent | BallEvent, () => void] {
       return updateBigmoon(setBigmoon);
     }
     const endTime = new Date(currentJson.currentEvent.times[0][1]);
-    if (endTime < new Date(Date.now())) {
-      return updateBigmoon(setBigmoon);
-    }
     setBigmoon(currentJson.currentEvent);
+    if (endTime < new Date(Date.now())) {
+      updateBigmoon(setBigmoon);
+    }
   }, [open, reloadTrigger]);
 
   return [bigmoon, forceReload];

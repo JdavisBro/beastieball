@@ -119,3 +119,20 @@
   bottom: 0;
   right: 3px;
 }
+
+.reloadButtonSpin {
+  animation: spin 1s;
+  animation-fill-mode: forwards;
+  transform-origin: 45% 60%;
+  cursor: default;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    color: gray;
+  }
+}

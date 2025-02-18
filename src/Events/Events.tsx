@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
 import { BallEvent, EventResponse, NoEvent } from "./Types";
@@ -126,6 +126,8 @@ function Bigmoon({
 }) {
   const startDate = new Date(bigmoon.times[0][0]);
   const endDate = new Date(bigmoon.times[0][1]);
+
+  const lastReload = useRef(0);
   return (
     <EventBlock>
       <div className={styles.eventImage}>
@@ -141,7 +143,20 @@ function Bigmoon({
         <div
           title="Check for Update"
           className={styles.eventReloadButton}
-          onClick={bigmoonReload}
+          onClick={(event) => {
+            if (Date.now() < lastReload.current + 10000) {
+              return;
+            }
+            lastReload.current = Date.now();
+            bigmoonReload();
+            const target = event.currentTarget;
+            target.classList.add(styles.reloadButtonSpin);
+            setTimeout(() => {
+              if (target) {
+                target.classList.remove(styles.reloadButtonSpin);
+              }
+            }, 10000);
+          }}
         >
           ⟳
         </div>

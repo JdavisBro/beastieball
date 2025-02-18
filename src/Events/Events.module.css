@@ -110,3 +110,12 @@
   color: darkblue;
   font-size: 1.1em;
 }
+
+.eventReloadButton {
+  position: absolute;
+  font-size: 1.2em;
+  cursor: pointer;
+  user-select: none;
+  bottom: 0;
+  right: 3px;
+}

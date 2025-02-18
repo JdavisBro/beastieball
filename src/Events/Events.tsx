@@ -20,8 +20,7 @@ function useBigmoon(open: boolean): [NoEvent | BallEvent, () => void] {
     NoEvent.WaitingForResponse,
   );
 
-  const [reloadTrigger, setReloadTrigger] = useState(false);
-  const forceReload = () => setReloadTrigger(!reloadTrigger);
+  const forceReload = () => updateBigmoon(setBigmoon);
 
   useEffect(() => {
     if (!open) {
@@ -43,7 +42,7 @@ function useBigmoon(open: boolean): [NoEvent | BallEvent, () => void] {
     if (endTime < new Date(Date.now())) {
       updateBigmoon(setBigmoon);
     }
-  }, [open, reloadTrigger]);
+  }, [open]);
 
   return [bigmoon, forceReload];
 }
@@ -118,7 +117,13 @@ const DATETIME_FORMATTER: Intl.DateTimeFormat = new Intl.DateTimeFormat(
   },
 );
 
-function Bigmoon({ bigmoon }: { bigmoon: BallEvent }) {
+function Bigmoon({
+  bigmoon,
+  bigmoonReload,
+}: {
+  bigmoon: BallEvent;
+  bigmoonReload: () => void;
+}) {
   const startDate = new Date(bigmoon.times[0][0]);
   const endDate = new Date(bigmoon.times[0][1]);
   return (
@@ -133,6 +138,13 @@ function Bigmoon({ bigmoon }: { bigmoon: BallEvent }) {
         <TimeDelta startDate={startDate} endDate={endDate} />
         <div>From: {DATETIME_FORMATTER.format(startDate)}</div>
         <div>Until: {DATETIME_FORMATTER.format(endDate)}</div>
+        <div
+          title="Check for Update"
+          className={styles.eventReloadButton}
+          onClick={bigmoonReload}
+        >
+          ⟳
+        </div>
       </div>
     </EventBlock>
   );
@@ -163,7 +175,7 @@ export default function Events() {
               <button onClick={bigmoonReload}>Reload</button>
             </EventBlock>
           ) : (
-            <Bigmoon bigmoon={bigmoon} />
+            <Bigmoon bigmoon={bigmoon} bigmoonReload={bigmoonReload} />
           )}
         </div>
       </div>

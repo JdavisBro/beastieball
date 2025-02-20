@@ -114,11 +114,7 @@ function getEffectString(
     case 10:
       return `+${effect.pow} ACTIONs.`;
     case 11:
-      if (effect.targ == 1) {
-        return "Switch places with fielded ally.";
-      } else {
-        return `Switch places with ${target}.`;
-      }
+      return "Switch places with fielded ally.";
     case 12:
       return `${feels} ${effect.pow} [sprStatus,1]ANGRY (only attacks)${dot}`;
     case 13:

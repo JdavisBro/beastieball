@@ -65,9 +65,9 @@ function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
   const [now, setNow] = useState(Date.now());
 
   useEffect(() => {
-    const timeout = setTimeout(() => setNow(Date.now()), 1000);
-    return () => clearTimeout(timeout);
-  });
+    const interval = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const usingStartDate = now < startDate.valueOf();
   const focusDate = usingStartDate ? startDate : endDate;
@@ -101,7 +101,7 @@ function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
       <div
         className={styles.eventDoneBar}
         style={{
-          width: `calc(${done * 100}% + ${10 - 10 * done}px)`,
+          width: `calc(${Math.floor(done * 1000) / 10}% + ${10 - Math.floor(1000 * done) / 100}px)`,
         }}
       ></div>
       <div>

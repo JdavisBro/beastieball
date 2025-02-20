@@ -240,6 +240,11 @@ a:visited {
     #ff8e4a 10px,
     #ff8e4a 20px
   ) !important;
+  background-size: 200% 200%;
+  animation-name: selectable-scroll;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 @keyframes selectable-scroll {

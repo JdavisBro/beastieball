@@ -84,7 +84,7 @@ export default function ComboMove({
         <option value={ComboType.Rivals}>Rivals Attack</option>
         <option value={ComboType.Partners}>Partners Volley</option>
         <option value={ComboType.Support}>Bestie/Sweetheart Support</option>
-        <option value={ComboType.Defense}>Bestie/Sweetheart Defense</option>
+        <option value={ComboType.Defense}>Bestie Defense</option>
       </select>
       <BeastieSelect beastieId={friendId} setBeastieId={setFriendId} />
       <MoveView

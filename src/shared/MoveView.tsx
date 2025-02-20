@@ -46,7 +46,7 @@ function getEffectString(
   args: { joiningEffects: null | number },
   move: Move,
 ) {
-  let pow = Math.abs(Math.floor(effect.pow)) - 1;
+  let pow = Math.min(5, Math.abs(Math.floor(effect.pow)) - 1); // Max 6 boosts at once?
   let boost = "";
   while (pow >= 0) {
     boost +=

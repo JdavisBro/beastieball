@@ -5,11 +5,17 @@ import { BallEvent, EventResponse, NoEvent } from "./Types";
 import styles from "./Events.module.css";
 import { Link } from "react-router-dom";
 
+const EVENT_RESPONSE_EXPIRE = 12 * 60 * 60 * 1000;
+
 function updateBigmoon(setBigmoon: (event: NoEvent | BallEvent) => void) {
   fetch("https://api.beastieballgame.com/api/events")
     .then((res) => res.json())
     .then((data) => {
       localStorage.setItem("gameEvent", JSON.stringify(data));
+      localStorage.setItem(
+        "bigmoonUpdate",
+        String(Date.now() + EVENT_RESPONSE_EXPIRE),
+      );
       setBigmoon(data.currentEvent);
     })
     .catch(() => setBigmoon(NoEvent.NoEvent));
@@ -39,7 +45,11 @@ function useBigmoon(open: boolean): [NoEvent | BallEvent, () => void] {
     }
     const endTime = new Date(currentJson.currentEvent.times[0][1]);
     setBigmoon(currentJson.currentEvent);
-    if (endTime < new Date(Date.now())) {
+    const now = Date.now();
+    if (
+      endTime.valueOf() < now &&
+      Number(localStorage.getItem("bigmoonUpdate") ?? 0) < now
+    ) {
       updateBigmoon(setBigmoon);
     }
   }, [open]);

@@ -17,7 +17,7 @@
 
 .moverow {
   composes: row;
-  align-items: center;
+  flex: 0 0 0;
   justify-content: center;
   padding: 0 8px;
   gap: 8px;
@@ -30,6 +30,12 @@
   text-align: center;
   max-width: 185px;
   width: 100%;
+}
+
+.name {
+  white-space: nowrap;
+  padding: 0 4px;
+  box-sizing: border-box;
 }
 
 .number {

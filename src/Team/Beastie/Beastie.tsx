@@ -61,7 +61,7 @@ export default function Beastie({
     <div className={styles.beastie}>
       <div className={styles.row}>
         <div className={styles.column}>
-          <span>
+          <span className={styles.name}>
             {teamBeastie.name}
             <span className={styles.number}>#{teamBeastie.number}</span>{" "}
             <span

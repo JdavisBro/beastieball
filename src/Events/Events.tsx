@@ -4,6 +4,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import { BallEvent, EventResponse, NoEvent } from "./Types";
 import styles from "./Events.module.css";
 import { Link } from "react-router-dom";
+import BEASTIE_DATA from "../data/BeastieData";
 
 const EVENT_RESPONSE_EXPIRE = 12 * 60 * 60 * 1000;
 
@@ -141,11 +142,33 @@ function Bigmoon({
   return (
     <EventBlock>
       <div className={styles.eventImage}>
-        <img src={`https://dumbandfat.com/beastieball/${bigmoon.img_url}`} />
+        <img
+          src={`https://dumbandfat.com/beastieball/${bigmoon.img_url}`}
+          onLoad={(event) => {
+            event.currentTarget.classList.remove(styles.eventImageFailed);
+          }}
+          onError={(event) => {
+            event.currentTarget.classList.add(styles.eventImageFailed);
+          }}
+        />
       </div>
       <div className={styles.eventBar}>
-        <Link to={bigmoon.url} target="_blank" rel="noopener">
+        <Link
+          className={styles.eventTitle}
+          to={bigmoon.url}
+          target="_blank"
+          rel="noopener"
+        >
           Bigmoon Bash
+          <br />
+          <div className={styles.eventSubtitle}>
+            {bigmoon.guilds.reduce(
+              (accum, beastieId) =>
+                (accum ? accum + " VS " : accum) +
+                BEASTIE_DATA.get(beastieId)?.name,
+              "",
+            )}
+          </div>
         </Link>
         <TimeDelta startDate={startDate} endDate={endDate} />
         <div>From: {DATETIME_FORMATTER.format(startDate)}</div>

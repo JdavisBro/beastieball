@@ -77,6 +77,10 @@
   clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
 }
 
+.eventImageFailed {
+  display: none;
+}
+
 .eventBar {
   composes: animSelectableBackground from global;
   flex: 1 0 0;
@@ -87,6 +91,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
 }
 
 .eventDoneBar {
@@ -99,16 +104,19 @@
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
 }
 
 .eventBar > * {
   z-index: 1;
 }
 
-.eventBar > a {
+.eventTitle {
   color: darkblue;
-  font-size: 1.1em;
+}
+
+.eventSubtitle {
+  font-size: 0.6em;
 }
 
 .eventReloadButton {

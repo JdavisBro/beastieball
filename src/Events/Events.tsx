@@ -41,7 +41,6 @@ function useBigmoon(open: boolean): [NoEvent | BallEvent, () => void] {
     } catch {
       return updateBigmoon(setBigmoon);
     }
-    const endTime = new Date(currentJson.currentEvent.times[0][1]);
     setBigmoon(currentJson.currentEvent);
     const now = Date.now();
     const response_expire =

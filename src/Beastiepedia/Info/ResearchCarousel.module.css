@@ -41,7 +41,7 @@
   width: calc(85vw - 44px);
   width: calc(85dvw - 44px);
   align-items: center;
-  overflow: scroll;
+  overflow: auto;
   margin-bottom: 16px;
   background-color: rgba(1, 1, 1, 0.1);
 }

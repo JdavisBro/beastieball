@@ -62,7 +62,7 @@ export default function Beastie({
       <div className={styles.row}>
         <div className={styles.column}>
           <span className={styles.name}>
-            {teamBeastie.name}
+            {teamBeastie.name || beastiedata.name}
             <span className={styles.number}>#{teamBeastie.number}</span>{" "}
             <span
               title={
@@ -77,7 +77,7 @@ export default function Beastie({
               Lvl {level}
             </span>
           </span>
-          {beastiedata.name != teamBeastie.name ? (
+          {teamBeastie.name && beastiedata.name != teamBeastie.name ? (
             <span className={styles.graytext}>({beastiedata.name})</span>
           ) : null}
           <Link

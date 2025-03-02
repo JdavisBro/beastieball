@@ -133,11 +133,17 @@
   animation-fill-mode: forwards;
   transform-origin: 45% 60%;
   cursor: default;
+  color: gray;
+}
+
+:global(.noanim) .reloadButtonSpin {
+  animation: none;
 }
 
 @keyframes spin {
   from {
     transform: rotate(0deg);
+    color: black;
   }
   to {
     transform: rotate(360deg);

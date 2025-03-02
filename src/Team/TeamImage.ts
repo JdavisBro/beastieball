@@ -305,7 +305,8 @@ async function createTeamImage(
         : Math.floor(Math.cbrt(beastie.xp / beastiedata.growth));
       const level_text = ` Lvl ${level}`;
 
-      const name_width = ctx.measureText(beastie.name).width;
+      const display_name = beastie.name || beastiedata.name;
+      const name_width = ctx.measureText(display_name).width;
       const level_width = ctx.measureText(level_text).width;
       ctx.font = NUMBER_FONT;
       const num_width = ctx.measureText(num_text).width;
@@ -316,14 +317,14 @@ async function createTeamImage(
       ctx.fillText(num_text, startx + start_offset + name_width, starty + 8);
       ctx.fillStyle = "black";
       ctx.font = REGULAR_FONT;
-      ctx.fillText(beastie.name, startx + start_offset, starty + 3);
+      ctx.fillText(display_name, startx + start_offset, starty + 3);
       ctx.fillText(
         level_text,
         startx + start_offset + name_width + num_width,
         starty + 3,
       );
 
-      if (beastie.name != beastiedata.name) {
+      if (beastie.name && beastie.name != beastiedata.name) {
         ctx.fillStyle = "#2f4f4f";
         ctx.textAlign = "center";
         ctx.font = SMALLTEXT_FONT;

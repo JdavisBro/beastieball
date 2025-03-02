@@ -13,10 +13,7 @@ function updateBigmoon(setBigmoon: (event: NoEvent | BallEvent) => void) {
     .then((res) => res.json())
     .then((data) => {
       localStorage.setItem("gameEvent", JSON.stringify(data));
-      localStorage.setItem(
-        "bigmoonUpdate",
-        String(Date.now() + EVENT_RESPONSE_EXPIRE),
-      );
+      localStorage.setItem("bigmoonUpdate", String(Date.now()));
       setBigmoon(data.currentEvent);
     })
     .catch(() => setBigmoon(NoEvent.NoEvent));
@@ -47,10 +44,10 @@ function useBigmoon(open: boolean): [NoEvent | BallEvent, () => void] {
     const endTime = new Date(currentJson.currentEvent.times[0][1]);
     setBigmoon(currentJson.currentEvent);
     const now = Date.now();
-    if (
-      endTime.valueOf() < now &&
-      Number(localStorage.getItem("bigmoonUpdate") ?? 0) < now
-    ) {
+    const response_expire =
+      Number(localStorage.getItem("bigmoonUpdate") ?? 0) +
+      EVENT_RESPONSE_EXPIRE;
+    if (response_expire < now) {
       updateBigmoon(setBigmoon);
     }
   }, [open]);

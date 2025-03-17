@@ -152,6 +152,10 @@
 
 .bigLevel,
 .bigLevel:hover {
+  z-index: -2 !important;
+}
+
+.goBehind {
   z-index: -1 !important;
 }
 

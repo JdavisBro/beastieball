@@ -147,7 +147,13 @@ export default function Map(): React.ReactNode {
 
     level_overlays.push(
       <ImageOverlay
-        className={level.name == "ocean" ? styles.bigLevel : undefined}
+        className={
+          level.name == "ocean"
+            ? styles.bigLevel
+            : level.name == "pirate_island"
+              ? styles.goBehind
+              : undefined
+        }
         interactive={true}
         bounds={level_bounds}
         url={

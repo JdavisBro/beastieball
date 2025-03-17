@@ -364,7 +364,7 @@ export default function Map(): React.ReactNode {
                     >
                       <img src="/map_icon/switch.png" alt="Switch Marker" />
                     </DivIconMarker>,
-                    walls.map((wall) => {
+                    walls.map((wall, wallIndex) => {
                       const rad = ((wall.angle - 180) * Math.PI) / 180;
                       const gatePos = L.latLng(
                         -wall.position[1] + Math.sin(rad) * 125,
@@ -372,7 +372,7 @@ export default function Map(): React.ReactNode {
                       );
                       return (
                         <Polyline
-                          key={`${index}_line`}
+                          key={`${index}_line_${wallIndex}`}
                           positions={[leverPos, gatePos]}
                           weight={6}
                           color={lineCol}

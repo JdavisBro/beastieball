@@ -108,7 +108,6 @@ export default function Map(): React.ReactNode {
     url.hash = "";
     history.pushState({}, "", url.toString());
   };
-  console.log(huntedBeastie);
 
   const [beastiesLevel, setBeastiesLevel] = useState("");
 

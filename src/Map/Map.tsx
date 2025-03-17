@@ -11,7 +11,6 @@ import {
   useMapEvents,
 } from "react-leaflet";
 import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 
 import WORLD_DATA, { EXTRA_MARKERS } from "../data/WorldData";
 import styles from "./Map.module.css";
@@ -33,6 +32,7 @@ import BeastieSelect from "../shared/BeastieSelect";
 import SpecialBeastieMarker from "./SpecialBeastieMarker";
 import { EXTINCT_BEASTIES, METAMORPH_LOCATIONS } from "./SpecialBeasties";
 import DivIconMarker from "./DivIconMarker";
+import createBeastieBox from "./createBeastieBox";
 
 const BEASTIE_ARRAY = [...BEASTIE_DATA.values()];
 
@@ -179,120 +179,44 @@ export default function Map(): React.ReactNode {
     if ((!show_beasties && !beastie_filter) || !level.has_spawns) {
       return;
     }
-    const group = (
-      (postgame && SPAWN_DATA[level.spawn_name[0] + "_postgame"]) ||
-      SPAWN_DATA[level.spawn_name[0]]
-    )?.group;
-    if (!group) {
-      return;
-    }
-    const overall_percent: {
-      [key: string]: {
-        percent: number;
-        levelMin: number;
-        levelMax: number;
-        variant: number;
-      };
-    } = {};
-    const non_dupe_beasties: string[] = [];
-    group.forEach((value) => {
-      if (beastie_filter != "all" && beastie_filter != value.specie) {
+    const groups = level.spawn_name.map(
+      (spawn_name) =>
+        (
+          (postgame && SPAWN_DATA[spawn_name + "_postgame"]) ||
+          SPAWN_DATA[spawn_name]
+        )?.group,
+    );
+    const horizontal = level_size.x > level_size.y;
+    for (let i = 0; i < groups.length; i++) {
+      const group = groups[i];
+      if (!group) {
         return;
       }
-      if (overall_percent[value.specie]) {
-        overall_percent[value.specie].percent += value.percent;
-        overall_percent[value.specie].levelMin = Math.min(
-          overall_percent[value.specie].levelMin,
-          value.lvlA,
-        );
-        overall_percent[value.specie].levelMax = Math.min(
-          overall_percent[value.specie].levelMax,
-          value.lvlB,
-        );
-      } else {
-        non_dupe_beasties.push(value.specie);
-        overall_percent[value.specie] = {
-          percent: value.percent,
-          levelMin: value.lvlA,
-          levelMax: value.lvlB,
-          variant: value.variant,
-        };
+      const pos = { x, y };
+      const size = { x: level_size.x, y: level_size.y };
+      if (groups.length == 2) {
+        if (horizontal) {
+          size.x *= i == 1 ? 0.34 : 0.66;
+          pos.x += i == 1 ? 0 : level_size.x * 0.34;
+        } else {
+          size.y *= i == 1 ? 0.34 : 0.66;
+          pos.y += i == 1 ? 0 : level_size.y * 0.34;
+        }
       }
-    });
-    non_dupe_beasties.forEach((value, index) => {
-      const beastie = BEASTIE_DATA.get(value);
-      if (!beastie) {
-        return;
-      }
-      const isSpoiler =
-        spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
-      const alt = `${isSpoiler ? `Beastie #${beastie.number}` : beastie.name} spawn location.`;
-      const iconScale = beastie.id != huntedBeastie ? 1 : 1.5;
       beastieSpawnsOverlays.push(
-        <Marker
-          key={`${level.name}-${beastie.id}`}
-          alt={alt}
-          title={alt}
-          position={
-            Math.max(level_size.x, level_size.y) /
-              Math.min(level_size.x, level_size.y) <
-            1.5
-              ? // square enough, diag
-                [
-                  -(
-                    y +
-                    (index + 0.5) * (level_size.y / non_dupe_beasties.length)
-                  ),
-                  x + (index + 0.5) * (level_size.x / non_dupe_beasties.length),
-                ]
-              : level_size.x > level_size.y
-                ? [
-                    -(y + level_size.y / 2),
-                    x +
-                      (index + 0.5) * (level_size.x / non_dupe_beasties.length),
-                  ]
-                : [
-                    -(
-                      y +
-                      (index + 0.5) * (level_size.y / non_dupe_beasties.length)
-                    ),
-                    x + level_size.x / 2,
-                  ]
-          }
-          icon={L.icon({
-            iconUrl: isSpoiler
-              ? "/gameassets/sprExclam_1.png"
-              : `/icons/${beastie.name}.png`,
-            className: isSpoiler ? styles.spoilerBeastie : undefined,
-            iconSize: [50 * iconScale, 50 * iconScale],
-          })}
-          eventHandlers={{
-            click: () => {
-              seenBeasties[beastie.id] = true;
-              setSeenBeasties(seenBeasties);
-            },
-          }}
-        >
-          <Popup offset={[0, -5]}>
-            <Link to={`/beastiepedia/${beastie.name}`}>{beastie.name}</Link>
-            <br />
-            {overall_percent[value].percent > 0
-              ? overall_percent[value].percent
-              : "???"}
-            %
-            <br />
-            Level {overall_percent[value].levelMin} -{" "}
-            {overall_percent[value].levelMax}
-            {beastie.colors2 ? (
-              <>
-                <br />
-                Variant Chance: {overall_percent[value].variant * 100}%
-              </>
-            ) : null}
-          </Popup>
-        </Marker>,
+        ...createBeastieBox(
+          group,
+          pos,
+          size,
+          `${level.name}-${level.spawn_name[i]}`,
+          beastie_filter,
+          spoilerMode,
+          seenBeasties,
+          setSeenBeasties,
+          huntedBeastie,
+        ),
       );
-    });
+    }
   });
 
   const inside_overlays: React.ReactElement[] = [];

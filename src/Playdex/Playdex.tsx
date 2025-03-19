@@ -11,6 +11,7 @@ import {
   useFriendSpoiler,
   useSpoilerMode,
 } from "../shared/useSpoiler";
+import RECENTLY_UPDATED from "./RecentlyUpdated";
 
 declare global {
   interface Window {
@@ -69,6 +70,7 @@ export default function PlayDex() {
   const [friendFilter, setFriendFilter] = useState<string | undefined>(
     undefined,
   );
+  const [recentlyChanged, setRecentlyChanged] = useState(false);
 
   let moves = Object.keys(MOVE_DIC)
     .map((id) => MOVE_DIC[id])
@@ -99,6 +101,9 @@ export default function PlayDex() {
         return move.type < 3 && target.includes(move.targ);
       }
     });
+  }
+  if (recentlyChanged) {
+    moves = moves.filter((move) => RECENTLY_UPDATED.includes(move.id));
   }
   moves = moves.sort(SortFunctions[sort]);
 
@@ -192,6 +197,16 @@ export default function PlayDex() {
               </option>
             ))}
           </select>
+        </label>{" "}
+        <label>
+          Recently Changed:{" "}
+          <input
+            type="checkbox"
+            checked={recentlyChanged}
+            onChange={(event) =>
+              setRecentlyChanged(event.currentTarget.checked)
+            }
+          />
         </label>
       </div>
       <div className={styles.movescontainer}>

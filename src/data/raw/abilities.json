@@ -90,7 +90,7 @@
     "name": "Challenger"
   },
   "defiant_h": {
-    "desc": "[sprIcon,1]POW[sprBoost,1] when any opponent gives them a [sprIcon,3]BOOST",
+    "desc": "[sprIcon,1]POW[sprBoost,1] when any opponent gives them a [sprBoost,3]BOOST",
     "id": "defiant_h",
     "name": "Defiant"
   },
@@ -300,7 +300,7 @@
     "name": "Treat"
   },
   "oblivious": {
-    "desc": "Ignores opponent's [sprBoost,0][sprBoost,3]BOOSTs",
+    "desc": "Ignores opponent's [sprBoost,0]BOOSTs",
     "id": "oblivious",
     "name": "Foggy"
   },

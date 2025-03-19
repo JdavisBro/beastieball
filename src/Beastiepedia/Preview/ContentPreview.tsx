@@ -242,6 +242,12 @@ export default function ContentPreview(props: Props): React.ReactNode {
   }, [anim]);
 
   useEffect(() => {
+    if (animStateRef.current.frame) {
+      setFrame(animStateRef.current.frame);
+    }
+  }, [drawnsprite, setFrame]);
+
+  useEffect(() => {
     beastieIdRef.current = props.beastiedata.id;
     setNoDisplayRender(true);
     setNoDisplayReason("Loading...");

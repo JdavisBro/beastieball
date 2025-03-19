@@ -40,7 +40,7 @@ export default function ComboMove({
             beastiedata.type_focus;
 
   const effects: MoveEffect[] = [];
-
+  let fullrestore = false;
   (friend ? [beastiedata, friend] : [beastiedata])
     .sort((beastie, beastie2) => beastie.number - beastie2.number)
     .forEach((beastie, beastieIndex) => {
@@ -50,6 +50,9 @@ export default function ComboMove({
           targ: beastie.combos[type][i + 1],
           pow: beastie.combos[type][i + 2],
         };
+        if (neweff.eff == 47) {
+          fullrestore = true;
+        }
         switch (neweff.eff) {
           case 49:
             target = neweff.pow;
@@ -77,6 +80,15 @@ export default function ComboMove({
         }
       }
     });
+
+  if (fullrestore) {
+    for (let i = 0; i < effects.length; i++) {
+      if (effects[i].eff == 8 && effects[i].pow > 0) {
+        effects.splice(i, 1);
+        i--;
+      }
+    }
+  }
 
   return (
     <InfoBox header="Combo Moves" className={styles.combo}>

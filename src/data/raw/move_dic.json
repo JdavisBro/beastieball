@@ -380,11 +380,11 @@
     "use": 0
   },
   "cook": {
-    "bt_tags": [1, 10, 37, 4],
+    "bt_tags": [1, 10],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 4, "pow": -1, "targ": 8 }],
+    "eff": [{ "eff": 4, "pow": -1, "targ": 4 }],
     "id": "cook",
     "name": "Cook",
     "pow": 65,
@@ -2085,12 +2085,12 @@
     "use": 0
   },
   "stresspass": {
-    "bt_tags": [23, 6, 31],
+    "bt_tags": [23, 22, 6, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 7, "pow": 1, "targ": 0 },
+      { "eff": 7, "pow": 1, "targ": 1 },
       { "eff": 15, "pow": 1, "targ": 1 },
       { "eff": 39, "pow": 1, "targ": 1 }
     ],

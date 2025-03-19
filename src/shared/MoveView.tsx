@@ -14,6 +14,7 @@ const TARGET_STRINGS: Record<number, string> = {
   1: "ally",
   2: "active team",
   3: "target",
+  4: "target team",
   5: "target's ally",
   6: "entire team",
   7: "every fielded player",

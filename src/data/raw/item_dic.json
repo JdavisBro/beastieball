@@ -99,46 +99,6 @@
     "type": 2,
     "value": 20.0
   },
-  "jersey2": {
-    "desc": "Recruit a Beastie that's level 20 or under. Its denser weave magnifies its bonding power.",
-    "eff": [4, 0.0, 1.0],
-    "id": "jersey2",
-    "img": 20.0,
-    "name": "Club Jersey",
-    "points": 1.0,
-    "type": 2,
-    "value": 50.0
-  },
-  "jersey3": {
-    "desc": "Recruit a Beastie that's level 30 or under. Facilitates even better mycelial communication somehow.",
-    "eff": [4, 0.0, 2.0],
-    "id": "jersey3",
-    "img": 21.0,
-    "name": "League Jersey",
-    "points": 1.0,
-    "type": 2,
-    "value": 100.0
-  },
-  "jersey4": {
-    "desc": "Recruit a Beastie that's level 40 or under. Its hyperdense weave magnifies willpower.",
-    "eff": [4, 0.0, 3.0],
-    "id": "jersey4",
-    "img": 22.0,
-    "name": "Pro Jersey",
-    "points": 1.0,
-    "type": 2,
-    "value": 200.0
-  },
-  "jersey5": {
-    "desc": "Recruit a Beastie at any level. The pinnacle of mycelial weaving.",
-    "eff": [4, 0.0, 4.0],
-    "id": "jersey5",
-    "img": 23.0,
-    "name": "Star Jersey",
-    "points": 1.0,
-    "type": 2,
-    "value": 300.0
-  },
   "jersey_ex1": {
     "desc": "Exchange a Jersey for a Club Jersey (can recruit higher level Beasties).",
     "eff": [10, "jersey", "jersey2"],
@@ -178,6 +138,46 @@
     "points": 1.0,
     "type": 2,
     "value": 200.0
+  },
+  "jersey2": {
+    "desc": "Recruit a Beastie that's level 20 or under. Its denser weave magnifies its bonding power.",
+    "eff": [4, 0.0, 1.0],
+    "id": "jersey2",
+    "img": 20.0,
+    "name": "Club Jersey",
+    "points": 1.0,
+    "type": 2,
+    "value": 50.0
+  },
+  "jersey3": {
+    "desc": "Recruit a Beastie that's level 30 or under. Facilitates even better mycelial communication somehow.",
+    "eff": [4, 0.0, 2.0],
+    "id": "jersey3",
+    "img": 21.0,
+    "name": "League Jersey",
+    "points": 1.0,
+    "type": 2,
+    "value": 100.0
+  },
+  "jersey4": {
+    "desc": "Recruit a Beastie that's level 40 or under. Its hyperdense weave magnifies willpower.",
+    "eff": [4, 0.0, 3.0],
+    "id": "jersey4",
+    "img": 22.0,
+    "name": "Pro Jersey",
+    "points": 1.0,
+    "type": 2,
+    "value": 200.0
+  },
+  "jersey5": {
+    "desc": "Recruit a Beastie at any level. The pinnacle of mycelial weaving.",
+    "eff": [4, 0.0, 4.0],
+    "id": "jersey5",
+    "img": 23.0,
+    "name": "Star Jersey",
+    "points": 1.0,
+    "type": 2,
+    "value": 300.0
   },
   "jerseycharm": {
     "desc": "A mycelial thread charm that will let you temporarily recruit any Beastie.",
@@ -379,26 +379,6 @@
     "type": 1,
     "value": 10.0
   },
-  "train_ba_2": {
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,0]POW +8pts",
-    "eff": [8, "train_ba", 2.0],
-    "id": "train_ba_2",
-    "img": 14.0,
-    "name": "Strength token x2",
-    "points": 1.0,
-    "type": 1,
-    "value": 25.0
-  },
-  "train_ba_3": {
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,0]POW +16pts",
-    "eff": [8, "train_ba", 4.0],
-    "id": "train_ba_3",
-    "img": 14.0,
-    "name": "Strength token x4",
-    "points": 1.0,
-    "type": 1,
-    "value": 45.0
-  },
   "train_bd": {
     "desc": "Exchange at a GYM to train a Beastie's [sprIcon,0]DEF +4pt",
     "eff": [3, 3.0, 4.0],
@@ -408,26 +388,6 @@
     "points": 1.0,
     "type": 1,
     "value": 10.0
-  },
-  "train_bd_2": {
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,0]DEF +8pts",
-    "eff": [8, "train_bd", 2.0],
-    "id": "train_bd_2",
-    "img": 17.0,
-    "name": "Core token x2",
-    "points": 1.0,
-    "type": 1,
-    "value": 25.0
-  },
-  "train_bd_3": {
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,0]DEF +16pts",
-    "eff": [8, "train_bd", 4.0],
-    "id": "train_bd_3",
-    "img": 17.0,
-    "name": "Core token x4",
-    "points": 1.0,
-    "type": 1,
-    "value": 45.0
   },
   "train_ha": {
     "desc": "Exchange at a GYM to train a Beastie's [sprIcon,1]POW +4pt",
@@ -439,26 +399,6 @@
     "type": 1,
     "value": 10.0
   },
-  "train_ha_2": {
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,1]POW +8pts",
-    "eff": [8, "train_ha", 2.0],
-    "id": "train_ha_2",
-    "img": 15.0,
-    "name": "Cardio token x2",
-    "points": 1.0,
-    "type": 1,
-    "value": 25.0
-  },
-  "train_ha_3": {
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,1]POW +16pts",
-    "eff": [8, "train_ha", 4.0],
-    "id": "train_ha_3",
-    "img": 15.0,
-    "name": "Cardio token x4",
-    "points": 1.0,
-    "type": 1,
-    "value": 45.0
-  },
   "train_hd": {
     "desc": "Exchange at a GYM to train a Beastie's [sprIcon,1]DEF +4pt",
     "eff": [3, 4.0, 4.0],
@@ -468,26 +408,6 @@
     "points": 1.0,
     "type": 1,
     "value": 10.0
-  },
-  "train_hd_2": {
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,1]DEF +8pts",
-    "eff": [8, "train_hd", 2.0],
-    "id": "train_hd_2",
-    "img": 18.0,
-    "name": "Dance token x2",
-    "points": 1.0,
-    "type": 1,
-    "value": 25.0
-  },
-  "train_hd_3": {
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,1]DEF +16pts",
-    "eff": [8, "train_hd", 4.0],
-    "id": "train_hd_3",
-    "img": 18.0,
-    "name": "Dance token x4",
-    "points": 1.0,
-    "type": 1,
-    "value": 45.0
   },
   "train_level": {
     "desc": "Bring to a GYM to raise a Beastie's Level by 1",
@@ -509,26 +429,6 @@
     "type": 1,
     "value": 10.0
   },
-  "train_ma_2": {
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,2]POW +8pts",
-    "eff": [8, "train_ma", 2.0],
-    "id": "train_ma_2",
-    "img": 16.0,
-    "name": "Study token x2",
-    "points": 1.0,
-    "type": 1,
-    "value": 25.0
-  },
-  "train_ma_3": {
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,2]POW +16pts",
-    "eff": [8, "train_ma", 4.0],
-    "id": "train_ma_3",
-    "img": 16.0,
-    "name": "Study token x4",
-    "points": 1.0,
-    "type": 1,
-    "value": 45.0
-  },
   "train_md": {
     "desc": "Exchange at a GYM to train a Beastie's [sprIcon,2]DEF +4pt",
     "eff": [3, 5.0, 4.0],
@@ -538,26 +438,6 @@
     "points": 1.0,
     "type": 1,
     "value": 10.0
-  },
-  "train_md_2": {
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,2]DEF +8pts",
-    "eff": [8, "train_md", 2.0],
-    "id": "train_md_2",
-    "img": 19.0,
-    "name": "Meditation token x2",
-    "points": 1.0,
-    "type": 1,
-    "value": 25.0
-  },
-  "train_md_3": {
-    "desc": "Exchange at a GYM to train a Beastie's [sprIcon,2]DEF +16pts",
-    "eff": [8, "train_md", 4.0],
-    "id": "train_md_3",
-    "img": 19.0,
-    "name": "Meditation token x4",
-    "points": 1.0,
-    "type": 1,
-    "value": 45.0
   },
   "train_reset": {
     "desc": "Exchange at a GYM to reset a Beastie's trained stats",

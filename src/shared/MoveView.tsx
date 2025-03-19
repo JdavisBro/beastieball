@@ -153,6 +153,10 @@ function getEffectString(
       return `SWITCH places with ${target} without moving ball.`;
     case 29:
       return `${feels} ${effect.pow} [sprStatus,10]TIRED (only basic actions)${dot}`;
+    case -30:
+      return move.eff.length < 3
+        ? `TAG OUT with ${ALT_TARGET_STRINGS[effect.targ]}.`
+        : "TAG OUT.";
     case 30:
       if (alt_target) {
         return move.eff.length < 3 ? `TAG OUT with ${target}.` : "TAG OUT.";
@@ -270,6 +274,10 @@ function getEffectString(
       return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} QUAKE${move.eff.find((ieff) => ieff.eff == effect.eff) == effect ? " (Volleys deal 25 damage)" : ""}.`;
     case 71:
       return "Automatically VOLLEYs to target ally.";
+    case 72:
+      return "If ball is hittable: ";
+    case 73:
+      return "Always goes where it's targeted.";
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

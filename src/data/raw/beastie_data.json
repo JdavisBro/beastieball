@@ -26,12 +26,14 @@
       "callout",
       "lock",
       "protect",
-      "rest"
+      "rest",
+      "splinter",
+      "rattle"
     ],
     "attklist_randomize": -1,
     "ba": 33,
-    "base_exp": 190.46,
-    "bd": 78,
+    "base_exp": 200.09,
+    "bd": 83,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -59,7 +61,7 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.65, 36, 5, 1],
+      [50, 0, 0.65, 70, 5, 2],
       [2, 1, 1, 8, 1, 0.15],
       [20, 1, 1, 2, 1, 1],
       [2, 2, 1, 5, 2, 1, 4, 2, 1]
@@ -79,19 +81,19 @@
     "foot_type": 1,
     "growth": 1.07,
     "ha": 52,
-    "hd": 108,
+    "hd": 113,
     "hidden": false,
     "hidden_counter": null,
     "id": "alien",
     "isBaby": false,
     "learnset": [
-      [0, "stun"],
+      [0, "mindbomb"],
       [0, "dispel"],
       [10, "mindpass"],
-      [14, "mindbomb"],
+      [14, "dropshot"],
       [20, "meditate"],
       [25, "taunt"],
-      [30, "dropshot"],
+      [30, "splinter"],
       [35, "refresh"],
       [39, "teleport"],
       [44, "tool"],
@@ -126,7 +128,7 @@
       "stretchiness": 0.1
     },
     "ma": 93,
-    "md": 44,
+    "md": 49,
     "name": "Albrax",
     "number": 38,
     "palettes": 1,
@@ -242,7 +244,9 @@
       "callout",
       "lock",
       "protect",
-      "rest"
+      "rest",
+      "splinter",
+      "rattle"
     ],
     "attklist_randomize": -1,
     "ba": 25,
@@ -282,7 +286,7 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.65, 36, 5, 1],
+      [50, 0, 0.65, 70, 5, 2],
       [2, 1, 1, 8, 1, 0.15],
       [20, 1, 1, 2, 1, 1],
       [2, 2, 1, 5, 2, 1, 4, 2, 1]
@@ -308,13 +312,13 @@
     "id": "alien1",
     "isBaby": false,
     "learnset": [
-      [0, "stun"],
+      [0, "mindbomb"],
       [0, "dispel"],
       [7, "mindpass"],
-      [11, "mindbomb"],
+      [11, "dropshot"],
       [17, "meditate"],
       [22, "taunt"],
-      [27, "dropshot"],
+      [27, "splinter"],
       [32, "refresh"],
       [36, "teleport"],
       [41, "tool"],
@@ -448,7 +452,6 @@
       "jazzattack",
       "shieldbreaker",
       "heart",
-      "commit",
       "healhit2",
       "blockattack",
       "tagattack",
@@ -463,10 +466,12 @@
       "rest",
       "tailwind",
       "bench",
-      "introduction",
       "protect",
       "batonpass",
       "steal",
+      "flight",
+      "scream",
+      "cook",
       "lifepass"
     ],
     "attklist_randomize": -1,
@@ -562,7 +567,7 @@
       [33, "lifedew"],
       [37, "heart"],
       [41, "heartpass"],
-      [45, "commit"]
+      [45, "scream"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -737,7 +742,6 @@
       "jazzattack",
       "shieldbreaker",
       "heart",
-      "commit",
       "healhit2",
       "blockattack",
       "tagattack",
@@ -752,10 +756,12 @@
       "rest",
       "tailwind",
       "bench",
-      "introduction",
       "protect",
       "batonpass",
-      "steal"
+      "steal",
+      "flight",
+      "scream",
+      "cook"
     ],
     "attklist_randomize": -1,
     "ba": 72,
@@ -830,7 +836,7 @@
       [29, "lifedew"],
       [33, "heart"],
       [37, "heartpass"],
-      [41, "commit"]
+      [41, "scream"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -1141,6 +1147,7 @@
       "commit",
       "float",
       "dig",
+      "facade",
       "desperate",
       "nightshade",
       "refresh",
@@ -1151,11 +1158,10 @@
       "defheal",
       "libero",
       "lifepass",
-      "facade",
       "charm",
       "protect",
       "set",
-      "introduction",
+      "cook",
       "construct",
       "chill"
     ],
@@ -1236,8 +1242,8 @@
     "id": "bestie",
     "isBaby": false,
     "learnset": [
-      [0, "pepshot"],
       [0, "dig"],
+      [0, "pepshot"],
       [5, "allyrush"],
       [10, "chill"],
       [13, "float"],
@@ -1350,6 +1356,7 @@
       "commit",
       "float",
       "dig",
+      "facade",
       "desperate",
       "nightshade",
       "refresh",
@@ -1360,11 +1367,10 @@
       "defheal",
       "libero",
       "lifepass",
-      "facade",
       "charm",
       "protect",
       "set",
-      "introduction",
+      "cook",
       "construct",
       "chill",
       "shieldbreaker",
@@ -1578,9 +1584,9 @@
       "nightshade"
     ],
     "attklist_randomize": -1,
-    "ba": 67,
-    "base_exp": 233.5,
-    "bd": 65,
+    "ba": 57,
+    "base_exp": 241,
+    "bd": 70,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -1644,7 +1650,7 @@
     "foot_type": 0,
     "growth": 1,
     "ha": 30,
-    "hd": 75,
+    "hd": 80,
     "hidden": false,
     "hidden_counter": null,
     "id": "bilby",
@@ -2860,7 +2866,6 @@
       "rhythm",
       "protect",
       "dispel",
-      "introduction",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -2919,7 +2924,7 @@
           {
             "conditions": [
               {
-                "effect_type": 72,
+                "effect_type": 74,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
@@ -2954,7 +2959,7 @@
       [25, "healbell"],
       [29, "freeball"],
       [33, "breakswipe"],
-      [39, "introduction"],
+      [39, "vigor"],
       [43, "swordsdance"],
       [50, "dispel"]
     ],
@@ -2995,7 +3000,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 72,
+          "effect_type": 74,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3075,7 +3080,6 @@
       "rhythm",
       "protect",
       "dispel",
-      "introduction",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -3148,7 +3152,7 @@
       [22, "healbell"],
       [26, "freeball"],
       [30, "breakswipe"],
-      [36, "introduction"],
+      [36, "vigor"],
       [40, "swordsdance"],
       [47, "dispel"]
     ],
@@ -3191,7 +3195,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 72,
+          "effect_type": 74,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3276,7 +3280,6 @@
       "rhythm",
       "protect",
       "dispel",
-      "introduction",
       "starterbody",
       "stomp"
     ],
@@ -3399,7 +3402,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 72,
+          "effect_type": 74,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -4156,15 +4159,22 @@
       {
         "array": [
           { "color": 13161189, "x": 0 },
-          { "color": 11914456, "x": 0.4933333333 },
-          { "color": 12311524, "x": 1 }
+          { "color": 10994904, "x": 0.4933333333 },
+          { "color": 11916004, "x": 1 }
         ]
       },
       {
         "array": [
           { "color": 8406082, "x": 0 },
           { "color": 8737579, "x": 0.5 },
-          { "color": 6902317, "x": 1 }
+          { "color": 7362092, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 14807549, "x": 0 },
+          { "color": 15333375, "x": 0.5 },
+          { "color": 15463679, "x": 1 }
         ]
       }
     ],
@@ -4212,7 +4222,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 104.75,
+      "char_width": 112.25,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -4297,21 +4307,28 @@
       {
         "array": [
           { "color": 16054271, "x": 0 },
-          { "color": 15988991, "x": 0.52 },
+          { "color": 15066879, "x": 0.52 },
           { "color": 15334143, "x": 1 }
         ]
       },
-      { "array": [{ "color": 12443108, "x": 0.5 }] },
+      { "array": [{ "color": 12437732, "x": 0.5 }] },
       {
         "array": [
           { "color": 7548146, "x": 0 },
           { "color": 6175226, "x": 0.5 },
           { "color": 4673524, "x": 1 }
         ]
+      },
+      {
+        "array": [
+          { "color": 13752831, "x": 0 },
+          { "color": 13752831, "x": 0.3933333333 },
+          { "color": 16777215, "x": 1 }
+        ]
       }
     ],
     "spr": "sprCrab",
-    "spr_alt": [],
+    "spr_alt": ["sprCrab_alt"],
     "tamecond": null,
     "tamelvl": 3,
     "tyield": ["ba", 2, "ha", 1],
@@ -4348,6 +4365,8 @@
       "mindup",
       "swordsdance",
       "protect",
+      "splinter",
+      "rattle",
       "netattack"
     ],
     "attklist_randomize": -1,
@@ -4968,7 +4987,6 @@
       "dump",
       "hazeball",
       "float",
-      "stun",
       "sidespin",
       "poisonhit",
       "desperate",
@@ -4986,10 +5004,11 @@
       "crowd",
       "protect",
       "taunt",
-      "noisytag",
+      "rhythm",
       "stress",
-      "introduction",
-      "enemylowered"
+      "enemylowered",
+      "rattle",
+      "scream"
     ],
     "attklist_randomize": -1,
     "ba": 40,
@@ -5062,15 +5081,15 @@
     "id": "disruptor",
     "isBaby": false,
     "learnset": [
-      [0, "nightshade"],
+      [0, "rattle"],
       [0, "distraction"],
       [9, "shaken"],
       [16, "sidespin"],
-      [19, "noisytag"],
+      [19, "rhythm"],
       [23, "rush"],
-      [27, "poisonhit"],
+      [27, "hazeball"],
       [31, "lock"],
-      [35, "stun"],
+      [35, "scream"],
       [40, "stress"],
       [47, "dump"]
     ],
@@ -5215,7 +5234,8 @@
       "tagattack",
       "spitball",
       "steal",
-      "shakeoff"
+      "shakeoff",
+      "scoreboosted"
     ],
     "attklist_randomize": -1,
     "ba": 70,
@@ -5309,16 +5329,16 @@
     "isBaby": false,
     "learnset": [
       [0, "pepshot"],
-      [0, "dig"],
-      [13, "charm"],
+      [0, "charm"],
+      [13, "snore"],
       [17, "desperate"],
       [21, "rush"],
-      [26, "jazzattack"],
-      [31, "libero"],
+      [26, "scoreboosted"],
+      [31, "shakeoff"],
       [35, "followme"],
       [39, "rushattack"],
-      [44, "shakeoff"],
-      [48, "damagedattack"]
+      [44, "damagedattack"],
+      [48, "vigor"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -5470,7 +5490,8 @@
       "tagattack",
       "spitball",
       "steal",
-      "shakeoff"
+      "shakeoff",
+      "scoreboosted"
     ],
     "attklist_randomize": -1,
     "ba": 50,
@@ -5575,16 +5596,16 @@
     "isBaby": true,
     "learnset": [
       [0, "pepshot"],
-      [0, "dig"],
-      [8, "charm"],
+      [0, "charm"],
+      [8, "snore"],
       [12, "desperate"],
       [16, "rush"],
-      [21, "jazzattack"],
-      [26, "libero"],
+      [21, "scoreboosted"],
+      [26, "shakeoff"],
       [30, "followme"],
       [34, "rushattack"],
-      [39, "shakeoff"],
-      [43, "damagedattack"]
+      [39, "damagedattack"],
+      [43, "vigor"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -7185,7 +7206,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 72,
+          "effect_type": 74,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7382,7 +7403,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 72,
+          "effect_type": 74,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7592,7 +7613,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 72,
+          "effect_type": 74,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7685,9 +7706,10 @@
       "sweatup",
       "eerie",
       "sweatall",
+      "rattle",
       "targethp",
-      "shaken",
-      "stun"
+      "stun",
+      "shaken"
     ],
     "attklist_randomize": -1,
     "ba": 15,
@@ -7751,14 +7773,14 @@
     "id": "ghost",
     "isBaby": false,
     "learnset": [
-      [0, "stun"],
+      [0, "poisonhit"],
       [0, "cover"],
-      [13, "poisonhit"],
-      [18, "shaken"],
-      [23, "hazeball"],
-      [28, "sweatup"],
+      [13, "shaken"],
+      [18, "rattle"],
+      [23, "sweatup"],
+      [28, "hex"],
       [33, "wornout"],
-      [36, "hex"],
+      [36, "stun"],
       [39, "teleport"],
       [44, "sweatall"],
       [49, "targethp"],
@@ -7836,21 +7858,21 @@
     "shiny": [
       {
         "array": [
-          { "color": 4091095, "x": 0 },
-          { "color": 4028896, "x": 0.3433333333 },
-          { "color": 2408191, "x": 1 }
+          { "color": 691967, "x": 0 },
+          { "color": 43263, "x": 0.3433333333 },
+          { "color": 56063, "x": 1 }
         ]
       },
       {
         "array": [
           { "color": 16120063, "x": 0 },
-          { "color": 16757694, "x": 1 }
+          { "color": 16764889, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 9797999, "x": 0 },
-          { "color": 9403519, "x": 1 }
+          { "color": 12341656, "x": 0 },
+          { "color": 16736429, "x": 1 }
         ]
       },
       {
@@ -7896,9 +7918,10 @@
       "sweatup",
       "eerie",
       "sweatall",
+      "rattle",
       "targethp",
-      "shaken",
-      "stun"
+      "stun",
+      "shaken"
     ],
     "attklist_randomize": -1,
     "ba": 5,
@@ -7963,14 +7986,14 @@
     "id": "ghost1",
     "isBaby": true,
     "learnset": [
-      [0, "stun"],
+      [0, "poisonhit"],
       [0, "cover"],
-      [7, "poisonhit"],
-      [12, "shaken"],
-      [17, "hazeball"],
-      [22, "sweatup"],
+      [7, "shaken"],
+      [12, "rattle"],
+      [17, "sweatup"],
+      [22, "hex"],
       [27, "wornout"],
-      [30, "hex"],
+      [30, "stun"],
       [33, "teleport"],
       [38, "sweatall"],
       [43, "targethp"],
@@ -8092,9 +8115,10 @@
       "sweatup",
       "eerie",
       "sweatall",
+      "rattle",
       "targethp",
-      "shaken",
-      "stun"
+      "stun",
+      "shaken"
     ],
     "attklist_randomize": -1,
     "ba": 10,
@@ -8146,14 +8170,14 @@
     "id": "ghost2",
     "isBaby": false,
     "learnset": [
-      [0, "stun"],
+      [0, "poisonhit"],
       [0, "cover"],
-      [10, "poisonhit"],
-      [15, "shaken"],
-      [20, "hazeball"],
-      [25, "sweatup"],
+      [10, "shaken"],
+      [15, "rattle"],
+      [20, "sweatup"],
+      [25, "hex"],
       [30, "wornout"],
-      [33, "hex"],
+      [33, "stun"],
       [36, "teleport"],
       [41, "sweatall"],
       [46, "targethp"],
@@ -8231,11 +8255,11 @@
     "shiny": [
       {
         "array": [
-          { "color": 5602300, "x": 0 },
-          { "color": 3188479, "x": 1 }
+          { "color": 2191103, "x": 0 },
+          { "color": 759551, "x": 1 }
         ]
       },
-      { "array": [{ "color": 16777215, "x": 0.5 }] }
+      { "array": [{ "color": 16777215, "x": 0.3366666667 }] }
     ],
     "spr": "sprGhost2",
     "spr_alt": [],
@@ -8442,7 +8466,6 @@
       "starterheart",
       "steamattack",
       "careful",
-      "snore",
       "enemyboosts",
       "scoreboosted",
       "desperate",
@@ -8459,7 +8482,8 @@
       "rhythm",
       "bdefup",
       "lifepass",
-      "protect"
+      "protect",
+      "cook"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -8540,7 +8564,7 @@
       [21, "allyrush"],
       [26, "careful"],
       [30, "rest"],
-      [34, "snore"],
+      [34, "cook"],
       [37, "trap"],
       [41, "damagedattack"],
       [46, "lifepass"]
@@ -9507,6 +9531,7 @@
       "nice",
       "spitball",
       "chill",
+      "rattle",
       "tool",
       "startermind"
     ],
@@ -9737,6 +9762,7 @@
       "nice",
       "spitball",
       "chill",
+      "rattle",
       "tool",
       "startermind"
     ],
@@ -9948,7 +9974,8 @@
       "fieldclear",
       "spitball",
       "eerie",
-      "sweatall"
+      "sweatall",
+      "cook"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -9985,6 +10012,15 @@
           { "color": 3868053, "x": 0.5 },
           { "color": 3933866, "x": 1 }
         ]
+      },
+      {
+        "array": [
+          { "color": 10668777, "x": 0.0066666667 },
+          { "color": 12243433, "x": 0.3166666667 },
+          { "color": 11776978, "x": 0.6233333333 },
+          { "color": 14791615, "x": 0.82 },
+          { "color": 14798011, "x": 1 }
+        ]
       }
     ],
     "colors2": null,
@@ -10017,7 +10053,7 @@
     "learnset": [
       [0, "steamattack"],
       [0, "rest"],
-      [10, "pursuit"],
+      [10, "cook"],
       [17, "sweatup"],
       [22, "protect"],
       [27, "heart"],
@@ -10113,7 +10149,7 @@
           { "color": 10088153, "x": 1 }
         ]
       },
-      { "array": [{ "color": 7266464, "x": 0 }] },
+      { "array": [{ "color": 7266478, "x": 0 }] },
       {
         "array": [
           { "color": 5859403, "x": 0 },
@@ -10126,7 +10162,8 @@
           { "color": 7709536, "x": 0.5 },
           { "color": 16777215, "x": 1 }
         ]
-      }
+      },
+      { "array": [{ "color": 10931417, "x": 0.5 }] }
     ],
     "spr": "sprKettle",
     "spr_alt": [],
@@ -10165,7 +10202,8 @@
       "fieldclear",
       "spitball",
       "eerie",
-      "sweatall"
+      "sweatall",
+      "cook"
     ],
     "attklist_randomize": -1,
     "ba": 35,
@@ -10176,8 +10214,9 @@
     "colors": [
       {
         "array": [
-          { "color": 9869036, "x": 0 },
-          { "color": 7970278, "x": 1 }
+          { "color": 8553196, "x": 0 },
+          { "color": 6323421, "x": 0.4866666667 },
+          { "color": 7973094, "x": 1 }
         ]
       },
       {
@@ -10188,9 +10227,19 @@
       },
       {
         "array": [
-          { "color": 5867263, "x": 0 },
-          { "color": 6795519, "x": 0.4966666667 },
-          { "color": 9560319, "x": 1 }
+          { "color": 4419295, "x": 0 },
+          { "color": 6069989, "x": 0.4966666667 },
+          { "color": 5550030, "x": 1 }
+        ]
+      },
+      { "array": [{ "color": 16645887, "x": 0.5 }] },
+      {
+        "array": [
+          { "color": 12047851, "x": 0.0333333333 },
+          { "color": 14082805, "x": 0.31 },
+          { "color": 12302289, "x": 0.6133333333 },
+          { "color": 14333100, "x": 0.8666666667 },
+          { "color": 14337457, "x": 1 }
         ]
       }
     ],
@@ -10224,7 +10273,7 @@
     "learnset": [
       [0, "steamattack"],
       [0, "rest"],
-      [7, "pursuit"],
+      [7, "cook"],
       [14, "sweatup"],
       [19, "protect"],
       [24, "heart"],
@@ -10239,7 +10288,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 60.25,
+      "char_width": 52,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -10304,9 +10353,21 @@
     "roguelvl": 1,
     "scale": [0.85, 1],
     "shiny": [
-      { "array": [{ "color": 7448449, "x": 0 }] },
-      { "array": [{ "color": 7915158, "x": 0 }] },
-      { "array": [{ "color": 4411971, "x": 0 }] }
+      {
+        "array": [
+          { "color": 8582091, "x": 0 },
+          { "color": 11134165, "x": 1 }
+        ]
+      },
+      { "array": [{ "color": 8180395, "x": 0 }] },
+      {
+        "array": [
+          { "color": 7512690, "x": 0 },
+          { "color": 6586716, "x": 1 }
+        ]
+      },
+      { "array": [{ "color": 16645887, "x": 0.5 }] },
+      { "array": [{ "color": 11063275, "x": 0.53 }] }
     ],
     "spr": "sprKettle1",
     "spr_alt": [],
@@ -10322,6 +10383,7 @@
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
+      "flight",
       "flyback",
       "tailwind",
       "heart",
@@ -10422,7 +10484,7 @@
       [35, "flyback"],
       [40, "rush"],
       [44, "bellydrum"],
-      [49, "backswitch"],
+      [49, "flight"],
       [53, "overheat"]
     ],
     "learnset_randomize": -1,
@@ -10560,6 +10622,7 @@
     "anim_progress": 100,
     "animator": 8,
     "attklist": [
+      "flight",
       "flyback",
       "tailwind",
       "heart",
@@ -10652,7 +10715,7 @@
       [31, "flyback"],
       [36, "rush"],
       [40, "bellydrum"],
-      [45, "backswitch"],
+      [45, "flight"],
       [49, "overheat"]
     ],
     "learnset_randomize": -1,
@@ -11252,7 +11315,6 @@
       "stomp",
       "swordsdance",
       "distraction",
-      "noisytag",
       "tool"
     ],
     "attklist_randomize": -1,
@@ -12039,7 +12101,6 @@
       "facade",
       "allyprotect",
       "substitute",
-      "commit",
       "heartup",
       "jazzattack",
       "minddown",
@@ -12053,7 +12114,8 @@
       "noisytag",
       "batonpass",
       "protect",
-      "allnervous"
+      "allnervous",
+      "scream"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -12125,12 +12187,11 @@
       [9, "shaken"],
       [13, "cheer"],
       [18, "shieldbreaker"],
-      [21, "lock"],
-      [25, "crowd"],
-      [30, "facade"],
-      [33, "allyprotect"],
-      [36, "substitute"],
-      [42, "commit"],
+      [23, "crowd"],
+      [30, "allyprotect"],
+      [34, "jazzattack"],
+      [39, "substitute"],
+      [44, "scream"],
       [47, "heartup"]
     ],
     "learnset_randomize": -1,
@@ -12234,19 +12295,14 @@
     "attklist": [
       "facade",
       "scoreboosted",
-      "float",
       "substitute",
       "commit",
       "overheat",
       "dare",
-      "stun",
-      "heartd",
       "wornattack",
       "netattack",
       "overthink",
       "preblock",
-      "mind",
-      "minddown",
       "heartpass",
       "teleport",
       "callout",
@@ -12264,8 +12320,12 @@
       "sweatup",
       "eerie",
       "ego",
+      "splinter",
+      "rattle",
+      "heartd",
       "startermind",
-      "crowd"
+      "crowd",
+      "scream"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -12333,15 +12393,15 @@
     "learnset": [
       [0, "startermind"],
       [0, "hdefup"],
-      [11, "stun"],
+      [11, "heartd"],
       [14, "preblock"],
       [20, "facade"],
       [26, "crowd"],
       [29, "ego"],
       [33, "taunt"],
       [38, "overthink"],
-      [42, "dare"],
-      [46, "stress"],
+      [42, "scream"],
+      [46, "wornattack"],
       [51, "eerie"]
     ],
     "learnset_randomize": -1,
@@ -12456,19 +12516,14 @@
     "attklist": [
       "facade",
       "scoreboosted",
-      "float",
       "substitute",
       "commit",
       "overheat",
       "dare",
-      "stun",
-      "heartd",
       "wornattack",
       "netattack",
       "overthink",
       "preblock",
-      "mind",
-      "minddown",
       "heartpass",
       "teleport",
       "callout",
@@ -12486,6 +12541,9 @@
       "sweatup",
       "eerie",
       "ego",
+      "splinter",
+      "rattle",
+      "heartd",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -12544,7 +12602,7 @@
     "learnset": [
       [0, "startermind"],
       [0, "hdefup"],
-      [5, "stun"],
+      [5, "heartd"],
       [8, "preblock"],
       [14, "facade"],
       [20, "sweatup"],
@@ -12552,7 +12610,7 @@
       [27, "taunt"],
       [32, "overthink"],
       [36, "dare"],
-      [40, "stress"],
+      [40, "wornattack"],
       [45, "eerie"]
     ],
     "learnset_randomize": -1,
@@ -12659,19 +12717,14 @@
     "attklist": [
       "facade",
       "scoreboosted",
-      "float",
       "substitute",
       "commit",
       "overheat",
       "dare",
-      "stun",
-      "heartd",
       "wornattack",
       "netattack",
       "overthink",
       "preblock",
-      "mind",
-      "minddown",
       "heartpass",
       "teleport",
       "callout",
@@ -12689,6 +12742,9 @@
       "sweatup",
       "eerie",
       "ego",
+      "splinter",
+      "rattle",
+      "heartd",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -12761,7 +12817,7 @@
     "learnset": [
       [0, "startermind"],
       [0, "hdefup"],
-      [8, "stun"],
+      [8, "heartd"],
       [11, "preblock"],
       [17, "facade"],
       [23, "sweatup"],
@@ -12769,7 +12825,7 @@
       [30, "taunt"],
       [35, "overthink"],
       [39, "dare"],
-      [43, "stress"],
+      [43, "wornattack"],
       [48, "eerie"]
     ],
     "learnset_randomize": -1,
@@ -12968,16 +13024,16 @@
     "id": "mudskipper",
     "isBaby": false,
     "learnset": [
-      [0, "stun"],
+      [0, "poisonhit"],
       [0, "chill"],
       [5, "refresh"],
       [8, "dig"],
-      [13, "poisonhit"],
+      [13, "float"],
       [19, "lifedew"],
       [24, "construct"],
-      [30, "float"],
+      [30, "spitball"],
       [35, "preblock"],
-      [41, "spitball"],
+      [41, "stun"],
       [46, "fieldclear"]
     ],
     "learnset_randomize": -1,
@@ -13491,7 +13547,8 @@
       "lock",
       "threat",
       "rest",
-      "protect"
+      "protect",
+      "flight"
     ],
     "attklist_randomize": -1,
     "ba": 26,
@@ -14034,7 +14091,6 @@
       "brine",
       "serve",
       "body",
-      "jump",
       "snore",
       "scoreboosted",
       "facade",
@@ -14056,12 +14112,14 @@
       "curse",
       "enemyboosts",
       "swordsdance",
-      "shakeoff"
+      "shakeoff",
+      "vigor",
+      "shieldbreaker"
     ],
     "attklist_randomize": -1,
     "ba": 90,
-    "base_exp": 182.6,
-    "bd": 85,
+    "base_exp": 192.5,
+    "bd": 90,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -14179,8 +14237,8 @@
       "squishiness": 0.02,
       "stretchiness": 0.02
     },
-    "ma": 30,
-    "md": 50,
+    "ma": 25,
+    "md": 60,
     "name": "Opposur",
     "number": 90,
     "palettes": 1,
@@ -14398,7 +14456,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 72,
+          "effect_type": 74,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -14550,9 +14608,9 @@
       [9, "sweatup"],
       [12, "markattack"],
       [18, "trap"],
-      [24, "hex"],
+      [24, "snipe"],
       [30, "mark"],
-      [36, "snipe"],
+      [36, "stun"],
       [40, "telekinesis"],
       [46, "dump"]
     ],
@@ -14593,7 +14651,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 72,
+          "effect_type": 74,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -14694,15 +14752,22 @@
       {
         "array": [
           { "color": 12142411, "x": 0 },
-          { "color": 12732005, "x": 0.4833333333 },
-          { "color": 12341371, "x": 1 }
+          { "color": 14762345, "x": 0.4833333333 },
+          { "color": 13189820, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 11791704, "x": 0 },
-          { "color": 15002969, "x": 0.5 },
-          { "color": 16118443, "x": 1 }
+          { "color": 11791704, "x": 0.02 },
+          { "color": 14810954, "x": 0.5 },
+          { "color": 16776645, "x": 0.9833333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 6467071, "x": 0.0033333333 },
+          { "color": 6936575, "x": 0.5 },
+          { "color": 5761535, "x": 1 }
         ]
       }
     ],
@@ -14778,9 +14843,9 @@
       [14, "sweatup"],
       [17, "markattack"],
       [23, "trap"],
-      [29, "hex"],
+      [29, "snipe"],
       [35, "mark"],
-      [41, "snipe"],
+      [41, "stun"],
       [45, "telekinesis"],
       [51, "dump"]
     ],
@@ -14821,7 +14886,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 72,
+          "effect_type": 74,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -14852,12 +14917,25 @@
     "roguelvl": -1,
     "scale": [0.85, 1],
     "shiny": [
-      { "array": [{ "color": 6393332, "x": 0.4833333333 }] },
-      { "array": [{ "color": 6505305, "x": 0.4766666667 }] },
+      { "array": [{ "color": 951534, "x": 0.4833333333 }] },
       {
         "array": [
-          { "color": 15660436, "x": 0 },
-          { "color": 11398533, "x": 1 }
+          { "color": 6441067, "x": 0 },
+          { "color": 6306925, "x": 0.4766666667 },
+          { "color": 4993376, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16252763, "x": 0.0033333333 },
+          { "color": 8705766, "x": 0.9966666667 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 14136489, "x": 0 },
+          { "color": 14136489, "x": 0.36 },
+          { "color": 12104670, "x": 1 }
         ]
       }
     ],
@@ -15798,7 +15876,11 @@
       "noisytag",
       "jazzattack",
       "skillswap",
-      "mindup"
+      "mindup",
+      "juggle",
+      "hdefup",
+      "cook",
+      "swordsdance"
     ],
     "attklist_randomize": -1,
     "ba": 89,
@@ -15912,7 +15994,7 @@
       [5, "breakswipe"],
       [9, "mind"],
       [12, "minddown"],
-      [18, "mindup"],
+      [18, "swordsdance"],
       [23, "storedpower"],
       [29, "noisytag"],
       [33, "moon"],
@@ -16084,7 +16166,11 @@
       "noisytag",
       "jazzattack",
       "skillswap",
-      "mindup"
+      "mindup",
+      "juggle",
+      "hdefup",
+      "cook",
+      "swordsdance"
     ],
     "attklist_randomize": -1,
     "ba": 66,
@@ -16146,7 +16232,7 @@
       [10, "breakswipe"],
       [14, "mind"],
       [17, "minddown"],
-      [23, "mindup"],
+      [23, "swordsdance"],
       [28, "storedpower"],
       [34, "noisytag"],
       [38, "moon"],
@@ -16669,7 +16755,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 72,
+          "effect_type": 74,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -16878,7 +16964,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 72,
+          "effect_type": 74,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17082,7 +17168,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 72,
+          "effect_type": 74,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17165,6 +17251,8 @@
       "defheal",
       "whirlwind",
       "protect",
+      "flight",
+      "scream",
       "followme"
     ],
     "attklist_randomize": -1,
@@ -17392,6 +17480,8 @@
       "defheal",
       "whirlwind",
       "protect",
+      "flight",
+      "scream",
       "followme"
     ],
     "attklist_randomize": -1,
@@ -18441,8 +18531,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 105,
-    "base_exp": 190.74,
-    "bd": 50,
+    "base_exp": 199.92,
+    "bd": 60,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -18489,7 +18579,7 @@
     "foot_type": 0,
     "growth": 1.02,
     "ha": 29,
-    "hd": 90,
+    "hd": 95,
     "hidden": false,
     "hidden_counter": null,
     "id": "shark",
@@ -19814,8 +19904,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 110,
-    "base_exp": 220,
-    "bd": 80,
+    "base_exp": 242.5,
+    "bd": 90,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -19872,7 +19962,7 @@
     "foot_type": 0,
     "growth": 1,
     "ha": 110,
-    "hd": 80,
+    "hd": 90,
     "hidden": true,
     "hidden_counter": null,
     "id": "shroommon",
@@ -19921,7 +20011,7 @@
       "stretchiness": 0.02
     },
     "ma": 110,
-    "md": 80,
+    "md": 90,
     "name": "Shloom",
     "number": 106,
     "palettes": 1,
@@ -20134,7 +20224,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 72,
+          "effect_type": 74,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -20648,7 +20738,8 @@
       "dare",
       "inferno",
       "distraction",
-      "sweatall"
+      "sweatall",
+      "cook"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -20681,7 +20772,7 @@
     ],
     "colors2": null,
     "combos": [
-      [33, 0, 1, 50, 0, 2],
+      [33, 0, 27, 50, 0, 0.75],
       [1, 2, 1],
       [43, 7, 6],
       [43, 7, 6]
@@ -20812,7 +20903,7 @@
       {
         "array": [
           { "color": 9663843, "x": 0 },
-          { "color": 10847593, "x": 0.4833333333 },
+          { "color": 10847336, "x": 0.4833333333 },
           { "color": 12164227, "x": 1 }
         ]
       },
@@ -20825,9 +20916,9 @@
       },
       {
         "array": [
-          { "color": 16445651, "x": 0 },
-          { "color": 16773089, "x": 0.7066666667 },
-          { "color": 16777215, "x": 1 }
+          { "color": 16251575, "x": 0 },
+          { "color": 16763288, "x": 0.7066666667 },
+          { "color": 16448255, "x": 1 }
         ]
       }
     ],
@@ -21104,7 +21195,8 @@
       "jazzpass",
       "bench",
       "basecover",
-      "slide"
+      "slide",
+      "flight"
     ],
     "attklist_randomize": -1,
     "ba": 94,
@@ -21182,8 +21274,9 @@
       [5, "rush"],
       [9, "brine"],
       [12, "tailwind"],
-      [17, "teleport"],
-      [23, "tagattack"],
+      [16, "teleport"],
+      [20, "flight"],
+      [24, "tagattack"],
       [29, "distraction"],
       [33, "rushattack"],
       [37, "batonpass"],
@@ -21327,6 +21420,7 @@
       "tagattack",
       "nice",
       "skillswap",
+      "rattle",
       "passattack",
       "starterside"
     ],
@@ -21577,6 +21671,7 @@
       "tagattack",
       "nice",
       "skillswap",
+      "rattle",
       "passattack",
       "starterside"
     ],
@@ -21799,7 +21894,7 @@
     "type_focus": 2
   },
   "turtle": {
-    "ability": ["rhythmpow", "fwdpass"],
+    "ability": ["rhythmset", "fwdpass"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
@@ -21909,8 +22004,8 @@
     "id": "turtle",
     "isBaby": false,
     "learnset": [
-      [0, "healhit"],
       [0, "preblock"],
+      [0, "healhit"],
       [9, "defheal"],
       [13, "rhythm"],
       [16, "heartdown"],
@@ -22141,8 +22236,8 @@
     "id": "turtle1",
     "isBaby": true,
     "learnset": [
-      [0, "healhit"],
       [0, "preblock"],
+      [0, "healhit"],
       [4, "defheal"],
       [8, "rhythm"],
       [11, "heartdown"],
@@ -22350,8 +22445,8 @@
     "id": "turtle2",
     "isBaby": false,
     "learnset": [
-      [0, "healhit"],
       [0, "preblock"],
+      [0, "healhit"],
       [7, "defheal"],
       [11, "rhythm"],
       [14, "heartdown"],
@@ -22504,6 +22599,8 @@
       "eerie",
       "inferno",
       "mdefup",
+      "flight",
+      "cook",
       "starterheart"
     ],
     "attklist_randomize": -1,
@@ -22583,7 +22680,7 @@
       [10, "enemyboosts"],
       [15, "dispel"],
       [22, "mark"],
-      [26, "minddown"],
+      [26, "cook"],
       [31, "lock"],
       [36, "distraction"],
       [41, "cut"],

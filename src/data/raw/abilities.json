@@ -90,7 +90,7 @@
     "name": "Challenger"
   },
   "defiant_h": {
-    "desc": "[sprIcon,1]Pow[sprBoost,1] when stats are lowered",
+    "desc": "[sprIcon,1]POW[sprBoost,1] when any opponent gives them a [sprIcon,3]BOOST",
     "id": "defiant_h",
     "name": "Defiant"
   },
@@ -105,7 +105,7 @@
     "name": "Unsettling-1"
   },
   "echo": {
-    "desc": "Attacks do 3/4x damage and add +1 QUAKE to opponent field",
+    "desc": "Attacks do x¾ damage and apply 1 QUAKE to opponent field",
     "id": "echo",
     "name": "Echo"
   },
@@ -145,7 +145,7 @@
     "name": "Jet"
   },
   "friendguard": {
-    "desc": "Ally takes x3/4 damage",
+    "desc": "Ally takes x¾ damage from attacks",
     "id": "friendguard",
     "name": "Friendship"
   },
@@ -155,7 +155,7 @@
     "name": "Captain"
   },
   "galaxybrain": {
-    "desc": "[sprIcon,2]Pow[sprBoost,0] when receiving a [sprIcon,2] attack",
+    "desc": "[sprIcon,2]POW[sprBoost,0] when receiving a [sprIcon,2] attack",
     "id": "galaxybrain",
     "name": "Galaxy Brain"
   },
@@ -165,7 +165,7 @@
     "name": "Intangible"
   },
   "gloat": {
-    "desc": "When an opponent is [sprStatus,5]WIPED,| this Beastie restores 50 STAMINA",
+    "desc": "When an opponent is [sprStatus,5]WIPED, this Beastie restores 50 STAMINA",
     "id": "gloat",
     "name": "Crowing"
   },
@@ -300,7 +300,7 @@
     "name": "Treat"
   },
   "oblivious": {
-    "desc": "Ignores opponent's [sprBoost,1][sprBoost,3]BOOSTs",
+    "desc": "Ignores opponent's [sprBoost,0][sprBoost,3]BOOSTs",
     "id": "oblivious",
     "name": "Foggy"
   },
@@ -330,9 +330,14 @@
     "name": "Flow"
   },
   "rhythmpow": {
-    "desc": "[sprIcon,0]Attacks do 1.3x damage while field has RHYTHM",
+    "desc": "[sprIcon,0]Attacks do 1.2x damage while field has RHYTHM",
     "id": "rhythmpow",
     "name": "Groove"
+  },
+  "rhythmset": {
+    "desc": "When they use a [sprIcon,0]BODY attack, sets RHYTHM on ally field",
+    "id": "rhythmset",
+    "name": "Shanty"
   },
   "runner": {
     "desc": "Does 1.3x damage just after moving or tagging in",
@@ -350,7 +355,7 @@
     "name": "Scary Face"
   },
   "shield": {
-    "desc": "Damage from non-SIDEWAYS attacks reduced x3/4",
+    "desc": "Damage from non-SIDEWAYS attacks reduced x¾",
     "id": "shield",
     "name": "Helmet"
   },

@@ -11,7 +11,7 @@ import {
   useFriendSpoiler,
   useSpoilerMode,
 } from "../shared/useSpoiler";
-import RECENTLY_UPDATED from "./RecentlyUpdated";
+import MOVE_RECENTLY_UPDATED from "./RecentlyUpdated";
 
 declare global {
   interface Window {
@@ -103,7 +103,7 @@ export default function PlayDex() {
     });
   }
   if (recentlyChanged) {
-    moves = moves.filter((move) => RECENTLY_UPDATED.includes(move.id));
+    moves = moves.filter((move) => MOVE_RECENTLY_UPDATED.includes(move.id));
   }
   moves = moves.sort(SortFunctions[sort]);
 

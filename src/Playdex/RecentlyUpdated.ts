@@ -1,4 +1,4 @@
-const RECENTLY_UPDATED: string[] = [
+const MOVE_RECENTLY_UPDATED: string[] = [
   "splinter",
   "flight",
   "scream",
@@ -18,4 +18,4 @@ const RECENTLY_UPDATED: string[] = [
   "ricochet",
 ];
 
-export default RECENTLY_UPDATED;
+export default MOVE_RECENTLY_UPDATED;

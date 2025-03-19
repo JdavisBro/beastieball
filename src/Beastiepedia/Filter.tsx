@@ -7,12 +7,17 @@ import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import TextTag from "../shared/TextTag";
 import MOVE_DIC, { Move } from "../data/MoveData";
 import MoveView from "../shared/MoveView";
+import {
+  BEASTIE_STUFF_RECENTLY_UPDATED,
+  BEASITE_SPRITES_RECENTLY_UPDATED,
+} from "./RecentlyUpdated";
 
 export enum FilterTypes {
   Ability,
   Move,
   Training,
   Metamorphs,
+  RecentlyUpdated,
 }
 
 type TrainingTypes = "ba" | "ha" | "ma" | "bd" | "hd" | "md";
@@ -26,11 +31,17 @@ const TRAINING_TYPES = {
   md: "Mind DEF",
 };
 
+enum RecentlyUpdatedTypes {
+  Stuff,
+  Sprites,
+}
+
 export type FilterType =
   | [FilterTypes.Ability, Ability]
   | [FilterTypes.Move, Move]
   | [FilterTypes.Training, TrainingTypes]
-  | [FilterTypes.Metamorphs, boolean];
+  | [FilterTypes.Metamorphs, boolean]
+  | [FilterTypes.RecentlyUpdated, RecentlyUpdatedTypes];
 
 const beastie_abilities: Ability[] = [];
 const beastie_moves: Move[] = [];
@@ -65,6 +76,7 @@ const FILTER_TYPE_PREFIX: Record<FilterTypes, string> = {
   [FilterTypes.Move]: "Learns Play(s): ",
   [FilterTypes.Training]: "Trains Allies: ",
   [FilterTypes.Metamorphs]: "Metamorphs: ",
+  [FilterTypes.RecentlyUpdated]: "Recently Updated: ",
 };
 
 const FILTER_TYPES = [
@@ -72,6 +84,7 @@ const FILTER_TYPES = [
   FilterTypes.Move,
   FilterTypes.Training,
   FilterTypes.Metamorphs,
+  FilterTypes.RecentlyUpdated,
 ];
 
 export function createFilterString(filters: FilterType[]) {
@@ -80,6 +93,7 @@ export function createFilterString(filters: FilterType[]) {
     [FilterTypes.Move]: [],
     [FilterTypes.Training]: [],
     [FilterTypes.Metamorphs]: [],
+    [FilterTypes.RecentlyUpdated]: [],
   };
   for (const filter of filters) {
     types[filter[0]].push(filter);
@@ -97,7 +111,11 @@ export function createFilterString(filters: FilterType[]) {
             ? filter[1]
               ? "Yes"
               : "No"
-            : filter[1].name),
+            : filter[0] == FilterTypes.RecentlyUpdated
+              ? filter[1] == RecentlyUpdatedTypes.Stuff
+                ? "Plays, Traits, or Stats"
+                : "Sprites or Colors"
+              : filter[1].name),
       "",
     ),
   ]).reduce(
@@ -127,6 +145,13 @@ export function createFilterFunction(filters: FilterType[]) {
             beastie.evolution.some((evo) => evo.condition[0] != 7); // Not Extinct
           return value ? metamorphs : !metamorphs;
         }
+        case FilterTypes.RecentlyUpdated:
+          switch (value) {
+            case RecentlyUpdatedTypes.Stuff:
+              return BEASTIE_STUFF_RECENTLY_UPDATED.includes(beastie.id);
+            case RecentlyUpdatedTypes.Sprites:
+              return BEASITE_SPRITES_RECENTLY_UPDATED.includes(beastie.id);
+          }
       }
     });
 }
@@ -174,15 +199,7 @@ export default function Filter({
       );
       if (index != -1) {
         const removed = filters.splice(index, 1)[0];
-        const has_id =
-          value[0] != FilterTypes.Training &&
-          removed[0] != FilterTypes.Training &&
-          value[0] != FilterTypes.Metamorphs &&
-          removed[0] != FilterTypes.Metamorphs;
-        if (
-          exclusive &&
-          (has_id ? removed[1].id != value[1].id : removed[1] != value[1])
-        ) {
+        if (exclusive && removed[1] != value[1]) {
           filters.push(value);
         }
       } else {
@@ -371,6 +388,50 @@ export default function Filter({
                 </button>
                 <br />
                 (Except for specific Metamorphosis types)
+                <br />
+                Recently Updated:
+                <br />
+                <button
+                  className={
+                    filters.some(
+                      (filter) =>
+                        filter[0] == FilterTypes.RecentlyUpdated &&
+                        filter[1] == RecentlyUpdatedTypes.Stuff,
+                    )
+                      ? styles.trainingSelected
+                      : undefined
+                  }
+                  onClick={() =>
+                    handleToggleFilter(
+                      [FilterTypes.RecentlyUpdated, RecentlyUpdatedTypes.Stuff],
+                      true,
+                    )
+                  }
+                >
+                  Plays, Traits, or Stats
+                </button>
+                <button
+                  className={
+                    filters.some(
+                      (filter) =>
+                        filter[0] == FilterTypes.RecentlyUpdated &&
+                        filter[1] == RecentlyUpdatedTypes.Sprites,
+                    )
+                      ? styles.trainingSelected
+                      : undefined
+                  }
+                  onClick={() =>
+                    handleToggleFilter(
+                      [
+                        FilterTypes.RecentlyUpdated,
+                        RecentlyUpdatedTypes.Sprites,
+                      ],
+                      true,
+                    )
+                  }
+                >
+                  Sprites or Colors
+                </button>
               </>
             ) : null}
           </div>

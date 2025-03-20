@@ -216,7 +216,12 @@ function getEffectString(
           return "Boosted by RALLY instead of weakened.";
         case 26:
           return "POW x1.5 if user changed row or lane this turn.";
+        case 27:
+          return "POW x2 when stamina is below 34.";
       }
+      console.log(
+        `Undefined POW COND ${effect.pow}. E ${effect.eff} T ${effect.targ}`,
+      );
       return `POW COND ${effect.pow}`;
     }
     case 34:

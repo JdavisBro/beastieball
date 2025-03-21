@@ -315,7 +315,7 @@
     "name": "Mischief"
   },
   "redirection": {
-    "desc": "Feels [sprStatus,3]NOISY (attracts attacks) when tagging in",
+    "desc": "When tagging in, feels [sprStatus,3]NOISY and ally feels +1 [sprStatus,1]ANGRY",
     "id": "redirection",
     "name": "Clamor"
   },
@@ -475,7 +475,7 @@
     "name": "Primitive"
   },
   "trappow": {
-    "desc": "When they attack, sets +1 TRAP on the opponent field",
+    "desc": "Sets +1 TRAP on the opponent field each turn",
     "id": "trappow",
     "name": "Trapper"
   },

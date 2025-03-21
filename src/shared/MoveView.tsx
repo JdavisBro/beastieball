@@ -74,7 +74,7 @@ function getEffectString(
     ? effect.targ == 0
       ? "Feel"
       : `${targetStart} feels`
-    : "+";
+    : "&";
   const dot =
     args.joiningEffects == null || args.joiningEffects == 1 ? "." : "";
 

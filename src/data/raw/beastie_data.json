@@ -2846,6 +2846,7 @@
     "anim_progress": 100,
     "animator": 8,
     "attklist": [
+      "introduction",
       "freeball",
       "cheer",
       "shakenhit",
@@ -3060,6 +3061,7 @@
     "anim_progress": 80,
     "animator": [10, 8],
     "attklist": [
+      "introduction",
       "freeball",
       "cheer",
       "shakenhit",
@@ -3260,6 +3262,7 @@
     "anim_progress": 20,
     "animator": 8,
     "attklist": [
+      "introduction",
       "freeball",
       "cheer",
       "shakenhit",
@@ -21922,7 +21925,6 @@
       "protect",
       "stress",
       "set",
-      "introduction",
       "nice",
       "skillswap",
       "steal",
@@ -22170,7 +22172,6 @@
       "protect",
       "stress",
       "set",
-      "introduction",
       "nice",
       "skillswap",
       "steal",
@@ -22365,7 +22366,6 @@
       "protect",
       "stress",
       "set",
-      "introduction",
       "nice",
       "skillswap",
       "steal",

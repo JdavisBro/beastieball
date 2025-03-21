@@ -57,6 +57,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
+      { "eff": 53, "pow": 0, "targ": 0 },
       { "eff": 14, "pow": 1, "targ": 0 },
       { "eff": 12, "pow": 2, "targ": 0 }
     ],
@@ -387,7 +388,7 @@
     "eff": [{ "eff": 4, "pow": -1, "targ": 4 }],
     "id": "cook",
     "name": "Cook",
-    "pow": 65,
+    "pow": 60,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -647,7 +648,7 @@
     "eff": [{ "eff": 33, "pow": 21, "targ": 0 }],
     "id": "enemylowered",
     "name": "Pierce",
-    "pow": 50,
+    "pow": 60,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1939,7 +1940,7 @@
     "eff": [{ "eff": 5, "pow": -2, "targ": 3 }],
     "id": "splinter",
     "name": "Splinter",
-    "pow": 80,
+    "pow": 70,
     "targ": 0,
     "type": 2,
     "use": 0

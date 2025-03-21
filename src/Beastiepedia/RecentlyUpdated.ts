@@ -7,6 +7,8 @@ export const BEASTIE_STUFF_RECENTLY_UPDATED = [
   "shark",
   "rainbow",
   "opossum",
+  "shroom_m",
+  "disruptor",
 ];
 
 export const BEASITE_SPRITES_RECENTLY_UPDATED = [

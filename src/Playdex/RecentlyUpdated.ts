@@ -16,6 +16,7 @@ const MOVE_RECENTLY_UPDATED: string[] = [
   "commit",
   "stun",
   "ricochet",
+  "enemylowered",
 ];
 
 export default MOVE_RECENTLY_UPDATED;

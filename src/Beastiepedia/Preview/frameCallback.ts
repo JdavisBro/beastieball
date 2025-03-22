@@ -57,8 +57,12 @@ export function setupFrameCallback(
       setFrame(startFrame);
       return;
     }
+    const reverse = startFrame > endFrame;
 
-    if (animState.frame == undefined || animState.frame < startFrame) {
+    if (
+      animState.frame == undefined ||
+      (reverse ? animState.frame > startFrame : animState.frame < startFrame)
+    ) {
       setFrame(startFrame);
       animState.frame = startFrame;
     }
@@ -71,8 +75,8 @@ export function setupFrameCallback(
       animState.frameLength / animState.userSpeed
     ) {
       animState.frameTime = animState.frameTime % (animState.frameLength || 1);
-      animState.frame += 1;
-      if (animState.frame > endFrame) {
+      animState.frame += reverse ? -1 : 1;
+      if (reverse ? animState.frame < endFrame : animState.frame > endFrame) {
         const transitions = animState.state.transitions;
         if (transitions && Array.isArray(animState.anim.frames)) {
           animState.state =
@@ -81,6 +85,9 @@ export function setupFrameCallback(
             ];
           animState.frame = animState.state.startFrame ?? 0;
         } else {
+          if (animState.anim.loop) {
+            return;
+          }
           animState.frame = startFrame;
         }
       }

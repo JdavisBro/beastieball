@@ -17,6 +17,7 @@ export type BeastieAnimation = {
   _: string;
   frames: BeastieFrames | BeastieFrames[];
   speed?: number;
+  loop?: string[];
 };
 
 export type BeastiePos = {

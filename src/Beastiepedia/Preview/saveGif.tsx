@@ -83,16 +83,21 @@ export default function saveGif(
     (_value, index) => (grouptransition[index] = 0),
   );
 
-  let loop = 0;
+  let anim_loops = !anim.loop;
+
+  let loop_count = 0;
   /*eslint no-constant-condition: ["error", { "checkLoops": false }]*/
   while (true) {
-    loop++;
-    if (loop > MAX_LOOPS) {
+    loop_count++;
+    if (loop_count > MAX_LOOPS) {
       throw new GifError("TOO MANY LOOPS!");
     }
 
     const group = frames[groupindex];
-    if ((!group.transitions || group.transitions.length == 0) && loop != 1) {
+    if (
+      (!group.transitions || group.transitions.length == 0) &&
+      loop_count != 1
+    ) {
       break;
     }
 
@@ -139,6 +144,7 @@ export default function saveGif(
           (othergroupindex) => othergroupindex == groupindex,
         )
       ) {
+        anim_loops = false;
         break;
       }
       // im trying to prioritise getting to the other states before going to state 0 to possibly end the animation
@@ -201,6 +207,7 @@ export default function saveGif(
       delay: delaylist[i],
       palette: doneframes[frame].palette,
       transparent: true,
+      repeat: anim_loops ? 0 : -1,
     });
   }
   encoder.finish();

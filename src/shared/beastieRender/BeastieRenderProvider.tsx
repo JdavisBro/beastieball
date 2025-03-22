@@ -99,7 +99,7 @@ export default function BeastieRenderProvider(
     });
     setColorUniforms(glRef.current.gl, glRef.current.program, cols);
     const sprite_bbox = drawn_sprite.bboxes[beastie_frame];
-    return [canvasRef.current, sprite_bbox] as [HTMLCanvasElement, BBox];
+    return [canvasRef.current, sprite_bbox] as [HTMLCanvasElement, BBox | null];
   }, []);
 
   const render = useCallback(
@@ -134,6 +134,9 @@ export default function BeastieRenderProvider(
         const context = cropCanvasRef.current.getContext("2d");
         if (!context) {
           return null;
+        }
+        if (!sprite_bbox) {
+          return drawn_canvas.toDataURL();
         }
         cropCanvasRef.current.width = sprite_bbox.width;
         cropCanvasRef.current.height = sprite_bbox.height;

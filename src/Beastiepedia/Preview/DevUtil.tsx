@@ -149,7 +149,12 @@ export default function DevUtil(props: {
       img.src = `/gameassets/beasties/${beastie.spr}/${frame % sprite.frames}.webp`;
       loadingRef.current[beastie.name] = {
         img: img,
-        crop: sprite.bboxes[frame % sprite.frames],
+        crop: sprite.bboxes[frame % sprite.frames] ?? {
+          x: 0,
+          y: 0,
+          width: 1000,
+          height: 1000,
+        },
         colors: beastie.colors,
       };
       beastieCountRef.current += 1;

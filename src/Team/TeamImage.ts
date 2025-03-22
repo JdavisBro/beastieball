@@ -70,7 +70,7 @@ export function createTeamImageCanvas(
   mode: DrawMode,
   beastieRender: (
     beastie: RenderBeastieType,
-  ) => Promise<[HTMLCanvasElement, BBox] | null>,
+  ) => Promise<[HTMLCanvasElement, BBox | null] | null>,
   atLevel?: number,
   maxCoaching?: boolean,
   copy?: boolean,
@@ -271,7 +271,7 @@ async function createTeamImage(
   mode: DrawMode,
   beastieRender: (
     beastie: RenderBeastieType,
-  ) => Promise<[HTMLCanvasElement, BBox] | null>,
+  ) => Promise<[HTMLCanvasElement, BBox | null] | null>,
   loadImage: (src: string) => Promise<HTMLImageElement>,
   atLevel?: number,
   maxCoaching?: boolean,
@@ -349,25 +349,27 @@ async function createTeamImage(
         throw new Error("Could not render Beastie.");
       }
       const [canvas, bbox] = result;
-      const width =
-        bbox.width > bbox.height
-          ? BEASTIE_IMAGE
-          : bbox.width * (BEASTIE_IMAGE / bbox.height);
-      const height =
-        bbox.width > bbox.height
-          ? bbox.height * (BEASTIE_IMAGE / bbox.width)
-          : BEASTIE_IMAGE;
-      ctx.drawImage(
-        canvas,
-        bbox.x,
-        bbox.y,
-        bbox.width,
-        bbox.height,
-        startx + BEASTIE_IMAGE_OFFSET + (BEASTIE_IMAGE - width) / 2,
-        starty + BEASTIE_PLAY_BEGIN - (BEASTIE_IMAGE + height) / 2 - 10,
-        width,
-        height,
-      );
+      if (bbox) {
+        const width =
+          bbox.width > bbox.height
+            ? BEASTIE_IMAGE
+            : bbox.width * (BEASTIE_IMAGE / bbox.height);
+        const height =
+          bbox.width > bbox.height
+            ? bbox.height * (BEASTIE_IMAGE / bbox.width)
+            : BEASTIE_IMAGE;
+        ctx.drawImage(
+          canvas,
+          bbox.x,
+          bbox.y,
+          bbox.width,
+          bbox.height,
+          startx + BEASTIE_IMAGE_OFFSET + (BEASTIE_IMAGE - width) / 2,
+          starty + BEASTIE_PLAY_BEGIN - (BEASTIE_IMAGE + height) / 2 - 10,
+          width,
+          height,
+        );
+      }
       // plays
       for (let i = 0; i < beastie.attklist.length; i++) {
         const move = MOVE_DIC[beastie.attklist[i]];

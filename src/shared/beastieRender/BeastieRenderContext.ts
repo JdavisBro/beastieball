@@ -17,5 +17,5 @@ export const BeastieRenderContext = createContext<null | {
   cancel: (id: number) => void;
   renderQuick: (
     beastie: RenderBeastieType,
-  ) => Promise<[HTMLCanvasElement, BBox] | null>;
+  ) => Promise<[HTMLCanvasElement, BBox | null] | null>;
 }>(null);

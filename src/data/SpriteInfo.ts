@@ -11,7 +11,7 @@ export type Sprite = {
   width: number;
   height: number;
   frames: number;
-  bboxes: BBox[];
+  bboxes: (BBox | null)[];
   bbox: BBox;
 };
 

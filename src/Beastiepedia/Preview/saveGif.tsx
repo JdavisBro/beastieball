@@ -42,8 +42,8 @@ export default function saveGif(
 
   let bbox: { x: number; y: number; endx: number; endy: number } | undefined =
     crop ? undefined : { x: 0, y: 0, endx: 1000, endy: 1000 };
-  function setBbox(framebbox: BBox) {
-    if (!crop) {
+  function setBbox(framebbox: BBox | null) {
+    if (!crop || !framebbox) {
       return;
     }
     if (bbox == undefined) {
@@ -98,7 +98,12 @@ export default function saveGif(
 
     const startFrame = group.startFrame != null ? group.startFrame : 0;
     const endFrame = group.endFrame != null ? group.endFrame : 0;
-    for (let i = startFrame; i <= endFrame; i++) {
+    const reverse = startFrame > endFrame;
+    for (
+      let i = startFrame;
+      reverse ? i >= endFrame : i <= endFrame;
+      reverse ? i-- : i++
+    ) {
       if (images[i % sprite.frames] == undefined) {
         throw new GifError("Required image not loaded.");
       }
@@ -129,6 +134,13 @@ export default function saveGif(
         group.transitions[Math.floor(Math.random() * group.transitions.length)];
       group.transitions.splice(group.transitions.indexOf(groupindex), 1);
     } else {
+      if (
+        group.transitions.every(
+          (othergroupindex) => othergroupindex == groupindex,
+        )
+      ) {
+        break;
+      }
       // im trying to prioritise getting to the other states before going to state 0 to possibly end the animation
       // this stuff can probably not be fully done automatically and i might add an editor to the site that lets users sequence their own state order
       grouptransition[groupindex] += 1;

@@ -154,11 +154,19 @@ export default function ContentPreview(props: Props): React.ReactNode {
       for (const state of frames) {
         const startFrame = state.startFrame || 0;
         const endFrame = state.endFrame || 0;
-        for (let i = startFrame; i <= endFrame; i++) {
+        const reverse = startFrame > endFrame;
+        for (
+          let i = reverse ? endFrame : startFrame;
+          i <= (reverse ? startFrame : endFrame);
+          i++
+        ) {
           if (!loadedImages[i % drawnsprite.frames]) {
             allFramesLoaded = false;
           }
           const framebbox = drawnsprite.bboxes[i % drawnsprite.frames];
+          if (!framebbox) {
+            continue;
+          }
           if (edges == undefined) {
             edges = {
               x: framebbox.x,
@@ -319,15 +327,15 @@ export default function ContentPreview(props: Props): React.ReactNode {
       let canvas = canvasRef.current;
       const frame = animStateRef.current.frame;
       if (fitBeastie && frame != undefined) {
-        cropCanvasRef.current.width = drawnsprite.bboxes[frame].width;
-        cropCanvasRef.current.height = drawnsprite.bboxes[frame].height;
+        const bbox = drawnsprite.bboxes[frame];
+        if (!bbox) {
+          return;
+        }
+        cropCanvasRef.current.width = bbox.width;
+        cropCanvasRef.current.height = bbox.height;
         cropCanvasRef.current
           .getContext("2d")
-          ?.drawImage(
-            canvasRef.current,
-            -drawnsprite.bboxes[frame].x,
-            -drawnsprite.bboxes[frame].y,
-          );
+          ?.drawImage(canvasRef.current, -bbox.x, -bbox.y);
         canvas = cropCanvasRef.current;
       }
       if (!copy) {

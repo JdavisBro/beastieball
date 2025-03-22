@@ -21,30 +21,34 @@ for beastie in beasties.iterdir():
     pilbbox = im.point(lambda p: p > 0).filter(ImageFilter.MedianFilter(3)).getbbox()
     if pilbbox:
       bbox = {"x": pilbbox[0], "y": pilbbox[1], "width": pilbbox[2] - pilbbox[0], "height": pilbbox[3] - pilbbox[1]}
-      for spr in spriteinfo:
-        spr = spriteinfo[beastie.name]
-        if not spr:
-          continue
-        if len(spr["bboxes"]) <= frame:
-          print(f"TOO MANY FRAMES!! {beastie.name}")
-          break
-        if spr["bboxes"][frame] == bbox:
-          continue
-        if beastie.name not in donesprites:
-          donesprites.append(beastie.name)
-        spr["bboxes"][frame] = bbox
+    else:
+      bbox = None
+    for spr in spriteinfo:
+      spr = spriteinfo[beastie.name]
+      if not spr:
+        continue
+      if len(spr["bboxes"]) <= frame:
+        print(f"TOO MANY FRAMES!! {beastie.name}")
+        break
+      if spr["bboxes"][frame] == bbox:
+        continue
+      if beastie.name not in donesprites:
+        donesprites.append(beastie.name)
+      spr["bboxes"][frame] = bbox
 
 print("Updating main bboxes.")
 for beastie in donesprites:
   spr = spriteinfo[beastie]
   if not spr:
     continue
-  bbox = spr["bbox"]
+  bbox = [i for i in spr["bboxes"] if i][0]
   bbox = {
     "x": bbox["x"], "y": bbox["y"],
     "x2": bbox["x"] + bbox["width"], "y2": bbox["y"] + bbox["height"]
   }
   for framebbox in spr["bboxes"]:
+    if not framebbox:
+      continue
     if framebbox["x"] < bbox["x"]: bbox["x"] = framebbox["x"]
     if framebbox["y"] < bbox["y"]: bbox["y"] = framebbox["y"]
     if framebbox["x"] + framebbox["width"] > bbox["x2"]: bbox["x2"] = framebbox["x"] + framebbox["width"]

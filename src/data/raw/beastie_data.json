@@ -6,6 +6,7 @@
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
+      "lockon",
       "stun",
       "markattack",
       "mindbomb",
@@ -27,8 +28,8 @@
       "lock",
       "protect",
       "rest",
-      "splinter",
-      "rattle"
+      "rattle",
+      "mindup"
     ],
     "attklist_randomize": -1,
     "ba": 33,
@@ -93,8 +94,8 @@
       [14, "dropshot"],
       [20, "meditate"],
       [25, "taunt"],
-      [30, "splinter"],
-      [35, "refresh"],
+      [30, "stun"],
+      [35, "mindup"],
       [39, "teleport"],
       [44, "tool"],
       [49, "lock"]
@@ -105,16 +106,16 @@
       "anim_min_speed": 0.2,
       "char_width": 79.25,
       "emote_hop_height": 25,
-      "float_dist": 0,
-      "float_wave": 0,
-      "float_wave_freq": 1000,
-      "hop_height": 25,
+      "float_dist": 3,
+      "float_wave": 3,
+      "float_wave_freq": 3333,
+      "hop_height": 0,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
-      "move_accel": 0.4444444444,
-      "move_decel": 0.6666666667,
+      "move_accel": 0.1,
+      "move_decel": 0.6,
       "move_pause_frames": [],
       "move_speed": 1,
       "move_speed_start": 0,
@@ -124,10 +125,10 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0.1,
-      "stretchiness": 0.1
+      "squishiness": 0,
+      "stretchiness": 0
     },
-    "ma": 93,
+    "ma": 88,
     "md": 49,
     "name": "Albrax",
     "number": 38,
@@ -224,6 +225,7 @@
     "anim_progress": 60,
     "animator": 8,
     "attklist": [
+      "lockon",
       "stun",
       "markattack",
       "mindbomb",
@@ -245,8 +247,8 @@
       "lock",
       "protect",
       "rest",
-      "splinter",
-      "rattle"
+      "rattle",
+      "mindup"
     ],
     "attklist_randomize": -1,
     "ba": 25,
@@ -318,8 +320,8 @@
       [11, "dropshot"],
       [17, "meditate"],
       [22, "taunt"],
-      [27, "splinter"],
-      [32, "refresh"],
+      [27, "stun"],
+      [32, "mindup"],
       [36, "teleport"],
       [41, "tool"],
       [46, "lock"]
@@ -4117,7 +4119,7 @@
     "ability": ["novolley", "rhythmpow"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 60,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "starterbody",
@@ -4445,7 +4447,7 @@
       [26, "netattack"],
       [30, "serve"],
       [36, "threat"],
-      [39, "snipe"],
+      [39, "splinter"],
       [44, "rushattack"],
       [49, "mindup"]
     ],
@@ -9951,7 +9953,7 @@
     "ability": ["oblivious", "sauna"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "steamattack",
@@ -10179,7 +10181,7 @@
     "ability": ["oblivious", "sauna"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "steamattack",
@@ -12090,7 +12092,7 @@
     "ability": ["scary"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "starterheart",
@@ -12118,7 +12120,8 @@
       "batonpass",
       "protect",
       "allnervous",
-      "scream"
+      "scream",
+      "commit"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -12136,23 +12139,32 @@
       },
       {
         "array": [
-          { "color": 4568506, "x": 0 },
-          { "color": 5685943, "x": 0.4833333333 },
-          { "color": 5029271, "x": 1 }
+          { "color": 4236730, "x": 0 },
+          { "color": 4439215, "x": 0.4833333333 },
+          { "color": 4504970, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 6004944, "x": 0 },
-          { "color": 6340060, "x": 0.5 },
-          { "color": 5480423, "x": 1 }
+          { "color": 7647450, "x": 0 },
+          { "color": 8110809, "x": 0.5 },
+          { "color": 7255286, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 4877984, "x": 0 },
-          { "color": 5405856, "x": 0.5 },
-          { "color": 5800335, "x": 1 }
+          { "color": 5595795, "x": 0 },
+          { "color": 5274014, "x": 0.5 },
+          { "color": 5740723, "x": 0.7966666667 },
+          { "color": 7838632, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 12173289, "x": 0 },
+          { "color": 8281087, "x": 0.44 },
+          { "color": 4527103, "x": 0.9433333333 },
+          { "color": 5047277, "x": 1 }
         ]
       }
     ],
@@ -12201,7 +12213,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 82.75,
+      "char_width": 83.25,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -12267,20 +12279,34 @@
     "shiny": [
       {
         "array": [
-          { "color": 5923175, "x": 0 },
-          { "color": 6385272, "x": 0.54 },
-          { "color": 7634309, "x": 1 }
+          { "color": 6054503, "x": 0 },
+          { "color": 6713464, "x": 0.54 },
+          { "color": 8028295, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 4613280, "x": 0 },
+          { "color": 4413592, "x": 0 },
           { "color": 4423347, "x": 0.5133333333 },
           { "color": 6857403, "x": 1 }
         ]
       },
       { "array": [{ "color": 4668006, "x": 0.5 }] },
-      { "array": [{ "color": 11855871, "x": 0.5 }] }
+      {
+        "array": [
+          { "color": 11256525, "x": 0 },
+          { "color": 11855871, "x": 0.5 },
+          { "color": 14153215, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 12173289, "x": 0 },
+          { "color": 8281087, "x": 0.44 },
+          { "color": 4527103, "x": 0.9433333333 },
+          { "color": 5047277, "x": 1 }
+        ]
+      }
     ],
     "spr": "sprMonkey",
     "spr_alt": [],
@@ -13522,7 +13548,7 @@
     "ability": ["teleport"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "startermind",
@@ -13562,19 +13588,25 @@
     "colors": [
       {
         "array": [
-          { "color": 14892911, "x": 0 },
-          { "color": 14496174, "x": 0.4933333333 },
-          { "color": 15615924, "x": 1 }
+          { "color": 15870051, "x": 0 },
+          { "color": 14030558, "x": 0.4933333333 },
+          { "color": 14963377, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 11752949, "x": 0 },
-          { "color": 8072428, "x": 0.4966666667 },
-          { "color": 4597996, "x": 1 }
+          { "color": 11418623, "x": 0 },
+          { "color": 8399103, "x": 0.4966666667 },
+          { "color": 7012607, "x": 1 }
         ]
       },
-      { "array": [{ "color": 6160359, "x": 0.5 }] },
+      {
+        "array": [
+          { "color": 5767111, "x": 0 },
+          { "color": 3735522, "x": 0.5 },
+          { "color": 65533, "x": 1 }
+        ]
+      },
       { "array": [{ "color": 16777120, "x": 0.5 }] }
     ],
     "colors2": null,
@@ -13621,7 +13653,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.5,
-      "char_width": 85.75,
+      "char_width": 88.75,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -13686,20 +13718,35 @@
     "shiny": [
       {
         "array": [
-          { "color": 6428649, "x": 0 },
-          { "color": 2629375, "x": 0.4766666667 },
-          { "color": 2971391, "x": 1 }
+          { "color": 16765755, "x": 0.0333333333 },
+          { "color": 14930095, "x": 0.26 },
+          { "color": 15514258, "x": 0.5033333333 },
+          { "color": 16742236, "x": 0.76 },
+          { "color": 14578023, "x": 0.95 }
         ]
       },
       {
         "array": [
-          { "color": 16164695, "x": 0 },
-          { "color": 16646000, "x": 0.4966666667 },
-          { "color": 14548865, "x": 1 }
+          { "color": 4121599, "x": 0 },
+          { "color": 6277631, "x": 0.35 },
+          { "color": 4241151, "x": 0.7833333333 },
+          { "color": 4232191, "x": 1 }
         ]
       },
-      { "array": [{ "color": 5507895, "x": 0.5 }] },
-      { "array": [{ "color": 16777215, "x": 0.5 }] }
+      {
+        "array": [
+          { "color": 7806975, "x": 0 },
+          { "color": 9983487, "x": 0.5 },
+          { "color": 11104767, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16777215, "x": 0.08 },
+          { "color": 16765665, "x": 0.4933333333 },
+          { "color": 11465727, "x": 0.9066666667 }
+        ]
+      }
     ],
     "spr": "sprOkapi",
     "spr_alt": [],
@@ -13805,7 +13852,7 @@
       [15, "nightshade"],
       [19, "recover"],
       [24, "hazeball"],
-      [29, "mindup"],
+      [29, "haze"],
       [35, "healhit2"],
       [39, "cover"],
       [44, "moon"],
@@ -13991,7 +14038,7 @@
       [12, "nightshade"],
       [16, "recover"],
       [21, "hazeball"],
-      [26, "mindup"],
+      [26, "haze"],
       [32, "healhit2"],
       [36, "cover"],
       [41, "moon"],
@@ -20148,6 +20195,12 @@
           { "color": 1468653, "x": 0.7733333333 },
           { "color": 2477817, "x": 1 }
         ]
+      },
+      {
+        "array": [
+          { "color": 2461115, "x": 0.1433333333 },
+          { "color": 5340326, "x": 1 }
+        ]
       }
     ],
     "colors2": null,
@@ -20272,7 +20325,8 @@
           { "color": 3828694, "x": 1 }
         ]
       },
-      { "array": [{ "color": 4542293, "x": 0.4733333333 }] }
+      { "array": [{ "color": 4542293, "x": 0.4733333333 }] },
+      { "array": [{ "color": 5460882, "x": 0.5 }] }
     ],
     "spr": "sprShy",
     "spr_alt": [],
@@ -20715,7 +20769,7 @@
     "ability": ["avenger", "guts"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "starterheart",
@@ -21929,6 +21983,7 @@
       "skillswap",
       "steal",
       "bomb",
+      "introduction",
       "haze",
       "dump",
       "quake"
@@ -22176,6 +22231,7 @@
       "skillswap",
       "steal",
       "bomb",
+      "introduction",
       "haze",
       "dump"
     ],
@@ -22370,6 +22426,7 @@
       "skillswap",
       "steal",
       "bomb",
+      "introduction",
       "haze",
       "dump"
     ],

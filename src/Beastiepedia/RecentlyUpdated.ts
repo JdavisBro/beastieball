@@ -19,4 +19,6 @@ export const BEASITE_SPRITES_RECENTLY_UPDATED = [
   "spirit",
   "ghost",
   "ghost2",
+  "okapi",
+  "monkey",
 ];

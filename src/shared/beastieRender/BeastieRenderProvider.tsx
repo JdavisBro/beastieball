@@ -94,7 +94,7 @@ export default function BeastieRenderProvider(
           : beastie_data.colors;
     const colors = beastie.colors ?? [0.5, 0.5, 0.5, 0.5, 0.5];
     const cols = [...Array(beastieColors.length).keys()].map((value) => {
-      const x = colors.length < value ? 0.5 : colors[value];
+      const x = colors.length <= value ? 0.5 : colors[value];
       return getColorInBeastieColors(x, beastieColors[value].array);
     });
     setColorUniforms(glRef.current.gl, glRef.current.program, cols);

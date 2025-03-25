@@ -152,7 +152,9 @@ export default function ColorTabs(props: Props): React.ReactNode {
 
   const [customColors, setCustomColors] = useState<string[]>(
     !isDiffBeastie && validStoredColors
-      ? storedColors[beastiedata.id].custom
+      ? colors.map(
+          (index) => storedColors[beastiedata.id].custom[index] ?? "#ffffff",
+        )
       : defaultColor(colors, beastiedata.colors).custom,
   );
 
@@ -163,12 +165,14 @@ export default function ColorTabs(props: Props): React.ReactNode {
     }
     const beastieColors =
       !isDiffBeastie && validStoredColors
-        ? storedColors[beastiedata.id]
-        : defaultColor(colors, beastiedata.colors);
-    beastieColors.custom.forEach((value, index) =>
+        ? colors.map(
+            (index) => storedColors[beastiedata.id].custom[index] ?? "#ffffff",
+          )
+        : defaultColor(colors, beastiedata.colors).custom;
+    beastieColors.forEach((value, index) =>
       colorChange(index, hexToRgb(value)),
     );
-    setCustomColors(beastieColors.custom);
+    setCustomColors(beastieColors);
   }, [
     isCustomTab,
     beastiedata,
@@ -415,6 +419,11 @@ function BeastieColorTabContent(props: {
     if (!isDiffBeastie) {
       if (storedColors[beastieid] && !Array.isArray(storedColors[beastieid])) {
         colorValues.current = storedColors[beastieid][tab];
+        if (colorValues.current.length < colorMax.length) {
+          colorValues.current = colorMax.map(
+            (index) => colorValues.current?.[index] ?? 0.5,
+          );
+        }
       } else {
         colorValues.current = colorMax.map(() => 0.5);
       }

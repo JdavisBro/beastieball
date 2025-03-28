@@ -37,6 +37,32 @@ type Props = {
   beastiedata: BeastieType;
 };
 
+function isAnimEmpty(anim: BeastieAnimation | number | string | undefined) {
+  if (!anim || typeof anim == "number" || typeof anim == "string") {
+    return true;
+  }
+  if (Array.isArray(anim.frames)) {
+    return false;
+  }
+  return !anim.frames.startFrame && !anim.frames.endFrame;
+}
+
+const ANIMATION_LIST = [
+  "idle",
+  "move",
+  "ready",
+  "spike",
+  "volley",
+  "good",
+  "bad",
+  "fall",
+  "air",
+  "stop",
+  "menu",
+  "hug", // troglum
+  "special", // conjarr
+];
+
 export default function ContentPreview(props: Props): React.ReactNode {
   const [colors, setColors] = useState<number[][]>([
     [255, 255, 255],
@@ -384,29 +410,12 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const [background, setBackground] = useState(false);
   const [backgroundColor, setBackgroundColor] = useState("#ffffff");
 
-  const animationList = [
-    "idle",
-    "move",
-    "ready",
-    "spike",
-    "volley",
-    "good",
-    "bad",
-    "fall",
-    "air",
-    "stop",
-    "menu",
-    "hug", // troglum
-  ];
-
-  // Remove animations not in beastie
-  if (animdata) {
-    animationList.forEach((value, index) => {
-      if (!(value in animdata)) {
-        animationList.splice(index, 1);
-      }
-    });
-  }
+  const animationList = ANIMATION_LIST.filter((value) => {
+    return (
+      value in animdata &&
+      !(value != "idle" && value != animation && isAnimEmpty(animdata[value]))
+    );
+  });
 
   const gifDisabled = useMemo(() => {
     if (animdata && animdata[animation]) {

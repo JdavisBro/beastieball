@@ -60,6 +60,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -299,6 +305,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -570,6 +582,12 @@
           "_": "class_canim_frames",
           "endFrame": 1,
           "startFrame": 1
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -937,6 +955,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -1174,6 +1198,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -1462,6 +1492,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -1679,6 +1715,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -1893,6 +1935,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -2292,6 +2340,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -2553,6 +2607,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -2906,6 +2966,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -3204,6 +3270,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -3444,6 +3516,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -3721,6 +3799,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -3976,6 +4060,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -4224,6 +4314,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -4516,6 +4612,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -4760,6 +4862,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -5060,6 +5168,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -5403,6 +5517,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -5608,15 +5728,82 @@
   },
   "_sprCrab_alt": {
     "anim_data": {
-      "__Elephant_Circular_Ref__": 1212
+      "__Elephant_Circular_Ref__": 1250
     },
     "ball": {
       "x": 123,
       "y": -408
     },
-    "colors": {
-      "__Elephant_Circular_Ref__": 1509
-    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 4276036,
+            "x": 0
+          },
+          {
+            "color": 5000279,
+            "x": 0.5
+          },
+          {
+            "color": 6177627,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 13161189,
+            "x": 0
+          },
+          {
+            "color": 10994904,
+            "x": 0.4933333333
+          },
+          {
+            "color": 11916004,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 8406082,
+            "x": 0
+          },
+          {
+            "color": 8737579,
+            "x": 0.5
+          },
+          {
+            "color": 7362092,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14807549,
+            "x": 0
+          },
+          {
+            "color": 15333375,
+            "x": 0.5
+          },
+          {
+            "color": 15463679,
+            "x": 1
+          }
+        ]
+      }
+    ],
     "colors2": null,
     "evo1": {
       "anim": "good",
@@ -5637,7 +5824,7 @@
       "y": 0
     },
     "loco_data": {
-      "__Elephant_Circular_Ref__": 1253
+      "__Elephant_Circular_Ref__": 1293
     },
     "miss": {
       "x": -22,
@@ -5653,9 +5840,68 @@
       "x": 100,
       "y": -535
     },
-    "shiny": {
-      "__Elephant_Circular_Ref__": 1539
-    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16054271,
+            "x": 0
+          },
+          {
+            "color": 15066879,
+            "x": 0.52
+          },
+          {
+            "color": 15334143,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 12437732,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 7548146,
+            "x": 0
+          },
+          {
+            "color": 6175226,
+            "x": 0.5
+          },
+          {
+            "color": 4673524,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 13752831,
+            "x": 0
+          },
+          {
+            "color": 13752831,
+            "x": 0.3933333333
+          },
+          {
+            "color": 16777215,
+            "x": 1
+          }
+        ]
+      }
+    ],
     "splash": {
       "angle": -10,
       "anim": "ready",
@@ -5722,6 +5968,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -5977,6 +6229,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -6262,6 +6520,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -6655,6 +6919,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -6938,6 +7208,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -7270,6 +7546,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -7640,6 +7922,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -7962,6 +8250,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -8243,6 +8537,12 @@
           "startFrame": 1
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -8461,6 +8761,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -8717,6 +9023,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -8921,6 +9233,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -9173,6 +9491,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -9468,6 +9792,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -9843,6 +10173,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -10107,6 +10443,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -10419,6 +10761,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -10675,6 +11023,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -10921,6 +11275,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -11154,6 +11514,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -11426,6 +11792,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -11953,6 +12325,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -12138,6 +12516,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -12339,6 +12723,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -12520,6 +12910,12 @@
         }
       },
       "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "special": {
         "_": "class_char_animationdata",
         "frames": {
           "_": "class_canim_frames"
@@ -12808,6 +13204,12 @@
           "startFrame": 20
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -13067,6 +13469,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -13361,6 +13769,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -13636,6 +14050,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -13995,6 +14415,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -14253,6 +14679,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -14570,6 +15002,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -14778,6 +15216,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -15017,6 +15461,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -15281,6 +15731,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -15525,6 +15981,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -15757,6 +16219,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -16070,6 +16538,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -16416,6 +16890,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -16632,6 +17112,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -16903,6 +17389,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -17148,6 +17640,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -17418,6 +17916,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -17666,6 +18170,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -17959,6 +18469,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -18189,6 +18705,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -18354,6 +18876,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -18679,6 +19207,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -19100,6 +19634,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -19324,6 +19864,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -19367,15 +19913,15 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 12142411,
+            "color": 16749977,
             "x": 0
           },
           {
-            "color": 14762345,
+            "color": 16746404,
             "x": 0.4833333333
           },
           {
-            "color": 13189820,
+            "color": 16094956,
             "x": 1
           }
         ]
@@ -19467,15 +20013,15 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 6441067,
+            "color": 11245991,
             "x": 0
           },
           {
-            "color": 6306925,
+            "color": 11045555,
             "x": 0.4766666667
           },
           {
-            "color": 4993376,
+            "color": 9664678,
             "x": 1
           }
         ]
@@ -19575,6 +20121,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -19981,6 +20533,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -20288,6 +20846,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -20590,6 +21154,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -20935,6 +21505,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -21318,6 +21894,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -21764,6 +22346,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -22105,15 +22693,152 @@
   },
   "_sprRat_alt": {
     "anim_data": {
-      "__Elephant_Circular_Ref__": 4898
+      "__Elephant_Circular_Ref__": 5080
     },
     "ball": {
       "x": 154.8,
       "y": -261.6
     },
-    "colors": {
-      "__Elephant_Circular_Ref__": 6056
-    },
+    "colors": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 1788927,
+            "x": 0
+          },
+          {
+            "color": 2631935,
+            "x": 0.4966666667
+          },
+          {
+            "color": 5124094,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 12637695,
+            "x": 0
+          },
+          {
+            "color": 11192063,
+            "x": 0.5
+          },
+          {
+            "color": 11854591,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16119777,
+            "x": 0
+          },
+          {
+            "color": 14869218,
+            "x": 0.5
+          },
+          {
+            "color": 12566494,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 4363499,
+            "x": 0
+          },
+          {
+            "color": 7388586,
+            "x": 0.12
+          },
+          {
+            "color": 11532208,
+            "x": 0.25
+          },
+          {
+            "color": 13759844,
+            "x": 0.37
+          },
+          {
+            "color": 15110714,
+            "x": 0.5
+          },
+          {
+            "color": 15031935,
+            "x": 0.62
+          },
+          {
+            "color": 13928915,
+            "x": 0.7533333333
+          },
+          {
+            "color": 9928162,
+            "x": 0.8766666667
+          },
+          {
+            "color": 3555918,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14713450,
+            "x": 0
+          },
+          {
+            "color": 15068869,
+            "x": 0.2493333333
+          },
+          {
+            "color": 10610632,
+            "x": 0.5013333333
+          },
+          {
+            "color": 11331053,
+            "x": 0.7573333333
+          },
+          {
+            "color": 14475252,
+            "x": 0.8773333333
+          },
+          {
+            "color": 14659815,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 8284649,
+            "x": 0
+          },
+          {
+            "color": 7576816,
+            "x": 0.5
+          },
+          {
+            "color": 8178928,
+            "x": 1
+          }
+        ]
+      }
+    ],
     "colors2": null,
     "evo1": {
       "anim": "good",
@@ -22134,7 +22859,7 @@
       "y": 0
     },
     "loco_data": {
-      "__Elephant_Circular_Ref__": 4974
+      "__Elephant_Circular_Ref__": 5158
     },
     "miss": {
       "x": 222.8571428571,
@@ -22150,9 +22875,122 @@
       "x": 139.4285714286,
       "y": -286.8571428571
     },
-    "shiny": {
-      "__Elephant_Circular_Ref__": 6105
-    },
+    "shiny": [
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 16758960,
+            "x": 0
+          },
+          {
+            "color": 11708106,
+            "x": 0.4813333333
+          },
+          {
+            "color": 5600994,
+            "x": 0.7253333333
+          },
+          {
+            "color": 2776499,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 11573759,
+            "x": 0
+          },
+          {
+            "color": 9211135,
+            "x": 0.4853333333
+          },
+          {
+            "color": 9212671,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 15527148,
+            "x": 0.5
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 5259334,
+            "x": 0
+          },
+          {
+            "color": 14408912,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 255,
+            "x": 0
+          },
+          {
+            "color": 43775,
+            "x": 0.1276190476
+          },
+          {
+            "color": 65405,
+            "x": 0.2571428571
+          },
+          {
+            "color": 5372672,
+            "x": 0.379047619
+          },
+          {
+            "color": 16774656,
+            "x": 0.5123809524
+          },
+          {
+            "color": 16729344,
+            "x": 0.6495238095
+          },
+          {
+            "color": 16711814,
+            "x": 0.779047619
+          },
+          {
+            "color": 11010303,
+            "x": 0.8895238095
+          },
+          {
+            "color": 255,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 14084330,
+            "x": 0
+          },
+          {
+            "color": 4076860,
+            "x": 1
+          }
+        ]
+      }
+    ],
     "splash": {
       "angle": 344.1231689453,
       "anim": "volley",
@@ -22219,6 +23057,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -22540,6 +23384,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -22789,6 +23639,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -23192,6 +24048,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -23753,6 +24615,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -24028,6 +24896,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -24274,6 +25148,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -24710,6 +25590,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -25060,6 +25946,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -25312,6 +26204,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -25578,6 +26476,12 @@
           "_": "class_canim_frames",
           "endFrame": 9,
           "startFrame": 9
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -25994,6 +26898,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -26283,6 +27193,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -26639,6 +27555,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -26983,6 +27905,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -27272,6 +28200,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -27575,6 +28509,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -27593,23 +28533,23 @@
       }
     },
     "ball": {
-      "x": 64,
-      "y": -150
+      "x": 81,
+      "y": -285
     },
     "colors": [
       {
         "_": "class_gradient",
         "array": [
           {
-            "color": 5232576,
+            "color": 5365190,
             "x": 0
           },
           {
-            "color": 4378838,
-            "x": 0.5
+            "color": 5695964,
+            "x": 0.4466666667
           },
           {
-            "color": 5227736,
+            "color": 6214374,
             "x": 1
           }
         ]
@@ -27618,15 +28558,23 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 7982420,
+            "color": 10012276,
             "x": 0
           },
           {
-            "color": 5822306,
+            "color": 6942505,
+            "x": 0.1433333333
+          },
+          {
+            "color": 9297480,
             "x": 0.5
           },
           {
             "color": 6016385,
+            "x": 0.84
+          },
+          {
+            "color": 7518606,
             "x": 1
           }
         ]
@@ -27635,7 +28583,7 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 15883995,
+            "color": 12412142,
             "x": 0
           },
           {
@@ -27643,15 +28591,19 @@
             "x": 0.25
           },
           {
-            "color": 2375666,
-            "x": 0.5
+            "color": 1987566,
+            "x": 0.4733333333
           },
           {
             "color": 1468653,
-            "x": 0.7733333333
+            "x": 0.7466666667
           },
           {
             "color": 2477817,
+            "x": 0.9333333333
+          },
+          {
+            "color": 4776703,
             "x": 1
           }
         ]
@@ -27660,11 +28612,15 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 2461115,
+            "color": 3630772,
             "x": 0.1433333333
           },
           {
-            "color": 5340326,
+            "color": 5541823,
+            "x": 0.5
+          },
+          {
+            "color": 5076637,
             "x": 1
           }
         ]
@@ -27695,18 +28651,18 @@
       "move_to_idle_transition_frames": []
     },
     "miss": {
-      "x": 76,
-      "y": -84
+      "x": 228,
+      "y": -162
     },
     "partner": {
       "angle": 328.6030883789,
       "anim": "good",
-      "x": 107,
-      "y": -66
+      "x": 178,
+      "y": -206
     },
     "ready": {
-      "x": 27,
-      "y": -182
+      "x": 192,
+      "y": -366
     },
     "shiny": [
       {
@@ -27765,8 +28721,8 @@
     "splash": {
       "angle": 355.9143981934,
       "anim": "ready",
-      "x": 74,
-      "y": -61
+      "x": 69,
+      "y": -45
     }
   },
   "_sprSnake": {
@@ -27828,6 +28784,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -28092,6 +29054,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -28333,6 +29301,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -28568,6 +29542,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -28854,6 +29834,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -29201,6 +30187,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {
@@ -29586,6 +30578,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -29965,6 +30963,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -30314,6 +31318,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -30550,6 +31560,12 @@
           "startFrame": 2
         }
       },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
       "spike": {
         "_": "class_char_animationdata",
         "frames": {
@@ -30776,7 +31792,9 @@
       "air": {
         "_": "class_char_animationdata",
         "frames": {
-          "_": "class_canim_frames"
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
         }
       },
       "bad": {
@@ -30829,6 +31847,14 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 8,
+          "startFrame": 8
         }
       },
       "spike": {
@@ -31113,6 +32139,12 @@
           "_": "class_canim_frames",
           "endFrame": 2,
           "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "spike": {

@@ -368,6 +368,7 @@ export default function MoveView(props: {
   if (attack) {
     switch (props.move.targ) {
       case 1:
+      case 3:
         desc.push("Targets straight ahead.");
         break;
       case 4:

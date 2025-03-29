@@ -18,7 +18,7 @@ const EffectFilters: {
   { name: "Usage Condition: At Net", use: [2] },
   { name: "Usage Condition: Ball Hittable", effects: [69] },
   // Targets
-  { name: "Targets: Straight Ahead", target: [1] },
+  { name: "Targets: Straight Ahead", target: [1, 3] },
   { name: "Targets: Front Row", target: [4] },
   { name: "Targets: Back Row", target: [8] },
   { name: "Targets: Sideways", target: [12] },
@@ -38,7 +38,7 @@ const EffectFilters: {
   { name: "Feeling: STRESSED", effects: [39] },
   // Field Effects
   { name: "Field: TRAP", effects: [42] },
-  { name: "Field: RALLY", effects: [43] },
+  { name: "Field: RALLY", effects: [43, [33, 25]] },
   { name: "Field: RHYTHM", effects: [44, 64] },
   { name: "Field: DREAD", effects: [45] },
   { name: "Field: QUAKE", effects: [70] },
@@ -77,7 +77,7 @@ const EffectFilters: {
       [33, 0],
       [33, 1],
       [33, 8],
-      [33, 9],
+      [33, 27],
     ],
   },
   {
@@ -107,9 +107,10 @@ const EffectFilters: {
     ],
   },
   { name: "Pow Condition: Tied/Behind", effects: [[33, 15]] },
-  { name: "Pow Condition: Recieved In Back", effects: [[33, 16]] },
+  { name: "Pow Condition: Back-row Target", effects: [[33, 16]] },
   { name: "Pow Condition: Recieved", effects: [[33, 18]] },
   { name: "Pow Condition: Volley", effects: [[33, 19]] },
+  { name: "Pow Condition: Changed Row/Lane", effects: [[33, 26]] },
 ];
 
 export default EffectFilters;

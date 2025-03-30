@@ -335,7 +335,7 @@
     "name": "Groove"
   },
   "rhythmset": {
-    "desc": "When they use a [sprIcon,0]BODY attack, sets RHYTHM on ally field",
+    "desc": "When they land a [sprIcon,0]BODY attack, sets RHYTHM on ally field",
     "id": "rhythmset",
     "name": "Shanty"
   },
@@ -345,7 +345,7 @@
     "name": "Momentum"
   },
   "sauna": {
-    "desc": "[sprStatus,6]SWEATY Beasties lose +10 STAMINA",
+    "desc": "Other [sprStatus,6]SWEATY Beasties lose +10 STAMINA",
     "id": "sauna",
     "name": "Sauna"
   },

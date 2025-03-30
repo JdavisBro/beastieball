@@ -7835,8 +7835,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14,
-          "user": 2
+          "type": 14
         }
       ],
       "description": "Land a [sprIcon,0] attack on this Beastie"
@@ -8048,8 +8047,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14,
-          "user": 2
+          "type": 14
         }
       ],
       "description": "Land a [sprIcon,0] attack on this Beastie"
@@ -8232,8 +8230,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14,
-          "user": 2
+          "type": 14
         }
       ],
       "description": "Land a [sprIcon,0] attack on this Beastie"
@@ -14752,7 +14749,7 @@
     "ability": ["lightningrod_m"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "markattack",
@@ -14801,9 +14798,9 @@
       },
       {
         "array": [
-          { "color": 12142411, "x": 0 },
-          { "color": 14762345, "x": 0.4833333333 },
-          { "color": 13189820, "x": 1 }
+          { "color": 16749977, "x": 0 },
+          { "color": 16746404, "x": 0.4833333333 },
+          { "color": 16094956, "x": 1 }
         ]
       },
       {
@@ -14970,9 +14967,9 @@
       { "array": [{ "color": 951534, "x": 0.4833333333 }] },
       {
         "array": [
-          { "color": 6441067, "x": 0 },
-          { "color": 6306925, "x": 0.4766666667 },
-          { "color": 4993376, "x": 1 }
+          { "color": 11245991, "x": 0 },
+          { "color": 11045555, "x": 0.4766666667 },
+          { "color": 9664678, "x": 1 }
         ]
       },
       {
@@ -16016,9 +16013,9 @@
                 "event": null,
                 "freq": -1,
                 "my_data": null,
+                "player": 0,
                 "rel_color": -1,
-                "type": 45,
-                "user": 0
+                "type": 45
               }
             ],
             "description": "A Squimage must change its Trait while its [sprIcon,0][sprIcon,1][sprIcon,2]DEFs are BOOSTed [sprBoost,0][sprBoost,0][sprBoost,0] or more"
@@ -20139,7 +20136,7 @@
     "ability": ["shy"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 20,
+    "anim_progress": 40,
     "animator": 8,
     "attklist": [
       "starterheart",
@@ -20175,31 +20172,35 @@
     "colors": [
       {
         "array": [
-          { "color": 5232576, "x": 0 },
-          { "color": 4378838, "x": 0.5 },
-          { "color": 5227736, "x": 1 }
+          { "color": 5365190, "x": 0 },
+          { "color": 5695964, "x": 0.4466666667 },
+          { "color": 6214374, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 7982420, "x": 0 },
-          { "color": 5822306, "x": 0.5 },
-          { "color": 6016385, "x": 1 }
+          { "color": 10012276, "x": 0 },
+          { "color": 6942505, "x": 0.1433333333 },
+          { "color": 9297480, "x": 0.5 },
+          { "color": 6016385, "x": 0.84 },
+          { "color": 7518606, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 15883995, "x": 0 },
+          { "color": 12412142, "x": 0 },
           { "color": 7546854, "x": 0.25 },
-          { "color": 2375666, "x": 0.5 },
-          { "color": 1468653, "x": 0.7733333333 },
-          { "color": 2477817, "x": 1 }
+          { "color": 1987566, "x": 0.4733333333 },
+          { "color": 1468653, "x": 0.7466666667 },
+          { "color": 2477817, "x": 0.9333333333 },
+          { "color": 4776703, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 2461115, "x": 0.1433333333 },
-          { "color": 5340326, "x": 1 }
+          { "color": 3630772, "x": 0.1433333333 },
+          { "color": 5541823, "x": 0.5 },
+          { "color": 5076637, "x": 1 }
         ]
       }
     ],
@@ -20247,7 +20248,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 56.25,
+      "char_width": 74.5,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -22795,9 +22796,9 @@
     },
     "recruit_value": 9,
     "roamer_style": {
-      "_name": "STOP_AND_STARE",
+      "_name": "CAMO",
       "can_react": true,
-      "can_socialize": true,
+      "can_socialize": false,
       "can_volley": true,
       "cancel_on_player_invincible": false,
       "checking_player_distance": true,

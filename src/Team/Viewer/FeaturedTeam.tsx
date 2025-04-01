@@ -82,7 +82,7 @@ export default function FeaturedTeam({
           }
           const isSpoiler =
             spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
-          const alt = `${isSpoiler ? `Beastie #${beastie.number}` : beastie.name} icon`;
+          const alt = `${isSpoiler ? `Human #${beastie.number}` : beastie.name} icon`;
           return (
             <img
               key={beastie.id + String(index)}

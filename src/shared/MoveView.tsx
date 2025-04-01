@@ -484,8 +484,8 @@ export default function MoveView(props: {
                 }
               }}
               role="button"
-              alt="View Beasties that learn this play."
-              title="View Beasties that learn this play."
+              alt="View Humans that learn this play."
+              title="View Humans that learn this play."
             />
           )}
         </div>

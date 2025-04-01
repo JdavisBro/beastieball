@@ -73,7 +73,7 @@ export default function Beastiepedia(): React.ReactNode {
         description={
           beastiedata
             ? beastiedata.desc
-            : "View information and previews of the Beasties from Beastieball!"
+            : "View information and previews of the Humans from Humanball!"
         }
       />
       <Header
@@ -113,11 +113,11 @@ export default function Beastiepedia(): React.ReactNode {
               </>
             ) : (
               <h1 className={styles.notselectedtext}>
-                No Beastie Selected
+                No Human Selected
                 <br />
                 {sidebarvisible
-                  ? "Select a beastie in the sidebar"
-                  : "Select a beastie by toggling the menu in the top left"}
+                  ? "Select a human in the sidebar"
+                  : "Select a human by toggling the menu in the top left"}
                 .
               </h1>
             )}

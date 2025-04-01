@@ -8,7 +8,7 @@ export default function Team() {
         title={`Teams - ${import.meta.env.VITE_BRANDING}`}
         image="gameassets/sprMainmenu/20.png"
         url="/team/"
-        description="Team Viewer and Builder for Beastieball!"
+        description="Team Viewer and Builder for Humanball!"
       />
       <NavigationMenuOption
         text="Home"

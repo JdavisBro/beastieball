@@ -37,7 +37,7 @@ export default function Save(): React.ReactElement {
         title="Beastieball Save Viewer"
         image="gameassets/sprMainmenu/10.png"
         url="modding/save/"
-        description="Save Viewer/Editor for Beastieball"
+        description="Save Viewer/Editor for Humanball"
       />
       <Header
         title="Beastieball Save Viewer"

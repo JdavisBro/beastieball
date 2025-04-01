@@ -84,7 +84,7 @@ export default function Sidebar(props: Props): React.ReactElement {
         <div className={styles.controls}>
           <input
             type="search"
-            placeholder="Search Beasties.."
+            placeholder="Search Humans.."
             className={styles.sidebarsearch}
             onChange={(event) => setSearch(event.currentTarget.value)}
             onFocus={(event) => event.currentTarget.select()}

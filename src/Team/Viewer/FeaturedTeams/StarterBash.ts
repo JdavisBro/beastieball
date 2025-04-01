@@ -2078,7 +2078,7 @@ const StarterBash: FeaturedCategoryRoot = {
           },
           name: "Kasaleet & Co v7.6",
           description:
-            "The seventhish iteration of my Kasaleet team! Supilero without attacks to fully support and back all the team members with Diabloceras to get rid of problematic Traits means that every Beastie here gets to win their ones eventually!",
+            "The seventhish iteration of my Kasaleet team! Supilero without attacks to fully support and back all the team members with Diabloceras to get rid of problematic Traits means that every Human here gets to win their ones eventually!",
           author: "Ultra Nero Mode",
         },
       ],

@@ -133,7 +133,7 @@ export default function Viewer() {
     <>
       <OpenGraph
         title={`${selectedFeatured ? `${selectedFeatured.name} - ` : ""}Team Viewer - ${import.meta.env.VITE_BRANDING}`}
-        description="Online Team Viewer for SportsNet download codes from Beastieball!"
+        description="Online Team Viewer for SportsNet download codes from Humanball!"
         image="gameassets/sprMainmenu/8.png"
         url="team/viewer/"
         noindex={!!code}

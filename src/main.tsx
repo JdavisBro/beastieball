@@ -42,7 +42,7 @@ createRoot(container).render(
         title={import.meta.env.VITE_BRANDING}
         image="ball.png"
         url=""
-        description="A website with information about the game Beastieball!"
+        description="A website with information about the game Humanball!"
       />
       <Container>
         <SpoilerWarning>

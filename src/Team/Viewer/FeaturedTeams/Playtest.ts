@@ -1037,6 +1037,6 @@ const playtest: FeaturedTeamType[] = [
 
 export default {
   header: "Playtest",
-  description: "Teams added to the page during the 3rd Beastieball Playtest.",
+  description: "Teams added to the page during the 3rd Humanball Playtest.",
   teams: playtest,
 };

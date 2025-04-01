@@ -65,7 +65,7 @@ export default function SavedTeams({
                           src={`/icons/${BEASTIE_DATA.get(beastie.specie)?.name}.png`}
                         />
                         <button
-                          title="Overwrites the Beastie you're currently editing."
+                          title="Overwrites the Human you're currently editing."
                           onClick={() => {
                             const newBeastie = structuredClone(beastie);
                             newBeastie.pid = createPid();

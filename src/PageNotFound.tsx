@@ -21,7 +21,7 @@ export default function PageNotFound(): React.ReactElement {
         title={`Page Not Found - ${import.meta.env.VITE_BRANDING}`}
         image="ball.png"
         url=""
-        description="A website with data on Beastieball!"
+        description="A website with data on Humanball!"
         notfound={true}
       />
       <h1>Page Not Found</h1>

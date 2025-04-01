@@ -235,7 +235,7 @@ export default function Filter({
     >
       <div title="">
         <Modal
-          header="Filter Beasties"
+          header="Filter Humans"
           open={open}
           onClose={() => setOpen(false)}
           hashValue="Filter"

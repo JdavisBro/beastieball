@@ -116,7 +116,7 @@ export default function PlayDex() {
         title="PlayDex"
         image="gameassets/sprMainmenu/6.png"
         url="playdex/"
-        description="List of moves/plays from Beastieball."
+        description="List of moves/plays from Humanball."
       />
       <Header title="PlayDex" />
       <div className={styles.settings}>

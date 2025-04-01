@@ -40,7 +40,7 @@ export default function Beastie(props: {
   });
 
   if (!beastiedata) {
-    throw Error(`Invalid Beastie? ${save_beastie.specie}`);
+    throw Error(`Invalid Human? ${save_beastie.specie}`);
   }
   // const [min_scale, max_scale] = beastiedata.scale;
   // const beastie_scale =

@@ -48,7 +48,7 @@ export default function BeastieRenderProvider(
 
     const beastie_data = BEASTIE_DATA.get(beastie.id);
     if (!beastie_data) {
-      console.log("Beastie render failed. Fake beastie");
+      console.log("Human render failed. Fake beastie");
       return null;
     }
     const sprite = SPRITE_INFO[beastie_data.spr];
@@ -60,7 +60,7 @@ export default function BeastieRenderProvider(
     const drawn_sprite = SPRITE_INFO[drawn_name];
     if (!sprite || !drawn_sprite) {
       console.log(
-        "Beastie render failed. SPRITE: ",
+        "Human render failed. SPRITE: ",
         !!sprite,
         "DRAWN_SPRITE: ",
         !!drawn_sprite,

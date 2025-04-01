@@ -8,7 +8,7 @@ export default function Modding(): React.ReactElement {
         title="Beastieball Modding Tools"
         image="gameassets/sprMainmenu/12.png"
         url="modding/"
-        description="Modding Tools, like a save file viewer, for Beastieball"
+        description="Modding Tools, like a save file viewer, for Humanball"
       />
       <NavigationMenu
         title="Beastieball Modding Tools"

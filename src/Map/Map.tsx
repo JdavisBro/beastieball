@@ -269,9 +269,9 @@ export default function Map(): React.ReactNode {
         title={`Map - ${import.meta.env.VITE_BRANDING}`}
         image="gameassets/sprMainmenu/3.png"
         url="map/"
-        description="A map of the world of Beastieball"
+        description="A map of the world of Humanball"
       />
-      <Header title="Beastieball Map" />
+      <Header title="Humanball Map" />
       <MapContainer
         className={styles.map}
         minZoom={-7}
@@ -303,7 +303,7 @@ export default function Map(): React.ReactNode {
               </LayersControl.Overlay>
             ),
           )}
-          <LayersControl.Overlay checked name="Beastie Spawns">
+          <LayersControl.Overlay checked name="Human Spawns">
             <LayerGroup>{beastieSpawnsOverlays}</LayerGroup>
           </LayersControl.Overlay>
           <LayersControl.Overlay checked name="Items">
@@ -412,7 +412,7 @@ export default function Map(): React.ReactNode {
           </LayersControl.Overlay>
           <LayersControl.Overlay
             checked
-            name={`${extinctIsSpoiler ? "???" : "Extinct"} Beastie Locations`}
+            name={`${extinctIsSpoiler ? "???" : "Extinct"} Human Locations`}
           >
             <LayerGroup>
               {EXTINCT_BEASTIES.map((extinct) => (
@@ -453,7 +453,7 @@ export default function Map(): React.ReactNode {
         <Control position="topright">
           <div className={styles.controlBox}>
             <div className={styles.controlHidden}>
-              <img src="/icons/Sprecko.png" alt="Beastie Options" />
+              <img src="/icons/Sprecko.png" alt="Human Options" />
             </div>
             <div className={styles.controlContent}>
               <h3>Beastie Options</h3>
@@ -465,7 +465,7 @@ export default function Map(): React.ReactNode {
                 isSelectable={(beastie) =>
                   SPAWNABLE_BEASTIES.includes(beastie.id)
                 }
-                nonSelectableReason="Beastie has no wild habitat."
+                nonSelectableReason="Human has no wild habitat."
               />
               <div>
                 <input

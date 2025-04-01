@@ -346,7 +346,7 @@ async function createTeamImage(
         sprAlt: beastie.spr_index,
       });
       if (!result) {
-        throw new Error("Could not render Beastie.");
+        throw new Error("Could not render Human.");
       }
       const [canvas, bbox] = result;
       if (bbox) {

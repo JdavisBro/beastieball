@@ -38,7 +38,7 @@ export default function LoadedFile(props: {
 
   return (
     <BeastieRenderProvider>
-      <FoldableSection title="Team Beasties">
+      <FoldableSection title="Team Humans">
         <div className={styles.beastiecontainer}>
           {props.save.team_party.map((value) => (
             <Beastie key={value.pid} beastie={value} />
@@ -61,7 +61,7 @@ export default function LoadedFile(props: {
           )}
         </div>
       </FoldableSection>
-      <FoldableSection title="Reserve Beasties" defaultOpen={false}>
+      <FoldableSection title="Reserve Humans" defaultOpen={false}>
         <div className={styles.beastiecontainer}>
           {reserve ? (
             reserve.map((value) => <Beastie key={value.pid} beastie={value} />)
@@ -70,7 +70,7 @@ export default function LoadedFile(props: {
           )}
         </div>
       </FoldableSection>
-      <FoldableSection title="Other Beasties" defaultOpen={false}>
+      <FoldableSection title="Other Humans" defaultOpen={false}>
         <div className={styles.beastiecontainer}>
           {others.map((value) => (
             <Beastie key={value.pid} beastie={value} />

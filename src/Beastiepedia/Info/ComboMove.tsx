@@ -116,7 +116,7 @@ export default function ComboMove({
         noLearner={true}
         typeText={
           type == ComboType.Rivals
-            ? "Rivals Move type is the type with the highest POW on the user Beastie."
+            ? "Rivals Move type is the type with the highest POW on the user Human."
             : undefined
         }
       />

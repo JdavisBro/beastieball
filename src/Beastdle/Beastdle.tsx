@@ -55,7 +55,7 @@ export default function Beastdle() {
         title={`Beastdle - ${import.meta.env.VITE_BRANDING}`}
         image="gameassets/sprMainmenu/25.png"
         url="beastdle/"
-        description="Beastieball Beastie Guessing Game!"
+        description="Beastieball Human Guessing Game!"
       />
       <Header title="Beastdle" />
       <div className={styles.container}>
@@ -120,7 +120,7 @@ export default function Beastdle() {
               <BeastieSelect
                 beastieId={undefined}
                 setBeastieId={guess}
-                textOverride="Select Beastie"
+                textOverride="Select Human"
               />
               <button
                 onClick={() => setGuesses([target.id, ...guesses])}

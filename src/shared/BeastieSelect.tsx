@@ -114,10 +114,10 @@ export default function BeastieSelect({
       <button onClick={() => setOpen(true)}>
         {textOverride
           ? textOverride
-          : `Select Beastie: ${beastie?.name ?? (extraOption && beastieId == extraOption ? extraOptionText : "Unset")}`}
+          : `Select Human: ${beastie?.name ?? (extraOption && beastieId == extraOption ? extraOptionText : "Unset")}`}
       </button>
       <Modal
-        header="Select Beastie"
+        header="Select Human"
         open={open}
         onClose={onClose}
         hashValue="BeastieSelect"

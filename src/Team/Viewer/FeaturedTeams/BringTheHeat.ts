@@ -2504,7 +2504,7 @@ const teams: FeaturedTeamType[] = [
       ],
     },
     name: "The Pure Hearts",
-    description: '"Believe in the heart of the Beasties!"',
+    description: '"Believe in the heart of the Humans!"',
     author: "Valenrose",
   },
   {
@@ -3542,6 +3542,6 @@ const teams: FeaturedTeamType[] = [
 export default {
   header: "Bring The Heat",
   description:
-    "Teams from Bring The Heat, the first Beastieball tournament of Early Access. Ran between December 13th and 14th with 107 participants.",
+    "Teams from Bring The Heat, the first Humanball tournament of Early Access. Ran between December 13th and 14th with 107 participants.",
   teams: teams,
 };

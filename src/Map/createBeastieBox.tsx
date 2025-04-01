@@ -61,7 +61,7 @@ export default function createBeastieBox(
     }
     const isSpoiler =
       spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
-    const alt = `${isSpoiler ? `Beastie #${beastie.number}` : beastie.name} spawn location.`;
+    const alt = `${isSpoiler ? `Human #${beastie.number}` : beastie.name} spawn location.`;
     const iconScale = beastie.id != huntedBeastie ? 1 : 1.5;
     beastieSpawnsOverlays.push(
       <Marker

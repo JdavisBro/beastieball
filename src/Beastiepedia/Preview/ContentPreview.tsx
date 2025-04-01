@@ -311,7 +311,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         if (error instanceof WebGLError) {
           console.log(`WebGL Error: ${error.message}`);
           setNoDisplayRender(true);
-          setNoDisplayReason("Beastie Preview Failed");
+          setNoDisplayReason("Human Preview Failed");
           return;
         } else {
           throw error;

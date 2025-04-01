@@ -367,7 +367,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
               setDiffBeastieColors(beastieId ? beastieId : "none")
             }
             isSelectable={(beastie) => beastie.id != props.beastiedata.id}
-            nonSelectableReason="Select Unset to use this Beastie's regular colors."
+            nonSelectableReason="Select Unset to use this Human's regular colors."
           />
         </div>
       </div>

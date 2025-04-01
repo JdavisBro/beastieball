@@ -77,7 +77,7 @@ export default function Beastiepedia(): React.ReactNode {
         }
       />
       <Header
-        title={(beastie ? `${beastie} - ` : "") + "Beastiepedia"}
+        title={(beastie ? `${beastie} - ` : "") + "Humanpedia"}
         menuButton={true}
         menuButtonState={sidebarvisible}
         onMenuButtonPressed={() => setSidebarvisible((visible) => !visible)}

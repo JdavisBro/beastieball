@@ -2,10 +2,10 @@ import { FeaturedCategoryRoot } from "../FeaturedCategories";
 
 const StarterBash: FeaturedCategoryRoot = {
   header: "Starter Bash",
-  description: "Teams for the Bildit VS Axolati VS Kichik Bigmoon Bash.",
+  description: "Teams for the Riley VS Elena VS Kaz Bigmoon Bash.",
   categories: [
     {
-      header: "Bildit",
+      header: "Riley",
       teams: [
         {
           team: {
@@ -609,7 +609,7 @@ const StarterBash: FeaturedCategoryRoot = {
       ],
     },
     {
-      header: "Axolati",
+      header: "Elena",
       teams: [
         {
           team: {
@@ -1049,7 +1049,7 @@ const StarterBash: FeaturedCategoryRoot = {
       ],
     },
     {
-      header: "Kichik",
+      header: "Kaz",
       teams: [
         {
           team: {

@@ -19,7 +19,7 @@ export default function createBeastie(number: string): TeamBeastie {
     date: 1,
     number: number,
     color: [0.5, 0.5, 0.5, 0.5, 0.5],
-    name: "Sprecko",
+    name: "Ace",
     spr_index: 0,
     xp: 125000,
     scale: 0.5,

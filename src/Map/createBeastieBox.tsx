@@ -107,7 +107,9 @@ export default function createBeastieBox(
         }}
       >
         <Popup offset={[0, -5]}>
-          <Link to={`/beastiepedia/${beastie.name}`}>{beastie.name}</Link>
+          <Link to={`/humanpedia/${beastie.name}/${beastie.number}`}>
+            {beastie.name}
+          </Link>
           <br />
           {overall_percent[value].percent > 0
             ? overall_percent[value].percent

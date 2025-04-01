@@ -158,7 +158,7 @@ export default function EditBeastie({
             );
           }}
         >
-          Copy from Beastiepedia
+          Copy from Humanpedia
         </button>
       </div>
       {beastiedata.spr_alt.length ? (

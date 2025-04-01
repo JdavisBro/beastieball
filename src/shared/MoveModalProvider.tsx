@@ -61,7 +61,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                   to={
                     isSpoiler
                       ? "#Play"
-                      : `/beastiepedia/${beastie[0].name}?play=${move?.name}`
+                      : `/humanpedia/${beastie[0].name}/${beastie[0].number}?play=${move?.name}`
                   }
                   key={beastie[0].id}
                   onClick={() =>
@@ -94,7 +94,11 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                 !seenBeasties[beastie.id];
               return (
                 <Link
-                  to={isSpoiler ? "#Play" : `/beastiepedia/${beastie.name}`}
+                  to={
+                    isSpoiler
+                      ? "#Play"
+                      : `/humanpedia/${beastie.name}/${beastie.number}`
+                  }
                   key={beastie.id}
                   onClick={() =>
                     handleClick(isSpoiler ? beastie.id : undefined)

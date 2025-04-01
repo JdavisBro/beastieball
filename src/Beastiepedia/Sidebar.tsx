@@ -68,12 +68,12 @@ export default function Sidebar(props: Props): React.ReactElement {
   const navigate = useNavigate();
 
   const handleSpoiler = useCallback(
-    (beastieId: string, name: string) => {
+    (beastieId: string, name: string, number: number) => {
       setSeenBeasties((prev) => {
         prev[beastieId] = true;
         return prev;
       });
-      navigate(`/beastiepedia/${name}`);
+      navigate(`/humanpedia/${name}/${number}`);
     },
     [setSeenBeasties, navigate],
   );

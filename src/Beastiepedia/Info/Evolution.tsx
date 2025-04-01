@@ -174,7 +174,7 @@ function EvoText({
   return (
     <div>
       Metamorphs {direction}{" "}
-      <Link to={`/beastiepedia/${evo.beastie.name}`}>
+      <Link to={`/humanpedia/${evo.beastie.name}/${evo.beastie.number}`}>
         {isSpoiler ? "???" : evo.beastie.name}
       </Link>{" "}
       {conds}

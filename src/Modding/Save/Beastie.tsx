@@ -67,7 +67,7 @@ export default function Beastie(props: {
         <InfoBox header="PID">{save_beastie.pid}</InfoBox>
         <InfoBox header="Beastiepedia">
           <Link
-            to={`/beastiepedia/${beastiedata.name}?${searchParam}=${beastieColors.join(",")}`}
+            to={`/humanpedia/${beastiedata.name}/${beastiedata.number}?${searchParam}=${beastieColors.join(",")}`}
             target="_blank"
           >
             Preview in the Beastipedia

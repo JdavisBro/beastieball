@@ -11,10 +11,10 @@ export default function Home(): React.ReactNode {
         location={"/playdex/"}
       />
       <NavigationMenuOption
-        text={"Beastiepedia"}
+        text={"Humanpedia"}
         image={"/gameassets/sprMainmenu/0.png"}
         hoverImage={"/gameassets/sprMainmenu/1.png"}
-        location={"/beastiepedia/"}
+        location={"/humanpedia/"}
       />
       <NavigationMenuOption
         text={"Map"}

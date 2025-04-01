@@ -37,7 +37,7 @@ export default function SpecialBeastieMarker({
   const handleTargetClick = isSpoiler ? () => setSeen(target.id) : undefined;
   const targetImage = (
     <Link
-      to={isSpoiler ? "#" : `/beastiepedia/${target.name}`}
+      to={isSpoiler ? "#" : `/humanpedia/${target.name}/${target.number}`}
       onClick={handleTargetClick}
     >
       <img src={targetUrl} onClick={handleTargetClick} />
@@ -45,7 +45,7 @@ export default function SpecialBeastieMarker({
   );
   const targetName = (
     <Link
-      to={isSpoiler ? "#" : `/beastiepedia/${target.name}`}
+      to={isSpoiler ? "#" : `/humanpedia/${target.name}/${target.number}`}
       onClick={handleTargetClick}
     >
       {isSpoiler ? "???" : target.name}
@@ -86,7 +86,7 @@ export default function SpecialBeastieMarker({
                   to={
                     metamorphSpoiler
                       ? "#"
-                      : `/beastiepedia/${metamorph.from.name}`
+                      : `/humanpedia/${metamorph.from.name}/${metamorph.from.number}`
                   }
                   onClick={handleMetamorphClick}
                 >
@@ -102,7 +102,7 @@ export default function SpecialBeastieMarker({
                   to={
                     metamorphSpoiler
                       ? "#"
-                      : `/beastiepedia/${metamorph.from.name}`
+                      : `/humanpedia/${metamorph.from.name}/${metamorph.from.number}`
                   }
                   onClick={handleMetamorphClick}
                 >

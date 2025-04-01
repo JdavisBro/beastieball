@@ -58,12 +58,26 @@ const routes: Array<RouteObject> = [
       },
       {
         element: <Beastiepedia />,
-        path: "/beastiepedia/",
+        path: "/humanpedia/",
       },
       {
         element: <Beastiepedia />,
-        path: "beastiepedia/:beastie",
+        path: "humanpedia/:beastie",
       },
+      {
+        element: <Beastiepedia />,
+        path: "humanpedia/:beastie/:number",
+      },
+
+      {
+        Component: () => <Navigate to={`/humanpedia/`} />,
+        path: "/beastiepedia/",
+      },
+      {
+        Component: () => <Navigate to={`/humanpedia/${useParams().splat}`} />,
+        path: "/beastiepedia/:splat",
+      },
+
       {
         element: <Playdex />,
         path: "/playdex/",

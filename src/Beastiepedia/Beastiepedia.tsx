@@ -22,18 +22,22 @@ declare global {
 
 export default function Beastiepedia(): React.ReactNode {
   const orientation = useScreenOrientation();
-  const { beastie }: { beastie?: string } = useParams();
+  const { beastie, number }: { beastie?: string; number?: string } =
+    useParams();
 
   const [beastieid, beastiedata] = useMemo(() => {
     if (beastie !== null) {
       for (const [key, value] of BEASTIE_DATA) {
-        if (value.name == beastie) {
+        if (
+          value.name == beastie &&
+          (!number || value.number == Number(number))
+        ) {
           return [key, value];
         }
       }
     }
     return [undefined, undefined];
-  }, [beastie]);
+  }, [beastie, number]);
 
   const [sidebarvisible, setSidebarvisible] = useState(
     !(beastieid !== undefined && orientation),
@@ -59,13 +63,13 @@ export default function Beastiepedia(): React.ReactNode {
   return (
     <div className={styles.container}>
       <OpenGraph
-        title={beastiedata ? `${beastie} - Beastiepedia` : "Beastiepedia"}
+        title={beastiedata ? `${beastie} - Humanpedia` : "Humanpedia"}
         image={
           beastiedata
             ? `icons/${beastiedata.name}.png`
             : "gameassets/sprMainmenu/0.png" // beastiepedia icon
         }
-        url={beastiedata ? `beastiepedia/${beastiedata.name}` : `beastiepedia/`}
+        url={beastiedata ? `humanpedia/${beastiedata.name}` : `humanpedia/`}
         description={
           beastiedata
             ? beastiedata.desc

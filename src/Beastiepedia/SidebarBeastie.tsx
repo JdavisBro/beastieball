@@ -13,7 +13,7 @@ type Props = {
   visible: boolean;
   isSpoiler: boolean;
   handleClick: () => void;
-  handleSpoilerClick: (beastieId: string, name: string) => void;
+  handleSpoilerClick: (beastieId: string, name: string, number: number) => void;
 };
 
 function SidebarBeastie(props: Props): React.ReactElement {
@@ -25,13 +25,21 @@ function SidebarBeastie(props: Props): React.ReactElement {
 
   return (
     <Link
-      to={props.isSpoiler ? "#" : `/beastiepedia/${beastiedata.name}`}
+      to={
+        props.isSpoiler
+          ? "#"
+          : `/humanpedia/${beastiedata.name}/${beastiedata.number}`
+      }
       className={styles.beastie}
       style={{ display: props.visible ? "block" : "none" }}
       onClick={() => {
         props.handleClick();
         if (props.isSpoiler) {
-          props.handleSpoilerClick(beastiedata.id, beastiedata.name);
+          props.handleSpoilerClick(
+            beastiedata.id,
+            beastiedata.name,
+            beastiedata.number,
+          );
         }
       }}
     >

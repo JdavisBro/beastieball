@@ -417,7 +417,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       value in animdata &&
       (ANIMATION_ALWAYS_SHOW.includes(value) ||
         value == animation ||
-        isAnimEmpty(animdata[value]))
+        !isAnimEmpty(animdata[value]))
     );
   });
 

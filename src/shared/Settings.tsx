@@ -30,7 +30,7 @@ export default function Settings({
   open: boolean;
   onClose: () => void;
 }) {
-  const experimental = import.meta.env.VITE_EXPERIMENTAL == "true";
+  const experimental = true;
   const experimental_different =
     import.meta.env.VITE_EXPERIMENTAL_DIFFERENT == "true";
   const experimental_target = new URL(location.href);
@@ -50,10 +50,7 @@ export default function Settings({
         <AnimationToggle />
         <SpoilerOptions />
         {experimental || experimental_different ? (
-          <Link to={experimental_target.href}>
-            Visit the {experimental ? "non-experimental" : "🧪experimental"}{" "}
-            site.
-          </Link>
+          <Link to={experimental_target.href}>Visit the normal site.</Link>
         ) : null}
       </div>
     </Modal>

@@ -105,6 +105,7 @@ export default function Sidebar(props: Props): React.ReactElement {
             <option value="ma">Mind POW</option>
             <option value="md">Mind DEF</option>
             <option value="recruit">Recruit $</option>
+            <option value="anim_progress">Dev %</option>
           </select>
           <button onClick={() => setSortDec(!sortDec)}>
             {sortDec ? "↓" : "↑"}

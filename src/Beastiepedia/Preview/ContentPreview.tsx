@@ -63,6 +63,8 @@ const ANIMATION_LIST = [
   "special", // conjarr
 ];
 
+const ANIMATION_ALWAYS_SHOW = ["idle", "move", "menu"];
+
 export default function ContentPreview(props: Props): React.ReactNode {
   const [colors, setColors] = useState<number[][]>([
     [255, 255, 255],
@@ -413,7 +415,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const animationList = ANIMATION_LIST.filter((value) => {
     return (
       value in animdata &&
-      !(value != "idle" && value != animation && isAnimEmpty(animdata[value]))
+      (ANIMATION_ALWAYS_SHOW.includes(value) ||
+        value == animation ||
+        isAnimEmpty(animdata[value]))
     );
   });
 

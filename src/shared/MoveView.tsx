@@ -284,6 +284,19 @@ function getEffectString(
       return "If ball is hittable: ";
     case 73:
       return "Always goes where it's targeted.";
+
+    case 74:
+      return `[sprIcon,0][sprIcon,1]POW${boost} to ${target}.`;
+    case 75:
+      return `[sprIcon,0][sprIcon,2]POW${boost} to ${target}.`;
+    case 76:
+      return `[sprIcon,1][sprIcon,2]POW${boost} to ${target}.`;
+    case 77:
+      return `[sprIcon,0][sprIcon,1]DEF${boost} to ${target}.`;
+    case 78:
+      return `[sprIcon,0][sprIcon,2]DEF${boost} to ${target}.`;
+    case 79:
+      return `[sprIcon,1][sprIcon,2]DEF${boost} to ${target}.`;
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

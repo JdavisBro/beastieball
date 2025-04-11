@@ -5,12 +5,12 @@ const EffectFilters: {
   target?: Array<number>;
 }[] = [
   // POW/DEF
-  { name: "Body POW", effects: [0, 15] },
-  { name: "Body DEF", effects: [3, 16] },
-  { name: "Spirit POW", effects: [1, 15] },
-  { name: "Spirit DEF", effects: [4, 16] },
-  { name: "Mind POW", effects: [2, 15] },
-  { name: "Mind DEF", effects: [5, 16] },
+  { name: "Body POW", effects: [0, 15, 74, 75] },
+  { name: "Body DEF", effects: [3, 16, 77, 78] },
+  { name: "Spirit POW", effects: [1, 15, 74, 76] },
+  { name: "Spirit DEF", effects: [4, 16, 77, 79] },
+  { name: "Mind POW", effects: [2, 15, 75, 76] },
+  { name: "Mind DEF", effects: [5, 16, 78, 79] },
   { name: "All POW", effects: [15] },
   { name: "All DEF", effects: [16] },
   // Use Conditions

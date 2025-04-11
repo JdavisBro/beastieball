@@ -467,8 +467,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 0, "pow": 1, "targ": 3 },
-      { "eff": 1, "pow": 1, "targ": 3 },
+      { "eff": 74, "pow": 1, "targ": 3 },
       { "eff": 12, "pow": 1, "targ": 3 }
     ],
     "id": "dare",
@@ -1106,10 +1105,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 0, "pow": -1, "targ": 3 },
-      { "eff": 2, "pow": -1, "targ": 3 }
-    ],
+    "eff": [{ "eff": 75, "pow": -1, "targ": 3 }],
     "id": "lowattks",
     "name": "Jeer",
     "pow": 0,
@@ -1163,8 +1159,7 @@
     "description": null,
     "eff": [
       { "eff": 2, "pow": 1, "targ": 0 },
-      { "eff": 5, "pow": 1, "targ": 0 },
-      { "eff": 4, "pow": 1, "targ": 0 }
+      { "eff": 79, "pow": 1, "targ": 0 }
     ],
     "id": "meditate",
     "name": "Meditate",

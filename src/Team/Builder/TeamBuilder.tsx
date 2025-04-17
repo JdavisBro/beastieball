@@ -26,6 +26,23 @@ function createTeam() {
   ];
 }
 
+type TeamHook = [
+  TeamBeastie[],
+  React.Dispatch<React.SetStateAction<TeamBeastie[]>>,
+  () => void,
+];
+
+const emptyTeamArr = [...new Array(5).keys()];
+
+function ensureFullTeam([team, setTeam, removeTeam]: TeamHook): TeamHook {
+  const newTeam = createTeam();
+  return [
+    emptyTeamArr.map((index) => team[index] ?? newTeam[index]),
+    setTeam,
+    removeTeam,
+  ];
+}
+
 function verifyTeamJson(json: unknown) {
   if (!Array.isArray(json)) {
     return false;
@@ -41,9 +58,8 @@ function verifyTeamJson(json: unknown) {
 }
 
 export default function TeamBuilder() {
-  const [team, setTeam] = useLocalStorage<TeamBeastie[]>(
-    "teamBuilderTeam",
-    createTeam(),
+  const [team, setTeam] = ensureFullTeam(
+    useLocalStorage<TeamBeastie[]>("teamBuilderTeam", []),
   );
 
   const setBeastie = (teamIndex: number, beastie: TeamBeastie) => {

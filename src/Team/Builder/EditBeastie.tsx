@@ -26,6 +26,27 @@ function clampColor(color: number) {
   return Math.max(Math.min(color, MAX_BEASITE_COLOR), MIN_BEASITE_COLOR);
 }
 
+type ChangeValueType = <T extends keyof TeamBeastie>(
+  key: T,
+  value: TeamBeastie[T],
+) => void;
+
+function BeastieDoesntExist({ changeValue }: { changeValue: ChangeValueType }) {
+  return (
+    <label>
+      Specie:{" "}
+      <BeastieSelect
+        beastieId={undefined}
+        setBeastieId={(beastieId) => {
+          if (beastieId) {
+            changeValue("specie", beastieId);
+          }
+        }}
+      />
+    </label>
+  );
+}
+
 export default function EditBeastie({
   beastie,
   setBeastie,
@@ -33,15 +54,12 @@ export default function EditBeastie({
   beastie: TeamBeastie;
   setBeastie: React.Dispatch<React.SetStateAction<TeamBeastie>>;
 }) {
-  const changeValue: <T extends keyof TeamBeastie>(
-    key: T,
-    value: TeamBeastie[T],
-  ) => void = (key, value) => {
+  const changeValue: ChangeValueType = (key, value) => {
     setBeastie((beastie) => ({ ...beastie, [key]: value }));
   };
   const beastiedata = BEASTIE_DATA.get(beastie.specie);
   if (!beastiedata) {
-    return null;
+    return <BeastieDoesntExist changeValue={changeValue} />;
   }
   const extraPoints = Math.min(
     Math.max(

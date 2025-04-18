@@ -86,7 +86,7 @@ function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
   const seconds = delta;
 
   const hoursRounded = Math.round(hours * 10) / 10;
-  const dayCount = Math.ceil(hours) == 24 ? Math.ceil(days) : Math.floor(days);
+  const dayCount = hoursRounded == 24 ? Math.ceil(days) : Math.floor(days);
   const minCeil = Math.ceil(minutes);
   const hourCount =
     Math.ceil(minutes) == 60 ? Math.ceil(hours) : Math.floor(hours);

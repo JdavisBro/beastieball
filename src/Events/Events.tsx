@@ -135,6 +135,18 @@ function Bigmoon({
   const endDate = new Date(bigmoon.times[0][1]);
 
   const lastReload = useRef(0);
+
+  const guilds = bigmoon.guilds.reduce(
+    (accum, beastieId) =>
+      (accum ? accum + " VS " : accum) + BEASTIE_DATA.get(beastieId)?.name,
+    "",
+  );
+  const bans = bigmoon.bans.reduce(
+    (accum, beastieId) =>
+      (accum ? accum + ", " : "") + BEASTIE_DATA.get(beastieId)?.name,
+    "",
+  );
+
   return (
     <EventBlock>
       <div className={styles.eventImage}>
@@ -158,12 +170,7 @@ function Bigmoon({
           Bigmoon Bash
           <br />
           <div className={styles.eventSubtitle}>
-            {bigmoon.guilds.reduce(
-              (accum, beastieId) =>
-                (accum ? accum + " VS " : accum) +
-                BEASTIE_DATA.get(beastieId)?.name,
-              "",
-            )}
+            {guilds || (bans ? bans + " banned" : undefined) || ""}
           </div>
         </Link>
         <TimeDelta startDate={startDate} endDate={endDate} />

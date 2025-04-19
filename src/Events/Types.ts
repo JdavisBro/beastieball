@@ -23,6 +23,7 @@ export type BallEvent = {
     specie_clause: boolean;
   };
   guilds: string[];
+  bans: string[];
   active: boolean;
 };
 

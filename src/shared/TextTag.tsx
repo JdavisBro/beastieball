@@ -215,7 +215,7 @@ export default function TextTag(props: Props): React.ReactElement {
   }
   const builder = new TagBuilder();
   // gets text before next tag or end of string (match[1]) (match[2] is [ when [[) + next tag (match[3]) + value (match[4])
-  const regex = /([^[]*?)?(?:\[(?:\]|$)|\[(?:(\[)|$)|\[(.+?)(?:,(.+?))?\]|$)/g;
+  const regex = /([^[]*)(?:\[(\[)|\[(.*?)(?:,(.*?))?\]|$)/g;
   let match = regex.exec(text);
   let i = 0;
   let combine = "";

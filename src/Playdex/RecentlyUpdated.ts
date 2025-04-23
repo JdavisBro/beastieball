@@ -10,6 +10,7 @@ const MOVE_RECENTLY_UPDATED: string[] = [
   "tagattack",
   "hex",
   "flatten",
+  "vigor",
 ];
 
 export default MOVE_RECENTLY_UPDATED;

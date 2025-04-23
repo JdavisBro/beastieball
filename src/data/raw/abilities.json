@@ -99,6 +99,11 @@
     "id": "defiant_m",
     "name": "Thoughts Racing"
   },
+  "doubler": {
+    "desc": "Additional effects from this Beastie's attacks trigger twice",
+    "id": "doubler",
+    "name": "Crafty"
+  },
   "dreadlock": {
     "desc": "While field has DREAD, this Beastie's attacks make target [sprStatus,0]NERVOUS",
     "id": "dreadlock",

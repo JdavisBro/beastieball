@@ -705,7 +705,7 @@
     ],
     "id": "flatten",
     "name": "Flatten",
-    "pow": 75,
+    "pow": 70,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -935,7 +935,7 @@
     "eff": [{ "eff": 33, "pow": 13, "targ": 0 }],
     "id": "hex",
     "name": "Nerve Strike",
-    "pow": 65,
+    "pow": 55,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -2386,14 +2386,14 @@
     "use": 0
   },
   "vigor": {
-    "bt_tags": [0, 8, 20],
+    "bt_tags": [0, 20],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [{ "eff": 33, "pow": 0, "targ": 0 }],
     "id": "vigor",
     "name": "Vigor Beam",
-    "pow": 125,
+    "pow": 20,
     "targ": 0,
     "type": 0,
     "use": 2

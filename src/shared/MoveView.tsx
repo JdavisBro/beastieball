@@ -176,7 +176,7 @@ function getEffectString(
     case 33: {
       switch (effect.pow) {
         case 0:
-          return "Strongest when user has more STAMINA.";
+          return "Add user's STAMINA to POW.";
         case 1:
           return "Strongest when user has less STAMINA.";
 

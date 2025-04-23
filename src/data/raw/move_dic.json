@@ -472,7 +472,7 @@
     ],
     "id": "dare",
     "name": "Challenge",
-    "pow": 90,
+    "pow": 85,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -589,10 +589,10 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 18, "pow": 0, "targ": 3 }],
+    "eff": [{ "eff": 33, "pow": 30, "targ": 0 }],
     "id": "dump",
     "name": "Dump",
-    "pow": 85,
+    "pow": 60,
     "targ": 4,
     "type": 2,
     "use": 2
@@ -621,7 +621,7 @@
     "eff": [{ "eff": 33, "pow": 25, "targ": 0 }],
     "id": "ego",
     "name": "Ego Blast",
-    "pow": 85,
+    "pow": 80,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -685,13 +685,29 @@
     "description": null,
     "eff": [
       { "eff": 46, "pow": 0, "targ": 7 },
-      { "eff": 8, "pow": 0.080000000000000002, "targ": 6 }
+      { "eff": 8, "pow": 0.10000000000000001, "targ": 6 }
     ],
     "id": "fieldclear",
     "name": "Clear Field",
     "pow": 0,
     "targ": 0,
     "type": 4,
+    "use": 0
+  },
+  "flatten": {
+    "bt_tags": [0, 16],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 29, "targ": 0 },
+      { "eff": 46, "pow": 0, "targ": 7 }
+    ],
+    "id": "flatten",
+    "name": "Flatten",
+    "pow": 75,
+    "targ": 0,
+    "type": 0,
     "use": 0
   },
   "flight": {
@@ -932,7 +948,7 @@
     "eff": [{ "eff": 29, "pow": 3, "targ": 0 }],
     "id": "hyperbeam",
     "name": "Hyperspike",
-    "pow": 135,
+    "pow": 125,
     "targ": 0,
     "type": 0,
     "use": 2
@@ -1418,7 +1434,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 23, "pow": 1, "targ": 3 }],
+    "eff": [{ "eff": 23, "pow": -1, "targ": 3 }],
     "id": "poisonhit",
     "name": "Cornershot",
     "pow": 25,
@@ -1896,7 +1912,7 @@
     "eff": [{ "eff": 33, "pow": 22, "targ": 0 }],
     "id": "snipe",
     "name": "Snipe",
-    "pow": 60,
+    "pow": 65,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -2013,7 +2029,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 23, "pow": 2, "targ": 3 }],
+    "eff": [{ "eff": 23, "pow": -2, "targ": 3 }],
     "id": "steamattack",
     "name": "Steamer",
     "pow": 1,
@@ -2173,7 +2189,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 23, "pow": 1, "targ": 3 }],
+    "eff": [{ "eff": 23, "pow": -1, "targ": 3 }],
     "id": "sweatup",
     "name": "Heat Up",
     "pow": 0,
@@ -2218,7 +2234,7 @@
     "eff": [{ "eff": 33, "pow": 20, "targ": 0 }],
     "id": "tagattack",
     "name": "Dive",
-    "pow": 60,
+    "pow": 55,
     "targ": 0,
     "type": 0,
     "use": 0

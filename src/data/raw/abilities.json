@@ -105,12 +105,12 @@
     "name": "Unsettling-1"
   },
   "echo": {
-    "desc": "Attacks do x¾ damage and apply 1 QUAKE to opponent field",
+    "desc": "Attacks apply 1 QUAKE to opponent field",
     "id": "echo",
     "name": "Echo"
   },
   "empath": {
-    "desc": "Reflects negative FEELINGs back onto enemies",
+    "desc": "Reflects negative FEELINGs back to opponent team",
     "id": "empath",
     "name": "Stirring"
   },
@@ -209,6 +209,11 @@
     "id": "magicguard",
     "name": "Unflappable"
   },
+  "mask": {
+    "desc": "While field has RALLY or DREAD, never takes more than 66 damage from attacks",
+    "id": "mask",
+    "name": "Stagecraft"
+  },
   "mimic": {
     "desc": "Copies nearest opponent's trait when TAGGED IN",
     "id": "mimic",
@@ -220,7 +225,7 @@
     "name": "Absorption"
   },
   "mindless": {
-    "desc": "Non-[sprIcon,0] attacks become [sprIcon,0] and are 1.3x stronger",
+    "desc": "Non-[sprIcon,0] attacks become [sprIcon,0] and are 1.2x stronger",
     "id": "mindless",
     "name": "Musclebrain"
   },
@@ -270,7 +275,7 @@
     "name": "In The Clouds"
   },
   "noredirect": {
-    "desc": "This Beastie's attacks always go where they are targeted",
+    "desc": "SIDEWAYS attacks do ¾x damage and ignore all shields and redirection",
     "id": "noredirect",
     "name": "Precise"
   },
@@ -445,7 +450,7 @@
     "name": "Anticipation"
   },
   "tagheal": {
-    "desc": "Restores 40 STAMINA to an ally that TAGS IN for them",
+    "desc": "Restores 35 STAMINA to an ally that TAGS IN for them",
     "id": "tagheal",
     "name": "Welcoming"
   },
@@ -515,7 +520,7 @@
     "name": "Moist"
   },
   "vampire": {
-    "desc": "Restores STAMINA equal to 1/6 of damage dealt",
+    "desc": "Restores STAMINA equal to 1/4 of damage dealt",
     "id": "vampire",
     "name": "Vampire"
   },

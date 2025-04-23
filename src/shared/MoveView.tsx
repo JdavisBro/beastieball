@@ -143,8 +143,13 @@ function getEffectString(
       }
     case 22:
       return `${feels} ${effect.pow} [sprStatus,5]WIPED (must bench)${dot}`;
-    case 23:
-      return `${feels} +${effect.pow} [sprStatus,6]SWEATY (losing stamina)${dot}`;
+    case 23: {
+      const feels2 =
+        effect.pow > 0 && effect.targ == 7
+          ? "Every non-[sprStatus,6]SWEATY (losing stamina) fielded player feels "
+          : feels + " +";
+      return `${feels2}${Math.abs(effect.pow)} [sprStatus,6]SWEATY (losing stamina)${dot}`;
+    }
     case -26:
     case 26:
       return `${feels} ${effect.pow} [sprStatus,8]JAZZED (POW +50%)${effect.eff < 0 && attack ? " before contact" : ""}${dot}`;
@@ -191,7 +196,7 @@ function getEffectString(
         case 12:
           return "POW x2 when [sprStatus,6]SWEATY, [sprStatus,0]NERVOUS, or [sprStatus,11]TENDER.";
         case 13:
-          return "POW x1.5 if target has a bad FEELING.";
+          return "POW x2 if target has a bad FEELING.";
         case 14:
           return "Ignores target's shields and [sprBoost,2][sprBoost,5]BOOSTS.";
         case 15:
@@ -218,6 +223,11 @@ function getEffectString(
           return "POW x1.5 if user changed row or lane this turn.";
         case 27:
           return "POW x2 when stamina is below 34.";
+
+        case 29:
+          return "POW x1.5 if there are any field effects.";
+        case 30:
+          return "POW x1.5 if user has 2+ ACTIONs.";
       }
       console.log(
         `Undefined POW COND ${effect.pow}. E ${effect.eff} T ${effect.targ}`,

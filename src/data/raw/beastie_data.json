@@ -968,7 +968,8 @@
       "protect",
       "sweatall",
       "shakeoff",
-      "bomb"
+      "bomb",
+      "flatten"
     ],
     "attklist_randomize": -1,
     "ba": 89,
@@ -1424,7 +1425,7 @@
     "face_color_index": 0,
     "family": "bestie",
     "first_frame": -1,
-    "foot_size": 89,
+    "foot_size": 71,
     "foot_type": 0,
     "growth": 1.09,
     "ha": 100,
@@ -2260,6 +2261,7 @@
       "switch",
       "mark",
       "powswitch",
+      "flatten",
       "vigor",
       "breakswipe",
       "starterbody"
@@ -2468,6 +2470,7 @@
       "switch",
       "mark",
       "powswitch",
+      "flatten",
       "vigor",
       "breakswipe",
       "starterbody"
@@ -2668,6 +2671,7 @@
       "switch",
       "mark",
       "powswitch",
+      "flatten",
       "vigor",
       "breakswipe",
       "starterbody"
@@ -3290,8 +3294,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 98,
-    "base_exp": 186.525,
-    "bd": 82,
+    "base_exp": 197.325,
+    "bd": 97,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -3353,7 +3357,7 @@
     "foot_type": 0,
     "growth": 0.9,
     "ha": 54,
-    "hd": 91,
+    "hd": 88,
     "hidden": true,
     "hidden_counter": null,
     "id": "cheerleadermon",
@@ -3399,7 +3403,7 @@
       "stretchiness": 0.03
     },
     "ma": 30,
-    "md": 50,
+    "md": 54,
     "name": "Mascurry",
     "number": 103,
     "palettes": 1,
@@ -4145,7 +4149,8 @@
       "bdefup",
       "noisytag",
       "protect",
-      "rest"
+      "rest",
+      "flatten"
     ],
     "attklist_randomize": -1,
     "ba": 108,
@@ -5017,8 +5022,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 40,
-    "base_exp": 145.7425,
-    "bd": 55,
+    "base_exp": 141.3775,
+    "bd": 50,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -5127,7 +5132,7 @@
       "stretchiness": 0.1
     },
     "ma": 73,
-    "md": 90,
+    "md": 85,
     "name": "Noizard",
     "number": 33,
     "palettes": 1,
@@ -5204,7 +5209,7 @@
     "tamecond": null,
     "tamelvl": 2,
     "tyield": ["hd", 2],
-    "type_focus": 2
+    "type_focus": 1
   },
   "dog": {
     "ability": ["fetch", "watcher"],
@@ -7152,7 +7157,7 @@
     "face_color_index": 0,
     "family": "frog1",
     "first_frame": -1,
-    "foot_size": 78,
+    "foot_size": 88,
     "foot_type": 0,
     "growth": 1,
     "ha": 100,
@@ -7718,7 +7723,7 @@
     ],
     "attklist_randomize": -1,
     "ba": 15,
-    "base_exp": 192.5,
+    "base_exp": 199.1,
     "bd": 105,
     "body_color_index": 0,
     "colormeta": null,
@@ -7820,7 +7825,7 @@
       "stretchiness": 0.1
     },
     "ma": 85,
-    "md": 70,
+    "md": 80,
     "name": "Mistic",
     "number": 46,
     "palettes": 1,
@@ -10027,10 +10032,10 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.6, 23, 8, 3, 49, 0, 0],
-      [23, 8, 1],
-      [23, 8, 2],
-      [34, 8, 1, 23, 8, 1]
+      [50, 0, 0.6, 23, 8, -3, 49, 0, 0],
+      [23, 8, -1],
+      [23, 8, -2],
+      [34, 8, 1, 23, 8, -1]
     ],
     "desc": "Their body is dense with fatty tissue storage, which constantly metabolizes into heat and steam. They migrate from arctic climates to raise Druppa near hot springs.",
     "designer": 8,
@@ -10247,10 +10252,10 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.6, 23, 8, 3, 49, 0, 0],
-      [23, 8, 1],
-      [23, 8, 2],
-      [34, 8, 1, 23, 8, 1]
+      [50, 0, 0.6, 23, 8, -3, 49, 0, 0],
+      [23, 8, -1],
+      [23, 8, -2],
+      [34, 8, 1, 23, 8, -1]
     ],
     "desc": "Despite their intensely high body temperature, they constantly seek heat sources as though they were cold. Take care when handling them directly.",
     "designer": 8,
@@ -10408,7 +10413,7 @@
     ],
     "attklist_randomize": -1,
     "ba": 40,
-    "base_exp": 132.521,
+    "base_exp": 131.3195,
     "bd": 44,
     "body_color_index": 1,
     "colormeta": null,
@@ -10469,7 +10474,7 @@
     "foot_size": 25,
     "foot_type": 1,
     "growth": 0.89,
-    "ha": 92,
+    "ha": 89,
     "hd": 110,
     "hidden": false,
     "hidden_counter": null,
@@ -10518,7 +10523,7 @@
       "stretchiness": 0.1
     },
     "ma": 55,
-    "md": 88,
+    "md": 85,
     "name": "Zefyre",
     "number": 21,
     "palettes": 1,
@@ -10870,6 +10875,7 @@
       "breakswipe",
       "steal",
       "rush",
+      "tool",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -10974,10 +10980,10 @@
       [18, "substitute"],
       [23, "pursuit"],
       [28, "mindup"],
-      [33, "heartdown"],
+      [33, "heartd"],
       [37, "trap"],
       [42, "protect"],
-      [46, "heartd"],
+      [46, "tool"],
       [50, "jump"]
     ],
     "learnset_randomize": -1,
@@ -11119,6 +11125,7 @@
       "breakswipe",
       "steal",
       "rush",
+      "tool",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11184,10 +11191,10 @@
       [14, "substitute"],
       [19, "pursuit"],
       [24, "mindup"],
-      [29, "heartdown"],
+      [29, "heartd"],
       [33, "trap"],
       [38, "protect"],
-      [42, "heartd"],
+      [42, "tool"],
       [46, "jump"]
     ],
     "learnset_randomize": -1,
@@ -11313,16 +11320,16 @@
       "breakswipe",
       "steal",
       "rush",
+      "tool",
       "startermind",
       "stomp",
       "swordsdance",
-      "distraction",
-      "tool"
+      "distraction"
     ],
     "attklist_randomize": -1,
-    "ba": 89,
-    "base_exp": 192.74,
-    "bd": 86,
+    "ba": 87,
+    "base_exp": 188.6,
+    "bd": 83,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -11375,7 +11382,7 @@
     "foot_size": 75,
     "foot_type": 1,
     "growth": 0.92,
-    "ha": 19,
+    "ha": 29,
     "hd": 49,
     "hidden": true,
     "hidden_counter": null,
@@ -11422,8 +11429,8 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 87,
-    "md": 91,
+    "ma": 85,
+    "md": 88,
     "name": "Maraptor",
     "number": 105,
     "palettes": 1,
@@ -11584,7 +11591,7 @@
       [0, "mark"],
       [0, "enemylowered"],
       [5, "breakswipe"],
-      [8, "float"],
+      [8, "blockattack"],
       [11, "rush"],
       [17, "distraction"],
       [23, "heartdown"],
@@ -11719,6 +11726,7 @@
       "hdefup",
       "stress",
       "distraction",
+      "flatten",
       "mark",
       "tagattack"
     ],
@@ -11782,7 +11790,7 @@
       [0, "stress"],
       [10, "sideshot"],
       [14, "allycover"],
-      [19, "blockattack"],
+      [19, "flatten"],
       [25, "rest"],
       [30, "protect"],
       [36, "body"],
@@ -11920,6 +11928,7 @@
       "hdefup",
       "stress",
       "distraction",
+      "flatten",
       "mark"
     ],
     "attklist_randomize": -1,
@@ -11981,7 +11990,7 @@
       [0, "stress"],
       [6, "sideshot"],
       [10, "allycover"],
-      [15, "blockattack"],
+      [15, "flatten"],
       [21, "rest"],
       [26, "protect"],
       [32, "body"],
@@ -12313,7 +12322,7 @@
     "type_focus": 1
   },
   "moth": {
-    "ability": ["empath", "crowddef"],
+    "ability": ["empath", "mask"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,
@@ -13050,8 +13059,8 @@
     "id": "mudskipper",
     "isBaby": false,
     "learnset": [
-      [0, "poisonhit"],
       [0, "chill"],
+      [0, "poisonhit"],
       [5, "refresh"],
       [8, "dig"],
       [13, "float"],
@@ -13176,6 +13185,9 @@
       "libero",
       "protect",
       "mdefup",
+      "telekinesis",
+      "mindup",
+      "dispel",
       "tool"
     ],
     "attklist_randomize": -1,
@@ -13379,6 +13391,9 @@
       "libero",
       "protect",
       "mdefup",
+      "telekinesis",
+      "mindup",
+      "dispel",
       "tool"
     ],
     "attklist_randomize": -1,
@@ -13786,7 +13801,7 @@
       "chill"
     ],
     "attklist_randomize": -1,
-    "ba": 70,
+    "ba": 75,
     "base_exp": 227.0625,
     "bd": 55,
     "body_color_index": 0,
@@ -14378,7 +14393,6 @@
       "cover",
       "allycover",
       "allyrush",
-      "stresspass",
       "meditate",
       "telekinesis",
       "mindup",
@@ -14397,9 +14411,9 @@
       "threat"
     ],
     "attklist_randomize": -1,
-    "ba": 30,
-    "base_exp": 244.1675,
-    "bd": 86,
+    "ba": 40,
+    "base_exp": 236.5925,
+    "bd": 81,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -14428,10 +14442,10 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.8, 23, 3, 2, 49, 0, 8],
+      [50, 0, 0.8, 23, 3, -2, 49, 0, 8],
       [2, 1, 1, 5, 1, 1],
       [2, 2, 1, 5, 2, 2],
-      [23, 8, 2]
+      [23, 8, -2]
     ],
     "desc": "Celia's Notes: Their spines somehow store electricity. It's conducted through their teeth when they bite into something.",
     "designer": 4,
@@ -14448,7 +14462,7 @@
     "foot_type": 0,
     "growth": 1.01,
     "ha": 50,
-    "hd": 75,
+    "hd": 70,
     "hidden": true,
     "hidden_counter": null,
     "id": "platypus",
@@ -14575,7 +14589,6 @@
       "cover",
       "allycover",
       "allyrush",
-      "stresspass",
       "meditate",
       "telekinesis",
       "mindup",
@@ -14623,10 +14636,10 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.8, 23, 3, 2, 49, 0, 8],
+      [50, 0, 0.8, 23, 3, -2, 49, 0, 8],
       [2, 1, 1, 5, 1, 1],
       [2, 2, 1, 5, 2, 2],
-      [23, 8, 2]
+      [23, 8, -2]
     ],
     "desc": "They use their bill to detect electrical fields. They heavily rely on this sense while the rest of their body develops.",
     "designer": [3, 4],
@@ -14765,7 +14778,6 @@
       "cover",
       "allycover",
       "allyrush",
-      "stresspass",
       "meditate",
       "telekinesis",
       "mindup",
@@ -14820,10 +14832,10 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.8, 23, 3, 2, 49, 0, 8],
+      [50, 0, 0.8, 23, 3, -2, 49, 0, 8],
       [2, 1, 1, 5, 1, 1],
       [2, 2, 1, 5, 2, 2],
-      [23, 8, 2]
+      [23, 8, -2]
     ],
     "desc": "They have honed their electroreceptive sensitivity, allowing them to foresee the movements of other Beasties.",
     "designer": [8, 4, 3],
@@ -15931,7 +15943,7 @@
     ],
     "attklist_randomize": -1,
     "ba": 89,
-    "base_exp": 153.224,
+    "base_exp": 158.36,
     "bd": 65,
     "body_color_index": 3,
     "colormeta": null,
@@ -16030,7 +16042,7 @@
     "foot_type": 0,
     "growth": 1.07,
     "ha": 91,
-    "hd": 38,
+    "hd": 46,
     "hidden": false,
     "hidden_counter": null,
     "id": "rainbow",
@@ -16221,8 +16233,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 66,
-    "base_exp": 257.87,
-    "bd": 111,
+    "base_exp": 250.6475,
+    "bd": 108,
     "body_color_index": 0,
     "colormeta": [1, 0],
     "colors": [
@@ -16268,7 +16280,7 @@
     "foot_type": 0,
     "growth": 1.07,
     "ha": 66,
-    "hd": 86,
+    "hd": 83,
     "hidden": true,
     "hidden_counter": null,
     "id": "rainbowmon",
@@ -16316,7 +16328,7 @@
       "stretchiness": 0.15
     },
     "ma": 66,
-    "md": 71,
+    "md": 68,
     "name": "Diabloceras",
     "number": 104,
     "palettes": 1,
@@ -16421,7 +16433,8 @@
       "dispel",
       "skillswap",
       "sweatup",
-      "steal"
+      "steal",
+      "flatten"
     ],
     "attklist_randomize": -1,
     "ba": 81,
@@ -17798,7 +17811,7 @@
     "face_color_index": 0,
     "family": "seal1",
     "first_frame": -1,
-    "foot_size": 88,
+    "foot_size": 84,
     "foot_type": 0,
     "growth": 1.025,
     "ha": 50,
@@ -18578,8 +18591,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 105,
-    "base_exp": 199.92,
-    "bd": 60,
+    "base_exp": 193.8,
+    "bd": 55,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -18626,7 +18639,7 @@
     "foot_type": 0,
     "growth": 1.02,
     "ha": 29,
-    "hd": 95,
+    "hd": 90,
     "hidden": false,
     "hidden_counter": null,
     "id": "shark",
@@ -18637,10 +18650,10 @@
       [11, "bdefup"],
       [15, "rocksmash"],
       [19, "preblock"],
-      [22, "serve"],
+      [22, "rocket"],
       [26, "curse"],
       [30, "shakeoff"],
-      [35, "rocket"],
+      [35, "serve"],
       [39, "protect"],
       [44, "rushattack"],
       [47, "hyperbeam"]
@@ -18831,10 +18844,10 @@
       [6, "bdefup"],
       [10, "rocksmash"],
       [14, "preblock"],
-      [17, "serve"],
+      [17, "rocket"],
       [21, "curse"],
       [25, "shakeoff"],
-      [30, "rocket"],
+      [30, "serve"],
       [34, "protect"],
       [39, "rushattack"],
       [42, "hyperbeam"]
@@ -18960,7 +18973,8 @@
       "callout",
       "chill",
       "sweatup",
-      "enemyboosts"
+      "enemyboosts",
+      "flatten"
     ],
     "attklist_randomize": -1,
     "ba": 45,
@@ -19042,7 +19056,7 @@
       [30, "mark"],
       [35, "hazeball"],
       [39, "allyrush"],
-      [43, "healhit2"]
+      [43, "flatten"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -19180,6 +19194,7 @@
       "chill",
       "sweatup",
       "enemyboosts",
+      "flatten",
       "rhythm",
       "blockattack",
       "vigor",
@@ -19435,6 +19450,7 @@
       "chill",
       "sweatup",
       "enemyboosts",
+      "flatten",
       "trap",
       "markattack",
       "netattack",
@@ -19442,7 +19458,8 @@
       "distraction",
       "sting",
       "starterside",
-      "snipe"
+      "snipe",
+      "sidespin"
     ],
     "attklist_randomize": -1,
     "ba": 65,
@@ -19680,6 +19697,7 @@
       "chill",
       "sweatup",
       "enemyboosts",
+      "flatten",
       "crowd",
       "heart",
       "minddown",
@@ -19922,6 +19940,7 @@
       "chill",
       "sweatup",
       "enemyboosts",
+      "flatten",
       "rhythm",
       "blockattack",
       "topspin",
@@ -20005,7 +20024,7 @@
     "face_color_index": 0,
     "family": "shroom1",
     "first_frame": -1,
-    "foot_size": 98,
+    "foot_size": 96,
     "foot_type": 0,
     "growth": 1,
     "ha": 110,
@@ -21990,9 +22009,9 @@
       "quake"
     ],
     "attklist_randomize": -1,
-    "ba": 65,
-    "base_exp": 204.02,
-    "bd": 100,
+    "ba": 70,
+    "base_exp": 200.99,
+    "bd": 95,
     "body_color_index": 0,
     "colormeta": null,
     "colors": [
@@ -22872,7 +22891,8 @@
       "facade",
       "cover",
       "mark",
-      "quake"
+      "quake",
+      "flatten"
     ],
     "attklist_randomize": -1,
     "ba": 96,

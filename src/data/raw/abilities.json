@@ -115,7 +115,7 @@
     "name": "Echo"
   },
   "empath": {
-    "desc": "Reflects negative FEELINGs back to opponent team",
+    "desc": "FEELINGs from any opponent reflect back onto the opponent team",
     "id": "empath",
     "name": "Stirring"
   },
@@ -210,7 +210,7 @@
     "name": "Neural Net"
   },
   "magicguard": {
-    "desc": "Only takes damage from attacks",
+    "desc": "Damage from non-attack sources reduced by 20",
     "id": "magicguard",
     "name": "Unflappable"
   },

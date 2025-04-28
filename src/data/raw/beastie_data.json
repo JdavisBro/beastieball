@@ -1564,7 +1564,6 @@
       "dropshot",
       "markattack",
       "mind",
-      "mindup",
       "rollshot",
       "mindbomb",
       "jazzpass",
@@ -1581,6 +1580,7 @@
       "nice",
       "chill",
       "shakeoff",
+      "meditate",
       "passattack",
       "dig",
       "startermind",
@@ -1669,7 +1669,7 @@
       [36, "construct"],
       [41, "jazzpass"],
       [45, "tool"],
-      [49, "mindup"]
+      [49, "meditate"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -1810,7 +1810,6 @@
       "dropshot",
       "markattack",
       "mind",
-      "mindup",
       "rollshot",
       "mindbomb",
       "jazzpass",
@@ -1827,6 +1826,7 @@
       "nice",
       "chill",
       "shakeoff",
+      "meditate",
       "passattack",
       "dig",
       "startermind"
@@ -1904,7 +1904,7 @@
       [28, "construct"],
       [33, "jazzpass"],
       [37, "tool"],
-      [41, "mindup"]
+      [41, "meditate"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -2017,7 +2017,6 @@
       "dropshot",
       "markattack",
       "mind",
-      "mindup",
       "rollshot",
       "mindbomb",
       "jazzpass",
@@ -2034,6 +2033,7 @@
       "nice",
       "chill",
       "shakeoff",
+      "meditate",
       "passattack",
       "dig",
       "startermind"
@@ -2118,7 +2118,7 @@
       [32, "construct"],
       [37, "jazzpass"],
       [41, "tool"],
-      [45, "mindup"]
+      [45, "meditate"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -2877,7 +2877,7 @@
     ],
     "attklist_randomize": -1,
     "ba": 65,
-    "base_exp": 127.125,
+    "base_exp": 125.1,
     "bd": 75,
     "body_color_index": 0,
     "colormeta": null,
@@ -2952,7 +2952,7 @@
     "foot_type": 0,
     "growth": 0.9,
     "ha": 55,
-    "hd": 90,
+    "hd": 88,
     "hidden": false,
     "hidden_counter": null,
     "id": "cheerleader",
@@ -2999,7 +2999,7 @@
       "stretchiness": 0.1
     },
     "ma": 40,
-    "md": 60,
+    "md": 57,
     "name": "Cherrily",
     "number": 36,
     "palettes": 1,
@@ -12125,7 +12125,8 @@
       "protect",
       "allnervous",
       "scream",
-      "commit"
+      "commit",
+      "pepshot"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -12340,7 +12341,6 @@
       "teleport",
       "callout",
       "bellydrum",
-      "mindup",
       "protect",
       "hdefup",
       "rest",
@@ -12561,7 +12561,6 @@
       "teleport",
       "callout",
       "bellydrum",
-      "mindup",
       "protect",
       "hdefup",
       "rest",
@@ -12762,7 +12761,6 @@
       "teleport",
       "callout",
       "bellydrum",
-      "mindup",
       "protect",
       "hdefup",
       "rest",
@@ -15933,7 +15931,6 @@
       "noisytag",
       "jazzattack",
       "skillswap",
-      "mindup",
       "juggle",
       "hdefup",
       "cook",
@@ -16223,11 +16220,11 @@
       "noisytag",
       "jazzattack",
       "skillswap",
-      "mindup",
       "juggle",
       "hdefup",
       "cook",
-      "swordsdance"
+      "swordsdance",
+      "mindup"
     ],
     "attklist_randomize": -1,
     "ba": 66,

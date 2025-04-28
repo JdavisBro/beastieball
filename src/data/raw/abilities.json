@@ -280,7 +280,7 @@
     "name": "In The Clouds"
   },
   "noredirect": {
-    "desc": "SIDEWAYS attacks do ¾x damage and ignore all shields and redirection",
+    "desc": "This Beastie's non-SIDEWAYS attacks always go where they are targeted",
     "id": "noredirect",
     "name": "Precise"
   },
@@ -530,7 +530,7 @@
     "name": "Vampire"
   },
   "vertical": {
-    "desc": "SIDEWAYS attacks do 1.5x damage",
+    "desc": "SIDEWAYS attacks do 1.3x damage",
     "id": "vertical",
     "name": "Goofy"
   },

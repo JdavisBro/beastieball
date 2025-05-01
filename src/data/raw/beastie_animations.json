@@ -5506,6 +5506,10 @@
         "frames": {
           "_": "class_canim_frames",
           "endFrame": 1,
+          "sounds": {
+            "-2": "fly_beastie_crabaret_tap_lp",
+            "_": "class_map"
+          },
           "startFrame": 1
         }
       },

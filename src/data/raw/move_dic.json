@@ -603,8 +603,8 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 7, "pow": 1, "targ": 0 },
-      { "eff": 45, "pow": 6, "targ": 7 }
+      { "eff": 45, "pow": 6, "targ": 7 },
+      { "eff": 7, "pow": 1, "targ": 0 }
     ],
     "id": "eerie",
     "name": "Dreadful Mist",

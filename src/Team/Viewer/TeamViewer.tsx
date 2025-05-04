@@ -188,7 +188,7 @@ export default function Viewer() {
         <div className={styles.sectionheader}>
           {team
             ? `${team.code}${selectedFeatured ? ` - ${selectedCategoryName} - ${selectedFeatured.name}` : ""}`
-            : ""}
+            : "No Team Loaded"}
         </div>
         <BeastieRenderProvider>
           <div className={styles.team}>

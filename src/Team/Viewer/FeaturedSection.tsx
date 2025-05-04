@@ -76,9 +76,6 @@ export default function FeaturedSection({
           All Teams
         </button>
       </div>
-      <div className={styles.sectionheader}>
-        {featuredCategories[tab]?.description ?? ""}
-      </div>
       {!allSelected && selectedTab.categories ? (
         <div className={styles.categorybg}>
           {selectedTab.categories.map((category, index) => (
@@ -96,6 +93,9 @@ export default function FeaturedSection({
           ))}
         </div>
       ) : null}
+      {selectedTab?.description ? (
+        <div className={styles.sectionheader}>{selectedTab.description}</div>
+      ) : undefined}
       <div className={styles.sectionheader}>
         <label>
           Filter:{" "}

@@ -182,9 +182,9 @@ export default function Viewer() {
             Find
           </button>
         </div>
-        <div className={styles.sectionheader}>
-          {error && !selectedFeatured ? `Invalid Code: ${code}` : null}
-        </div>
+        {error && !selectedFeatured ? (
+          <div className={styles.sectionheader}>`Invalid Code: ${code}`</div>
+        ) : null}
         <div className={styles.sectionheader}>
           {team
             ? `${team.code}${selectedFeatured ? ` - ${selectedCategoryName} - ${selectedFeatured.name}` : ""}`
@@ -259,17 +259,18 @@ export default function Viewer() {
             />
           </div>
         </BeastieRenderProvider>
-        <div className={styles.sectionheader}>
-          {orientation ? (
-            "View Community Teams by toggling the menu in the top left."
-          ) : (
-            <FeaturedSection
-              featuredCategories={featuredCategories}
-              code={team?.code}
-              setTeam={setTeam}
-            />
-          )}
-        </div>
+
+        {orientation ? (
+          <div className={styles.sectionheader}>
+            View Community Teams by toggling the menu in the top left.
+          </div>
+        ) : (
+          <FeaturedSection
+            featuredCategories={featuredCategories}
+            code={team?.code}
+            setTeam={setTeam}
+          />
+        )}
       </div>
     </>
   );

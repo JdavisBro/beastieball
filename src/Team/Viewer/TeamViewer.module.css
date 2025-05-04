@@ -1,7 +1,12 @@
 .sectionheader {
+  composes: animBoxBackground from global;
+  color: black;
   width: 100%;
   text-align: center;
-  margin: 4px 0 4px 0;
+  margin: 6px auto;
+  padding: 4px 8px;
+  width: fit-content;
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
 }
 
 .team {
@@ -117,12 +122,15 @@
 }
 
 .categorybg {
-  composes: sectionheader;
   composes: boxHeaderBackground from global;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
   width: fit-content;
   margin: auto;
+  font-size: 1.1em;
   clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
-  margin-bottom: 6px;
 }
 
 .categorybutton {
@@ -134,7 +142,7 @@
   border-radius: 0;
   clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
   height: 100%;
-  padding: 4px 8px 4px 8px;
+  padding: 4px 8px 5px 8px;
 }
 
 .categorybutton:hover {

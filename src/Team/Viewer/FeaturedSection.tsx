@@ -3,6 +3,13 @@ import { Team } from "../Types";
 import { FeaturedCategoryRoot } from "./FeaturedCategories";
 import FeaturedTeam from "./FeaturedTeam";
 import styles from "./TeamViewer.module.css";
+import BeastieSelect from "../../shared/BeastieSelect";
+
+enum FilterType {
+  Name,
+  Author,
+  Beastie,
+}
 
 export default function FeaturedSection({
   featuredCategories,
@@ -17,15 +24,31 @@ export default function FeaturedSection({
   const [subTab, setSubTab] = useState(0);
 
   const selectedTab = featuredCategories[tab];
+  const allSelected = tab == featuredCategories.length;
 
-  if (!selectedTab) {
+  const [filterType, setFilterType] = useState(FilterType.Name);
+  const [filterText, setFilterText] = useState("");
+  const [filterBeastie, setFilterBeastie] = useState<string | undefined>(
+    undefined,
+  );
+
+  if (!selectedTab && !allSelected) {
     return <div className={styles.categorybg}>Loading Community Teams...</div>;
   }
+
+  const teams = allSelected
+    ? featuredCategories.flatMap((root) =>
+        root.teams
+          ? root.teams
+          : root.categories.flatMap((category) => category.teams),
+      )
+    : (selectedTab.categories ? selectedTab.categories[subTab] : selectedTab)
+        ?.teams;
 
   return (
     <>
       <div className={styles.categorybg}>
-        {featuredCategories?.map((category, index) => (
+        {featuredCategories.map((category, index) => (
           <button
             key={category.header}
             className={
@@ -41,11 +64,22 @@ export default function FeaturedSection({
             {category.header}
           </button>
         ))}
+        <button
+          className={
+            allSelected ? styles.categorybuttonSelected : styles.categorybutton
+          }
+          onClick={() => {
+            setTab(featuredCategories.length);
+            setSubTab(0);
+          }}
+        >
+          All Teams
+        </button>
       </div>
       <div className={styles.sectionheader}>
         {featuredCategories[tab]?.description ?? ""}
       </div>
-      {selectedTab.categories ? (
+      {!allSelected && selectedTab.categories ? (
         <div className={styles.categorybg}>
           {selectedTab.categories.map((category, index) => (
             <button
@@ -62,27 +96,63 @@ export default function FeaturedSection({
           ))}
         </div>
       ) : null}
-      <div className={styles.featuredList}>
-        {(selectedTab.categories
-          ? selectedTab.categories[subTab]
-          : selectedTab
-        )?.teams.map((featuredteam) => (
-          <FeaturedTeam
-            key={featuredteam.name}
-            team={featuredteam}
-            selected={code == featuredteam.team.code}
-            setTeam={() => {
-              if (code != featuredteam.team.code) {
-                setTeam(featuredteam.team);
-              }
-            }}
+      <div className={styles.sectionheader}>
+        <label>
+          Filter:{" "}
+          <select
+            onChange={(event) => setFilterType(Number(event.target.value))}
+          >
+            <option value={FilterType.Name}>Name</option>
+            <option value={FilterType.Author}>Author</option>
+            <option value={FilterType.Beastie}>Beastie</option>
+          </select>
+        </label>
+        {filterType == FilterType.Beastie ? (
+          <BeastieSelect
+            beastieId={filterBeastie}
+            setBeastieId={setFilterBeastie}
           />
-        ))}
+        ) : (
+          <input
+            type="search"
+            onChange={(event) => setFilterText(event.target.value)}
+            value={filterText}
+            onFocus={(event) => event.currentTarget.select()}
+          />
+        )}
+      </div>
+      <div className={styles.featuredList}>
+        {teams
+          .filter((featuredTeam) =>
+            filterType == FilterType.Beastie
+              ? featuredTeam.team.team.some(
+                  (teamBeastie) =>
+                    !filterBeastie || teamBeastie.specie == filterBeastie,
+                )
+              : (filterType == FilterType.Author
+                  ? featuredTeam.author
+                  : featuredTeam.name
+                )
+                  .toLowerCase()
+                  .includes(filterText.toLowerCase()),
+          )
+          .map((featuredteam) => (
+            <FeaturedTeam
+              key={featuredteam.team.code}
+              team={featuredteam}
+              selected={code == featuredteam.team.code}
+              setTeam={() => {
+                if (code != featuredteam.team.code) {
+                  setTeam(featuredteam.team);
+                }
+              }}
+            />
+          )) || "no teams 🥺"}
       </div>
       <div className={styles.addTeamText}>
         Want your team added?{" "}
         <a
-          target={"_blank"}
+          target="_blank"
           rel="noreferrer"
           href={
             import.meta.env.VITE_ISSUES_URL +

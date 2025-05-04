@@ -104,7 +104,7 @@
   background-color: rgb(168, 168, 168);
 }
 
-@media all and (max-aspect-ratio: 1/1) {
+@media all and (max-aspect-ratio: 1/1) and (max-width: 800px) {
   .info {
     width: 100%;
     height: fit-content;
@@ -112,5 +112,11 @@
     overflow: visible;
     padding-top: 0;
     height: fit-content;
+  }
+}
+
+@media all and (max-aspect-ratio: 1/1) and (min-width: 800px) {
+  .info {
+    width: 55%;
   }
 }

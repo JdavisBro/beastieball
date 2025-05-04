@@ -65,7 +65,7 @@ export default function Viewer() {
   const [isLevelOverwritten, setIsLevelOverwritten] = useState(false);
   const [levelOverwrite, setLevelOverwrite] = useState(50);
   const [maxCoaching, setMaxCoaching] = useState(false);
-  const orientation = useScreenOrientation();
+  const orientation = useScreenOrientation(800);
 
   const navigate = useNavigate();
   const setCode = (code: string) => {

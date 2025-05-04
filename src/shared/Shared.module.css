@@ -216,7 +216,7 @@
   z-index: 1;
 }
 
-@media all and (max-aspect-ratio: 1/1) {
+@media all and (max-aspect-ratio: 1/1) and (max-width: 800px) {
   .movename {
     font-size: 1.6em;
   }

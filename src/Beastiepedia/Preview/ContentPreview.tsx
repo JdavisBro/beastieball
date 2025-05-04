@@ -444,8 +444,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
     return false;
   }, [loadedImages, beastiesprite, animation, animdata]);
 
-  const portrait = useScreenOrientation();
-  const [previewOptionsVisible, setPreviewOptionsVisible] = useState(!portrait);
+  const portrait = useScreenOrientation(800);
+  const [previewOptionsVisible, setPreviewOptionsVisible] = useState(false);
 
   return (
     <div className={styles.preview}>

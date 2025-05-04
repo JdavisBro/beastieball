@@ -36,7 +36,7 @@
   text-align: center;
 }
 
-@media all and (max-aspect-ratio: 1/1) {
+@media all and (max-aspect-ratio: 1/1) and (max-width: 800px) {
   .content {
     width: 100%;
     flex-wrap: wrap;

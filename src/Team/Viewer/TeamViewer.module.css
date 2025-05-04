@@ -44,7 +44,7 @@
   display: none;
 }
 
-@media all and (max-aspect-ratio: 1/1) {
+@media all and (max-aspect-ratio: 1/1) and (max-width: 800px) {
   .featuredTeam {
     font-size: 0.8em;
   }

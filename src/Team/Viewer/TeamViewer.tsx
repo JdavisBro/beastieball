@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import styles from "./TeamViewer.module.css";
 import { Team } from "../Types.ts";
@@ -68,12 +68,6 @@ export default function Viewer() {
   const orientation = useScreenOrientation(800);
 
   const navigate = useNavigate();
-  const setCode = (code: string) => {
-    navigate(
-      `/team/viewer/${code.toUpperCase().replace(/O/g, "0").replace(/#/g, "")}`,
-    );
-    setError(false);
-  };
 
   window.team = team;
 
@@ -106,10 +100,16 @@ export default function Viewer() {
           });
         } else {
           setError(true);
+          if (team?.code != code) {
+            setTeam(null);
+          }
         }
       })
       .catch((error) => {
         setError(true);
+        if (team?.code != code) {
+          setTeam(null);
+        }
         console.log(error);
       });
   }, [code, team?.code]);
@@ -128,6 +128,15 @@ export default function Viewer() {
   }, [selectedFeatured]);
 
   const [mobileFeatured, setMobileFeatured] = useState(false);
+
+  const submitCode = useCallback(() => {
+    if (textInput.current && code != textInput.current.value) {
+      navigate(
+        `/team/viewer/${textInput.current.value.toUpperCase().replace(/O/g, "0").replace(/#/g, "")}`,
+      );
+      setError(false);
+    }
+  }, [code, navigate]);
 
   return (
     <>
@@ -169,26 +178,24 @@ export default function Viewer() {
       >
         <div className={styles.sectionheader}>
           <label>
-            Team Code: <input type="text" ref={textInput} defaultValue={code} />
+            Team Code:{" "}
+            <input
+              type="text"
+              ref={textInput}
+              defaultValue={code}
+              onKeyUp={(event) => event.key == "Enter" && submitCode()}
+            />
           </label>
-          <button
-            onClick={() => {
-              if (textInput.current && code != textInput.current.value) {
-                setCode(textInput.current.value);
-                setTeam(null);
-              }
-            }}
-          >
-            Find
-          </button>
+          <button onClick={submitCode}>Find</button>
         </div>
-        {error && !selectedFeatured ? (
-          <div className={styles.sectionheader}>`Invalid Code: ${code}`</div>
-        ) : null}
         <div className={styles.sectionheader}>
-          {team
+          {team && team.code == code
             ? `${team.code}${selectedFeatured ? ` - ${selectedCategoryName} - ${selectedFeatured.name}` : ""}`
-            : "No Team Loaded"}
+            : error
+              ? `Invalid Code: ${code}`
+              : code
+                ? "Loading Team..."
+                : "No Team Loaded"}
         </div>
         <BeastieRenderProvider>
           <div className={styles.team}>

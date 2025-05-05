@@ -25,6 +25,18 @@
   z-index: 1;
 }
 
+.toggleButtonActive {
+  composes: boxHeaderSelectedBackground from global;
+  composes: selectableScroll from global;
+  composes: toggleButton;
+}
+
+.toggleButtonActiveOpen {
+  composes: boxHeaderSelectedBackground from global;
+  composes: selectableScroll from global;
+  composes: toggleButtonOpen;
+}
+
 .openBox {
   composes: animBoxBackground from global;
   color: black;

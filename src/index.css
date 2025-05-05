@@ -217,6 +217,20 @@ a:visited {
   );
 }
 
+.boxHeaderSelectedBackground {
+  background-image: repeating-linear-gradient(
+    135deg,
+    #a87038,
+    #a87038 10px,
+    #b88048 10px,
+    #b88048 20px
+  );
+}
+
+.selectableScroll {
+  animation: selectable-scroll 4s linear infinite;
+}
+
 .animSelectableBackground {
   background-image: repeating-linear-gradient(
     135deg,

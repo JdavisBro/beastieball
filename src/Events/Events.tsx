@@ -27,21 +27,26 @@ function useBigmoon(open: boolean): [NoEvent | BallEvent, () => void] {
   const forceReload = () => updateBigmoon(setBigmoon);
 
   useEffect(() => {
-    if (!open) {
-      return;
-    }
-
     const current = localStorage.getItem("gameEvent");
     if (!current) {
+      if (!open) {
+        return;
+      }
       return updateBigmoon(setBigmoon);
     }
     let currentJson: EventResponse;
     try {
       currentJson = JSON.parse(current);
     } catch {
+      if (!open) {
+        return;
+      }
       return updateBigmoon(setBigmoon);
     }
     setBigmoon(currentJson.currentEvent);
+    if (!open) {
+      return;
+    }
     const now = Date.now();
     const response_expire =
       Number(localStorage.getItem("bigmoonUpdate") ?? 0) +
@@ -205,12 +210,27 @@ export default function Events() {
   const [open, setOpen] = useState(false);
 
   const [bigmoon, bigmoonReload] = useBigmoon(open);
+  const now = new Date(Date.now());
+  let bigmoonActive = false;
+  if (bigmoon != NoEvent.WaitingForResponse && bigmoon != NoEvent.NoEvent) {
+    const startDate = new Date(bigmoon.times[0][0]);
+    const endDate = new Date(bigmoon.times[0][1]);
+    bigmoonActive = now > startDate && now < endDate;
+  }
 
   return (
     <ErrorBoundary fallbackRender={() => null}>
       <div className={styles.events}>
         <div
-          className={open ? styles.toggleButtonOpen : styles.toggleButton}
+          className={
+            bigmoonActive
+              ? open
+                ? styles.toggleButtonActiveOpen
+                : styles.toggleButtonActive
+              : open
+                ? styles.toggleButtonOpen
+                : styles.toggleButton
+          }
           role="button"
           onClick={() => setOpen(!open)}
           tabIndex={0}

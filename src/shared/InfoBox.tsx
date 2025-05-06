@@ -13,7 +13,7 @@ export default function InfoBox(
   props: PropsWithChildren &
     DivProps & {
       header: React.ReactNode;
-      useRef: React.RefObject<HTMLDivElement>;
+      useRef?: React.RefObject<HTMLDivElement>;
     },
 ): React.ReactNode {
   const { header, children } = props;

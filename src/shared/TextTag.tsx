@@ -187,6 +187,9 @@ class TagBuilder {
         );
         this.tooltipId = undefined;
         break;
+      case "br":
+        (this.tooltipId ? this.tooltipElements : this.elements).push(<br />);
+        break;
 
       default:
         console.log(`Tag Not Implemented ${tag}: ${value}`);

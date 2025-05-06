@@ -37,6 +37,9 @@ export default function HoverTooltipProvider({
     const callback = () => {
       setTooltipOpen(false);
       setTooltipStatic(false);
+      if (popoverRef.current) {
+        popoverRef.current.hidePopover();
+      }
     };
     window.addEventListener("click", callback);
     window.addEventListener("touchmove", callback);

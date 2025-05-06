@@ -1,3 +1,5 @@
+/// <reference types="react/canary" />
+
 import React, {
   CSSProperties,
   useEffect,

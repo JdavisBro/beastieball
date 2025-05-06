@@ -26,7 +26,7 @@ export const HOVER_TOOLTIPS: Record<string, HoverTooltip> = {
   tired: {
     id: "tired",
     title: "TIRED feeling",
-    desc: "[sprStatus,10]TIRED Beasties can only use the Move, Free Ball, and Tag Out Plays. Count decreases by 1 at the end of each Offense and Defense turn.",
+    desc: "[sprStatus,10]TIRED Beasties can only use the Move, Free Ball, and Tag Out Plays.[br]Stacks decrease by 1 at the end of each Offense and Defense turn.",
     trigger: /\[sprStatus,10\]TIRED( \(only basic actions\))?/g,
   },
   quake: {

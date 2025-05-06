@@ -11,6 +11,7 @@ import { HelmetProvider } from "react-helmet-async";
 import SpoilerWarning from "./SpoilerWarning";
 import CustomErrorBoundary from "./shared/CustomErrorBoundary";
 import { ErrorBoundary } from "react-error-boundary";
+import HoverTooltipProvider from "./shared/HoverTooltip/HoverTooltipProvider";
 
 const container = document.getElementById("root");
 
@@ -46,11 +47,13 @@ createRoot(container).render(
       />
       <Container>
         <SpoilerWarning>
-          <Suspense fallback={<Loading />}>
-            <ErrorBoundary fallback={<></>}>
-              <RouterProvider router={createBrowserRouter(routes, {})} />
-            </ErrorBoundary>
-          </Suspense>
+          <HoverTooltipProvider>
+            <Suspense fallback={<Loading />}>
+              <ErrorBoundary fallback={<></>}>
+                <RouterProvider router={createBrowserRouter(routes, {})} />
+              </ErrorBoundary>
+            </Suspense>
+          </HoverTooltipProvider>
         </SpoilerWarning>
       </Container>
     </HelmetProvider>

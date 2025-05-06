@@ -1,6 +1,8 @@
 import { Fragment } from "react/jsx-runtime";
 import { bgrDecimalToHex } from "../utils/color";
 import styles from "./Shared.module.css";
+import { HOVER_TOOLTIPS_ARRAY } from "./HoverTooltip/hoverTooltips";
+import Tooltipped from "./HoverTooltip/Tooltipped";
 
 // https://www.jujuadams.com/Scribble/#/latest/text-formatting
 // effects not added
@@ -64,6 +66,8 @@ class TagBuilder {
   elements: React.ReactElement[] = [];
   style: React.CSSProperties = { ...DEFAULT_STYLE };
   animations: string[] = [];
+  tooltipId?: string;
+  tooltipElements: React.ReactNode[] = [];
 
   applyTag(index: number, tag: string, value?: string) {
     if (tag.startsWith("spr")) {
@@ -74,7 +78,7 @@ class TagBuilder {
       if (!alt && !ALT_EXCEPTIONS.includes(tag)) {
         console.log(`NO ALT TEXT: '${tag}' frame ${value}`);
       }
-      this.elements.push(
+      (this.tooltipId ? this.tooltipElements : this.elements).push(
         <img
           key={`${index}${tag}`}
           className={styles.smallimage}
@@ -163,6 +167,27 @@ class TagBuilder {
       case "/shadow":
         this.style.textShadow = undefined;
         break;
+
+      case "tooltip":
+        this.tooltipId = value;
+        this.tooltipElements = [];
+        break;
+      case "/tooltip":
+        if (!this.tooltipId) {
+          return;
+        }
+        this.elements.push(
+          <Tooltipped
+            key={String(index)}
+            tooltipId={this.tooltipId}
+            style={{ animation: this.animations.join(", "), ...this.style }}
+          >
+            {this.tooltipElements}
+          </Tooltipped>,
+        );
+        this.tooltipId = undefined;
+        break;
+
       default:
         console.log(`Tag Not Implemented ${tag}: ${value}`);
         break;
@@ -170,21 +195,22 @@ class TagBuilder {
   }
 
   addText(index: number, text: string) {
-    this.elements.push(
+    const inner = text.split("\n").map((value, newlineindex) =>
+      newlineindex == 0 ? (
+        <Fragment key={`${index}${newlineindex}`}>{value}</Fragment>
+      ) : (
+        <Fragment key={`${index}${newlineindex}`}>
+          <br />
+          {value}
+        </Fragment>
+      ),
+    );
+    (this.tooltipId ? this.tooltipElements : this.elements).push(
       <span
         key={String(index)}
         style={{ animation: this.animations.join(", "), ...this.style }}
       >
-        {text.split("\n").map((value, newlineindex) =>
-          newlineindex == 0 ? (
-            <Fragment key={`${index}${newlineindex}`}>{value}</Fragment>
-          ) : (
-            <Fragment key={`${index}${newlineindex}`}>
-              <br />
-              {value}
-            </Fragment>
-          ),
-        )}
+        {inner}
       </span>,
     );
   }
@@ -201,6 +227,7 @@ export function tagEscape(
 
 type Props = {
   children: string | Array<string | number | undefined | null>;
+  autoTooltip?: boolean;
 };
 
 export default function TextTag(props: Props): React.ReactElement {
@@ -209,6 +236,17 @@ export default function TextTag(props: Props): React.ReactElement {
     text = props.children.join("");
   } else {
     text = props.children;
+  }
+  if (props.autoTooltip == undefined || props.autoTooltip) {
+    for (const tooltip of HOVER_TOOLTIPS_ARRAY) {
+      if (tooltip.trigger) {
+        console.log(tooltip.trigger);
+        text = text.replace(
+          tooltip.trigger,
+          (match) => `[tooltip,${tooltip.id}]${match}[/tooltip]`,
+        );
+      }
+    }
   }
   if (!text.includes("[")) {
     return <span className={styles.texttag}>{text}</span>;

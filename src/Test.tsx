@@ -3,6 +3,7 @@ import { useState } from "react";
 import TextTag from "./shared/TextTag";
 import BeastieRenderProvider from "./shared/beastieRender/BeastieRenderProvider";
 import { BeastieImage } from "./shared/beastieRender/BeastieImage";
+import Tooltipped from "./shared/HoverTooltip/Tooltipped";
 
 export default function Test(): React.ReactElement {
   const [text, setText] = useState(`size test:
@@ -18,6 +19,21 @@ color test: [#2cb18c]aqua[/c] [d#9346814]luncheon red
 
   return (
     <>
+      <h1>HoverTooltip Test</h1>
+      <Tooltipped tooltipId="test">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
+        obcaecati minima, doloribus eaque quos modi vero ullam, molestias harum
+        incidunt provident, porro laborum odio ex maxime sint explicabo dicta
+        necessitatibus dolor. Velit praesentium iste sed maxime qui, esse sint
+        vel blanditiis consequatur amet quibusdam nesciunt aliquam neque et?
+        Illo expedita quia rerum aliquam, perferendis obcaecati. Aspernatur
+        fugit fuga reiciendis quae dolore sequi? Ex numquam illum possimus autem
+        porro, quos quam natus provident totam modi minima dolore incidunt
+      </Tooltipped>
+      <br />
+      <span>
+        Bestie feels <Tooltipped tooltipId="tired">TIRED AND SHIT</Tooltipped>.
+      </span>
       <h1>TextTag test</h1>
       <a href="https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm">
         Colors
@@ -65,6 +81,16 @@ color test: [#2cb18c]aqua[/c] [d#9346814]luncheon red
           }}
         />
       </BeastieRenderProvider>
+      <Tooltipped tooltipId="test">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
+        obcaecati minima, doloribus eaque quos modi vero ullam, molestias harum
+        incidunt provident, porro laborum odio ex maxime sint explicabo dicta
+        necessitatibus dolor. Velit praesentium iste sed maxime qui, esse sint
+        vel blanditiis consequatur amet quibusdam nesciunt aliquam neque et?
+        Illo expedita quia rerum aliquam, perferendis obcaecati. Aspernatur
+        fugit fuga reiciendis quae dolore sequi? Ex numquam illum possimus autem
+        porro, quos quam natus provident totam modi minima dolore incidunt
+      </Tooltipped>
     </>
   );
 }

@@ -5,21 +5,47 @@ import Modal from "./Modal";
 import SpoilerOptions from "./SpoilerOptions";
 import { Link } from "react-router-dom";
 
-function AnimationToggle() {
+function Toggles() {
   const [noAnimations, setNoAnimations] = useLocalStorage(
     "noAnimations",
     false,
     { serializer: String, deserializer: (value) => value == "true" },
   );
+  const [tooltipsEnabled, setTooltipsEnabled] = useLocalStorage(
+    "tooltipsEnabled",
+    true,
+  );
+  const [tooltipsOnHover, setTooltipsOnHover] = useLocalStorage(
+    "tooltipsOnHover",
+    true,
+  );
   return (
-    <label className={styles.animationtoggle}>
-      <input
-        defaultChecked={noAnimations}
-        type="checkbox"
-        onChange={(event) => setNoAnimations(event.currentTarget.checked)}
-      />
-      Disable Animations
-    </label>
+    <>
+      <label className={styles.animationtoggle}>
+        <input
+          defaultChecked={noAnimations}
+          type="checkbox"
+          onChange={(event) => setNoAnimations(event.currentTarget.checked)}
+        />
+        Disable Animations
+      </label>
+      <label className={styles.animationtoggle}>
+        <input
+          defaultChecked={tooltipsEnabled}
+          type="checkbox"
+          onChange={(event) => setTooltipsEnabled(event.currentTarget.checked)}
+        />
+        Tooltips Enabled
+      </label>
+      <label className={styles.animationtoggle}>
+        <input
+          defaultChecked={tooltipsOnHover}
+          type="checkbox"
+          onChange={(event) => setTooltipsOnHover(event.currentTarget.checked)}
+        />
+        Show Tooltips On Hover
+      </label>
+    </>
   );
 }
 
@@ -47,7 +73,7 @@ export default function Settings({
       onClose={onClose}
     >
       <div className={styles.settingsContainer}>
-        <AnimationToggle />
+        <Toggles />
         <SpoilerOptions />
         {experimental || experimental_different ? (
           <Link to={experimental_target.href}>

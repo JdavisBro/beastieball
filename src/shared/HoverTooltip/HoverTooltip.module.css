@@ -1,0 +1,49 @@
+.tooltip {
+  display: none;
+  top: 0;
+  left: 0;
+  position: fixed;
+  pointer-events: none;
+}
+
+.tooltipOpen {
+  composes: tooltip;
+  display: block;
+  --tooltip-bottom-padding: 0px;
+  transform: translateX(min(var(--hover-x), calc(100vw - 100%)))
+    translateY(
+      min(var(--hover-y), calc(100vh - 100% - var(--tooltip-bottom-padding)))
+    );
+  right: 0;
+  max-width: 40vw;
+  max-width: 40dvw;
+  margin: 0;
+  border: none;
+  background: none;
+  width: fit-content;
+  height: fit-content;
+  filter: drop-shadow(#0008 -1px -1px 5px) drop-shadow(#0008 1px 1px 5px);
+  z-index: 10000;
+}
+
+.tooltip::backdrop {
+  background: none;
+}
+
+.tooltipStatic {
+  composes: tooltipOpen;
+  pointer-events: inherit;
+}
+
+@media all and (max-aspect-ratio: 1/1) and (max-width: 800px) {
+  .tooltipOpen {
+    --tooltip-bottom-padding: 40px;
+    max-width: 75vw;
+    max-width: 75dvw;
+  }
+}
+
+.tooltipped {
+  text-decoration: underline dotted;
+  cursor: help;
+}

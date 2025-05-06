@@ -222,10 +222,7 @@ class TagBuilder {
 export function tagEscape(
   text: string | Array<string | number | undefined | null>,
 ) {
-  return (Array.isArray(text) ? text.join("") : text).replace(
-    /(\[{1,2})/g,
-    "$1$1",
-  );
+  return (Array.isArray(text) ? text.join("") : text).replace(/\[/g, "[[");
 }
 
 type Props = {

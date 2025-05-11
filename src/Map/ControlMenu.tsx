@@ -106,67 +106,71 @@ export function ControlMenu({
   };
 
   return (
-    <Control position="topright">
-      <div className={styles.controlContainer}>
-        <ControlSection
-          header="Markers"
-          sectionName="markers"
-          visibleSection={visibleSection}
-          setVisibleSection={setVisibleSection}
-        >
-          {layers.map((layer) => (
-            <Fragment key={layer.title}>
-              {layer.category && (
-                <div onClick={() => toggleCategory(layer.category)}>
-                  {layer.category}
-                </div>
-              )}
-              <label>
-                <input
-                  type="checkbox"
-                  checked={layersVisible[layer.title] ?? true}
-                  onChange={(event) =>
-                    setLayer(layer.title, event.currentTarget.checked)
-                  }
-                />{" "}
-                {layer.title}
-              </label>
-              {(layersVisible[layer.title] ?? true) ? (
-                <LayerGroup>{layer.children}</LayerGroup>
-              ) : undefined}
-            </Fragment>
-          ))}
-        </ControlSection>
-        <ControlSection
-          header="Beasties"
-          sectionName="beasties"
-          visibleSection={visibleSection}
-          setVisibleSection={setVisibleSection}
-        >
-          <label>
-            Track:{" "}
-            <BeastieSelect
-              beastieId={huntedBeastie}
-              setBeastieId={setHuntedBeastie}
-              extraOptionText="Show All"
-              extraOption="all"
-              isSelectable={(beastie) =>
-                SPAWNABLE_BEASTIES.includes(beastie.id)
-              }
-              nonSelectableReason="Beastie has no wild habitat."
-            />
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              checked={postgame}
-              onChange={(event) => setPostgame(event.currentTarget.checked)}
-              id="postgame"
-            />{" "}
-            Postgame Spawns
-          </label>
-        </ControlSection>
-      </div>
+    <Control
+      position="topright"
+      container={{ className: styles.controlContainer }}
+    >
+      <ControlSection
+        header="Markers"
+        sectionName="markers"
+        visibleSection={visibleSection}
+        setVisibleSection={setVisibleSection}
+      >
+        {layers.map((layer) => (
+          <Fragment key={layer.title}>
+            {layer.category && (
+              <div
+                className={styles.controlLayerCategory}
+                onClick={() => toggleCategory(layer.category)}
+                tabIndex={0}
+                role="button"
+              >
+                {layer.category}
+              </div>
+            )}
+            <label>
+              <input
+                type="checkbox"
+                checked={layersVisible[layer.title] ?? true}
+                onChange={(event) =>
+                  setLayer(layer.title, event.currentTarget.checked)
+                }
+              />{" "}
+              {layer.title}
+            </label>
+            {(layersVisible[layer.title] ?? true) ? (
+              <LayerGroup>{layer.children}</LayerGroup>
+            ) : undefined}
+          </Fragment>
+        ))}
+      </ControlSection>
+      <ControlSection
+        header="Beasties"
+        sectionName="beasties"
+        visibleSection={visibleSection}
+        setVisibleSection={setVisibleSection}
+      >
+        <label>
+          Track:{" "}
+          <BeastieSelect
+            beastieId={huntedBeastie}
+            setBeastieId={setHuntedBeastie}
+            extraOptionText="Show All"
+            extraOption="all"
+            isSelectable={(beastie) => SPAWNABLE_BEASTIES.includes(beastie.id)}
+            nonSelectableReason="Beastie has no wild habitat."
+          />
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={postgame}
+            onChange={(event) => setPostgame(event.currentTarget.checked)}
+            id="postgame"
+          />{" "}
+          Postgame Spawns
+        </label>
+      </ControlSection>
     </Control>
   );
 }

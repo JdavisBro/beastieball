@@ -349,8 +349,8 @@ export default function Map(): React.ReactNode {
               )),
             },
             {
-              category: "Help",
-              title: "Inside Traversal Overlays",
+              category: "Exploration",
+              title: "Inside Overlays",
               children: inside_overlays,
             },
             {

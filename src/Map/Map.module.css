@@ -188,6 +188,8 @@
   display: flex;
   flex-direction: column;
   align-items: end;
+  user-select: none;
+  pointer-events: none;
 }
 
 :global(.noanim) .controlContainer * {
@@ -206,12 +208,14 @@
   margin-left: 0%;
   transform: translateX(0%);
   cursor: pointer;
+  pointer-events: auto;
 }
 
 .controlSectionClosed {
   composes: controlSection;
   height: 3em;
   filter: drop-shadow(white 0 0 2px);
+  pointer-events: none;
 }
 
 .controlSectionClosed :global(.infoboxHeader) {
@@ -221,6 +225,7 @@
 
 .controlSection :global(.infoBoxContent) {
   transition: clip-path 0.5s;
+  pointer-events: auto;
 }
 
 .controlSectionClosed :global(.infoBoxContent) {
@@ -240,5 +245,9 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  user-select: none;
+}
+
+.controlLayerCategory {
+  cursor: pointer;
+  font-size: 1.1em;
 }

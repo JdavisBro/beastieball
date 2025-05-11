@@ -97,26 +97,24 @@ export default function HoverTooltipProvider({
     >
       <InfoBox
         header={(hoverTooltipInfo && hoverTooltipInfo?.title) || "Tooltip"}
-        className={
-          tooltipsEnabled
+        container={{
+          className: tooltipsEnabled
             ? tooltipOpen
               ? tooltipStatic
                 ? styles.tooltipStatic
                 : styles.tooltipOpen
               : styles.tooltip
-            : styles.tooltip
-        }
-        style={
-          tooltipsEnabled
+            : styles.tooltip,
+          style: tooltipsEnabled
             ? ({
                 "--hover-x": `${tooltipPosition[0] + 20}px`,
                 "--hover-y": `${tooltipPosition[1]}px`,
               } as CSSProperties)
-            : undefined
-        }
-        onClick={(event) => event.stopPropagation()}
-        useRef={popoverRef}
-        popover={"manual"}
+            : undefined,
+          popover: "manual",
+          onClick: (event) => event.stopPropagation(),
+        }}
+        containerRef={popoverRef}
       >
         {tooltipOpen && hoverTooltipInfo ? (
           <TextTag autoTooltip={false}>{hoverTooltipInfo.desc}</TextTag>

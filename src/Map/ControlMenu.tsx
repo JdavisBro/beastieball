@@ -21,29 +21,22 @@ export function ControlSection({
   setVisibleSection: (section: string | undefined) => void;
 }) {
   return (
-    <div
-      onClick={() =>
+    <InfoBox
+      header={header}
+      container={{
+        className:
+          visibleSection == sectionName
+            ? styles.controlSection
+            : styles.controlSectionClosed,
+      }}
+      headerClick={() =>
         setVisibleSection(
           visibleSection == sectionName ? undefined : sectionName,
         )
       }
     >
-      <InfoBox
-        header={header}
-        className={
-          visibleSection == sectionName
-            ? styles.controlSection
-            : styles.controlSectionClosed
-        }
-      >
-        <div
-          className={styles.controlSectionChildren}
-          onClick={(event) => event.stopPropagation()}
-        >
-          {children}
-        </div>
-      </InfoBox>
-    </div>
+      <div className={styles.controlSectionChildren}>{children}</div>
+    </InfoBox>
   );
 }
 

@@ -91,7 +91,7 @@ export default function ComboMove({
   }
 
   return (
-    <InfoBox header="Combo Moves" className={styles.combo}>
+    <InfoBox header="Combo Moves" container={{ className: styles.combo }}>
       <select onChange={(event) => setType(Number(event.currentTarget.value))}>
         <option value={ComboType.Rivals}>Rivals Attack</option>
         <option value={ComboType.Partners}>Partners Volley</option>

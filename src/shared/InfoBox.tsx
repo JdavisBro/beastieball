@@ -10,18 +10,24 @@ type DivProps = React.DetailedHTMLProps<
 >;
 
 export default function InfoBox(
-  props: PropsWithChildren &
-    DivProps & {
-      header: React.ReactNode;
-      useRef?: React.RefObject<HTMLDivElement>;
-    },
+  props: PropsWithChildren & {
+    header: React.ReactNode;
+    container?: DivProps;
+    containerRef?: React.RefObject<HTMLDivElement>;
+    headerClick?: React.MouseEventHandler<HTMLDivElement>;
+  },
 ): React.ReactNode {
-  const { header, children } = props;
-
   return (
-    <div {...(props as DivProps)} ref={props.useRef}>
-      <div className="infoboxHeader">{header}</div>
-      <div className="infoBoxContent">{children}</div>
+    <div {...props.container} ref={props.containerRef}>
+      <div
+        className="infoboxHeader"
+        onClick={props.headerClick}
+        tabIndex={props.headerClick ? 0 : -1}
+        role={props.headerClick && "button"}
+      >
+        {props.header}
+      </div>
+      <div className="infoBoxContent">{props.children}</div>
     </div>
   );
 }

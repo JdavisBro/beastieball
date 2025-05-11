@@ -3,7 +3,6 @@ import * as L from "leaflet";
 import {
   ImageOverlay,
   LayerGroup,
-  LayersControl,
   MapContainer,
   Marker,
   Polyline,
@@ -27,16 +26,15 @@ import {
   useSpoilerSeen,
 } from "../shared/useSpoiler";
 import OTHER_AREAS from "./OtherLayerAreas";
-import Control from "react-leaflet-custom-control";
-import BeastieSelect from "../shared/BeastieSelect";
 import SpecialBeastieMarker from "./SpecialBeastieMarker";
 import { EXTINCT_BEASTIES, METAMORPH_LOCATIONS } from "./SpecialBeasties";
 import DivIconMarker from "./DivIconMarker";
 import createBeastieBox from "./createBeastieBox";
+import { ControlMenu } from "./ControlMenu";
 
 const BEASTIE_ARRAY = [...BEASTIE_DATA.values()];
 
-const SPAWNABLE_BEASTIES = Object.values(SPAWN_DATA)
+export const SPAWNABLE_BEASTIES = Object.values(SPAWN_DATA)
   .map((spawns) => spawns.group?.map((spawn) => spawn.specie))
   .flat()
   .filter((beastie) => typeof beastie === "string")
@@ -288,27 +286,76 @@ export default function Map(): React.ReactNode {
         crs={L.CRS.Simple}
       >
         <MapEvents />
-        <LayersControl>
-          <LayersControl.Overlay checked name="Region Names">
-            <LayerGroup>{bigtitleheaders}</LayerGroup>
-          </LayersControl.Overlay>
-          <LayersControl.Overlay checked name="Area Names">
-            <LayerGroup>{titleheaders}</LayerGroup>
-          </LayersControl.Overlay>
-
-          {Object.keys(imgheaders).map((key) =>
-            key == "Other" && imgheaders[key].length == 0 ? null : (
-              <LayersControl.Overlay key={key} checked name={key}>
-                <LayerGroup>{imgheaders[key]}</LayerGroup>
-              </LayersControl.Overlay>
-            ),
-          )}
-          <LayersControl.Overlay checked name="Beastie Spawns">
-            <LayerGroup>{beastieSpawnsOverlays}</LayerGroup>
-          </LayersControl.Overlay>
-          <LayersControl.Overlay checked name="Items">
-            <LayerGroup>
-              {EXTRA_MARKERS.gifts.map((gift) => (
+        <LayerGroup>{level_overlays}</LayerGroup>
+        <ControlMenu
+          layers={[
+            {
+              category: "Text",
+              title: "Region Names",
+              children: bigtitleheaders,
+            },
+            {
+              title: "Area Names",
+              children: titleheaders,
+            },
+            ...Object.keys(imgheaders)
+              .map((key, index) =>
+                key == "Other" && imgheaders[key].length == 0
+                  ? null
+                  : {
+                      category: index == 0 ? "Markers" : undefined,
+                      title: key,
+                      children: imgheaders[key],
+                    },
+              )
+              .filter((layer) => !!layer),
+            {
+              category: "Beasties",
+              title: "Beastie Spawns",
+              children: beastieSpawnsOverlays,
+            },
+            {
+              title: `${extinctIsSpoiler ? "???" : "Extinct"} Beastie Locations`,
+              children: EXTINCT_BEASTIES.map((extinct) => (
+                <SpecialBeastieMarker
+                  key={extinct.beastieId}
+                  open={
+                    extinct.beastieId ==
+                    (marker && "beastieId" in marker
+                      ? marker.beastieId
+                      : undefined)
+                  }
+                  position={extinct.position}
+                  target={BEASTIE_DATA.get(extinct.beastieId) as BeastieType}
+                />
+              )),
+            },
+            {
+              title: "Metamorphosis Locations",
+              children: METAMORPH_LOCATIONS.map((metamorph) => (
+                <SpecialBeastieMarker
+                  key={metamorph.to}
+                  open={
+                    metamorph.to ==
+                    (marker && "to" in marker ? marker.to : undefined)
+                  }
+                  position={metamorph.position}
+                  target={BEASTIE_DATA.get(metamorph.to) as BeastieType}
+                  metamorph={{
+                    from: BEASTIE_DATA.get(metamorph.from) as BeastieType,
+                    by: metamorph.by,
+                  }}
+                />
+              )),
+            },
+            {
+              category: "Exploration",
+              title: "Inside Overlays",
+              children: inside_overlays,
+            },
+            {
+              title: "Items",
+              children: EXTRA_MARKERS.gifts.map((gift) => (
                 <Marker
                   key={gift.id}
                   position={[-gift.y, gift.x]}
@@ -336,150 +383,83 @@ export default function Map(): React.ReactNode {
                     </div>
                   </Popup>
                 </Marker>
-              ))}
-            </LayerGroup>
-          </LayersControl.Overlay>
-          <LayersControl.Overlay checked name="Switches and Gates">
-            <LayerGroup>
-              {EXTRA_MARKERS.switches
-                .map((lever, index) => {
-                  const leverPos = L.latLng(
-                    -lever.position[1],
-                    lever.position[0],
-                  );
-                  const walls = EXTRA_MARKERS.walls[lever.lever_id];
-                  const lineCol = `hsl(${Math.floor(Math.abs(lever.position[0] + lever.position[1]) % 360) & 0xaaaaaa}, 100%, 50%)`;
-                  return [
-                    <DivIconMarker
-                      key={`${index}_lever`}
-                      tagName="div"
-                      className={styles.imgmarker}
-                      markerprops={{ position: leverPos }}
-                      icon={{
-                        className: styles.hidemarker,
-                        iconSize: [15, 30],
-                      }}
-                      popup={<Popup>Switch</Popup>}
-                    >
-                      <img src="/map_icon/switch.png" alt="Switch Marker" />
-                    </DivIconMarker>,
-                    walls.map((wall, wallIndex) => {
-                      const rad = ((wall.angle - 180) * Math.PI) / 180;
-                      const gatePos = L.latLng(
-                        -wall.position[1] + Math.sin(rad) * 125,
-                        wall.position[0] + Math.cos(rad) * 250,
-                      );
-                      return (
-                        <Polyline
-                          key={`${index}_line_${wallIndex}`}
-                          positions={[leverPos, gatePos]}
-                          weight={6}
-                          color={lineCol}
-                        />
-                      );
-                    }),
-                  ];
-                })
-                .flat()}
-              {Object.values(EXTRA_MARKERS.walls)
-                .flat()
-                .map((wall, index) => {
-                  const rad = ((wall.angle - 180) * Math.PI) / 180;
-                  const gatePos = L.latLng(
-                    -wall.position[1] + Math.sin(rad) * 125,
-                    wall.position[0] + Math.cos(rad) * 250,
-                  );
-                  return (
-                    <DivIconMarker
-                      key={`${index}_gate`}
-                      tagName="div"
-                      className={styles.imgmarker}
-                      markerprops={{ position: gatePos }}
-                      icon={{
-                        className: styles.hidemarker,
-                        iconSize: [15, 30],
-                      }}
-                      popup={<Popup>Gate</Popup>}
-                    >
-                      <img src="/map_icon/gate.png" alt="Gate Marker" />
-                    </DivIconMarker>
-                  );
-                })}
-            </LayerGroup>
-          </LayersControl.Overlay>
-          <LayersControl.Overlay checked name="Inside Overlays">
-            <LayerGroup>{inside_overlays}</LayerGroup>
-          </LayersControl.Overlay>
-          <LayersControl.Overlay
-            checked
-            name={`${extinctIsSpoiler ? "???" : "Extinct"} Beastie Locations`}
-          >
-            <LayerGroup>
-              {EXTINCT_BEASTIES.map((extinct) => (
-                <SpecialBeastieMarker
-                  key={extinct.beastieId}
-                  open={
-                    extinct.beastieId ==
-                    (marker && "beastieId" in marker
-                      ? marker.beastieId
-                      : undefined)
-                  }
-                  position={extinct.position}
-                  target={BEASTIE_DATA.get(extinct.beastieId) as BeastieType}
-                />
-              ))}
-            </LayerGroup>
-          </LayersControl.Overlay>
-          <LayersControl.Overlay checked name="Metamorphosis Locations">
-            <LayerGroup>
-              {METAMORPH_LOCATIONS.map((metamorph) => (
-                <SpecialBeastieMarker
-                  key={metamorph.to}
-                  open={
-                    metamorph.to ==
-                    (marker && "to" in marker ? marker.to : undefined)
-                  }
-                  position={metamorph.position}
-                  target={BEASTIE_DATA.get(metamorph.to) as BeastieType}
-                  metamorph={{
-                    from: BEASTIE_DATA.get(metamorph.from) as BeastieType,
-                    by: metamorph.by,
-                  }}
-                />
-              ))}
-            </LayerGroup>
-          </LayersControl.Overlay>
-        </LayersControl>
-        <Control position="topright">
-          <div className={styles.controlBox}>
-            <div className={styles.controlHidden}>
-              <img src="/icons/Sprecko.png" alt="Beastie Options" />
-            </div>
-            <div className={styles.controlContent}>
-              <h3>Beastie Options</h3>
-              <BeastieSelect
-                beastieId={huntedBeastie}
-                setBeastieId={setHuntedBeastie}
-                extraOptionText="Show All"
-                extraOption="all"
-                isSelectable={(beastie) =>
-                  SPAWNABLE_BEASTIES.includes(beastie.id)
-                }
-                nonSelectableReason="Beastie has no wild habitat."
-              />
-              <div>
-                <input
-                  type="checkbox"
-                  checked={postgame}
-                  onChange={(event) => setPostgame(event.currentTarget.checked)}
-                  id="postgame"
-                />
-                <label htmlFor="postgame"> Postgame Spawns</label>
-              </div>
-            </div>
-          </div>
-        </Control>
-        <LayerGroup>{level_overlays}</LayerGroup>
+              )),
+            },
+            {
+              title: "Switches and Gates",
+              children: [
+                EXTRA_MARKERS.switches
+                  .map((lever, index) => {
+                    const leverPos = L.latLng(
+                      -lever.position[1],
+                      lever.position[0],
+                    );
+                    const walls = EXTRA_MARKERS.walls[lever.lever_id];
+                    const lineCol = `hsl(${Math.floor(Math.abs(lever.position[0] + lever.position[1]) % 360) & 0xaaaaaa}, 100%, 50%)`;
+                    return [
+                      <DivIconMarker
+                        key={`${index}_lever`}
+                        tagName="div"
+                        className={styles.imgmarker}
+                        markerprops={{ position: leverPos }}
+                        icon={{
+                          className: styles.hidemarker,
+                          iconSize: [15, 30],
+                        }}
+                        popup={<Popup>Switch</Popup>}
+                      >
+                        <img src="/map_icon/switch.png" alt="Switch Marker" />
+                      </DivIconMarker>,
+                      walls.map((wall, wallIndex) => {
+                        const rad = ((wall.angle - 180) * Math.PI) / 180;
+                        const gatePos = L.latLng(
+                          -wall.position[1] + Math.sin(rad) * 125,
+                          wall.position[0] + Math.cos(rad) * 250,
+                        );
+                        return (
+                          <Polyline
+                            key={`${index}_line_${wallIndex}`}
+                            positions={[leverPos, gatePos]}
+                            weight={6}
+                            color={lineCol}
+                          />
+                        );
+                      }),
+                    ];
+                  })
+                  .flat(),
+                Object.values(EXTRA_MARKERS.walls)
+                  .flat()
+                  .map((wall, index) => {
+                    const rad = ((wall.angle - 180) * Math.PI) / 180;
+                    const gatePos = L.latLng(
+                      -wall.position[1] + Math.sin(rad) * 125,
+                      wall.position[0] + Math.cos(rad) * 250,
+                    );
+                    return (
+                      <DivIconMarker
+                        key={`${index}_gate`}
+                        tagName="div"
+                        className={styles.imgmarker}
+                        markerprops={{ position: gatePos }}
+                        icon={{
+                          className: styles.hidemarker,
+                          iconSize: [15, 30],
+                        }}
+                        popup={<Popup>Gate</Popup>}
+                      >
+                        <img src="/map_icon/gate.png" alt="Gate Marker" />
+                      </DivIconMarker>
+                    );
+                  }),
+              ],
+            },
+          ]}
+          huntedBeastie={huntedBeastie}
+          setHuntedBeastie={setHuntedBeastie}
+          postgame={postgame}
+          setPostgame={setPostgame}
+        />
       </MapContainer>
     </>
   );

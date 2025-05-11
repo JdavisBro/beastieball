@@ -17,7 +17,10 @@ type Props = {
 export default function PreviewSettings(props: Props): React.ReactElement {
   return (
     <>
-      <InfoBox header="Settings" className={styles.previewSettings}>
+      <InfoBox
+        header="Settings"
+        container={{ className: styles.previewSettings }}
+      >
         <div>
           <button onClick={() => props.downloadImage()}>Save PNG</button>
           <button onClick={() => props.downloadImage(true)}>Copy PNG</button>

@@ -5,53 +5,6 @@
   height: calc(100dvh - var(--header-height));
 }
 
-.controlBox {
-  background-color: white;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  background-clip: padding-box;
-  border-radius: 8px;
-  color: black;
-}
-
-.controlHidden {
-  display: none;
-}
-
-.controlBox:not(:hover) .controlHidden {
-  display: block;
-  width: 44px;
-  height: 44px;
-}
-
-.controlHidden > img {
-  margin-top: 4px;
-  margin-left: 4px;
-  width: 36px;
-  height: 36px;
-}
-
-.controlContent {
-  display: none;
-  flex-direction: column;
-  font-size: 1.08333em;
-  align-items: end;
-  margin: 6px;
-}
-
-.controlContent:has(dialog[open]) {
-  /* if modal is open DO NOT go display: none otherwise everything breaks */
-  display: flex;
-}
-
-.controlBox:hover .controlContent {
-  display: flex;
-}
-
-.controlContent > h3 {
-  width: 100%;
-  text-align: center;
-}
-
 .hidemarker {
   width: 0;
   height: 0;
@@ -228,4 +181,73 @@
     100% 100%,
     calc(100% - 10px) 0
   );
+}
+
+.controlContainer {
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  user-select: none;
+  pointer-events: none;
+}
+
+:global(.noanim) .controlContainer * {
+  transition: none !important;
+}
+
+.controlSection {
+  height: 100%;
+  transition: height 0.5s;
+}
+
+.controlSection :global(.infoboxHeader) {
+  transition:
+    margin-left 0.525s,
+    transform 0.5s;
+  margin-left: 0%;
+  transform: translateX(0%);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.controlSectionClosed {
+  composes: controlSection;
+  height: 3em;
+  filter: drop-shadow(white 0 0 2px);
+  pointer-events: none;
+}
+
+.controlSectionClosed :global(.infoboxHeader) {
+  margin-left: 100%;
+  transform: translateX(-100%);
+}
+
+.controlSection :global(.infoBoxContent) {
+  transition: clip-path 0.5s;
+  pointer-events: auto;
+}
+
+.controlSectionClosed :global(.infoBoxContent) {
+  clip-path: polygon(
+    calc(100% - 4px) 0,
+    calc(100% - 4px) 0,
+    100% 100%,
+    100% 100%
+  );
+  transition:
+    clip-path 0.5s,
+    display 1s;
+}
+
+.controlSectionChildren {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.controlLayerCategory {
+  cursor: pointer;
+  font-size: 1.1em;
 }

@@ -35,14 +35,13 @@
 }
 
 .sidebarsearch {
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex: 1 1 0;
   min-width: 20px;
 }
 
 .sidebarselect {
-  flex-grow: 0.5;
-  flex-shrink: 1;
+  flex: 1 0.5 0;
+  max-width: fit-content;
   min-width: 0;
 }
 

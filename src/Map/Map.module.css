@@ -211,6 +211,7 @@
 .controlSectionClosed {
   composes: controlSection;
   height: 3em;
+  filter: drop-shadow(white 0 0 2px);
 }
 
 .controlSectionClosed :global(.infoboxHeader) {

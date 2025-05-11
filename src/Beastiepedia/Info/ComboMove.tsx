@@ -27,7 +27,7 @@ export default function ComboMove({
   const friend = friendId ? BEASTIE_DATA.get(friendId) : undefined;
 
   const powMults: number[] = [1, 1];
-  let target = 0;
+  let target = type == ComboType.Rivals ? 0 : type == ComboType.Defense ? 1 : 2;
   let use = 0;
   const moveType =
     type == ComboType.Partners

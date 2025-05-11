@@ -19,6 +19,8 @@ const TARGET_STRINGS: Record<number, string> = {
   6: "entire team",
   7: "every fielded player",
   8: "other team",
+
+  9: "nearest enemy", // probably?
 };
 
 const ALT_TARGET_STRINGS: Record<number, string> = {

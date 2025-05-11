@@ -37,10 +37,23 @@ button {
   margin: 0 1px;
   padding: 2px 4px;
   font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
+  color: white;
 }
 
 button:hover {
   background-color: #52525e;
+}
+
+input[type="search"] {
+  background-color: #2b2a33;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+
+select {
+  background-color: #2b2a33;
+  border-radius: 4px;
+  border: 1px solid gray;
 }
 
 .container {

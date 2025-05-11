@@ -59,7 +59,7 @@
 
 .gridimageGrid {
   composes: gridimage;
-  background-size: 25% 100%;
+  background-size: 25.5% 100%;
 }
 
 .beastiecontainer {

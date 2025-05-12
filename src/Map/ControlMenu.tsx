@@ -6,6 +6,7 @@ import InfoBox from "../shared/InfoBox";
 import { LayerGroup } from "react-leaflet";
 import BeastieSelect from "../shared/BeastieSelect";
 import { SPAWNABLE_BEASTIES } from "./Map";
+import { useLocalStorage } from "usehooks-ts";
 
 export function ControlSection({
   header,
@@ -64,13 +65,13 @@ export function ControlMenu({
   const [visibleSection, setVisibleSection] = useState<string | undefined>(
     undefined,
   );
-  const [layersVisible, setLayersVisible] = useState<Record<string, boolean>>(
-    {},
-  );
+  const [layersVisible, setLayersVisible] = useLocalStorage<
+    Record<string, boolean>
+  >("mapLayersVisible", {});
   const setLayer = useCallback(
     (layer: string, visible: boolean) =>
       setLayersVisible((oldLayers) => ({ ...oldLayers, [layer]: visible })),
-    [],
+    [setLayersVisible],
   );
 
   const categories = layers

@@ -16,6 +16,9 @@ const BEASTIE_STAT_HEIGHT = 125;
 const BEASTIE_STAT_ICON = 31;
 const BEASTIE_STAT_BAR = 46;
 const BEASTIE_STAT_BAR_HEIGHT = 34;
+const BEASTIE_STAT_TEXT_OFFSET = navigator.userAgent.includes("Chrome/")
+  ? 24
+  : 22;
 
 const BEASTIE_PLAY_BEGIN = BEASTIE_SIZE[1] - 40;
 const BEASTIE_PLAY_SIZE = [98, 36];
@@ -558,7 +561,7 @@ async function createTeamImage(
         const textY =
           starty +
           right_gap +
-          22 +
+          BEASTIE_STAT_TEXT_OFFSET +
           BEASTIE_STAT_BAR_HEIGHT / 2 +
           BEASTIE_STAT_BAR_HEIGHT * i;
         ctx.font = "25px SportsJersey";
@@ -613,7 +616,7 @@ async function createTeamImage(
         const textY =
           starty +
           right_gap +
-          22 +
+          BEASTIE_STAT_TEXT_OFFSET +
           BEASTIE_STAT_BAR_HEIGHT / 2 +
           BEASTIE_STAT_BAR_HEIGHT * i;
         ctx.font = "25px SportsJersey";

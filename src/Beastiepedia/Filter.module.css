@@ -65,10 +65,8 @@
 }
 
 .ability {
-  composes: animSelectableBackground from global;
-  display: flex;
-  border: black 1px solid;
-  flex-direction: column;
+  color: white;
+  text-align: center;
   width: 250px;
   max-width: 100%;
   min-height: 80px;
@@ -81,8 +79,15 @@
   composes: animSelectedBackground from global;
 }
 
+.abilityInner {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
 .abilityDesc {
-  flex: 1 0 auto;
   overflow-y: auto;
   font-size: 0.9em;
 }

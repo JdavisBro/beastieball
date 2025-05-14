@@ -47,11 +47,11 @@
   flex-shrink: 1;
   width: fit-content;
   cursor: pointer;
-  text-decoration: underline dotted;
 }
 
 .movetext img {
   height: 1em;
+  margin: auto 2px auto 0;
 }
 
 .movetext.selected {

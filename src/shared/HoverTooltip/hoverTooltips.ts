@@ -9,6 +9,10 @@ type HoverMatcher = {
   match: (match: string, ...groups: string[]) => string;
 };
 
+const makeDefaultMatch: (id: string) => (match: string) => string =
+  (id) => (match) =>
+    `[tt,${id}]${match}[/tt]`;
+
 export const HOVER_MATCHERS: HoverMatcher[] = [
   {
     trigger: /\[sprStatus,\d+\](\p{L}+)( \(.+?\))?/gu,
@@ -18,10 +22,30 @@ export const HOVER_MATCHERS: HoverMatcher[] = [
       //   return match;
       // }
       if (feeling == "stressed" && groups[1]) {
-        return "[tt,stressed][sprStatus,12]STRESSED (becomes [tt,tired][sprStatus,10]TIRED[/tt][tt,stressed])[/tt]";
+        return "[tt,stressed][sprStatus,12]STRESSED (becomes [tt,tired][sprStatus,10]TIRED[tt,stressed])[/tt]";
       }
       return `[tt,${feeling}]${match}[/tt]`;
     },
+  },
+  {
+    trigger: /TRAP( \(.+?\))?/g,
+    match: makeDefaultMatch("trap"),
+  },
+  {
+    trigger: /RALLY( \(.+?\))?/g,
+    match: makeDefaultMatch("rally"),
+  },
+  {
+    trigger: /RHYTHM( \(.+?\))?/g,
+    match: makeDefaultMatch("rhythm"),
+  },
+  {
+    trigger: /DREAD( \(.+?\))?/g,
+    match: makeDefaultMatch("dread"),
+  },
+  {
+    trigger: /QUAKE( \(.+?\))?/g,
+    match: makeDefaultMatch("quake"),
   },
 ];
 

@@ -57,7 +57,6 @@ export default function HoverTooltipProvider({
         if (tooltipStaticRef.current && !is_static) {
           return;
         }
-        console.log(popoverRef);
         if (popoverRef.current) {
           popoverRef.current.showPopover();
         }

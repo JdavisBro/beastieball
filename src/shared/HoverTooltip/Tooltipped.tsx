@@ -7,9 +7,11 @@ import { useLocalStorage } from "usehooks-ts";
 export default function Tooltipped({
   children,
   tooltipId,
+  innerTooltip,
 }: {
   children: React.ReactNode;
   tooltipId: string;
+  innerTooltip?: boolean;
 }) {
   const hoverTooltipContext = useContext(HoverTooltipContext);
 
@@ -18,12 +20,13 @@ export default function Tooltipped({
   if (!tooltipsEnabled) {
     return children;
   }
+  const allowHover = !innerTooltip && tooltipsOnHover;
 
   return (
     <span
       className={styles.tooltipped}
       onMouseOver={
-        tooltipsOnHover
+        allowHover
           ? (event) => {
               hoverTooltipContext?.open(tooltipId, [
                 event.clientX,
@@ -33,7 +36,7 @@ export default function Tooltipped({
           : undefined
       }
       onMouseMove={
-        tooltipsOnHover
+        allowHover
           ? (event) => {
               hoverTooltipContext?.move(tooltipId, [
                 event.clientX,
@@ -43,7 +46,7 @@ export default function Tooltipped({
           : undefined
       }
       onMouseLeave={
-        tooltipsOnHover
+        allowHover
           ? () => {
               hoverTooltipContext?.close(tooltipId);
             }
@@ -52,7 +55,7 @@ export default function Tooltipped({
       onClick={(event) => {
         hoverTooltipContext?.open(
           tooltipId,
-          [event.clientX, event.clientY],
+          innerTooltip ? undefined : [event.clientX, event.clientY],
           true,
         );
         event.stopPropagation();

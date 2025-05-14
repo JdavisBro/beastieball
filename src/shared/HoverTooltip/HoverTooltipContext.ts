@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 export type HoverTooltipType = {
-  open: (tooltipId: string, at: [number, number], is_static?: boolean) => void;
+  open: (tooltipId: string, at?: [number, number], is_static?: boolean) => void;
   close: (tooltipId?: string) => void;
   move: (tooltipId: string, to: [number, number]) => void;
 };

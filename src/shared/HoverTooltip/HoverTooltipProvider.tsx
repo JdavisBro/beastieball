@@ -62,7 +62,9 @@ export default function HoverTooltipProvider({
         }
         setTooltipCurrentId(tooltipId);
         setTooltipOpen(true);
-        setTooltipPosition(at);
+        if (at) {
+          setTooltipPosition(at);
+        }
         setTooltipStatic(is_static ?? false);
       },
       close: (tooltipId) => {
@@ -116,7 +118,9 @@ export default function HoverTooltipProvider({
         containerRef={popoverRef}
       >
         {tooltipOpen && hoverTooltipInfo ? (
-          <TextTag autoTooltip={false}>{hoverTooltipInfo.desc}</TextTag>
+          <TextTag autoTooltip={false} innerTooltip={true}>
+            {hoverTooltipInfo.desc}
+          </TextTag>
         ) : null}
       </InfoBox>
       {children}

@@ -29,7 +29,7 @@ export const HOVER_TOOLTIPS: Record<string, HoverTooltip> = {
   test: {
     id: "test",
     title: "Test Tooltip",
-    desc: "Test Dialogue Tooltip for Testing Things. e.g: [sprIcon,0]POW[sprBoost,2]",
+    desc: "Test Dialogue Tooltip for Testing Things. e.g: [sprIcon,0]POW[sprBoost,2]. Innertooltip Texting: [tt,wiped][sprStatus,5]WIPED[/tt]",
   },
   wiped: {
     id: "wiped",

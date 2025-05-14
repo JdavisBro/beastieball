@@ -68,6 +68,7 @@ class TagBuilder {
   animations: string[] = [];
   tooltipId?: string;
   tooltipElements: React.ReactNode[] = [];
+  innerTooltip?: boolean;
 
   applyTag(index: number, tag: string, value?: string) {
     if (tag.startsWith("spr")) {
@@ -172,7 +173,11 @@ class TagBuilder {
       case "tt":
         if (this.tooltipId) {
           this.elements.push(
-            <Tooltipped key={String(index)} tooltipId={this.tooltipId}>
+            <Tooltipped
+              key={String(index)}
+              tooltipId={this.tooltipId}
+              innerTooltip={this.innerTooltip}
+            >
               {this.tooltipElements}
             </Tooltipped>,
           );
@@ -186,7 +191,11 @@ class TagBuilder {
           return;
         }
         this.elements.push(
-          <Tooltipped key={String(index)} tooltipId={this.tooltipId}>
+          <Tooltipped
+            key={String(index)}
+            tooltipId={this.tooltipId}
+            innerTooltip={this.innerTooltip}
+          >
             {this.tooltipElements}
           </Tooltipped>,
         );
@@ -233,6 +242,7 @@ export function tagEscape(
 type Props = {
   children: string | Array<string | number | undefined | null>;
   autoTooltip?: boolean;
+  innerTooltip?: boolean;
 };
 
 export default function TextTag(props: Props): React.ReactElement {
@@ -253,6 +263,7 @@ export default function TextTag(props: Props): React.ReactElement {
     return <span className={styles.texttag}>{text}</span>;
   }
   const builder = new TagBuilder();
+  builder.innerTooltip = props.innerTooltip;
   // gets text before next tag or end of string (match[1]) (match[2] is [ when [[) + next tag (match[3]) + value (match[4])
   const regex = /([^[]*)(?:\[(\[)|\[(.*?)(?:,(.*?))?\]|$)/g;
   let match = regex.exec(text);

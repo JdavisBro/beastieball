@@ -138,8 +138,9 @@
 .moveblock {
   height: 100%;
   width: 20px;
-  background-image: linear-gradient(var(--move-color), var(--move-color)),
-    var(--move-url), linear-gradient(black, black);
+  background-image:
+    linear-gradient(var(--move-color), var(--move-color)), var(--move-url),
+    linear-gradient(black, black);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

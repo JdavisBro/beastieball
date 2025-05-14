@@ -6,6 +6,7 @@ import MoveModalContext from "./MoveModalContext";
 import { useContext } from "react";
 import SOCIAL_DATA from "../data/SocialData";
 import { SpoilerMode, useFriendSpoiler, useSpoilerMode } from "./useSpoiler";
+import { useLocalStorage } from "usehooks-ts";
 
 // reuqired: targ=12 says Targets SIDEWAYS.
 
@@ -19,6 +20,8 @@ const TARGET_STRINGS: Record<number, string> = {
   6: "entire team",
   7: "every fielded player",
   8: "other team",
+
+  9: "nearest enemy", // probably?
 };
 
 const ALT_TARGET_STRINGS: Record<number, string> = {
@@ -326,6 +329,8 @@ export default function MoveView(props: {
     friend.plays.includes(props.move.id),
   );
 
+  const [simpleMoves] = useLocalStorage("simpleMoves", false);
+
   const [spoilerMode] = useSpoilerMode();
   const [seenFriends, setSeenFriends] = useFriendSpoiler();
   const friendSpoiler = friend
@@ -464,9 +469,11 @@ export default function MoveView(props: {
       </div>
       <div className={styles.moveseparator}></div>
       <div className={styles.movecontent}>
-        <div className={styles.moveothercolor}>
-          <div className={styles.movehalftone}></div>
-        </div>
+        {simpleMoves ? null : (
+          <div className={styles.moveothercolor}>
+            <div className={styles.movehalftone}></div>
+          </div>
+        )}
         <div
           className={
             props.move.name.length > 18 ? styles.movenamelong : styles.movename

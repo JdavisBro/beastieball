@@ -92,11 +92,11 @@ export default function EditBeastie({
           beastieId={beastie.specie}
           setBeastieId={(beastieId) => {
             if (beastieId) {
-              changeValue("specie", beastieId);
               const newBeastie = BEASTIE_DATA.get(beastieId);
               if (!newBeastie) {
                 return;
               }
+              changeValue("specie", beastieId);
               changeValue(
                 "xp",
                 (beastie.xp / beastiedata.growth) * newBeastie.growth,
@@ -106,10 +106,16 @@ export default function EditBeastie({
               }
               changeValue(
                 "attklist",
-                beastie.attklist.map((moveId) =>
-                  newBeastie.attklist.includes(moveId)
-                    ? moveId
-                    : newBeastie.attklist[0],
+                beastie.attklist.reduce<string[]>(
+                  (accum, moveId) => [
+                    ...accum,
+                    newBeastie.attklist.includes(moveId)
+                      ? moveId
+                      : (newBeastie.attklist.find(
+                          (newMoveId) => !accum.includes(newMoveId),
+                        ) ?? newBeastie.attklist[0]),
+                  ],
+                  [],
                 ),
               );
             }

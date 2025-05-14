@@ -86,9 +86,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
         <InfoBox header="Development">{beastiedata.anim_progress}%</InfoBox>
         <Evolution beastiedata={beastiedata} />
       </div>
-
       <InfoBox header="Description">{beastiedata.desc}</InfoBox>
-
       <InfoBox header="Traits">
         <table className={styles.traittable}>
           <tbody>
@@ -114,10 +112,8 @@ export default function ContentInfo(props: Props): React.ReactNode {
           </tbody>
         </table>
       </InfoBox>
-
       <BoxHeader>Stat Distribution</BoxHeader>
       <StatDistribution beastiedata={beastiedata} />
-
       <div className={styles.wrapinfoboxes}>
         <InfoBox header="Recruit Condition">
           {beastiedata.recruit_value != 0.5 ? (
@@ -140,13 +136,11 @@ export default function ContentInfo(props: Props): React.ReactNode {
         <InfoBox header="Ally Training">{training}</InfoBox>
         <ExpForLevel growth={beastiedata.growth} />
       </div>
-
       <MoveList
         movelist={beastiedata.attklist}
         learnset={beastiedata.learnset as [number, string][]}
       />
       <ComboMove beastiedata={beastiedata} />
-
       <InfoBox header="Research">
         <div className={styles.research}>
           <ResearchCarousel beastieid={beastiedata.id} />

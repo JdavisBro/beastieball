@@ -175,9 +175,11 @@ function AbilityButton({
       }}
       className={selected ? styles.abilitySelected : styles.ability}
     >
-      <div>{ability.name}</div>
-      <div className={styles.abilityDesc}>
-        <TextTag>{ability.desc.replace(/\|/g, "\n")}</TextTag>
+      <div className={styles.abilityInner}>
+        <div>{ability.name}</div>
+        <div className={styles.abilityDesc}>
+          <TextTag>{ability.desc.replace(/\|/g, "\n")}</TextTag>
+        </div>
       </div>
     </div>
   );

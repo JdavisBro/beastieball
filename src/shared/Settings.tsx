@@ -5,46 +5,55 @@ import Modal from "./Modal";
 import SpoilerOptions from "./SpoilerOptions";
 import { Link } from "react-router-dom";
 
+function ToggleCheckbox({
+  storageKey,
+  text,
+  defaultValue,
+  hoverText,
+}: {
+  storageKey: string;
+  text: string;
+  defaultValue?: boolean;
+  hoverText?: string;
+}) {
+  const [value, setValue] = useLocalStorage(storageKey, defaultValue ?? false);
+  return (
+    <label className={styles.animationtoggle} title={hoverText}>
+      <input
+        checked={value}
+        type="checkbox"
+        onChange={(event) => setValue(event.currentTarget.checked)}
+      />{" "}
+      {text}
+    </label>
+  );
+}
+
 function Toggles() {
-  const [noAnimations, setNoAnimations] = useLocalStorage(
-    "noAnimations",
-    false,
-    { serializer: String, deserializer: (value) => value == "true" },
-  );
-  const [tooltipsEnabled, setTooltipsEnabled] = useLocalStorage(
-    "tooltipsEnabled",
-    true,
-  );
-  const [tooltipsOnHover, setTooltipsOnHover] = useLocalStorage(
-    "tooltipsOnHover",
-    true,
-  );
   return (
     <>
-      <label className={styles.animationtoggle}>
-        <input
-          defaultChecked={noAnimations}
-          type="checkbox"
-          onChange={(event) => setNoAnimations(event.currentTarget.checked)}
-        />
-        Disable Animations
-      </label>
-      <label className={styles.animationtoggle}>
-        <input
-          defaultChecked={tooltipsEnabled}
-          type="checkbox"
-          onChange={(event) => setTooltipsEnabled(event.currentTarget.checked)}
-        />
-        Tooltips Enabled
-      </label>
-      <label className={styles.animationtoggle}>
-        <input
-          defaultChecked={tooltipsOnHover}
-          type="checkbox"
-          onChange={(event) => setTooltipsOnHover(event.currentTarget.checked)}
-        />
-        Show Tooltips On Hover
-      </label>
+      <ToggleCheckbox
+        storageKey="noAnimations"
+        text="Disable Animations"
+        hoverText="Removes background and header scrolling animations which can be distracting and has an impact on performance."
+      />
+      <ToggleCheckbox
+        storageKey="simpleMoves"
+        text="Simple Play Background"
+        hoverText="Disables halftones on Play boxes, which has an impact on performance when there are many."
+      />
+      <ToggleCheckbox
+        storageKey="tooltipsEnabled"
+        text="Tooltips Enabled"
+        defaultValue={true}
+        hoverText="Shows tooltips about specific aspects of the game when hovering over or clicking dotted underlined text."
+      />
+      <ToggleCheckbox
+        storageKey="tooltipsOnHover"
+        text="Show Tooltips On Hover"
+        defaultValue={true}
+        hoverText="Shows tooltips when dotted underlined text is hovered over. When disabled, tooltips will only be shown when clicked."
+      />
     </>
   );
 }

@@ -5,21 +5,44 @@ import Modal from "./Modal";
 import SpoilerOptions from "./SpoilerOptions";
 import { Link } from "react-router-dom";
 
-function AnimationToggle() {
-  const [noAnimations, setNoAnimations] = useLocalStorage(
-    "noAnimations",
-    false,
-    { serializer: String, deserializer: (value) => value == "true" },
-  );
+function ToggleCheckbox({
+  storageKey,
+  text,
+  defaultValue,
+  hoverText,
+}: {
+  storageKey: string;
+  text: string;
+  defaultValue?: boolean;
+  hoverText?: string;
+}) {
+  const [value, setValue] = useLocalStorage(storageKey, defaultValue ?? false);
   return (
-    <label className={styles.animationtoggle}>
+    <label className={styles.animationtoggle} title={hoverText}>
       <input
-        defaultChecked={noAnimations}
+        checked={value}
         type="checkbox"
-        onChange={(event) => setNoAnimations(event.currentTarget.checked)}
-      />
-      Disable Animations
+        onChange={(event) => setValue(event.currentTarget.checked)}
+      />{" "}
+      {text}
     </label>
+  );
+}
+
+function Toggles() {
+  return (
+    <>
+      <ToggleCheckbox
+        storageKey="noAnimations"
+        text="Disable Animations"
+        hoverText="Removes background and header scrolling animations which can be distracting and has an impact on performance."
+      />
+      <ToggleCheckbox
+        storageKey="simpleMoves"
+        text="Simple Play Background"
+        hoverText="Disables halftones on Play boxes, which has an impact on performance when there are many."
+      />
+    </>
   );
 }
 
@@ -47,7 +70,7 @@ export default function Settings({
       onClose={onClose}
     >
       <div className={styles.settingsContainer}>
-        <AnimationToggle />
+        <Toggles />
         <SpoilerOptions />
         {experimental || experimental_different ? (
           <Link to={experimental_target.href}>

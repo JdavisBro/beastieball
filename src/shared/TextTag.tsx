@@ -1,7 +1,7 @@
 import { Fragment } from "react/jsx-runtime";
 import { bgrDecimalToHex } from "../utils/color";
 import styles from "./Shared.module.css";
-import { HOVER_TOOLTIPS_ARRAY } from "./HoverTooltip/hoverTooltips";
+import { HOVER_MATCHERS } from "./HoverTooltip/hoverTooltips";
 import Tooltipped from "./HoverTooltip/Tooltipped";
 
 // https://www.jujuadams.com/Scribble/#/latest/text-formatting
@@ -169,10 +169,23 @@ class TagBuilder {
         break;
 
       case "tooltip":
+      case "tt":
+        if (this.tooltipId) {
+          this.elements.push(
+            <Tooltipped
+              key={String(index)}
+              tooltipId={this.tooltipId}
+              style={{ animation: this.animations.join(", "), ...this.style }}
+            >
+              {this.tooltipElements}
+            </Tooltipped>,
+          );
+        }
         this.tooltipId = value;
         this.tooltipElements = [];
         break;
       case "/tooltip":
+      case "/tt":
         if (!this.tooltipId) {
           return;
         }
@@ -238,13 +251,9 @@ export default function TextTag(props: Props): React.ReactElement {
     text = props.children;
   }
   if (props.autoTooltip == undefined || props.autoTooltip) {
-    for (const tooltip of HOVER_TOOLTIPS_ARRAY) {
-      if (tooltip.trigger) {
-        console.log(tooltip.trigger);
-        text = text.replace(
-          tooltip.trigger,
-          (match) => `[tooltip,${tooltip.id}]${match}[/tooltip]`,
-        );
+    for (const matcher of HOVER_MATCHERS) {
+      if (matcher.trigger) {
+        text = text.replace(matcher.trigger, matcher.match);
       }
     }
   }

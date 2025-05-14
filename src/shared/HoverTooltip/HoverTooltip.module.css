@@ -44,6 +44,8 @@
 }
 
 .tooltipped {
-  text-decoration: underline dotted;
+  /* text-decoration: underline dotted; */
+  vertical-align: initial !important;
+  border-bottom: black dotted 1px;
   cursor: help;
 }

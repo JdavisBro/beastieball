@@ -172,11 +172,7 @@ class TagBuilder {
       case "tt":
         if (this.tooltipId) {
           this.elements.push(
-            <Tooltipped
-              key={String(index)}
-              tooltipId={this.tooltipId}
-              style={{ animation: this.animations.join(", "), ...this.style }}
-            >
+            <Tooltipped key={String(index)} tooltipId={this.tooltipId}>
               {this.tooltipElements}
             </Tooltipped>,
           );
@@ -190,11 +186,7 @@ class TagBuilder {
           return;
         }
         this.elements.push(
-          <Tooltipped
-            key={String(index)}
-            tooltipId={this.tooltipId}
-            style={{ animation: this.animations.join(", "), ...this.style }}
-          >
+          <Tooltipped key={String(index)} tooltipId={this.tooltipId}>
             {this.tooltipElements}
           </Tooltipped>,
         );

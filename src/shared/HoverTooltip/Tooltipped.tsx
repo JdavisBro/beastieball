@@ -7,24 +7,21 @@ import { useLocalStorage } from "usehooks-ts";
 export default function Tooltipped({
   children,
   tooltipId,
-  style,
 }: {
   children: React.ReactNode;
   tooltipId: string;
-  style?: React.CSSProperties;
 }) {
   const hoverTooltipContext = useContext(HoverTooltipContext);
 
   const [tooltipsEnabled] = useLocalStorage("tooltipsEnabled", true);
   const [tooltipsOnHover] = useLocalStorage("tooltipsOnHover", true);
   if (!tooltipsEnabled) {
-    return <span style={style}>{children}</span>;
+    return children;
   }
 
   return (
     <span
       className={styles.tooltipped}
-      style={style}
       onMouseOver={
         tooltipsOnHover
           ? (event) => {

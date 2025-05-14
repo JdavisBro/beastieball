@@ -8,6 +8,7 @@ import { Move } from "../data/MoveData";
 import Modal from "./Modal";
 import MoveView from "./MoveView";
 import { SpoilerMode, useSpoilerMode, useSpoilerSeen } from "./useSpoiler";
+import useScreenOrientation from "../utils/useScreenOrientation";
 
 export default function MoveModalProvider(props: PropsWithChildren) {
   const [move, setMove] = useState<null | Move>(null);
@@ -38,6 +39,9 @@ export default function MoveModalProvider(props: PropsWithChildren) {
     setSeenBeasties(seenBeasties);
   };
 
+  const orientation = useScreenOrientation(800);
+  const levelSeparator = orientation ? <br /> : " - ";
+
   return (
     <MoveModalContext.Provider value={setMove}>
       <Modal
@@ -48,72 +52,77 @@ export default function MoveModalProvider(props: PropsWithChildren) {
       >
         <div className={styles.movemodalview}>
           {move ? <MoveView move={move} noLearner={true} /> : null}
-        </div>
-        <div className={styles.movebeastierow}>
-          <div className={styles.movebeastielist}>
-            {levelBeasties.length ? "From Level" : ""}
-            {levelBeasties.map((beastie) => {
-              const isSpoiler =
-                spoilerMode == SpoilerMode.OnlySeen &&
-                !seenBeasties[beastie[0].id];
-              return (
-                <Link
-                  to={
-                    isSpoiler
-                      ? "#Play"
-                      : `/beastiepedia/${beastie[0].name}?play=${move?.name}`
-                  }
-                  key={beastie[0].id}
-                  onClick={() =>
-                    handleClick(isSpoiler ? beastie[0].id : undefined)
-                  }
-                >
-                  <img
-                    src={
-                      isSpoiler
-                        ? "/gameassets/sprExclam_1.png"
-                        : `/icons/${beastie[0].name}.png`
-                    }
-                    style={
-                      isSpoiler ? { filter: "brightness(50%)" } : undefined
-                    }
-                  />
-                  {isSpoiler
-                    ? `Beastie #${beastie[0].number}`
-                    : beastie[0].name}{" "}
-                  - {beastie[1]}
-                </Link>
-              );
-            })}
+          <div className={styles.movebeastietitle}>
+            <div>{levelBeasties.length ? "From Level" : ""}</div>
+            <div>{friendBeasties.length ? "From Friends" : ""}</div>
           </div>
-          <div className={styles.movebeastielist}>
-            {friendBeasties.length ? "From Friends" : ""}
-            {friendBeasties.map((beastie) => {
-              const isSpoiler =
-                spoilerMode == SpoilerMode.OnlySeen &&
-                !seenBeasties[beastie.id];
-              return (
-                <Link
-                  to={isSpoiler ? "#Play" : `/beastiepedia/${beastie.name}`}
-                  key={beastie.id}
-                  onClick={() =>
-                    handleClick(isSpoiler ? beastie.id : undefined)
-                  }
-                >
-                  <img
-                    src={
+          <div className={styles.movebeastierow}>
+            <div className={styles.movebeastielist}>
+              {levelBeasties.map((beastie) => {
+                const isSpoiler =
+                  spoilerMode == SpoilerMode.OnlySeen &&
+                  !seenBeasties[beastie[0].id];
+                return (
+                  <Link
+                    to={
                       isSpoiler
-                        ? "/gameassets/sprExclam_1.png"
-                        : `/icons/${beastie.name}.png`
+                        ? "#Play"
+                        : `/beastiepedia/${beastie[0].name}?play=${move?.name}`
                     }
-                    style={
-                      isSpoiler ? { filter: "brightness(50%)" } : undefined
+                    key={beastie[0].id}
+                    onClick={() =>
+                      handleClick(isSpoiler ? beastie[0].id : undefined)
                     }
-                  />
-                  {isSpoiler ? `Beastie #${beastie.number}` : beastie.name}
-                </Link>
-              );
-            })}
+                  >
+                    <img
+                      src={
+                        isSpoiler
+                          ? "/gameassets/sprExclam_1.png"
+                          : `/icons/${beastie[0].name}.png`
+                      }
+                      style={
+                        isSpoiler ? { filter: "brightness(50%)" } : undefined
+                      }
+                    />
+                    <div>
+                      {isSpoiler
+                        ? `Beastie #${beastie[0].number}`
+                        : beastie[0].name}
+                      {levelSeparator}
+                      {beastie[1]}
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+            <div className={styles.movebeastielist}>
+              {friendBeasties.map((beastie) => {
+                const isSpoiler =
+                  spoilerMode == SpoilerMode.OnlySeen &&
+                  !seenBeasties[beastie.id];
+                return (
+                  <Link
+                    to={isSpoiler ? "#Play" : `/beastiepedia/${beastie.name}`}
+                    key={beastie.id}
+                    onClick={() =>
+                      handleClick(isSpoiler ? beastie.id : undefined)
+                    }
+                  >
+                    <img
+                      src={
+                        isSpoiler
+                          ? "/gameassets/sprExclam_1.png"
+                          : `/icons/${beastie.name}.png`
+                      }
+                      style={
+                        isSpoiler ? { filter: "brightness(50%)" } : undefined
+                      }
+                    />
+                    {isSpoiler ? `Beastie #${beastie.number}` : beastie.name}
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
       </Modal>

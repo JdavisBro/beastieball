@@ -232,30 +232,66 @@
   }
 }
 
+.movemodalview {
+  display: flex;
+  flex-direction: column;
+  max-height: 90dvh;
+}
+
 .movemodalview .movecontainer {
   width: 460px;
   max-width: 95%;
   margin: 8px;
+  flex: 1 0 auto;
 }
 
 .movebeastierow {
   display: flex;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex: 1 1 auto;
+}
+
+.movebeastietitle {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.movebeastietitle div {
+  flex: 1 1 0;
+  text-align: center;
 }
 
 .movebeastielist {
   display: flex;
+  justify-content: stretch;
   flex-direction: column;
   text-align: center;
-  width: 100%;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .movebeastielist a {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .movebeastielist img {
   height: 3em;
+  flex: 0 1 auto;
+}
+
+.movebeastielist div {
+  flex: 0 1 auto;
+  text-align: center;
+}
+
+@media all and (max-aspect-ratio: 1/1) and (max-width: 800px) {
+  .movebeastielist div {
+    flex: 1 1 auto;
+  }
 }
 
 .animationtoggle {

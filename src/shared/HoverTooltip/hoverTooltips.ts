@@ -80,8 +80,14 @@ Attempting to reapply [sprStatus,6]SWEATY will increase the number of stacks, un
   tired: {
     id: "tired",
     title: "TIRED feeling",
-    desc: `[sprStatus,10]TIRED Beasties can only use the Move, Free Ball, and Tag Out Plays.
+    desc: `[sprStatus,10]TIRED Beasties can only use the Move, Volley, Free Ball, and Tag Out Plays.
 Stacks decrease by 1 at the end of each Offense and Defense turn.`,
+  },
+  stressed: {
+    id: "stressed",
+    title: "STRESSED feeling",
+    desc: `[sprStatus,12]STRESSED stacks decrease at the end of every Offense and Defense turn.
+Once [sprStatus,12]STRESSED stacks reach 0, the previously [sprStatus,12]STRESSED Beastie will feel 2 [tt,tired][sprStatus,10]TIRED[/tt].`,
   },
   quake: {
     id: "quake",

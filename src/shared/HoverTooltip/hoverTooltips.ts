@@ -55,6 +55,10 @@ export const HOVER_MATCHERS: HoverMatcher[] = [
     trigger: /FIELD EFFECTS/gi,
     match: makeDefaultMatch("fieldeffects"),
   },
+  {
+    trigger: /(good |bad |negative )?FEELINGS?/gi,
+    match: makeDefaultMatch("feelings"),
+  },
 ];
 
 export const HOVER_TOOLTIPS: Record<string, HoverTooltip> = {
@@ -107,5 +111,16 @@ When setting QUAKE, stack count will only be changed if the new stack count is h
 [tt,dread]DREAD (No good feelings)[/tt]
 [tt,quake]QUAKE (Volleys deal 25 damage)[/tt]
 [tt,wall]WALL[/tt]`,
+  },
+  feelings: {
+    id: "feelings",
+    title: "FEELINGs",
+    desc: `FEELINGs are effects on an individual Beastie. Each feeling has a counter which, for most FEELINGs, counts down every turn.
+Good FEELINGs:
+[tt,noisy][sprStatus,3]NOISY (attracts attacks)[/tt] · [tt,tough][sprStatus,4]TOUGH (1/4 damage)[/tt] · [tt,jazzed][sprStatus,8]JAZZED (POW +50%)[/tt]
+Bad FEELINGs:
+[tt,nervous][sprStatus,0]NERVOUS (can't move)[/tt] · [tt,angry][sprStatus,1]ANGRY (only attacks)[/tt] · [tt,shook][sprStatus,2]SHOOK (can't attack)[/tt]
+[tt,wiped][sprStatus,5]WIPED (must bench)[/tt] · [tt,sweaty][sprStatus,6]SWEATY (losing stamina)[/tt] · [tt,blocked][sprStatus,9]BLOCKED (POW x2/3)[/tt]
+[tt,tired][sprStatus,10]TIRED (only basic actions)[/tt] · [tt,tender][sprStatus,11]TENDER (DEF x1/2)[/tt] · [tt,stressed][sprStatus,12]STRESSED (becomes [sprStatus,10]TIRED)[/tt]`,
   },
 };

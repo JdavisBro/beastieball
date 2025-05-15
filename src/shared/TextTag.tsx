@@ -198,7 +198,6 @@ class TagBuilder {
             {imgText[0]}
           </span>,
         );
-        console.log(imgText[0], imgText[0].length == text.length);
         if (imgText[0].length == text.length) {
           return;
         }

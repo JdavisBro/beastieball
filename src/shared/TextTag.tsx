@@ -307,5 +307,6 @@ export default function TextTag(props: Props): React.ReactElement {
     builder.addText(combine);
   }
   builder.pushImg();
+  builder.pushTooltip();
   return <span className={styles.texttag}>{builder.elements}</span>;
 }

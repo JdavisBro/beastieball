@@ -47,6 +47,10 @@ export const HOVER_MATCHERS: HoverMatcher[] = [
     trigger: /QUAKE( \(.+?\))?/g,
     match: makeDefaultMatch("quake"),
   },
+  {
+    trigger: /FIELD EFFECTS/gi,
+    match: makeDefaultMatch("fieldeffects"),
+  },
 ];
 
 export const HOVER_TOOLTIPS: Record<string, HoverTooltip> = {
@@ -58,21 +62,39 @@ export const HOVER_TOOLTIPS: Record<string, HoverTooltip> = {
   wiped: {
     id: "wiped",
     title: "WIPED feeling",
-    desc: "[sprStatus,5]WIPED Beasties can only use Free Ball.[br]Stacks decrease at the end of each Offense and Defense turn while the affected Beastie is on the bench (or is ROWDY).[br][sprStatus,5]WIPED Beasties with enough STAMINA can still receive Attacks without losing the point.",
+    desc: `[sprStatus,5]WIPED Beasties can only use Free Ball.
+Stacks decrease at the end of each Offense and Defense turn while the affected Beastie is on the bench (or is ROWDY).
+[sprStatus,5]WIPED Beasties with enough STAMINA can still receive Attacks without losing the point.`,
   },
   sweaty: {
     id: "sweaty",
     title: "SWEATY feeling",
-    desc: "At the end of a team's Offense turn, [sprStatus,6]SWEATY Beasties that're on the court lose 10 Stamina per stack of [sprStatus,6]SWEATY, and gain an additional stack of [sprStatus,6]SWEATY.[br][sprStatus,6]SWEATY stacks do not decrease over time.[br]Attempting to reapply [sprStatus,6]SWEATY will increase the number of stacks, unless specified otherwise.",
+    desc: `At the end of a team's Offense turn, [sprStatus,6]SWEATY Beasties that're on the court lose 10 Stamina per stack of [sprStatus,6]SWEATY, and gain an additional stack of [sprStatus,6]SWEATY.
+[sprStatus,6]SWEATY stacks do not decrease over time.
+Attempting to reapply [sprStatus,6]SWEATY will increase the number of stacks, unless specified otherwise.`,
   },
   tired: {
     id: "tired",
     title: "TIRED feeling",
-    desc: "[sprStatus,10]TIRED Beasties can only use the Move, Free Ball, and Tag Out Plays.[br]Stacks decrease by 1 at the end of each Offense and Defense turn.",
+    desc: `[sprStatus,10]TIRED Beasties can only use the Move, Free Ball, and Tag Out Plays.
+Stacks decrease by 1 at the end of each Offense and Defense turn.`,
   },
   quake: {
     id: "quake",
     title: "QUAKE field effect",
-    desc: "QUAKE applies to one side of the field.[br]While the field has QUAKE, Volleys on that side deal 25 damage to the receiving Beastie, while consuming a stack of QUAKE.[br]QUAKE stacks also decrease at the end of the side's Offense.[br]When setting QUAKE, stack count will only be changed if the new stack count is higher then the current count.",
+    desc: `QUAKE applies to one side of the field.
+While the field has QUAKE, Volleys on that side deal 25 damage to the receiving Beastie, while consuming a stack of QUAKE.
+QUAKE stacks also decrease at the end of the side's Offense.
+When setting QUAKE, stack count will only be changed if the new stack count is higher then the current count.`,
+  },
+  fieldeffects: {
+    id: "fieldeffects",
+    title: "FIELD EFFECTS",
+    desc: `FIELD EFFECTS are special effects that can target a single side of, or both sides of, the field. There are 5 Field Effects:
+[tt,trap]TRAP (Tag-ins lose 8 stamina per trap)[/tt]
+[tt,rally]RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW x3/4)[/tt]
+[tt,rhythm]RHYTHM (Healing and protection)[/tt]
+[tt,dread]DREAD (No good feelings)[/tt]
+[tt,quake]QUAKE (Volleys deal 25 damage)[/tt].`,
   },
 };

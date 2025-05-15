@@ -48,6 +48,10 @@ export const HOVER_MATCHERS: HoverMatcher[] = [
     match: makeDefaultMatch("quake"),
   },
   {
+    trigger: /WALL/g,
+    match: makeDefaultMatch("wall"),
+  },
+  {
     trigger: /FIELD EFFECTS/gi,
     match: makeDefaultMatch("fieldeffects"),
   },
@@ -90,11 +94,12 @@ When setting QUAKE, stack count will only be changed if the new stack count is h
   fieldeffects: {
     id: "fieldeffects",
     title: "FIELD EFFECTS",
-    desc: `FIELD EFFECTS are special effects that can target a single side of, or both sides of, the field. There are 5 Field Effects:
+    desc: `FIELD EFFECTS are special effects that can target a single side of, or both sides of, the field. There are 6 Field Effects:
 [tt,trap]TRAP (Tag-ins lose 8 stamina per trap)[/tt]
 [tt,rally]RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW x3/4)[/tt]
 [tt,rhythm]RHYTHM (Healing and protection)[/tt]
 [tt,dread]DREAD (No good feelings)[/tt]
-[tt,quake]QUAKE (Volleys deal 25 damage)[/tt].`,
+[tt,quake]QUAKE (Volleys deal 25 damage)[/tt]
+[tt,wall]WALL[/tt]`,
   },
 };

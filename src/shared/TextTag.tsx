@@ -176,12 +176,16 @@ class TagBuilder {
       return;
     }
     this.elements.push(
-      <span
-        className={styles.texttagnobreak}
-        style={{ animation: this.animations.join(", "), ...this.style }}
-      >
-        {this.imgNobreak}
-      </span>,
+      this.imgNobreak.length > 1 ? (
+        <span
+          className={styles.texttagnobreak}
+          style={{ animation: this.animations.join(", "), ...this.style }}
+        >
+          {this.imgNobreak}
+        </span>
+      ) : (
+        this.imgNobreak[0]
+      ),
     );
     this.imgNobreak = [];
   }

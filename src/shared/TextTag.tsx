@@ -173,33 +173,13 @@ class TagBuilder {
 
       case "tooltip":
       case "tt":
-        if (this.tooltipId) {
-          this.elements.push(
-            <Tooltipped
-              tooltipId={this.tooltipId}
-              innerTooltip={this.innerTooltip}
-            >
-              {this.tooltipElements}
-            </Tooltipped>,
-          );
-        }
+        this.pushTooltip();
         this.tooltipId = value;
         this.tooltipElements = [];
         break;
       case "/tooltip":
       case "/tt":
-        if (!this.tooltipId) {
-          return;
-        }
-        this.elements.push(
-          <Tooltipped
-            tooltipId={this.tooltipId}
-            innerTooltip={this.innerTooltip}
-          >
-            {this.tooltipElements}
-          </Tooltipped>,
-        );
-        this.tooltipId = undefined;
+        this.pushTooltip();
         break;
       case "br":
         (this.tooltipId ? this.tooltipElements : this.elements).push(<br />);
@@ -209,6 +189,19 @@ class TagBuilder {
         console.log(`Tag Not Implemented ${tag}: ${value}`);
         break;
     }
+  }
+
+  pushTooltip() {
+    if (!this.tooltipId) {
+      return;
+    }
+    this.pushImg();
+    this.elements.push(
+      <Tooltipped tooltipId={this.tooltipId} innerTooltip={this.innerTooltip}>
+        {this.tooltipElements}
+      </Tooltipped>,
+    );
+    this.tooltipId = undefined;
   }
 
   pushImg() {

@@ -11,6 +11,11 @@
   white-space: pre-line;
 }
 
+.texttagnobreak {
+  white-space: nowrap !important;
+  vertical-align: initial !important;
+}
+
 @keyframes wave {
   from {
     top: -2px;
@@ -51,10 +56,6 @@
   50% {
     visibility: visible;
   }
-}
-
-.texttagnobreak {
-  white-space: nowrap;
 }
 
 .externallinks {

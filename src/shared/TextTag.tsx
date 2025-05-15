@@ -61,6 +61,8 @@ const ANIMATIONS: { [key: string]: string } = {
   blink: `1s linear 0s infinite normal ${styles.blink}`,
 };
 
+const IMG_BREAK_REGEX = /^\S+/;
+
 class TagBuilder {
   elements: React.ReactElement[] = [];
   style: React.CSSProperties = { ...DEFAULT_STYLE };
@@ -69,7 +71,9 @@ class TagBuilder {
   tooltipElements: React.ReactNode[] = [];
   innerTooltip?: boolean;
 
-  applyTag(index: number, tag: string, value?: string) {
+  imgNobreak: React.ReactElement[] = [];
+
+  applyTag(tag: string, value?: string) {
     if (tag.startsWith("spr")) {
       const alt =
         tag in IMAGE_ALTS
@@ -78,9 +82,8 @@ class TagBuilder {
       if (!alt && !ALT_EXCEPTIONS.includes(tag)) {
         console.log(`NO ALT TEXT: '${tag}' frame ${value}`);
       }
-      (this.tooltipId ? this.tooltipElements : this.elements).push(
+      this.imgNobreak.push(
         <img
-          key={`${index}${tag}`}
           className={styles.smallimage}
           style={{ ...this.style }}
           alt={alt}
@@ -173,7 +176,6 @@ class TagBuilder {
         if (this.tooltipId) {
           this.elements.push(
             <Tooltipped
-              key={String(index)}
               tooltipId={this.tooltipId}
               innerTooltip={this.innerTooltip}
             >
@@ -191,7 +193,6 @@ class TagBuilder {
         }
         this.elements.push(
           <Tooltipped
-            key={String(index)}
             tooltipId={this.tooltipId}
             innerTooltip={this.innerTooltip}
           >
@@ -210,13 +211,45 @@ class TagBuilder {
     }
   }
 
-  addText(index: number, text: string) {
+  pushImg() {
+    if (!this.imgNobreak.length) {
+      return;
+    }
     (this.tooltipId ? this.tooltipElements : this.elements).push(
       <span
-        key={String(index)}
+        className={styles.texttagnobreak}
         style={{ animation: this.animations.join(", "), ...this.style }}
       >
-        {text}
+        {this.imgNobreak}
+      </span>,
+    );
+    this.imgNobreak = [];
+  }
+
+  addText(text: string) {
+    let used_text = text;
+    if (this.imgNobreak.length) {
+      const imgText = IMG_BREAK_REGEX.exec(text);
+      if (imgText && imgText[0]) {
+        this.imgNobreak.push(
+          <span
+            style={{ animation: this.animations.join(", "), ...this.style }}
+          >
+            {imgText[0]}
+          </span>,
+        );
+        console.log(imgText[0], imgText[0].length == text.length);
+        if (imgText[0].length == text.length) {
+          return;
+        }
+        used_text = text.slice(imgText[0].length);
+      }
+      this.pushImg();
+    }
+
+    (this.tooltipId ? this.tooltipElements : this.elements).push(
+      <span style={{ animation: this.animations.join(", "), ...this.style }}>
+        {used_text}
       </span>,
     );
   }
@@ -256,7 +289,6 @@ export default function TextTag(props: Props): React.ReactElement {
   // gets text before next tag or end of string (match[1]) (match[2] is [ when [[) + next tag (match[3]) + value (match[4])
   const regex = /([^[]*)(?:\[(\[)|\[(.*?)(?:,(.*?))?\]|$)/g;
   let match = regex.exec(text);
-  let i = 0;
   let combine = "";
   // match[0] will always be an empty string even at the end of the text
   while (match != null && match.some((value) => !!value)) {
@@ -268,21 +300,19 @@ export default function TextTag(props: Props): React.ReactElement {
       if (!tag) {
         // tag not changed (e.g only escape bracket) so combine with next match to reduce span tags
         combine += current_text + escape_bracket;
-        i += current_text.length + escape_bracket.length;
       } else {
-        builder.addText(i, combine + current_text + escape_bracket);
+        builder.addText(combine + current_text + escape_bracket);
         combine = "";
-        i += current_text.length + escape_bracket.length;
       }
     }
     if (tag) {
-      builder.applyTag(i, tag, value);
-      i += tag.length + (value?.length ?? 0);
+      builder.applyTag(tag, value);
     }
     match = regex.exec(text);
   }
   if (combine) {
-    builder.addText(i, combine);
+    builder.addText(combine);
   }
+  builder.pushImg();
   return <span className={styles.texttag}>{builder.elements}</span>;
 }

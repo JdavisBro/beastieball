@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useState } from "react";
+import { Fragment, useCallback, useMemo, useState } from "react";
 import Control from "react-leaflet-custom-control";
 
 import styles from "./Map.module.css";
@@ -55,7 +55,7 @@ type Props = {
   setPostgame: (postgame: boolean) => void;
 };
 
-export function ControlMenu({
+function ControlMenuInner({
   layers,
   huntedBeastie,
   setHuntedBeastie,
@@ -107,10 +107,7 @@ export function ControlMenu({
   };
 
   return (
-    <Control
-      position="topright"
-      container={{ className: styles.controlContainer }}
-    >
+    <>
       <ControlSection
         header="Markers"
         sectionName="markers"
@@ -172,6 +169,17 @@ export function ControlMenu({
           Postgame Spawns
         </label>
       </ControlSection>
+    </>
+  );
+}
+
+export function ControlMenu(props: Props) {
+  return (
+    <Control
+      position="topright"
+      container={useMemo(() => ({ className: styles.controlContainer }), [])}
+    >
+      <ControlMenuInner {...props} />
     </Control>
   );
 }

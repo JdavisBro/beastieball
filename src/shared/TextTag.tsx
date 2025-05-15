@@ -1,4 +1,3 @@
-import { Fragment } from "react/jsx-runtime";
 import { bgrDecimalToHex } from "../utils/color";
 import styles from "./Shared.module.css";
 import { HOVER_MATCHERS } from "./HoverTooltip/hoverTooltips";
@@ -212,22 +211,12 @@ class TagBuilder {
   }
 
   addText(index: number, text: string) {
-    const inner = text.split("\n").map((value, newlineindex) =>
-      newlineindex == 0 ? (
-        <Fragment key={`${index}${newlineindex}`}>{value}</Fragment>
-      ) : (
-        <Fragment key={`${index}${newlineindex}`}>
-          <br />
-          {value}
-        </Fragment>
-      ),
-    );
     (this.tooltipId ? this.tooltipElements : this.elements).push(
       <span
         key={String(index)}
         style={{ animation: this.animations.join(", "), ...this.style }}
       >
-        {inner}
+        {text}
       </span>,
     );
   }

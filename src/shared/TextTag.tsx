@@ -1,4 +1,3 @@
-import { Fragment } from "react/jsx-runtime";
 import { bgrDecimalToHex } from "../utils/color";
 import styles from "./Shared.module.css";
 
@@ -175,16 +174,7 @@ class TagBuilder {
         key={String(index)}
         style={{ animation: this.animations.join(", "), ...this.style }}
       >
-        {text.split("\n").map((value, newlineindex) =>
-          newlineindex == 0 ? (
-            <Fragment key={`${index}${newlineindex}`}>{value}</Fragment>
-          ) : (
-            <Fragment key={`${index}${newlineindex}`}>
-              <br />
-              {value}
-            </Fragment>
-          ),
-        )}
+        {text}
       </span>,
     );
   }

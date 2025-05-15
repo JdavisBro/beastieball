@@ -8,6 +8,7 @@
   /* align smaller text vertically */
   vertical-align: middle;
   position: relative;
+  white-space: pre-line;
 }
 
 @keyframes wave {

@@ -117,9 +117,8 @@ export default function Sidebar(props: Props): React.ReactElement {
             beastieid={beastie.id}
             beastiedata={beastie}
             statDisplay={
-              sort.display ? sort.display(beastie) : sort.value(beastie)
+              sort.display ? sort.display(beastie, grid) : sort.value(beastie)
             }
-            smallStatDisplay={sort.smallDisplay}
             selected={beastieid == beastie.id}
             visible={
               beastie.name.toLowerCase().includes(search.toLowerCase()) &&

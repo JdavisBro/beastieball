@@ -18,8 +18,10 @@ type SortValueType = {
   name: string;
   value: (beastie: BeastieType) => number;
   compare?: undefined;
-  display?: (beastie: BeastieType) => React.ReactNode | undefined; // undefined = use value result
-  smallDisplay?: boolean;
+  display?: (
+    beastie: BeastieType,
+    grid: boolean,
+  ) => React.ReactNode | undefined; // undefined = use value result, return value undefined: no show
 };
 
 type SortCompareType = Omit<SortValueType, "value" | "compare"> & {
@@ -65,6 +67,7 @@ export const SORT_CATEGORIES: SortType[] = [
     name: "Name",
     value: (beastie) => beastie.name,
     compare: (beastie1, beastie2) => beastie1.name.localeCompare(beastie2.name),
+    display: (beastie, grid) => (grid ? beastie.name : undefined),
   },
 
   {

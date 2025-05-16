@@ -8,7 +8,6 @@ type Props = {
   beastieid: string;
   beastiedata: BeastieType;
   statDisplay?: React.ReactNode;
-  smallStatDisplay?: boolean;
   selected: boolean;
   visible: boolean;
   isSpoiler: boolean;
@@ -53,13 +52,7 @@ function SidebarBeastie(props: Props): React.ReactElement {
             {String(beastiedata.number).padStart(2, "0")}
           </div>
           <div className={styles.gridInfoMiddle}></div>
-          <div
-            className={
-              props.smallStatDisplay
-                ? styles.gridnumberrightsmall
-                : styles.gridnumberright
-            }
-          >
+          <div className={styles.gridnumberright}>
             {props.isSpoiler ? "" : props.statDisplay}
           </div>
         </div>

@@ -7,8 +7,8 @@ import { memo } from "react";
 type Props = {
   beastieid: string;
   beastiedata: BeastieType;
-  statDisplay: string;
-  smallStatDisplay: boolean;
+  statDisplay?: React.ReactNode;
+  smallStatDisplay?: boolean;
   selected: boolean;
   visible: boolean;
   isSpoiler: boolean;

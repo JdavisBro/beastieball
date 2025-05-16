@@ -125,6 +125,13 @@
   z-index: 0 !important;
 }
 
+.gridnumberright img {
+  height: 1em;
+  margin-right: 2px;
+  position: relative;
+  top: 2px;
+}
+
 .gridnumberrightsmall {
   composes: gridnumberright;
   font-size: 0.8em;

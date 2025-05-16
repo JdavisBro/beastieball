@@ -14,6 +14,7 @@ import {
   useSpoilerSeen,
 } from "../shared/useSpoiler";
 import { useNavigate } from "react-router-dom";
+import { SORT_CATEGORIES } from "./sortCategories";
 
 const BEASTIES = [...BEASTIE_DATA.values()];
 
@@ -23,39 +24,20 @@ type Props = {
   onToggleSidebarVisibility: () => void;
 };
 
-type StatType = "ba" | "bd" | "ha" | "hd" | "ma" | "md";
-const STATS: StatType[] = ["ba", "bd", "ha", "hd", "ma", "md"];
-
-const OTHER_SORT_DATA: Record<string, (beastie: BeastieType) => number> = {
-  total: (beastie) => STATS.reduce((accum, stat) => accum + beastie[stat], 0),
-  pow: (beastie) => beastie.ba + beastie.ha + beastie.ma,
-  def: (beastie) => beastie.bd + beastie.hd + beastie.md,
-  recruit: (beastie) =>
-    beastie.recruit_value != 0.5 ? beastie.recruit_value : 0,
-};
-
 export default function Sidebar(props: Props): React.ReactElement {
   const beastieid = props.beastieid;
 
   const [search, setSearch] = useState("");
 
-  const [sort, setSort] = useState("number");
+  const [sort, setSort] = useState(SORT_CATEGORIES[0]);
   const [sortDec, setSortDec] = useState(false);
   const sortMult = sortDec ? -1 : 1;
   const sortFunc: (beastie1: BeastieType, beastie2: BeastieType) => number =
-    sort == "name"
-      ? (beastie1, beastie2) =>
-          beastie1.name.localeCompare(beastie2.name) * sortMult
-      : OTHER_SORT_DATA[sort]
-        ? (beastie1, beastie2) =>
-            (OTHER_SORT_DATA[sort](beastie1) -
-              OTHER_SORT_DATA[sort](beastie2)) *
-            sortMult
-        : (beastie1, beastie2) =>
-            ((beastie1[sort as keyof BeastieType] as number) -
-              (beastie2[sort as keyof BeastieType] as number)) *
-            sortMult;
-
+    sort.compare
+      ? (beastie1, beastie2) => sort.compare(beastie1, beastie2) * sortMult
+      : (beastie1, beastie2) =>
+          (sort.value(beastie1) - sort.value(beastie2)) * sortMult ||
+          beastie1.number - beastie2.number;
   const [grid, setGrid] = useLocalStorage("beastiepediaGrid", false);
 
   const [filters, setFilters] = useState<FilterType[]>([]);
@@ -90,22 +72,20 @@ export default function Sidebar(props: Props): React.ReactElement {
             onFocus={(event) => event.currentTarget.select()}
           />
           <select
-            onChange={(event) => setSort(event.currentTarget.value)}
+            onChange={(event) =>
+              setSort(
+                SORT_CATEGORIES.find(
+                  (sortCat) => sortCat.name == event.currentTarget.value,
+                ) ?? SORT_CATEGORIES[0],
+              )
+            }
             className={styles.sidebarselect}
           >
-            <option value="number">Number</option>
-            <option value="name">Name</option>
-            <option value="total">Stat Total</option>
-            <option value="pow">POW Total</option>
-            <option value="def">DEF Total</option>
-            <option value="ba">Body POW</option>
-            <option value="bd">Body DEF</option>
-            <option value="ha">Spirit POW</option>
-            <option value="hd">Spirit DEF</option>
-            <option value="ma">Mind POW</option>
-            <option value="md">Mind DEF</option>
-            <option value="recruit">Recruit $</option>
-            <option value="anim_progress">Dev %</option>
+            {SORT_CATEGORIES.map((sort) => (
+              <option key={sort.name} value={sort.name}>
+                {sort.name}
+              </option>
+            ))}
           </select>
           <button onClick={() => setSortDec(!sortDec)}>
             {sortDec ? "↓" : "↑"}
@@ -137,13 +117,9 @@ export default function Sidebar(props: Props): React.ReactElement {
             beastieid={beastie.id}
             beastiedata={beastie}
             statDisplay={
-              sort != "number" && !(!grid && sort == "name")
-                ? OTHER_SORT_DATA[sort]
-                  ? String(OTHER_SORT_DATA[sort](beastie))
-                  : (beastie[sort as keyof BeastieType] as string)
-                : ""
+              sort.display ? sort.display(beastie) : sort.value(beastie)
             }
-            smallStatDisplay={sort == "name"}
+            smallStatDisplay={sort.smallDisplay}
             selected={beastieid == beastie.id}
             visible={
               beastie.name.toLowerCase().includes(search.toLowerCase()) &&

@@ -102,24 +102,35 @@
   height: 90%;
 }
 
-.beastiecontainergrid > .beastie > .beastiecontent > .gridnumber {
-  display: block;
+.beastiecontainergrid > .beastie > .beastiecontent > .gridInfo {
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.gridnumber {
+  composes: boxHeaderBackground from global;
   padding: 0 6px 0 6px;
   font-family: SportsJersey, "Go Banana", sans-serif;
   color: white;
   clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 4px) 0);
-  box-sizing: border-box;
   z-index: 1;
+}
+
+.gridInfoMiddle {
+  flex: 10 1 0;
 }
 
 .gridnumberright {
   composes: gridnumber;
-  composes: boxHeaderBackground from global;
-  left: auto !important;
-  right: 0 !important;
+  flex: 1 0 auto;
+  text-align: right;
+  padding: 0 6px 0 4px;
   clip-path: polygon(0 0, 4px 100%, 100% 100%, 100% 0) !important;
   font-size: 0.9em;
   z-index: 0 !important;
@@ -129,12 +140,6 @@
   height: 1em;
   position: relative;
   top: 2px;
-  width: 0.8em;
-  object-fit: cover;
-}
-
-.gridnumberright img:only-of-type {
-  width: auto;
 }
 
 .gridnumberright img:last-of-type {
@@ -174,8 +179,7 @@
   height: 95%;
 }
 
-.gridnumber {
-  composes: boxHeaderBackground from global;
+.gridInfo {
   display: none;
 }
 
@@ -209,12 +213,9 @@
   white-space: nowrap;
 }
 
-@media all and (max-width: 1700px) {
-  .gridnumber {
+@media all and (min-aspect-ratio: 1/1) and (max-width: 1700px) {
+  .gridInfo {
     font-size: 0.8em;
-  }
-  .gridnumberright {
-    font-size: 0.6em;
   }
 }
 

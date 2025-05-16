@@ -47,19 +47,22 @@ function SidebarBeastie(props: Props): React.ReactElement {
           alt={`${props.isSpoiler ? "Hidden" : beastiedata.name} Icon`}
           loading="lazy"
         />
-        <span className={styles.gridnumber}>
-          <span className={styles.hash}>#</span>
-          {String(beastiedata.number).padStart(2, "0")}
-        </span>
-        <span
-          className={
-            props.smallStatDisplay
-              ? styles.gridnumberrightsmall
-              : styles.gridnumberright
-          }
-        >
-          {props.isSpoiler ? "" : props.statDisplay}
-        </span>
+        <div className={styles.gridInfo}>
+          <div className={styles.gridnumber}>
+            <span className={styles.hash}>#</span>
+            {String(beastiedata.number).padStart(2, "0")}
+          </div>
+          <div className={styles.gridInfoMiddle}></div>
+          <div
+            className={
+              props.smallStatDisplay
+                ? styles.gridnumberrightsmall
+                : styles.gridnumberright
+            }
+          >
+            {props.isSpoiler ? "" : props.statDisplay}
+          </div>
+        </div>
         <div className={styles.name}>
           <div className={styles.number}>
             <span className={styles.hash}>#</span>

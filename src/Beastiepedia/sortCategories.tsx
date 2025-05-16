@@ -4,7 +4,6 @@ type StatType = "ba" | "bd" | "ha" | "hd" | "ma" | "md";
 
 const STATS: StatType[] = ["ba", "bd", "ha", "hd", "ma", "md"];
 const POW_STATS: StatType[] = ["ba", "ha", "ma"];
-const POW_STATS_SORTABLE: StatType[] = ["ba", "ha", "ma"];
 
 const STAT_IMGS: Record<StatType, React.ReactElement> = {
   ba: <img key="ba" src="/gameassets/sprIcon/0.png" alt="Body POW" />,
@@ -51,11 +50,9 @@ function StatText({
   );
 }
 
-function getMaxStat(beastie: BeastieType): StatType[] {
-  const stat = POW_STATS_SORTABLE.sort((a, b) => beastie[b] - beastie[a])[0];
-  return POW_STATS.filter((a) => beastie[a] == beastie[stat]).sort((a, b) =>
-    a.localeCompare(b),
-  );
+function getMaxStat(beastie: BeastieType): [StatType[], number] {
+  const statNum = Math.max(beastie.ba, beastie.ha, beastie.ma);
+  return [POW_STATS.filter((a) => beastie[a] == statNum), statNum];
 }
 
 export const SORT_CATEGORIES: SortType[] = [
@@ -81,11 +78,13 @@ export const SORT_CATEGORIES: SortType[] = [
   {
     name: "Highest POW",
     value: (beastie) => Math.max(beastie.ba, beastie.ha, beastie.ma),
-    compare: (beastie1, beastie2) =>
-      beastie1[getMaxStat(beastie1)[0]] - beastie2[getMaxStat(beastie2)[0]] ||
-      getMaxStat(beastie2)[0].localeCompare(getMaxStat(beastie1)[0]),
+    compare: (beastie1, beastie2) => {
+      const [[stat1], val1] = getMaxStat(beastie1);
+      const [[stat2], val2] = getMaxStat(beastie2);
+      return val1 - val2 || stat2.localeCompare(stat1);
+    },
     display: (beastie) => (
-      <StatText beastie={beastie} stats={getMaxStat(beastie)} />
+      <StatText beastie={beastie} stats={getMaxStat(beastie)[0]} />
     ),
   },
   {

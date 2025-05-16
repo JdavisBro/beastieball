@@ -65,7 +65,10 @@ function SidebarBeastie(props: Props): React.ReactElement {
             <span className={styles.hash}>#</span>
             <span>{String(beastiedata.number).padStart(2, "0")}</span>
             {props.statDisplay && !props.isSpoiler ? (
-              <span> - {props.statDisplay}</span>
+              <span>
+                {" - "}
+                <span className={styles.statDisplay}>{props.statDisplay}</span>
+              </span>
             ) : null}
           </div>
           <div>{props.isSpoiler ? "???" : beastiedata.name}</div>

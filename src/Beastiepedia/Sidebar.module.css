@@ -191,11 +191,31 @@
 
 .number {
   font-family: SportsJersey, sans-serif;
+  text-align: center;
 }
 
 .hash {
   font-weight: 800;
   font-size: 0.8em;
+}
+
+.statDisplay img {
+  height: 0.8em;
+  position: relative;
+  top: 2px;
+}
+
+.statDisplay {
+  white-space: nowrap;
+}
+
+@media all and (max-width: 1700px) {
+  .gridnumber {
+    font-size: 0.8em;
+  }
+  .gridnumberright {
+    font-size: 0.6em;
+  }
 }
 
 @media all and (max-aspect-ratio: 1/1) {

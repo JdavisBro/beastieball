@@ -6,13 +6,13 @@ const STATS: StatType[] = ["ba", "bd", "ha", "hd", "ma", "md"];
 const POW_STATS: StatType[] = ["ba", "ha", "ma"];
 const POW_STATS_SORTABLE: StatType[] = ["ba", "ha", "ma"];
 
-const STAT_ALT_TEXT: Record<StatType, string> = {
-  ba: "Body POW",
-  bd: "Body DEF",
-  ha: "Spirit POW",
-  hd: "Spirit DEF",
-  ma: "Mind POW",
-  md: "Mind DEF",
+const STAT_IMGS: Record<StatType, React.ReactElement> = {
+  ba: <img key="ba" src="/gameassets/sprIcon/0.png" alt="Body POW" />,
+  bd: <img key="bd" src="/gameassets/sprIcon/0.png" alt="Body DEF" />,
+  ha: <img key="ha" src="/gameassets/sprIcon/1.png" alt="Spirit POW" />,
+  hd: <img key="hd" src="/gameassets/sprIcon/1.png" alt="Spirit DEF" />,
+  ma: <img key="ma" src="/gameassets/sprIcon/2.png" alt="Mind POW" />,
+  md: <img key="md" src="/gameassets/sprIcon/2.png" alt="Mind DEF" />,
 };
 
 type SortValueType = {
@@ -36,22 +36,26 @@ const NUMBER_FORMAT = Intl.NumberFormat(undefined, {
   currencyDisplay: "narrowSymbol",
 });
 
-function StatText({ beastie, stat }: { beastie: BeastieType; stat: StatType }) {
+function StatText({
+  beastie,
+  stats,
+}: {
+  beastie: BeastieType;
+  stats: StatType[];
+}) {
   return (
     <>
-      <img
-        src={`/gameassets/sprIcon/${POW_STATS.indexOf(stat)}.png`}
-        alt={STAT_ALT_TEXT[stat]}
-      />
-      {beastie[stat]}
+      {stats.map((stat) => STAT_IMGS[stat])}
+      {beastie[stats[0]]}
     </>
   );
 }
 
-function getMaxStat(beastie: BeastieType): StatType {
-  return POW_STATS_SORTABLE.sort(
-    (a, b) => beastie[b] - beastie[a] || a.localeCompare(b),
-  )[0];
+function getMaxStat(beastie: BeastieType): StatType[] {
+  const stat = POW_STATS_SORTABLE.sort((a, b) => beastie[b] - beastie[a])[0];
+  return POW_STATS.filter((a) => beastie[a] == beastie[stat]).sort((a, b) =>
+    a.localeCompare(b),
+  );
 }
 
 export const SORT_CATEGORIES: SortType[] = [
@@ -78,10 +82,10 @@ export const SORT_CATEGORIES: SortType[] = [
     name: "Highest POW",
     value: (beastie) => Math.max(beastie.ba, beastie.ha, beastie.ma),
     compare: (beastie1, beastie2) =>
-      beastie1[getMaxStat(beastie1)] - beastie2[getMaxStat(beastie2)] ||
-      getMaxStat(beastie2).localeCompare(getMaxStat(beastie1)),
+      beastie1[getMaxStat(beastie1)[0]] - beastie2[getMaxStat(beastie2)[0]] ||
+      getMaxStat(beastie2)[0].localeCompare(getMaxStat(beastie1)[0]),
     display: (beastie) => (
-      <StatText beastie={beastie} stat={getMaxStat(beastie)} />
+      <StatText beastie={beastie} stats={getMaxStat(beastie)} />
     ),
   },
   {

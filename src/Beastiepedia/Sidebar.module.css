@@ -127,9 +127,18 @@
 
 .gridnumberright img {
   height: 1em;
-  margin-right: 2px;
   position: relative;
   top: 2px;
+  width: 0.8em;
+  object-fit: cover;
+}
+
+.gridnumberright img:only-of-type {
+  width: auto;
+}
+
+.gridnumberright img:last-of-type {
+  margin-right: 2px;
 }
 
 .gridnumberrightsmall {

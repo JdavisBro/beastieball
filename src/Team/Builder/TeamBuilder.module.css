@@ -53,6 +53,8 @@
   gap: 10px;
   padding-top: 4px;
   justify-content: center;
+  align-items: start;
+  align-content: start;
   overflow-y: scroll;
   height: 90vh;
   max-width: calc(

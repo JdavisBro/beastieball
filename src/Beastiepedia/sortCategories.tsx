@@ -6,6 +6,15 @@ const STATS: StatType[] = ["ba", "bd", "ha", "hd", "ma", "md"];
 const POW_STATS: StatType[] = ["ba", "ha", "ma"];
 const POW_STATS_SORTABLE: StatType[] = ["ba", "ha", "ma"];
 
+const STAT_ALT_TEXT: Record<StatType, string> = {
+  ba: "Body POW",
+  bd: "Body DEF",
+  ha: "Spirit POW",
+  hd: "Spirit DEF",
+  ma: "Mind POW",
+  md: "Mind DEF",
+};
+
 type SortValueType = {
   name: string;
   value: (beastie: BeastieType) => number;
@@ -30,7 +39,10 @@ const NUMBER_FORMAT = Intl.NumberFormat(undefined, {
 function StatText({ beastie, stat }: { beastie: BeastieType; stat: StatType }) {
   return (
     <>
-      <img src={`/gameassets/sprIcon/${POW_STATS.indexOf(stat)}.png`} />
+      <img
+        src={`/gameassets/sprIcon/${POW_STATS.indexOf(stat)}.png`}
+        alt={STAT_ALT_TEXT[stat]}
+      />
       {beastie[stat]}
     </>
   );

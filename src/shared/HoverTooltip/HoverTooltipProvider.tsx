@@ -41,11 +41,13 @@ export default function HoverTooltipProvider({
         popoverRef.current.hidePopover();
       }
     };
-    window.addEventListener("click", callback);
-    window.addEventListener("touchmove", callback);
+    document.addEventListener("click", callback);
+    document.addEventListener("touchmove", callback);
+    document.addEventListener("scroll", callback, true);
     return () => {
-      window.removeEventListener("click", callback);
-      window.removeEventListener("touchmove", callback);
+      document.removeEventListener("click", callback);
+      document.removeEventListener("touchmove", callback);
+      document.removeEventListener("scroll", callback, true);
     };
   }, []);
 
@@ -114,6 +116,8 @@ export default function HoverTooltipProvider({
             : undefined,
           popover: "manual",
           onClick: (event) => event.stopPropagation(),
+          onTouchMove: (event) => event.stopPropagation(),
+          onScroll: (event) => event.stopPropagation(),
         }}
         containerRef={popoverRef}
       >

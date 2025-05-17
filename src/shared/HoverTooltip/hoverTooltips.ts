@@ -91,7 +91,7 @@ Stacks decrease by 1 at the end of each Offense and Defense turn.`,
     id: "stressed",
     title: "STRESSED feeling",
     desc: `[sprStatus,12]STRESSED stacks decrease at the end of every Offense and Defense turn.
-Once [sprStatus,12]STRESSED stacks reach 0, the previously [sprStatus,12]STRESSED Beastie will feel 2 [tt,tired][sprStatus,10]TIRED[/tt].`,
+If the [sprStatus,12]STRESSED Beastie is on field when stacks reach 0, they will feel 2 [tt,tired][sprStatus,10]TIRED[/tt].`,
   },
   rally: {
     id: "rally",

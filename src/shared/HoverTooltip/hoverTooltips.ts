@@ -110,9 +110,8 @@ RHYTHM decreases at the end of every Offense and Defense turn, after healing, an
   quake: {
     id: "quake",
     title: "QUAKE field effect",
-    desc: `QUAKE field effect
-QUAKE can be applied to either side of the field individually.
-While a side of the fieldhas QUAKE, Volleys on that side deal 25 damage to the receiving Beastie, while consuming a stack of QUAKE.
+    desc: `QUAKE can be applied to either side of the field individually.
+While a side of the field has QUAKE, Volleys on that side deal 25 damage to the receiving Beastie, while consuming a stack of QUAKE.
 QUAKE stacks also decrease at the end of the side's Offense.
 When setting QUAKE, stack count will only be changed if the new stack count is higher then the current count.`,
   },

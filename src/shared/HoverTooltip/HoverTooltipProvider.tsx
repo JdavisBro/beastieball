@@ -30,6 +30,10 @@ export default function HoverTooltipProvider({
   const [tooltipCurrentId, setTooltipCurrentId] = useState<string>();
   const tooltipCurrentIdRef = useRef(tooltipCurrentId);
   tooltipCurrentIdRef.current = tooltipCurrentId;
+  const [tooltipPath, setTooltipPath] = useState<string[]>([]);
+  const tooltipPrevious = tooltipPath.length
+    ? HOVER_TOOLTIPS[tooltipPath[tooltipPath.length - 1]]
+    : undefined;
 
   const popoverRef = useRef<HTMLDivElement>(null);
 
@@ -40,6 +44,7 @@ export default function HoverTooltipProvider({
       if (popoverRef.current) {
         popoverRef.current.hidePopover();
       }
+      setTooltipPath([]);
     };
     document.addEventListener("click", callback);
     document.addEventListener("touchmove", callback);
@@ -66,6 +71,18 @@ export default function HoverTooltipProvider({
         setTooltipOpen(true);
         if (at) {
           setTooltipPosition(at);
+          setTooltipPath([]);
+        } else {
+          const currentTooltip = tooltipCurrentIdRef.current;
+          setTooltipPath((oldPath) => {
+            const index = oldPath.indexOf(tooltipId);
+            if (index != -1) {
+              return oldPath.slice(0, index);
+            } else if (currentTooltip) {
+              return [...oldPath, currentTooltip];
+            }
+            return [];
+          });
         }
         setTooltipStatic(is_static ?? false);
       },
@@ -78,6 +95,7 @@ export default function HoverTooltipProvider({
           if (popoverRef.current) {
             popoverRef.current.hidePopover();
           }
+          setTooltipPath([]);
         }
       },
       move: (tooltipId, to) => {
@@ -121,6 +139,17 @@ export default function HoverTooltipProvider({
         }}
         containerRef={popoverRef}
       >
+        {tooltipPrevious ? (
+          <div
+            className={styles.tooltipBackButton}
+            onClick={() => {
+              setTooltipCurrentId(tooltipPrevious.id);
+              setTooltipPath(tooltipPath.slice(0, -1));
+            }}
+          >
+            ← {tooltipPrevious.title}
+          </div>
+        ) : null}
         {tooltipStatic ? null : (
           <div className={styles.tooltipFreezeText}>(Click to Freeze)</div>
         )}

@@ -71,13 +71,13 @@ export const HOVER_TOOLTIPS: Record<string, HoverTooltip> = {
     id: "wiped",
     title: "WIPED feeling",
     desc: `[sprStatus,5]WIPED Beasties can only use Free Ball.
-Stacks decrease at the end of each Offense and Defense turn while the affected Beastie is on the bench (or is ROWDY).
+[sprStatus,5]WIPED Stacks decrease at the end of each Offense and Defense turn while the affected Beastie is on the bench (or is ROWDY).
 [sprStatus,5]WIPED Beasties with enough STAMINA can still receive Attacks without losing the point.`,
   },
   sweaty: {
     id: "sweaty",
     title: "SWEATY feeling",
-    desc: `At the end of a team's Offense turn, [sprStatus,6]SWEATY Beasties that're on the court lose 10 Stamina per stack of [sprStatus,6]SWEATY, and gain an additional stack of [sprStatus,6]SWEATY.
+    desc: `At the end of a team's Offense turn, [sprStatus,6]SWEATY Beasties that're on field lose 10 Stamina per stack of [sprStatus,6]SWEATY, and gain an additional stack of [sprStatus,6]SWEATY.
 [sprStatus,6]SWEATY stacks do not decrease over time.
 Attempting to reapply [sprStatus,6]SWEATY will increase the number of stacks, unless specified otherwise.`,
   },
@@ -85,13 +85,13 @@ Attempting to reapply [sprStatus,6]SWEATY will increase the number of stacks, un
     id: "tired",
     title: "TIRED feeling",
     desc: `[sprStatus,10]TIRED Beasties can only use the Move, Volley, Free Ball, and Tag Out Plays.
-Stacks decrease by 1 at the end of each Offense and Defense turn.`,
+[sprStatus,10]TIRED Stacks decrease by 1 at the end of each Offense and Defense turn.`,
   },
   stressed: {
     id: "stressed",
     title: "STRESSED feeling",
-    desc: `[sprStatus,12]STRESSED stacks decrease at the end of every Offense and Defense turn.
-If the [sprStatus,12]STRESSED Beastie is on field when stacks reach 0, they will feel 2 [tt,tired][sprStatus,10]TIRED[/tt].`,
+    desc: `[sprStatus,12]STRESSED Beasties feel 2 [tt,tired][sprStatus,10]TIRED[/tt] when [sprStatus,12]STRESSED stacks reach 0.
+[sprStatus,12]STRESSED stacks decrease at the end of every Offense and Defense turn.`,
   },
   rally: {
     id: "rally",
@@ -104,7 +104,7 @@ RALLY decreases at the end of every Offense and Defense turn, and can be stacked
     id: "rhythm",
     title: "RHYTHM field effect",
     desc: `RHYTHM can be applied to either side of the field individually.
-While a side of the field has RHYTHM, all Beasties on that side heal 6 stamina at the end of each Offense and Defense turn and can't be made SWEATY, NERVOUS, STRESSED, or TIRED by opponent Beasties.
+While a side of the field has RHYTHM, all Beasties on that side heal 6 stamina at the end of each Offense and Defense turn and can't be made [tt,sweaty][sprStatus,6]SWEATY[/tt], [tt,nervous][sprStatus,0]NERVOUS[/tt], [tt,stressed][sprStatus,12]STRESSED[/tt], or [tt,tired][sprStatus,10]TIRED[/tt] by opponent Beasties.
 RHYTHM decreases at the end of every Offense and Defense turn, after healing, and can't be stacked.`,
   },
   quake: {

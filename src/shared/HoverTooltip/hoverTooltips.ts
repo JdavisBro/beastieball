@@ -90,7 +90,7 @@ Attempting to reapply [sprStatus,6]SWEATY will increase the number of stacks, un
   stressed: {
     id: "stressed",
     title: "STRESSED feeling",
-    desc: `[sprStatus,12]STRESSED Beasties feel 2 [tt,tired][sprStatus,10]TIRED[/tt] when [sprStatus,12]STRESSED stacks reach 0.
+    desc: `[sprStatus,12]STRESSED Beasties feel 2 [tt,tired][sprStatus,10]TIRED[/tt] if they're on field when [sprStatus,12]STRESSED stacks reach 0.
 [sprStatus,12]STRESSED stacks decrease at the end of every Offense and Defense turn.`,
   },
   rally: {

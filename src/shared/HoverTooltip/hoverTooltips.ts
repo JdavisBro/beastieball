@@ -52,7 +52,7 @@ export const HOVER_MATCHERS: HoverMatcher[] = [
     match: makeDefaultMatch("wall"),
   },
   {
-    trigger: /FIELD EFFECTS/gi,
+    trigger: /FIELD EFFECTS?/gi,
     match: makeDefaultMatch("fieldeffects"),
   },
   {
@@ -77,7 +77,7 @@ export const HOVER_TOOLTIPS: Record<string, HoverTooltip> = {
   sweaty: {
     id: "sweaty",
     title: "SWEATY feeling",
-    desc: `At the end of a team's Offense turn, [sprStatus,6]SWEATY Beasties that're on field lose 10 Stamina per stack of [sprStatus,6]SWEATY, and gain an additional stack of [sprStatus,6]SWEATY.
+    desc: `[sprStatus,6]SWEATY Beasties that're on field at the end of their team's Offense turn lose 10 Stamina per stack of [sprStatus,6]SWEATY, and gain an additional stack of [sprStatus,6]SWEATY.
 [sprStatus,6]SWEATY stacks do not decrease over time.
 Attempting to reapply [sprStatus,6]SWEATY will increase the number of stacks, unless specified otherwise.`,
   },
@@ -90,7 +90,7 @@ Attempting to reapply [sprStatus,6]SWEATY will increase the number of stacks, un
   stressed: {
     id: "stressed",
     title: "STRESSED feeling",
-    desc: `[sprStatus,12]STRESSED Beasties feel 2 [tt,tired][sprStatus,10]TIRED[/tt] if they're on field when [sprStatus,12]STRESSED stacks reach 0.
+    desc: `[sprStatus,12]STRESSED Beasties feel 2 [tt,tired][sprStatus,10]TIRED[/tt] if they're on field when stacks reach 0.
 [sprStatus,12]STRESSED stacks decrease at the end of every Offense and Defense turn.`,
   },
   rally: {

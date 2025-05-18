@@ -26,6 +26,15 @@
   z-index: 10000;
 }
 
+.tooltipOpen :global(.infoBoxContent) {
+  transition: padding-bottom 0.2s;
+}
+
+.tooltipOpen:not(.tooltipStatic) :global(.infoBoxContent) {
+  position: relative;
+  padding-bottom: 16px;
+}
+
 .tooltip::backdrop {
   background: none;
 }
@@ -33,6 +42,14 @@
 .tooltipStatic {
   composes: tooltipOpen;
   pointer-events: inherit;
+}
+
+.tooltipFreezeText {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  color: #333;
+  font-size: 0.7em;
 }
 
 @media all and (max-aspect-ratio: 1/1) and (max-width: 800px) {

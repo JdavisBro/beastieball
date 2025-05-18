@@ -121,6 +121,9 @@ export default function HoverTooltipProvider({
         }}
         containerRef={popoverRef}
       >
+        {tooltipStatic ? null : (
+          <div className={styles.tooltipFreezeText}>(Click to Freeze)</div>
+        )}
         {tooltipOpen && hoverTooltipInfo ? (
           <TextTag autoTooltip={false} innerTooltip={true}>
             {hoverTooltipInfo.desc}

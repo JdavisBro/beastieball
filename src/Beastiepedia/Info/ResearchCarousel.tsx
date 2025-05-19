@@ -38,6 +38,8 @@ export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
   const [imageIndex, setImageIndex] = useState(0);
   const [bigImage, setBigImage] = useState<boolean>(false);
 
+  const [loading, setLoading] = useState(true);
+
   const images: { link: string; url: string }[] = [];
   for (let i = 0; i < research_data[beastieid]; i++) {
     images.push({
@@ -48,9 +50,10 @@ export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
 
   useEffect(() => {
     setImageIndex(0);
-  }, [setImageIndex, beastieid]);
+  }, [beastieid]);
 
   const changeIndex = (targetIndex: number) => {
+    setLoading(true);
     setImageIndex(Math.min(Math.max(targetIndex, 0), images.length - 1));
   };
 
@@ -89,13 +92,23 @@ export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
         hashValue="Research"
       >
         <div className={styles.big}>
-          {bigImage ? (
+          <div
+            className={loading ? styles.imcontainerloading : styles.imcontainer}
+          >
             <img
               className={biggerImage ? styles.biggerimage : styles.bigimage}
-              src={images[imageIndex].link}
               onClick={() => setBiggerImage(!biggerImage)}
+              src={
+                images.length > imageIndex ? images[imageIndex].link : undefined
+              }
+              onLoad={() => setLoading(false)}
             />
-          ) : null}
+          </div>
+          <div
+            className={loading ? styles.loadingtext : styles.loadingtexthidden}
+          >
+            <div>Loading...</div>
+          </div>
         </div>
         <Controls
           imageIndex={imageIndex}

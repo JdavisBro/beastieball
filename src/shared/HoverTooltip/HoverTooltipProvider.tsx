@@ -21,6 +21,8 @@ export default function HoverTooltipProvider({
   children: React.ReactNode;
 }) {
   const [tooltipOpen, setTooltipOpen] = useState(false);
+  const tooltipOpenRef = useRef(tooltipOpen);
+  tooltipOpenRef.current = tooltipOpen;
   const [tooltipPosition, setTooltipPosition] = useState<[number, number]>([
     0, 0,
   ]);
@@ -35,7 +37,17 @@ export default function HoverTooltipProvider({
     ? HOVER_TOOLTIPS[tooltipPath[tooltipPath.length - 1]]
     : undefined;
 
+  const returnFocusRef = useRef<HTMLElement | undefined>(undefined);
+
+  const modalOpen = !!document.querySelector("dialog:open");
+
   const popoverRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (tooltipStatic && popoverRef.current) {
+      popoverRef.current.focus();
+    }
+  }, [tooltipStatic, tooltipCurrentId]);
 
   useEffect(() => {
     const callback = () => {
@@ -45,14 +57,25 @@ export default function HoverTooltipProvider({
         popoverRef.current.hidePopover();
       }
       setTooltipPath([]);
+      if (returnFocusRef.current) {
+        returnFocusRef.current.focus();
+        returnFocusRef.current = undefined;
+      }
+    };
+    const keyboardCallback = (event: KeyboardEvent) => {
+      if (event.key == "Escape") {
+        callback();
+      }
     };
     document.addEventListener("click", callback);
     document.addEventListener("touchmove", callback);
     document.addEventListener("scroll", callback, true);
+    document.addEventListener("keydown", keyboardCallback, true);
     return () => {
       document.removeEventListener("click", callback);
       document.removeEventListener("touchmove", callback);
       document.removeEventListener("scroll", callback, true);
+      document.removeEventListener("keydown", keyboardCallback, true);
     };
   }, []);
 
@@ -60,18 +83,29 @@ export default function HoverTooltipProvider({
 
   const contextValue: HoverTooltipType = useMemo(
     () => ({
-      open: (tooltipId, at, is_static) => {
+      open: (tooltipId, at, return_focus, is_static, select) => {
         if (tooltipStaticRef.current && !is_static) {
           return;
         }
         if (popoverRef.current) {
           popoverRef.current.showPopover();
+          if (is_static) {
+            const modal = document.querySelector("dialog:open");
+            if (modal) {
+              (modal as HTMLDialogElement).close();
+            }
+          }
+        }
+        if (return_focus) {
+          returnFocusRef.current = return_focus;
         }
         setTooltipCurrentId(tooltipId);
         setTooltipOpen(true);
         if (at) {
-          setTooltipPosition(at);
-          setTooltipPath([]);
+          if (!select || !tooltipOpenRef.current) {
+            setTooltipPosition(at);
+            setTooltipPath([]);
+          }
         } else {
           const currentTooltip = tooltipCurrentIdRef.current;
           setTooltipPath((oldPath) => {
@@ -96,6 +130,7 @@ export default function HoverTooltipProvider({
             popoverRef.current.hidePopover();
           }
           setTooltipPath([]);
+          returnFocusRef.current = undefined;
         }
       },
       move: (tooltipId, to) => {
@@ -133,6 +168,9 @@ export default function HoverTooltipProvider({
               } as CSSProperties)
             : undefined,
           popover: "manual",
+          tabIndex: 0,
+          role: "dialog",
+          id: "tooltip-content",
           onClick: (event) => event.stopPropagation(),
           onTouchMove: (event) => event.stopPropagation(),
           onScroll: (event) => event.stopPropagation(),
@@ -146,12 +184,21 @@ export default function HoverTooltipProvider({
               setTooltipCurrentId(tooltipPrevious.id);
               setTooltipPath(tooltipPath.slice(0, -1));
             }}
+            onKeyDown={(event) => {
+              if (event.key == "Enter") {
+                setTooltipCurrentId(tooltipPrevious.id);
+                setTooltipPath(tooltipPath.slice(0, -1));
+              }
+            }}
+            tabIndex={0}
           >
             ← {tooltipPrevious.title}
           </div>
         ) : null}
         {tooltipStatic ? null : (
-          <div className={styles.tooltipFreezeText}>(Click to Freeze)</div>
+          <div className={styles.tooltipFreezeText}>
+            (Click to Freeze{modalOpen ? " - Will Close Popup" : ""})
+          </div>
         )}
         {tooltipOpen && hoverTooltipInfo ? (
           <TextTag autoTooltip={false} innerTooltip={true}>

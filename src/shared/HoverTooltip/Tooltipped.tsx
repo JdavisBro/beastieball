@@ -28,10 +28,11 @@ export default function Tooltipped({
       onMouseOver={
         allowHover
           ? (event) => {
-              hoverTooltipContext?.open(tooltipId, [
-                event.clientX,
-                event.clientY,
-              ]);
+              hoverTooltipContext?.open(
+                tooltipId,
+                [event.clientX, event.clientY],
+                event.currentTarget,
+              );
             }
           : undefined
       }
@@ -56,10 +57,26 @@ export default function Tooltipped({
         hoverTooltipContext?.open(
           tooltipId,
           innerTooltip ? undefined : [event.clientX, event.clientY],
+          event.currentTarget,
           true,
         );
         event.stopPropagation();
       }}
+      onKeyDown={(event) => {
+        if (event.key == "Enter") {
+          const bounding = event.currentTarget.getBoundingClientRect();
+          hoverTooltipContext?.open(
+            tooltipId,
+            innerTooltip ? undefined : [bounding.right, bounding.bottom],
+            undefined,
+            true,
+            true,
+          );
+          event.stopPropagation();
+        }
+      }}
+      tabIndex={0}
+      aria-describedby="tooltip-content"
     >
       {children}
     </span>

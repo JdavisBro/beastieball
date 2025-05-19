@@ -7,6 +7,10 @@ import { LayerGroup } from "react-leaflet";
 import BeastieSelect from "../shared/BeastieSelect";
 import { SPAWNABLE_BEASTIES } from "./Map";
 import { useLocalStorage } from "usehooks-ts";
+import ITEM_DIC from "../data/ItemData";
+import Modal from "../shared/Modal";
+import { EXTRA_MARKERS } from "../data/WorldData";
+import TextTag from "../shared/TextTag";
 
 export function ControlSection({
   header,
@@ -41,6 +45,67 @@ export function ControlSection({
   );
 }
 
+const WILD_ITEMS = EXTRA_MARKERS.gifts
+  .flatMap((gift) => gift.items.map((item) => item[0] as string))
+  .filter((item, index, array) => array.indexOf(item) == index)
+  .map((itemId) => ITEM_DIC[itemId])
+  .sort((item1, item2) => item1.type - item2.type || item1.img - item2.img);
+
+console.log(WILD_ITEMS);
+
+function ItemSection({
+  huntedItem,
+  setHuntedItem,
+}: {
+  huntedItem: string | undefined;
+  setHuntedItem: (item: string | undefined) => void;
+}) {
+  const item = huntedItem && ITEM_DIC[huntedItem];
+  const [itemSelector, setItemSelector] = useState(false);
+
+  return (
+    <>
+      <label>
+        Find:{" "}
+        <button onClick={() => setItemSelector(true)}>
+          Select Item: {item ? item.name : "Unset"}
+        </button>
+      </label>
+      <Modal
+        header="Select Item"
+        open={itemSelector}
+        onClose={() => setItemSelector(false)}
+        hashValue="SelectItem"
+      >
+        <div className={styles.itemSelect}>
+          <div
+            key={"unset"}
+            className={styles.itemSelectItem}
+            onClick={() => setHuntedItem(undefined)}
+          >
+            Unset
+          </div>
+          {WILD_ITEMS.map((item) => (
+            <div
+              key={item.id}
+              className={styles.itemSelectItem}
+              onClick={() => setHuntedItem(item.id)}
+            >
+              <img src={`/gameassets/sprItems/${item.img}.png`} />
+              <div className={styles.itemText}>
+                <div className={styles.itemName}>{item.name}</div>
+                <div className={styles.itemDesc}>
+                  <TextTag>{item.desc}</TextTag>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Modal>
+    </>
+  );
+}
+
 type ControlLayerType = {
   children: React.ReactNode;
   title: string;
@@ -53,6 +118,8 @@ type Props = {
   setHuntedBeastie: (beastie: string | undefined) => void;
   postgame: boolean;
   setPostgame: (postgame: boolean) => void;
+  huntedItem: string | undefined;
+  setHuntedItem: (itemId: string | undefined) => void;
 };
 
 function ControlMenuInner({
@@ -61,6 +128,8 @@ function ControlMenuInner({
   setHuntedBeastie,
   postgame,
   setPostgame,
+  huntedItem,
+  setHuntedItem,
 }: Props) {
   const [visibleSection, setVisibleSection] = useState<string | undefined>(
     undefined,
@@ -168,6 +237,14 @@ function ControlMenuInner({
           />{" "}
           Postgame Spawns
         </label>
+      </ControlSection>
+      <ControlSection
+        header="Items"
+        sectionName="items"
+        visibleSection={visibleSection}
+        setVisibleSection={setVisibleSection}
+      >
+        <ItemSection huntedItem={huntedItem} setHuntedItem={setHuntedItem} />
       </ControlSection>
     </>
   );

@@ -251,3 +251,40 @@
   cursor: pointer;
   font-size: 1.1em;
 }
+
+.itemSelect {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  width: calc(round(down, 90vw, 244px) + 10px);
+  gap: 4px;
+  padding: 4px;
+}
+
+.itemSelectItem {
+  display: flex;
+  width: 240px;
+  height: 120px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  justify-content: center;
+  line-height: initial;
+}
+
+.itemText {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.itemName {
+  font-size: 1.2em;
+  border-bottom: solid white 1px;
+}
+
+.itemDesc {
+  line-height: 1em;
+}

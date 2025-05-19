@@ -83,6 +83,17 @@ export default function Map(): React.ReactNode {
 
   const [postgame, setPostgame] = useState(false);
 
+  const setQueryParam = (key: string, value?: string) => {
+    const url = new URL(window.location.href);
+    if (value) {
+      url.searchParams.set(key, value);
+    } else {
+      url.searchParams.delete(key);
+    }
+    url.hash = "";
+    history.pushState({}, "", url.toString());
+  };
+
   const searchParams = new URL(window.location.href).searchParams;
   const searchHuntedName = searchParams.get("track");
   const searchHunted = BEASTIE_ARRAY.find(
@@ -94,20 +105,27 @@ export default function Map(): React.ReactNode {
       ? searchHunted
       : undefined,
   );
-  const setHuntedBeastie = (beastieId: string | undefined) => {
+  const setHuntedBeastie = (beastieId?: string) => {
     setHuntedBeastieState(beastieId);
-    const url = new URL(window.location.href);
-    const beastie = beastieId ? BEASTIE_DATA.get(beastieId)?.name : undefined;
-    if (beastie) {
-      url.searchParams.set("track", beastie);
-    } else {
-      url.searchParams.delete("track");
-    }
-    url.hash = "";
-    history.pushState({}, "", url.toString());
+    setQueryParam(
+      "track",
+      beastieId ? BEASTIE_DATA.get(beastieId)?.name : undefined,
+    );
   };
 
   const [beastiesLevel, setBeastiesLevel] = useState("");
+
+  const searchItemName = searchParams.get("item");
+  const searchItemId =
+    searchItemName &&
+    Object.values(ITEM_DIC).find((item) => searchItemName == item.name)?.id;
+  const [huntedItem, setHuntedItemState] = useState<string | undefined>(
+    searchItemId ?? undefined,
+  );
+  const setHuntedItem = (itemId?: string) => {
+    setHuntedItemState(itemId);
+    setQueryParam("item", itemId ? ITEM_DIC[itemId]?.name : undefined);
+  };
 
   WORLD_DATA.level_stumps_array.forEach((level) => {
     const level_size = {
@@ -355,35 +373,41 @@ export default function Map(): React.ReactNode {
             },
             {
               title: "Items",
-              children: EXTRA_MARKERS.gifts.map((gift) => (
-                <Marker
-                  key={gift.id}
-                  position={[-gift.y, gift.x]}
-                  icon={L.icon({
-                    iconUrl: `/gameassets/sprItems/${ITEM_DIC[gift.items[0][0]].img}.png`,
-                    iconSize: [30, 30],
-                    iconAnchor: [15, 15],
-                  })}
-                >
-                  <Popup offset={[0, -5]}>
-                    <div className={styles.itemList}>
-                      {gift.items.map(([item, count]) => (
-                        <div key={item} className={styles.item}>
-                          <img
-                            src={`/gameassets/sprItems/${ITEM_DIC[item].img}.png`}
-                          />
-                          <div>
-                            <span>
-                              {ITEM_DIC[item].name} x{count}
-                            </span>
-                            <TextTag>{ITEM_DIC[item].desc}</TextTag>
+              children: EXTRA_MARKERS.gifts
+                .filter(
+                  (gift) =>
+                    !huntedItem ||
+                    gift.items.some((item) => item[0] == huntedItem),
+                )
+                .map((gift) => (
+                  <Marker
+                    key={gift.id}
+                    position={[-gift.y, gift.x]}
+                    icon={L.icon({
+                      iconUrl: `/gameassets/sprItems/${ITEM_DIC[gift.items[0][0]].img}.png`,
+                      iconSize: huntedItem ? [60, 60] : [30, 30],
+                      iconAnchor: huntedItem ? [30, 30] : [15, 15],
+                    })}
+                  >
+                    <Popup offset={[0, -5]} minWidth={300}>
+                      <div className={styles.itemList}>
+                        {gift.items.map(([item, count]) => (
+                          <div key={item} className={styles.item}>
+                            <img
+                              src={`/gameassets/sprItems/${ITEM_DIC[item].img}.png`}
+                            />
+                            <div>
+                              <span>
+                                {ITEM_DIC[item].name} x{count}
+                              </span>
+                              <TextTag>{ITEM_DIC[item].desc}</TextTag>
+                            </div>
                           </div>
-                        </div>
-                      ))}
-                    </div>
-                  </Popup>
-                </Marker>
-              )),
+                        ))}
+                      </div>
+                    </Popup>
+                  </Marker>
+                )),
             },
             {
               title: "Switches and Gates",
@@ -459,6 +483,8 @@ export default function Map(): React.ReactNode {
           setHuntedBeastie={setHuntedBeastie}
           postgame={postgame}
           setPostgame={setPostgame}
+          huntedItem={huntedItem}
+          setHuntedItem={setHuntedItem}
         />
       </MapContainer>
     </>

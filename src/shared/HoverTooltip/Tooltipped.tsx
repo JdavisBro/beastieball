@@ -57,7 +57,7 @@ export default function Tooltipped({
         hoverTooltipContext?.open(
           tooltipId,
           innerTooltip ? undefined : [event.clientX, event.clientY],
-          event.currentTarget,
+          innerTooltip ? undefined : event.currentTarget,
           true,
         );
         event.stopPropagation();
@@ -68,7 +68,7 @@ export default function Tooltipped({
           hoverTooltipContext?.open(
             tooltipId,
             innerTooltip ? undefined : [bounding.right, bounding.bottom],
-            undefined,
+            innerTooltip ? undefined : event.currentTarget,
             true,
             true,
           );

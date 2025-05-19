@@ -12,7 +12,8 @@
   clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 20px 100%);
   box-sizing: border-box;
   padding: 10px 30px 10px 30px;
-  width: 100%;
+  max-width: 80%;
+  width: 400px;
   overflow: hidden;
   margin-bottom: 10px;
 }

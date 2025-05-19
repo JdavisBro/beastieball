@@ -107,7 +107,11 @@ export default function Modal(
         props.onClose();
       }}
     >
-      <InfoBox key="MODALinfobox" header={props.header}>
+      <InfoBox
+        key="MODALinfobox"
+        header={props.header}
+        container={{ tabIndex: props.open ? 0 : undefined }}
+      >
         {props.open ? props.children : null}
       </InfoBox>
     </dialog>

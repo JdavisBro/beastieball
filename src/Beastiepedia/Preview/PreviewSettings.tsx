@@ -49,7 +49,7 @@ export default function PreviewSettings(props: Props): React.ReactElement {
                 props.canvasRef.current &&
                 props.canvasRef.current.parentElement
               ) {
-                props.canvasRef.current.parentElement.style.width = `${event.currentTarget.value}%`;
+                props.canvasRef.current.parentElement.style.maxWidth = `${event.currentTarget.value}%`;
               }
             }}
           />

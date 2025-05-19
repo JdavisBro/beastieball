@@ -11,7 +11,11 @@ import { BeastieType } from "../../data/BeastieData";
 
 declare global {
   interface Window {
-    saveBeastieImages: (icons: boolean) => void;
+    saveBeastieImages: (
+      icons?: boolean,
+      numbered?: boolean,
+      raremorph?: boolean,
+    ) => void;
     getWikiColorArgs: (beastiedata: BeastieType) => string;
   }
 }
@@ -24,18 +28,21 @@ export default function DevUtil(props: {
   canvasRef: React.RefObject<HTMLCanvasElement>;
   cropCanvasRef: React.RefObject<HTMLCanvasElement>;
 }) {
-  const loadingRef = useRef<{
-    [key: string]: {
-      img: HTMLImageElement;
-      crop: BBox;
-      colors: {
-        array: {
-          color: number;
-          x: number;
+  const loadingRef = useRef<
+    Record<
+      string,
+      {
+        img: HTMLImageElement;
+        crop: BBox;
+        colors: {
+          array: {
+            color: number;
+            x: number;
+          }[];
         }[];
-      }[];
-    };
-  }>({});
+      }
+    >
+  >({});
   const loadedNumRef = useRef(0);
   const beastieCountRef = useRef(0);
   const iconsRef = useRef(false);
@@ -119,8 +126,8 @@ export default function DevUtil(props: {
 
   // Use in developer console as just `saveBeastieImages( true | false )
   // Saves zip of images of all beasties. If icons is true then it makes them ICON_SIZE square.
-  window.saveBeastieImages = (icons) => {
-    iconsRef.current = icons;
+  window.saveBeastieImages = (icons, numbered, raremorph) => {
+    iconsRef.current = icons ?? false;
     loadedNumRef.current = 0;
     beastieCountRef.current = 0;
     loadingRef.current = {};
@@ -147,7 +154,11 @@ export default function DevUtil(props: {
         }
       });
       img.src = `/gameassets/beasties/${beastie.spr}/${frame % sprite.frames}.webp`;
-      loadingRef.current[beastie.name] = {
+      loadingRef.current[
+        numbered
+          ? `${String(beastie.number).padStart(3, "0")}-${beastie.name}`
+          : beastie.name
+      ] = {
         img: img,
         crop: sprite.bboxes[frame % sprite.frames] ?? {
           x: 0,
@@ -155,7 +166,7 @@ export default function DevUtil(props: {
           width: 1000,
           height: 1000,
         },
-        colors: beastie.colors,
+        colors: raremorph ? beastie.shiny : beastie.colors,
       };
       beastieCountRef.current += 1;
     });

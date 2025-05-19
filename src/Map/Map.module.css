@@ -65,6 +65,7 @@
 .item > div {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .specialBeastie {
@@ -274,17 +275,17 @@
   line-height: initial;
 }
 
-.itemText {
+.itemSelectText {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.itemName {
+.itemSelectName {
   font-size: 1.2em;
   border-bottom: solid white 1px;
 }
 
-.itemDesc {
+.itemSelectDesc {
   line-height: 1em;
 }

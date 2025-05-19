@@ -92,9 +92,9 @@ function ItemSection({
               onClick={() => setHuntedItem(item.id)}
             >
               <img src={`/gameassets/sprItems/${item.img}.png`} />
-              <div className={styles.itemText}>
-                <div className={styles.itemName}>{item.name}</div>
-                <div className={styles.itemDesc}>
+              <div className={styles.itemSelectText}>
+                <div className={styles.itemSelectName}>{item.name}</div>
+                <div className={styles.itemSelectDesc}>
                   <TextTag>{item.desc}</TextTag>
                 </div>
               </div>

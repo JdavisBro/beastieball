@@ -513,6 +513,11 @@ export default function MoveView(props: {
                   setMoveModal(props.move);
                 }
               }}
+              onKeyDown={(event) => {
+                if (event.key == "Enter" && setMoveModal) {
+                  setMoveModal(props.move);
+                }
+              }}
               role="button"
               alt="View Beasties that learn this play."
               title="View Beasties that learn this play."

@@ -73,6 +73,12 @@ class TagBuilder {
 
   imgNobreak: React.ReactElement[] = [];
 
+  typeOccurances: Record<"text" | "img" | "imgText", number> = {
+    text: 0,
+    img: 0,
+    imgText: 0,
+  }; // element counts of each type, for keys.
+
   applyTag(tag: string, value?: string) {
     if (tag.startsWith("spr")) {
       const alt =
@@ -84,12 +90,14 @@ class TagBuilder {
       }
       this.imgNobreak.push(
         <img
+          key={`img-${this.typeOccurances.img}`}
           className={styles.smallimage}
           style={{ ...this.style }}
           alt={alt}
           src={`/gameassets/${tag}/${value ?? "0"}.png`}
         />,
       );
+      this.typeOccurances.img += 1;
       return;
     }
     if (tag.startsWith("ft")) {
@@ -209,18 +217,18 @@ class TagBuilder {
       return;
     }
     (this.tooltipId ? this.tooltipElements : this.elements).push(
-      this.imgNobreak.length > 1 ? (
-        <span
-          className={styles.texttagnobreak}
-          style={{ animation: this.animations.join(", "), ...this.style }}
-        >
-          {this.imgNobreak}
-        </span>
-      ) : (
-        this.imgNobreak[0]
-      ),
+      <span
+        key={`text-${this.typeOccurances.text}`}
+        className={styles.texttagnobreak}
+        style={{ animation: this.animations.join(", "), ...this.style }}
+      >
+        {this.imgNobreak}
+      </span>,
     );
     this.imgNobreak = [];
+    this.typeOccurances.text += 1;
+    this.typeOccurances.img = 0;
+    this.typeOccurances.imgText = 0;
   }
 
   addText(text: string) {
@@ -230,11 +238,13 @@ class TagBuilder {
       if (imgText && imgText[0]) {
         this.imgNobreak.push(
           <span
+            key={`imgText-${this.typeOccurances.imgText}`}
             style={{ animation: this.animations.join(", "), ...this.style }}
           >
             {imgText[0]}
           </span>,
         );
+        this.typeOccurances.imgText += 1;
         if (imgText[0].length == text.length) {
           return;
         }
@@ -244,10 +254,14 @@ class TagBuilder {
     }
 
     (this.tooltipId ? this.tooltipElements : this.elements).push(
-      <span style={{ animation: this.animations.join(", "), ...this.style }}>
+      <span
+        key={`text-${this.typeOccurances.text}`}
+        style={{ animation: this.animations.join(", "), ...this.style }}
+      >
         {used_text}
       </span>,
     );
+    this.typeOccurances.text += 1;
   }
 }
 

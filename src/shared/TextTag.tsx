@@ -73,10 +73,11 @@ class TagBuilder {
 
   imgNobreak: React.ReactElement[] = [];
 
-  typeOccurances: Record<"text" | "img" | "imgText", number> = {
+  typeOccurances: Record<"text" | "img" | "imgText" | "tooltipText", number> = {
     text: 0,
     img: 0,
     imgText: 0,
+    tooltipText: 0,
   }; // element counts of each type, for keys.
 
   applyTag(tag: string, value?: string) {
@@ -205,10 +206,15 @@ class TagBuilder {
     }
     this.pushImg();
     this.elements.push(
-      <Tooltipped tooltipId={this.tooltipId} innerTooltip={this.innerTooltip}>
+      <Tooltipped
+        key={`text-${this.typeOccurances.text}`}
+        tooltipId={this.tooltipId}
+        innerTooltip={this.innerTooltip}
+      >
         {this.tooltipElements}
       </Tooltipped>,
     );
+    this.typeOccurances.text += 1;
     this.tooltipId = undefined;
   }
 
@@ -216,9 +222,12 @@ class TagBuilder {
     if (!this.imgNobreak.length) {
       return;
     }
+    const key = this.tooltipId
+      ? `tooltipText-${this.typeOccurances.tooltipText++}`
+      : `text-${this.typeOccurances.text++}`;
     (this.tooltipId ? this.tooltipElements : this.elements).push(
       <span
-        key={`text-${this.typeOccurances.text}`}
+        key={key}
         className={styles.texttagnobreak}
         style={{ animation: this.animations.join(", "), ...this.style }}
       >
@@ -226,7 +235,6 @@ class TagBuilder {
       </span>,
     );
     this.imgNobreak = [];
-    this.typeOccurances.text += 1;
     this.typeOccurances.img = 0;
     this.typeOccurances.imgText = 0;
   }
@@ -253,9 +261,12 @@ class TagBuilder {
       this.pushImg();
     }
 
+    const key = this.tooltipId
+      ? `tooltipText-${this.typeOccurances.tooltipText++}`
+      : `text-${this.typeOccurances.text++}`;
     (this.tooltipId ? this.tooltipElements : this.elements).push(
       <span
-        key={`text-${this.typeOccurances.text}`}
+        key={key}
         style={{ animation: this.animations.join(", "), ...this.style }}
       >
         {used_text}

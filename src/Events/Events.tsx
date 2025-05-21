@@ -5,6 +5,7 @@ import { BallEvent, EventResponse, NoEvent } from "./Types";
 import styles from "./Events.module.css";
 import { Link } from "react-router-dom";
 import BEASTIE_DATA from "../data/BeastieData";
+import useLocalization from "../localization/useLocalization";
 
 const EVENT_RESPONSE_EXPIRE = 12 * 60 * 60 * 1000;
 
@@ -136,21 +137,37 @@ function Bigmoon({
   bigmoon: BallEvent;
   bigmoonReload: () => void;
 }) {
+  const { L } = useLocalization();
+
   const startDate = new Date(bigmoon.times[0][0]);
   const endDate = new Date(bigmoon.times[0][1]);
 
   const lastReload = useRef(0);
 
-  const guilds = bigmoon.guilds.reduce(
-    (accum, beastieId) =>
-      (accum ? accum + " VS " : accum) + BEASTIE_DATA.get(beastieId)?.name,
-    "",
-  );
-  const bans = bigmoon.bans.reduce(
-    (accum, beastieId) =>
-      (accum ? accum + ", " : "") + BEASTIE_DATA.get(beastieId)?.name,
-    "",
-  );
+  const beasties = (
+    bigmoon.guilds.length
+      ? bigmoon.guilds
+      : bigmoon.bans.length
+        ? bigmoon.bans
+        : undefined
+  )
+    ?.map((beastieId) => BEASTIE_DATA.get(beastieId)?.name)
+    .filter((beastie) => typeof beastie == "string")
+    .map((name) => L(name));
+  const guilds =
+    beasties && bigmoon.guilds.length
+      ? beasties.reduce(
+          (accum, beastie) => (accum ? accum + " VS " : accum) + beastie,
+          "",
+        )
+      : undefined;
+  const bans =
+    beasties && bigmoon.bans.length
+      ? beasties.reduce(
+          (accum, beastie) => (accum ? accum + ", " : "") + beastie,
+          "",
+        )
+      : undefined;
 
   return (
     <EventBlock>
@@ -174,9 +191,7 @@ function Bigmoon({
         >
           Bigmoon Bash
           <br />
-          <div className={styles.eventSubtitle}>
-            {guilds || (bans ? bans + " banned" : undefined) || ""}
-          </div>
+          <div className={styles.eventSubtitle}>{guilds ?? bans ?? ""}</div>
         </Link>
         <TimeDelta startDate={startDate} endDate={endDate} />
         <div>From: {DATETIME_FORMATTER.format(startDate)}</div>

@@ -4,6 +4,7 @@ import styles from "./Shared.module.css";
 import Modal from "./Modal";
 import SpoilerOptions from "./SpoilerOptions";
 import { Link } from "react-router-dom";
+import { Language } from "./Language";
 
 function ToggleCheckbox({
   storageKey,
@@ -70,6 +71,7 @@ export default function Settings({
       onClose={onClose}
     >
       <div className={styles.settingsContainer}>
+        <Language />
         <Toggles />
         <SpoilerOptions />
         {experimental || experimental_different ? (

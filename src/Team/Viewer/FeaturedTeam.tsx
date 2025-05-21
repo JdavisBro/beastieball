@@ -7,6 +7,7 @@ import {
   useSpoilerMode,
   useSpoilerSeen,
 } from "../../shared/useSpoiler";
+import useLocalization from "../../localization/useLocalization";
 
 const LONG_NAME_LENGTH = 45;
 const DESCRIPTION_MAX = 115;
@@ -20,6 +21,8 @@ export default function FeaturedTeam({
   selected: boolean;
   setTeam: () => void;
 }) {
+  const { L } = useLocalization();
+
   const longDesc = team.description.length > DESCRIPTION_MAX;
 
   const [spoilerMode] = useSpoilerMode();
@@ -82,14 +85,15 @@ export default function FeaturedTeam({
           }
           const isSpoiler =
             spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
-          const alt = `${isSpoiler ? `Beastie #${beastie.number}` : beastie.name} icon`;
+          const beastieName = L(beastie.name);
+          const alt = `${isSpoiler ? `Beastie #${beastie.number}` : beastieName} icon`;
           return (
             <img
               key={beastie.id + String(index)}
               src={
                 isSpoiler
                   ? "/gameassets/sprExclam_1.png"
-                  : `/icons/${beastie.name}.png`
+                  : `/icons/${beastieName}.png`
               }
               alt={alt}
               title={alt}

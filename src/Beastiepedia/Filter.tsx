@@ -11,6 +11,9 @@ import {
   BEASTIE_STUFF_RECENTLY_UPDATED,
   BEASITE_SPRITES_RECENTLY_UPDATED,
 } from "./RecentlyUpdated";
+import useLocalization, {
+  LocalizationFunction,
+} from "../localization/useLocalization";
 
 export enum FilterTypes {
   Ability,
@@ -87,7 +90,10 @@ const FILTER_TYPES = [
   FilterTypes.RecentlyUpdated,
 ];
 
-export function createFilterString(filters: FilterType[]) {
+export function createFilterString(
+  filters: FilterType[],
+  L: LocalizationFunction,
+) {
   const types: Record<FilterTypes, FilterType[]> = {
     [FilterTypes.Ability]: [],
     [FilterTypes.Move]: [],
@@ -115,7 +121,7 @@ export function createFilterString(filters: FilterType[]) {
               ? filter[1] == RecentlyUpdatedTypes.Stuff
                 ? "Plays, Traits, or Stats"
                 : "Sprites or Colors"
-              : filter[1].name),
+              : L(filter[1].name)),
       "",
     ),
   ]).reduce(
@@ -165,6 +171,8 @@ function AbilityButton({
   selected: boolean;
   handleClick: () => void;
 }) {
+  const { L } = useLocalization();
+
   return (
     <div
       key={ability.id}
@@ -176,9 +184,9 @@ function AbilityButton({
       className={selected ? styles.abilitySelected : styles.ability}
     >
       <div className={styles.abilityInner}>
-        <div>{ability.name}</div>
+        <div>{L(ability.name)}</div>
         <div className={styles.abilityDesc}>
-          <TextTag>{ability.desc.replace(/\|/g, "\n")}</TextTag>
+          <TextTag>{L(ability.desc).replace(/\|/g, "\n")}</TextTag>
         </div>
       </div>
     </div>
@@ -192,6 +200,8 @@ export default function Filter({
   filters: FilterType[];
   setFilters: React.Dispatch<React.SetStateAction<FilterType[]>>;
 }) {
+  const { L } = useLocalization();
+
   const [open, setOpen] = useState(false);
 
   const handleToggleFilter = useCallback(
@@ -250,7 +260,7 @@ export default function Filter({
           >
             Clear Filter
           </button>
-          {" " + createFilterString(filters)}
+          {" " + createFilterString(filters, L)}
           <div className={styles.tabs}>
             <button
               className={tab == 0 ? styles.selectedtab : undefined}

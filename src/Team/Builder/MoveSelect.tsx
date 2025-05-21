@@ -4,6 +4,7 @@ import Modal from "../../shared/Modal";
 import MoveView from "../../shared/MoveView";
 import MOVE_DIC from "../../data/MoveData";
 import styles from "./TeamBuilder.module.css";
+import useLocalization from "../../localization/useLocalization";
 
 export default function MoveSelect({
   beastieMovelist,
@@ -14,6 +15,8 @@ export default function MoveSelect({
   teamBeastieMovelist: string[];
   setMove: (index: number, move: string) => void;
 }) {
+  const { L } = useLocalization();
+
   const [selecting, setSelecting] = useState<undefined | number>(undefined);
 
   const selectMove = (moveId: string) => {
@@ -52,13 +55,22 @@ export default function MoveSelect({
       </Modal>
       Plays:{" "}
       <button onClick={() => setSelecting(0)}>
-        Play 1: {MOVE_DIC[teamBeastieMovelist[0]]?.name ?? "Unset"}
+        Play 1:{" "}
+        {MOVE_DIC[teamBeastieMovelist[0]]
+          ? L(MOVE_DIC[teamBeastieMovelist[0]].name)
+          : "Unset"}
       </button>
       <button onClick={() => setSelecting(1)}>
-        Play 2: {MOVE_DIC[teamBeastieMovelist[1]]?.name ?? "Unset"}
+        Play 2:{" "}
+        {MOVE_DIC[teamBeastieMovelist[1]]
+          ? L(MOVE_DIC[teamBeastieMovelist[1]].name)
+          : "Unset"}
       </button>
       <button onClick={() => setSelecting(2)}>
-        Play 3: {MOVE_DIC[teamBeastieMovelist[2]]?.name ?? "Unset"}
+        Play 3:{" "}
+        {MOVE_DIC[teamBeastieMovelist[2]]
+          ? L(MOVE_DIC[teamBeastieMovelist[2]].name)
+          : "Unset"}
       </button>
     </div>
   );

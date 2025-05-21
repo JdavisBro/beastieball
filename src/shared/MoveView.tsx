@@ -7,6 +7,7 @@ import { useContext } from "react";
 import SOCIAL_DATA from "../data/SocialData";
 import { SpoilerMode, useFriendSpoiler, useSpoilerMode } from "./useSpoiler";
 import { useLocalStorage } from "usehooks-ts";
+import useLocalization from "../localization/useLocalization";
 
 // reuqired: targ=12 says Targets SIDEWAYS.
 
@@ -323,6 +324,8 @@ export default function MoveView(props: {
   friendFilter?: string;
   typeText?: string;
 }): React.ReactElement | null {
+  const { L } = useLocalization();
+
   const setMoveModal = useContext(MoveModalContext);
 
   let friend = SOCIAL_DATA.find((friend) =>
@@ -458,6 +461,8 @@ export default function MoveView(props: {
     )
     .join(" ");
 
+  const moveName = L(props.move.name);
+
   return (
     <div className={styles.movecontainer} style={style}>
       <div className={styles.moveviewbar}>
@@ -476,10 +481,10 @@ export default function MoveView(props: {
         )}
         <div
           className={
-            props.move.name.length > 18 ? styles.movenamelong : styles.movename
+            moveName.length > 18 ? styles.movenamelong : styles.movename
           }
         >
-          {props.move.name}{" "}
+          {moveName}{" "}
           {friend ? (
             <span
               title={learned_text}

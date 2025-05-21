@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./Sidebar.module.css";
 import type { BeastieType } from "../data/BeastieData";
 import { memo } from "react";
+import useLocalization from "../localization/useLocalization";
 
 type Props = {
   beastieid: string;
@@ -16,7 +17,11 @@ type Props = {
 };
 
 function SidebarBeastie(props: Props): React.ReactElement {
+  const { L } = useLocalization();
+
   const beastiedata = props.beastiedata;
+  const beastieName = L(beastiedata.name);
+
   const selected = props.selected;
   const content = selected
     ? `${styles.beastiecontent} ${styles.selected}`
@@ -24,13 +29,13 @@ function SidebarBeastie(props: Props): React.ReactElement {
 
   return (
     <Link
-      to={props.isSpoiler ? "#" : `/beastiepedia/${beastiedata.name}`}
+      to={props.isSpoiler ? "#" : `/beastiepedia/${beastieName}`}
       className={styles.beastie}
       style={{ display: props.visible ? "block" : "none" }}
       onClick={() => {
         props.handleClick();
         if (props.isSpoiler) {
-          props.handleSpoilerClick(beastiedata.id, beastiedata.name);
+          props.handleSpoilerClick(beastiedata.id, beastieName);
         }
       }}
     >
@@ -40,10 +45,10 @@ function SidebarBeastie(props: Props): React.ReactElement {
           src={
             props.isSpoiler
               ? "/gameassets/sprExclam_1.png"
-              : `/icons/${beastiedata.name}.png`
+              : `/icons/${beastieName}.png`
           }
           style={props.isSpoiler ? { filter: "brightness(50%)" } : undefined}
-          alt={`${props.isSpoiler ? "Hidden" : beastiedata.name} Icon`}
+          alt={`${props.isSpoiler ? "Hidden" : beastieName} Icon`}
           loading="lazy"
         />
         <div className={styles.gridInfo}>
@@ -67,7 +72,7 @@ function SidebarBeastie(props: Props): React.ReactElement {
               </span>
             ) : null}
           </div>
-          <div>{props.isSpoiler ? "???" : beastiedata.name}</div>
+          <div>{props.isSpoiler ? "???" : beastieName}</div>
         </div>
       </div>
     </Link>

@@ -1,5 +1,6 @@
 import { useLocalStorage } from "usehooks-ts";
 import SpoilerOptions from "./shared/SpoilerOptions";
+import { Language } from "./shared/Language";
 
 export default function SpoilerWarning(props: {
   children: React.ReactElement;
@@ -34,6 +35,7 @@ export default function SpoilerWarning(props: {
       <p>
         <button onClick={() => setSpoilersOk(true)}>Confirm</button>
       </p>
+      <Language />
     </div>
   );
 }

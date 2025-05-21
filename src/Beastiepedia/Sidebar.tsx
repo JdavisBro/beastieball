@@ -15,6 +15,7 @@ import {
 } from "../shared/useSpoiler";
 import { useNavigate } from "react-router-dom";
 import { SORT_CATEGORIES } from "./sortCategories";
+import useLocalization from "../localization/useLocalization";
 
 const BEASTIES = [...BEASTIE_DATA.values()];
 
@@ -25,6 +26,7 @@ type Props = {
 };
 
 export default function Sidebar(props: Props): React.ReactElement {
+  const { L } = useLocalization();
   const beastieid = props.beastieid;
 
   const [search, setSearch] = useState("");
@@ -34,9 +36,9 @@ export default function Sidebar(props: Props): React.ReactElement {
   const sortMult = sortDec ? -1 : 1;
   const sortFunc: (beastie1: BeastieType, beastie2: BeastieType) => number =
     sort.compare
-      ? (beastie1, beastie2) => sort.compare(beastie1, beastie2) * sortMult
+      ? (beastie1, beastie2) => sort.compare(beastie1, beastie2, L) * sortMult
       : (beastie1, beastie2) =>
-          (sort.value(beastie1) - sort.value(beastie2)) * sortMult ||
+          (sort.value(beastie1, L) - sort.value(beastie2, L)) * sortMult ||
           beastie1.number - beastie2.number;
   const [grid, setGrid] = useLocalStorage("beastiepediaGrid", false);
 
@@ -105,7 +107,7 @@ export default function Sidebar(props: Props): React.ReactElement {
           />
         </div>
         <div className={styles.filterText}>
-          {filters ? createFilterString(filters) : null}
+          {filters ? createFilterString(filters, L) : null}
         </div>
       </div>
       <div
@@ -117,7 +119,9 @@ export default function Sidebar(props: Props): React.ReactElement {
             beastieid={beastie.id}
             beastiedata={beastie}
             statDisplay={
-              sort.display ? sort.display(beastie, grid) : sort.value(beastie)
+              sort.display
+                ? sort.display(beastie, grid, L)
+                : sort.value(beastie, L)
             }
             selected={beastieid == beastie.id}
             visible={

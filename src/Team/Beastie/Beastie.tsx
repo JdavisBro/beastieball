@@ -8,6 +8,7 @@ import abilities from "../../data/abilities";
 import MOVE_DIC from "../../data/MoveData";
 import BeastieMove from "./BeastieMove";
 import { Link } from "react-router-dom";
+import useLocalization from "../../localization/useLocalization";
 
 const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
   1: "colors",
@@ -30,6 +31,8 @@ export default function Beastie({
   levelOverwrite?: number;
   maxCoaching?: boolean;
 }) {
+  const { L } = useLocalization();
+
   const beastiedata = BEASTIE_DATA.get(teamBeastie.specie);
   if (!beastiedata) {
     return null;
@@ -57,12 +60,14 @@ export default function Beastie({
       ]
     ];
 
+  const beastieName = L(beastiedata.name);
+
   return (
     <div className={styles.beastie}>
       <div className={styles.row}>
         <div className={styles.column}>
           <span className={styles.name}>
-            {teamBeastie.name || beastiedata.name}
+            {teamBeastie.name || beastieName}
             <span className={styles.number}>#{teamBeastie.number}</span>{" "}
             <span
               title={
@@ -77,8 +82,8 @@ export default function Beastie({
               Lvl {level}
             </span>
           </span>
-          {teamBeastie.name && beastiedata.name != teamBeastie.name ? (
-            <span className={styles.graytext}>({beastiedata.name})</span>
+          {teamBeastie.name && beastieName != teamBeastie.name ? (
+            <span className={styles.graytext}>({beastieName})</span>
           ) : null}
           <Link
             to={`/beastiepedia/${beastiedata.name}?${searchParam}=${beastieColors.join(",")}`}
@@ -105,8 +110,8 @@ export default function Beastie({
             maxCoaching={maxCoaching}
           />
           <div className={styles.column}>
-            <span className={styles.graytext}>{ability.name}</span>
-            <TextTag>{ability.desc.replace(/\|/, "")}</TextTag>
+            <span className={styles.graytext}>{L(ability.name)}</span>
+            <TextTag>{L(ability.desc).replace(/\|/, "")}</TextTag>
           </div>
         </div>
       </div>

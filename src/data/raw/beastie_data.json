@@ -68,7 +68,7 @@
       [20, 1, 1, 2, 1, 1],
       [2, 2, 1, 5, 2, 1, 4, 2, 1]
     ],
-    "desc": "They often hunt with the help of a Gastic's illusions. Their motivation for frightening humans is not fully understood.",
+    "desc": "¦beastiesetup_desc_038¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -132,7 +132,7 @@
     },
     "ma": 88,
     "md": 49,
-    "name": "Albrax",
+    "name": "¦beastiesetup_name_038¦",
     "number": 38,
     "palettes": 1,
     "prev_ids": [],
@@ -169,7 +169,7 @@
           "type": 19
         }
       ],
-      "description": "3+ times, TAG OUT a Beastie"
+      "description": "¦beastiesetup_classrecruit_032¦"
     },
     "recruit_value": 6.95,
     "roamer_style": {
@@ -296,7 +296,7 @@
       [20, 1, 1, 2, 1, 1],
       [2, 2, 1, 5, 2, 1, 4, 2, 1]
     ],
-    "desc": "There are numerous reports of coaches seeing their Beasties swooped up by Yueffowl at night, only to find them returned unharmed in the morning.",
+    "desc": "¦beastiesetup_desc_037¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -360,7 +360,7 @@
     },
     "ma": 68,
     "md": 30,
-    "name": "Yueffowl",
+    "name": "¦beastiesetup_name_037¦",
     "number": 37,
     "palettes": 1,
     "prev_ids": [],
@@ -387,7 +387,7 @@
           "type": 19
         }
       ],
-      "description": "2+ times, TAG OUT a Beastie"
+      "description": "¦beastiesetup_classrecruit_031¦"
     },
     "recruit_value": 4.65,
     "roamer_style": {
@@ -543,7 +543,7 @@
       [8, 6, 0.25],
       [26, 2, 1, 8, 2, 0.15]
     ],
-    "desc": "They nurture the children on their belly until they're strong enough to forage for themselves. Their pups maintain an exclusive diet of fresh fruit juice.",
+    "desc": "¦beastiesetup_desc_087¦",
     "designer": 4,
     "dlc": 0,
     "evo_pose": [
@@ -607,7 +607,7 @@
     },
     "ma": 35,
     "md": 83,
-    "name": "Froofulks",
+    "name": "¦beastiesetup_name_086¦",
     "number": 87,
     "palettes": 1,
     "prev_ids": [],
@@ -669,7 +669,7 @@
           "type": 45
         }
       ],
-      "description": "Restore STAMINA 5+ times"
+      "description": "¦beastiesetup_classrecruit_074¦"
     },
     "recruit_value": 11.2,
     "roamer_style": {
@@ -814,7 +814,7 @@
       [8, 6, 0.25],
       [26, 2, 1, 8, 2, 0.15]
     ],
-    "desc": "They use all their energy to fly and are constantly foraging for sources of sugar to replenish themselves. Their overall health has been in decline in recent years.",
+    "desc": "¦beastiesetup_desc_086¦",
     "designer": 4,
     "dlc": 0,
     "evo_pose": [
@@ -878,7 +878,7 @@
     },
     "ma": 29,
     "md": 55,
-    "name": "Jellibat",
+    "name": "¦beastiesetup_name_085¦",
     "number": 86,
     "palettes": 1,
     "prev_ids": [],
@@ -907,7 +907,7 @@
           "type": 45
         }
       ],
-      "description": "Restore STAMINA 2+ times"
+      "description": "¦beastiesetup_classrecruit_073¦"
     },
     "recruit_value": 5.6,
     "roamer_style": {
@@ -1016,7 +1016,7 @@
       [47, 2, 1, 29, 0, 6],
       [52, 1, 1, 8, 1, 0.5]
     ],
-    "desc": "They live at high elevations, absorbing moisture from clouds. They communicate with flashes of light from their antennae.",
+    "desc": "¦beastiesetup_desc_099¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -1080,7 +1080,7 @@
     },
     "ma": 29,
     "md": 99,
-    "name": "Deluja",
+    "name": "¦beastiesetup_name_098¦",
     "number": 99,
     "palettes": 1,
     "prev_ids": [],
@@ -1095,7 +1095,7 @@
           "type": 45
         }
       ],
-      "description": "Use any effect on a benched Beastie"
+      "description": "¦beastiesetup_classrecruit_085¦"
     },
     "recruit_value": 3.05,
     "roamer_style": {
@@ -1214,7 +1214,7 @@
       [8, 0, -0.34, 56, 2, 0],
       [8, 0, -0.34, 56, 2, 0]
     ],
-    "desc": "They lack any aggression at all. Using their tail as a lure, they invite other Beasties into their burrow to offer them food.",
+    "desc": "¦beastiesetup_desc_034¦",
     "designer": 1,
     "dlc": 0,
     "evo_pose": [
@@ -1239,7 +1239,7 @@
                 "type": 14
               }
             ],
-            "description": "A Diggum must [sprBoost,1]BOOST [sprIcon,1]POW [sprBoost,0][sprBoost,0][sprBoost,0] or more and deal 100+ damage with an attack"
+            "description": "¦beastiesetup_009¦"
           }
         ]
       }
@@ -1300,7 +1300,7 @@
     },
     "ma": 50,
     "md": 75,
-    "name": "Diggum",
+    "name": "¦beastiesetup_name_034¦",
     "number": 34,
     "palettes": 1,
     "prev_ids": ["caretaker", "bestie"],
@@ -1314,7 +1314,7 @@
           "type": 16
         }
       ],
-      "description": "Fulfill recruit conditions for 2+ of this Beasties' allies"
+      "description": "¦beastiesetup_classrecruit_028¦"
     },
     "recruit_value": 5,
     "roamer_style": {
@@ -1427,7 +1427,7 @@
       [8, 0, -0.34, 56, 2, 0],
       [8, 0, -0.34, 56, 2, 0]
     ],
-    "desc": "Celia's Notes: They seem very capable of murder. Watch out for those tusks.",
+    "desc": "¦beastiesetup_desc_102¦",
     "designer": 11,
     "dlc": 0,
     "evo_pose": [
@@ -1492,7 +1492,7 @@
     },
     "ma": 25,
     "md": 75,
-    "name": "Duggout",
+    "name": "¦beastiesetup_name_101¦",
     "number": 102,
     "palettes": 1,
     "prev_ids": [],
@@ -1521,7 +1521,7 @@
           "type": 45
         }
       ],
-      "description": "Heal 2+ times"
+      "description": "¦beastiesetup_classrecruit_088¦"
     },
     "recruit_value": 0.5,
     "roamer_style": {
@@ -1653,7 +1653,7 @@
       [2, 0, 2],
       [2, 0, 2]
     ],
-    "desc": "A single Bandicraft will manage 20 acres of land. They construct homes and care for other Beasties in their territory.",
+    "desc": "¦beastiesetup_desc_013¦",
     "designer": [5, 3, 0, 8],
     "dlc": 0,
     "evo_pose": [
@@ -1717,7 +1717,7 @@
     },
     "ma": 85,
     "md": 118,
-    "name": "Bandicraft",
+    "name": "¦beastiesetup_name_013¦",
     "number": 13,
     "palettes": 1,
     "prev_ids": ["setter"],
@@ -1756,7 +1756,7 @@
           "type": 50
         }
       ],
-      "description": "4+ times, use a special [sprIcon,3]Volley"
+      "description": "¦beastiesetup_004¦"
     },
     "recruit_value": 6.65,
     "roamer_style": {
@@ -1890,7 +1890,7 @@
       [2, 0, 2],
       [2, 0, 2]
     ],
-    "desc": "Their busy mind is only at rest while they dig. They'll hyperfocus for days on a single burrow.",
+    "desc": "¦beastiesetup_desc_011¦",
     "designer": [5, 8],
     "dlc": 0,
     "evo_pose": [
@@ -1954,7 +1954,7 @@
     },
     "ma": 65,
     "md": 70,
-    "name": "Bildit",
+    "name": "¦beastiesetup_name_011¦",
     "number": 11,
     "palettes": 1,
     "prev_ids": ["setter1"],
@@ -1977,7 +1977,7 @@
           "type": 50
         }
       ],
-      "description": "2+ times, use a special [sprIcon,3]Volley"
+      "description": "¦beastiesetup_002¦"
     },
     "recruit_value": 4,
     "roamer_style": {
@@ -2106,7 +2106,7 @@
       [2, 0, 2],
       [2, 0, 2]
     ],
-    "desc": "Following fires, rockslides, or other natural disasters, Handicoots often appear and help out.",
+    "desc": "¦beastiesetup_desc_012¦",
     "designer": [5, 8],
     "dlc": 0,
     "evo_pose": [
@@ -2170,7 +2170,7 @@
     },
     "ma": 75,
     "md": 95,
-    "name": "Handicoot",
+    "name": "¦beastiesetup_name_012¦",
     "number": 12,
     "palettes": 1,
     "prev_ids": ["setter1"],
@@ -2201,7 +2201,7 @@
           "type": 50
         }
       ],
-      "description": "3+ times, use a special [sprIcon,3]Volley"
+      "description": "¦beastiesetup_003¦"
     },
     "recruit_value": 5.35,
     "roamer_style": {
@@ -2330,7 +2330,7 @@
       [0, 0, 2],
       [0, 0, 2]
     ],
-    "desc": "They have an intense daily training regimen. If they miss it for some reason, they aren't able to sleep at night.",
+    "desc": "¦beastiesetup_desc_007¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -2395,7 +2395,7 @@
     },
     "ma": 35,
     "md": 80,
-    "name": "Kasaleet",
+    "name": "¦beastiesetup_name_007¦",
     "number": 7,
     "palettes": 1,
     "prev_ids": [],
@@ -2410,7 +2410,7 @@
           "type": 14
         }
       ],
-      "description": "Hit this Beastie with an attack that has 100 POW or more"
+      "description": "¦beastiesetup_classrecruit_007¦"
     },
     "recruit_value": 5.45,
     "roamer_style": {
@@ -2538,7 +2538,7 @@
       [0, 0, 2],
       [0, 0, 2]
     ],
-    "desc": "Anytime they encounter something new, they kick it. Kicking is their way of understanding the world.",
+    "desc": "¦beastiesetup_desc_005¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -2603,7 +2603,7 @@
     },
     "ma": 20,
     "md": 45,
-    "name": "Kichik",
+    "name": "¦beastiesetup_name_005¦",
     "number": 5,
     "palettes": 1,
     "prev_ids": ["bunny"],
@@ -2618,7 +2618,7 @@
           "type": 14
         }
       ],
-      "description": "Hit this Beastie with an attack that has 60 POW or more"
+      "description": "¦beastiesetup_classrecruit_005¦"
     },
     "recruit_value": 4.5,
     "roamer_style": {
@@ -2742,7 +2742,7 @@
       [0, 0, 2],
       [0, 0, 2]
     ],
-    "desc": "Despite their powerful legs they insist on using their head for everything. As a result they have frequent headaches and are usually grumpy.",
+    "desc": "¦beastiesetup_desc_006¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -2807,7 +2807,7 @@
     },
     "ma": 33,
     "md": 65,
-    "name": "Ostrisigh",
+    "name": "¦beastiesetup_name_006¦",
     "number": 6,
     "palettes": 1,
     "prev_ids": [],
@@ -2822,7 +2822,7 @@
           "type": 14
         }
       ],
-      "description": "Hit this Beastie with an attack that has 80 POW or more"
+      "description": "¦beastiesetup_classrecruit_006¦"
     },
     "recruit_value": 5.05,
     "roamer_style": {
@@ -2943,7 +2943,7 @@
       [32, 6, 1],
       [32, 6, 1]
     ],
-    "desc": "Its fluff is made of incredibly thin strands of wax, bundled like wool. If a Cherrily makes you a pom, it considers you a treasured friend.",
+    "desc": "¦beastiesetup_desc_036¦",
     "designer": [2, 8],
     "dlc": 0,
     "evo_pose": [
@@ -2968,7 +2968,7 @@
                 "type": 45
               }
             ],
-            "description": "[sprBoost,1]BOOST a Cherrily's [sprIcon,0]POW to +6 or more while their field has RHYTHM"
+            "description": "¦beastiesetup_010¬0¬¦fieldeffectstuff_003¦¦"
           }
         ]
       }
@@ -3028,7 +3028,7 @@
     },
     "ma": 40,
     "md": 57,
-    "name": "Cherrily",
+    "name": "¦beastiesetup_name_036¦",
     "number": 36,
     "palettes": 1,
     "prev_ids": ["support"],
@@ -3044,7 +3044,7 @@
           "type": 45
         }
       ],
-      "description": "Gain 5+ [sprBoost,2]BOOSTS on one Beastie"
+      "description": "¦beastiesetup_classrecruit_030¦"
     },
     "recruit_value": 8.25,
     "roamer_style": {
@@ -3160,7 +3160,7 @@
       [32, 6, 1],
       [32, 6, 1]
     ],
-    "desc": "It's extremely light and drifts with air currents. Groups of Merrifly will hold onto each other so as not to drift apart.",
+    "desc": "¦beastiesetup_desc_035¦",
     "designer": 3,
     "dlc": 0,
     "evo_pose": [
@@ -3226,7 +3226,7 @@
     },
     "ma": 30,
     "md": 40,
-    "name": "Merrifly",
+    "name": "¦beastiesetup_name_035¦",
     "number": 35,
     "palettes": 1,
     "prev_ids": ["support1"],
@@ -3242,7 +3242,7 @@
           "type": 45
         }
       ],
-      "description": "Gain 4+ [sprBoost,2]BOOSTS on one Beastie"
+      "description": "¦beastiesetup_classrecruit_029¦"
     },
     "recruit_value": 6.6,
     "roamer_style": {
@@ -3373,7 +3373,7 @@
       [32, 6, 1],
       [32, 6, 1]
     ],
-    "desc": "Celia's Notes: Most of what you see is a display. The real body is hidden inside... Perhaps it's a defensive adaptation?",
+    "desc": "¦beastiesetup_desc_103¦",
     "designer": 3,
     "dlc": 0,
     "evo_pose": [
@@ -3436,7 +3436,7 @@
     },
     "ma": 30,
     "md": 54,
-    "name": "Mascurry",
+    "name": "¦beastiesetup_name_102¦",
     "number": 103,
     "palettes": 1,
     "prev_ids": [],
@@ -3452,7 +3452,7 @@
           "type": 45
         }
       ],
-      "description": "Gain 5+ [sprBoost,2]BOOSTS on one Beastie"
+      "description": "¦beastiesetup_classrecruit_089¦"
     },
     "recruit_value": 0.5,
     "roamer_style": {
@@ -3578,7 +3578,7 @@
       [4, 7, 2, 5, 7, 2],
       [4, 7, 2, 5, 7, 2]
     ],
-    "desc": "Their dense internal structure is 99% made up of muscle. They can easily lift 20x their own body weight.",
+    "desc": "¦beastiesetup_desc_071¦",
     "designer": 3,
     "dlc": 0,
     "evo_pose": [
@@ -3642,7 +3642,7 @@
     },
     "ma": 36,
     "md": 38,
-    "name": "Musselbound",
+    "name": "¦beastiesetup_name_070¦",
     "number": 71,
     "palettes": 1,
     "prev_ids": [],
@@ -3679,7 +3679,7 @@
           "type": 14
         }
       ],
-      "description": "Receive 3+ [sprIcon,0]BODY attacks"
+      "description": "¦beastiesetup_classrecruit_059¦"
     },
     "recruit_value": 8,
     "roamer_style": {
@@ -3795,7 +3795,7 @@
       [10, 1, 1, 20, 0, 1],
       [15, 0, 1, 16, 0, 1]
     ],
-    "desc": "They have an incredible sense of balance and can juggle a ball while standing at any angle on any surface.",
+    "desc": "¦beastiesetup_desc_043¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -3860,7 +3860,7 @@
     },
     "ma": 95,
     "md": 85,
-    "name": "Goofsder",
+    "name": "¦beastiesetup_name_043¦",
     "number": 43,
     "palettes": 1,
     "prev_ids": [],
@@ -3875,7 +3875,7 @@
           "type": 8
         }
       ],
-      "description": "Launch an attack while your Beasties share the left or right Lane"
+      "description": "¦beastiesetup_012¦"
     },
     "recruit_value": 4,
     "roamer_style": {
@@ -4013,7 +4013,7 @@
       [10, 1, 1, 20, 0, 1],
       [15, 0, 1, 16, 0, 1]
     ],
-    "desc": "They relentlessly practice acrobatic tricks while dangling from treetops and frequently fall. Luckily they can simply curl up and bounce to safety.",
+    "desc": "¦beastiesetup_desc_042¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -4078,7 +4078,7 @@
     },
     "ma": 70,
     "md": 55,
-    "name": "Webbounce",
+    "name": "¦beastiesetup_name_042¦",
     "number": 42,
     "palettes": 1,
     "prev_ids": [],
@@ -4093,7 +4093,7 @@
           "type": 8
         }
       ],
-      "description": "Launch an attack while your Beasties share the left or right Lane"
+      "description": "¦beastiesetup_011¦"
     },
     "recruit_value": 4,
     "roamer_style": {
@@ -4234,7 +4234,7 @@
       [20, 1, 1, 0, 1, 1],
       [51, 0, 2, 14, 0, 1, 16, 0, 1]
     ],
-    "desc": "A leg from their molted shell is kept as a cane. They perform intricate dances in unison to bond and to attract mates.",
+    "desc": "¦beastiesetup_desc_066¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -4298,7 +4298,7 @@
     },
     "ma": 20,
     "md": 74,
-    "name": "Crabaret",
+    "name": "¦beastiesetup_name_065¦",
     "number": 66,
     "palettes": 1,
     "prev_ids": [],
@@ -4332,7 +4332,7 @@
           "type": 16
         }
       ],
-      "description": "Win without volleying, using at least 2 attacks"
+      "description": "¦beastiesetup_classrecruit_054¦"
     },
     "recruit_value": 8.4,
     "roamer_style": {
@@ -4463,7 +4463,7 @@
       [38, 9, 3, 14, 9, 3],
       [15, 9, -2]
     ],
-    "desc": "An ambush predator. They lie perfectly still blending in with foliage and then snap with jaws that could shred metal.",
+    "desc": "¦beastiesetup_desc_070¦",
     "designer": 7,
     "dlc": 0,
     "evo_pose": [
@@ -4528,7 +4528,7 @@
     },
     "ma": 90,
     "md": 60,
-    "name": "Crawlurk",
+    "name": "¦beastiesetup_name_069¦",
     "number": 70,
     "palettes": 1,
     "prev_ids": ["counter", "killa"],
@@ -4544,7 +4544,7 @@
           "type": 14
         }
       ],
-      "description": "Deal 60+ damage with a SERVE"
+      "description": "¦beastiesetup_classrecruit_058¦"
     },
     "recruit_value": 2.8,
     "roamer_style": {
@@ -4688,7 +4688,7 @@
       [19, 0, 4, 8, 0, -0.25],
       [1, 0, 2]
     ],
-    "desc": "Their top speed is over 100kmph. They race across the desert, then curl up into balls and cool off in any shadow they can find.",
+    "desc": "¦beastiesetup_desc_032¦",
     "designer": 3,
     "dlc": 0,
     "evo_pose": [
@@ -4753,7 +4753,7 @@
     },
     "ma": 25,
     "md": 55,
-    "name": "Daredillo",
+    "name": "¦beastiesetup_name_032¦",
     "number": 32,
     "palettes": 1,
     "prev_ids": [],
@@ -4776,7 +4776,7 @@
           "type": 11
         }
       ],
-      "description": "2+ times, MOVE or SHIFT a Beastie to receive an attack"
+      "description": "¦beastiesetup_classrecruit_026¦"
     },
     "recruit_value": 8,
     "roamer_style": {
@@ -4909,7 +4909,7 @@
       [19, 0, 4, 8, 0, -0.25],
       [1, 0, 2]
     ],
-    "desc": "Hyper-competitive, they begin playing Beastieball at a much earlier age than other juvenile Beasties. They will race against anything that moves near them, including trains.",
+    "desc": "¦beastiesetup_desc_031¦",
     "designer": 3,
     "dlc": 0,
     "evo_pose": [
@@ -4974,7 +4974,7 @@
     },
     "ma": 21,
     "md": 33,
-    "name": "Radillo",
+    "name": "¦beastiesetup_name_031¦",
     "number": 31,
     "palettes": 1,
     "prev_ids": [],
@@ -4989,7 +4989,7 @@
           "type": 11
         }
       ],
-      "description": "MOVE or SHIFT a Beastie before they receive an attack"
+      "description": "¦beastiesetup_classrecruit_025¦"
     },
     "recruit_value": 4,
     "roamer_style": {
@@ -5117,7 +5117,7 @@
       [12, 8, 2],
       [15, 8, -1]
     ],
-    "desc": "They'll chase away perceived invaders with cacophonous sound. Their drum and screeching can be heard from 3 kilometers away.",
+    "desc": "¦beastiesetup_desc_033¦",
     "designer": 5,
     "dlc": 0,
     "evo_pose": [
@@ -5181,7 +5181,7 @@
     },
     "ma": 73,
     "md": 85,
-    "name": "Noizard",
+    "name": "¦beastiesetup_name_033¦",
     "number": 33,
     "palettes": 1,
     "prev_ids": [],
@@ -5198,7 +5198,7 @@
           "type": 45
         }
       ],
-      "description": "Make any Beastie feel [sprStatus,3]NOISY or [sprStatus,8]JAZZED"
+      "description": "¦beastiesetup_classrecruit_027¬0¬[sprStatus,3]¦statuseffectstuff_004¦¬1¬[sprStatus,8]¦statuseffectstuff_009¦¦"
     },
     "recruit_value": 2.95,
     "roamer_style": {
@@ -5366,7 +5366,7 @@
       [14, 0, 3],
       [26, 2, 3]
     ],
-    "desc": "They easily scale cliffsides with huge leaps. They're guardians who make sure small Beasties don't go astray in the mountains.",
+    "desc": "¦beastiesetup_desc_023¦",
     "designer": 3,
     "dlc": 0,
     "evo_pose": [
@@ -5430,7 +5430,7 @@
     },
     "ma": 40,
     "md": 42,
-    "name": "Fetcham",
+    "name": "¦beastiesetup_name_023¦",
     "number": 23,
     "palettes": 2,
     "prev_ids": [],
@@ -5464,7 +5464,7 @@
           "type": 14
         }
       ],
-      "description": "Make this Beastie receive 3+ attacks"
+      "description": "¦beastiesetup_classrecruit_020¦"
     },
     "recruit_value": 10.8,
     "roamer_style": {
@@ -5635,7 +5635,7 @@
       [14, 0, 3],
       [26, 2, 3]
     ],
-    "desc": "They are obsessed with chasing balls. It's said that they see the moon itself as a giant Beastieball which they yearn to chase.",
+    "desc": "¦beastiesetup_desc_022¦",
     "designer": [3, 8],
     "dlc": 0,
     "evo_pose": [
@@ -5699,7 +5699,7 @@
     },
     "ma": 21,
     "md": 40,
-    "name": "Woollie",
+    "name": "¦beastiesetup_name_022¦",
     "number": 22,
     "palettes": 2,
     "prev_ids": [],
@@ -5733,7 +5733,7 @@
           "type": 14
         }
       ],
-      "description": "Make this Beastie receive 3+ attacks"
+      "description": "¦beastiesetup_classrecruit_019¦"
     },
     "recruit_value": 10.8,
     "roamer_style": {
@@ -5869,7 +5869,7 @@
       [10, 1, 2],
       [15, 2, 2, 16, 2, -1]
     ],
-    "desc": "Their bodies are made from hard translucent chitin. Depending on the arrangement of their cells, they refract light differently and can appear as vastly different colors.",
+    "desc": "¦beastiesetup_desc_026¦",
     "designer": [5, 8],
     "dlc": 0,
     "evo_pose": [
@@ -5933,7 +5933,7 @@
     },
     "ma": 59,
     "md": 74,
-    "name": "Kaleidarn",
+    "name": "¦beastiesetup_name_026¦",
     "number": 26,
     "palettes": 1,
     "prev_ids": ["dragonfly1"],
@@ -5951,7 +5951,7 @@
           "type": 14
         }
       ],
-      "description": "Deal 100+ damage with an attack"
+      "description": "¦beastiesetup_classrecruit_022¦"
     },
     "recruit_value": 2.35,
     "roamer_style": {
@@ -6097,7 +6097,7 @@
       [16, 0, 2, 6, 0, 1],
       [16, 0, 3, 6, 0, 3]
     ],
-    "desc": "Compressed air in their joints gives them explosive power. They can aim a Beastieball at targets 300m away.",
+    "desc": "¦beastiesetup_desc_041¦",
     "designer": 2,
     "dlc": 0,
     "evo_pose": [
@@ -6161,7 +6161,7 @@
     },
     "ma": 60,
     "md": 104,
-    "name": "Beetlback",
+    "name": "¦beastiesetup_name_041¦",
     "number": 41,
     "palettes": 1,
     "prev_ids": ["quarterback"],
@@ -6204,7 +6204,7 @@
           "type": 48
         }
       ],
-      "description": "Volley the ball 4+ times"
+      "description": "¦beastiesetup_classrecruit_035¦"
     },
     "recruit_value": 5.35,
     "roamer_style": {
@@ -6331,7 +6331,7 @@
       [16, 0, 2, 6, 0, 1],
       [16, 0, 3, 6, 0, 3]
     ],
-    "desc": "They run head-first, full speed into anything they encounter. Their exoskeleton gradually hardens from repeated impacts.",
+    "desc": "¦beastiesetup_desc_039¦",
     "designer": 2,
     "dlc": 0,
     "evo_pose": [
@@ -6395,7 +6395,7 @@
     },
     "ma": 20,
     "md": 50,
-    "name": "Scrubbub",
+    "name": "¦beastiesetup_name_039¦",
     "number": 39,
     "palettes": 1,
     "prev_ids": [],
@@ -6429,7 +6429,7 @@
           "type": 48
         }
       ],
-      "description": "Volley the ball 3+ times"
+      "description": "¦beastiesetup_classrecruit_033¦"
     },
     "recruit_value": 4,
     "roamer_style": {
@@ -6552,7 +6552,7 @@
       [16, 0, 2, 6, 0, 1],
       [16, 0, 3, 6, 0, 3]
     ],
-    "desc": "Their armor is as tough as steel. They settle their frequent territorial disputes with contests of strength.",
+    "desc": "¦beastiesetup_desc_040¦",
     "designer": 2,
     "dlc": 0,
     "evo_pose": [
@@ -6616,7 +6616,7 @@
     },
     "ma": 35,
     "md": 70,
-    "name": "Grubiron",
+    "name": "¦beastiesetup_name_040¦",
     "number": 40,
     "palettes": 1,
     "prev_ids": [],
@@ -6650,7 +6650,7 @@
           "type": 48
         }
       ],
-      "description": "Volley the ball 3+ times"
+      "description": "¦beastiesetup_classrecruit_034¦"
     },
     "recruit_value": 4,
     "roamer_style": {
@@ -6762,7 +6762,7 @@
       [20, 0, 1, 2, 0, 1, 5, 0, 1, 4, 0, 1],
       [27, 8, 1]
     ],
-    "desc": "Using harvested venomous cells, they deliver a painful sting at the slightest touch. Their venom is known to cause vivid hallucination.",
+    "desc": "¦beastiesetup_desc_054¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -6827,7 +6827,7 @@
     },
     "ma": 105,
     "md": 59,
-    "name": "Vultoxin",
+    "name": "¦beastiesetup_name_053¦",
     "number": 54,
     "palettes": 1,
     "prev_ids": [],
@@ -6867,7 +6867,7 @@
           "type": 14
         }
       ],
-      "description": "Land 3+ [sprIcon,2] attacks on this Beastie"
+      "description": "¦beastiesetup_classrecruit_046¦"
     },
     "recruit_value": 13.5,
     "roamer_style": {
@@ -6981,7 +6981,7 @@
       [20, 0, 1, 2, 0, 1, 5, 0, 1, 4, 0, 1],
       [27, 8, 1]
     ],
-    "desc": "Their parents swam far upriver to deposit Seakit eggs in the forest. They harvest stinging cells from Petula to mature.",
+    "desc": "¦beastiesetup_desc_053¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -7055,7 +7055,7 @@
     },
     "ma": 83,
     "md": 40,
-    "name": "Seakit",
+    "name": "¦beastiesetup_name_052¦",
     "number": 53,
     "palettes": 1,
     "prev_ids": [],
@@ -7084,7 +7084,7 @@
           "type": 14
         }
       ],
-      "description": "Land 2+ [sprIcon,2] attacks on this Beastie"
+      "description": "¦beastiesetup_classrecruit_045¦"
     },
     "recruit_value": 9,
     "roamer_style": {
@@ -7211,7 +7211,7 @@
       [44, 2, 6, 1, 2, 1],
       [44, 2, 6]
     ],
-    "desc": "Seldom seen, but commonly known for their haunting singing heard across lakes and rivers. In folklore their voice guides spirits to the afterlife.",
+    "desc": "¦beastiesetup_desc_010¦",
     "designer": [0, 3],
     "dlc": 0,
     "evo_pose": [
@@ -7275,7 +7275,7 @@
     },
     "ma": 26,
     "md": 55,
-    "name": "Hopra",
+    "name": "¦beastiesetup_name_010¦",
     "number": 10,
     "palettes": 1,
     "prev_ids": [],
@@ -7291,7 +7291,7 @@
           "type": 45
         }
       ],
-      "description": "Boost any [sprIcon,0][sprIcon,1][sprIcon,2]POW [sprBoost,0][sprBoost,0][sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
+      "description": "¦beastiesetup_classrecruit_010¦"
     },
     "recruit_value": 10.65,
     "roamer_style": {
@@ -7410,7 +7410,7 @@
       [44, 2, 6, 1, 2, 1],
       [44, 2, 6]
     ],
-    "desc": "They crave attention. They can hardly spend time with their own kind because they compete for an audience.",
+    "desc": "¦beastiesetup_desc_008¦",
     "designer": [0, 3],
     "dlc": 0,
     "evo_pose": [
@@ -7474,7 +7474,7 @@
     },
     "ma": 25,
     "md": 33,
-    "name": "Axolati",
+    "name": "¦beastiesetup_name_008¦",
     "number": 8,
     "palettes": 1,
     "prev_ids": ["tadpole"],
@@ -7490,7 +7490,7 @@
           "type": 45
         }
       ],
-      "description": "Boost any [sprIcon,0][sprIcon,1][sprIcon,2]POW [sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
+      "description": "¦beastiesetup_classrecruit_008¦"
     },
     "recruit_value": 6.4,
     "roamer_style": {
@@ -7620,7 +7620,7 @@
       [44, 2, 6, 1, 2, 1],
       [44, 2, 6]
     ],
-    "desc": "They are constantly, restlessly performing. If anyone around them isn't happy it only encourages them further.",
+    "desc": "¦beastiesetup_desc_009¦",
     "designer": [0, 3],
     "dlc": 0,
     "evo_pose": [
@@ -7686,7 +7686,7 @@
     },
     "ma": 27,
     "md": 50,
-    "name": "Hopsong",
+    "name": "¦beastiesetup_name_009¦",
     "number": 9,
     "palettes": 1,
     "prev_ids": ["frogmid"],
@@ -7702,7 +7702,7 @@
           "type": 45
         }
       ],
-      "description": "Boost any [sprIcon,0][sprIcon,1][sprIcon,2]POW [sprBoost,0][sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
+      "description": "¦beastiesetup_classrecruit_009¦"
     },
     "recruit_value": 8.5,
     "roamer_style": {
@@ -7833,7 +7833,7 @@
       [3, 0, 4],
       [3, 0, 4]
     ],
-    "desc": "They seem to enjoy performing for other Beasties. They conjure the most impressive displays when seducing a mate.",
+    "desc": "¦beastiesetup_desc_046¦",
     "designer": 5,
     "dlc": 0,
     "evo_pose": [
@@ -7898,7 +7898,7 @@
     },
     "ma": 85,
     "md": 80,
-    "name": "Mistic",
+    "name": "¦beastiesetup_name_046¦",
     "number": 46,
     "palettes": 1,
     "prev_ids": [],
@@ -7915,7 +7915,7 @@
           "type": 14
         }
       ],
-      "description": "Land a [sprIcon,0] attack on this Beastie"
+      "description": "¦beastiesetup_classrecruit_038¦"
     },
     "recruit_value": 3.6,
     "roamer_style": {
@@ -8047,7 +8047,7 @@
       [3, 0, 4],
       [3, 0, 4]
     ],
-    "desc": "They deftly manipulate gas to create a threat display. They are known for their distinctive sour smell when they're nearby.",
+    "desc": "¦beastiesetup_desc_044¦",
     "designer": 5,
     "dlc": 0,
     "evo_pose": [
@@ -8112,7 +8112,7 @@
     },
     "ma": 54,
     "md": 49,
-    "name": "Gastic",
+    "name": "¦beastiesetup_name_044¦",
     "number": 44,
     "palettes": 1,
     "prev_ids": ["ghost0"],
@@ -8129,7 +8129,7 @@
           "type": 14
         }
       ],
-      "description": "Land a [sprIcon,0] attack on this Beastie"
+      "description": "¦beastiesetup_classrecruit_036¦"
     },
     "recruit_value": 3.6,
     "roamer_style": {
@@ -8232,7 +8232,7 @@
       [3, 0, 4],
       [3, 0, 4]
     ],
-    "desc": "They are able to control the density of their gas to manipulate solid matter. The gas is mostly harmless to inhale.",
+    "desc": "¦beastiesetup_desc_045¦",
     "designer": 5,
     "dlc": 0,
     "evo_pose": [
@@ -8297,7 +8297,7 @@
     },
     "ma": 70,
     "md": 55,
-    "name": "Wisper",
+    "name": "¦beastiesetup_name_045¦",
     "number": 45,
     "palettes": 1,
     "prev_ids": [],
@@ -8314,7 +8314,7 @@
           "type": 14
         }
       ],
-      "description": "Land a [sprIcon,0] attack on this Beastie"
+      "description": "¦beastiesetup_classrecruit_037¦"
     },
     "recruit_value": 3.6,
     "roamer_style": {
@@ -8426,7 +8426,7 @@
       [15, 9, -2],
       [39, 9, 1, 6, 9, 1]
     ],
-    "desc": "A notorious urban pest, known for opportunistically stealing from humans. They are considered one of the smartest Beasties.",
+    "desc": "¦beastiesetup_desc_089¦",
     "designer": [6, 8],
     "dlc": 0,
     "evo_pose": [
@@ -8490,7 +8490,7 @@
     },
     "ma": 90,
     "md": 45,
-    "name": "Gremlur",
+    "name": "¦beastiesetup_name_088¦",
     "number": 89,
     "palettes": 1,
     "prev_ids": [],
@@ -8507,7 +8507,7 @@
           "type": 45
         }
       ],
-      "description": "Make any Beastie feel [sprStatus,0]NERVOUS, [sprStatus,12]STRESSED, or [sprStatus,2]SHOOK"
+      "description": "¦beastiesetup_classrecruit_075¬0¬[sprStatus,0]¦statuseffectstuff_001¦¬1¬[sprStatus,12]¦statuseffectstuff_013¦¬2¬[sprStatus,2]¦statuseffectstuff_003¦¦"
     },
     "recruit_value": 3.05,
     "roamer_style": {
@@ -8621,7 +8621,7 @@
       [16, 1, 3, 29, 0, 2],
       [16, 1, 3, 29, 0, 2]
     ],
-    "desc": "An ancient Beastie that has hardly changed in 400 million years. Their ability to play Beastieball both on land and deep undersea has allowed them to thrive through climate shifts.",
+    "desc": "¦beastiesetup_desc_072¦",
     "designer": 5,
     "dlc": 0,
     "evo_pose": [
@@ -8686,7 +8686,7 @@
     },
     "ma": 29,
     "md": 107,
-    "name": "Xiphosaur",
+    "name": "¦beastiesetup_name_071¦",
     "number": 72,
     "palettes": 1,
     "prev_ids": [],
@@ -8703,7 +8703,7 @@
           "type": 14
         }
       ],
-      "description": "Deal 99 damage with an attack"
+      "description": "¦beastiesetup_classrecruit_060¦"
     },
     "recruit_value": 2.7,
     "roamer_style": {
@@ -8862,7 +8862,7 @@
       [7, 0, 1, 20, 0, 1, 2, 0, 1],
       [2, 2, 1, 1, 8, -2]
     ],
-    "desc": "They nest in bins and hoard garbage. They mimic one anothers' adornments in pursuit of glamor, creating trends of trash fashion.",
+    "desc": "¦beastiesetup_desc_088¦",
     "designer": [0, 3, 9],
     "dlc": 0,
     "evo_pose": [
@@ -8926,7 +8926,7 @@
     },
     "ma": 108,
     "md": 88,
-    "name": "Bindiva",
+    "name": "¦beastiesetup_name_087¦",
     "number": 88,
     "palettes": 1,
     "prev_ids": [],
@@ -8941,7 +8941,7 @@
           "type": 8
         }
       ],
-      "description": "Launch an attack while your Beasties are both at the net"
+      "description": "¦beastiesetup_021¦"
     },
     "recruit_value": 4,
     "roamer_style": {
@@ -9093,7 +9093,7 @@
       [47, 0, 1, 13, 0, 2],
       [29, 8, 2, 8, 0, -0.2]
     ],
-    "desc": "Their hive mind can be slow to make decisions, leaving them inert for long periods. Inert Orgella are frequently mistaken for fruit.",
+    "desc": "¦beastiesetup_desc_064¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -9158,7 +9158,7 @@
     },
     "ma": 49,
     "md": 79,
-    "name": "Orgella",
+    "name": "¦beastiesetup_name_063¦",
     "number": 64,
     "palettes": 1,
     "prev_ids": [],
@@ -9174,7 +9174,7 @@
           "type": 42
         }
       ],
-      "description": "Reduce this Beastie's STAMINA to 0"
+      "description": "¦beastiesetup_classrecruit_052¦"
     },
     "recruit_value": 12,
     "roamer_style": {
@@ -9272,7 +9272,7 @@
       [47, 0, 1, 13, 0, 2],
       [29, 8, 2, 8, 0, -0.2]
     ],
-    "desc": "They're extraordinarily simple and underdeveloped. They swim with single-minded desire to join with other Petula.",
+    "desc": "¦beastiesetup_desc_062¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -9346,7 +9346,7 @@
     },
     "ma": 35,
     "md": 52,
-    "name": "Petula",
+    "name": "¦beastiesetup_name_061¦",
     "number": 62,
     "palettes": 1,
     "prev_ids": [],
@@ -9373,7 +9373,7 @@
           "type": 45
         }
       ],
-      "description": "2+ times, give any Beastie a FEELING"
+      "description": "¦beastiesetup_017¦"
     },
     "recruit_value": 5,
     "roamer_style": {
@@ -9471,7 +9471,7 @@
       [47, 0, 1, 13, 0, 2],
       [29, 8, 2, 8, 0, -0.2]
     ],
-    "desc": "A collection of Petula working together as one. Each takes on a different function as part of the collective.",
+    "desc": "¦beastiesetup_desc_063¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -9536,7 +9536,7 @@
     },
     "ma": 35,
     "md": 52,
-    "name": "Flowish",
+    "name": "¦beastiesetup_name_062¦",
     "number": 63,
     "palettes": 1,
     "prev_ids": [],
@@ -9552,7 +9552,7 @@
           "type": 42
         }
       ],
-      "description": "Reduce this Beastie's STAMINA to 0"
+      "description": "¦beastiesetup_classrecruit_051¦"
     },
     "recruit_value": 12,
     "roamer_style": {
@@ -9681,7 +9681,7 @@
       [8, 8, -0.2],
       [12, 8, 2]
     ],
-    "desc": "Even at their calmest, they communicate in piercing shrieks. The loudest Garood tends to be the leader of the flock.",
+    "desc": "¦beastiesetup_desc_025¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -9747,7 +9747,7 @@
     },
     "ma": 102,
     "md": 90,
-    "name": "Garood",
+    "name": "¦beastiesetup_name_025¦",
     "number": 25,
     "palettes": 1,
     "prev_ids": ["meanie"],
@@ -9778,7 +9778,7 @@
           "type": 50
         }
       ],
-      "description": "Use 3+ [sprIcon,4]SUPPORT plays"
+      "description": "¦beastiesetup_classrecruit_021¦"
     },
     "recruit_value": 6.05,
     "roamer_style": {
@@ -9909,7 +9909,7 @@
       [8, 8, -0.2],
       [12, 8, 2]
     ],
-    "desc": "They are skilled at mimicry and can even learn human words. They especially favor sounds which get a rise out of others.",
+    "desc": "¦beastiesetup_desc_024¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -9975,7 +9975,7 @@
     },
     "ma": 74,
     "md": 80,
-    "name": "Rookee",
+    "name": "¦beastiesetup_name_024¦",
     "number": 24,
     "palettes": 1,
     "prev_ids": ["rookee", "rookee1"],
@@ -9998,7 +9998,7 @@
           "type": 50
         }
       ],
-      "description": "Use 2+ [sprIcon,4]SUPPORT plays"
+      "description": "¦beastiesetup_005¦"
     },
     "recruit_value": 4,
     "roamer_style": {
@@ -10130,7 +10130,7 @@
       [23, 8, -2],
       [34, 8, 1, 23, 8, -1]
     ],
-    "desc": "Their body is dense with fatty tissue storage, which constantly metabolizes into heat and steam. They migrate from arctic climates to raise Druppa near hot springs.",
+    "desc": "¦beastiesetup_desc_095¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -10195,7 +10195,7 @@
     },
     "ma": 65,
     "md": 65,
-    "name": "Scauldra",
+    "name": "¦beastiesetup_name_094¦",
     "number": 95,
     "palettes": 1,
     "prev_ids": [],
@@ -10222,7 +10222,7 @@
           "type": 45
         }
       ],
-      "description": "2+ times, make any Beastie feel [sprStatus,6]SWEATY, [sprStatus,10]TIRED, [sprStatus,12]STRESSED or [sprStatus,11]TENDER"
+      "description": "¦beastiesetup_classrecruit_081¬0¬[sprStatus,6]¦statuseffectstuff_007¦¬1¬[sprStatus,10]¦statuseffectstuff_011¦¬2¬[sprStatus,12]¦statuseffectstuff_013¦¬3¬[sprStatus,11]¦statuseffectstuff_012¦¦"
     },
     "recruit_value": 3.05,
     "roamer_style": {
@@ -10352,7 +10352,7 @@
       [23, 8, -2],
       [34, 8, 1, 23, 8, -1]
     ],
-    "desc": "Despite their intensely high body temperature, they constantly seek heat sources as though they were cold. Take care when handling them directly.",
+    "desc": "¦beastiesetup_desc_094¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -10417,7 +10417,7 @@
     },
     "ma": 55,
     "md": 55,
-    "name": "Druppa",
+    "name": "¦beastiesetup_name_093¦",
     "number": 94,
     "palettes": 1,
     "prev_ids": [],
@@ -10434,7 +10434,7 @@
           "type": 45
         }
       ],
-      "description": "Make any Beastie feel [sprStatus,6]SWEATY, [sprStatus,10]TIRED, [sprStatus,12]STRESSED or [sprStatus,11]TENDER"
+      "description": "¦beastiesetup_classrecruit_080¬0¬[sprStatus,6]¦statuseffectstuff_007¦¬1¬[sprStatus,10]¦statuseffectstuff_011¦¬2¬[sprStatus,12]¦statuseffectstuff_013¦¬3¬[sprStatus,11]¦statuseffectstuff_012¦¦"
     },
     "recruit_value": 3.05,
     "roamer_style": {
@@ -10557,7 +10557,7 @@
       [7, 2, 1, 1, 2, 1],
       [7, 2, 0, 4, 2, 1]
     ],
-    "desc": "They protect forests from fire by raking soil to encourage plant decomposition. When fires do break out, they attentively manage them.",
+    "desc": "¦beastiesetup_desc_021¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -10622,7 +10622,7 @@
     },
     "ma": 55,
     "md": 85,
-    "name": "Zefyre",
+    "name": "¦beastiesetup_name_021¦",
     "number": 21,
     "palettes": 1,
     "prev_ids": ["angel"],
@@ -10665,7 +10665,7 @@
           "type": 47
         }
       ],
-      "description": "Make 4+ [sprIcon,8]MOVE actions"
+      "description": "¦beastiesetup_classrecruit_018¦"
     },
     "recruit_value": 6.4,
     "roamer_style": {
@@ -10790,7 +10790,7 @@
       [7, 2, 1, 1, 2, 1],
       [7, 2, 0, 4, 2, 1]
     ],
-    "desc": "They are constantly in motion. Their colorful plumage is a point of pride and they sometimes accessorize it with flower petals.",
+    "desc": "¦beastiesetup_desc_020¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -10855,7 +10855,7 @@
     },
     "ma": 30,
     "md": 35,
-    "name": "Sefren",
+    "name": "¦beastiesetup_name_020¦",
     "number": 20,
     "palettes": 1,
     "prev_ids": ["angel1"],
@@ -10889,7 +10889,7 @@
           "type": 47
         }
       ],
-      "description": "Make 3+ [sprIcon,8]MOVE actions"
+      "description": "¦beastiesetup_classrecruit_017¦"
     },
     "recruit_value": 4.85,
     "roamer_style": {
@@ -11030,7 +11030,7 @@
       [2, 2, 1, 42, 3, 2],
       [2, 2, 1, 42, 3, 2]
     ],
-    "desc": "They receive gifts from one another on their pikes. A heavily laden Magpike is a popular one.",
+    "desc": "¦beastiesetup_desc_082¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -11057,7 +11057,7 @@
                 "type": 45
               }
             ],
-            "description": "A Magpike must reduce their own STAMINA to 0 while their [sprIcon,0]POW is [sprBoost,1]BOOSTed [sprBoost,0][sprBoost,0][sprBoost,0] or more"
+            "description": "¦beastiesetup_020¦"
           }
         ]
       }
@@ -11117,7 +11117,7 @@
     },
     "ma": 105,
     "md": 95,
-    "name": "Magpike",
+    "name": "¦beastiesetup_name_081¦",
     "number": 82,
     "palettes": 1,
     "prev_ids": ["mindbody"],
@@ -11134,7 +11134,7 @@
           "type": 45
         }
       ],
-      "description": "Use a COMBO play"
+      "description": "¦beastiesetup_classrecruit_069¦"
     },
     "recruit_value": 3.25,
     "roamer_style": {
@@ -11262,7 +11262,7 @@
       [2, 2, 1, 42, 3, 2],
       [2, 2, 1, 42, 3, 2]
     ],
-    "desc": "They identify themselves through song. Tight cliques will often form around a common melody.",
+    "desc": "¦beastiesetup_desc_081¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -11331,7 +11331,7 @@
     },
     "ma": 74,
     "md": 67,
-    "name": "Punkchirp",
+    "name": "¦beastiesetup_name_080¦",
     "number": 81,
     "palettes": 1,
     "prev_ids": ["mindbody1"],
@@ -11348,7 +11348,7 @@
           "type": 45
         }
       ],
-      "description": "Use a COMBO play"
+      "description": "¦beastiesetup_classrecruit_068¦"
     },
     "recruit_value": 3.25,
     "roamer_style": {
@@ -11471,7 +11471,7 @@
       [2, 2, 1, 42, 3, 2],
       [2, 2, 1, 42, 3, 2]
     ],
-    "desc": "Celia's Notes: Their scream is tremendous! In prehistoric times it might have been for warning, or mating, or both.",
+    "desc": "¦beastiesetup_desc_105¦",
     "designer": 5,
     "dlc": 0,
     "evo_pose": [
@@ -11535,7 +11535,7 @@
     },
     "ma": 85,
     "md": 88,
-    "name": "Maraptor",
+    "name": "¦beastiesetup_name_104¦",
     "number": 105,
     "palettes": 1,
     "prev_ids": [],
@@ -11550,7 +11550,7 @@
           "type": 14
         }
       ],
-      "description": "Hit this Beastie with an attack that has less than 40 POW"
+      "description": "¦beastiesetup_classrecruit_091¦"
     },
     "recruit_value": 0.5,
     "roamer_style": {
@@ -11672,7 +11672,7 @@
       [27, 8, 1],
       [27, 9, 3]
     ],
-    "desc": "They'll stand perfectly still in plain sight, mimicking a tree. When prey least suspects it, they strike with blinding speed.",
+    "desc": "¦beastiesetup_desc_051¦",
     "designer": [0, 1, 8],
     "dlc": 0,
     "evo_pose": [
@@ -11737,7 +11737,7 @@
     },
     "ma": 80,
     "md": 105,
-    "name": "Armantis",
+    "name": "¦beastiesetup_name_050¦",
     "number": 51,
     "palettes": 1,
     "prev_ids": ["tsuki1", "mantis1"],
@@ -11754,7 +11754,7 @@
           "type": 14
         }
       ],
-      "description": "Take less than 10 damage from an attack"
+      "description": "¦beastiesetup_classrecruit_043¦"
     },
     "recruit_value": 2.8,
     "roamer_style": {
@@ -11872,7 +11872,7 @@
       [39, 8, 2],
       [39, 8, 1]
     ],
-    "desc": "They swing their armored head at high velocities to break through rock. The tunnels they create often become homes for other cave-dwellers.",
+    "desc": "¦beastiesetup_desc_079¦",
     "designer": [4, 0],
     "dlc": 0,
     "evo_pose": [
@@ -11936,7 +11936,7 @@
     },
     "ma": 48,
     "md": 98,
-    "name": "Demolipede",
+    "name": "¦beastiesetup_name_078¦",
     "number": 79,
     "palettes": 1,
     "prev_ids": [],
@@ -11959,7 +11959,7 @@
           "type": 11
         }
       ],
-      "description": "2+ times, TAG IN a Beastie to receive an attack"
+      "description": "¦beastiesetup_classrecruit_067¦"
     },
     "recruit_value": 8,
     "roamer_style": {
@@ -12074,7 +12074,7 @@
       [39, 8, 2],
       [39, 8, 1]
     ],
-    "desc": "They are diligent excavators. They are often at work clearing away debris left over from Demolipede activity.",
+    "desc": "¦beastiesetup_desc_078¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -12138,7 +12138,7 @@
     },
     "ma": 30,
     "md": 81,
-    "name": "Milimine",
+    "name": "¦beastiesetup_name_077¦",
     "number": 78,
     "palettes": 1,
     "prev_ids": [],
@@ -12153,7 +12153,7 @@
           "type": 11
         }
       ],
-      "description": "TAG IN a Beastie to receive an attack"
+      "description": "¦beastiesetup_classrecruit_066¦"
     },
     "recruit_value": 4,
     "roamer_style": {
@@ -12293,7 +12293,7 @@
       [43, 7, 4, 7, 8, 0],
       [43, 7, 4, 7, 8, 0]
     ],
-    "desc": "They exhibit complex social behavior and mediate disputes between other Beasties. Brighter-chested Grazadas tend to be leaders.",
+    "desc": "¦beastiesetup_desc_052¦",
     "designer": 5,
     "dlc": 0,
     "evo_pose": [
@@ -12358,7 +12358,7 @@
     },
     "ma": 25,
     "md": 65,
-    "name": "Grazada",
+    "name": "¦beastiesetup_name_051¦",
     "number": 52,
     "palettes": 1,
     "prev_ids": ["gelada"],
@@ -12374,7 +12374,7 @@
           "type": 44
         }
       ],
-      "description": "Reduce this Beastie's STAMINA to 0, not via ball attack"
+      "description": "¦beastiesetup_classrecruit_044¦"
     },
     "recruit_value": 15.05,
     "roamer_style": {
@@ -12518,7 +12518,7 @@
       [15, 2, 3, 39, 2, 1],
       [4, 2, 2]
     ],
-    "desc": "They can manipulate emotions with potent pheromones. Anyone who touches their mask, made from all the material they collected as a pupa, will face their wrath.",
+    "desc": "¦beastiesetup_desc_016¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -12583,7 +12583,7 @@
     },
     "ma": 95,
     "md": 75,
-    "name": "Plumask",
+    "name": "¦beastiesetup_name_016¦",
     "number": 16,
     "palettes": 1,
     "prev_ids": ["heartmind"],
@@ -12598,7 +12598,7 @@
           "type": 41
         }
       ],
-      "description": "[sprBoost,1]BOOST any stat to +4 or more"
+      "description": "¦beastiesetup_classrecruit_013¦"
     },
     "recruit_value": 6.45,
     "roamer_style": {
@@ -12728,7 +12728,7 @@
       [15, 2, 3, 39, 2, 1],
       [4, 2, 2]
     ],
-    "desc": "Their spines naturally collect plant detritus as they move about, building up their protective coat.",
+    "desc": "¦beastiesetup_desc_014¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -12793,7 +12793,7 @@
     },
     "ma": 65,
     "md": 50,
-    "name": "Collarva",
+    "name": "¦beastiesetup_name_014¦",
     "number": 14,
     "palettes": 1,
     "prev_ids": ["mindbug1"],
@@ -12808,7 +12808,7 @@
           "type": 41
         }
       ],
-      "description": "[sprBoost,1]BOOST any stat [sprBoost,0][sprBoost,0] or more"
+      "description": "¦beastiesetup_classrecruit_011¦"
     },
     "recruit_value": 3.85,
     "roamer_style": {
@@ -12944,7 +12944,7 @@
       [15, 2, 3, 39, 2, 1],
       [4, 2, 2]
     ],
-    "desc": "This Beastie hides in its cocoon and pilots a constructed decoy. They build masks and experiment with personas they might grow into.",
+    "desc": "¦beastiesetup_desc_015¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -13009,7 +13009,7 @@
     },
     "ma": 70,
     "md": 60,
-    "name": "Wormask",
+    "name": "¦beastiesetup_name_015¦",
     "number": 15,
     "palettes": 1,
     "prev_ids": ["mindbug2"],
@@ -13024,7 +13024,7 @@
           "type": 41
         }
       ],
-      "description": "[sprBoost,1]BOOST any stat [sprBoost,0][sprBoost,0][sprBoost,0] or more"
+      "description": "¦beastiesetup_classrecruit_012¦"
     },
     "recruit_value": 5.15,
     "roamer_style": {
@@ -13155,7 +13155,7 @@
       [56, 0, 0],
       [56, 0, 0]
     ],
-    "desc": "They can keep cool and moist in any environment. They're known for their relaxed demeanor, but they'll dance provocatively for any romantic interest.",
+    "desc": "¦beastiesetup_desc_069¦",
     "designer": 1,
     "dlc": 0,
     "evo_pose": [
@@ -13219,7 +13219,7 @@
     },
     "ma": 83,
     "md": 62,
-    "name": "Mudslee",
+    "name": "¦beastiesetup_name_068¦",
     "number": 69,
     "palettes": 1,
     "prev_ids": [],
@@ -13236,7 +13236,7 @@
           "type": 45
         }
       ],
-      "description": "Make any Beastie feel [sprStatus,1]ANGRY or [sprStatus,6]SWEATY"
+      "description": "¦beastiesetup_classrecruit_057¬0¬[sprStatus,1]¦statuseffectstuff_002¦¬1¬[sprStatus,6]¦statuseffectstuff_007¦¦"
     },
     "recruit_value": 3,
     "roamer_style": {
@@ -13352,7 +13352,7 @@
       [20, 0, 1, 2, 0, 2, 39, 0, 1],
       [42, 3, 5]
     ],
-    "desc": "They're attracted to the hum of computers. It's every network engineer's nightmare to flick the lights on in the server room, only to find a Debugly.",
+    "desc": "¦beastiesetup_desc_084¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -13416,7 +13416,7 @@
     },
     "ma": 110,
     "md": 99,
-    "name": "Debugly",
+    "name": "¦beastiesetup_name_083¦",
     "number": 84,
     "palettes": 1,
     "prev_ids": [],
@@ -13434,7 +13434,7 @@
           "type": 14
         }
       ],
-      "description": "Have this Beastie survive an attack with 75 POW or more"
+      "description": "¦beastiesetup_classrecruit_071¦"
     },
     "recruit_value": 5.45,
     "roamer_style": {
@@ -13553,7 +13553,7 @@
       [20, 0, 1, 2, 0, 2, 39, 0, 1],
       [42, 3, 5]
     ],
-    "desc": "They make their home in office desks where they can readily access their favorite food: paper. Math homework is especially enticing for them.",
+    "desc": "¦beastiesetup_desc_083¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -13617,7 +13617,7 @@
     },
     "ma": 85,
     "md": 80,
-    "name": "Calcroach",
+    "name": "¦beastiesetup_name_082¦",
     "number": 83,
     "palettes": 1,
     "prev_ids": [],
@@ -13635,7 +13635,7 @@
           "type": 14
         }
       ],
-      "description": "Have this Beastie survive an attack with 50 POW or more"
+      "description": "¦beastiesetup_classrecruit_070¦"
     },
     "recruit_value": 5.05,
     "roamer_style": {
@@ -13751,7 +13751,7 @@
       [38, 9, 1, 6, 9, 1],
       [38, 8, 1]
     ],
-    "desc": "The existence of this Beastie was long disputed. They only become fully visible to those they trust deeply.",
+    "desc": "¦beastiesetup_desc_050¦",
     "designer": [3, 8],
     "dlc": 0,
     "evo_pose": [
@@ -13815,7 +13815,7 @@
     },
     "ma": 86,
     "md": 104,
-    "name": "Skulkapi",
+    "name": "¦beastiesetup_name_049¦",
     "number": 50,
     "palettes": 1,
     "prev_ids": [],
@@ -13830,7 +13830,7 @@
           "type": 52
         }
       ],
-      "description": "Activate a Skulkapi's trait with this Beastie on the field"
+      "description": "¦beastiesetup_classrecruit_042¦"
     },
     "recruit_value": 8.4,
     "roamer_style": {
@@ -13961,7 +13961,7 @@
       [15, 0, 4, 29, 0, 1],
       [47, 0, 1, 29, 0, 2]
     ],
-    "desc": "They have incredible regenerative abilities. Many folk tales about sea monsters were most likely inspired by Hydrolm.",
+    "desc": "¦beastiesetup_desc_093¦",
     "designer": 3,
     "dlc": 0,
     "evo_pose": [
@@ -14027,7 +14027,7 @@
     },
     "ma": 95,
     "md": 100,
-    "name": "Hydrolm",
+    "name": "¦beastiesetup_name_092¦",
     "number": 93,
     "palettes": 1,
     "prev_ids": [],
@@ -14045,7 +14045,7 @@
           "type": 45
         }
       ],
-      "description": "Restore 30+ STAMINA at one time on a Beastie"
+      "description": "¦beastiesetup_classrecruit_079¦"
     },
     "recruit_value": 3.05,
     "roamer_style": {
@@ -14149,7 +14149,7 @@
       [15, 0, 4, 29, 0, 1],
       [47, 0, 1, 29, 0, 2]
     ],
-    "desc": "Their heart beats only twice per minute. Their \"eyes\" are fake; in fact, they are blind. They live in dark, wet places and are active only when playing Beastieball.",
+    "desc": "¦beastiesetup_desc_092¦",
     "designer": [3],
     "dlc": 0,
     "evo_pose": [
@@ -14215,7 +14215,7 @@
     },
     "ma": 55,
     "md": 70,
-    "name": "Proteos",
+    "name": "¦beastiesetup_name_091¦",
     "number": 92,
     "palettes": 1,
     "prev_ids": [],
@@ -14233,7 +14233,7 @@
           "type": 45
         }
       ],
-      "description": "Restore 15+ STAMINA at one time on a Beastie"
+      "description": "¦beastiesetup_classrecruit_078¦"
     },
     "recruit_value": 2.8,
     "roamer_style": {
@@ -14366,7 +14366,7 @@
       [8, 0, -0.25, 19, 2, 2],
       [19, 0, 1, 14, 0, 1, 12, 0, 4]
     ],
-    "desc": "Although infamous for picking fights, they keep troublesome Beasties like Gremlur in check. If they lose at sports they will avoid shame by pretending they've died.",
+    "desc": "¦beastiesetup_desc_090¦",
     "designer": [12],
     "dlc": 0,
     "evo_pose": [
@@ -14431,7 +14431,7 @@
     },
     "ma": 25,
     "md": 60,
-    "name": "Opposur",
+    "name": "¦beastiesetup_name_089¦",
     "number": 90,
     "palettes": 1,
     "prev_ids": [],
@@ -14450,7 +14450,7 @@
           "type": 14
         }
       ],
-      "description": "Deal 50+ damage to this Beastie without WIPING them out"
+      "description": "¦beastiesetup_classrecruit_076¦"
     },
     "recruit_value": 5.45,
     "roamer_style": {
@@ -14578,7 +14578,7 @@
       [2, 2, 1, 5, 2, 2],
       [23, 8, -2]
     ],
-    "desc": "Celia's Notes: Their spines somehow store electricity. It's conducted through their teeth when they bite into something.",
+    "desc": "¦beastiesetup_desc_101¦",
     "designer": 4,
     "dlc": 0,
     "evo_pose": [
@@ -14642,7 +14642,7 @@
     },
     "ma": 78,
     "md": 108,
-    "name": "Pladion",
+    "name": "¦beastiesetup_name_100¦",
     "number": 101,
     "palettes": 1,
     "prev_ids": [],
@@ -14658,7 +14658,7 @@
           "type": 45
         }
       ],
-      "description": "Boost [sprIcon,2]DEF [sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
+      "description": "¦beastiesetup_classrecruit_087¦"
     },
     "recruit_value": 0.5,
     "roamer_style": {
@@ -14774,7 +14774,7 @@
       [2, 2, 1, 5, 2, 2],
       [23, 8, -2]
     ],
-    "desc": "They use their bill to detect electrical fields. They heavily rely on this sense while the rest of their body develops.",
+    "desc": "¦beastiesetup_desc_027¦",
     "designer": [3, 4],
     "dlc": 0,
     "evo_pose": [
@@ -14838,7 +14838,7 @@
     },
     "ma": 48,
     "md": 75,
-    "name": "Platenna",
+    "name": "¦beastiesetup_name_027¦",
     "number": 27,
     "palettes": 1,
     "prev_ids": [],
@@ -14854,7 +14854,7 @@
           "type": 45
         }
       ],
-      "description": "Boost [sprIcon,2]DEF [sprBoost,0][sprBoost,0] or more on a Beastie"
+      "description": "¦beastiesetup_classrecruit_023¦"
     },
     "recruit_value": 4.2,
     "roamer_style": {
@@ -14972,7 +14972,7 @@
       [2, 2, 1, 5, 2, 2],
       [23, 8, -2]
     ],
-    "desc": "They have honed their electroreceptive sensitivity, allowing them to foresee the movements of other Beasties.",
+    "desc": "¦beastiesetup_desc_028¦",
     "designer": [8, 4, 3],
     "dlc": 0,
     "evo_pose": [
@@ -15014,7 +15014,7 @@
                 "type": 14
               }
             ],
-            "description": "A Platypulse must have all [sprIcon,0][sprIcon,1][sprIcon,2]DEFs [sprBoost,1]BOOSTED +5 or more and receive 3+ attacks"
+            "description": "¦beastiesetup_006¦"
           }
         ]
       }
@@ -15074,7 +15074,7 @@
     },
     "ma": 99,
     "md": 120,
-    "name": "Platypulse",
+    "name": "¦beastiesetup_name_028¦",
     "number": 28,
     "palettes": 1,
     "prev_ids": [],
@@ -15090,7 +15090,7 @@
           "type": 45
         }
       ],
-      "description": "Boost [sprIcon,2]DEF [sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
+      "description": "¦beastiesetup_classrecruit_024¦"
     },
     "recruit_value": 6.3,
     "roamer_style": {
@@ -15222,7 +15222,7 @@
       [16, 2, 1],
       [16, 2, 1]
     ],
-    "desc": "They're fearless solo foragers who will challenge anyone. They don't seem to remember they were once tiny Shooga.",
+    "desc": "¦beastiesetup_desc_019¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -15287,7 +15287,7 @@
     },
     "ma": 40,
     "md": 95,
-    "name": "Supilero",
+    "name": "¦beastiesetup_name_019¦",
     "number": 19,
     "palettes": 1,
     "prev_ids": ["libero"],
@@ -15303,7 +15303,7 @@
           "type": 23
         }
       ],
-      "description": "Land a no-touch point"
+      "description": "¦beastiesetup_classrecruit_016¦"
     },
     "recruit_value": 8.4,
     "roamer_style": {
@@ -15448,7 +15448,7 @@
       [16, 2, 1],
       [16, 2, 1]
     ],
-    "desc": "Their semitransparent ears shield their eyes from wind as they glide. They feel safest in large groups, especially with watchful Sefren.",
+    "desc": "¦beastiesetup_desc_017¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -15515,7 +15515,7 @@
     },
     "ma": 22,
     "md": 57,
-    "name": "Shooga",
+    "name": "¦beastiesetup_name_017¦",
     "number": 17,
     "palettes": 1,
     "prev_ids": [],
@@ -15531,7 +15531,7 @@
           "type": 23
         }
       ],
-      "description": "Land a no-touch point"
+      "description": "¦beastiesetup_classrecruit_014¦"
     },
     "recruit_value": 8.4,
     "roamer_style": {
@@ -15673,7 +15673,7 @@
       [16, 2, 1],
       [16, 2, 1]
     ],
-    "desc": "They can hear the footsteps of distant predators. They'll hide for as long as it takes for danger to pass.",
+    "desc": "¦beastiesetup_desc_018¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -15738,7 +15738,7 @@
     },
     "ma": 32,
     "md": 75,
-    "name": "Supassum",
+    "name": "¦beastiesetup_name_018¦",
     "number": 18,
     "palettes": 1,
     "prev_ids": [],
@@ -15754,7 +15754,7 @@
           "type": 23
         }
       ],
-      "description": "Land a no-touch point"
+      "description": "¦beastiesetup_classrecruit_015¦"
     },
     "recruit_value": 8.4,
     "roamer_style": {
@@ -15897,7 +15897,7 @@
       [20, 0, 1, 15, 0, 1],
       [5, 0, 4]
     ],
-    "desc": "Scientists still don't understand how this Beastie adapted psychokinetic abilities. Psylusc are known to influence the tides to protect their precious coral reefs.",
+    "desc": "¦beastiesetup_desc_073¦",
     "designer": 1,
     "dlc": 0,
     "evo_pose": [
@@ -15962,7 +15962,7 @@
     },
     "ma": 120,
     "md": 100,
-    "name": "Psylusc",
+    "name": "¦beastiesetup_name_072¦",
     "number": 73,
     "palettes": 1,
     "prev_ids": [],
@@ -15991,7 +15991,7 @@
           "type": 14
         }
       ],
-      "description": "Land 2+ [sprIcon,2]MIND attacks on this Beastie"
+      "description": "¦beastiesetup_classrecruit_061¦"
     },
     "recruit_value": 9,
     "roamer_style": {
@@ -16150,7 +16150,7 @@
       [15, 0, 1, 16, 0, 1],
       [16, 0, 2]
     ],
-    "desc": "Each one has a unique ink color. They tend to form colonies of similar color and mark their territory with vivid graffiti.",
+    "desc": "¦beastiesetup_desc_065¦",
     "designer": 4,
     "dlc": 0,
     "evo_pose": [
@@ -16175,7 +16175,7 @@
                 "type": 45
               }
             ],
-            "description": "A Squimage must change its Trait while its [sprIcon,0][sprIcon,1][sprIcon,2]DEFs are BOOSTed [sprBoost,0][sprBoost,0][sprBoost,0] or more"
+            "description": "¦beastiesetup_018¦"
           }
         ]
       }
@@ -16236,7 +16236,7 @@
     },
     "ma": 90,
     "md": 69,
-    "name": "Squimage",
+    "name": "¦beastiesetup_name_064¦",
     "number": 65,
     "palettes": 1,
     "prev_ids": [],
@@ -16273,7 +16273,7 @@
           "type": 14
         }
       ],
-      "description": "Land a [sprIcon,0] attack, a [sprIcon,1] attack and a [sprIcon,2] attack"
+      "description": "¦beastiesetup_classrecruit_053¦"
     },
     "recruit_value": 9.1,
     "roamer_style": {
@@ -16410,7 +16410,7 @@
       [15, 0, 1, 16, 0, 1],
       [16, 0, 2]
     ],
-    "desc": "Celia's Notes: Their bioluminescent body likely helps them navigate the deep sea and hypnotize prey. However, at lower pressures, they liquify.",
+    "desc": "¦beastiesetup_desc_104¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -16475,7 +16475,7 @@
     },
     "ma": 66,
     "md": 68,
-    "name": "Diabloceras",
+    "name": "¦beastiesetup_name_103¦",
     "number": 104,
     "palettes": 1,
     "prev_ids": [],
@@ -16512,7 +16512,7 @@
           "type": 14
         }
       ],
-      "description": "Land 3+ [sprIcon,0] attacks"
+      "description": "¦beastiesetup_classrecruit_090¦"
     },
     "recruit_value": 0.5,
     "roamer_style": {
@@ -16649,7 +16649,7 @@
       [8, 6, 0.15, 46, 7, 0],
       [15, 8, -1]
     ],
-    "desc": "They are often found in dumpsters. When they outgrow their can, Trats will gather with many others to exchange for larger cans.",
+    "desc": "¦beastiesetup_desc_080¦",
     "designer": 1,
     "dlc": 0,
     "evo_pose": [
@@ -16715,7 +16715,7 @@
     },
     "ma": 64,
     "md": 84,
-    "name": "Trat",
+    "name": "¦beastiesetup_name_079¦",
     "number": 80,
     "palettes": 1,
     "prev_ids": [],
@@ -16738,7 +16738,7 @@
           "type": 50
         }
       ],
-      "description": "Use 2+ [sprIcon,5]DEFENSE plays"
+      "description": "¦beastiesetup_019¦"
     },
     "recruit_value": 5,
     "roamer_style": {
@@ -16893,7 +16893,7 @@
       [16, 0, 1, 14, 0, 1],
       [8, 0, 0.5]
     ],
-    "desc": "Their tail carries most of their weight. They bludgeon would-be predators into a stupor before making their escape.",
+    "desc": "¦beastiesetup_desc_077¦",
     "designer": 5,
     "dlc": 0,
     "evo_pose": [
@@ -16958,7 +16958,7 @@
     },
     "ma": 75,
     "md": 55,
-    "name": "Boldlur",
+    "name": "¦beastiesetup_name_076¦",
     "number": 77,
     "palettes": 1,
     "prev_ids": [],
@@ -16974,7 +16974,7 @@
           "type": 45
         }
       ],
-      "description": "Boost [sprIcon,0]DEF [sprBoost,0][sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
+      "description": "¦beastiesetup_classrecruit_065¦"
     },
     "recruit_value": 8.4,
     "roamer_style": {
@@ -17104,7 +17104,7 @@
       [16, 0, 1, 14, 0, 1],
       [8, 0, 0.5]
     ],
-    "desc": "They enjoy basking in the sun, but this leaves them vulnerable. They stick out their tongue to intimidate predators.",
+    "desc": "¦beastiesetup_desc_075¦",
     "designer": 5,
     "dlc": 0,
     "evo_pose": [
@@ -17169,7 +17169,7 @@
     },
     "ma": 41,
     "md": 23,
-    "name": "Skibble",
+    "name": "¦beastiesetup_name_074¦",
     "number": 75,
     "palettes": 1,
     "prev_ids": [],
@@ -17185,7 +17185,7 @@
           "type": 45
         }
       ],
-      "description": "Boost [sprIcon,0]DEF [sprBoost,0][sprBoost,0] or more on a Beastie"
+      "description": "¦beastiesetup_classrecruit_063¦"
     },
     "recruit_value": 4.2,
     "roamer_style": {
@@ -17310,7 +17310,7 @@
       [16, 0, 1, 14, 0, 1],
       [8, 0, 0.5]
     ],
-    "desc": "Their decoy tail draws predators' attention away from their head. In a pinch, they'll drop their tail and quickly grow a new one.",
+    "desc": "¦beastiesetup_desc_076¦",
     "designer": 5,
     "dlc": 0,
     "evo_pose": [
@@ -17375,7 +17375,7 @@
     },
     "ma": 57,
     "md": 35,
-    "name": "Skorock",
+    "name": "¦beastiesetup_name_075¦",
     "number": 76,
     "palettes": 1,
     "prev_ids": [],
@@ -17391,7 +17391,7 @@
           "type": 45
         }
       ],
-      "description": "Boost [sprIcon,0]DEF [sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
+      "description": "¦beastiesetup_classrecruit_064¦"
     },
     "recruit_value": 6.3,
     "roamer_style": {
@@ -17527,7 +17527,7 @@
       [19, 0, 2],
       [19, 0, 1, 8, 0, 0.15]
     ],
-    "desc": "Known to travel vast distances and through any weather, they can stay airborne for a week without rest and then float on the water's surface.",
+    "desc": "¦beastiesetup_desc_061¦",
     "designer": 5,
     "dlc": 0,
     "evo_pose": [
@@ -17592,7 +17592,7 @@
     },
     "ma": 85,
     "md": 69,
-    "name": "Skiffrig",
+    "name": "¦beastiesetup_name_060¦",
     "number": 61,
     "palettes": 1,
     "prev_ids": [],
@@ -17615,7 +17615,7 @@
           "type": 8
         }
       ],
-      "description": "2+ times, attack with the Beastie who last received the ball"
+      "description": "¦beastiesetup_classrecruit_050¦"
     },
     "recruit_value": 5,
     "roamer_style": {
@@ -17749,7 +17749,7 @@
       [19, 0, 2],
       [19, 0, 1, 8, 0, 0.15]
     ],
-    "desc": "Juveniles will float on the ocean with their mouth open skyward awaiting food from their parents. Their brightly-colored neck pouch makes them visible from afar.",
+    "desc": "¦beastiesetup_desc_060¦",
     "designer": 5,
     "dlc": 0,
     "evo_pose": [
@@ -17814,7 +17814,7 @@
     },
     "ma": 65,
     "md": 40,
-    "name": "Gullit",
+    "name": "¦beastiesetup_name_059¦",
     "number": 60,
     "palettes": 1,
     "prev_ids": [],
@@ -17837,7 +17837,7 @@
           "type": 8
         }
       ],
-      "description": "2+ times, attack with the Beastie who last received the ball"
+      "description": "¦beastiesetup_classrecruit_049¦"
     },
     "recruit_value": 5,
     "roamer_style": {
@@ -17959,7 +17959,7 @@
       [51, 0, 2, 0, 2, 2],
       [0, 2, 1, 3, 2, 1, 8, 2, 0.15]
     ],
-    "desc": "They comb their hair with a special wax produced in their flippers. This keeps them incredibly smooth and able to glide over any surface.",
+    "desc": "¦beastiesetup_desc_068¦",
     "designer": [3, 8],
     "dlc": 0,
     "evo_pose": [
@@ -18024,7 +18024,7 @@
     },
     "ma": 69,
     "md": 75,
-    "name": "Broslidon",
+    "name": "¦beastiesetup_name_067¦",
     "number": 68,
     "palettes": 1,
     "prev_ids": [],
@@ -18049,7 +18049,7 @@
           "type": 12
         }
       ],
-      "description": "2+ times, give this Beastie an Easy Receive"
+      "description": "¦beastiesetup_classrecruit_056¦"
     },
     "recruit_value": 7.2,
     "roamer_style": {
@@ -18168,7 +18168,7 @@
       [51, 0, 2, 0, 2, 2],
       [0, 2, 1, 3, 2, 1, 8, 2, 0.15]
     ],
-    "desc": "Their incredibly dense hair keeps them well insulated even in cold ocean waters. Their actual body is quite small.",
+    "desc": "¦beastiesetup_desc_067¦",
     "designer": [3, 8],
     "dlc": 0,
     "evo_pose": [
@@ -18233,7 +18233,7 @@
     },
     "ma": 49,
     "md": 68,
-    "name": "Leobro",
+    "name": "¦beastiesetup_name_066¦",
     "number": 67,
     "palettes": 1,
     "prev_ids": [],
@@ -18249,7 +18249,7 @@
           "type": 12
         }
       ],
-      "description": "Give this Beastie an Easy Receive"
+      "description": "¦beastiesetup_classrecruit_055¦"
     },
     "recruit_value": 3.6,
     "roamer_style": {
@@ -18377,7 +18377,7 @@
       [16, 8, -1],
       [16, 8, -2]
     ],
-    "desc": "They leap high enough to snatch birds straight out of the sky. They'll leave claw marks on high places as a form of competition.",
+    "desc": "¦beastiesetup_desc_030¦",
     "designer": 3,
     "dlc": 0,
     "evo_pose": [
@@ -18442,7 +18442,7 @@
     },
     "ma": 45,
     "md": 30,
-    "name": "Servace",
+    "name": "¦beastiesetup_name_030¦",
     "number": 30,
     "palettes": 1,
     "prev_ids": ["decoy", "hinata"],
@@ -18473,7 +18473,7 @@
           "type": 8
         }
       ],
-      "description": "Attack 3+ times from the front lane"
+      "description": "¦beastiesetup_008¦"
     },
     "recruit_value": 7,
     "roamer_style": {
@@ -18596,7 +18596,7 @@
       [16, 8, -1],
       [16, 8, -2]
     ],
-    "desc": "When on the hunt, they'll often allow prey to escape so that they can continue the chase and practice their pounce more.",
+    "desc": "¦beastiesetup_desc_029¦",
     "designer": 3,
     "dlc": 0,
     "evo_pose": [
@@ -18661,7 +18661,7 @@
     },
     "ma": 29,
     "md": 21,
-    "name": "Servitt",
+    "name": "¦beastiesetup_name_029¦",
     "number": 29,
     "palettes": 1,
     "prev_ids": [],
@@ -18684,7 +18684,7 @@
           "type": 8
         }
       ],
-      "description": "Attack 2+ times from the front lane"
+      "description": "¦beastiesetup_007¦"
     },
     "recruit_value": 5,
     "roamer_style": {
@@ -18791,7 +18791,7 @@
       [0, 2, 2, 3, 2, -1],
       [3, 2, 2]
     ],
-    "desc": "They can swing their whip-like tail incredibly fast. Underwater, it creates shockwaves that stuns prey senseless.",
+    "desc": "¦beastiesetup_desc_059¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -18856,7 +18856,7 @@
     },
     "ma": 40,
     "md": 105,
-    "name": "Riplash",
+    "name": "¦beastiesetup_name_058¦",
     "number": 59,
     "palettes": 1,
     "prev_ids": [],
@@ -18874,7 +18874,7 @@
           "type": 14
         }
       ],
-      "description": "Take 50+ damage from an attack from this Beastie"
+      "description": "¦beastiesetup_classrecruit_048¦"
     },
     "recruit_value": 7.65,
     "roamer_style": {
@@ -18987,7 +18987,7 @@
       [0, 2, 2, 3, 2, -1],
       [3, 2, 2]
     ],
-    "desc": "Their tail communicates everything. Rather than fight, Waglash compete by making the biggest splashes they can with their tail.",
+    "desc": "¦beastiesetup_desc_058¦",
     "designer": 8,
     "dlc": 0,
     "evo_pose": [
@@ -19052,7 +19052,7 @@
     },
     "ma": 35,
     "md": 75,
-    "name": "Waglash",
+    "name": "¦beastiesetup_name_057¦",
     "number": 58,
     "palettes": 1,
     "prev_ids": ["lilshark"],
@@ -19070,7 +19070,7 @@
           "type": 14
         }
       ],
-      "description": "Take 30+ damage from an attack from this Beastie"
+      "description": "¦beastiesetup_classrecruit_047¦"
     },
     "recruit_value": 7.05,
     "roamer_style": {
@@ -19114,228 +19114,6 @@
     "tamelvl": 2,
     "tyield": ["ba", 2],
     "type_focus": 0
-  },
-  "shroom1": {
-    "ability": ["regenerator", "fieldclear"],
-    "ability_hidden": true,
-    "allowedInPromo": true,
-    "anim_progress": 100,
-    "animator": 8,
-    "attklist": [
-      "careful",
-      "bomb",
-      "hazeball",
-      "dropshot",
-      "rocksmash",
-      "healhit",
-      "healhit2",
-      "dig",
-      "allycover",
-      "allyrush",
-      "refresh",
-      "protect",
-      "rest",
-      "fieldclear",
-      "preblock",
-      "substitute",
-      "mark",
-      "lifepass",
-      "callout",
-      "chill",
-      "sweatup",
-      "enemyboosts",
-      "flatten"
-    ],
-    "attklist_randomize": -1,
-    "ba": 45,
-    "base_exp": 117.4,
-    "bd": 50,
-    "body_color_index": 0,
-    "codename": "f4388e02b4aa4cfbad8c85fb5f8ac9a5b2f58949",
-    "colormeta": null,
-    "colors": [
-      {
-        "array": [
-          { "color": 11131786, "x": 0 },
-          { "color": 8323027, "x": 1 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 13696983, "x": 0.1008333333 },
-          { "color": 12188927, "x": 0.4633333333 },
-          { "color": 10878939, "x": 0.9258333333 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 2829120, "x": 0.0783333333 },
-          { "color": 3983871, "x": 0.2433333333 },
-          { "color": 7763680, "x": 0.4358333333 },
-          { "color": 6377894, "x": 0.6158333333 },
-          { "color": 6382059, "x": 0.8133333333 },
-          { "color": 13339273, "x": 1 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 7707135, "x": 0 },
-          { "color": 6514897, "x": 1 }
-        ]
-      }
-    ],
-    "colors2": null,
-    "combos": [
-      [49, 0, 12, 50, 0, 1],
-      [52, 1, 1, 8, 1, 0.15],
-      [52, 1, 1, 8, 1, 0.5],
-      [52, 2, 1, 8, 2, 0.3]
-    ],
-    "desc": "Its body is covered in microscopic fungal feelers, making it feel sticky. They tend to all varieties of plant life.",
-    "designer": 1,
-    "dlc": 0,
-    "evo_pose": [
-      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
-      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
-      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
-    ],
-    "evolution": [
-      { "condition": [2], "specie": "shroom_b", "value": [0] },
-      { "condition": [2], "specie": "shroom_s", "value": [0] },
-      { "condition": [2], "specie": "shroom_m", "value": [0] }
-    ],
-    "face_color_index": 0,
-    "family": "shroom1",
-    "first_frame": -1,
-    "foot_size": 18,
-    "foot_type": 0,
-    "growth": 1,
-    "ha": 43,
-    "hd": 67,
-    "hidden": false,
-    "hidden_counter": null,
-    "id": "shroom1",
-    "isBaby": true,
-    "learnset": [
-      [0, "careful"],
-      [0, "callout"],
-      [6, "refresh"],
-      [9, "dropshot"],
-      [12, "rocksmash"],
-      [15, "protect"],
-      [19, "fieldclear"],
-      [24, "enemyboosts"],
-      [30, "mark"],
-      [35, "hazeball"],
-      [39, "allyrush"],
-      [43, "flatten"]
-    ],
-    "learnset_randomize": -1,
-    "linked_colors": {},
-    "loco": {
-      "anim_min_speed": 0.2,
-      "char_width": 66.75,
-      "emote_hop_height": 25,
-      "float_dist": 0,
-      "float_wave": 0,
-      "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
-      "hop_min_speed": 0.04,
-      "hop_shake": 0,
-      "hop_wobble": 0,
-      "move_accel": 3,
-      "move_decel": 0.6666666667,
-      "move_pause_frames": [],
-      "move_speed": 1,
-      "move_speed_start": -0.66,
-      "move_to_idle_transition_anim": "",
-      "move_to_idle_transition_frames": [8, 9, 10, 11, 12, 13, 14, 15],
-      "offset_freq": 2000,
-      "offset_rand_range": 0,
-      "offset_seconds": 0.2,
-      "randomize_idle": 0,
-      "squishiness": 0.2,
-      "stretchiness": 0.2
-    },
-    "ma": 42,
-    "md": 55,
-    "name": "Sprecko",
-    "number": 1,
-    "palettes": 1,
-    "prev_ids": ["tree1"],
-    "recruit": {
-      "conditions": [
-        {
-          "effect_type": [42, 43, 44, 45, 70, 56],
-          "event": null,
-          "freq": -1,
-          "func": null,
-          "my_data": null,
-          "player": 2,
-          "rel_color": -1,
-          "type": 45
-        }
-      ],
-      "description": "Create any type of field effect"
-    },
-    "recruit_value": 2.8,
-    "roamer_style": {
-      "_name": "STOP_AND_STARE",
-      "can_react": true,
-      "can_socialize": true,
-      "can_volley": true,
-      "cancel_on_player_invincible": false,
-      "checking_player_distance": true,
-      "colliding": false,
-      "default_locomote": true,
-      "default_physics": true,
-      "flying": false,
-      "interact_force": false,
-      "render_go_direction": false,
-      "render_guard_radius": false,
-      "seeking_interact": false
-    },
-    "roguelvl": -1,
-    "scale": [0.85, 1],
-    "shiny": [
-      {
-        "array": [
-          { "color": 15528703, "x": 0 },
-          { "color": 15528703, "x": 0.8066666667 },
-          { "color": 9021382, "x": 1 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 9021384, "x": 0.2883333333 },
-          { "color": 9939131, "x": 0.6658333333 },
-          { "color": 15593464, "x": 1 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 2829120, "x": 0.0783333333 },
-          { "color": 3983871, "x": 0.2433333333 },
-          { "color": 7763680, "x": 0.4358333333 },
-          { "color": 6377894, "x": 0.6158333333 },
-          { "color": 6382059, "x": 0.8133333333 },
-          { "color": 13339273, "x": 1 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 7112637, "x": 0 },
-          { "color": 6979005, "x": 1 }
-        ]
-      }
-    ],
-    "spr": "sprShroom1",
-    "spr_alt": [],
-    "tamecond": null,
-    "tamelvl": 2,
-    "tyield": ["hd", 1],
-    "type_focus": 1
   },
   "shroom_b": {
     "ability": ["rhythmblock", "tagheal"],
@@ -19430,7 +19208,7 @@
       [52, 1, 1, 8, 1, 0.5],
       [52, 2, 1, 8, 2, 0.3]
     ],
-    "desc": "The vibration of their belly drum promotes the growth of plants. Their habitats are always lush and overgrown.",
+    "desc": "¦beastiesetup_desc_002¦",
     "designer": 1,
     "dlc": 0,
     "evo_pose": [
@@ -19456,7 +19234,7 @@
                 "type": 14
               }
             ],
-            "description": "A Bongus, Surgus or Illugus must commune with 3 mushroom colonies"
+            "description": "¦beastiesetup_001¦"
           }
         ]
       }
@@ -19518,7 +19296,7 @@
     },
     "ma": 40,
     "md": 65,
-    "name": "Bongus",
+    "name": "¦beastiesetup_name_002¦",
     "number": 2,
     "palettes": 1,
     "prev_ids": ["tree_b"],
@@ -19535,7 +19313,7 @@
           "type": 45
         }
       ],
-      "description": "Create a RHYTHM field effect"
+      "description": "¦beastiesetup_classrecruit_002¦"
     },
     "recruit_value": 3.05,
     "roamer_style": {
@@ -19681,7 +19459,7 @@
       [52, 1, 1, 8, 1, 0.5],
       [52, 2, 1, 8, 2, 0.3]
     ],
-    "desc": "Though eerily quiet, they are constantly sending and receiving signals with nearby mycelia. As a result they have uncanny environmental awareness.",
+    "desc": "¦beastiesetup_desc_004¦",
     "designer": 1,
     "dlc": 0,
     "evo_pose": [
@@ -19707,7 +19485,7 @@
                 "type": 14
               }
             ],
-            "description": "A Bongus, Surgus or Illugus must commune with 3 mushroom colonies"
+            "description": "¦beastiesetup_001¦"
           }
         ]
       }
@@ -19769,7 +19547,7 @@
     },
     "ma": 90,
     "md": 110,
-    "name": "Illugus",
+    "name": "¦beastiesetup_name_004¦",
     "number": 4,
     "palettes": 1,
     "prev_ids": ["tree_m"],
@@ -19786,7 +19564,7 @@
           "type": 45
         }
       ],
-      "description": "Create a TRAP field effect"
+      "description": "¦beastiesetup_classrecruit_004¦"
     },
     "recruit_value": 3.05,
     "roamer_style": {
@@ -19929,7 +19707,7 @@
       [52, 1, 1, 8, 1, 0.5],
       [52, 2, 1, 8, 2, 0.3]
     ],
-    "desc": "This Beastie can lie in serenity for days, then suddenly fly into action. They are deeply attuned to the feelings of other Beasties.",
+    "desc": "¦beastiesetup_desc_003¦",
     "designer": 1,
     "dlc": 0,
     "evo_pose": [
@@ -19955,7 +19733,7 @@
                 "type": 14
               }
             ],
-            "description": "A Bongus, Surgus or Illugus must commune with 3 mushroom colonies"
+            "description": "¦beastiesetup_001¦"
           }
         ]
       }
@@ -20017,7 +19795,7 @@
     },
     "ma": 75,
     "md": 65,
-    "name": "Surgus",
+    "name": "¦beastiesetup_name_003¦",
     "number": 3,
     "palettes": 1,
     "prev_ids": ["tree_s"],
@@ -20034,7 +19812,7 @@
           "type": 45
         }
       ],
-      "description": "Create a RALLY field effect"
+      "description": "¦beastiesetup_classrecruit_003¦"
     },
     "recruit_value": 3.05,
     "roamer_style": {
@@ -20087,6 +19865,228 @@
     "tamecond": null,
     "tamelvl": 3,
     "tyield": ["ha", 1, "hd", 1],
+    "type_focus": 1
+  },
+  "shroom1": {
+    "ability": ["regenerator", "fieldclear"],
+    "ability_hidden": true,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 8,
+    "attklist": [
+      "careful",
+      "bomb",
+      "hazeball",
+      "dropshot",
+      "rocksmash",
+      "healhit",
+      "healhit2",
+      "dig",
+      "allycover",
+      "allyrush",
+      "refresh",
+      "protect",
+      "rest",
+      "fieldclear",
+      "preblock",
+      "substitute",
+      "mark",
+      "lifepass",
+      "callout",
+      "chill",
+      "sweatup",
+      "enemyboosts",
+      "flatten"
+    ],
+    "attklist_randomize": -1,
+    "ba": 45,
+    "base_exp": 117.4,
+    "bd": 50,
+    "body_color_index": 0,
+    "codename": "f4388e02b4aa4cfbad8c85fb5f8ac9a5b2f58949",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 11131786, "x": 0 },
+          { "color": 8323027, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 13696983, "x": 0.1008333333 },
+          { "color": 12188927, "x": 0.4633333333 },
+          { "color": 10878939, "x": 0.9258333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 2829120, "x": 0.0783333333 },
+          { "color": 3983871, "x": 0.2433333333 },
+          { "color": 7763680, "x": 0.4358333333 },
+          { "color": 6377894, "x": 0.6158333333 },
+          { "color": 6382059, "x": 0.8133333333 },
+          { "color": 13339273, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 7707135, "x": 0 },
+          { "color": 6514897, "x": 1 }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [49, 0, 12, 50, 0, 1],
+      [52, 1, 1, 8, 1, 0.15],
+      [52, 1, 1, 8, 1, 0.5],
+      [52, 2, 1, 8, 2, 0.3]
+    ],
+    "desc": "¦beastiesetup_desc_001¦",
+    "designer": 1,
+    "dlc": 0,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": [
+      { "condition": [2], "specie": "shroom_b", "value": [0] },
+      { "condition": [2], "specie": "shroom_s", "value": [0] },
+      { "condition": [2], "specie": "shroom_m", "value": [0] }
+    ],
+    "face_color_index": 0,
+    "family": "shroom1",
+    "first_frame": -1,
+    "foot_size": 18,
+    "foot_type": 0,
+    "growth": 1,
+    "ha": 43,
+    "hd": 67,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "shroom1",
+    "isBaby": true,
+    "learnset": [
+      [0, "careful"],
+      [0, "callout"],
+      [6, "refresh"],
+      [9, "dropshot"],
+      [12, "rocksmash"],
+      [15, "protect"],
+      [19, "fieldclear"],
+      [24, "enemyboosts"],
+      [30, "mark"],
+      [35, "hazeball"],
+      [39, "allyrush"],
+      [43, "flatten"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 66.75,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 3,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": -0.66,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [8, 9, 10, 11, 12, 13, 14, 15],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": 0,
+      "squishiness": 0.2,
+      "stretchiness": 0.2
+    },
+    "ma": 42,
+    "md": 55,
+    "name": "¦beastiesetup_name_001¦",
+    "number": 1,
+    "palettes": 1,
+    "prev_ids": ["tree1"],
+    "recruit": {
+      "conditions": [
+        {
+          "effect_type": [42, 43, 44, 45, 70, 56],
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 45
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_001¦"
+    },
+    "recruit_value": 2.8,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          { "color": 15528703, "x": 0 },
+          { "color": 15528703, "x": 0.8066666667 },
+          { "color": 9021382, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 9021384, "x": 0.2883333333 },
+          { "color": 9939131, "x": 0.6658333333 },
+          { "color": 15593464, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 2829120, "x": 0.0783333333 },
+          { "color": 3983871, "x": 0.2433333333 },
+          { "color": 7763680, "x": 0.4358333333 },
+          { "color": 6377894, "x": 0.6158333333 },
+          { "color": 6382059, "x": 0.8133333333 },
+          { "color": 13339273, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 7112637, "x": 0 },
+          { "color": 6979005, "x": 1 }
+        ]
+      }
+    ],
+    "spr": "sprShroom1",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["hd", 1],
     "type_focus": 1
   },
   "shroommon": {
@@ -20193,7 +20193,7 @@
       [52, 1, 1, 8, 1, 0.5],
       [52, 2, 1, 8, 2, 0.3]
     ],
-    "desc": "Celia's Notes: Their growths are proto-Beastieballs. This might be the missing link between fungi and Beastie!",
+    "desc": "¦beastiesetup_desc_106¦",
     "designer": [1, 8],
     "dlc": 0,
     "evo_pose": [
@@ -20259,7 +20259,7 @@
     },
     "ma": 110,
     "md": 90,
-    "name": "Shloom",
+    "name": "¦beastiesetup_name_105¦",
     "number": 106,
     "palettes": 1,
     "prev_ids": [],
@@ -20412,7 +20412,7 @@
       [7, 0, 1, 27, 9, 3],
       [34, 8, 1, 26, 2, 1]
     ],
-    "desc": "Chloroplasts from the plants they eat are absorbed and stored in their tails. This provides them camouflage as well as photosynthetic energy.",
+    "desc": "¦beastiesetup_desc_047¦",
     "designer": 1,
     "dlc": 0,
     "evo_pose": [
@@ -20476,7 +20476,7 @@
     },
     "ma": 60,
     "md": 112,
-    "name": "Wottle",
+    "name": "¦beastiesetup_name_047¦",
     "number": 47,
     "palettes": 1,
     "prev_ids": [],
@@ -20492,7 +20492,7 @@
           "type": 45
         }
       ],
-      "description": "Boost [sprIcon,1]DEF [sprBoost,0][sprBoost,0][sprBoost,0] or more on a Beastie"
+      "description": "¦beastiesetup_classrecruit_039¦"
     },
     "recruit_value": 6.3,
     "roamer_style": {
@@ -20611,7 +20611,7 @@
       [15, 1, 4, 8, 0, -0.6],
       [8, 0, 0.3, 0, 0, 1]
     ],
-    "desc": "They remove lightbulbs and take their place, feeding on the power supply. The bioluminescent fibres in their head glow brighter when they're well fed. ",
+    "desc": "¦beastiesetup_desc_085¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -20677,7 +20677,7 @@
     },
     "ma": 33,
     "md": 92,
-    "name": "Beelb",
+    "name": "¦beastiesetup_name_084¦",
     "number": 85,
     "palettes": 1,
     "prev_ids": [],
@@ -20692,7 +20692,7 @@
           "type": 41
         }
       ],
-      "description": "Let this Beastie boost [sprIcon,0]POW to [sprBoost,0][sprBoost,0][sprBoost,0] or more"
+      "description": "¦beastiesetup_classrecruit_072¦"
     },
     "recruit_value": 10.8,
     "roamer_style": {
@@ -20816,7 +20816,7 @@
       [45, 7, 6, 8, 2, 0.15],
       [45, 7, 6, 8, 2, 0.15]
     ],
-    "desc": "Their smaller wings help them conserve heat but became useless for flying. They're carnivores, and in extreme cases, will devour other Beasties.",
+    "desc": "¦beastiesetup_desc_098¦",
     "designer": 3,
     "dlc": 0,
     "evo_pose": [
@@ -20881,7 +20881,7 @@
     },
     "ma": 45,
     "md": 55,
-    "name": "Lunaptra",
+    "name": "¦beastiesetup_name_097¦",
     "number": 98,
     "palettes": 1,
     "prev_ids": [],
@@ -20918,7 +20918,7 @@
           "type": 14
         }
       ],
-      "description": "Land 3+ [sprIcon,0] attacks"
+      "description": "¦beastiesetup_classrecruit_084¦"
     },
     "recruit_value": 6,
     "roamer_style": {
@@ -21040,7 +21040,7 @@
       [43, 7, 6],
       [43, 7, 6]
     ],
-    "desc": "A superpollinator often found in lush flower fields. They will viciously hunt down any creature which endangers their flowers.",
+    "desc": "¦beastiesetup_desc_097¦",
     "designer": 3,
     "dlc": 0,
     "evo_pose": [
@@ -21105,7 +21105,7 @@
     },
     "ma": 45,
     "md": 75,
-    "name": "Heliath",
+    "name": "¦beastiesetup_name_096¦",
     "number": 97,
     "palettes": 1,
     "prev_ids": [],
@@ -21142,7 +21142,7 @@
           "type": 14
         }
       ],
-      "description": "Land 3+ [sprIcon,1] attacks"
+      "description": "¦beastiesetup_classrecruit_083¦"
     },
     "recruit_value": 8,
     "roamer_style": {
@@ -21276,7 +21276,7 @@
       [15, 2, 1],
       [15, 2, 1]
     ],
-    "desc": "They fly tirelessly through any condition to find flowers to feed on. Seeing one is considered a lucky charm.",
+    "desc": "¦beastiesetup_desc_096¦",
     "designer": 3,
     "dlc": 0,
     "evo_pose": [
@@ -21343,7 +21343,7 @@
     },
     "ma": 15,
     "md": 55,
-    "name": "Humflit",
+    "name": "¦beastiesetup_name_095¦",
     "number": 96,
     "palettes": 2,
     "prev_ids": [],
@@ -21370,7 +21370,7 @@
           "type": 14
         }
       ],
-      "description": "Land a [sprIcon,0] attack and a [sprIcon,1] attack"
+      "description": "¦beastiesetup_classrecruit_082¦"
     },
     "recruit_value": 5,
     "roamer_style": {
@@ -21514,7 +21514,7 @@
       [28, 1, 1, 0, 0, 1],
       [11, 0, 1, 16, 0, 1]
     ],
-    "desc": "The fastest known flier of all. They use echolocation to rapidly navigate narrow cave systems.",
+    "desc": "¦beastiesetup_desc_091¦",
     "designer": 5,
     "dlc": 0,
     "evo_pose": [
@@ -21580,7 +21580,7 @@
     },
     "ma": 45,
     "md": 47,
-    "name": "Blitzwift",
+    "name": "¦beastiesetup_name_090¦",
     "number": 91,
     "palettes": 1,
     "prev_ids": [],
@@ -21607,7 +21607,7 @@
           "type": 45
         }
       ],
-      "description": "SHIFT a Beastie 2+ times"
+      "description": "¦beastiesetup_classrecruit_077¦"
     },
     "recruit_value": 5.6,
     "roamer_style": {
@@ -21756,7 +21756,7 @@
       [6, 8, 1],
       [6, 8, 1]
     ],
-    "desc": "This pair is inseparable. Despite their highly developed sociability, they often remain solitary, perfectly satisfied with their own company.",
+    "desc": "¦beastiesetup_desc_049¦",
     "designer": 4,
     "dlc": 0,
     "evo_pose": [
@@ -21820,7 +21820,7 @@
     },
     "ma": 98,
     "md": 90,
-    "name": "Varkabond",
+    "name": "¦beastiesetup_name_048¦",
     "number": 49,
     "palettes": 1,
     "prev_ids": ["trickshot"],
@@ -21835,7 +21835,7 @@
           "type": 46
         }
       ],
-      "description": "WIPE OUT a Beastie with a SIDEWAYS attack"
+      "description": "¦beastiesetup_classrecruit_041¦"
     },
     "recruit_value": 5.65,
     "roamer_style": {
@@ -22009,7 +22009,7 @@
       [6, 8, 1],
       [6, 8, 1]
     ],
-    "desc": "Their life cycle begins in caves, but they journey to the forest in adulthood. Each one selects a companion rock who they talk to as though it were alive.",
+    "desc": "¦beastiesetup_desc_048¦",
     "designer": [4, 8],
     "dlc": 0,
     "evo_pose": [
@@ -22073,7 +22073,7 @@
     },
     "ma": 73,
     "md": 57,
-    "name": "Troglum",
+    "name": "¦beastiesetup_013¦",
     "number": 48,
     "palettes": 1,
     "prev_ids": [],
@@ -22088,7 +22088,7 @@
           "type": 46
         }
       ],
-      "description": "WIPE OUT a Beastie with a SIDEWAYS attack"
+      "description": "¦beastiesetup_classrecruit_040¦"
     },
     "recruit_value": 5.65,
     "roamer_style": {
@@ -22255,7 +22255,7 @@
       [44, 2, 6, 16, 2, 1],
       [19, 2, 1, 12, 2, 2]
     ],
-    "desc": "Their large shells become mini-ecosystems supporting barnacles and sponges. Crews of Turogue will make their home there too.",
+    "desc": "¦beastiesetup_desc_057¦",
     "designer": [2, 8],
     "dlc": 0,
     "evo_pose": [
@@ -22320,7 +22320,7 @@
     },
     "ma": 80,
     "md": 55,
-    "name": "Tortanchor",
+    "name": "¦beastiesetup_name_056¦",
     "number": 57,
     "palettes": 1,
     "prev_ids": ["tank"],
@@ -22359,7 +22359,7 @@
           "type": 50
         }
       ],
-      "description": "4+ times, use a play this Beastie knows"
+      "description": "¦beastiesetup_016¦"
     },
     "recruit_value": 12.15,
     "roamer_style": {
@@ -22489,7 +22489,7 @@
       [44, 2, 6, 16, 2, 1],
       [19, 2, 1, 12, 2, 2]
     ],
-    "desc": "A group of Turogue is called a \"crew.\" When they're together they will turn anything into a competition.",
+    "desc": "¦beastiesetup_desc_055¦",
     "designer": 2,
     "dlc": 0,
     "evo_pose": [
@@ -22554,7 +22554,7 @@
     },
     "ma": 55,
     "md": 40,
-    "name": "Turogue",
+    "name": "¦beastiesetup_name_054¦",
     "number": 55,
     "palettes": 1,
     "prev_ids": ["tank1"],
@@ -22577,7 +22577,7 @@
           "type": 50
         }
       ],
-      "description": "2+ times, use a play this Beastie knows"
+      "description": "¦beastiesetup_014¦"
     },
     "recruit_value": 6.1,
     "roamer_style": {
@@ -22700,7 +22700,7 @@
       [44, 2, 6, 16, 2, 1],
       [19, 2, 1, 12, 2, 2]
     ],
-    "desc": "They aren't great swimmers, but their bouyant shell keeps them afloat when they're in the water.",
+    "desc": "¦beastiesetup_desc_056¦",
     "designer": [2, 9],
     "dlc": 0,
     "evo_pose": [
@@ -22765,7 +22765,7 @@
     },
     "ma": 70,
     "md": 45,
-    "name": "Turtaneer",
+    "name": "¦beastiesetup_name_055¦",
     "number": 56,
     "palettes": 1,
     "prev_ids": ["tank2"],
@@ -22796,7 +22796,7 @@
           "type": 50
         }
       ],
-      "description": "3+ times, use a play this Beastie knows"
+      "description": "¦beastiesetup_015¦"
     },
     "recruit_value": 9.1,
     "roamer_style": {
@@ -22931,7 +22931,7 @@
       [7, 0, 1, 20, 0, 1, 45, 7, 6],
       [16, 0, 1, 7, 0, 1]
     ],
-    "desc": "Their feathers are exceptionally tough and lustrous. When they're loosed by ball impacts it makes Conjarr appear to sparkle.",
+    "desc": "¦beastiesetup_desc_074¦",
     "designer": 1,
     "dlc": 0,
     "evo_pose": [
@@ -22996,7 +22996,7 @@
     },
     "ma": 36,
     "md": 63,
-    "name": "Conjarr",
+    "name": "¦beastiesetup_name_073¦",
     "number": 74,
     "palettes": 1,
     "prev_ids": ["netsupport"],
@@ -23013,7 +23013,7 @@
           "type": 40
         }
       ],
-      "description": "Make this Beastie feel [sprStatus,9]BLOCKED"
+      "description": "¦beastiesetup_classrecruit_062¬0¬[sprStatus,9]¦statuseffectstuff_010¦¦"
     },
     "recruit_value": 9,
     "roamer_style": {
@@ -23154,7 +23154,7 @@
       [15, 0, 3, 8, 0, -0.34],
       [0, 2, 1, 1, 8, -2]
     ],
-    "desc": "Once thought to be solitary creatures. It was discovered they communicate with one another across mountain peaks with reflected light from their horn ice.",
+    "desc": "¦beastiesetup_desc_100¦",
     "designer": 0,
     "dlc": 0,
     "evo_pose": [
@@ -23218,7 +23218,7 @@
     },
     "ma": 20,
     "md": 64,
-    "name": "Yamyth",
+    "name": "¦beastiesetup_name_099¦",
     "number": 100,
     "palettes": 1,
     "prev_ids": ["snorlax"],
@@ -23237,7 +23237,7 @@
           "type": 45
         }
       ],
-      "description": "Give this Beastie any [sprBoost,3]BOOST"
+      "description": "¦beastiesetup_classrecruit_086¦"
     },
     "recruit_value": 5.05,
     "roamer_style": {

@@ -2,6 +2,7 @@ import { useContext, useRef, useState } from "react";
 import { TeamBeastie } from "./Types";
 import { createTeamImageCanvas, DrawMode } from "./TeamImage";
 import { BeastieRenderContext } from "../shared/beastieRender/BeastieRenderContext";
+import useLocalization from "../localization/useLocalization";
 
 export default function TeamImageButton({
   team,
@@ -12,6 +13,8 @@ export default function TeamImageButton({
   atLevel?: number;
   maxCoaching?: boolean;
 }) {
+  const { L } = useLocalization();
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const beastieRender = useContext(BeastieRenderContext);
 
@@ -23,6 +26,7 @@ export default function TeamImageButton({
         canvasRef.current,
         team,
         mode,
+        L,
         beastieRender.renderQuick,
         atLevel,
         maxCoaching,

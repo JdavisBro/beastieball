@@ -12,6 +12,7 @@ import CustomErrorBoundary from "../shared/CustomErrorBoundary";
 import ContentPreview from "./Preview/ContentPreview";
 import ContentInfo from "./Info/ContentInfo";
 import { useSpoilerSeen } from "../shared/useSpoiler";
+import useLocalization from "../localization/useLocalization";
 
 declare global {
   interface Window {
@@ -21,19 +22,21 @@ declare global {
 }
 
 export default function Beastiepedia(): React.ReactNode {
+  const { L } = useLocalization();
+
   const orientation = useScreenOrientation();
   const { beastie }: { beastie?: string } = useParams();
 
   const [beastieid, beastiedata] = useMemo(() => {
     if (beastie !== null) {
       for (const [key, value] of BEASTIE_DATA) {
-        if (value.name == beastie) {
+        if (L(value.name) == beastie) {
           return [key, value];
         }
       }
     }
     return [undefined, undefined];
-  }, [beastie]);
+  }, [L, beastie]);
 
   const [sidebarvisible, setSidebarvisible] = useState(
     !(beastieid !== undefined && orientation),
@@ -61,14 +64,12 @@ export default function Beastiepedia(): React.ReactNode {
       <OpenGraph
         title={beastiedata ? `${beastie} - Beastiepedia` : "Beastiepedia"}
         image={
-          beastiedata
-            ? `icons/${beastiedata.name}.png`
-            : "gameassets/sprMainmenu/0.png" // beastiepedia icon
+          beastiedata ? `icons/${beastie}.png` : "gameassets/sprMainmenu/0.png" // beastiepedia icon
         }
-        url={beastiedata ? `beastiepedia/${beastiedata.name}` : `beastiepedia/`}
+        url={beastiedata ? `beastiepedia/${beastie}` : `beastiepedia/`}
         description={
           beastiedata
-            ? beastiedata.desc
+            ? L(beastiedata.desc)
             : "View information and previews of the Beasties from Beastieball!"
         }
       />

@@ -31,6 +31,7 @@ import { EXTINCT_BEASTIES, METAMORPH_LOCATIONS } from "./SpecialBeasties";
 import DivIconMarker from "./DivIconMarker";
 import createBeastieBox from "./createBeastieBox";
 import { ControlMenu } from "./ControlMenu";
+import useLocalization from "../localization/useLocalization";
 
 const BEASTIE_ARRAY = [...BEASTIE_DATA.values()];
 
@@ -55,6 +56,8 @@ function MapEvents() {
 }
 
 export default function Map(): React.ReactNode {
+  const { L: Loc } = useLocalization();
+
   // these are estimates based on comparing the map to a screenshot but they should be about right for now
   const bounds = new L.LatLngBounds([0, 0], [1, 1]);
   const map_bg_bounds = new L.LatLngBounds([83000, -160000], [-42333, 14762]);
@@ -97,7 +100,7 @@ export default function Map(): React.ReactNode {
   const searchParams = new URL(window.location.href).searchParams;
   const searchHuntedName = searchParams.get("track");
   const searchHunted = BEASTIE_ARRAY.find(
-    (beastie) => beastie.name == searchHuntedName,
+    (beastie) => Loc(beastie.name) == searchHuntedName,
   )?.id;
 
   const [huntedBeastie, setHuntedBeastieState] = useState<string | undefined>(
@@ -107,10 +110,10 @@ export default function Map(): React.ReactNode {
   );
   const setHuntedBeastie = (beastieId?: string) => {
     setHuntedBeastieState(beastieId);
-    setQueryParam(
-      "track",
-      beastieId ? BEASTIE_DATA.get(beastieId)?.name : undefined,
-    );
+    const beastieName = beastieId
+      ? BEASTIE_DATA.get(beastieId)?.name
+      : undefined;
+    setQueryParam("track", beastieName ? Loc(beastieName) : undefined);
   };
 
   const [beastiesLevel, setBeastiesLevel] = useState("");
@@ -118,13 +121,15 @@ export default function Map(): React.ReactNode {
   const searchItemName = searchParams.get("item");
   const searchItemId =
     searchItemName &&
-    Object.values(ITEM_DIC).find((item) => searchItemName == item.name)?.id;
+    Object.values(ITEM_DIC).find((item) => searchItemName == Loc(item.name))
+      ?.id;
   const [huntedItem, setHuntedItemState] = useState<string | undefined>(
     searchItemId ?? undefined,
   );
   const setHuntedItem = (itemId?: string) => {
     setHuntedItemState(itemId);
-    setQueryParam("item", itemId ? ITEM_DIC[itemId]?.name : undefined);
+    const itemName = itemId ? ITEM_DIC[itemId]?.name : undefined;
+    setQueryParam("item", itemName ? Loc(itemName) : undefined);
   };
 
   WORLD_DATA.level_stumps_array.forEach((level) => {
@@ -260,7 +265,7 @@ export default function Map(): React.ReactNode {
     bigtitleheaders: React.ReactElement[];
     titleheaders: React.ReactElement[];
     imgheaders: { [key: string]: React.ReactElement[] };
-  } = useMemo(createMarkers, []);
+  } = useMemo(() => createMarkers(Loc), [Loc]);
 
   const extinctIsSpoiler = !(
     spoilerMode == SpoilerMode.All ||
@@ -398,9 +403,9 @@ export default function Map(): React.ReactNode {
                             />
                             <div>
                               <span>
-                                {ITEM_DIC[item].name} x{count}
+                                {Loc(ITEM_DIC[item].name)} x{count}
                               </span>
-                              <TextTag>{ITEM_DIC[item].desc}</TextTag>
+                              <TextTag>{Loc(ITEM_DIC[item].desc)}</TextTag>
                             </div>
                           </div>
                         ))}

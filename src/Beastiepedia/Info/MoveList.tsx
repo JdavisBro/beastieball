@@ -5,6 +5,7 @@ import styles from "./MoveList.module.css";
 import MOVE_DIC, { Move } from "../../data/MoveData";
 import MoveModalProvider from "../../shared/MoveModalProvider";
 import InfoBox from "../../shared/InfoBox";
+import useLocalization from "../../localization/useLocalization";
 
 type MoveTextProps = {
   level?: number;
@@ -14,6 +15,8 @@ type MoveTextProps = {
 };
 
 function MoveText(props: MoveTextProps): React.ReactElement {
+  const { L } = useLocalization();
+
   if (props.move === undefined) {
     // This can never happen?
     return <div>Move not found?</div>;
@@ -40,7 +43,7 @@ function MoveText(props: MoveTextProps): React.ReactElement {
         }}
       >
         <img src={`/gameassets/sprIcon/${props.move.type}.png`} alt="" />
-        {props.move.name}
+        {L(props.move.name)}
       </span>
     </div>
   );

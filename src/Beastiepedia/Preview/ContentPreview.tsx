@@ -28,6 +28,7 @@ import AnimationOptions from "./AnimationOptions";
 import PreviewSettings from "./PreviewSettings";
 import useScreenOrientation from "../../utils/useScreenOrientation";
 import { AnimationState, setupFrameCallback } from "./frameCallback.ts";
+import useLocalization from "../../localization/useLocalization.ts";
 
 const DevUtil = import.meta.env.DEV
   ? lazy(() => import("./DevUtil.tsx"))
@@ -66,6 +67,8 @@ const ANIMATION_LIST = [
 const ANIMATION_ALWAYS_SHOW = ["idle", "move", "menu"];
 
 export default function ContentPreview(props: Props): React.ReactNode {
+  const { L } = useLocalization();
+
   const [colors, setColors] = useState<number[][]>([
     [255, 255, 255],
     [255, 255, 255],
@@ -78,6 +81,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const [alt, setAlt] = useState(-1);
 
   useEffect(() => setAlt(-1), [props.beastiedata.id]);
+
+  const beastieName = L(props.beastiedata.name);
 
   const beastiesprite = SPRITE_INFO[props.beastiedata.spr] as Sprite;
   const drawnname =
@@ -368,7 +373,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       }
       if (!copy) {
         const a = document.createElement("a");
-        a.download = `${props.beastiedata.name}.png`;
+        a.download = `${beastieName}.png`;
         a.href = canvas.toDataURL("image/png");
         a.click();
       } else {
@@ -380,7 +385,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         }, "image/png");
       }
     },
-    [fitBeastie, drawnsprite, props.beastiedata.name],
+    [fitBeastie, drawnsprite, beastieName],
   );
 
   const downloadGif = useCallback(() => {
@@ -390,7 +395,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
     saveGif(
       glRef.current,
       fitBeastie,
-      `${props.beastiedata.name}_${animation}`,
+      `${beastieName}_${animation}`,
       loadedImages,
       structuredClone(anim),
       userSpeed,
@@ -402,7 +407,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
     animation,
     fitBeastie,
     loadedImages,
-    props.beastiedata.name,
+    beastieName,
     drawnsprite,
     anim,
     userSpeed,

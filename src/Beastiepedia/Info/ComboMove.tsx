@@ -6,6 +6,7 @@ import InfoBox from "../../shared/InfoBox";
 import MoveView from "../../shared/MoveView";
 import { MoveEffect } from "../../data/MoveData";
 import BeastieSelect from "../../shared/BeastieSelect";
+import useLocalization from "../../localization/useLocalization";
 
 enum ComboType {
   Rivals,
@@ -21,6 +22,8 @@ export default function ComboMove({
 }: {
   beastiedata: BeastieType;
 }) {
+  const { L } = useLocalization();
+
   const [type, setType] = useState<ComboType>(ComboType.Rivals);
 
   const [friendId, setFriendId] = useState<string | undefined>(undefined);
@@ -108,7 +111,7 @@ export default function ComboMove({
           bt_tags: [],
           use: use,
           desc_tags: [],
-          name: `${beastiedata.name} + ${friend ? friend.name : "???"} ${ComboType[type]}`,
+          name: `${L(beastiedata.name)} + ${friend ? L(friend.name) : "???"} ${ComboType[type]}`,
           type: moveType,
           pow: Math.round(((powMults[0] + powMults[1]) * 50) / 5) * 5,
           eff: effects,

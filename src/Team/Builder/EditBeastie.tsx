@@ -1,5 +1,6 @@
 import abilities from "../../data/abilities";
 import BEASTIE_DATA from "../../data/BeastieData";
+import useLocalization from "../../localization/useLocalization";
 import BeastieSelect from "../../shared/BeastieSelect";
 import type { TeamBeastie } from "../Types";
 import MoveSelect from "./MoveSelect";
@@ -54,6 +55,8 @@ export default function EditBeastie({
   beastie: TeamBeastie;
   setBeastie: React.Dispatch<React.SetStateAction<TeamBeastie>>;
 }) {
+  const { L } = useLocalization();
+
   const changeValue: ChangeValueType = (key, value) => {
     setBeastie((beastie) => ({ ...beastie, [key]: value }));
   };
@@ -228,7 +231,7 @@ export default function EditBeastie({
         >
           {beastiedata.ability.map((abilityId, index) => (
             <option key={abilityId} value={index}>
-              {abilities[abilityId].name}
+              {L(abilities[abilityId].name)}
             </option>
           ))}
         </select>

@@ -3,6 +3,7 @@ import { Popup } from "react-leaflet";
 import styles from "./Map.module.css";
 import WORLD_DATA, { MapIcon } from "../data/WorldData";
 import DivIconMarker from "./DivIconMarker";
+import { LocalizationFunction } from "../localization/useLocalization";
 
 function getKey(icon: MapIcon) {
   if (icon.is_cave) {
@@ -23,7 +24,7 @@ const CONDITIONAL_CHECK: Record<string, number> = {
   region_discovered_mtn: 1,
 };
 
-export function createMarkers() {
+export function createMarkers(Loc: LocalizationFunction) {
   const bigtitleheaders: React.ReactElement[] = [];
   const titleheaders: React.ReactElement[] = [];
 
@@ -81,7 +82,7 @@ export function createMarkers() {
       }
       containerclass =
         value.superheader == 1 ? styles.bigtextmarker : styles.textmarker;
-      markerup = value.text ? <>{value.text}</> : null;
+      markerup = value.text ? <>{Loc("_map_" + value.text)}</> : null;
       zindex = value.superheader == 1 ? 1100 : 1000;
     }
 

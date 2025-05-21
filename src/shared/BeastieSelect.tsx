@@ -4,6 +4,7 @@ import styles from "./Shared.module.css";
 import Modal from "./Modal";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import { SpoilerMode, useSpoilerMode, useSpoilerSeen } from "./useSpoiler";
+import useLocalization from "../localization/useLocalization";
 
 const BEASTIES = [...BEASTIE_DATA.values()];
 
@@ -22,6 +23,9 @@ function BeastieButton({
   nonSelectableReason?: string;
   handleClick: (beastieId: string, isSpoiler: boolean) => void;
 }) {
+  const { L } = useLocalization();
+
+  const beastieName = L(beastie.name);
   return (
     <div
       key={beastie.id}
@@ -45,14 +49,14 @@ function BeastieButton({
         src={
           isSpoiler
             ? "/gameassets/sprExclam_1.png"
-            : `/icons/${beastie.name}.png`
+            : `/icons/${beastieName}.png`
         }
       />
       <div className={styles.beastieSelectNameNum}>
         <div className={styles.beastieSelectNum}>
           #{String(beastie.number).padStart(2, "0")}
         </div>
-        <div>{isSpoiler ? "???" : beastie.name}</div>
+        <div>{isSpoiler ? "???" : beastieName}</div>
       </div>
     </div>
   );
@@ -75,6 +79,8 @@ export default function BeastieSelect({
   isSelectable?: (beastie: BeastieType) => boolean;
   nonSelectableReason?: string;
 }) {
+  const { L } = useLocalization();
+
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -114,7 +120,7 @@ export default function BeastieSelect({
       <button onClick={() => setOpen(true)}>
         {textOverride
           ? textOverride
-          : `Select Beastie: ${beastie?.name ?? (extraOption && beastieId == extraOption ? extraOptionText : "Unset")}`}
+          : `Select Beastie: ${beastie ? L(beastie.name) : extraOption && beastieId == extraOption ? extraOptionText : "Unset"}`}
       </button>
       <Modal
         header="Select Beastie"

@@ -11,6 +11,7 @@ import ComboMove from "./ComboMove";
 import { useState } from "react";
 import Sfx from "./Sfx";
 import Evolution from "./Evolution";
+import useLocalization from "../../localization/useLocalization";
 
 type Props = {
   beastiedata: BeastieType;
@@ -62,6 +63,7 @@ const TRAINING_TYPE: Record<string, React.ReactElement> = {
 };
 
 export default function ContentInfo(props: Props): React.ReactNode {
+  const { L } = useLocalization();
   const beastiedata = props.beastiedata;
 
   const training = beastiedata.tyield
@@ -82,11 +84,11 @@ export default function ContentInfo(props: Props): React.ReactNode {
     <div className={styles.info}>
       <div className={styles.wrapinfoboxes}>
         <InfoBox header="Number">#{beastiedata.number}</InfoBox>
-        <InfoBox header="Name">{beastiedata.name}</InfoBox>
+        <InfoBox header="Name">{L(beastiedata.name)}</InfoBox>
         <InfoBox header="Development">{beastiedata.anim_progress}%</InfoBox>
         <Evolution beastiedata={beastiedata} />
       </div>
-      <InfoBox header="Description">{beastiedata.desc}</InfoBox>
+      <InfoBox header="Description">{L(beastiedata.desc)}</InfoBox>
       <InfoBox header="Traits">
         <table className={styles.traittable}>
           <tbody>
@@ -94,14 +96,14 @@ export default function ContentInfo(props: Props): React.ReactNode {
               value in abilities ? (
                 <tr key={value}>
                   <td>
-                    {abilities[value].name}
+                    {L(abilities[value].name)}
                     {beastiedata.ability_hidden && index > 0
                       ? " (recessive)"
                       : ""}
                   </td>
                   <td>
                     <TextTag>
-                      {abilities[value].desc.replace(/\|/g, "")}
+                      {L(abilities[value].desc.replace(/\|/g, ""))}
                     </TextTag>
                   </td>
                 </tr>
@@ -118,7 +120,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
         <InfoBox header="Recruit Condition">
           {beastiedata.recruit_value != 0.5 ? (
             <>
-              <TextTag>{beastiedata.recruit.description}</TextTag>
+              <TextTag>{L(beastiedata.recruit.description)}</TextTag>
               <br />
               <span className={styles.training}>
                 <img

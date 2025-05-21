@@ -8,6 +8,7 @@ import {
 } from "../../shared/useSpoiler";
 import { useState } from "react";
 import TextTag from "../../shared/TextTag";
+import useLocalization from "../../localization/useLocalization";
 
 type EvolutionType = {
   condition: number[];
@@ -87,16 +88,18 @@ function EvoCondition({
   value: number | Condition;
   specie: string;
 }): React.ReactNode {
+  const { L } = useLocalization();
+
   switch (condition) {
     case 0:
       return `at level ${value}`;
     case 2: {
-      const beastie = BEASTIE_DATA.get(specie);
+      const beastieName = L(BEASTIE_DATA.get(specie)?.name ?? "someone");
       return (
         <>
           at {LOCATION_CONDS[specie] ?? "somewhere"}
           <Link
-            to={`/map/?marker=${beastie?.name}`}
+            to={`/map/?marker=${beastieName}`}
             title="View Metamorphosis Location on the Map"
           >
             <img
@@ -138,7 +141,7 @@ function EvoCondition({
     case 7:
       return (
         <EvoCondInfo>
-          <TextTag>- {(value as Condition).description}</TextTag>
+          <TextTag>- {L((value as Condition).description)}</TextTag>
         </EvoCondInfo>
       );
     case 8:
@@ -156,6 +159,8 @@ function EvoText({
   direction: string;
   isSpoiler: boolean;
 }) {
+  const { L } = useLocalization();
+
   const conds: React.ReactNode[] = [];
   for (let i = 0; i < evo.evolution.condition.length; i++) {
     if (i > 0) {
@@ -171,12 +176,11 @@ function EvoText({
     );
   }
 
+  const evoName = L(evo.beastie.name);
   return (
     <div>
       Metamorphs {direction}{" "}
-      <Link to={`/beastiepedia/${evo.beastie.name}`}>
-        {isSpoiler ? "???" : evo.beastie.name}
-      </Link>{" "}
+      <Link to={`/beastiepedia/${evoName}`}>{isSpoiler ? "???" : evoName}</Link>{" "}
       {conds}
     </div>
   );

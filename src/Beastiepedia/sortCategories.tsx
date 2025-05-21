@@ -1,4 +1,5 @@
 import { BeastieType } from "../data/BeastieData";
+import { LocalizationFunction } from "../localization/useLocalization";
 
 type StatType = "ba" | "bd" | "ha" | "hd" | "ma" | "md";
 
@@ -16,17 +17,22 @@ const STAT_IMGS: Record<StatType, React.ReactElement> = {
 
 type SortValueType = {
   name: string;
-  value: (beastie: BeastieType) => number;
+  value: (beastie: BeastieType, L: LocalizationFunction) => number;
   compare?: undefined;
   display?: (
     beastie: BeastieType,
     grid: boolean,
+    L: LocalizationFunction,
   ) => React.ReactNode | undefined; // undefined = use value result, return value undefined: no show
 };
 
 type SortCompareType = Omit<SortValueType, "value" | "compare"> & {
-  value: (beastie: BeastieType) => string | number;
-  compare: (beastie1: BeastieType, beastie2: BeastieType) => number;
+  value: (beastie: BeastieType, L: LocalizationFunction) => string | number;
+  compare: (
+    beastie1: BeastieType,
+    beastie2: BeastieType,
+    L: LocalizationFunction,
+  ) => number;
 };
 
 type SortType = SortValueType | SortCompareType;
@@ -65,9 +71,10 @@ export const SORT_CATEGORIES: SortType[] = [
   },
   {
     name: "Name",
-    value: (beastie) => beastie.name,
-    compare: (beastie1, beastie2) => beastie1.name.localeCompare(beastie2.name),
-    display: (beastie, grid) => (grid ? beastie.name : undefined),
+    value: (beastie, L) => L(beastie.name),
+    compare: (beastie1, beastie2, L) =>
+      L(beastie1.name).localeCompare(L(beastie2.name)),
+    display: (beastie, grid, L) => (grid ? L(beastie.name) : undefined),
   },
 
   {

@@ -11,6 +11,7 @@ import ITEM_DIC from "../data/ItemData";
 import Modal from "../shared/Modal";
 import { EXTRA_MARKERS } from "../data/WorldData";
 import TextTag from "../shared/TextTag";
+import useLocalization from "../localization/useLocalization";
 
 export function ControlSection({
   header,
@@ -60,6 +61,8 @@ function ItemSection({
   huntedItem: string | undefined;
   setHuntedItem: (item: string | undefined) => void;
 }) {
+  const { L: Loc } = useLocalization();
+
   const item = huntedItem && ITEM_DIC[huntedItem];
   const [itemSelector, setItemSelector] = useState(false);
 
@@ -68,7 +71,7 @@ function ItemSection({
       <label>
         Find:{" "}
         <button onClick={() => setItemSelector(true)}>
-          Select Item: {item ? item.name : "Unset"}
+          Select Item: {item ? Loc(item.name) : "Unset"}
         </button>
       </label>
       <Modal
@@ -93,9 +96,9 @@ function ItemSection({
             >
               <img src={`/gameassets/sprItems/${item.img}.png`} />
               <div className={styles.itemSelectText}>
-                <div className={styles.itemSelectName}>{item.name}</div>
+                <div className={styles.itemSelectName}>{Loc(item.name)}</div>
                 <div className={styles.itemSelectDesc}>
-                  <TextTag>{item.desc}</TextTag>
+                  <TextTag>{Loc(item.desc)}</TextTag>
                 </div>
               </div>
             </div>

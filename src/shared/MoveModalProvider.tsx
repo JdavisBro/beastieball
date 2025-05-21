@@ -9,8 +9,11 @@ import Modal from "./Modal";
 import MoveView from "./MoveView";
 import { SpoilerMode, useSpoilerMode, useSpoilerSeen } from "./useSpoiler";
 import useScreenOrientation from "../utils/useScreenOrientation";
+import useLocalization from "../localization/useLocalization";
 
 export default function MoveModalProvider(props: PropsWithChildren) {
+  const { L } = useLocalization();
+
   const [move, setMove] = useState<null | Move>(null);
 
   const levelBeasties: [BeastieType, number][] = [];
@@ -42,10 +45,12 @@ export default function MoveModalProvider(props: PropsWithChildren) {
   const orientation = useScreenOrientation(800);
   const levelSeparator = orientation ? <br /> : " - ";
 
+  const moveName = move && L(move.name);
+
   return (
     <MoveModalContext.Provider value={setMove}>
       <Modal
-        header={`Play: ${move?.name}`}
+        header={`Play: ${moveName}`}
         open={move != null}
         onClose={() => setMove(null)}
         hashValue="Play"
@@ -62,12 +67,13 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                 const isSpoiler =
                   spoilerMode == SpoilerMode.OnlySeen &&
                   !seenBeasties[beastie[0].id];
+                const beastieName = L(beastie[0].name);
                 return (
                   <Link
                     to={
                       isSpoiler
                         ? "#Play"
-                        : `/beastiepedia/${beastie[0].name}?play=${move?.name}`
+                        : `/beastiepedia/${beastieName}?play=${moveName}`
                     }
                     key={beastie[0].id}
                     onClick={() =>
@@ -78,7 +84,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                       src={
                         isSpoiler
                           ? "/gameassets/sprExclam_1.png"
-                          : `/icons/${beastie[0].name}.png`
+                          : `/icons/${beastieName}.png`
                       }
                       style={
                         isSpoiler ? { filter: "brightness(50%)" } : undefined
@@ -87,7 +93,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                     <div>
                       {isSpoiler
                         ? `Beastie #${beastie[0].number}`
-                        : beastie[0].name}
+                        : beastieName}
                       {levelSeparator}
                       {beastie[1]}
                     </div>
@@ -100,9 +106,10 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                 const isSpoiler =
                   spoilerMode == SpoilerMode.OnlySeen &&
                   !seenBeasties[beastie.id];
+                const beastieName = L(beastie.name);
                 return (
                   <Link
-                    to={isSpoiler ? "#Play" : `/beastiepedia/${beastie.name}`}
+                    to={isSpoiler ? "#Play" : `/beastiepedia/${beastieName}`}
                     key={beastie.id}
                     onClick={() =>
                       handleClick(isSpoiler ? beastie.id : undefined)
@@ -112,13 +119,13 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                       src={
                         isSpoiler
                           ? "/gameassets/sprExclam_1.png"
-                          : `/icons/${beastie.name}.png`
+                          : `/icons/${beastieName}.png`
                       }
                       style={
                         isSpoiler ? { filter: "brightness(50%)" } : undefined
                       }
                     />
-                    {isSpoiler ? `Beastie #${beastie.number}` : beastie.name}
+                    {isSpoiler ? `Beastie #${beastie.number}` : beastieName}
                   </Link>
                 );
               })}

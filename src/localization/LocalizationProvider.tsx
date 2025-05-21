@@ -1,4 +1,10 @@
-import { PropsWithChildren, useMemo, useEffect, useState } from "react";
+import {
+  useMemo,
+  useEffect,
+  useState,
+  useCallback,
+  PropsWithChildren,
+} from "react";
 import {
   LocalizationContext,
   LocalizationType,
@@ -6,6 +12,7 @@ import {
   SupportedLanguage,
 } from "./useLocalization";
 import { useLocalStorage } from "usehooks-ts";
+import { useNavigate, useParams } from "react-router-dom";
 
 type LanguageData = Record<string, string>;
 
@@ -71,10 +78,13 @@ function localize(
       : key;
 }
 
-export default function LocalizationProvider(props: PropsWithChildren) {
-  const [lang, setLang] = useLocalStorage<SupportedLanguage>(
+export default function LocalizationProvider({ children }: PropsWithChildren) {
+  const { lang: paramLang } = useParams();
+
+  const [storedLang, setStoredLang] = useLocalStorage<SupportedLanguage>(
     "language",
-    (navigator.languages.find((lang) => lang in LANGUAGES) ??
+    ((paramLang && paramLang in LANGUAGES ? paramLang : undefined) ??
+      navigator.languages.find((lang) => lang in LANGUAGES) ??
       "en") as SupportedLanguage,
     {
       serializer: String,
@@ -82,6 +92,42 @@ export default function LocalizationProvider(props: PropsWithChildren) {
         (value in LANGUAGES ? value : "en") as SupportedLanguage,
     },
   );
+
+  // const [autoNavigateLang] = useLocalStorage("autoNavigateLang", false);
+
+  const navigate = useNavigate();
+
+  const setParamLang = useCallback(
+    (lang: SupportedLanguage) => {
+      const prefix = lang == "en" ? "/" : `/${lang}/`;
+      const currentPrefix =
+        !paramLang || paramLang == "en" ? "/" : `/${paramLang}/`;
+      const path = location.pathname;
+      navigate({
+        pathname: path.replace(currentPrefix, prefix),
+        hash: location.hash,
+      });
+    },
+    [navigate, paramLang],
+  );
+
+  const setLang = useCallback(
+    (lang: SupportedLanguage) => {
+      setStoredLang(lang);
+      setParamLang(lang);
+    },
+    [setParamLang, setStoredLang],
+  );
+
+  useEffect(() => {
+    if (paramLang != storedLang) {
+      setParamLang(storedLang);
+    }
+  }, [storedLang, paramLang, setParamLang]);
+
+  const lang: SupportedLanguage = (
+    paramLang && paramLang in LANGUAGES ? paramLang : storedLang
+  ) as SupportedLanguage;
 
   const [languageData, setLanguageData] = useState<LanguageData | undefined>(
     undefined,
@@ -105,7 +151,7 @@ export default function LocalizationProvider(props: PropsWithChildren) {
 
   return (
     <LocalizationContext.Provider value={contextValue}>
-      {props.children}
+      {children}
     </LocalizationContext.Provider>
   );
 }

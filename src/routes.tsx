@@ -6,6 +6,8 @@ import {
   type RouteObject,
 } from "react-router-dom";
 import PageNotFound from "./PageNotFound";
+import LocalizationProvider from "./localization/LocalizationProvider";
+import SpoilerWarning from "./SpoilerWarning";
 
 const Home = lazy(() => import("./Home"));
 const Beastiepedia = lazy(() => import("./Beastiepedia/Beastiepedia"));
@@ -49,16 +51,21 @@ function RouteError() {
 
 const routes: Array<RouteObject> = [
   {
-    path: "/",
+    path: ":lang?/",
+    element: (
+      <LocalizationProvider>
+        <SpoilerWarning />
+      </LocalizationProvider>
+    ),
     errorElement: <RouteError />,
     children: [
       {
         element: <Home />,
-        path: "/",
+        path: "",
       },
       {
         element: <Beastiepedia />,
-        path: "/beastiepedia/",
+        path: "beastiepedia/",
       },
       {
         element: <Beastiepedia />,
@@ -66,63 +73,63 @@ const routes: Array<RouteObject> = [
       },
       {
         element: <Playdex />,
-        path: "/playdex/",
+        path: "playdex/",
       },
       {
         element: <Map />,
-        path: "/map/",
+        path: "map/",
       },
       {
         element: <Beastdle />,
-        path: "/beastdle/",
+        path: "beastdle/",
       },
 
       // OLD TEAM VIEWER REDIRECT
       {
         element: <Navigate to="/team/viewer/" />,
-        path: "/teams/",
+        path: "teams/",
       },
       {
         element: <Navigate to="/team/viewer/" />,
-        path: "/teams/viewer/",
+        path: "teams/viewer/",
       },
       {
         Component: () => <Navigate to={`/team/viewer/${useParams().code}`} />,
-        path: "/teams/:code",
+        path: "teams/:code",
       },
       {
         element: <Navigate to="/team/builder/" />,
-        path: "/teams/builder/",
+        path: "teams/builder/",
       },
 
       {
         element: <Team />,
-        path: "/team/",
+        path: "team/",
       },
       {
         element: <TeamViewer />,
-        path: "/team/viewer/:code",
+        path: "team/viewer/:code",
       },
       {
         element: <TeamViewer />,
-        path: "/team/viewer/",
+        path: "team/viewer/",
       },
       {
         element: <TeamBuilder />,
-        path: "/team/builder/",
+        path: "team/builder/",
       },
 
       {
         element: <Save />,
-        path: "/modding/save/",
+        path: "modding/save/",
       },
       {
         element: <Modding />,
-        path: "/modding/",
+        path: "modding/",
       },
       {
         element: <Test />,
-        path: "/test/",
+        path: "test/",
       },
       {
         element: <PageNotFound />,

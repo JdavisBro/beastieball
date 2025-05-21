@@ -270,7 +270,7 @@
     "name": "Self-Assured"
   },
   "nodie": {
-    "desc": "Restores instantly from [sprStatus,5]WIPED and just feels 2 [sprStatus,2]SHOOK",
+    "desc": "Restores instantly from 0 STAMINA and just feels 2 [sprStatus,2]SHOOK",
     "id": "nodie",
     "name": "Superorganism"
   },
@@ -395,17 +395,17 @@
     "name": "Spiker"
   },
   "starter_b": {
-    "desc": "[sprIcon,0]Attacks do 1.5x damage when STAMINA is below 34",
+    "desc": "[sprIcon,0]Attacks do +50% damage when STAMINA is below 34",
     "id": "starter_b",
     "name": "Power Up"
   },
   "starter_h": {
-    "desc": "[sprIcon,1]Attacks do 1.5x damage when STAMINA is below 34",
+    "desc": "[sprIcon,1]Attacks do +50% damage when STAMINA is below 34",
     "id": "starter_h",
     "name": "High Spirits"
   },
   "starter_m": {
-    "desc": "[sprIcon,2]Attacks do 1.5x damage when STAMINA is below 34",
+    "desc": "[sprIcon,2]Attacks do +50% damage when STAMINA is below 34",
     "id": "starter_m",
     "name": "Full Focus"
   },
@@ -525,7 +525,7 @@
     "name": "Moist"
   },
   "vampire": {
-    "desc": "Restores STAMINA equal to 1/4 of damage dealt",
+    "desc": "Restores STAMINA equal to 1\/4 of damage dealt",
     "id": "vampire",
     "name": "Vampire"
   },

@@ -56,6 +56,7 @@ export type BeastieType = {
   base_exp: number;
   body_color_index: number;
   face_color_index: number;
+  codename: string;
   colormeta: null | number[];
   colors: Array<{
     array: Array<{
@@ -79,6 +80,7 @@ export type BeastieType = {
   combos: Array<Array<number>>;
   desc: string;
   designer: number | number[];
+  dlc: number;
   evo_pose: Array<{
     anim: string;
     scale: number;

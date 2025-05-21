@@ -36,6 +36,7 @@
     "base_exp": 200.09,
     "bd": 83,
     "body_color_index": 0,
+    "codename": "c49afea3aa4dc321d7cdb2330c6d82ab979510af",
     "colormeta": null,
     "colors": [
       {
@@ -69,6 +70,7 @@
     ],
     "desc": "They often hunt with the help of a Gastic's illusions. Their motivation for frightening humans is not fully understood.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -255,6 +257,7 @@
     "base_exp": 124.655,
     "bd": 55,
     "body_color_index": 0,
+    "codename": "b472ac571570a36662700d9408fbaf1f079563c6",
     "colormeta": null,
     "colors": [
       {
@@ -295,6 +298,7 @@
     ],
     "desc": "There are numerous reports of coaches seeing their Beasties swooped up by Yueffowl at night, only to find them returned unharmed in the morning.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -481,6 +485,7 @@
     "base_exp": 177.276,
     "bd": 50,
     "body_color_index": 0,
+    "codename": "23ea3cd1a16916511f3e2f8dfd02451bc57b1f7d",
     "colormeta": null,
     "colors": [
       {
@@ -540,6 +545,7 @@
     ],
     "desc": "They nurture the children on their belly until they're strong enough to forage for themselves. Their pups maintain an exclusive diet of fresh fruit juice.",
     "designer": 4,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -770,6 +776,7 @@
     "base_exp": 87.006,
     "bd": 28,
     "body_color_index": 0,
+    "codename": "7c875a7d283689414a1c129f9dc44417380eb639",
     "colormeta": null,
     "colors": [
       {
@@ -809,6 +816,7 @@
     ],
     "desc": "They use all their energy to fly and are constantly foraging for sources of sugar to replenish themselves. Their overall health has been in decline in recent years.",
     "designer": 4,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -976,6 +984,7 @@
     "base_exp": 217.047,
     "bd": 111,
     "body_color_index": 0,
+    "codename": "522affbd68ba14fb39710a1823256df09c329f33",
     "colormeta": null,
     "colors": [
       {
@@ -1009,6 +1018,7 @@
     ],
     "desc": "They live at high elevations, absorbing moisture from clouds. They communicate with flashes of light from their antennae.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -1173,6 +1183,7 @@
     "base_exp": 216.91,
     "bd": 90,
     "body_color_index": 0,
+    "codename": "4559f7c5b6f454ed6b2ffc7ba436c5be34b30292",
     "colormeta": null,
     "colors": [
       {
@@ -1205,6 +1216,7 @@
     ],
     "desc": "They lack any aggression at all. Using their tail as a lure, they invite other Beasties into their burrow to offer them food.",
     "designer": 1,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -1384,6 +1396,7 @@
     "base_exp": 227.5375,
     "bd": 90,
     "body_color_index": 0,
+    "codename": "a8b666d5d0036971d804b9182b48285ff96b15b1",
     "colormeta": null,
     "colors": [
       {
@@ -1416,6 +1429,7 @@
     ],
     "desc": "Celia's Notes: They seem very capable of murder. Watch out for those tusks.",
     "designer": 11,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -1591,6 +1605,7 @@
     "base_exp": 241,
     "bd": 70,
     "body_color_index": 0,
+    "codename": "65278bca7a64fc3bc6d0660147c249891d0685e6",
     "colormeta": null,
     "colors": [
       {
@@ -1640,6 +1655,7 @@
     ],
     "desc": "A single Bandicraft will manage 20 acres of land. They construct homes and care for other Beasties in their territory.",
     "designer": [5, 3, 0, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -1836,6 +1852,7 @@
     "base_exp": 112,
     "bd": 40,
     "body_color_index": 0,
+    "codename": "eb4c7ffb554354c9b9ba751d0cab58638cde5b05",
     "colormeta": null,
     "colors": [
       {
@@ -1875,6 +1892,7 @@
     ],
     "desc": "Their busy mind is only at rest while they dig. They'll hyperfocus for days on a single burrow.",
     "designer": [5, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -2043,6 +2061,7 @@
     "base_exp": 169,
     "bd": 52,
     "body_color_index": 0,
+    "codename": "f7fcf007e532df8f16c6f6c011b8ffd2d183fc04",
     "colormeta": null,
     "colors": [
       {
@@ -2089,6 +2108,7 @@
     ],
     "desc": "Following fires, rockslides, or other natural disasters, Handicoots often appear and help out.",
     "designer": [5, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -2271,6 +2291,7 @@
     "base_exp": 212.5,
     "bd": 105,
     "body_color_index": 0,
+    "codename": "e3512e18caeed9f01365b8321dbde282717d6b51",
     "colormeta": null,
     "colors": [
       {
@@ -2311,6 +2332,7 @@
     ],
     "desc": "They have an intense daily training regimen. If they miss it for some reason, they aren't able to sleep at night.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -2480,6 +2502,7 @@
     "base_exp": 100.75,
     "bd": 65,
     "body_color_index": 1,
+    "codename": "c0a9d4e9456bc4b9700574924d98cd6c913bb3ed",
     "colormeta": null,
     "colors": [
       {
@@ -2517,6 +2540,7 @@
     ],
     "desc": "Anytime they encounter something new, they kick it. Kicking is their way of understanding the world.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -2681,6 +2705,7 @@
     "base_exp": 151,
     "bd": 85,
     "body_color_index": 0,
+    "codename": "373c084c941beabd42e24e283bcd599240156263",
     "colormeta": [2, 1, 0, 3],
     "colors": [
       {
@@ -2719,6 +2744,7 @@
     ],
     "desc": "Despite their powerful legs they insist on using their head for everything. As a result they have frequent headaches and are usually grumpy.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "bad", "scale": 2.156, "x": 80, "y": 125 },
       { "anim": "fall", "scale": 2.32315776, "x": -277, "y": 464 },
@@ -2880,6 +2906,7 @@
     "base_exp": 125.1,
     "bd": 75,
     "body_color_index": 0,
+    "codename": "f7e170d3a7ae9311326eb635dc1017bf7c26e096",
     "colormeta": null,
     "colors": [
       {
@@ -2918,6 +2945,7 @@
     ],
     "desc": "Its fluff is made of incredibly thin strands of wax, bundled like wool. If a Cherrily makes you a pom, it considers you a treasured friend.",
     "designer": [2, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -2931,7 +2959,7 @@
           {
             "conditions": [
               {
-                "effect_type": 80,
+                "effect_type": 81,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
@@ -3007,7 +3035,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 80,
+          "effect_type": 81,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3095,6 +3123,7 @@
     "base_exp": 85.41,
     "bd": 58,
     "body_color_index": 0,
+    "codename": "a21ccfe928a89668bb947c93d2377e7b72264fef",
     "colormeta": null,
     "colors": [
       {
@@ -3133,6 +3162,7 @@
     ],
     "desc": "It's extremely light and drifts with air currents. Groups of Merrifly will hold onto each other so as not to drift apart.",
     "designer": 3,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -3203,7 +3233,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 80,
+          "effect_type": 81,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3297,6 +3327,7 @@
     "base_exp": 197.325,
     "bd": 97,
     "body_color_index": 0,
+    "codename": "bc33a63ead700004d7b0d77fa8e3d4c3401abd8e",
     "colormeta": null,
     "colors": [
       {
@@ -3344,6 +3375,7 @@
     ],
     "desc": "Celia's Notes: Most of what you see is a display. The real body is hidden inside... Perhaps it's a defensive adaptation?",
     "designer": 3,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -3411,7 +3443,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 80,
+          "effect_type": 81,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3513,6 +3545,7 @@
     "base_exp": 187.892,
     "bd": 120,
     "body_color_index": 0,
+    "codename": "181f9dfcbe2a4ea287d8d124b2ae3885cbeca6d8",
     "colormeta": null,
     "colors": [
       {
@@ -3547,6 +3580,7 @@
     ],
     "desc": "Their dense internal structure is 99% made up of muscle. They can easily lift 20x their own body weight.",
     "designer": 3,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -3729,6 +3763,7 @@
     "base_exp": 169.28,
     "bd": 55,
     "body_color_index": 0,
+    "codename": "cb448635af05f5039b0c9472efa612430d2ef3f5",
     "colormeta": [0, 2, 4],
     "colors": [
       {
@@ -3762,6 +3797,7 @@
     ],
     "desc": "They have an incredible sense of balance and can juggle a ball while standing at any angle on any surface.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -3923,6 +3959,7 @@
     "base_exp": 100.97,
     "bd": 30,
     "body_color_index": 0,
+    "codename": "55494766c705ef7fc36910deec2befa0dbcc4f94",
     "colormeta": null,
     "colors": [
       {
@@ -3978,6 +4015,7 @@
     ],
     "desc": "They relentlessly practice acrobatic tricks while dangling from treetops and frequently fall. Luckily they can simply curl up and bounce to safety.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -4157,6 +4195,7 @@
     "base_exp": 178.978,
     "bd": 91,
     "body_color_index": 0,
+    "codename": "786ae349c9cd390da341ac9197f7cd8823e5c9fc",
     "colormeta": null,
     "colors": [
       {
@@ -4197,6 +4236,7 @@
     ],
     "desc": "A leg from their molted shell is kept as a cane. They perform intricate dances in unison to bond and to attract mates.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -4384,6 +4424,7 @@
     "base_exp": 169.1,
     "bd": 90,
     "body_color_index": 0,
+    "codename": "d95a9d9e4d845f2e2571db31d5e34951f2fb120b",
     "colormeta": null,
     "colors": [
       {
@@ -4424,6 +4465,7 @@
     ],
     "desc": "An ambush predator. They lie perfectly still blending in with foliage and then snap with jaws that could shred metal.",
     "designer": 7,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -4597,6 +4639,7 @@
     "base_exp": 125.8,
     "bd": 95,
     "body_color_index": 1,
+    "codename": "8bac734ff0bd3c4a1a0c1d7016a8f03a5d36c470",
     "colormeta": null,
     "colors": [
       {
@@ -4647,6 +4690,7 @@
     ],
     "desc": "Their top speed is over 100kmph. They race across the desert, then curl up into balls and cool off in any shadow they can find.",
     "designer": 3,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -4818,6 +4862,7 @@
     "base_exp": 83.3425,
     "bd": 71,
     "body_color_index": 1,
+    "codename": "42068245c9923ad154827121481784e1c7395715",
     "colormeta": null,
     "colors": [
       {
@@ -4866,6 +4911,7 @@
     ],
     "desc": "Hyper-competitive, they begin playing Beastieball at a much earlier age than other juvenile Beasties. They will race against anything that moves near them, including trains.",
     "designer": 3,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -5025,6 +5071,7 @@
     "base_exp": 141.3775,
     "bd": 50,
     "body_color_index": 0,
+    "codename": "f211e75822fb285a7af7092092eb3ea283ce1ab3",
     "colormeta": null,
     "colors": [
       {
@@ -5072,6 +5119,7 @@
     ],
     "desc": "They'll chase away perceived invaders with cacophonous sound. Their drum and screeching can be heard from 3 kilometers away.",
     "designer": 5,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -5252,6 +5300,7 @@
     "base_exp": 159.344,
     "bd": 85,
     "body_color_index": 0,
+    "codename": "58996b06ca854e96768d85cea7c32d4965b0c68c",
     "colormeta": null,
     "colors": [
       {
@@ -5319,6 +5368,7 @@
     ],
     "desc": "They easily scale cliffsides with huge leaps. They're guardians who make sure small Beasties don't go astray in the mountains.",
     "designer": 3,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -5508,6 +5558,7 @@
     "base_exp": 112.562,
     "bd": 68,
     "body_color_index": 0,
+    "codename": "03095002a7e76fa3ac7b1e65995767be9be5f73a",
     "colormeta": null,
     "colors": [
       {
@@ -5586,6 +5637,7 @@
     ],
     "desc": "They are obsessed with chasing balls. It's said that they see the moon itself as a giant Beastieball which they yearn to chase.",
     "designer": [3, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -5771,6 +5823,7 @@
     "base_exp": 103.455,
     "bd": 57,
     "body_color_index": 0,
+    "codename": "989764e0df7ade7fed47ddcac0d342041e67434e",
     "colormeta": null,
     "colors": [
       {
@@ -5818,6 +5871,7 @@
     ],
     "desc": "Their bodies are made from hard translucent chitin. Depending on the arrangement of their cells, they refract light differently and can appear as vastly different colors.",
     "designer": [5, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -6004,6 +6058,7 @@
     "base_exp": 208.868,
     "bd": 112,
     "body_color_index": 0,
+    "codename": "03e69cdeda302c067c5deaf048ac03b0495582ad",
     "colormeta": null,
     "colors": [
       {
@@ -6044,6 +6099,7 @@
     ],
     "desc": "Compressed air in their joints gives them explosive power. They can aim a Beastieball at targets 300m away.",
     "designer": 2,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -6244,6 +6300,7 @@
     "base_exp": 90.395,
     "bd": 80,
     "body_color_index": 0,
+    "codename": "0806b1e46f078880de772e0dccd984a756b70e75",
     "colormeta": null,
     "colors": [
       {
@@ -6276,6 +6333,7 @@
     ],
     "desc": "They run head-first, full speed into anything they encounter. Their exoskeleton gradually hardens from repeated impacts.",
     "designer": 2,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -6455,6 +6513,7 @@
     "base_exp": 135.845,
     "bd": 95,
     "body_color_index": 0,
+    "codename": "a37ff43502210471738e0969352670ea45bb5c47",
     "colormeta": null,
     "colors": [
       {
@@ -6495,6 +6554,7 @@
     ],
     "desc": "Their armor is as tough as steel. They settle their frequent territorial disputes with contests of strength.",
     "designer": 2,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -6677,6 +6737,7 @@
     "base_exp": 194.46,
     "bd": 85,
     "body_color_index": 0,
+    "codename": "958d477163722bb70bdd22cbd31b7aad5a99653a",
     "colormeta": [0, 2],
     "colors": [
       {
@@ -6703,6 +6764,7 @@
     ],
     "desc": "Using harvested venomous cells, they deliver a painful sting at the slightest touch. Their venom is known to cause vivid hallucination.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -6886,6 +6948,7 @@
     "base_exp": 129.885,
     "bd": 67,
     "body_color_index": 0,
+    "codename": "ebadd66b3055d5735bb8a1d4f9ffbe637a4b51aa",
     "colormeta": null,
     "colors": [
       {
@@ -6920,6 +6983,7 @@
     ],
     "desc": "Their parents swam far upriver to deposit Seakit eggs in the forest. They harvest stinging cells from Petula to mature.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -7108,6 +7172,7 @@
     "base_exp": 227.5,
     "bd": 85,
     "body_color_index": 0,
+    "codename": "998f1f79f972a240bc8c0a5f2900b7eafed68ffb",
     "colormeta": null,
     "colors": [
       {
@@ -7148,6 +7213,7 @@
     ],
     "desc": "Seldom seen, but commonly known for their haunting singing heard across lakes and rivers. In folklore their voice guides spirits to the afterlife.",
     "designer": [0, 3],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2.344, "x": 10, "y": 114 },
       { "anim": "good", "scale": 2.575584, "x": 475, "y": 691 },
@@ -7216,7 +7282,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 80,
+          "effect_type": 81,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7306,6 +7372,7 @@
     "base_exp": 102.1,
     "bd": 45,
     "body_color_index": 0,
+    "codename": "8b2129416ad718cb69eaa848214aa03a7513a5f1",
     "colormeta": null,
     "colors": [
       {
@@ -7345,6 +7412,7 @@
     ],
     "desc": "They crave attention. They can hardly spend time with their own kind because they compete for an audience.",
     "designer": [0, 3],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -7413,7 +7481,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 80,
+          "effect_type": 81,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7513,6 +7581,7 @@
     "base_exp": 154,
     "bd": 68,
     "body_color_index": 0,
+    "codename": "e1871c65cfa59ffb954920ca2075a721a3f76e24",
     "colormeta": null,
     "colors": [
       {
@@ -7553,6 +7622,7 @@
     ],
     "desc": "They are constantly, restlessly performing. If anyone around them isn't happy it only encourages them further.",
     "designer": [0, 3],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -7623,7 +7693,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 80,
+          "effect_type": 81,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7726,6 +7796,7 @@
     "base_exp": 199.1,
     "bd": 105,
     "body_color_index": 0,
+    "codename": "16920848e5e284efa05f185975beaa72ff7ee3c7",
     "colormeta": null,
     "colors": [
       {
@@ -7764,6 +7835,7 @@
     ],
     "desc": "They seem to enjoy performing for other Beasties. They conjure the most impressive displays when seducing a mate.",
     "designer": 5,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -7937,6 +8009,7 @@
     "base_exp": 91.52,
     "bd": 77,
     "body_color_index": 0,
+    "codename": "965cb6e78995dcc94726277564f5b4ddfeae96af",
     "colormeta": null,
     "colors": [
       {
@@ -7976,6 +8049,7 @@
     ],
     "desc": "They deftly manipulate gas to create a threat display. They are known for their distinctive sour smell when they're nearby.",
     "designer": 5,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -8133,6 +8207,7 @@
     "base_exp": 130.625,
     "bd": 90,
     "body_color_index": 0,
+    "codename": "ce96d2d48110d3cb9c90b293cfed8a036de5da99",
     "colormeta": null,
     "colors": [
       {
@@ -8159,6 +8234,7 @@
     ],
     "desc": "They are able to control the density of their gas to manipulate solid matter. The gas is mostly harmless to inhale.",
     "designer": 5,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -8311,6 +8387,7 @@
     "base_exp": 172.7,
     "bd": 70,
     "body_color_index": 0,
+    "codename": "f0ab4812aaf94f5fb3318a3d919825aa1c534a26",
     "colormeta": null,
     "colors": [
       {
@@ -8351,6 +8428,7 @@
     ],
     "desc": "A notorious urban pest, known for opportunistically stealing from humans. They are considered one of the smartest Beasties.",
     "designer": [6, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -8497,6 +8575,7 @@
     "base_exp": 187.2025,
     "bd": 123,
     "body_color_index": 0,
+    "codename": "04d4b740a549fd60a904de84a49287a9e8c493a2",
     "colormeta": null,
     "colors": [
       {
@@ -8544,6 +8623,7 @@
     ],
     "desc": "An ancient Beastie that has hardly changed in 400 million years. Their ability to play Beastieball both on land and deep undersea has allowed them to thrive through climate shifts.",
     "designer": 5,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -8703,6 +8783,7 @@
     "base_exp": 177.184,
     "bd": 71,
     "body_color_index": 2,
+    "codename": "d0722777142a3a504085adc7a4643aceec04c5a6",
     "colormeta": null,
     "colors": [
       {
@@ -8783,6 +8864,7 @@
     ],
     "desc": "They nest in bins and hoard garbage. They mimic one anothers' adornments in pursuit of glamor, creating trends of trash fashion.",
     "designer": [0, 3, 9],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -8987,6 +9069,7 @@
     "base_exp": 220.18,
     "bd": 90,
     "body_color_index": 0,
+    "codename": "03d91570315538175717f2271b94555c1b9c2370",
     "colormeta": null,
     "colors": [
       {
@@ -9012,6 +9095,7 @@
     ],
     "desc": "Their hive mind can be slow to make decisions, leaving them inert for long periods. Inert Orgella are frequently mistaken for fruit.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -9090,7 +9174,7 @@
           "type": 42
         }
       ],
-      "description": "WIPE OUT this Beastie"
+      "description": "Reduce this Beastie's STAMINA to 0"
     },
     "recruit_value": 12,
     "roamer_style": {
@@ -9163,6 +9247,7 @@
     "base_exp": 105.403,
     "bd": 64,
     "body_color_index": 0,
+    "codename": "ae8e5794f9df435ce934103cc6e642689039c788",
     "colormeta": null,
     "colors": [
       {
@@ -9189,6 +9274,7 @@
     ],
     "desc": "They're extraordinarily simple and underdeveloped. They swim with single-minded desire to join with other Petula.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -9360,6 +9446,7 @@
     "base_exp": 136.3045,
     "bd": 64,
     "body_color_index": 0,
+    "codename": "7ba001b637283c84c4906b2bab87814f02019bfe",
     "colormeta": null,
     "colors": [
       {
@@ -9386,6 +9473,7 @@
     ],
     "desc": "A collection of Petula working together as one. Each takes on a different function as part of the collective.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -9464,7 +9552,7 @@
           "type": 42
         }
       ],
-      "description": "WIPE OUT this Beastie"
+      "description": "Reduce this Beastie's STAMINA to 0"
     },
     "recruit_value": 12,
     "roamer_style": {
@@ -9547,6 +9635,7 @@
     "base_exp": 170.98,
     "bd": 80,
     "body_color_index": 0,
+    "codename": "adc9d357fcfd07b92337513d8a6342248ce1308c",
     "colormeta": null,
     "colors": [
       {
@@ -9594,6 +9683,7 @@
     ],
     "desc": "Even at their calmest, they communicate in piercing shrieks. The loudest Garood tends to be the leader of the flock.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -9778,6 +9868,7 @@
     "base_exp": 116.7505,
     "bd": 55,
     "body_color_index": 0,
+    "codename": "85fbd2c350d6a483ee54a9665cfcea868ce05fb6",
     "colormeta": null,
     "colors": [
       {
@@ -9820,6 +9911,7 @@
     ],
     "desc": "They are skilled at mimicry and can even learn human words. They especially favor sounds which get a rise out of others.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -9989,6 +10081,7 @@
     "base_exp": 262.5,
     "bd": 95,
     "body_color_index": 1,
+    "codename": "fb5b2a92821ba80b7cd3d6e0d04b475e8bec979e",
     "colormeta": null,
     "colors": [
       {
@@ -10039,6 +10132,7 @@
     ],
     "desc": "Their body is dense with fatty tissue storage, which constantly metabolizes into heat and steam. They migrate from arctic climates to raise Druppa near hot springs.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 3.040928, "x": 110, "y": 591 },
       { "anim": "bad", "scale": 2.632, "x": 349, "y": 783 },
@@ -10217,6 +10311,7 @@
     "base_exp": 131.775,
     "bd": 60,
     "body_color_index": 0,
+    "codename": "177a5b8cc9491a0dfcafac5974ae83176dfb1c2a",
     "colormeta": null,
     "colors": [
       {
@@ -10259,6 +10354,7 @@
     ],
     "desc": "Despite their intensely high body temperature, they constantly seek heat sources as though they were cold. Take care when handling them directly.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -10416,6 +10512,7 @@
     "base_exp": 131.3195,
     "bd": 44,
     "body_color_index": 1,
+    "codename": "7bc9c7277ae8268fc0ce13755ad2d93aa5e22afb",
     "colormeta": null,
     "colors": [
       {
@@ -10462,6 +10559,7 @@
     ],
     "desc": "They protect forests from fire by raking soil to encourage plant decomposition. When fires do break out, they attentively manage them.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -10655,6 +10753,7 @@
     "base_exp": 69.509,
     "bd": 20,
     "body_color_index": 1,
+    "codename": "f7a4ae52eb8438916b67a10df422625f0832ef61",
     "colormeta": null,
     "colors": [
       {
@@ -10693,6 +10792,7 @@
     ],
     "desc": "They are constantly in motion. Their colorful plumage is a point of pride and they sometimes accessorize it with flower petals.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -10882,6 +10982,7 @@
     "base_exp": 149.96,
     "bd": 50,
     "body_color_index": 0,
+    "codename": "2cd83ae3c5ea43667a68a486e0037deaf9976397",
     "colormeta": null,
     "colors": [
       {
@@ -10931,6 +11032,7 @@
     ],
     "desc": "They receive gifts from one another on their pikes. A heavily laden Magpike is a popular one.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -11131,6 +11233,7 @@
     "base_exp": 76.544,
     "bd": 29,
     "body_color_index": 0,
+    "codename": "9fa15ae932b1b4ab0b7f2209cd98113dc7291fe2",
     "colormeta": null,
     "colors": [
       {
@@ -11161,6 +11264,7 @@
     ],
     "desc": "They identify themselves through song. Tight cliques will often form around a common melody.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -11329,6 +11433,7 @@
     "base_exp": 188.6,
     "bd": 83,
     "body_color_index": 0,
+    "codename": "38939d036893910c18fe516e6353887c911818b9",
     "colormeta": null,
     "colors": [
       {
@@ -11368,6 +11473,7 @@
     ],
     "desc": "Celia's Notes: Their scream is tremendous! In prehistoric times it might have been for warning, or mating, or both.",
     "designer": 5,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -11526,6 +11632,7 @@
     "base_exp": 196.86,
     "bd": 80,
     "body_color_index": 0,
+    "codename": "1aabe8af8e0bf7650d72634cd35db800c2cf346d",
     "colormeta": null,
     "colors": [
       {
@@ -11567,6 +11674,7 @@
     ],
     "desc": "They'll stand perfectly still in plain sight, mimicking a tree. When prey least suspects it, they strike with blinding speed.",
     "designer": [0, 1, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -11733,6 +11841,7 @@
     "base_exp": 189.42,
     "bd": 78,
     "body_color_index": 1,
+    "codename": "34cc0a73655bb0d717cdac8ffcd2e72987841764",
     "colormeta": null,
     "colors": [
       {
@@ -11765,6 +11874,7 @@
     ],
     "desc": "They swing their armored head at high velocities to break through rock. The tunnels they create often become homes for other cave-dwellers.",
     "designer": [4, 0],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -11934,6 +12044,7 @@
     "base_exp": 131.3025,
     "bd": 64,
     "body_color_index": 1,
+    "codename": "d640ce59ea116867e82d73185bd4037ea02ebc27",
     "colormeta": null,
     "colors": [
       {
@@ -11965,6 +12076,7 @@
     ],
     "desc": "They are diligent excavators. They are often at work clearing away debris left over from Demolipede activity.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -12133,6 +12245,7 @@
     "base_exp": 194.93,
     "bd": 105,
     "body_color_index": 1,
+    "codename": "902385d727519c5b331293408f371a3bffe084fc",
     "colormeta": null,
     "colors": [
       {
@@ -12182,6 +12295,7 @@
     ],
     "desc": "They exhibit complex social behavior and mediate disputes between other Beasties. Brighter-chested Grazadas tend to be leaders.",
     "designer": 5,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -12365,6 +12479,7 @@
     "base_exp": 147.58,
     "bd": 30,
     "body_color_index": 0,
+    "codename": "26ef8b89a0c6acc44f7b4193f42bf67947a4577e",
     "colormeta": [1, 2, 0, -1, 3],
     "colors": [
       {
@@ -12405,6 +12520,7 @@
     ],
     "desc": "They can manipulate emotions with potent pheromones. Anyone who touches their mask, made from all the material they collected as a pupa, will face their wrath.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -12583,6 +12699,7 @@
     "base_exp": 68.62,
     "bd": 20,
     "body_color_index": 0,
+    "codename": "ea16a3bdbe5b836cb432779b8391c127f999f96e",
     "colormeta": null,
     "colors": [
       {
@@ -12613,6 +12730,7 @@
     ],
     "desc": "Their spines naturally collect plant detritus as they move about, building up their protective coat.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -12783,6 +12901,7 @@
     "base_exp": 117.97,
     "bd": 85,
     "body_color_index": 0,
+    "codename": "93f78b5e08535691b4ec82ef677ab3ebc92fa8e8",
     "colormeta": [4, 0, 1],
     "colors": [
       {
@@ -12827,6 +12946,7 @@
     ],
     "desc": "This Beastie hides in its cocoon and pilots a constructed decoy. They build masks and experiment with personas they might grow into.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -12996,6 +13116,7 @@
     "base_exp": 159.856,
     "bd": 86,
     "body_color_index": 0,
+    "codename": "675de3a7e68ca03c552cec834a425c37dfc251e5",
     "colormeta": null,
     "colors": [
       {
@@ -13036,6 +13157,7 @@
     ],
     "desc": "They can keep cool and moist in any environment. They're known for their relaxed demeanor, but they'll dance provocatively for any romantic interest.",
     "designer": 1,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -13191,6 +13313,7 @@
     "base_exp": 198.806,
     "bd": 79,
     "body_color_index": 0,
+    "codename": "62eed583583f6f553064412fb68f6faf6aedee00",
     "colormeta": null,
     "colors": [
       {
@@ -13231,6 +13354,7 @@
     ],
     "desc": "They're attracted to the hum of computers. It's every network engineer's nightmare to flick the lights on in the server room, only to find a Debugly.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -13397,6 +13521,7 @@
     "base_exp": 119.3585,
     "bd": 43,
     "body_color_index": 0,
+    "codename": "1035ff894ce8084486cdabdfe3f82d3502a2de0b",
     "colormeta": null,
     "colors": [
       {
@@ -13430,6 +13555,7 @@
     ],
     "desc": "They make their home in office desks where they can readily access their favorite food: paper. Math homework is especially enticing for them.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -13592,6 +13718,7 @@
     "base_exp": 198.806,
     "bd": 50,
     "body_color_index": 0,
+    "codename": "392b4e6f79ece42e82b09a8960fd3c4aed4412a6",
     "colormeta": null,
     "colors": [
       {
@@ -13626,6 +13753,7 @@
     ],
     "desc": "The existence of this Beastie was long disputed. They only become fully visible to those they trust deeply.",
     "designer": [3, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -13801,6 +13929,7 @@
     "base_exp": 227.0625,
     "bd": 55,
     "body_color_index": 0,
+    "codename": "c6d8f82bd48fab8d64d834415ff4d11a95d469b0",
     "colormeta": null,
     "colors": [
       {
@@ -13834,6 +13963,7 @@
     ],
     "desc": "They have incredible regenerative abilities. Many folk tales about sea monsters were most likely inspired by Hydrolm.",
     "designer": 3,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -14001,6 +14131,7 @@
     "base_exp": 139.65,
     "bd": 40,
     "body_color_index": 0,
+    "codename": "b4ad1c699138dbed98db10605b6006ca269b8bd7",
     "colormeta": null,
     "colors": [
       {
@@ -14020,6 +14151,7 @@
     ],
     "desc": "Their heart beats only twice per minute. Their \"eyes\" are fake; in fact, they are blind. They live in dark, wet places and are active only when playing Beastieball.",
     "designer": [3],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -14179,6 +14311,7 @@
     "base_exp": 192.5,
     "bd": 90,
     "body_color_index": 0,
+    "codename": "0278e35fda7798cdcefbfd0e6683d7aa22a1721d",
     "colormeta": null,
     "colors": [
       {
@@ -14235,6 +14368,7 @@
     ],
     "desc": "Although infamous for picking fights, they keep troublesome Beasties like Gremlur in check. If they lose at sports they will avoid shame by pretending they've died.",
     "designer": [12],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -14411,6 +14545,7 @@
     "base_exp": 236.5925,
     "bd": 81,
     "body_color_index": 0,
+    "codename": "8e1ef3ab2d1089fc6afb75640b696b78d61ad4cf",
     "colormeta": null,
     "colors": [
       {
@@ -14445,6 +14580,7 @@
     ],
     "desc": "Celia's Notes: Their spines somehow store electricity. It's conducted through their teeth when they bite into something.",
     "designer": 4,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -14513,7 +14649,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 80,
+          "effect_type": 81,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -14606,6 +14742,7 @@
     "base_exp": 95.243,
     "bd": 56,
     "body_color_index": 0,
+    "codename": "73a7560970a6a9af9581cb1553aa5206e98d07ab",
     "colormeta": null,
     "colors": [
       {
@@ -14639,6 +14776,7 @@
     ],
     "desc": "They use their bill to detect electrical fields. They heavily rely on this sense while the rest of their body develops.",
     "designer": [3, 4],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -14707,7 +14845,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 80,
+          "effect_type": 81,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -14795,6 +14933,7 @@
     "base_exp": 187.658,
     "bd": 38,
     "body_color_index": 0,
+    "codename": "d5533232f5c86b848475fc6afd00f4e9ba9550b8",
     "colormeta": null,
     "colors": [
       {
@@ -14835,6 +14974,7 @@
     ],
     "desc": "They have honed their electroreceptive sensitivity, allowing them to foresee the movements of other Beasties.",
     "designer": [8, 4, 3],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -14941,7 +15081,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 80,
+          "effect_type": 81,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15039,6 +15179,7 @@
     "base_exp": 198.85,
     "bd": 120,
     "body_color_index": 0,
+    "codename": "0374028607b99227ad3c0b3211abbdd9d5d5d4b3",
     "colormeta": null,
     "colors": [
       {
@@ -15083,6 +15224,7 @@
     ],
     "desc": "They're fearless solo foragers who will challenge anyone. They don't seem to remember they were once tiny Shooga.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -15262,6 +15404,7 @@
     "base_exp": 81.577,
     "bd": 65,
     "body_color_index": 0,
+    "codename": "be63d9a527572067eb853da877e9c22beffac4eb",
     "colormeta": null,
     "colors": [
       {
@@ -15307,6 +15450,7 @@
     ],
     "desc": "Their semitransparent ears shield their eyes from wind as they glide. They feel safest in large groups, especially with watchful Sefren.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -15481,6 +15625,7 @@
     "base_exp": 126.1,
     "bd": 85,
     "body_color_index": 0,
+    "codename": "177e302c3cc918486048b002a7e599f507f5d248",
     "colormeta": null,
     "colors": [
       {
@@ -15530,6 +15675,7 @@
     ],
     "desc": "They can hear the footsteps of distant predators. They'll hide for as long as it takes for danger to pass.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -15712,6 +15858,7 @@
     "base_exp": 136.5,
     "bd": 30,
     "body_color_index": 0,
+    "codename": "010901cfc33899ddf3cad08f4c4f738592f54403",
     "colormeta": null,
     "colors": [
       {
@@ -15752,6 +15899,7 @@
     ],
     "desc": "Scientists still don't understand how this Beastie adapted psychokinetic abilities. Psylusc are known to influence the tides to protect their precious coral reefs.",
     "designer": 1,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -15941,6 +16089,7 @@
     "base_exp": 158.36,
     "bd": 65,
     "body_color_index": 3,
+    "codename": "4967c4f8dec9d8ab856f86189a2ef28b845b9a34",
     "colormeta": null,
     "colors": [
       {
@@ -16003,6 +16152,7 @@
     ],
     "desc": "Each one has a unique ink color. They tend to form colonies of similar color and mark their territory with vivid graffiti.",
     "designer": 4,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -16223,14 +16373,14 @@
       "juggle",
       "hdefup",
       "cook",
-      "swordsdance",
-      "mindup"
+      "swordsdance"
     ],
     "attklist_randomize": -1,
     "ba": 66,
     "base_exp": 250.6475,
     "bd": 108,
     "body_color_index": 0,
+    "codename": "60c61ef65364010d4abcb6a6b6925dfab2164253",
     "colormeta": [1, 0],
     "colors": [
       {
@@ -16262,6 +16412,7 @@
     ],
     "desc": "Celia's Notes: Their bioluminescent body likely helps them navigate the deep sea and hypnotize prey. However, at lower pressures, they liquify.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -16436,6 +16587,7 @@
     "base_exp": 131.781,
     "bd": 49,
     "body_color_index": 3,
+    "codename": "cf35f82b9343c28b47293187af550ba686d51469",
     "colormeta": null,
     "colors": [
       {
@@ -16499,6 +16651,7 @@
     ],
     "desc": "They are often found in dumpsters. When they outgrow their can, Trats will gather with many others to exchange for larger cans.",
     "designer": 1,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -16699,6 +16852,7 @@
     "base_exp": 201.144,
     "bd": 125,
     "body_color_index": 0,
+    "codename": "424aa2e7137d841b3b44538339f154e85e8cf696",
     "colormeta": null,
     "colors": [
       {
@@ -16741,6 +16895,7 @@
     ],
     "desc": "Their tail carries most of their weight. They bludgeon would-be predators into a stupor before making their escape.",
     "designer": 5,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -16810,7 +16965,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 80,
+          "effect_type": 81,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -16910,6 +17065,7 @@
     "base_exp": 91.29,
     "bd": 85,
     "body_color_index": 0,
+    "codename": "f3d03f3e236a6ea6d9f3369979be6269fd66b175",
     "colormeta": null,
     "colors": [
       {
@@ -16950,6 +17106,7 @@
     ],
     "desc": "They enjoy basking in the sun, but this leaves them vulnerable. They stick out their tongue to intimidate predators.",
     "designer": 5,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -17019,7 +17176,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 80,
+          "effect_type": 81,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17113,6 +17270,7 @@
     "base_exp": 130.764,
     "bd": 95,
     "body_color_index": 0,
+    "codename": "001f9b0456360e3aff5c66947cd40affd37cd9ee",
     "colormeta": null,
     "colors": [
       {
@@ -17154,6 +17312,7 @@
     ],
     "desc": "Their decoy tail draws predators' attention away from their head. In a pinch, they'll drop their tail and quickly grow a new one.",
     "designer": 5,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -17223,7 +17382,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 80,
+          "effect_type": 81,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17315,6 +17474,7 @@
     "base_exp": 160.94,
     "bd": 98,
     "body_color_index": 0,
+    "codename": "bb4ca226b730fb10ac6ad839f3098293e7eacf87",
     "colormeta": [0, 2, 1, 3, 4],
     "colors": [
       {
@@ -17369,6 +17529,7 @@
     ],
     "desc": "Known to travel vast distances and through any weather, they can stay airborne for a week without rest and then float on the water's surface.",
     "designer": 5,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -17544,6 +17705,7 @@
     "base_exp": 96.512,
     "bd": 75,
     "body_color_index": 0,
+    "codename": "f87969b85893a425d73e37129495638c73657657",
     "colormeta": null,
     "colors": [
       {
@@ -17589,6 +17751,7 @@
     ],
     "desc": "Juveniles will float on the ocean with their mouth open skyward awaiting food from their parents. Their brightly-colored neck pouch makes them visible from afar.",
     "designer": 5,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -17759,6 +17922,7 @@
     "base_exp": 179.99,
     "bd": 93,
     "body_color_index": 0,
+    "codename": "0d3ffca62ec18534b871bdbd1fbb066da09d5869",
     "colormeta": null,
     "colors": [
       {
@@ -17797,6 +17961,7 @@
     ],
     "desc": "They comb their hair with a special wax produced in their flippers. This keeps them incredibly smooth and able to glide over any surface.",
     "designer": [3, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -17968,6 +18133,7 @@
     "base_exp": 130.94375,
     "bd": 78,
     "body_color_index": 0,
+    "codename": "2b5cd0b9a7f42eb608186f072dbbcb66a7e74cab",
     "colormeta": null,
     "colors": [
       {
@@ -18004,6 +18170,7 @@
     ],
     "desc": "Their incredibly dense hair keeps them well insulated even in cold ocean waters. Their actual body is quite small.",
     "designer": [3, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -18101,7 +18268,7 @@
       "render_guard_radius": false,
       "seeking_interact": false
     },
-    "roguelvl": 1,
+    "roguelvl": 2,
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -18172,6 +18339,7 @@
     "base_exp": 124.64,
     "bd": 64,
     "body_color_index": 0,
+    "codename": "6c4a4aee38f6215ab225151f0d811a7e9c09dd42",
     "colormeta": null,
     "colors": [
       {
@@ -18211,6 +18379,7 @@
     ],
     "desc": "They leap high enough to snatch birds straight out of the sky. They'll leave claw marks on high places as a form of competition.",
     "designer": 3,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -18390,6 +18559,7 @@
     "base_exp": 74.84,
     "bd": 38,
     "body_color_index": 0,
+    "codename": "766f734f6959dc9fc54fa7a2d3a020928c7e26b9",
     "colormeta": null,
     "colors": [
       {
@@ -18428,6 +18598,7 @@
     ],
     "desc": "When on the hunt, they'll often allow prey to escape so that they can continue the chase and practice their pounce more.",
     "designer": 3,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -18589,6 +18760,7 @@
     "base_exp": 193.8,
     "bd": 55,
     "body_color_index": 0,
+    "codename": "97ae657bc99d02799e8f0ccd6e7b08e2feafb199",
     "colormeta": null,
     "colors": [
       {
@@ -18621,6 +18793,7 @@
     ],
     "desc": "They can swing their whip-like tail incredibly fast. Underwater, it creates shockwaves that stuns prey senseless.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -18790,6 +18963,7 @@
     "base_exp": 123.42,
     "bd": 40,
     "body_color_index": 0,
+    "codename": "a95d5910c3a37f05e0617985726b4a0a458832de",
     "colormeta": null,
     "colors": [
       {
@@ -18815,6 +18989,7 @@
     ],
     "desc": "Their tail communicates everything. Rather than fight, Waglash compete by making the biggest splashes they can with their tail.",
     "designer": 8,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -18914,7 +19089,7 @@
       "render_guard_radius": false,
       "seeking_interact": false
     },
-    "roguelvl": 1,
+    "roguelvl": 2,
     "scale": [0.85, 1],
     "shiny": [
       {
@@ -18976,6 +19151,7 @@
     "base_exp": 117.4,
     "bd": 50,
     "body_color_index": 0,
+    "codename": "f4388e02b4aa4cfbad8c85fb5f8ac9a5b2f58949",
     "colormeta": null,
     "colors": [
       {
@@ -19017,6 +19193,7 @@
     ],
     "desc": "Its body is covered in microscopic fungal feelers, making it feel sticky. They tend to all varieties of plant life.",
     "designer": 1,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -19203,6 +19380,7 @@
     "base_exp": 199,
     "bd": 110,
     "body_color_index": 0,
+    "codename": "7370f081218636db144c2f89792f770a9222c5fe",
     "colormeta": [0, 1, 3],
     "colors": [
       {
@@ -19254,6 +19432,7 @@
     ],
     "desc": "The vibration of their belly drum promotes the growth of plants. Their habitats are always lush and overgrown.",
     "designer": 1,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -19461,6 +19640,7 @@
     "base_exp": 187,
     "bd": 75,
     "body_color_index": 0,
+    "codename": "ea61e001f87b03e3b00430b1636bc045fadc954f",
     "colormeta": [0, 1, 3],
     "colors": [
       {
@@ -19503,6 +19683,7 @@
     ],
     "desc": "Though eerily quiet, they are constantly sending and receiving signals with nearby mycelia. As a result they have uncanny environmental awareness.",
     "designer": 1,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -19707,6 +19888,7 @@
     "base_exp": 157,
     "bd": 40,
     "body_color_index": 0,
+    "codename": "d32ed59922c5ca896d712861e9689b2033459251",
     "colormeta": [0, 1, 3],
     "colors": [
       {
@@ -19749,6 +19931,7 @@
     ],
     "desc": "This Beastie can lie in serenity for days, then suddenly fly into action. They are deeply attuned to the feelings of other Beasties.",
     "designer": 1,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -19969,6 +20152,7 @@
     "base_exp": 242.5,
     "bd": 90,
     "body_color_index": 0,
+    "codename": "5bd135c1b6584fdc9ea0a2ea9c40cc07e2efd9fc",
     "colormeta": null,
     "colors": [
       {
@@ -20011,6 +20195,7 @@
     ],
     "desc": "Celia's Notes: Their growths are proto-Beastieballs. This might be the missing link between fungi and Beastie!",
     "designer": [1, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -20183,6 +20368,7 @@
     "base_exp": 209.736,
     "bd": 55,
     "body_color_index": 0,
+    "codename": "b52c84dac6d5ab2db7c2a9d98f2a6ccda555c392",
     "colormeta": null,
     "colors": [
       {
@@ -20228,6 +20414,7 @@
     ],
     "desc": "Chloroplasts from the plants they eat are absorbed and stored in their tails. This provides them camouflage as well as photosynthetic energy.",
     "designer": 1,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -20296,7 +20483,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 80,
+          "effect_type": 81,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -20385,6 +20572,7 @@
     "base_exp": 166.088,
     "bd": 70,
     "body_color_index": 0,
+    "codename": "d5c9dacef3f7d48514c67fd80fe55486a8cc0e07",
     "colormeta": null,
     "colors": [
       {
@@ -20425,6 +20613,7 @@
     ],
     "desc": "They remove lightbulbs and take their place, feeding on the power supply. The bioluminescent fibres in their head glow brighter when they're well fed. ",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -20595,6 +20784,7 @@
     "base_exp": 220,
     "bd": 110,
     "body_color_index": 0,
+    "codename": "5294a23e6f07094e3368e4b604de8b558efd811c",
     "colormeta": null,
     "colors": [
       {
@@ -20628,6 +20818,7 @@
     ],
     "desc": "Their smaller wings help them conserve heat but became useless for flying. They're carnivores, and in extreme cases, will devour other Beasties.",
     "designer": 3,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -20817,6 +21008,7 @@
     "base_exp": 208.75,
     "bd": 45,
     "body_color_index": 2,
+    "codename": "675b03bab41e32edeb779a4c75612d8cfb35fd90",
     "colormeta": null,
     "colors": [
       {
@@ -20850,6 +21042,7 @@
     ],
     "desc": "A superpollinator often found in lush flower fields. They will viciously hunt down any creature which endangers their flowers.",
     "designer": 3,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -21030,6 +21223,7 @@
     "base_exp": 116.5,
     "bd": 40,
     "body_color_index": 1,
+    "codename": "69cdd540dd4e626ef80c29b823d02bfa21796bc7",
     "colormeta": null,
     "colors": [
       {
@@ -21084,6 +21278,7 @@
     ],
     "desc": "They fly tirelessly through any condition to find flowers to feed on. Seeing one is considered a lucky charm.",
     "designer": 3,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -21273,6 +21468,7 @@
     "base_exp": 143.778,
     "bd": 62,
     "body_color_index": 0,
+    "codename": "2f00f2ebe0c588acb3fb5d339c6e549214ff1f8e",
     "colormeta": null,
     "colors": [
       {
@@ -21320,6 +21516,7 @@
     ],
     "desc": "The fastest known flier of all. They use echolocation to rapidly navigate narrow cave systems.",
     "designer": 5,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -21499,6 +21696,7 @@
     "base_exp": 170.28,
     "bd": 60,
     "body_color_index": 0,
+    "codename": "c28a7a2a2663e4dff2a685b5053ce218c1103c69",
     "colormeta": null,
     "colors": [
       {
@@ -21560,6 +21758,7 @@
     ],
     "desc": "This pair is inseparable. Despite their highly developed sociability, they often remain solitary, perfectly satisfied with their own company.",
     "designer": 4,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -21633,7 +21832,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": [0, 1],
-          "type": 42
+          "type": 46
         }
       ],
       "description": "WIPE OUT a Beastie with a SIDEWAYS attack"
@@ -21750,6 +21949,7 @@
     "base_exp": 98.406,
     "bd": 30,
     "body_color_index": 0,
+    "codename": "49a28d5c276a97f03a19ac06b75a5181f4866e5d",
     "colormeta": null,
     "colors": [
       {
@@ -21811,6 +22011,7 @@
     ],
     "desc": "Their life cycle begins in caves, but they journey to the forest in adulthood. Each one selects a companion rock who they talk to as though it were alive.",
     "designer": [4, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -21884,7 +22085,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": [0, 1],
-          "type": 42
+          "type": 46
         }
       ],
       "description": "WIPE OUT a Beastie with a SIDEWAYS attack"
@@ -22006,6 +22207,7 @@
     "base_exp": 200.99,
     "bd": 95,
     "body_color_index": 0,
+    "codename": "9303bd2961578a07205652bc1dee12618e033269",
     "colormeta": null,
     "colors": [
       {
@@ -22055,6 +22257,7 @@
     ],
     "desc": "Their large shells become mini-ecosystems supporting barnacles and sponges. Crews of Turogue will make their home there too.",
     "designer": [2, 8],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -22253,6 +22456,7 @@
     "base_exp": 96.758,
     "bd": 63,
     "body_color_index": 0,
+    "codename": "b8bcb62fc1b42e7e0a4a2d932c347e0007520c96",
     "colormeta": null,
     "colors": [
       {
@@ -22287,6 +22491,7 @@
     ],
     "desc": "A group of Turogue is called a \"crew.\" When they're together they will turn anything into a competition.",
     "designer": 2,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -22448,6 +22653,7 @@
     "base_exp": 139.9355,
     "bd": 80,
     "body_color_index": 0,
+    "codename": "8f1289e8e4ee9b8375f3dea733d1e252190e29b2",
     "colormeta": null,
     "colors": [
       {
@@ -22496,6 +22702,7 @@
     ],
     "desc": "They aren't great swimmers, but their bouyant shell keeps them afloat when they're in the water.",
     "designer": [2, 9],
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -22678,6 +22885,7 @@
     "base_exp": 208.436,
     "bd": 110,
     "body_color_index": 0,
+    "codename": "76094c8489b53ada7b57d4d0a44e028a5f949ba1",
     "colormeta": null,
     "colors": [
       {
@@ -22725,6 +22933,7 @@
     ],
     "desc": "Their feathers are exceptionally tough and lustrous. When they're loosed by ball impacts it makes Conjarr appear to sparkle.",
     "designer": 1,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -22892,6 +23101,7 @@
     "base_exp": 240.355,
     "bd": 85,
     "body_color_index": 0,
+    "codename": "cf021b568fa47678b206619bfe9eba54e32d0702",
     "colormeta": null,
     "colors": [
       {
@@ -22946,6 +23156,7 @@
     ],
     "desc": "Once thought to be solitary creatures. It was discovered they communicate with one another across mountain peaks with reflected light from their horn ice.",
     "designer": 0,
+    "dlc": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },

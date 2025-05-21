@@ -43,12 +43,17 @@ function localize(
   key: string,
   placeholders?: Record<string, string>,
 ) {
+  let placeholders_exist = true;
   if (!placeholders) {
+    placeholders_exist = false;
     placeholders = {};
   }
   if (key[0] == KEY_QUOTE) {
     const keyArr = key.slice(1, key.length - 1).split(KEY_SEP);
     key = keyArr[0];
+    if (keyArr.length > 1) {
+      placeholders_exist = true;
+    }
     for (let i = 1; i < keyArr.length; i += 2) {
       placeholders[keyArr[i]] = keyArr[i + 1].replace(/¦.+?¦/g, (match) =>
         localize(languageData, match),
@@ -56,10 +61,14 @@ function localize(
     }
   }
 
-  return (key in languageData ? languageData[key] : key).replace(
-    /\{(.+?)\}/g,
-    (match, g1) => placeholders[g1] ?? match,
-  );
+  return placeholders_exist
+    ? (key in languageData ? languageData[key] : key).replace(
+        /\{(.+?)\}/g,
+        (match, g1) => placeholders[g1] ?? match,
+      )
+    : key in languageData
+      ? languageData[key]
+      : key;
 }
 
 export default function LocalizationProvider(props: PropsWithChildren) {
@@ -73,7 +82,6 @@ export default function LocalizationProvider(props: PropsWithChildren) {
         (value in LANGUAGES ? value : "en") as SupportedLanguage,
     },
   );
-  console.log(lang, localStorage.getItem("language"));
 
   const [languageData, setLanguageData] = useState<LanguageData | undefined>(
     undefined,

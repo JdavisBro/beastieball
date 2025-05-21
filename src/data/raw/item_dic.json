@@ -80,14 +80,14 @@
     "value": 25.0
   },
   "icecream": {
-    "desc": "Restores a Beastie's STAMINA by 50% and improves their mood",
-    "eff": [0, 1.0, 0.5, 12, 1.0, -20.0],
+    "desc": "Restores a Beastie's STAMINA by 20% and improves their mood",
+    "eff": [0, 1.0, 0.20000000000000001, 12, 1.0, -20.0],
     "id": "icecream",
     "img": 41.0,
     "name": "Ice Cream",
     "points": 1.0,
     "type": 0,
-    "value": 25.0
+    "value": 8.0
   },
   "jersey": {
     "desc": "Recruit a Beastie that's level 10 or under. Woven from special mycelium.",

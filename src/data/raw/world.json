@@ -641,6 +641,38 @@
       "x": -37753,
       "y": -10498,
       "zoom_view": true
+    },
+    {
+      "_": "class_mapicon",
+      "conditional": {
+        "_": "class_datacheck",
+        "key": "region_discovered_desert",
+        "value": 1
+      },
+      "from_level": "hometown",
+      "has_conditional": true,
+      "superheader": true,
+      "text": "The Far Out",
+      "world_x": -70107,
+      "world_y": -8507,
+      "x": -70107,
+      "y": -8507
+    },
+    {
+      "_": "class_mapicon",
+      "conditional": {
+        "_": "class_datacheck",
+        "key": "region_discovered_desert",
+        "value": 1
+      },
+      "from_level": "deser_s",
+      "has_conditional": true,
+      "header": true,
+      "text": "Caraway Desert",
+      "world_x": -70146,
+      "world_y": -10002,
+      "x": -70146,
+      "y": -10002
     }
   ],
   "level_quadtree_size": 500,
@@ -9736,9 +9768,10 @@
     "city_market:objNaveen": { "x": -48669, "y": -17666 },
     "city_market:objStreamer": { "x": -48010, "y": -20089 },
     "city_market:objZipstation": { "x": -48010, "y": -20097 },
-    "city_neighborhood:objBallcenter": { "x": -10010, "y": -14974 },
+    "city_neighborhood:objBallcenter": { "x": -10029, "y": -14974 },
     "city_neighborhood:objGymdoor": { "x": -8792, "y": -17746 },
-    "city_rail_east_0": { "x": -28764, "y": -11372 },
+    "city_neighborhood:objWarrior": { "x": 0, "y": 0 },
+    "city_rail_east_0": { "x": -28927, "y": -13044 },
     "city_seacave_0": { "x": -35278, "y": -1316 },
     "city_trainyard_0": { "x": -35338, "y": -10239 },
     "cityhill_1": { "x": -14756, "y": -18886 },
@@ -9835,6 +9868,8 @@
     "sunken_stadium:objGameplay": { "x": -20229, "y": 41184 },
     "sunken_stadium:objResearcher": { "x": -21670, "y": 39049 },
     "tiny_island:objCycle": { "x": -10538, "y": 30958 },
+    "wetland1_0": { "x": -64339, "y": 1083 },
+    "wetland1_2": { "x": -67997, "y": 1470 },
     "wood_cave1_0": { "x": -34403, "y": -24369 },
     "wood_cave2_1": { "x": -33193, "y": -22314 },
     "wood_east_rail_1": { "x": -17155, "y": -30799 },
@@ -9861,7 +9896,7 @@
     ],
     "default": [11724372, 4521119, 5542911, 6835447, 8755724, 6938420, 0],
     "desert": [
-      5596142, 7015671, 6444141, 5538515, 6930631, 7909543, 13368099, 13433523,
+      5596142, 7015671, 5538515, 6444141, 6930631, 7909543, 13368099, 13433523,
       12710142, 11593723
     ],
     "desert_night": [

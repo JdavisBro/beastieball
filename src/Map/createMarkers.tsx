@@ -19,6 +19,10 @@ function getKey(icon: MapIcon) {
   );
 }
 
+const CONDITIONAL_CHECK: Record<string, number> = {
+  region_discovered_mtn: 1,
+};
+
 export function createMarkers() {
   const bigtitleheaders: React.ReactElement[] = [];
   const titleheaders: React.ReactElement[] = [];
@@ -67,6 +71,13 @@ export function createMarkers() {
     } else {
       if (value.from_object == "objHiddenObject") {
         return;
+      }
+      if (value.has_conditional && value.conditional) {
+        if (
+          CONDITIONAL_CHECK[value.conditional.key] != value.conditional.value
+        ) {
+          return;
+        }
       }
       containerclass =
         value.superheader == 1 ? styles.bigtextmarker : styles.textmarker;

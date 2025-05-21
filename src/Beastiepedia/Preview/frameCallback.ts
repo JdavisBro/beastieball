@@ -74,7 +74,9 @@ export function setupFrameCallback(
       animState.frameTime >
       animState.frameLength / animState.userSpeed
     ) {
-      animState.frameTime = animState.frameTime % (animState.frameLength || 1);
+      animState.frameTime =
+        animState.frameTime %
+        (animState.frameLength / animState.userSpeed || 1);
       animState.frame += reverse ? -1 : 1;
       if (reverse ? animState.frame < endFrame : animState.frame > endFrame) {
         const transitions = animState.state.transitions;

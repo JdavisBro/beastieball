@@ -525,7 +525,7 @@
     "name": "Moist"
   },
   "vampire": {
-    "desc": "Restores STAMINA equal to 1\/4 of damage dealt",
+    "desc": "Restores STAMINA equal to 1/4 of damage dealt",
     "id": "vampire",
     "name": "Vampire"
   },

@@ -12,9 +12,6 @@ PREVIEW_SIZE = (600, 300)
 
 RESEARCH_DATA = Path("../src/data/raw/research_data.json")
 
-def read_byte(f, count=1):
-    return struct.unpack("B"*count, f.read(count))
-
 def read_short(f):
     return struct.unpack("H", f.read(2))[0]
 

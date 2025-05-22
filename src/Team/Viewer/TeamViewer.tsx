@@ -100,9 +100,6 @@ export default function Viewer() {
           });
         } else {
           setError(true);
-          if (team?.code != code) {
-            setTeam(null);
-          }
         }
       })
       .catch((error) => {
@@ -200,7 +197,7 @@ export default function Viewer() {
         <BeastieRenderProvider>
           <div className={styles.team}>
             <MoveModalProvider>
-              {team
+              {code && team && (team.code == code || !error)
                 ? team.team.map((beastie) => (
                     <Beastie
                       key={beastie.pid}

@@ -104,7 +104,7 @@ export default function EditBeastie({
                 "xp",
                 (beastie.xp / beastiedata.growth) * newBeastie.growth,
               );
-              if (beastie.name == beastiedata.name) {
+              if (beastie.name == L(beastiedata.name)) {
                 changeValue("name", newBeastie.name);
               }
               changeValue(

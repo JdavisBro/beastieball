@@ -13,16 +13,19 @@ import useScreenOrientation from "../../utils/useScreenOrientation";
 import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider";
 import SavedTeams from "./SavedTeams";
 import TeamImageButton from "../TeamImageButton";
+import useLocalization, {
+  LocalizationFunction,
+} from "../../localization/useLocalization";
 
 const BEASTIE_KEYS = Object.keys(createBeastie("01"));
 
-function createTeam() {
+function createTeam(L: LocalizationFunction) {
   return [
-    createBeastie("01"),
-    createBeastie("02"),
-    createBeastie("03"),
-    createBeastie("04"),
-    createBeastie("05"),
+    createBeastie("01", L),
+    createBeastie("02", L),
+    createBeastie("03", L),
+    createBeastie("04", L),
+    createBeastie("05", L),
   ];
 }
 
@@ -34,8 +37,11 @@ type TeamHook = [
 
 const emptyTeamArr = [...new Array(5).keys()];
 
-function ensureFullTeam([team, setTeam, removeTeam]: TeamHook): TeamHook {
-  const newTeam = createTeam();
+function ensureFullTeam(
+  [team, setTeam, removeTeam]: TeamHook,
+  L: LocalizationFunction,
+): TeamHook {
+  const newTeam = createTeam(L);
   return [
     emptyTeamArr.map((index) => team[index] ?? newTeam[index]),
     setTeam,
@@ -58,8 +64,11 @@ function verifyTeamJson(json: unknown) {
 }
 
 export default function TeamBuilder() {
+  const { L } = useLocalization();
+
   const [team, setTeam] = ensureFullTeam(
     useLocalStorage<TeamBeastie[]>("teamBuilderTeam", []),
+    L,
   );
 
   const setBeastie = (teamIndex: number, beastie: TeamBeastie) => {
@@ -183,7 +192,7 @@ export default function TeamBuilder() {
                 >
                   Load Team JSON
                 </button>
-                <button onClick={() => setTeam(createTeam())}>
+                <button onClick={() => setTeam(createTeam(L))}>
                   Reset Team
                 </button>
               </div>

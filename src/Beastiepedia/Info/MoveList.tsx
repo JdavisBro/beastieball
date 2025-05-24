@@ -55,6 +55,8 @@ type Props = {
 };
 
 export default function MoveList(props: Props): React.ReactElement {
+  const { L } = useLocalization();
+
   const learnset = props.learnset;
 
   const url = new URL(window.location.href);
@@ -138,7 +140,7 @@ export default function MoveList(props: Props): React.ReactElement {
                 (move1, move2) =>
                   move1.type - move2.type ||
                   move2.pow - move1.pow ||
-                  move1.name.localeCompare(move2.name),
+                  L(move1.name).localeCompare(L(move2.name)),
               )
               .map((move) => (
                 <MoveText

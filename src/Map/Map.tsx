@@ -240,6 +240,7 @@ export default function Map(): React.ReactNode {
           seenBeasties,
           setSeenBeasties,
           huntedBeastie,
+          Loc,
         ),
       );
     }

@@ -86,12 +86,12 @@ export default function Beastie({
             <span className={styles.graytext}>({beastieName})</span>
           ) : null}
           <Link
-            to={`/beastiepedia/${beastiedata.name}?${searchParam}=${beastieColors.join(",")}`}
-            title={`Open ${beastiedata.name} with these colors in Beastiepedia`}
+            to={`/beastiepedia/${beastieName}?${searchParam}=${beastieColors.join(",")}`}
+            title={`Open ${beastieName} with these colors in Beastiepedia`}
           >
             <BeastieImage
               key={teamBeastie.pid + teamBeastie.specie}
-              defaultUrl={`/icons/${beastiedata.name}.png`}
+              defaultUrl={`/icons/${beastieName}.png`}
               beastie={{
                 id: beastiedata.id,
                 colors: beastieColors,

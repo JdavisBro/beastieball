@@ -354,10 +354,10 @@ export default function MoveView(props: {
     if (!found) {
       friend = undefined;
     } else {
-      learned_text = `Learned from ${friendSpoiler ? friend.name.slice(0, 2) + "..." : friend.name} at ${friend_hearts} hearts.`;
+      learned_text = `Learned from ${friendSpoiler ? L(friend.name).slice(0, 2) + "..." : L(friend.name)} at ${friend_hearts} hearts.`;
     }
   }
-  if (props.friendFilter && (!friend || friend.name != props.friendFilter)) {
+  if (props.friendFilter && (!friend || friend.id != props.friendFilter)) {
     return null;
   }
 

@@ -6,6 +6,7 @@ import { SpawnGroup } from "../data/SpawnData";
 import { SpoilerMode } from "../shared/useSpoiler";
 import BEASTIE_DATA from "../data/BeastieData";
 import styles from "./Map.module.css";
+import { LocalizationFunction } from "../localization/useLocalization";
 
 export default function createBeastieBox(
   group: SpawnGroup,
@@ -19,6 +20,7 @@ export default function createBeastieBox(
     React.SetStateAction<Record<string, boolean>>
   >,
   huntedBeastie: string | undefined,
+  L: LocalizationFunction,
 ) {
   const overall_percent: {
     [key: string]: {
@@ -61,7 +63,7 @@ export default function createBeastieBox(
     }
     const isSpoiler =
       spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
-    const alt = `${isSpoiler ? `Beastie #${beastie.number}` : beastie.name} spawn location.`;
+    const alt = `${isSpoiler ? `Beastie #${beastie.number}` : L(beastie.name)} spawn location.`;
     const iconScale = beastie.id != huntedBeastie ? 1 : 1.5;
     beastieSpawnsOverlays.push(
       <Marker
@@ -95,7 +97,7 @@ export default function createBeastieBox(
         icon={icon({
           iconUrl: isSpoiler
             ? "/gameassets/sprExclam_1.png"
-            : `/icons/${beastie.name}.png`,
+            : `/icons/${L(beastie.name)}.png`,
           className: isSpoiler ? styles.spoilerBeastie : undefined,
           iconSize: [50 * iconScale, 50 * iconScale],
         })}
@@ -107,7 +109,7 @@ export default function createBeastieBox(
         }}
       >
         <Popup offset={[0, -5]}>
-          <Link to={`/beastiepedia/${beastie.name}`}>{beastie.name}</Link>
+          <Link to={`/beastiepedia/${L(beastie.name)}`}>{L(beastie.name)}</Link>
           <br />
           {overall_percent[value].percent > 0
             ? overall_percent[value].percent

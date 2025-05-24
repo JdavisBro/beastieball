@@ -125,7 +125,7 @@ export default function Sidebar(props: Props): React.ReactElement {
             }
             selected={beastieid == beastie.id}
             visible={
-              beastie.name.toLowerCase().includes(search.toLowerCase()) &&
+              L(beastie.name).toLowerCase().includes(search.toLowerCase()) &&
               (!filterFunc || filterFunc(beastie))
             }
             isSpoiler={

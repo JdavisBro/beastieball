@@ -12,6 +12,10 @@ import {
   useSpoilerMode,
 } from "../shared/useSpoiler";
 import MOVE_RECENTLY_UPDATED from "./RecentlyUpdated";
+import useLocalization, {
+  LocalizationFunction,
+} from "../localization/useLocalization";
+import SOCIAL_DATA from "../data/SocialData";
 
 declare global {
   interface Window {
@@ -19,40 +23,42 @@ declare global {
   }
 }
 
-const SortFunctions: ((move1: Move, move2: Move) => number)[] = [
+const SortFunctions: (
+  L: LocalizationFunction,
+) => ((move1: Move, move2: Move) => number)[] = (L) => [
   // Type
   (move1, move2) =>
     move1.type - move2.type ||
     move2.pow - move1.pow ||
-    move1.name.localeCompare(move2.name),
+    L(move1.name).localeCompare(L(move2.name)),
   // Alphabetical
-  (move1, move2) => move1.name.localeCompare(move2.name),
+  (move1, move2) => L(move1.name).localeCompare(L(move2.name)),
   // Pow
   (move1, move2) =>
     move2.pow - move1.pow ||
     move1.type - move2.type ||
-    move1.name.localeCompare(move2.name),
+    L(move1.name).localeCompare(L(move2.name)),
   // Effect (unimplemented)
-  (move1, move2) => move1.name.localeCompare(move2.name),
+  (move1, move2) => L(move1.name).localeCompare(L(move2.name)),
   // Target
   (move1, move2) =>
     Number(move1.type > 2) - Number(move2.type > 2) ||
     move2.targ - move1.targ ||
     move2.pow - move1.pow ||
-    move1.name.localeCompare(move2.name),
+    L(move1.name).localeCompare(L(move2.name)),
 ];
 
-const CHAR_LIST: Record<string, string> = {
-  riley: "Riley",
-  kaz: "Kaz",
-  riven: "Riven",
-  science: "Celia",
-  celeb: "Sunsoo",
-  // pirate: "Marcy",
-  streamer: "Elena",
-  // academy: "Callisto",
-  warrior: "Dominic",
-};
+const CHAR_LIST = [
+  "riley",
+  "kaz",
+  "riven",
+  "science",
+  "celeb",
+  // "pirate",
+  "streamer",
+  // "academy",
+  // "warrior",
+];
 
 const HIDDEN_MOVES = [
   "userlowered", // Shrapnel, not in game.
@@ -61,6 +67,8 @@ const HIDDEN_MOVES = [
 ];
 
 export default function PlayDex() {
+  const { L } = useLocalization();
+
   window.MOVE_DIC = MOVE_DIC;
 
   const [search, setSearch] = useState("");
@@ -77,7 +85,7 @@ export default function PlayDex() {
     .filter((move) => !HIDDEN_MOVES.includes(move.id));
   if (search) {
     moves = moves.filter((move) =>
-      move.name.toLowerCase().includes(search.toLowerCase()),
+      L(move.name).toLowerCase().includes(search.toLowerCase()),
     );
   }
   if (typeFilter != -1) {
@@ -105,7 +113,7 @@ export default function PlayDex() {
   if (recentlyChanged) {
     moves = moves.filter((move) => MOVE_RECENTLY_UPDATED.includes(move.id));
   }
-  moves = moves.sort(SortFunctions[sort]);
+  moves = moves.sort(SortFunctions(L)[sort]);
 
   const [spoilerFriends] = useFriendSpoiler();
   const [spoilerMode] = useSpoilerMode();
@@ -188,14 +196,24 @@ export default function PlayDex() {
             value={friendFilter}
           >
             <option value="undefined">None</option>
-            {Object.keys(CHAR_LIST).map((friendId) => (
-              <option key={friendId} value={CHAR_LIST[friendId]}>
-                {spoilerMode == SpoilerMode.OnlySeen &&
-                !spoilerFriends[friendId]
-                  ? CHAR_LIST[friendId].slice(0, 2) + "..."
-                  : CHAR_LIST[friendId]}
-              </option>
-            ))}
+            {CHAR_LIST.map((friendId) => {
+              const friend = SOCIAL_DATA.find(
+                (friend) => friendId == friend.id,
+              );
+              if (!friend) {
+                return;
+              }
+              const friendName = L(friend.name);
+
+              return (
+                <option key={friendId} value={friendId}>
+                  {spoilerMode == SpoilerMode.OnlySeen &&
+                  !spoilerFriends[friendId]
+                    ? friendName.slice(0, 2) + "..."
+                    : friendName}
+                </option>
+              );
+            })}
           </select>
         </label>{" "}
         <label>

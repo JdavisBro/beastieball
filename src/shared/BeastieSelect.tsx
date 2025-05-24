@@ -188,7 +188,7 @@ export default function BeastieSelect({
                 }
                 selectable={!isSelectable || isSelectable(beastie)}
                 nonSelectableReason={nonSelectableReason}
-                visible={beastie.name
+                visible={L(beastie.name)
                   .toLowerCase()
                   .includes(search.toLowerCase())}
               />

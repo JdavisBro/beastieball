@@ -8,6 +8,7 @@ import JSZip from "jszip";
 import { setColorUniforms, setImage } from "../../shared/beastieRender/WebGL";
 import { bgrDecimalToHex, getColorInBeastieColors } from "../../utils/color";
 import { BeastieType } from "../../data/BeastieData";
+import useLocalization from "../../localization/useLocalization";
 
 declare global {
   interface Window {
@@ -28,6 +29,8 @@ export default function DevUtil(props: {
   canvasRef: React.RefObject<HTMLCanvasElement>;
   cropCanvasRef: React.RefObject<HTMLCanvasElement>;
 }) {
+  const { L } = useLocalization();
+
   const loadingRef = useRef<
     Record<
       string,
@@ -156,8 +159,8 @@ export default function DevUtil(props: {
       img.src = `/gameassets/beasties/${beastie.spr}/${frame % sprite.frames}.webp`;
       loadingRef.current[
         numbered
-          ? `${String(beastie.number).padStart(3, "0")}-${beastie.name}`
-          : beastie.name
+          ? `${String(beastie.number).padStart(3, "0")}-${L(beastie.name)}`
+          : L(beastie.name)
       ] = {
         img: img,
         crop: sprite.bboxes[frame % sprite.frames] ?? {

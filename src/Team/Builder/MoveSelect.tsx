@@ -30,7 +30,7 @@ export default function MoveSelect({
       (move1, move2) =>
         move1.type - move2.type ||
         move2.pow - move1.pow ||
-        move1.name.localeCompare(move2.name),
+        L(move1.name).localeCompare(L(move2.name)),
     );
 
   return (

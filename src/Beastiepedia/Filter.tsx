@@ -64,16 +64,6 @@ BEASTIE_DATA.forEach((beastie) => {
   });
 });
 
-beastie_abilities.sort((ability, ability2) =>
-  ability.name.localeCompare(ability2.name),
-);
-beastie_moves.sort(
-  (move1, move2) =>
-    move1.type - move2.type ||
-    move2.pow - move1.pow ||
-    move1.name.localeCompare(move2.name),
-);
-
 const FILTER_TYPE_PREFIX: Record<FilterTypes, string> = {
   [FilterTypes.Ability]: "Has Trait: ",
   [FilterTypes.Move]: "Learns Play(s): ",
@@ -202,6 +192,16 @@ export default function Filter({
 }) {
   const { L } = useLocalization();
 
+  beastie_abilities.sort((ability, ability2) =>
+    L(ability.name).localeCompare(L(ability2.name)),
+  );
+  beastie_moves.sort(
+    (move1, move2) =>
+      move1.type - move2.type ||
+      move2.pow - move1.pow ||
+      L(move1.name).localeCompare(L(move2.name)),
+  );
+
   const [open, setOpen] = useState(false);
 
   const handleToggleFilter = useCallback(
@@ -304,7 +304,9 @@ export default function Filter({
                           filter[0] == FilterTypes.Ability &&
                           filter[1].id == ability.id,
                       ) ||
-                      ability.name.toLowerCase().includes(search.toLowerCase()),
+                      L(ability.name)
+                        .toLowerCase()
+                        .includes(search.toLowerCase()),
                   )
                   .map((ability) => (
                     <AbilityButton
@@ -335,7 +337,7 @@ export default function Filter({
                           filter[0] == FilterTypes.Move &&
                           filter[1].id == move.id,
                       ) ||
-                      move.name.toLowerCase().includes(search.toLowerCase()),
+                      L(move.name).toLowerCase().includes(search.toLowerCase()),
                   )
                   .map((move) => (
                     <div

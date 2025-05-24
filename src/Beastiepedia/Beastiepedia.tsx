@@ -48,10 +48,13 @@ export default function Beastiepedia(): React.ReactNode {
     if (!beastiedata || beastie == L(beastiedata.name)) {
       return;
     }
-    navigate({
-      pathname: getLink(`/beastiepedia/${L(beastiedata.name)}`),
-      hash: location.hash,
-    });
+    navigate(
+      {
+        pathname: getLink(`/beastiepedia/${L(beastiedata.name)}`),
+        hash: location.hash,
+      },
+      { replace: true },
+    );
   }, [L, getLink, beastie, beastiedata, navigate]);
 
   const [sidebarvisible, setSidebarvisible] = useState(

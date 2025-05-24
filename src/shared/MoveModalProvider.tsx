@@ -12,7 +12,7 @@ import useScreenOrientation from "../utils/useScreenOrientation";
 import useLocalization from "../localization/useLocalization";
 
 export default function MoveModalProvider(props: PropsWithChildren) {
-  const { L } = useLocalization();
+  const { L, getLink } = useLocalization();
 
   const [move, setMove] = useState<null | Move>(null);
 
@@ -73,7 +73,9 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                     to={
                       isSpoiler
                         ? "#Play"
-                        : `/beastiepedia/${beastieName}?play=${moveName}`
+                        : getLink(
+                            `/beastiepedia/${beastieName}?play=${moveName}`,
+                          )
                     }
                     key={beastie[0].id}
                     onClick={() =>
@@ -109,7 +111,11 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                 const beastieName = L(beastie.name);
                 return (
                   <Link
-                    to={isSpoiler ? "#Play" : `/beastiepedia/${beastieName}`}
+                    to={
+                      isSpoiler
+                        ? "#Play"
+                        : getLink(`/beastiepedia/${beastieName}`)
+                    }
                     key={beastie.id}
                     onClick={() =>
                       handleClick(isSpoiler ? beastie.id : undefined)

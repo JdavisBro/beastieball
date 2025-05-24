@@ -21,7 +21,7 @@ export default function FeaturedTeam({
   selected: boolean;
   setTeam: () => void;
 }) {
-  const { L } = useLocalization();
+  const { L, getLink } = useLocalization();
 
   const longDesc = team.description.length > DESCRIPTION_MAX;
 
@@ -44,7 +44,7 @@ export default function FeaturedTeam({
 
   return (
     <Link
-      to={`/team/viewer/${team.team.code}`}
+      to={getLink(`/team/viewer/${team.team.code}`)}
       onClick={handleClick}
       className={selected ? styles.featuredTeamSelected : styles.featuredTeam}
     >

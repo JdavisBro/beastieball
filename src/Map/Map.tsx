@@ -56,7 +56,8 @@ function MapEvents() {
 }
 
 export default function Map(): React.ReactNode {
-  const { L: Loc } = useLocalization();
+  const Localization = useLocalization();
+  const { L: Loc } = Localization;
 
   // these are estimates based on comparing the map to a screenshot but they should be about right for now
   const bounds = new L.LatLngBounds([0, 0], [1, 1]);
@@ -240,7 +241,7 @@ export default function Map(): React.ReactNode {
           seenBeasties,
           setSeenBeasties,
           huntedBeastie,
-          Loc,
+          Localization,
         ),
       );
     }

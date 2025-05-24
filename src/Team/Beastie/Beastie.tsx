@@ -31,7 +31,7 @@ export default function Beastie({
   levelOverwrite?: number;
   maxCoaching?: boolean;
 }) {
-  const { L } = useLocalization();
+  const { L, getLink } = useLocalization();
 
   const beastiedata = BEASTIE_DATA.get(teamBeastie.specie);
   if (!beastiedata) {
@@ -86,7 +86,9 @@ export default function Beastie({
             <span className={styles.graytext}>({beastieName})</span>
           ) : null}
           <Link
-            to={`/beastiepedia/${beastieName}?${searchParam}=${beastieColors.join(",")}`}
+            to={getLink(
+              `/beastiepedia/${beastieName}?${searchParam}=${beastieColors.join(",")}`,
+            )}
             title={`Open ${beastieName} with these colors in Beastiepedia`}
           >
             <BeastieImage

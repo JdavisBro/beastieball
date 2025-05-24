@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import styles from "./NavigationMenu.module.css";
 import NavIcons from "./NavIcons";
+import useLocalization from "../localization/useLocalization";
 
 export function NavigationMenuOption(props: {
   text: string;
@@ -10,10 +11,11 @@ export function NavigationMenuOption(props: {
   location: string;
   target?: string;
 }) {
+  const { getLink } = useLocalization();
   return (
     <Link
       className={styles.menulink}
-      to={props.location}
+      to={getLink(props.location)}
       target={props.target ? props.target : "_self"}
     >
       <div className={styles.menuoption}>

@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import OpenGraph from "./shared/OpenGraph";
+import useLocalization from "./localization/useLocalization";
 
 export default function PageNotFound(): React.ReactElement {
+  const { getLink } = useLocalization();
+
   const [col, setCol] = useState(Math.floor(Math.random() * 360));
   const [spr, setSpr] = useState(Math.floor(Math.random() * 127));
 
@@ -41,7 +44,7 @@ export default function PageNotFound(): React.ReactElement {
         <div className="notfoundface"></div>
       </div>
       <h1>
-        <Link to="/">Go to Home</Link>
+        <Link to={getLink("/")}>Go to Home</Link>
       </h1>
     </div>
   );

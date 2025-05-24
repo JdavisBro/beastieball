@@ -100,9 +100,17 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
   const setParamLang = useCallback(
     (lang: SupportedLanguage) => {
       const prefix = lang == "en" ? "/" : `/${lang}/`;
-      const currentPrefix =
-        !paramLang || paramLang == "en" ? "/" : `/${paramLang}/`;
       const path = location.pathname;
+      let currentPrefix =
+        !paramLang || paramLang == "en" ? "/" : `/${paramLang}/`;
+      for (const supportedLang of SUPPORTED_LANGUAGES) {
+        if (path.startsWith(`/${supportedLang}/`)) {
+          currentPrefix = `/${supportedLang}/`;
+        }
+      }
+      if (prefix == currentPrefix) {
+        return;
+      }
       navigate({
         pathname: path.replace(currentPrefix, prefix),
         hash: location.hash,
@@ -145,6 +153,7 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
       currentLanguage: lang,
       anyLanguageLoaded: !!languageData,
       setLanguage: setLang,
+      getLink: (path) => (lang == "en" ? path : `/${lang}${path}`),
     }),
     [lang, languageData, setLang],
   );

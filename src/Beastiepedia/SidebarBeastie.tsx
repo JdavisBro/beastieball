@@ -17,7 +17,7 @@ type Props = {
 };
 
 function SidebarBeastie(props: Props): React.ReactElement {
-  const { L } = useLocalization();
+  const { L, getLink } = useLocalization();
 
   const beastiedata = props.beastiedata;
   const beastieName = L(beastiedata.name);
@@ -29,7 +29,7 @@ function SidebarBeastie(props: Props): React.ReactElement {
 
   return (
     <Link
-      to={props.isSpoiler ? "#" : `/beastiepedia/${beastieName}`}
+      to={props.isSpoiler ? "#" : getLink(`/beastiepedia/${beastieName}`)}
       className={styles.beastie}
       style={{ display: props.visible ? "block" : "none" }}
       onClick={() => {

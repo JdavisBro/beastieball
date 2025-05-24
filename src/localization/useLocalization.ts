@@ -20,6 +20,7 @@ export type LocalizationType = {
   currentLanguage: SupportedLanguage;
   anyLanguageLoaded: boolean;
   setLanguage: (lang: SupportedLanguage) => void;
+  getLink: (path: string) => string;
 };
 
 export const LocalizationContext = createContext<LocalizationType>({
@@ -31,6 +32,7 @@ export const LocalizationContext = createContext<LocalizationType>({
     ) as SupportedLanguage) ?? "en",
   anyLanguageLoaded: false,
   setLanguage: () => {},
+  getLink: (path) => path,
 });
 
 export default function useLocalization() {

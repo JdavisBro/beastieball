@@ -22,7 +22,7 @@ export default function SpecialBeastieMarker({
   open?: boolean;
   metamorph?: { from: BeastieType; by: string };
 }) {
-  const { L: Loc } = useLocalization();
+  const { L: Loc, getLink } = useLocalization();
 
   const [spoilerMode] = useSpoilerMode();
   const [beastiesSeen, setBeastiesSeen] = useSpoilerSeen();
@@ -41,7 +41,7 @@ export default function SpecialBeastieMarker({
   const handleTargetClick = isSpoiler ? () => setSeen(target.id) : undefined;
   const targetImage = (
     <Link
-      to={isSpoiler ? "#" : `/beastiepedia/${targetNameStr}`}
+      to={isSpoiler ? "#" : getLink(`/beastiepedia/${targetNameStr}`)}
       onClick={handleTargetClick}
     >
       <img src={targetUrl} onClick={handleTargetClick} />
@@ -49,7 +49,7 @@ export default function SpecialBeastieMarker({
   );
   const targetName = (
     <Link
-      to={isSpoiler ? "#" : `/beastiepedia/${targetNameStr}`}
+      to={isSpoiler ? "#" : getLink(`/beastiepedia/${targetNameStr}`)}
       onClick={handleTargetClick}
     >
       {isSpoiler ? "???" : targetNameStr}
@@ -92,7 +92,7 @@ export default function SpecialBeastieMarker({
                   to={
                     metamorphSpoiler
                       ? "#"
-                      : `/beastiepedia/${metamorphFromName}`
+                      : getLink(`/beastiepedia/${metamorphFromName}`)
                   }
                   onClick={handleMetamorphClick}
                 >
@@ -108,7 +108,7 @@ export default function SpecialBeastieMarker({
                   to={
                     metamorphSpoiler
                       ? "#"
-                      : `/beastiepedia/${metamorphFromName}`
+                      : getLink(`/beastiepedia/${metamorphFromName}`)
                   }
                   onClick={handleMetamorphClick}
                 >

@@ -88,7 +88,7 @@ function EvoCondition({
   value: number | Condition;
   specie: string;
 }): React.ReactNode {
-  const { L } = useLocalization();
+  const { L, getLink } = useLocalization();
 
   switch (condition) {
     case 0:
@@ -99,7 +99,7 @@ function EvoCondition({
         <>
           at {LOCATION_CONDS[specie] ?? "somewhere"}
           <Link
-            to={`/map/?marker=${beastieName}`}
+            to={getLink(`/map/?marker=${beastieName}`)}
             title="View Metamorphosis Location on the Map"
           >
             <img
@@ -159,7 +159,7 @@ function EvoText({
   direction: string;
   isSpoiler: boolean;
 }) {
-  const { L } = useLocalization();
+  const { L, getLink } = useLocalization();
 
   const conds: React.ReactNode[] = [];
   for (let i = 0; i < evo.evolution.condition.length; i++) {
@@ -180,7 +180,9 @@ function EvoText({
   return (
     <div>
       Metamorphs {direction}{" "}
-      <Link to={`/beastiepedia/${evoName}`}>{isSpoiler ? "???" : evoName}</Link>{" "}
+      <Link to={getLink(`/beastiepedia/${evoName}`)}>
+        {isSpoiler ? "???" : evoName}
+      </Link>{" "}
       {conds}
     </div>
   );

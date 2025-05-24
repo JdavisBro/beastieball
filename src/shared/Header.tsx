@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import NavIcons from "./NavIcons";
 import styles from "./Header.module.css";
+import useLocalization from "../localization/useLocalization";
 
 type Props = {
   title: string | undefined;
@@ -13,6 +14,7 @@ type Props = {
 };
 
 export default function Header(props: Props): React.ReactNode {
+  const { getLink } = useLocalization();
   return (
     <>
       <div className={styles.header}>
@@ -33,7 +35,7 @@ export default function Header(props: Props): React.ReactNode {
           />
         ) : null}
         <Link
-          to={props.returnButtonTo ?? "/"}
+          to={getLink(props.returnButtonTo ?? "/")}
           className={styles.homelink}
           title={`Return to ${props.returnButtonTitle ?? `${import.meta.env.VITE_BRANDING} Home`}`}
         >

@@ -8,6 +8,7 @@ import {
 import PageNotFound from "./PageNotFound";
 import LocalizationProvider from "./localization/LocalizationProvider";
 import SpoilerWarning from "./SpoilerWarning";
+import useLocalization from "./localization/useLocalization";
 
 const Home = lazy(() => import("./Home"));
 const Beastiepedia = lazy(() => import("./Beastiepedia/Beastiepedia"));
@@ -49,6 +50,11 @@ function RouteError() {
   );
 }
 
+function NavigateLocalized({ to }: { to: string }) {
+  const { getLink } = useLocalization();
+  return <Navigate to={getLink(to)} />;
+}
+
 const routes: Array<RouteObject> = [
   {
     path: ":lang?/",
@@ -86,19 +92,21 @@ const routes: Array<RouteObject> = [
 
       // OLD TEAM VIEWER REDIRECT
       {
-        element: <Navigate to="/team/viewer/" />,
+        element: <NavigateLocalized to="/team/viewer/" />,
         path: "teams/",
       },
       {
-        element: <Navigate to="/team/viewer/" />,
+        element: <NavigateLocalized to="/team/viewer/" />,
         path: "teams/viewer/",
       },
       {
-        Component: () => <Navigate to={`/team/viewer/${useParams().code}`} />,
+        Component: () => (
+          <NavigateLocalized to={`/team/viewer/${useParams().code}`} />
+        ),
         path: "teams/:code",
       },
       {
-        element: <Navigate to="/team/builder/" />,
+        element: <NavigateLocalized to="/team/builder/" />,
         path: "teams/builder/",
       },
 

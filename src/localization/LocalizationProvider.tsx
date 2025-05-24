@@ -156,7 +156,10 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
   );
 
   useEffect(() => {
-    LANGUAGES[lang]().then((data) => setLanguageData(data));
+    LANGUAGES[lang]().then((data) => {
+      setLanguageData(data);
+      document.documentElement.lang = lang;
+    });
   }, [lang]);
 
   const contextValue = useMemo<LocalizationType>(

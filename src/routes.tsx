@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import {
   Navigate,
+  Outlet,
   useParams,
   useRouteError,
   type RouteObject,
@@ -60,7 +61,9 @@ const routes: Array<RouteObject> = [
     path: ":lang?/",
     element: (
       <LocalizationProvider>
-        <SpoilerWarning />
+        <SpoilerWarning>
+          <Outlet />
+        </SpoilerWarning>
       </LocalizationProvider>
     ),
     errorElement: <RouteError />,

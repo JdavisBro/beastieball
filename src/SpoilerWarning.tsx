@@ -1,9 +1,9 @@
 import { useLocalStorage } from "usehooks-ts";
 import SpoilerOptions from "./shared/SpoilerOptions";
 import { Language } from "./shared/Language";
-import { Outlet } from "react-router-dom";
+import { PropsWithChildren } from "react";
 
-export default function SpoilerWarning() {
+export default function SpoilerWarning({ children }: PropsWithChildren) {
   const [spoilersOk, setSpoilersOk] = useLocalStorage("spoilersOk2", false, {
     serializer: String,
     deserializer: (value) => value == "true",
@@ -12,7 +12,7 @@ export default function SpoilerWarning() {
 
   return spoilersOk ||
     window.navigator.userAgent.toLowerCase().includes("prerender") ? (
-    <Outlet />
+    children
   ) : (
     <div className="commoncontainer">
       <img src="/gameassets/sprExclam_1.png" />

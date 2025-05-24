@@ -15,6 +15,7 @@ import {
   SupportedLanguage,
 } from "./useLocalization";
 import BEASTIE_NAMES_UNTYPED from "./beastie_names.json";
+import Loading from "../Loading";
 
 const BEASTIE_NAMES: Record<
   string,
@@ -171,6 +172,10 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
     }),
     [lang, languageData, setLang],
   );
+
+  if (!languageData) {
+    return <Loading />;
+  }
 
   return (
     <LocalizationContext.Provider value={contextValue}>

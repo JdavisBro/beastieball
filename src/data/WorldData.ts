@@ -39,7 +39,7 @@ export type MapIcon = {
   object_y?: number;
   revealed_text?: string;
   sprite?: number;
-  superheader?: number;
+  superheader?: number | boolean;
   text?: string;
   transit?: number;
   world_x: number;

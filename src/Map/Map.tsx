@@ -392,6 +392,7 @@ export default function Map(): React.ReactNode {
                       iconUrl: `/gameassets/sprItems/${ITEM_DIC[gift.items[0][0]].img}.png`,
                       iconSize: huntedItem ? [60, 60] : [30, 30],
                       iconAnchor: huntedItem ? [30, 30] : [15, 15],
+                      className: huntedItem ? styles.itemHunted : undefined,
                     })}
                   >
                     <Popup offset={[0, -5]} minWidth={300}>

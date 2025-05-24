@@ -47,6 +47,12 @@
   height: 80%;
 }
 
+.itemHunted {
+  z-index: 20000 !important;
+  background-color: white;
+  border-radius: 16px;
+}
+
 .itemList {
   display: flex;
   flex-direction: column;

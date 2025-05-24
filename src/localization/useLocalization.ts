@@ -13,6 +13,7 @@ export const LANGUAGE_NAMES: Record<SupportedLanguage, string> = {
 export type LocalizationFunction = (
   key: string,
   placeholders?: Record<string, string>,
+  useEnName?: boolean,
 ) => string;
 
 export type LocalizationType = {

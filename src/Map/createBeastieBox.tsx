@@ -98,7 +98,7 @@ export default function createBeastieBox(
         icon={icon({
           iconUrl: isSpoiler
             ? "/gameassets/sprExclam_1.png"
-            : `/icons/${Loc(beastie.name)}.png`,
+            : `/icons/${Loc(beastie.name, undefined, true)}.png`,
           className: isSpoiler ? styles.spoilerBeastie : undefined,
           iconSize: [50 * iconScale, 50 * iconScale],
         })}

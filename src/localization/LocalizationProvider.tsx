@@ -58,6 +58,7 @@ function localize(
   languageData: LanguageData,
   key: string,
   placeholders?: Record<string, string>,
+  useEnName?: boolean,
 ) {
   let placeholders_exist = true;
   if (!placeholders) {
@@ -78,7 +79,7 @@ function localize(
   }
 
   if (key in BEASTIE_NAMES) {
-    return BEASTIE_NAMES[key][lang];
+    return BEASTIE_NAMES[key][useEnName ? "en" : lang];
   }
 
   return placeholders_exist
@@ -164,8 +165,8 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
 
   const contextValue = useMemo<LocalizationType>(
     () => ({
-      L: (key, placeholders) =>
-        localize(lang, languageData ?? {}, key, placeholders),
+      L: (key, placeholders, useEnName) =>
+        localize(lang, languageData ?? {}, key, placeholders, useEnName),
       languages: SUPPORTED_LANGUAGES,
       currentLanguage: lang,
       anyLanguageLoaded: !!languageData,

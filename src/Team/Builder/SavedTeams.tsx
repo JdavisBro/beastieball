@@ -6,6 +6,7 @@ import Modal from "../../shared/Modal";
 import { TeamBeastie } from "../Types";
 import BEASTIE_DATA from "../../data/BeastieData";
 import { createPid } from "./createBeastie";
+import useLocalization from "../../localization/useLocalization";
 
 type SavedTeam = { name: string; team: TeamBeastie[] };
 
@@ -18,6 +19,8 @@ export default function SavedTeams({
   setCurrentTeam: React.Dispatch<React.SetStateAction<TeamBeastie[]>>;
   setCurrentBeastie: (beastie: TeamBeastie) => void;
 }) {
+  const { L } = useLocalization();
+
   const [open, setOpen] = useState(false);
   const [savedTeams, setSavedTeams] = useLocalStorage<SavedTeam[]>(
     "teamBuilderSavedTeams",
@@ -62,7 +65,7 @@ export default function SavedTeams({
                     {team.team.map((beastie) => (
                       <div key={beastie.pid}>
                         <img
-                          src={`/icons/${BEASTIE_DATA.get(beastie.specie)?.name}.png`}
+                          src={`/icons/${L(BEASTIE_DATA.get(beastie.specie)?.name ?? "beastiesetup_name_001", undefined, true)}.png`}
                         />
                         <button
                           title="Overwrites the Beastie you're currently editing."

@@ -21,6 +21,7 @@ function SidebarBeastie(props: Props): React.ReactElement {
 
   const beastiedata = props.beastiedata;
   const beastieName = L(beastiedata.name);
+  const beastieEnName = L(beastiedata.name, undefined, true);
 
   const selected = props.selected;
   const content = selected
@@ -45,7 +46,7 @@ function SidebarBeastie(props: Props): React.ReactElement {
           src={
             props.isSpoiler
               ? "/gameassets/sprExclam_1.png"
-              : `/icons/${beastieName}.png`
+              : `/icons/${beastieEnName}.png`
           }
           style={props.isSpoiler ? { filter: "brightness(50%)" } : undefined}
           alt={`${props.isSpoiler ? "Hidden" : beastieName} Icon`}

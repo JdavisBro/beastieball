@@ -37,7 +37,7 @@ export default function SpecialBeastieMarker({
   const targetNameStr = Loc(target.name);
   const targetUrl = isSpoiler
     ? "/gameassets/sprExclam_1.png"
-    : `/icons/${targetNameStr}.png`;
+    : `/icons/${Loc(target.name, undefined, true)}.png`;
   const handleTargetClick = isSpoiler ? () => setSeen(target.id) : undefined;
   const targetImage = (
     <Link
@@ -100,7 +100,7 @@ export default function SpecialBeastieMarker({
                     src={
                       metamorphSpoiler
                         ? "/gameassets/sprExclam_1.png"
-                        : `/icons/${metamorphFromName}.png`
+                        : `/icons/${Loc(metamorph.from.name, undefined, true)}.png`
                     }
                   />
                 </Link>

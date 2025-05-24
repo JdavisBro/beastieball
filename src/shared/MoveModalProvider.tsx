@@ -86,7 +86,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                       src={
                         isSpoiler
                           ? "/gameassets/sprExclam_1.png"
-                          : `/icons/${beastieName}.png`
+                          : `/icons/${L(beastie[0].name, undefined, true)}.png`
                       }
                       style={
                         isSpoiler ? { filter: "brightness(50%)" } : undefined
@@ -125,7 +125,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                       src={
                         isSpoiler
                           ? "/gameassets/sprExclam_1.png"
-                          : `/icons/${beastieName}.png`
+                          : `/icons/${L(beastie.name, undefined, true)}.png`
                       }
                       style={
                         isSpoiler ? { filter: "brightness(50%)" } : undefined

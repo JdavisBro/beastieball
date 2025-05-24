@@ -25,7 +25,6 @@ function BeastieButton({
 }) {
   const { L } = useLocalization();
 
-  const beastieName = L(beastie.name);
   return (
     <div
       key={beastie.id}
@@ -49,14 +48,14 @@ function BeastieButton({
         src={
           isSpoiler
             ? "/gameassets/sprExclam_1.png"
-            : `/icons/${beastieName}.png`
+            : `/icons/${L(beastie.name, undefined, true)}.png`
         }
       />
       <div className={styles.beastieSelectNameNum}>
         <div className={styles.beastieSelectNum}>
           #{String(beastie.number).padStart(2, "0")}
         </div>
-        <div>{isSpoiler ? "???" : beastieName}</div>
+        <div>{isSpoiler ? "???" : L(beastie.name)}</div>
       </div>
     </div>
   );

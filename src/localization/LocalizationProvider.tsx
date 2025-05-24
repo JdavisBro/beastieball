@@ -111,10 +111,13 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
       if (prefix == currentPrefix) {
         return;
       }
-      navigate({
-        pathname: path.replace(currentPrefix, prefix),
-        hash: location.hash,
-      });
+      navigate(
+        {
+          pathname: path.replace(currentPrefix, prefix),
+          hash: location.hash,
+        },
+        { replace: true },
+      );
     },
     [navigate, paramLang],
   );
@@ -133,9 +136,7 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
     }
   }, [storedLang, paramLang, setParamLang]);
 
-  const lang: SupportedLanguage = (
-    paramLang && paramLang in LANGUAGES ? paramLang : storedLang
-  ) as SupportedLanguage;
+  const lang: SupportedLanguage = storedLang;
 
   const [languageData, setLanguageData] = useState<LanguageData | undefined>(
     undefined,

@@ -1,27 +1,39 @@
 @font-face {
   font-family: "Go Banana";
-  src: url("/fonts/Go Banana.woff") format("woff");
   src: url("/fonts/Go Banana.woff2") format("woff2");
+  src: url("/fonts/Go Banana.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BalsamiqSans";
+  src: url("/fonts/BalsamiqSans-Regular.woff2") format("woff2");
+  src: url("/fonts/BalsamiqSans-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "SportsJersey";
-  src: url("/fonts/SportsJersey.woff") format("woff");
   src: url("/fonts/SportsJersey.woff2") format("woff2");
+  src: url("/fonts/SportsJersey.woff") format("woff");
   unicode-range: U+30-39, U+41-5A, U+61-7A; /* sports jersey only supports 0 to z and so this makes it fallback on regular fonts */
+}
+
+@font-face {
+  font-family: "WDXLLubrifontTC";
+  src: url("/fonts/WDXLLubrifontTC-Regular.woff2") format("woff2");
 }
 
 :root {
   font-family: var(--go-banana);
   font-size: 1.1em;
   letter-spacing: 1px;
+  line-height: 1.1;
 
   color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
-  --go-banana: "Go Banana", sans-serif;
-  --sports-jersey: "SportsJersey", "Go Banana", sans-serif;
+  --go-banana: "Go Banana", BalsamiqSans, sans-serif;
+  --sports-jersey: "SportsJersey", "WDXLLubrifontTC", "Go Banana", sans-serif;
   --header-height: 50px;
 }
 

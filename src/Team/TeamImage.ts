@@ -81,14 +81,14 @@ export function createTeamImageCanvas(
   copy?: boolean,
 ) {
   const size = MODE_SIZES[mode];
-  if (
-    !(
-      document.fonts.check("16px 'Go Banana'") &&
-      document.fonts.check("16px SportsJersey")
-    )
-  ) {
-    throw new Error("Missing Fonts");
-  }
+  // if (
+  //   !(
+  //     document.fonts.check("16px 'Go Banana', BalsamiqSans") &&
+  //     document.fonts.check("16px SportsJersey, WDXLLubrifontTC")
+  //   )
+  // ) {
+  //   throw new Error("Missing Fonts");
+  // }
   canvas.width = size[0];
   canvas.height = size[1];
   const ctx = canvas.getContext("2d");
@@ -261,9 +261,9 @@ function statCalc(
     )
   );
 }
-const REGULAR_FONT = "17.6px 'Go Banana'";
-const NUMBER_FONT = "11px SportsJersey";
-const SMALLTEXT_FONT = "15.84px 'Go Banana'";
+const REGULAR_FONT = "17.6px 'Go Banana', BalsamiqSans";
+const NUMBER_FONT = "11px SportsJersey, WDXLLubrifontTC";
+const SMALLTEXT_FONT = "15.84px 'Go Banana', BalsamiqSans";
 
 const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
   1: "colors",
@@ -571,7 +571,7 @@ async function createTeamImage(
           BEASTIE_STAT_TEXT_OFFSET +
           BEASTIE_STAT_BAR_HEIGHT / 2 +
           BEASTIE_STAT_BAR_HEIGHT * i;
-        ctx.font = "25px SportsJersey";
+        ctx.font = "25px SportsJersey, WDXLLubrifontTC";
         ctx.lineWidth = 3;
         ctx.strokeText(String(stat), textX, textY);
         ctx.fillText(String(stat), textX, textY);
@@ -626,7 +626,7 @@ async function createTeamImage(
           BEASTIE_STAT_TEXT_OFFSET +
           BEASTIE_STAT_BAR_HEIGHT / 2 +
           BEASTIE_STAT_BAR_HEIGHT * i;
-        ctx.font = "25px SportsJersey";
+        ctx.font = "25px SportsJersey, WDXLLubrifontTC";
         ctx.lineWidth = 3;
         ctx.strokeText(String(stat), textX, textY);
         ctx.fillText(String(stat), textX, textY);

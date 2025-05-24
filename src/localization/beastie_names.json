@@ -1,0 +1,532 @@
+{
+  "beastiesetup_name_001": {
+    "en": "Sprecko",
+    "ru": "Гриккон",
+    "zh-CN": "孢孢壁虎"
+  },
+  "beastiesetup_name_002": {
+    "en": "Bongus",
+    "ru": "Грибонгус",
+    "zh-CN": "鼓菌壁虎"
+  },
+  "beastiesetup_name_003": {
+    "en": "Surgus",
+    "ru": "Сёрфошляп",
+    "zh-CN": "涌菌壁虎"
+  },
+  "beastiesetup_name_004": {
+    "en": "Illugus",
+    "ru": "Иллюгриб",
+    "zh-CN": "幻菌壁虎"
+  },
+  "beastiesetup_name_005": {
+    "en": "Kichik",
+    "ru": "Лапкик",
+    "zh-CN": "小踢鸟"
+  },
+  "beastiesetup_name_006": {
+    "en": "Ostrisigh",
+    "ru": "Вздыхаус",
+    "zh-CN": "斥叹鸵鸟"
+  },
+  "beastiesetup_name_007": {
+    "en": "Kasaleet",
+    "ru": "Казулет",
+    "zh-CN": "精英鹤鸵"
+  },
+  "beastiesetup_name_008": {
+    "en": "Axolati",
+    "ru": "Аксолля",
+    "zh-CN": "蚪来咪"
+  },
+  "beastiesetup_name_009": {
+    "en": "Hopsong",
+    "ru": "Певпрыг",
+    "zh-CN": "Hopsong"
+  },
+  "beastiesetup_name_010": {
+    "en": "Hopra",
+    "ru": "Хопрано",
+    "zh-CN": "Hopra"
+  },
+  "beastiesetup_name_011": {
+    "en": "Bildit",
+    "ru": "Кролькоп",
+    "zh-CN": "兔耳狸"
+  },
+  "beastiesetup_name_012": {
+    "en": "Handicoot",
+    "ru": "Руккут",
+    "zh-CN": "Handicoot"
+  },
+  "beastiesetup_name_013": {
+    "en": "Bandicraft",
+    "ru": "Крольтектор",
+    "zh-CN": "Bandicraft"
+  },
+  "beastiesetup_name_014": {
+    "en": "Collarva",
+    "ru": "Букаброник",
+    "zh-CN": "积囤虫"
+  },
+  "beastiesetup_name_015": {
+    "en": "Wormask",
+    "ru": "Червемаска",
+    "zh-CN": "舞剧蛹"
+  },
+  "beastiesetup_name_016": {
+    "en": "Plumask",
+    "ru": "Маскакрылка",
+    "zh-CN": "假面羽蛾"
+  },
+  "beastiesetup_name_017": {
+    "en": "Shooga",
+    "ru": "Шуга",
+    "zh-CN": "蜜飞鼠"
+  },
+  "beastiesetup_name_018": {
+    "en": "Supassum",
+    "ru": "Ловкосум",
+    "zh-CN": "Supassum"
+  },
+  "beastiesetup_name_019": {
+    "en": "Supilero",
+    "ru": "Либеросум",
+    "zh-CN": "Supilero"
+  },
+  "beastiesetup_name_020": {
+    "en": "Sefren",
+    "ru": "Серафей",
+    "zh-CN": "细尾莺"
+  },
+  "beastiesetup_name_021": {
+    "en": "Zefyre",
+    "ru": "Жарфей",
+    "zh-CN": "微风琴鸟"
+  },
+  "beastiesetup_name_022": {
+    "en": "Woollie",
+    "ru": "Блека",
+    "zh-CN": "Woollie"
+  },
+  "beastiesetup_name_023": {
+    "en": "Fetcham",
+    "ru": "Хваташек",
+    "zh-CN": "Fetcham"
+  },
+  "beastiesetup_name_024": {
+    "en": "Rookee",
+    "ru": "Папуру",
+    "zh-CN": "吱吱鼠"
+  },
+  "beastiesetup_name_025": {
+    "en": "Garood",
+    "ru": "Крикуру",
+    "zh-CN": "尖啸鼠"
+  },
+  "beastiesetup_name_026": {
+    "en": "Kaleidarn",
+    "ru": "Стеклоза",
+    "zh-CN": "Kaleidarn"
+  },
+  "beastiesetup_name_027": {
+    "en": "Platenna",
+    "ru": "Антеннос",
+    "zh-CN": "Platenna"
+  },
+  "beastiesetup_name_028": {
+    "en": "Platypulse",
+    "ru": "Импульснос",
+    "zh-CN": "Platypulse"
+  },
+  "beastiesetup_name_029": {
+    "en": "Servitt",
+    "ru": "Кисмяуч",
+    "zh-CN": "Servitt"
+  },
+  "beastiesetup_name_030": {
+    "en": "Servace",
+    "ru": "Асподач",
+    "zh-CN": "Servace"
+  },
+  "beastiesetup_name_031": {
+    "en": "Radillo",
+    "ru": "Скороносец",
+    "zh-CN": "Radillo"
+  },
+  "beastiesetup_name_032": {
+    "en": "Daredillo",
+    "ru": "Бронегонк",
+    "zh-CN": "Daredillo"
+  },
+  "beastiesetup_name_033": {
+    "en": "Noizard",
+    "ru": "Барабащер",
+    "zh-CN": "Noizard"
+  },
+  "beastiesetup_name_034": {
+    "en": "Diggum",
+    "ru": "Норуш",
+    "zh-CN": "Diggum"
+  },
+  "beastiesetup_name_035": {
+    "en": "Merrifly",
+    "ru": "Радочка",
+    "zh-CN": "Merrifly"
+  },
+  "beastiesetup_name_036": {
+    "en": "Cherrily",
+    "ru": "Чирли",
+    "zh-CN": "Cherrily"
+  },
+  "beastiesetup_name_037": {
+    "en": "Yueffowl",
+    "ru": "Космохвост",
+    "zh-CN": "Yueffowl"
+  },
+  "beastiesetup_name_038": {
+    "en": "Albrax",
+    "ru": "ФилиНЛО",
+    "zh-CN": "Albrax"
+  },
+  "beastiesetup_name_039": {
+    "en": "Scrubbub",
+    "ru": "Личибрик",
+    "zh-CN": "Scrubbub"
+  },
+  "beastiesetup_name_040": {
+    "en": "Grubiron",
+    "ru": "Личиброн",
+    "zh-CN": "Grubiron"
+  },
+  "beastiesetup_name_041": {
+    "en": "Beetlback",
+    "ru": "Геркужук",
+    "zh-CN": "Beetlback"
+  },
+  "beastiesetup_name_042": {
+    "en": "Webbounce",
+    "ru": "Паукач",
+    "zh-CN": "Webbounce"
+  },
+  "beastiesetup_name_043": {
+    "en": "Goofsder",
+    "ru": "Хахахнид",
+    "zh-CN": "Goofsder"
+  },
+  "beastiesetup_name_044": {
+    "en": "Gastic",
+    "ru": "Жугаз",
+    "zh-CN": "Gastic"
+  },
+  "beastiesetup_name_045": {
+    "en": "Wisper",
+    "ru": "Шепоток",
+    "zh-CN": "Wisper"
+  },
+  "beastiesetup_name_046": {
+    "en": "Mistic",
+    "ru": "Миражук",
+    "zh-CN": "Mistic"
+  },
+  "beastiesetup_name_047": {
+    "en": "Wottle",
+    "ru": "Пухолипт",
+    "zh-CN": "Wottle"
+  },
+  "beastiesetup_013": {
+    "en": "Troglum",
+    "ru": "Тьмыш",
+    "zh-CN": "Troglum"
+  },
+  "beastiesetup_name_048": {
+    "en": "Varkabond",
+    "ru": "Мшуз",
+    "zh-CN": "Varkabond"
+  },
+  "beastiesetup_name_049": {
+    "en": "Skulkapi",
+    "ru": "Незребра",
+    "zh-CN": "Skulkapi"
+  },
+  "beastiesetup_name_050": {
+    "en": "Armantis",
+    "ru": "Бронемол",
+    "zh-CN": "Armantis"
+  },
+  "beastiesetup_name_051": {
+    "en": "Grazada",
+    "ru": "Кригрива",
+    "zh-CN": "Grazada"
+  },
+  "beastiesetup_name_052": {
+    "en": "Seakit",
+    "ru": "Морехвост",
+    "zh-CN": "Seakit"
+  },
+  "beastiesetup_name_053": {
+    "en": "Vultoxin",
+    "ru": "Ядолис",
+    "zh-CN": "Vultoxin"
+  },
+  "beastiesetup_name_054": {
+    "en": "Turogue",
+    "ru": "Пиранцырь",
+    "zh-CN": "海盗龟"
+  },
+  "beastiesetup_name_055": {
+    "en": "Turtaneer",
+    "ru": "Панцират",
+    "zh-CN": "皇盗龟"
+  },
+  "beastiesetup_name_056": {
+    "en": "Tortanchor",
+    "ru": "Тортильдор",
+    "zh-CN": "铠锚龟"
+  },
+  "beastiesetup_name_057": {
+    "en": "Waglash",
+    "ru": "Хвостоплюх",
+    "zh-CN": "Waglash"
+  },
+  "beastiesetup_name_058": {
+    "en": "Riplash",
+    "ru": "Аклыст",
+    "zh-CN": "Riplash"
+  },
+  "beastiesetup_name_059": {
+    "en": "Gullit",
+    "ru": "Плавчик",
+    "zh-CN": "Gullit"
+  },
+  "beastiesetup_name_060": {
+    "en": "Skiffrig",
+    "ru": "Пуффриг",
+    "zh-CN": "Skiffrig"
+  },
+  "beastiesetup_name_061": {
+    "en": "Petula",
+    "ru": "Цветуза",
+    "zh-CN": "花瓣水母"
+  },
+  "beastiesetup_name_062": {
+    "en": "Flowish",
+    "ru": "Цплава",
+    "zh-CN": "花朵水母"
+  },
+  "beastiesetup_name_063": {
+    "en": "Orgella",
+    "ru": "Оргелла",
+    "zh-CN": "花果水母"
+  },
+  "beastiesetup_name_064": {
+    "en": "Squimage",
+    "ru": "Кальмаг",
+    "zh-CN": "Squimage"
+  },
+  "beastiesetup_name_065": {
+    "en": "Crabaret",
+    "ru": "Крабарей",
+    "zh-CN": "Crabaret"
+  },
+  "beastiesetup_name_066": {
+    "en": "Leobro",
+    "ru": "Леобро",
+    "zh-CN": "Leobro"
+  },
+  "beastiesetup_name_067": {
+    "en": "Broslidon",
+    "ru": "Посейброн",
+    "zh-CN": "Broslidon"
+  },
+  "beastiesetup_name_068": {
+    "en": "Mudslee",
+    "ru": "Грязняш",
+    "zh-CN": "Mudslee"
+  },
+  "beastiesetup_name_069": {
+    "en": "Crawlurk",
+    "ru": "Скрык",
+    "zh-CN": "Crawlurk"
+  },
+  "beastiesetup_name_070": {
+    "en": "Musselbound",
+    "ru": "Мусктриц",
+    "zh-CN": "Musselbound"
+  },
+  "beastiesetup_name_071": {
+    "en": "Xiphosaur",
+    "ru": "Мечезавр",
+    "zh-CN": "Xiphosaur"
+  },
+  "beastiesetup_name_072": {
+    "en": "Psylusc",
+    "ru": "Иллюск",
+    "zh-CN": "Psylusc"
+  },
+  "beastiesetup_name_073": {
+    "en": "Conjarr",
+    "ru": "Чароклюв",
+    "zh-CN": "Conjarr"
+  },
+  "beastiesetup_name_074": {
+    "en": "Skibble",
+    "ru": "Плящерка",
+    "zh-CN": "Skibble"
+  },
+  "beastiesetup_name_075": {
+    "en": "Skorock",
+    "ru": "Камнехвост",
+    "zh-CN": "Skorock"
+  },
+  "beastiesetup_name_076": {
+    "en": "Boldlur",
+    "ru": "Валунишка",
+    "zh-CN": "Boldlur"
+  },
+  "beastiesetup_name_077": {
+    "en": "Milimine",
+    "ru": "Сорокопашка",
+    "zh-CN": "Milimine"
+  },
+  "beastiesetup_name_078": {
+    "en": "Demolipede",
+    "ru": "Сножка",
+    "zh-CN": "Demolipede"
+  },
+  "beastiesetup_name_079": {
+    "en": "Trat",
+    "ru": "Мышурка",
+    "zh-CN": "Trat"
+  },
+  "beastiesetup_name_080": {
+    "en": "Punkchirp",
+    "ru": "Панклюв",
+    "zh-CN": "Punkchirp"
+  },
+  "beastiesetup_name_081": {
+    "en": "Magpike",
+    "ru": "Сорокер",
+    "zh-CN": "Magpike"
+  },
+  "beastiesetup_name_082": {
+    "en": "Calcroach",
+    "ru": "Калькан",
+    "zh-CN": "Calcroach"
+  },
+  "beastiesetup_name_083": {
+    "en": "Debugly",
+    "ru": "Дебагыч",
+    "zh-CN": "Debugly"
+  },
+  "beastiesetup_name_084": {
+    "en": "Beelb",
+    "ru": "Углампс",
+    "zh-CN": "Beelb"
+  },
+  "beastiesetup_name_085": {
+    "en": "Jellibat",
+    "ru": "Летучая мармышь",
+    "zh-CN": "Jellibat"
+  },
+  "beastiesetup_name_086": {
+    "en": "Froofulks",
+    "ru": "Фрумамышь",
+    "zh-CN": "Froofulks"
+  },
+  "beastiesetup_name_087": {
+    "en": "Bindiva",
+    "ru": "Бакдива",
+    "zh-CN": "Bindiva"
+  },
+  "beastiesetup_name_088": {
+    "en": "Gremlur",
+    "ru": "Гремур",
+    "zh-CN": "Gremlur"
+  },
+  "beastiesetup_name_089": {
+    "en": "Opposur",
+    "ru": "Отпорсум",
+    "zh-CN": "Opposur"
+  },
+  "beastiesetup_name_090": {
+    "en": "Blitzwift",
+    "ru": "Вжуточка",
+    "zh-CN": "Blitzwift"
+  },
+  "beastiesetup_name_091": {
+    "en": "Proteos",
+    "ru": "Слепротей",
+    "zh-CN": "Proteos"
+  },
+  "beastiesetup_name_092": {
+    "en": "Hydrolm",
+    "ru": "Гидротей",
+    "zh-CN": "Hydrolm"
+  },
+  "beastiesetup_name_093": {
+    "en": "Druppa",
+    "ru": "Чашуйчай",
+    "zh-CN": "Druppa"
+  },
+  "beastiesetup_name_094": {
+    "en": "Scauldra",
+    "ru": "Чайникон",
+    "zh-CN": "Scauldra"
+  },
+  "beastiesetup_name_095": {
+    "en": "Humflit",
+    "ru": "Нектылёк",
+    "zh-CN": "Humflit"
+  },
+  "beastiesetup_name_096": {
+    "en": "Heliath",
+    "ru": "Гелиаф",
+    "zh-CN": "Heliath"
+  },
+  "beastiesetup_name_097": {
+    "en": "Lunaptra",
+    "ru": "Мотылун",
+    "zh-CN": "Lunaptra"
+  },
+  "beastiesetup_name_098": {
+    "en": "Deluja",
+    "ru": "Белуча",
+    "zh-CN": "Deluja"
+  },
+  "beastiesetup_name_099": {
+    "en": "Yamyth",
+    "ru": "Легентур",
+    "zh-CN": "Yamyth"
+  },
+  "beastiesetup_name_100": {
+    "en": "Pladion",
+    "ru": "Утнозавр",
+    "zh-CN": "Pladion"
+  },
+  "beastiesetup_name_101": {
+    "en": "Duggout",
+    "ru": "Клыкуш",
+    "zh-CN": "Duggout"
+  },
+  "beastiesetup_name_102": {
+    "en": "Mascurry",
+    "ru": "Маска-пляска",
+    "zh-CN": "Mascurry"
+  },
+  "beastiesetup_name_103": {
+    "en": "Diabloceras",
+    "ru": "Магракен",
+    "zh-CN": "Diabloceras"
+  },
+  "beastiesetup_name_104": {
+    "en": "Maraptor",
+    "ru": "Руптор",
+    "zh-CN": "Maraptor"
+  },
+  "beastiesetup_name_105": {
+    "en": "Shloom",
+    "ru": "Грибч",
+    "zh-CN": "Shloom"
+  }
+}

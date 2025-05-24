@@ -5,14 +5,21 @@ import {
   useCallback,
   PropsWithChildren,
 } from "react";
+import { useLocalStorage } from "usehooks-ts";
+import { useNavigate, useParams } from "react-router-dom";
+
 import {
   LocalizationContext,
   LocalizationType,
   SUPPORTED_LANGUAGES,
   SupportedLanguage,
 } from "./useLocalization";
-import { useLocalStorage } from "usehooks-ts";
-import { useNavigate, useParams } from "react-router-dom";
+import BEASTIE_NAMES_UNTYPED from "./beastie_names.json";
+
+const BEASTIE_NAMES: Record<
+  string,
+  Record<SupportedLanguage, string>
+> = BEASTIE_NAMES_UNTYPED;
 
 type LanguageData = Record<string, string>;
 
@@ -46,6 +53,7 @@ const KEY_QUOTE = "¦";
 const KEY_SEP = "¬";
 
 function localize(
+  lang: SupportedLanguage,
   languageData: LanguageData,
   key: string,
   placeholders?: Record<string, string>,
@@ -63,9 +71,13 @@ function localize(
     }
     for (let i = 1; i < keyArr.length; i += 2) {
       placeholders[keyArr[i]] = keyArr[i + 1].replace(/¦.+?¦/g, (match) =>
-        localize(languageData, match),
+        localize(lang, languageData, match),
       );
     }
+  }
+
+  if (key in BEASTIE_NAMES) {
+    return BEASTIE_NAMES[key][lang];
   }
 
   return placeholders_exist
@@ -149,12 +161,13 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
   const contextValue = useMemo<LocalizationType>(
     () => ({
       L: (key, placeholders) =>
-        (languageData && localize(languageData, key, placeholders)) ?? key,
+        localize(lang, languageData ?? {}, key, placeholders),
       languages: SUPPORTED_LANGUAGES,
       currentLanguage: lang,
       anyLanguageLoaded: !!languageData,
       setLanguage: setLang,
       getLink: (path) => (lang == "en" ? path : `/${lang}${path}`),
+      beastieNames: BEASTIE_NAMES,
     }),
     [lang, languageData, setLang],
   );

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import Header from "../shared/Header";
 import Sidebar from "./Sidebar";
@@ -22,21 +22,37 @@ declare global {
 }
 
 export default function Beastiepedia(): React.ReactNode {
-  const { L } = useLocalization();
+  const { L, getLink, beastieNames } = useLocalization();
 
   const orientation = useScreenOrientation();
   const { beastie }: { beastie?: string } = useParams();
 
   const [beastieid, beastiedata] = useMemo(() => {
-    if (beastie !== null) {
+    if (beastie) {
       for (const [key, value] of BEASTIE_DATA) {
-        if (L(value.name) == beastie) {
+        if (
+          Object.values(
+            beastieNames[value.name.slice(1, value.name.length - 1)],
+          ).includes(beastie)
+        ) {
           return [key, value];
         }
       }
     }
     return [undefined, undefined];
-  }, [L, beastie]);
+  }, [beastieNames, beastie]);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!beastiedata || beastie == L(beastiedata.name)) {
+      return;
+    }
+    navigate({
+      pathname: getLink(`/beastiepedia/${L(beastiedata.name)}`),
+      hash: location.hash,
+    });
+  }, [L, getLink, beastie, beastiedata, navigate]);
 
   const [sidebarvisible, setSidebarvisible] = useState(
     !(beastieid !== undefined && orientation),

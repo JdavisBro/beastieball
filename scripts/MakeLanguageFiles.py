@@ -65,6 +65,8 @@ LANG_CODES = {
   "Русский": "ru",
 }
 
+beastie_names = {}
+
 for lang_fp in loc_dir.iterdir():
   if lang_fp.stem not in LANG_CODES:
     continue
@@ -73,9 +75,17 @@ for lang_fp in loc_dir.iterdir():
   with lang_fp.open(encoding="utf8", newline="") as f:
     reader = csv.reader(f)
     for line in reader:
-      if line[0] in required_keys or any([line[0].startswith(i) for i in INCLUDE_PREFIXES]):
+      if line[0].startswith("beastiesetup_name_") or line[0] == "beastiesetup_013": # troglum
+        if line[0] not in beastie_names:
+          beastie_names[line[0]] = {}
+        beastie_names[line[0]][lang_code] = line[1]
+      elif line[0] in required_keys or any([line[0].startswith(i) for i in INCLUDE_PREFIXES]):
         lang_out[line[0]] = line[1]
   out_dir = (language_out_dir / lang_code / "game.json")
   out_dir.parent.mkdir(exist_ok=True)
   with out_dir.open("w+", encoding="utf8") as f:
     json.dump(lang_out, f, ensure_ascii=False, indent=2)
+
+beastie_fp = language_out_dir.parent / "beastie_names.json"
+with beastie_fp.open("w+", encoding="utf8") as f:
+  json.dump(beastie_names, f, ensure_ascii=False, indent=2)

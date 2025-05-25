@@ -81,7 +81,9 @@ export default function Beastiepedia(): React.ReactNode {
   return (
     <div className={styles.container}>
       <OpenGraph
-        title={beastiedata ? `${beastie} - Beastiepedia` : "Beastiepedia"}
+        title={
+          beastiedata ? `${L(beastiedata.name)} - Beastiepedia` : "Beastiepedia"
+        }
         image={
           beastiedata ? `icons/${beastie}.png` : "gameassets/sprMainmenu/0.png" // beastiepedia icon
         }
@@ -93,7 +95,9 @@ export default function Beastiepedia(): React.ReactNode {
         }
       />
       <Header
-        title={(beastie ? `${beastie} - ` : "") + "Beastiepedia"}
+        title={
+          (beastiedata ? `${L(beastiedata.name)} - ` : "") + "Beastiepedia"
+        }
         menuButton={true}
         menuButtonState={sidebarvisible}
         onMenuButtonPressed={() => setSidebarvisible((visible) => !visible)}

@@ -277,10 +277,11 @@ export default function Map(): React.ReactNode {
   const marker_name = searchParams.get("marker");
   const marker = marker_name
     ? METAMORPH_LOCATIONS.find(
-        (value) => BEASTIE_DATA.get(value.to)?.name == marker_name,
+        (value) => Loc(BEASTIE_DATA.get(value.to)?.name ?? "") == marker_name,
       ) ||
       EXTINCT_BEASTIES.find(
-        (value) => BEASTIE_DATA.get(value.beastieId)?.name == marker_name,
+        (value) =>
+          Loc(BEASTIE_DATA.get(value.beastieId)?.name ?? "") == marker_name,
       )
     : undefined;
   const center = marker ? marker.position : L.latLng(0, 0);

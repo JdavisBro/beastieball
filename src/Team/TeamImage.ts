@@ -172,6 +172,20 @@ function splitText(
   for (let i = 0; i < text.length; i++) {
     const char = text[i];
     let newchar = char;
+    if (
+      (char == " " || breakChars) &&
+      ctx.measureText(
+        lines[lines.length - 1] +
+          newchar +
+          text
+            .slice(i, char == " " ? text.indexOf(" ", i + 1) : i + 2)
+            .replace(/\|/, "")
+            .replace(/\[[^[]+?]/, "　"),
+      ).width > max_width
+    ) {
+      lines.push("");
+      newchar = "";
+    }
     switch (char) {
       case "[":
         if (tagging && tag == "") {
@@ -204,21 +218,6 @@ function splitText(
           });
         }
         break;
-    }
-    if (
-      char == " " ||
-      (breakChars &&
-        ctx.measureText(
-          lines[lines.length - 1] +
-            newchar +
-            text
-              .slice(i, breakChars ? i + 2 : text.indexOf(" ", i + 1))
-              .replace(/\|/, "")
-              .replace(/\[[^[]+?]/, "　"),
-        ).width > max_width)
-    ) {
-      lines.push("");
-      newchar = "";
     }
     if (newchar) {
       if (tagging) {
@@ -467,7 +466,7 @@ async function createTeamImage(
         BEASTIE_SIZE[0] / 2,
         loadImage,
       );
-      const line_height = lines.length < 4 ? 24 : 20;
+      const line_height = lines.length < 4 ? 24 : lines.length < 5 ? 20 : 16;
       const trait_height = (lines.length + 1) * line_height;
       const right_gap =
         (BEASTIE_PLAY_BEGIN - BEASTIE_STAT_HEIGHT - trait_height) / 3;
@@ -481,7 +480,7 @@ async function createTeamImage(
         ctx.fillText(
           lines[i],
           startx + text_middle,
-          starty + trait_begin + 20 + line_height * i,
+          starty + trait_begin + line_height * (i + 1),
         );
       }
       for (const image of images) {
@@ -489,7 +488,7 @@ async function createTeamImage(
         ctx.drawImage(
           img,
           startx + text_middle + image.x,
-          starty + trait_begin + 19 + line_height * image.line,
+          starty + trait_begin + line_height * (image.line + 1) - 1,
           (18 / img.height) * img.width,
           18,
         );

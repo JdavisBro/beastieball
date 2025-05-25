@@ -356,7 +356,7 @@
 }
 
 .beastieSelectNum {
-  font-family: var(--sports-jersey);
+  composes: numberFont from global;
   font-size: 2em;
 }
 

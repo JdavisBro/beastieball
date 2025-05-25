@@ -13,7 +13,7 @@ export default function TeamImageButton({
   atLevel?: number;
   maxCoaching?: boolean;
 }) {
-  const { L } = useLocalization();
+  const Localization = useLocalization();
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const beastieRender = useContext(BeastieRenderContext);
@@ -26,7 +26,7 @@ export default function TeamImageButton({
         canvasRef.current,
         team,
         mode,
-        L,
+        Localization,
         beastieRender.renderQuick,
         atLevel,
         maxCoaching,

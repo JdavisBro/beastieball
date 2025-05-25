@@ -4,7 +4,7 @@ import MOVE_DIC from "../data/MoveData";
 
 import type { BBox } from "../data/SpriteInfo";
 import { TypeData } from "../data/TypeColor";
-import { LocalizationFunction } from "../localization/useLocalization";
+import { LocalizationType } from "../localization/useLocalization";
 import type { RenderBeastieType } from "../shared/beastieRender/BeastieRenderContext";
 import type { TeamBeastie } from "./Types";
 
@@ -72,7 +72,7 @@ export function createTeamImageCanvas(
   canvas: HTMLCanvasElement,
   team: TeamBeastie[],
   mode: DrawMode,
-  L: LocalizationFunction,
+  Localization: LocalizationType,
   beastieRender: (
     beastie: RenderBeastieType,
   ) => Promise<[HTMLCanvasElement, BBox | null] | null>,
@@ -99,7 +99,7 @@ export function createTeamImageCanvas(
     ctx,
     team,
     mode,
-    L,
+    Localization,
     beastieRender,
     loadImageCanvas,
     atLevel,
@@ -173,6 +173,7 @@ function splitText(
     const char = text[i];
     let newchar = char;
     if (
+      !tagging &&
       (char == " " || breakChars) &&
       ctx.measureText(
         lines[lines.length - 1] +
@@ -262,9 +263,6 @@ function statCalc(
     )
   );
 }
-const REGULAR_FONT = "17.6px 'Go Banana', BalsamiqSans";
-const NUMBER_FONT = "11px SportsJersey, WDXLLubrifontTC";
-const SMALLTEXT_FONT = "15.84px 'Go Banana', BalsamiqSans";
 
 const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
   1: "colors",
@@ -276,7 +274,7 @@ async function createTeamImage(
   ctx: CanvasRenderingContext2D,
   team: TeamBeastie[],
   mode: DrawMode,
-  L: LocalizationFunction,
+  Localization: LocalizationType,
   beastieRender: (
     beastie: RenderBeastieType,
   ) => Promise<[HTMLCanvasElement, BBox | null] | null>,
@@ -284,6 +282,17 @@ async function createTeamImage(
   atLevel?: number,
   maxCoaching?: boolean,
 ) {
+  const { L, currentLanguage } = Localization;
+  const SUPPORTED_CHAR_FONT = "17.6px 'Go Banana', BalsamiqSans";
+  const REGULAR_FONT =
+    currentLanguage == "en" ? SUPPORTED_CHAR_FONT : "17.6px BalsamiqSans";
+  const NUMBER_FONT = "11px SportsJersey, WDXLLubrifontTC";
+  const BIG_NUBMER_FONT = "25px SportsJersey, WDXLLubrifontTC";
+  const SMALLTEXT_FONT =
+    currentLanguage == "en"
+      ? "15.84px 'Go Banana', BalsamiqSans"
+      : "15.84px BalsamiqSans";
+
   const typeImages = [];
   for (let i = 0; i < 6; i++) {
     typeImages.push(await loadImage(`/gameassets/sprType/${i}.png`));
@@ -317,6 +326,7 @@ async function createTeamImage(
 
       const display_name = beastie.name || beastieName;
       const name_width = ctx.measureText(display_name).width;
+      ctx.font = SUPPORTED_CHAR_FONT;
       const level_width = ctx.measureText(level_text).width;
       ctx.font = NUMBER_FONT;
       const num_width = ctx.measureText(num_text).width;
@@ -328,6 +338,7 @@ async function createTeamImage(
       ctx.fillStyle = "black";
       ctx.font = REGULAR_FONT;
       ctx.fillText(display_name, startx + start_offset, starty + 3);
+      ctx.font = SUPPORTED_CHAR_FONT;
       ctx.fillText(
         level_text,
         startx + start_offset + name_width + num_width,
@@ -494,6 +505,7 @@ async function createTeamImage(
         );
       }
       ctx.textBaseline = "top";
+      ctx.font = SUPPORTED_CHAR_FONT;
       ctx.fillText(
         "POW          DEF",
         startx + text_middle,
@@ -576,7 +588,7 @@ async function createTeamImage(
         ctx.lineWidth = 3;
         ctx.strokeText(String(stat), textX, textY);
         ctx.fillText(String(stat), textX, textY);
-        ctx.font = REGULAR_FONT;
+        ctx.font = SUPPORTED_CHAR_FONT;
         ctx.fillText(
           `+${atkTrainings[i]}`,
           startx + BEASTIE_SIZE[0] / 2 + BEASTIE_STAT_ICON / 2,
@@ -627,11 +639,11 @@ async function createTeamImage(
           BEASTIE_STAT_TEXT_OFFSET +
           BEASTIE_STAT_BAR_HEIGHT / 2 +
           BEASTIE_STAT_BAR_HEIGHT * i;
-        ctx.font = "25px SportsJersey, WDXLLubrifontTC";
+        ctx.font = BIG_NUBMER_FONT;
         ctx.lineWidth = 3;
         ctx.strokeText(String(stat), textX, textY);
         ctx.fillText(String(stat), textX, textY);
-        ctx.font = REGULAR_FONT;
+        ctx.font = SUPPORTED_CHAR_FONT;
         ctx.fillText(
           `+${defTrainings[i]}`,
           startx +

@@ -56,10 +56,10 @@ function findBeastiePreevolutions(
 }
 
 const LOCATION_CONDS: Record<string, string> = {
-  shroom_b: "The Rutile Preserve",
-  shroom_s: "Cerise Atoll",
-  shroom_m: "Miconia Grove",
-  tricky: "Cordia Lake",
+  shroom_b: "_map_Rutile Preserve",
+  shroom_s: "_map_Cerise Atoll",
+  shroom_m: "_map_Miconia Grove",
+  tricky: "_map_Cordia Lake",
 };
 
 function EvoCondInfo({ children }: { children: React.ReactNode }) {
@@ -97,7 +97,7 @@ function EvoCondition({
       const beastieName = L(BEASTIE_DATA.get(specie)?.name ?? "someone");
       return (
         <>
-          at {LOCATION_CONDS[specie] ?? "somewhere"}
+          at {L(LOCATION_CONDS[specie] ?? "somewhere")}
           <Link
             to={getLink(`/map/?marker=${beastieName}`)}
             title="View Metamorphosis Location on the Map"

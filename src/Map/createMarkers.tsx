@@ -66,9 +66,14 @@ export function createMarkers(Loc: LocalizationFunction) {
         markertype = imgheaders["Other"];
       }
       markerup = <img src={`/gameassets/sprSponsors/${value.img}.png`} />;
-      popup = (
-        <Popup>{value.revealed_text ? value.revealed_text : value.text}</Popup>
-      );
+      const revealed =
+        value.revealed_text &&
+        value.revealed_text.replace(
+          /(.+?)(?: \((.+?)\)|$)/,
+          (_, g1, g2) =>
+            `${Loc("_map_" + g1)}${g2 ? ` (${Loc("_map_" + g2)})` : ""}`,
+        );
+      popup = <Popup>{revealed ? revealed : Loc("_map_" + value.text)}</Popup>;
     } else {
       if (value.from_object == "objHiddenObject") {
         return;

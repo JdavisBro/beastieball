@@ -118,6 +118,7 @@
 }
 
 .movepower {
+  composes: numberFont from global;
   width: 64px;
   height: 64px;
   line-height: 64px;

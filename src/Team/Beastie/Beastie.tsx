@@ -77,7 +77,9 @@ export default function Beastie({
                     ? "Max Level"
                     : `To next level: ${teamBeastie.xp - level_exp}/${next_level_exp - level_exp} (${next_level_exp - teamBeastie.xp} left)`
               }
-              className={levelOverwrite ? styles.levelOverwritten : undefined}
+              className={
+                levelOverwrite ? styles.levelOverwritten : styles.levelText
+              }
             >
               Lvl {level}
             </span>

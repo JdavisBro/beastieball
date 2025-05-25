@@ -39,8 +39,8 @@
 }
 
 .number {
+  composes: numberFont from global;
   font-size: 62.5%;
-  font-family: var(--sports-jersey);
   color: #808080;
 }
 
@@ -53,6 +53,7 @@
 }
 
 .statDist {
+  composes: latinText from global;
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -97,12 +98,12 @@
 }
 
 .barText {
+  composes: numberFont from global;
   position: absolute;
   top: 3px;
   left: 0;
   width: 100%;
   height: 100%;
-  font-family: var(--sports-jersey);
   font-size: 1.4em;
   /* -webkit-text-stroke: 0.5px var(--type-col); */
   text-shadow:
@@ -112,7 +113,12 @@
     -1px 1px 0 var(--type-col);
 }
 
+.levelText {
+  composes: latinText from global;
+}
+
 .levelOverwritten {
+  composes: latinText from global;
   color: darkblue;
 }
 

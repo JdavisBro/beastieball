@@ -32,9 +32,18 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
+  --go-banana: BalsamiqSans, sans-serif;
+  --sports-jersey: "WDXLLubrifontTC", "Go Banana", sans-serif;
+  --header-height: 50px;
+}
+
+:root:lang(en, zh, ja, kr) {
   --go-banana: "Go Banana", BalsamiqSans, sans-serif;
   --sports-jersey: "SportsJersey", "WDXLLubrifontTC", "Go Banana", sans-serif;
-  --header-height: 50px;
+}
+
+:root:lang(ru, fr, es, de) {
+  letter-spacing: normal;
 }
 
 body {

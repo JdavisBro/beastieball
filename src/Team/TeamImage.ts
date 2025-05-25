@@ -158,6 +158,7 @@ function splitText(
   max_width: number,
   loadImage: (src: string) => Promise<HTMLImageElement>,
 ): [string[], { x: number; line: number; image: Promise<HTMLImageElement> }[]] {
+  const breakChars = text.split(" ").length < 5;
   const lines = [""];
   const images: {
     line: number;
@@ -203,20 +204,21 @@ function splitText(
           });
         }
         break;
-      case " ":
-        if (
-          ctx.measureText(
-            lines[lines.length - 1] +
-              newchar +
-              text
-                .slice(i, text.indexOf(" ", i + 1))
-                .replace(/\|/, "")
-                .replace(/\[[^[]+?]/, "　"),
-          ).width > max_width
-        ) {
-          lines.push("");
-          newchar = "";
-        }
+    }
+    if (
+      char == " " ||
+      (breakChars &&
+        ctx.measureText(
+          lines[lines.length - 1] +
+            newchar +
+            text
+              .slice(i, breakChars ? i + 2 : text.indexOf(" ", i + 1))
+              .replace(/\|/, "")
+              .replace(/\[[^[]+?]/, "　"),
+        ).width > max_width)
+    ) {
+      lines.push("");
+      newchar = "";
     }
     if (newchar) {
       if (tagging) {

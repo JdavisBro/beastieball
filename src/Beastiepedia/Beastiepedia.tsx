@@ -78,26 +78,24 @@ export default function Beastiepedia(): React.ReactNode {
   window.BEASTIE_DATA = BEASTIE_DATA;
   window.beastie = beastiedata;
 
+  const pageTitle = beastiedata
+    ? L("beastiepedia.titleBeastie", { beastie: L(beastiedata.name) })
+    : L("beastiepedia.title");
+
   return (
     <div className={styles.container}>
       <OpenGraph
-        title={
-          beastiedata ? `${L(beastiedata.name)} - Beastiepedia` : "Beastiepedia"
-        }
+        title={pageTitle}
         image={
           beastiedata ? `icons/${beastie}.png` : "gameassets/sprMainmenu/0.png" // beastiepedia icon
         }
         url={beastiedata ? `beastiepedia/${beastie}` : `beastiepedia/`}
         description={
-          beastiedata
-            ? L(beastiedata.desc)
-            : "View information and previews of the Beasties from Beastieball!"
+          beastiedata ? L(beastiedata.desc) : L("beastiepedia.description")
         }
       />
       <Header
-        title={
-          (beastiedata ? `${L(beastiedata.name)} - ` : "") + "Beastiepedia"
-        }
+        title={pageTitle}
         menuButton={true}
         menuButtonState={sidebarvisible}
         onMenuButtonPressed={() => setSidebarvisible((visible) => !visible)}
@@ -133,12 +131,11 @@ export default function Beastiepedia(): React.ReactNode {
               </>
             ) : (
               <h1 className={styles.notselectedtext}>
-                No Beastie Selected
+                {L("beastiepedia.noBeastie.text")}
                 <br />
                 {sidebarvisible
-                  ? "Select a beastie in the sidebar"
-                  : "Select a beastie by toggling the menu in the top left"}
-                .
+                  ? L("beastiepedia.noBeastie.menuEnabled")
+                  : L("beastiepedia.noBeastie.menuDisabled")}
               </h1>
             )}
           </div>

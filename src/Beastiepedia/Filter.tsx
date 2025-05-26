@@ -26,12 +26,12 @@ export enum FilterTypes {
 type TrainingTypes = "ba" | "ha" | "ma" | "bd" | "hd" | "md";
 const STATS: TrainingTypes[] = ["ba", "bd", "ha", "hd", "ma", "md"];
 const TRAINING_TYPES = {
-  ba: "Body POW",
-  ha: "Spirit POW",
-  ma: "Mind POW",
-  bd: "Body DEF",
-  hd: "Spirit DEF",
-  md: "Mind DEF",
+  ba: "bodyPow",
+  ha: "spiritPow",
+  ma: "mindPow",
+  bd: "bodyDef",
+  hd: "spiritDef",
+  md: "mindDef",
 };
 
 enum RecentlyUpdatedTypes {
@@ -241,13 +241,13 @@ export default function Filter({
     <div
       className={styles.filterButton}
       role="button"
-      title="Sort by Filters"
+      title={L("beastiepedia.sidebar.filter.title")}
       tabIndex={0}
       onClick={() => setOpen(true)}
     >
       <div title="">
         <Modal
-          header="Filter Beasties"
+          header={L("beastiepedia.sidebar.filter.title")}
           open={open}
           onClose={() => setOpen(false)}
           hashValue="Filter"
@@ -258,7 +258,7 @@ export default function Filter({
               setFilters([]);
             }}
           >
-            Clear Filter
+            {L("beastiepedia.sidebar.filter.clear")}
           </button>
           {" " + createFilterString(filters, L)}
           <div className={styles.tabs}>
@@ -266,24 +266,24 @@ export default function Filter({
               className={tab == 0 ? styles.selectedtab : undefined}
               onClick={() => changeTab(0)}
             >
-              Trait
+              {L("beastiepedia.sidebar.filter.trait")}
             </button>
             <button
               className={tab == 1 ? styles.selectedtab : undefined}
               onClick={() => changeTab(1)}
             >
-              Plays
+              {L("beastiepedia.sidebar.filter.plays")}
             </button>
             <button
               className={tab == 2 ? styles.selectedtab : undefined}
               onClick={() => changeTab(2)}
             >
-              Other
+              {L("beastiepedia.sidebar.filter.other")}
             </button>
           </div>
           {tab < 2 ? (
             <label>
-              Search:{" "}
+              {L("common.searchPrefix")}
               <input
                 type="search"
                 onChange={(event) => setSearch(event.currentTarget.value)}
@@ -362,7 +362,7 @@ export default function Filter({
             ) : null}
             {tab == 2 ? (
               <>
-                Ally Training:
+                {L("beastiepedia.sidebar.filter.allyTraining")}
                 <br />
                 {STATS.map((type) => (
                   <button
@@ -374,11 +374,11 @@ export default function Filter({
                       handleToggleFilter([FilterTypes.Training, type], true)
                     }
                   >
-                    {TRAINING_TYPES[type]}
+                    {L("common.types." + TRAINING_TYPES[type])}
                   </button>
                 ))}
                 <br />
-                Metamorphosis:
+                {L("beastiepedia.sidebar.filter.metamorphosis.title")}
                 <br />
                 <button
                   className={
@@ -388,7 +388,7 @@ export default function Filter({
                     handleToggleFilter([FilterTypes.Metamorphs, false], true)
                   }
                 >
-                  Does not Metamorph
+                  {L("beastiepedia.sidebar.filter.metamorphosis.doesNot")}
                 </button>
                 <button
                   className={
@@ -398,12 +398,12 @@ export default function Filter({
                     handleToggleFilter([FilterTypes.Metamorphs, true], true)
                   }
                 >
-                  Does Metamorph
+                  {L("beastiepedia.sidebar.filter.metamorphosis.does")}
                 </button>
                 <br />
-                (Except for specific Metamorphosis types)
+                {L("beastiepedia.sidebar.filter.metamorphosis.disclamer")}
                 <br />
-                Recently Updated:
+                {L("beastiepedia.sidebar.filter.recentlyUpdated.title")}
                 <br />
                 <button
                   className={
@@ -422,7 +422,9 @@ export default function Filter({
                     )
                   }
                 >
-                  Plays, Traits, or Stats
+                  {L(
+                    "beastiepedia.sidebar.filter.recentlyUpdated.playsTraitsStats",
+                  )}
                 </button>
                 <button
                   className={
@@ -444,7 +446,9 @@ export default function Filter({
                     )
                   }
                 >
-                  Sprites or Colors
+                  {L(
+                    "beastiepedia.sidebar.filter.recentlyUpdated.spritesColors",
+                  )}
                 </button>
               </>
             ) : null}

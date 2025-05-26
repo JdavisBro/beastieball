@@ -49,7 +49,7 @@ function SidebarBeastie(props: Props): React.ReactElement {
               : `/icons/${beastieEnName}.png`
           }
           style={props.isSpoiler ? { filter: "brightness(50%)" } : undefined}
-          alt={`${props.isSpoiler ? "Hidden" : beastieName} Icon`}
+          alt={props.isSpoiler ? L("common.hiddenBeastie") : beastieName}
           loading="lazy"
         />
         <div className={styles.gridInfo}>
@@ -68,12 +68,12 @@ function SidebarBeastie(props: Props): React.ReactElement {
             <span>{String(beastiedata.number).padStart(2, "0")}</span>
             {props.statDisplay && !props.isSpoiler ? (
               <span>
-                {" - "}
+                {L("beastiepedia.sidebar.statDisplaySeparator")}
                 <span className={styles.statDisplay}>{props.statDisplay}</span>
               </span>
             ) : null}
           </div>
-          <div>{props.isSpoiler ? "???" : beastieName}</div>
+          <div>{props.isSpoiler ? L("common.spoiler") : beastieName}</div>
         </div>
       </div>
     </Link>

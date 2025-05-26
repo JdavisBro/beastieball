@@ -1,3 +1,134 @@
 {
-  "SITE_BRANDING": "Beastieball.info"
+  "common": {
+    "types": {
+      "body": "Body",
+      "spirit": "Spirit",
+      "mind": "Mind",
+      "bodyPow": "Body POW",
+      "spiritPow": "Spirit POW",
+      "mindPow": "Mind POW",
+      "bodyDef": "Body DEF",
+      "spiritDef": "Spirit DEF",
+      "mindDef": "Mind DEF"
+    },
+    "searchPrefix": "Search: ",
+    "spoiler": "???",
+    "hiddenBeastie": "Hidden Beastie"
+  },
+  "beastiepedia": {
+    "title": "Beastiepedia",
+    "titleBeastie": "{beastie} - Beastiepedia",
+    "description": "View information and previews of the Beasties from Beastieball!",
+    "noBeastie": {
+      "text": "No Beastie Selected",
+      "menuEnabled": "Select a Beastie in the sidebar.",
+      "menuDisabled": "Select a Beastie by toggling the menu in the top left."
+    },
+    "sidebar": {
+      "search": "Search Beasties..",
+      "sort": {
+        "ascending": "↑",
+        "descending": "↓",
+        "number": "Number",
+        "name": "Name",
+        "totalStats": "Stat Total",
+        "totalPow": "POW Total",
+        "highestPow": "Highest Pow",
+        "totalDef": "DEF Total",
+        "bodyPow": "Body POW",
+        "bodyDef": "Body DEF",
+        "spiritPow": "Spirit POW",
+        "spiritDef": "Spirit DEF",
+        "mindPow": "Mind POW",
+        "mindDef": "Mind DEF",
+        "recruit": "Recruit $",
+        "development": "Dev %"
+      },
+      "toggleGrid": "Toggle Grid View",
+      "filter": {
+        "title": "Filter Beasties",
+        "clear": "Clear Filter",
+        "trait": "Trait",
+        "plays": "Plays",
+        "other": "Other",
+        "allyTraining": "Ally Training:",
+        "metamorphosis": {
+          "title": "Metamorphosis:",
+          "doesNot": "Does not Metamorph",
+          "does": "Does Metamorph",
+          "disclamer": "(Except for specific Metamorphosis types)"
+        },
+        "recentlyUpdated": {
+          "title": "Recently Updated:",
+          "playsTraitsStats": "Plays, Traits, or Stats",
+          "spritesColors": "Sprites or Colors"
+        }
+      },
+      "statDisplaySeparator": " - "
+    },
+    "preview": {
+      "loading": "Loading...",
+      "failed": "Beastie Preview Failed",
+      "canvasAlt": "Beastie Preview Image",
+      "options": {
+        "text": "Preview Options",
+        "open": "▼ ",
+        "closed": "▲ "
+      },
+      "animationOptions": {
+        "header": "Animation",
+        "altSprite": {
+          "label": "Alt Sprite: ",
+          "normal": "Normal",
+          "alternate": "Alternate",
+          "altermateNumbered": "Alternate {num}"
+        },
+        "animLabel": "Animation: ",
+        "prev": "<-",
+        "next": "->",
+        "play": "PLAY",
+        "pause": "PAUSE",
+        "frameLabel": "Frame: ",
+        "speedLabel": "Speed: x",
+        "speedReset": "Reset"
+      },
+      "color": {
+        "regular": "Regular",
+        "variant": "Variant",
+        "raremorph": "Raremorph",
+        "custom": "Custom",
+        "reset": "Reset Colors",
+        "random": "Randomize Colors",
+        "copyLink": "Copy Link with Colors",
+        "rowdyLabel": "Rowdy: ",
+        "paletteSwapLabel": "Palette Swap: ",
+        "paletteSwapModalCurrentBeastie": "Select Unset to use this Beastie's regular colors."
+      },
+      "settings": {
+        "header": "Settings",
+        "savePNG": "Save PNG",
+        "copyPNG": "Copy PNG",
+        "saveGIF": "Save GIF",
+        "gifSpeedNote": "When using a high speed, GIFs might not save the speed correctly.",
+        "displaySizeLabel": "Display Size: ",
+        "backgroundLabel": "Background: ",
+        "cropLabel": "Crop to Beastie: "
+      },
+      "anim": {
+        "idle": "Idle",
+        "move": "Move",
+        "ready": "Ready",
+        "spike": "Spike",
+        "volley": "Volley",
+        "good": "Good",
+        "bad": "Bad",
+        "fall": "Fall",
+        "air": "Air",
+        "stop": "Stop",
+        "menu": "Menu",
+        "hug": "Hug",
+        "special": "Special"
+      }
+    }
+  }
 }

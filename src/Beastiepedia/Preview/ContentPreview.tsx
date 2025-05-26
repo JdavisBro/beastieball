@@ -116,6 +116,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   ) {
     anim = tempanim;
   }
+  const animDisplay = L("beastiepedia.preview.anim." + animation);
 
   const [userSpeed, setUserSpeed] = useState(1);
 
@@ -145,7 +146,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const [noDisplayRenderState, setNoDisplayRender] = useState(true);
   const noDisplayRender =
     beastieIdRef.current != props.beastiedata.id || noDisplayRenderState;
-  const [noDisplayReason, setNoDisplayReason] = useState("Loading...");
+  const [noDisplayReason, setNoDisplayReason] = useState(
+    "beastiepedia.preview.loading",
+  );
 
   const setFrame = useCallback(
     (frame: number) => {
@@ -158,7 +161,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         }
       } else if (!loadedImages[frame % drawnsprite.frames]) {
         setNoDisplayRender(true);
-        setNoDisplayReason("Loading...");
+        setNoDisplayReason("beastiepedia.preview.loading");
       }
     },
     [loadedImages, drawnsprite.frames],
@@ -291,7 +294,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   useEffect(() => {
     beastieIdRef.current = props.beastiedata.id;
     setNoDisplayRender(true);
-    setNoDisplayReason("Loading...");
+    setNoDisplayReason("beastiepedia.preview.loading");
   }, [props.beastiedata.id]);
 
   useEffect(() => {
@@ -318,14 +321,14 @@ export default function ContentPreview(props: Props): React.ReactNode {
         if (error instanceof WebGLError) {
           console.log(`WebGL Error: ${error.message}`);
           setNoDisplayRender(true);
-          setNoDisplayReason("Beastie Preview Failed");
+          setNoDisplayReason("beastiepedia.preview.failed");
           return;
         } else {
           throw error;
         }
       }
     }
-  }, [colors, props.beastiedata.colors.length, rowdy, setFrame]);
+  }, [colors, props.beastiedata.colors.length, rowdy, setFrame, L]);
 
   useEffect(() => {
     if (glRef.current && programRef.current) {
@@ -395,7 +398,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
     saveGif(
       glRef.current,
       fitBeastie,
-      `${beastieName}_${animation}`,
+      `${beastieName}_${animDisplay}`,
       loadedImages,
       structuredClone(anim),
       userSpeed,
@@ -404,7 +407,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       animStateRef.current.frame ?? 0,
     );
   }, [
-    animation,
+    animDisplay,
     fitBeastie,
     loadedImages,
     beastieName,
@@ -472,7 +475,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
           height={1000}
           ref={canvasRef}
         >
-          Beastie Preview Image
+          {L("beastiepedia.preview.canvasAlt")}
         </canvas>
         <div
           className={styles.canvasfailed}
@@ -488,7 +491,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
               : "black",
           }}
         >
-          <div>{noDisplayReason}</div>
+          <div>{L(noDisplayReason)}</div>
         </div>
       </div>
 
@@ -497,8 +500,10 @@ export default function ContentPreview(props: Props): React.ReactNode {
         onClick={() => setPreviewOptionsVisible((visible) => !visible)}
         style={{ display: portrait ? "block" : "none" }}
       >
-        <span className={previewOptionsVisible ? "" : styles.upArrow}>V</span>{" "}
-        Preview Options
+        {previewOptionsVisible
+          ? L("beastiepedia.preview.options.open")
+          : L("beastiepedia.preview.options.closed")}
+        {L("beastiepedia.preview.options.text")}
       </button>
 
       <div

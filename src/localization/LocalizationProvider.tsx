@@ -22,7 +22,7 @@ const BEASTIE_NAMES: Record<
   Record<SupportedLanguage, string>
 > = BEASTIE_NAMES_UNTYPED;
 
-type LanguageData = Record<string, string>;
+type LanguageData = { [key: string]: LanguageData | string };
 
 async function loadLanguageData(
   gamePromise: Promise<{ default: LanguageData }>,
@@ -53,6 +53,8 @@ const LANGUAGES: Record<SupportedLanguage, () => Promise<LanguageData>> = {
 const KEY_QUOTE = "¦";
 const KEY_SEP = "¬";
 
+const SITE_SEP = ".";
+
 function localize(
   lang: SupportedLanguage,
   languageData: LanguageData,
@@ -76,6 +78,22 @@ function localize(
         localize(lang, languageData, match),
       );
     }
+  } else if (key.includes(SITE_SEP)) {
+    let current: string | LanguageData = languageData;
+    for (const fragment of key.split(SITE_SEP)) {
+      if (typeof current == "string") {
+        break;
+      }
+      current = current[fragment];
+      if (!current) {
+        return key;
+      }
+    }
+    // return key;
+    return (typeof current == "string" ? current : key).replace(
+      /\{(.+?)\}/g,
+      (match, g1) => placeholders[g1] ?? match,
+    );
   }
 
   if (key in BEASTIE_NAMES) {
@@ -83,12 +101,12 @@ function localize(
   }
 
   return placeholders_exist
-    ? (key in languageData ? languageData[key] : key).replace(
+    ? (key in languageData ? (languageData[key] as string) : key).replace(
         /\{(.+?)\}/g,
         (match, g1) => placeholders[g1] ?? match,
       )
     : key in languageData
-      ? languageData[key]
+      ? (languageData[key] as string)
       : key;
 }
 

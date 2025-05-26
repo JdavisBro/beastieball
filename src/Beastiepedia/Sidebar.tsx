@@ -70,7 +70,7 @@ export default function Sidebar(props: Props): React.ReactElement {
         <div className={styles.controls}>
           <input
             type="search"
-            placeholder="Search Beasties.."
+            placeholder={L("beastiepedia.sidebar.search")}
             className={styles.sidebarsearch}
             onChange={(event) => setSearch(event.currentTarget.value)}
             onFocus={(event) => event.currentTarget.select()}
@@ -87,18 +87,20 @@ export default function Sidebar(props: Props): React.ReactElement {
           >
             {SORT_CATEGORIES.map((sort) => (
               <option key={sort.name} value={sort.name}>
-                {sort.name}
+                {L("beastiepedia.sidebar.sort." + sort.name)}
               </option>
             ))}
           </select>
           <button onClick={() => setSortDec(!sortDec)}>
-            {sortDec ? "↓" : "↑"}
+            {sortDec
+              ? L("beastiepedia.sidebar.sort.descending")
+              : L("beastiepedia.sidebar.sort.ascending")}
           </button>
           <Filter filters={filters} setFilters={setFilters} />
           <div
             className={grid ? styles.gridimage : styles.gridimageGrid}
             tabIndex={0}
-            title="Toggle Grid View"
+            title={L("beastiepedia.sidebar.toggleGrid")}
             role="button"
             onClick={() => setGrid(!grid)}
             onKeyDown={(event) => {

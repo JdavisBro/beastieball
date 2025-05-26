@@ -132,7 +132,7 @@ function getEffectString(
           ? `Every non-${feelingText} fielded player`
           : target[0].toUpperCase() + target.slice(1);
       const placeholders = {
-        "0": String(effect.pow),
+        "0": String(Math.abs(effect.pow)),
         "1": feelingText,
         Target: feelTarget,
       };
@@ -221,11 +221,13 @@ function getEffectString(
       }
       return L("movedefine_descadd_004");
     case 20:
-      if (effect.targ == 3) {
+      if (effect.targ == 1) {
         return L("movedefine_descadd_045");
       } else {
-        return L("movedefine_descadd_044");
+        return L("movedefine_descadd_044", { target: target });
       }
+    case 28:
+      return L("movedefine_descadd_041");
     case -30:
       return move.eff.length < 3
         ? L("movedefine_descadd_038")
@@ -348,7 +350,7 @@ function getEffectString(
           "1":
             effect.eff == 42
               ? L("fieldeffectstuff_008", { "1": "8" })
-              : L("fieldeffectstuff_007", { "1": "50", "2": "¾" }),
+              : L("fieldeffectstuff_007", { "1": "+50", "2": "¾" }),
         }),
       });
     case 44:

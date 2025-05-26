@@ -9,7 +9,7 @@ import useLocalization from "../../localization/useLocalization";
 
 type MoveTextProps = {
   level?: number;
-  move: Move | undefined;
+  move: Move;
   selected: boolean;
   onSelect: () => void;
 };
@@ -17,10 +17,6 @@ type MoveTextProps = {
 function MoveText(props: MoveTextProps): React.ReactElement {
   const { L } = useLocalization();
 
-  if (props.move === undefined) {
-    // This can never happen?
-    return <div>Move not found?</div>;
-  }
   return (
     <div className={styles.movecontainer}>
       {props.level ? (
@@ -127,14 +123,14 @@ export default function MoveList(props: Props): React.ReactElement {
 
   return (
     <div className={styles.container}>
-      <InfoBox header="Plays">
+      <InfoBox header={L("beastiepedia.info.plays.title")}>
         <div className={styles.listcontainer}>
           <div className={styles.movelist}>
-            <div>From Levels:</div>
+            <div>{L("beastiepedia.info.plays.fromLevels")}</div>
             {learnmoves}
           </div>
           <div className={styles.movelist}>
-            <div>From Friends:</div>
+            <div>{L("beastiepedia.info.plays.fromFriends")}</div>
             {friendmoves
               .sort(
                 (move1, move2) =>
@@ -153,7 +149,7 @@ export default function MoveList(props: Props): React.ReactElement {
           </div>
         </div>
       </InfoBox>
-      <InfoBox header="Selected Play">
+      <InfoBox header={L("beastiepedia.info.plays.selectedPlay")}>
         <div className={styles.viewcontainer}>
           {moveselected ? (
             <MoveModalProvider>

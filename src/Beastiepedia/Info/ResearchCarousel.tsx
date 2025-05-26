@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styles from "./ResearchCarousel.module.css";
 import Modal from "../../shared/Modal";
 import untyped_research_data from "../../data/raw/research_data.json";
+import useLocalization from "../../localization/useLocalization";
 
 const research_data: { [key: string]: number } = untyped_research_data;
 
@@ -15,20 +16,25 @@ function Controls({
   changeIndex: (targetIndex: number) => void;
   totalImages: number;
 }) {
+  const { L } = useLocalization();
+
   return (
     <div className={styles.controls}>
       <button
         disabled={imageIndex == 0}
         onClick={() => changeIndex(imageIndex - 1)}
       >
-        {"<"}Prev
+        {L("beastiepedia.info.research.prev")}
       </button>
-      {imageIndex + 1}/{totalImages}
+      {L("beastiepedia.info.research.current", {
+        num: String(imageIndex + 1),
+        max: String(totalImages),
+      })}
       <button
         disabled={imageIndex == totalImages - 1}
         onClick={() => changeIndex(imageIndex + 1)}
       >
-        Next{">"}
+        {L("beastiepedia.info.research.next")}
       </button>
     </div>
   );

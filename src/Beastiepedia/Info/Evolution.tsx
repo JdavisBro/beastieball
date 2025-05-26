@@ -72,9 +72,17 @@ function EvoCondInfo({ children }: { children: React.ReactNode }) {
         onClick={() => setDescShown(!descShown)}
         role="button"
       >
+        {" "}
         🛈
       </span>
-      <div style={{ display: descShown ? "block" : "none" }}>{children}</div>
+      <div
+        style={{
+          display: descShown ? "block" : "none",
+          whiteSpace: "pre-line",
+        }}
+      >
+        {children}
+      </div>
     </>
   );
 }
@@ -92,15 +100,19 @@ function EvoCondition({
 
   switch (condition) {
     case 0:
-      return `at level ${value}`;
+      return L("beastiepedia.info.metamorphosis.level", {
+        level: String(value),
+      });
     case 2: {
       const beastieName = L(BEASTIE_DATA.get(specie)?.name ?? "someone");
       return (
         <>
-          at {L(LOCATION_CONDS[specie] ?? "somewhere")}
+          {L("beastiepedia.info.metamorphosis.location", {
+            location: L(LOCATION_CONDS[specie] ?? "somewhere"),
+          })}
           <Link
             to={getLink(`/map/?marker=${beastieName}`)}
-            title="View Metamorphosis Location on the Map"
+            title={L("beastiepedia.info.metamorphosis.viewInMap")}
           >
             <img
               src="/gameassets/sprMainmenu/2.png"
@@ -115,25 +127,30 @@ function EvoCondition({
       );
     }
     case 3:
-      return `after forming ${value} relationships`;
+      return L("beastiepedia.info.metamorphosis.relationships", {
+        num: String(value),
+      });
     case 4:
       return (
         <>
-          at level {value} after fulfilling the Yearning.
+          {L("beastiepedia.info.metamorphosis.homeYearning", {
+            level: String(value),
+          })}
           <EvoCondInfo>
-            - The yearning will appear after enough trust is reached.
-            <br />- Trust is raised when the Beastie is on-field during a game.
+            {L("beastiepedia.info.metamorphosis.homeYearningMore")}
           </EvoCondInfo>
         </>
       );
     case 5:
     case 6: {
-      const snow = condition == 6;
+      const keyBase = condition == 6 ? "variantVariant" : "variantRegular";
       return (
         <>
-          at level {value} if {snow ? "variant" : "regular"} colors
+          {L("beastiepedia.info.metamorphosis." + keyBase, {
+            level: String(value),
+          })}
           <EvoCondInfo>
-            - or Raremorph while {snow ? "" : "not "}in the Alto Alps
+            {L("beastiepedia.info.metamorphosis." + keyBase + "Raremorph")}
           </EvoCondInfo>
         </>
       );
@@ -141,22 +158,27 @@ function EvoCondition({
     case 7:
       return (
         <EvoCondInfo>
-          <TextTag>- {L((value as Condition).description)}</TextTag>
+          <TextTag>
+            {L("beastiepedia.info.metamorphosis.ancientMorePrefix")}
+            {L((value as Condition).description)}
+          </TextTag>
         </EvoCondInfo>
       );
     case 8:
-      return `after beating ${value} Petula.`;
+      return L("beastiepedia.info.metamorphosis.petula", {
+        num: String(value),
+      });
   }
-  return "idk when though";
+  return L("beastiepedia.info.metamorphosis.fallback");
 }
 
 function EvoText({
   evo,
-  direction,
+  into,
   isSpoiler,
 }: {
   evo: { beastie: BeastieType; evolution: EvolutionType };
-  direction: string;
+  into: boolean;
   isSpoiler: boolean;
 }) {
   const { L, getLink } = useLocalization();
@@ -164,7 +186,7 @@ function EvoText({
   const conds: React.ReactNode[] = [];
   for (let i = 0; i < evo.evolution.condition.length; i++) {
     if (i > 0) {
-      conds.push(" or ");
+      conds.push(L("beastiepedia.info.metamorphosis.joiner"));
     }
     conds.push(
       <EvoCondition
@@ -179,10 +201,14 @@ function EvoText({
   const evoName = L(evo.beastie.name);
   return (
     <div>
-      Metamorphs {direction}{" "}
+      {L(
+        into
+          ? "beastiepedia.info.metamorphosis.to"
+          : "beastiepedia.info.metamorphosis.from",
+      )}
       <Link to={getLink(`/beastiepedia/${evoName}`)}>
-        {isSpoiler ? "???" : evoName}
-      </Link>{" "}
+        {isSpoiler ? L("common.spoiler") : evoName}
+      </Link>
       {conds}
     </div>
   );
@@ -229,6 +255,8 @@ export default function Evolution({
 }: {
   beastiedata: BeastieType;
 }) {
+  const { L } = useLocalization();
+
   const [spoilerMode] = useSpoilerMode();
   const [beastieSeen] = useSpoilerSeen();
 
@@ -249,13 +277,13 @@ export default function Evolution({
   const [showEvolution, setShowEvolution] = useState("");
 
   return (
-    <InfoBox header="Metamorphosis">
+    <InfoBox header={L("beastiepedia.info.metamorphosis.title")}>
       {preEvos?.length ? (
         preEvos.map((evo, index) => (
           <EvoText
             key={`${evo.beastie.id}${index}`}
             evo={evo}
-            direction="from"
+            into={false}
             isSpoiler={
               evo
                 ? spoilerMode == SpoilerMode.OnlySeen &&
@@ -265,7 +293,7 @@ export default function Evolution({
           />
         ))
       ) : (
-        <div>Does not Metamorph from any Beastie</div>
+        <div>{L("beastiepedia.info.metamorphosis.fromNone")}</div>
       )}
 
       {showEvolution == beastiedata.id || spoilerMode == SpoilerMode.All ? (
@@ -274,7 +302,7 @@ export default function Evolution({
             <EvoText
               key={evo.beastie.id + index}
               evo={evo}
-              direction="to"
+              into={true}
               isSpoiler={
                 spoilerMode == SpoilerMode.OnlySeen &&
                 !beastieSeen[evo.beastie.id]
@@ -282,11 +310,11 @@ export default function Evolution({
             />
           ))
         ) : (
-          <div>Does not Metamorph into any Beastie</div>
+          <div>{L("beastiepedia.info.metamorphosis.toNone")}</div>
         )
       ) : (
         <div onClick={() => setShowEvolution(beastiedata.id)}>
-          Possible spoiler. Click to reveal.
+          {L("beastiepedia.info.metamorphosis.spoiler")}
         </div>
       )}
     </InfoBox>

@@ -94,12 +94,23 @@ export default function ComboMove({
   }
 
   return (
-    <InfoBox header="Combo Moves" container={{ className: styles.combo }}>
+    <InfoBox
+      header={L("beastiepedia.info.combo.title")}
+      container={{ className: styles.combo }}
+    >
       <select onChange={(event) => setType(Number(event.currentTarget.value))}>
-        <option value={ComboType.Rivals}>Rivals Attack</option>
-        <option value={ComboType.Partners}>Partners Volley</option>
-        <option value={ComboType.Support}>Bestie/Sweetheart Support</option>
-        <option value={ComboType.Defense}>Bestie Defense</option>
+        <option value={ComboType.Rivals}>
+          {L("beastiepedia.info.combo.dropdown.rivals")}
+        </option>
+        <option value={ComboType.Partners}>
+          {L("beastiepedia.info.combo.dropdown.partners")}
+        </option>
+        <option value={ComboType.Support}>
+          {L("beastiepedia.info.combo.dropdown.support")}
+        </option>
+        <option value={ComboType.Defense}>
+          {L("beastiepedia.info.combo.dropdown.defense")}
+        </option>
       </select>
       <BeastieSelect beastieId={friendId} setBeastieId={setFriendId} />
       <MoveView
@@ -111,7 +122,13 @@ export default function ComboMove({
           bt_tags: [],
           use: use,
           desc_tags: [],
-          name: `${L(beastiedata.name)} + ${friend ? L(friend.name) : "???"} ${ComboType[type]}`,
+          name: L("beastiepedia.info.combo.beastieCombine", {
+            beastie: L(beastiedata.name),
+            friend: friend
+              ? L(friend.name)
+              : L("beastiepedia.info.combo.noFriend"),
+            type: L("beastiepedia.info.combo.type." + type),
+          }),
           type: moveType,
           pow: Math.round(((powMults[0] + powMults[1]) * 50) / 5) * 5,
           eff: effects,
@@ -119,7 +136,7 @@ export default function ComboMove({
         noLearner={true}
         typeText={
           type == ComboType.Rivals
-            ? "Rivals Move type is the type with the highest POW on the user Beastie."
+            ? L("beastiepedia.info.combo.rivalsTypeDesc")
             : undefined
         }
       />

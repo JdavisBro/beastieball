@@ -24,13 +24,15 @@ const NUMBER_FORMAT = Intl.NumberFormat(undefined, {
 });
 
 function ExpForLevel({ growth }: { growth: number }) {
+  const { L } = useLocalization();
+
   const [userLevel, setUserLevel] = useState(100);
   const level = Math.min(Math.max(userLevel, 0), 100);
   return (
     <InfoBox
       header={
         <>
-          Exp for Level{" "}
+          {L("beastiepedia.info.expForLevel")}
           <input
             type="number"
             className={styles.levelInput}
@@ -55,11 +57,10 @@ function ExpForLevel({ growth }: { growth: number }) {
   );
 }
 
-/* prettier-ignore */
-const TRAINING_TYPE: Record<string, React.ReactElement> = {
-  b: <img src="/gameassets/sprIcon/0.png" alt="Body" className={styles.trainingImage} />,
-  h: <img src="/gameassets/sprIcon/1.png" alt="Spirit" className={styles.trainingImage} />,
-  m: <img src="/gameassets/sprIcon/2.png" alt="Mind"className={styles.trainingImage} />,
+const TYPES: Record<string, [string, string]> = {
+  b: ["/gameassets/sprIcon/0.png", "common.type.body"],
+  h: ["/gameassets/sprIcon/1.png", "common.type.spirit"],
+  m: ["/gameassets/sprIcon/2.png", "common.type.mind"],
 };
 
 export default function ContentInfo(props: Props): React.ReactNode {
@@ -69,12 +70,19 @@ export default function ContentInfo(props: Props): React.ReactNode {
   const training = beastiedata.tyield
     .map((type, index, array) => {
       if (index % 2 != 0) return null;
+      const [src, altKey] = TYPES[(type as string)[0]];
       return (
         <span key={index} className={styles.training}>
           {index != 0 ? <br /> : null}
-          <span>+{array[index + 1]} </span>
-          {TRAINING_TYPE[(type as string)[0]]}
-          <span>{(type as string)[1] == "a" ? "POW" : "DEF"}</span>
+          <span>
+            {L("beastiepedia.info.allyTrainingPlus", {
+              num: String(array[index + 1]),
+            })}
+          </span>
+          <img src={src} alt={L(altKey)} className={styles.trainingImage} />
+          <span>
+            {(type as string)[1] == "a" ? L("common.pow") : L("common.def")}
+          </span>
         </span>
       );
     })
@@ -83,13 +91,21 @@ export default function ContentInfo(props: Props): React.ReactNode {
   return (
     <div className={styles.info}>
       <div className={styles.wrapinfoboxes}>
-        <InfoBox header="Number">#{beastiedata.number}</InfoBox>
-        <InfoBox header="Name">{L(beastiedata.name)}</InfoBox>
-        <InfoBox header="Development">{beastiedata.anim_progress}%</InfoBox>
+        <InfoBox header={L("beastiepedia.info.number")}>
+          #{beastiedata.number}
+        </InfoBox>
+        <InfoBox header={L("beastiepedia.info.name")}>
+          {L(beastiedata.name)}
+        </InfoBox>
+        <InfoBox header={L("beastiepedia.info.development")}>
+          {beastiedata.anim_progress}%
+        </InfoBox>
         <Evolution beastiedata={beastiedata} />
       </div>
-      <InfoBox header="Description">{L(beastiedata.desc)}</InfoBox>
-      <InfoBox header="Traits">
+      <InfoBox header={L("beastiepedia.info.description")}>
+        {L(beastiedata.desc)}
+      </InfoBox>
+      <InfoBox header={L("beastiepedia.info.traits.title")}>
         <table className={styles.traittable}>
           <tbody>
             {beastiedata.ability.map((value, index) =>
@@ -98,26 +114,26 @@ export default function ContentInfo(props: Props): React.ReactNode {
                   <td>
                     {L(abilities[value].name)}
                     {beastiedata.ability_hidden && index > 0
-                      ? " (recessive)"
+                      ? L("beastiepedia.info.traits.recessive")
                       : ""}
                   </td>
                   <td>
                     <TextTag>
-                      {L(abilities[value].desc.replace(/\|/g, ""))}
+                      {L(abilities[value].desc).replace(/|/g, "")}
                     </TextTag>
                   </td>
                 </tr>
               ) : (
-                `Unknown trait ${value}`
+                L("beastiepedia.info.traits.error", { value: value })
               ),
             )}
           </tbody>
         </table>
       </InfoBox>
-      <BoxHeader>Stat Distribution</BoxHeader>
+      <BoxHeader>{L("beastiepedia.info.statDistribution")}</BoxHeader>
       <StatDistribution beastiedata={beastiedata} />
       <div className={styles.wrapinfoboxes}>
-        <InfoBox header="Recruit Condition">
+        <InfoBox header={L("beastiepedia.info.recruit.title")}>
           {beastiedata.recruit_value != 0.5 ? (
             <>
               <TextTag>{L(beastiedata.recruit.description)}</TextTag>
@@ -125,17 +141,19 @@ export default function ContentInfo(props: Props): React.ReactNode {
               <span className={styles.training}>
                 <img
                   src="/gameassets/sprSponsors/1.png"
-                  alt="Staying Power Fitness Sponsor"
+                  alt={L("beastiepedia.info.recruit.sponsor")}
                   className={styles.gymLogo}
                 />
                 <span>{NUMBER_FORMAT.format(beastiedata.recruit_value)}</span>
               </span>
             </>
           ) : (
-            "Cannot be recruited from the wild."
+            L("beastiepedia.info.recruit.noRecruit")
           )}
         </InfoBox>
-        <InfoBox header="Ally Training">{training}</InfoBox>
+        <InfoBox header={L("beastiepedia.info.allyTraining")}>
+          {training}
+        </InfoBox>
         <ExpForLevel growth={beastiedata.growth} />
       </div>
       <MoveList
@@ -143,24 +161,26 @@ export default function ContentInfo(props: Props): React.ReactNode {
         learnset={beastiedata.learnset as [number, string][]}
       />
       <ComboMove beastiedata={beastiedata} />
-      <InfoBox header="Research">
+      <InfoBox header={L("beastiepedia.info.research.title")}>
         <div className={styles.research}>
           <ResearchCarousel beastieid={beastiedata.id} />
         </div>
-        Researcher
-        {Array.isArray(beastiedata.designer) && beastiedata.designer.length > 1
-          ? "s"
-          : ""}
-        :{" "}
+        {L(
+          Array.isArray(beastiedata.designer) && beastiedata.designer.length > 1
+            ? "beastiepedia.info.research.researchers"
+            : "beastiepedia.info.research.researcher",
+        )}
         {Array.isArray(beastiedata.designer)
-          ? beastiedata.designer.map((i) => designers[i]).join(", ")
+          ? beastiedata.designer
+              .map((i) => designers[i])
+              .join(L("beastiepedia.info.research.joiner"))
           : designers[beastiedata.designer]}
         <br />
-        Videographer
-        {Array.isArray(beastiedata.animator) && beastiedata.animator.length > 1
-          ? "s"
-          : ""}
-        :{" "}
+        {L(
+          Array.isArray(beastiedata.animator) && beastiedata.animator.length > 1
+            ? "beastiepedia.info.research.videographers"
+            : "beastiepedia.info.research.videographer",
+        )}
         {Array.isArray(beastiedata.animator)
           ? beastiedata.animator.map((i) => designers[i]).join(", ")
           : designers[beastiedata.animator]}

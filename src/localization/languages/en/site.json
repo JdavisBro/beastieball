@@ -1,5 +1,7 @@
 {
   "common": {
+    "pow": "POW",
+    "def": "DEF",
     "types": {
       "body": "Body",
       "spirit": "Spirit",
@@ -133,6 +135,89 @@
         "menu": "Menu",
         "hug": "Hug",
         "special": "Special"
+      }
+    },
+    "info": {
+      "number": "Number",
+      "name": "Name",
+      "development": "Development",
+      "metamorphosis": {
+        "title": "Metamorphosis",
+        "fromNone": "Does not Metamorph from any Beastie",
+        "from": "Metamorphs from ",
+        "toNone": "Does not Metamorph into any Beastie",
+        "to": "Metamorphs to ",
+        "level": " at level {level}",
+        "location": " at {location}",
+        "viewInMap": "View Metamorphosis Location on the Map",
+        "relationships": " after forming {num} relationships",
+        "homeYearning": " at level {level} after fulfilling the Yearning.",
+        "homeYearningMore": "- The yearning will appear after enough trust is reached.\n- Trust is raised when the Beastie is on-field during a game.",
+        "variantRegular": " at level {level} if the Beastie has Regular colors",
+        "variantRegularRaremorph": "- or if it's a Raremorph and you're not in the Alto Alps",
+        "variantVariant": " at level {level} if the Beastie has Variant colors",
+        "variantVariantRaremorph": "- or if it's a Raremorph and you're in the Alto Alps",
+        "ancientMorePrefix": "- ",
+        "petula": " after beating {num} Petula",
+        "fallback": " idk when though",
+        "joiner": " or",
+        "spoiler": "Possible spoiler. Click to reveal."
+      },
+      "description": "Description",
+      "traits": {
+        "title": "Traits",
+        "recessive": " (recessive)",
+        "error": "Unknown Trait: {value}"
+      },
+      "statDistribution": "Stat Distribution",
+      "recruit": {
+        "title": "Recruit Condition",
+        "sponsor": "Staying Power Fitness Sponsor",
+        "noRecruit": "Cannot be recruited from the wild."
+      },
+      "allyTraining": "Ally Training",
+      "allyTrainingPlus": "+{num} ",
+      "expForLevel": "Exp for Level ",
+      "plays": {
+        "title": "Plays",
+        "fromLevels": "From Levels:",
+        "fromFriends": "From Friends:",
+        "selectedPlay": "Selected Play"
+      },
+      "combo": {
+        "title": "Combo Plays",
+        "dropdown": {
+          "rivals": "Rivals Attack",
+          "partners": "Partners Volley",
+          "support": "Bestie/Sweetheart Support",
+          "defense": "Bestie Defense"
+        },
+        "beastieCombine": "{beastie} + {friend} {type}",
+        "noFriend": "???",
+        "type": {
+          "0": "Rivals",
+          "1": "Partners",
+          "2": "Support",
+          "3": "Defense"
+        },
+        "rivalsTypeDesc": "Rivals Play's type is the type with the highest POW on the using Beastie."
+      },
+      "research": {
+        "title": "Research",
+        "prev": "<Prev",
+        "next": "Next>",
+        "current": "{num}/{max}",
+        "researcher": "Researcher: ",
+        "researchers": "Researchers: ",
+        "videographer": "Videographer: ",
+        "videographers": "Videographers: ",
+        "joiner": ", "
+      },
+      "voice": {
+        "title": "Voice",
+        "hello": "Hello: ",
+        "cheer": "Cheer: ",
+        "boo": "Boo: "
       }
     }
   }

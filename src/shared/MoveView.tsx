@@ -95,7 +95,7 @@ function getEffectString(
     case 0:
     case 1:
     case 2:
-      return L(`movedefine_descadd_021`, {
+      return L("movedefine_descadd_021", {
         "0": `[sprIcon,${effect.eff}]`,
         "1": boost,
         target: target,
@@ -103,7 +103,7 @@ function getEffectString(
     case 3:
     case 4:
     case 5:
-      return L(`movedefine_descadd_024`, {
+      return L("movedefine_descadd_024", {
         "0": `[sprIcon,${effect.eff - 3}]`,
         "1": boost,
         target: target,
@@ -202,14 +202,14 @@ function getEffectString(
     case 11:
       return L("movedefine_descadd_037");
     case 15:
-      return L(`movedefine_descadd_021`, {
-        "0": `[sprIcon,0][sprIcon,1][sprIcon,2]`,
+      return L("movedefine_descadd_021", {
+        "0": "[sprIcon,0][sprIcon,1][sprIcon,2]",
         "1": boost,
         target: target,
       });
     case 16:
-      return L(`movedefine_descadd_024`, {
-        "0": `[sprIcon,0][sprIcon,1][sprIcon,2]`,
+      return L("movedefine_descadd_024", {
+        "0": "[sprIcon,0][sprIcon,1][sprIcon,2]",
         "1": boost,
         target: target,
       });
@@ -551,17 +551,17 @@ export default function MoveView(props: {
     }
 
     if (props.move.pow < -1) {
-      desc.push(L(`movedefine_descadd_018`, { "0": String(-props.move.pow) }));
+      desc.push(L("movedefine_descadd_018", { "0": String(-props.move.pow) }));
     } else if (props.move.pow > -1 && props.move.pow < 0) {
       desc.push(
-        L(`movedefine_descadd_017`, { "0": String(-props.move.pow * 100) }),
+        L("movedefine_descadd_017", { "0": String(-props.move.pow * 100) }),
       );
     }
 
     if (!desc.length && props.move.eff.length < 2) {
       if (props.move.eff.length == 0) {
         desc.push(
-          L(`movedefine_descadd_088`, { "0": String(props.move.type) }),
+          L("movedefine_descadd_088", { "0": String(props.move.type) }),
         );
       } else {
         desc.push(L("movedefine_descadd_001"));

@@ -17,10 +17,6 @@ language_out_dir = Path(r"../src/localization/languages/")
 
 INCLUDE_PREFIXES = [
   "_map_",
-  "movedefine_0",
-  "movedefine_descadd",
-  "fieldeffectstuff",
-  "statuseffectstuff",
 ]
 required_keys = []
 
@@ -62,6 +58,15 @@ for fp in data_dir.iterdir():
   keys = get_keys(data)
   if keys:
     required_keys += keys
+
+# get keys from code
+fp = Path("../src/shared/MoveView.tsx")
+with fp.open(encoding="utf8") as f:
+  text = f.read()
+  # required_keys = re.findall(r'L\("([\w\W]+?)"(?:\)|,)', text, re.M)
+  required_keys += re.findall(r'"(statuseffectstuff_\d+?)"', text, re.M)
+  required_keys += re.findall(r'"(fieldeffectstuff_\d+?)"', text, re.M)
+  required_keys += re.findall(r'"(movedefine_.+?)"', text, re.M)
 
 LANG_CODES = {
   "English": "en",

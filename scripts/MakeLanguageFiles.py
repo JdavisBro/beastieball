@@ -16,7 +16,11 @@ loc_dir = Path(r"C:\Program Files (x86)\Steam\steamapps\common\Beastieball\loc")
 language_out_dir = Path(r"../src/localization/languages/")
 
 INCLUDE_PREFIXES = [
-  "_map_"
+  "_map_",
+  "movedefine_0",
+  "movedefine_descadd",
+  "fieldeffectstuff",
+  "statuseffectstuff",
 ]
 required_keys = []
 

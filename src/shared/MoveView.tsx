@@ -7,50 +7,67 @@ import { useContext } from "react";
 import SOCIAL_DATA from "../data/SocialData";
 import { SpoilerMode, useFriendSpoiler, useSpoilerMode } from "./useSpoiler";
 import { useLocalStorage } from "usehooks-ts";
-import useLocalization from "../localization/useLocalization";
+import useLocalization, {
+  LocalizationFunction,
+} from "../localization/useLocalization";
 
 // reuqired: targ=12 says Targets SIDEWAYS.
 
 const TARGET_STRINGS: Record<number, string> = {
-  0: "self",
-  1: "ally",
-  2: "active team",
-  3: "target",
-  4: "target team",
-  5: "target's ally",
-  6: "entire team",
-  7: "every fielded player",
-  8: "other team",
-
-  9: "nearest enemy", // probably?
+  0: "movedefine_032", // self
+  1: "movedefine_033", // ally
+  2: "movedefine_034", // active team
+  3: "movedefine_035", // target
+  4: "movedefine_036", // target team
+  5: "movedefine_037", // target's ally
+  6: "movedefine_038", // entire team
+  7: "movedefine_039", // every fielded player
+  8: "movedefine_040", // other team
+  9: "movedefine_041", // nearest enemy
 };
 
 const ALT_TARGET_STRINGS: Record<number, string> = {
-  0: "self",
-  1: "ally",
-  2: "active team",
-  3: "benched ally",
-  6: "entire team",
-  7: "entire field",
-  8: "other team",
-  9: "nearest enemy",
+  0: "movedefine_032",
+  1: "movedefine_033",
+  2: "movedefine_034",
+  3: "movedefine_042", // benched ally
+  6: "movedefine_038",
+  7: "movedefine_045", // entire field
+  8: "movedefine_040",
+  9: "movedefine_041",
 };
 
 const FIELD_TARGET: Record<number, string> = {
-  0: "Ally field",
-  2: "Ally field",
-  3: "Opponent field",
-  5: "Opponent field",
-  7: "Entire field",
+  0: "movedefine_043", // ally field
+  2: "movedefine_043",
+  3: "movedefine_044", // opponent field
+  5: "movedefine_044",
+  7: "movedefine_045", // entire field
+};
+
+const FEELING_EFF_MAP: Record<number, [string, string, string]> = {
+  6: ["[sprStatus,0]", "statuseffectstuff_001", "statuseffectstuff_014"],
+  12: ["[sprStatus,1]", "statuseffectstuff_002", "statuseffectstuff_015"],
+  13: ["[sprStatus,2]", "statuseffectstuff_003", "statuseffectstuff_016"],
+  14: ["[sprStatus,3]", "statuseffectstuff_004", "statuseffectstuff_017"],
+  19: ["[sprStatus,4]", "statuseffectstuff_005", "statuseffectstuff_018"],
+  22: ["[sprStatus,5]", "statuseffectstuff_006", "statuseffectstuff_019"],
+  23: ["[sprStatus,6]", "statuseffectstuff_007", "statuseffectstuff_020"],
+  26: ["[sprStatus,8]", "statuseffectstuff_009", "statuseffectstuff_022"],
+  27: ["[sprStatus,9]", "statuseffectstuff_010", "statuseffectstuff_023"],
+  29: ["[sprStatus,10]", "statuseffectstuff_011", "statuseffectstuff_024"],
+  38: ["[sprStatus,11]", "statuseffectstuff_012", "statuseffectstuff_025"],
+  39: ["[sprStatus,12]", "statuseffectstuff_013", "statuseffectstuff_026"],
 };
 
 function getEffectString(
   effect: MoveEffect,
   attack: boolean,
   alt_target: boolean,
-  args: { joiningEffects: null | number },
+  args: { joiningEffects: null | boolean | Record<string, string> },
   move: Move,
-) {
+  L: LocalizationFunction,
+): string {
   let pow = Math.min(5, Math.abs(Math.floor(effect.pow)) - 1); // Max 6 boosts at once?
   let boost = "";
   while (pow >= 0) {
@@ -60,178 +77,245 @@ function getEffectString(
         : `[sprBoost,${Math.min(2, pow) + 3}]`;
     pow -= 3;
   }
-  const target = (alt_target ? ALT_TARGET_STRINGS : TARGET_STRINGS)[
+  const targKey = (alt_target ? ALT_TARGET_STRINGS : TARGET_STRINGS)[
     effect.targ
   ];
-
-  if (target == undefined) {
+  if (targKey == undefined) {
     console.log(`Target ${effect.targ} undefined!! ${effect}`);
   }
+  const target = L(targKey);
 
-  const targetStart =
-    target == undefined
-      ? "Undefined"
-      : target[0].toUpperCase() + target.slice(1);
-  // const targetCaps = target.toUpperCase();
-
-  const feels = !args.joiningEffects // Off completely is null, first in join is 0
-    ? effect.targ == 0
-      ? "Feel"
-      : `${targetStart} feels`
-    : "&";
-  const dot =
-    args.joiningEffects == null || args.joiningEffects == 1 ? "." : "";
-
-  if (args.joiningEffects != null) {
-    args.joiningEffects += 1;
+  let target_field = FIELD_TARGET[effect.targ];
+  if (target_field) {
+    target_field = L(target_field);
+    target_field = target_field[0].toUpperCase() + target_field.slice(1);
   }
 
   switch (effect.eff) {
     case 0:
-      return `[sprIcon,0]POW${boost} to ${target}.`;
     case 1:
-      return `[sprIcon,1]POW${boost} to ${target}.`;
     case 2:
-      return `[sprIcon,2]POW${boost} to ${target}.`;
+      return L(`movedefine_descadd_021`, {
+        "0": `[sprIcon,${effect.eff}]`,
+        "1": boost,
+        target: target,
+      });
     case 3:
-      return `[sprIcon,0]DEF${boost} to ${target}.`;
     case 4:
-      return `[sprIcon,1]DEF${boost} to ${target}.`;
     case 5:
-      return `[sprIcon,2]DEF${boost} to ${target}.`;
+      return L(`movedefine_descadd_024`, {
+        "0": `[sprIcon,${effect.eff - 3}]`,
+        "1": boost,
+        target: target,
+      });
     case 6:
-      return `${feels} ${effect.pow} [sprStatus,0]NERVOUS (can't move)${dot}`;
+    case 12:
+    case 13:
+    case 14:
+    case 19:
+    case 22:
+    case 23:
+    case 26:
+    case -26:
+    case 27:
+    case 29:
+    case 38:
+    case 39: {
+      const [im, nameKey, descKey] = FEELING_EFF_MAP[Math.abs(effect.eff)];
+      const feelingText = L("{im}{0} {1}", {
+        im: im,
+        "0": L(nameKey),
+        "1": L(descKey),
+      });
+      const feelTarget =
+        effect.eff == 23 && effect.pow > 0 && effect.targ == 7
+          ? `Every non-${feelingText} fielded player`
+          : target[0].toUpperCase() + target.slice(1);
+      const placeholders = {
+        "0": String(effect.pow),
+        "1": feelingText,
+        Target: feelTarget,
+      };
+      if (args.joiningEffects == true) {
+        args.joiningEffects = placeholders;
+        return "";
+      } else if (args.joiningEffects) {
+        const newPlaceholders = {
+          "0": args.joiningEffects["0"] + " ",
+          "1": args.joiningEffects["1"],
+          "2": placeholders["0"] + " ",
+          "3": placeholders["1"],
+          Target: feelTarget,
+        };
+        args.joiningEffects = null;
+        return L(
+          effect.targ == 0 ? "movedefine_005" : "movedefine_006",
+          newPlaceholders,
+        );
+      }
+      const key =
+        effect.eff < 0 && attack
+          ? effect.targ == 0
+            ? "movedefine_007" // Feel ... before contact
+            : "movedefine_008" // Targ feels ... before contact
+          : effect.targ == 0
+            ? "movedefine_003" // Feels
+            : "movedefine_004"; // Targ feels
+
+      return L(key, placeholders);
+    }
     case -7:
-    case 7:
-      return `SHIFTs ${target} to ${["back row", "front row", "opposite lane", "3", "4", "5", "6", "opposite row"][effect.pow]}${attack && effect.eff > 0 ? " after hitting" : ""}.`;
+    case 7: {
+      const key =
+        attack && effect.eff > 0 ? "movedefine_019" : "movedefine_014";
+
+      return L(key, {
+        "0": L(
+          [
+            "movedefine_015",
+            "movedefine_016",
+            "movedefine_017",
+            "3",
+            "4",
+            "5",
+            "6",
+            "movedefine_018",
+          ][effect.pow],
+        ),
+        target: target,
+      });
+    }
     case 8: {
-      const hp = Math.floor(Math.round(effect.pow * 10000000) / 100000); // rounds to 5dp then floors because funny float imprecision
+      const hp = String(Math.floor(Math.round(effect.pow * 10000000) / 100000)); // rounds to 5dp then floors because funny float imprecision
       if (effect.pow < 0) {
         if (effect.targ == 0) {
-          return `${hp} STAMINA.`;
+          return L("movedefine_descadd_034", { "0": hp });
         } else {
-          return `${hp} STAMINA to ${target}.`;
+          return L("movedefine_descadd_035", { "0": hp, target: target });
         }
       } else {
-        return `HEALs ${target} ${effect.pow > 0 ? "+" : ""}${hp}.`;
+        return L("movedefine_descadd_033", { "0": "+" + hp, target: target });
       }
     }
     case 10:
-      return `+${effect.pow} ACTIONs.`;
+      return L("movedefine_descadd_036", { "0": `+${effect.pow}` });
     case 11:
-      return "Switch places with fielded ally.";
-    case 12:
-      return `${feels} ${effect.pow} [sprStatus,1]ANGRY (only attacks)${dot}`;
-    case 13:
-      return `${feels} ${effect.pow} [sprStatus,2]SHOOK (can't attack)${dot}`;
-    case 14:
-      return `${feels} ${effect.pow} [sprStatus,3]NOISY (attracts attacks)${dot}`;
+      return L("movedefine_descadd_037");
     case 15:
-      return `[sprIcon,0][sprIcon,1][sprIcon,2]POW${boost} to ${target}.`;
+      return L(`movedefine_descadd_021`, {
+        "0": `[sprIcon,0][sprIcon,1][sprIcon,2]`,
+        "1": boost,
+        target: target,
+      });
     case 16:
-      return `[sprIcon,0][sprIcon,1][sprIcon,2]DEF${boost} to ${target}.`;
+      return L(`movedefine_descadd_024`, {
+        "0": `[sprIcon,0][sprIcon,1][sprIcon,2]`,
+        "1": boost,
+        target: target,
+      });
     case 17:
-      return `Can hit without volleying.`;
+      return L("movedefine_descadd_042");
     case 18:
       if (effect.targ == 3) {
-        return "Easy recieve.";
+        return L("movedefine_descadd_043");
       }
-      return "Volley to an opponent and skip your attack. Can always be used";
-    case 19:
-      return `${feels} ${effect.pow} [sprStatus,4]TOUGH (1/4 damage)${dot}`;
+      return L("movedefine_descadd_004");
     case 20:
-      if (effect.targ == 0) {
-        return `Ball goes to self.`;
+      if (effect.targ == 3) {
+        return L("movedefine_descadd_045");
       } else {
-        return `${targetStart}'s ball becomes VOLLEYed.`;
+        return L("movedefine_descadd_044");
       }
-    case 22:
-      return `${feels} ${effect.pow} [sprStatus,5]WIPED (must bench)${dot}`;
-    case 23: {
-      const feels2 =
-        effect.pow > 0 && effect.targ == 7
-          ? "Every non-[sprStatus,6]SWEATY (losing stamina) fielded player feels "
-          : feels + " +";
-      return `${feels2}${Math.abs(effect.pow)} [sprStatus,6]SWEATY (losing stamina)${dot}`;
-    }
-    case -26:
-    case 26:
-      return `${feels} ${effect.pow} [sprStatus,8]JAZZED (POW +50%)${effect.eff < 0 && attack ? " before contact" : ""}${dot}`;
-    case 27:
-      return `${feels} ${effect.pow} [sprStatus,9]BLOCKED (POW x2/3)${dot}`;
-    case 28:
-      return `SWITCH places with ${target} without moving ball.`;
-    case 29:
-      return `${feels} ${effect.pow} [sprStatus,10]TIRED (only basic actions)${dot}`;
     case -30:
       return move.eff.length < 3
-        ? `TAG OUT with ${ALT_TARGET_STRINGS[effect.targ]}.`
-        : "TAG OUT.";
+        ? L("movedefine_descadd_038")
+        : L("movedefine_descadd_039");
     case 30:
       if (alt_target) {
-        return move.eff.length < 3 ? `TAG OUT with ${target}.` : "TAG OUT.";
+        return move.eff.length < 3
+          ? L("movedefine_descadd_038")
+          : L("movedefine_descadd_039");
       } else {
-        return `Force ${target} to TAG OUT.`;
+        return L("movedefine_descadd_040", { target: target });
       }
     case 31:
-      return `Transfer [sprBoost,2][sprBoost,5]BOOSTS to ${target}.`;
+      return L("movedefine_descadd_052", {
+        "0": "[sprBoost,2]",
+        "1": "[sprBoost,5]",
+        target: target,
+      });
     case 32:
-      return `Clears FEELINGs (except [sprStatus,1]ANGRY) from ${target}.`;
+      return L("movedefine_descadd_053", {
+        "0": "[sprStatus,1]" + L("statuseffectstuff_002"),
+        target: target,
+      });
     case 33: {
       switch (effect.pow) {
         case 0:
-          return "Add user's STAMINA to POW.";
+          return L("movedefine_descadd_058");
         case 1:
-          return "Strongest when user has less STAMINA.";
+          return L("movedefine_descadd_059");
 
         case 5:
-          return "POW x2 if target just TAGGED IN.";
-
+          return L("movedefine_descadd_060");
+        case 6:
+          return L("movedefine_descadd_061");
         case 7:
-          return "POW x1.5 if used to serve.";
+          return L("movedefine_descadd_062");
         case 8:
-          return "Strongest when target has more STAMINA.";
+          return L("movedefine_descadd_063");
         case 9:
-          return "POW x2 if target STAMINA is under 50.";
+          return L("movedefine_descadd_064");
         case 10:
-          return "POW +10 for each [sprBoost,0]BOOST on the user.";
+          return L("movedefine_descadd_065");
         case 11:
-          return "POW +100% for each [sprBoost,1]BOOST on target.";
+          return L("movedefine_descadd_066");
         case 12:
-          return "POW x2 when [sprStatus,6]SWEATY, [sprStatus,0]NERVOUS, or [sprStatus,11]TENDER.";
+          return L("movedefine_descadd_067", {
+            "0": "[sprStatus,6]" + L("statuseffectstuff_007"),
+            "1": "[sprStatus,0]" + L("statuseffectstuff_001"),
+            "2": "[sprStatus,11]" + L("statuseffectstuff_012"),
+          });
         case 13:
-          return "POW x2 if target has a bad FEELING.";
+          return L("movedefine_descadd_068", { "0": "2" });
         case 14:
-          return "Ignores target's shields and [sprBoost,2][sprBoost,5]BOOSTS.";
+          return L("movedefine_descadd_069");
         case 15:
-          return "POW x1.5 if tied or behind on score.";
+          return L("movedefine_descadd_070");
         case 16:
-          return "Does more damage to back-row targets.";
+          return L("movedefine_descadd_071");
         case 17:
-          return "Ignores [sprStatus,9]BLOCKED.";
+          return L("movedefine_descadd_072", {
+            "0": "[sprStatus,9]" + L("statuseffectstuff_010"),
+          });
         case 18:
-          return "POW x1.5 if user recieved the ball.";
+          return L("movedefine_descadd_073");
         case 19:
-          return "POW +50% for each volley between allies.";
+          return L("movedefine_descadd_074");
         case 20:
-          return "POW x2 if user just TAGGED IN.";
+          return L("movedefine_descadd_076");
         case 21:
-          return "POW +25% for each [sprBoost,4]BOOST on target.";
+          return L("movedefine_descadd_077");
         case 22:
-          return "Damages based on target's weakest DEF.";
+          return L("movedefine_descadd_079");
         case 23:
-          return "Damages based on target's strongest DEF.";
+          return L("movedefine_descadd_080");
         case 25:
-          return "Boosted by RALLY instead of weakened.";
+          return L("movedefine_descadd_081", {
+            "0": L("fieldeffectstuff_001"),
+          }); // Boosted by RALLY instead of weakened.
         case 26:
-          return "POW x1.5 if user changed row or lane this turn.";
+          return L("movedefine_descadd_075");
         case 27:
-          return "POW x2 when stamina is below 34.";
+          return L("movedefine_descadd_092", {
+            "0": "2",
+            "1": "34",
+          });
 
         case 29:
-          return "POW x1.5 if there are any field effects.";
+          return L("movedefine_descadd_094");
         case 30:
-          return "POW x1.5 if user has 2+ ACTIONs.";
+          return L("movedefine_descadd_095");
       }
       console.log(
         `Undefined POW COND ${effect.pow}. E ${effect.eff} T ${effect.targ}`,
@@ -239,78 +323,121 @@ function getEffectString(
       return `POW COND ${effect.pow}`;
     }
     case 34:
-      return `Clears BOOSTS from ${target}`;
+      return L("movedefine_descadd_055", { target: target });
     case 36:
       if (effect.targ == 5 && effect.pow == 1) {
-        return "Damages both opponents.";
+        return L("movedefine_descadd_048");
       }
-      return `Additional ${effect.pow * 100}% damage to ${target}.`;
-    case 38:
-      return `${feels} ${effect.pow} [sprStatus,11]TENDER (DEF x1/2)${dot}`;
-    case 39:
-      return `${feels} ${effect.pow} [sprStatus,12]STRESSED (becomes [sprStatus,10]TIRED)${dot}`;
+      return L("movedefine_descadd_049", {
+        "0": String(effect.pow * 100),
+        target: target,
+      });
     case 40:
-      return "Requires 2 ACTIONS.";
+      return L("movedefine_descadd_056");
     case 41:
-      return "Requires 3 ACTIONS.";
+      return L("movedefine_descadd_057");
     case 42:
-      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} TRAP (Tag-ins lose 8 stamina per trap).`;
     case 43:
-      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW x3/4).`;
+      return L("movedefine_descadd_083", {
+        Field: target_field,
+        "0": `+${effect.pow}`,
+        "1": L("fieldeffectstuff_006", {
+          "0": L(
+            effect.eff == 42 ? "fieldeffectstuff_002" : "fieldeffectstuff_001",
+          ),
+          "1":
+            effect.eff == 42
+              ? L("fieldeffectstuff_008", { "1": "8" })
+              : L("fieldeffectstuff_007", { "1": "50", "2": "¾" }),
+        }),
+      });
     case 44:
-      return `${FIELD_TARGET[effect.targ]} fills with RHYTHM (Healing and protection).`;
     case 45:
-      return `${FIELD_TARGET[effect.targ]} fills with DREAD (No good feelings).`;
+      return L("movedefine_descadd_097", {
+        Field: target_field,
+        "1": L("fieldeffectstuff_006", {
+          "0": L(
+            effect.eff == 44 ? "fieldeffectstuff_003" : "fieldeffectstuff_004",
+          ),
+          "1": L(
+            effect.eff == 44 ? "fieldeffectstuff_009" : "fieldeffectstuff_010",
+          ),
+        }),
+      });
     case 46:
       if (effect.targ == 7) {
-        return `Clears all FIELD EFFECTS.`;
+        return L("movedefine_descadd_082"); // Clears all FIELD EFFECTS.
       }
       break;
     case 47:
       if (effect.targ == 0) {
-        return "Fully restores stamina and FEELINGS.";
+        return L("movedefine_descadd_031");
       }
-      return `Restores ${target}'s stamina and FEELINGS.`;
+      return L("movedefine_descadd_032", { target: target });
     case 52:
-      return `Clears negative FEELINGs from ${target}.`;
+      return L("movedefine_descadd_054", { target: target });
     case 53:
-      args.joiningEffects = 0;
+      args.joiningEffects = true;
       return "";
     case 56:
-      return `Build a WALL in front of ${target}.`;
+      return L("movedefine_descadd_084", { target: target });
     case 57:
       return ""; // shows on a few that are only used on back row but not others?
     case 60:
       return ""; // rowdy, displays as nothing, probably gives an extra rowdy point
     case 61:
-      return "Can use even when [sprStatus,2]SHOOK or [sprStatus,10]TIRED.";
+      return L("movedefine_descadd_030", {
+        "0": "[sprStatus,2]" + L("statuseffectstuff_003"),
+        "1": "[sprStatus,10]" + L("statuseffectstuff_011"),
+      });
     case 63:
-      return `Swaps Trait with ${TARGET_STRINGS[effect.targ]}.`;
+      return L("movedefine_descadd_085", {
+        target: L(TARGET_STRINGS[effect.targ]),
+      });
     case 64:
-      return "If ally field has RHYTHM: ";
+      return L("movedefine_descadd_029", {
+        field: target_field.toLowerCase(),
+        "0": L(`fieldeffectstuff_${String(effect.pow + 1).padStart(3, "0")}`),
+      });
     case 69:
       return ""; // Only when hittable - i do this elsewhere since it needs to be first.
-    case 70:
-      return `${FIELD_TARGET[effect.targ]} gets ${effect.pow} QUAKE${move.eff.find((ieff) => ieff.eff == effect.eff) == effect ? " (Volleys deal 25 damage)" : ""}.`;
+    case 70: {
+      const firstQuake =
+        move.eff.find((ieff) => ieff.eff == effect.eff) == effect;
+      return L("movedefine_descadd_083", {
+        "0": String(effect.pow),
+        "1": L(firstQuake ? "fieldeffectstuff_006" : "{0}", {
+          "0": L("fieldeffectstuff_005"),
+          "1": L("fieldeffectstuff_011", { "1": "25" }),
+        }),
+        Field: target_field,
+      });
+    }
     case 71:
-      return "Automatically VOLLEYs to target ally.";
+      return L("movedefine_descadd_046");
     case 72:
-      return "If ball is hittable: ";
+      return L("movedefine_descadd_091");
     case 73:
-      return "Always goes where it's targeted.";
+      return L("movedefine_descadd_096");
 
     case 74:
-      return `[sprIcon,0][sprIcon,1]POW${boost} to ${target}.`;
     case 75:
-      return `[sprIcon,0][sprIcon,2]POW${boost} to ${target}.`;
     case 76:
-      return `[sprIcon,1][sprIcon,2]POW${boost} to ${target}.`;
+      return L("movedefine_descadd_089", {
+        "0": `[sprIcon,${effect.eff == 76 ? "1" : "0"}]`,
+        "2": `[sprIcon,${effect.eff == 74 ? "1" : "2"}]`,
+        "1": boost,
+        target: target,
+      });
     case 77:
-      return `[sprIcon,0][sprIcon,1]DEF${boost} to ${target}.`;
     case 78:
-      return `[sprIcon,0][sprIcon,2]DEF${boost} to ${target}.`;
     case 79:
-      return `[sprIcon,1][sprIcon,2]DEF${boost} to ${target}.`;
+      return L("movedefine_descadd_090", {
+        "0": `[sprIcon,${effect.eff == 79 ? "1" : "0"}]`,
+        "2": `[sprIcon,${effect.eff == 77 ? "1" : "2"}]`,
+        "1": boost,
+        target: target,
+      });
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,
@@ -370,70 +497,72 @@ export default function MoveView(props: {
     "--move-url": `url("/gameassets/sprType/${String(props.move.type)}.png")`,
   } as React.CSSProperties;
 
-  const desc = [];
+  const desc: string[] = [];
   let pow = <></>;
 
   const attack = props.move.type < 3;
 
   switch (props.move.use) {
     case 1:
-      desc.push("Only used from back row.");
+      desc.push(L("movedefine_descadd_007"));
       break;
     case 2:
       // If it auto targets front row and is Only used from net then ONLY is not included.
-      desc.push(
-        props.move.targ != 4 ? "Only used from net." : "Used from net.",
-      );
+      if (props.move.targ == 4 && attack) {
+        desc.push(L("movedefine_descadd_006"));
+      } else {
+        desc.push(L("movedefine_descadd_008"));
+      }
       break;
   }
 
   if (props.move.eff.find((effect) => effect.eff == 69)) {
-    desc.push("Only used when ball is hittable.");
+    desc.push(L("movedefine_descadd_009"));
   } else if (
     props.move.type == Type.Volley &&
     !props.move.eff.some((eff) => eff.eff == 20) // Eff 20: Ball goes to TARGET. Does not have volley text
   ) {
-    desc.push("VOLLEY.");
+    desc.push(L("movedefine_descadd_019"));
   }
 
   if (attack) {
     switch (props.move.targ) {
       case 1:
       case 3:
-        desc.push("Targets straight ahead.");
+        desc.push(L("movedefine_descadd_015"));
         break;
       case 4:
-        // If it is Only used from net and Auto targets front row then Auto- is not included.
-        desc.push(
-          props.move.use != 2
-            ? "Auto-targets front row."
-            : "Targets front row.",
-        );
+        if (props.move.use == 2) {
+          break;
+        }
+        desc.push(L("movedefine_descadd_012"));
         break;
       case 8:
-        desc.push("Auto-targets back row.");
+        desc.push(L("movedefine_descadd_013"));
         break;
       case 12:
-        desc.push("Targets SIDEWAYS.");
+        desc.push(L("movedefine_descadd_014"));
         break;
       case 13:
-        desc.push("Auto-targets nearest opponent.");
+        desc.push(L("movedefine_descadd_010"));
         break;
     }
 
     if (props.move.pow < -1) {
-      desc.push(`Always does ${-props.move.pow} damage.`);
+      desc.push(L(`movedefine_descadd_018`, { "0": String(-props.move.pow) }));
     } else if (props.move.pow > -1 && props.move.pow < 0) {
       desc.push(
-        `Damage equals ${-props.move.pow * 100}% of target's remaining STAMINA.`,
+        L(`movedefine_descadd_017`, { "0": String(-props.move.pow * 100) }),
       );
     }
 
     if (!desc.length && props.move.eff.length < 2) {
       if (props.move.eff.length == 0) {
-        desc.push(`A [sprIcon,${props.move.type}] ATTACK.`);
+        desc.push(
+          L(`movedefine_descadd_088`, { "0": String(props.move.type) }),
+        );
       } else {
-        desc.push("ATTACK.");
+        desc.push(L("movedefine_descadd_001"));
       }
     }
     pow = (
@@ -455,6 +584,7 @@ export default function MoveView(props: {
             !attack && (props.move.targ == 0 || props.move.targ == 8),
             args,
             props.move,
+            L,
           ),
         )
         .filter((effect) => !!effect),

@@ -129,7 +129,7 @@ function getEffectString(
       });
       const feelTarget =
         effect.eff == 23 && effect.pow > 0 && effect.targ == 7
-          ? `Every non-${feelingText} fielded player`
+          ? `Every non-${im + L(nameKey)} fielded player`
           : target[0].toUpperCase() + target.slice(1);
       const placeholders = {
         "0": (effect.eff == 23 ? "+" : "") + String(Math.abs(effect.pow)),

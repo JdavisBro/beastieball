@@ -26,7 +26,7 @@ type Props = {
 };
 
 export default function Sidebar(props: Props): React.ReactElement {
-  const { L } = useLocalization();
+  const { currentLanguage, L } = useLocalization();
   const beastieid = props.beastieid;
 
   const [search, setSearch] = useState("");
@@ -57,9 +57,11 @@ export default function Sidebar(props: Props): React.ReactElement {
         prev[beastieId] = true;
         return prev;
       });
-      navigate(`/beastiepedia/${name}`);
+      navigate(
+        `${currentLanguage == "en" ? "/" : `/${currentLanguage}/`}beastiepedia/${name}`,
+      );
     },
-    [setSeenBeasties, navigate],
+    [setSeenBeasties, navigate, currentLanguage],
   );
 
   return (

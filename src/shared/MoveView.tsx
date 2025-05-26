@@ -149,7 +149,7 @@ function getEffectString(
     case 23: {
       const feels2 =
         effect.pow > 0 && effect.targ == 7
-          ? "Every non-[sprStatus,6]SWEATY (losing stamina) fielded player feels "
+          ? "Every non-[sprStatus,6]SWEATY fielded player feels "
           : feels + " +";
       return `${feels2}${Math.abs(effect.pow)} [sprStatus,6]SWEATY (losing stamina)${dot}`;
     }

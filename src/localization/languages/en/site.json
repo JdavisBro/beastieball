@@ -13,7 +13,12 @@
     },
     "searchPrefix": "Search: ",
     "spoiler": "???",
-    "hiddenBeastie": "Hidden Beastie"
+    "hiddenBeastie": "Hidden Beastie",
+    "beastieSelect": {
+      "title": "Select Beastie",
+      "label": "Select Beastie: {beastie}",
+      "unset": "Unset"
+    }
   },
   "beastiepedia": {
     "title": "Beastiepedia",

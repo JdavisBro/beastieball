@@ -119,17 +119,23 @@ export default function BeastieSelect({
       <button onClick={() => setOpen(true)}>
         {textOverride
           ? textOverride
-          : `Select Beastie: ${beastie ? L(beastie.name) : extraOption && beastieId == extraOption ? extraOptionText : "Unset"}`}
+          : L("common.beastieSelect.label", {
+              beastie: beastie
+                ? L(beastie.name)
+                : extraOptionText && beastieId == extraOption
+                  ? extraOptionText
+                  : L("common.beastieSelect.unset"),
+            })}
       </button>
       <Modal
-        header="Select Beastie"
+        header={L("common.beastieSelect.title")}
         open={open}
         onClose={onClose}
         hashValue="BeastieSelect"
       >
         <div className={styles.beastieSelectContainer}>
           <label tabIndex={0}>
-            Search:{" "}
+            {L("common.searchPrefix")}
             <input
               type="search"
               onChange={(event) => setSearch(event.currentTarget.value)}
@@ -153,7 +159,7 @@ export default function BeastieSelect({
                 setOpen(false);
               }}
             >
-              Unset
+              {L("common.beastieSelect.unset")}
             </div>
             {extraOption && extraOptionText ? (
               <div

@@ -6,6 +6,11 @@
       "body": "Body",
       "spirit": "Spirit",
       "mind": "Mind",
+      "volley": "Volley",
+      "support": "Support",
+      "defense": "Defense",
+      "move": "Move",
+      "tag": "Tag Out",
       "bodyPow": "Body POW",
       "spiritPow": "Spirit POW",
       "mindPow": "Mind POW",
@@ -20,6 +25,11 @@
       "title": "Select Beastie",
       "label": "Select Beastie: {beastie}",
       "unset": "Unset"
+    },
+    "moveView": {
+      "learnedFriend": "Learned from {friend} at {hearts} hearts.",
+      "viewLearners": "View Beasties that learn this play.",
+      "playText": "{type} Play"
     }
   },
   "beastiepedia": {

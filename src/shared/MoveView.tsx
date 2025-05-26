@@ -483,16 +483,30 @@ export default function MoveView(props: {
     if (!found) {
       friend = undefined;
     } else {
-      learned_text = `Learned from ${friendSpoiler ? L(friend.name).slice(0, 2) + "..." : L(friend.name)} at ${friend_hearts} hearts.`;
+      learned_text = L("common.moveView.learnedFriend", {
+        friend: friendSpoiler
+          ? L(friend.name).slice(0, 2) + "..."
+          : L(friend.name),
+        hearts: String(friend_hearts),
+      });
     }
   }
   if (props.friendFilter && (!friend || friend.id != props.friendFilter)) {
     return null;
   }
 
-  const { color, darkColor, alt } = TypeData[props.move.type]
+  const {
+    color,
+    darkColor,
+    alt: altKey,
+  } = TypeData[props.move.type]
     ? TypeData[props.move.type]
     : { color: "#ffffff", alt: "a" };
+
+  const alt = L("common.moveView.playText", {
+    type: L("common.types." + altKey),
+  });
+
   const style = {
     "--move-color": color,
     "--move-dark": darkColor,
@@ -656,8 +670,8 @@ export default function MoveView(props: {
                 }
               }}
               role="button"
-              alt="View Beasties that learn this play."
-              title="View Beasties that learn this play."
+              alt={L("common.moveView.viewLearners")}
+              title={L("common.moveView.viewLearners")}
             />
           )}
         </div>

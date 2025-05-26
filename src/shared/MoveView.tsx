@@ -132,7 +132,7 @@ function getEffectString(
           ? `Every non-${feelingText} fielded player`
           : target[0].toUpperCase() + target.slice(1);
       const placeholders = {
-        "0": String(Math.abs(effect.pow)),
+        "0": (effect.eff == 23 ? "+" : "") + String(Math.abs(effect.pow)),
         "1": feelingText,
         Target: feelTarget,
       };

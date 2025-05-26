@@ -133,11 +133,11 @@ function getEffectString(
       return `Can hit without volleying.`;
     case 18:
       if (effect.targ == 3) {
-        return "Easy recieve.";
+        return "Easy receive.";
       }
-      return "Volley to an opponent and skip your attack. Can always be used";
+      return "Pass to an opponent and skip your turn. Can always be used";
     case 19:
-      return `${feels} ${effect.pow} [sprStatus,4]TOUGH (1/4 damage)${dot}`;
+      return `${feels} ${effect.pow} [sprStatus,4]TOUGH (¼ damage)${dot}`;
     case 20:
       if (effect.targ == 0) {
         return `Ball goes to self.`;
@@ -195,13 +195,13 @@ function getEffectString(
         case 10:
           return "POW +10 for each [sprBoost,0]BOOST on the user.";
         case 11:
-          return "POW +100% for each [sprBoost,1]BOOST on target.";
+          return "POW +100% for each [sprBoost,0]BOOST on target.";
         case 12:
           return "POW x2 when [sprStatus,6]SWEATY, [sprStatus,0]NERVOUS, or [sprStatus,11]TENDER.";
         case 13:
           return "POW x2 if target has a bad FEELING.";
         case 14:
-          return "Ignores target's shields and [sprBoost,2][sprBoost,5]BOOSTS.";
+          return "Ignores target's shields and [sprBoost,0][sprBoost,3]BOOSTS.";
         case 15:
           return "POW x1.5 if tied or behind on score.";
         case 16:
@@ -209,13 +209,13 @@ function getEffectString(
         case 17:
           return "Ignores [sprStatus,9]BLOCKED.";
         case 18:
-          return "POW x1.5 if user recieved the ball.";
+          return "POW x1.5 if user received the ball.";
         case 19:
           return "POW +50% for each volley between allies.";
         case 20:
           return "POW x2 if user just TAGGED IN.";
         case 21:
-          return "POW +25% for each [sprBoost,4]BOOST on target.";
+          return "POW +25% for each [sprBoost,3]BOOST on target.";
         case 22:
           return "Damages based on target's weakest DEF.";
         case 23:
@@ -225,7 +225,7 @@ function getEffectString(
         case 26:
           return "POW x1.5 if user changed row or lane this turn.";
         case 27:
-          return "POW x2 when stamina is below 34.";
+          return "POW x2 when STAMINA is below 34.";
 
         case 29:
           return "POW x1.5 if there are any field effects.";
@@ -238,7 +238,7 @@ function getEffectString(
       return `POW COND ${effect.pow}`;
     }
     case 34:
-      return `Clears BOOSTS from ${target}`;
+      return `Clears BOOSTS from ${target}.`;
     case 36:
       if (effect.targ == 5 && effect.pow == 1) {
         return "Damages both opponents.";
@@ -255,7 +255,7 @@ function getEffectString(
     case 42:
       return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} TRAP (Tag-ins lose 8 stamina per trap).`;
     case 43:
-      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW x3/4).`;
+      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW x¾).`;
     case 44:
       return `${FIELD_TARGET[effect.targ]} fills with RHYTHM (Healing and protection).`;
     case 45:
@@ -286,7 +286,7 @@ function getEffectString(
     case 63:
       return `Swaps Trait with ${TARGET_STRINGS[effect.targ]}.`;
     case 64:
-      return "If ally field has RHYTHM: ";
+      return "If ally field has RHYTHM:";
     case 69:
       return ""; // Only when hittable - i do this elsewhere since it needs to be first.
     case 70:
@@ -294,7 +294,7 @@ function getEffectString(
     case 71:
       return "Automatically VOLLEYs to target ally.";
     case 72:
-      return "If ball is hittable: ";
+      return "If ball is hittable:";
     case 73:
       return "Always goes where it's targeted.";
 
@@ -379,7 +379,9 @@ export default function MoveView(props: {
     case 2:
       // If it auto targets front row and is Only used from net then ONLY is not included.
       desc.push(
-        props.move.targ != 4 ? "Only used from net." : "Used from net.",
+        props.move.targ != 4 && !attack
+          ? "Only used from net."
+          : "Used from net.",
       );
       break;
   }

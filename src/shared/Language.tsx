@@ -5,11 +5,11 @@ import useLocalization, {
 } from "../localization/useLocalization";
 
 export function Language() {
-  const { currentLanguage, setLanguage } = useLocalization();
+  const { L, currentLanguage, setLanguage } = useLocalization();
 
   return (
     <label>
-      Language:{" "}
+      {L("common.languageLabel")}
       <select
         value={currentLanguage}
         onChange={(event) =>

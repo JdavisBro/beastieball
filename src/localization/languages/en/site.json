@@ -1,5 +1,35 @@
 {
   "common": {
+    "header": {
+      "enableMenu": "Enabled Menu",
+      "disableMenu": "Disabled Menu",
+      "return": "Return to {place}",
+      "defaultPlace": "{branding} Home"
+    },
+    "navIcons": {
+      "githubImg": "GitHub Logo",
+      "githubOpen": "Open GitHub Repository",
+      "settingsImg": "Settings Menu",
+      "settingsOpen": "Open {branding} Settings"
+    },
+    "settings": {
+      "title": "{branding} Settings",
+      "disableAnimations": "Disable Animations",
+      "disableAnimationsDesc": "Removes background and header scrolling animations which can be distracting and has an impact on performance.",
+      "simplePlay": "Simple Play Background",
+      "simplePlayDesc": "Disables halftones on Play boxes, which has an impact on performance when there are many.",
+      "visit": "Visit the {version} site.",
+      "normal": "non-experimental",
+      "experimental": "🧪experimental"
+    },
+    "spoilerOptions": {
+      "showLabel": "Show: ",
+      "seen": "Seen Beasties/Characters",
+      "all": "All Beasties/Characters",
+      "reset": "Reset Seen Beasties/Characters"
+    },
+    "languageLabel": "Language: ",
+    "experimentalPrefix": "🧪 ",
     "pow": "POW",
     "def": "DEF",
     "types": {

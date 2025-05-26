@@ -118,7 +118,7 @@ function getEffectString(
     case 10:
       return `+${effect.pow} ACTIONs.`;
     case 11:
-      return "Switch places with fielded ally.";
+      return "SWITCH places with fielded ally.";
     case 12:
       return `${feels} ${effect.pow} [sprStatus,1]ANGRY (only attacks)${dot}`;
     case 13:
@@ -135,7 +135,7 @@ function getEffectString(
       if (effect.targ == 3) {
         return "Easy receive.";
       }
-      return "Pass to an opponent and skip your turn. Can always be used";
+      return "Pass to an opponent and skip your turn. Can always be used.";
     case 19:
       return `${feels} ${effect.pow} [sprStatus,4]TOUGH (¼ damage)${dot}`;
     case 20:
@@ -213,7 +213,7 @@ function getEffectString(
         case 19:
           return "POW +50% for each volley between allies.";
         case 20:
-          return "POW x2 if user just TAGGED IN.";
+          return "POW x2 if the user recently TAGGED IN.";
         case 21:
           return "POW +25% for each [sprBoost,3]BOOST on target.";
         case 22:
@@ -245,7 +245,7 @@ function getEffectString(
       }
       return `Additional ${effect.pow * 100}% damage to ${target}.`;
     case 38:
-      return `${feels} ${effect.pow} [sprStatus,11]TENDER (DEF x1/2)${dot}`;
+      return `${feels} ${effect.pow} [sprStatus,11]TENDER (DEF x½)${dot}`;
     case 39:
       return `${feels} ${effect.pow} [sprStatus,12]STRESSED (becomes [sprStatus,10]TIRED)${dot}`;
     case 40:
@@ -379,9 +379,9 @@ export default function MoveView(props: {
     case 2:
       // If it auto targets front row and is Only used from net then ONLY is not included.
       desc.push(
-        props.move.targ != 4 && !attack
-          ? "Only used from net."
-          : "Used from net.",
+        attack && props.move.targ == 4
+          ? "Used from net."
+          : "Only used from net.",
       );
       break;
   }

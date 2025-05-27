@@ -2,12 +2,15 @@ import { useLocalStorage } from "usehooks-ts";
 import SpoilerOptions from "./shared/SpoilerOptions";
 import { Language } from "./shared/Language";
 import { PropsWithChildren } from "react";
+import useLocalization from "./localization/useLocalization";
 
 export default function SpoilerWarning({ children }: PropsWithChildren) {
   const [spoilersOk, setSpoilersOk] = useLocalStorage("spoilersOk2", false, {
     serializer: String,
     deserializer: (value) => value == "true",
   });
+  const { L } = useLocalization();
+
   const site = import.meta.env.VITE_BRANDING;
 
   return spoilersOk ||
@@ -16,18 +19,13 @@ export default function SpoilerWarning({ children }: PropsWithChildren) {
   ) : (
     <div className="commoncontainer">
       <img src="/gameassets/sprExclam_1.png" />
-      <h1>Notice!</h1>
+      <h1>{L("notice.title")}</h1>
       <p>
-        {site} is an unofficial resource for Beastieball!
+        {L("notice.unofficial", { branding: site })}
         <br />
-        It may contain content that doesn't appear in the game, posting of this
-        content in official Wishes Unlimited channels (e.g Wishes Unlimited
-        Discord) is not allowed as per Wishes Unlimited's rules.
+        {L("notice.wishes", { branding: site })}
         <br />
-        {site} will also contain spoilers for the full game, in order to avoid
-        spoilers you can set to only show beasties/characters you've clicked on.
-        All other beasties/characters will have images and names hidden until
-        you click on them.
+        {L("notice.spoilers", { branding: site })}
       </p>
       <SpoilerOptions />
       <br />

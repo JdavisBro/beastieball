@@ -74,6 +74,13 @@
       "playText": "{type} Play"
     }
   },
+  "notice": {
+    "title": "Notice!",
+    "unofficial": "{branding} is an unofficial resource for Beastieball!",
+    "wishes": "It may contain content that doesn't appear in the game, posting of this content in official Wishes Unlimited channels (e.g Wishes Unlimited Discord) is not allowed as per Wishes Unlimited's rules.",
+    "spoilers": "{branding} will also contain spoilers for the full game, in order to avoid spoilers you can set to only show beasties/characters you've clicked on. All other beasties/characters will have images and names hidden until you click on them.",
+    "confirm": "Confirm"
+  },
   "beastiepedia": {
     "title": "Beastiepedia",
     "titleBeastie": "{beastie} - Beastiepedia",

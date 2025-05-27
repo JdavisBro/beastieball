@@ -64,7 +64,20 @@ function EventBlock({ children }: { children: React.ReactNode }) {
   return <div className={styles.eventBlock}>{children}</div>;
 }
 
+declare global {
+  interface Window {
+    forceEventTime?: {
+      days: number;
+      hours: number;
+      minutes: number;
+      seconds: number;
+    };
+  }
+}
+
 function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
+  const { L } = useLocalization();
+
   const [now, setNow] = useState(Date.now());
 
   useEffect(() => {
@@ -83,6 +96,14 @@ function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
 
   const future = focusDate.valueOf() > now;
   let delta = Math.abs((focusDate.valueOf() - now) / 1000);
+  if (import.meta.env.DEV && window.forceEventTime) {
+    delta =
+      window.forceEventTime.days * 86400 +
+      window.forceEventTime.hours * 3600 +
+      window.forceEventTime.minutes * 60 +
+      window.forceEventTime.seconds;
+  }
+
   const days = delta / 86400;
   delta -= Math.floor(days) * 86400;
   const hours = delta / 3600;
@@ -99,6 +120,44 @@ function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
   const secCeil = Math.ceil(seconds);
   const minCount = secCeil == 60 ? Math.ceil(minutes) : Math.floor(minutes);
   const secCount = secCeil == 60 ? 0 : secCeil;
+
+  const [oneKey, oneCount, twoKey, twoCount]: [
+    string,
+    number,
+    string | undefined,
+    number | undefined,
+  ] =
+    days >= 1 || (hourCount == 24 && minCeil == 60)
+      ? [
+          "day",
+          dayCount,
+          "hour",
+          hoursRounded == 24 || hoursRounded == 0 ? undefined : hoursRounded,
+        ]
+      : hours >= 1
+        ? [
+            "hour",
+            hourCount,
+            "minute",
+            minCeil == 60 ? 0 : minutes < 1 ? undefined : minCeil,
+          ]
+        : minutes >= 1
+          ? ["minute", minCount, "secondsMini", secCount]
+          : [
+              "second",
+              future ? secCeil : Math.floor(seconds),
+              undefined,
+              undefined,
+            ];
+
+  const text =
+    L("events." + oneKey + (oneCount != 1 ? "s" : ""), {
+      num: String(oneCount),
+    }) +
+    (twoKey && twoCount != undefined
+      ? `${L("events.timeSep")}${L("events." + twoKey + (twoCount != 1 ? "s" : ""), { num: String(twoCount) })}`
+      : "");
+
   return (
     <>
       <div
@@ -108,27 +167,18 @@ function TimeDelta({ startDate, endDate }: { startDate: Date; endDate: Date }) {
         }}
       ></div>
       <div>
-        {usingStartDate ? "Starts in " : future ? "Ends in " : "Ended "}
-        {days >= 1
-          ? `${dayCount} day${dayCount == 1 ? "" : "s"}${hoursRounded != 0 && hoursRounded != 24 ? `, ${hoursRounded} hour${hoursRounded == 1 ? "" : "s"}` : ""}`
-          : hours >= 1
-            ? `${hourCount} hour${hourCount == 1 ? "" : "s"}${minutes >= 1 && minCeil != 60 ? `, ${minCeil} minute${minCeil == 1 ? "" : "s"}` : ""}`
-            : minutes >= 1
-              ? `${minCount} minute${minCount == 1 ? "" : "s"}, ${secCount}s`
-              : `${secCeil} seconds`}
-        {future ? "" : " ago"}
+        {L(
+          usingStartDate
+            ? "events.startsIn"
+            : future
+              ? "events.endsIn"
+              : "events.ended",
+          { time: text },
+        )}
       </div>
     </>
   );
 }
-
-const DATETIME_FORMATTER: Intl.DateTimeFormat = new Intl.DateTimeFormat(
-  undefined,
-  {
-    dateStyle: "medium",
-    timeStyle: "short",
-  },
-);
 
 function Bigmoon({
   bigmoon,
@@ -137,7 +187,17 @@ function Bigmoon({
   bigmoon: BallEvent;
   bigmoonReload: () => void;
 }) {
-  const { L } = useLocalization();
+  const { L, currentLanguage } = useLocalization();
+
+  const datetime_format: Intl.DateTimeFormat = new Intl.DateTimeFormat(
+    navigator.language.startsWith(currentLanguage)
+      ? undefined
+      : currentLanguage, // use regional format if it's the same lang
+    {
+      dateStyle: "medium",
+      timeStyle: "short",
+    },
+  );
 
   const startDate = new Date(bigmoon.times[0][0]);
   const endDate = new Date(bigmoon.times[0][1]);
@@ -154,19 +214,21 @@ function Bigmoon({
     ?.map((beastieId) => BEASTIE_DATA.get(beastieId)?.name)
     .filter((beastie) => typeof beastie == "string")
     .map((name) => L(name));
+  const guildSep = L("events.guildSep");
   const guilds =
     beasties && bigmoon.guilds.length
       ? beasties.reduce(
-          (accum, beastie) => (accum ? accum + " VS " : accum) + beastie,
+          (accum, beastie) => (accum ? accum + guildSep : accum) + beastie,
           "",
-        )
+        ) + L("events.guildSuffix")
       : undefined;
+  const bannedSep = L("events.bannedSep");
   const bans =
     beasties && bigmoon.bans.length
       ? beasties.reduce(
-          (accum, beastie) => (accum ? accum + ", " : "") + beastie,
+          (accum, beastie) => (accum ? accum + bannedSep : "") + beastie,
           "",
-        )
+        ) + L("events.bannedSuffix")
       : undefined;
 
   return (
@@ -189,15 +251,19 @@ function Bigmoon({
           target="_blank"
           rel="noopener"
         >
-          Bigmoon Bash
+          {L("events.bigmoon")}
           <br />
           <div className={styles.eventSubtitle}>{guilds ?? bans ?? ""}</div>
         </Link>
         <TimeDelta startDate={startDate} endDate={endDate} />
-        <div>From: {DATETIME_FORMATTER.format(startDate)}</div>
-        <div>Until: {DATETIME_FORMATTER.format(endDate)}</div>
+        <div>
+          {L("events.from", { date: datetime_format.format(startDate) })}
+        </div>
+        <div>
+          {L("events.until", { date: datetime_format.format(endDate) })}
+        </div>
         <div
-          title="Check for Update"
+          title={L("events.checkForUpdate")}
           className={styles.eventReloadButton}
           onClick={(event) => {
             if (Date.now() < lastReload.current + 10000) {

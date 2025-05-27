@@ -43,14 +43,13 @@ export default function MoveModalProvider(props: PropsWithChildren) {
   };
 
   const orientation = useScreenOrientation(800);
-  const levelSeparator = orientation ? <br /> : " - ";
 
   const moveName = move && L(move.name);
 
   return (
     <MoveModalContext.Provider value={setMove}>
       <Modal
-        header={`Play: ${moveName}`}
+        header={L("common.moveModal.title", { name: moveName ?? "" })}
         open={move != null}
         onClose={() => setMove(null)}
         hashValue="Play"
@@ -58,8 +57,10 @@ export default function MoveModalProvider(props: PropsWithChildren) {
         <div className={styles.movemodalview}>
           {move ? <MoveView move={move} noLearner={true} /> : null}
           <div className={styles.movebeastietitle}>
-            <div>{levelBeasties.length ? "From Level" : ""}</div>
-            <div>{friendBeasties.length ? "From Friends" : ""}</div>
+            <div>{levelBeasties.length ? L("common.moveModal.level") : ""}</div>
+            <div>
+              {friendBeasties.length ? L("common.moveModal.friends") : ""}
+            </div>
           </div>
           <div className={styles.movebeastierow}>
             <div className={styles.movebeastielist}>
@@ -92,12 +93,20 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                         isSpoiler ? { filter: "brightness(50%)" } : undefined
                       }
                     />
-                    <div>
-                      {isSpoiler
-                        ? `Beastie #${beastie[0].number}`
-                        : beastieName}
-                      {levelSeparator}
-                      {beastie[1]}
+                    <div style={{ whiteSpace: "pre-wrap" }}>
+                      {L(
+                        orientation
+                          ? "common.moveModal.levelFormatMobile"
+                          : "common.moveModal.levelFormat",
+                        {
+                          beastie: isSpoiler
+                            ? L("common.beastieNum", {
+                                num: String(beastie[0].number),
+                              })
+                            : beastieName,
+                          level: String(beastie[1]),
+                        },
+                      )}
                     </div>
                   </Link>
                 );
@@ -131,7 +140,11 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                         isSpoiler ? { filter: "brightness(50%)" } : undefined
                       }
                     />
-                    {isSpoiler ? `Beastie #${beastie.number}` : beastieName}
+                    {isSpoiler
+                      ? L("common.beastieNum", {
+                          num: String(beastie.number),
+                        })
+                      : beastieName}
                   </Link>
                 );
               })}

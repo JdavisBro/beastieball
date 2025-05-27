@@ -72,6 +72,13 @@
       "learnedFriend": "Learned from {friend} at {hearts} hearts.",
       "viewLearners": "View Beasties that learn this play.",
       "playText": "{type} Play"
+    },
+    "moveModal": {
+      "title": "Play: {name}",
+      "level": "From Level",
+      "friends": "From Friends",
+      "levelFormat": "{beastie} - {level}",
+      "levelFormatMobile": "{beastie}\n{level}"
     }
   },
   "notice": {

@@ -1,7 +1,7 @@
-import { lazy } from "react";
 import {
   Navigate,
   Outlet,
+  useLoaderData,
   useParams,
   useRouteError,
   type RouteObject,
@@ -11,17 +11,11 @@ import LocalizationProvider from "./localization/LocalizationProvider";
 import SpoilerWarning from "./SpoilerWarning";
 import useLocalization from "./localization/useLocalization";
 
-const Home = lazy(() => import("./Home"));
-const Beastiepedia = lazy(() => import("./Beastiepedia/Beastiepedia"));
-const Playdex = lazy(() => import("./Playdex/Playdex"));
-const Map = lazy(() => import("./Map/Map"));
-const Beastdle = lazy(() => import("./Beastdle/Beastdle"));
-const Team = lazy(() => import("./Team/Team"));
-const TeamViewer = lazy(() => import("./Team/Viewer/TeamViewer"));
-const TeamBuilder = lazy(() => import("./Team/Builder/TeamBuilder"));
-const Modding = lazy(() => import("./Modding/Modding"));
-const Save = lazy(() => import("./Modding/Save/Save"));
-const Test = lazy(() => import("./Test"));
+function LoaderComponent() {
+  const Component = (useLoaderData() as { default: React.FunctionComponent })
+    .default;
+  return <Component />;
+}
 
 const UPDATED_ERRORS = ["unable to preload css", "dynamically imported module"];
 
@@ -69,28 +63,34 @@ const routes: Array<RouteObject> = [
     errorElement: <RouteError />,
     children: [
       {
-        element: <Home />,
+        element: <LoaderComponent />,
         path: "",
+        loader: () => import("./Home"),
       },
       {
-        element: <Beastiepedia />,
+        element: <LoaderComponent />,
         path: "beastiepedia/",
+        loader: () => import("./Beastiepedia/Beastiepedia"),
       },
       {
-        element: <Beastiepedia />,
+        element: <LoaderComponent />,
         path: "beastiepedia/:beastie",
+        loader: () => import("./Beastiepedia/Beastiepedia"),
       },
       {
-        element: <Playdex />,
+        element: <LoaderComponent />,
         path: "playdex/",
+        loader: () => import("./Playdex/Playdex"),
       },
       {
-        element: <Map />,
+        element: <LoaderComponent />,
         path: "map/",
+        loader: () => import("./Map/Map"),
       },
       {
-        element: <Beastdle />,
+        element: <LoaderComponent />,
         path: "beastdle/",
+        loader: () => import("./Beastdle/Beastdle"),
       },
 
       // OLD TEAM VIEWER REDIRECT
@@ -114,33 +114,40 @@ const routes: Array<RouteObject> = [
       },
 
       {
-        element: <Team />,
+        element: <LoaderComponent />,
         path: "team/",
+        loader: () => import("./Team/Team"),
       },
       {
-        element: <TeamViewer />,
+        element: <LoaderComponent />,
         path: "team/viewer/:code",
+        loader: () => import("./Team/Viewer/TeamViewer"),
       },
       {
-        element: <TeamViewer />,
+        element: <LoaderComponent />,
         path: "team/viewer/",
+        loader: () => import("./Team/Viewer/TeamViewer"),
       },
       {
-        element: <TeamBuilder />,
+        element: <LoaderComponent />,
         path: "team/builder/",
+        loader: () => import("./Team/Builder/TeamBuilder"),
       },
 
       {
-        element: <Save />,
+        element: <LoaderComponent />,
         path: "modding/save/",
+        loader: () => import("./Modding/Save/Save"),
       },
       {
-        element: <Modding />,
+        element: <LoaderComponent />,
         path: "modding/",
+        loader: () => import("./Modding/Modding"),
       },
       {
-        element: <Test />,
+        element: <LoaderComponent />,
         path: "test/",
+        loader: () => import("./Test"),
       },
       {
         element: <PageNotFound />,

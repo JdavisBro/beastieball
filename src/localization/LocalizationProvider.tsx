@@ -85,7 +85,7 @@ function localize(
         break;
       }
       current = current[fragment];
-      if (!current) {
+      if (current === undefined) {
         return key;
       }
     }

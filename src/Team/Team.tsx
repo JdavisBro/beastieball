@@ -6,7 +6,7 @@ export default function Team() {
   const { L } = useLocalization();
 
   return (
-    <NavigationMenu title="Teams">
+    <NavigationMenu title={L("teams.title")}>
       <OpenGraph
         title={L("common.title", {
           page: L("teams.title"),

@@ -34,13 +34,16 @@ export function NavigationMenu(props: {
   title?: string;
   note?: React.ReactNode;
 }): React.ReactNode {
+  const { L } = useLocalization();
+
   return (
     <div className={styles.navmenu}>
       <div className={styles.sep}></div>
       <h1 className={styles.header}>
         {props.title ??
-          (import.meta.env.VITE_EXPERIMENTAL == "true" ? "🧪 " : "") +
-            import.meta.env.VITE_BRANDING}
+          (import.meta.env.VITE_EXPERIMENTAL == "true"
+            ? L("common.experimentalPrefix")
+            : "") + import.meta.env.VITE_BRANDING}
       </h1>
       {props.note}
       <div className={styles.options}>{props.children}</div>

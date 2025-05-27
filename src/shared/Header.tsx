@@ -17,8 +17,8 @@ export default function Header(props: Props): React.ReactNode {
   const { L, getLink } = useLocalization();
 
   const menuText = props.menuButtonState
-    ? L("common.header.enableMenu")
-    : L("common.header.disableMenu");
+    ? L("common.header.enabledMenu")
+    : L("common.header.disabledMenu");
   return (
     <>
       <div className={styles.header}>

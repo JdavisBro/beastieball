@@ -2,8 +2,8 @@
   "common": {
     "title": "{page} - {branding}",
     "header": {
-      "enableMenu": "Enabled Menu",
-      "disableMenu": "Disabled Menu",
+      "enabledMenu": "Enabled Menu",
+      "disabledMenu": "Disabled Menu",
       "return": "Return to {place}",
       "defaultPlace": "{branding} Home"
     },

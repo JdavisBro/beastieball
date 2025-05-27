@@ -158,7 +158,7 @@ export default function Viewer() {
         noindex={!!code}
       />
       <Header
-        title="Team Viewer"
+        title={L("teams.viewer.title")}
         returnButtonTo="/team/"
         returnButtonTitle={L("teams.return", {
           branding: import.meta.env.VITE_BRANDING,

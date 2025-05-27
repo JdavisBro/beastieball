@@ -288,6 +288,8 @@ function Bigmoon({
 }
 
 export default function Events() {
+  const { L } = useLocalization();
+
   const [open, setOpen] = useState(false);
 
   const [bigmoon, bigmoonReload] = useBigmoon(open);
@@ -316,7 +318,7 @@ export default function Events() {
           onClick={() => setOpen(!open)}
           tabIndex={0}
         >
-          Events
+          {L("events.title")}
         </div>
         <div className={open ? styles.openBox : styles.closedBox}>
           {bigmoon == NoEvent.WaitingForResponse ? (

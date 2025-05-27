@@ -121,15 +121,18 @@ export default function PlayDex() {
   return (
     <div className={styles.container}>
       <OpenGraph
-        title="PlayDex"
+        title={L("common.title", {
+          page: L("playdex.title"),
+          branding: import.meta.env.VITE_BRANDING,
+        })}
         image="gameassets/sprMainmenu/6.png"
         url="playdex/"
-        description="List of moves/plays from Beastieball."
+        description={L("playdex.description")}
       />
-      <Header title="PlayDex" />
+      <Header title={L("playdex.title")} />
       <div className={styles.settings}>
         <label>
-          Search:{" "}
+          {L("common.searchPrefix")}
           <input
             type="search"
             onChange={(event) => setSearch(event.currentTarget.value)}
@@ -137,54 +140,61 @@ export default function PlayDex() {
           />
         </label>{" "}
         <label>
-          Sort by:{" "}
+          {L("playdex.sort.label")}
           <select
             id="sort"
             onChange={(event) => setSort(Number(event.currentTarget.value))}
             value={String(sort)}
           >
-            <option value="0">Type</option>
-            <option value="1">Alphabetical</option>
-            <option value="2">Pow</option>
-            {/* <option value="3">Effect</option> */}
-            <option value="4">Target</option>
+            <option value="0">{L("playdex.sort.type")}</option>
+            <option value="1">{L("playdex.sort.alphabetical")}</option>
+            <option value="2">{L("common.pow")}</option>
+            {/* <option value="3">{L("playdex.sort.effect")}</option> */}
+            <option value="4">{L("playdex.sort.target")}</option>
           </select>
         </label>{" "}
         <label>
-          Type:{" "}
+          {L("playdex.type")}
           <select
             onChange={(event) =>
               setTypeFilter(Number(event.currentTarget.value))
             }
             value={String(typeFilter)}
           >
-            <option value="-1">All</option>
-            <option value="0">Body</option>
-            <option value="1">Spirit</option>
-            <option value="2">Mind</option>
-            <option value="3">Volley</option>
-            <option value="4">Support</option>
-            <option value="5">Defense</option>
+            <option value="-1">{L("playdex.all")}</option>
+            <option value="0">{L("common.types.body")}</option>
+            <option value="1">{L("common.types.spirit")}</option>
+            <option value="2">{L("common.types.mind")}</option>
+            <option value="3">{L("common.types.volley")}</option>
+            <option value="4">{L("common.types.support")}</option>
+            <option value="5">{L("common.types.defense")}</option>
           </select>
         </label>{" "}
         <label>
-          Effect:{" "}
+          {L("playdex.effect.label")}
           <select
             onChange={(event) =>
               setEffectFilter(Number(event.currentTarget.value))
             }
             value={String(effectFilter)}
           >
-            <option value={-1}>All</option>
+            <option value={-1}>{L("playdex.all")}</option>
             {EffectFilters.map((effect, index) => (
               <option key={effect.name} value={index}>
-                {effect.name}
+                {effect.name.startsWith("common")
+                  ? L(effect.name)
+                  : L(
+                      "playdex.effect." + effect.name,
+                      effect.placeholderKey
+                        ? { "0": L(effect.placeholderKey) }
+                        : undefined,
+                    )}
               </option>
             ))}
           </select>
         </label>{" "}
         <label>
-          Favor:{" "}
+          {L("playdex.favor")}
           <select
             onChange={(event) =>
               setFriendFilter(
@@ -195,7 +205,7 @@ export default function PlayDex() {
             }
             value={friendFilter}
           >
-            <option value="undefined">None</option>
+            <option value="undefined">{L("playdex.favorNone")}</option>
             {CHAR_LIST.map((friendId) => {
               const friend = SOCIAL_DATA.find(
                 (friend) => friendId == friend.id,
@@ -217,7 +227,7 @@ export default function PlayDex() {
           </select>
         </label>{" "}
         <label>
-          Recently Changed:{" "}
+          {L("playdex.recentlyChanged")}
           <input
             type="checkbox"
             checked={recentlyChanged}

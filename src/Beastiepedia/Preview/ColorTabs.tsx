@@ -211,21 +211,21 @@ export default function ColorTabs(props: Props): React.ReactNode {
           className={currentTab == "color" ? styles.selectedtab : ""}
           onClick={() => setCurrentTab("color")}
         >
-          {L("beastiepedia.preview.color.regular")}
+          {L("common.color.regular")}
         </button>
         {beastiedata.colors2 ? (
           <button
             className={currentTab == "color2" ? styles.selectedtab : ""}
             onClick={() => setCurrentTab("color2")}
           >
-            {L("beastiepedia.preview.color.variant")}
+            {L("common.color.variant")}
           </button>
         ) : null}
         <button
           className={currentTab == "shiny" ? styles.selectedtab : ""}
           onClick={() => setCurrentTab("shiny")}
         >
-          {L("beastiepedia.preview.color.raremorph")}
+          {L("common.color.raremorph")}
         </button>
         <button
           className={currentTab == "custom" ? styles.selectedtab : ""}

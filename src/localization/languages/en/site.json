@@ -1,5 +1,6 @@
 {
   "common": {
+    "title": "{page} - {branding}",
     "header": {
       "enableMenu": "Enabled Menu",
       "disableMenu": "Disabled Menu",
@@ -49,8 +50,19 @@
       "mindDef": "Mind DEF"
     },
     "searchPrefix": "Search: ",
+    "altSprite": {
+      "normal": "Normal",
+      "alternate": "Alternate",
+      "alternateNumbered": "Alternate {num}"
+    },
+    "color": {
+      "regular": "Regular",
+      "variant": "Variant",
+      "raremorph": "Raremorph"
+    },
     "spoiler": "???",
     "hiddenBeastie": "Hidden Beastie",
+    "beastieNum": "Beastie #{num}",
     "beastieSelect": {
       "title": "Select Beastie",
       "label": "Select Beastie: {beastie}",
@@ -124,12 +136,7 @@
       },
       "animationOptions": {
         "header": "Animation",
-        "altSprite": {
-          "label": "Alt Sprite: ",
-          "normal": "Normal",
-          "alternate": "Alternate",
-          "altermateNumbered": "Alternate {num}"
-        },
+        "altSpriteLabel": "Alt Sprite: ",
         "animLabel": "Animation: ",
         "prev": "<-",
         "next": "->",
@@ -140,9 +147,6 @@
         "speedReset": "Reset"
       },
       "color": {
-        "regular": "Regular",
-        "variant": "Variant",
-        "raremorph": "Raremorph",
         "custom": "Custom",
         "reset": "Reset Colors",
         "random": "Randomize Colors",
@@ -259,6 +263,112 @@
         "cheer": "Cheer: ",
         "boo": "Boo: "
       }
+    }
+  },
+  "playdex": {
+    "title": "PlayDex"
+  },
+  "map": {
+    "title": "Map",
+    "header": "Beastieball Map"
+  },
+  "teams": {
+    "title": "Teams",
+    "description": "Team Viewer and Builder for Beastieball!",
+    "home": "Home",
+    "return": "{branding} Team Page",
+    "image": {
+      "imageLabel": "Image: ",
+      "drawMode": {
+        "grid": "Grid",
+        "horizontal": "Horizontal",
+        "vertical": "Vertical"
+      },
+      "save": "Save",
+      "copy": "Copy"
+    },
+    "beastie": {
+      "lvl": " Lvl {level}",
+      "maxLevel": "Max Level",
+      "expToNext": "To next level: {num}/{max} ({left} left)",
+      "openWithColors": "Open {beastie} with these colors in the Beastiepedia",
+      "statTooltip": "Coached: {coached}%\nTraining: {training}"
+    },
+    "viewer": {
+      "title": "Team Viewer",
+      "titleCommunity": "{team} - Team Viewer - {branding}",
+      "description": "Online Team Viewer for SportsNet download codes from Beastieball!",
+      "codeLabel": "Team Code: ",
+      "findButton": "Find",
+      "invalidCode": "Invalid Code: {code}",
+      "loadingTeam": "Loading Team...",
+      "noTeam": "No Team Loaded",
+      "atLevelLabel": "At Level ",
+      "maxCoachingLabel": "Max Coaching",
+      "teamBuilderButton": "Open in Team Builder",
+      "community": {
+        "menuHint": "View Community Teams by toggling the menu in the top left.",
+        "loading": "Loading Community Teams...",
+        "all": "All Teams",
+        "filter": {
+          "label": "Filter: ",
+          "name": "Name",
+          "author": "Author",
+          "beastie": "Beastie"
+        },
+        "add": "Want your team added? ",
+        "addLink": "Make an issue on GitHub.",
+        "issueDefaultText": "Name: Insert Team Name Here\nDescription: Insert Team Description Here\nCode: Insert Team Code Here (shared from in game)\nAuthor: Insert Author Name Here (how you'd like to be credited)",
+        "longDescSuffix": "...",
+        "longDescExpand": "V Hover / Tap to Expand V",
+        "by": "By {author}",
+        "joiner": " - ",
+        "code": "#{code}"
+      }
+    },
+    "builder": {
+      "title": "Team Builder",
+      "description": "Team Builder for Beastieball!",
+      "edit": "Edit",
+      "editing": "Editing",
+      "swap": "⇄",
+      "scrollsHorizontally": "Team Scrolls Horizontally",
+      "saveJson": "Save Team JSON",
+      "loadJson": "Load Team JSON",
+      "reset": "Reset Team",
+      "savedTeams": {
+        "title": "Saved Teams",
+        "copy": "Copy",
+        "copyDesc": "Overwrites the Beastie you're currently editing.",
+        "save": "Save",
+        "saveDesc": "Saves your Current Team over this one.",
+        "load": "Load",
+        "loadDesc": "Loads this Team as your current Team.",
+        "delete": "Delete",
+        "deleteDesc": "Deletes this Team from your Saved Teams.",
+        "noTeams": "No Saved Teams",
+        "saveCurrent": "Save Current Team as New Team"
+      },
+      "species": "Species: ",
+      "name": "Name: ",
+      "number": "Number: ",
+      "color": "Color: ",
+      "colorCopy": "Copy from Beastiepedia",
+      "sprite": "Sprite: ",
+      "level": "Level: ",
+      "trait": "Trait: ",
+      "coaching": "Coaching",
+      "sep": " - ",
+      "coachingMin": "All to 0%",
+      "coachingMax": "All to 100%",
+      "training": "Training",
+      "trainingPoint": "{num} Point Left",
+      "trainingPoints": "{num} Points Left",
+      "trainingClear": "Clear",
+      "plays": "Plays: ",
+      "playNum": "Play {num}: ",
+      "playUnset": "Unset",
+      "selectPlay": "Select Play {num}"
     }
   }
 }

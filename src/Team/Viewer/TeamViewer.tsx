@@ -15,6 +15,7 @@ import type {
 import TeamImageButton from "../TeamImageButton.tsx";
 import FeaturedSection from "./FeaturedSection.tsx";
 import useScreenOrientation from "../../utils/useScreenOrientation.ts";
+import useLocalization from "../../localization/useLocalization.ts";
 
 declare global {
   interface Window {
@@ -59,6 +60,8 @@ function findFeatured(
 }
 
 export default function Viewer() {
+  const { L } = useLocalization();
+
   const { code }: { code?: string } = useParams();
   const [team, setTeam] = useState<Team | null>(null);
   const [error, setError] = useState(false);
@@ -138,8 +141,18 @@ export default function Viewer() {
   return (
     <>
       <OpenGraph
-        title={`${selectedFeatured ? `${selectedFeatured.name} - ` : ""}Team Viewer - ${import.meta.env.VITE_BRANDING}`}
-        description="Online Team Viewer for SportsNet download codes from Beastieball!"
+        title={
+          selectedFeatured
+            ? L("teams.viewer.titleCommunity", {
+                team: selectedFeatured.name,
+                branding: import.meta.env.VITE_BRANDING,
+              })
+            : L("common.title", {
+                page: L("teams.viewer.title"),
+                branding: import.meta.env.VITE_BRANDING,
+              })
+        }
+        description={L("teams.viewer.description")}
         image="gameassets/sprMainmenu/8.png"
         url="team/viewer/"
         noindex={!!code}
@@ -147,7 +160,9 @@ export default function Viewer() {
       <Header
         title="Team Viewer"
         returnButtonTo="/team/"
-        returnButtonTitle={`${import.meta.env.VITE_BRANDING} Team Page`}
+        returnButtonTitle={L("teams.return", {
+          branding: import.meta.env.VITE_BRANDING,
+        })}
         menuButton={orientation}
         menuButtonState={mobileFeatured}
         onMenuButtonPressed={() => setMobileFeatured(!mobileFeatured)}
@@ -175,7 +190,7 @@ export default function Viewer() {
       >
         <div className={styles.sectionheader}>
           <label>
-            Team Code:{" "}
+            {L("teams.viewer.codeLabel")}
             <input
               type="text"
               ref={textInput}
@@ -183,16 +198,16 @@ export default function Viewer() {
               onKeyUp={(event) => event.key == "Enter" && submitCode()}
             />
           </label>
-          <button onClick={submitCode}>Find</button>
+          <button onClick={submitCode}>{L("teams.viewer.findButton")}</button>
         </div>
         <div className={styles.sectionheader}>
           {team && team.code == code
             ? `${team.code}${selectedFeatured ? ` - ${selectedCategoryName} - ${selectedFeatured.name}` : ""}`
             : error
-              ? `Invalid Code: ${code}`
+              ? L("teams.viewer.invalidCode", { code: code ?? "" })
               : code
-                ? "Loading Team..."
-                : "No Team Loaded"}
+                ? L("teams.viewer.loadingTeam")
+                : L("teams.viewer.noTeam")}
         </div>
         <BeastieRenderProvider>
           <div className={styles.team}>
@@ -219,7 +234,7 @@ export default function Viewer() {
                   setIsLevelOverwritten(event.currentTarget.checked)
                 }
               />
-              At Level{" "}
+              {L("teams.viewer.atLevelLabel")}
               <input
                 type="number"
                 onChange={(event) =>
@@ -238,7 +253,7 @@ export default function Viewer() {
                   setMaxCoaching(event.currentTarget.checked)
                 }
               />
-              Max Coaching
+              {L("teams.viewer.maxCoachingLabel")}
             </label>
             {orientation ? <br /> : " - "}
             <button
@@ -253,7 +268,7 @@ export default function Viewer() {
               }}
               disabled={!team}
             >
-              Open in Team Builder
+              {L("teams.viewer.teamBuilderButton")}
             </button>
             {orientation ? <br /> : " - "}
             <TeamImageButton
@@ -266,7 +281,7 @@ export default function Viewer() {
 
         {orientation ? (
           <div className={styles.sectionheader}>
-            View Community Teams by toggling the menu in the top left.
+            {L("teams.viewer.community.menuHint")}
           </div>
         ) : (
           <FeaturedSection

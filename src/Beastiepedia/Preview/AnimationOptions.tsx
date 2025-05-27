@@ -29,26 +29,21 @@ export default function AnimationOptions(props: Props): React.ReactElement {
         {props.beastiedata.spr_alt.length ? (
           <>
             <label>
-              {L("beastiepedia.preview.animationOptions.altSprite.label")}
+              {L("beastiepedia.preview.animationOptions.altSpriteLabel")}
               <select
                 onChange={(event) =>
                   props.setAlt(Number(event.currentTarget.value))
                 }
                 value={props.alt}
               >
-                <option value="-1">
-                  {L("beastiepedia.preview.animationOptions.altSprite.normal")}
-                </option>
+                <option value="-1">{L("common.altSprite.normal")}</option>
                 {props.beastiedata.spr_alt.map((sprindex, index) => (
                   <option key={sprindex} value={index}>
                     {alt_nums
-                      ? L(
-                          "beastiepedia.preview.animationOptions.altSprite.alternateNumbered",
-                          { num: String(index + 1) },
-                        )
-                      : L(
-                          "beastiepedia.preview.animationOptions.altSprite.alternate",
-                        )}
+                      ? L("common.altSprite.alternateNumbered", {
+                          num: String(index + 1),
+                        })
+                      : L("common.altSprite.alternate")}
                   </option>
                 ))}
               </select>

@@ -6,9 +6,9 @@ import type { TeamBeastie } from "../Types";
 import MoveSelect from "./MoveSelect";
 
 const TYPES = [
-  ["b", "Body"],
-  ["h", "Spirit"],
-  ["m", "Mind"],
+  ["b", "body"],
+  ["h", "spirit"],
+  ["m", "mind"],
 ];
 
 type COACHING = "ba_r" | "bd_r" | "ha_r" | "hd_r" | "ma_r" | "md_r";
@@ -87,10 +87,12 @@ export default function EditBeastie({
     });
   };
 
+  const sep = L("teams.builder.sep");
+
   return (
     <>
       <label>
-        Specie:{" "}
+        {L("teams.builder.species")}
         <BeastieSelect
           beastieId={beastie.specie}
           setBeastieId={(beastieId) => {
@@ -126,7 +128,7 @@ export default function EditBeastie({
         />
       </label>
       <label>
-        Name:{" "}
+        {L("teams.builder.name")}
         <input
           type="text"
           maxLength={12}
@@ -135,7 +137,7 @@ export default function EditBeastie({
         />
       </label>
       <label>
-        Number:{" "}
+        {L("teams.builder.number")}
         <input
           type="number"
           min={0}
@@ -148,7 +150,7 @@ export default function EditBeastie({
       </label>
       <div>
         <label>
-          Color:{" "}
+          {L("teams.builder.color")}
           <select
             value={Math.floor(beastie.color[0])}
             onChange={(event) =>
@@ -162,9 +164,11 @@ export default function EditBeastie({
               )
             }
           >
-            <option value={0}>Regular</option>
-            {beastiedata.colors2 ? <option value={2}>Variant</option> : null}
-            <option value={1}>Raremorph</option>
+            <option value={0}>{L("common.color.regular")}</option>
+            {beastiedata.colors2 ? (
+              <option value={2}>{L("common.color.variant")}</option>
+            ) : null}
+            <option value={1}>{L("common.color.raremorph")}</option>
           </select>
         </label>
         <button
@@ -185,29 +189,34 @@ export default function EditBeastie({
             );
           }}
         >
-          Copy from Beastiepedia
+          {L("teams.builder.colorCopy")}
         </button>
       </div>
       {beastiedata.spr_alt.length ? (
         <label>
-          Sprite:{" "}
+          {L("teams.builder.sprite")}
           <select
             value={beastie.spr_index}
             onChange={(event) =>
               changeValue("spr_index", Number(event.currentTarget.value))
             }
           >
-            <option value={0}>Normal</option>
+            <option value={0}>{L("common.altSprite.normal")}</option>
             {beastiedata.spr_alt.map((_, index) => (
               <option key={index} value={index + 1}>
-                Alternate{beastiedata.spr_alt.length > 1 ? ` ${index}` : ""}
+                {L(
+                  beastiedata.spr_alt.length > 1
+                    ? "common.altSprite.alternateNumbered"
+                    : "common.altSprite.alternate",
+                  { num: String(index) },
+                )}
               </option>
             ))}
           </select>
         </label>
       ) : null}
       <label>
-        Level:{" "}
+        {L("teams.builder.level")}
         <input
           type="number"
           min={1}
@@ -222,7 +231,7 @@ export default function EditBeastie({
         />
       </label>
       <label>
-        Trait:{" "}
+        {L("teams.builder.trait")}
         <select
           defaultValue={beastie.ability_index}
           onChange={(event) =>
@@ -237,8 +246,15 @@ export default function EditBeastie({
         </select>
       </label>
       <div>
-        Coaching - <button onClick={() => setAllCoaching(0)}>All to 0%</button>{" "}
-        - <button onClick={() => setAllCoaching(1)}>All to 100%</button>
+        {L("teams.builder.coaching")}
+        {sep}
+        <button onClick={() => setAllCoaching(0)}>
+          {L("teams.builder.coachingMin")}
+        </button>
+        {sep}
+        <button onClick={() => setAllCoaching(1)}>
+          {L("teams.builder.coachingMax")}
+        </button>
       </div>
       {TYPES.map(([char, name]) => {
         const pow_key = (char + "a_r") as COACHING;
@@ -246,7 +262,7 @@ export default function EditBeastie({
         return (
           <div key={char}>
             <label>
-              {name} POW{" "}
+              {L("common.types." + name + "Pow")}{" "}
               <input
                 type="number"
                 min={0}
@@ -258,9 +274,9 @@ export default function EditBeastie({
               />
               %
             </label>
-            {" - "}
+            {sep}
             <label>
-              {name} DEF{" "}
+              {L("common.types." + name + "Def")}{" "}
               <input
                 type="number"
                 min={0}
@@ -276,7 +292,15 @@ export default function EditBeastie({
         );
       })}
       <div>
-        Training - {extraPoints} Point{extraPoints == 1 ? "" : "s"} Left -{" "}
+        {L("teams.builder.training")}
+        {sep}
+        {L(
+          extraPoints == 1
+            ? "teams.builder.trainingPoint"
+            : "teams.builder.trainingPoints",
+          { num: String(extraPoints) },
+        )}
+        {sep}
         <button
           onClick={() => {
             TYPES.map(([char]) => {
@@ -285,7 +309,7 @@ export default function EditBeastie({
             });
           }}
         >
-          Clear
+          {L("teams.builder.trainingClear")}
         </button>
       </div>
       {TYPES.map(([char, name]) => {
@@ -296,7 +320,8 @@ export default function EditBeastie({
         return (
           <div key={char}>
             <label>
-              {name} POW +
+              {L("common.types." + name + "Pow")}
+              {" +"}
               <input
                 type="number"
                 min={0}
@@ -316,7 +341,8 @@ export default function EditBeastie({
             </label>
             {" - "}
             <label>
-              {name} DEF +
+              {L("common.types." + name + "Def")}
+              {" +"}
               <input
                 type="number"
                 min={0}

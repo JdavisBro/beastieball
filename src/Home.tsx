@@ -1,29 +1,32 @@
 import Events from "./Events/Events";
+import useLocalization from "./localization/useLocalization";
 import { NavigationMenu, NavigationMenuOption } from "./shared/NavigationMenu";
 
 export default function Home(): React.ReactNode {
+  const { L } = useLocalization();
+
   return (
     <NavigationMenu note={<Events />}>
       <NavigationMenuOption
-        text={"Playdex"}
+        text={L("playdex.title")}
         image={"/gameassets/sprMainmenu/6.png"}
         hoverImage={"/gameassets/sprMainmenu/7.png"}
         location={"/playdex/"}
       />
       <NavigationMenuOption
-        text={"Beastiepedia"}
+        text={L("beastiepedia.title")}
         image={"/gameassets/sprMainmenu/0.png"}
         hoverImage={"/gameassets/sprMainmenu/1.png"}
         location={"/beastiepedia/"}
       />
       <NavigationMenuOption
-        text={"Map"}
+        text={L("map.title")}
         image={"/gameassets/sprMainmenu/2.png"}
         hoverImage={"/gameassets/sprMainmenu/3.png"}
         location={"/map/"}
       />
       <NavigationMenuOption
-        text={"Teams"}
+        text={L("teams.title")}
         image={"/gameassets/sprMainmenu/20.png"}
         hoverImage={"/gameassets/sprMainmenu/21.png"}
         location={"/team/"}

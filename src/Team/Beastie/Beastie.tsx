@@ -68,20 +68,24 @@ export default function Beastie({
         <div className={styles.column}>
           <span className={styles.name}>
             {teamBeastie.name || beastieName}
-            <span className={styles.number}>#{teamBeastie.number}</span>{" "}
+            <span className={styles.number}>#{teamBeastie.number}</span>
             <span
               title={
                 levelOverwrite
                   ? ""
                   : level >= 100
-                    ? "Max Level"
-                    : `To next level: ${teamBeastie.xp - level_exp}/${next_level_exp - level_exp} (${next_level_exp - teamBeastie.xp} left)`
+                    ? L("teams.beastie.maxLevel")
+                    : L("teams.beastie.expToNext", {
+                        num: String(teamBeastie.xp - level_exp),
+                        max: String(next_level_exp - level_exp),
+                        left: String(next_level_exp - teamBeastie.xp),
+                      })
               }
               className={
                 levelOverwrite ? styles.levelOverwritten : styles.levelText
               }
             >
-              Lvl {level}
+              {L("teams.beastie.lvl", { level: String(level) })}
             </span>
           </span>
           {teamBeastie.name && beastieName != teamBeastie.name ? (
@@ -91,7 +95,7 @@ export default function Beastie({
             to={getLink(
               `/beastiepedia/${beastieName}?${searchParam}=${beastieColors.join(",")}`,
             )}
-            title={`Open ${beastieName} with these colors in Beastiepedia`}
+            title={L("teams.beastie.openWithColors", { beastie: beastieName })}
           >
             <BeastieImage
               key={teamBeastie.pid + teamBeastie.specie}

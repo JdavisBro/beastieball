@@ -4,6 +4,7 @@ import { FeaturedCategoryRoot } from "./FeaturedCategories";
 import FeaturedTeam from "./FeaturedTeam";
 import styles from "./TeamViewer.module.css";
 import BeastieSelect from "../../shared/BeastieSelect";
+import useLocalization from "../../localization/useLocalization";
 
 enum FilterType {
   Name,
@@ -20,6 +21,8 @@ export default function FeaturedSection({
   code?: string;
   setTeam: (team: Team) => void;
 }) {
+  const { L } = useLocalization();
+
   const [tab, setTab] = useState(0);
   const [subTab, setSubTab] = useState(0);
 
@@ -33,7 +36,11 @@ export default function FeaturedSection({
   );
 
   if (!selectedTab && !allSelected) {
-    return <div className={styles.categorybg}>Loading Community Teams...</div>;
+    return (
+      <div className={styles.categorybg}>
+        {L("teams.viewer.loadingCommunity")}
+      </div>
+    );
   }
 
   const teams = allSelected
@@ -73,7 +80,7 @@ export default function FeaturedSection({
             setSubTab(0);
           }}
         >
-          All Teams
+          {L("teams.viewer.community.all")}
         </button>
       </div>
       {!allSelected && selectedTab.categories ? (
@@ -98,13 +105,19 @@ export default function FeaturedSection({
       ) : undefined}
       <div className={styles.sectionheader}>
         <label>
-          Filter:{" "}
+          {L("teams.viewer.community.filter.label")}
           <select
             onChange={(event) => setFilterType(Number(event.target.value))}
           >
-            <option value={FilterType.Name}>Name</option>
-            <option value={FilterType.Author}>Author</option>
-            <option value={FilterType.Beastie}>Beastie</option>
+            <option value={FilterType.Name}>
+              {L("teams.viewer.community.filter.name")}
+            </option>
+            <option value={FilterType.Author}>
+              {L("teams.viewer.community.filter.author")}
+            </option>
+            <option value={FilterType.Beastie}>
+              {L("teams.viewer.community.filter.beastie")}
+            </option>
           </select>
         </label>
         {filterType == FilterType.Beastie ? (
@@ -147,29 +160,23 @@ export default function FeaturedSection({
                 }
               }}
             />
-          )) || "no teams 🥺"}
+          ))}
       </div>
       <div className={styles.addTeamText}>
-        Want your team added?{" "}
+        {L("teams.viewer.community.add")}
         <a
           target="_blank"
           rel="noreferrer"
           href={
             import.meta.env.VITE_ISSUES_URL +
-            `new?title=New Featured Team&body=${FEATURED_TEAM_ISSUE_TEXT}`
+            `new?title=New Featured Team&body=${L(
+              "teams.viewer.community.issueDefaultText",
+            ).replace(/\n/g, "%0A")}`
           }
         >
-          Make an issue on GitHub
+          {L("teams.viewer.community.addLink")}
         </a>
       </div>
     </>
   );
 }
-
-const FEATURED_TEAM_ISSUE_TEXT = `Name: Insert Team Name Here
-Description: Insert Team Description Here
-Code: Insert Team Code Here (shared from in game)
-Author: Insert Author Name Here (how you'd like to be credited)`.replace(
-  /\n/g,
-  "%0A",
-);

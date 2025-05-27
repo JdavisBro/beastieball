@@ -36,7 +36,9 @@ export default function MoveSelect({
   return (
     <div>
       <Modal
-        header={`Select Play ${(selecting ?? 0) + 1}`}
+        header={L("teams.builder.selectPlay", {
+          num: String((selecting ?? 0) + 1),
+        })}
         open={selecting !== undefined}
         onClose={() => setSelecting(undefined)}
         hashValue="SelectPlay"
@@ -53,24 +55,24 @@ export default function MoveSelect({
           ))}
         </div>
       </Modal>
-      Plays:{" "}
+      {L("teams.builder.plays")}
       <button onClick={() => setSelecting(0)}>
-        Play 1:{" "}
+        {L("teams.builder.playNum", { num: "1" })}
         {MOVE_DIC[teamBeastieMovelist[0]]
           ? L(MOVE_DIC[teamBeastieMovelist[0]].name)
-          : "Unset"}
+          : L("teams.builder.playUnset")}
       </button>
       <button onClick={() => setSelecting(1)}>
-        Play 2:{" "}
+        {L("teams.builder.playNum", { num: "2" })}
         {MOVE_DIC[teamBeastieMovelist[1]]
           ? L(MOVE_DIC[teamBeastieMovelist[1]].name)
-          : "Unset"}
+          : L("teams.builder.playUnset")}
       </button>
       <button onClick={() => setSelecting(2)}>
-        Play 3:{" "}
+        {L("teams.builder.playNum", { num: "3" })}
         {MOVE_DIC[teamBeastieMovelist[2]]
           ? L(MOVE_DIC[teamBeastieMovelist[2]].name)
-          : "Unset"}
+          : L("teams.builder.playUnset")}
       </button>
     </div>
   );

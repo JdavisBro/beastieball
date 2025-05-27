@@ -58,7 +58,7 @@ export default function FeaturedTeam({
       <div className={styles.featuredDesc}>
         <div>
           {team.description.slice(0, DESCRIPTION_MAX).trimEnd()}
-          {longDesc ? "..." : ""}
+          {longDesc ? L("teams.viewer.community.longDescSuffix") : ""}
         </div>
         {longDesc ? (
           <div
@@ -71,7 +71,7 @@ export default function FeaturedTeam({
             }}
           >
             <div className={styles.featuredHoverCollapsed}>
-              V Hover / Tap to Expand V
+              {L("teams.viewer.community.longDescExpand")}
             </div>
             <div className={styles.featuredHoverDesc}>{team.description}</div>
           </div>
@@ -85,7 +85,9 @@ export default function FeaturedTeam({
           }
           const isSpoiler =
             spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
-          const alt = `${isSpoiler ? `Beastie #${beastie.number}` : L(beastie.name)} icon`;
+          const alt = isSpoiler
+            ? L("common.beastieNum", { num: String(beastie.number) })
+            : L(beastie.name);
           return (
             <img
               key={beastie.id + String(index)}
@@ -103,8 +105,11 @@ export default function FeaturedTeam({
         })}
       </div>
       <div>
-        By {team.author}
-        {team.builder ? "" : ` - #${team.team.code}`}
+        {L("teams.viewer.community.by", { author: team.author })}
+        {team.builder
+          ? null
+          : L("teams.viewer.community.joiner") +
+            L("teams.viewer.community.code", { code: team.team.code })}
       </div>
     </Link>
   );

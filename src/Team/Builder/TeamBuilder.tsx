@@ -92,15 +92,20 @@ export default function TeamBuilder() {
   return (
     <>
       <OpenGraph
-        title={`Team Builder - ${import.meta.env.VITE_BRANDING}`}
-        description="Team Builder for Beastieball!"
+        title={L("common.title", {
+          page: L("teams.builder.title"),
+          branding: import.meta.env.VITE_BRANDING,
+        })}
+        description={L("teams.builder.description")}
         image="gameassets/sprMainmenu/18.png"
         url="team/builder/"
       />
       <Header
-        title="Team Builder"
+        title={L("teams.builder.title")}
         returnButtonTo="/team/"
-        returnButtonTitle={`${import.meta.env.VITE_BRANDING} Team Page`}
+        returnButtonTitle={L("teams.return", {
+          branding: import.meta.env.VITE_BRANDING,
+        })}
       />
       <BeastieRenderProvider>
         <div className={styles.container}>
@@ -114,7 +119,9 @@ export default function TeamBuilder() {
                       disabled={editingBeastie == index}
                       onClick={() => setEditingBeastie(index)}
                     >
-                      {editingBeastie == index ? "Editing" : "Edit"}
+                      {editingBeastie == index
+                        ? L("teams.builder.editing")
+                        : L("teams.builder.edit")}
                     </button>
                   </div>
                   {index != 4 ? (
@@ -125,7 +132,7 @@ export default function TeamBuilder() {
                         setBeastie(index + 1, beastie);
                       }}
                     >
-                      ⇄
+                      {L("teams.builder.swap")}
                     </button>
                   ) : undefined}
                 </Fragment>
@@ -142,7 +149,7 @@ export default function TeamBuilder() {
                     setTeamScroll(event.currentTarget.checked)
                   }
                 />
-                Team Scrolls Horizontally
+                {L("teams.builder.scrollsHorizontally")}
               </label>
               <div>
                 <TeamImageButton team={team} />
@@ -181,7 +188,7 @@ export default function TeamBuilder() {
                     a.click();
                   }}
                 >
-                  Save Team JSON
+                  {L("teams.builder.saveJson")}
                 </button>
                 <button
                   onClick={() => {
@@ -190,10 +197,10 @@ export default function TeamBuilder() {
                     }
                   }}
                 >
-                  Load Team JSON
+                  {L("teams.builder.loadJson")}
                 </button>
                 <button onClick={() => setTeam(createTeam(L))}>
-                  Reset Team
+                  {L("teams.builder.reset")}
                 </button>
               </div>
               <SavedTeams

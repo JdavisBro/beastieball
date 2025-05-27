@@ -320,7 +320,7 @@ async function createTeamImage(
       const level = atLevel
         ? atLevel
         : Math.floor(Math.cbrt(beastie.xp / beastiedata.growth));
-      const level_text = ` Lvl ${level}`;
+      const level_text = L("teams.beastie.lvl", { level: String(level) });
 
       const beastieName = L(beastiedata.name);
 
@@ -507,7 +507,7 @@ async function createTeamImage(
       ctx.textBaseline = "top";
       ctx.font = SUPPORTED_CHAR_FONT;
       ctx.fillText(
-        "POW          DEF",
+        L("common.pow") + "          " + L("common.def"),
         startx + text_middle,
         starty + right_gap,
       );

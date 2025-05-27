@@ -14,6 +14,7 @@ export default function TeamImageButton({
   maxCoaching?: boolean;
 }) {
   const Localization = useLocalization();
+  const { L } = Localization;
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const beastieRender = useContext(BeastieRenderContext);
@@ -36,17 +37,21 @@ export default function TeamImageButton({
 
   return (
     <>
-      Image:{" "}
+      {L("teams.image.imageLabel")}
       <select onChange={(event) => setMode(Number(event.currentTarget.value))}>
-        <option value={DrawMode.VGrid}>Grid</option>
-        <option value={DrawMode.Horizontal}>Horizontal</option>
-        <option value={DrawMode.Vertical}>Vertical</option>
+        <option value={DrawMode.VGrid}>{L("teams.image.drawMode.grid")}</option>
+        <option value={DrawMode.Horizontal}>
+          {L("teams.image.drawMode.horizontal")}
+        </option>
+        <option value={DrawMode.Vertical}>
+          {L("teams.image.drawMode.vertical")}
+        </option>
       </select>
       <button disabled={!team} onClick={() => saveImage(false)}>
-        Save
+        {L("teams.image.save")}
       </button>
       <button disabled={!team} onClick={() => saveImage(true)}>
-        Copy
+        {L("teams.image.copy")}
       </button>
       <canvas ref={canvasRef} style={{ display: "none" }} />
     </>

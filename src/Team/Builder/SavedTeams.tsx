@@ -41,9 +41,11 @@ export default function SavedTeams({
 
   return (
     <>
-      <button onClick={() => setOpen(true)}>Saved Teams</button>
+      <button onClick={() => setOpen(true)}>
+        {L("teams.builder.savedTeams.title")}
+      </button>
       <Modal
-        header="Saved Teams"
+        header={L("teams.builder.savedTeams.title")}
         hashValue="SavedTeams"
         open={open}
         onClose={() => setOpen(false)}
@@ -68,45 +70,45 @@ export default function SavedTeams({
                           src={`/icons/${L(BEASTIE_DATA.get(beastie.specie)?.name ?? "beastiesetup_name_001", undefined, true)}.png`}
                         />
                         <button
-                          title="Overwrites the Beastie you're currently editing."
+                          title={L("teams.builder.savedTeams.copyDesc")}
                           onClick={() => {
                             const newBeastie = structuredClone(beastie);
                             newBeastie.pid = createPid();
                             setCurrentBeastie(newBeastie);
                           }}
                         >
-                          Copy
+                          {L("teams.builder.savedTeams.copy")}
                         </button>
                       </div>
                     ))}
                   </div>
                   <button
-                    title="Saves your Current Team over this one."
+                    title={L("teams.builder.savedTeams.saveDesc")}
                     onClick={() => setSavedTeam(index, [...currentTeam])}
                   >
-                    Overwrite
+                    {L("teams.builder.savedTeams.save")}
                   </button>
                   <button
-                    title="Loads this Team as your Current Team."
+                    title={L("teams.builder.savedTeams.loadDesc")}
                     onClick={() => setCurrentTeam([...team.team])}
                   >
-                    Load
+                    {L("teams.builder.savedTeams.load")}
                   </button>
                   <button
-                    title="Deletes this Team from your Saved Teams."
+                    title={L("teams.builder.savedTeams.deleteDesc")}
                     onClick={() => {
                       savedTeams.splice(index, 1);
                       setSavedTeams([...savedTeams]);
                     }}
                   >
-                    Delete
+                    {L("teams.builder.savedTeams.delete")}
                   </button>
                 </div>
               ))
-            : "No Saved Teams"}
+            : L("teams.builder.savedTeams.noTeams")}
         </div>
         <button onClick={() => setSavedTeam(savedTeams.length, currentTeam)}>
-          Save Current Team as New Team
+          {L("teams.builder.savedTeams.saveCurrent")}
         </button>
       </Modal>
     </>

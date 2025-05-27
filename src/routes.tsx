@@ -10,10 +10,14 @@ import PageNotFound from "./PageNotFound";
 import LocalizationProvider from "./localization/LocalizationProvider";
 import SpoilerWarning from "./SpoilerWarning";
 import useLocalization from "./localization/useLocalization";
+import { FunctionComponent, memo, useMemo } from "react";
 
 function LoaderComponent() {
-  const Component = (useLoaderData() as { default: React.FunctionComponent })
-    .default;
+  const loader =
+    useLoaderData() as React.MemoExoticComponent<FunctionComponent>;
+
+  const Component = useMemo(() => memo(loader), [loader]);
+
   return <Component />;
 }
 
@@ -65,32 +69,34 @@ const routes: Array<RouteObject> = [
       {
         element: <LoaderComponent />,
         path: "",
-        loader: () => import("./Home"),
+        loader: () => import("./Home").then((m) => m.default),
       },
       {
         element: <LoaderComponent />,
         path: "beastiepedia/",
-        loader: () => import("./Beastiepedia/Beastiepedia"),
+        loader: () =>
+          import("./Beastiepedia/Beastiepedia").then((m) => m.default),
       },
       {
         element: <LoaderComponent />,
         path: "beastiepedia/:beastie",
-        loader: () => import("./Beastiepedia/Beastiepedia"),
+        loader: () =>
+          import("./Beastiepedia/Beastiepedia").then((m) => m.default),
       },
       {
         element: <LoaderComponent />,
         path: "playdex/",
-        loader: () => import("./Playdex/Playdex"),
+        loader: () => import("./Playdex/Playdex").then((m) => m.default),
       },
       {
         element: <LoaderComponent />,
         path: "map/",
-        loader: () => import("./Map/Map"),
+        loader: () => import("./Map/Map").then((m) => m.default),
       },
       {
         element: <LoaderComponent />,
         path: "beastdle/",
-        loader: () => import("./Beastdle/Beastdle"),
+        loader: () => import("./Beastdle/Beastdle").then((m) => m.default),
       },
 
       // OLD TEAM VIEWER REDIRECT
@@ -116,38 +122,39 @@ const routes: Array<RouteObject> = [
       {
         element: <LoaderComponent />,
         path: "team/",
-        loader: () => import("./Team/Team"),
+        loader: () => import("./Team/Team").then((m) => m.default),
       },
       {
         element: <LoaderComponent />,
         path: "team/viewer/:code",
-        loader: () => import("./Team/Viewer/TeamViewer"),
+        loader: () => import("./Team/Viewer/TeamViewer").then((m) => m.default),
       },
       {
         element: <LoaderComponent />,
         path: "team/viewer/",
-        loader: () => import("./Team/Viewer/TeamViewer"),
+        loader: () => import("./Team/Viewer/TeamViewer").then((m) => m.default),
       },
       {
         element: <LoaderComponent />,
         path: "team/builder/",
-        loader: () => import("./Team/Builder/TeamBuilder"),
+        loader: () =>
+          import("./Team/Builder/TeamBuilder").then((m) => m.default),
       },
 
       {
         element: <LoaderComponent />,
         path: "modding/save/",
-        loader: () => import("./Modding/Save/Save"),
+        loader: () => import("./Modding/Save/Save").then((m) => m.default),
       },
       {
         element: <LoaderComponent />,
         path: "modding/",
-        loader: () => import("./Modding/Modding"),
+        loader: () => import("./Modding/Modding").then((m) => m.default),
       },
       {
         element: <LoaderComponent />,
         path: "test/",
-        loader: () => import("./Test"),
+        loader: () => import("./Test").then((m) => m.default),
       },
       {
         element: <PageNotFound />,

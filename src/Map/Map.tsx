@@ -5,7 +5,6 @@ import {
   LayerGroup,
   MapContainer,
   Marker,
-  Polyline,
   Popup,
   useMapEvents,
 } from "react-leaflet";
@@ -28,10 +27,10 @@ import {
 import OTHER_AREAS from "./OtherLayerAreas";
 import SpecialBeastieMarker from "./SpecialBeastieMarker";
 import { EXTINCT_BEASTIES, METAMORPH_LOCATIONS } from "./SpecialBeasties";
-import DivIconMarker from "./DivIconMarker";
 import createBeastieBox from "./createBeastieBox";
 import { ControlMenu } from "./ControlMenu";
 import useLocalization from "../localization/useLocalization";
+import SwitchMarkers from "./SwitchMarkers";
 
 const BEASTIE_ARRAY = [...BEASTIE_DATA.values()];
 
@@ -290,12 +289,15 @@ export default function Map(): React.ReactNode {
   return (
     <>
       <OpenGraph
-        title={`Map - ${import.meta.env.VITE_BRANDING}`}
+        title={Loc("common.title", {
+          page: Loc("map.title"),
+          branding: import.meta.env.VITE_BRANDING,
+        })}
         image="gameassets/sprMainmenu/3.png"
         url="map/"
-        description="A map of the world of Beastieball"
+        description={Loc("map.description")}
       />
-      <Header title="Beastieball Map" />
+      <Header title={Loc("map.header")} />
       <MapContainer
         className={styles.map}
         minZoom={-7}
@@ -316,32 +318,32 @@ export default function Map(): React.ReactNode {
         <ControlMenu
           layers={[
             {
-              category: "Text",
-              title: "Region Names",
+              category: "text",
+              title: "regionNames",
               children: bigtitleheaders,
             },
             {
-              title: "Area Names",
+              title: "areaNames",
               children: titleheaders,
             },
             ...Object.keys(imgheaders)
               .map((key, index) =>
-                key == "Other" && imgheaders[key].length == 0
+                key == "other" && imgheaders[key].length == 0
                   ? null
                   : {
-                      category: index == 0 ? "Markers" : undefined,
+                      category: index == 0 ? "markers" : undefined,
                       title: key,
                       children: imgheaders[key],
                     },
               )
               .filter((layer) => !!layer),
             {
-              category: "Beasties",
-              title: "Beastie Spawns",
+              category: "beasties",
+              title: "beastieSpawns",
               children: beastieSpawnsOverlays,
             },
             {
-              title: `${extinctIsSpoiler ? "???" : "Extinct"} Beastie Locations`,
+              title: extinctIsSpoiler ? "extinctUnseen" : "extinct",
               children: EXTINCT_BEASTIES.map((extinct) => (
                 <SpecialBeastieMarker
                   key={extinct.beastieId}
@@ -357,7 +359,7 @@ export default function Map(): React.ReactNode {
               )),
             },
             {
-              title: "Metamorphosis Locations",
+              title: "metamorphosis",
               children: METAMORPH_LOCATIONS.map((metamorph) => (
                 <SpecialBeastieMarker
                   key={metamorph.to}
@@ -375,12 +377,12 @@ export default function Map(): React.ReactNode {
               )),
             },
             {
-              category: "Exploration",
-              title: "Inside Overlays",
+              category: "exploration",
+              title: "insideOverlay",
               children: inside_overlays,
             },
             {
-              title: "Items",
+              title: "items",
               children: EXTRA_MARKERS.gifts
                 .filter(
                   (gift) =>
@@ -419,73 +421,8 @@ export default function Map(): React.ReactNode {
                 )),
             },
             {
-              title: "Switches and Gates",
-              children: [
-                EXTRA_MARKERS.switches
-                  .map((lever, index) => {
-                    const leverPos = L.latLng(
-                      -lever.position[1],
-                      lever.position[0],
-                    );
-                    const walls = EXTRA_MARKERS.walls[lever.lever_id];
-                    const lineCol = `hsl(${Math.floor(Math.abs(lever.position[0] + lever.position[1]) % 360) & 0xaaaaaa}, 100%, 50%)`;
-                    return [
-                      <DivIconMarker
-                        key={`${index}_lever`}
-                        tagName="div"
-                        className={styles.imgmarker}
-                        markerprops={{ position: leverPos }}
-                        icon={{
-                          className: styles.hidemarker,
-                          iconSize: [15, 30],
-                        }}
-                        popup={<Popup>Switch</Popup>}
-                      >
-                        <img src="/map_icon/switch.png" alt="Switch Marker" />
-                      </DivIconMarker>,
-                      walls.map((wall, wallIndex) => {
-                        const rad = ((wall.angle - 180) * Math.PI) / 180;
-                        const gatePos = L.latLng(
-                          -wall.position[1] + Math.sin(rad) * 125,
-                          wall.position[0] + Math.cos(rad) * 250,
-                        );
-                        return (
-                          <Polyline
-                            key={`${index}_line_${wallIndex}`}
-                            positions={[leverPos, gatePos]}
-                            weight={6}
-                            color={lineCol}
-                          />
-                        );
-                      }),
-                    ];
-                  })
-                  .flat(),
-                Object.values(EXTRA_MARKERS.walls)
-                  .flat()
-                  .map((wall, index) => {
-                    const rad = ((wall.angle - 180) * Math.PI) / 180;
-                    const gatePos = L.latLng(
-                      -wall.position[1] + Math.sin(rad) * 125,
-                      wall.position[0] + Math.cos(rad) * 250,
-                    );
-                    return (
-                      <DivIconMarker
-                        key={`${index}_gate`}
-                        tagName="div"
-                        className={styles.imgmarker}
-                        markerprops={{ position: gatePos }}
-                        icon={{
-                          className: styles.hidemarker,
-                          iconSize: [15, 30],
-                        }}
-                        popup={<Popup>Gate</Popup>}
-                      >
-                        <img src="/map_icon/gate.png" alt="Gate Marker" />
-                      </DivIconMarker>
-                    );
-                  }),
-              ],
+              title: "switchesGates",
+              children: <SwitchMarkers />,
             },
           ]}
           huntedBeastie={huntedBeastie}

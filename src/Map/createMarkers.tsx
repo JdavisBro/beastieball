@@ -29,24 +29,23 @@ export function createMarkers(Loc: LocalizationFunction) {
   const titleheaders: React.ReactElement[] = [];
 
   const objtypes: { [key: string]: string } = {
-    objBallcenter: "Beastieball Center",
-    objRailhouse: "Railhouse/Boathouse/Camp",
-    objBoathouse: "Railhouse/Boathouse/Camp",
-    objCamp: "Railhouse/Boathouse/Camp",
-    objGymdoor: "Gym",
-    objClothesShop: "Clothes Shop",
-    objZipstation: "Zip Station",
-    objMall: "Zip Station",
+    objBallcenter: "beastieballCenter",
+    objRailhouse: "railhouse",
+    objBoathouse: "railhouse",
+    objCamp: "railhouse",
+    objGymdoor: "gym",
+    objClothesShop: "clothes",
+    objZipstation: "railhouse",
+    objMall: "railhouse",
   };
 
   const imgheaders: { [key: string]: React.ReactElement[] } = {
-    "Beastieball Center": [],
-    "Railhouse/Boathouse/Camp": [],
-    Gym: [],
-    "Clothes Shop": [],
-    "Zip Station": [],
-    Caves: [],
-    Other: [],
+    beastieballCenter: [],
+    railhouse: [],
+    gym: [],
+    clothes: [],
+    caves: [],
+    other: [],
   };
 
   function createMarker(value: MapIcon) {
@@ -58,12 +57,12 @@ export function createMarkers(Loc: LocalizationFunction) {
     if (value.img) {
       markertype =
         value.is_cave == 1
-          ? imgheaders["Caves"]
+          ? imgheaders.caves
           : value.from_object
             ? imgheaders[objtypes[value.from_object]]
-            : imgheaders["Other"];
+            : imgheaders.other;
       if (markertype == undefined) {
-        markertype = imgheaders["Other"];
+        markertype = imgheaders.other;
       }
       markerup = <img src={`/gameassets/sprSponsors/${value.img}.png`} />;
       const revealed =

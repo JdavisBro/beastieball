@@ -69,13 +69,15 @@ function ItemSection({
   return (
     <>
       <label>
-        Find:{" "}
+        {Loc("map.items.find")}
         <button onClick={() => setItemSelector(true)}>
-          Select Item: {item ? Loc(item.name) : "Unset"}
+          {Loc("map.items.selectButton", {
+            item: item ? Loc(item.name) : Loc("map.items.unset"),
+          })}
         </button>
       </label>
       <Modal
-        header="Select Item"
+        header={Loc("map.items.selectHeader")}
         open={itemSelector}
         onClose={() => setItemSelector(false)}
         hashValue="SelectItem"
@@ -134,6 +136,8 @@ function ControlMenuInner({
   huntedItem,
   setHuntedItem,
 }: Props) {
+  const { L: Loc } = useLocalization();
+
   const [visibleSection, setVisibleSection] = useState<string | undefined>(
     undefined,
   );
@@ -181,7 +185,7 @@ function ControlMenuInner({
   return (
     <>
       <ControlSection
-        header="Markers"
+        header={Loc("map.markers.title")}
         sectionName="markers"
         visibleSection={visibleSection}
         setVisibleSection={setVisibleSection}
@@ -195,7 +199,7 @@ function ControlMenuInner({
                 tabIndex={0}
                 role="button"
               >
-                {layer.category}
+                {Loc("map.markers." + layer.category)}
               </div>
             )}
             <label>
@@ -206,7 +210,7 @@ function ControlMenuInner({
                   setLayer(layer.title, event.currentTarget.checked)
                 }
               />{" "}
-              {layer.title}
+              {Loc("map.markers." + layer.title)}
             </label>
             {(layersVisible[layer.title] ?? true) ? (
               <LayerGroup>{layer.children}</LayerGroup>
@@ -215,20 +219,20 @@ function ControlMenuInner({
         ))}
       </ControlSection>
       <ControlSection
-        header="Beasties"
+        header={Loc("map.beastie.title")}
         sectionName="beasties"
         visibleSection={visibleSection}
         setVisibleSection={setVisibleSection}
       >
         <label>
-          Track:{" "}
+          {Loc("map.beastie.track")}
           <BeastieSelect
             beastieId={huntedBeastie}
             setBeastieId={setHuntedBeastie}
-            extraOptionText="Show All"
+            extraOptionText={Loc("map.beastie.showAll")}
             extraOption="all"
             isSelectable={(beastie) => SPAWNABLE_BEASTIES.includes(beastie.id)}
-            nonSelectableReason="Beastie has no wild habitat."
+            nonSelectableReason={Loc("map.beastie.noWild")}
           />
         </label>
         <label>
@@ -237,12 +241,12 @@ function ControlMenuInner({
             checked={postgame}
             onChange={(event) => setPostgame(event.currentTarget.checked)}
             id="postgame"
-          />{" "}
-          Postgame Spawns
+          />
+          {Loc("map.beastie.postgame")}
         </label>
       </ControlSection>
       <ControlSection
-        header="Items"
+        header={Loc("map.items.title")}
         sectionName="items"
         visibleSection={visibleSection}
         setVisibleSection={setVisibleSection}

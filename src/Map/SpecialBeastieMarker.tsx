@@ -52,7 +52,7 @@ export default function SpecialBeastieMarker({
       to={isSpoiler ? "#" : getLink(`/beastiepedia/${targetNameStr}`)}
       onClick={handleTargetClick}
     >
-      {isSpoiler ? "???" : targetNameStr}
+      {isSpoiler ? Loc("common.spoiler") : targetNameStr}
     </Link>
   );
 
@@ -112,21 +112,25 @@ export default function SpecialBeastieMarker({
                   }
                   onClick={handleMetamorphClick}
                 >
-                  {metamorphSpoiler ? "???" : metamorphFromName}
+                  {metamorphSpoiler ? Loc("common.spoiler") : metamorphFromName}
                 </Link>
               </div>
-              <div>→</div>
+              <div>{Loc("map.metamorphosis.arrow")}</div>
               <div className={styles.metamorphColumn}>
                 {targetImage}
                 {targetName}
               </div>
             </div>
-            {metamorph.by}
+            {Loc("map.metamorphosis." + metamorph.by)}
           </>
         ) : (
           <div className={styles.specialBeastie}>
             {targetImage}
-            <div>{targetName} is found here initially.</div>
+            <div>
+              {Loc("map.extinctFoundHerePre")}
+              {targetName}
+              {Loc("map.extinctFoundHerePost")}
+            </div>
           </div>
         )}
       </Popup>

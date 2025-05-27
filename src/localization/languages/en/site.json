@@ -364,7 +364,55 @@
   },
   "map": {
     "title": "Map",
-    "header": "Beastieball Map"
+    "description": "A map of the world of Beastieball",
+    "header": "Beastieball Map",
+    "markers": {
+      "title": "Markers",
+      "text": "Text",
+      "regionNames": "Region Names",
+      "areaNames": "Area Names",
+      "markers": "Markers",
+      "beastieballCenter": "Beastieball Center",
+      "railhouse": "Railhouse/Boathouse/Camp/Zip Station",
+      "gym": "Gym",
+      "clothes": "Clothes Shop",
+      "caves": "Caves",
+      "other": "Other",
+      "beasties": "Beasties",
+      "beastieSpawns": "Beastie Spawns",
+      "extinctUnseen": "??? Beastie Locations",
+      "extinct": "Extinct Beastie Locations",
+      "metamorphosis": "Metamorphosis Locations",
+      "exploration": "Exploration",
+      "insideOverlay": "Inside Overlays",
+      "items": "Items",
+      "switchesGates": "Switches and Gates"
+    },
+    "beastie": {
+      "title": "Beasties",
+      "track": "Track: ",
+      "showAll": "Show All",
+      "noWild": "Beastie has no wild habitat.",
+      "postgame": " Postgame Spawns"
+    },
+    "items": {
+      "title": "Items",
+      "find": "Find: ",
+      "selectHeader": "Select Item",
+      "selectButton": "Select Item: {item}",
+      "unset": "Unset"
+    },
+    "metamorphosis": {
+      "arrow": "→",
+      "sprecko": "By communing with the Mushroom Colony",
+      "troglum": "By interacting with a Bugestie"
+    },
+    "extinctFoundHerePre": "",
+    "extinctFoundHerePost": " is found here initially.",
+    "gate": "Gate",
+    "gateMarker": "Gate Marker",
+    "switch": "Switch",
+    "switchMarker": "Switch Marker"
   },
   "teams": {
     "title": "Teams",

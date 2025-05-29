@@ -160,6 +160,17 @@
           "title": "Recently Updated:",
           "playsTraitsStats": "Plays, Traits, or Stats",
           "spritesColors": "Sprites or Colors"
+        },
+        "string": {
+          "diffTypeSep": " + ",
+          "innerTypeSep": ", ",
+          "trait": "Has Trait: ",
+          "plays": "Learns Play(s): ",
+          "allyTraining": "Trains Allies: ",
+          "metamorphosis": "Metamorphs: ",
+          "yes": "Yes",
+          "no": "No",
+          "recentlyUpdated": "Recently Updated: "
         }
       },
       "statDisplaySeparator": " - "

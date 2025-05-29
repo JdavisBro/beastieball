@@ -65,11 +65,11 @@ BEASTIE_DATA.forEach((beastie) => {
 });
 
 const FILTER_TYPE_PREFIX: Record<FilterTypes, string> = {
-  [FilterTypes.Ability]: "Has Trait: ",
-  [FilterTypes.Move]: "Learns Play(s): ",
-  [FilterTypes.Training]: "Trains Allies: ",
-  [FilterTypes.Metamorphs]: "Metamorphs: ",
-  [FilterTypes.RecentlyUpdated]: "Recently Updated: ",
+  [FilterTypes.Ability]: "trait",
+  [FilterTypes.Move]: "plays",
+  [FilterTypes.Training]: "allyTraining",
+  [FilterTypes.Metamorphs]: "metamorphosis",
+  [FilterTypes.RecentlyUpdated]: "recentlyUpdated",
 };
 
 const FILTER_TYPES = [
@@ -79,6 +79,8 @@ const FILTER_TYPES = [
   FilterTypes.Metamorphs,
   FilterTypes.RecentlyUpdated,
 ];
+
+const Lpre = "beastiepedia.sidebar.filter.";
 
 export function createFilterString(
   filters: FilterType[],
@@ -95,29 +97,36 @@ export function createFilterString(
     types[filter[0]].push(filter);
   }
 
+  const diffTypeSep = L(Lpre + "string.diffTypeSep");
+  const innerTypeSep = L(Lpre + "string.innerTypeSep");
+
   return FILTER_TYPES.map<[FilterTypes, string]>((type) => [
     type,
     types[type].reduce(
       (accum2, filter) =>
         accum2 +
-        (accum2 ? ", " : "") +
+        (accum2 ? innerTypeSep : "") +
         (filter[0] == FilterTypes.Training
-          ? TRAINING_TYPES[filter[1]]
+          ? L("common.types." + TRAINING_TYPES[filter[1]])
           : filter[0] == FilterTypes.Metamorphs
             ? filter[1]
-              ? "Yes"
-              : "No"
+              ? L(Lpre + "string.yes")
+              : L(Lpre + "string.no")
             : filter[0] == FilterTypes.RecentlyUpdated
               ? filter[1] == RecentlyUpdatedTypes.Stuff
-                ? "Plays, Traits, or Stats"
-                : "Sprites or Colors"
+                ? L(Lpre + "recentlyUpdated.playsTraitsStats")
+                : L(Lpre + "recentlyUpdated.spritesColors")
               : L(filter[1].name)),
       "",
     ),
   ]).reduce(
     (accum, [type, values]) =>
       accum +
-      (values ? (accum ? " + " : "") + FILTER_TYPE_PREFIX[type] + values : ""),
+      (values
+        ? (accum ? diffTypeSep : "") +
+          L(Lpre + "string." + FILTER_TYPE_PREFIX[type]) +
+          values
+        : ""),
     "",
   );
 }

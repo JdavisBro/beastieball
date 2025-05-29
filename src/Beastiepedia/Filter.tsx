@@ -66,7 +66,7 @@ BEASTIE_DATA.forEach((beastie) => {
 
 const FILTER_TYPE_PREFIX: Record<FilterTypes, string> = {
   [FilterTypes.Ability]: "trait",
-  [FilterTypes.Move]: "plays",
+  [FilterTypes.Move]: "play",
   [FilterTypes.Training]: "allyTraining",
   [FilterTypes.Metamorphs]: "metamorphosis",
   [FilterTypes.RecentlyUpdated]: "recentlyUpdated",
@@ -124,7 +124,12 @@ export function createFilterString(
       accum +
       (values
         ? (accum ? diffTypeSep : "") +
-          L(Lpre + "string." + FILTER_TYPE_PREFIX[type]) +
+          L(
+            Lpre +
+              "string." +
+              FILTER_TYPE_PREFIX[type] +
+              (types[type].length > 1 ? "s" : ""),
+          ) +
           values
         : ""),
     "",

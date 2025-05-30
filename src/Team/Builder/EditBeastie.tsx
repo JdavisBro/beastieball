@@ -33,9 +33,11 @@ type ChangeValueType = <T extends keyof TeamBeastie>(
 ) => void;
 
 function BeastieDoesntExist({ changeValue }: { changeValue: ChangeValueType }) {
+  const { L } = useLocalization();
+
   return (
     <label>
-      Specie:{" "}
+      {L("teams.builder.species")}
       <BeastieSelect
         beastieId={undefined}
         setBeastieId={(beastieId) => {

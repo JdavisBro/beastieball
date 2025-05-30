@@ -95,6 +95,7 @@
     "guildSuffix": "",
     "bannedSep": ", ",
     "bannedSuffix": " banned",
+    "noEvent": " No Event ",
     "checkForUpdate": "Check for Update",
     "from": "From: {date}",
     "until": "Until: {date}",

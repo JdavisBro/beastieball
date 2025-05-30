@@ -325,8 +325,11 @@ export default function Events() {
             <EventBlock>Loading...</EventBlock>
           ) : bigmoon == NoEvent.NoEvent ? (
             <EventBlock>
-              <img className={styles.wahhhhwahhhh} src="/nojs.png" /> No Event{" "}
-              <button onClick={bigmoonReload}>Reload</button>
+              <img className={styles.wahhhhwahhhh} src="/nojs.png" />
+              {L("events.noEvent")}
+              <button onClick={bigmoonReload}>
+                {L("events.checkForUpdate")}
+              </button>
             </EventBlock>
           ) : (
             <Bigmoon bigmoon={bigmoon} bigmoonReload={bigmoonReload} />

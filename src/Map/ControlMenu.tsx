@@ -88,7 +88,7 @@ function ItemSection({
             className={styles.itemSelectItem}
             onClick={() => setHuntedItem(undefined)}
           >
-            Unset
+            {Loc("map.items.unset")}
           </div>
           {WILD_ITEMS.map((item) => (
             <div

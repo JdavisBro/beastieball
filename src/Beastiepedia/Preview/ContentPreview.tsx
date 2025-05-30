@@ -146,9 +146,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const [noDisplayRenderState, setNoDisplayRender] = useState(true);
   const noDisplayRender =
     beastieIdRef.current != props.beastiedata.id || noDisplayRenderState;
-  const [noDisplayReason, setNoDisplayReason] = useState(
-    "beastiepedia.preview.loading",
-  );
+  const [noDisplayReason, setNoDisplayReason] = useState("common.loading");
 
   const setFrame = useCallback(
     (frame: number) => {
@@ -161,7 +159,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         }
       } else if (!loadedImages[frame % drawnsprite.frames]) {
         setNoDisplayRender(true);
-        setNoDisplayReason("beastiepedia.preview.loading");
+        setNoDisplayReason("common.loading");
       }
     },
     [loadedImages, drawnsprite.frames],
@@ -294,7 +292,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   useEffect(() => {
     beastieIdRef.current = props.beastiedata.id;
     setNoDisplayRender(true);
-    setNoDisplayReason("beastiepedia.preview.loading");
+    setNoDisplayReason("common.loading");
   }, [props.beastiedata.id]);
 
   useEffect(() => {

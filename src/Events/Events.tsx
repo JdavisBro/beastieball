@@ -322,7 +322,7 @@ export default function Events() {
         </div>
         <div className={open ? styles.openBox : styles.closedBox}>
           {bigmoon == NoEvent.WaitingForResponse ? (
-            <EventBlock>Loading...</EventBlock>
+            <EventBlock>{L("common.loading")}</EventBlock>
           ) : bigmoon == NoEvent.NoEvent ? (
             <EventBlock>
               <img className={styles.wahhhhwahhhh} src="/nojs.png" />

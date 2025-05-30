@@ -30,7 +30,9 @@ export default function SpoilerWarning({ children }: PropsWithChildren) {
       <SpoilerOptions />
       <br />
       <p>
-        <button onClick={() => setSpoilersOk(true)}>Confirm</button>
+        <button onClick={() => setSpoilersOk(true)}>
+          {L("notice.confirm")}
+        </button>
       </p>
       <Language />
     </div>

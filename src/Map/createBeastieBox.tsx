@@ -124,7 +124,8 @@ export default function createBeastieBox(
           {beastie.colors2 ? (
             <>
               <br />
-              Variant Chance: {overall_percent[value].variant * 100}%
+              {Loc("map.beastie.variantChance")}
+              {overall_percent[value].variant * 100}%
             </>
           ) : null}
         </Popup>

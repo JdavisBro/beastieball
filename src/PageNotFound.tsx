@@ -4,7 +4,7 @@ import OpenGraph from "./shared/OpenGraph";
 import useLocalization from "./localization/useLocalization";
 
 export default function PageNotFound(): React.ReactElement {
-  const { getLink } = useLocalization();
+  const { L, getLink } = useLocalization();
 
   const [col, setCol] = useState(Math.floor(Math.random() * 360));
   const [spr, setSpr] = useState(Math.floor(Math.random() * 127));
@@ -21,13 +21,16 @@ export default function PageNotFound(): React.ReactElement {
   return (
     <div className="commoncontainer">
       <OpenGraph
-        title={`Page Not Found - ${import.meta.env.VITE_BRANDING}`}
+        title={L("common.title", {
+          page: L("notFound.title"),
+          branding: import.meta.env.VITE_BRANDING,
+        })}
         image="ball.png"
         url=""
-        description="A website with data on Beastieball!"
+        description={L("common.description")}
         notfound={true}
       />
-      <h1>Page Not Found</h1>
+      <h1>{L("notFound.title")}</h1>
       <div
         className="notfoundfacecontainer"
         tabIndex={0}
@@ -44,7 +47,7 @@ export default function PageNotFound(): React.ReactElement {
         <div className="notfoundface"></div>
       </div>
       <h1>
-        <Link to={getLink("/")}>Go to Home</Link>
+        <Link to={getLink("/")}>{L("notFound.goHome")}</Link>
       </h1>
     </div>
   );

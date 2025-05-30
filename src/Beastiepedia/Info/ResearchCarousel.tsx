@@ -41,6 +41,8 @@ function Controls({
 }
 
 export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
+  const { L } = useLocalization();
+
   const [imageIndex, setImageIndex] = useState(0);
   const [bigImage, setBigImage] = useState<boolean>(false);
 
@@ -113,7 +115,7 @@ export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
           <div
             className={loading ? styles.loadingtext : styles.loadingtexthidden}
           >
-            <div>Loading...</div>
+            <div>{L("common.loading")}</div>
           </div>
         </div>
         <Controls

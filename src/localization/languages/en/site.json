@@ -1,6 +1,7 @@
 {
   "common": {
     "title": "{page} - {branding}",
+    "description": "A website with information about the game Beastieball!",
     "header": {
       "enabledMenu": "Enabled Menu",
       "disabledMenu": "Disabled Menu",
@@ -49,6 +50,7 @@
       "spiritDef": "Spirit DEF",
       "mindDef": "Mind DEF"
     },
+    "loading": "Loading...",
     "searchPrefix": "Search: ",
     "altSprite": {
       "normal": "Normal",
@@ -80,6 +82,16 @@
       "levelFormat": "{beastie} - {level}",
       "levelFormatMobile": "{beastie}\n{level}"
     }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "goHome": "Go to Home"
+  },
+  "error": {
+    "title": "Error!",
+    "reset": "Reset",
+    "copy": "Copy Error",
+    "github": "Report on GitHub Issues"
   },
   "notice": {
     "title": "Notice!",
@@ -178,7 +190,6 @@
       "statDisplaySeparator": " - "
     },
     "preview": {
-      "loading": "Loading...",
       "failed": "Beastie Preview Failed",
       "canvasAlt": "Beastie Preview Image",
       "options": {
@@ -406,7 +417,8 @@
       "track": "Track: ",
       "showAll": "Show All",
       "noWild": "Beastie has no wild habitat.",
-      "postgame": " Postgame Spawns"
+      "postgame": " Postgame Spawns",
+      "variantChance": "Variant Chance: "
     },
     "items": {
       "title": "Items",

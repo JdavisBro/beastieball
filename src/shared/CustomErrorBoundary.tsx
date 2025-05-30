@@ -1,17 +1,20 @@
 import { ErrorInfo, PropsWithChildren } from "react";
 import { ErrorBoundary, FallbackProps } from "react-error-boundary";
 import { Link } from "react-router-dom";
+import useLocalization from "../localization/useLocalization";
 
 function Fallback({
   error,
   resetErrorBoundary,
   className,
 }: FallbackProps & { className: string }) {
+  const { L } = useLocalization();
+
   console.log(error);
   return (
     <div className={className}>
-      <h1>Error!</h1>
-      <button onClick={resetErrorBoundary}>Reset</button>
+      <h1>{L("error.title")}</h1>
+      <button onClick={resetErrorBoundary}>{L("error.reset")}</button>
       <button
         onClick={() =>
           navigator.clipboard.writeText(
@@ -19,13 +22,13 @@ function Fallback({
           )
         }
       >
-        Copy Error
+        {L("error.copy")}
       </button>
       <Link
         to="https://github.com/JdavisBro/beastieball/issues"
         target="_blank"
       >
-        Report on GitHub Issues
+        {L("error.github")}
       </Link>
       <br />
       <p>{String(error)}</p>

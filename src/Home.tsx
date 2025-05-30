@@ -1,12 +1,19 @@
 import Events from "./Events/Events";
 import useLocalization from "./localization/useLocalization";
 import { NavigationMenu, NavigationMenuOption } from "./shared/NavigationMenu";
+import OpenGraph from "./shared/OpenGraph";
 
 export default function Home(): React.ReactNode {
   const { L } = useLocalization();
 
   return (
     <NavigationMenu note={<Events />}>
+      <OpenGraph
+        title={import.meta.env.VITE_BRANDING}
+        image="ball.png"
+        url=""
+        description={L("common.description")}
+      />
       <NavigationMenuOption
         text={L("playdex.title")}
         image={"/gameassets/sprMainmenu/6.png"}

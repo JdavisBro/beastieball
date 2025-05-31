@@ -11,19 +11,21 @@ export function Fallback({
   className: string;
   resetErrorBoundary?: () => void;
 }) {
-  const { L } = useLocalization();
+  const { L, anyLanguageLoaded } = useLocalization();
 
   console.log(error);
   return (
     <div className={className}>
-      <h1>{L("error.title")}</h1>
+      <h1>{anyLanguageLoaded ? L("error.title") : "Error!"}</h1>
       <img src="/nojs.png" />
-      <button onClick={resetErrorBoundary}>{L("error.reset")}</button>
+      <button onClick={resetErrorBoundary}>
+        {anyLanguageLoaded ? L("error.reset") : "Reset"}
+      </button>
       <Link
         to={`https://github.com/JdavisBro/beastieball/issues/new?body=Describe%20what%20happened%20before%20the%20error:%20%0A%0A${String(error)}%0A${error.fileName}:${error.lineNumber}%0A%0A${error.stack}`}
         target="_blank"
       >
-        {L("error.github")}
+        {anyLanguageLoaded ? L("error.github") : "Report on GitHub Issues"}
       </Link>
       <br />
       <p>{String(error)}</p>

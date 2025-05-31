@@ -3,29 +3,24 @@ import { ErrorBoundary, FallbackProps } from "react-error-boundary";
 import { Link } from "react-router-dom";
 import useLocalization from "../localization/useLocalization";
 
-function Fallback({
+export function Fallback({
   error,
   resetErrorBoundary,
   className,
-}: FallbackProps & { className: string }) {
+}: Omit<FallbackProps, "resetErrorBoundary"> & {
+  className: string;
+  resetErrorBoundary?: () => void;
+}) {
   const { L } = useLocalization();
 
   console.log(error);
   return (
     <div className={className}>
       <h1>{L("error.title")}</h1>
+      <img src="/nojs.png" />
       <button onClick={resetErrorBoundary}>{L("error.reset")}</button>
-      <button
-        onClick={() =>
-          navigator.clipboard.writeText(
-            `${String(error)}\n${error.fileName}:${error.lineNumber}\n\n${error.stack}`,
-          )
-        }
-      >
-        {L("error.copy")}
-      </button>
       <Link
-        to="https://github.com/JdavisBro/beastieball/issues"
+        to={`https://github.com/JdavisBro/beastieball/issues/new?body=Describe%20what%20happened%20before%20the%20error:%20%0A%0A${String(error)}%0A${error.fileName}:${error.lineNumber}%0A%0A${error.stack}`}
         target="_blank"
       >
         {L("error.github")}

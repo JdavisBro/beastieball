@@ -7,6 +7,7 @@ import {
   type RouteObject,
 } from "react-router-dom";
 import PageNotFound from "./PageNotFound";
+import { Fallback } from "./shared/CustomErrorBoundary";
 import LocalizationProvider from "./localization/LocalizationProvider";
 import SpoilerWarning from "./SpoilerWarning";
 import useLocalization from "./localization/useLocalization";
@@ -34,18 +35,12 @@ function RouteError() {
     location.reload();
   }
 
-  return (
+  return updatedError ? (
     <div className="commoncontainer">
-      <h2>
-        {String(error)}
-        {updatedError ? (
-          <>
-            <br />
-            Page may have been updated. Attmepting to reload.
-          </>
-        ) : null}
-      </h2>
+      <h2>Page may have been updated. Attmepting to reload.</h2>
     </div>
+  ) : (
+    <Fallback error={error} className="commoncontainer" />
   );
 }
 

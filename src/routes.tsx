@@ -6,6 +6,7 @@ import {
   type RouteObject,
 } from "react-router-dom";
 import PageNotFound from "./PageNotFound";
+import { Fallback } from "./shared/CustomErrorBoundary";
 
 const Home = lazy(() => import("./Home"));
 const Beastiepedia = lazy(() => import("./Beastiepedia/Beastiepedia"));
@@ -32,18 +33,12 @@ function RouteError() {
     location.reload();
   }
 
-  return (
+  return updatedError ? (
     <div className="commoncontainer">
-      <h2>
-        {String(error)}
-        {updatedError ? (
-          <>
-            <br />
-            Page may have been updated. Attmepting to reload.
-          </>
-        ) : null}
-      </h2>
+      <h2>Page may have been updated. Attmepting to reload.</h2>
     </div>
+  ) : (
+    <Fallback error={error} className="commoncontainer" />
   );
 }
 

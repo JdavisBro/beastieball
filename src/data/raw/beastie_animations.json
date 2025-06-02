@@ -1,4 +1,210 @@
 {
+  "_584ded5e15c0bde150a2cfc26cf3415fb8ee0d04": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 0,
+      "y": 0
+    },
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": 0,
+      "y": 0
+    },
+    "partner": {
+      "angle": -10,
+      "anim": "spike",
+      "x": 0,
+      "y": 0
+    },
+    "ready": {
+      "x": 0,
+      "y": 0
+    },
+    "splash": {
+      "angle": -10,
+      "anim": "ready",
+      "x": 0,
+      "y": -200
+    }
+  },
+  "_df9e243d472125a4acabd9a2859427df166072e0": {
+    "ball": {
+      "x": -30.8571428571,
+      "y": -267.4285714286
+    },
+    "colors": [
+      {
+        "array": [
+          {
+            "color": 6736127,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 10512127,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "miss": {
+      "x": -30.8571428571,
+      "y": -267.4285714286
+    },
+    "partner": {
+      "angle": 350.980682373,
+      "anim": "good",
+      "x": 62.8571428571,
+      "y": -160
+    },
+    "ready": {
+      "x": 37,
+      "y": -208
+    },
+    "shiny": [
+      {
+        "array": [
+          {
+            "color": 16213759,
+            "x": 0
+          }
+        ]
+      },
+      {
+        "array": [
+          {
+            "color": 10512127,
+            "x": 0
+          }
+        ]
+      }
+    ],
+    "splash": {
+      "angle": -25,
+      "anim": "ready",
+      "x": 76,
+      "y": -112
+    }
+  },
   "_sprAlien": {
     "anim_data": {
       "_": "class_char_animation",
@@ -5732,82 +5938,15 @@
   },
   "_sprCrab_alt": {
     "anim_data": {
-      "__Elephant_Circular_Ref__": 1250
+      "__Elephant_Circular_Ref__": 1298
     },
     "ball": {
       "x": 123,
       "y": -408
     },
-    "colors": [
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 4276036,
-            "x": 0
-          },
-          {
-            "color": 5000279,
-            "x": 0.5
-          },
-          {
-            "color": 6177627,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 13161189,
-            "x": 0
-          },
-          {
-            "color": 10994904,
-            "x": 0.4933333333
-          },
-          {
-            "color": 11916004,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 8406082,
-            "x": 0
-          },
-          {
-            "color": 8737579,
-            "x": 0.5
-          },
-          {
-            "color": 7362092,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 14807549,
-            "x": 0
-          },
-          {
-            "color": 15333375,
-            "x": 0.5
-          },
-          {
-            "color": 15463679,
-            "x": 1
-          }
-        ]
-      }
-    ],
+    "colors": {
+      "__Elephant_Circular_Ref__": 1606
+    },
     "colors2": null,
     "evo1": {
       "anim": "good",
@@ -5828,7 +5967,7 @@
       "y": 0
     },
     "loco_data": {
-      "__Elephant_Circular_Ref__": 1293
+      "__Elephant_Circular_Ref__": 1342
     },
     "miss": {
       "x": -22,
@@ -5844,68 +5983,9 @@
       "x": 100,
       "y": -535
     },
-    "shiny": [
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 16054271,
-            "x": 0
-          },
-          {
-            "color": 15066879,
-            "x": 0.52
-          },
-          {
-            "color": 15334143,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 12437732,
-            "x": 0.5
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 7548146,
-            "x": 0
-          },
-          {
-            "color": 6175226,
-            "x": 0.5
-          },
-          {
-            "color": 4673524,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 13752831,
-            "x": 0
-          },
-          {
-            "color": 13752831,
-            "x": 0.3933333333
-          },
-          {
-            "color": 16777215,
-            "x": 1
-          }
-        ]
-      }
-    ],
+    "shiny": {
+      "__Elephant_Circular_Ref__": 1636
+    },
     "splash": {
       "angle": -10,
       "anim": "ready",
@@ -22697,152 +22777,15 @@
   },
   "_sprRat_alt": {
     "anim_data": {
-      "__Elephant_Circular_Ref__": 5080
+      "__Elephant_Circular_Ref__": 5099
     },
     "ball": {
       "x": 154.8,
       "y": -261.6
     },
-    "colors": [
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 1788927,
-            "x": 0
-          },
-          {
-            "color": 2631935,
-            "x": 0.4966666667
-          },
-          {
-            "color": 5124094,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 12637695,
-            "x": 0
-          },
-          {
-            "color": 11192063,
-            "x": 0.5
-          },
-          {
-            "color": 11854591,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 16119777,
-            "x": 0
-          },
-          {
-            "color": 14869218,
-            "x": 0.5
-          },
-          {
-            "color": 12566494,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 4363499,
-            "x": 0
-          },
-          {
-            "color": 7388586,
-            "x": 0.12
-          },
-          {
-            "color": 11532208,
-            "x": 0.25
-          },
-          {
-            "color": 13759844,
-            "x": 0.37
-          },
-          {
-            "color": 15110714,
-            "x": 0.5
-          },
-          {
-            "color": 15031935,
-            "x": 0.62
-          },
-          {
-            "color": 13928915,
-            "x": 0.7533333333
-          },
-          {
-            "color": 9928162,
-            "x": 0.8766666667
-          },
-          {
-            "color": 3555918,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 14713450,
-            "x": 0
-          },
-          {
-            "color": 15068869,
-            "x": 0.2493333333
-          },
-          {
-            "color": 10610632,
-            "x": 0.5013333333
-          },
-          {
-            "color": 11331053,
-            "x": 0.7573333333
-          },
-          {
-            "color": 14475252,
-            "x": 0.8773333333
-          },
-          {
-            "color": 14659815,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 8284649,
-            "x": 0
-          },
-          {
-            "color": 7576816,
-            "x": 0.5
-          },
-          {
-            "color": 8178928,
-            "x": 1
-          }
-        ]
-      }
-    ],
+    "colors": {
+      "__Elephant_Circular_Ref__": 6267
+    },
     "colors2": null,
     "evo1": {
       "anim": "good",
@@ -22863,7 +22806,7 @@
       "y": 0
     },
     "loco_data": {
-      "__Elephant_Circular_Ref__": 5158
+      "__Elephant_Circular_Ref__": 5177
     },
     "miss": {
       "x": 222.8571428571,
@@ -22879,122 +22822,9 @@
       "x": 139.4285714286,
       "y": -286.8571428571
     },
-    "shiny": [
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 16758960,
-            "x": 0
-          },
-          {
-            "color": 11708106,
-            "x": 0.4813333333
-          },
-          {
-            "color": 5600994,
-            "x": 0.7253333333
-          },
-          {
-            "color": 2776499,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 11573759,
-            "x": 0
-          },
-          {
-            "color": 9211135,
-            "x": 0.4853333333
-          },
-          {
-            "color": 9212671,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 15527148,
-            "x": 0.5
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 5259334,
-            "x": 0
-          },
-          {
-            "color": 14408912,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 255,
-            "x": 0
-          },
-          {
-            "color": 43775,
-            "x": 0.1276190476
-          },
-          {
-            "color": 65405,
-            "x": 0.2571428571
-          },
-          {
-            "color": 5372672,
-            "x": 0.379047619
-          },
-          {
-            "color": 16774656,
-            "x": 0.5123809524
-          },
-          {
-            "color": 16729344,
-            "x": 0.6495238095
-          },
-          {
-            "color": 16711814,
-            "x": 0.779047619
-          },
-          {
-            "color": 11010303,
-            "x": 0.8895238095
-          },
-          {
-            "color": 255,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 14084330,
-            "x": 0
-          },
-          {
-            "color": 4076860,
-            "x": 1
-          }
-        ]
-      }
-    ],
+    "shiny": {
+      "__Elephant_Circular_Ref__": 6316
+    },
     "splash": {
       "angle": 344.1231689453,
       "anim": "volley",
@@ -30070,6 +29900,132 @@
       "y": -158
     }
   },
+  "_sprTest_secret_beastie": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 0,
+      "y": 0
+    },
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": 0,
+      "y": 0
+    },
+    "partner": {
+      "angle": -10,
+      "anim": "spike",
+      "x": 0,
+      "y": 0
+    },
+    "ready": {
+      "x": 0,
+      "y": 0
+    },
+    "splash": {
+      "angle": -10,
+      "anim": "ready",
+      "x": 0,
+      "y": -200
+    }
+  },
   "_sprTricky": {
     "anim_data": {
       "_": "class_char_animation",
@@ -32386,86 +32342,6 @@
       "anim": "ready",
       "x": 127,
       "y": -300
-    }
-  },
-  "_sprZorilla": {
-    "ball": {
-      "x": -30.8571428571,
-      "y": -267.4285714286
-    },
-    "colors": [
-      {
-        "array": [
-          {
-            "color": 6736127,
-            "x": 0
-          }
-        ]
-      },
-      {
-        "array": [
-          {
-            "color": 10512127,
-            "x": 0
-          }
-        ]
-      }
-    ],
-    "evo1": {
-      "anim": "good",
-      "scale": 2,
-      "x": 0,
-      "y": 0
-    },
-    "evo2": {
-      "anim": "good",
-      "scale": 2,
-      "x": 0,
-      "y": 0
-    },
-    "evo3": {
-      "anim": "good",
-      "scale": 2,
-      "x": 0,
-      "y": 0
-    },
-    "miss": {
-      "x": -30.8571428571,
-      "y": -267.4285714286
-    },
-    "partner": {
-      "angle": 350.980682373,
-      "anim": "good",
-      "x": 62.8571428571,
-      "y": -160
-    },
-    "ready": {
-      "x": 37,
-      "y": -208
-    },
-    "shiny": [
-      {
-        "array": [
-          {
-            "color": 16213759,
-            "x": 0
-          }
-        ]
-      },
-      {
-        "array": [
-          {
-            "color": 10512127,
-            "x": 0
-          }
-        ]
-      }
-    ],
-    "splash": {
-      "angle": -25,
-      "anim": "ready",
-      "x": 76,
-      "y": -112
     }
   }
 }

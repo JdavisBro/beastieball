@@ -94,6 +94,19 @@
     "type": 5,
     "use": 0
   },
+  "bamboozle": {
+    "bt_tags": [2],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 81, "pow": 0, "targ": 3 }],
+    "id": "bamboozle",
+    "name": "Echo Strike",
+    "pow": 70,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
   "basecover": {
     "bt_tags": [],
     "desc_tagids": [],
@@ -368,7 +381,7 @@
     "use": 1
   },
   "contest": {
-    "bt_tags": [1, 8, 10],
+    "bt_tags": [1, 8, 20, 10],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
@@ -378,7 +391,7 @@
     "pow": 110,
     "targ": 0,
     "type": 1,
-    "use": 0
+    "use": 2
   },
   "cook": {
     "bt_tags": [1, 10],
@@ -388,7 +401,7 @@
     "eff": [{ "eff": 4, "pow": -1, "targ": 4 }],
     "id": "cook",
     "name": "Cook",
-    "pow": 60,
+    "pow": 55,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -462,17 +475,14 @@
     "use": 0
   },
   "dare": {
-    "bt_tags": [1, 10, 31, 15, 38],
+    "bt_tags": [1, 10, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 74, "pow": 1, "targ": 3 },
-      { "eff": 12, "pow": 1, "targ": 3 }
-    ],
+    "eff": [{ "eff": 74, "pow": 1, "targ": 3 }],
     "id": "dare",
     "name": "Challenge",
-    "pow": 85,
+    "pow": 95,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -660,7 +670,7 @@
     "eff": [{ "eff": 33, "pow": 12, "targ": 0 }],
     "id": "facade",
     "name": "Grit",
-    "pow": 65,
+    "pow": 60,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -699,13 +709,10 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 33, "pow": 29, "targ": 0 },
-      { "eff": 46, "pow": 0, "targ": 7 }
-    ],
+    "eff": [{ "eff": 46, "pow": 0, "targ": 7 }],
     "id": "flatten",
     "name": "Demolish",
-    "pow": 70,
+    "pow": 80,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -990,7 +997,7 @@
     "eff": [{ "eff": -26, "pow": 1, "targ": 0 }],
     "id": "jazzattack",
     "name": "Thriller",
-    "pow": 60,
+    "pow": 65,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1077,6 +1084,7 @@
     "description": null,
     "eff": [
       { "eff": 8, "pow": -1, "targ": 0 },
+      { "eff": 82, "pow": -10, "targ": 0 },
       { "eff": 47, "pow": 1, "targ": 3 },
       { "eff": 30, "pow": 1, "targ": 3 }
     ],
@@ -1588,14 +1596,11 @@
     "use": 0
   },
   "rest": {
-    "bt_tags": [24, 40, 31],
+    "bt_tags": [24, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 47, "pow": 1, "targ": 0 },
-      { "eff": 29, "pow": 4, "targ": 0 }
-    ],
+    "eff": [{ "eff": 22, "pow": 2, "targ": 0 }],
     "id": "rest",
     "name": "Doze",
     "pow": 0,
@@ -1650,7 +1655,10 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 33, "pow": 16, "targ": 0 }],
+    "eff": [
+      { "eff": 33, "pow": 16, "targ": 0 },
+      { "eff": 73, "pow": 1, "targ": 0 }
+    ],
     "id": "rocket",
     "name": "Rocket",
     "pow": 70,
@@ -1734,7 +1742,7 @@
     "eff": [{ "eff": 14, "pow": 2, "targ": 3 }],
     "id": "scream",
     "name": "Scream",
-    "pow": 95,
+    "pow": 90,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1925,7 +1933,7 @@
     "eff": [{ "eff": 61, "pow": 1, "targ": 0 }],
     "id": "snore",
     "name": "Relentless",
-    "pow": 50,
+    "pow": 70,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2370,6 +2378,23 @@
     "pow": 70,
     "targ": 12,
     "type": 0,
+    "use": 0
+  },
+  "toughattack": {
+    "bt_tags": [1, 10, 33],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 53, "pow": 0, "targ": 0 },
+      { "eff": 19, "pow": 1, "targ": 0 },
+      { "eff": 23, "pow": 2, "targ": 0 }
+    ],
+    "id": "toughattack",
+    "name": "Exert",
+    "pow": 65,
+    "targ": 0,
+    "type": 1,
     "use": 0
   },
   "trap": {

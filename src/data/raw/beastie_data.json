@@ -1569,7 +1569,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 80,
-    "animator": 8,
+    "animator": 10,
     "attklist": [
       "bounce",
       "set",
@@ -2959,7 +2959,7 @@
           {
             "conditions": [
               {
-                "effect_type": 81,
+                "effect_type": 83,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
@@ -3035,7 +3035,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3233,7 +3233,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3443,7 +3443,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -4630,6 +4630,7 @@
       "reversal",
       "noisytag",
       "superpower",
+      "toughattack",
       "backswitch",
       "taunt",
       "starterheart"
@@ -4718,7 +4719,7 @@
       [27, "substitute"],
       [31, "tagattack"],
       [35, "jump"],
-      [39, "damagedattack"],
+      [39, "toughattack"],
       [42, "backswitch"],
       [46, "rush"],
       [50, "overheat"]
@@ -4853,6 +4854,7 @@
       "reversal",
       "noisytag",
       "superpower",
+      "toughattack",
       "backswitch",
       "taunt",
       "starterheart"
@@ -4939,7 +4941,7 @@
       [23, "substitute"],
       [27, "tagattack"],
       [31, "jump"],
-      [35, "damagedattack"],
+      [35, "toughattack"],
       [38, "backswitch"],
       [42, "rush"],
       [46, "overheat"]
@@ -5047,7 +5049,6 @@
       "poisonhit",
       "desperate",
       "rush",
-      "allyrush",
       "distraction",
       "allyprotect",
       "lock",
@@ -7282,7 +7283,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7481,7 +7482,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7693,7 +7694,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7764,7 +7765,6 @@
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
-      "mind",
       "wornout",
       "mindbomb",
       "hazeball",
@@ -7787,6 +7787,7 @@
       "eerie",
       "sweatall",
       "rattle",
+      "bamboozle",
       "targethp",
       "stun",
       "shaken"
@@ -7977,7 +7978,6 @@
     "anim_progress": 100,
     "animator": 10,
     "attklist": [
-      "mind",
       "wornout",
       "mindbomb",
       "hazeball",
@@ -8000,6 +8000,7 @@
       "eerie",
       "sweatall",
       "rattle",
+      "bamboozle",
       "targethp",
       "stun",
       "shaken"
@@ -8175,7 +8176,6 @@
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
-      "mind",
       "wornout",
       "mindbomb",
       "hazeball",
@@ -8198,6 +8198,7 @@
       "eerie",
       "sweatall",
       "rattle",
+      "bamboozle",
       "targethp",
       "stun",
       "shaken"
@@ -8352,8 +8353,8 @@
     "type_focus": 2
   },
   "gremlin": {
-    "ability": ["sneaky"],
-    "ability_hidden": false,
+    "ability": ["sneaky", "mimically"],
+    "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 10,
@@ -8568,7 +8569,8 @@
       "bdefup",
       "lifepass",
       "protect",
-      "cook"
+      "cook",
+      "toughattack"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -8776,7 +8778,8 @@
       "protect",
       "threat",
       "noisytag",
-      "mindup"
+      "mindup",
+      "bamboozle"
     ],
     "attklist_randomize": -1,
     "ba": 71,
@@ -10975,6 +10978,7 @@
       "steal",
       "rush",
       "snipe",
+      "bamboozle",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11226,6 +11230,7 @@
       "steal",
       "rush",
       "snipe",
+      "bamboozle",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11392,7 +11397,7 @@
     "type_focus": 2
   },
   "magpiemon": {
-    "ability": ["echo", "redirection"],
+    "ability": ["wipekiller", "redirection"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 20,
@@ -11422,6 +11427,7 @@
       "steal",
       "rush",
       "snipe",
+      "bamboozle",
       "startermind",
       "stomp",
       "swordsdance",
@@ -11429,9 +11435,9 @@
       "tool"
     ],
     "attklist_randomize": -1,
-    "ba": 87,
-    "base_exp": 188.6,
-    "bd": 83,
+    "ba": 89,
+    "base_exp": 185.84,
+    "bd": 81,
     "body_color_index": 0,
     "codename": "38939d036893910c18fe516e6353887c911818b9",
     "colormeta": null,
@@ -11533,8 +11539,8 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 85,
-    "md": 88,
+    "ma": 87,
+    "md": 86,
     "name": "Maraptor",
     "number": 105,
     "palettes": 1,
@@ -11625,6 +11631,7 @@
       "jump",
       "recover",
       "ricochet",
+      "netattack",
       "enemylowered"
     ],
     "attklist_randomize": -1,
@@ -11700,7 +11707,7 @@
       [8, "blockattack"],
       [11, "rush"],
       [17, "distraction"],
-      [23, "heartdown"],
+      [23, "netattack"],
       [30, "lock"],
       [34, "ricochet"],
       [38, "protect"],
@@ -12237,8 +12244,9 @@
       "protect",
       "allnervous",
       "scream",
-      "commit",
-      "pepshot"
+      "pepshot",
+      "toughattack",
+      "dare"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -12444,20 +12452,14 @@
       "facade",
       "scoreboosted",
       "substitute",
-      "commit",
       "overheat",
-      "dare",
       "wornattack",
-      "netattack",
       "overthink",
       "preblock",
       "heartpass",
-      "teleport",
-      "callout",
       "bellydrum",
       "protect",
       "hdefup",
-      "rest",
       "shieldbreaker",
       "noisytag",
       "stress",
@@ -12470,6 +12472,7 @@
       "splinter",
       "rattle",
       "heartd",
+      "bamboozle",
       "startermind",
       "crowd",
       "scream"
@@ -12542,7 +12545,7 @@
     "learnset": [
       [0, "startermind"],
       [0, "hdefup"],
-      [11, "heartd"],
+      [11, "bamboozle"],
       [14, "preblock"],
       [20, "facade"],
       [26, "crowd"],
@@ -12666,20 +12669,14 @@
       "facade",
       "scoreboosted",
       "substitute",
-      "commit",
       "overheat",
-      "dare",
       "wornattack",
-      "netattack",
       "overthink",
       "preblock",
       "heartpass",
-      "teleport",
-      "callout",
       "bellydrum",
       "protect",
       "hdefup",
-      "rest",
       "shieldbreaker",
       "noisytag",
       "stress",
@@ -12692,6 +12689,7 @@
       "splinter",
       "rattle",
       "heartd",
+      "bamboozle",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -12759,7 +12757,7 @@
       [23, "hex"],
       [27, "taunt"],
       [32, "overthink"],
-      [36, "dare"],
+      [36, "rattle"],
       [40, "wornattack"],
       [45, "eerie"]
     ],
@@ -12868,20 +12866,14 @@
       "facade",
       "scoreboosted",
       "substitute",
-      "commit",
       "overheat",
-      "dare",
       "wornattack",
-      "netattack",
       "overthink",
       "preblock",
       "heartpass",
-      "teleport",
-      "callout",
       "bellydrum",
       "protect",
       "hdefup",
-      "rest",
       "shieldbreaker",
       "noisytag",
       "stress",
@@ -12894,6 +12886,7 @@
       "splinter",
       "rattle",
       "heartd",
+      "bamboozle",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -12975,7 +12968,7 @@
       [26, "hex"],
       [30, "taunt"],
       [35, "overthink"],
-      [39, "dare"],
+      [39, "rattle"],
       [43, "wornattack"],
       [48, "eerie"]
     ],
@@ -13922,10 +13915,11 @@
       "whirlwind",
       "rest",
       "basecover",
+      "rocket",
       "chill"
     ],
     "attklist_randomize": -1,
-    "ba": 75,
+    "ba": 85,
     "base_exp": 227.0625,
     "bd": 55,
     "body_color_index": 0,
@@ -14124,6 +14118,7 @@
       "whirlwind",
       "rest",
       "basecover",
+      "rocket",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -14304,7 +14299,8 @@
       "swordsdance",
       "shakeoff",
       "vigor",
-      "shieldbreaker"
+      "shieldbreaker",
+      "toughattack"
     ],
     "attklist_randomize": -1,
     "ba": 90,
@@ -14394,7 +14390,7 @@
       [11, "shaken"],
       [16, "facade"],
       [21, "dig"],
-      [25, "scoreboosted"],
+      [25, "toughattack"],
       [29, "body"],
       [33, "substitute"],
       [39, "dare"],
@@ -14517,7 +14513,6 @@
       "hex",
       "float",
       "hazeball",
-      "mind",
       "dump",
       "mindpass",
       "cover",
@@ -14538,6 +14533,7 @@
       "enemylowered",
       "snipe",
       "sweatup",
+      "bamboozle",
       "threat"
     ],
     "attklist_randomize": -1,
@@ -14649,7 +14645,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -14715,7 +14711,6 @@
       "hex",
       "float",
       "hazeball",
-      "mind",
       "dump",
       "mindpass",
       "cover",
@@ -14735,7 +14730,8 @@
       "stress",
       "enemylowered",
       "snipe",
-      "sweatup"
+      "sweatup",
+      "bamboozle"
     ],
     "attklist_randomize": -1,
     "ba": 18,
@@ -14845,7 +14841,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -14906,7 +14902,6 @@
       "hex",
       "float",
       "hazeball",
-      "mind",
       "dump",
       "mindpass",
       "cover",
@@ -14926,7 +14921,8 @@
       "stress",
       "enemylowered",
       "snipe",
-      "sweatup"
+      "sweatup",
+      "bamboozle"
     ],
     "attklist_randomize": -1,
     "ba": 26,
@@ -15081,7 +15077,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15142,7 +15138,7 @@
     "type_focus": 2
   },
   "possum": {
-    "ability": ["regenerator", "unnervous"],
+    "ability": ["regenerator2", "boostin"],
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
@@ -15166,6 +15162,7 @@
       "bench",
       "batonpass",
       "haze",
+      "toughattack",
       "construct",
       "tagattack",
       "set",
@@ -15396,6 +15393,7 @@
       "bench",
       "batonpass",
       "haze",
+      "toughattack",
       "construct",
       "tagattack"
     ],
@@ -15616,6 +15614,7 @@
       "bench",
       "batonpass",
       "haze",
+      "toughattack",
       "construct",
       "tagattack",
       "set"
@@ -16082,6 +16081,7 @@
       "juggle",
       "hdefup",
       "cook",
+      "toughattack",
       "swordsdance"
     ],
     "attklist_randomize": -1,
@@ -16373,6 +16373,7 @@
       "juggle",
       "hdefup",
       "cook",
+      "toughattack",
       "swordsdance"
     ],
     "attklist_randomize": -1,
@@ -16580,7 +16581,8 @@
       "skillswap",
       "sweatup",
       "steal",
-      "flatten"
+      "flatten",
+      "bamboozle"
     ],
     "attklist_randomize": -1,
     "ba": 81,
@@ -16965,7 +16967,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17176,7 +17178,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17382,7 +17384,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17467,6 +17469,7 @@
       "protect",
       "flight",
       "scream",
+      "toughattack",
       "followme"
     ],
     "attklist_randomize": -1,
@@ -17698,6 +17701,7 @@
       "protect",
       "flight",
       "scream",
+      "toughattack",
       "followme"
     ],
     "attklist_randomize": -1,
@@ -19342,7 +19346,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 10,
     "attklist": [
       "careful",
       "bomb",
@@ -20483,7 +20487,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -20997,7 +21001,7 @@
       "sweatup",
       "crowd",
       "reversal",
-      "dare",
+      "jazzattack",
       "inferno",
       "distraction",
       "sweatall",
@@ -21071,7 +21075,7 @@
       [30, "serve"],
       [34, "rush"],
       [39, "scoreboosted"],
-      [44, "dare"],
+      [44, "jazzattack"],
       [48, "distraction"],
       [53, "reversal"]
     ],
@@ -22844,8 +22848,8 @@
     "type_focus": 0
   },
   "wizard": {
-    "ability": ["negation"],
-    "ability_hidden": false,
+    "ability": ["negation", "noredirect"],
+    "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
@@ -23094,7 +23098,8 @@
       "cover",
       "mark",
       "quake",
-      "flatten"
+      "flatten",
+      "toughattack"
     ],
     "attklist_randomize": -1,
     "ba": 96,

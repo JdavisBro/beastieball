@@ -39,6 +39,11 @@
     "id": "blocker",
     "name": "Power Forward"
   },
+  "boostin": {
+    "desc": "[sprIcon,0]POW[sprBoost,0] and [sprIcon,0]DEF[sprBoost,0] when TAGGED IN",
+    "id": "boostin",
+    "name": "Confident"
+  },
   "bouncy": {
     "desc": "Volleys the ball to their ally after receiving any attack",
     "id": "bouncy",
@@ -112,7 +117,7 @@
   "echo": {
     "desc": "Attacks apply 1 QUAKE to opponent field",
     "id": "echo",
-    "name": "Echo"
+    "name": "Reverb"
   },
   "empath": {
     "desc": "FEELINGs from any opponent reflect back onto the opponent team",
@@ -140,7 +145,7 @@
     "name": "Inspired"
   },
   "flee": {
-    "desc": "TAGS OUT when stamina falls below 50",
+    "desc": "TAGS OUT when stamina falls to 50 or less",
     "id": "flee",
     "name": "Flee"
   },
@@ -223,6 +228,11 @@
     "desc": "Copies nearest opponent's trait when TAGGED IN",
     "id": "mimic",
     "name": "Mimicry"
+  },
+  "mimically": {
+    "desc": "Copies their ally's Trait when they TAG IN",
+    "id": "mimically",
+    "name": "Adaptation"
   },
   "mindabsorb": {
     "desc": "Has 1.5x [sprIcon,2]MIND defense",
@@ -334,8 +344,13 @@
     "id": "regenerator",
     "name": "Scavenger"
   },
+  "regenerator2": {
+    "desc": "Restores 50 STAMINA when tagged out",
+    "id": "regenerator2",
+    "name": "Forager"
+  },
   "rhythmblock": {
-    "desc": "While on field with RHYTHM, allies can't be [sprStatus,9]BLOCKED",
+    "desc": "While on field with RHYTHM, opponents can't give allies any bad feelings",
     "id": "rhythmblock",
     "name": "Flow"
   },
@@ -385,7 +400,7 @@
     "name": "Silencer"
   },
   "sneaky": {
-    "desc": "Makes adjacent allies receive attacks in their place",
+    "desc": "This Beastie's damage is reduced 25%. Adjacent allies receive attacks in their place.",
     "id": "sneaky",
     "name": "Slippery"
   },
@@ -548,6 +563,11 @@
     "desc": "Receives attacks in place of adjacent allies",
     "id": "watcher",
     "name": "Watchtower"
+  },
+  "wipekiller": {
+    "desc": "POW +50% while any Beastie on the opponent team is [sprStatus,5]WIPED",
+    "id": "wipekiller",
+    "name": "Thrasher"
   },
   "wither": {
     "desc": "Loses 10 STAMINA each turn",

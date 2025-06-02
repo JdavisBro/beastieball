@@ -29,6 +29,16 @@
     "type": 3,
     "value": -1.0
   },
+  "energy": {
+    "desc": "Cures a Beastie of feeling [sprStatus,6]SWEATY and restores 25% STAMINA outside of games",
+    "eff": [1, 1.0, 1.0, 0, 1.0, 0.25],
+    "id": "energy",
+    "img": 4.0,
+    "name": "Daredillo Eenergy",
+    "points": 1.0,
+    "type": 0,
+    "value": 8.0
+  },
   "fries": {
     "desc": "Restores a Beastie's STAMINA by 33% outside of games",
     "eff": [0, 1.0, 0.33000000000000002, 5, 0.0, "{0} ate the French Fries!"],

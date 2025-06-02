@@ -150,7 +150,7 @@ function getEffectString(
       const feels2 =
         effect.pow > 0 && effect.targ == 7
           ? "Every non-[sprStatus,6]SWEATY fielded player feels "
-          : feels + " +";
+          : feels + (args.joiningEffects ? " " : " +");
       return `${feels2}${Math.abs(effect.pow)} [sprStatus,6]SWEATY (losing stamina)${dot}`;
     }
     case -26:
@@ -310,6 +310,10 @@ function getEffectString(
       return `[sprIcon,0][sprIcon,2]DEF${boost} to ${target}.`;
     case 79:
       return `[sprIcon,1][sprIcon,2]DEF${boost} to ${target}.`;
+    case 81:
+      return `Changes ${target} trait to user's trait.`;
+    case 82:
+      return `${effect.pow} Max STAMINA.`;
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

@@ -1,4 +1,4 @@
-export const BEASTIE_STUFF_RECENTLY_UPDATED = [
+export const BEASTIE_STUFF_RECENTLY_UPDATED: string[] = [
   "shroom_b",
   "moth1",
   "moth2",
@@ -38,4 +38,4 @@ export const BEASTIE_STUFF_RECENTLY_UPDATED = [
   "magpiemon",
 ];
 
-export const BEASITE_SPRITES_RECENTLY_UPDATED = [];
+export const BEASITE_SPRITES_RECENTLY_UPDATED: string[] = [];

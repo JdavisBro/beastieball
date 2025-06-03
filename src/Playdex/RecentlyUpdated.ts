@@ -11,6 +11,7 @@ const MOVE_RECENTLY_UPDATED: string[] = [
   "scream",
   "snore",
   "bamboozle",
+  "toughattack",
 ];
 
 export default MOVE_RECENTLY_UPDATED;

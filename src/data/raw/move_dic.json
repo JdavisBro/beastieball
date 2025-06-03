@@ -1596,11 +1596,14 @@
     "use": 0
   },
   "rest": {
-    "bt_tags": [24, 31],
+    "bt_tags": [24, 17, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 22, "pow": 2, "targ": 0 }],
+    "eff": [
+      { "eff": 32, "pow": 1, "targ": 0 },
+      { "eff": 22, "pow": 2, "targ": 0 }
+    ],
     "id": "rest",
     "name": "Doze",
     "pow": 0,
@@ -2388,7 +2391,7 @@
     "eff": [
       { "eff": 53, "pow": 0, "targ": 0 },
       { "eff": 19, "pow": 1, "targ": 0 },
-      { "eff": 23, "pow": 2, "targ": 0 }
+      { "eff": 23, "pow": -2, "targ": 0 }
     ],
     "id": "toughattack",
     "name": "Exert",

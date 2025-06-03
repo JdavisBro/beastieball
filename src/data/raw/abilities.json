@@ -400,7 +400,7 @@
     "name": "Silencer"
   },
   "sneaky": {
-    "desc": "This Beastie's damage is reduced 25%. Adjacent allies receive attacks in their place.",
+    "desc": "This Bestie's damage is reduced 25%. Adjacent allies receive attacks in their place.",
     "id": "sneaky",
     "name": "Slippery"
   },

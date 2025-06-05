@@ -835,11 +835,11 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 32, "pow": 1, "targ": 6 }],
+    "eff": [{ "eff": 52, "pow": 1, "targ": 3 }],
     "id": "healbell",
-    "name": "Team Chant",
+    "name": "Chant",
     "pow": 0,
-    "targ": 1,
+    "targ": 9,
     "type": 4,
     "use": 0
   },
@@ -1602,10 +1602,10 @@
     "description": null,
     "eff": [
       { "eff": 32, "pow": 1, "targ": 0 },
-      { "eff": 22, "pow": 2, "targ": 0 }
+      { "eff": 22, "pow": 4, "targ": 0 }
     ],
     "id": "rest",
-    "name": "Doze",
+    "name": "Exhaust",
     "pow": 0,
     "targ": 1,
     "type": 4,
@@ -2390,7 +2390,7 @@
     "description": null,
     "eff": [
       { "eff": 53, "pow": 0, "targ": 0 },
-      { "eff": 19, "pow": 1, "targ": 0 },
+      { "eff": 19, "pow": 2, "targ": 0 },
       { "eff": 23, "pow": -2, "targ": 0 }
     ],
     "id": "toughattack",

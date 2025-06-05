@@ -135,7 +135,7 @@
     "name": "Fetch"
   },
   "fieldclear": {
-    "desc": "Clears FIELD EFFECTS when tagged out",
+    "desc": "Clears FIELD EFFECTS when TAGGED OUT",
     "id": "fieldclear",
     "name": "Cleanup"
   },
@@ -200,7 +200,7 @@
     "name": "Noise Cancel"
   },
   "intimidate": {
-    "desc": "[sprIcon,1]Pow[sprBoost,3] to opponent team when tagged in",
+    "desc": "[sprIcon,1]Pow[sprBoost,3] to opponent team when TAGGED IN",
     "id": "intimidate",
     "name": "Majesty"
   },
@@ -300,7 +300,7 @@
     "name": "Plucky"
   },
   "notag": {
-    "desc": "Prevents nearest non-[sprStatus,5]WIPED opponent from using \"Tag Out\"",
+    "desc": "Prevents nearest non-[sprStatus,5]WIPED opponent from using Tag Out",
     "id": "notag",
     "name": "Tractor Beam"
   },
@@ -335,22 +335,22 @@
     "name": "Mischief"
   },
   "redirection": {
-    "desc": "When tagging in, feels [sprStatus,3]NOISY and ally feels +1 [sprStatus,1]ANGRY",
+    "desc": "On TAG IN, feels [sprStatus,3]NOISY and ally feels +1 [sprStatus,1]ANGRY",
     "id": "redirection",
     "name": "Clamor"
   },
   "regenerator": {
-    "desc": "Restores 25 STAMINA when tagged out",
+    "desc": "Restores 25 STAMINA when TAGGED OUT",
     "id": "regenerator",
     "name": "Scavenger"
   },
   "regenerator2": {
-    "desc": "Restores 50 STAMINA when tagged out",
+    "desc": "Restores 50 STAMINA when TAGGED OUT",
     "id": "regenerator2",
     "name": "Forager"
   },
   "rhythmblock": {
-    "desc": "While on field with RHYTHM, opponents can't give allies any bad feelings",
+    "desc": "While on field with RHYTHM, allies can't be [sprStatus,9]BLOCKED",
     "id": "rhythmblock",
     "name": "Flow"
   },
@@ -400,7 +400,7 @@
     "name": "Silencer"
   },
   "sneaky": {
-    "desc": "This Bestie's damage is reduced 25%. Adjacent allies receive attacks in their place.",
+    "desc": "This Beastie's damage is reduced 25%. Adjacent allies receive attacks in their place.",
     "id": "sneaky",
     "name": "Slippery"
   },
@@ -565,7 +565,7 @@
     "name": "Watchtower"
   },
   "wipekiller": {
-    "desc": "POW +50% while any Beastie on the opponent team is [sprStatus,5]WIPED",
+    "desc": "Does 1.3x damage while any Beastie on the opponent team is [sprStatus,5]WIPED",
     "id": "wipekiller",
     "name": "Thrasher"
   },

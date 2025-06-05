@@ -271,7 +271,7 @@ function getEffectString(
       }
       return `Restores ${target}'s stamina and FEELINGS.`;
     case 52:
-      return `Clears negative FEELINGs from ${target}.`;
+      return `Clears negative FEELINGs (except [sprStatus,1]ANGRY) from ${target}.`;
     case 53:
       args.joiningEffects = 0;
       return "";

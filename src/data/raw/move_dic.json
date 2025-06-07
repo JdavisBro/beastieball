@@ -1489,7 +1489,7 @@
     "description": null,
     "eff": [
       { "eff": 53, "pow": 0, "targ": 0 },
-      { "eff": 19, "pow": 1, "targ": 0 },
+      { "eff": 19, "pow": 2, "targ": 0 },
       { "eff": 12, "pow": 2, "targ": 0 }
     ],
     "id": "protect",

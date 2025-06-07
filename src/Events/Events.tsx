@@ -238,16 +238,18 @@ export default function Events() {
           Events
         </div>
         <div className={open ? styles.openBox : styles.closedBox}>
-          {bigmoon == NoEvent.WaitingForResponse ? (
-            <EventBlock>Loading...</EventBlock>
-          ) : bigmoon == NoEvent.NoEvent ? (
-            <EventBlock>
-              <img className={styles.wahhhhwahhhh} src="/nojs.png" /> No Event{" "}
-              <button onClick={bigmoonReload}>Reload</button>
-            </EventBlock>
-          ) : (
-            <Bigmoon bigmoon={bigmoon} bigmoonReload={bigmoonReload} />
-          )}
+          {open ? (
+            bigmoon == NoEvent.WaitingForResponse ? (
+              <EventBlock>Loading...</EventBlock>
+            ) : bigmoon == NoEvent.NoEvent ? (
+              <EventBlock>
+                <img className={styles.wahhhhwahhhh} src="/nojs.png" /> No Event{" "}
+                <button onClick={bigmoonReload}>Reload</button>
+              </EventBlock>
+            ) : (
+              <Bigmoon bigmoon={bigmoon} bigmoonReload={bigmoonReload} />
+            )
+          ) : undefined}
         </div>
       </div>
     </ErrorBoundary>

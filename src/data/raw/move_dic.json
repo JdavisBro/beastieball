@@ -2384,14 +2384,13 @@
     "use": 0
   },
   "toughattack": {
-    "bt_tags": [1, 10, 33],
+    "bt_tags": [1, 10, 33, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 53, "pow": 0, "targ": 0 },
       { "eff": 19, "pow": 2, "targ": 0 },
-      { "eff": 23, "pow": -2, "targ": 0 }
+      { "eff": 8, "pow": -0.29999999999999999, "targ": 0 }
     ],
     "id": "toughattack",
     "name": "Exert",

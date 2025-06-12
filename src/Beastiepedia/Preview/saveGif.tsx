@@ -61,24 +61,26 @@ export default function saveGif(
     }
   }
 
-  const transitionedto: { [key: number]: number } = {};
+  const transitionedto: Record<number, number> = {};
   frames.forEach((value) => {
     if (value?.transitions) {
-      value?.transitions.forEach((target) => {
-        transitionedto[target] =
-          transitionedto[target] != undefined ? transitionedto[target] + 1 : 1;
+      value?.transitions.forEach((target, index, array) => {
+        if (array.indexOf(target) == index) {
+          transitionedto[target] = (transitionedto[target] ?? 0) + 1;
+        }
       });
     }
   });
 
+  const maxTransitioned = Math.max(...Object.values(transitionedto));
   let basegroup = frames.findIndex(
-    (_value, index) => transitionedto[index] != undefined,
+    (_value, index) => transitionedto[index] == maxTransitioned,
   );
   basegroup = basegroup != -1 ? basegroup : 0;
 
   let groupindex = basegroup;
 
-  const grouptransition: { [key: number]: number } = {};
+  const grouptransition: Record<number, number> = {};
   Object.keys(transitionedto).forEach(
     (_value, index) => (grouptransition[index] = 0),
   );

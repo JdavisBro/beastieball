@@ -84,7 +84,7 @@ export type LevelStump = {
 export type World = {
   _: string;
   icons_array: MapIcon[];
-  level_quadtree_size: number;
+  // level_quadtree_size: number;
   level_stumps_array: LevelStump[];
   map_position_data: {
     _: string;

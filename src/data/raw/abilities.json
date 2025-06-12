@@ -39,6 +39,11 @@
     "id": "blocker",
     "name": "¦abilitiessetup_abilitydefine_060¦"
   },
+  "boostin": {
+    "desc": "¦abilitiessetup_abilitydefine_242¦",
+    "id": "boostin",
+    "name": "¦abilitiessetup_abilitydefine_241¦"
+  },
   "bouncy": {
     "desc": "¦abilitiessetup_abilitydefine_062¦",
     "id": "bouncy",
@@ -224,6 +229,11 @@
     "id": "mimic",
     "name": "¦abilitiessetup_abilitydefine_157¦"
   },
+  "mimically": {
+    "desc": "¦abilitiessetup_abilitydefine_244¦",
+    "id": "mimically",
+    "name": "¦abilitiessetup_abilitydefine_243¦"
+  },
   "mindabsorb": {
     "desc": "¦abilitiessetup_abilitydefine_137¬0¬1.5¦",
     "id": "mindabsorb",
@@ -334,6 +344,11 @@
     "id": "regenerator",
     "name": "¦abilitiessetup_abilitydefine_002¦"
   },
+  "regenerator2": {
+    "desc": "¦abilitiessetup_abilitydefine_001¬0¬50¦",
+    "id": "regenerator2",
+    "name": "¦abilitiessetup_abilitydefine_240¦"
+  },
   "rhythmblock": {
     "desc": "¦abilitiessetup_abilitydefine_177¬0¬¦fieldeffectstuff_003¦¬1¬[sprStatus,9]¦statuseffectstuff_010¦¦",
     "id": "rhythmblock",
@@ -385,7 +400,7 @@
     "name": "¦abilitiessetup_abilitydefine_154¦"
   },
   "sneaky": {
-    "desc": "¦abilitiessetup_abilitydefine_066¦",
+    "desc": "¦abilitiessetup_abilitydefine_066¬0¬25¦",
     "id": "sneaky",
     "name": "¦abilitiessetup_abilitydefine_065¦"
   },
@@ -548,6 +563,11 @@
     "desc": "¦abilitiessetup_abilitydefine_098¦",
     "id": "watcher",
     "name": "¦abilitiessetup_abilitydefine_097¦"
+  },
+  "wipekiller": {
+    "desc": "¦abilitiessetup_abilitydefine_245¬0¬1.3¬1¬[sprStatus,5]¦statuseffectstuff_006¦¦",
+    "id": "wipekiller",
+    "name": "¦abilitiessetup_abilitydefine_246¦"
   },
   "wither": {
     "desc": "¦abilitiessetup_abilitydefine_131¬0¬10¦",

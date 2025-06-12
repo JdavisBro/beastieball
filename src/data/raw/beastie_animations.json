@@ -1119,6 +1119,10 @@
           {
             "color": 14155770,
             "x": 0.5
+          },
+          {
+            "color": 13956863,
+            "x": 1
           }
         ]
       },
@@ -1126,8 +1130,16 @@
         "_": "class_gradient",
         "array": [
           {
+            "color": 13089279,
+            "x": 0
+          },
+          {
             "color": 11903999,
             "x": 0.5
+          },
+          {
+            "color": 9335807,
+            "x": 1
           }
         ]
       }
@@ -1910,9 +1922,107 @@
       },
       "idle": {
         "_": "class_char_animationdata",
-        "frames": {
-          "_": "class_canim_frames"
-        }
+        "frames": [
+          {
+            "_": "class_canim_frames",
+            "endFrame": 22,
+            "holds": {
+              "18": 3,
+              "19": 2,
+              "20": 3,
+              "21": 4,
+              "22": 4,
+              "_": "class_map"
+            },
+            "startFrame": 18,
+            "transitions": [5]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 35,
+            "holds": {
+              "23": 3,
+              "25": 4,
+              "26": 4,
+              "27": 4,
+              "28": 4,
+              "29": 5,
+              "30": 4,
+              "32": 1,
+              "33": 6,
+              "34": 6,
+              "35": 4,
+              "36": 5,
+              "_": "class_map"
+            },
+            "startFrame": 23,
+            "transitions": [5]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 49,
+            "holds": {
+              "37": 3,
+              "39": 1,
+              "41": 3,
+              "43": 1,
+              "45": 3,
+              "46": 4,
+              "47": 4,
+              "48": 4,
+              "49": 4,
+              "_": "class_map"
+            },
+            "startFrame": 37,
+            "transitions": [0, 5]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 68,
+            "holds": {
+              "51": 1,
+              "54": 3,
+              "55": 3,
+              "56": [6, 12],
+              "61": 3,
+              "62": 3,
+              "63": [4, 8],
+              "64": 3,
+              "65": 2,
+              "67": 3,
+              "68": 3,
+              "69": 14,
+              "_": "class_map"
+            },
+            "startFrame": 50,
+            "transitions": [5]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 79,
+            "holds": {
+              "77": 4,
+              "78": 4,
+              "79": 5,
+              "_": "class_map"
+            },
+            "startFrame": 71,
+            "transitions": [0, 0, 4, 5, 5]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 22,
+            "holds": {
+              "18": 3,
+              "20": 3,
+              "21": 4,
+              "22": 4,
+              "_": "class_map"
+            },
+            "startFrame": 21,
+            "transitions": [0, 0, 1, 2, 3, 4, 5, 5, 5, 5]
+          }
+        ]
       },
       "menu": {
         "_": "class_char_animationdata",
@@ -1924,10 +2034,23 @@
         "_": "class_char_animationdata",
         "frames": {
           "_": "class_canim_frames",
-          "endFrame": 21,
+          "endFrame": 17,
+          "holds": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "16": 1,
+            "17": 1,
+            "8": 1,
+            "_": "class_map"
+          },
+          "sounds": {
+            "11": 0,
+            "16": 0,
+            "_": "class_map"
+          },
           "startFrame": 8
-        },
-        "speed": 2
+        }
       },
       "ready": {
         "_": "class_char_animationdata",
@@ -2564,9 +2687,199 @@
       },
       "idle": {
         "_": "class_char_animationdata",
-        "frames": {
-          "_": "class_canim_frames"
-        }
+        "frames": [
+          {
+            "_": "class_canim_frames",
+            "endFrame": 23,
+            "holds": {
+              "22": 10,
+              "23": 10,
+              "_": "class_map"
+            },
+            "startFrame": 22,
+            "transitions": [0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 3, 10]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 27,
+            "holds": {
+              "26": 4,
+              "27": 6,
+              "_": "class_map"
+            },
+            "startFrame": 24,
+            "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 43,
+            "holds": {
+              "38": 3,
+              "39": 3,
+              "41": 4,
+              "43": 1,
+              "_": "class_map"
+            },
+            "startFrame": 28,
+            "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 53,
+            "holds": {
+              "47": 3,
+              "48": 3,
+              "49": 3,
+              "50": 3,
+              "51": 7,
+              "52": 3,
+              "53": 1,
+              "_": "class_map"
+            },
+            "startFrame": 44,
+            "transitions": [4]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 68,
+            "holds": {
+              "53": 1,
+              "55": 3,
+              "56": 3,
+              "57": 7,
+              "58": 1,
+              "60": 5,
+              "64": 3,
+              "65": 3,
+              "66": 6,
+              "68": [2, 2, 2, 4, 6, 8],
+              "_": "class_map"
+            },
+            "startFrame": 54,
+            "transitions": [5, 6, 7]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 53,
+            "holds": {
+              "53": 10,
+              "55": 3,
+              "56": 3,
+              "57": 7,
+              "58": 1,
+              "59": [2, 2, 4, 8],
+              "60": 2,
+              "62": [8, 10, 12],
+              "64": 2,
+              "65": 2,
+              "66": 7,
+              "67": 3,
+              "68": 16,
+              "69": 1,
+              "_": "class_map"
+            },
+            "startFrame": 69,
+            "transitions": [8, 9]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 79,
+            "holds": {
+              "69": 1,
+              "72": 1,
+              "75": 3,
+              "77": 6,
+              "79": 2,
+              "_": "class_map"
+            },
+            "startFrame": 69,
+            "transitions": [5, 7, 7]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 95,
+            "holds": {
+              "78": 0,
+              "79": 4,
+              "80": 1,
+              "81": 3,
+              "86": 3,
+              "87": 8,
+              "88": 3,
+              "92": 3,
+              "93": 7,
+              "95": 1,
+              "_": "class_map"
+            },
+            "startFrame": 78,
+            "transitions": [8, 8, 8, 8, 9]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 103,
+            "holds": {
+              "100": 4,
+              "102": 3,
+              "103": [3, 3, 3, 6, 6, 9],
+              "99": 3,
+              "_": "class_map"
+            },
+            "startFrame": 96,
+            "transitions": [8, 8, 9, 9]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 109,
+            "holds": {
+              "105": 3,
+              "106": 4,
+              "107": 4,
+              "108": 5,
+              "109": 5,
+              "_": "class_map"
+            },
+            "startFrame": 104,
+            "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 163,
+            "holds": {
+              "110": 3,
+              "112": 1,
+              "116": 3,
+              "118": 1,
+              "119": 1,
+              "122": 1,
+              "124": 1,
+              "125": 1,
+              "126": 3,
+              "127": 3,
+              "128": [2, 2, 4, 8],
+              "129": 2,
+              "131": 3,
+              "133": 1,
+              "135": 3,
+              "138": 1,
+              "139": 1,
+              "142": 1,
+              "144": 1,
+              "145": 1,
+              "148": 1,
+              "149": 3,
+              "150": 1,
+              "152": 3,
+              "153": 3,
+              "155": 2,
+              "156": 3,
+              "158": 1,
+              "160": 3,
+              "_": "class_map"
+            },
+            "startFrame": 110,
+            "transitions": [0]
+          }
+        ]
       },
       "menu": {
         "_": "class_char_animationdata",
@@ -2940,9 +3253,74 @@
       },
       "idle": {
         "_": "class_char_animationdata",
-        "frames": {
-          "_": "class_canim_frames"
-        }
+        "frames": [
+          {
+            "_": "class_canim_frames",
+            "endFrame": 18,
+            "holds": {
+              "18": [8, 10, 12],
+              "_": "class_map"
+            },
+            "startFrame": 18,
+            "transitions": [1, 2, 2, 2, 2]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 34,
+            "holds": {
+              "23": [6, 12],
+              "27": [8, 10, 12],
+              "_": "class_map"
+            },
+            "sounds": {
+              "31": 1,
+              "_": "class_map"
+            },
+            "startFrame": 19,
+            "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 35,
+            "holds": {
+              "35": 2,
+              "_": "class_map"
+            },
+            "startFrame": 35,
+            "transitions": [3, 4]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 40,
+            "holds": {
+              "36": 3,
+              "38": 1,
+              "40": 2,
+              "_": "class_map"
+            },
+            "sounds": {
+              "37": 1,
+              "_": "class_map"
+            },
+            "startFrame": 36,
+            "transitions": [3, 3, 4]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 46,
+            "holds": {
+              "41": 3,
+              "43": 1,
+              "_": "class_map"
+            },
+            "sounds": {
+              "42": 1,
+              "_": "class_map"
+            },
+            "startFrame": 41,
+            "transitions": [0]
+          }
+        ]
       },
       "menu": {
         "_": "class_char_animationdata",
@@ -2954,8 +3332,20 @@
         "_": "class_char_animationdata",
         "frames": {
           "_": "class_canim_frames",
-          "endFrame": 1,
-          "startFrame": 1
+          "endFrame": 17,
+          "holds": {
+            "12": 1,
+            "14": 1,
+            "17": 1,
+            "9": 1,
+            "_": "class_map"
+          },
+          "sounds": {
+            "13": 0,
+            "8": 0,
+            "_": "class_map"
+          },
+          "startFrame": 8
         }
       },
       "ready": {
@@ -2978,6 +3368,12 @@
           "_": "class_canim_frames",
           "endFrame": 7,
           "startFrame": 7
+        }
+      },
+      "stop": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "volley": {
@@ -3084,8 +3480,11 @@
     },
     "loco_data": {
       "_": "locomotor",
+      "hop_height": 0,
       "move_pause_frames": [],
-      "move_to_idle_transition_frames": []
+      "move_to_idle_transition_frames": [],
+      "squishiness": 0,
+      "stretchiness": 0
     },
     "miss": {
       "x": 252,
@@ -3119,7 +3518,7 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 47103,
+            "color": 4438527,
             "x": 0
           },
           {
@@ -3145,11 +3544,19 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 5197805,
+            "color": 4079295,
             "x": 0
           },
           {
-            "color": 7354367,
+            "color": 5192672,
+            "x": 0.1066666667
+          },
+          {
+            "color": 6961402,
+            "x": 0.8466666667
+          },
+          {
+            "color": 8730623,
             "x": 1
           }
         ]
@@ -3458,6 +3865,7 @@
   "_sprCassowary2": {
     "anim_data": {
       "_": "class_char_animation",
+      "__anim_speed": 0.5,
       "air": {
         "_": "class_char_animationdata",
         "frames": {
@@ -3492,9 +3900,107 @@
       },
       "idle": {
         "_": "class_char_animationdata",
-        "frames": {
-          "_": "class_canim_frames"
-        }
+        "frames": [
+          {
+            "_": "class_canim_frames",
+            "endFrame": 16,
+            "holds": {
+              "16": [8, 12, 18],
+              "_": "class_map"
+            },
+            "startFrame": 16,
+            "transitions": [1, 1, 2, 2, 4, 4, 8]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 24,
+            "holds": {
+              "17": 1,
+              "18": 1,
+              "21": 1,
+              "22": 1,
+              "_": "class_map"
+            },
+            "startFrame": 17,
+            "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 28,
+            "holds": {
+              "25": 1,
+              "27": 1,
+              "_": "class_map"
+            },
+            "startFrame": 25,
+            "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames"
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 37,
+            "holds": {
+              "29": 1,
+              "30": 1,
+              "31": 1,
+              "32": 1,
+              "33": 1,
+              "34": 1,
+              "35": 1,
+              "36": 1,
+              "37": 1,
+              "_": "class_map"
+            },
+            "startFrame": 29,
+            "transitions": [5]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 38,
+            "holds": {
+              "38": [2, 4, 6],
+              "_": "class_map"
+            },
+            "startFrame": 38,
+            "transitions": [5, 6, 6, 7]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 42,
+            "holds": {
+              "41": 1,
+              "_": "class_map"
+            },
+            "startFrame": 39,
+            "transitions": [5]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 47,
+            "holds": {
+              "45": 1,
+              "_": "class_map"
+            },
+            "startFrame": 43,
+            "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 56,
+            "holds": {
+              "48": 1,
+              "51": 1,
+              "53": 1,
+              "54": 1,
+              "55": 1,
+              "_": "class_map"
+            },
+            "startFrame": 48,
+            "transitions": [0]
+          }
+        ]
       },
       "menu": {
         "_": "class_char_animationdata",
@@ -3507,8 +4013,14 @@
         "frames": {
           "_": "class_canim_frames",
           "endFrame": 15,
+          "sounds": {
+            "10": 0,
+            "14": 0,
+            "_": "class_map"
+          },
           "startFrame": 8
-        }
+        },
+        "speed": 2
       },
       "ready": {
         "_": "class_char_animationdata",
@@ -3599,15 +4111,15 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 766420,
+            "color": 176855,
             "x": 0
           },
           {
-            "color": 4775167,
+            "color": 3791103,
             "x": 0.57
           },
           {
-            "color": 2194381,
+            "color": 1013976,
             "x": 1
           }
         ]
@@ -3950,6 +4462,10 @@
           {
             "color": 12639999,
             "x": 0
+          },
+          {
+            "color": 10141951,
+            "x": 1
           }
         ]
       },
@@ -3957,8 +4473,12 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 9106943,
+            "color": 8320255,
             "x": 0
+          },
+          {
+            "color": 9558783,
+            "x": 1
           }
         ]
       },
@@ -5732,82 +6252,15 @@
   },
   "_sprCrab_alt": {
     "anim_data": {
-      "__Elephant_Circular_Ref__": 1250
+      "__Elephant_Circular_Ref__": 1324
     },
     "ball": {
       "x": 123,
       "y": -408
     },
-    "colors": [
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 4276036,
-            "x": 0
-          },
-          {
-            "color": 5000279,
-            "x": 0.5
-          },
-          {
-            "color": 6177627,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 13161189,
-            "x": 0
-          },
-          {
-            "color": 10994904,
-            "x": 0.4933333333
-          },
-          {
-            "color": 11916004,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 8406082,
-            "x": 0
-          },
-          {
-            "color": 8737579,
-            "x": 0.5
-          },
-          {
-            "color": 7362092,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 14807549,
-            "x": 0
-          },
-          {
-            "color": 15333375,
-            "x": 0.5
-          },
-          {
-            "color": 15463679,
-            "x": 1
-          }
-        ]
-      }
-    ],
+    "colors": {
+      "__Elephant_Circular_Ref__": 1670
+    },
     "colors2": null,
     "evo1": {
       "anim": "good",
@@ -5828,7 +6281,7 @@
       "y": 0
     },
     "loco_data": {
-      "__Elephant_Circular_Ref__": 1293
+      "__Elephant_Circular_Ref__": 1368
     },
     "miss": {
       "x": -22,
@@ -5844,68 +6297,9 @@
       "x": 100,
       "y": -535
     },
-    "shiny": [
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 16054271,
-            "x": 0
-          },
-          {
-            "color": 15066879,
-            "x": 0.52
-          },
-          {
-            "color": 15334143,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 12437732,
-            "x": 0.5
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 7548146,
-            "x": 0
-          },
-          {
-            "color": 6175226,
-            "x": 0.5
-          },
-          {
-            "color": 4673524,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 13752831,
-            "x": 0
-          },
-          {
-            "color": 13752831,
-            "x": 0.3933333333
-          },
-          {
-            "color": 16777215,
-            "x": 1
-          }
-        ]
-      }
-    ],
+    "shiny": {
+      "__Elephant_Circular_Ref__": 1700
+    },
     "splash": {
       "angle": -10,
       "anim": "ready",
@@ -6413,8 +6807,16 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 16737975,
+            "color": 16729258,
             "x": 0
+          },
+          {
+            "color": 16739257,
+            "x": 0.4166666667
+          },
+          {
+            "color": 16742079,
+            "x": 1
           }
         ]
       },
@@ -6452,8 +6854,16 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 34559,
+            "color": 2660863,
+            "x": 0
+          },
+          {
+            "color": 4737279,
             "x": 0.5
+          },
+          {
+            "color": 16745326,
+            "x": 1
           }
         ]
       }
@@ -6693,14 +7103,22 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 6964028,
+            "color": 8015687,
             "x": 0.1366666667
+          },
+          {
+            "color": 7555394,
+            "x": 1
           }
         ]
       },
       {
         "_": "class_gradient",
         "array": [
+          {
+            "color": 15557544,
+            "x": 0
+          },
           {
             "color": 16743101,
             "x": 0.9966666667
@@ -6737,8 +7155,16 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 43263,
+            "color": 6673151,
+            "x": 0
+          },
+          {
+            "color": 9142015,
             "x": 0.5
+          },
+          {
+            "color": 16758431,
+            "x": 1
           }
         ]
       }
@@ -8193,6 +8619,132 @@
       "y": -107
     }
   },
+  "_sprFO_z": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 0,
+      "y": 0
+    },
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": 0,
+      "y": 0
+    },
+    "partner": {
+      "angle": -10,
+      "anim": "spike",
+      "x": 0,
+      "y": 0
+    },
+    "ready": {
+      "x": 0,
+      "y": 0
+    },
+    "splash": {
+      "angle": -10,
+      "anim": "ready",
+      "x": 0,
+      "y": -200
+    }
+  },
   "_sprFootball": {
     "anim_data": {
       "_": "class_char_animation",
@@ -9380,7 +9932,7 @@
             "x": 0
           },
           {
-            "color": 8947967,
+            "color": 10533119,
             "x": 0.5866666667
           },
           {
@@ -9472,8 +10024,27 @@
       "idle": {
         "_": "class_char_animationdata",
         "frames": {
-          "_": "class_canim_frames"
-        }
+          "_": "class_canim_frames",
+          "bpm": true,
+          "endFrame": 31,
+          "holds": {
+            "20": 3,
+            "21": 4,
+            "22": 3,
+            "23": 4,
+            "24": 3,
+            "25": 3,
+            "26": 3,
+            "27": 4,
+            "28": 3,
+            "29": 4,
+            "30": 3,
+            "31": 3,
+            "_": "class_map"
+          },
+          "startFrame": 20
+        },
+        "speed": 0.8
       },
       "menu": {
         "_": "class_char_animationdata",
@@ -9485,8 +10056,31 @@
         "_": "class_char_animationdata",
         "frames": {
           "_": "class_canim_frames",
-          "endFrame": 1,
-          "startFrame": 1
+          "bpm": true,
+          "endFrame": 19,
+          "holds": {
+            "10": 1,
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2,
+            "15": 2,
+            "16": 1,
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "8": 2,
+            "9": 2,
+            "_": "class_map"
+          },
+          "sounds": {
+            "10": -1,
+            "15": 0,
+            "16": -1,
+            "9": 0,
+            "_": "class_map"
+          },
+          "startFrame": 8
         }
       },
       "ready": {
@@ -11419,8 +12013,20 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 11375748,
+            "color": 11971749,
             "x": 0
+          },
+          {
+            "color": 8094638,
+            "x": 0.1966666667
+          },
+          {
+            "color": 5268916,
+            "x": 0.4566666667
+          },
+          {
+            "color": 6064850,
+            "x": 1
           }
         ]
       },
@@ -11428,26 +12034,46 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 9671571,
+            "color": 8634093,
+            "x": 0.08
+          },
+          {
+            "color": 5342168,
+            "x": 0.9333333333
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 7703240,
+            "x": 0.0233333333
+          },
+          {
+            "color": 7703240,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 6094322,
             "x": 0
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
+          },
           {
-            "color": 7105644,
-            "x": 0.5
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
+            "color": 7202815,
+            "x": 0.49
+          },
           {
-            "color": 9807795,
-            "x": 0.5
+            "color": 5889535,
+            "x": 0.78
+          },
+          {
+            "color": 10207459,
+            "x": 1
           }
         ]
       }
@@ -13356,6 +13982,10 @@
           {
             "color": 10597577,
             "x": 0
+          },
+          {
+            "color": 11123912,
+            "x": 1
           }
         ]
       },
@@ -14865,6 +15495,10 @@
           {
             "color": 13167103,
             "x": 0
+          },
+          {
+            "color": 15004927,
+            "x": 1
           }
         ]
       },
@@ -15627,8 +16261,12 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 12826111,
+            "color": 12562687,
             "x": 0
+          },
+          {
+            "color": 13945599,
+            "x": 1
           }
         ]
       },
@@ -17533,8 +18171,16 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 3920575,
+            "color": 3990991,
+            "x": 0
+          },
+          {
+            "color": 3532239,
             "x": 0.5
+          },
+          {
+            "color": 5429724,
+            "x": 1
           }
         ]
       },
@@ -17559,8 +18205,16 @@
         "_": "class_gradient",
         "array": [
           {
+            "color": 1797097,
+            "x": 0
+          },
+          {
             "color": 1484287,
             "x": 0.5
+          },
+          {
+            "color": 6669567,
+            "x": 1
           }
         ]
       },
@@ -18802,11 +19456,19 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 6234367,
+            "color": 4325620,
             "x": 0
           },
           {
-            "color": 11037183,
+            "color": 6892287,
+            "x": 0.2033333333
+          },
+          {
+            "color": 10510847,
+            "x": 0.8933333333
+          },
+          {
+            "color": 11960831,
             "x": 1
           }
         ]
@@ -19076,6 +19738,10 @@
           {
             "color": 9574394,
             "x": 0
+          },
+          {
+            "color": 14036730,
+            "x": 1
           }
         ]
       },
@@ -19096,8 +19762,16 @@
         "_": "class_gradient",
         "array": [
           {
+            "color": 46335,
+            "x": 0
+          },
+          {
             "color": 54015,
             "x": 0.5
+          },
+          {
+            "color": 3792127,
+            "x": 1
           }
         ]
       },
@@ -19139,8 +19813,12 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 6209504,
+            "color": 7004369,
             "x": 0.5
+          },
+          {
+            "color": 10017718,
+            "x": 0.9933333333
           }
         ]
       }
@@ -22581,6 +23259,10 @@
             "x": 0
           },
           {
+            "color": 16777215,
+            "x": 0.39
+          },
+          {
             "color": 11708106,
             "x": 0.4813333333
           },
@@ -22598,11 +23280,11 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 11573759,
+            "color": 10066431,
             "x": 0
           },
           {
-            "color": 9211135,
+            "color": 8421631,
             "x": 0.4853333333
           },
           {
@@ -22615,8 +23297,16 @@
         "_": "class_gradient",
         "array": [
           {
+            "color": 16113876,
+            "x": 0.0033333333
+          },
+          {
             "color": 15527148,
             "x": 0.5
+          },
+          {
+            "color": 13948140,
+            "x": 1
           }
         ]
       },
@@ -22628,7 +23318,7 @@
             "x": 0
           },
           {
-            "color": 14408912,
+            "color": 15461856,
             "x": 1
           }
         ]
@@ -22697,152 +23387,15 @@
   },
   "_sprRat_alt": {
     "anim_data": {
-      "__Elephant_Circular_Ref__": 5080
+      "__Elephant_Circular_Ref__": 5188
     },
     "ball": {
       "x": 154.8,
       "y": -261.6
     },
-    "colors": [
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 1788927,
-            "x": 0
-          },
-          {
-            "color": 2631935,
-            "x": 0.4966666667
-          },
-          {
-            "color": 5124094,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 12637695,
-            "x": 0
-          },
-          {
-            "color": 11192063,
-            "x": 0.5
-          },
-          {
-            "color": 11854591,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 16119777,
-            "x": 0
-          },
-          {
-            "color": 14869218,
-            "x": 0.5
-          },
-          {
-            "color": 12566494,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 4363499,
-            "x": 0
-          },
-          {
-            "color": 7388586,
-            "x": 0.12
-          },
-          {
-            "color": 11532208,
-            "x": 0.25
-          },
-          {
-            "color": 13759844,
-            "x": 0.37
-          },
-          {
-            "color": 15110714,
-            "x": 0.5
-          },
-          {
-            "color": 15031935,
-            "x": 0.62
-          },
-          {
-            "color": 13928915,
-            "x": 0.7533333333
-          },
-          {
-            "color": 9928162,
-            "x": 0.8766666667
-          },
-          {
-            "color": 3555918,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 14713450,
-            "x": 0
-          },
-          {
-            "color": 15068869,
-            "x": 0.2493333333
-          },
-          {
-            "color": 10610632,
-            "x": 0.5013333333
-          },
-          {
-            "color": 11331053,
-            "x": 0.7573333333
-          },
-          {
-            "color": 14475252,
-            "x": 0.8773333333
-          },
-          {
-            "color": 14659815,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 8284649,
-            "x": 0
-          },
-          {
-            "color": 7576816,
-            "x": 0.5
-          },
-          {
-            "color": 8178928,
-            "x": 1
-          }
-        ]
-      }
-    ],
+    "colors": {
+      "__Elephant_Circular_Ref__": 6396
+    },
     "colors2": null,
     "evo1": {
       "anim": "good",
@@ -22863,7 +23416,7 @@
       "y": 0
     },
     "loco_data": {
-      "__Elephant_Circular_Ref__": 5158
+      "__Elephant_Circular_Ref__": 5266
     },
     "miss": {
       "x": 222.8571428571,
@@ -22879,122 +23432,9 @@
       "x": 139.4285714286,
       "y": -286.8571428571
     },
-    "shiny": [
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 16758960,
-            "x": 0
-          },
-          {
-            "color": 11708106,
-            "x": 0.4813333333
-          },
-          {
-            "color": 5600994,
-            "x": 0.7253333333
-          },
-          {
-            "color": 2776499,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 11573759,
-            "x": 0
-          },
-          {
-            "color": 9211135,
-            "x": 0.4853333333
-          },
-          {
-            "color": 9212671,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 15527148,
-            "x": 0.5
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 5259334,
-            "x": 0
-          },
-          {
-            "color": 14408912,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 255,
-            "x": 0
-          },
-          {
-            "color": 43775,
-            "x": 0.1276190476
-          },
-          {
-            "color": 65405,
-            "x": 0.2571428571
-          },
-          {
-            "color": 5372672,
-            "x": 0.379047619
-          },
-          {
-            "color": 16774656,
-            "x": 0.5123809524
-          },
-          {
-            "color": 16729344,
-            "x": 0.6495238095
-          },
-          {
-            "color": 16711814,
-            "x": 0.779047619
-          },
-          {
-            "color": 11010303,
-            "x": 0.8895238095
-          },
-          {
-            "color": 255,
-            "x": 1
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
-          {
-            "color": 14084330,
-            "x": 0
-          },
-          {
-            "color": 4076860,
-            "x": 1
-          }
-        ]
-      }
-    ],
+    "shiny": {
+      "__Elephant_Circular_Ref__": 6445
+    },
     "splash": {
       "angle": 344.1231689453,
       "anim": "volley",
@@ -26109,17 +26549,29 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 7263487,
+            "color": 9428223,
             "x": 0
+          },
+          {
+            "color": 7324159,
+            "x": 1
           }
         ]
       },
       {
         "_": "class_gradient",
         "array": [
+          {
+            "color": 13959008,
+            "x": 0
+          },
           {
             "color": 14539584,
             "x": 0.5
+          },
+          {
+            "color": 16768058,
+            "x": 1
           }
         ]
       },
@@ -26127,8 +26579,20 @@
         "_": "class_gradient",
         "array": [
           {
+            "color": 10241023,
+            "x": 0
+          },
+          {
+            "color": 15367935,
+            "x": 0.2666666667
+          },
+          {
             "color": 16747983,
-            "x": 0.5
+            "x": 0.6033333333
+          },
+          {
+            "color": 16747955,
+            "x": 1
           }
         ]
       },
@@ -27141,6 +27605,7 @@
   "_sprShroom_b": {
     "anim_data": {
       "_": "class_char_animation",
+      "__anim_speed": 1.25,
       "air": {
         "_": "class_char_animationdata",
         "frames": {
@@ -27174,7 +27639,23 @@
       "idle": {
         "_": "class_char_animationdata",
         "frames": {
-          "_": "class_canim_frames"
+          "_": "class_canim_frames",
+          "bpm": true,
+          "endFrame": 33,
+          "holds": {
+            "20": 3,
+            "21": 4,
+            "22": 3,
+            "23": 3,
+            "26": 3,
+            "27": 3,
+            "28": 4,
+            "29": 3,
+            "30": 3,
+            "33": 3,
+            "_": "class_map"
+          },
+          "startFrame": 20
         }
       },
       "menu": {
@@ -27187,8 +27668,22 @@
         "_": "class_char_animationdata",
         "frames": {
           "_": "class_canim_frames",
-          "endFrame": 1,
-          "startFrame": 1
+          "bpm": true,
+          "endFrame": 19,
+          "holds": {
+            "15": 3,
+            "19": 3,
+            "9": 3,
+            "_": "class_map"
+          },
+          "sounds": {
+            "11": 0,
+            "12": 5,
+            "17": 0,
+            "18": 5,
+            "_": "class_map"
+          },
+          "startFrame": 8
         }
       },
       "ready": {
@@ -27211,6 +27706,12 @@
           "_": "class_canim_frames",
           "endFrame": 7,
           "startFrame": 7
+        }
+      },
+      "stop": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
         }
       },
       "volley": {
@@ -27407,6 +27908,10 @@
           {
             "color": 5892853,
             "x": 0
+          },
+          {
+            "color": 7986431,
+            "x": 1
           }
         ]
       },
@@ -27499,29 +28004,57 @@
       },
       "idle": {
         "_": "class_char_animationdata",
-        "frames": {
-          "_": "class_canim_frames",
-          "endFrame": 34,
-          "holds": {
-            "18": [4, 4, 4, 6, 8, 10],
-            "19": 4,
-            "21": 4,
-            "22": 4,
-            "23": 4,
-            "24": 4,
-            "25": 4,
-            "26": 4,
-            "27": [4, 4, 4, 6, 8, 10],
-            "29": 4,
-            "30": 4,
-            "31": 4,
-            "32": 4,
-            "33": 4,
-            "34": 4,
-            "_": "class_map"
+        "frames": [
+          {
+            "_": "class_canim_frames",
+            "endFrame": 34,
+            "holds": {
+              "18": [4, 4, 4, 6, 8, 10],
+              "19": 4,
+              "21": 4,
+              "22": 4,
+              "23": 4,
+              "24": 4,
+              "25": 4,
+              "26": 4,
+              "27": [4, 4, 4, 6, 8, 10],
+              "29": 4,
+              "30": 4,
+              "31": 4,
+              "32": 4,
+              "33": 4,
+              "34": 4,
+              "_": "class_map"
+            },
+            "startFrame": 18,
+            "transitions": [0, 0, 0, 0, 1]
           },
-          "startFrame": 18
-        }
+          {
+            "_": "class_canim_frames",
+            "endFrame": 66,
+            "holds": {
+              "36": 3,
+              "39": 3,
+              "40": 4,
+              "50": 3,
+              "51": 3,
+              "52": 3,
+              "53": 3,
+              "54": 5,
+              "55": 3,
+              "56": 3,
+              "57": [8, 9, 10, 11, 12, 13],
+              "60": 3,
+              "63": 3,
+              "64": 4,
+              "65": 4,
+              "66": 4,
+              "_": "class_map"
+            },
+            "startFrame": 35,
+            "transitions": [0]
+          }
+        ]
       },
       "menu": {
         "_": "class_char_animationdata",
@@ -28180,9 +28713,73 @@
       },
       "idle": {
         "_": "class_char_animationdata",
-        "frames": {
-          "_": "class_canim_frames"
-        }
+        "frames": [
+          {
+            "_": "class_canim_frames",
+            "endFrame": 21,
+            "holds": {
+              "18": 4,
+              "20": 4,
+              "21": [6, 6, 12, 18],
+              "_": "class_map"
+            },
+            "startFrame": 17,
+            "transitions": [0, 0, 1, 1, 2]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 40,
+            "holds": {
+              "22": 4,
+              "23": 6,
+              "24": 6,
+              "25": 6,
+              "26": 5,
+              "27": 5,
+              "28": 10,
+              "29": 10,
+              "30": 6,
+              "31": 6,
+              "32": 8,
+              "33": 6,
+              "34": 6,
+              "35": 6,
+              "36": 10,
+              "37": 6,
+              "38": 6,
+              "39": 6,
+              "40": 6,
+              "_": "class_map"
+            },
+            "startFrame": 22,
+            "transitions": [0, 2, 2]
+          },
+          {
+            "_": "class_canim_frames",
+            "endFrame": 56,
+            "holds": {
+              "41": 4,
+              "42": 6,
+              "43": 6,
+              "44": 6,
+              "45": 10,
+              "46": 6,
+              "47": 4,
+              "48": 4,
+              "49": 6,
+              "50": 6,
+              "51": 6,
+              "52": 8,
+              "53": 6,
+              "54": 6,
+              "55": 6,
+              "56": 10,
+              "_": "class_map"
+            },
+            "startFrame": 41,
+            "transitions": [0]
+          }
+        ]
       },
       "menu": {
         "_": "class_char_animationdata",
@@ -28194,9 +28791,21 @@
         "_": "class_char_animationdata",
         "frames": {
           "_": "class_canim_frames",
-          "endFrame": 1,
-          "startFrame": 1
-        }
+          "endFrame": 15,
+          "holds": {
+            "9": 1,
+            "_": "class_map"
+          },
+          "sounds": {
+            "10": 0,
+            "13": 0,
+            "14": 0,
+            "8": 0,
+            "_": "class_map"
+          },
+          "startFrame": 8
+        },
+        "speed": 0.75
       },
       "ready": {
         "_": "class_char_animationdata",
@@ -30070,6 +30679,132 @@
       "y": -158
     }
   },
+  "_sprTest_secret_beastie": {
+    "anim_data": {
+      "_": "class_char_animation",
+      "bad": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 6,
+          "startFrame": 6
+        }
+      },
+      "fall": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 4,
+          "startFrame": 4
+        }
+      },
+      "good": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 5,
+          "startFrame": 5
+        }
+      },
+      "idle": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "menu": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "move": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 1,
+          "startFrame": 1
+        }
+      },
+      "ready": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 2,
+          "startFrame": 2
+        }
+      },
+      "special": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames"
+        }
+      },
+      "spike": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 7,
+          "startFrame": 7
+        }
+      },
+      "volley": {
+        "_": "class_char_animationdata",
+        "frames": {
+          "_": "class_canim_frames",
+          "endFrame": 3,
+          "startFrame": 3
+        }
+      }
+    },
+    "ball": {
+      "x": 0,
+      "y": 0
+    },
+    "evo1": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo2": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "evo3": {
+      "anim": "good",
+      "scale": 2,
+      "x": 0,
+      "y": 0
+    },
+    "loco_data": {
+      "_": "locomotor",
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
+    "miss": {
+      "x": 0,
+      "y": 0
+    },
+    "partner": {
+      "angle": -10,
+      "anim": "spike",
+      "x": 0,
+      "y": 0
+    },
+    "ready": {
+      "x": 0,
+      "y": 0
+    },
+    "splash": {
+      "angle": -10,
+      "anim": "ready",
+      "x": 0,
+      "y": -200
+    }
+  },
   "_sprTricky": {
     "anim_data": {
       "_": "class_char_animation",
@@ -31137,6 +31872,10 @@
           },
           {
             "color": 3750386,
+            "x": 0.8366666667
+          },
+          {
+            "color": 2829300,
             "x": 1
           }
         ]
@@ -31175,7 +31914,7 @@
             "x": 0.0233333333
           },
           {
-            "color": 5133403,
+            "color": 5594211,
             "x": 0.9966666667
           }
         ]
@@ -31463,16 +32202,15 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 1144319,
+            "color": 3835378,
             "x": 0
-          }
-        ]
-      },
-      {
-        "_": "class_gradient",
-        "array": [
+          },
           {
-            "color": 13682276,
+            "color": 1144319,
+            "x": 0.4933333333
+          },
+          {
+            "color": 8191,
             "x": 1
           }
         ]
@@ -31481,8 +32219,16 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 6766082,
-            "x": 0.5
+            "color": 15129980,
+            "x": 0
+          },
+          {
+            "color": 14340208,
+            "x": 0.4966666667
+          },
+          {
+            "color": 14405469,
+            "x": 1
           }
         ]
       },
@@ -31490,8 +32236,33 @@
         "_": "class_gradient",
         "array": [
           {
+            "color": 6439202,
+            "x": 0
+          },
+          {
+            "color": 7816704,
+            "x": 0.5
+          },
+          {
+            "color": 6771970,
+            "x": 1
+          }
+        ]
+      },
+      {
+        "_": "class_gradient",
+        "array": [
+          {
+            "color": 8813260,
+            "x": 0
+          },
+          {
             "color": 7102644,
             "x": 0.5
+          },
+          {
+            "color": 8417009,
+            "x": 1
           }
         ]
       }
@@ -32339,35 +33110,63 @@
         "_": "class_gradient",
         "array": [
           {
-            "color": 16249785,
+            "color": 15136711,
             "x": 0
+          },
+          {
+            "color": 16771521,
+            "x": 1
           }
         ]
       },
       {
         "_": "class_gradient",
         "array": [
+          {
+            "color": 13959078,
+            "x": 0
+          },
           {
             "color": 14679960,
             "x": 0.5
+          },
+          {
+            "color": 16449432,
+            "x": 1
           }
         ]
       },
       {
         "_": "class_gradient",
         "array": [
+          {
+            "color": 8346171,
+            "x": 0
+          },
           {
             "color": 7429964,
             "x": 0.5
+          },
+          {
+            "color": 7693653,
+            "x": 1
           }
         ]
       },
       {
         "_": "class_gradient",
         "array": [
+          {
+            "color": 14286800,
+            "x": 0.0033333333
+          },
           {
             "color": 15466455,
             "x": 0.5
+          },
+          {
+            "color": 16765887,
+            "x": 1
           }
         ]
       },
@@ -32375,8 +33174,16 @@
         "_": "class_gradient",
         "array": [
           {
+            "color": 15634412,
+            "x": 0
+          },
+          {
             "color": 15629804,
             "x": 0.5
+          },
+          {
+            "color": 14904287,
+            "x": 1
           }
         ]
       }

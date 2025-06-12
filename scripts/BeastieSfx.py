@@ -27,6 +27,8 @@ for fp in voDir.glob("**/*.wav"):
   num = int(fp.stem.split("_")[-1])
   fn = fp.parent.name.split("_")
   bid = "_".join(fn[1:-1])
+  if bid.startswith("iceCream"):
+    continue
   typ = fn[-1]
   op = outDir / bid / f"{typ}_{num}.flac"
   op.parent.mkdir(parents=True, exist_ok=True)

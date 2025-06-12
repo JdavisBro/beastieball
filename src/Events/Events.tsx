@@ -321,19 +321,21 @@ export default function Events() {
           {L("events.title")}
         </div>
         <div className={open ? styles.openBox : styles.closedBox}>
-          {bigmoon == NoEvent.WaitingForResponse ? (
-            <EventBlock>{L("common.loading")}</EventBlock>
-          ) : bigmoon == NoEvent.NoEvent ? (
-            <EventBlock>
-              <img className={styles.wahhhhwahhhh} src="/nojs.png" />
-              {L("events.noEvent")}
-              <button onClick={bigmoonReload}>
-                {L("events.checkForUpdate")}
-              </button>
-            </EventBlock>
-          ) : (
-            <Bigmoon bigmoon={bigmoon} bigmoonReload={bigmoonReload} />
-          )}
+          {open ? (
+            bigmoon == NoEvent.WaitingForResponse ? (
+              <EventBlock>{L("common.loading")}</EventBlock>
+            ) : bigmoon == NoEvent.NoEvent ? (
+              <EventBlock>
+                <img className={styles.wahhhhwahhhh} src="/nojs.png" />
+                {L("events.noEvent")}
+                <button onClick={bigmoonReload}>
+                  {L("events.checkForUpdate")}
+                </button>
+              </EventBlock>
+            ) : (
+              <Bigmoon bigmoon={bigmoon} bigmoonReload={bigmoonReload} />
+            )
+          ) : undefined}
         </div>
       </div>
     </ErrorBoundary>

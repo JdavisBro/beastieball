@@ -94,6 +94,19 @@
     "type": 5,
     "use": 0
   },
+  "bamboozle": {
+    "bt_tags": [2],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 81, "pow": 0, "targ": 3 }],
+    "id": "bamboozle",
+    "name": "¦movessetup_movedefine_184¦",
+    "pow": 70,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
   "basecover": {
     "bt_tags": [],
     "desc_tagids": [],
@@ -368,7 +381,7 @@
     "use": 1
   },
   "contest": {
-    "bt_tags": [1, 8, 10],
+    "bt_tags": [1, 8, 20, 10],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
@@ -378,7 +391,7 @@
     "pow": 110,
     "targ": 0,
     "type": 1,
-    "use": 0
+    "use": 2
   },
   "cook": {
     "bt_tags": [1, 10],
@@ -388,7 +401,7 @@
     "eff": [{ "eff": 4, "pow": -1, "targ": 4 }],
     "id": "cook",
     "name": "¦movessetup_movedefine_174¦",
-    "pow": 60,
+    "pow": 55,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -462,17 +475,14 @@
     "use": 0
   },
   "dare": {
-    "bt_tags": [1, 10, 31, 15, 38],
+    "bt_tags": [1, 10, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 74, "pow": 1, "targ": 3 },
-      { "eff": 12, "pow": 1, "targ": 3 }
-    ],
+    "eff": [{ "eff": 74, "pow": 1, "targ": 3 }],
     "id": "dare",
     "name": "¦movessetup_movedefine_054¦",
-    "pow": 85,
+    "pow": 95,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -660,7 +670,7 @@
     "eff": [{ "eff": 33, "pow": 12, "targ": 0 }],
     "id": "facade",
     "name": "¦movessetup_movedefine_046¦",
-    "pow": 65,
+    "pow": 60,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -699,13 +709,10 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 33, "pow": 29, "targ": 0 },
-      { "eff": 46, "pow": 0, "targ": 7 }
-    ],
+    "eff": [{ "eff": 46, "pow": 0, "targ": 7 }],
     "id": "flatten",
     "name": "¦movessetup_movedefine_173¦",
-    "pow": 70,
+    "pow": 80,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -828,11 +835,11 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 32, "pow": 1, "targ": 6 }],
+    "eff": [{ "eff": 52, "pow": 1, "targ": 3 }],
     "id": "healbell",
     "name": "¦movessetup_movedefine_135¦",
     "pow": 0,
-    "targ": 1,
+    "targ": 9,
     "type": 4,
     "use": 0
   },
@@ -990,7 +997,7 @@
     "eff": [{ "eff": -26, "pow": 1, "targ": 0 }],
     "id": "jazzattack",
     "name": "¦movessetup_movedefine_044¦",
-    "pow": 60,
+    "pow": 65,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1077,6 +1084,7 @@
     "description": null,
     "eff": [
       { "eff": 8, "pow": -1, "targ": 0 },
+      { "eff": 82, "pow": -10, "targ": 0 },
       { "eff": 47, "pow": 1, "targ": 3 },
       { "eff": 30, "pow": 1, "targ": 3 }
     ],
@@ -1481,7 +1489,7 @@
     "description": null,
     "eff": [
       { "eff": 53, "pow": 0, "targ": 0 },
-      { "eff": 19, "pow": 1, "targ": 0 },
+      { "eff": 19, "pow": 2, "targ": 0 },
       { "eff": 12, "pow": 2, "targ": 0 }
     ],
     "id": "protect",
@@ -1588,13 +1596,13 @@
     "use": 0
   },
   "rest": {
-    "bt_tags": [24, 40, 31],
+    "bt_tags": [24, 17, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 47, "pow": 1, "targ": 0 },
-      { "eff": 29, "pow": 4, "targ": 0 }
+      { "eff": 32, "pow": 1, "targ": 0 },
+      { "eff": 22, "pow": 4, "targ": 0 }
     ],
     "id": "rest",
     "name": "¦movessetup_movedefine_115¦",
@@ -1650,7 +1658,10 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 33, "pow": 16, "targ": 0 }],
+    "eff": [
+      { "eff": 33, "pow": 16, "targ": 0 },
+      { "eff": 73, "pow": 1, "targ": 0 }
+    ],
     "id": "rocket",
     "name": "¦movessetup_movedefine_021¦",
     "pow": 70,
@@ -1734,7 +1745,7 @@
     "eff": [{ "eff": 14, "pow": 2, "targ": 3 }],
     "id": "scream",
     "name": "¦movessetup_movedefine_176¦",
-    "pow": 95,
+    "pow": 90,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1925,7 +1936,7 @@
     "eff": [{ "eff": 61, "pow": 1, "targ": 0 }],
     "id": "snore",
     "name": "¦movessetup_movedefine_040¦",
-    "pow": 50,
+    "pow": 70,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2370,6 +2381,22 @@
     "pow": 70,
     "targ": 12,
     "type": 0,
+    "use": 0
+  },
+  "toughattack": {
+    "bt_tags": [1, 10, 33, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 19, "pow": 2, "targ": 0 },
+      { "eff": 8, "pow": -0.29999999999999999, "targ": 0 }
+    ],
+    "id": "toughattack",
+    "name": "¦movessetup_movedefine_183¦",
+    "pow": 65,
+    "targ": 0,
+    "type": 1,
     "use": 0
   },
   "trap": {

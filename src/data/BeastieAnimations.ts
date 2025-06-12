@@ -2,7 +2,7 @@ import beastie_animations from "./raw/beastie_animations.json";
 
 export type BeastieFrames = {
   _: string;
-  bpm?: number;
+  bpm?: boolean | number;
   startFrame?: number;
   endFrame?: number;
   holds?: {
@@ -57,7 +57,7 @@ export type BeastieAnimList = {
   partner: BeastiePos;
   ready: BeastiePos;
   splash: BeastiePos;
-  colors:
+  colors?:
     | Array<{
         _?: string;
         array: Array<{
@@ -66,7 +66,7 @@ export type BeastieAnimList = {
         }>;
       }>
     | Circular;
-  colors2:
+  colors2?:
     | Array<{
         _?: string;
         array: Array<{
@@ -76,7 +76,7 @@ export type BeastieAnimList = {
       }>
     | null
     | Circular;
-  shiny:
+  shiny?:
     | Array<{
         _?: string;
         array: Array<{

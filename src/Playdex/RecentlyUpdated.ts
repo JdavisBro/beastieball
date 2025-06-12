@@ -1,16 +1,17 @@
 const MOVE_RECENTLY_UPDATED: string[] = [
+  "contest",
+  "cook",
   "dare",
-  "dump",
-  "ego",
-  "fieldclear",
-  "hyperbeam",
-  "poisonhit",
-  "snipe",
-  "sweatall",
-  "tagattack",
-  "hex",
+  "facade",
   "flatten",
-  "vigor",
+  "jazzattack",
+  "lifepass",
+  "rest",
+  "rocket",
+  "scream",
+  "snore",
+  "bamboozle",
+  "toughattack",
 ];
 
 export default MOVE_RECENTLY_UPDATED;

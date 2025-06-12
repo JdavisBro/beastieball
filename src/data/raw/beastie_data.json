@@ -71,6 +71,7 @@
     "desc": "¦beastiesetup_desc_038¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -299,6 +300,7 @@
     "desc": "¦beastiesetup_desc_037¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -546,6 +548,7 @@
     "desc": "¦beastiesetup_desc_087¦",
     "designer": 4,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -817,6 +820,7 @@
     "desc": "¦beastiesetup_desc_086¦",
     "designer": 4,
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -937,8 +941,19 @@
           { "color": 8191979, "x": 1 }
         ]
       },
-      { "array": [{ "color": 14155770, "x": 0.5 }] },
-      { "array": [{ "color": 11903999, "x": 0.5 }] }
+      {
+        "array": [
+          { "color": 14155770, "x": 0.5 },
+          { "color": 13956863, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 13089279, "x": 0 },
+          { "color": 11903999, "x": 0.5 },
+          { "color": 9335807, "x": 1 }
+        ]
+      }
     ],
     "spr": "sprBat1",
     "spr_alt": [],
@@ -1019,6 +1034,7 @@
     "desc": "¦beastiesetup_desc_099¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -1217,6 +1233,7 @@
     "desc": "¦beastiesetup_desc_034¦",
     "designer": 1,
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -1430,6 +1447,7 @@
     "desc": "¦beastiesetup_desc_102¦",
     "designer": 11,
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -1568,8 +1586,8 @@
     "ability": ["starter_m", "fwdpass"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 80,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": 10,
     "attklist": [
       "bounce",
       "set",
@@ -1656,6 +1674,7 @@
     "desc": "¦beastiesetup_desc_013¦",
     "designer": [5, 3, 0, 8],
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -1893,6 +1912,7 @@
     "desc": "¦beastiesetup_desc_011¦",
     "designer": [5, 8],
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -2025,7 +2045,7 @@
     "ability": ["starter_m", "fwdpass"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 80,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "bounce",
@@ -2109,6 +2129,7 @@
     "desc": "¦beastiesetup_desc_012¦",
     "designer": [5, 8],
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -2257,7 +2278,7 @@
     "ability": ["starter_b", "lifeorb"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 60,
+    "anim_progress": 100,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -2333,6 +2354,7 @@
     "desc": "¦beastiesetup_desc_007¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -2374,7 +2396,7 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 25,
+      "hop_height": 0,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
@@ -2390,8 +2412,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0.1,
-      "stretchiness": 0.1
+      "squishiness": 0,
+      "stretchiness": 0
     },
     "ma": 35,
     "md": 80,
@@ -2440,7 +2462,7 @@
       },
       {
         "array": [
-          { "color": 47103, "x": 0 },
+          { "color": 4438527, "x": 0 },
           { "color": 38902, "x": 1 }
         ]
       },
@@ -2452,8 +2474,10 @@
       },
       {
         "array": [
-          { "color": 5197805, "x": 0 },
-          { "color": 7354367, "x": 1 }
+          { "color": 4079295, "x": 0 },
+          { "color": 5192672, "x": 0.1066666667 },
+          { "color": 6961402, "x": 0.8466666667 },
+          { "color": 8730623, "x": 1 }
         ]
       }
     ],
@@ -2541,6 +2565,7 @@
     "desc": "¦beastiesetup_desc_005¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -2671,7 +2696,7 @@
     "ability": ["starter_b", "lifeorb"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 80,
+    "anim_progress": 100,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -2729,9 +2754,9 @@
       },
       {
         "array": [
-          { "color": 766420, "x": 0 },
-          { "color": 4775167, "x": 0.57 },
-          { "color": 2194381, "x": 1 }
+          { "color": 176855, "x": 0 },
+          { "color": 3791103, "x": 0.57 },
+          { "color": 1013976, "x": 1 }
         ]
       }
     ],
@@ -2745,6 +2770,7 @@
     "desc": "¦beastiesetup_desc_006¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "bad", "scale": 2.156, "x": 80, "y": 125 },
       { "anim": "fall", "scale": 2.32315776, "x": -277, "y": 464 },
@@ -2946,6 +2972,7 @@
     "desc": "¦beastiesetup_desc_036¦",
     "designer": [2, 8],
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -2959,7 +2986,7 @@
           {
             "conditions": [
               {
-                "effect_type": 81,
+                "effect_type": 83,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
@@ -3035,7 +3062,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3072,8 +3099,18 @@
           { "color": 9433258, "x": 1 }
         ]
       },
-      { "array": [{ "color": 12639999, "x": 0 }] },
-      { "array": [{ "color": 9106943, "x": 0 }] },
+      {
+        "array": [
+          { "color": 12639999, "x": 0 },
+          { "color": 10141951, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 8320255, "x": 0 },
+          { "color": 9558783, "x": 1 }
+        ]
+      },
       {
         "array": [
           { "color": 12758518, "x": 0 },
@@ -3163,6 +3200,7 @@
     "desc": "¦beastiesetup_desc_035¦",
     "designer": 3,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -3233,7 +3271,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3376,6 +3414,7 @@
     "desc": "¦beastiesetup_desc_103¦",
     "designer": 3,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -3443,7 +3482,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3581,6 +3620,7 @@
     "desc": "¦beastiesetup_desc_071¦",
     "designer": 3,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -3798,6 +3838,7 @@
     "desc": "¦beastiesetup_desc_043¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -4016,6 +4057,7 @@
     "desc": "¦beastiesetup_desc_042¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -4237,6 +4279,7 @@
     "desc": "¦beastiesetup_desc_066¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -4466,6 +4509,7 @@
     "desc": "¦beastiesetup_desc_070¦",
     "designer": 7,
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -4630,6 +4674,7 @@
       "reversal",
       "noisytag",
       "superpower",
+      "toughattack",
       "backswitch",
       "taunt",
       "starterheart"
@@ -4691,6 +4736,7 @@
     "desc": "¦beastiesetup_desc_032¦",
     "designer": 3,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -4718,7 +4764,7 @@
       [27, "substitute"],
       [31, "tagattack"],
       [35, "jump"],
-      [39, "damagedattack"],
+      [39, "toughattack"],
       [42, "backswitch"],
       [46, "rush"],
       [50, "overheat"]
@@ -4799,7 +4845,13 @@
     "scale": [0.85, 1],
     "shiny": [
       { "array": [{ "color": 16762106, "x": 1 }] },
-      { "array": [{ "color": 16737975, "x": 0 }] },
+      {
+        "array": [
+          { "color": 16729258, "x": 0 },
+          { "color": 16739257, "x": 0.4166666667 },
+          { "color": 16742079, "x": 1 }
+        ]
+      },
       {
         "array": [
           { "color": 11425023, "x": 0.1033333333 },
@@ -4813,7 +4865,13 @@
           { "color": 8224137, "x": 0.92 }
         ]
       },
-      { "array": [{ "color": 34559, "x": 0.5 }] }
+      {
+        "array": [
+          { "color": 2660863, "x": 0 },
+          { "color": 4737279, "x": 0.5 },
+          { "color": 16745326, "x": 1 }
+        ]
+      }
     ],
     "spr": "sprDaredevil",
     "spr_alt": [],
@@ -4853,6 +4911,7 @@
       "reversal",
       "noisytag",
       "superpower",
+      "toughattack",
       "backswitch",
       "taunt",
       "starterheart"
@@ -4912,6 +4971,7 @@
     "desc": "¦beastiesetup_desc_031¦",
     "designer": 3,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -4939,7 +4999,7 @@
       [23, "substitute"],
       [27, "tagattack"],
       [31, "jump"],
-      [35, "damagedattack"],
+      [35, "toughattack"],
       [38, "backswitch"],
       [42, "rush"],
       [46, "overheat"]
@@ -5011,8 +5071,18 @@
     "roguelvl": 1,
     "scale": [0.85, 1],
     "shiny": [
-      { "array": [{ "color": 6964028, "x": 0.1366666667 }] },
-      { "array": [{ "color": 16743101, "x": 0.9966666667 }] },
+      {
+        "array": [
+          { "color": 8015687, "x": 0.1366666667 },
+          { "color": 7555394, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 15557544, "x": 0 },
+          { "color": 16743101, "x": 0.9966666667 }
+        ]
+      },
       {
         "array": [
           { "color": 16402943, "x": 0 },
@@ -5021,7 +5091,13 @@
         ]
       },
       { "array": [{ "color": 10075319, "x": 0.5 }] },
-      { "array": [{ "color": 43263, "x": 0.5 }] }
+      {
+        "array": [
+          { "color": 6673151, "x": 0 },
+          { "color": 9142015, "x": 0.5 },
+          { "color": 16758431, "x": 1 }
+        ]
+      }
     ],
     "spr": "sprDaredevil1",
     "spr_alt": [],
@@ -5047,7 +5123,6 @@
       "poisonhit",
       "desperate",
       "rush",
-      "allyrush",
       "distraction",
       "allyprotect",
       "lock",
@@ -5120,6 +5195,7 @@
     "desc": "¦beastiesetup_desc_033¦",
     "designer": 5,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -5369,6 +5445,7 @@
     "desc": "¦beastiesetup_desc_023¦",
     "designer": 3,
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -5638,6 +5715,7 @@
     "desc": "¦beastiesetup_desc_022¦",
     "designer": [3, 8],
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -5872,6 +5950,7 @@
     "desc": "¦beastiesetup_desc_026¦",
     "designer": [5, 8],
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -6100,6 +6179,7 @@
     "desc": "¦beastiesetup_desc_041¦",
     "designer": 2,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -6334,6 +6414,7 @@
     "desc": "¦beastiesetup_desc_039¦",
     "designer": 2,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -6555,6 +6636,7 @@
     "desc": "¦beastiesetup_desc_040¦",
     "designer": 2,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -6765,6 +6847,7 @@
     "desc": "¦beastiesetup_desc_054¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -6984,6 +7067,7 @@
     "desc": "¦beastiesetup_desc_053¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -7109,7 +7193,7 @@
       {
         "array": [
           { "color": 11328767, "x": 0 },
-          { "color": 8947967, "x": 0.5866666667 },
+          { "color": 10533119, "x": 0.5866666667 },
           { "color": 8834552, "x": 1 }
         ]
       },
@@ -7139,7 +7223,7 @@
     "ability": ["starter_h", "allyheal"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 60,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "pepshot",
@@ -7214,6 +7298,7 @@
     "desc": "¦beastiesetup_desc_010¦",
     "designer": [0, 3],
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2.344, "x": 10, "y": 114 },
       { "anim": "good", "scale": 2.575584, "x": 475, "y": 691 },
@@ -7282,7 +7367,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7413,6 +7498,7 @@
     "desc": "¦beastiesetup_desc_008¦",
     "designer": [0, 3],
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -7481,7 +7567,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7623,6 +7709,7 @@
     "desc": "¦beastiesetup_desc_009¦",
     "designer": [0, 3],
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -7693,7 +7780,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7764,7 +7851,6 @@
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
-      "mind",
       "wornout",
       "mindbomb",
       "hazeball",
@@ -7787,6 +7873,7 @@
       "eerie",
       "sweatall",
       "rattle",
+      "bamboozle",
       "targethp",
       "stun",
       "shaken"
@@ -7836,6 +7923,7 @@
     "desc": "¦beastiesetup_desc_046¦",
     "designer": 5,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -7977,7 +8065,6 @@
     "anim_progress": 100,
     "animator": 10,
     "attklist": [
-      "mind",
       "wornout",
       "mindbomb",
       "hazeball",
@@ -8000,6 +8087,7 @@
       "eerie",
       "sweatall",
       "rattle",
+      "bamboozle",
       "targethp",
       "stun",
       "shaken"
@@ -8050,6 +8138,7 @@
     "desc": "¦beastiesetup_desc_044¦",
     "designer": 5,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -8175,7 +8264,6 @@
     "anim_progress": 40,
     "animator": 8,
     "attklist": [
-      "mind",
       "wornout",
       "mindbomb",
       "hazeball",
@@ -8198,6 +8286,7 @@
       "eerie",
       "sweatall",
       "rattle",
+      "bamboozle",
       "targethp",
       "stun",
       "shaken"
@@ -8235,6 +8324,7 @@
     "desc": "¦beastiesetup_desc_045¦",
     "designer": 5,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -8352,8 +8442,8 @@
     "type_focus": 2
   },
   "gremlin": {
-    "ability": ["sneaky"],
-    "ability_hidden": false,
+    "ability": ["sneaky", "mimically"],
+    "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 10,
@@ -8429,6 +8519,7 @@
     "desc": "¦beastiesetup_desc_089¦",
     "designer": [6, 8],
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -8529,10 +8620,34 @@
     "roguelvl": 2,
     "scale": [0.85, 1],
     "shiny": [
-      { "array": [{ "color": 11375748, "x": 0 }] },
-      { "array": [{ "color": 9671571, "x": 0 }] },
-      { "array": [{ "color": 7105644, "x": 0.5 }] },
-      { "array": [{ "color": 9807795, "x": 0.5 }] }
+      {
+        "array": [
+          { "color": 11971749, "x": 0 },
+          { "color": 8094638, "x": 0.1966666667 },
+          { "color": 5268916, "x": 0.4566666667 },
+          { "color": 6064850, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 8634093, "x": 0.08 },
+          { "color": 5342168, "x": 0.9333333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 7703240, "x": 0.0233333333 },
+          { "color": 7703240, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 6094322, "x": 0 },
+          { "color": 7202815, "x": 0.49 },
+          { "color": 5889535, "x": 0.78 },
+          { "color": 10207459, "x": 1 }
+        ]
+      }
     ],
     "spr": "sprGremlin",
     "spr_alt": [],
@@ -8568,7 +8683,8 @@
       "bdefup",
       "lifepass",
       "protect",
-      "cook"
+      "cook",
+      "toughattack"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -8624,6 +8740,7 @@
     "desc": "¦beastiesetup_desc_072¦",
     "designer": 5,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -8776,7 +8893,8 @@
       "protect",
       "threat",
       "noisytag",
-      "mindup"
+      "mindup",
+      "bamboozle"
     ],
     "attklist_randomize": -1,
     "ba": 71,
@@ -8865,6 +8983,7 @@
     "desc": "¦beastiesetup_desc_088¦",
     "designer": [0, 3, 9],
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -9096,6 +9215,7 @@
     "desc": "¦beastiesetup_desc_064¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -9275,6 +9395,7 @@
     "desc": "¦beastiesetup_desc_062¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -9474,6 +9595,7 @@
     "desc": "¦beastiesetup_desc_063¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -9684,6 +9806,7 @@
     "desc": "¦beastiesetup_desc_025¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -9912,6 +10035,7 @@
     "desc": "¦beastiesetup_desc_024¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -10020,7 +10144,12 @@
     "roguelvl": 1,
     "scale": [0.9, 1],
     "shiny": [
-      { "array": [{ "color": 10597577, "x": 0 }] },
+      {
+        "array": [
+          { "color": 10597577, "x": 0 },
+          { "color": 11123912, "x": 1 }
+        ]
+      },
       {
         "array": [
           { "color": 9410469, "x": 0 },
@@ -10133,6 +10262,7 @@
     "desc": "¦beastiesetup_desc_095¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 3.040928, "x": 110, "y": 591 },
       { "anim": "bad", "scale": 2.632, "x": 349, "y": 783 },
@@ -10355,6 +10485,7 @@
     "desc": "¦beastiesetup_desc_094¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -10560,6 +10691,7 @@
     "desc": "¦beastiesetup_desc_021¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -10793,6 +10925,7 @@
     "desc": "¦beastiesetup_desc_020¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -10975,6 +11108,7 @@
       "steal",
       "rush",
       "snipe",
+      "bamboozle",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11033,6 +11167,7 @@
     "desc": "¦beastiesetup_desc_082¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -11162,7 +11297,12 @@
           { "color": 7832722, "x": 1 }
         ]
       },
-      { "array": [{ "color": 13167103, "x": 0 }] },
+      {
+        "array": [
+          { "color": 13167103, "x": 0 },
+          { "color": 15004927, "x": 1 }
+        ]
+      },
       {
         "array": [
           { "color": 8344548, "x": 0 },
@@ -11226,6 +11366,7 @@
       "steal",
       "rush",
       "snipe",
+      "bamboozle",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11265,6 +11406,7 @@
     "desc": "¦beastiesetup_desc_081¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -11392,7 +11534,7 @@
     "type_focus": 2
   },
   "magpiemon": {
-    "ability": ["echo", "redirection"],
+    "ability": ["wipekiller", "redirection"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 20,
@@ -11422,6 +11564,7 @@
       "steal",
       "rush",
       "snipe",
+      "bamboozle",
       "startermind",
       "stomp",
       "swordsdance",
@@ -11429,9 +11572,9 @@
       "tool"
     ],
     "attklist_randomize": -1,
-    "ba": 87,
-    "base_exp": 188.6,
-    "bd": 83,
+    "ba": 89,
+    "base_exp": 185.84,
+    "bd": 81,
     "body_color_index": 0,
     "codename": "38939d036893910c18fe516e6353887c911818b9",
     "colormeta": null,
@@ -11474,6 +11617,7 @@
     "desc": "¦beastiesetup_desc_105¦",
     "designer": 5,
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -11535,7 +11679,7 @@
     },
     "ma": 85,
     "md": 88,
-    "name": "¦beastiesetup_name_104¦",
+    "name": "Maraptor",
     "number": 105,
     "palettes": 1,
     "prev_ids": [],
@@ -11625,6 +11769,7 @@
       "jump",
       "recover",
       "ricochet",
+      "netattack",
       "enemylowered"
     ],
     "attklist_randomize": -1,
@@ -11675,6 +11820,7 @@
     "desc": "¦beastiesetup_desc_051¦",
     "designer": [0, 1, 8],
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -11700,7 +11846,7 @@
       [8, "blockattack"],
       [11, "rush"],
       [17, "distraction"],
-      [23, "heartdown"],
+      [23, "netattack"],
       [30, "lock"],
       [34, "ricochet"],
       [38, "protect"],
@@ -11782,7 +11928,12 @@
           { "color": 10774271, "x": 0.9933333333 }
         ]
       },
-      { "array": [{ "color": 12826111, "x": 0 }] },
+      {
+        "array": [
+          { "color": 12562687, "x": 0 },
+          { "color": 13945599, "x": 1 }
+        ]
+      },
       {
         "array": [
           { "color": 14872063, "x": 0 },
@@ -11875,6 +12026,7 @@
     "desc": "¦beastiesetup_desc_079¦",
     "designer": [4, 0],
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -12077,6 +12229,7 @@
     "desc": "¦beastiesetup_desc_078¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -12237,8 +12390,9 @@
       "protect",
       "allnervous",
       "scream",
-      "commit",
-      "pepshot"
+      "pepshot",
+      "toughattack",
+      "dare"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -12296,6 +12450,7 @@
     "desc": "¦beastiesetup_desc_052¦",
     "designer": 5,
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -12444,20 +12599,14 @@
       "facade",
       "scoreboosted",
       "substitute",
-      "commit",
       "overheat",
-      "dare",
       "wornattack",
-      "netattack",
       "overthink",
       "preblock",
       "heartpass",
-      "teleport",
-      "callout",
       "bellydrum",
       "protect",
       "hdefup",
-      "rest",
       "shieldbreaker",
       "noisytag",
       "stress",
@@ -12470,6 +12619,8 @@
       "splinter",
       "rattle",
       "heartd",
+      "bamboozle",
+      "rest",
       "startermind",
       "crowd",
       "scream"
@@ -12521,6 +12672,7 @@
     "desc": "¦beastiesetup_desc_016¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -12542,7 +12694,7 @@
     "learnset": [
       [0, "startermind"],
       [0, "hdefup"],
-      [11, "heartd"],
+      [11, "bamboozle"],
       [14, "preblock"],
       [20, "facade"],
       [26, "crowd"],
@@ -12666,20 +12818,14 @@
       "facade",
       "scoreboosted",
       "substitute",
-      "commit",
       "overheat",
-      "dare",
       "wornattack",
-      "netattack",
       "overthink",
       "preblock",
       "heartpass",
-      "teleport",
-      "callout",
       "bellydrum",
       "protect",
       "hdefup",
-      "rest",
       "shieldbreaker",
       "noisytag",
       "stress",
@@ -12692,6 +12838,8 @@
       "splinter",
       "rattle",
       "heartd",
+      "bamboozle",
+      "rest",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -12731,6 +12879,7 @@
     "desc": "¦beastiesetup_desc_014¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -12759,7 +12908,7 @@
       [23, "hex"],
       [27, "taunt"],
       [32, "overthink"],
-      [36, "dare"],
+      [36, "rattle"],
       [40, "wornattack"],
       [45, "eerie"]
     ],
@@ -12868,20 +13017,14 @@
       "facade",
       "scoreboosted",
       "substitute",
-      "commit",
       "overheat",
-      "dare",
       "wornattack",
-      "netattack",
       "overthink",
       "preblock",
       "heartpass",
-      "teleport",
-      "callout",
       "bellydrum",
       "protect",
       "hdefup",
-      "rest",
       "shieldbreaker",
       "noisytag",
       "stress",
@@ -12894,6 +13037,8 @@
       "splinter",
       "rattle",
       "heartd",
+      "bamboozle",
+      "rest",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -12947,6 +13092,7 @@
     "desc": "¦beastiesetup_desc_015¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -12975,7 +13121,7 @@
       [26, "hex"],
       [30, "taunt"],
       [35, "overthink"],
-      [39, "dare"],
+      [39, "rattle"],
       [43, "wornattack"],
       [48, "eerie"]
     ],
@@ -13158,6 +13304,7 @@
     "desc": "¦beastiesetup_desc_069¦",
     "designer": 1,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -13258,7 +13405,13 @@
     "roguelvl": -1,
     "scale": [0.85, 1],
     "shiny": [
-      { "array": [{ "color": 3920575, "x": 0.5 }] },
+      {
+        "array": [
+          { "color": 3990991, "x": 0 },
+          { "color": 3532239, "x": 0.5 },
+          { "color": 5429724, "x": 1 }
+        ]
+      },
       {
         "array": [
           { "color": 6354175, "x": 0 },
@@ -13266,7 +13419,13 @@
           { "color": 3058423, "x": 1 }
         ]
       },
-      { "array": [{ "color": 1484287, "x": 0.5 }] },
+      {
+        "array": [
+          { "color": 1797097, "x": 0 },
+          { "color": 1484287, "x": 0.5 },
+          { "color": 6669567, "x": 1 }
+        ]
+      },
       { "array": [{ "color": 1935606, "x": 0.5 }] }
     ],
     "spr": "sprMudskipper",
@@ -13355,6 +13514,7 @@
     "desc": "¦beastiesetup_desc_084¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -13556,6 +13716,7 @@
     "desc": "¦beastiesetup_desc_083¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -13754,6 +13915,7 @@
     "desc": "¦beastiesetup_desc_050¦",
     "designer": [3, 8],
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -13922,10 +14084,11 @@
       "whirlwind",
       "rest",
       "basecover",
+      "rocket",
       "chill"
     ],
     "attklist_randomize": -1,
-    "ba": 75,
+    "ba": 85,
     "base_exp": 227.0625,
     "bd": 55,
     "body_color_index": 0,
@@ -13964,6 +14127,7 @@
     "desc": "¦beastiesetup_desc_093¦",
     "designer": 3,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -14124,6 +14288,7 @@
       "whirlwind",
       "rest",
       "basecover",
+      "rocket",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -14152,6 +14317,7 @@
     "desc": "¦beastiesetup_desc_092¦",
     "designer": [3],
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -14257,8 +14423,10 @@
     "shiny": [
       {
         "array": [
-          { "color": 6234367, "x": 0 },
-          { "color": 11037183, "x": 1 }
+          { "color": 4325620, "x": 0 },
+          { "color": 6892287, "x": 0.2033333333 },
+          { "color": 10510847, "x": 0.8933333333 },
+          { "color": 11960831, "x": 1 }
         ]
       }
     ],
@@ -14304,7 +14472,8 @@
       "swordsdance",
       "shakeoff",
       "vigor",
-      "shieldbreaker"
+      "shieldbreaker",
+      "toughattack"
     ],
     "attklist_randomize": -1,
     "ba": 90,
@@ -14369,6 +14538,7 @@
     "desc": "¦beastiesetup_desc_090¦",
     "designer": [12],
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -14394,7 +14564,7 @@
       [11, "shaken"],
       [16, "facade"],
       [21, "dig"],
-      [25, "scoreboosted"],
+      [25, "toughattack"],
       [29, "body"],
       [33, "substitute"],
       [39, "dare"],
@@ -14472,14 +14642,25 @@
     "roguelvl": 2,
     "scale": [0.85, 1],
     "shiny": [
-      { "array": [{ "color": 9574394, "x": 0 }] },
+      {
+        "array": [
+          { "color": 9574394, "x": 0 },
+          { "color": 14036730, "x": 1 }
+        ]
+      },
       {
         "array": [
           { "color": 16711911, "x": 0 },
           { "color": 16711727, "x": 1 }
         ]
       },
-      { "array": [{ "color": 54015, "x": 0.5 }] },
+      {
+        "array": [
+          { "color": 46335, "x": 0 },
+          { "color": 54015, "x": 0.5 },
+          { "color": 3792127, "x": 1 }
+        ]
+      },
       {
         "array": [
           { "color": 8515262, "x": 0.5 },
@@ -14494,7 +14675,12 @@
           { "color": 14172927, "x": 0.9933333333 }
         ]
       },
-      { "array": [{ "color": 6209504, "x": 0.5 }] }
+      {
+        "array": [
+          { "color": 7004369, "x": 0.5 },
+          { "color": 10017718, "x": 0.9933333333 }
+        ]
+      }
     ],
     "spr": "sprOpossum",
     "spr_alt": [],
@@ -14517,7 +14703,6 @@
       "hex",
       "float",
       "hazeball",
-      "mind",
       "dump",
       "mindpass",
       "cover",
@@ -14538,6 +14723,7 @@
       "enemylowered",
       "snipe",
       "sweatup",
+      "bamboozle",
       "threat"
     ],
     "attklist_randomize": -1,
@@ -14581,6 +14767,7 @@
     "desc": "¦beastiesetup_desc_101¦",
     "designer": 4,
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -14649,7 +14836,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -14715,7 +14902,6 @@
       "hex",
       "float",
       "hazeball",
-      "mind",
       "dump",
       "mindpass",
       "cover",
@@ -14735,7 +14921,8 @@
       "stress",
       "enemylowered",
       "snipe",
-      "sweatup"
+      "sweatup",
+      "bamboozle"
     ],
     "attklist_randomize": -1,
     "ba": 18,
@@ -14777,6 +14964,7 @@
     "desc": "¦beastiesetup_desc_027¦",
     "designer": [3, 4],
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -14845,7 +15033,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -14906,7 +15094,6 @@
       "hex",
       "float",
       "hazeball",
-      "mind",
       "dump",
       "mindpass",
       "cover",
@@ -14926,7 +15113,8 @@
       "stress",
       "enemylowered",
       "snipe",
-      "sweatup"
+      "sweatup",
+      "bamboozle"
     ],
     "attklist_randomize": -1,
     "ba": 26,
@@ -14975,6 +15163,7 @@
     "desc": "¦beastiesetup_desc_028¦",
     "designer": [8, 4, 3],
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -15081,7 +15270,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15142,7 +15331,7 @@
     "type_focus": 2
   },
   "possum": {
-    "ability": ["regenerator", "unnervous"],
+    "ability": ["regenerator2", "boostin"],
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
@@ -15151,7 +15340,7 @@
       "bounce",
       "body",
       "rocksmash",
-      "storedpower",
+      "flatten",
       "dig",
       "vigor",
       "juggle",
@@ -15166,6 +15355,8 @@
       "bench",
       "batonpass",
       "haze",
+      "toughattack",
+      "thunder",
       "construct",
       "tagattack",
       "set",
@@ -15225,6 +15416,7 @@
     "desc": "¦beastiesetup_desc_019¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -15381,7 +15573,7 @@
       "bounce",
       "body",
       "rocksmash",
-      "storedpower",
+      "flatten",
       "dig",
       "vigor",
       "juggle",
@@ -15396,6 +15588,8 @@
       "bench",
       "batonpass",
       "haze",
+      "toughattack",
+      "thunder",
       "construct",
       "tagattack"
     ],
@@ -15451,6 +15645,7 @@
     "desc": "¦beastiesetup_desc_017¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -15601,7 +15796,7 @@
       "bounce",
       "body",
       "rocksmash",
-      "storedpower",
+      "flatten",
       "dig",
       "vigor",
       "juggle",
@@ -15616,6 +15811,8 @@
       "bench",
       "batonpass",
       "haze",
+      "toughattack",
+      "thunder",
       "construct",
       "tagattack",
       "set"
@@ -15676,6 +15873,7 @@
     "desc": "¦beastiesetup_desc_018¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -15900,6 +16098,7 @@
     "desc": "¦beastiesetup_desc_073¦",
     "designer": 1,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -16082,6 +16281,7 @@
       "juggle",
       "hdefup",
       "cook",
+      "toughattack",
       "swordsdance"
     ],
     "attklist_randomize": -1,
@@ -16153,6 +16353,7 @@
     "desc": "¦beastiesetup_desc_065¦",
     "designer": 4,
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -16373,6 +16574,7 @@
       "juggle",
       "hdefup",
       "cook",
+      "toughattack",
       "swordsdance"
     ],
     "attklist_randomize": -1,
@@ -16413,6 +16615,7 @@
     "desc": "¦beastiesetup_desc_104¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -16580,7 +16783,8 @@
       "skillswap",
       "sweatup",
       "steal",
-      "flatten"
+      "flatten",
+      "bamboozle"
     ],
     "attklist_randomize": -1,
     "ba": 81,
@@ -16652,6 +16856,7 @@
     "desc": "¦beastiesetup_desc_080¦",
     "designer": 1,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -16682,7 +16887,7 @@
       [28, "skillswap"],
       [33, "switch"],
       [38, "healhit2"],
-      [42, "rest"],
+      [42, "followme"],
       [45, "tool"]
     ],
     "learnset_randomize": -1,
@@ -16763,6 +16968,7 @@
       {
         "array": [
           { "color": 16758960, "x": 0 },
+          { "color": 16777215, "x": 0.39 },
           { "color": 11708106, "x": 0.4813333333 },
           { "color": 5600994, "x": 0.7253333333 },
           { "color": 2776499, "x": 1 }
@@ -16770,16 +16976,22 @@
       },
       {
         "array": [
-          { "color": 11573759, "x": 0 },
-          { "color": 9211135, "x": 0.4853333333 },
+          { "color": 10066431, "x": 0 },
+          { "color": 8421631, "x": 0.4853333333 },
           { "color": 9212671, "x": 1 }
         ]
       },
-      { "array": [{ "color": 15527148, "x": 0.5 }] },
+      {
+        "array": [
+          { "color": 16113876, "x": 0.0033333333 },
+          { "color": 15527148, "x": 0.5 },
+          { "color": 13948140, "x": 1 }
+        ]
+      },
       {
         "array": [
           { "color": 5259334, "x": 0 },
-          { "color": 14408912, "x": 1 }
+          { "color": 15461856, "x": 1 }
         ]
       },
       {
@@ -16896,6 +17108,7 @@
     "desc": "¦beastiesetup_desc_077¦",
     "designer": 5,
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -16965,7 +17178,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17107,6 +17320,7 @@
     "desc": "¦beastiesetup_desc_075¦",
     "designer": 5,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -17176,7 +17390,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17313,6 +17527,7 @@
     "desc": "¦beastiesetup_desc_076¦",
     "designer": 5,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -17382,7 +17597,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17467,6 +17682,7 @@
       "protect",
       "flight",
       "scream",
+      "toughattack",
       "followme"
     ],
     "attklist_randomize": -1,
@@ -17530,6 +17746,7 @@
     "desc": "¦beastiesetup_desc_061¦",
     "designer": 5,
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -17698,6 +17915,7 @@
       "protect",
       "flight",
       "scream",
+      "toughattack",
       "followme"
     ],
     "attklist_randomize": -1,
@@ -17752,6 +17970,7 @@
     "desc": "¦beastiesetup_desc_060¦",
     "designer": 5,
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -17962,6 +18181,7 @@
     "desc": "¦beastiesetup_desc_068¦",
     "designer": [3, 8],
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -18171,6 +18391,7 @@
     "desc": "¦beastiesetup_desc_067¦",
     "designer": [3, 8],
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -18380,6 +18601,7 @@
     "desc": "¦beastiesetup_desc_030¦",
     "designer": 3,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -18599,6 +18821,7 @@
     "desc": "¦beastiesetup_desc_029¦",
     "designer": 3,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -18712,9 +18935,27 @@
           { "color": 7829503, "x": 1 }
         ]
       },
-      { "array": [{ "color": 7263487, "x": 0 }] },
-      { "array": [{ "color": 14539584, "x": 0.5 }] },
-      { "array": [{ "color": 16747983, "x": 0.5 }] },
+      {
+        "array": [
+          { "color": 9428223, "x": 0 },
+          { "color": 7324159, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 13959008, "x": 0 },
+          { "color": 14539584, "x": 0.5 },
+          { "color": 16768058, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 10241023, "x": 0 },
+          { "color": 15367935, "x": 0.2666666667 },
+          { "color": 16747983, "x": 0.6033333333 },
+          { "color": 16747955, "x": 1 }
+        ]
+      },
       { "array": [{ "color": 15138763, "x": 0.5 }] }
     ],
     "spr": "sprServal1",
@@ -18794,6 +19035,7 @@
     "desc": "¦beastiesetup_desc_059¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -18990,6 +19232,7 @@
     "desc": "¦beastiesetup_desc_058¦",
     "designer": 8,
     "dlc": 0,
+    "eat_type": 1,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -19115,12 +19358,234 @@
     "tyield": ["ba", 2],
     "type_focus": 0
   },
+  "shroom1": {
+    "ability": ["regenerator", "fieldclear"],
+    "ability_hidden": true,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 8,
+    "attklist": [
+      "careful",
+      "bomb",
+      "hazeball",
+      "dropshot",
+      "rocksmash",
+      "healhit",
+      "healhit2",
+      "dig",
+      "allycover",
+      "allyrush",
+      "refresh",
+      "protect",
+      "rest",
+      "fieldclear",
+      "preblock",
+      "substitute",
+      "mark",
+      "lifepass",
+      "callout",
+      "chill",
+      "sweatup",
+      "enemyboosts",
+      "flatten"
+    ],
+    "attklist_randomize": -1,
+    "ba": 45,
+    "base_exp": 117.4,
+    "bd": 50,
+    "body_color_index": 0,
+    "codename": "f4388e02b4aa4cfbad8c85fb5f8ac9a5b2f58949",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 11131786, "x": 0 },
+          { "color": 8323027, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 13696983, "x": 0.1008333333 },
+          { "color": 12188927, "x": 0.4633333333 },
+          { "color": 10878939, "x": 0.9258333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 2829120, "x": 0.0783333333 },
+          { "color": 3983871, "x": 0.2433333333 },
+          { "color": 7763680, "x": 0.4358333333 },
+          { "color": 6377894, "x": 0.6158333333 },
+          { "color": 6382059, "x": 0.8133333333 },
+          { "color": 13339273, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 7707135, "x": 0 },
+          { "color": 6514897, "x": 1 }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [49, 0, 12, 50, 0, 1],
+      [52, 1, 1, 8, 1, 0.15],
+      [52, 1, 1, 8, 1, 0.5],
+      [52, 2, 1, 8, 2, 0.3]
+    ],
+    "desc": "Its body is covered in microscopic fungal feelers, making it feel sticky. They tend to all varieties of plant life.",
+    "designer": 1,
+    "dlc": 0,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": [
+      { "condition": [2], "specie": "shroom_b", "value": [0] },
+      { "condition": [2], "specie": "shroom_s", "value": [0] },
+      { "condition": [2], "specie": "shroom_m", "value": [0] }
+    ],
+    "face_color_index": 0,
+    "family": "shroom1",
+    "first_frame": -1,
+    "foot_size": 18,
+    "foot_type": 0,
+    "growth": 1,
+    "ha": 43,
+    "hd": 67,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "shroom1",
+    "isBaby": true,
+    "learnset": [
+      [0, "careful"],
+      [0, "callout"],
+      [6, "refresh"],
+      [9, "dropshot"],
+      [12, "rocksmash"],
+      [15, "protect"],
+      [19, "fieldclear"],
+      [24, "enemyboosts"],
+      [30, "mark"],
+      [35, "hazeball"],
+      [39, "allyrush"],
+      [43, "flatten"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 66.75,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "hop_height": 0,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 3,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": -0.66,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [8, 9, 10, 11, 12, 13, 14, 15],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": 0,
+      "squishiness": 0.2,
+      "stretchiness": 0.2
+    },
+    "ma": 42,
+    "md": 55,
+    "name": "Sprecko",
+    "number": 1,
+    "palettes": 1,
+    "prev_ids": ["tree1"],
+    "recruit": {
+      "conditions": [
+        {
+          "effect_type": [42, 43, 44, 45, 70, 56],
+          "event": null,
+          "freq": -1,
+          "func": null,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 45
+        }
+      ],
+      "description": "Create any type of field effect"
+    },
+    "recruit_value": 2.8,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          { "color": 15528703, "x": 0 },
+          { "color": 15528703, "x": 0.8066666667 },
+          { "color": 9021382, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 9021384, "x": 0.2883333333 },
+          { "color": 9939131, "x": 0.6658333333 },
+          { "color": 15593464, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 2829120, "x": 0.0783333333 },
+          { "color": 3983871, "x": 0.2433333333 },
+          { "color": 7763680, "x": 0.4358333333 },
+          { "color": 6377894, "x": 0.6158333333 },
+          { "color": 6382059, "x": 0.8133333333 },
+          { "color": 13339273, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 7112637, "x": 0 },
+          { "color": 6979005, "x": 1 }
+        ]
+      }
+    ],
+    "spr": "sprShroom1",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tyield": ["hd", 1],
+    "type_focus": 1
+  },
   "shroom_b": {
     "ability": ["rhythmblock", "tagheal"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 60,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": 10,
     "attklist": [
       "careful",
       "bomb",
@@ -19211,6 +19676,7 @@
     "desc": "¦beastiesetup_desc_002¦",
     "designer": 1,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -19347,7 +19813,12 @@
           { "color": 2162686, "x": 1 }
         ]
       },
-      { "array": [{ "color": 5892853, "x": 0 }] },
+      {
+        "array": [
+          { "color": 5892853, "x": 0 },
+          { "color": 7986431, "x": 1 }
+        ]
+      },
       {
         "array": [
           { "color": 2829120, "x": 0.0783333333 },
@@ -19377,7 +19848,7 @@
     "ability": ["trappow", "noredirect"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 95,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "careful",
@@ -19462,6 +19933,7 @@
     "desc": "¦beastiesetup_desc_004¦",
     "designer": 1,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -19626,7 +20098,7 @@
     "ability": ["crowddef", "defiant_h"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 95,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "careful",
@@ -19710,6 +20182,7 @@
     "desc": "¦beastiesetup_desc_003¦",
     "designer": 1,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -20093,7 +20566,7 @@
     "ability": ["wither"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 60,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "careful",
@@ -20196,6 +20669,7 @@
     "desc": "¦beastiesetup_desc_106¦",
     "designer": [1, 8],
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -20415,6 +20889,7 @@
     "desc": "¦beastiesetup_desc_047¦",
     "designer": 1,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -20483,7 +20958,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 81,
+          "effect_type": 83,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -20614,6 +21089,7 @@
     "desc": "¦beastiesetup_desc_085¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -20819,6 +21295,7 @@
     "desc": "¦beastiesetup_desc_098¦",
     "designer": 3,
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -20997,7 +21474,7 @@
       "sweatup",
       "crowd",
       "reversal",
-      "dare",
+      "jazzattack",
       "inferno",
       "distraction",
       "sweatall",
@@ -21043,6 +21520,7 @@
     "desc": "¦beastiesetup_desc_097¦",
     "designer": 3,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -21071,7 +21549,7 @@
       [30, "serve"],
       [34, "rush"],
       [39, "scoreboosted"],
-      [44, "dare"],
+      [44, "jazzattack"],
       [48, "distraction"],
       [53, "reversal"]
     ],
@@ -21279,6 +21757,7 @@
     "desc": "¦beastiesetup_desc_096¦",
     "designer": 3,
     "dlc": 0,
+    "eat_type": 3,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -21517,6 +21996,7 @@
     "desc": "¦beastiesetup_desc_091¦",
     "designer": 5,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -21759,6 +22239,7 @@
     "desc": "¦beastiesetup_desc_049¦",
     "designer": 4,
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -22012,6 +22493,7 @@
     "desc": "¦beastiesetup_desc_048¦",
     "designer": [4, 8],
     "dlc": 0,
+    "eat_type": 0,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -22258,6 +22740,7 @@
     "desc": "¦beastiesetup_desc_057¦",
     "designer": [2, 8],
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -22384,7 +22867,8 @@
       {
         "array": [
           { "color": 4086736, "x": 0 },
-          { "color": 3750386, "x": 1 }
+          { "color": 3750386, "x": 0.8366666667 },
+          { "color": 2829300, "x": 1 }
         ]
       },
       {
@@ -22402,7 +22886,7 @@
       {
         "array": [
           { "color": 3555144, "x": 0.0233333333 },
-          { "color": 5133403, "x": 0.9966666667 }
+          { "color": 5594211, "x": 0.9966666667 }
         ]
       },
       { "array": [{ "color": 9816319, "x": 0.59 }] }
@@ -22489,9 +22973,10 @@
       [44, 2, 6, 16, 2, 1],
       [19, 2, 1, 12, 2, 2]
     ],
-    "desc": "¦beastiesetup_desc_055¦",
+    "desc": "A group of Turogue is called a \"crew.\" When they're together they will turn anything into a competition.",
     "designer": 2,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -22599,10 +23084,34 @@
     "roguelvl": -1,
     "scale": [0.85, 1],
     "shiny": [
-      { "array": [{ "color": 1144319, "x": 0 }] },
-      { "array": [{ "color": 13682276, "x": 1 }] },
-      { "array": [{ "color": 6766082, "x": 0.5 }] },
-      { "array": [{ "color": 7102644, "x": 0.5 }] }
+      {
+        "array": [
+          { "color": 3835378, "x": 0 },
+          { "color": 1144319, "x": 0.4933333333 },
+          { "color": 8191, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 15129980, "x": 0 },
+          { "color": 14340208, "x": 0.4966666667 },
+          { "color": 14405469, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 6439202, "x": 0 },
+          { "color": 7816704, "x": 0.5 },
+          { "color": 6771970, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 8813260, "x": 0 },
+          { "color": 7102644, "x": 0.5 },
+          { "color": 8417009, "x": 1 }
+        ]
+      }
     ],
     "spr": "sprTurtle1",
     "spr_alt": [],
@@ -22703,6 +23212,7 @@
     "desc": "¦beastiesetup_desc_056¦",
     "designer": [2, 9],
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -22844,8 +23354,8 @@
     "type_focus": 0
   },
   "wizard": {
-    "ability": ["negation"],
-    "ability_hidden": false,
+    "ability": ["negation", "noredirect"],
+    "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 8,
@@ -22934,6 +23444,7 @@
     "desc": "¦beastiesetup_desc_074¦",
     "designer": 1,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -23094,7 +23605,8 @@
       "cover",
       "mark",
       "quake",
-      "flatten"
+      "flatten",
+      "toughattack"
     ],
     "attklist_randomize": -1,
     "ba": 96,
@@ -23157,6 +23669,7 @@
     "desc": "¦beastiesetup_desc_100¦",
     "designer": 0,
     "dlc": 0,
+    "eat_type": 2,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -23265,11 +23778,40 @@
           { "color": 12736601, "x": 1 }
         ]
       },
-      { "array": [{ "color": 16249785, "x": 0 }] },
-      { "array": [{ "color": 14679960, "x": 0.5 }] },
-      { "array": [{ "color": 7429964, "x": 0.5 }] },
-      { "array": [{ "color": 15466455, "x": 0.5 }] },
-      { "array": [{ "color": 15629804, "x": 0.5 }] }
+      {
+        "array": [
+          { "color": 15136711, "x": 0 },
+          { "color": 16771521, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 13959078, "x": 0 },
+          { "color": 14679960, "x": 0.5 },
+          { "color": 16449432, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 8346171, "x": 0 },
+          { "color": 7429964, "x": 0.5 },
+          { "color": 7693653, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 14286800, "x": 0.0033333333 },
+          { "color": 15466455, "x": 0.5 },
+          { "color": 16765887, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 15634412, "x": 0 },
+          { "color": 15629804, "x": 0.5 },
+          { "color": 14904287, "x": 1 }
+        ]
+      }
     ],
     "spr": "sprYeti",
     "spr_alt": [],

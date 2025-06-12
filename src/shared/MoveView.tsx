@@ -127,10 +127,7 @@ function getEffectString(
         "0": L(nameKey),
         "1": L(descKey),
       });
-      const feelTarget =
-        effect.eff == 23 && effect.pow > 0 && effect.targ == 7
-          ? `Every non-${im + L(nameKey)} fielded player`
-          : target[0].toUpperCase() + target.slice(1);
+      const feelTarget = target[0].toUpperCase() + target.slice(1);
       const placeholders = {
         "0": (effect.eff == 23 ? "+" : "") + String(Math.abs(effect.pow)),
         "1": feelingText,
@@ -141,9 +138,9 @@ function getEffectString(
         return "";
       } else if (args.joiningEffects) {
         const newPlaceholders = {
-          "0": args.joiningEffects["0"] + " ",
+          "0": args.joiningEffects["0"],
           "1": args.joiningEffects["1"],
-          "2": placeholders["0"] + " ",
+          "2": placeholders["0"],
           "3": placeholders["1"],
           Target: feelTarget,
         };
@@ -154,13 +151,15 @@ function getEffectString(
         );
       }
       const key =
-        effect.eff < 0 && attack
-          ? effect.targ == 0
-            ? "movedefine_007" // Feel ... before contact
-            : "movedefine_008" // Targ feels ... before contact
-          : effect.targ == 0
-            ? "movedefine_003" // Feels
-            : "movedefine_004"; // Targ feels
+        effect.eff == 23 && effect.pow > 0 && effect.targ == 7
+          ? "movedefine_048" // Every non-FEELING fielded player feels
+          : effect.eff < 0 && attack
+            ? effect.targ == 0
+              ? "movedefine_007" // Feel ... before contact
+              : "movedefine_008" // Targ feels ... before contact
+            : effect.targ == 0
+              ? "movedefine_003" // Feels
+              : "movedefine_004"; // Targ feels
 
       return L(key, placeholders);
     }

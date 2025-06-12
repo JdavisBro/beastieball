@@ -932,6 +932,9 @@
   "abilitiessetup_abilitydefine_244": "Copies their ally's Trait when they TAG IN",
   "abilitiessetup_abilitydefine_245": "Does {0}x damage while any Beastie on the opponent team is {1}",
   "abilitiessetup_abilitydefine_246": "Thrasher",
+  "movedefine_descadd_098": "Changes {target} trait to user's trait.",
+  "movedefine_descadd_099": "{Target} Max STAMINA {0}.",
+  "movedefine_050": "{0} Max STAMINA.",
   "movessetup_movedefine_183": "Exert",
   "movessetup_movedefine_184": "Echo Strike"
 }

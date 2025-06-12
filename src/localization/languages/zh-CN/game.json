@@ -932,6 +932,9 @@
   "abilitiessetup_abilitydefine_244": "队友入场时复制其特质",
   "abilitiessetup_abilitydefine_245": "任意对手{1}时，造成{0}x伤害",
   "abilitiessetup_abilitydefine_246": "乘胜追击",
+  "movedefine_descadd_098": "更改{target}特质为使用者的特质。",
+  "movedefine_descadd_099": "{Target}最大体力{0}。",
+  "movedefine_050": "{0}最大体力。",
   "movessetup_movedefine_183": "硬撑",
   "movessetup_movedefine_184": "回声打击"
 }

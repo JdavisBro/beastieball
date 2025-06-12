@@ -443,6 +443,17 @@ function getEffectString(
         "1": boost,
         target: target,
       });
+    case 81:
+      return L("movedefine_descadd_098", { target: target });
+    case 82:
+      if (effect.targ != 0) {
+        return L("movedefine_descadd_099", {
+          target: target,
+          "0": String(effect.pow),
+        });
+      } else {
+        return L("movedefine_050", { "0": String(effect.pow) });
+      }
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

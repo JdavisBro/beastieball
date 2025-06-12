@@ -87,7 +87,9 @@ export default function Beastiepedia(): React.ReactNode {
       <OpenGraph
         title={pageTitle}
         image={
-          beastiedata ? `icons/${beastie}.png` : "gameassets/sprMainmenu/0.png" // beastiepedia icon
+          beastiedata
+            ? `icons/${L(beastiedata.name, undefined, true)}.png`
+            : "gameassets/sprMainmenu/0.png" // beastiepedia icon
         }
         url={beastiedata ? `beastiepedia/${beastie}` : `beastiepedia/`}
         description={

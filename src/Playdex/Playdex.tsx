@@ -180,7 +180,10 @@ export default function PlayDex() {
           >
             <option value={-1}>{L("playdex.all")}</option>
             {EffectFilters.map((effect, index) => (
-              <option key={effect.name} value={index}>
+              <option
+                key={effect.name + (effect.placeholderKey ?? "")}
+                value={index}
+              >
                 {effect.name.startsWith("common")
                   ? L(effect.name)
                   : L(

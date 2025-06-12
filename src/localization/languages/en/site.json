@@ -50,6 +50,14 @@
       "spiritDef": "Spirit DEF",
       "mindDef": "Mind DEF"
     },
+    "boosts": {
+      "up1": "1 up boost",
+      "up2": "2 up boost",
+      "up3": "3 up boost",
+      "down1": "1 down boost",
+      "down2": "2 down boost",
+      "down3": "3 down boost"
+    },
     "loading": "Loading...",
     "searchPrefix": "Search: ",
     "altSprite": {

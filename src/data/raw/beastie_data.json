@@ -11677,9 +11677,9 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 85,
-    "md": 88,
-    "name": "Maraptor",
+    "ma": 87,
+    "md": 86,
+    "name": "¦beastiesetup_name_104¦",
     "number": 105,
     "palettes": 1,
     "prev_ids": [],
@@ -19434,9 +19434,10 @@
       [52, 1, 1, 8, 1, 0.5],
       [52, 2, 1, 8, 2, 0.3]
     ],
-    "desc": "Its body is covered in microscopic fungal feelers, making it feel sticky. They tend to all varieties of plant life.",
+    "desc": "¦beastiesetup_desc_001¦",
     "designer": 1,
     "dlc": 0,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -19503,7 +19504,7 @@
     },
     "ma": 42,
     "md": 55,
-    "name": "Sprecko",
+    "name": "¦beastiesetup_name_001¦",
     "number": 1,
     "palettes": 1,
     "prev_ids": ["tree1"],
@@ -19520,7 +19521,7 @@
           "type": 45
         }
       ],
-      "description": "Create any type of field effect"
+      "description": "¦beastiesetup_classrecruit_001¦"
     },
     "recruit_value": 2.8,
     "roamer_style": {
@@ -20338,228 +20339,6 @@
     "tamecond": null,
     "tamelvl": 3,
     "tyield": ["ha", 1, "hd", 1],
-    "type_focus": 1
-  },
-  "shroom1": {
-    "ability": ["regenerator", "fieldclear"],
-    "ability_hidden": true,
-    "allowedInPromo": true,
-    "anim_progress": 100,
-    "animator": 8,
-    "attklist": [
-      "careful",
-      "bomb",
-      "hazeball",
-      "dropshot",
-      "rocksmash",
-      "healhit",
-      "healhit2",
-      "dig",
-      "allycover",
-      "allyrush",
-      "refresh",
-      "protect",
-      "rest",
-      "fieldclear",
-      "preblock",
-      "substitute",
-      "mark",
-      "lifepass",
-      "callout",
-      "chill",
-      "sweatup",
-      "enemyboosts",
-      "flatten"
-    ],
-    "attklist_randomize": -1,
-    "ba": 45,
-    "base_exp": 117.4,
-    "bd": 50,
-    "body_color_index": 0,
-    "codename": "f4388e02b4aa4cfbad8c85fb5f8ac9a5b2f58949",
-    "colormeta": null,
-    "colors": [
-      {
-        "array": [
-          { "color": 11131786, "x": 0 },
-          { "color": 8323027, "x": 1 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 13696983, "x": 0.1008333333 },
-          { "color": 12188927, "x": 0.4633333333 },
-          { "color": 10878939, "x": 0.9258333333 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 2829120, "x": 0.0783333333 },
-          { "color": 3983871, "x": 0.2433333333 },
-          { "color": 7763680, "x": 0.4358333333 },
-          { "color": 6377894, "x": 0.6158333333 },
-          { "color": 6382059, "x": 0.8133333333 },
-          { "color": 13339273, "x": 1 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 7707135, "x": 0 },
-          { "color": 6514897, "x": 1 }
-        ]
-      }
-    ],
-    "colors2": null,
-    "combos": [
-      [49, 0, 12, 50, 0, 1],
-      [52, 1, 1, 8, 1, 0.15],
-      [52, 1, 1, 8, 1, 0.5],
-      [52, 2, 1, 8, 2, 0.3]
-    ],
-    "desc": "¦beastiesetup_desc_001¦",
-    "designer": 1,
-    "dlc": 0,
-    "evo_pose": [
-      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
-      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
-      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
-    ],
-    "evolution": [
-      { "condition": [2], "specie": "shroom_b", "value": [0] },
-      { "condition": [2], "specie": "shroom_s", "value": [0] },
-      { "condition": [2], "specie": "shroom_m", "value": [0] }
-    ],
-    "face_color_index": 0,
-    "family": "shroom1",
-    "first_frame": -1,
-    "foot_size": 18,
-    "foot_type": 0,
-    "growth": 1,
-    "ha": 43,
-    "hd": 67,
-    "hidden": false,
-    "hidden_counter": null,
-    "id": "shroom1",
-    "isBaby": true,
-    "learnset": [
-      [0, "careful"],
-      [0, "callout"],
-      [6, "refresh"],
-      [9, "dropshot"],
-      [12, "rocksmash"],
-      [15, "protect"],
-      [19, "fieldclear"],
-      [24, "enemyboosts"],
-      [30, "mark"],
-      [35, "hazeball"],
-      [39, "allyrush"],
-      [43, "flatten"]
-    ],
-    "learnset_randomize": -1,
-    "linked_colors": {},
-    "loco": {
-      "anim_min_speed": 0.2,
-      "char_width": 66.75,
-      "emote_hop_height": 25,
-      "float_dist": 0,
-      "float_wave": 0,
-      "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
-      "hop_min_speed": 0.04,
-      "hop_shake": 0,
-      "hop_wobble": 0,
-      "move_accel": 3,
-      "move_decel": 0.6666666667,
-      "move_pause_frames": [],
-      "move_speed": 1,
-      "move_speed_start": -0.66,
-      "move_to_idle_transition_anim": "",
-      "move_to_idle_transition_frames": [8, 9, 10, 11, 12, 13, 14, 15],
-      "offset_freq": 2000,
-      "offset_rand_range": 0,
-      "offset_seconds": 0.2,
-      "randomize_idle": 0,
-      "squishiness": 0.2,
-      "stretchiness": 0.2
-    },
-    "ma": 42,
-    "md": 55,
-    "name": "¦beastiesetup_name_001¦",
-    "number": 1,
-    "palettes": 1,
-    "prev_ids": ["tree1"],
-    "recruit": {
-      "conditions": [
-        {
-          "effect_type": [42, 43, 44, 45, 70, 56],
-          "event": null,
-          "freq": -1,
-          "func": null,
-          "my_data": null,
-          "player": 2,
-          "rel_color": -1,
-          "type": 45
-        }
-      ],
-      "description": "¦beastiesetup_classrecruit_001¦"
-    },
-    "recruit_value": 2.8,
-    "roamer_style": {
-      "_name": "STOP_AND_STARE",
-      "can_react": true,
-      "can_socialize": true,
-      "can_volley": true,
-      "cancel_on_player_invincible": false,
-      "checking_player_distance": true,
-      "colliding": false,
-      "default_locomote": true,
-      "default_physics": true,
-      "flying": false,
-      "interact_force": false,
-      "render_go_direction": false,
-      "render_guard_radius": false,
-      "seeking_interact": false
-    },
-    "roguelvl": -1,
-    "scale": [0.85, 1],
-    "shiny": [
-      {
-        "array": [
-          { "color": 15528703, "x": 0 },
-          { "color": 15528703, "x": 0.8066666667 },
-          { "color": 9021382, "x": 1 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 9021384, "x": 0.2883333333 },
-          { "color": 9939131, "x": 0.6658333333 },
-          { "color": 15593464, "x": 1 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 2829120, "x": 0.0783333333 },
-          { "color": 3983871, "x": 0.2433333333 },
-          { "color": 7763680, "x": 0.4358333333 },
-          { "color": 6377894, "x": 0.6158333333 },
-          { "color": 6382059, "x": 0.8133333333 },
-          { "color": 13339273, "x": 1 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 7112637, "x": 0 },
-          { "color": 6979005, "x": 1 }
-        ]
-      }
-    ],
-    "spr": "sprShroom1",
-    "spr_alt": [],
-    "tamecond": null,
-    "tamelvl": 2,
-    "tyield": ["hd", 1],
     "type_focus": 1
   },
   "shroommon": {
@@ -22973,7 +22752,7 @@
       [44, 2, 6, 16, 2, 1],
       [19, 2, 1, 12, 2, 2]
     ],
-    "desc": "A group of Turogue is called a \"crew.\" When they're together they will turn anything into a competition.",
+    "desc": "¦beastiesetup_desc_055¦",
     "designer": 2,
     "dlc": 0,
     "eat_type": 4,

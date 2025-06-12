@@ -112,7 +112,6 @@
   "beastiesetup_classrecruit_046": "Попади по этому зверьку [sprIcon,2] атакой не менее 3 раз",
   "beastiesetup_desc_054": "Из-за собранных жалящих клеток этот зверек может обжечь даже легким касанием. Его яд вызывает сильные галлюцинации.",
   "beastiesetup_014": "Используй прием, знакомый этому зверьку, не менее 2 раз",
-  "beastiesetup_desc_055": "Стаю пиранцырей называют «карамба». Компания этих зверьков что угодно превратит в соревнование.",
   "beastiesetup_015": "Используй прием, знакомый этому зверьку, не менее 3 раз",
   "beastiesetup_desc_056": "Пловцы из этих зверьков никудышные, но легкий панцирь держит их на воде.",
   "beastiesetup_016": "Используй прием, знакомый этому зверьку, не менее 4 раз",
@@ -921,6 +920,5 @@
   "movessetup_movedefine_177": "Splinter",
   "movessetup_movedefine_178": "Rattle",
   "movessetup_movedefine_179": "Rumble",
-  "_map_The Far Out": "The Far Out",
-  "_map_Caraway Desert": "Caraway Desert"
+  "_map_The Far Out": "The Far Out"
 }

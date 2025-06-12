@@ -377,7 +377,10 @@ function getEffectString(
       }
       return L("movedefine_descadd_032", { target: target });
     case 52:
-      return `Clears negative FEELINGs from ${target}.`;
+      return L("movedefine_descadd_054", {
+        target: target,
+        "0": "[sprStatus,1]" + L("statuseffectstuff_002"),
+      });
     case 53:
       args.joiningEffects = true;
       return "";
@@ -434,7 +437,12 @@ function getEffectString(
     case 77:
     case 78:
     case 79:
-      return `[sprIcon,1][sprIcon,2]DEF${boost} to ${target}.`;
+      return L("movedefine_descadd_090", {
+        "0": `[sprIcon,${effect.eff == 79 ? "1" : "0"}]`,
+        "2": `[sprIcon,${effect.eff == 77 ? "1" : "2"}]`,
+        "1": boost,
+        target: target,
+      });
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

@@ -7,6 +7,12 @@
       "y": 14266
     },
     {
+      "id": "gift_beryl_0",
+      "items": [["energy3", 1.0]],
+      "x": -13400,
+      "y": 12178
+    },
+    {
       "id": "hometown_west_b",
       "items": [["status_b", 1.0]],
       "x": -6834,
@@ -71,6 +77,12 @@
       "items": [["train_hd", 4.0]],
       "x": 2356.0,
       "y": -16624
+    },
+    {
+      "id": "gift_jasper_1",
+      "items": [["sell1", 1.0]],
+      "x": -1703.0,
+      "y": -18122
     },
     {
       "id": "hometown_north_b",
@@ -208,7 +220,7 @@
       "id": "gift_beryl_railpath_end_0",
       "items": [["lure_b", 1.0]],
       "x": -7802.0,
-      "y": 10326
+      "y": 10321
     },
     {
       "id": "gift_canyon_1_0",
@@ -503,8 +515,8 @@
     {
       "id": "gift_park_south_0",
       "items": [["heal_b", 1.0]],
-      "x": -24143,
-      "y": -11932
+      "x": -23915,
+      "y": -11970
     },
     {
       "id": "gift_park_south2_0",
@@ -621,7 +633,7 @@
     { "lever_id": "woods_west", "position": [-34376, -27061] },
     { "lever_id": "woods_west", "position": [-31434, -27764] },
     { "lever_id": "beryl_rail_north", "position": [-18998.0, 9189] },
-    { "lever_id": "beryl_rail", "position": [-9952.0, 9672] },
+    { "lever_id": "beryl_rail", "position": [-9952.0, 9667] },
     { "lever_id": "canyon_1", "position": [-19628, 1286] },
     { "lever_id": "canyon_2", "position": [-19562, -2341] },
     { "lever_id": "canyon_4", "position": [-23308, -6238] },
@@ -631,7 +643,7 @@
     { "lever_id": "canyon_secret_2", "position": [-20646, -7267] },
     { "lever_id": "CITY_south", "position": [-36545, 2370] },
     { "lever_id": "mtn_windy", "position": [-60373, -46062] },
-    { "lever_id": "park_1", "position": [-27313, -12690] },
+    { "lever_id": "park_1", "position": [-27085, -12728] },
     { "lever_id": "abandoned_rail", "position": [-6070, -9745] },
     { "lever_id": "seacave1", "position": [-48336, 10656] },
     { "lever_id": "seapuzzle1", "position": [-43330, 2502] },
@@ -699,7 +711,7 @@
     ],
     "never_opened": [{ "position": [-36218, -11675], "angle": 90 }],
     "mtn_windy": [{ "position": [-60218, -46850], "angle": 0 }],
-    "park_1": [{ "position": [-22106.5, -12256.5], "angle": 290.8544616699 }],
+    "park_1": [{ "position": [-21878.5, -12294.5], "angle": 290.8544616699 }],
     "abandoned_rail": [
       { "position": [-18135, -9790], "angle": 116.5650405884 }
     ],

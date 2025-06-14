@@ -29,6 +29,7 @@ import PreviewSettings from "./PreviewSettings";
 import useScreenOrientation from "../../utils/useScreenOrientation";
 import { AnimationState, setupFrameCallback } from "./frameCallback.ts";
 import useLocalization from "../../localization/useLocalization.ts";
+import ImageContextMenu from "./ImageContextMenu.tsx";
 
 const DevUtil = import.meta.env.DEV
   ? lazy(() => import("./DevUtil.tsx"))
@@ -456,7 +457,10 @@ export default function ContentPreview(props: Props): React.ReactNode {
   return (
     <div className={styles.preview}>
       <canvas ref={cropCanvasRef} style={{ display: "none" }} />
-      <div
+      <ImageContextMenu
+        downloadImage={downloadImage}
+        downloadGif={downloadGif}
+        gifDisabled={gifDisabled}
         className={styles.canvascon}
         style={{
           backgroundImage: background ? "none" : "",
@@ -491,7 +495,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         >
           <div>{L(noDisplayReason)}</div>
         </div>
-      </div>
+      </ImageContextMenu>
 
       <button
         className={styles.previewOptionsButton}

@@ -18,6 +18,59 @@
   margin-bottom: 10px;
 }
 
+.contextMenu {
+  display: none;
+  background-color: transparent;
+  color: black;
+  border: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  transform: translateX(min(var(--menu-x), calc(100vw - 100%)))
+    translateY(min(var(--menu-y), calc(100vh - 100%)));
+  filter: drop-shadow(#0008 -1px -1px 5px) drop-shadow(#0008 1px 1px 5px);
+}
+
+.contextMenu:popover-open {
+  display: block;
+}
+
+.contextMenu::backdrop {
+  opacity: 0;
+}
+
+.contextMenu div {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
+}
+
+.contextButton {
+  composes: animSelectableBackground from global;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 4px 20px;
+  border-radius: 0;
+}
+
+.contextButton:hover {
+  background-image: repeating-linear-gradient(
+    135deg,
+    #ffaa55,
+    #ffaa55 10px,
+    #ff8e4a 10px,
+    #ff8e4a 20px
+  ) !important;
+}
+
 .previewcanvas {
   width: 100%;
   height: auto;

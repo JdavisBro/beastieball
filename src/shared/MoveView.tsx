@@ -282,7 +282,7 @@ function getEffectString(
     case 60:
       return ""; // rowdy, displays as nothing, probably gives an extra rowdy point
     case 61:
-      return "Can use even when [sprStatus,2]SHOOK or [sprStatus,10]TIRED.";
+      return "Can use even when [sprStatus,2]SHOOK, [sprStatus,10]TIRED or [sprStatus,5]WIPED.";
     case 63:
       return `Swaps Trait with ${TARGET_STRINGS[effect.targ]}.`;
     case 64:

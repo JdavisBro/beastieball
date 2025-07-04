@@ -73,7 +73,7 @@ export default function BeastieRenderProvider(
       frames = frames[0];
     }
     const beastie_frame =
-      (beastie.frame ?? frames) ? (frames?.startFrame ?? 0) : 0;
+      beastie.frame ?? (frames ? (frames?.startFrame ?? 0) : 0);
 
     const img = await new Promise<HTMLImageElement>((resolve, reject) => {
       const image = document.createElement("img");

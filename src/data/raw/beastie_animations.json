@@ -1935,7 +1935,7 @@
               "_": "class_map"
             },
             "startFrame": 18,
-            "transitions": [5]
+            "transitions": [1, 5]
           },
           {
             "_": "class_canim_frames",
@@ -2020,7 +2020,7 @@
               "_": "class_map"
             },
             "startFrame": 21,
-            "transitions": [0, 0, 1, 2, 3, 4, 5, 5, 5, 5]
+            "transitions": [0, 0, 1, 1, 2, 3, 4, 5, 5, 5]
           }
         ]
       },
@@ -2697,7 +2697,7 @@
               "_": "class_map"
             },
             "startFrame": 22,
-            "transitions": [0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 3, 10]
+            "transitions": [0, 0, 1, 1, 1, 2, 2, 3, 3, 10]
           },
           {
             "_": "class_canim_frames",
@@ -2708,7 +2708,7 @@
               "_": "class_map"
             },
             "startFrame": 24,
-            "transitions": [0]
+            "transitions": [0, 2, 10]
           },
           {
             "_": "class_canim_frames",
@@ -2721,7 +2721,7 @@
               "_": "class_map"
             },
             "startFrame": 28,
-            "transitions": [0]
+            "transitions": [0, 1, 10]
           },
           {
             "_": "class_canim_frames",
@@ -2812,20 +2812,23 @@
               "_": "class_map"
             },
             "startFrame": 78,
-            "transitions": [8, 8, 8, 8, 9]
+            "transitions": [8, 8, 9]
           },
           {
             "_": "class_canim_frames",
             "endFrame": 103,
             "holds": {
-              "100": 4,
+              "100": 2,
+              "101": 1,
               "102": 3,
               "103": [3, 3, 3, 6, 6, 9],
+              "97": 1,
+              "98": 1,
               "99": 3,
               "_": "class_map"
             },
             "startFrame": 96,
-            "transitions": [8, 8, 9, 9]
+            "transitions": [8, 9, 9]
           },
           {
             "_": "class_canim_frames",
@@ -2877,7 +2880,7 @@
               "_": "class_map"
             },
             "startFrame": 110,
-            "transitions": [0]
+            "transitions": [0, 1, 2, 2, 3]
           }
         ]
       },
@@ -10023,27 +10026,110 @@
       },
       "idle": {
         "_": "class_char_animationdata",
-        "frames": {
-          "_": "class_canim_frames",
-          "bpm": true,
-          "endFrame": 31,
-          "holds": {
-            "20": 3,
-            "21": 4,
-            "22": 3,
-            "23": 4,
-            "24": 3,
-            "25": 3,
-            "26": 3,
-            "27": 4,
-            "28": 3,
-            "29": 4,
-            "30": 3,
-            "31": 3,
-            "_": "class_map"
+        "frames": [
+          {
+            "_": "class_canim_frames",
+            "bpm": true,
+            "endFrame": 25,
+            "holds": {
+              "20": 3,
+              "21": 4,
+              "22": 3,
+              "23": 4,
+              "24": 3,
+              "25": 3,
+              "26": 3,
+              "27": 4,
+              "28": 3,
+              "29": 4,
+              "30": 3,
+              "31": 3,
+              "_": "class_map"
+            },
+            "startFrame": 20,
+            "transitions": [1, 1, 5]
           },
-          "startFrame": 20
-        },
+          {
+            "_": "class_canim_frames",
+            "bpm": true,
+            "endFrame": 31,
+            "holds": {
+              "26": 3,
+              "27": 4,
+              "28": 3,
+              "29": 4,
+              "30": 3,
+              "31": 3,
+              "_": "class_map"
+            },
+            "startFrame": 26,
+            "transitions": [0]
+          },
+          {
+            "_": "class_canim_frames",
+            "bpm": true,
+            "endFrame": 37,
+            "holds": {
+              "32": 3,
+              "33": 4,
+              "34": 3,
+              "35": 4,
+              "36": 3,
+              "37": 3,
+              "_": "class_map"
+            },
+            "startFrame": 32,
+            "transitions": [3]
+          },
+          {
+            "_": "class_canim_frames",
+            "bpm": true,
+            "endFrame": 43,
+            "holds": {
+              "38": 3,
+              "39": 4,
+              "40": 3,
+              "41": 4,
+              "42": 3,
+              "43": 3,
+              "_": "class_map"
+            },
+            "startFrame": 38,
+            "transitions": [2, 4]
+          },
+          {
+            "_": "class_canim_frames",
+            "bpm": true,
+            "endFrame": 49,
+            "holds": {
+              "44": 3,
+              "45": 4,
+              "46": 3,
+              "47": 4,
+              "48": 3,
+              "49": 3,
+              "_": "class_map"
+            },
+            "startFrame": 44,
+            "transitions": [1]
+          },
+          {
+            "_": "class_canim_frames",
+            "bpm": true,
+            "endFrame": 55,
+            "holds": {
+              "50": 3,
+              "51": 4,
+              "52": 3,
+              "53": 4,
+              "54": 3,
+              "55": 3,
+              "_": "class_map"
+            },
+            "startFrame": 50,
+            "transitions": [2, 4]
+          }
+        ],
         "speed": 0.8
       },
       "menu": {
@@ -23387,14 +23473,14 @@
   },
   "_sprRat_alt": {
     "anim_data": {
-      "__Elephant_Circular_Ref__": 5188
+      "__Elephant_Circular_Ref__": 5198
     },
     "ball": {
       "x": 154.8,
       "y": -261.6
     },
     "colors": {
-      "__Elephant_Circular_Ref__": 6396
+      "__Elephant_Circular_Ref__": 6413
     },
     "colors2": null,
     "evo1": {
@@ -23416,7 +23502,7 @@
       "y": 0
     },
     "loco_data": {
-      "__Elephant_Circular_Ref__": 5266
+      "__Elephant_Circular_Ref__": 5276
     },
     "miss": {
       "x": 222.8571428571,
@@ -23433,7 +23519,7 @@
       "y": -286.8571428571
     },
     "shiny": {
-      "__Elephant_Circular_Ref__": 6445
+      "__Elephant_Circular_Ref__": 6462
     },
     "splash": {
       "angle": 344.1231689453,
@@ -27653,6 +27739,13 @@
             "29": 3,
             "30": 3,
             "33": 3,
+            "_": "class_map"
+          },
+          "sounds": {
+            "21": -1,
+            "23": -1,
+            "24": -1,
+            "33": -1,
             "_": "class_map"
           },
           "startFrame": 20

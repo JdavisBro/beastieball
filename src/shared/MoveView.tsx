@@ -393,6 +393,7 @@ function getEffectString(
       return L("movedefine_descadd_030", {
         "0": "[sprStatus,2]" + L("statuseffectstuff_003"),
         "1": "[sprStatus,10]" + L("statuseffectstuff_011"),
+        "2": "[sprStatus,5]" + L("statuseffectstuff_006"),
       });
     case 63:
       return L("movedefine_descadd_085", {

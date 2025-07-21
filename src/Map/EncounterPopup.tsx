@@ -50,7 +50,8 @@ export default function EncounterPopup({
   const [spoilerSeen, setSpoilerSeen] = useSpoilerSeen();
 
   if (!encounterData) {
-    return <button onClick={loadEncounterData}>Load Encounters</button>;
+    loadEncounterData();
+    return <div>Loading Encounters</div>;
   }
   const encounter = encounterData[encounterId];
   if (!encounter) {

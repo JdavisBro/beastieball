@@ -9,7 +9,7 @@ import {
   Popup,
   useMapEvents,
 } from "react-leaflet";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 
 import WORLD_DATA, { EXTRA_MARKERS } from "../data/WorldData";
 import styles from "./Map.module.css";
@@ -284,8 +284,13 @@ export default function Map(): React.ReactNode {
   const [encounterData, setEncounterData] = useState<
     EncounterDataType | undefined
   >(undefined);
+  const loadingEncounterDataRef = useRef(false);
 
   const loadEncounterData = useCallback(() => {
+    if (loadingEncounterDataRef.current) {
+      return;
+    }
+    loadingEncounterDataRef.current = true;
     import("../data/EncounterData").then((data) =>
       setEncounterData(data.default),
     );

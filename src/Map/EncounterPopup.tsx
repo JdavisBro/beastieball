@@ -6,6 +6,7 @@ import {
   useSpoilerMode,
   useSpoilerSeen,
 } from "../shared/useSpoiler";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 const LEVEL_METAMORPHS = [0, 4, 9, 10, 11];
@@ -47,7 +48,7 @@ export default function EncounterPopup({
   loadEncounterData: () => void;
 }) {
   const [spoilerMode] = useSpoilerMode();
-  const [spoilerSeen] = useSpoilerSeen();
+  const [spoilerSeen, setSpoilerSeen] = useSpoilerSeen();
 
   if (!encounterData) {
     return <button onClick={loadEncounterData}>Load Encounters</button>;
@@ -82,13 +83,28 @@ export default function EncounterPopup({
 
           return (
             <div key={index} className={styles.encounterBeastie}>
-              <img
-                src={
-                  isSpoiler
-                    ? "/gameassets/sprExclam_1.png"
-                    : `/icons/${beastieData.name}.png`
+              <Link
+                to={
+                  isWild || isSpoiler ? "" : `/beastiepedia/${beastieData.name}`
                 }
-              />
+                onClick={
+                  isSpoiler
+                    ? () =>
+                        setSpoilerSeen((seen) => {
+                          seen[beastieData.id] = true;
+                          return seen;
+                        })
+                    : undefined
+                }
+              >
+                <img
+                  src={
+                    isSpoiler
+                      ? "/gameassets/sprExclam_1.png"
+                      : `/icons/${beastieData.name}.png`
+                  }
+                />
+              </Link>
               <div>
                 {beastie.name || (isSpoiler ? "???" : beastieData.name)}
               </div>

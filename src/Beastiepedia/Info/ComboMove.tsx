@@ -6,7 +6,6 @@ import InfoBox from "../../shared/InfoBox";
 import MoveView from "../../shared/MoveView";
 import { MoveEffect } from "../../data/MoveData";
 import BeastieSelect from "../../shared/BeastieSelect";
-import { move } from "../../Team/Beastie/Beastie.module.css";
 
 enum ComboType {
   Rivals,
@@ -14,8 +13,6 @@ enum ComboType {
   Support,
   Defense,
 }
-
-const UNCOMBINABLE_EFFECTS = [33];
 
 export default function ComboMove({
   beastiedata,

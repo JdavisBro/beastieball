@@ -16,7 +16,7 @@ OTHER_AREAS = [
 with (gamedir / "data_out" / "gift_table").open() as f:
   gift_data = json.load(f)
 
-out_data = {"gifts": [], "switches": [], "walls": {}}
+out_data = {"gifts": [], "switches": [], "walls": {}, "encounters": []}
 
 with list((gamedir / "world_data").glob("*world.json"))[0].open() as f:
   world_data = json.load(f)
@@ -49,7 +49,12 @@ for level in (gamedir / "world_data").glob("**/*.json"):
   level_name = level_data["name"]
   stump = level_stumps[level_name]
   layer = stump["world_layer"] if "world_layer" in stump else 0 
-  level_offset = ([area["offset"] for area in OTHER_AREAS if level_name.startswith(area["prefix"])] or [[0, 0]])[0] if layer != 0 else [0,0]
+  level_offset = [0, 0]
+  if layer != 0:
+    offset = [area["offset"] for area in OTHER_AREAS if level_name.startswith(area["prefix"])]
+    if not offset:
+      continue
+    level_offset = offset[0]
   for obj in level_data["objects_array"]:
     z = find_z_pos(
       obj.get("x", 0),
@@ -90,6 +95,17 @@ for level in (gamedir / "world_data").glob("**/*.json"):
         "position": [x, y],
         "angle": obj.get("angle", 0),
       })
+    elif obj["object"] == "objSpawner":
+      encounter = obj["encounter"]
+      if encounter == "" or encounter == "none":
+        encounter = ""
+        if obj["miniboss"]:
+          encounter = level_name + "_" + str(obj["miniboss_index"])
+      if encounter:
+        out_data["encounters"].append({
+          "position": [x, y],
+          "encounter": encounter,
+        })
 
 with Path("../src/data/raw/extra_markers.json").open("w+") as f:
   json.dump(out_data, f)

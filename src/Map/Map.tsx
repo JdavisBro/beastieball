@@ -9,7 +9,7 @@ import {
   Popup,
   useMapEvents,
 } from "react-leaflet";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 import WORLD_DATA, { EXTRA_MARKERS } from "../data/WorldData";
 import styles from "./Map.module.css";
@@ -31,6 +31,8 @@ import { EXTINCT_BEASTIES, METAMORPH_LOCATIONS } from "./SpecialBeasties";
 import DivIconMarker from "./DivIconMarker";
 import createBeastieBox from "./createBeastieBox";
 import { ControlMenu } from "./ControlMenu";
+import EncounterPopup from "./EncounterPopup";
+import { EncounterDataType } from "../data/EncounterData";
 
 const BEASTIE_ARRAY = [...BEASTIE_DATA.values()];
 
@@ -279,6 +281,16 @@ export default function Map(): React.ReactNode {
   const center = marker ? marker.position : L.latLng(0, 0);
   const zoom = marker ? -4 : -5.5;
 
+  const [encounterData, setEncounterData] = useState<
+    EncounterDataType | undefined
+  >(undefined);
+
+  const loadEncounterData = useCallback(() => {
+    import("../data/EncounterData").then((data) =>
+      setEncounterData(data.default),
+    );
+  }, []);
+
   return (
     <>
       <OpenGraph
@@ -365,6 +377,41 @@ export default function Map(): React.ReactNode {
                   }}
                 />
               )),
+            },
+            {
+              title: "Encounters",
+              children: EXTRA_MARKERS.encounters.map((encounter) => (
+                <DivIconMarker
+                  key={encounter.encounter}
+                  tagName="div"
+                  icon={{
+                    className: styles.hidemarker,
+                    iconSize: [15, 30],
+                  }}
+                  markerprops={{
+                    position: L.latLng(
+                      -encounter.position[1],
+                      encounter.position[0],
+                    ),
+                  }}
+                  className={styles.encounterImgmarker}
+                  popup={
+                    <Popup>
+                      <EncounterPopup
+                        encounterId={encounter.encounter}
+                        encounterData={encounterData}
+                        loadEncounterData={loadEncounterData}
+                      />
+                    </Popup>
+                  }
+                >
+                  <img
+                    src="/gameassets/sprSponsors/5.png"
+                    alt="Encounter Marker"
+                  />
+                </DivIconMarker>
+              )),
+              defaultHidden: true,
             },
             {
               category: "Exploration",

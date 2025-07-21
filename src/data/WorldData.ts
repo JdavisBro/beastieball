@@ -15,10 +15,13 @@ export type Switch = {
 
 export type Wall = { position: number[]; angle: number };
 
+export type EncounterMarker = { position: number[]; encounter: string };
+
 export const EXTRA_MARKERS: {
   gifts: Gift[];
   switches: Switch[];
   walls: Record<string, Wall[]>;
+  encounters: EncounterMarker[];
 } = extra_markers;
 
 export type MapIcon = {

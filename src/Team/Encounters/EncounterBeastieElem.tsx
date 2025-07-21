@@ -5,7 +5,7 @@ import Beastie from "../Beastie/Beastie";
 import { createPid } from "../Builder/createBeastie";
 import getMoveset from "./getMoveset";
 import getMetamorphAtLevel from "./getMetamorphAtLevel";
-import Randomizer from "../../utils/randomizer";
+import Randomizer from "../../utils/Randomizer";
 
 function hashCode(text: string) {
   let hash = 0;

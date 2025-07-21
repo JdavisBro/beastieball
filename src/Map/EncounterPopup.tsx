@@ -7,7 +7,6 @@ import {
   useSpoilerSeen,
 } from "../shared/useSpoiler";
 import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
 
 const LEVEL_METAMORPHS = [0, 4, 9, 10, 11];
 
@@ -117,7 +116,7 @@ export default function EncounterPopup({
       {encounter.scales ? (
         <div>Beastie level or metamorphosis may be higher due to scaling.</div>
       ) : null}
-      {/* <Link to={`/team/encounters/${encounter.id}`}>View more details.</Link> */}
+      <Link to={`/team/encounters/${encounter.id}`}>View more details.</Link>
     </div>
   );
 }

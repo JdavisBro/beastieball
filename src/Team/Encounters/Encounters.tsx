@@ -25,7 +25,7 @@ export default function Encounters() {
     <>
       <OpenGraph
         title={`Encounters - ${import.meta.env.VITE_BRANDING}`}
-        description="View Team from encounters in Beastieball!"
+        description="View Teams from encounters in Beastieball!"
         image="gameassets/sprMainmenu/27.png"
         url="team/encounters/"
       />

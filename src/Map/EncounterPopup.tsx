@@ -1,6 +1,11 @@
 import { EncounterDataType } from "../data/EncounterData";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import styles from "./Map.module.css";
+import {
+  SpoilerMode,
+  useSpoilerMode,
+  useSpoilerSeen,
+} from "../shared/useSpoiler";
 // import { Link } from "react-router-dom";
 
 const LEVEL_METAMORPHS = [0, 4, 9, 10, 11];
@@ -41,6 +46,9 @@ export default function EncounterPopup({
   encounterData: EncounterDataType | undefined;
   loadEncounterData: () => void;
 }) {
+  const [spoilerMode] = useSpoilerMode();
+  const [spoilerSeen] = useSpoilerSeen();
+
   if (!encounterData) {
     return <button onClick={loadEncounterData}>Load Encounters</button>;
   }
@@ -67,11 +75,24 @@ export default function EncounterPopup({
               beastie.level,
               oldBeastieData.id,
             ) ?? oldBeastieData;
+          const isWild = beastie.specie == "";
+          const isSpoiler =
+            isWild ||
+            (spoilerMode != SpoilerMode.All && !spoilerSeen[beastieData.id]);
 
           return (
             <div key={index} className={styles.encounterBeastie}>
-              <img src={`/icons/${beastieData.name}.png`} />
-              <div>{beastie.name || beastieData.name}</div>
+              <img
+                src={
+                  isSpoiler
+                    ? "/gameassets/sprExclam_1.png"
+                    : `/icons/${beastieData.name}.png`
+                }
+              />
+              <div>
+                {beastie.name || (isSpoiler ? "???" : beastieData.name)}
+              </div>
+              {isWild ? <div>Nearby Wild Beastie</div> : null}
               <div>Lvl {beastie.level}</div>
             </div>
           );

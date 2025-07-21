@@ -1,0 +1,382 @@
+{
+  "academy": {
+    "color": 12268098.0,
+    "crowd": [
+      "@ref object(objJoel)",
+      "@ref object(objSavanah)",
+      "@ref object(objWitchinstructor)",
+      "@ref object(objValerie)",
+      "@ref object(objSteven)",
+      "@ref object(objKids)"
+    ],
+    "id": "academy",
+    "levels": 5.5,
+    "min_rank": 4.5,
+    "music": 14,
+    "obj": "@ref object(objHeadmaster)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 1.0,
+      "wordA": "magic_desc",
+      "wordB": "moons"
+    }
+  },
+  "celeb": {
+    "color": 2068168.0,
+    "crowd": [
+      "@ref object(objBouncer)",
+      "@ref object(objKisy)",
+      "@ref object(objLucille)",
+      "@ref object(objOleh)"
+    ],
+    "id": "celeb",
+    "levels": 4.5,
+    "min_rank": 3.0,
+    "music": 12,
+    "obj": "@ref object(objCeleb)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 0.0,
+      "wordA": "golden",
+      "wordB": "gods"
+    }
+  },
+  "champion": {
+    "color": 14610175.0,
+    "crowd": [],
+    "id": "champion",
+    "levels": 0.0,
+    "min_rank": 9.5,
+    "music": 17,
+    "obj": "@ref object(objValerie)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 1.0,
+      "wordA": "radical",
+      "wordB": "kings|queens|royals"
+    }
+  },
+  "coral_shroom_0": {
+    "color": 0.0,
+    "crowd": [],
+    "id": "coral_shroom_0",
+    "levels": 2.5,
+    "min_rank": 3.0,
+    "music": 1,
+    "obj": -1.0,
+    "rank": 0.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 2.0,
+      "wordA": "",
+      "wordB": ""
+    }
+  },
+  "cycle": {
+    "color": 6375753.0,
+    "crowd": [],
+    "id": "cycle",
+    "levels": 0.0,
+    "min_rank": 9.5,
+    "music": 19,
+    "obj": "@ref object(objCycle)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 0.0,
+      "wordA": "midnight",
+      "wordB": "machines"
+    }
+  },
+  "default": {
+    "color": 4210752.0,
+    "crowd": [],
+    "id": "default",
+    "levels": 0.0,
+    "min_rank": 0.0,
+    "music": 1,
+    "obj": "@ref object(objRedd)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 0.0,
+      "wordA": "wild",
+      "wordB": "beasts"
+    }
+  },
+  "kaz": {
+    "color": 18687.0,
+    "crowd": [
+      "@ref object(objBored1)",
+      "@ref object(objBored2)",
+      "@ref object(objBored3)",
+      "@ref object(objGfxtee)",
+      "@ref object(objHatlady)",
+      "@ref object(objHiker)",
+      "@ref object(objHatguy)"
+    ],
+    "id": "kaz",
+    "levels": 4.5,
+    "min_rank": 1.5,
+    "music": 6,
+    "obj": "@ref object(objKaz)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 0.0,
+      "wordA": "raging",
+      "wordB": "blazes"
+    }
+  },
+  "mask": {
+    "color": 15952127.0,
+    "crowd": [],
+    "id": "mask",
+    "levels": 0.0,
+    "min_rank": 0.0,
+    "music": 3,
+    "obj": "@ref object(objMask)",
+    "rank": 0.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 0.0,
+      "wordA": "mega",
+      "wordB": "beasts"
+    }
+  },
+  "pirate": {
+    "color": 13631311.0,
+    "crowd": [
+      "@ref object(objVuk)",
+      "@ref object(objZara)",
+      "@ref object(objKatya)",
+      "@ref object(objRuben)",
+      "@ref object(objYoandy)"
+    ],
+    "id": "pirate",
+    "levels": 5.0,
+    "min_rank": 3.0,
+    "music": 14,
+    "obj": "@ref object(objPirate)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 1.0,
+      "wordA": "party",
+      "wordB": "pirates"
+    }
+  },
+  "racer": {
+    "color": 1909204.0,
+    "crowd": [
+      "@ref object(objJavier)",
+      "@ref object(objSteven)",
+      "@ref object(objGfxtee)",
+      "@ref object(objDiana)",
+      "@ref object(objEtienne)",
+      "@ref object(objJiyun)",
+      "@ref object(objHena)",
+      "@ref object(objKaan)",
+      "@ref object(objMagdalena)",
+      "@ref object(objMod)",
+      "@ref object(objPaula)",
+      "@ref object(objTomislav)",
+      "@ref object(objYamileidys)",
+      "@ref object(objYsabella)",
+      "@ref object(objJini)",
+      "@ref object(objAthan)"
+    ],
+    "id": "racer",
+    "levels": 0.0,
+    "min_rank": 9.5,
+    "music": 6,
+    "obj": "@ref object(objRacer)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 0.0,
+      "wordA": "crimson",
+      "wordB": "racers"
+    }
+  },
+  "redd": {
+    "color": 1820671.0,
+    "crowd": [
+      "@ref object(objConstructionguy)",
+      "@ref object(objJackie)",
+      "@ref object(objRiley)",
+      "@ref object(objAnnabel)",
+      "@ref object(objDaniel)",
+      "@ref object(objRaymond)"
+    ],
+    "id": "redd",
+    "levels": 0.0,
+    "min_rank": 0.0,
+    "music": 1,
+    "obj": "@ref object(objRedd)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 0.0,
+      "wordA": "rutile",
+      "wordB": "all-stars"
+    }
+  },
+  "redd2": {
+    "color": 6228731.0,
+    "crowd": [],
+    "id": "redd2",
+    "levels": 0.0,
+    "min_rank": 9.5,
+    "music": 1,
+    "obj": "@ref object(objRedd)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 0.0,
+      "wordA": "rutile",
+      "wordB": "all-stars"
+    }
+  },
+  "reserve_boss": {
+    "color": 0.0,
+    "crowd": [],
+    "id": "reserve_boss",
+    "levels": 2.5,
+    "min_rank": 3.5,
+    "music": 11,
+    "obj": -1.0,
+    "rank": 0.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 2.0,
+      "wordA": "",
+      "wordB": ""
+    }
+  },
+  "riven": {
+    "color": 16711818.0,
+    "crowd": [
+      "@ref object(objAutumn)",
+      "@ref object(objJavier)",
+      "@ref object(objCarlos)",
+      "@ref object(objNatalia)",
+      "@ref object(objTrent)"
+    ],
+    "id": "riven",
+    "levels": 4.5,
+    "min_rank": 1.5,
+    "music": 5,
+    "obj": "@ref object(objRiven)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 1.0,
+      "wordA": "mythic",
+      "wordB": "dreamers"
+    }
+  },
+  "science": {
+    "color": 4251151.0,
+    "crowd": [
+      "@ref object(objResearcher)",
+      "@ref object(objBrodie)",
+      "@ref object(objCraig)"
+    ],
+    "id": "science",
+    "levels": 4.0,
+    "min_rank": 3.0,
+    "music": 13,
+    "obj": "@ref object(objScience)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 2.0,
+      "wordA": "wild",
+      "wordB": "flowers"
+    }
+  },
+  "shroom_path_boss": {
+    "color": 0.0,
+    "crowd": [],
+    "id": "shroom_path_boss",
+    "levels": 2.5,
+    "min_rank": 3.0,
+    "music": 1,
+    "obj": -1.0,
+    "rank": 0.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 2.0,
+      "wordA": "",
+      "wordB": ""
+    }
+  },
+  "streamer": {
+    "color": 12460543.0,
+    "crowd": [
+      "@ref object(objFankid)",
+      "@ref object(objFanspike)",
+      "@ref object(objFanbro)",
+      "@ref object(objLeagueman)",
+      "@ref object(objRahma)"
+    ],
+    "id": "streamer",
+    "levels": 5.5,
+    "min_rank": 4.5,
+    "music": 16,
+    "obj": "@ref object(objStreamer)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 1.0,
+      "wordA": "hello",
+      "wordB": "freaks"
+    }
+  },
+  "warrior": {
+    "color": 14341053.0,
+    "crowd": [
+      "@ref object(objRaymond)",
+      "@ref object(objKaan)",
+      "@ref object(objAnton)",
+      "@ref object(objPaula)",
+      "@ref object(objTomislav)",
+      "@ref object(objYamileidys)",
+      "@ref object(objMod)"
+    ],
+    "id": "warrior",
+    "levels": 0.0,
+    "min_rank": 11.0,
+    "music": 1,
+    "obj": "@ref object(objWarrior)",
+    "rank": 1.0,
+    "scale_rank_start_offset": 0.0,
+    "title": {
+      "color": -1.0,
+      "gender": 0.0,
+      "wordA": "silent",
+      "wordB": "warriors"
+    }
+  }
+}

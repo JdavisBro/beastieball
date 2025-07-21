@@ -28,6 +28,12 @@ export default function Team() {
         hoverImage="/gameassets/sprMainmenu/19.png"
         location="/team/builder/"
       />
+      {/* <NavigationMenuOption
+        text="Encounters"
+        image="/gameassets/sprMainmenu/27.png"
+        hoverImage="/gameassets/sprMainmenu/28.png"
+        location="/team/encounters/"
+      /> */}
     </NavigationMenu>
   );
 }

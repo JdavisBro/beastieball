@@ -16,6 +16,7 @@ const Beastdle = lazy(() => import("./Beastdle/Beastdle"));
 const Team = lazy(() => import("./Team/Team"));
 const TeamViewer = lazy(() => import("./Team/Viewer/TeamViewer"));
 const TeamBuilder = lazy(() => import("./Team/Builder/TeamBuilder"));
+const Encounters = lazy(() => import("./Team/Encounters/Encounters"));
 const Modding = lazy(() => import("./Modding/Modding"));
 const Save = lazy(() => import("./Modding/Save/Save"));
 const Test = lazy(() => import("./Test"));
@@ -105,6 +106,14 @@ const routes: Array<RouteObject> = [
       {
         element: <TeamBuilder />,
         path: "/team/builder/",
+      },
+      {
+        element: <Encounters />,
+        path: "/team/encounters/:encounterId",
+      },
+      {
+        element: <Encounters />,
+        path: "/team/encounters/",
       },
 
       {

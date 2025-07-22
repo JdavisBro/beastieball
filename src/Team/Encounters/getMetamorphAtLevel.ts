@@ -6,20 +6,20 @@ export default function getMetamorphAtLevel(
   beastie: BeastieType,
   level: number,
   splitPrefer: string,
+  return_self: boolean = false,
 ): null | BeastieType {
   if (!beastie.evolution) {
-    return null;
+    return return_self ? beastie : null;
   }
   const levelMetamorphs = beastie.evolution.filter((evo) =>
     evo.condition.some((cond) => LEVEL_METAMORPHS.includes(cond)),
   );
   if (!levelMetamorphs.length) {
-    return null;
+    return return_self ? beastie : null;
   }
   const possibleLevelMetamorphs = levelMetamorphs.filter(
     (evo) => typeof evo.value[0] == "number" && evo.value[0] <= level,
   );
-  console.log(possibleLevelMetamorphs, beastie.id);
   if (!possibleLevelMetamorphs.length) {
     return beastie;
   }
@@ -30,6 +30,13 @@ export default function getMetamorphAtLevel(
   if (!evo_beastie) {
     return null;
   }
-  console.log(evo_beastie);
-  return getMetamorphAtLevel(evo_beastie, level, splitPrefer) ?? evo_beastie;
+  if (!evo_beastie.evolution) {
+    return evo_beastie;
+  }
+  return getMetamorphAtLevel(
+    evo_beastie,
+    level,
+    splitPrefer,
+    beastie.id == splitPrefer || return_self,
+  );
 }

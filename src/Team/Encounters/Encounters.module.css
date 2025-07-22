@@ -1,3 +1,7 @@
+.bosses {
+  user-select: none;
+}
+
 .team {
   flex: 0 1 auto;
   display: flex;

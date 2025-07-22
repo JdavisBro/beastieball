@@ -6,6 +6,7 @@ import { createPid } from "../Builder/createBeastie";
 import getMoveset from "./getMoveset";
 import getMetamorphAtLevel from "./getMetamorphAtLevel";
 import Randomizer from "../../utils/Randomizer";
+import { useMemo } from "react";
 
 function hashCode(text: string) {
   let hash = 0;
@@ -21,11 +22,17 @@ export default function EncounterBeastieElem({
   encounterId,
   encBeastie,
   index,
+  bonus_levels,
 }: {
   encounterId: string;
   encBeastie: EncounterBeastie;
   index: number;
+  bonus_levels: number;
 }) {
+  const level = encBeastie.level + Math.floor(bonus_levels);
+
+  const pid = useMemo(createPid, [encounterId]);
+
   const beastieDataPre = BEASTIE_DATA.get(encBeastie.specie || "shroom1");
   if (!beastieDataPre) {
     return null;
@@ -35,7 +42,7 @@ export default function EncounterBeastieElem({
     return null;
   }
   const beastieData =
-    getMetamorphAtLevel(beastieFamily, encBeastie.level, beastieDataPre.id) ??
+    getMetamorphAtLevel(beastieFamily, level, beastieDataPre.id) ??
     beastieDataPre;
 
   const fromEncounter = encBeastie.from_encounter ?? encounterId;
@@ -114,7 +121,7 @@ export default function EncounterBeastieElem({
     <div className={styles.beastieContainer}>
       <Beastie
         teamBeastie={{
-          pid: createPid(),
+          pid: pid,
           specie: beastieData.id,
           date: 1,
           number: (encBeastie.number &&
@@ -125,11 +132,11 @@ export default function EncounterBeastieElem({
           color: color,
           name: encBeastie.name ?? "",
           spr_index: spr_index,
-          xp: encBeastie.level ** 3 * beastieData.growth,
+          xp: level ** 3 * beastieData.growth,
           scale: encBeastie.size && encBeastie.size > 0 ? encBeastie.size : 0.5,
           vibe: encBeastie.vibe && encBeastie.vibe > 0 ? encBeastie.vibe : 0,
           ability_index: ability_index,
-          attklist: getMoveset(encBeastie, beastieData, encBeastie.level),
+          attklist: getMoveset(encBeastie, beastieData, level),
           ba_r: 1,
           ha_r: 1,
           ma_r: 1,

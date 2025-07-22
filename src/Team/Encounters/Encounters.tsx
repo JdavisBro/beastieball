@@ -6,6 +6,8 @@ import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
 import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider";
 import EncounterBeastieElem from "./EncounterBeastieElem";
+import getLevelBonus from "./getLevelBonus";
+import { useState } from "react";
 
 const ENCOUNTER_LIST = Object.values(ENCOUNTER_DATA);
 
@@ -16,10 +18,43 @@ function prettyName(name: string) {
     .replace(/[^ \d]\d/g, (match) => match[0] + " " + match[1]);
 }
 
+const BOSSES_MAP: Record<string, string> = {
+  kaz: "Kaz",
+  riven: "Riven",
+  science: "Celia",
+  pirate: "Marcy",
+  celeb: "Sunsoo",
+  streamer: "Elena",
+  academy: "Callisto",
+  warrior: "Dominic",
+  coral_shroom_0: "Surgus",
+  shroom_path_boss: "Illugus",
+  reserve_boss: "Bongus",
+
+  // default: "Default", // can't
+  // redd: "Marlin", // always true
+
+  racer: "Barnes",
+  // cycle: "Gene", // no defeated_ tag
+  // redd2: "Marlin 2", // no defeated_ tag
+  // mask: "Jack", // no defeated_ tag
+  champion: "Valerie",
+};
+
 export default function Encounters() {
   const navigate = useNavigate();
   const encounterId = useParams().encounterId;
   const encounter = encounterId ? ENCOUNTER_DATA[encounterId] : undefined;
+  const [bossesDefeated, setBossesDefeated] = useState<Record<string, boolean>>(
+    { redd: true },
+  );
+
+  const bonus_levels = encounter
+    ? getLevelBonus(
+        typeof encounter.scales == "string" ? encounter.scales : "redd",
+        bossesDefeated,
+      )
+    : 0;
 
   return (
     <>
@@ -49,9 +84,30 @@ export default function Encounters() {
         </select>
         {encounter
           ? encounter.scales
-            ? ` - Scales with ${encounter.scales}`
+            ? ` - Scales with ${encounter.scales} - +${Math.floor(bonus_levels)} levels`
             : " - No scaling"
           : null}
+        {" - Defeated:"}
+        <span className={styles.bosses}>
+          {Object.keys(BOSSES_MAP).map((bossId, index) => (
+            <>
+              {index == 0 ? null : " - "}
+              <label key={bossId}>
+                <input
+                  type="checkbox"
+                  checked={bossesDefeated[bossId]}
+                  onChange={(event) =>
+                    setBossesDefeated((bosses) => ({
+                      ...bosses,
+                      [bossId]: event.target.checked,
+                    }))
+                  }
+                />
+                {BOSSES_MAP[bossId]}
+              </label>
+            </>
+          ))}
+        </span>
         <div className={styles.team}>
           <BeastieRenderProvider>
             {encounter
@@ -61,6 +117,7 @@ export default function Encounters() {
                     encounterId={encounter.id}
                     encBeastie={encBeastie}
                     index={index}
+                    bonus_levels={bonus_levels}
                   />
                 ))
               : null}

@@ -8,6 +8,7 @@ import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvi
 import EncounterBeastieElem from "./EncounterBeastieElem";
 import getLevelBonus from "./getLevelBonus";
 import { useState } from "react";
+import MoveModalProvider from "../../shared/MoveModalProvider";
 
 const ENCOUNTER_LIST = Object.values(ENCOUNTER_DATA);
 
@@ -110,19 +111,21 @@ export default function Encounters() {
           ))}
         </span>
         <div className={styles.team}>
-          <BeastieRenderProvider>
-            {encounter
-              ? encounter.team.map((encBeastie, index) => (
-                  <EncounterBeastieElem
-                    key={index}
-                    encounterId={encounter.id}
-                    encBeastie={encBeastie}
-                    index={index}
-                    bonus_levels={bonus_levels}
-                  />
-                ))
-              : null}
-          </BeastieRenderProvider>
+          <MoveModalProvider>
+            <BeastieRenderProvider>
+              {encounter
+                ? encounter.team.map((encBeastie, index) => (
+                    <EncounterBeastieElem
+                      key={index}
+                      encounterId={encounter.id}
+                      encBeastie={encBeastie}
+                      index={index}
+                      bonus_levels={bonus_levels}
+                    />
+                  ))
+                : null}
+            </BeastieRenderProvider>
+          </MoveModalProvider>
         </div>
       </div>
     </>

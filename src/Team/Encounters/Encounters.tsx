@@ -49,12 +49,13 @@ export default function Encounters() {
     { redd: true },
   );
 
-  const bonus_levels = encounter
-    ? getLevelBonus(
-        typeof encounter.scales == "string" ? encounter.scales : "redd",
-        bossesDefeated,
-      )
-    : 0;
+  const bonus_levels =
+    encounter && encounter.scales
+      ? getLevelBonus(
+          typeof encounter.scales == "string" ? encounter.scales : "redd",
+          bossesDefeated,
+        )
+      : 0;
 
   return (
     <>

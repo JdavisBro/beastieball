@@ -557,6 +557,7 @@
     },
     "encounters": {
       "title": "Encounters",
+      "description": "View Teams from encounters in Beastieball!",
       "encounterSelect": "Encounter: ",
       "scales": "Scales with {boss}: +{levels} levels",
       "noScaling": "No scaling",

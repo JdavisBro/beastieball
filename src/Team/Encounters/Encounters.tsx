@@ -65,15 +65,20 @@ export default function Encounters() {
   return (
     <>
       <OpenGraph
-        title={`Encounters - ${import.meta.env.VITE_BRANDING}`}
-        description="View Teams from encounters in Beastieball!"
+        title={L("common.title", {
+          page: L("teams.encounters.title"),
+          branding: import.meta.env.VITE_BRANDING,
+        })}
+        description={L("teams.encounters.description")}
         image="gameassets/sprMainmenu/27.png"
         url="team/encounters/"
       />
       <Header
-        title="Encounters"
+        title={L("teams.encounters.title")}
         returnButtonTo="/team/"
-        returnButtonTitle={`${import.meta.env.VITE_BRANDING} Team Page`}
+        returnButtonTitle={L("teams.return", {
+          branding: import.meta.env.VITE_BRANDING,
+        })}
       />
       <div className={styles.box}>
         <label>

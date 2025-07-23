@@ -106,7 +106,7 @@ export default function Encounters() {
               <label key={bossId}>
                 <input
                   type="checkbox"
-                  checked={bossesDefeated[bossId]}
+                  checked={bossesDefeated[bossId] == true}
                   onChange={(event) =>
                     setBossesDefeated((bosses) => ({
                       ...bosses,
@@ -118,6 +118,10 @@ export default function Encounters() {
               </label>
             </>
           ))}
+          {" - "}
+          <button onClick={() => setBossesDefeated({ redd: true })}>
+            Reset
+          </button>
         </span>
       </div>
       <div className={styles.team}>

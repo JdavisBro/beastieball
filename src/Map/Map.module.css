@@ -295,3 +295,41 @@
 .itemSelectDesc {
   line-height: 1em;
 }
+
+.encounterImgmarker {
+  composes: imgmarker;
+  border-color: red;
+}
+
+div:has(> .encounter) {
+  width: inherit !important;
+  min-width: 200px;
+}
+
+.encounter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+  gap: 4px;
+}
+
+.encounterTeam {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.encounterBeastie {
+  display: flex;
+  min-width: 60px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.encounterBeastie img {
+  height: 64px;
+  width: 64px;
+}

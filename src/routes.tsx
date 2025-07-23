@@ -135,6 +135,18 @@ const routes: Array<RouteObject> = [
         loader: () =>
           import("./Team/Builder/TeamBuilder").then((m) => m.default),
       },
+      {
+        element: <LoaderComponent />,
+        path: "/team/encounters/:encounterId",
+        loader: () =>
+          import("./Team/Encounters/Encounters").then((m) => m.default),
+      },
+      {
+        element: <LoaderComponent />,
+        path: "/team/encounters/",
+        loader: () =>
+          import("./Team/Encounters/Encounters").then((m) => m.default),
+      },
 
       {
         element: <LoaderComponent />,

@@ -1,0 +1,39 @@
+.box {
+  composes: animBoxBackground from global;
+  color: black;
+  width: 100%;
+  text-align: center;
+  margin: 6px auto;
+  padding: 4px 8px;
+  width: fit-content;
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
+}
+
+.bosses {
+  user-select: none;
+}
+
+.bosses > label {
+  white-space: nowrap;
+}
+
+.team {
+  flex: 0 1 auto;
+  display: flex;
+  padding: 10px 0 10px 0;
+  gap: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.beastieContainer {
+  max-width: 350px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.beastieContainer > div {
+  flex-grow: 1;
+}

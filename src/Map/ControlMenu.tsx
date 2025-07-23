@@ -52,8 +52,6 @@ const WILD_ITEMS = EXTRA_MARKERS.gifts
   .map((itemId) => ITEM_DIC[itemId])
   .sort((item1, item2) => item1.type - item2.type || item1.img - item2.img);
 
-console.log(WILD_ITEMS);
-
 function ItemSection({
   huntedItem,
   setHuntedItem,
@@ -115,6 +113,7 @@ type ControlLayerType = {
   children: React.ReactNode;
   title: string;
   category?: string;
+  defaultHidden?: boolean;
 };
 
 type Props = {
@@ -175,7 +174,11 @@ function ControlMenuInner({
       return;
     }
     const anyNotVisible = categoryLayers[category].some(
-      (layer) => layersVisible[layer] === false,
+      (layer) =>
+        (layersVisible[layer] ??
+          (layers.find((l) => l.title == layer)?.defaultHidden
+            ? false
+            : true)) === false,
     );
     for (const layer of categoryLayers[category]) {
       setLayer(layer, anyNotVisible);
@@ -205,14 +208,18 @@ function ControlMenuInner({
             <label>
               <input
                 type="checkbox"
-                checked={layersVisible[layer.title] ?? true}
+                checked={
+                  layersVisible[layer.title] ??
+                  (layer.defaultHidden ? false : true)
+                }
                 onChange={(event) =>
                   setLayer(layer.title, event.currentTarget.checked)
                 }
               />{" "}
               {Loc("map.markers." + layer.title)}
             </label>
-            {(layersVisible[layer.title] ?? true) ? (
+            {(layersVisible[layer.title] ??
+            (layer.defaultHidden ? false : true)) ? (
               <LayerGroup>{layer.children}</LayerGroup>
             ) : undefined}
           </Fragment>

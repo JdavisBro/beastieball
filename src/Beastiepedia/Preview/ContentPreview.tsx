@@ -281,6 +281,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       state: undefined,
       frameLength: 0,
       anim: anim,
+      frame: undefined,
     };
   }, [anim]);
 

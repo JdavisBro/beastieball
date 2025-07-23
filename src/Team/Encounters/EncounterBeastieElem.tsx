@@ -7,6 +7,7 @@ import getMoveset from "./getMoveset";
 import getMetamorphAtLevel from "./getMetamorphAtLevel";
 import Randomizer from "../../utils/Randomizer";
 import { useMemo } from "react";
+import useLocalization from "../../localization/useLocalization";
 
 function hashCode(text: string) {
   let hash = 0;
@@ -29,6 +30,8 @@ export default function EncounterBeastieElem({
   index: number;
   bonus_levels: number;
 }) {
+  const { L } = useLocalization();
+
   const level = encBeastie.level + Math.floor(bonus_levels);
 
   const pid = useMemo(createPid, [encounterId]);
@@ -130,7 +133,7 @@ export default function EncounterBeastieElem({
             : String(index + 1)
           ).padStart(2, "0"),
           color: color,
-          name: encBeastie.name ?? "",
+          name: L(encBeastie.name ?? ""),
           spr_index: spr_index,
           xp: level ** 3 * beastieData.growth,
           scale: encBeastie.size && encBeastie.size > 0 ? encBeastie.size : 0.5,

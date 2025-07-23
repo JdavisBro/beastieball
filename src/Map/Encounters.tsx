@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+import * as L from "leaflet";
+import { Popup } from "react-leaflet";
+
 import { EncounterDataType } from "../data/EncounterData";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import styles from "./Map.module.css";
@@ -6,7 +10,10 @@ import {
   useSpoilerMode,
   useSpoilerSeen,
 } from "../shared/useSpoiler";
-import { Link } from "react-router-dom";
+import { EXTRA_MARKERS } from "../data/WorldData";
+import DivIconMarker from "./DivIconMarker";
+import { useCallback, useRef, useState } from "react";
+import useLocalization from "../localization/useLocalization";
 
 const LEVEL_METAMORPHS = [0, 4, 9, 10, 11];
 
@@ -37,7 +44,7 @@ function findMetamorphAtLevel(
   return new_beastie ?? null;
 }
 
-export default function EncounterPopup({
+function EncounterPopup({
   encounterId,
   encounterData,
   loadEncounterData,
@@ -46,16 +53,20 @@ export default function EncounterPopup({
   encounterData: EncounterDataType | undefined;
   loadEncounterData: () => void;
 }) {
+  const { L: Loc, getLink } = useLocalization();
+
   const [spoilerMode] = useSpoilerMode();
   const [spoilerSeen, setSpoilerSeen] = useSpoilerSeen();
 
   if (!encounterData) {
     loadEncounterData();
-    return <div>Loading Encounters</div>;
+    return <div>{Loc("map.encounterPopup.loadingEncounters")}</div>;
   }
   const encounter = encounterData[encounterId];
   if (!encounter) {
-    return <div>Encounter not found: {encounterId}</div>;
+    return (
+      <div>{Loc("map.encounterPopup.encounterNotFound", { encounterId })}</div>
+    );
   }
 
   return (
@@ -85,7 +96,9 @@ export default function EncounterPopup({
             <div key={index} className={styles.encounterBeastie}>
               <Link
                 to={
-                  isWild || isSpoiler ? "" : `/beastiepedia/${beastieData.name}`
+                  isWild || isSpoiler
+                    ? ""
+                    : `/beastiepedia/${Loc(beastieData.name)}`
                 }
                 onClick={
                   isSpoiler
@@ -101,23 +114,89 @@ export default function EncounterPopup({
                   src={
                     isSpoiler
                       ? "/gameassets/sprExclam_1.png"
-                      : `/icons/${beastieData.name}.png`
+                      : `/icons/${Loc(beastieData.name, {}, true)}.png`
+                  }
+                  alt={
+                    isWild
+                      ? ""
+                      : isSpoiler
+                        ? Loc("common.hiddenBeastie")
+                        : Loc(beastieData.name)
                   }
                 />
               </Link>
               <div>
-                {beastie.name || (isSpoiler ? "???" : beastieData.name)}
+                {Loc(
+                  (beastie.name ?? "") ||
+                    (isWild
+                      ? "map.encounterPopup.wild"
+                      : isSpoiler
+                        ? "common.spoiler"
+                        : beastieData.name),
+                )}
               </div>
-              {isWild ? <div>Nearby Wild Beastie</div> : null}
-              <div>Lvl {beastie.level}</div>
+              <div>
+                {Loc("map.encounterPopup.lvl", {
+                  level: String(beastie.level),
+                })}
+              </div>
             </div>
           );
         })}
       </div>
       {encounter.scales ? (
-        <div>Beastie level or metamorphosis may be higher due to scaling.</div>
+        <div>{Loc("map.encounterPopup.scalingNote")}</div>
       ) : null}
-      <Link to={`/team/encounters/${encounter.id}`}>View more details.</Link>
+      <Link to={getLink(`/team/encounters/${encounter.id}`)}>
+        {Loc("map.encounterPopup.moreDetailsLink")}
+      </Link>
     </div>
   );
+}
+
+export default function Encounters() {
+  const { L: Loc } = useLocalization();
+
+  const [encounterData, setEncounterData] = useState<
+    EncounterDataType | undefined
+  >(undefined);
+  const loadingEncounterDataRef = useRef(false);
+
+  const loadEncounterData = useCallback(() => {
+    if (loadingEncounterDataRef.current) {
+      return;
+    }
+    loadingEncounterDataRef.current = true;
+    import("../data/EncounterData").then((data) =>
+      setEncounterData(data.default),
+    );
+  }, []);
+
+  const encounterMarker = Loc("map.encounterMarker");
+
+  return EXTRA_MARKERS.encounters.map((encounter) => (
+    <DivIconMarker
+      key={encounter.encounter}
+      tagName="div"
+      icon={{
+        className: styles.hidemarker,
+        iconSize: [15, 30],
+      }}
+      markerprops={{
+        position: L.latLng(-encounter.position[1], encounter.position[0]),
+      }}
+      className={styles.encounterImgmarker}
+      popup={
+        <Popup>
+          <EncounterPopup
+            encounterId={encounter.encounter}
+            encounterData={encounterData}
+            loadEncounterData={loadEncounterData}
+          />
+        </Popup>
+      }
+    >
+      <img src="/gameassets/sprSponsors/5.png" alt={encounterMarker} />
+    </DivIconMarker>
+  ));
 }

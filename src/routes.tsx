@@ -137,13 +137,13 @@ const routes: Array<RouteObject> = [
       },
       {
         element: <LoaderComponent />,
-        path: "/team/encounters/:encounterId",
+        path: "team/encounters/:encounterId",
         loader: () =>
           import("./Team/Encounters/Encounters").then((m) => m.default),
       },
       {
         element: <LoaderComponent />,
-        path: "/team/encounters/",
+        path: "team/encounters/",
         loader: () =>
           import("./Team/Encounters/Encounters").then((m) => m.default),
       },

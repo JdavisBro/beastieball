@@ -17,8 +17,13 @@ language_out_dir = Path(r"../src/localization/languages/")
 
 INCLUDE_PREFIXES = [
   "_map_",
+  "socialssetup_classsocial_",
 ]
-required_keys = []
+required_keys = [
+  "Racer_Create0npcname_001",
+  "Headmaster_Create0npcname_001",
+  "Valerie_Create0npcname_001",
+]
 
 def get_keys(data) -> list[str] | None:
   if isinstance(data, str):

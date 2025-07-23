@@ -9,6 +9,7 @@ import EncounterBeastieElem from "./EncounterBeastieElem";
 import getLevelBonus from "./getLevelBonus";
 import { useState } from "react";
 import MoveModalProvider from "../../shared/MoveModalProvider";
+import useLocalization from "../../localization/useLocalization";
 
 const ENCOUNTER_LIST = Object.values(ENCOUNTER_DATA);
 
@@ -20,29 +21,31 @@ function prettyName(name: string) {
 }
 
 const BOSSES_MAP: Record<string, string> = {
-  kaz: "Kaz",
-  riven: "Riven",
-  science: "Celia",
-  pirate: "Marcy",
-  celeb: "Sunsoo",
-  streamer: "Elena",
-  academy: "Callisto",
-  warrior: "Dominic",
-  coral_shroom_0: "Surgus",
-  shroom_path_boss: "Illugus",
-  reserve_boss: "Bongus",
+  kaz: "¦socialssetup_classsocial_005¦",
+  riven: "¦socialssetup_classsocial_003¦",
+  science: "¦socialssetup_classsocial_007¦",
+  pirate: "¦socialssetup_classsocial_004¦",
+  celeb: "¦socialssetup_classsocial_006¦",
+  streamer: "¦socialssetup_classsocial_009¦",
+  academy: "¦Headmaster_Create0npcname_001¦",
+  warrior: "¦socialssetup_classsocial_010¦",
+  coral_shroom_0: "¦beastiesetup_name_003¦",
+  shroom_path_boss: "¦beastiesetup_name_004¦",
+  reserve_boss: "¦beastiesetup_name_002¦",
 
   // default: "Default", // can't
   // redd: "Marlin", // always true
 
-  racer: "Barnes",
+  racer: "¦Racer_Create0npcname_001¦",
   // cycle: "Gene", // no defeated_ tag
   // redd2: "Marlin 2", // no defeated_ tag
   // mask: "Jack", // no defeated_ tag
-  champion: "Valerie",
+  champion: "¦Valerie_Create0npcname_001¦",
 };
 
 export default function Encounters() {
+  const { L, getLink } = useLocalization();
+
   const navigate = useNavigate();
   const encounterId = useParams().encounterId;
   const encounter = encounterId ? ENCOUNTER_DATA[encounterId] : undefined;
@@ -58,6 +61,7 @@ export default function Encounters() {
         )
       : 0;
 
+  const bossSep = L("teams.encounters.bossSep");
   return (
     <>
       <OpenGraph
@@ -77,7 +81,9 @@ export default function Encounters() {
           <select
             onChange={(event) =>
               navigate(
-                `/team/encounters/${event.target.value == "undefined" ? "" : event.target.value}`,
+                getLink(
+                  `/team/encounters/${event.target.value == "undefined" ? "" : event.target.value}`,
+                ),
               )
             }
             value={encounterId}
@@ -93,16 +99,19 @@ export default function Encounters() {
         <br />
         {encounter
           ? encounter.scales
-            ? `Scales with ${encounter.scales}: +${Math.floor(bonus_levels)} levels`
-            : "No scaling"
+            ? L("teams.encounters.scales", {
+                boss: String(encounter.scales),
+                levels: String(Math.floor(bonus_levels)),
+              })
+            : L("teams.encounters.noScaling")
           : null}
       </div>
       <div className={styles.box}>
-        Defeated:{" "}
+        {L("teams.encounters.defeatedBoss")}
         <span className={styles.bosses}>
           {Object.keys(BOSSES_MAP).map((bossId, index) => (
             <>
-              {index == 0 ? null : " - "}
+              {index == 0 ? null : bossSep}
               <label key={bossId}>
                 <input
                   type="checkbox"
@@ -114,13 +123,13 @@ export default function Encounters() {
                     }))
                   }
                 />
-                {BOSSES_MAP[bossId]}
+                {L(BOSSES_MAP[bossId])}
               </label>
             </>
           ))}
-          {" - "}
+          {bossSep}
           <button onClick={() => setBossesDefeated({ redd: true })}>
-            Reset
+            {L("teams.encounters.resetBoss")}
           </button>
         </span>
       </div>

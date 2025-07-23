@@ -415,6 +415,7 @@
       "extinctUnseen": "??? Beastie Locations",
       "extinct": "Extinct Beastie Locations",
       "metamorphosis": "Metamorphosis Locations",
+      "encounters": "Encounters",
       "exploration": "Exploration",
       "insideOverlay": "Inside Overlays",
       "items": "Items",
@@ -442,6 +443,15 @@
     },
     "extinctFoundHerePre": "",
     "extinctFoundHerePost": " is found here initially.",
+    "encounterMarker": "Encounter Marker",
+    "encounterPopup": {
+      "loadingEncounters": "Loading Encounters",
+      "encounterNotFound": "Encounter not found: {encounterId}",
+      "lvl": " Lvl {level}",
+      "scalingNote": "Beastie level and metamorphosis may be higher due to scaling.",
+      "wild": "Nearby Wild Beastie",
+      "moreDetailsLink": "View more details."
+    },
     "gate": "Gate",
     "gateMarker": "Gate Marker",
     "switch": "Switch",
@@ -544,6 +554,15 @@
       "playNum": "Play {num}: ",
       "playUnset": "Unset",
       "selectPlay": "Select Play {num}"
+    },
+    "encounters": {
+      "title": "Encounters",
+      "encounterSelect": "Encounter: ",
+      "scales": "Scales with {boss}: +{levels} levels",
+      "noScaling": "No scaling",
+      "defeatedBoss": "Defeated: ",
+      "resetBoss": "Reset",
+      "bossSep": " - "
     }
   }
 }

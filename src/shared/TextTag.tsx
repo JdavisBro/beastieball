@@ -83,6 +83,10 @@ class TagBuilder {
     imgText: 0,
   }; // element counts of each type, for keys.
 
+  constructor(L: LocalizationFunction) {
+    this.L = L;
+  }
+
   applyTag(tag: string, value?: string) {
     if (tag.startsWith("spr")) {
       const alt =
@@ -265,8 +269,7 @@ export default function TextTag(props: Props): React.ReactElement {
   if (!text.includes("[")) {
     return <span className={styles.texttag}>{text}</span>;
   }
-  const builder = new TagBuilder();
-  builder.L = L;
+  const builder = new TagBuilder(L);
   // gets text before next tag or end of string (match[1]) (match[2] is [ when [[) + next tag (match[3]) + value (match[4])
   const regex = /([^[]*)(?:\[(\[)|\[(.*?)(?:,(.*?))?\]|$)/g;
   let match = regex.exec(text);

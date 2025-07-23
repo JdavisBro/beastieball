@@ -71,25 +71,34 @@ export default function Encounters() {
         returnButtonTo="/team/"
         returnButtonTitle={`${import.meta.env.VITE_BRANDING} Team Page`}
       />
-      <div>
-        <select
-          onChange={(event) =>
-            navigate(`/team/encounters/${event.target.value}`)
-          }
-          value={encounterId}
-        >
-          {ENCOUNTER_LIST.map((encounter) => (
-            <option key={encounter.id} value={encounter.id}>
-              {prettyName(encounter.id)}
-            </option>
-          ))}
-        </select>
+      <div className={styles.box}>
+        <label>
+          Encounter:{" "}
+          <select
+            onChange={(event) =>
+              navigate(
+                `/team/encounters/${event.target.value == "undefined" ? "" : event.target.value}`,
+              )
+            }
+            value={encounterId}
+          >
+            <option value={"undefined"}>None</option>
+            {ENCOUNTER_LIST.map((encounter) => (
+              <option key={encounter.id} value={encounter.id}>
+                {prettyName(encounter.id)}
+              </option>
+            ))}
+          </select>
+        </label>
+        <br />
         {encounter
           ? encounter.scales
-            ? ` - Scales with ${encounter.scales} - +${Math.floor(bonus_levels)} levels`
-            : " - No scaling"
+            ? `Scales with ${encounter.scales}: +${Math.floor(bonus_levels)} levels`
+            : "No scaling"
           : null}
-        {" - Defeated:"}
+      </div>
+      <div className={styles.box}>
+        Defeated:{" "}
         <span className={styles.bosses}>
           {Object.keys(BOSSES_MAP).map((bossId, index) => (
             <>
@@ -110,23 +119,23 @@ export default function Encounters() {
             </>
           ))}
         </span>
-        <div className={styles.team}>
-          <MoveModalProvider>
-            <BeastieRenderProvider>
-              {encounter
-                ? encounter.team.map((encBeastie, index) => (
-                    <EncounterBeastieElem
-                      key={index}
-                      encounterId={encounter.id}
-                      encBeastie={encBeastie}
-                      index={index}
-                      bonus_levels={bonus_levels}
-                    />
-                  ))
-                : null}
-            </BeastieRenderProvider>
-          </MoveModalProvider>
-        </div>
+      </div>
+      <div className={styles.team}>
+        <MoveModalProvider>
+          <BeastieRenderProvider>
+            {encounter
+              ? encounter.team.map((encBeastie, index) => (
+                  <EncounterBeastieElem
+                    key={index}
+                    encounterId={encounter.id}
+                    encBeastie={encBeastie}
+                    index={index}
+                    bonus_levels={bonus_levels}
+                  />
+                ))
+              : null}
+          </BeastieRenderProvider>
+        </MoveModalProvider>
       </div>
     </>
   );

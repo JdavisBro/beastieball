@@ -9,7 +9,9 @@ import EncounterBeastieElem from "./EncounterBeastieElem";
 import getLevelBonus from "./getLevelBonus";
 import { useState } from "react";
 import MoveModalProvider from "../../shared/MoveModalProvider";
-import useLocalization from "../../localization/useLocalization";
+import useLocalization, {
+  LocalizationFunction,
+} from "../../localization/useLocalization";
 
 const ENCOUNTER_LIST = Object.values(ENCOUNTER_DATA);
 
@@ -21,7 +23,10 @@ function prettyName(name: string) {
 }
 
 // only rowdy bosses, overworld ranked coaches, valerie. can be "defeated"
-const BOSSES_MAP: Record<string, string> = {
+const BOSSES_MAP: Record<
+  string,
+  string | ((L: LocalizationFunction) => string)
+> = {
   kaz: "¦socialssetup_classsocial_005¦",
   riven: "¦socialssetup_classsocial_003¦",
   science: "¦socialssetup_classsocial_007¦",
@@ -34,14 +39,14 @@ const BOSSES_MAP: Record<string, string> = {
   shroom_path_boss: "¦beastiesetup_name_004¦",
   reserve_boss: "¦beastiesetup_name_002¦",
 
-  redd: "Marlin", // always true
+  redd: "¦Redd_Create0npcname_001¦", // always true
 
   // non-defeatable
   default: "Default", // can't
   racer: "¦Racer_Create0npcname_001¦", // no defeated_ tag
-  cycle: "Gene", // no defeated_ tag
-  redd2: "Marlin 2", // no defeated_ tag
-  mask: "Jack", // no defeated_ tag
+  cycle: "¦Cycle_Create0npcname_001¦", // no defeated_ tag
+  redd2: (L) => L("¦Redd_Create0npcname_001¦") + " 2", // no defeated_ tag
+  mask: "¦Mask_Create0npcname_001¦", // no defeated_ tag
   champion: "¦Valerie_Create0npcname_001¦",
 };
 
@@ -79,6 +84,17 @@ export default function Encounters() {
       : 0;
 
   const bossSep = L("teams.encounters.bossSep");
+
+  const scalesBossKey = encounter
+    ? BOSSES_MAP[
+        typeof encounter.scales == "string" ? encounter.scales : "redd"
+      ]
+    : undefined;
+  const scalesBossName = scalesBossKey
+    ? typeof scalesBossKey == "string"
+      ? L(scalesBossKey)
+      : scalesBossKey(L)
+    : "";
   return (
     <>
       <OpenGraph
@@ -122,13 +138,7 @@ export default function Encounters() {
         {encounter
           ? encounter.scales
             ? L("teams.encounters.scales", {
-                boss: L(
-                  BOSSES_MAP[
-                    typeof encounter.scales == "string"
-                      ? encounter.scales
-                      : "redd"
-                  ],
-                ),
+                boss: scalesBossName,
                 levels: String(Math.floor(bonus_levels)),
               })
             : L("teams.encounters.noScaling")
@@ -151,7 +161,9 @@ export default function Encounters() {
                     }))
                   }
                 />
-                {L(BOSSES_MAP[bossId])}
+                {typeof BOSSES_MAP[bossId] == "string"
+                  ? L(BOSSES_MAP[bossId])
+                  : BOSSES_MAP[bossId](L)}
               </label>
             </>
           ))}

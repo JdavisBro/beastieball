@@ -23,6 +23,9 @@ required_keys = [
   "Racer_Create0npcname_001",
   "Headmaster_Create0npcname_001",
   "Valerie_Create0npcname_001",
+  "Cycle_Create0npcname_001",
+  "Redd_Create0npcname_001",
+  "Mask_Create0npcname_001",
 ]
 
 def get_keys(data) -> list[str] | None:

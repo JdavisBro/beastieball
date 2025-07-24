@@ -97,7 +97,7 @@ export default function Encounters() {
                 `/team/encounters/${event.target.value == "undefined" ? "" : event.target.value}`,
               )
             }
-            value={encounterId}
+            value={String(encounterId)}
           >
             <option value={"undefined"}>None</option>
             {ENCOUNTER_LIST.map((encounter) => (

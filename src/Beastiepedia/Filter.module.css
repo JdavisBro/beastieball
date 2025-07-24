@@ -40,28 +40,23 @@
   background-color: #ffaa55a8 !important;
 }
 
-.moveList,
-.abilityList {
-  display: flex;
-  gap: 4px;
-  flex-wrap: wrap;
+.list {
   max-height: 80dvh;
   height: 80dvh;
   align-content: start;
   overflow-y: auto;
   user-select: none;
-}
-
-.moveList {
   width: calc(
-    round(down, calc(90vw - 60px), min(calc(90vw - 60px), 474px)) + 13px
+    round(down, calc(90vw - 60px), min(calc(90vw - 60px), 262px)) + 13px
   );
 }
 
-.abilityList {
-  width: calc(
-    round(down, calc(90vw - 60px), min(calc(90vw - 60px), 264px)) + 13px
-  );
+.listFlex {
+  composes: list;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .ability {

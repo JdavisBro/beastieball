@@ -19,6 +19,7 @@ function prettyName(name: string) {
     .replace(/[^ \d]\d/g, (match) => match[0] + " " + match[1]);
 }
 
+// only rowdy bosses, overworld ranked coaches, valerie. can be "defeated"
 const BOSSES_MAP: Record<string, string> = {
   kaz: "Kaz",
   riven: "Riven",
@@ -32,15 +33,31 @@ const BOSSES_MAP: Record<string, string> = {
   shroom_path_boss: "Illugus",
   reserve_boss: "Bongus",
 
-  // default: "Default", // can't
-  // redd: "Marlin", // always true
+  redd: "Marlin", // always true
 
-  racer: "Barnes",
-  // cycle: "Gene", // no defeated_ tag
-  // redd2: "Marlin 2", // no defeated_ tag
-  // mask: "Jack", // no defeated_ tag
+  // non-defeatable
+  default: "Default", // can't
+  racer: "Barnes", // no defeated_ tag
+  cycle: "Gene", // no defeated_ tag
+  redd2: "Marlin 2", // no defeated_ tag
+  mask: "Jack", // no defeated_ tag
   champion: "Valerie",
 };
+
+const DEFEATABLE_BOSSES = [
+  "kaz",
+  "riven",
+  "science",
+  "pirate",
+  "celeb",
+  "streamer",
+  "academy",
+  "warrior",
+  "coral_shroom_0",
+  "shroom_path_boss",
+  "reserve_boss",
+  "champion",
+];
 
 export default function Encounters() {
   const navigate = useNavigate();
@@ -93,14 +110,14 @@ export default function Encounters() {
         <br />
         {encounter
           ? encounter.scales
-            ? `Scales with ${encounter.scales}: +${Math.floor(bonus_levels)} levels`
+            ? `Scales with ${BOSSES_MAP[typeof encounter.scales == "string" ? encounter.scales : "redd"]}: +${Math.floor(bonus_levels)} levels`
             : "No scaling"
           : null}
       </div>
       <div className={styles.box}>
         Defeated:{" "}
         <span className={styles.bosses}>
-          {Object.keys(BOSSES_MAP).map((bossId, index) => (
+          {DEFEATABLE_BOSSES.map((bossId, index) => (
             <>
               {index == 0 ? null : " - "}
               <label key={bossId}>

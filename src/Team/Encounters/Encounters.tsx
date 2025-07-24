@@ -124,7 +124,7 @@ export default function Encounters() {
                 ),
               )
             }
-            value={encounterId}
+            value={String(encounterId)}
           >
             <option value={"undefined"}>None</option>
             {ENCOUNTER_LIST.map((encounter) => (

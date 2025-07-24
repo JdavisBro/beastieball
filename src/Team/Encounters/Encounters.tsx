@@ -20,6 +20,7 @@ function prettyName(name: string) {
     .replace(/[^ \d]\d/g, (match) => match[0] + " " + match[1]);
 }
 
+// only rowdy bosses, overworld ranked coaches, valerie. can be "defeated"
 const BOSSES_MAP: Record<string, string> = {
   kaz: "¦socialssetup_classsocial_005¦",
   riven: "¦socialssetup_classsocial_003¦",
@@ -33,15 +34,31 @@ const BOSSES_MAP: Record<string, string> = {
   shroom_path_boss: "¦beastiesetup_name_004¦",
   reserve_boss: "¦beastiesetup_name_002¦",
 
-  // default: "Default", // can't
-  // redd: "Marlin", // always true
+  redd: "Marlin", // always true
 
-  racer: "¦Racer_Create0npcname_001¦",
-  // cycle: "Gene", // no defeated_ tag
-  // redd2: "Marlin 2", // no defeated_ tag
-  // mask: "Jack", // no defeated_ tag
+  // non-defeatable
+  default: "Default", // can't
+  racer: "¦Racer_Create0npcname_001¦", // no defeated_ tag
+  cycle: "Gene", // no defeated_ tag
+  redd2: "Marlin 2", // no defeated_ tag
+  mask: "Jack", // no defeated_ tag
   champion: "¦Valerie_Create0npcname_001¦",
 };
+
+const DEFEATABLE_BOSSES = [
+  "kaz",
+  "riven",
+  "science",
+  "pirate",
+  "celeb",
+  "streamer",
+  "academy",
+  "warrior",
+  "coral_shroom_0",
+  "shroom_path_boss",
+  "reserve_boss",
+  "champion",
+];
 
 export default function Encounters() {
   const { L, getLink } = useLocalization();
@@ -105,7 +122,13 @@ export default function Encounters() {
         {encounter
           ? encounter.scales
             ? L("teams.encounters.scales", {
-                boss: String(encounter.scales),
+                boss: L(
+                  BOSSES_MAP[
+                    typeof encounter.scales == "string"
+                      ? encounter.scales
+                      : "redd"
+                  ],
+                ),
                 levels: String(Math.floor(bonus_levels)),
               })
             : L("teams.encounters.noScaling")
@@ -114,7 +137,7 @@ export default function Encounters() {
       <div className={styles.box}>
         {L("teams.encounters.defeatedBoss")}
         <span className={styles.bosses}>
-          {Object.keys(BOSSES_MAP).map((bossId, index) => (
+          {DEFEATABLE_BOSSES.map((bossId, index) => (
             <>
               {index == 0 ? null : bossSep}
               <label key={bossId}>

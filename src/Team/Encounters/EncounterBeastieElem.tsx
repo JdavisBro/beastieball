@@ -145,6 +145,7 @@ export default function EncounterBeastieElem({
           hd_r: 1,
           ...training,
         }}
+        noMoveWarning={true}
       />
     </div>
   );

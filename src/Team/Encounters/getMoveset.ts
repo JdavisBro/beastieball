@@ -21,8 +21,6 @@ export default function getMoveset(
     return moves;
   }
 
-  console.log(learned);
-
   for (let i = encBeastie.moves.length - 1; i >= 0; i--) {
     const slot = encBeastie.moves[i];
     let move: string;
@@ -49,7 +47,6 @@ export default function getMoveset(
               const learns = beastieData.learnset.find(
                 (learn) => learn[1] == next_move,
               );
-              console.log(learns);
               if (!learns?.length) {
                 break;
               }

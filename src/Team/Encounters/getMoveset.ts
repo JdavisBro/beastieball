@@ -36,8 +36,10 @@ export default function getMoveset(
           if (!beastieData.attklist.includes(slot[i])) {
             continue;
           } else if (
-            !beastieData.learnset.find((learn) => learn[1] == slot[i])
+            beastieData.learnset.find((learn) => learn[1] == slot[i])
           ) {
+            move = slot[i];
+          } else {
             move = slot[i];
             if (i == slot.length - 1) {
               break;

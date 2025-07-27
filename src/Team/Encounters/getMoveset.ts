@@ -21,6 +21,8 @@ export default function getMoveset(
     return moves;
   }
 
+  console.log(learned);
+
   for (let i = encBeastie.moves.length - 1; i >= 0; i--) {
     const slot = encBeastie.moves[i];
     let move: string;
@@ -33,7 +35,9 @@ export default function getMoveset(
         } else {
           if (!beastieData.attklist.includes(slot[i])) {
             continue;
-          } else {
+          } else if (
+            !beastieData.learnset.find((learn) => learn[1] == slot[i])
+          ) {
             move = slot[i];
             if (i == slot.length - 1) {
               break;
@@ -43,7 +47,8 @@ export default function getMoveset(
               const learns = beastieData.learnset.find(
                 (learn) => learn[1] == next_move,
               );
-              if (!learns) {
+              console.log(learns);
+              if (!learns?.length) {
                 break;
               }
               const learn_level = learns[0] as number;

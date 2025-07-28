@@ -117,6 +117,8 @@ type Props = {
   setHuntedBeastie: (beastie: string | undefined) => void;
   postgame: boolean;
   setPostgame: (postgame: boolean) => void;
+  attractSpray: boolean;
+  setAttractSpray: (attractSpray: boolean) => void;
   huntedItem: string | undefined;
   setHuntedItem: (itemId: string | undefined) => void;
 };
@@ -127,6 +129,8 @@ function ControlMenuInner({
   setHuntedBeastie,
   postgame,
   setPostgame,
+  attractSpray,
+  setAttractSpray,
   huntedItem,
   setHuntedItem,
 }: Props) {
@@ -243,6 +247,15 @@ function ControlMenuInner({
             id="postgame"
           />{" "}
           Postgame Spawns
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={attractSpray}
+            onChange={(event) => setAttractSpray(event.currentTarget.checked)}
+            id="postgame"
+          />{" "}
+          Attract Spray
         </label>
       </ControlSection>
       <ControlSection

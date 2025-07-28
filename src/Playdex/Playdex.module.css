@@ -9,9 +9,17 @@
 }
 
 .settings {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
+  composes: animBoxBackground from global;
+  color: black;
+  text-align: center;
+  margin: 6px auto;
+  padding: 4px 8px;
+  width: fit-content;
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
+}
+
+.settings > label {
+  white-space: nowrap;
 }
 
 .movescontainer {

@@ -127,7 +127,8 @@ export default function PlayDex() {
             onChange={(event) => setSearch(event.currentTarget.value)}
             onFocus={(event) => event.currentTarget.select()}
           />
-        </label>{" "}
+        </label>
+        {" - "}
         <label>
           Sort by:{" "}
           <select
@@ -141,7 +142,8 @@ export default function PlayDex() {
             {/* <option value="3">Effect</option> */}
             <option value="4">Target</option>
           </select>
-        </label>{" "}
+        </label>
+        {" - "}
         <label>
           Type:{" "}
           <select
@@ -158,7 +160,8 @@ export default function PlayDex() {
             <option value="4">Support</option>
             <option value="5">Defense</option>
           </select>
-        </label>{" "}
+        </label>
+        {" - "}
         <label>
           Effect:{" "}
           <select
@@ -174,7 +177,8 @@ export default function PlayDex() {
               </option>
             ))}
           </select>
-        </label>{" "}
+        </label>
+        {" - "}
         <label>
           Favor:{" "}
           <select
@@ -197,7 +201,8 @@ export default function PlayDex() {
               </option>
             ))}
           </select>
-        </label>{" "}
+        </label>
+        {" - "}
         <label>
           Recently Changed:{" "}
           <input

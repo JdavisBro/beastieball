@@ -13,7 +13,9 @@ export default function getMoveset(
       learned.push(learn[1] as string);
     }
   }
-  const moves = learned.slice(Math.max(0, learned.length - 3)).reverse();
+  const moves = encBeastie.aggro
+    ? []
+    : learned.slice(Math.max(0, learned.length - 3)).reverse();
 
   if (!encBeastie.moves) {
     return moves;
@@ -31,6 +33,10 @@ export default function getMoveset(
         } else {
           if (!beastieData.attklist.includes(slot[i])) {
             continue;
+          } else if (
+            beastieData.learnset.find((learn) => learn[1] == slot[i])
+          ) {
+            move = slot[i];
           } else {
             move = slot[i];
             if (i == slot.length - 1) {
@@ -41,7 +47,7 @@ export default function getMoveset(
               const learns = beastieData.learnset.find(
                 (learn) => learn[1] == next_move,
               );
-              if (!learns) {
+              if (!learns?.length) {
                 break;
               }
               const learn_level = learns[0] as number;
@@ -69,6 +75,9 @@ export default function getMoveset(
   }
   if (moves.length > 3 && !encBeastie.aggro) {
     moves.splice(3, moves.length - 3);
+  }
+  if (encBeastie.aggro) {
+    moves.push("meter"); // Rowdy
   }
 
   return moves;

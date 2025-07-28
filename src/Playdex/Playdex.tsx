@@ -138,7 +138,8 @@ export default function PlayDex() {
             onChange={(event) => setSearch(event.currentTarget.value)}
             onFocus={(event) => event.currentTarget.select()}
           />
-        </label>{" "}
+        </label>
+        {" - "}
         <label>
           {L("playdex.sort.label")}
           <select
@@ -152,7 +153,8 @@ export default function PlayDex() {
             {/* <option value="3">{L("playdex.sort.effect")}</option> */}
             <option value="4">{L("playdex.sort.target")}</option>
           </select>
-        </label>{" "}
+        </label>
+        {" - "}
         <label>
           {L("playdex.type")}
           <select
@@ -169,7 +171,8 @@ export default function PlayDex() {
             <option value="4">{L("common.types.support")}</option>
             <option value="5">{L("common.types.defense")}</option>
           </select>
-        </label>{" "}
+        </label>
+        {" - "}
         <label>
           {L("playdex.effect.label")}
           <select
@@ -195,7 +198,8 @@ export default function PlayDex() {
               </option>
             ))}
           </select>
-        </label>{" "}
+        </label>
+        {" - "}
         <label>
           {L("playdex.favor")}
           <select
@@ -228,7 +232,8 @@ export default function PlayDex() {
               );
             })}
           </select>
-        </label>{" "}
+        </label>
+        {" - "}
         <label>
           {L("playdex.recentlyChanged")}
           <input

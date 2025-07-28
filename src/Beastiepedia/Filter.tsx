@@ -306,75 +306,70 @@ export default function Filter({
               />
             </label>
           ) : null}
-          <div onWheel={(event) => event.stopPropagation()}>
+          <div
+            className={tab < 2 ? styles.listFlex : styles.list}
+            onWheel={(event) => event.stopPropagation()}
+          >
             {tab == 0 ? (
-              <div className={styles.abilityList}>
-                {beastie_abilities
-                  .filter(
-                    (ability) =>
-                      !search ||
-                      filters.find(
+              beastie_abilities
+                .filter(
+                  (ability) =>
+                    !search ||
+                    filters.find(
+                      (filter) =>
+                        filter[0] == FilterTypes.Ability &&
+                        filter[1].id == ability.id,
+                    ) ||
+                    L(ability.name)
+                      .toLowerCase()
+                      .includes(search.toLowerCase()),
+                )
+                .map((ability) => (
+                  <AbilityButton
+                    key={ability.id}
+                    ability={ability}
+                    selected={
+                      !!filters.find(
                         (filter) =>
                           filter[0] == FilterTypes.Ability &&
                           filter[1].id == ability.id,
-                      ) ||
-                      L(ability.name)
-                        .toLowerCase()
-                        .includes(search.toLowerCase()),
-                  )
-                  .map((ability) => (
-                    <AbilityButton
-                      key={ability.id}
-                      ability={ability}
-                      selected={
-                        !!filters.find(
-                          (filter) =>
-                            filter[0] == FilterTypes.Ability &&
-                            filter[1].id == ability.id,
-                        )
-                      }
-                      handleClick={() =>
-                        handleToggleFilter([FilterTypes.Ability, ability], true)
-                      }
-                    />
-                  ))}
-              </div>
-            ) : null}
-            {tab == 1 ? (
-              <div className={styles.moveList}>
-                {beastie_moves
-                  .filter(
-                    (move) =>
-                      !search ||
+                      )
+                    }
+                    handleClick={() =>
+                      handleToggleFilter([FilterTypes.Ability, ability], true)
+                    }
+                  />
+                ))
+            ) : tab == 1 ? (
+              beastie_moves
+                .filter(
+                  (move) =>
+                    !search ||
+                    filters.find(
+                      (filter) =>
+                        filter[0] == FilterTypes.Move &&
+                        filter[1].id == move.id,
+                    ) ||
+                    L(move.name).toLowerCase().includes(search.toLowerCase()),
+                )
+                .map((move) => (
+                  <div
+                    key={move.id}
+                    onClick={() => handleToggleFilter([FilterTypes.Move, move])}
+                    className={
                       filters.find(
                         (filter) =>
                           filter[0] == FilterTypes.Move &&
                           filter[1].id == move.id,
-                      ) ||
-                      L(move.name).toLowerCase().includes(search.toLowerCase()),
-                  )
-                  .map((move) => (
-                    <div
-                      key={move.id}
-                      onClick={() =>
-                        handleToggleFilter([FilterTypes.Move, move])
-                      }
-                      className={
-                        filters.find(
-                          (filter) =>
-                            filter[0] == FilterTypes.Move &&
-                            filter[1].id == move.id,
-                        )
-                          ? styles.moveSelected
-                          : styles.moveContainer
-                      }
-                    >
-                      <MoveView move={move} noLearner={true} />
-                    </div>
-                  ))}
-              </div>
-            ) : null}
-            {tab == 2 ? (
+                      )
+                        ? styles.moveSelected
+                        : styles.moveContainer
+                    }
+                  >
+                    <MoveView move={move} noLearner={true} />
+                  </div>
+                ))
+            ) : tab == 2 ? (
               <>
                 {L("beastiepedia.sidebar.filter.allyTraining")}
                 <br />

@@ -26,10 +26,12 @@ export default function Beastie({
   teamBeastie,
   levelOverwrite,
   maxCoaching,
+  noMoveWarning,
 }: {
   teamBeastie: TeamBeastie;
   levelOverwrite?: number;
   maxCoaching?: boolean;
+  noMoveWarning?: boolean;
 }) {
   const { L, getLink } = useLocalization();
 
@@ -128,7 +130,9 @@ export default function Beastie({
           <BeastieMove
             key={moveId + index}
             move={MOVE_DIC[moveId]}
-            impossible={!beastiedata.attklist.includes(moveId)}
+            impossible={
+              !noMoveWarning && !beastiedata.attklist.includes(moveId)
+            }
           />
         ))}
       </div>

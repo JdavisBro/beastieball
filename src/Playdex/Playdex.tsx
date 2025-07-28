@@ -118,6 +118,7 @@ export default function PlayDex() {
   const [spoilerFriends] = useFriendSpoiler();
   const [spoilerMode] = useSpoilerMode();
 
+  const settingsSep = L("playdex.settingsSep");
   return (
     <div className={styles.container}>
       <OpenGraph
@@ -139,7 +140,7 @@ export default function PlayDex() {
             onFocus={(event) => event.currentTarget.select()}
           />
         </label>
-        {" - "}
+        {settingsSep}
         <label>
           {L("playdex.sort.label")}
           <select
@@ -154,7 +155,7 @@ export default function PlayDex() {
             <option value="4">{L("playdex.sort.target")}</option>
           </select>
         </label>
-        {" - "}
+        {settingsSep}
         <label>
           {L("playdex.type")}
           <select
@@ -172,7 +173,7 @@ export default function PlayDex() {
             <option value="5">{L("common.types.defense")}</option>
           </select>
         </label>
-        {" - "}
+        {settingsSep}
         <label>
           {L("playdex.effect.label")}
           <select
@@ -199,7 +200,7 @@ export default function PlayDex() {
             ))}
           </select>
         </label>
-        {" - "}
+        {settingsSep}
         <label>
           {L("playdex.favor")}
           <select
@@ -233,7 +234,7 @@ export default function PlayDex() {
             })}
           </select>
         </label>
-        {" - "}
+        {settingsSep}
         <label>
           {L("playdex.recentlyChanged")}
           <input

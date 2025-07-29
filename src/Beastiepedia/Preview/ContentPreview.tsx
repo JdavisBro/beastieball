@@ -180,7 +180,21 @@ export default function ContentPreview(props: Props): React.ReactNode {
       | undefined = undefined;
     if (anim && !paused) {
       const frames = Array.isArray(anim.frames) ? anim.frames : [anim.frames];
-      for (const state of frames) {
+      const possibleFrames = [0];
+      const checkedFrames = [];
+      for (let i = 0; i < possibleFrames.length; i++) {
+        const state = frames[possibleFrames[i]];
+        if (state.transitions?.length) {
+          for (const transition of state.transitions) {
+            if (!possibleFrames.includes(transition)) {
+              possibleFrames.push(transition);
+            }
+          }
+        }
+        checkedFrames.push(possibleFrames[i]);
+      }
+      for (const stateIndex of possibleFrames) {
+        const state = frames[stateIndex];
         const startFrame = state.startFrame || 0;
         const endFrame = state.endFrame || 0;
         const reverse = startFrame > endFrame;

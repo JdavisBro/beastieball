@@ -69,7 +69,7 @@ export default function EncounterBeastieElem({
   }
 
   const variant =
-    encBeastie.variant && encBeastie.variant != -1
+    encBeastie.variant !== undefined && encBeastie.variant != -1
       ? encBeastie.variant
       : randomSprite;
   const color = Array.isArray(encBeastie.color)
@@ -86,7 +86,7 @@ export default function EncounterBeastieElem({
         : 0;
 
   const ability_index =
-    encBeastie.ability && encBeastie.ability != -1
+    encBeastie.ability !== undefined && encBeastie.ability != -1
       ? encBeastie.ability
       : beastieData.ability_hidden || beastieData.ability.length == 1
         ? 0

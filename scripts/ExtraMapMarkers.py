@@ -28,8 +28,14 @@ def find_z_pos(x, y, shape_groups):
   for group in shape_groups:
     grp_x, grp_y = group.get("x", 0), group.get("y", 0)
     for shape in group.get("shapes_array", []):
+      if not (shape.get("flat", False) and shape.get("solid", False)):
+        continue
+      if shape.get("shadow_caster", False) or shape.get("wall_collider", False):
+        continue
       shp_x, shp_y = shape.get("x", 0), shape.get("y", 0)
       pts = shape.get("points_array", [])
+      if not pts:
+        continue
       poly = shapely.Polygon([
           [grp_x + shp_x + pts[i], grp_y + shp_y + pts[i+1]]
           for i in range(0, len(pts), 3)
@@ -42,6 +48,7 @@ def find_z_pos(x, y, shape_groups):
 for level in (gamedir / "world_data").glob("**/*.json"):
   if "world" in level.name or "zerozero" in level.name:
     continue
+
   with level.open() as f:
     level_data = json.load(f)
   if level_data["name"] not in level_stumps:
@@ -57,9 +64,10 @@ for level in (gamedir / "world_data").glob("**/*.json"):
     level_offset = offset[0]
   for obj in level_data["objects_array"]:
     z = find_z_pos(
-      obj.get("x", 0),
-      obj.get("y", 0),
-      level_data.get("shape_groups_array", []))
+      obj["x"],
+      obj["y"],
+      level_data.get("shape_groups_array", [])
+    )
     x = stump["world_x1"] + obj["x"] + level_offset[0]
     y = stump["world_y1"] + obj["y"] - (obj.get("z", 0)) - z + level_offset[1]
     if obj["object"] == "objGift":

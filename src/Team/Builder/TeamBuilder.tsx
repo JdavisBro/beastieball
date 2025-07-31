@@ -64,6 +64,8 @@ function verifyTeamJson(json: unknown) {
 }
 
 export function Box({ children }: { children: React.ReactNode[] }) {
+  const sep = useLocalization().L("teams.builder.sep");
+
   return (
     <div className={styles.box}>
       {children
@@ -71,7 +73,7 @@ export function Box({ children }: { children: React.ReactNode[] }) {
         .map((c, index) =>
           index > 0 ? (
             <Fragment key={index}>
-              {" - "}
+              {sep}
               {c}
             </Fragment>
           ) : (
@@ -163,7 +165,7 @@ export default function TeamBuilder() {
           <div className={teamScroll ? styles.editScrolls : styles.edit}>
             <Box>
               <label>
-                Team Scrolls Horizontally:
+                {L("teams.builder.scrollsHorizontally")}
                 <input
                   type="checkbox"
                   defaultChecked={teamScroll}
@@ -171,7 +173,6 @@ export default function TeamBuilder() {
                     setTeamScroll(event.currentTarget.checked)
                   }
                 />
-                {L("teams.builder.scrollsHorizontally")}
               </label>
               <TeamImageButton team={team} />
             </Box>

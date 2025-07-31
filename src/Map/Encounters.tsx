@@ -176,7 +176,7 @@ export default function Encounters() {
 
   return EXTRA_MARKERS.encounters.map((encounter) => (
     <DivIconMarker
-      key={encounter.encounter}
+      key={`${encounter.position[0]}-${encounter.position[1]}-${encounter.encounter}`}
       tagName="div"
       icon={{
         className: styles.hidemarker,

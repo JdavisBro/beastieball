@@ -139,7 +139,9 @@ export default function Encounters() {
             }
             value={String(encounterId)}
           >
-            <option value={"undefined"}>None</option>
+            <option value={"undefined"}>
+              {L("teams.encounters.noneSelected")}
+            </option>
             {ENCOUNTER_LIST.map((encounter) => (
               <option key={encounter.id} value={encounter.id}>
                 {prettyName(encounter.id)}

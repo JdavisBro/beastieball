@@ -428,7 +428,11 @@
       "showAll": "Show All",
       "noWild": "Beastie has no wild habitat.",
       "postgame": " Postgame Spawns",
-      "variantChance": "Variant Chance: "
+      "attractSpray": " Attract Spray",
+      "spawnRate": "{percent}%",
+      "variantChance": "Variant Chance: {percent}%",
+      "level": "Level {levels}",
+      "levelRange": "{0} - {1}"
     },
     "items": {
       "title": "Items",
@@ -518,7 +522,7 @@
       "edit": "Edit",
       "editing": "Editing",
       "swap": "⇄",
-      "scrollsHorizontally": "Team Scrolls Horizontally",
+      "scrollsHorizontally": "Team Scrolls Horizontally: ",
       "saveJson": "Save Team JSON",
       "loadJson": "Load Team JSON",
       "reset": "Reset Team",
@@ -536,15 +540,14 @@
         "saveCurrent": "Save Current Team as New Team"
       },
       "species": "Species: ",
+      "level": "Level: ",
+      "trait": "Trait: ",
       "name": "Name: ",
       "number": "Number: ",
       "color": "Color: ",
       "colorCopy": "Copy from Beastiepedia",
       "sprite": "Sprite: ",
-      "level": "Level: ",
-      "trait": "Trait: ",
       "coaching": "Coaching",
-      "sep": " - ",
       "coachingMin": "All to 0%",
       "coachingMax": "All to 100%",
       "training": "Training",
@@ -554,12 +557,14 @@
       "plays": "Plays: ",
       "playNum": "Play {num}: ",
       "playUnset": "Unset",
-      "selectPlay": "Select Play {num}"
+      "selectPlay": "Select Play {num}",
+      "sep": " - "
     },
     "encounters": {
       "title": "Encounters",
       "description": "View Teams from encounters in Beastieball!",
       "encounterSelect": "Encounter: ",
+      "noneSelected": "None",
       "scales": "Scales with {boss}: +{levels} levels",
       "noScaling": "No scaling",
       "defeatedBoss": "Defeated: ",

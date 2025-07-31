@@ -261,8 +261,8 @@ function ControlMenuInner({
             checked={attractSpray}
             onChange={(event) => setAttractSpray(event.currentTarget.checked)}
             id="postgame"
-          />{" "}
-          Attract Spray
+          />
+          {Loc("map.beastie.attractSpray")}
         </label>
       </ControlSection>
       <ControlSection

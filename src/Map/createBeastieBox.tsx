@@ -122,24 +122,34 @@ export default function createBeastieBox(
             {Loc(beastie.name)}
           </Link>
           <br />
-          <span title={`${overall.percent}%`}>
+          <span
+            title={Loc("map.beastie.spawnRate", {
+              percent: String(overall.percent),
+            })}
+          >
             {overall.percent > 0
-              ? Math.round(overall.percent * 100) / 100
-              : "???"}
-            %
+              ? Loc("map.beastie.spawnRate", {
+                  percent: String(Math.round(overall.percent * 100) / 100),
+                })
+              : Loc("common.spoiler")}
           </span>
           <br />
-          Level{" "}
-          {attractSpray
-            ? overall.levelMax + 1
-            : overall.levelMin == overall.levelMax
-              ? overall.levelMax
-              : `${overall.levelMin} - ${overall.levelMax}`}
+          {Loc("map.beastie.level", {
+            levels: attractSpray
+              ? String(overall.levelMax + 1)
+              : overall.levelMin == overall.levelMax
+                ? String(overall.levelMax)
+                : Loc("map.beastie.levelRange", {
+                    "0": String(overall.levelMin),
+                    "1": String(overall.levelMax),
+                  }),
+          })}
           {beastie.colors2 ? (
             <>
               <br />
-              {Loc("map.beastie.variantChance")}
-              {overall_percent[value].variant * 100}%
+              {Loc("map.beastie.variantChance", {
+                percent: String(overall_percent[value].variant * 100),
+              })}
             </>
           ) : null}
         </Popup>

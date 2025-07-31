@@ -57,6 +57,25 @@ function verifyTeamJson(json: unknown) {
   return true;
 }
 
+export function Box({ children }: { children: React.ReactNode[] }) {
+  return (
+    <div className={styles.box}>
+      {children
+        .filter((c) => c)
+        .map((c, index) =>
+          index > 0 ? (
+            <>
+              {" - "}
+              {c}
+            </>
+          ) : (
+            c
+          ),
+        )}
+    </div>
+  );
+}
+
 export default function TeamBuilder() {
   const [team, setTeam] = ensureFullTeam(
     useLocalStorage<TeamBeastie[]>("teamBuilderTeam", []),
@@ -124,8 +143,9 @@ export default function TeamBuilder() {
             </div>
           </MoveModalProvider>
           <div className={styles.edit}>
-            <div className={styles.editOptions}>
+            <Box>
               <label>
+                Team Scrolls Horizontally:
                 <input
                   type="checkbox"
                   defaultChecked={teamScroll}
@@ -133,36 +153,42 @@ export default function TeamBuilder() {
                     setTeamScroll(event.currentTarget.checked)
                   }
                 />
-                Team Scrolls Horizontally
               </label>
-              <div>
-                <TeamImageButton team={team} />
-              </div>
-              <input
-                type="file"
-                onChange={(event) => {
-                  const files = event.currentTarget.files;
-                  if (files) {
-                    files[0].text().then((text) => {
-                      const newteam = JSON.parse(text);
-                      if (!verifyTeamJson(newteam)) {
-                        console.log("Invalid Team Loaded");
-                        return;
-                      }
-                      setTeam(
-                        [...new Array(5).keys()].map(
-                          (index) =>
-                            newteam[index] ?? createBeastie("0" + index),
-                        ),
-                      );
-                    });
-                  }
-                }}
-                accept=".json"
-                style={{ display: "none" }}
-                ref={fileInputRef}
+              <TeamImageButton team={team} />
+            </Box>
+            <Box>
+              <SavedTeams
+                currentTeam={team}
+                setCurrentTeam={setTeam}
+                setCurrentBeastie={(beastie: TeamBeastie) =>
+                  setBeastie(editingBeastie, beastie)
+                }
               />
-              <div>
+              <>
+                <input
+                  type="file"
+                  onChange={(event) => {
+                    const files = event.currentTarget.files;
+                    if (files) {
+                      files[0].text().then((text) => {
+                        const newteam = JSON.parse(text);
+                        if (!verifyTeamJson(newteam)) {
+                          console.log("Invalid Team Loaded");
+                          return;
+                        }
+                        setTeam(
+                          [...new Array(5).keys()].map(
+                            (index) =>
+                              newteam[index] ?? createBeastie("0" + index),
+                          ),
+                        );
+                      });
+                    }
+                  }}
+                  accept=".json"
+                  style={{ display: "none" }}
+                  ref={fileInputRef}
+                />
                 <button
                   onClick={() => {
                     const a = document.createElement("a");
@@ -174,39 +200,30 @@ export default function TeamBuilder() {
                 >
                   Save Team JSON
                 </button>
-                <button
-                  onClick={() => {
-                    if (fileInputRef.current) {
-                      fileInputRef.current.click();
-                    }
-                  }}
-                >
-                  Load Team JSON
-                </button>
-                <button onClick={() => setTeam(createTeam())}>
-                  Reset Team
-                </button>
-              </div>
-              <SavedTeams
-                currentTeam={team}
-                setCurrentTeam={setTeam}
-                setCurrentBeastie={(beastie: TeamBeastie) =>
-                  setBeastie(editingBeastie, beastie)
-                }
-              />
-              <EditBeastie
-                key={team[editingBeastie].pid + team[editingBeastie].specie}
-                beastie={team[editingBeastie]}
-                setBeastie={(beastie) =>
-                  setBeastie(
-                    editingBeastie,
-                    typeof beastie == "function"
-                      ? beastie(team[editingBeastie])
-                      : beastie,
-                  )
-                }
-              />
-            </div>
+              </>
+              <button
+                onClick={() => {
+                  if (fileInputRef.current) {
+                    fileInputRef.current.click();
+                  }
+                }}
+              >
+                Load Team JSON
+              </button>
+              <button onClick={() => setTeam(createTeam())}>Reset Team</button>
+            </Box>
+            <EditBeastie
+              key={team[editingBeastie].pid + team[editingBeastie].specie}
+              beastie={team[editingBeastie]}
+              setBeastie={(beastie) =>
+                setBeastie(
+                  editingBeastie,
+                  typeof beastie == "function"
+                    ? beastie(team[editingBeastie])
+                    : beastie,
+                )
+              }
+            />
           </div>
         </div>
       </BeastieRenderProvider>

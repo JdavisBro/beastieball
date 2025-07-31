@@ -31,7 +31,7 @@ export default function MoveSelect({
     );
 
   return (
-    <div>
+    <div className={styles.box}>
       <Modal
         header={`Select Play ${(selecting ?? 0) + 1}`}
         open={selecting !== undefined}

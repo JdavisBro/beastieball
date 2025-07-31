@@ -1,7 +1,10 @@
 import { useNavigate, useParams } from "react-router-dom";
 
 import styles from "./Encounters.module.css";
-import ENCOUNTER_DATA from "../../data/EncounterData";
+import ENCOUNTER_DATA, {
+  Encounter,
+  EncounterDataType,
+} from "../../data/EncounterData";
 import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
 import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider";
@@ -12,6 +15,13 @@ import MoveModalProvider from "../../shared/MoveModalProvider";
 import useLocalization, {
   LocalizationFunction,
 } from "../../localization/useLocalization";
+
+declare global {
+  interface Window {
+    encounter?: Encounter;
+    ENCOUNTER_DATA: EncounterDataType;
+  }
+}
 
 const ENCOUNTER_LIST = Object.values(ENCOUNTER_DATA);
 
@@ -74,6 +84,9 @@ export default function Encounters() {
   const [bossesDefeated, setBossesDefeated] = useState<Record<string, boolean>>(
     { redd: true },
   );
+
+  window.encounter = encounter;
+  window.ENCOUNTER_DATA = ENCOUNTER_DATA;
 
   const bonus_levels =
     encounter && encounter.scales

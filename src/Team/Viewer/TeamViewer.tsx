@@ -15,6 +15,7 @@ import type {
 import TeamImageButton from "../TeamImageButton.tsx";
 import FeaturedSection from "./FeaturedSection.tsx";
 import useScreenOrientation from "../../utils/useScreenOrientation.ts";
+import BEASTIE_DATA from "../../data/BeastieData.ts";
 import useLocalization from "../../localization/useLocalization.ts";
 
 declare global {
@@ -259,9 +260,29 @@ export default function Viewer() {
             <button
               onClick={() => {
                 if (team) {
+                  let newTeam = team.team;
+                  if (levelOverwrite) {
+                    newTeam = newTeam.map((beastie) => ({
+                      ...beastie,
+                      xp:
+                        levelOverwrite ** 3 *
+                        (BEASTIE_DATA.get(beastie.specie)?.growth ?? 1),
+                    }));
+                  }
+                  if (maxCoaching) {
+                    newTeam = newTeam.map((beastie) => ({
+                      ...beastie,
+                      ba_r: 1,
+                      bd_r: 1,
+                      ha_r: 1,
+                      hd_r: 1,
+                      ma_r: 1,
+                      md_r: 1,
+                    }));
+                  }
                   localStorage.setItem(
                     "teamBuilderTeam",
-                    JSON.stringify(team.team),
+                    JSON.stringify(newTeam),
                   );
                   navigate("/team/builder/");
                 }

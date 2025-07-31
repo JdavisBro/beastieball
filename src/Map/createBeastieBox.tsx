@@ -20,6 +20,7 @@ export default function createBeastieBox(
     React.SetStateAction<Record<string, boolean>>
   >,
   huntedBeastie: string | undefined,
+  attractSpray: boolean,
   Localization: LocalizationType,
 ) {
   const { L: Loc, getLink } = Localization;
@@ -32,12 +33,18 @@ export default function createBeastieBox(
     };
   } = {};
   const non_dupe_beasties: string[] = [];
-  group.forEach((value) => {
+  let previous_freq = 0;
+  group.forEach((value, index) => {
+    const freq = attractSpray
+      ? value.freq + ((100 * (index + 1)) / group.length - value.freq) * 0.5
+      : value.freq;
+    const percent = freq - previous_freq;
+    previous_freq = freq;
     if (beastie_filter != "all" && beastie_filter != value.specie) {
       return;
     }
     if (overall_percent[value.specie]) {
-      overall_percent[value.specie].percent += value.percent;
+      overall_percent[value.specie].percent += percent;
       overall_percent[value.specie].levelMin = Math.min(
         overall_percent[value.specie].levelMin,
         value.lvlA,
@@ -49,7 +56,7 @@ export default function createBeastieBox(
     } else {
       non_dupe_beasties.push(value.specie);
       overall_percent[value.specie] = {
-        percent: value.percent,
+        percent: percent,
         levelMin: value.lvlA,
         levelMax: value.lvlB,
         variant: value.variant,
@@ -66,6 +73,7 @@ export default function createBeastieBox(
       spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
     const alt = `${isSpoiler ? `Beastie #${beastie.number}` : Loc(beastie.name)} spawn location.`;
     const iconScale = beastie.id != huntedBeastie ? 1 : 1.5;
+    const overall = overall_percent[value];
     beastieSpawnsOverlays.push(
       <Marker
         key={`${key}-${beastie.id}`}
@@ -114,13 +122,19 @@ export default function createBeastieBox(
             {Loc(beastie.name)}
           </Link>
           <br />
-          {overall_percent[value].percent > 0
-            ? overall_percent[value].percent
-            : "???"}
-          %
+          <span title={`${overall.percent}%`}>
+            {overall.percent > 0
+              ? Math.round(overall.percent * 100) / 100
+              : "???"}
+            %
+          </span>
           <br />
-          Level {overall_percent[value].levelMin} -{" "}
-          {overall_percent[value].levelMax}
+          Level{" "}
+          {attractSpray
+            ? overall.levelMax + 1
+            : overall.levelMin == overall.levelMax
+              ? overall.levelMax
+              : `${overall.levelMin} - ${overall.levelMax}`}
           {beastie.colors2 ? (
             <>
               <br />

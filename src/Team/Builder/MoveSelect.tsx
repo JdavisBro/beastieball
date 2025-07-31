@@ -34,7 +34,7 @@ export default function MoveSelect({
     );
 
   return (
-    <div>
+    <div className={styles.box}>
       <Modal
         header={L("teams.builder.selectPlay", {
           num: String((selecting ?? 0) + 1),

@@ -36,17 +36,23 @@ export default function TeamImageButton({
   };
 
   return (
-    <>
-      {L("teams.image.imageLabel")}
-      <select onChange={(event) => setMode(Number(event.currentTarget.value))}>
-        <option value={DrawMode.VGrid}>{L("teams.image.drawMode.grid")}</option>
-        <option value={DrawMode.Horizontal}>
-          {L("teams.image.drawMode.horizontal")}
-        </option>
-        <option value={DrawMode.Vertical}>
-          {L("teams.image.drawMode.vertical")}
-        </option>
-      </select>
+    <span>
+      <label>
+        {L("teams.image.imageLabel")}
+        <select
+          onChange={(event) => setMode(Number(event.currentTarget.value))}
+        >
+          <option value={DrawMode.VGrid}>
+            {L("teams.image.drawMode.grid")}
+          </option>
+          <option value={DrawMode.Horizontal}>
+            {L("teams.image.drawMode.horizontal")}
+          </option>
+          <option value={DrawMode.Vertical}>
+            {L("teams.image.drawMode.vertical")}
+          </option>
+        </select>
+      </label>
       <button disabled={!team} onClick={() => saveImage(false)}>
         {L("teams.image.save")}
       </button>
@@ -54,6 +60,6 @@ export default function TeamImageButton({
         {L("teams.image.copy")}
       </button>
       <canvas ref={canvasRef} style={{ display: "none" }} />
-    </>
+    </span>
   );
 }

@@ -3,10 +3,16 @@
   flex-direction: column;
 }
 
+.containerScrolls {
+  composes: container;
+  max-height: calc(100dvh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
+}
+
 .team {
   flex: 0 1 auto;
   display: flex;
-  padding: 10px 0 10px 0;
+  padding: 5px 0 0 0;
   gap: 2px;
   flex-wrap: wrap;
   justify-content: center;
@@ -14,9 +20,10 @@
 
 .teamScroll {
   composes: team;
+  flex: 0 0 auto;
   flex-wrap: nowrap;
   justify-content: start;
-  padding: 10px;
+  padding: 5px 10px 0 10px;
   overflow-x: auto;
 }
 
@@ -35,16 +42,37 @@
   flex: 1 0 auto;
 }
 
-.edit {
-  flex: 1 0 auto;
-  margin: 8px;
+.box {
+  composes: animBoxBackground from global;
+  color: black;
+  margin: 6px 0;
+  padding: 4px 8px;
+  width: fit-content;
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
 }
 
-.editOptions {
+@media all and (max-aspect-ratio: 1/1) and (max-width: 800px) {
+  .box {
+    margin: 1px 0;
+  }
+}
+
+.box > * {
+  white-space: nowrap;
+}
+
+.edit {
+  flex: 1 1 auto;
+  margin: 4px;
   display: flex;
   flex-direction: column;
   gap: 4px;
   align-items: start;
+}
+
+.editScrolls {
+  composes: edit;
+  overflow-y: scroll;
 }
 
 .moveSelectModal {
@@ -98,4 +126,81 @@
 
 .savedTeamBeasties img {
   width: 60px;
+}
+
+.tabs {
+  width: fit-content;
+  height: 32px;
+  position: relative;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #000000,
+    #000000 10px,
+    #2e2e2e 10px,
+    #2e2e2e 20px
+  );
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+  z-index: 1;
+}
+
+.tabs > button {
+  font-family: inherit;
+  font-size: 1em;
+  background-color: transparent;
+  transition: background-color 0.2s;
+  border: none;
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+  height: 100%;
+}
+
+.tabs > button:hover {
+  background-color: #ffaa556b;
+}
+
+.selectedtab {
+  background-color: #ffaa55a8 !important;
+}
+
+.tabcontainer {
+  composes: animBoxBackground from global;
+  position: relative;
+  top: -4px;
+  margin-bottom: 10px;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 100%, 8px 100%);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 700px;
+  padding: 4px 16px;
+  color: black;
+}
+
+.statselect {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statrow {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.stattop {
+  font-size: 1.2em;
+}
+
+.stattopsep {
+  width: 30px;
+}
+
+.statimg {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.statinput {
+  width: 40px;
 }

@@ -86,6 +86,7 @@ export default function Map(): React.ReactNode {
   const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
 
   const [postgame, setPostgame] = useState(false);
+  const [attractSpray, setAttractSpray] = useState(false);
 
   const setQueryParam = (key: string, value?: string) => {
     const url = new URL(window.location.href);
@@ -241,6 +242,7 @@ export default function Map(): React.ReactNode {
           seenBeasties,
           setSeenBeasties,
           huntedBeastie,
+          attractSpray,
           Localization,
         ),
       );
@@ -435,6 +437,8 @@ export default function Map(): React.ReactNode {
           setHuntedBeastie={setHuntedBeastie}
           postgame={postgame}
           setPostgame={setPostgame}
+          attractSpray={attractSpray}
+          setAttractSpray={setAttractSpray}
           huntedItem={huntedItem}
           setHuntedItem={setHuntedItem}
         />

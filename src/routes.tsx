@@ -2,6 +2,7 @@ import {
   Navigate,
   Outlet,
   useLoaderData,
+  useNavigation,
   useParams,
   useRouteError,
   type RouteObject,
@@ -11,7 +12,46 @@ import { Fallback } from "./shared/CustomErrorBoundary";
 import LocalizationProvider from "./localization/LocalizationProvider";
 import SpoilerWarning from "./SpoilerWarning";
 import useLocalization from "./localization/useLocalization";
-import { FunctionComponent, memo, useMemo } from "react";
+import {
+  FunctionComponent,
+  memo,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import Loading from "./Loading";
+
+const LOADING_TIME = 30; // ms
+
+function Root() {
+  const navigation = useNavigation();
+  const [, setUpdate] = useState(false);
+  const timedOut = useRef(false);
+  if (navigation.state != "loading") {
+    timedOut.current = false;
+  }
+
+  useEffect(() => {
+    if (navigation.state == "loading") {
+      const timeout = setTimeout(() => {
+        setUpdate((update) => !update);
+        timedOut.current = true;
+      }, LOADING_TIME);
+      return () => clearTimeout(timeout);
+    }
+  }, [navigation.state]);
+
+  return timedOut.current ? (
+    <Loading />
+  ) : (
+    <LocalizationProvider>
+      <SpoilerWarning>
+        <Outlet />
+      </SpoilerWarning>
+    </LocalizationProvider>
+  );
+}
 
 function LoaderComponent() {
   const loader =
@@ -52,13 +92,7 @@ function NavigateLocalized({ to }: { to: string }) {
 const routes: Array<RouteObject> = [
   {
     path: ":lang?/",
-    element: (
-      <LocalizationProvider>
-        <SpoilerWarning>
-          <Outlet />
-        </SpoilerWarning>
-      </LocalizationProvider>
-    ),
+    Component: Root,
     errorElement: <RouteError />,
     children: [
       {

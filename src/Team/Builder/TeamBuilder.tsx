@@ -64,10 +64,10 @@ export function Box({ children }: { children: React.ReactNode[] }) {
         .filter((c) => c)
         .map((c, index) =>
           index > 0 ? (
-            <>
+            <Fragment key={index}>
               {" - "}
               {c}
-            </>
+            </Fragment>
           ) : (
             c
           ),
@@ -113,7 +113,9 @@ export default function TeamBuilder() {
         returnButtonTitle={`${import.meta.env.VITE_BRANDING} Team Page`}
       />
       <BeastieRenderProvider>
-        <div className={styles.container}>
+        <div
+          className={teamScroll ? styles.containerScrolls : styles.container}
+        >
           <MoveModalProvider>
             <div className={teamScroll ? styles.teamScroll : styles.team}>
               {team.map((beastie, index) => (
@@ -142,7 +144,7 @@ export default function TeamBuilder() {
               ))}
             </div>
           </MoveModalProvider>
-          <div className={styles.edit}>
+          <div className={teamScroll ? styles.editScrolls : styles.edit}>
             <Box>
               <label>
                 Team Scrolls Horizontally:

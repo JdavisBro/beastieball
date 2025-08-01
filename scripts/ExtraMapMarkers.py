@@ -44,6 +44,13 @@ def find_z_pos(x, y, shape_groups):
         highest_z = max(highest_z, group.get("z", 0) + shape.get("z", 0))
   return highest_z
 
+extinct_objs = {
+  "objSecretYeti": "myth_forest_yeti", # mascurry
+  "objTrainboss": "train_boss", # maraptor
+  "objSunkenboss": "sunken_boss", # diabloceras
+  "objMangroveboss": "mangrove_boss", # pladion
+  "objSecretReserve": "reserve_dino", # duggout
+}
 
 for level in (gamedir / "world_data").glob("**/*.json"):
   if "world" in level.name or "zerozero" in level.name:
@@ -70,7 +77,8 @@ for level in (gamedir / "world_data").glob("**/*.json"):
     )
     x = stump["world_x1"] + obj["x"] + level_offset[0]
     y = stump["world_y1"] + obj["y"] - (obj.get("z", 0)) - z + level_offset[1]
-    if obj["object"] == "objGift":
+    objName = obj["object"]
+    if objName == "objGift":
       gift_id = f"gift_{level_data['name']}_{obj['gift_id_index']}" if obj["gift_id"] == "none" else obj['gift_id']
       if gift_id not in gift_data:
         print(f"GIFT NOT FOUND {gift_id}, {obj}")
@@ -82,7 +90,7 @@ for level in (gamedir / "world_data").glob("**/*.json"):
         "x": x,
         "y": y,
       })
-    elif obj["object"] == "objRailswitch":
+    elif objName == "objRailswitch":
       if stump.get("world_layer", 0) != 0:
         continue
       if x < stump["world_x1"] or x > stump["world_x2"] or y < stump["world_y1"] or y > stump["world_y2"]:
@@ -91,7 +99,7 @@ for level in (gamedir / "world_data").glob("**/*.json"):
         "lever_id": obj.get("lever_id", level_name),
         "position": [x, y],
       })
-    elif obj["object"] == "objRailwall":
+    elif objName == "objRailwall":
       if stump.get("world_layer", 0) != 0:
         continue
       if x < stump["world_x1"] or x > stump["world_x2"] or y < stump["world_y1"] or y > stump["world_y2"]:
@@ -103,7 +111,7 @@ for level in (gamedir / "world_data").glob("**/*.json"):
         "position": [x, y],
         "angle": obj.get("angle", 0),
       })
-    elif obj["object"] == "objSpawner":
+    elif objName == "objSpawner":
       encounter = obj["encounter"]
       if encounter == "" or encounter == "none":
         encounter = ""
@@ -114,6 +122,11 @@ for level in (gamedir / "world_data").glob("**/*.json"):
           "position": [x, y],
           "encounter": encounter,
         })
+    elif objName in extinct_objs:
+      out_data["encounters"].append({
+        "position": [x, y],
+        "encounter": extinct_objs[objName],
+      })
 
 with Path("../src/data/raw/extra_markers.json").open("w+") as f:
   json.dump(out_data, f)

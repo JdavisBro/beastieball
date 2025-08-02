@@ -89,6 +89,10 @@ function NavigateLocalized({ to }: { to: string }) {
   return <Navigate to={getLink(to)} />;
 }
 
+function shouldRevalidate() {
+  return false;
+}
+
 const routes: Array<RouteObject> = [
   {
     path: ":lang?/",
@@ -99,33 +103,32 @@ const routes: Array<RouteObject> = [
         element: <LoaderComponent />,
         path: "",
         loader: () => import("./Home").then((m) => m.default),
+        shouldRevalidate: shouldRevalidate,
       },
       {
         element: <LoaderComponent />,
-        path: "beastiepedia/",
+        path: "beastiepedia/:beastie?",
         loader: () =>
           import("./Beastiepedia/Beastiepedia").then((m) => m.default),
-      },
-      {
-        element: <LoaderComponent />,
-        path: "beastiepedia/:beastie",
-        loader: () =>
-          import("./Beastiepedia/Beastiepedia").then((m) => m.default),
+        shouldRevalidate: shouldRevalidate,
       },
       {
         element: <LoaderComponent />,
         path: "playdex/",
         loader: () => import("./Playdex/Playdex").then((m) => m.default),
+        shouldRevalidate: shouldRevalidate,
       },
       {
         element: <LoaderComponent />,
         path: "map/",
         loader: () => import("./Map/Map").then((m) => m.default),
+        shouldRevalidate: shouldRevalidate,
       },
       {
         element: <LoaderComponent />,
         path: "beastdle/",
         loader: () => import("./Beastdle/Beastdle").then((m) => m.default),
+        shouldRevalidate: shouldRevalidate,
       },
 
       // OLD TEAM VIEWER REDIRECT
@@ -152,50 +155,46 @@ const routes: Array<RouteObject> = [
         element: <LoaderComponent />,
         path: "team/",
         loader: () => import("./Team/Team").then((m) => m.default),
+        shouldRevalidate: shouldRevalidate,
       },
       {
         element: <LoaderComponent />,
-        path: "team/viewer/:code",
+        path: "team/viewer/:code?",
         loader: () => import("./Team/Viewer/TeamViewer").then((m) => m.default),
-      },
-      {
-        element: <LoaderComponent />,
-        path: "team/viewer/",
-        loader: () => import("./Team/Viewer/TeamViewer").then((m) => m.default),
+        shouldRevalidate: shouldRevalidate,
       },
       {
         element: <LoaderComponent />,
         path: "team/builder/",
         loader: () =>
           import("./Team/Builder/TeamBuilder").then((m) => m.default),
+        shouldRevalidate: shouldRevalidate,
       },
       {
         element: <LoaderComponent />,
-        path: "team/encounters/:encounterId",
+        path: "team/encounters/:encounterId?",
         loader: () =>
           import("./Team/Encounters/Encounters").then((m) => m.default),
-      },
-      {
-        element: <LoaderComponent />,
-        path: "team/encounters/",
-        loader: () =>
-          import("./Team/Encounters/Encounters").then((m) => m.default),
+        shouldRevalidate: shouldRevalidate,
       },
 
       {
         element: <LoaderComponent />,
         path: "modding/save/",
         loader: () => import("./Modding/Save/Save").then((m) => m.default),
+        shouldRevalidate: shouldRevalidate,
       },
       {
         element: <LoaderComponent />,
         path: "modding/",
         loader: () => import("./Modding/Modding").then((m) => m.default),
+        shouldRevalidate: shouldRevalidate,
       },
       {
         element: <LoaderComponent />,
         path: "test/",
         loader: () => import("./Test").then((m) => m.default),
+        shouldRevalidate: shouldRevalidate,
       },
       {
         element: <PageNotFound />,

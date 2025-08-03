@@ -104,6 +104,39 @@ function ItemSection({
   );
 }
 
+type ReactStateBool = React.Dispatch<React.SetStateAction<boolean>>;
+
+function Checkbox({
+  checked,
+  handleChange,
+  text,
+}: {
+  checked: boolean;
+  handleChange: ReactStateBool;
+  text: string;
+}) {
+  const handleChangeActual: React.MouseEventHandler = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    handleChange((value) => !value);
+  };
+  // weird react things that breaks labels on checkboxes on mobile
+  return (
+    <label onClick={handleChangeActual} tabIndex={0}>
+      <input
+        type="checkbox"
+        checked={checked}
+        /* react yells at your for having checked without onChange */
+        onChange={() => {}}
+        /* checked value doesn't update properly when clicking directly on the checkbox */
+        key={String(checked)}
+        tabIndex={-1}
+      />{" "}
+      {text}
+    </label>
+  );
+}
+
 type ControlLayerType = {
   children: React.ReactNode;
   title: string;
@@ -116,9 +149,9 @@ type Props = {
   huntedBeastie: string | undefined;
   setHuntedBeastie: (beastie: string | undefined) => void;
   postgame: boolean;
-  setPostgame: (postgame: boolean) => void;
+  setPostgame: ReactStateBool;
   attractSpray: boolean;
-  setAttractSpray: (attractSpray: boolean) => void;
+  setAttractSpray: ReactStateBool;
   huntedItem: string | undefined;
   setHuntedItem: (itemId: string | undefined) => void;
 };
@@ -202,19 +235,18 @@ function ControlMenuInner({
                 {layer.category}
               </div>
             )}
-            <label>
-              <input
-                type="checkbox"
-                checked={
-                  layersVisible[layer.title] ??
-                  (layer.defaultHidden ? false : true)
-                }
-                onChange={(event) =>
-                  setLayer(layer.title, event.currentTarget.checked)
-                }
-              />{" "}
-              {layer.title}
-            </label>
+            <Checkbox
+              checked={layersVisible[layer.title] ?? !layer.defaultHidden}
+              handleChange={(value) =>
+                typeof value == "boolean"
+                  ? setLayer(layer.title, value)
+                  : setLayer(
+                      layer.title,
+                      value(layersVisible[layer.title] ?? !layer.defaultHidden),
+                    )
+              }
+              text={layer.title}
+            />
             {(layersVisible[layer.title] ??
             (layer.defaultHidden ? false : true)) ? (
               <LayerGroup>{layer.children}</LayerGroup>
@@ -239,24 +271,16 @@ function ControlMenuInner({
             nonSelectableReason="Beastie has no wild habitat."
           />
         </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={postgame}
-            onChange={(event) => setPostgame(event.currentTarget.checked)}
-            id="postgame"
-          />{" "}
-          Postgame Spawns
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={attractSpray}
-            onChange={(event) => setAttractSpray(event.currentTarget.checked)}
-            id="postgame"
-          />{" "}
-          Attract Spray
-        </label>
+        <Checkbox
+          checked={postgame}
+          handleChange={setPostgame}
+          text="Postgame Spawns"
+        />
+        <Checkbox
+          checked={attractSpray}
+          handleChange={setAttractSpray}
+          text="Attract Spray"
+        />
       </ControlSection>
       <ControlSection
         header="Items"

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import styles from "./ContentInfo.module.css";
 import BEASTIE_DATA, { BeastieType } from "../../data/BeastieData";
@@ -210,6 +211,8 @@ export default function ComboMove({
       }
     });
 
+  const navigate = useNavigate();
+
   return (
     <InfoBox header="Combo Moves" container={{ className: styles.combo }}>
       <select onChange={(event) => setType(Number(event.currentTarget.value))}>
@@ -219,6 +222,17 @@ export default function ComboMove({
         <option value={ComboType.Defense}>Bestie Defense</option>
       </select>
       <BeastieSelect beastieId={friendId} setBeastieId={setFriendId} />
+      <button
+        onClick={() => {
+          if (friend) {
+            setFriendId(beastiedata.id);
+            navigate(`/beastiepedia/${friend.name}`);
+          }
+        }}
+        disabled={!friend}
+      >
+        Swap
+      </button>
       <MoveView
         move={{
           id: "whatever",

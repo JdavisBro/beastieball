@@ -48,9 +48,8 @@ export default function EncounterBeastieElem({
   const fromEncounter = encBeastie.from_encounter ?? encounterId;
   const fromEncounterIndex = encBeastie.from_encounter_index ?? index;
 
-  const randomizer = new Randomizer(
-    hashCode(fromEncounter) + fromEncounterIndex,
-  );
+  const randomizer = new Randomizer(1);
+  randomizer.randomizer_seed(hashCode(fromEncounter) + fromEncounterIndex);
   randomizer.spam_random(9);
   const random_ability = Math.floor(
     randomizer.random(beastieData.ability.length),

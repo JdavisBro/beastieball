@@ -657,7 +657,7 @@
   "walls": {
     "beryl_rail": [
       { "position": [-12688, 12617], "angle": 0 },
-      { "position": [-12767.0, 10956], "angle": 0 }
+      { "position": [-12767.0, 10955], "angle": 0 }
     ],
     "hometown_railgate": [{ "position": [2183, 5757], "angle": 279.46 }],
     "jasper_cave": [{ "position": [277.0, -21879], "angle": 0 }],
@@ -703,7 +703,7 @@
     ],
     "suburb_south": [
       { "position": [-35033, -5983], "angle": 0 },
-      { "position": [-34967, -4500], "angle": 0 }
+      { "position": [-34967, -4600], "angle": 0 }
     ],
     "seapuzzle3": [
       { "position": [-38429, 1698], "angle": 145.3840179443 },
@@ -768,13 +768,13 @@
     { "position": [-32411, 10326], "encounter": "rockybeach_5" },
     { "position": [-34709, 8830], "encounter": "rockybeach_4" },
     { "position": [-35999, 11498], "encounter": "rockybeach_3" },
-    { "position": [-30320, 12793], "encounter": "ocean_1" },
+    { "position": [-30320, 12943], "encounter": "ocean_1" },
     { "position": [-11239, 31879], "encounter": "tiny_island_0" },
     { "position": [-9787, -35981], "encounter": "academy_0" },
     { "position": [-19250.0, 6358], "encounter": "ambestone_west_cliff_0" },
     { "position": [-8698.0, 10498], "encounter": "beryl_railpath_end_0" },
-    { "position": [-13055.0, 10180], "encounter": "beryl_railpath_south_0" },
-    { "position": [-15253.0, 9209], "encounter": "beryl_railpath_west_0" },
+    { "position": [-13055.0, 10179], "encounter": "beryl_railpath_south_0" },
+    { "position": [-15253.0, 9208], "encounter": "beryl_railpath_west_0" },
     { "position": [-21564, 2486], "encounter": "canyon_1_0" },
     { "position": [-20949, -2844], "encounter": "canyon_2_0" },
     { "position": [-22175, -917], "encounter": "canyon_2_1" },
@@ -788,7 +788,7 @@
     { "position": [-34203, -6911], "encounter": "city_railalley_0" },
     { "position": [-28764, -12077], "encounter": "city_rail_east_0" },
     { "position": [-35278, -1868], "encounter": "city_seacave_0" },
-    { "position": [-35287, -2774], "encounter": "city_seacave_0" },
+    { "position": [-35287, -2876], "encounter": "city_seacave_0" },
     { "position": [-35338, -10239], "encounter": "city_trainyard_0" },
     { "position": [-15167, 7958], "encounter": "cliff_train_cave_guard" },
     { "position": [-15214, -34270], "encounter": "forest_lake_0" },

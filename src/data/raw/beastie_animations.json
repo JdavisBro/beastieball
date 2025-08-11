@@ -2306,8 +2306,8 @@
     "splash": {
       "angle": 356.7022094727,
       "anim": "ready",
-      "x": 69,
-      "y": -275
+      "x": 99,
+      "y": -266
     }
   },
   "_sprBilby1": {
@@ -12167,8 +12167,8 @@
     "splash": {
       "angle": -25,
       "anim": "ready",
-      "x": 102,
-      "y": -70
+      "x": 38,
+      "y": -68
     }
   },
   "_sprHorseshoe": {
@@ -12976,8 +12976,8 @@
     "splash": {
       "angle": -10,
       "anim": "ready",
-      "x": 67.5,
-      "y": -306
+      "x": 72,
+      "y": -326
     }
   },
   "_sprJellyfish": {
@@ -16122,8 +16122,8 @@
     "splash": {
       "angle": -10,
       "anim": "ready",
-      "x": 143,
-      "y": -319
+      "x": 135,
+      "y": -344
     }
   },
   "_sprMantis": {
@@ -17777,8 +17777,8 @@
     "splash": {
       "angle": -25,
       "anim": "ready",
-      "x": 66,
-      "y": -48
+      "x": 74,
+      "y": -53
     }
   },
   "_sprMoth2": {
@@ -22827,8 +22827,8 @@
     "splash": {
       "angle": -10,
       "anim": "ready",
-      "x": -46.8,
-      "y": -187.2
+      "x": 4,
+      "y": -84
     }
   },
   "_sprRaptor": {
@@ -25361,8 +25361,8 @@
     "splash": {
       "angle": -10,
       "anim": "ready",
-      "x": 92,
-      "y": -171
+      "x": -3,
+      "y": -122
     }
   },
   "_sprSeal": {
@@ -30185,8 +30185,8 @@
     "splash": {
       "angle": -10,
       "anim": "ready",
-      "x": -77,
-      "y": -292
+      "x": -58,
+      "y": -285
     }
   },
   "_sprSpirit1": {
@@ -30768,8 +30768,8 @@
     "splash": {
       "angle": 346.5347900391,
       "anim": "ready",
-      "x": 47,
-      "y": -158
+      "x": 60,
+      "y": -142
     }
   },
   "_sprTest_secret_beastie": {

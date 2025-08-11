@@ -2986,7 +2986,7 @@
           {
             "conditions": [
               {
-                "effect_type": 83,
+                "effect_type": 85,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
@@ -3062,7 +3062,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 83,
+          "effect_type": 85,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3271,7 +3271,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 83,
+          "effect_type": 85,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3482,7 +3482,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 83,
+          "effect_type": 85,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -5264,7 +5264,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": [14, 26],
+          "effect_type": [14, 26, -14, -26],
           "event": null,
           "freq": -1,
           "func": null,
@@ -7367,7 +7367,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 83,
+          "effect_type": 85,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7567,7 +7567,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 83,
+          "effect_type": 85,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7780,7 +7780,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 83,
+          "effect_type": 85,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -13509,7 +13509,7 @@
       [50, 0, 1.3, 49, 0, 13],
       [2, 1, 1, 42, 3, 2],
       [20, 0, 1, 2, 0, 2, 39, 0, 1],
-      [42, 3, 5]
+      [42, 3, 4]
     ],
     "desc": "They're attracted to the hum of computers. It's every network engineer's nightmare to flick the lights on in the server room, only to find a Debugly.",
     "designer": 0,
@@ -13711,7 +13711,7 @@
       [50, 0, 1.3, 49, 0, 13],
       [2, 1, 1, 42, 3, 2],
       [20, 0, 1, 2, 0, 2, 39, 0, 1],
-      [42, 3, 5]
+      [42, 3, 4]
     ],
     "desc": "They make their home in office desks where they can readily access their favorite food: paper. Math homework is especially enticing for them.",
     "designer": 0,
@@ -14119,7 +14119,7 @@
     ],
     "colors2": null,
     "combos": [
-      [51, 0, 2, 50, 0, 1.6, 33, 0, 0],
+      [51, 0, 2, 50, 0, 0.8, 33, 0, 0],
       [15, 1, 2, 29, 0, 2],
       [15, 0, 4, 29, 0, 1],
       [47, 0, 1, 29, 0, 2]
@@ -14309,7 +14309,7 @@
     ],
     "colors2": null,
     "combos": [
-      [51, 0, 2, 50, 0, 1.6, 33, 0, 0],
+      [51, 0, 2, 50, 0, 0.8, 33, 0, 0],
       [15, 1, 2, 29, 0, 2],
       [15, 0, 4, 29, 0, 1],
       [47, 0, 1, 29, 0, 2]
@@ -14836,7 +14836,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 83,
+          "effect_type": 85,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15033,7 +15033,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 83,
+          "effect_type": 85,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15270,7 +15270,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 83,
+          "effect_type": 85,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17178,7 +17178,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 83,
+          "effect_type": 85,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17390,7 +17390,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 83,
+          "effect_type": 85,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17597,7 +17597,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 83,
+          "effect_type": 85,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -20737,7 +20737,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 83,
+          "effect_type": 85,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -20889,11 +20889,11 @@
     "isBaby": false,
     "learnset": [
       [0, "starterbody"],
-      [0, "defheal"],
+      [0, "rest"],
       [6, "storedpower"],
       [10, "refresh"],
       [14, "sensihit"],
-      [18, "rest"],
+      [18, "defheal"],
       [23, "rush"],
       [26, "healhit2"],
       [30, "recover"],

@@ -4,6 +4,11 @@
     "id": "ace",
     "name": "Ambush"
   },
+  "achiever": {
+    "desc": "When attacks confer bonus POW, gets an additional 1.1x POW",
+    "id": "achiever",
+    "name": "Overachiever"
+  },
   "acidic": {
     "desc": "When receiving an attack, attacker loses 10 STAMINA",
     "id": "acidic",

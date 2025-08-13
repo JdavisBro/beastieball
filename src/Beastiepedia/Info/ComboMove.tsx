@@ -15,6 +15,13 @@ enum ComboType {
   Defense,
 }
 
+function getRivalsType(beastiedata: BeastieType, friend?: BeastieType) {
+  const ba = beastiedata.ba + (friend?.ba ?? 0);
+  const ha = beastiedata.ha + (friend?.ha ?? 0);
+  const ma = beastiedata.ma + (friend?.ma ?? 0);
+  return ma > ba && ma > ha ? 2 : ha > ba ? 1 : 0;
+}
+
 export default function ComboMove({
   beastiedata,
 }: {
@@ -36,7 +43,7 @@ export default function ComboMove({
         : type == ComboType.Support
           ? 4
           : // Rivals
-            beastiedata.type_focus;
+            getRivalsType(beastiedata, friend);
 
   const effects: MoveEffect[] = [];
   const used_effects: Record<number, MoveEffect> = {};
@@ -250,7 +257,7 @@ export default function ComboMove({
         noLearner={true}
         typeText={
           type == ComboType.Rivals
-            ? "Rivals Move type is the type with the highest POW on the user Beastie."
+            ? "Rivals Move type is the type with the highest total POW of both Beasties, which could change depending on coaching and training."
             : undefined
         }
       />

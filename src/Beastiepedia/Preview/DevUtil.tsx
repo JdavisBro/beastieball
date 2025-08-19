@@ -23,10 +23,10 @@ declare global {
 const ICON_SIZE = 256;
 
 export default function DevUtil(props: {
-  glRef: React.MutableRefObject<WebGLRenderingContext | null>;
-  programRef: React.MutableRefObject<WebGLProgram | null>;
-  canvasRef: React.RefObject<HTMLCanvasElement>;
-  cropCanvasRef: React.RefObject<HTMLCanvasElement>;
+  glRef: React.RefObject<null | WebGLRenderingContext>;
+  programRef: React.RefObject<null | WebGLProgram>;
+  canvasRef: React.RefObject<null | HTMLCanvasElement>;
+  cropCanvasRef: React.RefObject<null | HTMLCanvasElement>;
 }) {
   const loadingRef = useRef<
     Record<

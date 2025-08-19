@@ -6,7 +6,7 @@ type Props = {
   downloadGif: () => void;
   gifDisabled: boolean;
   userSpeed: number;
-  canvasRef: React.RefObject<HTMLCanvasElement>;
+  canvasRef: React.RefObject<null | HTMLCanvasElement>;
   defaultSize: number;
   setBackground: React.Dispatch<React.SetStateAction<boolean>>;
   setBackgroundColor: React.Dispatch<React.SetStateAction<string>>;

@@ -216,7 +216,7 @@ export default function saveGif(
   const a = document.createElement("a");
   a.download = `${name}.gif`;
   a.href = URL.createObjectURL(
-    new Blob([encoder.bytes()], { type: "image/gif" }),
+    new Blob([encoder.bytes().buffer as ArrayBuffer], { type: "image/gif" }),
   );
   a.click();
 }

@@ -1,25 +1,63 @@
-import { lazy } from "react";
 import {
   Navigate,
+  Outlet,
+  useLoaderData,
+  useNavigation,
   useParams,
   useRouteError,
   type RouteObject,
 } from "react-router-dom";
 import PageNotFound from "./PageNotFound";
 import { Fallback } from "./shared/CustomErrorBoundary";
+import SpoilerWarning from "./SpoilerWarning";
+import {
+  FunctionComponent,
+  memo,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import Loading from "./Loading";
 
-const Home = lazy(() => import("./Home"));
-const Beastiepedia = lazy(() => import("./Beastiepedia/Beastiepedia"));
-const Playdex = lazy(() => import("./Playdex/Playdex"));
-const Map = lazy(() => import("./Map/Map"));
-const Beastdle = lazy(() => import("./Beastdle/Beastdle"));
-const Team = lazy(() => import("./Team/Team"));
-const TeamViewer = lazy(() => import("./Team/Viewer/TeamViewer"));
-const TeamBuilder = lazy(() => import("./Team/Builder/TeamBuilder"));
-const Encounters = lazy(() => import("./Team/Encounters/Encounters"));
-const Modding = lazy(() => import("./Modding/Modding"));
-const Save = lazy(() => import("./Modding/Save/Save"));
-const Test = lazy(() => import("./Test"));
+const LOADING_TIME = 20; // ms
+
+function Root() {
+  const navigation = useNavigation();
+  const [, setUpdate] = useState(false);
+  const timedOut = useRef(false);
+  if (navigation.state != "loading") {
+    timedOut.current = false;
+  }
+
+  useEffect(() => {
+    if (navigation.state == "loading") {
+      const timeout = setTimeout(() => {
+        setUpdate((update) => !update);
+        timedOut.current = true;
+      }, LOADING_TIME);
+      return () => clearTimeout(timeout);
+    }
+  }, [navigation.state]);
+
+  return timedOut.current ? (
+    <Loading />
+  ) : (
+    <SpoilerWarning>
+      <Outlet />
+    </SpoilerWarning>
+  );
+}
+
+function LoaderComponent() {
+  const loader = useLoaderData() as {
+    component: React.MemoExoticComponent<FunctionComponent>;
+  };
+
+  const Component = useMemo(() => memo(loader.component), [loader]);
+
+  return <Component />;
+}
 
 const UPDATED_ERRORS = ["unable to preload css", "dynamically imported module"];
 
@@ -43,90 +81,126 @@ function RouteError() {
   );
 }
 
+function shouldRevalidate() {
+  return false;
+}
+
 const routes: Array<RouteObject> = [
   {
-    path: "/",
+    path: ":lang?/",
+    Component: Root,
     errorElement: <RouteError />,
+    shouldRevalidate: shouldRevalidate,
     children: [
       {
-        element: <Home />,
-        path: "/",
+        element: <LoaderComponent />,
+        path: "",
+        loader: () => import("./Home").then((m) => ({ component: m.default })),
+        shouldRevalidate: shouldRevalidate,
       },
       {
-        element: <Beastiepedia />,
-        path: "/beastiepedia/",
+        element: <LoaderComponent />,
+        path: "beastiepedia/:beastie?",
+        loader: () =>
+          import("./Beastiepedia/Beastiepedia").then((m) => ({
+            component: m.default,
+          })),
+        shouldRevalidate: shouldRevalidate,
       },
       {
-        element: <Beastiepedia />,
-        path: "beastiepedia/:beastie",
+        element: <LoaderComponent />,
+        path: "playdex/",
+        loader: () =>
+          import("./Playdex/Playdex").then((m) => ({ component: m.default })),
+        shouldRevalidate: shouldRevalidate,
       },
       {
-        element: <Playdex />,
-        path: "/playdex/",
+        element: <LoaderComponent />,
+        path: "map/",
+        loader: () =>
+          import("./Map/Map").then((m) => ({ component: m.default })),
+        shouldRevalidate: shouldRevalidate,
       },
       {
-        element: <Map />,
-        path: "/map/",
-      },
-      {
-        element: <Beastdle />,
-        path: "/beastdle/",
+        element: <LoaderComponent />,
+        path: "beastdle/",
+        loader: () =>
+          import("./Beastdle/Beastdle").then((m) => ({ component: m.default })),
+        shouldRevalidate: shouldRevalidate,
       },
 
       // OLD TEAM VIEWER REDIRECT
       {
         element: <Navigate to="/team/viewer/" />,
-        path: "/teams/",
+        path: "teams/",
       },
       {
         element: <Navigate to="/team/viewer/" />,
-        path: "/teams/viewer/",
+        path: "teams/viewer/",
       },
       {
         Component: () => <Navigate to={`/team/viewer/${useParams().code}`} />,
-        path: "/teams/:code",
+        path: "teams/:code",
       },
       {
         element: <Navigate to="/team/builder/" />,
-        path: "/teams/builder/",
+        path: "teams/builder/",
       },
 
       {
-        element: <Team />,
-        path: "/team/",
+        element: <LoaderComponent />,
+        path: "team/",
+        loader: () =>
+          import("./Team/Team").then((m) => ({ component: m.default })),
+        shouldRevalidate: shouldRevalidate,
       },
       {
-        element: <TeamViewer />,
-        path: "/team/viewer/:code",
+        element: <LoaderComponent />,
+        path: "team/viewer/:code?",
+        loader: () =>
+          import("./Team/Viewer/TeamViewer").then((m) => ({
+            component: m.default,
+          })),
+        shouldRevalidate: shouldRevalidate,
       },
       {
-        element: <TeamViewer />,
-        path: "/team/viewer/",
+        element: <LoaderComponent />,
+        path: "team/builder/",
+        loader: () =>
+          import("./Team/Builder/TeamBuilder").then((m) => ({
+            component: m.default,
+          })),
+        shouldRevalidate: shouldRevalidate,
       },
       {
-        element: <TeamBuilder />,
-        path: "/team/builder/",
-      },
-      {
-        element: <Encounters />,
-        path: "/team/encounters/:encounterId",
-      },
-      {
-        element: <Encounters />,
-        path: "/team/encounters/",
+        element: <LoaderComponent />,
+        path: "team/encounters/:encounterId?",
+        loader: () =>
+          import("./Team/Encounters/Encounters").then((m) => ({
+            component: m.default,
+          })),
+        shouldRevalidate: shouldRevalidate,
       },
 
       {
-        element: <Save />,
-        path: "/modding/save/",
+        element: <LoaderComponent />,
+        path: "modding/save/",
+        loader: () =>
+          import("./Modding/Save/Save").then((m) => ({ component: m.default })),
+        shouldRevalidate: shouldRevalidate,
       },
       {
-        element: <Modding />,
-        path: "/modding/",
+        element: <LoaderComponent />,
+        path: "modding/",
+        loader: () =>
+          import("./Modding/Modding").then((m) => ({ component: m.default })),
+        shouldRevalidate: shouldRevalidate,
       },
       {
-        element: <Test />,
-        path: "/test/",
+        element: <LoaderComponent />,
+        path: "test/",
+        loader: () => import("./Test").then((m) => ({ component: m.default })),
+        shouldRevalidate: shouldRevalidate,
       },
       {
         element: <PageNotFound />,

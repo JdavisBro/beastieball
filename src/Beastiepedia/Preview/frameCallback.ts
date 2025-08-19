@@ -1,4 +1,3 @@
-import { MutableRefObject } from "react";
 import { BeastieAnimation, BeastieFrames } from "../../data/BeastieAnimations";
 
 export type AnimationState = {
@@ -31,7 +30,7 @@ function updateHold(animState: AnimationState, beastieSpeed: number) {
 
 export function setupFrameCallback(
   setFrame: (frame: number) => void,
-  animStateRef: MutableRefObject<AnimationState>,
+  animStateRef: React.RefObject<AnimationState>,
   beastieSpeed: number,
 ) {
   animStateRef.current.frameTime = 0;

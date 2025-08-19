@@ -88,8 +88,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const drawnsprite = SPRITE_INFO[drawnname];
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const glRef = useRef<WebGLRenderingContext | null>(null);
-  const programRef = useRef<WebGLProgram | null>(null);
+  const glRef = useRef<WebGLRenderingContext>(null);
+  const programRef = useRef<WebGLProgram>(null);
   const cropCanvasRef = useRef<HTMLCanvasElement>(null);
 
   const [rowdy, setRowdy] = useState(false);

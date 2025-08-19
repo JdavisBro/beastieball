@@ -155,7 +155,7 @@ export default function BeastieSelect({
               tabIndex={0}
               className={styles.beastieSelectBeastie}
               onClick={() => {
-                setBeastieId(undefined);
+                clickedRef.current = [true, undefined];
                 setOpen(false);
               }}
             >
@@ -175,7 +175,7 @@ export default function BeastieSelect({
                 tabIndex={0}
                 className={styles.beastieSelectBeastie}
                 onClick={() => {
-                  setBeastieId(extraOption);
+                  clickedRef.current = [true, extraOption];
                   setOpen(false);
                 }}
               >

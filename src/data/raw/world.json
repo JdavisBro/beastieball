@@ -115,9 +115,9 @@
       "revealed_text": "Boathouse (Chartreuse Island)",
       "text": "Boathouse",
       "transit": 2,
-      "world_x": -36020,
+      "world_x": -36060,
       "world_y": 27120,
-      "x": -36020,
+      "x": -36060,
       "y": 27520,
       "zoom_view": true
     },
@@ -212,9 +212,9 @@
       "text": "Railhouse",
       "transit": 1,
       "world_x": 708.5,
-      "world_y": -19015,
+      "world_y": -19017,
       "x": 708.5,
-      "y": -18615,
+      "y": -18617,
       "zoom_view": true
     },
     {
@@ -1000,7 +1000,7 @@
           "_": "class_portal",
           "allow_exit": 0,
           "destination": "title",
-          "ground_z": 430,
+          "ground_z": 432,
           "index": 0,
           "x": 3903,
           "x1": -100,
@@ -1432,9 +1432,9 @@
           "revealed_text": "Clothes Shop (Jasper)",
           "text": "Clothes Shop",
           "world_x": -786.5,
-          "world_y": -17712,
+          "world_y": -17715,
           "x": 1397,
-          "y": 2946
+          "y": 2943
         },
         {
           "_": "class_mapicon",
@@ -3041,7 +3041,7 @@
           "_": "class_portal",
           "destination": "beach_cliff1",
           "direction": 2,
-          "ground_z": 149.752599537,
+          "ground_z": 150,
           "x": 118,
           "x1": -630,
           "x2": 79,
@@ -3060,6 +3060,18 @@
           "y": 2633,
           "y1": -1802,
           "y2": -93,
+          "z1": -50
+        },
+        {
+          "_": "class_portal",
+          "destination": "city_construction6",
+          "ground_z": 1800,
+          "x": 9383,
+          "x1": -462,
+          "x2": 1041,
+          "y": 2591,
+          "y1": -2277,
+          "y2": -152,
           "z1": -50
         }
       ],
@@ -6268,7 +6280,7 @@
       "_": "class_level_stump",
       "area_id": 4,
       "color": 16620976,
-      "display_name": "Burblog",
+      "display_name": "none",
       "encounters": ["city_seacave_0"],
       "has_spawns": true,
       "icons_array": [],
@@ -6279,6 +6291,7 @@
           "_": "class_portal",
           "destination": "city_seacave",
           "direction": 3,
+          "ground_z": 102,
           "x": 5853,
           "x1": -455,
           "x2": 410,
@@ -6290,6 +6303,7 @@
         {
           "_": "class_portal",
           "destination": "city_railalley",
+          "ground_z": 102,
           "x": 5874,
           "x1": -413,
           "x2": 414,
@@ -6301,6 +6315,7 @@
         {
           "_": "class_portal",
           "destination": "dogpark",
+          "ground_z": 102,
           "x": 1005,
           "x1": -573,
           "x2": 508,
@@ -6310,9 +6325,9 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["city_suburb"],
+      "spawn_name": ["city_rail"],
       "world_x1": -41151,
-      "world_x2": -31955,
+      "world_x2": -33499,
       "world_y1": -5703,
       "world_y2": -2371
     },
@@ -7141,9 +7156,9 @@
           "x": 427,
           "x1": -524,
           "x2": 74,
-          "y": 5158.5,
-          "y1": -383.5,
-          "y2": 407.5,
+          "y": 5143.5,
+          "y1": -651.5,
+          "y2": 856.5,
           "z1": -50
         },
         {
@@ -9073,7 +9088,7 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["default"],
+      "spawn_name": ["downtown"],
       "world_x1": -53463.5,
       "world_x2": -48818.5,
       "world_y1": -14497,
@@ -9781,7 +9796,7 @@
     },
     "beryl_railpath_end_0": {
       "x": -8698,
-      "y": 10503
+      "y": 10498
     },
     "canyon_1_0": {
       "x": -21564,
@@ -9961,15 +9976,15 @@
     },
     "jasper:objBallcenter": {
       "x": 564.5,
-      "y": -15615
+      "y": -15616
     },
     "jasper:objDiner": {
       "x": -605.5,
-      "y": -18790
+      "y": -18792
     },
     "jasper:objSteven": {
-      "x": 390,
-      "y": -18775
+      "x": 243,
+      "y": -18761
     },
     "jasper_cave_1": {
       "x": -8849,
@@ -10100,8 +10115,8 @@
       "y": -10188
     },
     "park_south_0": {
-      "x": -27009,
-      "y": -12606
+      "x": -26781,
+      "y": -12644
     },
     "park_south_end:objGameplay": {
       "x": -16726,

@@ -17,6 +17,10 @@ export default class Randomizer {
     this.i = seed % m;
   }
 
+  randomizer_seed(seed: number, randomizer: number = 1000000007) {
+    this.i = (seed + randomizer) % m;
+  }
+
   randomize() {
     this.i = Math.random() * m;
   }

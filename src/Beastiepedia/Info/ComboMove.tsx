@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import styles from "./ContentInfo.module.css";
 import BEASTIE_DATA, { BeastieType } from "../../data/BeastieData";
@@ -13,6 +14,13 @@ enum ComboType {
   Partners,
   Support,
   Defense,
+}
+
+function getRivalsType(beastiedata: BeastieType, friend?: BeastieType) {
+  const ba = beastiedata.ba + (friend?.ba ?? 0);
+  const ha = beastiedata.ha + (friend?.ha ?? 0);
+  const ma = beastiedata.ma + (friend?.ma ?? 0);
+  return ma > ba && ma > ha ? 2 : ha > ba ? 1 : 0;
 }
 
 export default function ComboMove({
@@ -38,7 +46,7 @@ export default function ComboMove({
         : type == ComboType.Support
           ? 4
           : // Rivals
-            beastiedata.type_focus;
+            getRivalsType(beastiedata, friend);
 
   const effects: MoveEffect[] = [];
   const used_effects: Record<number, MoveEffect> = {};
@@ -213,6 +221,8 @@ export default function ComboMove({
       }
     });
 
+  const navigate = useNavigate();
+
   return (
     <InfoBox
       header={L("beastiepedia.info.combo.title")}
@@ -233,6 +243,17 @@ export default function ComboMove({
         </option>
       </select>
       <BeastieSelect beastieId={friendId} setBeastieId={setFriendId} />
+      <button
+        onClick={() => {
+          if (friend) {
+            setFriendId(beastiedata.id);
+            navigate(`/beastiepedia/${friend.name}`);
+          }
+        }}
+        disabled={!friend}
+      >
+        Swap
+      </button>
       <MoveView
         move={{
           id: "whatever",

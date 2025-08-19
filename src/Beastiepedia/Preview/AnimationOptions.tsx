@@ -5,7 +5,7 @@ import InfoBox from "../../shared/InfoBox";
 type Props = {
   paused: boolean;
   setPaused: (paused: boolean) => void;
-  frameInputRef: React.RefObject<HTMLInputElement>;
+  frameInputRef: React.Ref<HTMLInputElement>;
   animation: string;
   setAnimation: React.Dispatch<React.SetStateAction<string>>;
   animationList: string[];

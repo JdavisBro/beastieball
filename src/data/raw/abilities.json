@@ -4,6 +4,11 @@
     "id": "ace",
     "name": "¦abilitiessetup_abilitydefine_084¦"
   },
+  "achiever": {
+    "desc": "When attacks confer bonus POW, gets an additional 1.1x POW",
+    "id": "achiever",
+    "name": "Overachiever"
+  },
   "acidic": {
     "desc": "¦abilitiessetup_abilitydefine_195¬0¬10¦",
     "id": "acidic",

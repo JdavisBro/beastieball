@@ -79,6 +79,7 @@ export default function Modal(
           old.hash = "";
           history.replaceState({}, "", old.toString());
         }
+        console.log("navigate!");
         navigate({
           search: window.location.search,
           hash: "#" + props.hashValue,
@@ -90,7 +91,7 @@ export default function Modal(
     } else if (dialogOpen) {
       dialogRef.current.close();
     }
-  }, [props, navigate, location]);
+  }, [props.open, props.hashValue, navigate, location]);
 
   return (
     <dialog

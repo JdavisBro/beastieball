@@ -1,8 +1,8 @@
 import { Team } from "../Types";
+import Community from "./FeaturedTeams/Community";
 import HeatWave from "./FeaturedTeams/HeatWave";
 import StarterBash from "./FeaturedTeams/StarterBash";
 import BringTheHeat from "./FeaturedTeams/BringTheHeat";
-import Community from "./FeaturedTeams/Community";
 import Playtest from "./FeaturedTeams/Playtest";
 
 export type FeaturedTeamType = {
@@ -32,10 +32,10 @@ export type FeaturedCategoryRoot =
   | FeaturedCategory;
 
 const categories: FeaturedCategoryRoot[] = [
+  Community,
   HeatWave,
   StarterBash,
   BringTheHeat,
-  Community,
   Playtest,
 ];
 

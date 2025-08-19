@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useMemo, useState } from "react";
+import { Fragment, useCallback, useMemo, useRef, useState } from "react";
 import Control from "react-leaflet-custom-control";
 
 import styles from "./Map.module.css";
@@ -64,6 +64,16 @@ function ItemSection({
   const item = huntedItem && ITEM_DIC[huntedItem];
   const [itemSelector, setItemSelector] = useState(false);
 
+  const itemRef = useRef<[boolean, undefined | string]>([false, undefined]);
+
+  const onClose = () => {
+    if (itemRef.current[0]) {
+      setItemSelector(false);
+      setHuntedItem(itemRef.current[1]);
+      itemRef.current[0] = false;
+    }
+  };
+
   return (
     <>
       <label>
@@ -77,14 +87,17 @@ function ItemSection({
       <Modal
         header={Loc("map.items.selectHeader")}
         open={itemSelector}
-        onClose={() => setItemSelector(false)}
+        onClose={onClose}
         hashValue="SelectItem"
       >
         <div className={styles.itemSelect}>
           <div
             key={"unset"}
             className={styles.itemSelectItem}
-            onClick={() => setHuntedItem(undefined)}
+            onClick={() => {
+              itemRef.current = [true, undefined];
+              setItemSelector(false);
+            }}
           >
             {Loc("map.items.unset")}
           </div>
@@ -92,7 +105,10 @@ function ItemSection({
             <div
               key={item.id}
               className={styles.itemSelectItem}
-              onClick={() => setHuntedItem(item.id)}
+              onClick={() => {
+                itemRef.current = [true, item.id];
+                setItemSelector(false);
+              }}
             >
               <img src={`/gameassets/sprItems/${item.img}.png`} />
               <div className={styles.itemSelectText}>
@@ -109,6 +125,43 @@ function ItemSection({
   );
 }
 
+type ReactStateBool = React.Dispatch<React.SetStateAction<boolean>>;
+
+function Checkbox({
+  checked,
+  handleChange,
+  text,
+}: {
+  checked: boolean;
+  handleChange: ReactStateBool;
+  text: string;
+}) {
+  const handleChangeActual: React.MouseEventHandler = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    handleChange((value) => !value);
+  };
+  // weird react things that breaks labels on checkboxes on mobile
+  return (
+    <label
+      tabIndex={0}
+      className={styles.controlCheckLabel}
+      onClick={handleChangeActual}
+    >
+      <input
+        type="checkbox"
+        checked={checked}
+        /* react yells at your for having checked without onChange */
+        onChange={() => {}}
+        /* checked value doesn't update properly when clicking directly on the checkbox */
+        key={String(checked)}
+        tabIndex={-1}
+      />
+      {text}
+    </label>
+  );
+}
+
 type ControlLayerType = {
   children: React.ReactNode;
   title: string;
@@ -121,9 +174,9 @@ type Props = {
   huntedBeastie: string | undefined;
   setHuntedBeastie: (beastie: string | undefined) => void;
   postgame: boolean;
-  setPostgame: (postgame: boolean) => void;
+  setPostgame: ReactStateBool;
   attractSpray: boolean;
-  setAttractSpray: (attractSpray: boolean) => void;
+  setAttractSpray: ReactStateBool;
   huntedItem: string | undefined;
   setHuntedItem: (itemId: string | undefined) => void;
 };
@@ -209,19 +262,18 @@ function ControlMenuInner({
                 {Loc("map.markers." + layer.category)}
               </div>
             )}
-            <label>
-              <input
-                type="checkbox"
-                checked={
-                  layersVisible[layer.title] ??
-                  (layer.defaultHidden ? false : true)
-                }
-                onChange={(event) =>
-                  setLayer(layer.title, event.currentTarget.checked)
-                }
-              />{" "}
-              {Loc("map.markers." + layer.title)}
-            </label>
+            <Checkbox
+              checked={layersVisible[layer.title] ?? !layer.defaultHidden}
+              handleChange={(value) =>
+                typeof value == "boolean"
+                  ? setLayer(layer.title, value)
+                  : setLayer(
+                      layer.title,
+                      value(layersVisible[layer.title] ?? !layer.defaultHidden),
+                    )
+              }
+              text={Loc("map.markers." + layer.title)}
+            />
             {(layersVisible[layer.title] ??
             (layer.defaultHidden ? false : true)) ? (
               <LayerGroup>{layer.children}</LayerGroup>

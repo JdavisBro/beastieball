@@ -1,8 +1,7 @@
-import { StrictMode, Suspense } from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Loading from "./Loading";
 import "./index.css";
 import { routes } from "./routes";
 import OpenGraph from "./shared/OpenGraph";
@@ -43,13 +42,11 @@ createRoot(container).render(
         url=""
         description="A website with information about the game Beastieball!"
       />
-      <Suspense fallback={<Loading />}>
-        <Container>
-          <ErrorBoundary fallback={<></>}>
-            <RouterProvider router={createBrowserRouter(routes, {})} />
-          </ErrorBoundary>
-        </Container>
-      </Suspense>
+      <Container>
+        <ErrorBoundary fallback={<></>}>
+          <RouterProvider router={createBrowserRouter(routes, {})} />
+        </ErrorBoundary>
+      </Container>
     </HelmetProvider>
   </StrictMode>,
 );

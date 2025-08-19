@@ -7,11 +7,7 @@ import {
   useRouteError,
   type RouteObject,
 } from "react-router-dom";
-import PageNotFound from "./PageNotFound";
-import { Fallback } from "./shared/CustomErrorBoundary";
-import LocalizationProvider from "./localization/LocalizationProvider";
 import SpoilerWarning from "./SpoilerWarning";
-import useLocalization from "./localization/useLocalization";
 import {
   FunctionComponent,
   memo,
@@ -21,8 +17,12 @@ import {
   useState,
 } from "react";
 import Loading from "./Loading";
+import PageNotFound from "./PageNotFound";
+import useLocalization from "./localization/useLocalization";
+import { Fallback } from "./shared/CustomErrorBoundary";
+import LocalizationProvider from "./localization/LocalizationProvider";
 
-const LOADING_TIME = 30; // ms
+const LOADING_TIME = 20; // ms
 
 function Root() {
   const navigation = useNavigation();
@@ -54,10 +54,11 @@ function Root() {
 }
 
 function LoaderComponent() {
-  const loader =
-    useLoaderData() as React.MemoExoticComponent<FunctionComponent>;
+  const loader = useLoaderData() as {
+    component: React.MemoExoticComponent<FunctionComponent>;
+  };
 
-  const Component = useMemo(() => memo(loader), [loader]);
+  const Component = useMemo(() => memo(loader.component), [loader]);
 
   return <Component />;
 }
@@ -98,6 +99,8 @@ const routes: Array<RouteObject> = [
     path: ":lang?/",
     Component: Root,
     errorElement: <RouteError />,
+    hydrateFallbackElement: <Loading />,
+    shouldRevalidate: shouldRevalidate,
     children: [
       {
         element: <LoaderComponent />,

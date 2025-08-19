@@ -3,7 +3,7 @@ import * as L from "leaflet";
 import { Popup } from "react-leaflet";
 
 import { EncounterDataType } from "../data/EncounterData";
-import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
+import BEASTIE_DATA from "../data/BeastieData";
 import styles from "./Map.module.css";
 import {
   SpoilerMode,
@@ -14,35 +14,7 @@ import { EXTRA_MARKERS } from "../data/WorldData";
 import DivIconMarker from "./DivIconMarker";
 import { useCallback, useRef, useState } from "react";
 import useLocalization from "../localization/useLocalization";
-
-const LEVEL_METAMORPHS = [0, 4, 9, 10, 11];
-
-function findMetamorphAtLevel(
-  beastie: BeastieType,
-  level: number,
-  splitPrefer: string,
-) {
-  if (!beastie.evolution) {
-    return null;
-  }
-  const levelMetamorphs = beastie.evolution.filter((evo) =>
-    evo.condition.some((cond) => LEVEL_METAMORPHS.includes(cond)),
-  );
-  if (!levelMetamorphs.length) {
-    return null;
-  }
-  const possibleLevelMetamorphs = levelMetamorphs.filter(
-    (evo) => typeof evo.value[0] == "number" && evo.value[0] <= level,
-  );
-  if (!possibleLevelMetamorphs.length) {
-    return beastie;
-  }
-  const evo =
-    possibleLevelMetamorphs.find((evo) => evo.specie == splitPrefer) ??
-    possibleLevelMetamorphs[0];
-  const new_beastie = BEASTIE_DATA.get(evo.specie);
-  return new_beastie ?? null;
-}
+import getMetamorphAtLevel from "../Team/Encounters/getMetamorphAtLevel";
 
 function EncounterPopup({
   encounterId,
@@ -82,7 +54,7 @@ function EncounterPopup({
             return null;
           }
           const beastieData =
-            findMetamorphAtLevel(
+            getMetamorphAtLevel(
               babyBeastieData,
               beastie.level,
               oldBeastieData.id,

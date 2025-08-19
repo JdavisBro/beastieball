@@ -315,7 +315,7 @@
           "2": "Support",
           "3": "Defense"
         },
-        "rivalsTypeDesc": "Rivals Play's type is the type with the highest POW on the using Beastie."
+        "rivalsTypeDesc": "Rivals Move type is the type with the highest total POW of both Beasties, which could change depending on coaching and training."
       },
       "research": {
         "title": "Research",
@@ -406,7 +406,7 @@
       "areaNames": "Area Names",
       "markers": "Markers",
       "beastieballCenter": "Beastieball Center",
-      "railhouse": "Railhouse/Boathouse/Camp/Zip Station",
+      "railhouse": "Railhouse / Boathouse /\nCamp / Zip Station",
       "gym": "Gym",
       "clothes": "Clothes Shop",
       "caves": "Caves",

@@ -1,6 +1,7 @@
 import move_dic from "./raw/move_dic.json";
 
-export enum Origin { // For sorting, currently this is not added to the moves.
+export enum Origin {
+  // For sorting, currently this is not added to the moves.
   Net = 0,
   Back = 1,
   Any = 2,

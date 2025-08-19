@@ -122,7 +122,8 @@
   height: 64px;
   line-height: 64px;
   box-sizing: border-box;
-  background-image: linear-gradient(to right, #606060, #606060),
+  background-image:
+    linear-gradient(to right, #606060, #606060),
     url("/gameassets/sprite2_0.png"),
     linear-gradient(to right, #000000, #000000);
   background-repeat: no-repeat;

@@ -69,9 +69,6 @@ export function createMarkers() {
         <Popup>{value.revealed_text ? value.revealed_text : value.text}</Popup>
       );
     } else {
-      if (value.from_object == "objHiddenObject") {
-        return;
-      }
       if (value.has_conditional && value.conditional) {
         if (
           CONDITIONAL_CHECK[value.conditional.key] != value.conditional.value

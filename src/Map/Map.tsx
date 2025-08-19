@@ -138,6 +138,14 @@ export default function Map(): React.ReactNode {
     let x = level.world_x1;
     let y = level.world_y1;
 
+    if (
+      level.map_hidden ||
+      (level.name == "alleyway" && level.area_id == undefined)
+    ) {
+      // also hide alleyway until it changes when it'll probably get a area_id
+      return;
+    }
+
     const layer = level.world_layer ? level.world_layer : 0;
     let area_found = false;
     if (layer != 0) {

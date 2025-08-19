@@ -250,6 +250,7 @@
 .controlSectionChildren {
   display: flex;
   flex-direction: column;
+  gap: 4px;
   width: 100%;
   height: 100%;
 }
@@ -257,6 +258,13 @@
 .controlLayerCategory {
   cursor: pointer;
   font-size: 1.1em;
+}
+
+.controlCheckLabel {
+  display: flex;
+  gap: 6px;
+  line-height: 1.2em;
+  white-space: pre;
 }
 
 .itemSelect {

@@ -23,27 +23,28 @@ const CONDITIONAL_CHECK: Record<string, number> = {
   region_discovered_mtn: 1,
 };
 
+const railhouseStr = "Railhouse / Boathouse /\nCamp / Zip Station";
+
 export function createMarkers() {
   const bigtitleheaders: React.ReactElement[] = [];
   const titleheaders: React.ReactElement[] = [];
 
   const objtypes: { [key: string]: string } = {
     objBallcenter: "Beastieball Center",
-    objRailhouse: "Railhouse/Boathouse/Camp",
-    objBoathouse: "Railhouse/Boathouse/Camp",
-    objCamp: "Railhouse/Boathouse/Camp",
+    objRailhouse: railhouseStr,
+    objBoathouse: railhouseStr,
+    objCamp: railhouseStr,
     objGymdoor: "Gym",
     objClothesShop: "Clothes Shop",
-    objZipstation: "Zip Station",
-    objMall: "Zip Station",
+    objZipstation: railhouseStr,
+    objMall: railhouseStr,
   };
 
   const imgheaders: { [key: string]: React.ReactElement[] } = {
     "Beastieball Center": [],
-    "Railhouse/Boathouse/Camp": [],
+    [railhouseStr]: [],
     Gym: [],
     "Clothes Shop": [],
-    "Zip Station": [],
     Caves: [],
     Other: [],
   };

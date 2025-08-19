@@ -122,7 +122,11 @@ function Checkbox({
   };
   // weird react things that breaks labels on checkboxes on mobile
   return (
-    <label onClick={handleChangeActual} tabIndex={0}>
+    <label
+      tabIndex={0}
+      className={styles.controlCheckLabel}
+      onClick={handleChangeActual}
+    >
       <input
         type="checkbox"
         checked={checked}
@@ -131,7 +135,7 @@ function Checkbox({
         /* checked value doesn't update properly when clicking directly on the checkbox */
         key={String(checked)}
         tabIndex={-1}
-      />{" "}
+      />
       {text}
     </label>
   );

@@ -90,6 +90,7 @@ const routes: Array<RouteObject> = [
     path: ":lang?/",
     Component: Root,
     errorElement: <RouteError />,
+    hydrateFallbackElement: <Loading />,
     shouldRevalidate: shouldRevalidate,
     children: [
       {

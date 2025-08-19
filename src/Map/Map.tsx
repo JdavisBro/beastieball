@@ -94,7 +94,9 @@ export default function Map(): React.ReactNode {
       url.searchParams.delete(key);
     }
     url.hash = "";
-    history.pushState({}, "", url.toString());
+    if (url.toString() != window.location.href) {
+      history.pushState({}, "", url.toString());
+    }
   };
 
   const searchParams = new URL(window.location.href).searchParams;

@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useMemo, useState } from "react";
+import { Fragment, useCallback, useMemo, useRef, useState } from "react";
 import Control from "react-leaflet-custom-control";
 
 import styles from "./Map.module.css";
@@ -61,6 +61,16 @@ function ItemSection({
   const item = huntedItem && ITEM_DIC[huntedItem];
   const [itemSelector, setItemSelector] = useState(false);
 
+  const itemRef = useRef<[boolean, undefined | string]>([false, undefined]);
+
+  const onClose = () => {
+    if (itemRef.current[0]) {
+      setItemSelector(false);
+      setHuntedItem(itemRef.current[1]);
+      itemRef.current[0] = false;
+    }
+  };
+
   return (
     <>
       <label>
@@ -72,14 +82,17 @@ function ItemSection({
       <Modal
         header="Select Item"
         open={itemSelector}
-        onClose={() => setItemSelector(false)}
+        onClose={onClose}
         hashValue="SelectItem"
       >
         <div className={styles.itemSelect}>
           <div
             key={"unset"}
             className={styles.itemSelectItem}
-            onClick={() => setHuntedItem(undefined)}
+            onClick={() => {
+              itemRef.current = [true, undefined];
+              setItemSelector(false);
+            }}
           >
             Unset
           </div>
@@ -87,7 +100,10 @@ function ItemSection({
             <div
               key={item.id}
               className={styles.itemSelectItem}
-              onClick={() => setHuntedItem(item.id)}
+              onClick={() => {
+                itemRef.current = [true, item.id];
+                setItemSelector(false);
+              }}
             >
               <img src={`/gameassets/sprItems/${item.img}.png`} />
               <div className={styles.itemSelectText}>

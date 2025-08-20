@@ -17,6 +17,12 @@ import {
 import BEASTIE_NAMES_UNTYPED from "./beastie_names.json";
 import Loading from "../Loading";
 
+declare global {
+  interface Window {
+    Localization: LocalizationType;
+  }
+}
+
 const BEASTIE_NAMES: Record<
   string,
   Record<SupportedLanguage, string>
@@ -106,11 +112,11 @@ function localize(
   }
 
   return placeholders_exist
-    ? (str === undefined ? str : key).replace(
+    ? (str !== undefined ? str : key).replace(
         /\{(.+?)\}/g,
         (match, g1) => placeholders[g1] ?? match,
       )
-    : str === undefined
+    : str !== undefined
       ? str
       : key;
 }
@@ -199,6 +205,7 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
     }),
     [lang, languageData, setLang],
   );
+  window.Localization = contextValue;
 
   if (!languageData) {
     return <Loading />;

@@ -89,10 +89,14 @@ class TagBuilder {
 
   applyTag(tag: string, value?: string) {
     if (tag.startsWith("spr")) {
+      const altKey =
+        tag in IMAGE_ALTS ? IMAGE_ALTS[tag][Number(value ?? 0)] : undefined;
       const alt =
-        tag in IMAGE_ALTS
-          ? this.L(IMAGE_ALTS[tag][Number(value ?? 0)] ?? "")
-          : undefined;
+        altKey !== undefined
+          ? this.L(altKey)
+          : altKey == ""
+            ? altKey
+            : undefined;
       if (!alt && !ALT_EXCEPTIONS.includes(tag)) {
         console.log(`NO ALT TEXT: '${tag}' frame ${value}`);
       }

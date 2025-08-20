@@ -58,9 +58,9 @@ function ExpForLevel({ growth }: { growth: number }) {
 }
 
 const TYPES: Record<string, [string, string]> = {
-  b: ["/gameassets/sprIcon/0.png", "common.type.body"],
-  h: ["/gameassets/sprIcon/1.png", "common.type.spirit"],
-  m: ["/gameassets/sprIcon/2.png", "common.type.mind"],
+  b: ["/gameassets/sprIcon/0.png", "common.types.body"],
+  h: ["/gameassets/sprIcon/1.png", "common.types.spirit"],
+  m: ["/gameassets/sprIcon/2.png", "common.types.mind"],
 };
 
 export default function ContentInfo(props: Props): React.ReactNode {

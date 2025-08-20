@@ -122,11 +122,7 @@ function getEffectString(
     case 38:
     case 39: {
       const [im, nameKey, descKey] = FEELING_EFF_MAP[Math.abs(effect.eff)];
-      const feelingText = L("{im}{0} {1}", {
-        im: im,
-        "0": L(nameKey),
-        "1": L(descKey),
-      });
+      const feelingText = `${im}${L(nameKey)} ${L(descKey)}`;
       const feelTarget = target[0].toUpperCase() + target.slice(1);
       const placeholders = {
         "0": (effect.eff == 23 ? "+" : "") + String(Math.abs(effect.pow)),
@@ -411,10 +407,12 @@ function getEffectString(
         move.eff.find((ieff) => ieff.eff == effect.eff) == effect;
       return L("movedefine_descadd_083", {
         "0": String(effect.pow),
-        "1": L(firstQuake ? "fieldeffectstuff_006" : "{0}", {
-          "0": L("fieldeffectstuff_005"),
-          "1": L("fieldeffectstuff_011", { "1": "25" }),
-        }),
+        "1": firstQuake
+          ? L("fieldeffectstuff_006", {
+              "0": L("fieldeffectstuff_005"),
+              "1": L("fieldeffectstuff_011", { "1": "25" }),
+            })
+          : L("fieldeffectstuff_005"),
         Field: target_field,
       });
     }
@@ -621,7 +619,8 @@ export default function MoveView(props: {
     )
     .join(" ");
 
-  const moveName = L(props.move.name);
+  const moveName =
+    props.move.name[0] == "¦" ? L(props.move.name) : props.move.name;
 
   return (
     <div className={styles.movecontainer} style={style}>

@@ -14,11 +14,9 @@ const DESCRIPTION_MAX = 115;
 export default function FeaturedTeam({
   team,
   selected,
-  setTeam,
 }: {
   team: FeaturedTeamType;
   selected: boolean;
-  setTeam: () => void;
 }) {
   const longDesc = team.description.length > DESCRIPTION_MAX;
 
@@ -36,7 +34,6 @@ export default function FeaturedTeam({
     if (seenChanged) {
       setSeenBeasties(seenBeasties);
     }
-    setTeam();
   };
 
   return (

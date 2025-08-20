@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Team } from "../Types";
 import { FeaturedCategoryRoot } from "./FeaturedCategories";
 import FeaturedTeam from "./FeaturedTeam";
 import styles from "./TeamViewer.module.css";
@@ -14,11 +13,9 @@ enum FilterType {
 export default function FeaturedSection({
   featuredCategories,
   code,
-  setTeam,
 }: {
   featuredCategories: FeaturedCategoryRoot[];
   code?: string;
-  setTeam: (team: Team) => void;
 }) {
   const [tab, setTab] = useState(0);
   const [subTab, setSubTab] = useState(0);
@@ -141,11 +138,6 @@ export default function FeaturedSection({
               key={featuredteam.team.code}
               team={featuredteam}
               selected={code == featuredteam.team.code}
-              setTeam={() => {
-                if (code != featuredteam.team.code) {
-                  setTeam(featuredteam.team);
-                }
-              }}
             />
           )) || "no teams 🥺"}
       </div>

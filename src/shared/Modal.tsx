@@ -79,7 +79,6 @@ export default function Modal(
           old.hash = "";
           history.replaceState({}, "", old.toString());
         }
-        console.log("navigate!");
         navigate({
           search: window.location.search,
           hash: "#" + props.hashValue,

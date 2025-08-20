@@ -30,31 +30,31 @@
     "value": -1.0
   },
   "energy1": {
-    "desc": "Cures a Beastie of feeling [sprStatus,6]SWEATY outside of games",
+    "desc": "¦itemsinit_itemdefine_116¬0¬[sprStatus,6]¦statuseffectstuff_007¦¦",
     "eff": [1, 1.0, 1.0],
     "id": "energy1",
     "img": 48.0,
-    "name": "Star Soda",
+    "name": "¦itemsinit_itemdefine_117¦",
     "points": 1.0,
     "type": 0,
     "value": 6.0
   },
   "energy2": {
-    "desc": "Cures a Beastie of feeling [sprStatus,6]SWEATY and restores 25% STAMINA outside of games",
+    "desc": "¦itemsinit_itemdefine_118¬0¬[sprStatus,6]¦statuseffectstuff_007¦¦",
     "eff": [1, 1.0, 1.0, 0, 1.0, 0.25],
     "id": "energy2",
     "img": 49.0,
-    "name": "Peptrolyte",
+    "name": "¦itemsinit_itemdefine_119¦",
     "points": 1.0,
     "type": 0,
     "value": 9.0
   },
   "energy3": {
-    "desc": "Cures a Beastie of feeling [sprStatus,6]SWEATY and restores 33% STAMINA outside of games",
+    "desc": "¦itemsinit_itemdefine_120¬0¬[sprStatus,6]¦statuseffectstuff_007¦¦",
     "eff": [1, 1.0, 1.0, 0, 1.0, 0.33000000000000002],
     "id": "energy3",
     "img": 50.0,
-    "name": "Daredillo Energy",
+    "name": "¦itemsinit_itemdefine_121¦",
     "points": 1.0,
     "type": 0,
     "value": 12.0
@@ -138,7 +138,7 @@
   },
   "jersey_ex1": {
     "desc": "¦itemsinit_itemdefine_081¦",
-    "eff": [10, "jersey", "¦itemsinit_itemdefine_082¦"],
+    "eff": [10, "jersey", "jersey2"],
     "id": "jersey_ex1",
     "img": 20.0,
     "name": "¦itemsinit_itemdefine_080¦",
@@ -148,7 +148,7 @@
   },
   "jersey_ex2": {
     "desc": "¦itemsinit_itemdefine_084¦",
-    "eff": [10, "jersey2", "¦itemsinit_itemdefine_085¦"],
+    "eff": [10, "jersey2", "jersey3"],
     "id": "jersey_ex2",
     "img": 21.0,
     "name": "¦itemsinit_itemdefine_083¦",
@@ -158,7 +158,7 @@
   },
   "jersey_ex3": {
     "desc": "¦itemsinit_itemdefine_087¦",
-    "eff": [10, "jersey3", "¦itemsinit_itemdefine_088¦"],
+    "eff": [10, "jersey3", "jersey4"],
     "id": "jersey_ex3",
     "img": 22.0,
     "name": "¦itemsinit_itemdefine_086¦",
@@ -168,7 +168,7 @@
   },
   "jersey_ex4": {
     "desc": "¦itemsinit_itemdefine_090¦",
-    "eff": [10, "jersey4", "¦itemsinit_itemdefine_091¦"],
+    "eff": [10, "jersey4", "jersey5"],
     "id": "jersey_ex4",
     "img": 23.0,
     "name": "¦itemsinit_itemdefine_089¦",

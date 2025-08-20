@@ -102,7 +102,9 @@ for lang_fp in loc_dir.iterdir():
   out_dir.parent.mkdir(exist_ok=True)
   with out_dir.open("w+", encoding="utf8") as f:
     json.dump(lang_out, f, ensure_ascii=False, indent=2)
+    f.write("\n")
 
 beastie_fp = language_out_dir.parent / "beastie_names.json"
 with beastie_fp.open("w+", encoding="utf8") as f:
   json.dump(beastie_names, f, ensure_ascii=False, indent=2)
+  f.write("\n")

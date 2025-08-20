@@ -142,7 +142,7 @@ function getEffectString(
       if (effect.targ == 0) {
         return `Ball goes to self.`;
       } else {
-        return `${targetStart}'s ball becomes VOLLEYed.`;
+        return `${targetStart}'s ball becomes hittable.`;
       }
     case 22:
       return `${feels} ${effect.pow} [sprStatus,5]WIPED (must bench)${dot}`;

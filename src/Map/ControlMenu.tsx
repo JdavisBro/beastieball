@@ -298,24 +298,22 @@ function ControlMenuInner({
             nonSelectableReason={Loc("map.beastie.noWild")}
           />
         </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={postgame}
-            onChange={(event) => setPostgame(event.currentTarget.checked)}
-            id="postgame"
-          />
-          {Loc("map.beastie.postgame")}
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={attractSpray}
-            onChange={(event) => setAttractSpray(event.currentTarget.checked)}
-            id="postgame"
-          />
-          {Loc("map.beastie.attractSpray")}
-        </label>
+        <Checkbox
+          checked={postgame}
+          handleChange={(value) =>
+            setPostgame(typeof value == "boolean" ? value : value(postgame))
+          }
+          text={Loc("map.beastie.postgame")}
+        />
+        <Checkbox
+          checked={attractSpray}
+          handleChange={(value) =>
+            setAttractSpray(
+              typeof value == "boolean" ? value : value(attractSpray),
+            )
+          }
+          text={Loc("map.beastie.attractSpray")}
+        />
       </ControlSection>
       <ControlSection
         header={Loc("map.items.title")}

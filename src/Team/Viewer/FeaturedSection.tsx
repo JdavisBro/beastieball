@@ -3,6 +3,7 @@ import { FeaturedCategoryRoot } from "./FeaturedCategories";
 import FeaturedTeam from "./FeaturedTeam";
 import styles from "./TeamViewer.module.css";
 import BeastieSelect from "../../shared/BeastieSelect";
+import InfoTabberHeader from "../../shared/InfoTabber";
 
 enum FilterType {
   Name,
@@ -44,51 +45,22 @@ export default function FeaturedSection({
 
   return (
     <>
-      <div className={styles.categorybg}>
-        {featuredCategories.map((category, index) => (
-          <button
-            key={category.header}
-            className={
-              index == tab
-                ? styles.categorybuttonSelected
-                : styles.categorybutton
-            }
-            onClick={() => {
-              setTab(index);
-              setSubTab(0);
-            }}
-          >
-            {category.header}
-          </button>
-        ))}
-        <button
-          className={
-            allSelected ? styles.categorybuttonSelected : styles.categorybutton
-          }
-          onClick={() => {
-            setTab(featuredCategories.length);
-            setSubTab(0);
-          }}
-        >
-          All Teams
-        </button>
-      </div>
+      <InfoTabberHeader
+        tab={tab}
+        setTab={setTab}
+        tabs={[
+          ...featuredCategories.map((category) => category.header),
+          "All Teams",
+        ]}
+        className={styles.categorybg}
+      />
       {!allSelected && selectedTab.categories ? (
-        <div className={styles.categorybg}>
-          {selectedTab.categories.map((category, index) => (
-            <button
-              key={category.header}
-              className={
-                index == subTab
-                  ? styles.categorybuttonSelected
-                  : styles.categorybutton
-              }
-              onClick={() => setSubTab(index)}
-            >
-              {category.header}
-            </button>
-          ))}
-        </div>
+        <InfoTabberHeader
+          tab={subTab}
+          setTab={setSubTab}
+          tabs={selectedTab.categories.map((category) => category.header)}
+          className={styles.categorybg}
+        />
       ) : null}
       {selectedTab?.description ? (
         <div className={styles.sectionheader}>{selectedTab.description}</div>

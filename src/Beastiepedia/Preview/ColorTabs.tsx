@@ -11,6 +11,7 @@ import type { BeastieType } from "../../data/BeastieData";
 import { useLocalStorage } from "usehooks-ts";
 import BEASTIE_DATA from "../../data/BeastieData";
 import BeastieSelect from "../../shared/BeastieSelect";
+import InfoTabberHeader from "../../shared/InfoTabber";
 
 function defaultColor(
   colors: number[],
@@ -203,34 +204,16 @@ export default function ColorTabs(props: Props): React.ReactNode {
 
   return (
     <>
-      <div className={styles.tabselect}>
-        <button
-          className={currentTab == "color" ? styles.selectedtab : ""}
-          onClick={() => setCurrentTab("color")}
-        >
-          Regular
-        </button>
-        {beastiedata.colors2 ? (
-          <button
-            className={currentTab == "color2" ? styles.selectedtab : ""}
-            onClick={() => setCurrentTab("color2")}
-          >
-            Variant
-          </button>
-        ) : null}
-        <button
-          className={currentTab == "shiny" ? styles.selectedtab : ""}
-          onClick={() => setCurrentTab("shiny")}
-        >
-          Raremorph
-        </button>
-        <button
-          className={currentTab == "custom" ? styles.selectedtab : ""}
-          onClick={() => setCurrentTab("custom")}
-        >
-          Custom
-        </button>
-      </div>
+      <InfoTabberHeader
+        tab={currentTab}
+        setTab={setCurrentTab}
+        tabs={{
+          color: "Regular",
+          ...(beastiedata.colors2 ? { color2: "Variant" } : {}),
+          shiny: "Raremorph",
+          custom: "Custom",
+        }}
+      />
       <div className={styles.tabcontainer}>
         <BeastieColorTabContent
           tab={"color"}

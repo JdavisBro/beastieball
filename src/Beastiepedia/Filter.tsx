@@ -11,6 +11,7 @@ import {
   BEASTIE_STUFF_RECENTLY_UPDATED,
   BEASITE_SPRITES_RECENTLY_UPDATED,
 } from "./RecentlyUpdated";
+import InfoTabberHeader from "../shared/InfoTabber";
 
 export enum FilterTypes {
   Ability,
@@ -251,26 +252,12 @@ export default function Filter({
             Clear Filter
           </button>
           {" " + createFilterString(filters)}
-          <div className={styles.tabs}>
-            <button
-              className={tab == 0 ? styles.selectedtab : undefined}
-              onClick={() => changeTab(0)}
-            >
-              Trait
-            </button>
-            <button
-              className={tab == 1 ? styles.selectedtab : undefined}
-              onClick={() => changeTab(1)}
-            >
-              Plays
-            </button>
-            <button
-              className={tab == 2 ? styles.selectedtab : undefined}
-              onClick={() => changeTab(2)}
-            >
-              Other
-            </button>
-          </div>
+          <InfoTabberHeader
+            tab={tab}
+            setTab={changeTab}
+            tabs={["Trait", "Plays", "Other"]}
+            className={styles.tabSelect}
+          />
           {tab < 2 ? (
             <label>
               Search:{" "}

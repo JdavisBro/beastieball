@@ -6,6 +6,7 @@ import type { TeamBeastie } from "../Types";
 import MoveSelect from "./MoveSelect";
 import { Box } from "./TeamBuilder";
 import styles from "./TeamBuilder.module.css";
+import InfoTabberHeader from "../../shared/InfoTabber";
 
 const TYPES = [
   ["b", "Body"],
@@ -147,7 +148,8 @@ function StatOptions({
   beastie: TeamBeastie;
   changeValue: ChangeValueType;
 }) {
-  const [training, setTraining] = useState(true);
+  const [tab, setTab] = useState(0);
+  const training = tab == 0;
 
   const extraPoints = Math.min(
     Math.max(
@@ -174,20 +176,11 @@ function StatOptions({
 
   return (
     <div>
-      <div className={styles.tabs}>
-        <button
-          className={training ? styles.selectedtab : undefined}
-          onClick={() => setTraining(true)}
-        >
-          Training
-        </button>
-        <button
-          className={training ? undefined : styles.selectedtab}
-          onClick={() => setTraining(false)}
-        >
-          Coaching
-        </button>
-      </div>
+      <InfoTabberHeader
+        tab={tab}
+        setTab={setTab}
+        tabs={["Training", "Coaching"]}
+      />
       <div className={styles.tabcontainer}>
         <StatSelect
           beastie={beastie}

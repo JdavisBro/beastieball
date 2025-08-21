@@ -37,6 +37,7 @@ function findLanguageText(text: string[], langs: string[]) {
       }
     }
   }
+  return text[0];
 }
 
 export default function Carousel({

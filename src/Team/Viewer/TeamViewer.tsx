@@ -91,13 +91,13 @@ export default function Viewer() {
     ) {
       return;
     }
-    if (code.split("").some((char) => !VALID_CHARACTERS.includes(char))) {
-      setError(true);
-      return;
-    }
     if (selectedFeatured) {
       setMobileFeatured(false);
       setTeam(selectedFeatured.team);
+      return;
+    }
+    if (code.split("").some((char) => !VALID_CHARACTERS.includes(char))) {
+      setError(true);
       return;
     }
     fetch(

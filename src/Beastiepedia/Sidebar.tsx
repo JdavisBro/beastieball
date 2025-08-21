@@ -21,7 +21,6 @@ const BEASTIES = [...BEASTIE_DATA.values()];
 type Props = {
   beastieid: string | null | undefined;
   visibility: boolean;
-  onToggleSidebarVisibility: () => void;
 };
 
 export default function Sidebar(props: Props): React.ReactElement {
@@ -127,7 +126,6 @@ export default function Sidebar(props: Props): React.ReactElement {
             isSpoiler={
               spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id]
             }
-            handleClick={props.onToggleSidebarVisibility}
             handleSpoilerClick={handleSpoiler}
           />
         ))}

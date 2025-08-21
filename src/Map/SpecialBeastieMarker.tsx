@@ -3,11 +3,7 @@ import { Marker, Popup } from "react-leaflet";
 import { Link } from "react-router-dom";
 
 import { BeastieType } from "../data/BeastieData";
-import {
-  SpoilerMode,
-  useSpoilerMode,
-  useSpoilerSeen,
-} from "../shared/useSpoiler";
+import { useIsSpoiler } from "../shared/useSpoiler";
 import styles from "./Map.module.css";
 
 export default function SpecialBeastieMarker({
@@ -21,15 +17,9 @@ export default function SpecialBeastieMarker({
   open?: boolean;
   metamorph?: { from: BeastieType; by: string };
 }) {
-  const [spoilerMode] = useSpoilerMode();
-  const [beastiesSeen, setBeastiesSeen] = useSpoilerSeen();
+  const [isSpoilerFn, setSeen] = useIsSpoiler();
 
-  const isSpoiler =
-    spoilerMode == SpoilerMode.OnlySeen && !beastiesSeen[target.id];
-
-  const setSeen = (beastieId: string) => {
-    setBeastiesSeen({ ...beastiesSeen, [beastieId]: true });
-  };
+  const isSpoiler = isSpoilerFn(target.id);
 
   const targetUrl = isSpoiler
     ? "/gameassets/sprExclam_1.png"
@@ -52,9 +42,7 @@ export default function SpecialBeastieMarker({
     </Link>
   );
 
-  const metamorphSpoiler = metamorph
-    ? spoilerMode == SpoilerMode.OnlySeen && !beastiesSeen[metamorph.from.id]
-    : true;
+  const metamorphSpoiler = metamorph ? isSpoilerFn(metamorph.from.id) : true;
   const handleMetamorphClick =
     metamorph && metamorphSpoiler
       ? () => setSeen(metamorph.from.id)

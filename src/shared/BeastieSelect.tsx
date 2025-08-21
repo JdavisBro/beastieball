@@ -3,7 +3,7 @@ import { useCallback, useRef, useState } from "react";
 import styles from "./Shared.module.css";
 import Modal from "./Modal";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
-import { SpoilerMode, useSpoilerMode, useSpoilerSeen } from "./useSpoiler";
+import { useIsSpoiler } from "./useSpoiler";
 
 const BEASTIES = [...BEASTIE_DATA.values()];
 
@@ -80,24 +80,20 @@ export default function BeastieSelect({
 
   const beastie = beastieId ? BEASTIE_DATA.get(beastieId) : undefined;
 
-  const [spoilerMode] = useSpoilerMode();
-  const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
+  const [isSpoiler, setSeen] = useIsSpoiler();
 
   const clickedRef = useRef<[boolean, string | undefined]>([false, undefined]);
 
   const handleClick = useCallback(
     (beastieId: string, isSpoiler: boolean) => {
       if (isSpoiler) {
-        setSeenBeasties((prev) => ({
-          [beastieId]: true,
-          ...prev,
-        }));
+        setSeen(beastieId);
         return;
       }
       clickedRef.current = [true, beastieId];
       setOpen(false);
     },
-    [setSeenBeasties],
+    [setSeen],
   );
 
   const onClose = () => {
@@ -176,10 +172,7 @@ export default function BeastieSelect({
                 key={beastie.id}
                 beastie={beastie}
                 handleClick={handleClick}
-                isSpoiler={
-                  spoilerMode == SpoilerMode.OnlySeen &&
-                  !seenBeasties[beastie.id]
-                }
+                isSpoiler={isSpoiler(beastie.id)}
                 selectable={!isSelectable || isSelectable(beastie)}
                 nonSelectableReason={nonSelectableReason}
                 visible={beastie.name

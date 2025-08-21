@@ -7,7 +7,7 @@ import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import { Move } from "../data/MoveData";
 import Modal from "./Modal";
 import MoveView from "./MoveView";
-import { SpoilerMode, useSpoilerMode, useSpoilerSeen } from "./useSpoiler";
+import { useIsSpoiler } from "./useSpoiler";
 import useScreenOrientation from "../utils/useScreenOrientation";
 
 export default function MoveModalProvider(props: PropsWithChildren) {
@@ -28,15 +28,13 @@ export default function MoveModalProvider(props: PropsWithChildren) {
     });
   }
 
-  const [spoilerMode] = useSpoilerMode();
-  const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
+  const [isSpoilerFn, setSeen] = useIsSpoiler();
 
   const handleClick = (spoilerBeastie: string | undefined = undefined) => {
     if (!spoilerBeastie) {
       return setMove(null);
     }
-    seenBeasties[spoilerBeastie] = true;
-    setSeenBeasties(seenBeasties);
+    setSeen(spoilerBeastie);
   };
 
   const orientation = useScreenOrientation(800);
@@ -59,9 +57,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
           <div className={styles.movebeastierow}>
             <div className={styles.movebeastielist}>
               {levelBeasties.map((beastie) => {
-                const isSpoiler =
-                  spoilerMode == SpoilerMode.OnlySeen &&
-                  !seenBeasties[beastie[0].id];
+                const isSpoiler = isSpoilerFn(beastie[0].id);
                 return (
                   <Link
                     to={
@@ -97,9 +93,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
             </div>
             <div className={styles.movebeastielist}>
               {friendBeasties.map((beastie) => {
-                const isSpoiler =
-                  spoilerMode == SpoilerMode.OnlySeen &&
-                  !seenBeasties[beastie.id];
+                const isSpoiler = isSpoilerFn(beastie.id);
                 return (
                   <Link
                     to={isSpoiler ? "#Play" : `/beastiepedia/${beastie.name}`}

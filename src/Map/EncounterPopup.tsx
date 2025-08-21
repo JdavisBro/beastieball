@@ -1,11 +1,7 @@
 import { EncounterDataType } from "../data/EncounterData";
 import BEASTIE_DATA from "../data/BeastieData";
 import styles from "./Map.module.css";
-import {
-  SpoilerMode,
-  useSpoilerMode,
-  useSpoilerSeen,
-} from "../shared/useSpoiler";
+import { useIsSpoiler } from "../shared/useSpoiler";
 import { Link } from "react-router-dom";
 import getMetamorphAtLevel from "../Team/Encounters/getMetamorphAtLevel";
 
@@ -18,8 +14,7 @@ export default function EncounterPopup({
   encounterData: EncounterDataType | undefined;
   loadEncounterData: () => void;
 }) {
-  const [spoilerMode] = useSpoilerMode();
-  const [spoilerSeen, setSpoilerSeen] = useSpoilerSeen();
+  const [isSpoilerFn, setSeen] = useIsSpoiler();
 
   if (!encounterData) {
     loadEncounterData();
@@ -49,9 +44,7 @@ export default function EncounterPopup({
               oldBeastieData.id,
             ) ?? oldBeastieData;
           const isWild = beastie.specie == "";
-          const isSpoiler =
-            isWild ||
-            (spoilerMode != SpoilerMode.All && !spoilerSeen[beastieData.id]);
+          const isSpoiler = isWild || isSpoilerFn(beastie.specie);
 
           return (
             <div key={index} className={styles.encounterBeastie}>
@@ -59,15 +52,7 @@ export default function EncounterPopup({
                 to={
                   isWild || isSpoiler ? "" : `/beastiepedia/${beastieData.name}`
                 }
-                onClick={
-                  isSpoiler
-                    ? () =>
-                        setSpoilerSeen((seen) => {
-                          seen[beastieData.id] = true;
-                          return seen;
-                        })
-                    : undefined
-                }
+                onClick={isSpoiler ? () => setSeen(beastieData.id) : undefined}
               >
                 <img
                   src={

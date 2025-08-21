@@ -8,11 +8,7 @@ import Filter, {
   createFilterString,
   FilterType,
 } from "./Filter";
-import {
-  SpoilerMode,
-  useSpoilerMode,
-  useSpoilerSeen,
-} from "../shared/useSpoiler";
+import { useIsSpoiler } from "../shared/useSpoiler";
 import { useNavigate } from "react-router-dom";
 import { SORT_CATEGORIES } from "./sortCategories";
 
@@ -43,20 +39,16 @@ export default function Sidebar(props: Props): React.ReactElement {
 
   const filterFunc = createFilterFunction(filters);
 
-  const [spoilerMode] = useSpoilerMode();
-  const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
+  const [isSpoiler, setSeen] = useIsSpoiler();
 
   const navigate = useNavigate();
 
   const handleSpoiler = useCallback(
     (beastieId: string, name: string) => {
-      setSeenBeasties((prev) => {
-        prev[beastieId] = true;
-        return prev;
-      });
+      setSeen(beastieId);
       navigate(`/beastiepedia/${name}`);
     },
-    [setSeenBeasties, navigate],
+    [setSeen, navigate],
   );
 
   return (
@@ -123,9 +115,7 @@ export default function Sidebar(props: Props): React.ReactElement {
               beastie.name.toLowerCase().includes(search.toLowerCase()) &&
               (!filterFunc || filterFunc(beastie))
             }
-            isSpoiler={
-              spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id]
-            }
+            isSpoiler={isSpoiler(beastie.id)}
             handleSpoilerClick={handleSpoiler}
           />
         ))}

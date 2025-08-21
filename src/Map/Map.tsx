@@ -20,11 +20,7 @@ import SPAWN_DATA from "../data/SpawnData";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import ITEM_DIC from "../data/ItemData";
 import TextTag from "../shared/TextTag";
-import {
-  SpoilerMode,
-  useSpoilerMode,
-  useSpoilerSeen,
-} from "../shared/useSpoiler";
+import { useIsSpoiler } from "../shared/useSpoiler";
 import OTHER_AREAS from "./OtherLayerAreas";
 import SpecialBeastieMarker from "./SpecialBeastieMarker";
 import { EXTINCT_BEASTIES, METAMORPH_LOCATIONS } from "./SpecialBeasties";
@@ -80,8 +76,7 @@ export default function Map(): React.ReactNode {
 
   const beastieSpawnsOverlays: React.ReactElement[] = [];
 
-  const [spoilerMode] = useSpoilerMode();
-  const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
+  const [isSpoiler, setSeen] = useIsSpoiler();
 
   const [postgame, setPostgame] = useState(false);
   const [attractSpray, setAttractSpray] = useState(false);
@@ -241,9 +236,8 @@ export default function Map(): React.ReactNode {
           size,
           `${level.name}-${level.spawn_name[i]}`,
           beastie_filter,
-          spoilerMode,
-          seenBeasties,
-          setSeenBeasties,
+          isSpoiler,
+          setSeen,
           huntedBeastie,
           attractSpray,
         ),
@@ -273,9 +267,8 @@ export default function Map(): React.ReactNode {
     imgheaders: { [key: string]: React.ReactElement[] };
   } = useMemo(createMarkers, []);
 
-  const extinctIsSpoiler = !(
-    spoilerMode == SpoilerMode.All ||
-    EXTINCT_BEASTIES.some((extinct) => seenBeasties[extinct.beastieId])
+  const extinctIsSpoiler = !EXTINCT_BEASTIES.some((extinct) =>
+    isSpoiler(extinct.beastieId),
   );
 
   const marker_name = searchParams.get("marker");

@@ -11,7 +11,7 @@ import { BeastieType } from "../data/BeastieData";
 import CustomErrorBoundary from "../shared/CustomErrorBoundary";
 import ContentPreview from "./Preview/ContentPreview";
 import ContentInfo from "./Info/ContentInfo";
-import { useSpoilerSeen } from "../shared/useSpoiler";
+import { useIsSpoiler } from "../shared/useSpoiler";
 
 declare global {
   interface Window {
@@ -45,13 +45,12 @@ export default function Beastiepedia(): React.ReactNode {
     }
   }, [beastieid]);
 
-  const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
+  const [isSpoiler, setSeen] = useIsSpoiler();
   useEffect(() => {
-    if (beastiedata && !seenBeasties[beastiedata.id]) {
-      seenBeasties[beastiedata.id] = true;
-      setSeenBeasties(seenBeasties);
+    if (beastiedata && isSpoiler(beastiedata.id)) {
+      setSeen(beastiedata.id);
     }
-  }, [beastiedata, seenBeasties, setSeenBeasties]);
+  }, [beastiedata, isSpoiler]);
 
   window.BEASTIE_DATA = BEASTIE_DATA;
   window.beastie = beastiedata;

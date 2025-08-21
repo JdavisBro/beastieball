@@ -1,6 +1,6 @@
-export enum NoEvent {
+export enum NoData {
   WaitingForResponse,
-  NoEvent,
+  NoData,
 }
 
 export type BallEvent = {
@@ -28,3 +28,12 @@ export type BallEvent = {
 };
 
 export type EventResponse = { currentEvent: BallEvent };
+
+export type CarouselData = {
+  data: {
+    url: string;
+    img: string;
+    text: string[];
+    langs: string[];
+  }[];
+};

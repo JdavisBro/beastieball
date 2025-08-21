@@ -48,7 +48,7 @@ function isAnimEmpty(anim: BeastieAnimation | number | string | undefined) {
   return !anim.frames.startFrame && !anim.frames.endFrame;
 }
 
-const ANIMATION_LIST = [
+export const ANIMATION_LIST = [
   "idle",
   "move",
   "ready",
@@ -57,9 +57,9 @@ const ANIMATION_LIST = [
   "good",
   "bad",
   "fall",
+  "menu",
   "air",
   "stop",
-  "menu",
   "hug", // troglum
   "special", // conjarr
 ];
@@ -452,14 +452,14 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const [background, setBackground] = useState(false);
   const [backgroundColor, setBackgroundColor] = useState("#ffffff");
 
-  const animationList = ANIMATION_LIST.filter((value) => {
-    return (
+  const animationAllowed: Record<string, boolean> = {};
+  for (const value of ANIMATION_LIST) {
+    animationAllowed[value] =
       value in animdata &&
       (ANIMATION_ALWAYS_SHOW.includes(value) ||
         (!isAnimEmpty(animdata[value]) &&
-          (anim_check(value, props.beastiedata) == value || secrets)))
-    );
-  });
+          (anim_check(value, props.beastiedata) == value || secrets)));
+  }
 
   const gifDisabled = useMemo(() => {
     if (animdata && animdata[animation]) {
@@ -552,7 +552,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
           frameInputRef={frameInputRef}
           animation={animationState}
           setAnimation={setAnimation}
-          animationList={animationList}
+          animationAllowed={animationAllowed}
           frameCount={beastiesprite.frames}
           setFrame={setFrame}
           changeFrame={changeFrame}

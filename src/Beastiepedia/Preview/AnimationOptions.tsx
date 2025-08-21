@@ -1,5 +1,6 @@
 import { BeastieType } from "../../data/BeastieData";
 import InfoBox from "../../shared/InfoBox";
+import { ANIMATION_LIST } from "./ContentPreview";
 
 type Props = {
   paused: boolean;
@@ -7,7 +8,7 @@ type Props = {
   frameInputRef: React.Ref<HTMLInputElement>;
   animation: string;
   setAnimation: React.Dispatch<React.SetStateAction<string>>;
-  animationList: string[];
+  animationAllowed: Record<string, boolean>;
   frameCount: number;
   setFrame: (frame: number) => void;
   changeFrame: (diff: number) => void;
@@ -55,8 +56,12 @@ export default function AnimationOptions(props: Props): React.ReactElement {
           }}
           value={props.animation}
         >
-          {props.animationList.map((value: string) => (
-            <option value={value} key={value}>
+          {ANIMATION_LIST.map((value: string) => (
+            <option
+              value={value}
+              key={value}
+              disabled={!props.animationAllowed[value]}
+            >
               {value.charAt(0).toUpperCase() + value.slice(1)}
             </option>
           ))}

@@ -5,7 +5,7 @@ import { Type, Move, MoveEffect } from "../data/MoveData";
 import MoveModalContext from "./MoveModalContext";
 import { useContext, useMemo } from "react";
 import SOCIAL_DATA from "../data/SocialData";
-import { SpoilerMode, useFriendSpoiler, useSpoilerMode } from "./useSpoiler";
+import { useIsSpoiler } from "./useSpoiler";
 import { useLocalStorage } from "usehooks-ts";
 
 // reuqired: targ=12 says Targets SIDEWAYS.
@@ -421,11 +421,8 @@ export default function MoveView(props: {
 
   const [simpleMoves] = useLocalStorage("simpleMoves", false);
 
-  const [spoilerMode] = useSpoilerMode();
-  const [seenFriends, setSeenFriends] = useFriendSpoiler();
-  const friendSpoiler = friend
-    ? spoilerMode == SpoilerMode.OnlySeen && !seenFriends[friend.id]
-    : false;
+  const [isSpoilerFriend, setSeenFriend] = useIsSpoiler(true);
+  const friendSpoiler = friend ? isSpoilerFriend(friend.id) : false;
   let friend_hearts = 0;
   let learned_text;
   if (friend) {
@@ -503,8 +500,7 @@ export default function MoveView(props: {
               onClick={
                 friendSpoiler
                   ? () => {
-                      seenFriends[friend.id] = true;
-                      setSeenFriends(seenFriends);
+                      setSeenFriend(friend.id);
                     }
                   : undefined
               }

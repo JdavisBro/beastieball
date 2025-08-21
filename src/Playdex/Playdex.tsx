@@ -6,11 +6,7 @@ import Header from "../shared/Header";
 import { useState } from "react";
 import MoveModalProvider from "../shared/MoveModalProvider";
 import EffectFilters from "./EffectFilters";
-import {
-  SpoilerMode,
-  useFriendSpoiler,
-  useSpoilerMode,
-} from "../shared/useSpoiler";
+import { useIsSpoiler } from "../shared/useSpoiler";
 import MOVE_RECENTLY_UPDATED from "./RecentlyUpdated";
 
 declare global {
@@ -107,8 +103,7 @@ export default function PlayDex() {
   }
   moves = moves.sort(SortFunctions[sort]);
 
-  const [spoilerFriends] = useFriendSpoiler();
-  const [spoilerMode] = useSpoilerMode();
+  const [isSpoilerFriend] = useIsSpoiler(true);
 
   return (
     <div className={styles.container}>
@@ -194,8 +189,7 @@ export default function PlayDex() {
             <option value="undefined">None</option>
             {Object.keys(CHAR_LIST).map((friendId) => (
               <option key={friendId} value={CHAR_LIST[friendId]}>
-                {spoilerMode == SpoilerMode.OnlySeen &&
-                !spoilerFriends[friendId]
+                {isSpoilerFriend(friendId)
                   ? CHAR_LIST[friendId].slice(0, 2) + "..."
                   : CHAR_LIST[friendId]}
               </option>

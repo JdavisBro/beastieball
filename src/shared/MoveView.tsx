@@ -444,6 +444,9 @@ export default function MoveView(props: {
       learned_text = `Learned from ${friendSpoiler ? friend.name.slice(0, 2) + "..." : friend.name} at ${friend_hearts} hearts.`;
     }
   }
+
+  var desc_str = useMemo(() => getMoveDesc(props.move), [props.move.id]);
+
   if (props.friendFilter && (!friend || friend.name != props.friendFilter)) {
     return null;
   }
@@ -457,7 +460,6 @@ export default function MoveView(props: {
     "--move-url": `url("/gameassets/sprType/${String(props.move.type)}.png")`,
   } as React.CSSProperties;
 
-  var desc_str = useMemo(() => getMoveDesc(props.move), [props.move.id]);
   const pow =
     props.move.type < 3 ? (
       <div className={styles.movepower}>

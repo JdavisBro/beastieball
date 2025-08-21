@@ -20,6 +20,7 @@ export default function InfoTabberHeader<T extends string | number>({
         const keyCorrect = (typeof tab == "number" ? Number(key) : key) as T;
         return (
           <button
+            key={key}
             className={tab == keyCorrect ? "tabberSelected" : undefined}
             onClick={() => setTab(keyCorrect)}
           >

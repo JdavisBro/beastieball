@@ -17,7 +17,7 @@ import styles from "./ContentPreview.module.css";
 import type { BeastieType } from "../../data/BeastieData";
 import ColorTabs from "./ColorTabs";
 import SPRITE_INFO, { Sprite } from "../../data/SpriteInfo";
-import useLoadBeastieImages from "../../utils/useLoadBeastieImages";
+import useLoadBeastieImages from "./useLoadBeastieImages.ts";
 import BEASTIE_ANIMATIONS, {
   BeastieAnimation,
   BeastieAnimData,

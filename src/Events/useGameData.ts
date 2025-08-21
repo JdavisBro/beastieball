@@ -26,7 +26,11 @@ export function useGameData<T>(
     localStorage.setItem(storage + "Expire", String(Date.now()));
   };
 
-  const forceReload = () => updateGameData(path, handleSetGameData);
+  const forceReload = () => {
+    if (gameData != NoData.WaitingForResponse) {
+      updateGameData(path, handleSetGameData);
+    }
+  };
 
   useEffect(() => {
     const current = localStorage.getItem(storage);

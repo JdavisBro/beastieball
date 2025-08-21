@@ -6,7 +6,7 @@ import Header from "../shared/Header";
 import { useState } from "react";
 import MoveModalProvider from "../shared/MoveModalProvider";
 import EffectFilters from "./EffectFilters";
-import { useIsSpoiler } from "../shared/useSpoiler";
+import { useIsSpoilerFriend } from "../shared/useSpoiler";
 import MOVE_RECENTLY_UPDATED from "./RecentlyUpdated";
 
 declare global {
@@ -103,7 +103,7 @@ export default function PlayDex() {
   }
   moves = moves.sort(SortFunctions[sort]);
 
-  const [isSpoilerFriend] = useIsSpoiler(true);
+  const [isSpoilerFriend] = useIsSpoilerFriend();
 
   return (
     <div className={styles.container}>

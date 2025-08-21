@@ -49,12 +49,11 @@ export function useIsSpoiler(
   const [spoilerMode] = useSpoilerMode();
 
   return [
-    (subject: string) => {
-      if (spoilerMode == SpoilerMode.All) {
-        return false;
-      }
-      return !spoilerSeen[subject];
-    },
+    spoilerMode == SpoilerMode.All
+      ? () => false
+      : (subject: string) => {
+          return !spoilerSeen[subject];
+        },
     (subject: string | string[]) => {
       setSpoilerSeen((oldSeen) => {
         if (Array.isArray(subject)) {
@@ -68,4 +67,8 @@ export function useIsSpoiler(
       });
     },
   ];
+}
+
+export function useIsSpoilerFriend() {
+  return useIsSpoiler(true);
 }

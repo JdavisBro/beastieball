@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { NoData } from "./Types";
 
 const EVENT_RESPONSE_EXPIRE = 12 * 60 * 60 * 1000;
@@ -16,8 +16,22 @@ export function useGameData<T>(
   storage: string,
   open: boolean,
 ): [NoData | T, () => void] {
+  const storageItem = useMemo(() => {
+    const current = localStorage.getItem(storage);
+    if (!current) {
+      return undefined;
+    }
+    let currentJson: T;
+    try {
+      currentJson = JSON.parse(current);
+    } catch {
+      return undefined;
+    }
+    return currentJson;
+  }, []);
+
   const [gameData, setGameData] = useState<NoData | T>(
-    NoData.WaitingForResponse,
+    storageItem ?? NoData.WaitingForResponse,
   );
 
   const handleSetGameData = (newGameData: NoData | T) => {
@@ -33,23 +47,15 @@ export function useGameData<T>(
   };
 
   useEffect(() => {
-    const current = localStorage.getItem(storage);
-    if (!current) {
-      if (!open) {
-        return;
+    if (gameData == NoData.NoData || gameData == NoData.WaitingForResponse) {
+      if (storageItem == undefined) {
+        if (!open) {
+          return;
+        }
+        return updateGameData(path, handleSetGameData);
       }
-      return updateGameData(path, handleSetGameData);
+      setGameData(storageItem);
     }
-    let currentJson: T;
-    try {
-      currentJson = JSON.parse(current);
-    } catch {
-      if (!open) {
-        return;
-      }
-      return updateGameData(path, handleSetGameData);
-    }
-    setGameData(currentJson);
     if (!open) {
       return;
     }

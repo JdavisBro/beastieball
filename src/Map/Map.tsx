@@ -267,8 +267,8 @@ export default function Map(): React.ReactNode {
     imgheaders: { [key: string]: React.ReactElement[] };
   } = useMemo(createMarkers, []);
 
-  const extinctIsSpoiler = !EXTINCT_BEASTIES.some((extinct) =>
-    isSpoiler(extinct.beastieId),
+  const extinctIsSpoiler = !EXTINCT_BEASTIES.some(
+    (extinct) => !isSpoiler(extinct.beastieId),
   );
 
   const marker_name = searchParams.get("marker");

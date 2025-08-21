@@ -125,11 +125,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  mask: linear-gradient(#000 0 0); /* clip the background to child element*/
   max-width: 100%;
+  height: fit-content;
   margin: auto;
   font-size: 1.1em;
 }
 
 .categorybg > button {
+  flex: 1 0 auto;
   padding: 4px 8px 5px;
 }

@@ -32,7 +32,6 @@ function findLanguageText(text: string[], langs: string[]) {
         console.log("MISSING LANG", langs[i]);
         continue;
       }
-      console.log(lang_code, navigator.languages);
       if (lang.startsWith(lang_code)) {
         return text[i];
       }

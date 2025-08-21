@@ -58,13 +58,10 @@ export default function Carousel({
   const [tab, setTab] = useState(0);
   const lastReload = useRef(0);
 
-  if (noData) {
-    return children;
-  }
+  const datas = noData
+    ? []
+    : carouselData.data.filter((data) => !data.img.startsWith("bigmoon"));
 
-  const datas = carouselData.data.filter(
-    (data) => !data.img.startsWith("bigmoon"),
-  );
   const tabs = [
     EMOJI_MAP.bigmoon,
     ...datas.map((data) => {

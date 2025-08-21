@@ -34,8 +34,6 @@ export type Move = {
   name: string;
 };
 
-export const MOVE_DIC: {
-  [key: string]: Move;
-} = move_dic;
+export const MOVE_DIC: Record<string, Move> = move_dic;
 
 export default MOVE_DIC;

@@ -1,20 +1,15 @@
 import beastie_animations from "./raw/beastie_animations.json";
 
 export type BeastieFrames = {
-  _: string;
   bpm?: boolean | number;
   startFrame?: number;
   endFrame?: number;
-  holds?: {
-    _: string;
-    [index: string]: number | number[] | string | undefined; // has to be either or the class thing will make error...
-  };
-  sounds?: { _: string; [index: string]: number | string | undefined };
+  holds?: Record<string, number[] | number | string | undefined>;
+  sounds?: Record<string, number | string | undefined>;
   transitions?: number[];
 };
 
 export type BeastieAnimation = {
-  _: string;
   frames: BeastieFrames | BeastieFrames[];
   speed?: number;
   loop?: string[];
@@ -29,7 +24,6 @@ export type BeastiePos = {
 };
 
 export type BeastieAnimData = {
-  _: string;
   __anim_speed?: number;
   bad: BeastieAnimation;
   fall: BeastieAnimation;

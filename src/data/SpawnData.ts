@@ -9,10 +9,6 @@ export type SpawnGroup = {
   lvlB: number;
 }[];
 
-const SPAWN_DATA: {
-  [key: string]: {
-    group: SpawnGroup | undefined;
-  };
-} = spawn_data;
+const SPAWN_DATA: Record<string, { group?: SpawnGroup }> = spawn_data;
 
 export default SPAWN_DATA;

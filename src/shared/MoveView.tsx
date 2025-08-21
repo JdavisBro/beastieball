@@ -3,7 +3,7 @@ import styles from "./Shared.module.css";
 import { TypeData } from "../data/TypeColor";
 import { Type, Move, MoveEffect } from "../data/MoveData";
 import MoveModalContext from "./MoveModalContext";
-import { useContext } from "react";
+import { useContext, useMemo } from "react";
 import SOCIAL_DATA from "../data/SocialData";
 import { SpoilerMode, useFriendSpoiler, useSpoilerMode } from "./useSpoiler";
 import { useLocalStorage } from "usehooks-ts";
@@ -321,6 +321,92 @@ function getEffectString(
   return `E ${effect.eff} T ${effect.targ} P ${effect.pow}`;
 }
 
+export function getMoveDesc(move: Move) {
+  const desc = [];
+
+  const attack = move.type < 3;
+
+  switch (move.use) {
+    case 1:
+      desc.push("Only used from back row.");
+      break;
+    case 2:
+      // If it auto targets front row and is Only used from net then ONLY is not included.
+      desc.push(
+        attack && move.targ == 4 ? "Used from net." : "Only used from net.",
+      );
+      break;
+  }
+
+  if (move.eff.find((effect) => effect.eff == 69)) {
+    desc.push("Only used when ball is hittable.");
+  } else if (
+    move.type == Type.Volley &&
+    !move.eff.some((eff) => eff.eff == 20) // Eff 20: Ball goes to TARGET. Does not have volley text
+  ) {
+    desc.push("VOLLEY.");
+  }
+
+  if (attack) {
+    switch (move.targ) {
+      case 1:
+      case 3:
+        desc.push("Targets straight ahead.");
+        break;
+      case 4:
+        // If it is Only used from net and Auto targets front row then Auto- is not included.
+        desc.push(
+          move.use != 2 ? "Auto-targets front row." : "Targets front row.",
+        );
+        break;
+      case 8:
+        desc.push("Auto-targets back row.");
+        break;
+      case 12:
+        desc.push("Targets SIDEWAYS.");
+        break;
+      case 13:
+        desc.push("Auto-targets nearest opponent.");
+        break;
+    }
+
+    if (move.pow < -1) {
+      desc.push(`Always does ${-move.pow} damage.`);
+    } else if (move.pow > -1 && move.pow < 0) {
+      desc.push(
+        `Damage equals ${-move.pow * 100}% of target's remaining STAMINA.`,
+      );
+    }
+
+    if (!desc.length && move.eff.length < 2) {
+      if (move.eff.length == 0) {
+        desc.push(`A [sprIcon,${move.type}] ATTACK.`);
+      } else {
+        desc.push("ATTACK.");
+      }
+    }
+  }
+
+  const args = { joiningEffects: null };
+
+  const desc_str = desc
+    .concat(
+      move.eff
+        .map((effect) =>
+          getEffectString(
+            effect,
+            attack,
+            !attack && (move.targ == 0 || move.targ == 8),
+            args,
+            move,
+          ),
+        )
+        .filter((effect) => !!effect),
+    )
+    .join(" ");
+  return desc_str;
+}
+
 export default function MoveView(props: {
   move: Move;
   noLearner?: boolean;
@@ -371,98 +457,13 @@ export default function MoveView(props: {
     "--move-url": `url("/gameassets/sprType/${String(props.move.type)}.png")`,
   } as React.CSSProperties;
 
-  const desc = [];
-  let pow = <></>;
-
-  const attack = props.move.type < 3;
-
-  switch (props.move.use) {
-    case 1:
-      desc.push("Only used from back row.");
-      break;
-    case 2:
-      // If it auto targets front row and is Only used from net then ONLY is not included.
-      desc.push(
-        attack && props.move.targ == 4
-          ? "Used from net."
-          : "Only used from net.",
-      );
-      break;
-  }
-
-  if (props.move.eff.find((effect) => effect.eff == 69)) {
-    desc.push("Only used when ball is hittable.");
-  } else if (
-    props.move.type == Type.Volley &&
-    !props.move.eff.some((eff) => eff.eff == 20) // Eff 20: Ball goes to TARGET. Does not have volley text
-  ) {
-    desc.push("VOLLEY.");
-  }
-
-  if (attack) {
-    switch (props.move.targ) {
-      case 1:
-      case 3:
-        desc.push("Targets straight ahead.");
-        break;
-      case 4:
-        // If it is Only used from net and Auto targets front row then Auto- is not included.
-        desc.push(
-          props.move.use != 2
-            ? "Auto-targets front row."
-            : "Targets front row.",
-        );
-        break;
-      case 8:
-        desc.push("Auto-targets back row.");
-        break;
-      case 12:
-        desc.push("Targets SIDEWAYS.");
-        break;
-      case 13:
-        desc.push("Auto-targets nearest opponent.");
-        break;
-    }
-
-    if (props.move.pow < -1) {
-      desc.push(`Always does ${-props.move.pow} damage.`);
-    } else if (props.move.pow > -1 && props.move.pow < 0) {
-      desc.push(
-        `Damage equals ${-props.move.pow * 100}% of target's remaining STAMINA.`,
-      );
-    }
-
-    if (!desc.length && props.move.eff.length < 2) {
-      if (props.move.eff.length == 0) {
-        desc.push(`A [sprIcon,${props.move.type}] ATTACK.`);
-      } else {
-        desc.push("ATTACK.");
-      }
-    }
-    pow = (
+  var desc_str = useMemo(() => getMoveDesc(props.move), [props.move.id]);
+  const pow =
+    props.move.type < 3 ? (
       <div className={styles.movepower}>
         {String(Math.max(0, props.move.pow))}
       </div>
-    );
-  }
-
-  const args = { joiningEffects: null };
-
-  const desc_str = desc
-    .concat(
-      props.move.eff
-        .map((effect) =>
-          getEffectString(
-            effect,
-            attack,
-            !attack && (props.move.targ == 0 || props.move.targ == 8),
-            args,
-            props.move,
-          ),
-        )
-        .filter((effect) => !!effect),
-    )
-    .join(" ");
+    ) : null;
 
   return (
     <div className={styles.movecontainer} style={style}>

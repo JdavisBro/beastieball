@@ -37,7 +37,7 @@ export default function Beastie({
     return null;
   }
 
-  const searchParam = altSearchMap[Math.ceil(teamBeastie.color[0])];
+  const searchParam = altSearchMap[Math.ceil(teamBeastie.color[0])] ?? "color";
 
   const beastieColors = teamBeastie.color.map(
     (value) => value - Math.ceil(value) + 1,

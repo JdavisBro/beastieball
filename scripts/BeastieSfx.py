@@ -49,5 +49,5 @@ for fp in voDir.glob("**/*.wav"):
       fw.write(numpy.zeros((f.num_channels, f.samplerate))) # Add padding second
 
 with outFile.open("w+") as f:
-  json.dump(beastie_vo, f)
+  json.dump(beastie_vo, f, ensure_ascii=False, sort_keys=True, indent=2)
 

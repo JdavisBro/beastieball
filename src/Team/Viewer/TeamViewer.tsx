@@ -77,6 +77,14 @@ export default function Viewer() {
 
   const textInput = useRef<HTMLInputElement>(null);
 
+  // Lazy Load Featured Teams.
+  const featuredCategories = useFeaturedCategories();
+
+  const [selectedCategoryName, selectedFeatured] = findFeatured(
+    code,
+    featuredCategories,
+  );
+
   useEffect(() => {
     if (
       team?.code == code ||
@@ -84,6 +92,11 @@ export default function Viewer() {
       // Don't make request on prerender
       window.navigator.userAgent.toLowerCase().includes("prerender")
     ) {
+      return;
+    }
+    if (selectedFeatured) {
+      setMobileFeatured(false);
+      setTeam(selectedFeatured.team);
       return;
     }
     if (code.split("").some((char) => !VALID_CHARACTERS.includes(char))) {
@@ -113,20 +126,7 @@ export default function Viewer() {
         }
         console.log(error);
       });
-  }, [code, team?.code]);
-
-  // Lazy Load Featured Teams.
-  const featuredCategories = useFeaturedCategories();
-
-  const [selectedCategoryName, selectedFeatured] = findFeatured(
-    code,
-    featuredCategories,
-  );
-  useEffect(() => {
-    if (selectedFeatured) {
-      setTeam(selectedFeatured.team);
-    }
-  }, [selectedFeatured]);
+  }, [code, team?.code, selectedFeatured]);
 
   const [mobileFeatured, setMobileFeatured] = useState(false);
 
@@ -177,10 +177,6 @@ export default function Viewer() {
           <FeaturedSection
             featuredCategories={featuredCategories}
             code={team?.code}
-            setTeam={(team) => {
-              setMobileFeatured(false);
-              setTeam(team);
-            }}
           />
         </div>
       ) : null}
@@ -308,7 +304,6 @@ export default function Viewer() {
           <FeaturedSection
             featuredCategories={featuredCategories}
             code={team?.code}
-            setTeam={setTeam}
           />
         )}
       </div>

@@ -12,7 +12,6 @@ type Props = {
   selected: boolean;
   visible: boolean;
   isSpoiler: boolean;
-  handleClick: () => void;
   handleSpoilerClick: (beastieId: string, name: string) => void;
 };
 
@@ -34,7 +33,6 @@ function SidebarBeastie(props: Props): React.ReactElement {
       className={styles.beastie}
       style={{ display: props.visible ? "block" : "none" }}
       onClick={() => {
-        props.handleClick();
         if (props.isSpoiler) {
           props.handleSpoilerClick(beastiedata.id, beastieName);
         }

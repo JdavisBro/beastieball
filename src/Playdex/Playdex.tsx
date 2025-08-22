@@ -6,11 +6,7 @@ import Header from "../shared/Header";
 import { useState } from "react";
 import MoveModalProvider from "../shared/MoveModalProvider";
 import EffectFilters from "./EffectFilters";
-import {
-  SpoilerMode,
-  useFriendSpoiler,
-  useSpoilerMode,
-} from "../shared/useSpoiler";
+import { useIsSpoilerFriend } from "../shared/useSpoiler";
 import MOVE_RECENTLY_UPDATED from "./RecentlyUpdated";
 import useLocalization, {
   LocalizationFunction,
@@ -115,8 +111,7 @@ export default function PlayDex() {
   }
   moves = moves.sort(SortFunctions(L)[sort]);
 
-  const [spoilerFriends] = useFriendSpoiler();
-  const [spoilerMode] = useSpoilerMode();
+  const [isSpoilerFriend] = useIsSpoilerFriend();
 
   const settingsSep = L("playdex.settingsSep");
   return (
@@ -225,8 +220,7 @@ export default function PlayDex() {
 
               return (
                 <option key={friendId} value={friendId}>
-                  {spoilerMode == SpoilerMode.OnlySeen &&
-                  !spoilerFriends[friendId]
+                  {isSpoilerFriend(friendId)
                     ? friendName.slice(0, 2) + "..."
                     : friendName}
                 </option>

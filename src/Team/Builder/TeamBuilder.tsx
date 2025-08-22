@@ -17,7 +17,8 @@ import useLocalization, {
   LocalizationFunction,
 } from "../../localization/useLocalization";
 
-const BEASTIE_KEYS = Object.keys(createBeastie("01"));
+const CONTROL_BEASTIE = createBeastie("01");
+const BEASTIE_KEYS = Object.keys(CONTROL_BEASTIE) as Array<keyof TeamBeastie>;
 
 function createTeam(L: LocalizationFunction) {
   return [
@@ -55,7 +56,9 @@ function verifyTeamJson(json: unknown) {
   }
   if (
     !json.every((beastie) =>
-      BEASTIE_KEYS.every((key) => beastie[key] !== undefined),
+      BEASTIE_KEYS.every(
+        (key) => typeof beastie[key] == typeof CONTROL_BEASTIE[key],
+      ),
     )
   ) {
     return false;
@@ -193,7 +196,9 @@ export default function TeamBuilder() {
                       files[0].text().then((text) => {
                         const newteam = JSON.parse(text);
                         if (!verifyTeamJson(newteam)) {
-                          console.log("Invalid Team Loaded");
+                          window.alert(
+                            "Invalid Team Data. Report on GitHub if you think this is incorrect.",
+                          );
                           return;
                         }
                         setTeam(

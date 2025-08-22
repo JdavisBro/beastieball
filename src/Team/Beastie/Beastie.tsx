@@ -40,7 +40,7 @@ export default function Beastie({
     return null;
   }
 
-  const searchParam = altSearchMap[Math.ceil(teamBeastie.color[0])];
+  const searchParam = altSearchMap[Math.ceil(teamBeastie.color[0])] ?? "color";
 
   const beastieColors = teamBeastie.color.map(
     (value) => value - Math.ceil(value) + 1,
@@ -129,7 +129,7 @@ export default function Beastie({
         {teamBeastie.attklist.map((moveId, index) => (
           <BeastieMove
             key={moveId + index}
-            move={MOVE_DIC[moveId]}
+            move={MOVE_DIC[moveId] ?? MOVE_DIC["???"]}
             impossible={
               !noMoveWarning && !beastiedata.attklist.includes(moveId)
             }

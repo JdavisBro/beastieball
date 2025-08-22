@@ -35,3 +35,40 @@ export function useFriendSpoiler() {
     FRIEND_SPOILERS,
   );
 }
+
+export function useIsSpoiler(
+  friend?: boolean,
+): [(subject: string) => boolean, (subject: string | string[]) => void] {
+  let spoilerSeen: Record<string, boolean>;
+  let setSpoilerSeen: ReturnType<typeof useSpoilerSeen>[1];
+  if (friend) {
+    [spoilerSeen, setSpoilerSeen] = useFriendSpoiler();
+  } else {
+    [spoilerSeen, setSpoilerSeen] = useSpoilerSeen();
+  }
+  const [spoilerMode] = useSpoilerMode();
+
+  return [
+    spoilerMode == SpoilerMode.All
+      ? () => false
+      : (subject: string) => {
+          return !spoilerSeen[subject];
+        },
+    (subject: string | string[]) => {
+      setSpoilerSeen((oldSeen) => {
+        if (Array.isArray(subject)) {
+          for (const sub of subject) {
+            oldSeen[sub] = true;
+          }
+        } else {
+          oldSeen[subject] = true;
+        }
+        return oldSeen;
+      });
+    },
+  ];
+}
+
+export function useIsSpoilerFriend() {
+  return useIsSpoiler(true);
+}

@@ -7,6 +7,7 @@ import type { TeamBeastie } from "../Types";
 import MoveSelect from "./MoveSelect";
 import { Box } from "./TeamBuilder";
 import styles from "./TeamBuilder.module.css";
+import InfoTabberHeader from "../../shared/InfoTabber";
 
 const TYPES = [
   ["b", "body"],
@@ -154,7 +155,8 @@ function StatOptions({
 }) {
   const { L } = useLocalization();
 
-  const [training, setTraining] = useState(true);
+  const [tab, setTab] = useState(0);
+  const training = tab == 0;
 
   const extraPoints = Math.min(
     Math.max(
@@ -181,20 +183,11 @@ function StatOptions({
 
   return (
     <div>
-      <div className={styles.tabs}>
-        <button
-          className={training ? styles.selectedtab : undefined}
-          onClick={() => setTraining(true)}
-        >
-          {L("teams.builder.training")}
-        </button>
-        <button
-          className={training ? undefined : styles.selectedtab}
-          onClick={() => setTraining(false)}
-        >
-          {L("teams.builder.coaching")}
-        </button>
-      </div>
+      <InfoTabberHeader
+        tab={tab}
+        setTab={setTab}
+        tabs={[L("teams.builder.training"), L("teams.builder.coaching")]}
+      />
       <div className={styles.tabcontainer}>
         <StatSelect
           beastie={beastie}

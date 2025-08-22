@@ -8,11 +8,7 @@ import Filter, {
   createFilterString,
   FilterType,
 } from "./Filter";
-import {
-  SpoilerMode,
-  useSpoilerMode,
-  useSpoilerSeen,
-} from "../shared/useSpoiler";
+import { useIsSpoiler } from "../shared/useSpoiler";
 import { useNavigate } from "react-router-dom";
 import { SORT_CATEGORIES } from "./sortCategories";
 import useLocalization from "../localization/useLocalization";
@@ -22,11 +18,10 @@ const BEASTIES = [...BEASTIE_DATA.values()];
 type Props = {
   beastieid: string | null | undefined;
   visibility: boolean;
-  onToggleSidebarVisibility: () => void;
 };
 
 export default function Sidebar(props: Props): React.ReactElement {
-  const { currentLanguage, L } = useLocalization();
+  const { getLink, L } = useLocalization();
   const beastieid = props.beastieid;
 
   const [search, setSearch] = useState("");
@@ -46,22 +41,16 @@ export default function Sidebar(props: Props): React.ReactElement {
 
   const filterFunc = createFilterFunction(filters);
 
-  const [spoilerMode] = useSpoilerMode();
-  const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
+  const [isSpoiler, setSeen] = useIsSpoiler();
 
   const navigate = useNavigate();
 
   const handleSpoiler = useCallback(
     (beastieId: string, name: string) => {
-      setSeenBeasties((prev) => {
-        prev[beastieId] = true;
-        return prev;
-      });
-      navigate(
-        `${currentLanguage == "en" ? "/" : `/${currentLanguage}/`}beastiepedia/${name}`,
-      );
+      setSeen(beastieId);
+      navigate(getLink(`/beastiepedia/${name}`));
     },
-    [setSeenBeasties, navigate, currentLanguage],
+    [setSeen, navigate, getLink],
   );
 
   return (
@@ -132,10 +121,7 @@ export default function Sidebar(props: Props): React.ReactElement {
               L(beastie.name).toLowerCase().includes(search.toLowerCase()) &&
               (!filterFunc || filterFunc(beastie))
             }
-            isSpoiler={
-              spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id]
-            }
-            handleClick={props.onToggleSidebarVisibility}
+            isSpoiler={isSpoiler(beastie.id)}
             handleSpoilerClick={handleSpoiler}
           />
         ))}

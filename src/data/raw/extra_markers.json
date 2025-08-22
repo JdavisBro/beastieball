@@ -160,7 +160,7 @@
       "id": "gift_sphinx_0",
       "items": [["train_ma", 4.0]],
       "x": -22376.0,
-      "y": -28421
+      "y": -28422
     },
     {
       "id": "gift_beach_cliff1_0",
@@ -669,11 +669,11 @@
     "train_mine_east": [{ "position": [-1016, -26784], "angle": 0 }],
     "mines_3": [{ "position": [-15411, -24429], "angle": 180 }],
     "wood_rail_central": [
-      { "position": [-18919.5, -30097], "angle": 357.3974304199 },
+      { "position": [-18919.5, -30098], "angle": 357.3974304199 },
       { "position": [-17360, -31155], "angle": 75.6944656372 }
     ],
     "wood_rail_central2": [
-      { "position": [-18918.5, -29940], "angle": 15 },
+      { "position": [-18918.5, -29941], "angle": 15 },
       { "position": [-17237, -31147], "angle": 75.6944656372 }
     ],
     "woods_west": [
@@ -739,7 +739,7 @@
     { "position": [-10464, -1799], "encounter": "reserve4" },
     { "position": [9291, -10111], "encounter": "seaside_cliff_0" },
     { "position": [5253, -11395], "encounter": "seaside_path_0" },
-    { "position": [6331, -7639], "encounter": "seaside_trees_0" },
+    { "position": [6331, -7640], "encounter": "seaside_trees_0" },
     { "position": [-8849.0, -24429], "encounter": "jasper_cave_1" },
     { "position": [-1262, -28112], "encounter": "jasper_cave_south_exit_0" },
     { "position": [-12197, -29312], "encounter": "jasper_cave_n" },

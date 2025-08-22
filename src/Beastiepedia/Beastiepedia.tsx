@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import Header from "../shared/Header";
@@ -11,7 +11,7 @@ import { BeastieType } from "../data/BeastieData";
 import CustomErrorBoundary from "../shared/CustomErrorBoundary";
 import ContentPreview from "./Preview/ContentPreview";
 import ContentInfo from "./Info/ContentInfo";
-import { useSpoilerSeen } from "../shared/useSpoiler";
+import { useIsSpoiler } from "../shared/useSpoiler";
 import useLocalization from "../localization/useLocalization";
 
 declare global {
@@ -61,19 +61,18 @@ export default function Beastiepedia(): React.ReactNode {
     !(beastieid !== undefined && orientation),
   ); // Selected beastie & portrait automatically hides sidebar
 
-  const handleDisableSidebar = useCallback(() => {
-    if (orientation) {
+  useEffect(() => {
+    if (beastieid && orientation) {
       setSidebarvisible(false);
     }
-  }, [orientation]);
+  }, [beastieid]);
 
-  const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
+  const [isSpoiler, setSeen] = useIsSpoiler();
   useEffect(() => {
-    if (beastiedata && !seenBeasties[beastiedata.id]) {
-      seenBeasties[beastiedata.id] = true;
-      setSeenBeasties(seenBeasties);
+    if (beastiedata && isSpoiler(beastiedata.id)) {
+      setSeen(beastiedata.id);
     }
-  }, [beastiedata, seenBeasties, setSeenBeasties]);
+  }, [beastiedata, isSpoiler]);
 
   window.BEASTIE_DATA = BEASTIE_DATA;
   window.beastie = beastiedata;
@@ -104,11 +103,7 @@ export default function Beastiepedia(): React.ReactNode {
       />
       <div className={styles.belowheader}>
         <CustomErrorBoundary fallbackClassName={styles.sidebar}>
-          <Sidebar
-            beastieid={beastieid}
-            visibility={sidebarvisible}
-            onToggleSidebarVisibility={handleDisableSidebar}
-          />
+          <Sidebar beastieid={beastieid} visibility={sidebarvisible} />
         </CustomErrorBoundary>
         <CustomErrorBoundary fallbackClassName={styles.content}>
           <div

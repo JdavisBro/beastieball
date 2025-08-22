@@ -3,8 +3,8 @@ import BEASTIE_DATA, { BeastieType, Condition } from "../../data/BeastieData";
 import InfoBox from "../../shared/InfoBox";
 import {
   SpoilerMode,
+  useIsSpoiler,
   useSpoilerMode,
-  useSpoilerSeen,
 } from "../../shared/useSpoiler";
 import { useState } from "react";
 import TextTag from "../../shared/TextTag";
@@ -257,8 +257,8 @@ export default function Evolution({
 }) {
   const { L } = useLocalization();
 
+  const [isSpoiler] = useIsSpoiler();
   const [spoilerMode] = useSpoilerMode();
-  const [beastieSeen] = useSpoilerSeen();
 
   const preEvos = squashEvolutions(
     findBeastiePreevolutions(beastiedata.family, beastiedata.id),
@@ -268,7 +268,7 @@ export default function Evolution({
       return {
         beastie: BEASTIE_DATA.get(evo.specie) as BeastieType,
         evolution: structuredClone(evo),
-        seen: spoilerMode == SpoilerMode.All || beastieSeen[evo.specie],
+        seen: !isSpoiler(evo.specie),
       };
     }),
     true,
@@ -284,12 +284,7 @@ export default function Evolution({
             key={`${evo.beastie.id}${index}`}
             evo={evo}
             into={false}
-            isSpoiler={
-              evo
-                ? spoilerMode == SpoilerMode.OnlySeen &&
-                  !beastieSeen[evo.beastie.id]
-                : false
-            }
+            isSpoiler={evo ? isSpoiler(evo.beastie.id) : false}
           />
         ))
       ) : (
@@ -303,10 +298,7 @@ export default function Evolution({
               key={evo.beastie.id + index}
               evo={evo}
               into={true}
-              isSpoiler={
-                spoilerMode == SpoilerMode.OnlySeen &&
-                !beastieSeen[evo.beastie.id]
-              }
+              isSpoiler={isSpoiler(evo.beastie.id)}
             />
           ))
         ) : (

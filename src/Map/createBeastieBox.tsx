@@ -3,7 +3,6 @@ import { Marker, Popup } from "react-leaflet";
 import { Link } from "react-router-dom";
 
 import { SpawnGroup } from "../data/SpawnData";
-import { SpoilerMode } from "../shared/useSpoiler";
 import BEASTIE_DATA from "../data/BeastieData";
 import styles from "./Map.module.css";
 import { LocalizationType } from "../localization/useLocalization";
@@ -14,11 +13,8 @@ export default function createBeastieBox(
   size: { x: number; y: number },
   key: string,
   beastie_filter: string | undefined,
-  spoilerMode: SpoilerMode,
-  seenBeasties: Record<string, boolean>,
-  setSeenBeasties: React.Dispatch<
-    React.SetStateAction<Record<string, boolean>>
-  >,
+  isSpoilerFn: (subject: string) => boolean,
+  setSeen: (subject: string) => void,
   huntedBeastie: string | undefined,
   attractSpray: boolean,
   Localization: LocalizationType,
@@ -69,8 +65,7 @@ export default function createBeastieBox(
     if (!beastie) {
       return;
     }
-    const isSpoiler =
-      spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
+    const isSpoiler = isSpoilerFn(beastie.id);
     const alt = `${isSpoiler ? `Beastie #${beastie.number}` : Loc(beastie.name)} spawn location.`;
     const iconScale = beastie.id != huntedBeastie ? 1 : 1.5;
     const overall = overall_percent[value];
@@ -111,10 +106,7 @@ export default function createBeastieBox(
           iconSize: [50 * iconScale, 50 * iconScale],
         })}
         eventHandlers={{
-          click: () => {
-            seenBeasties[beastie.id] = true;
-            setSeenBeasties(seenBeasties);
-          },
+          click: () => setSeen(beastie.id),
         }}
       >
         <Popup offset={[0, -5]}>

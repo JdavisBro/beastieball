@@ -2,11 +2,7 @@ import { Link } from "react-router-dom";
 import { FeaturedTeamType } from "./FeaturedCategories";
 import styles from "./TeamViewer.module.css";
 import BEASTIE_DATA from "../../data/BeastieData";
-import {
-  SpoilerMode,
-  useSpoilerMode,
-  useSpoilerSeen,
-} from "../../shared/useSpoiler";
+import { useIsSpoiler } from "../../shared/useSpoiler";
 import useLocalization from "../../localization/useLocalization";
 
 const LONG_NAME_LENGTH = 45;
@@ -15,31 +11,18 @@ const DESCRIPTION_MAX = 115;
 export default function FeaturedTeam({
   team,
   selected,
-  setTeam,
 }: {
   team: FeaturedTeamType;
   selected: boolean;
-  setTeam: () => void;
 }) {
   const { L, getLink } = useLocalization();
 
   const longDesc = team.description.length > DESCRIPTION_MAX;
 
-  const [spoilerMode] = useSpoilerMode();
-  const [seenBeasties, setSeenBeasties] = useSpoilerSeen();
+  const [isSpoilerFn, setSeen] = useIsSpoiler();
 
   const handleClick = () => {
-    let seenChanged = false;
-    team.team.team.forEach((beastie) => {
-      if (!seenBeasties[beastie.specie]) {
-        seenBeasties[beastie.specie] = true;
-        seenChanged = true;
-      }
-    });
-    if (seenChanged) {
-      setSeenBeasties(seenBeasties);
-    }
-    setTeam();
+    setSeen(team.team.team.map((beastie) => beastie.specie));
   };
 
   return (
@@ -83,8 +66,7 @@ export default function FeaturedTeam({
           if (!beastie) {
             return null;
           }
-          const isSpoiler =
-            spoilerMode == SpoilerMode.OnlySeen && !seenBeasties[beastie.id];
+          const isSpoiler = isSpoilerFn(beastie.id);
           const alt = isSpoiler
             ? L("common.beastieNum", { num: String(beastie.number) })
             : L(beastie.name);

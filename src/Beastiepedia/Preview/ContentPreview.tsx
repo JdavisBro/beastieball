@@ -17,7 +17,7 @@ import styles from "./ContentPreview.module.css";
 import type { BeastieType } from "../../data/BeastieData";
 import ColorTabs from "./ColorTabs";
 import SPRITE_INFO, { Sprite } from "../../data/SpriteInfo";
-import useLoadBeastieImages from "../../utils/useLoadBeastieImages";
+import useLoadBeastieImages from "./useLoadBeastieImages.ts";
 import BEASTIE_ANIMATIONS, {
   BeastieAnimation,
   BeastieAnimData,
@@ -49,7 +49,7 @@ function isAnimEmpty(anim: BeastieAnimation | number | string | undefined) {
   return !anim.frames.startFrame && !anim.frames.endFrame;
 }
 
-const ANIMATION_LIST = [
+export const ANIMATION_LIST = [
   "idle",
   "move",
   "ready",
@@ -58,14 +58,32 @@ const ANIMATION_LIST = [
   "good",
   "bad",
   "fall",
+  "menu",
   "air",
   "stop",
-  "menu",
   "hug", // troglum
   "special", // conjarr
 ];
 
-const ANIMATION_ALWAYS_SHOW = ["idle", "move", "menu"];
+const ANIMATION_ALWAYS_SHOW = ["idle", "menu"];
+
+const IDLE_EXCEPTIONS = ["sprServal", "sprDragonfly", "sprOppossum"];
+const MOVE_EXCEPTIONS = ["sprSeal", "sprDragonfly"];
+
+function anim_check(anim: string, beastie: BeastieType) {
+  const progress = beastie.anim_progress;
+  const sprite = beastie.spr;
+  if (anim == "idle" && progress < 95 && !IDLE_EXCEPTIONS.includes(sprite)) {
+    return "menu";
+  } else if (
+    anim == "move" &&
+    progress < 80 &&
+    !MOVE_EXCEPTIONS.includes(sprite)
+  ) {
+    return "menu";
+  }
+  return anim;
+}
 
 export default function ContentPreview(props: Props): React.ReactNode {
   const { L } = useLocalization();
@@ -99,10 +117,16 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   const [rowdy, setRowdy] = useState(false);
 
-  const [animation, setAnimation] = useState("idle");
+  const secrets = localStorage.getItem("secrets") == "true";
+
+  const [animationState, setAnimation] = useState("idle");
   const animdata: BeastieAnimData | undefined = BEASTIE_ANIMATIONS.get(
     `_${props.beastiedata.spr}`,
   )?.anim_data as BeastieAnimData;
+
+  const animation = secrets
+    ? animationState
+    : anim_check(animationState, props.beastiedata);
 
   let anim: BeastieAnimation | undefined = undefined;
   const tempanim = animdata
@@ -434,14 +458,14 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const [background, setBackground] = useState(false);
   const [backgroundColor, setBackgroundColor] = useState("#ffffff");
 
-  const animationList = ANIMATION_LIST.filter((value) => {
-    return (
+  const animationAllowed: Record<string, boolean> = {};
+  for (const value of ANIMATION_LIST) {
+    animationAllowed[value] =
       value in animdata &&
       (ANIMATION_ALWAYS_SHOW.includes(value) ||
-        value == animation ||
-        !isAnimEmpty(animdata[value]))
-    );
-  });
+        (!isAnimEmpty(animdata[value]) &&
+          (anim_check(value, props.beastiedata) == value || secrets)));
+  }
 
   const gifDisabled = useMemo(() => {
     if (animdata && animdata[animation]) {
@@ -534,9 +558,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
           paused={paused}
           setPaused={setPaused}
           frameInputRef={frameInputRef}
-          animation={animation}
+          animation={animationState}
           setAnimation={setAnimation}
-          animationList={animationList}
+          animationAllowed={animationAllowed}
           frameCount={beastiesprite.frames}
           setFrame={setFrame}
           changeFrame={changeFrame}

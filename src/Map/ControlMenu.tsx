@@ -68,10 +68,10 @@ function ItemSection({
 
   const onClose = () => {
     if (itemRef.current[0]) {
-      setItemSelector(false);
       setHuntedItem(itemRef.current[1]);
       itemRef.current[0] = false;
     }
+    setItemSelector(false);
   };
 
   return (

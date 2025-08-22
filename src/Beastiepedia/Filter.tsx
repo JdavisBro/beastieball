@@ -14,6 +14,7 @@ import {
 import useLocalization, {
   LocalizationFunction,
 } from "../localization/useLocalization";
+import InfoTabberHeader from "../shared/InfoTabber";
 
 export enum FilterTypes {
   Ability,
@@ -274,27 +275,17 @@ export default function Filter({
           >
             {L("beastiepedia.sidebar.filter.clear")}
           </button>
-          {" " + createFilterString(filters, L)}
-          <div className={styles.tabs}>
-            <button
-              className={tab == 0 ? styles.selectedtab : undefined}
-              onClick={() => changeTab(0)}
-            >
-              {L("beastiepedia.sidebar.filter.trait")}
-            </button>
-            <button
-              className={tab == 1 ? styles.selectedtab : undefined}
-              onClick={() => changeTab(1)}
-            >
-              {L("beastiepedia.sidebar.filter.plays")}
-            </button>
-            <button
-              className={tab == 2 ? styles.selectedtab : undefined}
-              onClick={() => changeTab(2)}
-            >
-              {L("beastiepedia.sidebar.filter.other")}
-            </button>
-          </div>
+          {" " + createFilterString(filters)}
+          <InfoTabberHeader
+            tab={tab}
+            setTab={changeTab}
+            tabs={[
+              L("beastiepedia.sidebar.filter.trait"),
+              L("beastiepedia.sidebar.filter.plays"),
+              L("beastiepedia.sidebar.filter.other"),
+            ]}
+            className={styles.tabSelect}
+          />
           {tab < 2 ? (
             <label>
               {L("common.searchPrefix")}

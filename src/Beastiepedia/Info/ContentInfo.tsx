@@ -182,7 +182,9 @@ export default function ContentInfo(props: Props): React.ReactNode {
             : "beastiepedia.info.research.videographer",
         )}
         {Array.isArray(beastiedata.animator)
-          ? beastiedata.animator.map((i) => designers[i]).join(", ")
+          ? beastiedata.animator
+              .map((i) => designers[i])
+              .join(L("beastiepedia.info.research.joiner"))
           : designers[beastiedata.animator]}
       </InfoBox>
       <Sfx beastiedata={beastiedata} />

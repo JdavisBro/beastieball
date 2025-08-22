@@ -91,7 +91,7 @@ export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
         totalImages={images.length}
       />
       <Modal
-        header="Research"
+        header={L("beastiepedia.info.research.title")}
         open={bigImage}
         onClose={() => {
           setBigImage(false);

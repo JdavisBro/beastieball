@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
+import useLocalization from "./localization/useLocalization";
 
 const MAX_DOTS = 3;
 
 export default function Loading(): React.ReactElement {
+  const { L, anyLanguageLoaded } = useLocalization();
+
   const [dots, setDots] = useState(0);
+
+  const text = anyLanguageLoaded ? L("common.loadingNoDot") : "Loading";
+  const dot = anyLanguageLoaded ? L("common.loadingDot") : ".";
 
   useEffect(() => {
     const timeout = setTimeout(
@@ -17,8 +23,9 @@ export default function Loading(): React.ReactElement {
     <div className="container">
       <div className="commoncontainer">
         <div className="loading animSelectableBackground">
-          Loading{".".repeat(dots)}
-          <span className="notvisible">{".".repeat(MAX_DOTS - dots)}</span>
+          {text}
+          {dot.repeat(dots)}
+          <span className="notvisible">{dot.repeat(MAX_DOTS - dots)}</span>
         </div>
       </div>
     </div>

@@ -59,6 +59,8 @@
       "down3": "3 down boost"
     },
     "loading": "Loading...",
+    "loadingNoDot": "Loading",
+    "loadingDot": ".",
     "searchPrefix": "Search: ",
     "altSprite": {
       "normal": "Normal",

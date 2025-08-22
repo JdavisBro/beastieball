@@ -42,13 +42,15 @@ function Root() {
     }
   }, [navigation.state]);
 
-  return timedOut.current ? (
-    <Loading />
-  ) : (
+  return (
     <LocalizationProvider>
-      <SpoilerWarning>
-        <Outlet />
-      </SpoilerWarning>
+      {timedOut.current ? (
+        <Loading />
+      ) : (
+        <SpoilerWarning>
+          <Outlet />
+        </SpoilerWarning>
+      )}
     </LocalizationProvider>
   );
 }
@@ -99,7 +101,11 @@ const routes: Array<RouteObject> = [
     path: ":lang?/",
     Component: Root,
     errorElement: <RouteError />,
-    hydrateFallbackElement: <Loading />,
+    hydrateFallbackElement: (
+      <LocalizationProvider>
+        <Loading />
+      </LocalizationProvider>
+    ),
     shouldRevalidate: shouldRevalidate,
     children: [
       {

@@ -116,7 +116,7 @@ export default function Beastie({
         {teamBeastie.attklist.map((moveId, index) => (
           <BeastieMove
             key={moveId + index}
-            move={MOVE_DIC[moveId]}
+            move={MOVE_DIC[moveId] ?? MOVE_DIC["???"]}
             impossible={
               !noMoveWarning && !beastiedata.attklist.includes(moveId)
             }

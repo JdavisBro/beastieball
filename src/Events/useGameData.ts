@@ -36,8 +36,10 @@ export function useGameData<T>(
 
   const handleSetGameData = (newGameData: NoData | T) => {
     setGameData(newGameData);
-    localStorage.setItem(storage, JSON.stringify(newGameData));
-    localStorage.setItem(storage + "Expire", String(Date.now()));
+    if (newGameData != NoData.NoData) {
+      localStorage.setItem(storage, JSON.stringify(newGameData));
+      localStorage.setItem(storage + "Expire", String(Date.now()));
+    }
   };
 
   const forceReload = () => {

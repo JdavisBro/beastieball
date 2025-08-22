@@ -466,61 +466,61 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
 
   switch (move.use) {
     case 1:
-      desc.push("Only used from back row.");
+      desc.push(L("movedefine_descadd_007"));
       break;
     case 2:
       // If it auto targets front row and is Only used from net then ONLY is not included.
-      desc.push(
-        attack && move.targ == 4 ? "Used from net." : "Only used from net.",
-      );
+      if (move.targ == 4 && attack) {
+        desc.push(L("movedefine_descadd_006"));
+      } else {
+        desc.push(L("movedefine_descadd_008"));
+      }
       break;
   }
 
   if (move.eff.find((effect) => effect.eff == 69)) {
-    desc.push("Only used when ball is hittable.");
+    desc.push(L("movedefine_descadd_009"));
   } else if (
     move.type == Type.Volley &&
     !move.eff.some((eff) => eff.eff == 20) // Eff 20: Ball goes to TARGET. Does not have volley text
   ) {
-    desc.push("VOLLEY.");
+    desc.push(L("movedefine_descadd_019"));
   }
 
   if (attack) {
     switch (move.targ) {
       case 1:
       case 3:
-        desc.push("Targets straight ahead.");
+        desc.push(L("movedefine_descadd_015"));
         break;
       case 4:
-        // If it is Only used from net and Auto targets front row then Auto- is not included.
-        desc.push(
-          move.use != 2 ? "Auto-targets front row." : "Targets front row.",
-        );
+        if (move.use == 2) {
+          break;
+        }
+        desc.push(L("movedefine_descadd_012"));
         break;
       case 8:
-        desc.push("Auto-targets back row.");
+        desc.push(L("movedefine_descadd_013"));
         break;
       case 12:
-        desc.push("Targets SIDEWAYS.");
+        desc.push(L("movedefine_descadd_014"));
         break;
       case 13:
-        desc.push("Auto-targets nearest opponent.");
+        desc.push(L("movedefine_descadd_010"));
         break;
     }
 
     if (move.pow < -1) {
-      desc.push(`Always does ${-move.pow} damage.`);
+      desc.push(L("movedefine_descadd_018", { "0": String(-move.pow) }));
     } else if (move.pow > -1 && move.pow < 0) {
-      desc.push(
-        `Damage equals ${-move.pow * 100}% of target's remaining STAMINA.`,
-      );
+      desc.push(L("movedefine_descadd_017", { "0": String(-move.pow * 100) }));
     }
 
     if (!desc.length && move.eff.length < 2) {
       if (move.eff.length == 0) {
-        desc.push(`A [sprIcon,${move.type}] ATTACK.`);
+        desc.push(L("movedefine_descadd_088", { "0": String(move.type) }));
       } else {
-        desc.push("ATTACK.");
+        desc.push(L("movedefine_descadd_001"));
       }
     }
   }

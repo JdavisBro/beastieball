@@ -275,7 +275,7 @@ export default function Filter({
           >
             {L("beastiepedia.sidebar.filter.clear")}
           </button>
-          {" " + createFilterString(filters)}
+          {" " + createFilterString(filters, L)}
           <InfoTabberHeader
             tab={tab}
             setTab={changeTab}

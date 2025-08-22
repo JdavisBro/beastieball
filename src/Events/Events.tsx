@@ -6,8 +6,11 @@ import styles from "./Events.module.css";
 import { useGameData } from "./useGameData";
 import BigmoonBlock from "./Bigmoon";
 import Carousel from "./Carousel";
+import useLocalization from "../localization/useLocalization";
 
 export default function Events() {
+  const { L } = useLocalization();
+
   const [open, setOpen] = useState(false);
 
   const [bigmoonData, bigmoonReload] = useGameData<EventResponse>(
@@ -44,7 +47,7 @@ export default function Events() {
           onClick={() => setOpen(!open)}
           tabIndex={0}
         >
-          Events/News
+          {L("events.title")}
         </div>
         <div className={open ? styles.openBox : styles.closedBox}>
           {open ? (

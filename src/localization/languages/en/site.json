@@ -109,7 +109,7 @@
     "confirm": "Confirm"
   },
   "events": {
-    "title": "Events",
+    "title": "Events/News",
     "bigmoon": "Bigmoon Bash",
     "guildSep": " VS ",
     "guildSuffix": "",
@@ -446,6 +446,7 @@
       "sprecko": "By communing with the Mushroom Colony",
       "troglum": "By interacting with a Bugestie"
     },
+    "spawnLocation": "{name} spawn location.",
     "extinctFoundHerePre": "",
     "extinctFoundHerePost": " is found here initially.",
     "encounterMarker": "Encounter Marker",

@@ -66,7 +66,11 @@ export default function createBeastieBox(
       return;
     }
     const isSpoiler = isSpoilerFn(beastie.id);
-    const alt = `${isSpoiler ? `Beastie #${beastie.number}` : Loc(beastie.name)} spawn location.`;
+    const alt = Loc("map.spawnLocation", {
+      name: isSpoiler
+        ? Loc("common.beastieNum", { num: String(beastie.number) })
+        : Loc(beastie.name),
+    });
     const iconScale = beastie.id != huntedBeastie ? 1 : 1.5;
     const overall = overall_percent[value];
     beastieSpawnsOverlays.push(

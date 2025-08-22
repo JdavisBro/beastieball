@@ -4,6 +4,9 @@ import styles from "./Events.module.css";
 import { CarouselData, NoData } from "./Types";
 import { useGameData } from "./useGameData";
 import { Link } from "react-router-dom";
+import useLocalization, {
+  LANGUAGE_NAMES,
+} from "../localization/useLocalization";
 
 const EMOJI_MAP: Record<string, string> = {
   bigmoon: "🌙",
@@ -18,28 +21,6 @@ const EMOJI_MAP: Record<string, string> = {
 };
 const EMOJI_SWAPPED = Object.keys(EMOJI_MAP);
 
-const LANG_MAP: Record<string, string> = {
-  English: "en",
-  Русский: "ru",
-  简体中文: "zh-CN",
-};
-
-function findLanguageText(text: string[], langs: string[]) {
-  for (const lang of navigator.languages) {
-    for (let i = 0; i < langs.length; i++) {
-      const lang_code = LANG_MAP[langs[i]];
-      if (!lang_code) {
-        console.log("MISSING LANG", langs[i]);
-        continue;
-      }
-      if (lang.startsWith(lang_code)) {
-        return text[i];
-      }
-    }
-  }
-  return text[0];
-}
-
 export default function Carousel({
   children,
   bigmoonReload,
@@ -47,6 +28,8 @@ export default function Carousel({
   children: React.ReactNode;
   bigmoonReload: () => void;
 }) {
+  const { L, currentLanguage } = useLocalization();
+
   const [carouselData, carouselReload] = useGameData<CarouselData>(
     "carousel",
     "carouselData",
@@ -104,7 +87,14 @@ export default function Carousel({
                 rel="noopener"
               >
                 <div className={styles.carouselItemText}>
-                  {findLanguageText(data.text, data.langs)}
+                  {data.text[
+                    Math.max(
+                      0,
+                      data.langs.indexOf(
+                        LANGUAGE_NAMES[currentLanguage] ?? "en",
+                      ),
+                    )
+                  ] ?? data.text[0]}
                 </div>
               </Link>
             </div>
@@ -112,7 +102,7 @@ export default function Carousel({
         </div>
       </div>
       <div
-        title="Check for Update"
+        title={L("events.checkForUpdate")}
         className={styles.eventReloadButton}
         onClick={(event) => {
           if (Date.now() < lastReload.current + 10000) {

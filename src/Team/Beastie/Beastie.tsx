@@ -8,6 +8,7 @@ import abilities from "../../data/abilities";
 import MOVE_DIC from "../../data/MoveData";
 import BeastieMove from "./BeastieMove";
 import { Link } from "react-router-dom";
+import useLocalization from "../../localization/useLocalization";
 
 const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
   1: "colors",
@@ -32,6 +33,8 @@ export default function Beastie({
   maxCoaching?: boolean;
   noMoveWarning?: boolean;
 }) {
+  const { L, getLink } = useLocalization();
+
   const beastiedata = BEASTIE_DATA.get(teamBeastie.specie);
   if (!beastiedata) {
     return null;
@@ -59,36 +62,48 @@ export default function Beastie({
       ]
     ];
 
+  const beastieName = L(beastiedata.name);
+
   return (
     <div className={styles.beastie}>
       <div className={styles.row}>
         <div className={styles.column}>
           <span className={styles.name}>
-            {teamBeastie.name || beastiedata.name}
-            <span className={styles.number}>#{teamBeastie.number}</span>{" "}
+            {teamBeastie.name || beastieName}
+            <span className={styles.number}>#{teamBeastie.number}</span>
             <span
               title={
                 levelOverwrite
                   ? ""
                   : level >= 100
-                    ? "Max Level"
-                    : `To next level: ${teamBeastie.xp - level_exp}/${next_level_exp - level_exp} (${next_level_exp - teamBeastie.xp} left)`
+                    ? L("teams.beastie.maxLevel")
+                    : L("teams.beastie.expToNext", {
+                        num: String(teamBeastie.xp - level_exp),
+                        max: String(next_level_exp - level_exp),
+                        left: String(next_level_exp - teamBeastie.xp),
+                      })
               }
-              className={levelOverwrite ? styles.levelOverwritten : undefined}
+              className={
+                levelOverwrite ? styles.levelOverwritten : styles.levelText
+              }
             >
-              Lvl {level}
+              {L("teams.beastie.lvl", { level: String(level) })}
             </span>
           </span>
-          {teamBeastie.name && beastiedata.name != teamBeastie.name ? (
-            <span className={styles.graytext}>({beastiedata.name})</span>
+          {teamBeastie.name && beastieName != teamBeastie.name ? (
+            <span className={styles.graytext}>
+              {L("teams.beastie.species", { species: beastieName })}
+            </span>
           ) : null}
           <Link
-            to={`/beastiepedia/${beastiedata.name}?${searchParam}=${beastieColors.join(",")}`}
-            title={`Open ${beastiedata.name} with these colors in Beastiepedia`}
+            to={getLink(
+              `/beastiepedia/${beastieName}?${searchParam}=${beastieColors.join(",")}`,
+            )}
+            title={L("teams.beastie.openWithColors", { beastie: beastieName })}
           >
             <BeastieImage
               key={teamBeastie.pid + teamBeastie.specie}
-              defaultUrl={`/icons/${beastiedata.name}.png`}
+              defaultUrl={`/icons/${L(beastiedata.name, undefined, true)}.png`}
               beastie={{
                 id: beastiedata.id,
                 colors: beastieColors,
@@ -107,8 +122,8 @@ export default function Beastie({
             maxCoaching={maxCoaching}
           />
           <div className={styles.column}>
-            <span className={styles.graytext}>{ability.name}</span>
-            <TextTag>{ability.desc.replace(/\|/, "")}</TextTag>
+            <span className={styles.graytext}>{L(ability.name)}</span>
+            <TextTag>{L(ability.desc).replace(/\|/, "")}</TextTag>
           </div>
         </div>
       </div>

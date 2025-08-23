@@ -5,19 +5,18 @@ import styles from "./MoveList.module.css";
 import MOVE_DIC, { Move } from "../../data/MoveData";
 import MoveModalProvider from "../../shared/MoveModalProvider";
 import InfoBox from "../../shared/InfoBox";
+import useLocalization from "../../localization/useLocalization";
 
 type MoveTextProps = {
   level?: number;
-  move: Move | undefined;
+  move: Move;
   selected: boolean;
   onSelect: () => void;
 };
 
 function MoveText(props: MoveTextProps): React.ReactElement {
-  if (props.move === undefined) {
-    // This can never happen?
-    return <div>Move not found?</div>;
-  }
+  const { L } = useLocalization();
+
   return (
     <div className={styles.movecontainer}>
       {props.level ? (
@@ -40,7 +39,7 @@ function MoveText(props: MoveTextProps): React.ReactElement {
         }}
       >
         <img src={`/gameassets/sprIcon/${props.move.type}.png`} alt="" />
-        {props.move.name}
+        {L(props.move.name)}
       </span>
     </div>
   );
@@ -52,6 +51,8 @@ type Props = {
 };
 
 export default function MoveList(props: Props): React.ReactElement {
+  const { L } = useLocalization();
+
   const learnset = props.learnset;
 
   const url = new URL(window.location.href);
@@ -122,20 +123,20 @@ export default function MoveList(props: Props): React.ReactElement {
 
   return (
     <div className={styles.container}>
-      <InfoBox header="Plays">
+      <InfoBox header={L("beastiepedia.info.plays.title")}>
         <div className={styles.listcontainer}>
           <div className={styles.movelist}>
-            <div>From Levels:</div>
+            <div>{L("beastiepedia.info.plays.fromLevels")}</div>
             {learnmoves}
           </div>
           <div className={styles.movelist}>
-            <div>From Friends:</div>
+            <div>{L("beastiepedia.info.plays.fromFriends")}</div>
             {friendmoves
               .sort(
                 (move1, move2) =>
                   move1.type - move2.type ||
                   move2.pow - move1.pow ||
-                  move1.name.localeCompare(move2.name),
+                  L(move1.name).localeCompare(L(move2.name)),
               )
               .map((move) => (
                 <MoveText
@@ -148,7 +149,7 @@ export default function MoveList(props: Props): React.ReactElement {
           </div>
         </div>
       </InfoBox>
-      <InfoBox header="Selected Play">
+      <InfoBox header={L("beastiepedia.info.plays.selectedPlay")}>
         <div className={styles.viewcontainer}>
           {moveselected ? (
             <MoveModalProvider>

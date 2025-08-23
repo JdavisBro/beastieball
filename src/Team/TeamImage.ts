@@ -4,6 +4,7 @@ import MOVE_DIC from "../data/MoveData";
 
 import type { BBox } from "../data/SpriteInfo";
 import { TypeData } from "../data/TypeColor";
+import { LocalizationType } from "../localization/useLocalization";
 import type { RenderBeastieType } from "../shared/beastieRender/BeastieRenderContext";
 import type { TeamBeastie } from "./Types";
 
@@ -71,6 +72,7 @@ export function createTeamImageCanvas(
   canvas: HTMLCanvasElement,
   team: TeamBeastie[],
   mode: DrawMode,
+  Localization: LocalizationType,
   beastieRender: (
     beastie: RenderBeastieType,
   ) => Promise<[HTMLCanvasElement, BBox | null] | null>,
@@ -79,14 +81,14 @@ export function createTeamImageCanvas(
   copy?: boolean,
 ) {
   const size = MODE_SIZES[mode];
-  if (
-    !(
-      document.fonts.check("16px 'Go Banana'") &&
-      document.fonts.check("16px SportsJersey")
-    )
-  ) {
-    throw new Error("Missing Fonts");
-  }
+  // if (
+  //   !(
+  //     document.fonts.check("16px 'Go Banana', BalsamiqSans") &&
+  //     document.fonts.check("16px SportsJersey, WDXLLubrifontTC")
+  //   )
+  // ) {
+  //   throw new Error("Missing Fonts");
+  // }
   canvas.width = size[0];
   canvas.height = size[1];
   const ctx = canvas.getContext("2d");
@@ -97,6 +99,7 @@ export function createTeamImageCanvas(
     ctx,
     team,
     mode,
+    Localization,
     beastieRender,
     loadImageCanvas,
     atLevel,
@@ -155,6 +158,7 @@ function splitText(
   max_width: number,
   loadImage: (src: string) => Promise<HTMLImageElement>,
 ): [string[], { x: number; line: number; image: Promise<HTMLImageElement> }[]] {
+  const breakChars = text.split(" ").length < 5;
   const lines = [""];
   const images: {
     line: number;
@@ -168,6 +172,21 @@ function splitText(
   for (let i = 0; i < text.length; i++) {
     const char = text[i];
     let newchar = char;
+    if (
+      !tagging &&
+      (char == " " || breakChars) &&
+      ctx.measureText(
+        lines[lines.length - 1] +
+          newchar +
+          text
+            .slice(i, char == " " ? text.indexOf(" ", i + 1) : i + 2)
+            .replace(/\|/, "")
+            .replace(/\[[^[]+?]/, "　"),
+      ).width > max_width
+    ) {
+      lines.push("");
+      newchar = "";
+    }
     switch (char) {
       case "[":
         if (tagging && tag == "") {
@@ -200,20 +219,6 @@ function splitText(
           });
         }
         break;
-      case " ":
-        if (
-          ctx.measureText(
-            lines[lines.length - 1] +
-              newchar +
-              text
-                .slice(i, text.indexOf(" ", i + 1))
-                .replace(/\|/, "")
-                .replace(/\[[^[]+?]/, "　"),
-          ).width > max_width
-        ) {
-          lines.push("");
-          newchar = "";
-        }
     }
     if (newchar) {
       if (tagging) {
@@ -258,9 +263,6 @@ function statCalc(
     )
   );
 }
-const REGULAR_FONT = "17.6px 'Go Banana'";
-const NUMBER_FONT = "11px SportsJersey";
-const SMALLTEXT_FONT = "15.84px 'Go Banana'";
 
 const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
   1: "colors",
@@ -272,6 +274,7 @@ async function createTeamImage(
   ctx: CanvasRenderingContext2D,
   team: TeamBeastie[],
   mode: DrawMode,
+  Localization: LocalizationType,
   beastieRender: (
     beastie: RenderBeastieType,
   ) => Promise<[HTMLCanvasElement, BBox | null] | null>,
@@ -279,6 +282,17 @@ async function createTeamImage(
   atLevel?: number,
   maxCoaching?: boolean,
 ) {
+  const { L, currentLanguage } = Localization;
+  const SUPPORTED_CHAR_FONT = "17.6px 'Go Banana', BalsamiqSans";
+  const REGULAR_FONT =
+    currentLanguage == "en" ? SUPPORTED_CHAR_FONT : "17.6px BalsamiqSans";
+  const NUMBER_FONT = "11px SportsJersey, WDXLLubrifontTC";
+  const BIG_NUBMER_FONT = "25px SportsJersey, WDXLLubrifontTC";
+  const SMALLTEXT_FONT =
+    currentLanguage == "en"
+      ? "15.84px 'Go Banana', BalsamiqSans"
+      : "15.84px BalsamiqSans";
+
   const typeImages = [];
   for (let i = 0; i < 6; i++) {
     typeImages.push(await loadImage(`/gameassets/sprType/${i}.png`));
@@ -306,10 +320,13 @@ async function createTeamImage(
       const level = atLevel
         ? atLevel
         : Math.floor(Math.cbrt(beastie.xp / beastiedata.growth));
-      const level_text = ` Lvl ${level}`;
+      const level_text = L("teams.beastie.lvl", { level: String(level) });
 
-      const display_name = beastie.name || beastiedata.name;
+      const beastieName = L(beastiedata.name);
+
+      const display_name = beastie.name || beastieName;
       const name_width = ctx.measureText(display_name).width;
+      ctx.font = SUPPORTED_CHAR_FONT;
       const level_width = ctx.measureText(level_text).width;
       ctx.font = NUMBER_FONT;
       const num_width = ctx.measureText(num_text).width;
@@ -321,18 +338,19 @@ async function createTeamImage(
       ctx.fillStyle = "black";
       ctx.font = REGULAR_FONT;
       ctx.fillText(display_name, startx + start_offset, starty + 3);
+      ctx.font = SUPPORTED_CHAR_FONT;
       ctx.fillText(
         level_text,
         startx + start_offset + name_width + num_width,
         starty + 3,
       );
 
-      if (beastie.name && beastie.name != beastiedata.name) {
+      if (beastie.name && beastie.name != beastieName) {
         ctx.fillStyle = "#2f4f4f";
         ctx.textAlign = "center";
         ctx.font = SMALLTEXT_FONT;
         ctx.fillText(
-          `(${beastiedata.name})`,
+          `(${beastieName})`,
           startx + BEASTIE_SIZE[0] / 4,
           starty + 22,
         );
@@ -395,11 +413,12 @@ async function createTeamImage(
         );
         ctx.textBaseline = "middle";
         ctx.font = REGULAR_FONT;
-        const last_space = move.name.lastIndexOf(" ");
-        if (last_space == -1 || move.name.length < 9) {
+        const moveName = L(move.name);
+        const last_space = moveName.lastIndexOf(" ");
+        if (last_space == -1 || moveName.length < 9) {
           ctx.textAlign = "right";
           ctx.fillText(
-            move.name,
+            moveName,
             playx + BEASTIE_PLAY_SIZE[0],
             starty + BEASTIE_PLAY_BEGIN + BEASTIE_PLAY_SIZE[1] / 2,
             BEASTIE_PLAY_SIZE[0] - BEASTIE_PLAY_BLOCK,
@@ -407,8 +426,8 @@ async function createTeamImage(
         } else {
           ctx.textAlign = "center";
           const slicepos = last_space == -1 ? 8 : last_space;
-          const line1 = move.name.slice(0, slicepos);
-          const line2 = move.name.slice(slicepos + (last_space == -1 ? 0 : 1));
+          const line1 = moveName.slice(0, slicepos);
+          const line2 = moveName.slice(slicepos + (last_space == -1 ? 0 : 1));
           ctx.fillText(
             line1,
             playx +
@@ -453,26 +472,26 @@ async function createTeamImage(
           ]
         ];
       const [lines, images] = splitText(
-        ability.desc.replace(/\|/, ""),
+        L(ability.desc).replace(/\|/, ""),
         ctx,
         BEASTIE_SIZE[0] / 2,
         loadImage,
       );
-      const line_height = lines.length < 4 ? 24 : 20;
+      const line_height = lines.length < 4 ? 24 : lines.length < 5 ? 20 : 16;
       const trait_height = (lines.length + 1) * line_height;
       const right_gap =
         (BEASTIE_PLAY_BEGIN - BEASTIE_STAT_HEIGHT - trait_height) / 3;
       const trait_begin = right_gap * 2 + BEASTIE_STAT_HEIGHT;
       ctx.fillStyle = "#2f4f4f";
       ctx.font = SMALLTEXT_FONT;
-      ctx.fillText(ability.name, startx + text_middle, starty + trait_begin);
+      ctx.fillText(L(ability.name), startx + text_middle, starty + trait_begin);
       ctx.font = REGULAR_FONT;
       ctx.fillStyle = "black";
       for (let i = 0; i < lines.length; i++) {
         ctx.fillText(
           lines[i],
           startx + text_middle,
-          starty + trait_begin + 20 + line_height * i,
+          starty + trait_begin + line_height * (i + 1),
         );
       }
       for (const image of images) {
@@ -480,14 +499,15 @@ async function createTeamImage(
         ctx.drawImage(
           img,
           startx + text_middle + image.x,
-          starty + trait_begin + 19 + line_height * image.line,
+          starty + trait_begin + line_height * (image.line + 1) - 1,
           (18 / img.height) * img.width,
           18,
         );
       }
       ctx.textBaseline = "top";
+      ctx.font = SUPPORTED_CHAR_FONT;
       ctx.fillText(
-        "POW          DEF",
+        L("common.pow") + "          " + L("common.def"),
         startx + text_middle,
         starty + right_gap,
       );
@@ -564,11 +584,11 @@ async function createTeamImage(
           BEASTIE_STAT_TEXT_OFFSET +
           BEASTIE_STAT_BAR_HEIGHT / 2 +
           BEASTIE_STAT_BAR_HEIGHT * i;
-        ctx.font = "25px SportsJersey";
+        ctx.font = "25px SportsJersey, WDXLLubrifontTC";
         ctx.lineWidth = 3;
         ctx.strokeText(String(stat), textX, textY);
         ctx.fillText(String(stat), textX, textY);
-        ctx.font = REGULAR_FONT;
+        ctx.font = SUPPORTED_CHAR_FONT;
         ctx.fillText(
           `+${atkTrainings[i]}`,
           startx + BEASTIE_SIZE[0] / 2 + BEASTIE_STAT_ICON / 2,
@@ -619,11 +639,11 @@ async function createTeamImage(
           BEASTIE_STAT_TEXT_OFFSET +
           BEASTIE_STAT_BAR_HEIGHT / 2 +
           BEASTIE_STAT_BAR_HEIGHT * i;
-        ctx.font = "25px SportsJersey";
+        ctx.font = BIG_NUBMER_FONT;
         ctx.lineWidth = 3;
         ctx.strokeText(String(stat), textX, textY);
         ctx.fillText(String(stat), textX, textY);
-        ctx.font = REGULAR_FONT;
+        ctx.font = SUPPORTED_CHAR_FONT;
         ctx.fillText(
           `+${defTrainings[i]}`,
           startx +

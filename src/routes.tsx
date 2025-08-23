@@ -7,8 +7,6 @@ import {
   useRouteError,
   type RouteObject,
 } from "react-router-dom";
-import PageNotFound from "./PageNotFound";
-import { Fallback } from "./shared/CustomErrorBoundary";
 import SpoilerWarning from "./SpoilerWarning";
 import {
   FunctionComponent,
@@ -19,6 +17,10 @@ import {
   useState,
 } from "react";
 import Loading from "./Loading";
+import PageNotFound from "./PageNotFound";
+import useLocalization from "./localization/useLocalization";
+import { Fallback } from "./shared/CustomErrorBoundary";
+import LocalizationProvider from "./localization/LocalizationProvider";
 
 const LOADING_TIME = 20; // ms
 
@@ -40,12 +42,16 @@ function Root() {
     }
   }, [navigation.state]);
 
-  return timedOut.current ? (
-    <Loading />
-  ) : (
-    <SpoilerWarning>
-      <Outlet />
-    </SpoilerWarning>
+  return (
+    <LocalizationProvider>
+      {timedOut.current ? (
+        <Loading />
+      ) : (
+        <SpoilerWarning>
+          <Outlet />
+        </SpoilerWarning>
+      )}
+    </LocalizationProvider>
   );
 }
 
@@ -81,6 +87,11 @@ function RouteError() {
   );
 }
 
+function NavigateLocalized({ to }: { to: string }) {
+  const { getLink } = useLocalization();
+  return <Navigate to={getLink(to)} />;
+}
+
 function shouldRevalidate() {
   return false;
 }
@@ -90,7 +101,11 @@ const routes: Array<RouteObject> = [
     path: ":lang?/",
     Component: Root,
     errorElement: <RouteError />,
-    hydrateFallbackElement: <Loading />,
+    hydrateFallbackElement: (
+      <LocalizationProvider>
+        <Loading />
+      </LocalizationProvider>
+    ),
     shouldRevalidate: shouldRevalidate,
     children: [
       {
@@ -132,19 +147,21 @@ const routes: Array<RouteObject> = [
 
       // OLD TEAM VIEWER REDIRECT
       {
-        element: <Navigate to="/team/viewer/" />,
+        element: <NavigateLocalized to="/team/viewer/" />,
         path: "teams/",
       },
       {
-        element: <Navigate to="/team/viewer/" />,
+        element: <NavigateLocalized to="/team/viewer/" />,
         path: "teams/viewer/",
       },
       {
-        Component: () => <Navigate to={`/team/viewer/${useParams().code}`} />,
+        Component: () => (
+          <NavigateLocalized to={`/team/viewer/${useParams().code}`} />
+        ),
         path: "teams/:code",
       },
       {
-        element: <Navigate to="/team/builder/" />,
+        element: <NavigateLocalized to="/team/builder/" />,
         path: "teams/builder/",
       },
 

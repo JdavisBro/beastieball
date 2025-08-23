@@ -3,68 +3,89 @@ const EffectFilters: {
   effects?: Array<number | [number, number]>; // eff | [eff, pow]
   use?: Array<number>;
   target?: Array<number>;
+  placeholderKey?: string;
 }[] = [
   // POW/DEF
-  { name: "Body POW", effects: [0, 15, 74, 75] },
-  { name: "Body DEF", effects: [3, 16, 77, 78] },
-  { name: "Spirit POW", effects: [1, 15, 74, 76] },
-  { name: "Spirit DEF", effects: [4, 16, 77, 79] },
-  { name: "Mind POW", effects: [2, 15, 75, 76] },
-  { name: "Mind DEF", effects: [5, 16, 78, 79] },
-  { name: "All POW", effects: [15] },
-  { name: "All DEF", effects: [16] },
+  { name: "common.types.bodyPow", effects: [0, 15, 74, 75] },
+  { name: "common.types.bodyDef", effects: [3, 16, 77, 78] },
+  { name: "common.types.spiritPow", effects: [1, 15, 74, 76] },
+  { name: "common.types.spiritDef", effects: [4, 16, 77, 79] },
+  { name: "common.types.mindPow", effects: [2, 15, 75, 76] },
+  { name: "common.types.mindDef", effects: [5, 16, 78, 79] },
+  { name: "allPow", effects: [15] },
+  { name: "allDef", effects: [16] },
   // Use Conditions
-  { name: "Usage Condition: From Back", use: [1] },
-  { name: "Usage Condition: At Net", use: [2] },
-  { name: "Usage Condition: Ball Hittable", effects: [69] },
+  { name: "useFromBack", use: [1] },
+  { name: "useFromNet", use: [2] },
+  { name: "useBallHittable", effects: [69] },
   // Targets
-  { name: "Targets: Straight Ahead", target: [1, 3] },
-  { name: "Targets: Front Row", target: [4] },
-  { name: "Targets: Back Row", target: [8] },
-  { name: "Targets: Sideways", target: [12] },
-  { name: "Targets: Nearest Opponent", target: [13] },
+  { name: "targetStraight", target: [1, 3] },
+  { name: "targetFront", target: [4] },
+  { name: "targetBack", target: [8] },
+  { name: "targetSideways", target: [12] },
+  { name: "targetNearest", target: [13] },
   // FEELINGS
-  { name: "Feeling: NERVOUS", effects: [6, [33, 12]] },
-  { name: "Feeling: ANGRY", effects: [12] },
-  { name: "Feeling: SHOOK", effects: [13, 61] },
-  { name: "Feeling: NOISY", effects: [14] },
-  { name: "Feeling: TOUGH", effects: [19] },
-  { name: "Feeling: WIPED", effects: [22] },
-  { name: "Feeling: SWEATY", effects: [23, [33, 12]] },
-  { name: "Feeling: JAZZED", effects: [26] },
-  { name: "Feeling: BLOCKED", effects: [27] },
-  { name: "Feeling: TIRED", effects: [29] },
-  { name: "Feeling: TENDER", effects: [38, [33, 12]] },
-  { name: "Feeling: STRESSED", effects: [39] },
-  // Field Effects
-  { name: "Field: TRAP", effects: [42] },
-  { name: "Field: RALLY", effects: [43, [33, 25]] },
-  { name: "Field: RHYTHM", effects: [44, 64] },
-  { name: "Field: DREAD", effects: [45] },
-  { name: "Field: QUAKE", effects: [70] },
-  // Other
-  { name: "Shift/Move", effects: [7] },
-  { name: "Switch Places", effects: [11, 28] },
-  { name: "Heal/Direct Damage", effects: [8] },
-  { name: "Volley Ball/Take Ball", effects: [20] },
-  { name: "Hit Without Volley", effects: [17] },
-  { name: "Easy Recieve", effects: [18] },
-  { name: "TAG OUT", effects: [30] },
-  { name: "Transfer Boosts", effects: [31] },
-  { name: "Clear Feelings", effects: [32, 34] },
-  { name: "Restore Stamina and Feelings", effects: [47] },
-  { name: "Clear Field", effects: [46] },
   {
-    name: "Ignores Shields/Boosts/Feelings",
+    name: "feeling",
+    placeholderKey: "statuseffectstuff_001",
+    effects: [6, [33, 12]],
+  },
+  { name: "feeling", placeholderKey: "statuseffectstuff_002", effects: [12] },
+  {
+    name: "feeling",
+    placeholderKey: "statuseffectstuff_003",
+    effects: [13, 61],
+  },
+  { name: "feeling", placeholderKey: "statuseffectstuff_004", effects: [14] },
+  { name: "feeling", placeholderKey: "statuseffectstuff_005", effects: [19] },
+  { name: "feeling", placeholderKey: "statuseffectstuff_006", effects: [22] },
+  {
+    name: "feeling",
+    placeholderKey: "statuseffectstuff_007",
+    effects: [23, [33, 12]],
+  },
+  { name: "feeling", placeholderKey: "statuseffectstuff_009", effects: [26] }, // JAZZED
+  { name: "feeling", placeholderKey: "statuseffectstuff_010", effects: [27] },
+  { name: "feeling", placeholderKey: "statuseffectstuff_011", effects: [29] },
+  {
+    name: "feeling",
+    placeholderKey: "statuseffectstuff_012",
+    effects: [38, [33, 12]],
+  },
+  { name: "feeling", placeholderKey: "statuseffectstuff_013", effects: [39] },
+  // Field Effects
+  {
+    name: "field",
+    placeholderKey: "fieldeffectstuff_001",
+    effects: [43, [33, 25]],
+  },
+  { name: "field", placeholderKey: "fieldeffectstuff_002", effects: [42] },
+  { name: "field", placeholderKey: "fieldeffectstuff_003", effects: [44, 64] },
+  { name: "field", placeholderKey: "fieldeffectstuff_004", effects: [45] },
+  { name: "field", placeholderKey: "fieldeffectstuff_005", effects: [70] },
+  // Other
+  { name: "move", effects: [7] },
+  { name: "switch", effects: [11, 28] },
+  { name: "healDamage", effects: [8] },
+  { name: "volleyTake", effects: [20] },
+  { name: "hitWithoutVolleying", effects: [17] },
+  { name: "easyReceive", effects: [18] },
+  { name: "tagOut", effects: [30] },
+  { name: "transferBoosts", effects: [31] },
+  { name: "clearFeelings", effects: [32, 34] },
+  { name: "restore", effects: [47] },
+  { name: "clearField", effects: [46] },
+  {
+    name: "ignore",
     effects: [[33, 14], [33, 17], 61],
   },
   // { name: "Additional Damage", effects: [36] },
-  { name: "Add Actions", effects: [10] },
-  { name: "Requires More Actions", effects: [40, 41] },
-  { name: "Wall", effects: [56] },
-  { name: "Swap Traits", effects: [63] },
+  { name: "addActions", effects: [10] },
+  { name: "requiresActions", effects: [40, 41] },
+  { name: "wall", effects: [56] },
+  { name: "swapTrait", effects: [63] },
   {
-    name: "Based on Target DEF",
+    name: "basedOnDef",
     effects: [
       [33, 22],
       [33, 23],
@@ -72,7 +93,7 @@ const EffectFilters: {
   },
   // Conditional Boosts
   {
-    name: "Pow Condition: STAMINA",
+    name: "powStamina",
     effects: [
       [33, 0],
       [33, 1],
@@ -81,18 +102,18 @@ const EffectFilters: {
     ],
   },
   {
-    name: "Pow Condition: TAGGED IN",
+    name: "powTag",
     effects: [
       [33, 5],
       [33, 20],
     ],
   },
   {
-    name: "Pow Condition: Serve",
+    name: "powServe",
     effects: [[33, 7]],
   },
   {
-    name: "Pow Condition: Boost",
+    name: "powBoost",
     effects: [
       [33, 10],
       [33, 11],
@@ -100,17 +121,17 @@ const EffectFilters: {
     ],
   },
   {
-    name: "Pow Condition: Bad Feeling",
+    name: "powFeeling",
     effects: [
       [33, 12],
       [33, 13],
     ],
   },
-  { name: "Pow Condition: Tied/Behind", effects: [[33, 15]] },
-  { name: "Pow Condition: Back-row Target", effects: [[33, 16]] },
-  { name: "Pow Condition: Recieved", effects: [[33, 18]] },
-  { name: "Pow Condition: Volley", effects: [[33, 19]] },
-  { name: "Pow Condition: Changed Row/Lane", effects: [[33, 26]] },
+  { name: "powPoints", effects: [[33, 15]] },
+  { name: "powBack", effects: [[33, 16]] },
+  { name: "powRecieved", effects: [[33, 18]] },
+  { name: "powVolley", effects: [[33, 19]] },
+  { name: "powMoved", effects: [[33, 26]] },
 ];
 
 export default EffectFilters;

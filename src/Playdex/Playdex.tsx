@@ -8,6 +8,10 @@ import MoveModalProvider from "../shared/MoveModalProvider";
 import EffectFilters from "./EffectFilters";
 import { useIsSpoilerFriend } from "../shared/useSpoiler";
 import MOVE_RECENTLY_UPDATED from "./RecentlyUpdated";
+import useLocalization, {
+  LocalizationFunction,
+} from "../localization/useLocalization";
+import SOCIAL_DATA from "../data/SocialData";
 
 declare global {
   interface Window {
@@ -15,40 +19,42 @@ declare global {
   }
 }
 
-const SortFunctions: ((move1: Move, move2: Move) => number)[] = [
+const SortFunctions: (
+  L: LocalizationFunction,
+) => ((move1: Move, move2: Move) => number)[] = (L) => [
   // Type
   (move1, move2) =>
     move1.type - move2.type ||
     move2.pow - move1.pow ||
-    move1.name.localeCompare(move2.name),
+    L(move1.name).localeCompare(L(move2.name)),
   // Alphabetical
-  (move1, move2) => move1.name.localeCompare(move2.name),
+  (move1, move2) => L(move1.name).localeCompare(L(move2.name)),
   // Pow
   (move1, move2) =>
     move2.pow - move1.pow ||
     move1.type - move2.type ||
-    move1.name.localeCompare(move2.name),
+    L(move1.name).localeCompare(L(move2.name)),
   // Effect (unimplemented)
-  (move1, move2) => move1.name.localeCompare(move2.name),
+  (move1, move2) => L(move1.name).localeCompare(L(move2.name)),
   // Target
   (move1, move2) =>
     Number(move1.type > 2) - Number(move2.type > 2) ||
     move2.targ - move1.targ ||
     move2.pow - move1.pow ||
-    move1.name.localeCompare(move2.name),
+    L(move1.name).localeCompare(L(move2.name)),
 ];
 
-const CHAR_LIST: Record<string, string> = {
-  riley: "Riley",
-  kaz: "Kaz",
-  riven: "Riven",
-  science: "Celia",
-  celeb: "Sunsoo",
-  // pirate: "Marcy",
-  streamer: "Elena",
-  // academy: "Callisto",
-  warrior: "Dominic",
-};
+const CHAR_LIST = [
+  "riley",
+  "kaz",
+  "riven",
+  "science",
+  "celeb",
+  // "pirate",
+  "streamer",
+  // "academy",
+  // "warrior",
+];
 
 const HIDDEN_MOVES = [
   "userlowered", // Shrapnel, not in game.
@@ -57,6 +63,8 @@ const HIDDEN_MOVES = [
 ];
 
 export default function PlayDex() {
+  const { L } = useLocalization();
+
   window.MOVE_DIC = MOVE_DIC;
 
   const [search, setSearch] = useState("");
@@ -73,7 +81,7 @@ export default function PlayDex() {
     .filter((move) => !HIDDEN_MOVES.includes(move.id));
   if (search) {
     moves = moves.filter((move) =>
-      move.name.toLowerCase().includes(search.toLowerCase()),
+      L(move.name).toLowerCase().includes(search.toLowerCase()),
     );
   }
   if (typeFilter != -1) {
@@ -101,81 +109,95 @@ export default function PlayDex() {
   if (recentlyChanged) {
     moves = moves.filter((move) => MOVE_RECENTLY_UPDATED.includes(move.id));
   }
-  moves = moves.sort(SortFunctions[sort]);
+  moves = moves.sort(SortFunctions(L)[sort]);
 
   const [isSpoilerFriend] = useIsSpoilerFriend();
 
+  const settingsSep = L("playdex.settingsSep");
   return (
     <div className={styles.container}>
       <OpenGraph
-        title="PlayDex"
+        title={L("common.title", {
+          page: L("playdex.title"),
+          branding: import.meta.env.VITE_BRANDING,
+        })}
         image="gameassets/sprMainmenu/6.png"
         url="playdex/"
-        description="List of moves/plays from Beastieball."
+        description={L("playdex.description")}
       />
-      <Header title="PlayDex" />
+      <Header title={L("playdex.title")} />
       <div className={styles.settings}>
         <label>
-          Search:{" "}
+          {L("common.searchPrefix")}
           <input
             type="search"
             onChange={(event) => setSearch(event.currentTarget.value)}
             onFocus={(event) => event.currentTarget.select()}
           />
         </label>
-        {" - "}
+        {settingsSep}
         <label>
-          Sort by:{" "}
+          {L("playdex.sort.label")}
           <select
             id="sort"
             onChange={(event) => setSort(Number(event.currentTarget.value))}
             value={String(sort)}
           >
-            <option value="0">Type</option>
-            <option value="1">Alphabetical</option>
-            <option value="2">Pow</option>
-            {/* <option value="3">Effect</option> */}
-            <option value="4">Target</option>
+            <option value="0">{L("playdex.sort.type")}</option>
+            <option value="1">{L("playdex.sort.alphabetical")}</option>
+            <option value="2">{L("common.pow")}</option>
+            {/* <option value="3">{L("playdex.sort.effect")}</option> */}
+            <option value="4">{L("playdex.sort.target")}</option>
           </select>
         </label>
-        {" - "}
+        {settingsSep}
         <label>
-          Type:{" "}
+          {L("playdex.type")}
           <select
             onChange={(event) =>
               setTypeFilter(Number(event.currentTarget.value))
             }
             value={String(typeFilter)}
           >
-            <option value="-1">All</option>
-            <option value="0">Body</option>
-            <option value="1">Spirit</option>
-            <option value="2">Mind</option>
-            <option value="3">Volley</option>
-            <option value="4">Support</option>
-            <option value="5">Defense</option>
+            <option value="-1">{L("playdex.all")}</option>
+            <option value="0">{L("common.types.body")}</option>
+            <option value="1">{L("common.types.spirit")}</option>
+            <option value="2">{L("common.types.mind")}</option>
+            <option value="3">{L("common.types.volley")}</option>
+            <option value="4">{L("common.types.support")}</option>
+            <option value="5">{L("common.types.defense")}</option>
           </select>
         </label>
-        {" - "}
+        {settingsSep}
         <label>
-          Effect:{" "}
+          {L("playdex.effect.label")}
           <select
             onChange={(event) =>
               setEffectFilter(Number(event.currentTarget.value))
             }
             value={String(effectFilter)}
           >
-            <option value={-1}>All</option>
+            <option value={-1}>{L("playdex.all")}</option>
             {EffectFilters.map((effect, index) => (
-              <option key={effect.name} value={index}>
-                {effect.name}
+              <option
+                key={effect.name + (effect.placeholderKey ?? "")}
+                value={index}
+              >
+                {effect.name.startsWith("common")
+                  ? L(effect.name)
+                  : L(
+                      "playdex.effect." + effect.name,
+                      effect.placeholderKey
+                        ? { "0": L(effect.placeholderKey) }
+                        : undefined,
+                    )}
               </option>
             ))}
           </select>
         </label>
-        {" - "}
+        {settingsSep}
         <label>
-          Favor:{" "}
+          {L("playdex.favor")}
           <select
             onChange={(event) =>
               setFriendFilter(
@@ -186,19 +208,29 @@ export default function PlayDex() {
             }
             value={friendFilter}
           >
-            <option value="undefined">None</option>
-            {Object.keys(CHAR_LIST).map((friendId) => (
-              <option key={friendId} value={CHAR_LIST[friendId]}>
-                {isSpoilerFriend(friendId)
-                  ? CHAR_LIST[friendId].slice(0, 2) + "..."
-                  : CHAR_LIST[friendId]}
-              </option>
-            ))}
+            <option value="undefined">{L("playdex.favorNone")}</option>
+            {CHAR_LIST.map((friendId) => {
+              const friend = SOCIAL_DATA.find(
+                (friend) => friendId == friend.id,
+              );
+              if (!friend) {
+                return;
+              }
+              const friendName = L(friend.name);
+
+              return (
+                <option key={friendId} value={friendId}>
+                  {isSpoilerFriend(friendId)
+                    ? friendName.slice(0, 2) + "..."
+                    : friendName}
+                </option>
+              );
+            })}
           </select>
         </label>
-        {" - "}
+        {settingsSep}
         <label>
-          Recently Changed:{" "}
+          {L("playdex.recentlyChanged")}
           <input
             type="checkbox"
             checked={recentlyChanged}

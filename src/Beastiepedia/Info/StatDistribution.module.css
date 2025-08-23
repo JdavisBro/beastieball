@@ -22,6 +22,7 @@
 
 .statcontainer {
   composes: column;
+  composes: latinText from global;
   width: 45%;
 }
 

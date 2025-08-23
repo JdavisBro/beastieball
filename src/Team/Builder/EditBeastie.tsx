@@ -1,6 +1,7 @@
 import { useState } from "react";
 import abilities from "../../data/abilities";
 import BEASTIE_DATA from "../../data/BeastieData";
+import useLocalization from "../../localization/useLocalization";
 import BeastieSelect from "../../shared/BeastieSelect";
 import type { TeamBeastie } from "../Types";
 import MoveSelect from "./MoveSelect";
@@ -9,9 +10,9 @@ import styles from "./TeamBuilder.module.css";
 import InfoTabberHeader from "../../shared/InfoTabber";
 
 const TYPES = [
-  ["b", "Body"],
-  ["h", "Spirit"],
-  ["m", "Mind"],
+  ["b", "body"],
+  ["h", "spirit"],
+  ["m", "mind"],
 ];
 
 type COACHING = "ba_r" | "bd_r" | "ha_r" | "hd_r" | "ma_r" | "md_r";
@@ -37,9 +38,11 @@ type ChangeValueType = <T extends keyof TeamBeastie>(
 ) => void;
 
 function BeastieDoesntExist({ changeValue }: { changeValue: ChangeValueType }) {
+  const { L } = useLocalization();
+
   return (
     <label>
-      Specie:{" "}
+      {L("teams.builder.species")}
       <BeastieSelect
         beastieId={undefined}
         setBeastieId={(beastieId) => {
@@ -98,12 +101,14 @@ function StatSelect({
   statPost: string;
   end: React.ReactNode;
 }) {
+  const { L } = useLocalization();
+
   return (
     <div className={styles.statselect}>
       <div className={styles.statrow}>
-        <div className={styles.stattop}>POW</div>
+        <div className={styles.stattop}>{L("common.pow")}</div>
         <div className={styles.stattopsep}></div>
-        <div className={styles.stattop}>DEF</div>
+        <div className={styles.stattop}>{L("common.def")}</div>
       </div>
       {TYPES.map(([char, name], index) => (
         <div className={styles.statrow} key={char}>
@@ -148,6 +153,8 @@ function StatOptions({
   beastie: TeamBeastie;
   changeValue: ChangeValueType;
 }) {
+  const { L } = useLocalization();
+
   const [tab, setTab] = useState(0);
   const training = tab == 0;
 
@@ -179,7 +186,7 @@ function StatOptions({
       <InfoTabberHeader
         tab={tab}
         setTab={setTab}
-        tabs={["Training", "Coaching"]}
+        tabs={[L("teams.builder.training"), L("teams.builder.coaching")]}
       />
       <div className={styles.tabcontainer}>
         <StatSelect
@@ -215,7 +222,13 @@ function StatOptions({
           end={
             training ? (
               <div className={styles.statrow}>
-                {extraPoints} Points Left -{" "}
+                {L(
+                  extraPoints == 1
+                    ? "teams.builder.trainingPoint"
+                    : "teams.builder.trainingPoints",
+                  { num: String(extraPoints) },
+                )}
+                {L("teams.builder.sep")}
                 <button
                   onClick={() =>
                     TYPES.map(([char]) => {
@@ -224,14 +237,18 @@ function StatOptions({
                     })
                   }
                 >
-                  Clear
+                  {L("teams.builder.trainingClear")}
                 </button>
               </div>
             ) : (
               <div className={styles.statrow}>
-                <button onClick={() => setAllCoaching(0)}>All to 0%</button>
-                {" - "}
-                <button onClick={() => setAllCoaching(1)}>All to 100%</button>
+                <button onClick={() => setAllCoaching(0)}>
+                  {L("teams.builder.coachingMin")}
+                </button>
+                {L("teams.builder.sep")}
+                <button onClick={() => setAllCoaching(1)}>
+                  {L("teams.builder.coachingMax")}
+                </button>
               </div>
             )
           }
@@ -248,6 +265,8 @@ export default function EditBeastie({
   beastie: TeamBeastie;
   setBeastie: React.Dispatch<React.SetStateAction<TeamBeastie>>;
 }) {
+  const { L } = useLocalization();
+
   const changeValue: ChangeValueType = (key, value) => {
     setBeastie((beastie) => ({ ...beastie, [key]: value }));
   };
@@ -260,7 +279,7 @@ export default function EditBeastie({
     <>
       <Box>
         <label>
-          Species:{" "}
+          {L("teams.builder.species")}
           <BeastieSelect
             beastieId={beastie.specie}
             setBeastieId={(beastieId) => {
@@ -296,7 +315,7 @@ export default function EditBeastie({
           />
         </label>
         <label>
-          Level:{" "}
+          {L("teams.builder.level")}
           <input
             type="number"
             min={1}
@@ -313,7 +332,7 @@ export default function EditBeastie({
           />
         </label>
         <label>
-          Trait:{" "}
+          {L("teams.builder.trait")}
           <select
             defaultValue={beastie.ability_index}
             onChange={(event) =>
@@ -322,7 +341,7 @@ export default function EditBeastie({
           >
             {beastiedata.ability.map((abilityId, index) => (
               <option key={abilityId} value={index}>
-                {abilities[abilityId].name}
+                {L(abilities[abilityId].name)}
               </option>
             ))}
           </select>
@@ -330,7 +349,7 @@ export default function EditBeastie({
       </Box>
       <Box>
         <label>
-          Name:{" "}
+          {L("teams.builder.name")}
           <input
             type="text"
             maxLength={12}
@@ -339,7 +358,7 @@ export default function EditBeastie({
           />
         </label>
         <label>
-          Number:{" "}
+          {L("teams.builder.number")}
           <input
             type="number"
             min={0}
@@ -352,7 +371,7 @@ export default function EditBeastie({
         </label>
         <span>
           <label>
-            Color:{" "}
+            {L("teams.builder.color")}
             <select
               value={Math.floor(beastie.color[0])}
               onChange={(event) =>
@@ -366,9 +385,11 @@ export default function EditBeastie({
                 )
               }
             >
-              <option value={0}>Regular</option>
-              {beastiedata.colors2 ? <option value={2}>Variant</option> : null}
-              <option value={1}>Raremorph</option>
+              <option value={0}>{L("common.color.regular")}</option>
+              {beastiedata.colors2 ? (
+                <option value={2}>{L("common.color.variant")}</option>
+              ) : null}
+              <option value={1}>{L("common.color.raremorph")}</option>
             </select>
           </label>
           <button
@@ -389,22 +410,26 @@ export default function EditBeastie({
               );
             }}
           >
-            Copy from Beastiepedia
+            {L("teams.builder.colorCopy")}
           </button>
         </span>
         {beastiedata.spr_alt.length ? (
           <label>
-            Sprite:{" "}
+            {L("teams.builder.sprite")}
             <select
               value={beastie.spr_index}
               onChange={(event) =>
                 changeValue("spr_index", Number(event.currentTarget.value))
               }
             >
-              <option value={0}>Normal</option>
+              <option value={0}> {L("common.altSprite.normal")}</option>
               {beastiedata.spr_alt.map((_, index) => (
                 <option key={index} value={index + 1}>
-                  Alternate{beastiedata.spr_alt.length > 1 ? ` ${index}` : ""}
+                  {beastiedata.spr_alt.length > 1
+                    ? L("common.altSprite.alternateNumbered", {
+                        num: String(index),
+                      })
+                    : L("common.altSprite.alternate")}
                 </option>
               ))}
             </select>

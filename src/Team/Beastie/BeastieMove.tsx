@@ -34,7 +34,7 @@ export default function BeastieMove({
     >
       <div className={styles.moveblock}></div>
       {impossible ? (
-        <div title="This Beastie cannot learn this Play.">⚠️</div>
+        <div title={L("teams.beastie.impossibleMove")}>⚠️</div>
       ) : null}
       <div className={styles.movename}>{L(move.name)}</div>
     </div>

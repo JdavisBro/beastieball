@@ -213,8 +213,8 @@ export default function ColorTabs(props: Props): React.ReactNode {
         tabs={{
           color: L("common.color.regular"),
           ...(beastiedata.colors2 ? { color2: L("common.color.variant") } : {}),
-          shiny: L("beastiepedia.preview.color.custom"),
-          custom: "Custom",
+          shiny: L("common.color.raremorph"),
+          custom: L("beastiepedia.preview.color.custom"),
         }}
       />
       <div className={styles.tabcontainer}>

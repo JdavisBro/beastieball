@@ -20,7 +20,7 @@ export default function PreviewSettings(props: Props): React.ReactElement {
   return (
     <>
       <InfoBox
-        header="Settings"
+        header={L("beastiepedia.preview.settings.header")}
         container={{ className: styles.previewSettings }}
       >
         <div>

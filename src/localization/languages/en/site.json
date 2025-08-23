@@ -482,10 +482,12 @@
     },
     "beastie": {
       "lvl": " Lvl {level}",
+      "species": "({species})",
       "maxLevel": "Max Level",
       "expToNext": "To next level: {num}/{max} ({left} left)",
       "openWithColors": "Open {beastie} with these colors in the Beastiepedia",
-      "statTooltip": "Coached: {coached}%\nTraining: {training}"
+      "statTooltip": "Coached: {coached}%\nTraining: {training}",
+      "impossibleMove": "This Beastie cannot learn this Play."
     },
     "viewer": {
       "title": "Team Viewer",

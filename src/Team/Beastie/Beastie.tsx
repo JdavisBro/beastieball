@@ -91,7 +91,9 @@ export default function Beastie({
             </span>
           </span>
           {teamBeastie.name && beastieName != teamBeastie.name ? (
-            <span className={styles.graytext}>({beastieName})</span>
+            <span className={styles.graytext}>
+              {L("teams.beastie.species", { species: beastieName })}
+            </span>
           ) : null}
           <Link
             to={getLink(

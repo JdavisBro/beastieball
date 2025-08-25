@@ -14,6 +14,7 @@ const EMOJI_MAP: Record<string, string> = {
   tournament: "🏆",
   heatwave: "🏆",
   heatup: "🏆",
+  experimental: "🧪",
   default: "❓",
 };
 const EMOJI_SWAPPED = Object.keys(EMOJI_MAP);

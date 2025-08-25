@@ -114,6 +114,10 @@
   flex: 0 0 178px;
 }
 
+.eventImage:has(.eventImageFailed) {
+  display: none;
+}
+
 .eventImage > img {
   position: absolute;
   height: 100%;

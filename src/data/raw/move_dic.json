@@ -498,7 +498,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 27, "pow": 1, "targ": 3 }],
+    "eff": [{ "eff": 27, "pow": -1, "targ": 3 }],
     "id": "defense",
     "name": "Block",
     "pow": 0,
@@ -571,6 +571,22 @@
     "name": "Distraction",
     "pow": 0,
     "targ": 1,
+    "type": 5,
+    "use": 2
+  },
+  "doubleblock": {
+    "bt_tags": [20, 9, 42, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 85, "pow": 0, "targ": 0 },
+      { "eff": 27, "pow": -2, "targ": 3 }
+    ],
+    "id": "doubleblock",
+    "name": "Double Block",
+    "pow": 0,
+    "targ": 4,
     "type": 5,
     "use": 2
   },
@@ -1064,7 +1080,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 27, "pow": 1, "targ": 3 },
+      { "eff": 27, "pow": -1, "targ": 3 },
       { "eff": 8, "pow": -0.1, "targ": 0 }
     ],
     "id": "libero",
@@ -1152,7 +1168,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 27, "pow": 1, "targ": 3 }],
+    "eff": [{ "eff": 27, "pow": -1, "targ": 3 }],
     "id": "mark",
     "name": "Mark",
     "pow": 0,
@@ -1165,7 +1181,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 27, "pow": 1, "targ": 3 }],
+    "eff": [{ "eff": 27, "pow": -1, "targ": 3 }],
     "id": "markattack",
     "name": "Tracker",
     "pow": 45,
@@ -1202,6 +1218,22 @@
     "type": 4,
     "use": 0
   },
+  "menace": {
+    "bt_tags": [9, 42, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 27, "pow": -2, "targ": 3 },
+      { "eff": 12, "pow": 2, "targ": 0 }
+    ],
+    "id": "menace",
+    "name": "Menace",
+    "pow": 0,
+    "targ": 4,
+    "type": 5,
+    "use": 0
+  },
   "meter": {
     "bt_tags": [24, 9, 15, 38],
     "desc_tagids": [],
@@ -1225,7 +1257,7 @@
     "description": null,
     "eff": [
       { "eff": 83, "pow": 1, "targ": 0 },
-      { "eff": 84, "pow": 15, "targ": 0 }
+      { "eff": 84, "pow": 1.2, "targ": 0 }
     ],
     "id": "mimic",
     "name": "Mimic",
@@ -2487,6 +2519,22 @@
     "targ": 2,
     "type": 3,
     "use": 0
+  },
+  "wall": {
+    "bt_tags": [20, 9, 42, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 27, "pow": -2, "targ": 3 },
+      { "eff": 8, "pow": -0.1, "targ": 0 }
+    ],
+    "id": "wall",
+    "name": "Wall",
+    "pow": 0,
+    "targ": 4,
+    "type": 5,
+    "use": 2
   },
   "whirlwind": {
     "bt_tags": [9, 12],

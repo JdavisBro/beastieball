@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import BeastieColorSlider from "./BeastieColorSlider";
 import styles from "./ColorTabs.module.css";
@@ -52,6 +52,50 @@ type StoredType = {
   };
 };
 
+type HookType = [StoredType, React.Dispatch<React.SetStateAction<StoredType>>];
+
+function isNumberArray(array: unknown) {
+  return Array.isArray(array) && array.every((a) => typeof a == "number");
+}
+
+function useStoredTypes(): HookType {
+  const [storedColors, setStoredColors] = useLocalStorage<StoredType>(
+    "beastiecolors",
+    {},
+    { serializer: JSON.stringify, deserializer: JSON.parse },
+  );
+  const storedOk = typeof storedColors == "object";
+  const setHook = useCallback(
+    (colors: StoredType | ((colors: StoredType) => StoredType)) => {
+      if (typeof colors == "function") {
+        setStoredColors(colors(storedOk ? storedColors : {}));
+      } else {
+        setStoredColors(colors);
+      }
+    },
+    [storedOk],
+  );
+  if (!storedOk) {
+    return [{}, setHook];
+  }
+  for (const beastieId of Object.keys(storedColors)) {
+    if (
+      Array.isArray(storedColors[beastieId]) ||
+      typeof storedColors[beastieId] != "object" ||
+      !isNumberArray(storedColors[beastieId].color) ||
+      !isNumberArray(storedColors[beastieId].color2) ||
+      !isNumberArray(storedColors[beastieId].shiny) ||
+      !(
+        Array.isArray(storedColors[beastieId].custom) &&
+        storedColors[beastieId].custom.every((a) => typeof a == "string")
+      )
+    ) {
+      delete storedColors[beastieId];
+    }
+  }
+  return [storedColors, setHook];
+}
+
 export default function ColorTabs(props: Props): React.ReactNode {
   const colorChange = props.colorChange;
 
@@ -84,11 +128,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
       ? "color"
       : currentTabActual;
 
-  const [storedColors, setStoredColors] = useLocalStorage<StoredType>(
-    "beastiecolors",
-    {},
-    { serializer: JSON.stringify, deserializer: JSON.parse },
-  );
+  const [storedColors, setStoredColors] = useStoredTypes();
 
   useEffect(() => {
     // doesn't change tab automatically on dev because of double render

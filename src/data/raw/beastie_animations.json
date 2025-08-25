@@ -349,8 +349,11 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
+      "hop_wobble": 5,
       "move_pause_frames": [],
-      "move_to_idle_transition_frames": []
+      "move_to_idle_transition_frames": [],
+      "squishiness": 0.2,
+      "stretchiness": 0.2
     },
     "miss": { "x": 154.2857142857, "y": -48 },
     "partner": {
@@ -547,7 +550,6 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
       "move_pause_frames": [],
       "move_speed_start": -0.7,
       "move_to_idle_transition_frames": []
@@ -931,11 +933,10 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
       "move_pause_frames": [],
       "move_to_idle_transition_frames": [10, 11, 12, 13],
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.05,
+      "stretchiness": 0.05
     },
     "miss": { "x": 234.75, "y": -69.4159042928 },
     "partner": {
@@ -1341,11 +1342,13 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_height": 35,
+      "hop_length": 2,
+      "hop_shake": 0.2,
       "move_pause_frames": [],
       "move_to_idle_transition_frames": [],
       "squishiness": 0,
-      "stretchiness": 0
+      "stretchiness": 0.05
     },
     "miss": { "x": 252, "y": -156 },
     "partner": { "angle": 0.0602479018, "anim": "spike", "x": 366, "y": -485 },
@@ -1403,7 +1406,8 @@
             "startFrame": 32,
             "transitions": [2, 2, 3]
           },
-          { "endFrame": 38, "holds": {}, "startFrame": 36, "transitions": [0] }
+          { "endFrame": 38, "holds": {}, "startFrame": 36, "transitions": [0] },
+          {}
         ],
         "speed": 0.6
       },
@@ -1447,13 +1451,13 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_wobble": 2,
       "move_accel": 3,
       "move_pause_frames": [],
       "move_speed_start": -0.3,
       "move_to_idle_transition_frames": [8, 9, 13, 14, 15, 18],
-      "squishiness": 0.2,
-      "stretchiness": 0.2
+      "squishiness": 0.05,
+      "stretchiness": 0.05
     },
     "miss": { "x": 178, "y": -94 },
     "partner": {
@@ -1605,8 +1609,11 @@
     "evo2": { "anim": "fall", "scale": 2.32315776, "x": -277, "y": 464 },
     "evo3": { "anim": "good", "scale": 2.519808, "x": 183, "y": 1036 },
     "loco_data": {
+      "hop_wobble": 2,
+      "move_decel": 0.67,
       "move_pause_frames": [],
-      "move_to_idle_transition_frames": []
+      "move_to_idle_transition_frames": [],
+      "squishiness": 0.05
     },
     "miss": { "x": 196, "y": -136 },
     "partner": { "angle": 0, "anim": "spike", "x": 205, "y": -483 },
@@ -1752,7 +1759,7 @@
       "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
       "fall": { "frames": { "endFrame": 4, "startFrame": 4 } },
       "good": { "frames": { "endFrame": 5, "startFrame": 5 } },
-      "idle": { "frames": [{}, {}] },
+      "idle": { "frames": [{}, {}, {}] },
       "menu": { "frames": {} },
       "move": {
         "frames": {
@@ -1943,7 +1950,7 @@
         ]
       }
     ],
-    "splash": { "angle": -10, "anim": "ready", "x": 46, "y": -264 }
+    "splash": { "angle": -10, "anim": "ready", "x": 44, "y": -237 }
   },
   "_sprClam": {
     "anim_data": {
@@ -2020,7 +2027,7 @@
       },
       { "array": [{ "color": 10018303, "x": 0.5 }] }
     ],
-    "splash": { "angle": -10, "anim": "ready", "x": 15, "y": -48 }
+    "splash": { "angle": -10, "anim": "ready", "x": 7, "y": -50 }
   },
   "_sprClown": {
     "anim_data": {
@@ -2381,14 +2388,14 @@
     "splash": { "angle": -10, "anim": "ready", "x": 132, "y": -198 }
   },
   "_sprCrab_alt": {
-    "anim_data": { "__Elephant_Circular_Ref__": 1324 },
+    "anim_data": { "__Elephant_Circular_Ref__": 1326 },
     "ball": { "x": 123, "y": -408 },
-    "colors": { "__Elephant_Circular_Ref__": 1670 },
+    "colors": { "__Elephant_Circular_Ref__": 1672 },
     "colors2": null,
     "evo1": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
-    "loco_data": { "__Elephant_Circular_Ref__": 1368 },
+    "loco_data": { "__Elephant_Circular_Ref__": 1370 },
     "miss": { "x": -22, "y": -199 },
     "partner": {
       "angle": 305.8698120117,
@@ -2397,7 +2404,7 @@
       "y": -236
     },
     "ready": { "x": 100, "y": -535 },
-    "shiny": { "__Elephant_Circular_Ref__": 1700 },
+    "shiny": { "__Elephant_Circular_Ref__": 1702 },
     "splash": { "angle": -10, "anim": "ready", "x": 84, "y": -221 }
   },
   "_sprCroc": {
@@ -2586,7 +2593,7 @@
         ]
       }
     ],
-    "splash": { "angle": -25, "anim": "ready", "x": 159, "y": -81 }
+    "splash": { "angle": -25, "anim": "ready", "x": 135, "y": -86 }
   },
   "_sprDaredevil1": {
     "anim_data": {
@@ -2690,6 +2697,18 @@
     "splash": { "angle": 353.164642334, "anim": "ready", "x": 59, "y": -64 }
   },
   "_sprDefaultBeastie": {
+    "anim_data": {
+      "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
+      "fall": { "frames": { "endFrame": 4, "startFrame": 4 } },
+      "good": { "frames": { "endFrame": 5, "startFrame": 5 } },
+      "idle": { "frames": {} },
+      "menu": { "frames": {} },
+      "move": { "frames": { "endFrame": 1, "startFrame": 1 } },
+      "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
+      "special": { "frames": {} },
+      "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
+      "volley": { "frames": { "endFrame": 3, "startFrame": 3 } }
+    },
     "ball": { "x": 60.5714285714, "y": -216 },
     "colors": [
       {
@@ -2710,9 +2729,14 @@
         ]
       }
     ],
+    "colors2": null,
     "evo1": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+    "loco_data": {
+      "move_pause_frames": [],
+      "move_to_idle_transition_frames": []
+    },
     "miss": { "x": 137, "y": -49 },
     "partner": {
       "angle": 322.5350952148,
@@ -3200,6 +3224,139 @@
     ],
     "splash": { "angle": -10, "anim": "ready", "x": -54, "y": -107 }
   },
+  "_sprFO_c1": {
+    "anim_data": {
+      "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
+      "fall": { "frames": { "endFrame": 4, "startFrame": 4 } },
+      "good": { "frames": { "endFrame": 5, "startFrame": 5 } },
+      "idle": { "frames": {} },
+      "menu": { "frames": {} },
+      "move": { "frames": { "endFrame": 1, "startFrame": 1 } },
+      "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
+      "special": { "frames": {} },
+      "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
+      "volley": { "frames": { "endFrame": 3, "startFrame": 3 } }
+    },
+    "ball": { "x": 0, "y": 0 },
+    "colors": [
+      {
+        "array": [
+          { "color": 7659263, "x": 0 },
+          { "color": 7578623, "x": 1 }
+        ]
+      }
+    ],
+    "colors2": [
+      {
+        "array": [
+          { "color": 5189960, "x": 0 },
+          { "color": 7230796, "x": 1 }
+        ]
+      }
+    ],
+    "evo1": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+    "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+    "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+    "loco_data": {
+      "hop_height": 40,
+      "hop_length": 2,
+      "hop_wobble": 7,
+      "move_accel": 3,
+      "move_decel": 0.67,
+      "move_pause_frames": [],
+      "move_speed": 1.1,
+      "move_speed_start": -150,
+      "move_to_idle_transition_frames": []
+    },
+    "miss": { "x": 0, "y": 0 },
+    "partner": { "angle": -10, "anim": "spike", "x": 0, "y": 0 },
+    "ready": { "x": 0, "y": 0 },
+    "shiny": [
+      {
+        "array": [
+          { "color": 5970938, "x": 0 },
+          { "color": 240, "x": 1 }
+        ]
+      }
+    ],
+    "splash": { "angle": -10, "anim": "ready", "x": 0, "y": -200 }
+  },
+  "_sprFO_ca": {
+    "anim_data": {
+      "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
+      "fall": { "frames": { "endFrame": 4, "startFrame": 4 } },
+      "good": { "frames": { "endFrame": 5, "startFrame": 5 } },
+      "idle": { "frames": {} },
+      "menu": { "frames": {} },
+      "move": { "frames": { "endFrame": 1, "startFrame": 1 } },
+      "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
+      "special": { "frames": {} },
+      "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
+      "volley": { "frames": { "endFrame": 3, "startFrame": 3 } }
+    },
+    "ball": { "x": 0, "y": 0 },
+    "colors": [
+      {
+        "array": [
+          { "color": 11331835, "x": 0 },
+          { "color": 9810934, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 12505658, "x": 0 },
+          { "color": 15782440, "x": 0.5066666667 },
+          { "color": 14592282, "x": 1 }
+        ]
+      }
+    ],
+    "colors2": [
+      {
+        "array": [
+          { "color": 5585998, "x": 0 },
+          { "color": 6377547, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 7485180, "x": 0 },
+          { "color": 3418348, "x": 1 }
+        ]
+      }
+    ],
+    "evo1": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+    "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+    "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+    "loco_data": {
+      "hop_length": 2,
+      "hop_shake": 0.5,
+      "move_pause_frames": [],
+      "move_speed": 0.85,
+      "move_speed_start": -80,
+      "move_to_idle_transition_frames": [],
+      "squishiness": 0.01,
+      "stretchiness": 0.01
+    },
+    "miss": { "x": 0, "y": 0 },
+    "partner": { "angle": -10, "anim": "spike", "x": 0, "y": 0 },
+    "ready": { "x": 0, "y": 0 },
+    "shiny": [
+      {
+        "array": [
+          { "color": 7091967, "x": 0 },
+          { "color": 921333, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 13679539, "x": 0 },
+          { "color": 11508117, "x": 0.5 },
+          { "color": 10587017, "x": 1 }
+        ]
+      }
+    ],
+    "splash": { "angle": -10, "anim": "ready", "x": 0, "y": -200 }
+  },
   "_sprFO_z": {
     "anim_data": {
       "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
@@ -3214,6 +3371,11 @@
       "volley": { "frames": { "endFrame": 3, "startFrame": 3 } }
     },
     "ball": { "x": 0, "y": 0 },
+    "colors": [
+      { "array": [{ "color": 255, "x": 0 }] },
+      { "array": [{ "color": 65280, "x": 0 }] }
+    ],
+    "colors2": null,
     "evo1": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -3224,6 +3386,10 @@
     "miss": { "x": 0, "y": 0 },
     "partner": { "angle": -10, "anim": "spike", "x": 0, "y": 0 },
     "ready": { "x": 0, "y": 0 },
+    "shiny": [
+      { "array": [{ "color": 6750086, "x": 0 }] },
+      { "array": [{ "color": 65280, "x": 0 }] }
+    ],
     "splash": { "angle": -10, "anim": "ready", "x": 0, "y": -200 }
   },
   "_sprFootball": {
@@ -3790,7 +3956,7 @@
       },
       { "array": [{ "color": 13815807, "x": 0.5 }] }
     ],
-    "splash": { "angle": 342.6044006348, "anim": "good", "x": 246, "y": -488 }
+    "splash": { "angle": 342.6044006348, "anim": "good", "x": 277, "y": -454 }
   },
   "_sprFrog1": {
     "anim_data": {
@@ -3880,7 +4046,8 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_height": 20,
+      "hop_length": 1.2,
       "move_pause_frames": [],
       "move_to_idle_transition_frames": [8, 12, 13, 14],
       "squishiness": 0.2,
@@ -3915,7 +4082,7 @@
         ]
       }
     ],
-    "splash": { "angle": 348.5530395508, "anim": "ready", "x": 10, "y": -95 }
+    "splash": { "angle": 348.5530395508, "anim": "ready", "x": 58, "y": -95 }
   },
   "_sprFrog2": {
     "anim_data": {
@@ -4069,13 +4236,13 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_height": 35,
+      "hop_length": 2,
       "move_pause_frames": [],
       "move_to_idle_transition_frames": [
         13, 21, 20, 10, 11, 12, 18, 19, 8, 9, 16, 17
       ],
-      "squishiness": 0.2,
-      "stretchiness": 0.2
+      "stretchiness": 0.05
     },
     "miss": { "x": 249.6, "y": -61.2 },
     "partner": {
@@ -4309,15 +4476,16 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_height": 8,
+      "hop_length": 0.9,
       "move_accel": 8,
       "move_pause_frames": [],
       "move_speed": 0.95,
       "move_speed_start": 0.25,
       "move_to_idle_transition_anim": "stop",
       "move_to_idle_transition_frames": [],
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.2,
+      "stretchiness": 0.2
     },
     "miss": { "x": 44, "y": -200 },
     "partner": {
@@ -5094,11 +5262,10 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_height": 40,
+      "hop_length": 1.8,
       "move_pause_frames": [],
-      "move_to_idle_transition_frames": [18, 19],
-      "squishiness": 0,
-      "stretchiness": 0
+      "move_to_idle_transition_frames": [18, 19]
     },
     "miss": { "x": 92, "y": -94 },
     "partner": { "angle": 297.0356445312, "anim": "spike", "x": 262, "y": -76 },
@@ -5500,11 +5667,12 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_length": 1.3,
+      "move_decel": 0.67,
       "move_pause_frames": [],
       "move_to_idle_transition_frames": [11, 12, 13, 14],
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.05,
+      "stretchiness": 0.05
     },
     "miss": { "x": 77, "y": -117 },
     "partner": {
@@ -5646,7 +5814,7 @@
         ]
       }
     ],
-    "splash": { "angle": 352.4952697754, "anim": "ready", "x": 135, "y": -320 }
+    "splash": { "angle": 352.4952697754, "anim": "ready", "x": 104, "y": -305 }
   },
   "_sprMagpie1": {
     "anim_data": {
@@ -5695,13 +5863,8 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
       "move_pause_frames": [],
-      "move_to_idle_transition_frames": [
-        10, 11, 12, 13, 14, 15, 16, 17, 18, 19
-      ],
-      "squishiness": 0,
-      "stretchiness": 0
+      "move_to_idle_transition_frames": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
     },
     "miss": { "x": 217, "y": -160 },
     "partner": {
@@ -6033,7 +6196,9 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_height": 1,
+      "hop_length": 0.4,
+      "hop_wobble": 3,
       "move_pause_frames": [],
       "move_to_idle_transition_frames": [],
       "squishiness": 0,
@@ -6378,9 +6543,14 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_height": 10,
+      "hop_length": 0.7,
+      "hop_wobble": 3,
+      "move_decel": 0.67,
       "move_pause_frames": [],
-      "move_to_idle_transition_frames": []
+      "move_to_idle_transition_frames": [],
+      "squishiness": 0.05,
+      "stretchiness": 0.02
     },
     "miss": { "x": 120, "y": -183.6 },
     "partner": {
@@ -6671,7 +6841,7 @@
         ]
       }
     ],
-    "splash": { "angle": -10, "anim": "good", "x": 93, "y": -413 }
+    "splash": { "angle": -10, "anim": "good", "x": 45, "y": -411 }
   },
   "_sprNerd1": {
     "anim_data": {
@@ -6732,15 +6902,16 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_height": 15,
+      "hop_length": 1.1,
       "move_accel": 0.6,
       "move_decel": 85,
       "move_pause_frames": [],
       "move_speed": 1.4,
       "move_speed_start": -85,
       "move_to_idle_transition_frames": [],
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.05,
+      "stretchiness": 0.05
     },
     "miss": { "x": 3, "y": -203 },
     "partner": { "angle": 315, "anim": "spike", "x": 190, "y": -74 },
@@ -7378,11 +7549,9 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "move_decel": 0.67,
       "move_pause_frames": [],
-      "move_to_idle_transition_frames": [8, 9, 10, 11],
-      "squishiness": 0,
-      "stretchiness": 0
+      "move_to_idle_transition_frames": [8, 9, 10, 11]
     },
     "miss": { "x": 108.5714285714, "y": -169.1428571429 },
     "partner": {
@@ -7715,15 +7884,14 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_height": 10,
+      "hop_length": 0.5,
       "move_pause_frames": [8],
       "move_speed": 1.1,
       "move_to_idle_transition_anim": "stop",
       "move_to_idle_transition_frames": [
         10, 11, 12, 13, 14, 15, 16, 17, 21, 22, 23, 24, 25, 26, 27, 28
-      ],
-      "squishiness": 0,
-      "stretchiness": 0
+      ]
     },
     "miss": { "x": 79, "y": -62 },
     "partner": {
@@ -8112,12 +8280,13 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
-      "hop_length": 75,
+      "hop_height": 15,
+      "hop_length": 1,
+      "hop_wobble": 2,
       "move_pause_frames": [],
       "move_to_idle_transition_frames": [],
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.2,
+      "stretchiness": 0.2
     },
     "miss": { "x": 83, "y": -192 },
     "partner": { "angle": 329.1440429688, "anim": "good", "x": 175, "y": -216 },
@@ -8360,7 +8529,7 @@
         "speed": 1.1
       },
       "menu": { "frames": { "endFrame": 57, "startFrame": 57 } },
-      "move": { "frames": { "endFrame": 15, "startFrame": 8 } },
+      "move": { "frames": [{ "endFrame": 15, "startFrame": 8 }, {}] },
       "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
       "special": { "frames": {} },
       "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
@@ -8433,10 +8602,14 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_height": 15,
+      "hop_length": 1.2,
+      "hop_wobble": 1.5,
       "move_pause_frames": [],
       "move_to_idle_transition_anim": "stop",
-      "move_to_idle_transition_frames": []
+      "move_to_idle_transition_frames": [],
+      "squishiness": 0.02,
+      "stretchiness": 0.02
     },
     "miss": { "x": 222.8571428571, "y": -114.2857142857 },
     "partner": {
@@ -8504,14 +8677,14 @@
     }
   },
   "_sprRat_alt": {
-    "anim_data": { "__Elephant_Circular_Ref__": 5198 },
+    "anim_data": { "__Elephant_Circular_Ref__": 5321 },
     "ball": { "x": 154.8, "y": -261.6 },
-    "colors": { "__Elephant_Circular_Ref__": 6413 },
+    "colors": { "__Elephant_Circular_Ref__": 6565 },
     "colors2": null,
     "evo1": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
-    "loco_data": { "__Elephant_Circular_Ref__": 5276 },
+    "loco_data": { "__Elephant_Circular_Ref__": 5400 },
     "miss": { "x": 222.8571428571, "y": -114.2857142857 },
     "partner": {
       "angle": 305.217590332,
@@ -8520,7 +8693,7 @@
       "y": -1.2
     },
     "ready": { "x": 139.4285714286, "y": -286.8571428571 },
-    "shiny": { "__Elephant_Circular_Ref__": 6462 },
+    "shiny": { "__Elephant_Circular_Ref__": 6614 },
     "splash": {
       "angle": 344.1231689453,
       "anim": "volley",
@@ -8698,7 +8871,6 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
       "move_pause_frames": [],
       "move_speed_start": -0.6,
       "move_to_idle_transition_frames": []
@@ -9203,8 +9375,9 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
-      "hop_length": 1,
+      "hop_height": 15,
+      "hop_length": 0.75,
+      "hop_wobble": 2,
       "move_accel": 1,
       "move_pause_frames": [],
       "move_to_idle_transition_frames": [],
@@ -9642,11 +9815,9 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_height": 30,
       "move_pause_frames": [],
-      "move_to_idle_transition_frames": [],
-      "squishiness": 0,
-      "stretchiness": 0
+      "move_to_idle_transition_frames": []
     },
     "miss": { "x": 38, "y": -75 },
     "partner": {
@@ -9954,7 +10125,6 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
       "move_accel": 3,
       "move_pause_frames": [],
       "move_speed_start": -0.66,
@@ -10095,14 +10265,12 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 12,
-      "hop_length": 85,
-      "hop_wobble": 1.5,
+      "hop_length": 1.8,
+      "hop_wobble": 2,
       "move_accel": 3,
       "move_pause_frames": [],
       "move_speed_start": -0.66,
       "move_to_idle_transition_frames": [],
-      "squishiness": 0.2,
       "stretchiness": 0.08
     },
     "miss": { "x": 41, "y": -336 },
@@ -10254,8 +10422,8 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
-      "hop_length": 85,
+      "hop_height": 20,
+      "hop_length": 0.85,
       "move_accel": 3,
       "move_pause_frames": [],
       "move_speed_start": -0.66,
@@ -10399,8 +10567,7 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
-      "hop_length": 85,
+      "hop_length": 0.85,
       "move_accel": 3,
       "move_pause_frames": [],
       "move_speed_start": -0.66,
@@ -11145,6 +11312,11 @@
       "volley": { "frames": { "endFrame": 3, "startFrame": 3 } }
     },
     "ball": { "x": 0, "y": 0 },
+    "colors": [
+      { "array": [{ "color": 255, "x": 0 }] },
+      { "array": [{ "color": 65280, "x": 0 }] }
+    ],
+    "colors2": null,
     "evo1": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -11155,6 +11327,10 @@
     "miss": { "x": 0, "y": 0 },
     "partner": { "angle": -10, "anim": "spike", "x": 0, "y": 0 },
     "ready": { "x": 0, "y": 0 },
+    "shiny": [
+      { "array": [{ "color": 6750057, "x": 0 }] },
+      { "array": [{ "color": 65280, "x": 0 }] }
+    ],
     "splash": { "angle": -10, "anim": "ready", "x": 0, "y": -200 }
   },
   "_sprTricky": {
@@ -11641,11 +11817,12 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
+      "hop_length": 1.4,
+      "hop_wobble": 6,
       "move_pause_frames": [],
       "move_to_idle_transition_frames": [],
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.02,
+      "stretchiness": 0.02
     },
     "miss": { "x": -55, "y": -147 },
     "partner": { "angle": 291.6444396973, "anim": "volley", "x": 214, "y": 31 },

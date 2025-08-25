@@ -108,11 +108,14 @@
     "use": 0
   },
   "basecover": {
-    "bt_tags": [],
+    "bt_tags": [29, 7],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 7, "pow": 0, "targ": 2 }],
+    "eff": [
+      { "eff": 16, "pow": 1, "targ": 10 },
+      { "eff": 7, "pow": 0, "targ": 2 }
+    ],
     "id": "basecover",
     "name": "Fall Back",
     "pow": 0,
@@ -274,7 +277,10 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 16, "pow": 1, "targ": 1 }],
+    "eff": [
+      { "eff": 77, "pow": 1, "targ": 1 },
+      { "eff": 5, "pow": 2, "targ": 1 }
+    ],
     "id": "callout",
     "name": "Call Out",
     "pow": 0,
@@ -942,23 +948,27 @@
     "eff": [{ "eff": 33, "pow": 13, "targ": 0 }],
     "id": "hex",
     "name": "Nerve Strike",
-    "pow": 55,
+    "pow": 50,
     "targ": 0,
     "type": 2,
     "use": 0
   },
   "hyperbeam": {
-    "bt_tags": [0, 8, 20, 31],
+    "bt_tags": [0, 8, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 29, "pow": 3, "targ": 0 }],
+    "eff": [
+      { "eff": 86, "pow": 3, "targ": 0 },
+      { "eff": 29, "pow": 3, "targ": 0 },
+      { "eff": 87, "pow": 0, "targ": 0 }
+    ],
     "id": "hyperbeam",
     "name": "Hyperspike",
     "pow": 125,
     "targ": 0,
     "type": 0,
-    "use": 2
+    "use": 0
   },
   "inferno": {
     "bt_tags": [1, 10, 43],
@@ -1208,6 +1218,22 @@
     "type": 4,
     "use": 0
   },
+  "mimic": {
+    "bt_tags": [0],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 83, "pow": 1, "targ": 0 },
+      { "eff": 84, "pow": 15, "targ": 0 }
+    ],
+    "id": "mimic",
+    "name": "Mimic",
+    "pow": -1,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
   "mind": {
     "bt_tags": [2, 29, 7],
     "desc_tagids": [],
@@ -1304,7 +1330,10 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 1, "pow": 1, "targ": 0 }],
+    "eff": [
+      { "eff": 88, "pow": 50, "targ": 0 },
+      { "eff": 1, "pow": 1, "targ": 0 }
+    ],
     "id": "myheartpass",
     "name": "Excited Pass",
     "pow": 0,
@@ -1472,7 +1501,8 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 16, "pow": 1, "targ": 0 },
+      { "eff": 3, "pow": 2, "targ": 0 },
+      { "eff": 79, "pow": 1, "targ": 0 },
       { "eff": 6, "pow": 1, "targ": 0 }
     ],
     "id": "preblock",
@@ -2264,17 +2294,21 @@
     "use": 0
   },
   "tailwind": {
-    "bt_tags": [24, 22],
+    "bt_tags": [24, 21, 27],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 7, "pow": 1, "targ": 2 }],
+    "eff": [
+      { "eff": 57, "pow": 0, "targ": 0 },
+      { "eff": 7, "pow": 1, "targ": 0 },
+      { "eff": 10, "pow": 1, "targ": 1 }
+    ],
     "id": "tailwind",
-    "name": "Tailwind",
+    "name": "Whoosh",
     "pow": 0,
-    "targ": 3,
+    "targ": 1,
     "type": 4,
-    "use": 0
+    "use": 1
   },
   "targethp": {
     "bt_tags": [2, 8],
@@ -2294,7 +2328,10 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 12, "pow": 2, "targ": 3 }],
+    "eff": [
+      { "eff": 12, "pow": 2, "targ": 3 },
+      { "eff": 77, "pow": -1, "targ": 0 }
+    ],
     "id": "taunt",
     "name": "Provoke",
     "pow": 0,
@@ -2329,6 +2366,19 @@
     "pow": 0,
     "targ": 1,
     "type": 4,
+    "use": 0
+  },
+  "thrash": {
+    "bt_tags": [1, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 33, "pow": 31, "targ": 0 }],
+    "id": "thrash",
+    "name": "Thrash",
+    "pow": 80,
+    "targ": 0,
+    "type": 1,
     "use": 0
   },
   "threat": {
@@ -2384,17 +2434,17 @@
     "use": 0
   },
   "toughattack": {
-    "bt_tags": [1, 10, 33, 31],
+    "bt_tags": [1, 10, 33],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
       { "eff": 19, "pow": 2, "targ": 0 },
-      { "eff": 8, "pow": -0.3, "targ": 0 }
+      { "eff": 23, "pow": -2, "targ": 0 }
     ],
     "id": "toughattack",
     "name": "Exert",
-    "pow": 65,
+    "pow": 60,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2456,7 +2506,10 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 40, "pow": 1, "targ": 0 }],
+    "eff": [
+      { "eff": 40, "pow": 1, "targ": 0 },
+      { "eff": 33, "pow": 32, "targ": 0 }
+    ],
     "id": "wornattack",
     "name": "Perfect Shot",
     "pow": 125,

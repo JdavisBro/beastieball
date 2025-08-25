@@ -990,7 +990,8 @@
       "sweatall",
       "shakeoff",
       "bomb",
-      "flatten"
+      "flatten",
+      "wall"
     ],
     "attklist_randomize": -1,
     "ba": 89,
@@ -1611,6 +1612,7 @@
       "chill",
       "shakeoff",
       "meditate",
+      "wall",
       "passattack",
       "dig",
       "startermind",
@@ -1860,6 +1862,7 @@
       "chill",
       "shakeoff",
       "meditate",
+      "wall",
       "passattack",
       "dig",
       "startermind"
@@ -2070,6 +2073,7 @@
       "chill",
       "shakeoff",
       "meditate",
+      "wall",
       "passattack",
       "dig",
       "startermind"
@@ -4458,6 +4462,7 @@
       "protect",
       "splinter",
       "rattle",
+      "menace",
       "netattack"
     ],
     "attklist_randomize": -1,
@@ -7874,6 +7879,7 @@
       "sweatall",
       "rattle",
       "bamboozle",
+      "menace",
       "targethp",
       "stun",
       "shaken"
@@ -8088,6 +8094,7 @@
       "sweatall",
       "rattle",
       "bamboozle",
+      "menace",
       "targethp",
       "stun",
       "shaken"
@@ -8287,6 +8294,7 @@
       "sweatall",
       "rattle",
       "bamboozle",
+      "menace",
       "targethp",
       "stun",
       "shaken"
@@ -11767,6 +11775,7 @@
       "steal",
       "jazzpass",
       "jump",
+      "wall",
       "recover",
       "ricochet",
       "netattack",
@@ -14091,6 +14100,7 @@
       "rest",
       "basecover",
       "rocket",
+      "menace",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -14295,6 +14305,7 @@
       "rest",
       "basecover",
       "rocket",
+      "menace",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -14479,7 +14490,8 @@
       "shakeoff",
       "vigor",
       "shieldbreaker",
-      "toughattack"
+      "toughattack",
+      "wall"
     ],
     "attklist_randomize": -1,
     "ba": 95,
@@ -17069,6 +17081,7 @@
       "rest",
       "protect",
       "swordsdance",
+      "menace",
       "starterbody",
       "quake",
       "bomb"
@@ -17285,6 +17298,7 @@
       "rest",
       "protect",
       "swordsdance",
+      "menace",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -17491,6 +17505,7 @@
       "rest",
       "protect",
       "swordsdance",
+      "menace",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -18148,6 +18163,7 @@
       "nice",
       "skillswap",
       "slide",
+      "wall",
       "starterbody",
       "tailwind"
     ],
@@ -18360,6 +18376,7 @@
       "nice",
       "skillswap",
       "slide",
+      "wall",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -18566,6 +18583,7 @@
       "vigor",
       "contest",
       "basecover",
+      "wall",
       "protectcheer",
       "pushattack"
     ],
@@ -18787,6 +18805,7 @@
       "vigor",
       "contest",
       "basecover",
+      "wall",
       "protectcheer",
       "pushattack"
     ],
@@ -20411,6 +20430,7 @@
       "eerie",
       "3actions",
       "snore",
+      "menace",
       "quake"
     ],
     "attklist_randomize": -1,
@@ -22471,6 +22491,7 @@
       "steal",
       "bomb",
       "introduction",
+      "menace",
       "haze",
       "dump",
       "quake"
@@ -22721,6 +22742,7 @@
       "steal",
       "bomb",
       "introduction",
+      "menace",
       "haze",
       "dump"
     ],
@@ -22941,6 +22963,7 @@
       "steal",
       "bomb",
       "introduction",
+      "menace",
       "haze",
       "dump"
     ],
@@ -23395,7 +23418,9 @@
       "quake",
       "flatten",
       "toughattack",
-      "thrash"
+      "thrash",
+      "wall",
+      "menace"
     ],
     "attklist_randomize": -1,
     "ba": 96,

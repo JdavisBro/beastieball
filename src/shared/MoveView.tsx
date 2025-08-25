@@ -157,7 +157,7 @@ function getEffectString(
     case 26:
       return `${feels} ${effect.pow} [sprStatus,8]JAZZED (POW +50%)${effect.eff < 0 && attack ? " before contact" : ""}${dot}`;
     case 27:
-      return `${feels} ${effect.pow} [sprStatus,9]BLOCKED (POW x2/3)${dot}`;
+      return `${feels} ${effect.pow < 0 ? "+" : ""}${Math.abs(effect.pow)} [sprStatus,9]BLOCKED (POW x2/3)${dot}`;
     case 28:
       return `SWITCH places with ${target} without moving ball.`;
     case 29:
@@ -321,7 +321,7 @@ function getEffectString(
     case 83:
       return `The attack changes to the ally's first attack.`;
     case 84:
-      return `POW x${effect.pow / 10}.`;
+      return `POW x${effect.pow}.`;
 
     case 86:
       return `Charges each turn on field, up to ${effect.pow}.`;

@@ -140,7 +140,7 @@
     "name": "Fetch"
   },
   "fieldclear": {
-    "desc": "Clears FIELD EFFECTS when TAGGED OUT",
+    "desc": "Clears all FIELD EFFECTS and BOOSTS when TAGGED OUT",
     "id": "fieldclear",
     "name": "Cleanup"
   },
@@ -165,7 +165,7 @@
     "name": "Friendship"
   },
   "fwdpass": {
-    "desc": "When they volley, SHIFTs ally to the net",
+    "desc": "When they volley from the net, SHIFTs ally to the net",
     "id": "fwdpass",
     "name": "Captain"
   },
@@ -215,7 +215,7 @@
     "name": "Overwork"
   },
   "lightningrod_m": {
-    "desc": "Is a magnet for all [sprIcon,2] attacks",
+    "desc": "[sprIcon,2] attacks always target this Beastie and give an EASY RECEIVE",
     "id": "lightningrod_m",
     "name": "Neural Net"
   },
@@ -294,6 +294,11 @@
     "id": "nofield",
     "name": "In The Clouds"
   },
+  "noiseattack": {
+    "desc": "Feels 1 [sprStatus,3]NOISY when they attack",
+    "id": "noiseattack",
+    "name": "Roaring"
+  },
   "noredirect": {
     "desc": "This Beastie's non-SIDEWAYS attacks always go where they are targeted",
     "id": "noredirect",
@@ -305,7 +310,7 @@
     "name": "Plucky"
   },
   "notag": {
-    "desc": "Prevents nearest non-[sprStatus,5]WIPED opponent from using Tag Out",
+    "desc": "On turn start, nearest non-[sprStatus,5]WIPED opponent is beamed, preventing use of \"Tag Out\"",
     "id": "notag",
     "name": "Tractor Beam"
   },
@@ -335,7 +340,7 @@
     "name": "Overwrite"
   },
   "prankster": {
-    "desc": "Can use [sprIcon,4]SUPPORT plays during Defense",
+    "desc": "Can use [sprIcon,4]SUPPORT plays with the ball and during Defense",
     "id": "prankster",
     "name": "Mischief"
   },
@@ -404,6 +409,11 @@
     "id": "silencer",
     "name": "Silencer"
   },
+  "smooth": {
+    "desc": "When they MOVE or SHIFT, restores 25 STAMINA",
+    "id": "smooth",
+    "name": "Smooth"
+  },
   "sneaky": {
     "desc": "This Beastie's damage is reduced 25%. Adjacent allies receive attacks in their place.",
     "id": "sneaky",
@@ -460,7 +470,7 @@
     "name": "Miracle Play"
   },
   "study": {
-    "desc": "After receiving any [sprIcon,0][sprIcon,1][sprIcon,2]attack, [sprBoost,0]BOOSTs the corresponding DEF",
+    "desc": "After receiving any [sprIcon,0][sprIcon,1][sprIcon,2]attack, [sprBoost,1]BOOSTs the corresponding DEF",
     "id": "study",
     "name": "Study"
   },
@@ -483,6 +493,11 @@
     "desc": "Does 1.5x damage when the target has just TAGGED IN",
     "id": "taghit",
     "name": "Hunter"
+  },
+  "tangled": {
+    "desc": "When they MOVE or SHIFT, loses 10 STAMINA",
+    "id": "tangled",
+    "name": "Tangled"
   },
   "taunt": {
     "desc": "Attacks make the target [sprStatus,1]ANGRY",
@@ -540,7 +555,7 @@
     "name": "Steady"
   },
   "unsweaty": {
-    "desc": "Immune to feeling [sprStatus,6]SWEATY",
+    "desc": "When [sprStatus,6]SWEATY, restores 10 STAMINA each turn instead",
     "id": "unsweaty",
     "name": "Moist"
   },
@@ -565,7 +580,7 @@
     "name": "Torpor"
   },
   "watcher": {
-    "desc": "Receives attacks in place of adjacent allies",
+    "desc": "Attacks targeting an adjacent ally go to this Beastie and deal 1.2x damage",
     "id": "watcher",
     "name": "Watchtower"
   },

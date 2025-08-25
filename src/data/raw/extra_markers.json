@@ -15,8 +15,8 @@
     {
       "id": "hometown_west_b",
       "items": [["status_b", 1.0]],
-      "x": -6834,
-      "y": 6704
+      "x": -6839,
+      "y": 6408
     },
     {
       "id": "hometown_north_a",
@@ -249,7 +249,7 @@
     {
       "id": "gift_canyon_3_0",
       "items": [["status_b", 1.0]],
-      "x": -24837,
+      "x": -24838,
       "y": -2982
     },
     {
@@ -611,7 +611,7 @@
     {
       "id": "gift_hometown_0",
       "items": [["sell1", 1.0]],
-      "x": -1647,
+      "x": -1698,
       "y": 1646
     },
     {
@@ -636,8 +636,8 @@
     { "lever_id": "beryl_rail", "position": [-9952.0, 9667] },
     { "lever_id": "canyon_1", "position": [-19628, 1286] },
     { "lever_id": "canyon_2", "position": [-19562, -2341] },
-    { "lever_id": "canyon_4", "position": [-23308, -5738] },
-    { "lever_id": "canyon_3", "position": [-23599, -3963] },
+    { "lever_id": "canyon_4", "position": [-23309, -5738] },
+    { "lever_id": "canyon_3", "position": [-23600, -3963] },
     { "lever_id": "canyon_end", "position": [-24964, -10206] },
     { "lever_id": "canyon_secret_1", "position": [-20731, -5430] },
     { "lever_id": "canyon_secret_2", "position": [-20646, -7267] },
@@ -687,8 +687,8 @@
     "beryl_rail_north": [{ "position": [-18924.5, 8926], "angle": 0 }],
     "canyon_1": [{ "position": [-19009, 2071], "angle": 0 }],
     "canyon_2": [{ "position": [-18951, -2164], "angle": 0 }],
-    "canyon_4": [{ "position": [-23814, -7090], "angle": 0 }],
-    "canyon_3": [{ "position": [-23292, -6366], "angle": 351.8699035645 }],
+    "canyon_4": [{ "position": [-23815, -7090], "angle": 0 }],
+    "canyon_3": [{ "position": [-23293, -6366], "angle": 351.8699035645 }],
     "canyon_end": [
       { "position": [-26191, -9957], "angle": 85.6012878418 },
       { "position": [-27592, -9539], "angle": 280.1246643066 }
@@ -722,17 +722,17 @@
     "reserve_lake5": [{ "position": [-11608, 4501], "angle": 76.8462905884 }]
   },
   "encounters": [
-    { "position": [-14023, 7883], "encounter": "cliff_train_cave_guard" },
-    { "position": [-8901, 7421], "encounter": "reserve_west1" },
-    { "position": [-5681, 7455], "encounter": "reserve_west3" },
-    { "position": [-7300, 8315], "encounter": "reserve_west2" },
+    { "position": [-14028, 7587], "encounter": "cliff_train_cave_guard" },
+    { "position": [-8906, 7125], "encounter": "reserve_west1" },
+    { "position": [-5686, 7159], "encounter": "reserve_west3" },
+    { "position": [-7278, 8284], "encounter": "reserve_west2" },
     { "position": [-532, -10276], "encounter": "hometown_north1" },
     { "position": [-645, -10976], "encounter": "hometown_north2" },
     { "position": [-3684, 12386], "encounter": "hometown_south2" },
     { "position": [-1929, 10593], "encounter": "hometown_south1" },
     { "position": [-5426, 13400], "encounter": "hometown_south3" },
     { "position": [668, 7162], "encounter": "hometown_south" },
-    { "position": [-3179.0, -23097], "encounter": "jasper_north" },
+    { "position": [-3179.0, -23100], "encounter": "jasper_north" },
     { "position": [-5089, -11973], "encounter": "railtrail_2_0" },
     { "position": [-16154, 2232], "encounter": "reserve1" },
     { "position": [-14865, -986], "encounter": "reserve2" },
@@ -778,8 +778,8 @@
     { "position": [-21564, 2486], "encounter": "canyon_1_0" },
     { "position": [-20949, -2844], "encounter": "canyon_2_0" },
     { "position": [-22175, -917], "encounter": "canyon_2_1" },
-    { "position": [-25274, -4157], "encounter": "canyon_3_1" },
-    { "position": [-24085, -6825], "encounter": "korwin" },
+    { "position": [-25275, -4157], "encounter": "canyon_3_1" },
+    { "position": [-24086, -6825], "encounter": "korwin" },
     { "position": [-17003, -7245], "encounter": "train_boss" },
     { "position": [-12733, -16759], "encounter": "cityhill_0" },
     { "position": [-14756, -18886], "encounter": "cityhill_1" },

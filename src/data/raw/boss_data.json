@@ -185,7 +185,8 @@
       "@ref object(objRiley)",
       "@ref object(objAnnabel)",
       "@ref object(objDaniel)",
-      "@ref object(objRaymond)"
+      "@ref object(objRaymond)",
+      "@ref object(objDad)"
     ],
     "id": "redd",
     "levels": 0,

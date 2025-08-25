@@ -20,8 +20,8 @@ const TARGET_STRINGS: Record<number, string> = {
   6: "entire team",
   7: "every fielded player",
   8: "other team",
-
-  9: "nearest enemy", // probably?
+  9: "nearest enemy",
+  10: "front row active team",
 };
 
 const ALT_TARGET_STRINGS: Record<number, string> = {
@@ -231,6 +231,10 @@ function getEffectString(
           return "POW x1.5 if there are any field effects.";
         case 30:
           return "POW x1.5 if user has 2+ ACTIONs.";
+        case 31:
+          return "POW x1.5 if user feels [sprStatus,8]JAZZED.";
+        case 32:
+          return "POW x¾ if user has any FEELINGs.";
       }
       console.log(
         `Undefined POW COND ${effect.pow}. E ${effect.eff} T ${effect.targ}`,
@@ -314,6 +318,17 @@ function getEffectString(
       return `Changes ${target} trait to user's trait.`;
     case 82:
       return `${effect.pow} Max STAMINA.`;
+    case 83:
+      return `The attack changes to the ally's first attack.`;
+    case 84:
+      return `POW x${effect.pow / 10}.`;
+
+    case 86:
+      return `Charges each turn on field, up to ${effect.pow}.`;
+    case 87:
+      return "";
+    case 88:
+      return `If STAMINA is over ${effect.pow}: `;
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

@@ -242,7 +242,7 @@ export default function ComboMove({
       </button>
       <MoveView
         move={{
-          id: "whatever",
+          id: `${type}${beastiedata.id}${friend?.id}`,
           targ: target,
           desc_tagids: [],
           description: null,

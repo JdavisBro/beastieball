@@ -11773,7 +11773,7 @@
       "libero",
       "healhit2",
       "steal",
-      "jazzpass",
+      "set",
       "jump",
       "wall",
       "recover",
@@ -22492,6 +22492,7 @@
       "bomb",
       "introduction",
       "menace",
+      "healbell",
       "haze",
       "dump",
       "quake"
@@ -22743,6 +22744,7 @@
       "bomb",
       "introduction",
       "menace",
+      "healbell",
       "haze",
       "dump"
     ],
@@ -22964,6 +22966,7 @@
       "bomb",
       "introduction",
       "menace",
+      "healbell",
       "haze",
       "dump"
     ],

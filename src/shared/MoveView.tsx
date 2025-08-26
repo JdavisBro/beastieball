@@ -322,13 +322,14 @@ function getEffectString(
       return `The attack changes to the ally's first attack.`;
     case 84:
       return `POW x${effect.pow}.`;
-
+    case 85:
+      return "If ally also BLOCKS:";
     case 86:
       return `Charges each turn on field, up to ${effect.pow}.`;
     case 87:
       return "";
     case 88:
-      return `If STAMINA is over ${effect.pow}: `;
+      return `If STAMINA is over ${effect.pow}:`;
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

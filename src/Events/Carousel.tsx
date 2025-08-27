@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 const EMOJI_MAP: Record<string, string> = {
   bigmoon: "🌙",
+  experimental: "🧪",
   milestone: "⏫",
   update: "⏫",
   ost: "💿",
@@ -14,7 +15,6 @@ const EMOJI_MAP: Record<string, string> = {
   tournament: "🏆",
   heatwave: "🏆",
   heatup: "🏆",
-  experimental: "🧪",
   default: "❓",
 };
 const EMOJI_SWAPPED = Object.keys(EMOJI_MAP);

@@ -6132,6 +6132,7 @@
       "heartup",
       "fieldclear",
       "callout",
+      "tailwind",
       "bodypass",
       "mindpass",
       "heartd",
@@ -6378,7 +6379,8 @@
       "protect",
       "heartup",
       "fieldclear",
-      "callout"
+      "callout",
+      "tailwind"
     ],
     "attklist_randomize": -1,
     "ba": 48,
@@ -6592,7 +6594,8 @@
       "protect",
       "heartup",
       "fieldclear",
-      "callout"
+      "callout",
+      "tailwind"
     ],
     "attklist_randomize": -1,
     "ba": 60,
@@ -11966,7 +11969,7 @@
     "type_focus": 2
   },
   "millipede": {
-    "ability": ["watcher"],
+    "ability": ["watcher", "breaker"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
@@ -12171,7 +12174,7 @@
     "type_focus": 0
   },
   "millipede1": {
-    "ability": ["watcher"],
+    "ability": ["watcher", "breaker"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,

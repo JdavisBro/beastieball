@@ -54,6 +54,11 @@
     "id": "bouncy",
     "name": "Bouncy"
   },
+  "breaker": {
+    "desc": "[sprIcon,0][sprIcon,1][sprIcon,2]DEF[sprBoost,3] to opponents that receive their attacks",
+    "id": "breaker",
+    "name": "Wallbreaker"
+  },
   "charge": {
     "desc": "[sprIcon,0][sprIcon,1][sprIcon,2]POW[sprBoost,0] at the end of each turn",
     "id": "charge",
@@ -410,7 +415,7 @@
     "name": "Silencer"
   },
   "smooth": {
-    "desc": "When they MOVE or SHIFT, restores 25 STAMINA",
+    "desc": "When they MOVE or SHIFT, restores 20 STAMINA",
     "id": "smooth",
     "name": "Smooth"
   },

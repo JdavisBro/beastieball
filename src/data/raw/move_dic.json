@@ -1426,15 +1426,14 @@
     "use": 0
   },
   "noisytag": {
-    "bt_tags": [34, 31, 19],
+    "bt_tags": [34, 19, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 53, "pow": 0, "targ": 3 },
       { "eff": 14, "pow": 1, "targ": 3 },
-      { "eff": 12, "pow": 2, "targ": 3 },
-      { "eff": 30, "pow": 1, "targ": 3 }
+      { "eff": 30, "pow": 1, "targ": 3 },
+      { "eff": 12, "pow": -1, "targ": 11 }
     ],
     "id": "noisytag",
     "name": "Dramatic Exit",
@@ -2333,6 +2332,7 @@
     "eff": [
       { "eff": 57, "pow": 0, "targ": 0 },
       { "eff": 7, "pow": 1, "targ": 0 },
+      { "eff": 8, "pow": -0.1, "targ": 0 },
       { "eff": 10, "pow": 1, "targ": 1 }
     ],
     "id": "tailwind",
@@ -2360,10 +2360,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 12, "pow": 2, "targ": 3 },
-      { "eff": 77, "pow": -1, "targ": 0 }
-    ],
+    "eff": [{ "eff": 12, "pow": 2, "targ": 3 }],
     "id": "taunt",
     "name": "Provoke",
     "pow": 0,

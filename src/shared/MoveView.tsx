@@ -22,6 +22,7 @@ const TARGET_STRINGS: Record<number, string> = {
   8: "other team",
   9: "nearest enemy",
   10: "front row active team",
+  11: "active team",
 };
 
 const ALT_TARGET_STRINGS: Record<number, string> = {
@@ -33,6 +34,8 @@ const ALT_TARGET_STRINGS: Record<number, string> = {
   7: "entire field",
   8: "other team",
   9: "nearest enemy",
+
+  11: "active team",
 };
 
 const FIELD_TARGET: Record<number, string> = {
@@ -120,7 +123,7 @@ function getEffectString(
     case 11:
       return "SWITCH places with fielded ally.";
     case 12:
-      return `${feels} ${effect.pow} [sprStatus,1]ANGRY (only attacks)${dot}`;
+      return `${feels} ${effect.pow < 0 ? "+" : ""}${Math.abs(effect.pow)} [sprStatus,1]ANGRY (only attacks)${dot}`;
     case 13:
       return `${feels} ${effect.pow} [sprStatus,2]SHOOK (can't attack)${dot}`;
     case 14:

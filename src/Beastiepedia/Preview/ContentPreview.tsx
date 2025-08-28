@@ -48,6 +48,8 @@ function isAnimEmpty(anim: BeastieAnimation | number | string | undefined) {
   return !anim.frames.startFrame && !anim.frames.endFrame;
 }
 
+const secrets = localStorage.getItem("secrets") == "true";
+
 const ANIMATION_LIST = [
   "idle",
   "move",
@@ -71,6 +73,7 @@ const IDLE_EXCEPTIONS = ["sprServal", "sprDragonfly", "sprOppossum"];
 const MOVE_EXCEPTIONS = ["sprSeal", "sprDragonfly"];
 
 function anim_check(anim: string, beastie: BeastieType) {
+  if (secrets) return anim;
   const progress = beastie.anim_progress;
   const sprite = beastie.spr;
   if (anim == "idle" && progress < 95 && !IDLE_EXCEPTIONS.includes(sprite)) {
@@ -113,16 +116,12 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   const [rowdy, setRowdy] = useState(false);
 
-  const secrets = localStorage.getItem("secrets") == "true";
-
   const [animationState, setAnimation] = useState("idle");
   const animdata: BeastieAnimData | undefined = BEASTIE_ANIMATIONS.get(
     `_${props.beastiedata.spr}`,
   )?.anim_data as BeastieAnimData;
 
-  const animation = secrets
-    ? animationState
-    : anim_check(animationState, props.beastiedata);
+  const animation = anim_check(animationState, props.beastiedata);
 
   let anim: BeastieAnimation | undefined = undefined;
   const tempanim = animdata
@@ -462,8 +461,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
     animationDisabled[value] = !(
       value in animdata &&
       (ANIMATION_ALWAYS_ENABLED.includes(value) ||
-        (!anim_empty &&
-          (anim_check(value, props.beastiedata) == value || secrets)))
+        (!anim_empty && anim_check(value, props.beastiedata) == value))
     );
   }
 

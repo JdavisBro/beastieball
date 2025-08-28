@@ -1,6 +1,8 @@
 import { NavigationMenu, NavigationMenuOption } from "../shared/NavigationMenu";
 import OpenGraph from "../shared/OpenGraph";
 
+const secrets = localStorage.getItem("secrets") == "true";
+
 export default function Team() {
   return (
     <NavigationMenu title="Teams">
@@ -28,12 +30,16 @@ export default function Team() {
         hoverImage="/gameassets/sprMainmenu/19.png"
         location="/team/builder/"
       />
-      {/* <NavigationMenuOption
-        text="Encounters"
-        image="/gameassets/sprMainmenu/27.png"
-        hoverImage="/gameassets/sprMainmenu/28.png"
-        location="/team/encounters/"
-      /> */}
+      {secrets ? (
+        <NavigationMenuOption
+          text="Encounters"
+          image="/gameassets/sprMainmenu/27.png"
+          hoverImage="/gameassets/sprMainmenu/28.png"
+          location="/team/encounters/"
+        />
+      ) : (
+        <></>
+      )}
     </NavigationMenu>
   );
 }

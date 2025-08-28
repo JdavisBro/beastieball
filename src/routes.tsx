@@ -204,6 +204,13 @@ const routes: Array<RouteObject> = [
         shouldRevalidate: shouldRevalidate,
       },
       {
+        element: <LoaderComponent />,
+        path: "secrets/",
+        loader: () =>
+          import("./Secrets").then((m) => ({ component: m.default })),
+        shouldRevalidate: shouldRevalidate,
+      },
+      {
         element: <PageNotFound />,
         path: "*",
       },

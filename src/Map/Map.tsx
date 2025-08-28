@@ -30,6 +30,8 @@ import { ControlMenu } from "./ControlMenu";
 import EncounterPopup from "./EncounterPopup";
 import { EncounterDataType } from "../data/EncounterData";
 
+const secrets = localStorage.getItem("secrets") == "true";
+
 const BEASTIE_ARRAY = [...BEASTIE_DATA.values()];
 
 export const SPAWNABLE_BEASTIES = Object.values(SPAWN_DATA)
@@ -385,41 +387,42 @@ export default function Map(): React.ReactNode {
                 />
               )),
             },
-            {
-              title: "Encounters",
-              children: EXTRA_MARKERS.encounters.map((encounter) => (
-                <DivIconMarker
-                  key={`${encounter.position[0]}-${encounter.position[1]}-${encounter.encounter}`}
-                  tagName="div"
-                  icon={{
-                    className: styles.hidemarker,
-                    iconSize: [15, 30],
-                  }}
-                  markerprops={{
-                    position: L.latLng(
-                      -encounter.position[1],
-                      encounter.position[0],
-                    ),
-                  }}
-                  className={styles.encounterImgmarker}
-                  popup={
-                    <Popup>
-                      <EncounterPopup
-                        encounterId={encounter.encounter}
-                        encounterData={encounterData}
-                        loadEncounterData={loadEncounterData}
+            secrets
+              ? {
+                  title: "Encounters",
+                  children: EXTRA_MARKERS.encounters.map((encounter) => (
+                    <DivIconMarker
+                      key={`${encounter.position[0]}-${encounter.position[1]}-${encounter.encounter}`}
+                      tagName="div"
+                      icon={{
+                        className: styles.hidemarker,
+                        iconSize: [15, 30],
+                      }}
+                      markerprops={{
+                        position: L.latLng(
+                          -encounter.position[1],
+                          encounter.position[0],
+                        ),
+                      }}
+                      className={styles.encounterImgmarker}
+                      popup={
+                        <Popup>
+                          <EncounterPopup
+                            encounterId={encounter.encounter}
+                            encounterData={encounterData}
+                            loadEncounterData={loadEncounterData}
+                          />
+                        </Popup>
+                      }
+                    >
+                      <img
+                        src="/gameassets/sprSponsors/5.png"
+                        alt="Encounter Marker"
                       />
-                    </Popup>
-                  }
-                >
-                  <img
-                    src="/gameassets/sprSponsors/5.png"
-                    alt="Encounter Marker"
-                  />
-                </DivIconMarker>
-              )),
-              defaultHidden: true,
-            },
+                    </DivIconMarker>
+                  )),
+                }
+              : undefined,
             {
               category: "Exploration",
               title: "Inside Overlays",
@@ -533,7 +536,7 @@ export default function Map(): React.ReactNode {
                   }),
               ],
             },
-          ]}
+          ].filter((layer) => layer !== undefined)}
           huntedBeastie={huntedBeastie}
           setHuntedBeastie={setHuntedBeastie}
           postgame={postgame}

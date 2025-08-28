@@ -100,6 +100,7 @@ export default function Encounters() {
         title="Encounters"
         returnButtonTo="/team/"
         returnButtonTitle={`${import.meta.env.VITE_BRANDING} Team Page`}
+        secretPage={true}
       />
       <div className={styles.box}>
         <label>

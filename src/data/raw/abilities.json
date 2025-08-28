@@ -170,7 +170,7 @@
     "name": "Friendship"
   },
   "fwdpass": {
-    "desc": "When they volley from the net, SHIFTs ally to the net",
+    "desc": "When they use \"Volley\": SHIFTs ally to the net",
     "id": "fwdpass",
     "name": "Captain"
   },
@@ -265,7 +265,7 @@
     "name": "Protector"
   },
   "monster": {
-    "desc": "When they use \"Block,\" target also feels 2 [sprStatus,2]SHOOK",
+    "desc": "When they use \"Block\": target also feels 2 [sprStatus,2]SHOOK",
     "id": "monster",
     "name": "Monster Block"
   },

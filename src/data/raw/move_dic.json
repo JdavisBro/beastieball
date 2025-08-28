@@ -536,11 +536,11 @@
     "use": 0
   },
   "dig": {
-    "bt_tags": [23, 32],
+    "bt_tags": [23],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 26, "pow": 1, "targ": 0 }],
+    "eff": [{ "eff": 8, "pow": 0.15, "targ": 0 }],
     "id": "dig",
     "name": "Dig",
     "pow": 0,
@@ -553,7 +553,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 20, "pow": 1, "targ": 1 }],
+    "eff": [{ "eff": 20, "pow": 2, "targ": 1 }],
     "id": "dispel",
     "name": "Dispel",
     "pow": 0,
@@ -1050,7 +1050,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 20, "pow": 1, "targ": 0 },
+      { "eff": 20, "pow": 2, "targ": 0 },
       { "eff": 72, "pow": 0, "targ": 0 },
       { "eff": 0, "pow": 1, "targ": 0 }
     ],
@@ -1358,13 +1358,13 @@
     "use": 0
   },
   "myheartpass": {
-    "bt_tags": [23, 28],
+    "bt_tags": [23, 32],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 88, "pow": 50, "targ": 0 },
-      { "eff": 1, "pow": 1, "targ": 0 }
+      { "eff": 88, "pow": 40, "targ": 0 },
+      { "eff": 26, "pow": 1, "targ": 0 }
     ],
     "id": "myheartpass",
     "name": "Excited Pass",

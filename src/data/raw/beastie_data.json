@@ -18,7 +18,6 @@
       "freeball",
       "mindpass",
       "refresh",
-      "dispel",
       "teleport",
       "meditate",
       "chill",
@@ -92,7 +91,7 @@
     "isBaby": false,
     "learnset": [
       [0, "mindbomb"],
-      [0, "dispel"],
+      [0, "lockon"],
       [10, "mindpass"],
       [14, "dropshot"],
       [20, "meditate"],
@@ -240,7 +239,6 @@
       "freeball",
       "mindpass",
       "refresh",
-      "dispel",
       "teleport",
       "meditate",
       "chill",
@@ -321,7 +319,7 @@
     "isBaby": false,
     "learnset": [
       [0, "mindbomb"],
-      [0, "dispel"],
+      [0, "lockon"],
       [7, "mindpass"],
       [11, "dropshot"],
       [17, "meditate"],
@@ -1615,6 +1613,7 @@
       "wall",
       "quake",
       "batonpass",
+      "myheartpass",
       "passattack",
       "dig",
       "startermind",
@@ -1868,6 +1867,7 @@
       "wall",
       "quake",
       "batonpass",
+      "myheartpass",
       "passattack",
       "dig",
       "startermind"
@@ -2082,6 +2082,7 @@
       "wall",
       "quake",
       "batonpass",
+      "myheartpass",
       "passattack",
       "dig",
       "startermind"
@@ -2936,6 +2937,7 @@
       "rhythm",
       "protect",
       "dispel",
+      "myheartpass",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -3164,6 +3166,7 @@
       "rhythm",
       "protect",
       "dispel",
+      "myheartpass",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -3368,6 +3371,7 @@
       "rhythm",
       "protect",
       "dispel",
+      "myheartpass",
       "starterbody",
       "stomp"
     ],
@@ -4687,6 +4691,7 @@
       "noisytag",
       "superpower",
       "toughattack",
+      "tailwind",
       "backswitch",
       "taunt",
       "starterheart"
@@ -4924,6 +4929,7 @@
       "noisytag",
       "superpower",
       "toughattack",
+      "tailwind",
       "backswitch",
       "taunt",
       "starterheart"
@@ -6927,7 +6933,7 @@
       "squishiness": 0,
       "stretchiness": 0
     },
-    "ma": 105,
+    "ma": 97,
     "md": 59,
     "name": "Vultoxin",
     "number": 54,
@@ -21996,6 +22002,7 @@
       "nice",
       "skillswap",
       "rattle",
+      "dig",
       "passattack",
       "starterside"
     ],
@@ -22250,6 +22257,7 @@
       "nice",
       "skillswap",
       "rattle",
+      "dig",
       "passattack",
       "starterside"
     ],

@@ -587,7 +587,7 @@
     "name": "Double Block",
     "pow": 0,
     "targ": 4,
-    "type": 5,
+    "type": 15,
     "use": 2
   },
   "dragontail": {
@@ -964,7 +964,7 @@
     "eff": [{ "eff": 33, "pow": 13, "targ": 0 }],
     "id": "hex",
     "name": "Nerve Strike",
-    "pow": 50,
+    "pow": 55,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -981,7 +981,7 @@
     ],
     "id": "hyperbeam",
     "name": "Hyperspike",
-    "pow": 125,
+    "pow": 130,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -2332,7 +2332,7 @@
     "eff": [
       { "eff": 57, "pow": 0, "targ": 0 },
       { "eff": 7, "pow": 1, "targ": 0 },
-      { "eff": 8, "pow": -0.1, "targ": 0 },
+      { "eff": 8, "pow": -0.15, "targ": 0 },
       { "eff": 10, "pow": 1, "targ": 1 }
     ],
     "id": "tailwind",

@@ -477,17 +477,18 @@ export default function MoveView(props: {
     return null;
   }
 
-  const { color, darkColor, alt } = TypeData[props.move.type]
-    ? TypeData[props.move.type]
-    : { color: "#ffffff", alt: "a" };
+  const type =
+    props.move.type == Type.DoubleBlock ? Type.Defence : props.move.type;
+
+  const { color, darkColor, alt } = TypeData[type] ?? TypeData[Type.Support];
   const style = {
     "--move-color": color,
     "--move-dark": darkColor,
-    "--move-url": `url("/gameassets/sprType/${String(props.move.type)}.png")`,
+    "--move-url": `url("/gameassets/sprType/${String(type)}.png")`,
   } as React.CSSProperties;
 
   const pow =
-    props.move.type < 3 ? (
+    type < 3 ? (
       <div className={styles.movepower}>
         {String(Math.max(0, props.move.pow))}
       </div>

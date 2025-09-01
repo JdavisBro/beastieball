@@ -415,7 +415,7 @@
     "name": "Silencer"
   },
   "smooth": {
-    "desc": "When they MOVE or SHIFT, restores 20 STAMINA",
+    "desc": "When they MOVE or SHIFT, restores 15 STAMINA",
     "id": "smooth",
     "name": "Smooth"
   },

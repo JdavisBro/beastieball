@@ -129,7 +129,6 @@ export default function PlayDex() {
     }
     return false;
   }).map((friend) => friend.id);
-  console.log(char_list);
 
   return (
     <div className={styles.container}>

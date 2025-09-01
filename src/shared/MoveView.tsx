@@ -429,6 +429,12 @@ export default function MoveView(props: {
     const friend_rank = Math.floor(friend.plays.indexOf(props.move.id) / 4) + 1;
     let rank = 0;
     const found = friend.events.find((event) => {
+      if (event.prereq.type[0] == 4 || event.prereq.type[0] == 1) {
+        return false;
+      }
+      if (event.alt_complete_flag == -1 && event.dest_level == "") {
+        return false;
+      }
       friend_hearts += 1;
       if (event.rankup) {
         rank += 1;

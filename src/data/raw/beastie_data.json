@@ -11136,6 +11136,7 @@
       "snipe",
       "bamboozle",
       "healbell",
+      "markattack",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11395,6 +11396,7 @@
       "snipe",
       "bamboozle",
       "healbell",
+      "markattack",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11594,6 +11596,7 @@
       "snipe",
       "bamboozle",
       "healbell",
+      "markattack",
       "startermind",
       "stomp",
       "swordsdance",

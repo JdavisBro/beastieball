@@ -2707,6 +2707,7 @@
       "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
       "special": { "frames": {} },
       "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
+      "stop": { "frames": {} },
       "volley": { "frames": { "endFrame": 3, "startFrame": 3 } }
     },
     "ball": { "x": 60.5714285714, "y": -216 },
@@ -2856,13 +2857,49 @@
   },
   "_sprDog": {
     "anim_data": {
-      "air": { "frames": {} },
+      "air": { "frames": { "endFrame": 16, "startFrame": 16 } },
       "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
       "fall": { "frames": { "endFrame": 4, "startFrame": 4 } },
       "good": { "frames": { "endFrame": 5, "startFrame": 5 } },
-      "idle": { "frames": {} },
+      "idle": {
+        "frames": [
+          {
+            "endFrame": 17,
+            "holds": { "17": [2, 2, 4, 8] },
+            "startFrame": 17,
+            "transitions": [1, 2, 5, 6, 6, 6]
+          },
+          {
+            "endFrame": 33,
+            "holds": { "33": [8, 12] },
+            "sounds": { "24": 3 },
+            "startFrame": 18,
+            "transitions": [0]
+          },
+          { "endFrame": 36, "startFrame": 34, "transitions": [3] },
+          { "endFrame": 40, "startFrame": 37, "transitions": [3, 3, 3, 4] },
+          { "endFrame": 44, "startFrame": 41, "transitions": [8] },
+          {
+            "endFrame": 65,
+            "sounds": { "62": 3 },
+            "startFrame": 58,
+            "transitions": [0]
+          },
+          { "endFrame": 72, "startFrame": 66, "transitions": [6, 6, 6, 7] },
+          { "endFrame": 81, "startFrame": 74, "transitions": [0] },
+          { "endFrame": 51, "startFrame": 45, "transitions": [8, 8, 9] },
+          { "endFrame": 57, "startFrame": 52, "transitions": [0] }
+        ]
+      },
       "menu": { "frames": {} },
-      "move": { "frames": { "endFrame": 1, "startFrame": 1 } },
+      "move": {
+        "frames": {
+          "endFrame": 16,
+          "holds": { "12": 1, "14": 1, "15": 1, "9": 1 },
+          "sounds": { "11": 0, "12": 0, "13": 0 },
+          "startFrame": 8
+        }
+      },
       "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
       "special": { "frames": {} },
       "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
@@ -2897,6 +2934,12 @@
           { "color": 10375487, "x": 0.5 },
           { "color": 9204788, "x": 1 }
         ]
+      },
+      {
+        "array": [
+          { "color": 10517247, "x": 0 },
+          { "color": 10919935, "x": 1 }
+        ]
       }
     ],
     "colors2": [
@@ -2924,6 +2967,12 @@
         "array": [
           { "color": 9060893, "x": 0 },
           { "color": 4807268, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 10918299, "x": 0 },
+          { "color": 10714283, "x": 1 }
         ]
       }
     ],
@@ -2965,7 +3014,13 @@
           { "color": 13500343, "x": 1 }
         ]
       },
-      { "array": [{ "color": 11975966, "x": 0.5 }] }
+      { "array": [{ "color": 11975966, "x": 0.5 }] },
+      {
+        "array": [
+          { "color": 9403647, "x": 0 },
+          { "color": 10855935, "x": 1 }
+        ]
+      }
     ],
     "splash": { "angle": 4.5447244644, "anim": "ready", "x": 207, "y": -210 }
   },
@@ -2975,7 +3030,135 @@
       "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
       "fall": { "frames": { "endFrame": 4, "startFrame": 4 } },
       "good": { "frames": { "endFrame": 5, "startFrame": 5 } },
-      "idle": { "frames": {} },
+      "idle": {
+        "frames": [
+          {
+            "endFrame": 17,
+            "startFrame": 15,
+            "transitions": [0, 0, 0, 0, 0, 1, 1, 1, 1]
+          },
+          { "endFrame": 20, "startFrame": 18, "transitions": [2, 2, 2, 3] },
+          {
+            "endFrame": 26,
+            "holds": { "21": 1, "22": 1, "23": 1, "24": 1, "25": 1, "26": 1 },
+            "startFrame": 21,
+            "transitions": [2, 2, 2, 3, 4, 5, 8]
+          },
+          {
+            "endFrame": 31,
+            "holds": { "27": 1, "28": 1, "29": 2 },
+            "startFrame": 27,
+            "transitions": [0]
+          },
+          {
+            "endFrame": 67,
+            "holds": {
+              "32": 1,
+              "33": 1,
+              "34": 1,
+              "35": 1,
+              "36": 1,
+              "37": 1,
+              "38": 1,
+              "39": 1,
+              "40": 1,
+              "41": 1,
+              "42": 1,
+              "43": 1,
+              "44": 1,
+              "45": 1,
+              "46": 1,
+              "47": 1,
+              "48": 1,
+              "49": 1,
+              "50": 1,
+              "51": 1,
+              "52": 1,
+              "53": 1,
+              "54": 1,
+              "55": 1,
+              "56": 1,
+              "57": 1,
+              "58": 1,
+              "59": 1,
+              "60": 1,
+              "61": 1,
+              "62": 1,
+              "63": 1,
+              "64": 1,
+              "65": 1,
+              "66": 1,
+              "67": 1
+            },
+            "sounds": { "61": 1 },
+            "startFrame": 32,
+            "transitions": [2]
+          },
+          {
+            "endFrame": 78,
+            "holds": { "68": 1, "69": 1, "70": 1, "71": 1, "77": 1, "78": 1 },
+            "sounds": { "74": 0 },
+            "startFrame": 68,
+            "transitions": [6]
+          },
+          {
+            "endFrame": 84,
+            "holds": { "79": 1, "80": 1, "81": 1, "82": 1, "83": 1, "84": 1 },
+            "startFrame": 79,
+            "transitions": [6, 6, 7]
+          },
+          {
+            "endFrame": 94,
+            "holds": {
+              "85": 1,
+              "86": 1,
+              "87": 1,
+              "88": 1,
+              "89": 1,
+              "90": 1,
+              "92": 1
+            },
+            "startFrame": 85,
+            "transitions": [2]
+          },
+          {
+            "endFrame": 97,
+            "holds": { "95": 1 },
+            "startFrame": 95,
+            "transitions": [9]
+          },
+          {
+            "endFrame": 103,
+            "holds": { "99": 1 },
+            "sounds": { "99": 2 },
+            "startFrame": 98,
+            "transitions": [9, 10]
+          },
+          {
+            "endFrame": 120,
+            "holds": {
+              "106": 1,
+              "107": 1,
+              "108": 1,
+              "109": 1,
+              "110": 1,
+              "111": 1,
+              "112": 1,
+              "113": 1,
+              "114": 1,
+              "115": 1,
+              "116": 1,
+              "117": 1,
+              "118": 1,
+              "119": 1,
+              "120": 1
+            },
+            "sounds": { "105": 2 },
+            "startFrame": 104,
+            "transitions": [2]
+          }
+        ]
+      },
       "menu": { "frames": {} },
       "move": {
         "frames": {
@@ -3113,9 +3296,51 @@
       "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
       "fall": { "frames": { "endFrame": 4, "startFrame": 4 } },
       "good": { "frames": { "endFrame": 5, "startFrame": 5 } },
-      "idle": { "frames": { "endFrame": 19, "startFrame": 8 }, "speed": 2 },
+      "idle": {
+        "frames": [
+          {
+            "endFrame": 29,
+            "holds": {
+              "14": 2,
+              "15": 1,
+              "16": 1,
+              "18": 1,
+              "19": 1,
+              "21": 1,
+              "26": 1,
+              "27": 1
+            },
+            "startFrame": 14,
+            "transitions": [0, 0, 0, 1, 1]
+          },
+          {
+            "endFrame": 46,
+            "holds": {
+              "31": 2,
+              "32": 1,
+              "33": 1,
+              "34": 2,
+              "35": 1,
+              "36": 1,
+              "37": 2,
+              "38": 1,
+              "39": 1,
+              "41": 1,
+              "45": 1
+            },
+            "startFrame": 30,
+            "transitions": [0]
+          }
+        ]
+      },
       "menu": { "frames": {} },
-      "move": { "frames": { "endFrame": 31, "startFrame": 20 }, "speed": 2 },
+      "move": {
+        "frames": {
+          "endFrame": 13,
+          "sounds": { "10": 4, "11": 4, "12": 4, "13": 4, "8": 4, "9": 4 },
+          "startFrame": 8
+        }
+      },
       "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
       "special": { "frames": {} },
       "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
@@ -5114,18 +5339,115 @@
   "_sprKangaroo": {
     "anim_data": {
       "air": { "frames": {} },
-      "bad": { "frames": {} },
-      "fall": { "frames": {} },
-      "good": { "frames": {} },
-      "idle": { "frames": {} },
+      "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
+      "fall": { "frames": { "endFrame": 4, "startFrame": 4 } },
+      "good": { "frames": { "endFrame": 5, "startFrame": 5 } },
+      "idle": {
+        "frames": [
+          {
+            "endFrame": 19,
+            "holds": { "18": 6, "19": 4 },
+            "startFrame": 18,
+            "transitions": [0, 0, 1, 1, 1, 2, 5]
+          },
+          {
+            "endFrame": 28,
+            "holds": { "21": 4, "22": 1, "28": 3 },
+            "startFrame": 20,
+            "transitions": [0]
+          },
+          {
+            "endFrame": 33,
+            "holds": {
+              "29": 3,
+              "30": 4,
+              "31": 3,
+              "32": 4,
+              "33": 6,
+              "34": 8,
+              "35": 8,
+              "36": 4,
+              "37": 3,
+              "38": 4,
+              "39": 6
+            },
+            "startFrame": 29,
+            "transitions": [3]
+          },
+          {
+            "endFrame": 35,
+            "holds": { "34": 8, "35": 8 },
+            "startFrame": 34,
+            "transitions": [3, 3, 3, 4]
+          },
+          {
+            "endFrame": 40,
+            "holds": { "36": 4, "37": 3, "38": 4, "39": 6 },
+            "startFrame": 36,
+            "transitions": [0]
+          },
+          { "endFrame": 46, "startFrame": 41, "transitions": [6, 6, 6, 7] },
+          {
+            "endFrame": 58,
+            "holds": { "50": 1, "54": 1, "57": 3, "58": 3 },
+            "startFrame": 47,
+            "transitions": [6, 7, 8]
+          },
+          {
+            "endFrame": 72,
+            "holds": {
+              "60": 1,
+              "61": 4,
+              "62": 4,
+              "63": 3,
+              "65": 1,
+              "66": 1,
+              "67": 1,
+              "68": 3,
+              "69": 4,
+              "72": 7
+            },
+            "startFrame": 59,
+            "transitions": [8]
+          },
+          { "endFrame": 79, "startFrame": 73, "transitions": [0] }
+        ]
+      },
       "menu": { "frames": {} },
-      "move": { "frames": {} },
-      "ready": { "frames": {} },
+      "move": {
+        "bounces_in": 0,
+        "frames": [
+          {
+            "endFrame": 81,
+            "holds": { "80": 2, "81": 1 },
+            "startFrame": 80,
+            "transitions": [1]
+          },
+          {
+            "endFrame": 17,
+            "holds": { "10": 1, "11": 1, "8": 1, "9": 1 },
+            "sounds": { "17": 0, "8": 0 },
+            "startFrame": 8,
+            "transitions": [1]
+          }
+        ]
+      },
+      "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
       "special": { "frames": {} },
-      "spike": { "frames": {} },
-      "volley": { "frames": {} }
+      "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
+      "stop": {
+        "bounces_in": 0,
+        "bounces_out": 0,
+        "frames": {
+          "endFrame": 85,
+          "holds": { "82": 1, "83": 1 },
+          "startFrame": 82
+        },
+        "loop": [""]
+      },
+      "volley": { "frames": { "endFrame": 3, "startFrame": 3 } }
     },
-    "ball": { "x": 138, "y": -338 },
+    "ball": { "x": 21, "y": -478 },
     "colors": [
       {
         "array": [
@@ -5168,15 +5490,24 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "hop_height": 0,
-      "move_pause_frames": [],
-      "move_to_idle_transition_frames": [18, 19],
+      "hop_height": 50,
+      "move_pause_frames": [9],
+      "move_speed_start": -150,
+      "move_to_idle_transition_anim": "stop",
+      "move_to_idle_transition_frames": [
+        18, 19, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+      ],
       "squishiness": 0,
       "stretchiness": 0
     },
-    "miss": { "x": -43, "y": -383 },
-    "partner": { "angle": 323.6731872559, "anim": "good", "x": 286, "y": -188 },
-    "ready": { "x": 34, "y": -431 },
+    "miss": { "x": -246, "y": -100 },
+    "partner": {
+      "angle": 339.0755004883,
+      "anim": "volley",
+      "x": 160,
+      "y": -424
+    },
+    "ready": { "x": 162, "y": -512 },
     "shiny": [
       { "array": [{ "color": 10597577, "x": 0.48 }] },
       {
@@ -5194,7 +5525,7 @@
       },
       { "array": [{ "color": 13681818, "x": 0.5 }] }
     ],
-    "splash": { "angle": 328.9517822266, "anim": "ready", "x": 154, "y": -348 }
+    "splash": { "angle": 328.9517822266, "anim": "ready", "x": 108, "y": -336 }
   },
   "_sprKangaroo1": {
     "anim_data": {
@@ -6342,7 +6673,7 @@
       "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
       "fall": { "frames": { "endFrame": 4, "startFrame": 4 } },
       "good": { "frames": { "endFrame": 5, "startFrame": 5 } },
-      "idle": { "frames": {} },
+      "idle": { "frames": { "endFrame": 43, "startFrame": 16 } },
       "menu": { "frames": {} },
       "move": {
         "frames": {
@@ -6394,7 +6725,6 @@
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
       "float_dist": 50,
-      "float_wave": 8,
       "hop_height": 0,
       "move_accel": 8,
       "move_pause_frames": [],
@@ -6586,19 +6916,125 @@
   },
   "_sprMoth2": {
     "anim_data": {
-      "air": { "frames": {} },
+      "air": { "frames": { "endFrame": 15, "startFrame": 15 } },
       "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
       "fall": { "frames": { "endFrame": 4, "startFrame": 4 } },
       "good": { "frames": { "endFrame": 5, "startFrame": 5 } },
-      "idle": { "frames": {} },
+      "idle": {
+        "frames": [
+          {
+            "endFrame": 19,
+            "holds": {
+              "19": [8, 12, 16],
+              "23": 4,
+              "24": 4,
+              "25": 5,
+              "26": 6,
+              "27": 6,
+              "28": 5,
+              "29": 5,
+              "30": 4,
+              "31": 4,
+              "32": 4,
+              "33": 5,
+              "34": 6
+            },
+            "startFrame": 19,
+            "transitions": [1, 1, 4, 4]
+          },
+          {
+            "endFrame": 34,
+            "holds": {
+              "20": 6,
+              "21": 6,
+              "22": 4,
+              "23": 4,
+              "24": 4,
+              "25": 6,
+              "26": 8,
+              "27": 8,
+              "28": 6,
+              "29": 6,
+              "30": 4,
+              "31": 4,
+              "32": 4,
+              "33": 6,
+              "34": 8,
+              "35": 6,
+              "36": 6,
+              "37": 5
+            },
+            "startFrame": 20,
+            "transitions": [2]
+          },
+          {
+            "endFrame": 50,
+            "holds": {
+              "35": 8,
+              "36": 6,
+              "37": 6,
+              "38": 4,
+              "39": 4,
+              "40": 4,
+              "41": 6,
+              "42": 8,
+              "43": 8,
+              "44": 6,
+              "45": 6,
+              "46": 4,
+              "47": 4,
+              "48": 4,
+              "49": 6,
+              "50": 8
+            },
+            "startFrame": 35,
+            "transitions": [2, 2, 3]
+          },
+          {
+            "endFrame": 53,
+            "holds": {
+              "40": 4,
+              "41": 4,
+              "42": 3,
+              "43": 5,
+              "44": 5,
+              "51": 6,
+              "52": 6,
+              "53": 6
+            },
+            "startFrame": 51,
+            "transitions": [0]
+          },
+          {
+            "endFrame": 59,
+            "holds": {
+              "46": 6,
+              "47": 4,
+              "54": 3,
+              "55": 2,
+              "57": 3,
+              "58": 5,
+              "59": 5
+            },
+            "startFrame": 54,
+            "transitions": [0]
+          }
+        ]
+      },
       "menu": { "frames": {} },
-      "move": { "frames": { "endFrame": 1, "startFrame": 1 } },
+      "move": {
+        "frames": {
+          "endFrame": 18,
+          "holds": { "10": 1, "11": 1, "12": 1, "17": 1, "18": 1 },
+          "startFrame": 8
+        }
+      },
       "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
       "special": { "frames": {} },
       "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
       "volley": { "frames": { "endFrame": 3, "startFrame": 3 } }
     },
-    "ball": { "x": 86, "y": -361 },
+    "ball": { "x": 91, "y": -413 },
     "colors": [
       {
         "array": [
@@ -6631,6 +7067,13 @@
           { "color": 15755841, "x": 0.5013333333 },
           { "color": 13848372, "x": 1 }
         ]
+      },
+      {
+        "array": [
+          { "color": 3620890, "x": 0 },
+          { "color": 4470784, "x": 0.5 },
+          { "color": 5255437, "x": 1 }
+        ]
       }
     ],
     "colors2": null,
@@ -6641,9 +7084,14 @@
       "move_pause_frames": [],
       "move_to_idle_transition_frames": []
     },
-    "miss": { "x": -3, "y": -96 },
-    "partner": { "angle": 327.5288085938, "anim": "good", "x": 236, "y": -207 },
-    "ready": { "x": 8, "y": -422 },
+    "miss": { "x": 100, "y": -183 },
+    "partner": {
+      "angle": 327.5288085938,
+      "anim": "volley",
+      "x": 341,
+      "y": -264
+    },
+    "ready": { "x": 232, "y": -372 },
     "shiny": [
       {
         "array": [
@@ -6666,9 +7114,16 @@
           { "color": 6440956, "x": 0.4893333333 },
           { "color": 2899196, "x": 1 }
         ]
+      },
+      {
+        "array": [
+          { "color": 5582375, "x": 0 },
+          { "color": 5580595, "x": 0.5 },
+          { "color": 5580600, "x": 1 }
+        ]
       }
     ],
-    "splash": { "angle": 348.0319213867, "anim": "ready", "x": 105, "y": -235 }
+    "splash": { "angle": 348.0319213867, "anim": "good", "x": 139, "y": -184 }
   },
   "_sprMudskipper": {
     "anim_data": {
@@ -7584,9 +8039,75 @@
       "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
       "fall": { "frames": { "endFrame": 4, "startFrame": 4 } },
       "good": { "frames": { "endFrame": 5, "startFrame": 5 } },
-      "idle": { "frames": {} },
+      "idle": {
+        "frames": [
+          {
+            "endFrame": 20,
+            "holds": { "20": [12, 16, 16, 20, 20] },
+            "startFrame": 20,
+            "transitions": [1, 1, 2, 3, 3]
+          },
+          {
+            "endFrame": 34,
+            "holds": { "23": 1, "25": 1, "27": 1, "29": 1, "31": 3, "33": 3 },
+            "sounds": {
+              "25": 4,
+              "26": -1,
+              "27": 4,
+              "28": -1,
+              "29": 4,
+              "30": -1,
+              "31": -1,
+              "32": 1
+            },
+            "startFrame": 21,
+            "transitions": [0]
+          },
+          {
+            "endFrame": 68,
+            "holds": {
+              "36": 1,
+              "41": 3,
+              "42": 3,
+              "44": 3,
+              "45": 3,
+              "46": 3,
+              "49": 3,
+              "56": 3,
+              "57": 3,
+              "60": 3,
+              "61": 3,
+              "64": 3,
+              "67": 3
+            },
+            "startFrame": 35,
+            "transitions": [0]
+          },
+          {
+            "endFrame": 84,
+            "holds": { "73": 1, "78": 3, "79": 3, "82": 3, "83": 4, "84": 4 },
+            "startFrame": 69,
+            "transitions": [0]
+          }
+        ]
+      },
       "menu": { "frames": {} },
-      "move": { "frames": { "endFrame": 1, "startFrame": 1 } },
+      "move": {
+        "frames": {
+          "endFrame": 19,
+          "holds": {
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "18": 1,
+            "19": 1,
+            "8": 1,
+            "9": 2
+          },
+          "sounds": { "11": 0, "12": -1, "17": 0 },
+          "startFrame": 8
+        }
+      },
       "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
       "special": { "frames": {} },
       "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
@@ -7631,7 +8152,7 @@
       "move_pause_frames": [],
       "move_to_idle_transition_frames": []
     },
-    "miss": { "x": -256, "y": -231 },
+    "miss": { "x": -225, "y": -249 },
     "partner": { "angle": 345.9637451172, "anim": "good", "x": 306, "y": -307 },
     "ready": { "x": 170, "y": -594 },
     "shiny": [
@@ -7662,18 +8183,76 @@
   "_sprPossum": {
     "anim_data": {
       "air": { "frames": {} },
-      "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
-      "fall": { "frames": { "endFrame": 4, "startFrame": 4 } },
-      "good": { "frames": { "endFrame": 5, "startFrame": 5 } },
-      "idle": { "frames": {} },
+      "bad": { "frames": { "endFrame": 5, "startFrame": 5 } },
+      "fall": { "frames": { "endFrame": 3, "startFrame": 3 } },
+      "good": { "frames": { "endFrame": 4, "startFrame": 4 } },
+      "idle": {
+        "frames": [
+          {
+            "endFrame": 20,
+            "holds": { "19": [6, 8, 12], "20": [5, 5, 7, 7] },
+            "startFrame": 19,
+            "transitions": [1, 1, 1, 2, 2, 4]
+          },
+          {
+            "endFrame": 22,
+            "holds": { "21": [6, 6, 8, 8], "22": [5, 5, 7, 7] },
+            "startFrame": 21,
+            "transitions": [0]
+          },
+          { "endFrame": 28, "startFrame": 23, "transitions": [2, 2, 3] },
+          { "endFrame": 29, "startFrame": 29, "transitions": [0] },
+          {
+            "endFrame": 45,
+            "holds": { "31": 3, "33": 4, "41": 3, "44": 3, "45": 3 },
+            "startFrame": 30,
+            "transitions": [0]
+          }
+        ]
+      },
       "menu": { "frames": {} },
-      "move": { "frames": {} },
-      "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
+      "move": {
+        "frames": [
+          {
+            "endFrame": 18,
+            "holds": { "18": 3 },
+            "startFrame": 18,
+            "transitions": [1]
+          },
+          {
+            "endFrame": 18,
+            "holds": {
+              "10": [3, 4, 5],
+              "11": [3, 4, 5],
+              "12": 3,
+              "13": 3,
+              "17": 1,
+              "18": 1,
+              "9": 3
+            },
+            "sounds": { "17": 1, "18": 0 },
+            "startFrame": 7,
+            "transitions": [1]
+          }
+        ]
+      },
+      "ready": { "frames": { "endFrame": 1, "startFrame": 1 } },
       "special": { "frames": {} },
-      "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
-      "volley": { "frames": { "endFrame": 3, "startFrame": 3 } }
+      "spike": { "frames": { "endFrame": 6, "startFrame": 6 } },
+      "stop": {
+        "bounce": 2,
+        "bounces_out": 0,
+        "frames": {
+          "endFrame": 17,
+          "holds": { "16": 0, "17": 0, "18": 2 },
+          "sounds": { "17": 3 },
+          "startFrame": 17
+        },
+        "loop": [""]
+      },
+      "volley": { "frames": { "endFrame": 2, "startFrame": 2 } }
     },
-    "ball": { "x": 182, "y": -189 },
+    "ball": { "x": 183, "y": -197 },
     "colors": [
       {
         "array": [
@@ -7713,10 +8292,12 @@
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "loco_data": {
-      "move_pause_frames": [],
+      "move_pause_frames": [18],
+      "move_speed_start": -40,
+      "move_to_idle_transition_anim": "stop",
       "move_to_idle_transition_frames": []
     },
-    "miss": { "x": 441, "y": -114 },
+    "miss": { "x": 306, "y": -218 },
     "partner": {
       "angle": 346.3495788574,
       "anim": "spike",
@@ -7764,7 +8345,7 @@
         ]
       }
     ],
-    "splash": { "angle": -10, "anim": "ready", "x": 92, "y": -113 }
+    "splash": { "angle": -10, "anim": "ready", "x": 96, "y": -130 }
   },
   "_sprPossum1": {
     "anim_data": {
@@ -7942,26 +8523,88 @@
   },
   "_sprPossum2": {
     "anim_data": {
-      "__anim_speed": 1.6666666667,
-      "air": { "frames": { "endFrame": 12, "startFrame": 12 } },
-      "bad": { "frames": { "endFrame": 6, "startFrame": 6 } },
-      "fall": { "frames": { "endFrame": 4, "startFrame": 4 } },
-      "good": { "frames": { "endFrame": 5, "startFrame": 5 } },
-      "idle": { "frames": {} },
+      "air": { "frames": { "endFrame": 11, "startFrame": 11 } },
+      "bad": { "frames": { "endFrame": 5, "startFrame": 5 } },
+      "fall": { "frames": { "endFrame": 3, "startFrame": 3 } },
+      "good": { "frames": { "endFrame": 4, "startFrame": 4 } },
+      "idle": {
+        "frames": [
+          {
+            "endFrame": 15,
+            "holds": { "15": [6, 8, 10] },
+            "startFrame": 15,
+            "transitions": [0, 0, 0, 1, 2, 7, 7, 8]
+          },
+          {
+            "endFrame": 24,
+            "holds": { "24": 3 },
+            "sounds": { "19": 1, "23": 1 },
+            "startFrame": 16,
+            "transitions": [0]
+          },
+          {
+            "endFrame": 32,
+            "holds": { "25": 3, "31": 1 },
+            "startFrame": 25,
+            "transitions": [3]
+          },
+          {
+            "endFrame": 33,
+            "holds": { "33": [8, 12, 20] },
+            "startFrame": 33,
+            "transitions": [4, 4, 5, 5, 6, 6]
+          },
+          { "endFrame": 38, "startFrame": 34, "transitions": [3] },
+          {
+            "endFrame": 49,
+            "holds": { "41": 1, "42": 1, "44": 1, "45": 1 },
+            "startFrame": 39,
+            "transitions": [3]
+          },
+          { "endFrame": 53, "startFrame": 50, "transitions": [0] },
+          {
+            "endFrame": 63,
+            "holds": {
+              "56": 1,
+              "57": 1,
+              "58": 1,
+              "59": 1,
+              "60": [5, 8, 12],
+              "62": 1,
+              "63": 1
+            },
+            "startFrame": 54,
+            "transitions": [0]
+          },
+          {
+            "endFrame": 66,
+            "holds": { "65": 1, "66": 1 },
+            "startFrame": 64,
+            "transitions": [9]
+          },
+          {
+            "endFrame": 70,
+            "startFrame": 68,
+            "transitions": [9, 9, 9, 9, 9, 10]
+          },
+          { "endFrame": 76, "startFrame": 71, "transitions": [0] }
+        ]
+      },
       "menu": { "frames": {} },
       "move": {
         "frames": {
-          "endFrame": 15,
-          "sounds": { "14": 1, "15": 0 },
-          "startFrame": 8
+          "endFrame": 14,
+          "holds": { "11": 1, "13": 1, "14": 1, "7": 1, "8": 1 },
+          "sounds": { "11": -1, "12": 1, "13": 0, "14": -1, "15": 0 },
+          "startFrame": 7
         }
       },
-      "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
+      "ready": { "frames": { "endFrame": 1, "startFrame": 1 } },
       "special": { "frames": {} },
-      "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
-      "volley": { "frames": { "endFrame": 3, "startFrame": 3 } }
+      "spike": { "frames": { "endFrame": 6, "startFrame": 6 } },
+      "volley": { "frames": { "endFrame": 2, "startFrame": 2 } }
     },
-    "ball": { "x": 51, "y": -269 },
+    "ball": { "x": 61, "y": -266 },
     "colors": [
       {
         "array": [
@@ -8012,7 +8655,7 @@
       "squishiness": 0.12,
       "stretchiness": 0.12
     },
-    "miss": { "x": 29, "y": -53 },
+    "miss": { "x": 37, "y": -66 },
     "partner": { "angle": 355.4860229492, "anim": "spike", "x": 80, "y": -289 },
     "ready": { "x": 96, "y": -276 },
     "shiny": [
@@ -8529,7 +9172,7 @@
         "speed": 1.1
       },
       "menu": { "frames": { "endFrame": 57, "startFrame": 57 } },
-      "move": { "frames": [{ "endFrame": 15, "startFrame": 8 }, {}] },
+      "move": { "frames": { "endFrame": 15, "startFrame": 8 } },
       "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
       "special": { "frames": {} },
       "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
@@ -8677,14 +9320,14 @@
     }
   },
   "_sprRat_alt": {
-    "anim_data": { "__Elephant_Circular_Ref__": 5321 },
+    "anim_data": { "__Elephant_Circular_Ref__": 5458 },
     "ball": { "x": 154.8, "y": -261.6 },
-    "colors": { "__Elephant_Circular_Ref__": 6565 },
+    "colors": { "__Elephant_Circular_Ref__": 6791 },
     "colors2": null,
     "evo1": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
-    "loco_data": { "__Elephant_Circular_Ref__": 5400 },
+    "loco_data": { "__Elephant_Circular_Ref__": 5536 },
     "miss": { "x": 222.8571428571, "y": -114.2857142857 },
     "partner": {
       "angle": 305.217590332,
@@ -8693,7 +9336,7 @@
       "y": -1.2
     },
     "ready": { "x": 139.4285714286, "y": -286.8571428571 },
-    "shiny": { "__Elephant_Circular_Ref__": 6614 },
+    "shiny": { "__Elephant_Circular_Ref__": 6840 },
     "splash": {
       "angle": 344.1231689453,
       "anim": "volley",
@@ -9635,17 +10278,82 @@
       "idle": {
         "frames": [
           {
-            "endFrame": 38,
-            "holds": { "35": 0.5, "37": 1.5, "38": 1.5 },
-            "startFrame": 34,
-            "transitions": [0]
+            "endFrame": 20,
+            "holds": { "20": [4, 8, 12], "35": 0.5, "37": 1.5, "38": 1.5 },
+            "startFrame": 20,
+            "transitions": [1]
           },
-          {}
-        ],
-        "speed": 0.7
+          {
+            "endFrame": 40,
+            "holds": {
+              "22": 1,
+              "23": 1,
+              "24": 1,
+              "25": 1,
+              "27": 3,
+              "29": 1,
+              "30": 3,
+              "33": 1,
+              "37": 1,
+              "38": 1,
+              "39": 3
+            },
+            "startFrame": 21,
+            "transitions": [2, 3]
+          },
+          {
+            "endFrame": 60,
+            "holds": {
+              "42": 1,
+              "44": 3,
+              "45": [3, 10, 16],
+              "47": 1,
+              "49": 3,
+              "50": [4, 8, 12],
+              "52": 1,
+              "54": 3,
+              "55": 3,
+              "57": 1,
+              "60": 3
+            },
+            "startFrame": 41,
+            "transitions": [0, 3]
+          },
+          {
+            "endFrame": 66,
+            "holds": { "62": 1, "63": 3, "67": 1, "70": 1, "74": 3 },
+            "sounds": { "67": 2, "68": 4, "70": -1, "71": 0 },
+            "startFrame": 61,
+            "transitions": [4]
+          },
+          {
+            "endFrame": 73,
+            "holds": { "67": 1, "70": 1 },
+            "sounds": { "68": 4, "71": 0 },
+            "startFrame": 67,
+            "transitions": [4, 4, 5, 5, 5]
+          },
+          { "endFrame": 76, "startFrame": 74, "transitions": [1] }
+        ]
       },
       "menu": { "frames": {} },
-      "move": { "frames": { "endFrame": 1, "startFrame": 1 } },
+      "move": {
+        "frames": [
+          {
+            "endFrame": 19,
+            "holds": { "18": 1 },
+            "startFrame": 18,
+            "transitions": [1]
+          },
+          {
+            "endFrame": 17,
+            "holds": { "11": 1, "12": 1, "13": 1, "16": 1, "17": 1, "8": 1 },
+            "sounds": { "11": 0, "12": 1, "16": 0, "17": 1 },
+            "startFrame": 8,
+            "transitions": [1]
+          }
+        ]
+      },
       "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
       "special": { "frames": {} },
       "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },

@@ -1508,7 +1508,7 @@
     "ma": 25,
     "md": 75,
     "name": "Duggout",
-    "number": 102,
+    "number": 111,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -3491,7 +3491,7 @@
     "ma": 30,
     "md": 54,
     "name": "Mascurry",
-    "number": 103,
+    "number": 112,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -5357,7 +5357,7 @@
     "ability": ["fetch", "watcher"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 100,
     "animator": [13, 10],
     "attklist": [
       "bounce",
@@ -5426,6 +5426,12 @@
           { "color": 10375487, "x": 0.5 },
           { "color": 9204788, "x": 1 }
         ]
+      },
+      {
+        "array": [
+          { "color": 10517247, "x": 0 },
+          { "color": 10919935, "x": 1 }
+        ]
       }
     ],
     "colors2": [
@@ -5453,6 +5459,12 @@
         "array": [
           { "color": 9060893, "x": 0 },
           { "color": 4807268, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 10918299, "x": 0 },
+          { "color": 10714283, "x": 1 }
         ]
       }
     ],
@@ -5605,7 +5617,13 @@
           { "color": 13500343, "x": 1 }
         ]
       },
-      { "array": [{ "color": 11975966, "x": 0.5 }] }
+      { "array": [{ "color": 11975966, "x": 0.5 }] },
+      {
+        "array": [
+          { "color": 9403647, "x": 0 },
+          { "color": 10855935, "x": 1 }
+        ]
+      }
     ],
     "spr": "sprDog",
     "spr_alt": [],
@@ -5618,7 +5636,7 @@
     "ability": ["fetch", "watcher"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 80,
+    "anim_progress": 100,
     "animator": [13, 10, 8],
     "attklist": [
       "bounce",
@@ -5891,8 +5909,8 @@
     "ability": ["nimble"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 60,
-    "animator": [10, 8],
+    "anim_progress": 100,
+    "animator": [10],
     "attklist": [
       "pepshot",
       "careful",
@@ -9742,7 +9760,7 @@
     "ability": ["prankster", "gloat"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 100,
     "animator": [10, 8],
     "attklist": [
       "bounce",
@@ -9870,23 +9888,25 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 73,
+      "char_width": 112.5,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
+      "hop_height": 50,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
-      "move_pause_frames": [],
+      "move_pause_frames": [9],
       "move_speed": 1,
-      "move_speed_start": 0,
-      "move_to_idle_transition_anim": "",
-      "move_to_idle_transition_frames": [18, 19],
+      "move_speed_start": -150,
+      "move_to_idle_transition_anim": "stop",
+      "move_to_idle_transition_frames": [
+        18, 19, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+      ],
       "offset_freq": 2000,
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
@@ -11712,7 +11732,7 @@
     "ma": 87,
     "md": 86,
     "name": "Maraptor",
-    "number": 105,
+    "number": 114,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -12628,7 +12648,7 @@
     "ability": ["empath", "mask"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 80,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "facade",
@@ -12748,7 +12768,7 @@
       "char_width": 89.75,
       "emote_hop_height": 25,
       "float_dist": 50,
-      "float_wave": 8,
+      "float_wave": 0,
       "float_wave_freq": 1000,
       "hop_height": 0,
       "hop_length": 1.5,
@@ -13048,7 +13068,7 @@
     "ability": ["empath", "defiant_h"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "facade",
@@ -13117,6 +13137,13 @@
           { "color": 15959636, "x": 0 },
           { "color": 15755841, "x": 0.5013333333 },
           { "color": 13848372, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 3620890, "x": 0 },
+          { "color": 4470784, "x": 0.5 },
+          { "color": 5255437, "x": 1 }
         ]
       }
     ],
@@ -13250,6 +13277,13 @@
           { "color": 7616757, "x": 0 },
           { "color": 6440956, "x": 0.4893333333 },
           { "color": 2899196, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 5582375, "x": 0 },
+          { "color": 5580595, "x": 0.5 },
+          { "color": 5580600, "x": 1 }
         ]
       }
     ],
@@ -14874,7 +14908,7 @@
     "ma": 78,
     "md": 108,
     "name": "Pladion",
-    "number": 101,
+    "number": 110,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -15130,7 +15164,7 @@
     "ability": ["lightningrod_m"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "markattack",
@@ -15382,8 +15416,8 @@
     "ability": ["regenerator2", "boostin"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": [8],
+    "anim_progress": 100,
+    "animator": [8, 13],
     "attklist": [
       "bounce",
       "body",
@@ -15501,7 +15535,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 76.75,
+      "char_width": 100.25,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -15513,10 +15547,10 @@
       "hop_wobble": 0,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
-      "move_pause_frames": [],
+      "move_pause_frames": [18],
       "move_speed": 1,
-      "move_speed_start": 0,
-      "move_to_idle_transition_anim": "",
+      "move_speed_start": -40,
+      "move_to_idle_transition_anim": "stop",
       "move_to_idle_transition_frames": [],
       "offset_freq": 2000,
       "offset_rand_range": 0,
@@ -15838,7 +15872,7 @@
     "ability": ["regenerator", "flee"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 100,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -16728,7 +16762,7 @@
     "ma": 66,
     "md": 68,
     "name": "Diabloceras",
-    "number": 104,
+    "number": 113,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -18578,7 +18612,7 @@
     "ability": ["spiker"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 60,
+    "anim_progress": 100,
     "animator": [10, 8],
     "attklist": [
       "bounce",
@@ -20571,7 +20605,7 @@
     "ma": 110,
     "md": 90,
     "name": "Shloom",
-    "number": 106,
+    "number": 117,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {

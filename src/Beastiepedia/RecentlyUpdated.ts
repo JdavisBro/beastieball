@@ -68,4 +68,15 @@ export const BEASTIE_STUFF_RECENTLY_UPDATED: string[] = [
   "shroommon",
 ];
 
-export const BEASITE_SPRITES_RECENTLY_UPDATED: string[] = [];
+export const BEASITE_SPRITES_RECENTLY_UPDATED: string[] = [
+  "moth2",
+  "moth",
+  "possum2",
+  "possum",
+  "dog1",
+  "dog",
+  "serval",
+  "kangaroo",
+  "dragonfly",
+  "platypus2",
+];

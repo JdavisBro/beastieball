@@ -23,6 +23,18 @@
       "wordB": "moons"
     }
   },
+  "casino": {
+    "color": 4099153,
+    "crowd": [],
+    "id": "casino",
+    "levels": 4,
+    "min_rank": 3,
+    "music": 19,
+    "obj": "@ref object(objCycle)",
+    "rank": 1,
+    "scale_rank_start_offset": 0,
+    "title": { "color": -1, "gender": 0, "wordA": "danger", "wordB": "aces" }
+  },
   "celeb": {
     "color": 2068168,
     "crowd": [
@@ -68,6 +80,18 @@
     "rank": 0,
     "scale_rank_start_offset": 0,
     "title": { "color": -1, "gender": 2, "wordA": "", "wordB": "" }
+  },
+  "cowboy": {
+    "color": 360191,
+    "crowd": [],
+    "id": "cowboy",
+    "levels": 0,
+    "min_rank": 1.5,
+    "music": 19,
+    "obj": "@ref object(objCycle)",
+    "rank": 1,
+    "scale_rank_start_offset": 0,
+    "title": { "color": -1, "gender": 0, "wordA": "fallen", "wordB": "riders" }
   },
   "cycle": {
     "color": 6375753,
@@ -129,6 +153,18 @@
     "rank": 0,
     "scale_rank_start_offset": 0,
     "title": { "color": -1, "gender": 0, "wordA": "mega", "wordB": "beasts" }
+  },
+  "moon_boss": {
+    "color": 0,
+    "crowd": [],
+    "id": "moon_boss",
+    "levels": 2,
+    "min_rank": 9.5,
+    "music": 1,
+    "obj": -1,
+    "rank": 0,
+    "scale_rank_start_offset": 0,
+    "title": { "color": -1, "gender": 2, "wordA": "", "wordB": "" }
   },
   "pirate": {
     "color": 13631311,

@@ -1508,7 +1508,7 @@
     "ma": 25,
     "md": 75,
     "name": "Duggout",
-    "number": 111,
+    "number": 102,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -3491,7 +3491,7 @@
     "ma": 30,
     "md": 54,
     "name": "Mascurry",
-    "number": 112,
+    "number": 103,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -6882,10 +6882,10 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.85, 27, 3, 1],
+      [50, 0, 0.85, 27, 3, -1],
       [2, 1, 1, 5, 1, 1, 4, 1, 1],
       [20, 0, 1, 2, 0, 1, 5, 0, 1, 4, 0, 1],
-      [27, 8, 1]
+      [27, 8, -1]
     ],
     "desc": "Using harvested venomous cells, they deliver a painful sting at the slightest touch. Their venom is known to cause vivid hallucination.",
     "designer": 8,
@@ -7102,10 +7102,10 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.85, 27, 3, 1],
+      [50, 0, 0.85, 27, 3, -1],
       [2, 1, 1, 5, 1, 1, 4, 1, 1],
       [20, 0, 1, 2, 0, 1, 5, 0, 1, 4, 0, 1],
-      [27, 8, 1]
+      [27, 8, -1]
     ],
     "desc": "Their parents swam far upriver to deposit Seakit eggs in the forest. They harvest stinging cells from Petula to mature.",
     "designer": 8,
@@ -11732,7 +11732,7 @@
     "ma": 87,
     "md": 86,
     "name": "Maraptor",
-    "number": 114,
+    "number": 105,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -11866,8 +11866,8 @@
     "combos": [
       [17, 0, 1, 50, 0, 1.2, 51, 0, 2],
       [7, 0, 1, 14, 0, 1, 12, 0, 2],
-      [27, 8, 1],
-      [27, 9, 3]
+      [27, 8, -1],
+      [27, 9, -3]
     ],
     "desc": "They'll stand perfectly still in plain sight, mimicking a tree. When prey least suspects it, they strike with blinding speed.",
     "designer": [0, 1, 8],
@@ -14908,7 +14908,7 @@
     "ma": 78,
     "md": 108,
     "name": "Pladion",
-    "number": 110,
+    "number": 101,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -16172,7 +16172,7 @@
     "colors2": null,
     "combos": [
       [50, 0, 1.6, 40, 0, 1],
-      [27, 9, 1],
+      [27, 9, -1],
       [20, 0, 1, 15, 0, 1],
       [5, 0, 4]
     ],
@@ -16762,7 +16762,7 @@
     "ma": 66,
     "md": 68,
     "name": "Diabloceras",
-    "number": 113,
+    "number": 104,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -20605,7 +20605,7 @@
     "ma": 110,
     "md": 90,
     "name": "Shloom",
-    "number": 117,
+    "number": 106,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -20754,7 +20754,7 @@
     "combos": [
       [30, 3, 1, 50, 0, 1],
       [51, 0, 2, 7, 1, 1, 26, 1, 1],
-      [7, 0, 1, 27, 9, 3],
+      [7, 0, 1, 27, 9, -3],
       [34, 8, 1, 26, 2, 1]
     ],
     "desc": "Chloroplasts from the plants they eat are absorbed and stored in their tails. This provides them camouflage as well as photosynthetic energy.",

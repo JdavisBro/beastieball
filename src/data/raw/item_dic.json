@@ -109,16 +109,6 @@
     "type": 0,
     "value": 25
   },
-  "hotelkey": {
-    "desc": "A card for the Gold Egg Casino Hotel elevator.",
-    "eff": [7, 0, 0],
-    "id": "hotelkey",
-    "img": 42,
-    "name": "Resort Card",
-    "points": 1,
-    "type": 3,
-    "value": -1
-  },
   "icecream": {
     "desc": "Restores a Beastie's STAMINA by 20% and improves their mood",
     "eff": [0, 1, 0.2, 12, 1, -20],
@@ -289,16 +279,6 @@
     "type": 0,
     "value": 50
   },
-  "moonshroom": {
-    "desc": "Mysterious fungus recovered from a Pygmite hive. May be noteworthy for celestial study.",
-    "eff": [7, 0, 0],
-    "id": "moonshroom",
-    "img": 28,
-    "name": "Moon Shroom",
-    "points": 1,
-    "type": 3,
-    "value": -1
-  },
   "pirate_drink": {
     "desc": "Revives a [sprStatus,5]WIPED Beastie and restores 25% STAMINA outside of games",
     "eff": [1, 1, 2, 0, 1, 0.25],
@@ -348,16 +328,6 @@
     "points": 1,
     "type": 0,
     "value": 35
-  },
-  "rope": {
-    "desc": "A rope ideal for lassoing, or climbing.",
-    "eff": [7, 0, 0],
-    "id": "rope",
-    "img": 42,
-    "name": "Rope",
-    "points": 1,
-    "type": 3,
-    "value": -1
   },
   "sell1": {
     "desc": "A shiny thing that can be sold.",
@@ -418,16 +388,6 @@
     "points": 1,
     "type": 0,
     "value": 14
-  },
-  "sunscreen": {
-    "desc": "An essential Far Out item. Your SPF increases by 5 for every 3 owned.",
-    "eff": [7, 0, 0],
-    "id": "sunscreen",
-    "img": 40,
-    "name": "Sunscreen",
-    "points": 1,
-    "type": 3,
-    "value": -1
   },
   "tatteredjersey": {
     "desc": "A tattered old Jersey that belongs to a giant Beastie found in the Chroma Sea.",

@@ -56,7 +56,7 @@ declare module "gifenc" {
 
   export declare function nearestColorIndex(
     palette: number[][],
-    pixel: [number, number, number] | [number, number, number],
+    pixel: [number, number, number] | [number, number, number, number],
   ): number;
 
   export declare function nearestColorIndexWithDistance(

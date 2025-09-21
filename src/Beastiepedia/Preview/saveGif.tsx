@@ -1,4 +1,4 @@
-import { GIFEncoder, applyPalette, quantize } from "gifenc";
+import { GIFEncoder, nearestColorIndex, quantize } from "gifenc";
 
 import { BeastieAnimation } from "../../data/BeastieAnimations";
 import { setImage } from "../../shared/beastieRender/WebGL";
@@ -20,6 +20,33 @@ function flipImageData(non_clamped_data: Uint8Array, w: number, h: number) {
     data.slice(i * w * 4, (i + 1) * w * 4),
   ).forEach((val, i) => data.set(val, (h - i - 1) * w * 4));
   return data;
+}
+
+// taken from gifenc, modified to use full 8bit color for cache to avoid weird color popping. also removed format since i only need rgba4444
+function applyPalette(
+  rgba: Uint8Array | Uint8ClampedArray,
+  palette: number[][],
+) {
+  const data = new Uint32Array(rgba.buffer);
+  const length = data.length;
+  const index = new Uint8Array(length);
+  const cache: Record<number, number> = {};
+
+  for (let i = 0; i < length; i++) {
+    const color = data[i];
+    const idx =
+      color in cache
+        ? cache[color]
+        : (cache[color] = nearestColorIndex(palette, [
+            color & 0xff,
+            (color >> 8) & 0xff,
+            (color >> 16) & 0xff,
+            (color >> 24) & 0xff,
+          ]));
+    index[i] = idx;
+  }
+
+  return index;
 }
 
 export default function saveGif(
@@ -191,7 +218,7 @@ export default function saveGif(
       format: "rgba4444",
       oneBitAlpha: true,
     });
-    const index = applyPalette(pixelData, palette, "rgba4444");
+    const index = applyPalette(pixelData, palette);
     doneframes[frame] = { index: index, palette: palette };
   }
 

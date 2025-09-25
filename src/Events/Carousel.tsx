@@ -12,6 +12,7 @@ const EMOJI_MAP: Record<string, string> = {
   update: "⏫",
   ost: "💿",
   merch: "👕",
+  fantourney: "🏆",
   tournament: "🏆",
   heatwave: "🏆",
   heatup: "🏆",

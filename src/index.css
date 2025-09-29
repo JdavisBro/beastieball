@@ -14,7 +14,8 @@
   font-family: "SportsJersey";
   src: url("/fonts/SportsJersey.woff2") format("woff2");
   src: url("/fonts/SportsJersey.woff") format("woff");
-  unicode-range: U+30-39, U+41-5A, U+61-7A; /* sports jersey only supports 0 to z and so this makes it fallback on regular fonts */
+  unicode-range:
+    U+30-39, U+41-5A, U+61-7A; /* sports jersey only supports 0 to z and so this makes it fallback on regular fonts */
 }
 
 @font-face {

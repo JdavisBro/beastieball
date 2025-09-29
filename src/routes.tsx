@@ -98,7 +98,7 @@ function shouldRevalidate() {
 
 const routes: Array<RouteObject> = [
   {
-    path: "/",
+    path: "/:lang?/",
     Component: Root,
     errorElement: <RouteError />,
     hydrateFallbackElement: (

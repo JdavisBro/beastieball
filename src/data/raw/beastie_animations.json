@@ -5348,7 +5348,7 @@
             "endFrame": 19,
             "holds": { "18": 6, "19": 4 },
             "startFrame": 18,
-            "transitions": [0, 0, 1, 1, 1, 2, 5]
+            "transitions": [0, 1, 1, 2, 2, 2, 5]
           },
           {
             "endFrame": 28,
@@ -5378,7 +5378,7 @@
             "endFrame": 35,
             "holds": { "34": 8, "35": 8 },
             "startFrame": 34,
-            "transitions": [3, 3, 3, 4]
+            "transitions": [3, 3, 4, 4, 4]
           },
           {
             "endFrame": 40,
@@ -5391,7 +5391,7 @@
             "endFrame": 58,
             "holds": { "50": 1, "54": 1, "57": 3, "58": 3 },
             "startFrame": 47,
-            "transitions": [6, 7, 8]
+            "transitions": [6, 7, 9]
           },
           {
             "endFrame": 72,
@@ -5410,7 +5410,8 @@
             "startFrame": 59,
             "transitions": [8]
           },
-          { "endFrame": 79, "startFrame": 73, "transitions": [0] }
+          { "endFrame": 79, "startFrame": 73, "transitions": [0] },
+          { "endFrame": 79, "startFrame": 74, "transitions": [0] }
         ]
       },
       "menu": { "frames": {} },
@@ -8198,14 +8199,20 @@
             "endFrame": 22,
             "holds": { "21": [6, 6, 8, 8], "22": [5, 5, 7, 7] },
             "startFrame": 21,
-            "transitions": [0]
+            "transitions": [0, 0, 5]
           },
-          { "endFrame": 28, "startFrame": 23, "transitions": [2, 2, 3] },
+          { "endFrame": 28, "startFrame": 23, "transitions": [2, 2, 3, 3] },
           { "endFrame": 29, "startFrame": 29, "transitions": [0] },
           {
             "endFrame": 45,
             "holds": { "31": 3, "33": 4, "41": 3, "44": 3, "45": 3 },
             "startFrame": 30,
+            "transitions": [0]
+          },
+          {
+            "endFrame": 49,
+            "holds": { "46": 5, "47": 3, "48": 5, "49": 5 },
+            "startFrame": 46,
             "transitions": [0]
           }
         ]
@@ -8308,8 +8315,8 @@
     "shiny": [
       {
         "array": [
-          { "color": 3253475, "x": 0 },
-          { "color": 4688092, "x": 1 }
+          { "color": 4235497, "x": 0 },
+          { "color": 4422089, "x": 1 }
         ]
       },
       {
@@ -8320,9 +8327,9 @@
       },
       {
         "array": [
-          { "color": 8678092, "x": 0 },
-          { "color": 9536971, "x": 0.5233333333 },
-          { "color": 7826120, "x": 1 }
+          { "color": 2963796, "x": 0 },
+          { "color": 8420248, "x": 0.5233333333 },
+          { "color": 6841470, "x": 1 }
         ]
       },
       {
@@ -8339,9 +8346,9 @@
       },
       {
         "array": [
-          { "color": 16774381, "x": 0 },
-          { "color": 15191496, "x": 0.5 },
-          { "color": 14212545, "x": 1 }
+          { "color": 10735359, "x": 0 },
+          { "color": 12177127, "x": 0.5 },
+          { "color": 10669311, "x": 1 }
         ]
       }
     ],
@@ -8582,15 +8589,11 @@
             "startFrame": 64,
             "transitions": [9]
           },
-          {
-            "endFrame": 70,
-            "startFrame": 68,
-            "transitions": [9, 9, 9, 9, 9, 10]
-          },
+          { "endFrame": 70, "startFrame": 68, "transitions": [9, 9, 9, 10] },
           { "endFrame": 76, "startFrame": 71, "transitions": [0] }
         ]
       },
-      "menu": { "frames": {} },
+      "menu": { "frames": { "endFrame": 15, "startFrame": 15 } },
       "move": {
         "frames": {
           "endFrame": 14,
@@ -8608,8 +8611,9 @@
     "colors": [
       {
         "array": [
-          { "color": 7173296, "x": 0 },
-          { "color": 7636889, "x": 1 }
+          { "color": 6122672, "x": 0 },
+          { "color": 6981538, "x": 0.8733333333 },
+          { "color": 6780291, "x": 1 }
         ]
       },
       {
@@ -8627,13 +8631,14 @@
       {
         "array": [
           { "color": 2328530, "x": 0 },
-          { "color": 6400987, "x": 1 }
+          { "color": 6400987, "x": 0.9266666667 },
+          { "color": 5671596, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 10988741, "x": 0 },
-          { "color": 7895255, "x": 1 }
+          { "color": 9674213, "x": 0 },
+          { "color": 7904727, "x": 1 }
         ]
       },
       {
@@ -8668,14 +8673,14 @@
       {
         "array": [
           { "color": 11650047, "x": 0 },
-          { "color": 12183039, "x": 1 }
+          { "color": 12183039, "x": 0.9866666667 }
         ]
       },
       {
         "array": [
-          { "color": 11965940, "x": 0 },
-          { "color": 11839487, "x": 0.5208333333 },
-          { "color": 7895277, "x": 1 }
+          { "color": 12890100, "x": 0 },
+          { "color": 12234996, "x": 0.5208333333 },
+          { "color": 8684758, "x": 1 }
         ]
       },
       {
@@ -8686,8 +8691,8 @@
       },
       {
         "array": [
-          { "color": 9985779, "x": 0 },
-          { "color": 8410358, "x": 1 }
+          { "color": 5535943, "x": 0 },
+          { "color": 6063054, "x": 1 }
         ]
       },
       {
@@ -9320,14 +9325,14 @@
     }
   },
   "_sprRat_alt": {
-    "anim_data": { "__Elephant_Circular_Ref__": 5458 },
+    "anim_data": { "__Elephant_Circular_Ref__": 5463 },
     "ball": { "x": 154.8, "y": -261.6 },
-    "colors": { "__Elephant_Circular_Ref__": 6791 },
+    "colors": { "__Elephant_Circular_Ref__": 6798 },
     "colors2": null,
     "evo1": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
-    "loco_data": { "__Elephant_Circular_Ref__": 5536 },
+    "loco_data": { "__Elephant_Circular_Ref__": 5541 },
     "miss": { "x": 222.8571428571, "y": -114.2857142857 },
     "partner": {
       "angle": 305.217590332,
@@ -9336,7 +9341,7 @@
       "y": -1.2
     },
     "ready": { "x": 139.4285714286, "y": -286.8571428571 },
-    "shiny": { "__Elephant_Circular_Ref__": 6840 },
+    "shiny": { "__Elephant_Circular_Ref__": 6847 },
     "splash": {
       "angle": 344.1231689453,
       "anim": "volley",

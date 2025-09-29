@@ -18,7 +18,6 @@
       "freeball",
       "mindpass",
       "refresh",
-      "dispel",
       "teleport",
       "meditate",
       "chill",
@@ -33,8 +32,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 33,
-    "base_exp": 200.09,
-    "bd": 83,
+    "base_exp": 193.67,
+    "bd": 73,
     "body_color_index": 0,
     "codename": "c49afea3aa4dc321d7cdb2330c6d82ab979510af",
     "colormeta": null,
@@ -92,7 +91,7 @@
     "isBaby": false,
     "learnset": [
       [0, "mindbomb"],
-      [0, "dispel"],
+      [0, "lockon"],
       [10, "mindpass"],
       [14, "dropshot"],
       [20, "meditate"],
@@ -240,7 +239,6 @@
       "freeball",
       "mindpass",
       "refresh",
-      "dispel",
       "teleport",
       "meditate",
       "chill",
@@ -321,7 +319,7 @@
     "isBaby": false,
     "learnset": [
       [0, "mindbomb"],
-      [0, "dispel"],
+      [0, "lockon"],
       [7, "mindpass"],
       [11, "dropshot"],
       [17, "meditate"],
@@ -472,7 +470,6 @@
       "followme",
       "heartup",
       "rest",
-      "tailwind",
       "bench",
       "protect",
       "batonpass",
@@ -765,7 +762,6 @@
       "followme",
       "heartup",
       "rest",
-      "tailwind",
       "bench",
       "protect",
       "batonpass",
@@ -865,7 +861,7 @@
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 0,
+      "hop_wobble": 5,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
       "move_pause_frames": [],
@@ -877,8 +873,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0.1,
-      "stretchiness": 0.1
+      "squishiness": 0.2,
+      "stretchiness": 0.2
     },
     "ma": 29,
     "md": 55,
@@ -992,7 +988,8 @@
       "sweatall",
       "shakeoff",
       "bomb",
-      "flatten"
+      "flatten",
+      "wall"
     ],
     "attklist_randomize": -1,
     "ba": 89,
@@ -1296,7 +1293,7 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
+      "hop_height": 25,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
@@ -1613,6 +1610,10 @@
       "chill",
       "shakeoff",
       "meditate",
+      "wall",
+      "quake",
+      "batonpass",
+      "myheartpass",
       "passattack",
       "dig",
       "startermind",
@@ -1620,7 +1621,7 @@
     ],
     "attklist_randomize": -1,
     "ba": 57,
-    "base_exp": 241,
+    "base_exp": 244.75,
     "bd": 70,
     "body_color_index": 0,
     "codename": "65278bca7a64fc3bc6d0660147c249891d0685e6",
@@ -1687,8 +1688,8 @@
     "foot_size": 49,
     "foot_type": 0,
     "growth": 1,
-    "ha": 30,
-    "hd": 80,
+    "ha": 25,
+    "hd": 85,
     "hidden": false,
     "hidden_counter": null,
     "id": "bilby",
@@ -1697,11 +1698,12 @@
       [0, "startermind"],
       [0, "dig"],
       [15, "allyrush"],
-      [19, "mind"],
-      [22, "set"],
-      [26, "stresspass"],
-      [31, "passattack"],
-      [36, "construct"],
+      [18, "mind"],
+      [21, "set"],
+      [25, "stresspass"],
+      [29, "passattack"],
+      [32, "construct"],
+      [36, "wall"],
       [41, "jazzpass"],
       [45, "tool"],
       [49, "meditate"]
@@ -1862,6 +1864,10 @@
       "chill",
       "shakeoff",
       "meditate",
+      "wall",
+      "quake",
+      "batonpass",
+      "myheartpass",
       "passattack",
       "dig",
       "startermind"
@@ -1935,11 +1941,12 @@
       [0, "startermind"],
       [0, "dig"],
       [7, "allyrush"],
-      [11, "mind"],
-      [14, "set"],
-      [18, "stresspass"],
-      [23, "passattack"],
-      [28, "construct"],
+      [10, "mind"],
+      [13, "set"],
+      [17, "stresspass"],
+      [21, "passattack"],
+      [24, "construct"],
+      [28, "wall"],
       [33, "jazzpass"],
       [37, "tool"],
       [41, "meditate"]
@@ -1953,7 +1960,7 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
+      "hop_height": 25,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
@@ -1969,8 +1976,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.05,
+      "stretchiness": 0.05
     },
     "ma": 65,
     "md": 70,
@@ -2072,13 +2079,17 @@
       "chill",
       "shakeoff",
       "meditate",
+      "wall",
+      "quake",
+      "batonpass",
+      "myheartpass",
       "passattack",
       "dig",
       "startermind"
     ],
     "attklist_randomize": -1,
     "ba": 43,
-    "base_exp": 169,
+    "base_exp": 170.2,
     "bd": 52,
     "body_color_index": 0,
     "codename": "f7fcf007e532df8f16c6f6c011b8ffd2d183fc04",
@@ -2142,8 +2153,8 @@
     "foot_size": 33,
     "foot_type": 0,
     "growth": 1,
-    "ha": 22,
-    "hd": 68,
+    "ha": 20,
+    "hd": 70,
     "hidden": false,
     "hidden_counter": null,
     "id": "bilby2",
@@ -2152,11 +2163,12 @@
       [0, "startermind"],
       [0, "dig"],
       [11, "allyrush"],
-      [15, "mind"],
-      [18, "set"],
-      [22, "stresspass"],
-      [27, "passattack"],
-      [32, "construct"],
+      [14, "mind"],
+      [17, "set"],
+      [21, "stresspass"],
+      [25, "passattack"],
+      [28, "construct"],
+      [32, "wall"],
       [37, "jazzpass"],
       [41, "tool"],
       [45, "meditate"]
@@ -2396,10 +2408,10 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
+      "hop_height": 35,
+      "hop_length": 2,
       "hop_min_speed": 0.04,
-      "hop_shake": 0,
+      "hop_shake": 0.2,
       "hop_wobble": 0,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
@@ -2413,7 +2425,7 @@
       "offset_seconds": 0.2,
       "randomize_idle": true,
       "squishiness": 0,
-      "stretchiness": 0
+      "stretchiness": 0.05
     },
     "ma": 35,
     "md": 80,
@@ -2607,11 +2619,11 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
+      "hop_height": 25,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 0,
+      "hop_wobble": 2,
       "move_accel": 3,
       "move_decel": 0.6666666667,
       "move_pause_frames": [],
@@ -2623,8 +2635,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0.2,
-      "stretchiness": 0.2
+      "squishiness": 0.05,
+      "stretchiness": 0.05
     },
     "ma": 20,
     "md": 45,
@@ -2816,9 +2828,9 @@
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 0,
+      "hop_wobble": 2,
       "move_accel": 0.4444444444,
-      "move_decel": 0.6666666667,
+      "move_decel": 0.67,
       "move_pause_frames": [],
       "move_speed": 1,
       "move_speed_start": 0,
@@ -2828,7 +2840,7 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0.1,
+      "squishiness": 0.05,
       "stretchiness": 0.1
     },
     "ma": 33,
@@ -2925,6 +2937,7 @@
       "rhythm",
       "protect",
       "dispel",
+      "myheartpass",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -2986,7 +2999,7 @@
           {
             "conditions": [
               {
-                "effect_type": 85,
+                "effect_type": 89,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
@@ -3062,7 +3075,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 85,
+          "effect_type": 89,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3153,6 +3166,7 @@
       "rhythm",
       "protect",
       "dispel",
+      "myheartpass",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -3271,7 +3285,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 85,
+          "effect_type": 89,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3357,6 +3371,7 @@
       "rhythm",
       "protect",
       "dispel",
+      "myheartpass",
       "starterbody",
       "stomp"
     ],
@@ -3482,7 +3497,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 85,
+          "effect_type": 89,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -4460,6 +4475,7 @@
       "protect",
       "splinter",
       "rattle",
+      "menace",
       "netattack"
     ],
     "attklist_randomize": -1,
@@ -4531,7 +4547,7 @@
     "learnset": [
       [0, "enemylowered"],
       [0, "lockon"],
-      [6, "lowattks"],
+      [6, "menace"],
       [11, "brine"],
       [16, "pursuit"],
       [20, "feint"],
@@ -4675,13 +4691,14 @@
       "noisytag",
       "superpower",
       "toughattack",
+      "tailwind",
       "backswitch",
       "taunt",
       "starterheart"
     ],
     "attklist_randomize": -1,
     "ba": 95,
-    "base_exp": 125.8,
+    "base_exp": 130.9,
     "bd": 95,
     "body_color_index": 1,
     "codename": "8bac734ff0bd3c4a1a0c1d7016a8f03a5d36c470",
@@ -4798,7 +4815,7 @@
       "stretchiness": 0.1
     },
     "ma": 25,
-    "md": 55,
+    "md": 65,
     "name": "¦beastiesetup_name_032¦",
     "number": 32,
     "palettes": 1,
@@ -4826,13 +4843,13 @@
     },
     "recruit_value": 8,
     "roamer_style": {
-      "_name": "STOP_AND_STARE",
-      "can_react": true,
+      "_name": "RACER..",
+      "can_react": false,
       "can_socialize": true,
       "can_volley": true,
-      "cancel_on_player_invincible": false,
+      "cancel_on_player_invincible": true,
       "checking_player_distance": true,
-      "colliding": false,
+      "colliding": true,
       "default_locomote": true,
       "default_physics": true,
       "flying": false,
@@ -4912,13 +4929,14 @@
       "noisytag",
       "superpower",
       "toughattack",
+      "tailwind",
       "backswitch",
       "taunt",
       "starterheart"
     ],
     "attklist_randomize": -1,
     "ba": 68,
-    "base_exp": 83.3425,
+    "base_exp": 85.255,
     "bd": 71,
     "body_color_index": 1,
     "codename": "42068245c9923ad154827121481784e1c7395715",
@@ -5033,7 +5051,7 @@
       "stretchiness": 0
     },
     "ma": 21,
-    "md": 33,
+    "md": 38,
     "name": "¦beastiesetup_name_031¦",
     "number": 31,
     "palettes": 1,
@@ -5053,13 +5071,13 @@
     },
     "recruit_value": 4,
     "roamer_style": {
-      "_name": "STOP_AND_STARE",
-      "can_react": true,
+      "_name": "RACER..",
+      "can_react": false,
       "can_socialize": true,
       "can_volley": true,
-      "cancel_on_player_invincible": false,
+      "cancel_on_player_invincible": true,
       "checking_player_distance": true,
-      "colliding": false,
+      "colliding": true,
       "default_locomote": true,
       "default_physics": true,
       "flying": false,
@@ -5339,8 +5357,8 @@
     "ability": ["fetch", "watcher"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 10,
+    "anim_progress": 100,
+    "animator": [13, 10],
     "attklist": [
       "bounce",
       "libero",
@@ -5369,11 +5387,13 @@
       "spitball",
       "steal",
       "shakeoff",
+      "thrash",
+      "myheartpass",
       "scoreboosted"
     ],
     "attklist_randomize": -1,
-    "ba": 70,
-    "base_exp": 159.344,
+    "ba": 75,
+    "base_exp": 166.52,
     "bd": 85,
     "body_color_index": 0,
     "codename": "58996b06ca854e96768d85cea7c32d4965b0c68c",
@@ -5406,6 +5426,12 @@
           { "color": 10375487, "x": 0.5 },
           { "color": 9204788, "x": 1 }
         ]
+      },
+      {
+        "array": [
+          { "color": 10517247, "x": 0 },
+          { "color": 10919935, "x": 1 }
+        ]
       }
     ],
     "colors2": [
@@ -5434,10 +5460,16 @@
           { "color": 9060893, "x": 0 },
           { "color": 4807268, "x": 1 }
         ]
+      },
+      {
+        "array": [
+          { "color": 10918299, "x": 0 },
+          { "color": 10714283, "x": 1 }
+        ]
       }
     ],
     "combos": [
-      [-26, 0, 1, 50, 0, 0.85],
+      [33, 0, 31, 50, 0, 0.9],
       [15, 0, 1],
       [14, 0, 3],
       [26, 2, 3]
@@ -5458,7 +5490,7 @@
     "foot_size": 72,
     "foot_type": 2,
     "growth": 0.92,
-    "ha": 80,
+    "ha": 83,
     "hd": 95,
     "hidden": false,
     "hidden_counter": null,
@@ -5466,7 +5498,7 @@
     "isBaby": false,
     "learnset": [
       [0, "pepshot"],
-      [0, "charm"],
+      [0, "dig"],
       [13, "snore"],
       [17, "desperate"],
       [21, "rush"],
@@ -5474,7 +5506,7 @@
       [31, "shakeoff"],
       [35, "followme"],
       [39, "rushattack"],
-      [44, "damagedattack"],
+      [44, "thrash"],
       [48, "vigor"]
     ],
     "learnset_randomize": -1,
@@ -5505,8 +5537,8 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 40,
-    "md": 42,
+    "ma": 35,
+    "md": 55,
     "name": "¦beastiesetup_name_023¦",
     "number": 23,
     "palettes": 2,
@@ -5585,7 +5617,13 @@
           { "color": 13500343, "x": 1 }
         ]
       },
-      { "array": [{ "color": 11975966, "x": 0.5 }] }
+      { "array": [{ "color": 11975966, "x": 0.5 }] },
+      {
+        "array": [
+          { "color": 9403647, "x": 0 },
+          { "color": 10855935, "x": 1 }
+        ]
+      }
     ],
     "spr": "sprDog",
     "spr_alt": [],
@@ -5598,8 +5636,8 @@
     "ability": ["fetch", "watcher"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 80,
-    "animator": [10, 8],
+    "anim_progress": 100,
+    "animator": [13, 10, 8],
     "attklist": [
       "bounce",
       "libero",
@@ -5628,11 +5666,13 @@
       "spitball",
       "steal",
       "shakeoff",
+      "thrash",
+      "myheartpass",
       "scoreboosted"
     ],
     "attklist_randomize": -1,
     "ba": 50,
-    "base_exp": 112.562,
+    "base_exp": 114.632,
     "bd": 68,
     "body_color_index": 0,
     "codename": "03095002a7e76fa3ac7b1e65995767be9be5f73a",
@@ -5707,7 +5747,7 @@
       }
     ],
     "combos": [
-      [-26, 0, 1, 50, 0, 0.85],
+      [33, 0, 31, 50, 0, 0.9],
       [15, 0, 1],
       [14, 0, 3],
       [26, 2, 3]
@@ -5736,7 +5776,7 @@
     "isBaby": true,
     "learnset": [
       [0, "pepshot"],
-      [0, "charm"],
+      [0, "dig"],
       [8, "snore"],
       [12, "desperate"],
       [16, "rush"],
@@ -5744,7 +5784,7 @@
       [26, "shakeoff"],
       [30, "followme"],
       [34, "rushattack"],
-      [39, "damagedattack"],
+      [39, "thrash"],
       [43, "vigor"]
     ],
     "learnset_randomize": -1,
@@ -5776,7 +5816,7 @@
       "stretchiness": 0
     },
     "ma": 21,
-    "md": 40,
+    "md": 45,
     "name": "¦beastiesetup_name_022¦",
     "number": 22,
     "palettes": 2,
@@ -5869,8 +5909,8 @@
     "ability": ["nimble"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 60,
-    "animator": [10, 8],
+    "anim_progress": 100,
+    "animator": [10],
     "attklist": [
       "pepshot",
       "careful",
@@ -6127,6 +6167,7 @@
       "heartup",
       "fieldclear",
       "callout",
+      "tailwind",
       "bodypass",
       "mindpass",
       "heartd",
@@ -6200,14 +6241,14 @@
     "isBaby": false,
     "learnset": [
       [0, "rocksmash"],
-      [0, "allyrush"],
+      [0, "tailwind"],
       [11, "shakeoff"],
       [15, "nightshade"],
       [19, "powswitch"],
       [23, "rocket"],
       [29, "set"],
       [35, "moon"],
-      [39, "allyprotect"],
+      [39, "basecover"],
       [45, "libero"],
       [51, "hyperbeam"]
     ],
@@ -6373,7 +6414,8 @@
       "protect",
       "heartup",
       "fieldclear",
-      "callout"
+      "callout",
+      "tailwind"
     ],
     "attklist_randomize": -1,
     "ba": 48,
@@ -6435,14 +6477,14 @@
     "isBaby": true,
     "learnset": [
       [0, "rocksmash"],
-      [0, "allyrush"],
+      [0, "tailwind"],
       [6, "shakeoff"],
       [10, "nightshade"],
       [14, "powswitch"],
       [18, "rocket"],
       [24, "set"],
       [30, "moon"],
-      [34, "allyprotect"],
+      [34, "basecover"],
       [40, "libero"],
       [46, "hyperbeam"]
     ],
@@ -6587,7 +6629,8 @@
       "protect",
       "heartup",
       "fieldclear",
-      "callout"
+      "callout",
+      "tailwind"
     ],
     "attklist_randomize": -1,
     "ba": 60,
@@ -6657,14 +6700,14 @@
     "isBaby": true,
     "learnset": [
       [0, "rocksmash"],
-      [0, "allyrush"],
+      [0, "tailwind"],
       [9, "shakeoff"],
       [13, "nightshade"],
       [17, "powswitch"],
       [21, "rocket"],
       [27, "set"],
       [33, "moon"],
-      [37, "allyprotect"],
+      [37, "basecover"],
       [43, "libero"],
       [49, "hyperbeam"]
     ],
@@ -6839,10 +6882,10 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.85, 27, 3, 1],
+      [50, 0, 0.85, 27, 3, -1],
       [2, 1, 1, 5, 1, 1, 4, 1, 1],
       [20, 0, 1, 2, 0, 1, 5, 0, 1, 4, 0, 1],
-      [27, 8, 1]
+      [27, 8, -1]
     ],
     "desc": "¦beastiesetup_desc_054¦",
     "designer": 8,
@@ -6908,7 +6951,7 @@
       "squishiness": 0,
       "stretchiness": 0
     },
-    "ma": 105,
+    "ma": 97,
     "md": 59,
     "name": "¦beastiesetup_name_053¦",
     "number": 54,
@@ -7059,10 +7102,10 @@
     ],
     "colors2": null,
     "combos": [
-      [50, 0, 0.85, 27, 3, 1],
+      [50, 0, 0.85, 27, 3, -1],
       [2, 1, 1, 5, 1, 1, 4, 1, 1],
       [20, 0, 1, 2, 0, 1, 5, 0, 1, 4, 0, 1],
-      [27, 8, 1]
+      [27, 8, -1]
     ],
     "desc": "¦beastiesetup_desc_053¦",
     "designer": 8,
@@ -7367,7 +7410,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 85,
+          "effect_type": 89,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7539,8 +7582,8 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
+      "hop_height": 20,
+      "hop_length": 1.2,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
@@ -7567,7 +7610,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 85,
+          "effect_type": 89,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7750,8 +7793,8 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
+      "hop_height": 35,
+      "hop_length": 2,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
@@ -7768,8 +7811,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0.2,
-      "stretchiness": 0.2
+      "squishiness": 0.1,
+      "stretchiness": 0.05
     },
     "ma": 27,
     "md": 50,
@@ -7780,7 +7823,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 85,
+          "effect_type": 89,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7874,6 +7917,7 @@
       "sweatall",
       "rattle",
       "bamboozle",
+      "menace",
       "targethp",
       "stun",
       "shaken"
@@ -8088,6 +8132,7 @@
       "sweatall",
       "rattle",
       "bamboozle",
+      "menace",
       "targethp",
       "stun",
       "shaken"
@@ -8180,8 +8225,8 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
+      "hop_height": 8,
+      "hop_length": 0.9,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
@@ -8196,8 +8241,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.2,
+      "stretchiness": 0.2
     },
     "ma": 54,
     "md": 49,
@@ -8287,6 +8332,7 @@
       "sweatall",
       "rattle",
       "bamboozle",
+      "menace",
       "targethp",
       "stun",
       "shaken"
@@ -8465,12 +8511,12 @@
       "lockon",
       "lowattks",
       "libero",
-      "basecover",
       "nettle",
       "trap",
       "stress",
       "steal",
-      "eerie"
+      "eerie",
+      "basecover"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -8517,7 +8563,7 @@
       [39, 9, 1, 6, 9, 1]
     ],
     "desc": "¦beastiesetup_desc_089¦",
-    "designer": [6, 8],
+    "designer": [6, 8, 3],
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -8887,7 +8933,6 @@
       "jazzpass",
       "rest",
       "taunt",
-      "tailwind",
       "lowattks",
       "libero",
       "protect",
@@ -9716,8 +9761,8 @@
     "ability": ["prankster", "gloat"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": [10, 8],
     "attklist": [
       "bounce",
       "breakswipe",
@@ -9844,23 +9889,25 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 73,
+      "char_width": 112.5,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
+      "hop_height": 50,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
-      "move_pause_frames": [],
+      "move_pause_frames": [9],
       "move_speed": 1,
-      "move_speed_start": 0,
-      "move_to_idle_transition_anim": "",
-      "move_to_idle_transition_frames": [18, 19],
+      "move_speed_start": -150,
+      "move_to_idle_transition_anim": "stop",
+      "move_to_idle_transition_frames": [
+        18, 19, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+      ],
       "offset_freq": 2000,
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
@@ -10078,8 +10125,8 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
+      "hop_height": 40,
+      "hop_length": 1.8,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
@@ -10094,8 +10141,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.1,
+      "stretchiness": 0.1
     },
     "ma": 74,
     "md": 80,
@@ -10967,13 +11014,13 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
+      "hop_height": 25,
+      "hop_length": 1.3,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
       "move_accel": 0.4444444444,
-      "move_decel": 0.6666666667,
+      "move_decel": 0.67,
       "move_pause_frames": [],
       "move_speed": 1,
       "move_speed_start": 0,
@@ -10983,8 +11030,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.05,
+      "stretchiness": 0.05
     },
     "ma": 30,
     "md": 35,
@@ -11109,11 +11156,13 @@
       "rush",
       "snipe",
       "bamboozle",
+      "healbell",
+      "markattack",
       "startermind"
     ],
     "attklist_randomize": -1,
     "ba": 90,
-    "base_exp": 149.96,
+    "base_exp": 157.136,
     "bd": 50,
     "body_color_index": 0,
     "codename": "2cd83ae3c5ea43667a68a486e0037deaf9976397",
@@ -11204,7 +11253,7 @@
     "foot_type": 1,
     "growth": 0.92,
     "ha": 21,
-    "hd": 60,
+    "hd": 69,
     "hidden": false,
     "hidden_counter": null,
     "id": "magpie",
@@ -11251,7 +11300,7 @@
       "stretchiness": 0.1
     },
     "ma": 105,
-    "md": 95,
+    "md": 99,
     "name": "¦beastiesetup_name_081¦",
     "number": 82,
     "palettes": 1,
@@ -11367,6 +11416,8 @@
       "rush",
       "snipe",
       "bamboozle",
+      "healbell",
+      "markattack",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11450,7 +11501,7 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
+      "hop_height": 25,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
@@ -11468,8 +11519,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.1,
+      "stretchiness": 0.1
     },
     "ma": 74,
     "md": 67,
@@ -11534,7 +11585,7 @@
     "type_focus": 2
   },
   "magpiemon": {
-    "ability": ["wipekiller", "redirection"],
+    "ability": ["wipekiller", "noiseattack"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 20,
@@ -11565,6 +11616,8 @@
       "rush",
       "snipe",
       "bamboozle",
+      "healbell",
+      "markattack",
       "startermind",
       "stomp",
       "swordsdance",
@@ -11572,9 +11625,9 @@
       "tool"
     ],
     "attklist_randomize": -1,
-    "ba": 89,
-    "base_exp": 185.84,
-    "bd": 81,
+    "ba": 93,
+    "base_exp": 198.95,
+    "bd": 91,
     "body_color_index": 0,
     "codename": "38939d036893910c18fe516e6353887c911818b9",
     "colormeta": null,
@@ -11630,8 +11683,8 @@
     "foot_size": 75,
     "foot_type": 1,
     "growth": 0.92,
-    "ha": 29,
-    "hd": 49,
+    "ha": 21,
+    "hd": 58,
     "hidden": true,
     "hidden_counter": null,
     "id": "magpiemon",
@@ -11736,7 +11789,7 @@
     "tamecond": null,
     "tamelvl": 4,
     "tyield": ["bd", 2, "md", 2],
-    "type_focus": 2
+    "type_focus": 0
   },
   "mantis": {
     "ability": ["monster", "blocker"],
@@ -11764,9 +11817,9 @@
       "libero",
       "healhit2",
       "steal",
-      "basecover",
-      "jazzpass",
+      "set",
       "jump",
+      "wall",
       "recover",
       "ricochet",
       "netattack",
@@ -11814,8 +11867,8 @@
     "combos": [
       [17, 0, 1, 50, 0, 1.2, 51, 0, 2],
       [7, 0, 1, 14, 0, 1, 12, 0, 2],
-      [27, 8, 1],
-      [27, 9, 3]
+      [27, 8, -1],
+      [27, 9, -3]
     ],
     "desc": "¦beastiesetup_desc_051¦",
     "designer": [0, 1, 8],
@@ -11849,7 +11902,7 @@
       [23, "netattack"],
       [30, "lock"],
       [34, "ricochet"],
-      [38, "protect"],
+      [38, "wall"],
       [42, "thunder"],
       [46, "recover"]
     ],
@@ -11957,7 +12010,7 @@
     "type_focus": 2
   },
   "millipede": {
-    "ability": ["watcher"],
+    "ability": ["watcher", "breaker"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
@@ -11984,13 +12037,14 @@
       "stress",
       "distraction",
       "flatten",
+      "dig",
       "mark",
       "tagattack"
     ],
     "attklist_randomize": -1,
     "ba": 88,
-    "base_exp": 189.42,
-    "bd": 78,
+    "base_exp": 195.72,
+    "bd": 88,
     "body_color_index": 1,
     "codename": "34cc0a73655bb0d717cdac8ffcd2e72987841764",
     "colormeta": null,
@@ -12047,7 +12101,7 @@
     "isBaby": false,
     "learnset": [
       [0, "starterbody"],
-      [0, "stress"],
+      [0, "dig"],
       [10, "sideshot"],
       [14, "allycover"],
       [19, "flatten"],
@@ -12162,7 +12216,7 @@
     "type_focus": 0
   },
   "millipede1": {
-    "ability": ["watcher"],
+    "ability": ["watcher", "breaker"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,
@@ -12189,6 +12243,7 @@
       "stress",
       "distraction",
       "flatten",
+      "dig",
       "mark"
     ],
     "attklist_randomize": -1,
@@ -12250,7 +12305,7 @@
     "isBaby": false,
     "learnset": [
       [0, "starterbody"],
-      [0, "stress"],
+      [0, "dig"],
       [6, "sideshot"],
       [10, "allycover"],
       [15, "flatten"],
@@ -12270,11 +12325,11 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
+      "hop_height": 1,
+      "hop_length": 0.4,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 0,
+      "hop_wobble": 3,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
       "move_pause_frames": [],
@@ -12365,7 +12420,7 @@
     "animator": 8,
     "attklist": [
       "starterheart",
-      "dig",
+      "myheartpass",
       "careful",
       "shaken",
       "cheer",
@@ -12392,7 +12447,8 @@
       "scream",
       "pepshot",
       "toughattack",
-      "dare"
+      "dare",
+      "healbell"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -12470,7 +12526,7 @@
     "id": "monkey",
     "isBaby": false,
     "learnset": [
-      [0, "dig"],
+      [0, "myheartpass"],
       [0, "starterheart"],
       [6, "careful"],
       [9, "shaken"],
@@ -12593,7 +12649,7 @@
     "ability": ["empath", "mask"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 80,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "facade",
@@ -12621,6 +12677,7 @@
       "heartd",
       "bamboozle",
       "rest",
+      "healbell",
       "startermind",
       "crowd",
       "scream"
@@ -12712,7 +12769,7 @@
       "char_width": 89.75,
       "emote_hop_height": 25,
       "float_dist": 50,
-      "float_wave": 8,
+      "float_wave": 0,
       "float_wave_freq": 1000,
       "hop_height": 0,
       "hop_length": 1.5,
@@ -12840,6 +12897,7 @@
       "heartd",
       "bamboozle",
       "rest",
+      "healbell",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -12921,13 +12979,13 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
+      "hop_height": 10,
+      "hop_length": 0.7,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 0,
+      "hop_wobble": 3,
       "move_accel": 0.4444444444,
-      "move_decel": 0.6666666667,
+      "move_decel": 0.67,
       "move_pause_frames": [],
       "move_speed": 1,
       "move_speed_start": 0,
@@ -12937,8 +12995,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0.1,
-      "stretchiness": 0.1
+      "squishiness": 0.05,
+      "stretchiness": 0.02
     },
     "ma": 65,
     "md": 50,
@@ -13011,7 +13069,7 @@
     "ability": ["empath", "defiant_h"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 100,
     "animator": 10,
     "attklist": [
       "facade",
@@ -13039,6 +13097,7 @@
       "heartd",
       "bamboozle",
       "rest",
+      "healbell",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -13079,6 +13138,13 @@
           { "color": 15959636, "x": 0 },
           { "color": 15755841, "x": 0.5013333333 },
           { "color": 13848372, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 3620890, "x": 0 },
+          { "color": 4470784, "x": 0.5 },
+          { "color": 5255437, "x": 1 }
         ]
       }
     ],
@@ -13213,6 +13279,13 @@
           { "color": 6440956, "x": 0.4893333333 },
           { "color": 2899196, "x": 1 }
         ]
+      },
+      {
+        "array": [
+          { "color": 5582375, "x": 0 },
+          { "color": 5580595, "x": 0.5 },
+          { "color": 5580600, "x": 1 }
+        ]
       }
     ],
     "spr": "sprMoth2",
@@ -13251,7 +13324,6 @@
       "powswitch",
       "allyprotect",
       "spitball",
-      "skillswap",
       "sweatup",
       "sweatall",
       "shakeoff",
@@ -13259,8 +13331,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 35,
-    "base_exp": 159.856,
-    "bd": 86,
+    "base_exp": 157.075,
+    "bd": 80,
     "body_color_index": 0,
     "codename": "675de3a7e68ca03c552cec834a425c37dfc251e5",
     "colormeta": null,
@@ -13757,8 +13829,8 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
+      "hop_height": 15,
+      "hop_length": 1.1,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
@@ -13773,8 +13845,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.05,
+      "stretchiness": 0.05
     },
     "ma": 85,
     "md": 80,
@@ -13872,7 +13944,9 @@
       "threat",
       "rest",
       "protect",
-      "flight"
+      "flight",
+      "tailwind",
+      "thrash"
     ],
     "attklist_randomize": -1,
     "ba": 26,
@@ -13936,7 +14010,7 @@
     "isBaby": false,
     "learnset": [
       [0, "startermind"],
-      [0, "rush"],
+      [0, "basecover"],
       [5, "shakenmind"],
       [10, "teleport"],
       [15, "passattack"],
@@ -14085,12 +14159,13 @@
       "rest",
       "basecover",
       "rocket",
+      "menace",
       "chill"
     ],
     "attklist_randomize": -1,
     "ba": 85,
-    "base_exp": 227.0625,
-    "bd": 55,
+    "base_exp": 231,
+    "bd": 60,
     "body_color_index": 0,
     "codename": "c6d8f82bd48fab8d64d834415ff4d11a95d469b0",
     "colormeta": null,
@@ -14140,7 +14215,7 @@
     "foot_size": 83,
     "foot_type": 0,
     "growth": 1.05,
-    "ha": 30,
+    "ha": 25,
     "hd": 80,
     "hidden": false,
     "hidden_counter": null,
@@ -14156,7 +14231,7 @@
       [24, "hazeball"],
       [29, "haze"],
       [35, "healhit2"],
-      [39, "cover"],
+      [39, "menace"],
       [44, "moon"],
       [49, "meditate"],
       [54, "vigor"]
@@ -14289,6 +14364,7 @@
       "rest",
       "basecover",
       "rocket",
+      "menace",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -14330,7 +14406,7 @@
     "foot_size": 3,
     "foot_type": 0,
     "growth": 1.05,
-    "ha": 30,
+    "ha": 25,
     "hd": 45,
     "hidden": false,
     "hidden_counter": null,
@@ -14346,7 +14422,7 @@
       [21, "hazeball"],
       [26, "haze"],
       [32, "healhit2"],
-      [36, "cover"],
+      [36, "menace"],
       [41, "moon"],
       [46, "meditate"],
       [51, "vigor"]
@@ -14379,7 +14455,7 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 55,
+    "ma": 60,
     "md": 70,
     "name": "¦beastiesetup_name_091¦",
     "number": 92,
@@ -14473,10 +14549,11 @@
       "shakeoff",
       "vigor",
       "shieldbreaker",
-      "toughattack"
+      "toughattack",
+      "wall"
     ],
     "attklist_randomize": -1,
-    "ba": 90,
+    "ba": 95,
     "base_exp": 192.5,
     "bd": 90,
     "body_color_index": 0,
@@ -14551,7 +14628,7 @@
     "foot_size": 32,
     "foot_type": 0,
     "growth": 1.1,
-    "ha": 95,
+    "ha": 90,
     "hd": 75,
     "hidden": false,
     "hidden_counter": null,
@@ -14724,6 +14801,8 @@
       "snipe",
       "sweatup",
       "bamboozle",
+      "set",
+      "ricochet",
       "threat"
     ],
     "attklist_randomize": -1,
@@ -14836,7 +14915,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 85,
+          "effect_type": 89,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -14922,7 +15001,9 @@
       "enemylowered",
       "snipe",
       "sweatup",
-      "bamboozle"
+      "bamboozle",
+      "set",
+      "ricochet"
     ],
     "attklist_randomize": -1,
     "ba": 18,
@@ -15005,13 +15086,13 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
+      "hop_height": 25,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
       "move_accel": 0.4444444444,
-      "move_decel": 0.6666666667,
+      "move_decel": 0.67,
       "move_pause_frames": [],
       "move_speed": 1,
       "move_speed_start": 0,
@@ -15021,8 +15102,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.1,
+      "stretchiness": 0.1
     },
     "ma": 48,
     "md": 75,
@@ -15033,7 +15114,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 85,
+          "effect_type": 89,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15084,8 +15165,8 @@
     "ability": ["lightningrod_m"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": 10,
     "attklist": [
       "markattack",
       "startermind",
@@ -15114,12 +15195,14 @@
       "enemylowered",
       "snipe",
       "sweatup",
-      "bamboozle"
+      "bamboozle",
+      "set",
+      "ricochet"
     ],
     "attklist_randomize": -1,
     "ba": 26,
-    "base_exp": 187.658,
-    "bd": 38,
+    "base_exp": 192.506,
+    "bd": 46,
     "body_color_index": 0,
     "codename": "d5533232f5c86b848475fc6afd00f4e9ba9550b8",
     "colormeta": null,
@@ -15270,7 +15353,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 85,
+          "effect_type": 89,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15334,8 +15417,8 @@
     "ability": ["regenerator2", "boostin"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": [8, 13],
     "attklist": [
       "bounce",
       "body",
@@ -15453,7 +15536,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 76.75,
+      "char_width": 100.25,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -15465,10 +15548,10 @@
       "hop_wobble": 0,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
-      "move_pause_frames": [],
+      "move_pause_frames": [18],
       "move_speed": 1,
-      "move_speed_start": 0,
-      "move_to_idle_transition_anim": "",
+      "move_speed_start": -40,
+      "move_to_idle_transition_anim": "stop",
       "move_to_idle_transition_frames": [],
       "offset_freq": 2000,
       "offset_rand_range": 0,
@@ -15519,8 +15602,8 @@
     "shiny": [
       {
         "array": [
-          { "color": 3253475, "x": 0 },
-          { "color": 4688092, "x": 1 }
+          { "color": 4235497, "x": 0 },
+          { "color": 4422089, "x": 1 }
         ]
       },
       {
@@ -15531,9 +15614,9 @@
       },
       {
         "array": [
-          { "color": 8678092, "x": 0 },
-          { "color": 9536971, "x": 0.5233333333 },
-          { "color": 7826120, "x": 1 }
+          { "color": 2963796, "x": 0 },
+          { "color": 8420248, "x": 0.5233333333 },
+          { "color": 6841470, "x": 1 }
         ]
       },
       {
@@ -15550,9 +15633,9 @@
       },
       {
         "array": [
-          { "color": 16774381, "x": 0 },
-          { "color": 15191496, "x": 0.5 },
-          { "color": 14212545, "x": 1 }
+          { "color": 10735359, "x": 0 },
+          { "color": 12177127, "x": 0.5 },
+          { "color": 10669311, "x": 1 }
         ]
       }
     ],
@@ -15687,8 +15770,8 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
+      "hop_height": 10,
+      "hop_length": 0.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
@@ -15705,8 +15788,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.1,
+      "stretchiness": 0.1
     },
     "ma": 22,
     "md": 57,
@@ -15790,7 +15873,7 @@
     "ability": ["regenerator", "flee"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 100,
     "animator": 8,
     "attklist": [
       "bounce",
@@ -15827,8 +15910,9 @@
     "colors": [
       {
         "array": [
-          { "color": 7173296, "x": 0 },
-          { "color": 7636889, "x": 1 }
+          { "color": 6122672, "x": 0 },
+          { "color": 6981538, "x": 0.8733333333 },
+          { "color": 6780291, "x": 1 }
         ]
       },
       {
@@ -15846,13 +15930,14 @@
       {
         "array": [
           { "color": 2328530, "x": 0 },
-          { "color": 6400987, "x": 1 }
+          { "color": 6400987, "x": 0.9266666667 },
+          { "color": 5671596, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 10988741, "x": 0 },
-          { "color": 7895255, "x": 1 }
+          { "color": 9674213, "x": 0 },
+          { "color": 7904727, "x": 1 }
         ]
       },
       {
@@ -15983,14 +16068,14 @@
       {
         "array": [
           { "color": 11650047, "x": 0 },
-          { "color": 12183039, "x": 1 }
+          { "color": 12183039, "x": 0.9866666667 }
         ]
       },
       {
         "array": [
-          { "color": 11965940, "x": 0 },
-          { "color": 11839487, "x": 0.5208333333 },
-          { "color": 7895277, "x": 1 }
+          { "color": 12890100, "x": 0 },
+          { "color": 12234996, "x": 0.5208333333 },
+          { "color": 8684758, "x": 1 }
         ]
       },
       {
@@ -16001,8 +16086,8 @@
       },
       {
         "array": [
-          { "color": 9985779, "x": 0 },
-          { "color": 8410358, "x": 1 }
+          { "color": 5535943, "x": 0 },
+          { "color": 6063054, "x": 1 }
         ]
       },
       {
@@ -16043,12 +16128,12 @@
       "taunt",
       "lockon",
       "mdefup",
-      "basecover",
       "substitute",
       "cover",
       "nightshade",
       "protect",
       "rest",
+      "basecover",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -16091,7 +16176,7 @@
     "colors2": null,
     "combos": [
       [50, 0, 1.6, 40, 0, 1],
-      [27, 9, 1],
+      [27, 9, -1],
       [20, 0, 1, 15, 0, 1],
       [5, 0, 4]
     ],
@@ -16260,7 +16345,7 @@
       "mind",
       "hyperbeam",
       "wornattack",
-      "dig",
+      "myheartpass",
       "allyrush",
       "libero",
       "charm",
@@ -16282,7 +16367,8 @@
       "hdefup",
       "cook",
       "toughattack",
-      "swordsdance"
+      "swordsdance",
+      "mimic"
     ],
     "attklist_randomize": -1,
     "ba": 89,
@@ -16396,7 +16482,7 @@
     "learnset": [
       [0, "pepshot"],
       [0, "callout"],
-      [5, "breakswipe"],
+      [5, "mimic"],
       [9, "mind"],
       [12, "minddown"],
       [18, "swordsdance"],
@@ -16416,11 +16502,11 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 75,
+      "hop_height": 15,
+      "hop_length": 1,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 0,
+      "hop_wobble": 2,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
       "move_pause_frames": [],
@@ -16432,8 +16518,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.2,
+      "stretchiness": 0.2
     },
     "ma": 90,
     "md": 69,
@@ -16553,7 +16639,7 @@
       "mind",
       "hyperbeam",
       "wornattack",
-      "dig",
+      "myheartpass",
       "allyrush",
       "libero",
       "charm",
@@ -16575,7 +16661,8 @@
       "hdefup",
       "cook",
       "toughattack",
-      "swordsdance"
+      "swordsdance",
+      "mimic"
     ],
     "attklist_randomize": -1,
     "ba": 66,
@@ -16637,7 +16724,7 @@
     "learnset": [
       [0, "pepshot"],
       [0, "callout"],
-      [10, "breakswipe"],
+      [10, "mimic"],
       [14, "mind"],
       [17, "minddown"],
       [23, "swordsdance"],
@@ -16784,7 +16871,8 @@
       "sweatup",
       "steal",
       "flatten",
-      "bamboozle"
+      "bamboozle",
+      "substitute"
     ],
     "attklist_randomize": -1,
     "ba": 81,
@@ -16899,11 +16987,11 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
+      "hop_height": 15,
+      "hop_length": 1.2,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 0,
+      "hop_wobble": 1.5,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
       "move_pause_frames": [],
@@ -16915,8 +17003,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0.1,
-      "stretchiness": 0.1
+      "squishiness": 0.02,
+      "stretchiness": 0.02
     },
     "ma": 64,
     "md": 84,
@@ -17055,6 +17143,7 @@
       "rest",
       "protect",
       "swordsdance",
+      "menace",
       "starterbody",
       "quake",
       "bomb"
@@ -17178,7 +17267,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 85,
+          "effect_type": 89,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17271,6 +17360,7 @@
       "rest",
       "protect",
       "swordsdance",
+      "menace",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -17362,7 +17452,7 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
+      "hop_height": 25,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
@@ -17390,7 +17480,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 85,
+          "effect_type": 89,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17477,6 +17567,7 @@
       "rest",
       "protect",
       "swordsdance",
+      "menace",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -17597,7 +17688,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 85,
+          "effect_type": 89,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17674,7 +17765,6 @@
       "rest",
       "taunt",
       "substitute",
-      "tailwind",
       "lowattks",
       "mark",
       "defheal",
@@ -17683,6 +17773,7 @@
       "flight",
       "scream",
       "toughattack",
+      "healbell",
       "followme"
     ],
     "attklist_randomize": -1,
@@ -17907,7 +17998,6 @@
       "rest",
       "taunt",
       "substitute",
-      "tailwind",
       "lowattks",
       "mark",
       "defheal",
@@ -17916,6 +18006,7 @@
       "flight",
       "scream",
       "toughattack",
+      "healbell",
       "followme"
     ],
     "attklist_randomize": -1,
@@ -18012,11 +18103,11 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1,
+      "hop_height": 15,
+      "hop_length": 0.75,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 0,
+      "hop_wobble": 2,
       "move_accel": 1,
       "move_decel": 0.6666666667,
       "move_pause_frames": [],
@@ -18102,8 +18193,8 @@
     "type_focus": 1
   },
   "seal": {
-    "ability": ["strongchance"],
-    "ability_hidden": false,
+    "ability": ["smooth", "strongchance"],
+    "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 8,
@@ -18134,7 +18225,9 @@
       "nice",
       "skillswap",
       "slide",
-      "starterbody"
+      "wall",
+      "starterbody",
+      "tailwind"
     ],
     "attklist_randomize": -1,
     "ba": 100,
@@ -18202,17 +18295,16 @@
     "isBaby": false,
     "learnset": [
       [0, "starterbody"],
-      [0, "curse"],
-      [6, "dig"],
+      [0, "tailwind"],
+      [6, "set"],
       [11, "healhit"],
-      [16, "swordsdance"],
+      [16, "dig"],
       [21, "serve"],
-      [26, "batonpass"],
-      [31, "set"],
+      [26, "swordsdance"],
+      [31, "batonpass"],
       [36, "nice"],
       [40, "jazzpass"],
-      [44, "slide"],
-      [49, "superpower"]
+      [45, "superpower"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -18314,8 +18406,8 @@
     "type_focus": 0
   },
   "seal1": {
-    "ability": ["strongchance"],
-    "ability_hidden": false,
+    "ability": ["tangled", "strongchance"],
+    "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 10,
@@ -18346,6 +18438,7 @@
       "nice",
       "skillswap",
       "slide",
+      "wall",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -18389,7 +18482,7 @@
       [0, 2, 1, 3, 2, 1, 8, 2, 0.15]
     ],
     "desc": "¦beastiesetup_desc_067¦",
-    "designer": [3, 8],
+    "designer": [8, 3],
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -18523,8 +18616,8 @@
     "ability": ["spiker"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 60,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": [10, 8],
     "attklist": [
       "bounce",
       "jump",
@@ -18552,6 +18645,7 @@
       "vigor",
       "contest",
       "basecover",
+      "wall",
       "protectcheer",
       "pushattack"
     ],
@@ -18773,6 +18867,7 @@
       "vigor",
       "contest",
       "basecover",
+      "wall",
       "protectcheer",
       "pushattack"
     ],
@@ -18863,7 +18958,7 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
+      "hop_height": 30,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
@@ -18879,8 +18974,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.1,
+      "stretchiness": 0.1
     },
     "ma": 29,
     "md": 21,
@@ -18998,7 +19093,7 @@
     ],
     "attklist_randomize": -1,
     "ba": 105,
-    "base_exp": 193.8,
+    "base_exp": 187.68,
     "bd": 55,
     "body_color_index": 0,
     "codename": "97ae657bc99d02799e8f0ccd6e7b08e2feafb199",
@@ -19049,7 +19144,7 @@
     "foot_type": 0,
     "growth": 1.02,
     "ha": 29,
-    "hd": 90,
+    "hd": 80,
     "hidden": false,
     "hidden_counter": null,
     "id": "shark",
@@ -19483,7 +19578,7 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
+      "hop_height": 25,
       "hop_length": 1.5,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
@@ -19742,11 +19837,11 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 12,
-      "hop_length": 85,
+      "hop_height": 25,
+      "hop_length": 1.8,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 1.5,
+      "hop_wobble": 2,
       "move_accel": 3,
       "move_decel": 0.6666666667,
       "move_pause_frames": [],
@@ -19758,7 +19853,7 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0.2,
+      "squishiness": 0.1,
       "stretchiness": 0.08
     },
     "ma": 40,
@@ -19999,8 +20094,8 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 85,
+      "hop_height": 20,
+      "hop_length": 0.85,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
@@ -20248,8 +20343,8 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 85,
+      "hop_height": 25,
+      "hop_length": 0.85,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
@@ -20397,6 +20492,7 @@
       "eerie",
       "3actions",
       "snore",
+      "menace",
       "quake"
     ],
     "attklist_randomize": -1,
@@ -20662,7 +20758,7 @@
     "combos": [
       [30, 3, 1, 50, 0, 1],
       [51, 0, 2, 7, 1, 1, 26, 1, 1],
-      [7, 0, 1, 27, 9, 3],
+      [7, 0, 1, 27, 9, -3],
       [34, 8, 1, 26, 2, 1]
     ],
     "desc": "¦beastiesetup_desc_047¦",
@@ -20737,7 +20833,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 85,
+          "effect_type": 89,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -21797,9 +21893,9 @@
     "learnset": [
       [0, "starterbody"],
       [0, "feint"],
-      [5, "rush"],
+      [5, "followme"],
       [9, "brine"],
-      [12, "tailwind"],
+      [12, "swordsdance"],
       [16, "teleport"],
       [20, "flight"],
       [24, "tagattack"],
@@ -21947,12 +22043,13 @@
       "nice",
       "skillswap",
       "rattle",
+      "dig",
       "passattack",
       "starterside"
     ],
     "attklist_randomize": -1,
     "ba": 60,
-    "base_exp": 170.28,
+    "base_exp": 182.16,
     "bd": 60,
     "body_color_index": 0,
     "codename": "c28a7a2a2663e4dff2a685b5053ce218c1103c69",
@@ -22031,8 +22128,8 @@
     "foot_size": 37,
     "foot_type": 0,
     "growth": 0.99,
-    "ha": 50,
-    "hd": 70,
+    "ha": 30,
+    "hd": 80,
     "hidden": false,
     "hidden_counter": null,
     "id": "tricky",
@@ -22079,7 +22176,7 @@
       "stretchiness": 0.1
     },
     "ma": 98,
-    "md": 90,
+    "md": 100,
     "name": "¦beastiesetup_name_048¦",
     "number": 49,
     "palettes": 1,
@@ -22201,13 +22298,14 @@
       "nice",
       "skillswap",
       "rattle",
+      "dig",
       "passattack",
       "starterside"
     ],
     "attklist_randomize": -1,
     "ba": 40,
-    "base_exp": 98.406,
-    "bd": 30,
+    "base_exp": 100.6335,
+    "bd": 35,
     "body_color_index": 0,
     "codename": "49a28d5c276a97f03a19ac06b75a5181f4866e5d",
     "colormeta": null,
@@ -22285,7 +22383,7 @@
     "foot_size": 26,
     "foot_type": 0,
     "growth": 0.99,
-    "ha": 33,
+    "ha": 28,
     "hd": 45,
     "hidden": false,
     "hidden_counter": null,
@@ -22436,7 +22534,6 @@
       "recover",
       "mind",
       "heartdown",
-      "hazeball",
       "nightshade",
       "poisonhit",
       "moon",
@@ -22452,16 +22549,16 @@
       "taunt",
       "vigor",
       "protect",
-      "stress",
       "set",
       "nice",
       "skillswap",
       "steal",
       "bomb",
       "introduction",
+      "menace",
+      "healbell",
       "haze",
-      "dump",
-      "quake"
+      "dump"
     ],
     "attklist_randomize": -1,
     "ba": 70,
@@ -22688,7 +22785,6 @@
       "recover",
       "mind",
       "heartdown",
-      "hazeball",
       "nightshade",
       "poisonhit",
       "moon",
@@ -22704,13 +22800,14 @@
       "taunt",
       "vigor",
       "protect",
-      "stress",
       "set",
       "nice",
       "skillswap",
       "steal",
       "bomb",
       "introduction",
+      "menace",
+      "healbell",
       "haze",
       "dump"
     ],
@@ -22797,11 +22894,11 @@
       "float_dist": 0,
       "float_wave": 0,
       "float_wave_freq": 1000,
-      "hop_height": 0,
-      "hop_length": 1.5,
+      "hop_height": 25,
+      "hop_length": 1.4,
       "hop_min_speed": 0.04,
       "hop_shake": 0,
-      "hop_wobble": 0,
+      "hop_wobble": 6,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
       "move_pause_frames": [],
@@ -22813,8 +22910,8 @@
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
       "randomize_idle": true,
-      "squishiness": 0,
-      "stretchiness": 0
+      "squishiness": 0.02,
+      "stretchiness": 0.02
     },
     "ma": 55,
     "md": 40,
@@ -22910,7 +23007,6 @@
       "recover",
       "mind",
       "heartdown",
-      "hazeball",
       "nightshade",
       "poisonhit",
       "moon",
@@ -22926,13 +23022,14 @@
       "taunt",
       "vigor",
       "protect",
-      "stress",
       "set",
       "nice",
       "skillswap",
       "steal",
       "bomb",
       "introduction",
+      "menace",
+      "healbell",
       "haze",
       "dump"
     ],
@@ -23167,6 +23264,7 @@
       "mdefup",
       "flight",
       "cook",
+      "healbell",
       "starterheart"
     ],
     "attklist_randomize": -1,
@@ -23385,7 +23483,10 @@
       "mark",
       "quake",
       "flatten",
-      "toughattack"
+      "toughattack",
+      "thrash",
+      "wall",
+      "menace"
     ],
     "attklist_randomize": -1,
     "ba": 96,

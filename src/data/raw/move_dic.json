@@ -1,17 +1,4 @@
 {
-  "???": {
-    "bt_tags": [],
-    "desc_tagids": [],
-    "desc_tags": [],
-    "description": null,
-    "eff": [],
-    "id": "???",
-    "name": "¦movessetup_movedefine_001¦",
-    "pow": 0,
-    "targ": 0,
-    "type": 6,
-    "use": 0
-  },
   "3actions": {
     "bt_tags": [0, 8, 31],
     "desc_tagids": [],
@@ -23,6 +10,19 @@
     "pow": 220,
     "targ": 0,
     "type": 0,
+    "use": 0
+  },
+  "???": {
+    "bt_tags": [],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [],
+    "id": "???",
+    "name": "¦movessetup_movedefine_001¦",
+    "pow": 0,
+    "targ": 0,
+    "type": 6,
     "use": 0
   },
   "allnervous": {
@@ -108,11 +108,14 @@
     "use": 0
   },
   "basecover": {
-    "bt_tags": [],
+    "bt_tags": [29, 7],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 7, "pow": 0, "targ": 2 }],
+    "eff": [
+      { "eff": 16, "pow": 1, "targ": 10 },
+      { "eff": 7, "pow": 0, "targ": 2 }
+    ],
     "id": "basecover",
     "name": "¦movessetup_movedefine_157¦",
     "pow": 0,
@@ -156,7 +159,7 @@
     "description": null,
     "eff": [
       { "eff": 1, "pow": 2, "targ": 0 },
-      { "eff": 8, "pow": -0.34000000000000002, "targ": 0 }
+      { "eff": 8, "pow": -0.34, "targ": 0 }
     ],
     "id": "bellydrum",
     "name": "¦movessetup_movedefine_126¦",
@@ -274,7 +277,10 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 16, "pow": 1, "targ": 1 }],
+    "eff": [
+      { "eff": 77, "pow": 1, "targ": 1 },
+      { "eff": 5, "pow": 2, "targ": 1 }
+    ],
     "id": "callout",
     "name": "¦movessetup_movedefine_111¦",
     "pow": 0,
@@ -370,7 +376,7 @@
     "description": null,
     "eff": [
       { "eff": 56, "pow": 0, "targ": 0 },
-      { "eff": 8, "pow": -0.34000000000000002, "targ": 0 },
+      { "eff": 8, "pow": -0.34, "targ": 0 },
       { "eff": 57, "pow": 0, "targ": 0 }
     ],
     "id": "construct",
@@ -492,7 +498,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 27, "pow": 1, "targ": 3 }],
+    "eff": [{ "eff": 27, "pow": -1, "targ": 3 }],
     "id": "defense",
     "name": "¦movessetup_movedefine_006¦",
     "pow": 0,
@@ -505,7 +511,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 8, "pow": 0.29999999999999999, "targ": 0 }],
+    "eff": [{ "eff": 8, "pow": 0.3, "targ": 0 }],
     "id": "defheal",
     "name": "¦movessetup_movedefine_151¦",
     "pow": 0,
@@ -530,11 +536,11 @@
     "use": 0
   },
   "dig": {
-    "bt_tags": [23, 32],
+    "bt_tags": [23],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 26, "pow": 1, "targ": 0 }],
+    "eff": [{ "eff": 8, "pow": 0.15, "targ": 0 }],
     "id": "dig",
     "name": "¦movessetup_movedefine_095¦",
     "pow": 0,
@@ -547,7 +553,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 20, "pow": 1, "targ": 1 }],
+    "eff": [{ "eff": 20, "pow": 2, "targ": 1 }],
     "id": "dispel",
     "name": "¦movessetup_movedefine_123¦",
     "pow": 0,
@@ -566,6 +572,22 @@
     "pow": 0,
     "targ": 1,
     "type": 5,
+    "use": 2
+  },
+  "doubleblock": {
+    "bt_tags": [20, 9, 42, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 85, "pow": 0, "targ": 0 },
+      { "eff": 27, "pow": -2, "targ": 3 }
+    ],
+    "id": "doubleblock",
+    "name": "¦movessetup_movedefine_188¦",
+    "pow": 0,
+    "targ": 4,
+    "type": 15,
     "use": 2
   },
   "dragontail": {
@@ -695,7 +717,7 @@
     "description": null,
     "eff": [
       { "eff": 46, "pow": 0, "targ": 7 },
-      { "eff": 8, "pow": 0.10000000000000001, "targ": 6 }
+      { "eff": 8, "pow": 0.1, "targ": 6 }
     ],
     "id": "fieldclear",
     "name": "¦movessetup_movedefine_140¦",
@@ -779,7 +801,7 @@
     "description": null,
     "eff": [
       { "eff": 10, "pow": 1, "targ": 1 },
-      { "eff": 8, "pow": -0.40000000000000002, "targ": 0 }
+      { "eff": 8, "pow": -0.4, "targ": 0 }
     ],
     "id": "freeball",
     "name": "¦movessetup_movedefine_097¦",
@@ -848,7 +870,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 8, "pow": 0.20000000000000001, "targ": 0 }],
+    "eff": [{ "eff": 8, "pow": 0.2, "targ": 0 }],
     "id": "healhit",
     "name": "¦movessetup_movedefine_016¦",
     "pow": 50,
@@ -861,7 +883,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 8, "pow": 0.10000000000000001, "targ": 0 }],
+    "eff": [{ "eff": 8, "pow": 0.1, "targ": 0 }],
     "id": "healhit2",
     "name": "¦movessetup_movedefine_023¦",
     "pow": 75,
@@ -948,17 +970,21 @@
     "use": 0
   },
   "hyperbeam": {
-    "bt_tags": [0, 8, 20, 31],
+    "bt_tags": [0, 8, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 29, "pow": 3, "targ": 0 }],
+    "eff": [
+      { "eff": 86, "pow": 3, "targ": 0 },
+      { "eff": 29, "pow": 3, "targ": 0 },
+      { "eff": 87, "pow": 0, "targ": 0 }
+    ],
     "id": "hyperbeam",
     "name": "¦movessetup_movedefine_034¦",
-    "pow": 125,
+    "pow": 130,
     "targ": 0,
     "type": 0,
-    "use": 2
+    "use": 0
   },
   "inferno": {
     "bt_tags": [1, 10, 43],
@@ -1024,7 +1050,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 20, "pow": 1, "targ": 0 },
+      { "eff": 20, "pow": 2, "targ": 0 },
       { "eff": 72, "pow": 0, "targ": 0 },
       { "eff": 0, "pow": 1, "targ": 0 }
     ],
@@ -1054,8 +1080,8 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 27, "pow": 1, "targ": 3 },
-      { "eff": 8, "pow": -0.10000000000000001, "targ": 0 }
+      { "eff": 27, "pow": -1, "targ": 3 },
+      { "eff": 8, "pow": -0.1, "targ": 0 }
     ],
     "id": "libero",
     "name": "¦movessetup_movedefine_150¦",
@@ -1069,7 +1095,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 8, "pow": 0.14999999999999999, "targ": 2 }],
+    "eff": [{ "eff": 8, "pow": 0.15, "targ": 2 }],
     "id": "lifedew",
     "name": "¦movessetup_movedefine_116¦",
     "pow": 0,
@@ -1142,7 +1168,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 27, "pow": 1, "targ": 3 }],
+    "eff": [{ "eff": 27, "pow": -1, "targ": 3 }],
     "id": "mark",
     "name": "¦movessetup_movedefine_132¦",
     "pow": 0,
@@ -1155,7 +1181,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 27, "pow": 1, "targ": 3 }],
+    "eff": [{ "eff": 27, "pow": -1, "targ": 3 }],
     "id": "markattack",
     "name": "¦movessetup_movedefine_064¦",
     "pow": 45,
@@ -1192,6 +1218,22 @@
     "type": 4,
     "use": 0
   },
+  "menace": {
+    "bt_tags": [9, 42, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 27, "pow": -2, "targ": 3 },
+      { "eff": 12, "pow": 2, "targ": 0 }
+    ],
+    "id": "menace",
+    "name": "¦movessetup_movedefine_187¦",
+    "pow": 0,
+    "targ": 4,
+    "type": 5,
+    "use": 0
+  },
   "meter": {
     "bt_tags": [24, 9, 15, 38],
     "desc_tagids": [],
@@ -1206,6 +1248,22 @@
     "pow": 0,
     "targ": 4,
     "type": 4,
+    "use": 0
+  },
+  "mimic": {
+    "bt_tags": [0],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 83, "pow": 1, "targ": 0 },
+      { "eff": 84, "pow": 1.2, "targ": 0 }
+    ],
+    "id": "mimic",
+    "name": "¦movessetup_movedefine_189¦",
+    "pow": -1,
+    "targ": 0,
+    "type": 0,
     "use": 0
   },
   "mind": {
@@ -1300,11 +1358,14 @@
     "use": 0
   },
   "myheartpass": {
-    "bt_tags": [23, 28],
+    "bt_tags": [23, 32],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 1, "pow": 1, "targ": 0 }],
+    "eff": [
+      { "eff": 88, "pow": 40, "targ": 0 },
+      { "eff": 26, "pow": 1, "targ": 0 }
+    ],
     "id": "myheartpass",
     "name": "¦movessetup_movedefine_105¦",
     "pow": 0,
@@ -1330,7 +1391,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 8, "pow": -0.20000000000000001, "targ": 3 }],
+    "eff": [{ "eff": 8, "pow": -0.2, "targ": 3 }],
     "id": "nettle",
     "name": "¦movessetup_movedefine_137¦",
     "pow": 0,
@@ -1365,15 +1426,14 @@
     "use": 0
   },
   "noisytag": {
-    "bt_tags": [34, 31, 19],
+    "bt_tags": [34, 19, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 53, "pow": 0, "targ": 3 },
       { "eff": 14, "pow": 1, "targ": 3 },
-      { "eff": 12, "pow": 2, "targ": 3 },
-      { "eff": 30, "pow": 1, "targ": 3 }
+      { "eff": 30, "pow": 1, "targ": 3 },
+      { "eff": 12, "pow": -1, "targ": 11 }
     ],
     "id": "noisytag",
     "name": "¦movessetup_movedefine_169¦",
@@ -1472,7 +1532,8 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 16, "pow": 1, "targ": 0 },
+      { "eff": 3, "pow": 2, "targ": 0 },
+      { "eff": 79, "pow": 1, "targ": 0 },
       { "eff": 6, "pow": 1, "targ": 0 }
     ],
     "id": "preblock",
@@ -1574,7 +1635,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 8, "pow": 0.29999999999999999, "targ": 0 }],
+    "eff": [{ "eff": 8, "pow": 0.3, "targ": 0 }],
     "id": "recover",
     "name": "¦movessetup_movedefine_112¦",
     "pow": 0,
@@ -1587,7 +1648,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 8, "pow": 0.14999999999999999, "targ": 1 }],
+    "eff": [{ "eff": 8, "pow": 0.15, "targ": 1 }],
     "id": "refresh",
     "name": "¦movessetup_movedefine_096¦",
     "pow": 0,
@@ -1837,7 +1898,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 8, "pow": 0.20000000000000001, "targ": 0 },
+      { "eff": 8, "pow": 0.2, "targ": 0 },
       { "eff": 52, "pow": 1, "targ": 0 }
     ],
     "id": "shakeoff",
@@ -2055,7 +2116,7 @@
     "description": null,
     "eff": [
       { "eff": 29, "pow": 2, "targ": 3 },
-      { "eff": 8, "pow": -0.20000000000000001, "targ": 0 }
+      { "eff": 8, "pow": -0.2, "targ": 0 }
     ],
     "id": "sting",
     "name": "¦movessetup_movedefine_166¦",
@@ -2264,17 +2325,22 @@
     "use": 0
   },
   "tailwind": {
-    "bt_tags": [24, 22],
+    "bt_tags": [24, 21, 27],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 7, "pow": 1, "targ": 2 }],
+    "eff": [
+      { "eff": 57, "pow": 0, "targ": 0 },
+      { "eff": 7, "pow": 1, "targ": 0 },
+      { "eff": 8, "pow": -0.15, "targ": 0 },
+      { "eff": 10, "pow": 1, "targ": 1 }
+    ],
     "id": "tailwind",
     "name": "¦movessetup_movedefine_125¦",
     "pow": 0,
-    "targ": 3,
+    "targ": 1,
     "type": 4,
-    "use": 0
+    "use": 1
   },
   "targethp": {
     "bt_tags": [2, 8],
@@ -2331,6 +2397,19 @@
     "type": 4,
     "use": 0
   },
+  "thrash": {
+    "bt_tags": [1, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 33, "pow": 31, "targ": 0 }],
+    "id": "thrash",
+    "name": "¦movessetup_movedefine_185¦",
+    "pow": 80,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
   "threat": {
     "bt_tags": [9, 38],
     "desc_tagids": [],
@@ -2384,17 +2463,17 @@
     "use": 0
   },
   "toughattack": {
-    "bt_tags": [1, 10, 33, 31],
+    "bt_tags": [1, 10, 33],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
       { "eff": 19, "pow": 2, "targ": 0 },
-      { "eff": 8, "pow": -0.29999999999999999, "targ": 0 }
+      { "eff": 23, "pow": -2, "targ": 0 }
     ],
     "id": "toughattack",
     "name": "¦movessetup_movedefine_183¦",
-    "pow": 65,
+    "pow": 60,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2438,6 +2517,22 @@
     "type": 3,
     "use": 0
   },
+  "wall": {
+    "bt_tags": [20, 9, 42, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 27, "pow": -2, "targ": 3 },
+      { "eff": 8, "pow": -0.1, "targ": 0 }
+    ],
+    "id": "wall",
+    "name": "¦movessetup_movedefine_186¦",
+    "pow": 0,
+    "targ": 4,
+    "type": 5,
+    "use": 2
+  },
   "whirlwind": {
     "bt_tags": [9, 12],
     "desc_tagids": [],
@@ -2456,7 +2551,10 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 40, "pow": 1, "targ": 0 }],
+    "eff": [
+      { "eff": 40, "pow": 1, "targ": 0 },
+      { "eff": 33, "pow": 32, "targ": 0 }
+    ],
     "id": "wornattack",
     "name": "¦movessetup_movedefine_087¦",
     "pow": 125,

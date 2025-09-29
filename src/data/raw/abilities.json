@@ -5,9 +5,9 @@
     "name": "¦abilitiessetup_abilitydefine_084¦"
   },
   "achiever": {
-    "desc": "When attacks confer bonus POW, gets an additional 1.1x POW",
+    "desc": "¦abilitiessetup_abilitydefine_251¬0¬1.1¦",
     "id": "achiever",
-    "name": "Overachiever"
+    "name": "¦abilitiessetup_abilitydefine_252¦"
   },
   "acidic": {
     "desc": "¦abilitiessetup_abilitydefine_195¬0¬10¦",
@@ -53,6 +53,11 @@
     "desc": "¦abilitiessetup_abilitydefine_062¦",
     "id": "bouncy",
     "name": "¦abilitiessetup_abilitydefine_061¦"
+  },
+  "breaker": {
+    "desc": "¦abilitiessetup_abilitydefine_263¬0¬[sprIcon,0][sprIcon,1][sprIcon,2]¬1¬3¦",
+    "id": "breaker",
+    "name": "¦abilitiessetup_abilitydefine_264¦"
   },
   "charge": {
     "desc": "¦abilitiessetup_abilitydefine_086¦",
@@ -294,6 +299,11 @@
     "id": "nofield",
     "name": "¦abilitiessetup_abilitydefine_155¦"
   },
+  "noiseattack": {
+    "desc": "¦abilitiessetup_abilitydefine_259¬0¬[sprStatus,3]¦statuseffectstuff_004¦¦",
+    "id": "noiseattack",
+    "name": "¦abilitiessetup_abilitydefine_260¦"
+  },
   "noredirect": {
     "desc": "¦abilitiessetup_abilitydefine_180¦",
     "id": "noredirect",
@@ -404,6 +414,11 @@
     "id": "silencer",
     "name": "¦abilitiessetup_abilitydefine_154¦"
   },
+  "smooth": {
+    "desc": "¦abilitiessetup_abilitydefine_249¬0¬15¦",
+    "id": "smooth",
+    "name": "¦abilitiessetup_abilitydefine_250¦"
+  },
   "sneaky": {
     "desc": "¦abilitiessetup_abilitydefine_066¬0¬25¦",
     "id": "sneaky",
@@ -460,7 +475,7 @@
     "name": "¦abilitiessetup_abilitydefine_094¦"
   },
   "study": {
-    "desc": "¦abilitiessetup_abilitydefine_106¦",
+    "desc": "¦abilitiessetup_abilitydefine_106¬0¬1¦",
     "id": "study",
     "name": "¦abilitiessetup_abilitydefine_105¦"
   },
@@ -483,6 +498,11 @@
     "desc": "¦abilitiessetup_abilitydefine_107¬0¬1.5¦",
     "id": "taghit",
     "name": "¦abilitiessetup_abilitydefine_108¦"
+  },
+  "tangled": {
+    "desc": "¦abilitiessetup_abilitydefine_247¬0¬10¦",
+    "id": "tangled",
+    "name": "¦abilitiessetup_abilitydefine_248¦"
   },
   "taunt": {
     "desc": "¦abilitiessetup_abilitydefine_133¬0¬[sprStatus,1]¦statuseffectstuff_002¦¦",
@@ -540,7 +560,7 @@
     "name": "¦abilitiessetup_abilitydefine_206¦"
   },
   "unsweaty": {
-    "desc": "¦abilitiessetup_abilitydefine_045¬0¬[sprStatus,6]¦statuseffectstuff_007¦¦",
+    "desc": "¦abilitiessetup_abilitydefine_045¬0¬[sprStatus,6]¦statuseffectstuff_007¦¬1¬10¦",
     "id": "unsweaty",
     "name": "¦abilitiessetup_abilitydefine_046¦"
   },
@@ -565,7 +585,7 @@
     "name": "¦abilitiessetup_abilitydefine_123¦"
   },
   "watcher": {
-    "desc": "¦abilitiessetup_abilitydefine_098¦",
+    "desc": "¦abilitiessetup_abilitydefine_098¬0¬1.2¦",
     "id": "watcher",
     "name": "¦abilitiessetup_abilitydefine_097¦"
   },

@@ -10,10 +10,12 @@ import useLocalization, {
 
 const EMOJI_MAP: Record<string, string> = {
   bigmoon: "🌙",
+  experimental: "🧪",
   milestone: "⏫",
   update: "⏫",
   ost: "💿",
   merch: "👕",
+  fantourney: "🏆",
   tournament: "🏆",
   heatwave: "🏆",
   heatup: "🏆",

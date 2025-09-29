@@ -1,35 +1,40 @@
 import social_data from "./raw/social_data.json";
 
+type DataCheck = {
+  comparison: number;
+  editor_openable: boolean;
+  key: string;
+  lastcheck: null | number;
+  name: string;
+  needscheck: boolean;
+  value: number;
+};
+
 type SocialEvent = {
   cost: number;
   id: string | { field: number; type: number[] };
   dest_level: string;
   dest_object: number | string;
-  parent: string; // recursive struct!!!
-  collides: number;
-  alt_complete_flag: number | string | string[]; // -1 or datacheck(class_datacheck)
-  rankup: number | boolean;
-  invite_scene: string; // function!!!
+  parent: string | null; // recursive struct!!!
+  collides: boolean;
+  alt_complete_flag: number | DataCheck | DataCheck[]; // -1 or datacheck(class_datacheck)
+  rankup: boolean;
   prereq: {
     type: number[];
-    field: number | string; // 0 or datacheck(class_datacheck)
+    field: string | number | DataCheck;
   };
 };
 
 type SocialFriend = {
-  id: string;
-  max_hearts: number;
-  spr: string;
-  object: string;
-  loneliness: number;
   events: SocialEvent[];
+  id: string;
   img: number;
+  loneliness: number;
+  max_hearts: number;
   name: string;
-  collision_scene: string; // function!!
-  teach_scene: string; // function!!
+  object: string;
   plays: string[];
-  unavailable_func: string; // function!!
-  same_screen_scene: string; // function!!
+  spr: string;
 };
 
 const SOCIAL_DATA: SocialFriend[] = social_data;

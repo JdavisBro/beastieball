@@ -3,7 +3,7 @@ import TextTag from "../../shared/TextTag";
 import styles from "./ContentInfo.module.css";
 import type { BeastieType } from "../../data/BeastieData";
 import MoveList from "./MoveList";
-import designers from "../../data/raw/designers.json";
+import staff_names from "../../data/raw/staff_name.json";
 import abilities from "../../data/abilities";
 import InfoBox, { BoxHeader } from "../../shared/InfoBox";
 import ResearchCarousel from "./ResearchCarousel";
@@ -172,9 +172,9 @@ export default function ContentInfo(props: Props): React.ReactNode {
         )}
         {Array.isArray(beastiedata.designer)
           ? beastiedata.designer
-              .map((i) => designers[i])
+              .map((i) => staff_names[i])
               .join(L("beastiepedia.info.research.joiner"))
-          : designers[beastiedata.designer]}
+          : staff_names[beastiedata.designer]}
         <br />
         {L(
           Array.isArray(beastiedata.animator) && beastiedata.animator.length > 1
@@ -183,9 +183,9 @@ export default function ContentInfo(props: Props): React.ReactNode {
         )}
         {Array.isArray(beastiedata.animator)
           ? beastiedata.animator
-              .map((i) => designers[i])
+              .map((i) => staff_names[i])
               .join(L("beastiepedia.info.research.joiner"))
-          : designers[beastiedata.animator]}
+          : staff_names[beastiedata.animator]}
       </InfoBox>
       <Sfx beastiedata={beastiedata} />
     </div>

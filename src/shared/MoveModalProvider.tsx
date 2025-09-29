@@ -35,7 +35,10 @@ export default function MoveModalProvider(props: PropsWithChildren) {
 
   const handleClick = (spoilerBeastie: string | undefined = undefined) => {
     if (!spoilerBeastie) {
-      return setMove(null);
+      const url = new URL(window.location.href);
+      url.hash = "";
+      history.replaceState({}, "", url);
+      return;
     }
     setSeen(spoilerBeastie);
   };

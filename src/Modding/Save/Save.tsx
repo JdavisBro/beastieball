@@ -43,6 +43,7 @@ export default function Save(): React.ReactElement {
         title="Beastieball Save Viewer"
         returnButtonTitle="Beastieball Modding Tools"
         returnButtonTo="/modding/"
+        secretPage={true}
       />
       <div className={styles.belowheader}>
         <br />

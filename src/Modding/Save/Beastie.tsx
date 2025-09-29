@@ -24,6 +24,11 @@ export default function Beastie(props: {
   beastie: SaveBeastie;
 }): React.ReactElement {
   const save_beastie = props.beastie;
+  if (save_beastie._ != "class_beastie") {
+    console.log("not beastie", save_beastie);
+    return <></>;
+  }
+
   const beastiedata = BEASTIE_DATA.get(props.beastie.specie);
 
   const searchParam = altSearchMap[Math.ceil(props.beastie.color[0])];

@@ -8,10 +8,10 @@ import MoveModalProvider from "../shared/MoveModalProvider";
 import EffectFilters from "./EffectFilters";
 import { useIsSpoilerFriend } from "../shared/useSpoiler";
 import MOVE_RECENTLY_UPDATED from "./RecentlyUpdated";
+import SOCIAL_DATA from "../data/SocialData";
 import useLocalization, {
   LocalizationFunction,
 } from "../localization/useLocalization";
-import SOCIAL_DATA from "../data/SocialData";
 
 declare global {
   interface Window {
@@ -42,18 +42,6 @@ const SortFunctions: (
     move2.targ - move1.targ ||
     move2.pow - move1.pow ||
     L(move1.name).localeCompare(L(move2.name)),
-];
-
-const CHAR_LIST = [
-  "riley",
-  "kaz",
-  "riven",
-  "science",
-  "celeb",
-  // "pirate",
-  "streamer",
-  // "academy",
-  // "warrior",
 ];
 
 const HIDDEN_MOVES = [
@@ -112,6 +100,27 @@ export default function PlayDex() {
   moves = moves.sort(SortFunctions(L)[sort]);
 
   const [isSpoilerFriend] = useIsSpoilerFriend();
+
+  const char_list = SOCIAL_DATA.filter((friend) => {
+    if (
+      !friend.plays.length ||
+      friend.plays.every((play) => play.startsWith("_"))
+    ) {
+      return false;
+    }
+    for (const event of friend.events) {
+      if (event.prereq.type[0] == 4 || event.prereq.type[0] == 1) {
+        continue;
+      }
+      if (event.alt_complete_flag == -1 && event.dest_level == "") {
+        return false;
+      }
+      if (event.rankup) {
+        return true;
+      }
+    }
+    return false;
+  });
 
   const settingsSep = L("playdex.settingsSep");
   return (
@@ -209,23 +218,13 @@ export default function PlayDex() {
             value={friendFilter}
           >
             <option value="undefined">{L("playdex.favorNone")}</option>
-            {CHAR_LIST.map((friendId) => {
-              const friend = SOCIAL_DATA.find(
-                (friend) => friendId == friend.id,
-              );
-              if (!friend) {
-                return;
-              }
-              const friendName = L(friend.name);
-
-              return (
-                <option key={friendId} value={friendId}>
-                  {isSpoilerFriend(friendId)
-                    ? friendName.slice(0, 2) + "..."
-                    : friendName}
-                </option>
-              );
-            })}
+            {char_list.map((friend) => (
+              <option key={friend.id} value={friend.id}>
+                {isSpoilerFriend(friend.id)
+                  ? friend.name.slice(0, 2) + "..."
+                  : friend.name}
+              </option>
+            ))}
           </select>
         </label>
         {settingsSep}

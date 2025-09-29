@@ -11,6 +11,58 @@
   cursor: inherit;
 }
 
+:global(.leaflet-control-attribution) {
+  background: repeating-linear-gradient(
+    135deg,
+    #000,
+    #000 10px,
+    #2e2e2e 10px 20px
+  ) !important;
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+  margin: 2px !important;
+}
+
+:global(.leaflet-control-attribution a) {
+  color: lightblue;
+  padding-left: 2px;
+}
+
+:global(
+  .leaflet-control-container
+    div:has(.leaflet-control-zoom, .leaflet-control-attribution)
+) {
+  filter: drop-shadow(white 0 0 2px);
+}
+
+:global(.leaflet-control-zoom) {
+  background: repeating-linear-gradient(
+    135deg,
+    #000,
+    #000 10px,
+    #2e2e2e 10px 20px
+  ) !important;
+  border-radius: 0 !important;
+  clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 100%, 5px 100%);
+  border: none !important;
+}
+
+:global(.leaflet-control-zoom a) {
+  width: 35px !important;
+  background-color: transparent !important;
+  color: white !important;
+}
+
+:global(.leaflet-control-zoom a.leaflet-disabled) {
+  color: #888 !important;
+}
+
+:global(.leaflet-control-zoom-out) {
+  width: 35px;
+  background-color: transparent !important;
+  color: white;
+  padding-left: 2px;
+}
+
 .spoilerBeastie {
   filter: brightness(50%);
 }

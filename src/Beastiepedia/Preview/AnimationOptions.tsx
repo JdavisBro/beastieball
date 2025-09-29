@@ -1,7 +1,6 @@
 import { BeastieType } from "../../data/BeastieData";
 import useLocalization from "../../localization/useLocalization";
 import InfoBox from "../../shared/InfoBox";
-import { ANIMATION_LIST } from "./ContentPreview";
 
 type Props = {
   paused: boolean;
@@ -9,7 +8,7 @@ type Props = {
   frameInputRef: React.Ref<HTMLInputElement>;
   animation: string;
   setAnimation: React.Dispatch<React.SetStateAction<string>>;
-  animationAllowed: Record<string, boolean>;
+  animationDisabled: Record<string, boolean>;
   frameCount: number;
   setFrame: (frame: number) => void;
   changeFrame: (diff: number) => void;
@@ -61,12 +60,8 @@ export default function AnimationOptions(props: Props): React.ReactElement {
             }}
             value={props.animation}
           >
-            {ANIMATION_LIST.map((value: string) => (
-              <option
-                value={value}
-                key={value}
-                disabled={!props.animationAllowed[value]}
-              >
+            {Object.entries(props.animationDisabled).map(([value, allowed]) => (
+              <option value={value} key={value} disabled={allowed}>
                 {L("beastiepedia.preview.anim." + value)}
               </option>
             ))}

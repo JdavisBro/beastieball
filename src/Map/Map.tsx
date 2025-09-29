@@ -29,6 +29,8 @@ import useLocalization from "../localization/useLocalization";
 import SwitchMarkers from "./SwitchMarkers";
 import Encounters from "./Encounters";
 
+const secrets = localStorage.getItem("secrets") == "true";
+
 const BEASTIE_ARRAY = [...BEASTIE_DATA.values()];
 
 export const SPAWNABLE_BEASTIES = Object.values(SPAWN_DATA)
@@ -379,11 +381,12 @@ export default function Map(): React.ReactNode {
                 />
               )),
             },
-            {
-              title: "encounters",
-              children: <Encounters />,
-              defaultHidden: true,
-            },
+            secrets
+              ? {
+                  title: "encounters",
+                  children: <Encounters />,
+                }
+              : undefined,
             {
               category: "exploration",
               title: "insideOverlay",
@@ -432,7 +435,7 @@ export default function Map(): React.ReactNode {
               title: "switchesGates",
               children: <SwitchMarkers />,
             },
-          ]}
+          ].filter((layer) => layer !== undefined)}
           huntedBeastie={huntedBeastie}
           setHuntedBeastie={setHuntedBeastie}
           postgame={postgame}

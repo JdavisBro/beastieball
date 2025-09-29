@@ -12,6 +12,7 @@ export enum Type {
   Movement = 8,
   Swap = 9, // tag out is a "defence action" deespite having this icon
   Ice = 10, // idk what this one is either but the icon is ice
+  DoubleBlock = 15,
 }
 
 export type MoveEffect = {

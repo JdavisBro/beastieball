@@ -98,7 +98,7 @@ function shouldRevalidate() {
 
 const routes: Array<RouteObject> = [
   {
-    path: ":lang?/",
+    path: "/",
     Component: Root,
     errorElement: <RouteError />,
     hydrateFallbackElement: (
@@ -218,6 +218,13 @@ const routes: Array<RouteObject> = [
         element: <LoaderComponent />,
         path: "test/",
         loader: () => import("./Test").then((m) => ({ component: m.default })),
+        shouldRevalidate: shouldRevalidate,
+      },
+      {
+        element: <LoaderComponent />,
+        path: "secrets/",
+        loader: () =>
+          import("./Secrets").then((m) => ({ component: m.default })),
         shouldRevalidate: shouldRevalidate,
       },
       {

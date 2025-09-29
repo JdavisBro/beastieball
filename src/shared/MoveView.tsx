@@ -24,6 +24,8 @@ const TARGET_STRINGS: Record<number, string> = {
   7: "movedefine_039", // every fielded player
   8: "movedefine_040", // other team
   9: "movedefine_041", // nearest enemy
+  10: "movedefine_051", // front row active team
+  11: "movedefine_034", // active team
 };
 
 const ALT_TARGET_STRINGS: Record<number, string> = {
@@ -35,6 +37,7 @@ const ALT_TARGET_STRINGS: Record<number, string> = {
   7: "movedefine_045", // entire field
   8: "movedefine_040",
   9: "movedefine_041",
+  11: "movedefine_034", // active team
 };
 
 const FIELD_TARGET: Record<number, string> = {
@@ -125,7 +128,7 @@ function getEffectString(
       const feelingText = `${im}${L(nameKey)} ${L(descKey)}`;
       const feelTarget = target[0].toUpperCase() + target.slice(1);
       const placeholders = {
-        "0": (effect.eff == 23 ? "+" : "") + String(Math.abs(effect.pow)),
+        "0": (effect.pow < 0 ? "+" : "") + String(Math.abs(effect.pow)),
         "1": feelingText,
         Target: feelTarget,
       };
@@ -313,6 +316,12 @@ function getEffectString(
           return L("movedefine_descadd_094");
         case 30:
           return L("movedefine_descadd_095");
+        case 31:
+          return L("movedefine_descadd_100", {
+            "0": "[sprStatus,8]" + L("statuseffectstuff_009"),
+          });
+        case 32:
+          return L("movedefine_descadd_104", { "0": "¾" });
       }
       console.log(
         `Undefined POW COND ${effect.pow}. E ${effect.eff} T ${effect.targ}`,
@@ -452,6 +461,18 @@ function getEffectString(
       } else {
         return L("movedefine_050", { "0": String(effect.pow) });
       }
+    case 83:
+      return L("movedefine_descadd_101");
+    case 84:
+      return L("movedefine_descadd_102", { "0": String(effect.pow) });
+    case 85:
+      return L("movedefine_descadd_105");
+    case 86:
+      return L("movedefine_descadd_106");
+    case 87:
+      return "";
+    case 88:
+      return L("movedefine_descadd_103", { "0": String(effect.pow) });
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,
@@ -546,6 +567,8 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
   return desc_str;
 }
 
+const MAX_FRIENDS = ["riley", "riven", "streamer"];
+
 export default function MoveView(props: {
   move: Move;
   noLearner?: boolean;
@@ -569,13 +592,25 @@ export default function MoveView(props: {
   if (friend) {
     const friend_rank = Math.floor(friend.plays.indexOf(props.move.id) / 4) + 1;
     let rank = 0;
-    const found = friend.events.find((event) => {
+    let found;
+    for (const event of friend.events) {
+      if (!MAX_FRIENDS.includes(friend.id)) {
+        if (event.prereq.type[0] == 4 || event.prereq.type[0] == 1) {
+          continue;
+        }
+        if (event.alt_complete_flag == -1 && event.dest_level == "") {
+          break;
+        }
+      }
       friend_hearts += 1;
       if (event.rankup) {
         rank += 1;
       }
-      return rank == friend_rank;
-    });
+      if (rank == friend_rank) {
+        found = true;
+        break;
+      }
+    }
     if (!found) {
       friend = undefined;
     } else {
@@ -594,13 +629,14 @@ export default function MoveView(props: {
     return null;
   }
 
+  const type =
+    props.move.type == Type.DoubleBlock ? Type.Defence : props.move.type;
+
   const {
     color,
     darkColor,
     alt: altKey,
-  } = TypeData[props.move.type]
-    ? TypeData[props.move.type]
-    : { color: "#ffffff", alt: "a" };
+  } = TypeData[type] ?? TypeData[Type.Support];
 
   const alt = L("common.moveView.playText", {
     type: L("common.types." + altKey),
@@ -609,11 +645,11 @@ export default function MoveView(props: {
   const style = {
     "--move-color": color,
     "--move-dark": darkColor,
-    "--move-url": `url("/gameassets/sprType/${String(props.move.type)}.png")`,
+    "--move-url": `url("/gameassets/sprType/${String(type)}.png")`,
   } as React.CSSProperties;
 
   const pow =
-    props.move.type < 3 ? (
+    type < 3 ? (
       <div className={styles.movepower}>
         {String(Math.max(0, props.move.pow))}
       </div>

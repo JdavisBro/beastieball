@@ -125,6 +125,7 @@ export default function Encounters() {
         returnButtonTitle={L("teams.return", {
           branding: import.meta.env.VITE_BRANDING,
         })}
+        secretPage={true}
       />
       <div className={styles.box}>
         <label>

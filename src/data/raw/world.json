@@ -227,9 +227,9 @@
       "revealed_text": "Railhouse (Rutile)",
       "text": "Railhouse",
       "transit": 1,
-      "world_x": 2991,
+      "world_x": 2940,
       "world_y": 2458,
-      "x": 2991,
+      "x": 2940,
       "y": 2858,
       "zoom_view": true
     },
@@ -292,9 +292,9 @@
       "text": "Railhouse",
       "transit": 1,
       "world_x": -19746.5,
-      "world_y": -29239,
+      "world_y": -29240,
       "x": -19746.5,
-      "y": -28839,
+      "y": -28840,
       "zoom_view": true
     },
     {
@@ -323,10 +323,10 @@
       "revealed_text": "Campsite (Domain Park)",
       "text": "Campsite",
       "transit": 3,
-      "world_x": -12192,
-      "world_y": -9619,
-      "x": -12192,
-      "y": -9319,
+      "world_x": -12193,
+      "world_y": -9580,
+      "x": -12193,
+      "y": -9280,
       "zoom_view": true
     },
     {
@@ -925,7 +925,7 @@
           "from_level": "hometown",
           "header": 1,
           "text": "Rutile Town",
-          "world_x": 679,
+          "world_x": 628,
           "world_y": 1031,
           "x": 3991,
           "y": 2091
@@ -939,7 +939,7 @@
           "object_y": -300,
           "revealed_text": "Beastieball Center (Rutile)",
           "text": "Beastieball Center",
-          "world_x": 586,
+          "world_x": 535,
           "world_y": -117,
           "x": 3898,
           "y": 1243
@@ -1012,8 +1012,8 @@
         }
       ],
       "spawn_name": ["default"],
-      "world_x1": -3312,
-      "world_x2": 4148,
+      "world_x1": -3363,
+      "world_x2": 4097,
       "world_y1": -1060,
       "world_y2": 3865
     },
@@ -1587,6 +1587,7 @@
         {
           "_": "class_portal",
           "destination": "reserve_west",
+          "ground_z": 300,
           "x": 3636.5,
           "x1": -595.5,
           "x2": 595.5,
@@ -1599,7 +1600,7 @@
           "_": "class_portal",
           "destination": "hometown_south_rail",
           "direction": 0,
-          "ground_z": 300,
+          "ground_z": 600,
           "index": 1,
           "x": 10960.25,
           "x1": -126.25,
@@ -1613,6 +1614,7 @@
           "_": "class_portal",
           "destination": "hometown_south_rail",
           "direction": 0,
+          "ground_z": 300,
           "index": 0,
           "x": 10966.5,
           "x1": -121.5,
@@ -1626,6 +1628,7 @@
           "_": "class_portal",
           "destination": "cliffs_rail_cave_east",
           "direction": 2,
+          "ground_z": 300,
           "x": 315,
           "x1": -327,
           "x2": 109,
@@ -1637,10 +1640,10 @@
         }
       ],
       "spawn_name": ["hometown_rail"],
-      "world_x1": -14631,
-      "world_x2": -3312,
-      "world_y1": 6097,
-      "world_y2": 9494
+      "world_x1": -14636,
+      "world_x2": -3317,
+      "world_y1": 6101,
+      "world_y2": 9498
     },
     {
       "_": "class_level_stump",
@@ -2046,6 +2049,7 @@
           "_": "class_portal",
           "destination": "jasper_cave_1",
           "direction": 1.5,
+          "ground_z": 3,
           "x": 1072.5,
           "x1": -315,
           "x2": 105,
@@ -3095,6 +3099,7 @@
           "_": "class_portal",
           "destination": "beryl",
           "direction": 3,
+          "ground_z": 1,
           "x": 5071,
           "x1": -350.5,
           "x2": 350.5,
@@ -3900,15 +3905,14 @@
         {
           "_": "class_portal",
           "destination": "academy_room",
-          "ground_z": 200,
           "x": 2498,
           "x1": 272,
           "x2": 849,
           "y": 3063,
           "y1": -1612,
           "y2": -727,
-          "z2": 1000,
-          "z_offset": 200
+          "z1": 200,
+          "z2": 1200
         },
         {
           "_": "class_portal",
@@ -5512,8 +5516,8 @@
         }
       ],
       "spawn_name": ["canyon"],
-      "world_x1": -26128,
-      "world_x2": -22901,
+      "world_x1": -26129,
+      "world_x2": -22902,
       "world_y1": -8048,
       "world_y2": -2247
     },
@@ -7129,9 +7133,9 @@
           "revealed_text": "Gym (Begonia)",
           "text": "Gym",
           "world_x": -21840,
-          "world_y": -27989,
+          "world_y": -27990,
           "x": 2246.5,
-          "y": 4226
+          "y": 4225
         }
       ],
       "name": "sphinx",
@@ -7141,6 +7145,7 @@
           "_": "class_portal",
           "destination": "mythwood_cave_east",
           "direction": 0,
+          "ground_z": 1,
           "x": 5702,
           "x1": -147,
           "x2": 441,
@@ -7153,6 +7158,7 @@
           "_": "class_portal",
           "destination": "wood_rail",
           "direction": 2,
+          "ground_z": 1,
           "x": 427,
           "x1": -524,
           "x2": 74,
@@ -7164,6 +7170,7 @@
         {
           "_": "class_portal",
           "destination": "myth_forest1",
+          "ground_z": 1,
           "x": 3746.5,
           "x1": -540.5,
           "x2": 540.5,
@@ -7176,7 +7183,7 @@
           "_": "class_portal",
           "destination": "wood_east_rail",
           "direction": 0.5,
-          "ground_z": 1,
+          "ground_z": 2,
           "x": 4978,
           "x1": -416,
           "x2": 448,
@@ -7693,10 +7700,10 @@
         }
       ],
       "spawn_name": ["park_water"],
-      "world_x1": -14561,
-      "world_x2": -11396,
-      "world_y1": -13405,
-      "world_y2": -8599
+      "world_x1": -14562,
+      "world_x2": -11397,
+      "world_y1": -13366,
+      "world_y2": -8560
     },
     {
       "_": "class_level_stump",
@@ -8884,6 +8891,7 @@
           "_": "class_portal",
           "destination": "seaside_cliff",
           "direction": 0,
+          "ground_z": 1,
           "x": 2432,
           "x1": -150,
           "x2": 337,
@@ -8896,6 +8904,7 @@
           "_": "class_portal",
           "destination": "hometown_starters",
           "direction": 3,
+          "ground_z": 1,
           "x": 825,
           "x1": -684,
           "x2": 747,
@@ -9246,6 +9255,7 @@
           "_": "class_portal",
           "destination": "mountain_4",
           "direction": 0,
+          "ground_z": 1,
           "x": 2583,
           "x1": -57,
           "x2": 591,
@@ -9258,6 +9268,7 @@
           "_": "class_portal",
           "allow_exit": 0,
           "destination": "roguelike",
+          "ground_z": 1,
           "index": 0,
           "x": 1477,
           "x1": -100,
@@ -9271,6 +9282,7 @@
           "_": "class_portal",
           "allow_exit": 0,
           "destination": "roguelike",
+          "ground_z": 1,
           "index": 1,
           "x": 1066,
           "x1": -100,
@@ -9284,6 +9296,7 @@
           "_": "class_portal",
           "destination": "mountain_6",
           "direction": 0,
+          "ground_z": 1,
           "x": 2557,
           "x1": -68,
           "x2": 808,
@@ -9887,12 +9900,12 @@
       "y": -14099
     },
     "cliff_train_cave_guard": {
-      "x": -14023,
-      "y": 8683
+      "x": -14028,
+      "y": 8687
     },
     "cliffs_railroad:objCeleb": {
-      "x": -9787,
-      "y": 7656
+      "x": -9792,
+      "y": 7360
     },
     "coral_island:objBeachedTurtle": {
       "x": -45252,
@@ -9915,19 +9928,19 @@
       "y": -34070
     },
     "hometown:objBallcenter": {
-      "x": 586,
-      "y": 203
+      "x": 535,
+      "y": 201
     },
     "hometown:objReserveplaque": {
-      "x": 2004,
+      "x": 1953,
       "y": 2721
     },
     "hometown:objRiley": {
-      "x": 829,
+      "x": 778,
       "y": 2211
     },
     "hometown:objTutorialtext": {
-      "x": 587,
+      "x": 536,
       "y": -167
     },
     "hometown_north": {
@@ -10015,7 +10028,7 @@
       "y": -23097
     },
     "korwin": {
-      "x": -24085,
+      "x": -24086,
       "y": -6825
     },
     "mainstreet:objRiven": {
@@ -10111,8 +10124,8 @@
       "y": -17507
     },
     "park_south3:objScience": {
-      "x": -12644,
-      "y": -10188
+      "x": -12645,
+      "y": -10149
     },
     "park_south_0": {
       "x": -26781,
@@ -10220,11 +10233,11 @@
     },
     "sphinx:objGymdoor": {
       "x": -21840,
-      "y": -27689
+      "y": -27690
     },
     "sphinx:objKaz": {
       "x": -20543,
-      "y": -28654
+      "y": -28655
     },
     "stadium:objBallman": {
       "x": -51395.5,
@@ -10282,7 +10295,8 @@
     ],
     "cliffs": [
       5282300, 2477823, 7055076, 5063839, 7098658, 3043922, 10131047, 13826256,
-      15073263, 13560811, 13749626, 11836999, 11836999, 11836999, 8048639
+      15073263, 13560811, 13749626, 11836999, 11836999, 11836999, 8048639,
+      2323320, 8048639
     ],
     "cliffs_night": [
       10793879, 10998992, 12047045, 6437738, 4731922, 5924891, 6575646,
@@ -10327,5 +10341,9 @@
       11314689, 11991080, 10077875, 9722316, 8870677, 13172531, 15693388,
       16693799, 13360853, 10407096, 11348340
     ]
-  }
+  },
+  "paths": {
+    "_": "class_map"
+  },
+  "race_track": []
 }

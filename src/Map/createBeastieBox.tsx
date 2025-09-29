@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { SpawnGroup } from "../data/SpawnData";
 import BEASTIE_DATA from "../data/BeastieData";
 import styles from "./Map.module.css";
+import { LocalizationType } from "../localization/useLocalization";
 
 export default function createBeastieBox(
   group: SpawnGroup,
@@ -16,7 +17,9 @@ export default function createBeastieBox(
   setSeen: (subject: string) => void,
   huntedBeastie: string | undefined,
   attractSpray: boolean,
+  Localization: LocalizationType,
 ) {
+  const { L: Loc, getLink } = Localization;
   const overall_percent: {
     [key: string]: {
       percent: number;
@@ -63,7 +66,11 @@ export default function createBeastieBox(
       return;
     }
     const isSpoiler = isSpoilerFn(beastie.id);
-    const alt = `${isSpoiler ? `Beastie #${beastie.number}` : beastie.name} spawn location.`;
+    const alt = Loc("map.spawnLocation", {
+      name: isSpoiler
+        ? Loc("common.beastieNum", { num: String(beastie.number) })
+        : Loc(beastie.name),
+    });
     const iconScale = beastie.id != huntedBeastie ? 1 : 1.5;
     const overall = overall_percent[value];
     beastieSpawnsOverlays.push(
@@ -98,7 +105,7 @@ export default function createBeastieBox(
         icon={icon({
           iconUrl: isSpoiler
             ? "/gameassets/sprExclam_1.png"
-            : `/icons/${beastie.name}.png`,
+            : `/icons/${Loc(beastie.name, undefined, true)}.png`,
           className: isSpoiler ? styles.spoilerBeastie : undefined,
           iconSize: [50 * iconScale, 50 * iconScale],
         })}
@@ -107,25 +114,38 @@ export default function createBeastieBox(
         }}
       >
         <Popup offset={[0, -5]}>
-          <Link to={`/beastiepedia/${beastie.name}`}>{beastie.name}</Link>
+          <Link to={getLink(`/beastiepedia/${Loc(beastie.name)}`)}>
+            {Loc(beastie.name)}
+          </Link>
           <br />
-          <span title={`${overall.percent}%`}>
+          <span
+            title={Loc("map.beastie.spawnRate", {
+              percent: String(overall.percent),
+            })}
+          >
             {overall.percent > 0
-              ? Math.round(overall.percent * 100) / 100
-              : "???"}
-            %
+              ? Loc("map.beastie.spawnRate", {
+                  percent: String(Math.round(overall.percent * 100) / 100),
+                })
+              : Loc("common.spoiler")}
           </span>
           <br />
-          Level{" "}
-          {attractSpray
-            ? overall.levelMax + 1
-            : overall.levelMin == overall.levelMax
-              ? overall.levelMax
-              : `${overall.levelMin} - ${overall.levelMax}`}
+          {Loc("map.beastie.level", {
+            levels: attractSpray
+              ? String(overall.levelMax + 1)
+              : overall.levelMin == overall.levelMax
+                ? String(overall.levelMax)
+                : Loc("map.beastie.levelRange", {
+                    "0": String(overall.levelMin),
+                    "1": String(overall.levelMax),
+                  }),
+          })}
           {beastie.colors2 ? (
             <>
               <br />
-              Variant Chance: {overall.variant * 100}%
+              {Loc("map.beastie.variantChance", {
+                percent: String(overall_percent[value].variant * 100),
+              })}
             </>
           ) : null}
         </Popup>

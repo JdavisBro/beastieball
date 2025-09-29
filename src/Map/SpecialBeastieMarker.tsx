@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { BeastieType } from "../data/BeastieData";
 import { useIsSpoiler } from "../shared/useSpoiler";
 import styles from "./Map.module.css";
+import useLocalization from "../localization/useLocalization";
 
 export default function SpecialBeastieMarker({
   position,
@@ -17,17 +18,20 @@ export default function SpecialBeastieMarker({
   open?: boolean;
   metamorph?: { from: BeastieType; by: string };
 }) {
+  const { L: Loc, getLink } = useLocalization();
+
   const [isSpoilerFn, setSeen] = useIsSpoiler();
 
   const isSpoiler = isSpoilerFn(target.id);
 
+  const targetNameStr = Loc(target.name);
   const targetUrl = isSpoiler
     ? "/gameassets/sprExclam_1.png"
-    : `/icons/${target.name}.png`;
+    : `/icons/${Loc(target.name, undefined, true)}.png`;
   const handleTargetClick = isSpoiler ? () => setSeen(target.id) : undefined;
   const targetImage = (
     <Link
-      to={isSpoiler ? "#" : `/beastiepedia/${target.name}`}
+      to={isSpoiler ? "#" : getLink(`/beastiepedia/${targetNameStr}`)}
       onClick={handleTargetClick}
     >
       <img src={targetUrl} onClick={handleTargetClick} />
@@ -35,10 +39,10 @@ export default function SpecialBeastieMarker({
   );
   const targetName = (
     <Link
-      to={isSpoiler ? "#" : `/beastiepedia/${target.name}`}
+      to={isSpoiler ? "#" : getLink(`/beastiepedia/${targetNameStr}`)}
       onClick={handleTargetClick}
     >
-      {isSpoiler ? "???" : target.name}
+      {isSpoiler ? Loc("common.spoiler") : targetNameStr}
     </Link>
   );
 
@@ -47,6 +51,8 @@ export default function SpecialBeastieMarker({
     metamorph && metamorphSpoiler
       ? () => setSeen(metamorph.from.id)
       : undefined;
+
+  const metamorphFromName = metamorph ? Loc(metamorph.from.name) : undefined;
 
   return (
     <Marker
@@ -74,7 +80,7 @@ export default function SpecialBeastieMarker({
                   to={
                     metamorphSpoiler
                       ? "#"
-                      : `/beastiepedia/${metamorph.from.name}`
+                      : getLink(`/beastiepedia/${metamorphFromName}`)
                   }
                   onClick={handleMetamorphClick}
                 >
@@ -82,7 +88,7 @@ export default function SpecialBeastieMarker({
                     src={
                       metamorphSpoiler
                         ? "/gameassets/sprExclam_1.png"
-                        : `/icons/${metamorph.from.name}.png`
+                        : `/icons/${Loc(metamorph.from.name, undefined, true)}.png`
                     }
                   />
                 </Link>
@@ -90,25 +96,29 @@ export default function SpecialBeastieMarker({
                   to={
                     metamorphSpoiler
                       ? "#"
-                      : `/beastiepedia/${metamorph.from.name}`
+                      : getLink(`/beastiepedia/${metamorphFromName}`)
                   }
                   onClick={handleMetamorphClick}
                 >
-                  {metamorphSpoiler ? "???" : metamorph.from.name}
+                  {metamorphSpoiler ? Loc("common.spoiler") : metamorphFromName}
                 </Link>
               </div>
-              <div>→</div>
+              <div>{Loc("map.metamorphosis.arrow")}</div>
               <div className={styles.metamorphColumn}>
                 {targetImage}
                 {targetName}
               </div>
             </div>
-            {metamorph.by}
+            {Loc("map.metamorphosis." + metamorph.by)}
           </>
         ) : (
           <div className={styles.specialBeastie}>
             {targetImage}
-            <div>{targetName} is found here initially.</div>
+            <div>
+              {Loc("map.extinctFoundHerePre")}
+              {targetName}
+              {Loc("map.extinctFoundHerePost")}
+            </div>
           </div>
         )}
       </Popup>

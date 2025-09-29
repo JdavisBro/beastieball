@@ -20,32 +20,32 @@ export const TypeData: Record<
   [Type.Body]: {
     color: TypeColor.Body,
     darkColor: "#ffc150",
-    alt: "Body Play",
+    alt: "body",
   },
   [Type.Spirit]: {
     color: TypeColor.Spirit,
     darkColor: "#fc6ba8",
-    alt: "Spirit Play",
+    alt: "spirit",
   },
   [Type.Mind]: {
     color: TypeColor.Mind,
     darkColor: "#81c5f9",
-    alt: "Mind Play",
+    alt: "mind",
   },
   [Type.Volley]: {
     color: TypeColor.Pass,
     darkColor: "#b8c8c5",
-    alt: "Volley Play",
+    alt: "volley",
   },
   [Type.Support]: {
     color: TypeColor.Support,
     darkColor: "#b8c8c5",
-    alt: "Support Play",
+    alt: "support",
   },
   [Type.Defence]: {
     color: TypeColor.Defence,
     darkColor: "#abb1d0",
-    alt: "Defence Play",
+    alt: "defense",
   },
   [Type.Unknown]: {
     color: TypeColor.Unknown,
@@ -56,9 +56,9 @@ export const TypeData: Record<
   [Type.Movement]: {
     color: TypeColor.Support,
     darkColor: "#b8c8c5",
-    alt: "Move Play",
+    alt: "move",
   },
-  [Type.Swap]: { color: TypeColor.Defence, darkColor: "#abb1d0", alt: "???" },
+  [Type.Swap]: { color: TypeColor.Defence, darkColor: "#abb1d0", alt: "tag" },
 };
 
 export default TypeColor;

@@ -13,17 +13,20 @@ import useScreenOrientation from "../../utils/useScreenOrientation";
 import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider";
 import SavedTeams from "./SavedTeams";
 import TeamImageButton from "../TeamImageButton";
+import useLocalization, {
+  LocalizationFunction,
+} from "../../localization/useLocalization";
 
 const CONTROL_BEASTIE = createBeastie("01");
 const BEASTIE_KEYS = Object.keys(CONTROL_BEASTIE) as Array<keyof TeamBeastie>;
 
-function createTeam() {
+function createTeam(L: LocalizationFunction) {
   return [
-    createBeastie("01"),
-    createBeastie("02"),
-    createBeastie("03"),
-    createBeastie("04"),
-    createBeastie("05"),
+    createBeastie("01", L),
+    createBeastie("02", L),
+    createBeastie("03", L),
+    createBeastie("04", L),
+    createBeastie("05", L),
   ];
 }
 
@@ -35,8 +38,11 @@ type TeamHook = [
 
 const emptyTeamArr = [...new Array(5).keys()];
 
-function ensureFullTeam([team, setTeam, removeTeam]: TeamHook): TeamHook {
-  const newTeam = createTeam();
+function ensureFullTeam(
+  [team, setTeam, removeTeam]: TeamHook,
+  L: LocalizationFunction,
+): TeamHook {
+  const newTeam = createTeam(L);
   return [
     emptyTeamArr.map((index) => team[index] ?? newTeam[index]),
     setTeam,
@@ -61,6 +67,8 @@ function verifyTeamJson(json: unknown) {
 }
 
 export function Box({ children }: { children: React.ReactNode[] }) {
+  const sep = useLocalization().L("teams.builder.sep");
+
   return (
     <div className={styles.box}>
       {children
@@ -68,7 +76,7 @@ export function Box({ children }: { children: React.ReactNode[] }) {
         .map((c, index) =>
           index > 0 ? (
             <Fragment key={index}>
-              {" - "}
+              {sep}
               {c}
             </Fragment>
           ) : (
@@ -80,8 +88,11 @@ export function Box({ children }: { children: React.ReactNode[] }) {
 }
 
 export default function TeamBuilder() {
+  const { L } = useLocalization();
+
   const [team, setTeam] = ensureFullTeam(
     useLocalStorage<TeamBeastie[]>("teamBuilderTeam", []),
+    L,
   );
 
   const setBeastie = (teamIndex: number, beastie: TeamBeastie) => {
@@ -105,15 +116,20 @@ export default function TeamBuilder() {
   return (
     <>
       <OpenGraph
-        title={`Team Builder - ${import.meta.env.VITE_BRANDING}`}
-        description="Team Builder for Beastieball!"
+        title={L("common.title", {
+          page: L("teams.builder.title"),
+          branding: import.meta.env.VITE_BRANDING,
+        })}
+        description={L("teams.builder.description")}
         image="gameassets/sprMainmenu/18.png"
         url="team/builder/"
       />
       <Header
-        title="Team Builder"
+        title={L("teams.builder.title")}
         returnButtonTo="/team/"
-        returnButtonTitle={`${import.meta.env.VITE_BRANDING} Team Page`}
+        returnButtonTitle={L("teams.return", {
+          branding: import.meta.env.VITE_BRANDING,
+        })}
       />
       <BeastieRenderProvider>
         <div
@@ -129,7 +145,9 @@ export default function TeamBuilder() {
                       disabled={editingBeastie == index}
                       onClick={() => setEditingBeastie(index)}
                     >
-                      {editingBeastie == index ? "Editing" : "Edit"}
+                      {editingBeastie == index
+                        ? L("teams.builder.editing")
+                        : L("teams.builder.edit")}
                     </button>
                   </div>
                   {index != 4 ? (
@@ -140,7 +158,7 @@ export default function TeamBuilder() {
                         setBeastie(index + 1, beastie);
                       }}
                     >
-                      ⇄
+                      {L("teams.builder.swap")}
                     </button>
                   ) : undefined}
                 </Fragment>
@@ -150,7 +168,7 @@ export default function TeamBuilder() {
           <div className={teamScroll ? styles.editScrolls : styles.edit}>
             <Box>
               <label>
-                Team Scrolls Horizontally:
+                {L("teams.builder.scrollsHorizontally")}
                 <input
                   type="checkbox"
                   defaultChecked={teamScroll}
@@ -205,7 +223,7 @@ export default function TeamBuilder() {
                     a.click();
                   }}
                 >
-                  Save Team JSON
+                  {L("teams.builder.saveJson")}
                 </button>
               </>
               <button
@@ -215,9 +233,11 @@ export default function TeamBuilder() {
                   }
                 }}
               >
-                Load Team JSON
+                {L("teams.builder.loadJson")}
               </button>
-              <button onClick={() => setTeam(createTeam())}>Reset Team</button>
+              <button onClick={() => setTeam(createTeam(L))}>
+                {L("teams.builder.reset")}
+              </button>
             </Box>
             <EditBeastie
               key={team[editingBeastie].pid + team[editingBeastie].specie}

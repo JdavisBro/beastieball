@@ -1,3 +1,4 @@
+import useLocalization from "../localization/useLocalization";
 import {
   DEFAULT_SEEN,
   FRIEND_SPOILERS,
@@ -8,6 +9,8 @@ import {
 } from "./useSpoiler";
 
 export default function SpoilerOptions() {
+  const { L } = useLocalization();
+
   const [spoilerMode, setSpoilerMode] = useSpoilerMode();
   const [, setSpoilerSeen] = useSpoilerSeen();
   const [, setFriendSpoiler] = useFriendSpoiler();
@@ -15,15 +18,19 @@ export default function SpoilerOptions() {
   return (
     <div>
       <label>
-        Show:{" "}
+        {L("common.spoilerOptions.showLabel")}
         <select
           value={spoilerMode || SpoilerMode.OnlySeen}
           onChange={(event) =>
             setSpoilerMode(Number(event.currentTarget.value))
           }
         >
-          <option value={SpoilerMode.OnlySeen}>Seen Beasties/Characters</option>
-          <option value={SpoilerMode.All}>All Beasties/Characters</option>
+          <option value={SpoilerMode.OnlySeen}>
+            {L("common.spoilerOptions.seen")}
+          </option>
+          <option value={SpoilerMode.All}>
+            {L("common.spoilerOptions.all")}
+          </option>
         </select>
       </label>
       <br />
@@ -34,7 +41,7 @@ export default function SpoilerOptions() {
             setFriendSpoiler(FRIEND_SPOILERS);
           }}
         >
-          Reset Seen Beasties/Characters
+          {L("common.spoilerOptions.reset")}
         </button>
       ) : null}
     </div>

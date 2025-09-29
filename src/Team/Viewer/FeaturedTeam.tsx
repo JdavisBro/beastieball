@@ -3,6 +3,7 @@ import { FeaturedTeamType } from "./FeaturedCategories";
 import styles from "./TeamViewer.module.css";
 import BEASTIE_DATA from "../../data/BeastieData";
 import { useIsSpoiler } from "../../shared/useSpoiler";
+import useLocalization from "../../localization/useLocalization";
 
 const LONG_NAME_LENGTH = 45;
 const DESCRIPTION_MAX = 115;
@@ -14,6 +15,8 @@ export default function FeaturedTeam({
   team: FeaturedTeamType;
   selected: boolean;
 }) {
+  const { L, getLink } = useLocalization();
+
   const longDesc = team.description.length > DESCRIPTION_MAX;
 
   const [isSpoilerFn, setSeen] = useIsSpoiler();
@@ -24,7 +27,7 @@ export default function FeaturedTeam({
 
   return (
     <Link
-      to={`/team/viewer/${team.team.code}`}
+      to={getLink(`/team/viewer/${team.team.code}`)}
       onClick={handleClick}
       className={selected ? styles.featuredTeamSelected : styles.featuredTeam}
     >
@@ -38,7 +41,7 @@ export default function FeaturedTeam({
       <div className={styles.featuredDesc}>
         <div>
           {team.description.slice(0, DESCRIPTION_MAX).trimEnd()}
-          {longDesc ? "..." : ""}
+          {longDesc ? L("teams.viewer.community.longDescSuffix") : ""}
         </div>
         {longDesc ? (
           <div
@@ -51,7 +54,7 @@ export default function FeaturedTeam({
             }}
           >
             <div className={styles.featuredHoverCollapsed}>
-              V Hover / Tap to Expand V
+              {L("teams.viewer.community.longDescExpand")}
             </div>
             <div className={styles.featuredHoverDesc}>{team.description}</div>
           </div>
@@ -64,14 +67,16 @@ export default function FeaturedTeam({
             return null;
           }
           const isSpoiler = isSpoilerFn(beastie.id);
-          const alt = `${isSpoiler ? `Beastie #${beastie.number}` : beastie.name} icon`;
+          const alt = isSpoiler
+            ? L("common.beastieNum", { num: String(beastie.number) })
+            : L(beastie.name);
           return (
             <img
               key={beastie.id + String(index)}
               src={
                 isSpoiler
                   ? "/gameassets/sprExclam_1.png"
-                  : `/icons/${beastie.name}.png`
+                  : `/icons/${L(beastie.name, undefined, true)}.png`
               }
               alt={alt}
               title={alt}
@@ -82,8 +87,11 @@ export default function FeaturedTeam({
         })}
       </div>
       <div>
-        By {team.author}
-        {team.builder ? "" : ` - #${team.team.code}`}
+        {L("teams.viewer.community.by", { author: team.author })}
+        {team.builder
+          ? null
+          : L("teams.viewer.community.joiner") +
+            L("teams.viewer.community.code", { code: team.team.code })}
       </div>
     </Link>
   );

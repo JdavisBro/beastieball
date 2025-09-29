@@ -4,6 +4,7 @@ import styles from "./Shared.module.css";
 import Modal from "./Modal";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import { useIsSpoiler } from "./useSpoiler";
+import useLocalization from "../localization/useLocalization";
 
 const BEASTIES = [...BEASTIE_DATA.values()];
 
@@ -22,6 +23,8 @@ function BeastieButton({
   nonSelectableReason?: string;
   handleClick: (beastieId: string, isSpoiler: boolean) => void;
 }) {
+  const { L } = useLocalization();
+
   return (
     <div
       key={beastie.id}
@@ -45,14 +48,14 @@ function BeastieButton({
         src={
           isSpoiler
             ? "/gameassets/sprExclam_1.png"
-            : `/icons/${beastie.name}.png`
+            : `/icons/${L(beastie.name, undefined, true)}.png`
         }
       />
       <div className={styles.beastieSelectNameNum}>
         <div className={styles.beastieSelectNum}>
           #{String(beastie.number).padStart(2, "0")}
         </div>
-        <div>{isSpoiler ? "???" : beastie.name}</div>
+        <div>{isSpoiler ? "???" : L(beastie.name)}</div>
       </div>
     </div>
   );
@@ -75,6 +78,8 @@ export default function BeastieSelect({
   isSelectable?: (beastie: BeastieType) => boolean;
   nonSelectableReason?: string;
 }) {
+  const { L } = useLocalization();
+
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -110,17 +115,23 @@ export default function BeastieSelect({
       <button onClick={() => setOpen(true)}>
         {textOverride
           ? textOverride
-          : `Select Beastie: ${beastie?.name ?? (extraOption && beastieId == extraOption ? extraOptionText : "Unset")}`}
+          : L("common.beastieSelect.label", {
+              beastie: beastie
+                ? L(beastie.name)
+                : extraOptionText && beastieId == extraOption
+                  ? extraOptionText
+                  : L("common.beastieSelect.unset"),
+            })}
       </button>
       <Modal
-        header="Select Beastie"
+        header={L("common.beastieSelect.title")}
         open={open}
         onClose={onClose}
         hashValue="BeastieSelect"
       >
         <div className={styles.beastieSelectContainer}>
           <label tabIndex={0}>
-            Search:{" "}
+            {L("common.searchPrefix")}
             <input
               type="search"
               onChange={(event) => setSearch(event.currentTarget.value)}
@@ -144,7 +155,7 @@ export default function BeastieSelect({
                 setOpen(false);
               }}
             >
-              Unset
+              {L("common.beastieSelect.unset")}
             </div>
             {extraOption && extraOptionText ? (
               <div
@@ -175,7 +186,7 @@ export default function BeastieSelect({
                 isSpoiler={isSpoiler(beastie.id)}
                 selectable={!isSelectable || isSelectable(beastie)}
                 nonSelectableReason={nonSelectableReason}
-                visible={beastie.name
+                visible={L(beastie.name)
                   .toLowerCase()
                   .includes(search.toLowerCase())}
               />

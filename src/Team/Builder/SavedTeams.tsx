@@ -7,15 +7,15 @@ import { TeamBeastie } from "../Types";
 import BEASTIE_DATA from "../../data/BeastieData";
 import { createPid } from "./createBeastie";
 
-type SavedTeam = { name: string; team: TeamBeastie[] };
+type SavedTeam = { name: string; team: (TeamBeastie | null)[] };
 
 export default function SavedTeams({
   currentTeam,
   setCurrentTeam,
   setCurrentBeastie,
 }: {
-  currentTeam: TeamBeastie[];
-  setCurrentTeam: React.Dispatch<React.SetStateAction<TeamBeastie[]>>;
+  currentTeam: (TeamBeastie | null)[];
+  setCurrentTeam: React.Dispatch<React.SetStateAction<(TeamBeastie | null)[]>>;
   setCurrentBeastie: (beastie: TeamBeastie) => void;
 }) {
   const [open, setOpen] = useState(false);
@@ -24,7 +24,11 @@ export default function SavedTeams({
     [],
   );
 
-  const setSavedTeam = (index: number, team?: TeamBeastie[], name?: string) => {
+  const setSavedTeam = (
+    index: number,
+    team?: (TeamBeastie | null)[],
+    name?: string,
+  ) => {
     const newteam = team ?? savedTeams[index]?.team;
     if (!newteam) {
       throw Error("NO TEAM");
@@ -59,23 +63,25 @@ export default function SavedTeams({
                     onKeyDownCapture={(event) => event.stopPropagation()}
                   />
                   <div className={styles.savedTeamBeasties}>
-                    {team.team.map((beastie) => (
-                      <div key={beastie.pid}>
-                        <img
-                          src={`/icons/${BEASTIE_DATA.get(beastie.specie)?.name}.png`}
-                        />
-                        <button
-                          title="Overwrites the Beastie you're currently editing."
-                          onClick={() => {
-                            const newBeastie = structuredClone(beastie);
-                            newBeastie.pid = createPid();
-                            setCurrentBeastie(newBeastie);
-                          }}
-                        >
-                          Copy
-                        </button>
-                      </div>
-                    ))}
+                    {team.team.map((beastie) =>
+                      beastie ? (
+                        <div key={beastie.pid}>
+                          <img
+                            src={`/icons/${BEASTIE_DATA.get(beastie.specie)?.name}.png`}
+                          />
+                          <button
+                            title="Overwrites the Beastie you're currently editing."
+                            onClick={() => {
+                              const newBeastie = structuredClone(beastie);
+                              newBeastie.pid = createPid();
+                              setCurrentBeastie(newBeastie);
+                            }}
+                          >
+                            Copy
+                          </button>
+                        </div>
+                      ) : null,
+                    )}
                   </div>
                   <button
                     title="Saves your Current Team over this one."

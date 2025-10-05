@@ -69,7 +69,7 @@ const COLOR_HEIGHT = 4;
 
 export function createTeamImageCanvas(
   canvas: HTMLCanvasElement,
-  team: TeamBeastie[],
+  team: (TeamBeastie | null)[],
   mode: DrawMode,
   beastieRender: (
     beastie: RenderBeastieType,
@@ -270,7 +270,7 @@ const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
 
 async function createTeamImage(
   ctx: CanvasRenderingContext2D,
-  team: TeamBeastie[],
+  team: (TeamBeastie | null)[],
   mode: DrawMode,
   beastieRender: (
     beastie: RenderBeastieType,
@@ -285,19 +285,19 @@ async function createTeamImage(
   }
 
   for (let i = 0; i < 5; i++) {
-    const [startx, starty] = MODE_POS[mode][i];
-    drawLines(
-      ctx,
-      startx,
-      starty,
-      BEASTIE_SIZE[0],
-      BEASTIE_SIZE[1],
-      BEASITE_COLORS[0],
-      BEASITE_COLORS[1],
-    );
     const beastie = team[i];
     const beastiedata = beastie ? BEASTIE_DATA.get(beastie.specie) : undefined;
     if (beastie && beastiedata) {
+      const [startx, starty] = MODE_POS[mode][i];
+      drawLines(
+        ctx,
+        startx,
+        starty,
+        BEASTIE_SIZE[0],
+        BEASTIE_SIZE[1],
+        BEASITE_COLORS[0],
+        BEASITE_COLORS[1],
+      );
       ctx.letterSpacing = "1px";
       ctx.textBaseline = "top";
       ctx.textAlign = "left";

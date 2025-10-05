@@ -1,3 +1,4 @@
+import BEASTIE_DATA from "../../data/BeastieData";
 import type { TeamBeastie } from "../Types";
 
 const PID_CHARS = "0123456789abcdef";
@@ -12,20 +13,28 @@ export function createPid() {
   return pid;
 }
 
-export default function createBeastie(number: string): TeamBeastie {
+export default function createBeastie(
+  number: string,
+  beastieId: string = "shroom1",
+): TeamBeastie {
+  const beastie = BEASTIE_DATA.get(beastieId) ?? BEASTIE_DATA.get("shroom1");
   return {
     pid: createPid(),
-    specie: "shroom1",
+    specie: beastie?.id ?? "shroom1",
     date: 1,
     number: number,
-    color: [0.5, 0.5, 0.5, 0.5, 0.5],
-    name: "Sprecko",
+    color: [0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
+    name: beastie?.name ?? "Sprecko",
     spr_index: 0,
-    xp: 125000,
+    xp: 125000 * (beastie?.growth ?? 1),
     scale: 0.5,
     vibe: 0,
     ability_index: 0,
-    attklist: ["careful", "callout", "refresh"],
+    attklist: beastie?.attklist.slice(0, 3) ?? [
+      "careful",
+      "callout",
+      "refresh",
+    ],
 
     ba_r: 1,
     ha_r: 1,

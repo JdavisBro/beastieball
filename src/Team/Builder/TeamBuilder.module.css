@@ -61,6 +61,19 @@
   white-space: nowrap;
 }
 
+.noBeastie {
+  composes: animBoxBackground from global;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: black;
+  height: 253.7px;
+  max-width: 370px;
+  width: 100%;
+}
+
 .edit {
   flex: 1 1 auto;
   margin: 4px;

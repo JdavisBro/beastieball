@@ -79,6 +79,7 @@ function NoBeastie({
 }) {
   return (
     <div className={styles.noBeastie}>
+      No Beastie
       <BeastieSelect beastieId={undefined} setBeastieId={setBeastieId} />
     </div>
   );

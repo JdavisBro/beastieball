@@ -31,11 +31,6 @@ export enum DrawMode {
   VGrid,
 }
 
-const MODE_SIZES = [
-  [BEASTIE_SIZE[0] * 5 + BEASTIE_GAP * 4, BEASTIE_SIZE[1]],
-  [BEASTIE_SIZE[0], BEASTIE_SIZE[1] * 5 + BEASTIE_GAP * 4],
-  [BEASTIE_SIZE[0] * 2 + BEASTIE_GAP, BEASTIE_SIZE[1] * 3 + BEASTIE_GAP * 2],
-];
 const MODE_POS = [
   [
     [0, 0],
@@ -67,9 +62,38 @@ const BEASITE_COLORS = ["#ddd1bd", "#d5c9b5"];
 const BAR_COLORS = ["#232323", "#1c1c1c"];
 const COLOR_HEIGHT = 4;
 
+function getSize(mode: DrawMode, count: number) {
+  switch (mode) {
+    case DrawMode.Horizontal:
+      return [
+        BEASTIE_SIZE[0] * count + BEASTIE_GAP * (count - 1),
+        BEASTIE_SIZE[1],
+      ];
+    case DrawMode.Vertical:
+      return [
+        BEASTIE_SIZE[0],
+        BEASTIE_SIZE[1] * count + BEASTIE_GAP * (count - 1),
+      ];
+    case DrawMode.VGrid: {
+      switch (count) {
+        case 0:
+          return [1, 1];
+        case 1:
+          return BEASTIE_SIZE;
+        default:
+          return [
+            BEASTIE_SIZE[0] * 2 + BEASTIE_GAP,
+            BEASTIE_SIZE[1] * Math.ceil(count / 2) +
+              BEASTIE_GAP * Math.ceil(count / 2 - 1),
+          ];
+      }
+    }
+  }
+}
+
 export function createTeamImageCanvas(
   canvas: HTMLCanvasElement,
-  team: (TeamBeastie | null)[],
+  team: TeamBeastie[],
   mode: DrawMode,
   beastieRender: (
     beastie: RenderBeastieType,
@@ -78,7 +102,7 @@ export function createTeamImageCanvas(
   maxCoaching?: boolean,
   copy?: boolean,
 ) {
-  const size = MODE_SIZES[mode];
+  const size = getSize(mode, team.length);
   if (
     !(
       document.fonts.check("16px 'Go Banana'") &&
@@ -270,7 +294,7 @@ const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
 
 async function createTeamImage(
   ctx: CanvasRenderingContext2D,
-  team: (TeamBeastie | null)[],
+  team: TeamBeastie[],
   mode: DrawMode,
   beastieRender: (
     beastie: RenderBeastieType,

@@ -130,12 +130,15 @@ export default function TeamBuilder() {
                       <Beastie teamBeastie={beastie} />
                     ) : (
                       <NoBeastie
-                        setBeastieId={(beastieId) =>
-                          setBeastie(
-                            index,
-                            createBeastie(`0${index + 1}`, beastieId),
-                          )
-                        }
+                        setBeastieId={(beastieId) => {
+                          if (beastieId) {
+                            setBeastie(
+                              index,
+                              createBeastie(`0${index + 1}`, beastieId),
+                            );
+                            setEditingBeastie(index);
+                          }
+                        }}
                       />
                     )}
                     <button

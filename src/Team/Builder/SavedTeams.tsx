@@ -3,19 +3,19 @@ import { useLocalStorage } from "usehooks-ts";
 
 import styles from "./TeamBuilder.module.css";
 import Modal from "../../shared/Modal";
-import { TeamBeastie } from "../Types";
+import { BuilderTeam, TeamBeastie } from "../Types";
 import BEASTIE_DATA from "../../data/BeastieData";
 import { createPid } from "./createBeastie";
 
-type SavedTeam = { name: string; team: (TeamBeastie | null)[] };
+type SavedTeam = { name: string; team: BuilderTeam };
 
 export default function SavedTeams({
   currentTeam,
   setCurrentTeam,
   setCurrentBeastie,
 }: {
-  currentTeam: (TeamBeastie | null)[];
-  setCurrentTeam: React.Dispatch<React.SetStateAction<(TeamBeastie | null)[]>>;
+  currentTeam: BuilderTeam;
+  setCurrentTeam: React.Dispatch<React.SetStateAction<BuilderTeam>>;
   setCurrentBeastie: (beastie: TeamBeastie) => void;
 }) {
   const [open, setOpen] = useState(false);
@@ -24,11 +24,7 @@ export default function SavedTeams({
     [],
   );
 
-  const setSavedTeam = (
-    index: number,
-    team?: (TeamBeastie | null)[],
-    name?: string,
-  ) => {
+  const setSavedTeam = (index: number, team?: BuilderTeam, name?: string) => {
     const newteam = team ?? savedTeams[index]?.team;
     if (!newteam) {
       throw Error("NO TEAM");

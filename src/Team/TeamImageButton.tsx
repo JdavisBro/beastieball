@@ -8,7 +8,7 @@ export default function TeamImageButton({
   atLevel,
   maxCoaching,
 }: {
-  team?: (TeamBeastie | null)[];
+  team?: TeamBeastie[];
   atLevel?: number;
   maxCoaching?: boolean;
 }) {

@@ -1,7 +1,7 @@
 import { Fragment, useRef, useState } from "react";
 
 import styles from "./TeamBuilder.module.css";
-import type { TeamBeastie } from "../Types";
+import type { BuilderTeam, TeamBeastie } from "../Types";
 import OpenGraph from "../../shared/OpenGraph";
 import Header from "../../shared/Header";
 import Beastie from "../Beastie/Beastie";
@@ -19,8 +19,8 @@ const CONTROL_BEASTIE = createBeastie("01");
 const BEASTIE_KEYS = Object.keys(CONTROL_BEASTIE) as Array<keyof TeamBeastie>;
 
 type TeamHook = [
-  (TeamBeastie | null)[],
-  React.Dispatch<React.SetStateAction<(TeamBeastie | null)[]>>,
+  BuilderTeam,
+  React.Dispatch<React.SetStateAction<BuilderTeam>>,
   () => void,
 ];
 
@@ -83,7 +83,7 @@ function NoBeastie({
 
 export default function TeamBuilder() {
   const [team, setTeam] = ensureFullTeam(
-    useLocalStorage<(TeamBeastie | null)[]>("teamBuilderTeam", []),
+    useLocalStorage<BuilderTeam>("teamBuilderTeam", []),
   );
 
   const setBeastie = (teamIndex: number, beastie: TeamBeastie | null) => {
@@ -180,7 +180,7 @@ export default function TeamBuilder() {
                   }
                 />
               </label>
-              <TeamImageButton team={team} />
+              <TeamImageButton team={team.filter((beastie) => !!beastie)} />
             </Box>
             <Box>
               <SavedTeams

@@ -6,7 +6,7 @@ import OpenGraph from "../../shared/OpenGraph";
 import Header from "../../shared/Header";
 import Beastie from "../Beastie/Beastie";
 import createBeastie from "./createBeastie";
-import EditBeastie from "./EditBeastie";
+import EditBeastie, { BeastieDoesntExist } from "./EditBeastie";
 import { useLocalStorage } from "usehooks-ts";
 import MoveModalProvider from "../../shared/MoveModalProvider";
 import useScreenOrientation from "../../utils/useScreenOrientation";
@@ -14,6 +14,7 @@ import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvi
 import SavedTeams from "./SavedTeams";
 import TeamImageButton from "../TeamImageButton";
 import BeastieSelect from "../../shared/BeastieSelect";
+import BEASTIE_DATA from "../../data/BeastieData";
 
 const CONTROL_BEASTIE = createBeastie("01");
 const BEASTIE_KEYS = Object.keys(CONTROL_BEASTIE) as Array<keyof TeamBeastie>;
@@ -50,21 +51,23 @@ function verifyTeamJson(json: unknown) {
   return true;
 }
 
-export function Box({ children }: { children: React.ReactNode[] }) {
+export function Box({ children }: { children: React.ReactNode }) {
   return (
     <div className={styles.box}>
-      {children
-        .filter((c) => c)
-        .map((c, index) =>
-          index > 0 ? (
-            <Fragment key={index}>
-              {" - "}
-              {c}
-            </Fragment>
-          ) : (
-            c
-          ),
-        )}
+      {Array.isArray(children)
+        ? children
+            .filter((c) => c)
+            .map((c, index) =>
+              index > 0 ? (
+                <Fragment key={index}>
+                  {" - "}
+                  {c}
+                </Fragment>
+              ) : (
+                c
+              ),
+            )
+        : children}
     </div>
   );
 }
@@ -126,7 +129,7 @@ export default function TeamBuilder() {
               {team.map((beastie, index) => (
                 <Fragment key={beastie?.pid ?? index}>
                   <div className={styles.beastieContainer}>
-                    {beastie ? (
+                    {beastie && BEASTIE_DATA.has(beastie.specie) ? (
                       <Beastie teamBeastie={beastie} />
                     ) : (
                       <NoBeastie
@@ -260,7 +263,16 @@ export default function TeamBuilder() {
                   )
                 }
               />
-            ) : null}
+            ) : (
+              <BeastieDoesntExist
+                changeBeastieId={(beastieId) =>
+                  setBeastie(
+                    editingBeastie,
+                    createBeastie(`0${editingBeastie}`, beastieId),
+                  )
+                }
+              />
+            )}
           </div>
         </div>
       </BeastieRenderProvider>

@@ -36,19 +36,25 @@ type ChangeValueType = <T extends keyof TeamBeastie>(
   value: TeamBeastie[T],
 ) => void;
 
-function BeastieDoesntExist({ changeValue }: { changeValue: ChangeValueType }) {
+export function BeastieDoesntExist({
+  changeBeastieId: setBeastieId,
+}: {
+  changeBeastieId: (beastieId: string) => void;
+}) {
   return (
-    <label>
-      Specie:{" "}
-      <BeastieSelect
-        beastieId={undefined}
-        setBeastieId={(beastieId) => {
-          if (beastieId) {
-            changeValue("specie", beastieId);
-          }
-        }}
-      />
-    </label>
+    <Box>
+      <label>
+        Species:{" "}
+        <BeastieSelect
+          beastieId={undefined}
+          setBeastieId={(beastieId) => {
+            if (beastieId) {
+              setBeastieId(beastieId);
+            }
+          }}
+        />
+      </label>
+    </Box>
   );
 }
 
@@ -253,7 +259,11 @@ export default function EditBeastie({
   };
   const beastiedata = BEASTIE_DATA.get(beastie.specie);
   if (!beastiedata) {
-    return <BeastieDoesntExist changeValue={changeValue} />;
+    return (
+      <BeastieDoesntExist
+        changeBeastieId={(beastieId) => changeValue("specie", beastieId)}
+      />
+    );
   }
 
   return (

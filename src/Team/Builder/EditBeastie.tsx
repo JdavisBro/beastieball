@@ -252,10 +252,10 @@ export default function EditBeastie({
   setBeastie,
 }: {
   beastie: TeamBeastie;
-  setBeastie: React.Dispatch<React.SetStateAction<TeamBeastie>>;
+  setBeastie: React.Dispatch<React.SetStateAction<TeamBeastie | null>>;
 }) {
   const changeValue: ChangeValueType = (key, value) => {
-    setBeastie((beastie) => ({ ...beastie, [key]: value }));
+    setBeastie((beastie) => (beastie ? { ...beastie, [key]: value } : beastie));
   };
   const beastiedata = BEASTIE_DATA.get(beastie.specie);
   if (!beastiedata) {
@@ -274,7 +274,9 @@ export default function EditBeastie({
           <BeastieSelect
             beastieId={beastie.specie}
             setBeastieId={(beastieId) => {
-              if (beastieId) {
+              if (beastieId === undefined) {
+                setBeastie(null);
+              } else if (beastieId) {
                 const newBeastie = BEASTIE_DATA.get(beastieId);
                 if (!newBeastie) {
                   return;

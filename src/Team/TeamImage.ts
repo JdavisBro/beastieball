@@ -58,6 +58,11 @@ const MODE_POS = [
   ],
 ];
 
+const POS_VGRID_3_CENTER = [
+  (BEASTIE_SIZE[0] + BEASTIE_GAP) * 0.5,
+  BEASTIE_SIZE[1] + BEASTIE_GAP,
+];
+
 const BEASITE_COLORS = ["#ddd1bd", "#d5c9b5"];
 const BAR_COLORS = ["#232323", "#1c1c1c"];
 const COLOR_HEIGHT = 4;
@@ -312,7 +317,10 @@ async function createTeamImage(
     const beastie = team[i];
     const beastiedata = beastie ? BEASTIE_DATA.get(beastie.specie) : undefined;
     if (beastie && beastiedata) {
-      const [startx, starty] = MODE_POS[mode][i];
+      const [startx, starty] =
+        mode == DrawMode.VGrid && team.length == 3 && i == 2
+          ? POS_VGRID_3_CENTER
+          : MODE_POS[mode][i];
       drawLines(
         ctx,
         startx,

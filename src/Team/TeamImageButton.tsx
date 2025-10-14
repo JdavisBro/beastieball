@@ -18,7 +18,7 @@ export default function TeamImageButton({
   const [mode, setMode] = useState(DrawMode.VGrid);
 
   const saveImage = (copy: boolean) => {
-    if (team && canvasRef.current && beastieRender)
+    if (team && team.length && canvasRef.current && beastieRender)
       createTeamImageCanvas(
         canvasRef.current,
         team,
@@ -29,6 +29,8 @@ export default function TeamImageButton({
         copy,
       );
   };
+
+  const buttonsDisabled = !team || !team.length;
 
   return (
     <span>
@@ -42,10 +44,10 @@ export default function TeamImageButton({
           <option value={DrawMode.Vertical}>Vertical</option>
         </select>
       </label>
-      <button disabled={!team} onClick={() => saveImage(false)}>
+      <button disabled={buttonsDisabled} onClick={() => saveImage(false)}>
         Save
       </button>
-      <button disabled={!team} onClick={() => saveImage(true)}>
+      <button disabled={buttonsDisabled} onClick={() => saveImage(true)}>
         Copy
       </button>
       <canvas ref={canvasRef} style={{ display: "none" }} />

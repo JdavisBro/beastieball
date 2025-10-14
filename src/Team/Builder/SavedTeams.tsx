@@ -36,6 +36,8 @@ export default function SavedTeams({
     setSavedTeams([...savedTeams]);
   };
 
+  const disableSaving = currentTeam.filter((beastie) => !!beastie).length == 0;
+
   return (
     <>
       <button onClick={() => setOpen(true)}>Saved Teams</button>
@@ -81,6 +83,7 @@ export default function SavedTeams({
                   </div>
                   <button
                     title="Saves your Current Team over this one."
+                    disabled={disableSaving}
                     onClick={() => setSavedTeam(index, [...currentTeam])}
                   >
                     Overwrite
@@ -104,7 +107,10 @@ export default function SavedTeams({
               ))
             : "No Saved Teams"}
         </div>
-        <button onClick={() => setSavedTeam(savedTeams.length, currentTeam)}>
+        <button
+          disabled={disableSaving}
+          onClick={() => setSavedTeam(savedTeams.length, currentTeam)}
+        >
           Save Current Team as New Team
         </button>
       </Modal>

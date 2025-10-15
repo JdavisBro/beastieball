@@ -156,16 +156,8 @@ export default function TeamBuilder() {
                     <button
                       onClick={() => {
                         const target = team[index + 1];
-                        if (target) {
-                          setBeastie(index, target);
-                        } else {
-                          setBeastie(index, null);
-                        }
-                        if (beastie) {
-                          setBeastie(index + 1, beastie);
-                        } else {
-                          setBeastie(index + 1, null);
-                        }
+                        setBeastie(index, target);
+                        setBeastie(index + 1, beastie);
                       }}
                     >
                       ⇄

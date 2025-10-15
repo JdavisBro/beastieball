@@ -39,16 +39,17 @@ function verifyTeamJson(json: unknown) {
   if (!Array.isArray(json)) {
     return false;
   }
-  if (
-    !json.every((beastie) =>
-      BEASTIE_KEYS.every(
-        (key) => typeof beastie[key] == typeof CONTROL_BEASTIE[key],
-      ),
-    )
-  ) {
+  try {
+    return json.every(
+      (beastie) =>
+        beastie == null ||
+        BEASTIE_KEYS.every(
+          (key) => typeof beastie[key] == typeof CONTROL_BEASTIE[key],
+        ),
+    );
+  } catch {
     return false;
   }
-  return true;
 }
 
 export function Box({ children }: { children: React.ReactNode }) {
@@ -205,8 +206,7 @@ export default function TeamBuilder() {
                         }
                         setTeam(
                           [...new Array(5).keys()].map(
-                            (index) =>
-                              newteam[index] ?? createBeastie("0" + index),
+                            (index) => newteam[index] ?? null,
                           ),
                         );
                       });

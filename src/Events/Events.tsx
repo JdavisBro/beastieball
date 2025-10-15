@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
 import { EventResponse, NoData } from "./Types";
@@ -6,9 +5,10 @@ import styles from "./Events.module.css";
 import { useGameData } from "./useGameData";
 import BigmoonBlock from "./Bigmoon";
 import Carousel from "./Carousel";
+import { useLocalStorage } from "usehooks-ts";
 
 export default function Events() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useLocalStorage("eventsOpen", true);
 
   const [bigmoonData, bigmoonReload] = useGameData<EventResponse>(
     "events",

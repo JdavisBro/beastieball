@@ -159,6 +159,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   animStateRef.current.userSpeed = userSpeed;
 
   const [paused, setPaused] = useState(false);
+  const [pausedFrame, setPausedFrame] = useState(0);
 
   const frameInputRef = useRef<HTMLInputElement>(null);
 
@@ -176,12 +177,15 @@ export default function ContentPreview(props: Props): React.ReactNode {
         if (frameInputRef.current) {
           frameInputRef.current.value = String(frame);
         }
+        if (paused) {
+          setPausedFrame(frame);
+        }
       } else if (!loadedImages[frame % drawnsprite.frames]) {
         setNoDisplayRender(true);
         setNoDisplayReason("Loading...");
       }
     },
-    [loadedImages, drawnsprite.frames],
+    [loadedImages, drawnsprite.frames, paused],
   );
 
   const changeFrame = useCallback(
@@ -252,7 +256,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
     }
     let bbox;
     if (!edges) {
-      bbox = drawnsprite.bbox;
+      bbox =
+        drawnsprite.bboxes[animStateRef.current.frame ?? 0] ?? drawnsprite.bbox;
     } else {
       bbox = {
         x: edges.x,
@@ -262,7 +267,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       };
     }
     return [bbox, allFramesLoaded];
-  }, [anim, drawnsprite, loadedImages, paused]);
+  }, [anim, drawnsprite, loadedImages, paused && pausedFrame]);
 
   const beastiescale =
     bbox.width > bbox.height

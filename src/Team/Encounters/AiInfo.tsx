@@ -27,7 +27,7 @@ export default function AiInfo({ encounter }: { encounter: Encounter }) {
     ["Foe Knockout Potential", ai.knockout],
     ["Non-easy Recieve Bonus", ai.force],
     ["Consider Attack Secondary Effects", ai.secondary ? "true" : "false"],
-    ["Tag Penalty", ai.tag_penalty],
+    ["Tag Penalty", String(ai.tag_penalty)],
     ["Usable Attack", ai.usable_attack],
 
     encounter.team.some((beastie) => beastie.aggro)
@@ -47,14 +47,14 @@ export default function AiInfo({ encounter }: { encounter: Encounter }) {
         <table>
           <tr>
             <th>Type</th>
-            <th>Multiplier/Enabled</th>
+            <th>Multiplier / Value / Enabled</th>
           </tr>
           {data
             .filter((v) => !!v)
             .map(([desc, value]) => (
               <tr key={desc}>
                 <td>{desc}</td>
-                <td>{value}</td>
+                <td>{typeof value == "number" ? `${value}x` : value}</td>
               </tr>
             ))}
         </table>

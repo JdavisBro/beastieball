@@ -1,7 +1,7 @@
 import encounter_data from "./raw/encounter_data.json";
 
-type Ai = {
-  actions: number;
+export type EncounterAi = {
+  actions: number; // does something but i dont think it makes a difference..
   blocking: number;
   boost: number;
   damage: number;
@@ -15,12 +15,12 @@ type Ai = {
   knockout: number;
   lane: number;
   lane_cover: number;
-  lane_prediction: number;
+  lane_prediction: number; // UNUSED?
   lane_sideways_fear: number;
   lane_straight_fear: number;
   meter: number;
   point: number;
-  prediction: number;
+  prediction: number; // UNUSED?
   prefer_target: number;
   secondary: number | boolean;
   stamina: number;
@@ -56,7 +56,7 @@ export type EncounterBeastie = {
 };
 
 export type Encounter = {
-  ai: Ai;
+  ai: EncounterAi;
   id: string;
   scales: string | boolean | number;
   team: EncounterBeastie[];

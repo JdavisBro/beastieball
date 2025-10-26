@@ -12,6 +12,7 @@ import EncounterBeastieElem from "./EncounterBeastieElem";
 import getLevelBonus from "./getLevelBonus";
 import { useState } from "react";
 import MoveModalProvider from "../../shared/MoveModalProvider";
+import AiInfo from "./AiInfo";
 
 declare global {
   interface Window {
@@ -121,12 +122,15 @@ export default function Encounters() {
             ))}
           </select>
         </label>
-        <br />
-        {encounter
-          ? encounter.scales
-            ? `Scales with ${BOSSES_MAP[typeof encounter.scales == "string" ? encounter.scales : "redd"]}: +${Math.floor(bonus_levels)} levels`
-            : "No scaling"
-          : null}
+        {encounter ? (
+          <>
+            <br />
+            {encounter.scales
+              ? `Scales with ${BOSSES_MAP[typeof encounter.scales == "string" ? encounter.scales : "redd"]}: +${Math.floor(bonus_levels)} levels`
+              : "No scaling"}{" "}
+            <AiInfo encounter={encounter} />
+          </>
+        ) : null}
       </div>
       <div className={styles.box}>
         Defeated:{" "}

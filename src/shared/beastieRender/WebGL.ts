@@ -39,8 +39,11 @@ export function setColorUniforms(
   colorCount?: number,
 ) {
   const count = Math.min(6, colorCount ?? colors.length);
-  for (let i = 0; i < count; i++) {
-    gl.uniform3fv(gl.getUniformLocation(program, `colorOut[${i}]`), colors[i]);
+  for (let i = 0; i < 6; i++) {
+    gl.uniform3fv(
+      gl.getUniformLocation(program, `colorOut[${i}]`),
+      i < count ? colors[i] : [1, 1, 1],
+    );
   }
   gl.uniform1i(gl.getUniformLocation(program, "colorCount"), count);
   draw(gl);

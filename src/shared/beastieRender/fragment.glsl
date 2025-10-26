@@ -1,7 +1,7 @@
 precision mediump float;
- 
+
 const int max_colors = 6;
-const vec3 color_tolorance = vec3(0.0833,0.99,0.99);
+const vec3 color_tolorance = vec3(0.0833, 0.99, 0.99);
 
 // our texture
 uniform sampler2D u_image;
@@ -10,23 +10,21 @@ uniform int colorCount;
 
 // the texCoords passed in from the vertex shader.
 varying vec2 v_texCoord;
- 
-vec3 rgb_to_hsv( vec3 c ) {
-    vec4 K = vec4( 0., -1./3., 2./3., -1. );
-    vec4 p = (c.g < c.b)? vec4(c.bg, K.wz) : vec4(c.gb, K.xy);
-    vec4 q = (c.r < p.x)? vec4(p.xyw, c.r) : vec4(c.r, p.yzx);
+
+vec3 rgb_to_hsv(vec3 c) {
+    vec4 K = vec4(0., -1. / 3., 2. / 3., -1.);
+    vec4 p = (c.g < c.b) ? vec4(c.bg, K.wz) : vec4(c.gb, K.xy);
+    vec4 q = (c.r < p.x) ? vec4(p.xyw, c.r) : vec4(c.r, p.yzx);
     float chroma = q.x - min(q.w, q.y);
-    if ( chroma == 0. ) //max = min (no saturation)
+    if(chroma == 0.) //max = min (no saturation)
     {
-        return vec3( 0., 0., q.x );
-    }
-    else if ( q.x == 0. ) //max = 0 (black)
+        return vec3(0., 0., q.x);
+    } else if(q.x == 0.) //max = 0 (black)
     {
-        return vec3( 0. );
-    }
-    else //Normal output, without div-by-zero errors! \o/
+        return vec3(0.);
+    } else //Normal output, without div-by-zero errors! \o/
     {
-        return vec3( abs( q.z + (q.w - q.y)/(6.*chroma) ), chroma/q.x, q.x );
+        return vec3(abs(q.z + (q.w - q.y) / (6. * chroma)), chroma / q.x, q.x);
     }
 }
 
@@ -38,7 +36,7 @@ vec3 hsv_to_rgb(vec3 c) {
 
 void main() {
     vec4 initialColor = texture2D(u_image, v_texCoord);
-    if (initialColor.a == 0.0) {
+    if(initialColor.a == 0.0) {
         gl_FragColor = vec4(0, 0, 0, 0);
         return;
     }
@@ -51,22 +49,18 @@ void main() {
     colorIn[4] = vec3(0.5, 1.0, 1.0);
     colorIn[5] = vec3(0.833, 1.0, 1.0);
     vec3 colorHSV = rgb_to_hsv(color);
-    for (int i=0; i < max_colors; i+=1) {
-        if (i >= colorCount) {break;}
+    for(int i = 0; i < max_colors; i += 1) {
+        if(colorCount <= 2 && i >= colorCount)
+            break;
         vec3 colorDelta = colorHSV - colorIn[i];
-        if (abs(colorDelta.r) > 0.5) colorDelta.r -= sign(colorDelta.r);
-        if (
-            abs(colorDelta.r) <= color_tolorance.r && 
+        if(abs(colorDelta.r) > 0.5)
+            colorDelta.r -= sign(colorDelta.r);
+        if(abs(colorDelta.r) <= color_tolorance.r &&
             abs(colorDelta.g) <= color_tolorance.g &&
-            abs(colorDelta.b) <= color_tolorance.b
-        ) {
+            abs(colorDelta.b) <= color_tolorance.b) {
             vec3 colorOutHSV = rgb_to_hsv(colorOut[i]);
-            color = hsv_to_rgb(vec3(
-                mod(colorOutHSV.r + colorDelta.r, 1.0),
-                clamp(colorOutHSV.g + colorDelta.g, 0.0, 1.0),
-                clamp(colorOutHSV.b + colorDelta.b, 0.0, 1.0)
-            ));
+            color = hsv_to_rgb(vec3(mod(colorOutHSV.r + colorDelta.r, 1.0), clamp(colorOutHSV.g + colorDelta.g, 0.0, 1.0), clamp(colorOutHSV.b + colorDelta.b, 0.0, 1.0)));
         }
     }
-   gl_FragColor =  vec4(color, initialColor.a);
+    gl_FragColor = vec4(color, initialColor.a);
 }

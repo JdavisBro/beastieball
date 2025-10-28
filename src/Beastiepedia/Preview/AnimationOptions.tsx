@@ -57,7 +57,15 @@ export default function AnimationOptions(props: Props): React.ReactElement {
         >
           {Object.entries(props.animationDisabled).map(([value, allowed]) => (
             <option value={value} key={value} disabled={allowed}>
-              {value.charAt(0).toUpperCase() + value.slice(1)}
+              {value
+                .split(/_| /)
+                .reduce(
+                  (accum, word) =>
+                    (accum ? accum + " " : "") +
+                    word.charAt(0).toUpperCase() +
+                    word.slice(1),
+                  "",
+                )}
             </option>
           ))}
         </select>

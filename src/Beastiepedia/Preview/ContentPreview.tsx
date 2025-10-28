@@ -64,10 +64,19 @@ const ANIMATION_LIST = [
   "stop",
   "hug", // troglum
   "special", // conjarr
+  "bug_idle", // varkabond
+  "bug_walk",
+  "bug_cheer",
 ];
 
 const ANIMATION_ALWAYS_ENABLED = ["idle", "menu"];
-const ANIMATION_UNIQUE = ["hug", "special"];
+const ANIMATION_UNIQUE = [
+  "hug", // troglum
+  "special", // conjarr
+  "bug_idle", // varkabond
+  "bug_walk",
+  "bug_cheer",
+];
 
 const IDLE_EXCEPTIONS = ["sprServal", "sprDragonfly", "sprOppossum"];
 const MOVE_EXCEPTIONS = ["sprSeal", "sprDragonfly"];

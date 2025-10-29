@@ -4,20 +4,19 @@ import styles from "./Shared.module.css";
 import Modal from "./Modal";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import { useIsSpoiler } from "./useSpoiler";
+import { useLocalStorage } from "usehooks-ts";
 
 const BEASTIES = [...BEASTIE_DATA.values()];
 
 function BeastieButton({
   beastie,
   isSpoiler,
-  visible,
   selectable,
   nonSelectableReason,
   handleClick,
 }: {
   beastie: BeastieType;
   isSpoiler: boolean;
-  visible: boolean;
   selectable: boolean;
   nonSelectableReason?: string;
   handleClick: (beastieId: string, isSpoiler: boolean) => void;
@@ -26,9 +25,6 @@ function BeastieButton({
     <div
       key={beastie.id}
       role="button"
-      style={{
-        display: visible ? "flex" : "none",
-      }}
       tabIndex={selectable ? 0 : -1}
       className={
         selectable
@@ -56,6 +52,12 @@ function BeastieButton({
       </div>
     </div>
   );
+}
+
+enum FilterMode {
+  None,
+  NoMetamorph,
+  Metamorphs,
 }
 
 export default function BeastieSelect({
@@ -105,6 +107,24 @@ export default function BeastieSelect({
     clickedRef.current = [false, undefined];
   };
 
+  const [filterMode, setFilterMode] = useLocalStorage(
+    "beastieSelectFilterMode",
+    FilterMode.None,
+  );
+
+  const filterFunction: (beastie: BeastieType) => Boolean =
+    filterMode == FilterMode.None
+      ? () => true
+      : filterMode == FilterMode.Metamorphs
+        ? (beastie: BeastieType) =>
+            !!beastie.evolution?.length &&
+            beastie.evolution.some((evo) => evo.condition[0] != 7)
+        : filterMode == FilterMode.NoMetamorph
+          ? (beastie: BeastieType) =>
+              !beastie.evolution?.length ||
+              beastie.evolution.every((evo) => evo.condition[0] == 7)
+          : () => true;
+
   return (
     <>
       <button onClick={() => setOpen(true)}>
@@ -119,15 +139,33 @@ export default function BeastieSelect({
         hashValue="BeastieSelect"
       >
         <div className={styles.beastieSelectContainer}>
-          <label tabIndex={0}>
-            Search:{" "}
-            <input
-              type="search"
-              onChange={(event) => setSearch(event.currentTarget.value)}
-              onFocus={(event) => event.currentTarget.select()}
-              value={search}
-            />
-          </label>
+          <div>
+            <label tabIndex={0}>
+              Search:{" "}
+              <input
+                type="search"
+                onChange={(event) => setSearch(event.currentTarget.value)}
+                onFocus={(event) => event.currentTarget.select()}
+                value={search}
+              />
+            </label>
+            {" - "}
+            <label>
+              Filter:{" "}
+              <select
+                value={filterMode}
+                onChange={(event) =>
+                  setFilterMode(Number(event.currentTarget.value))
+                }
+              >
+                <option value={FilterMode.None}>None</option>
+                <option value={FilterMode.NoMetamorph}>
+                  Can not Metamorph
+                </option>
+                <option value={FilterMode.Metamorphs}>Can Metamorph</option>
+              </select>
+            </label>
+          </div>
           <div className={styles.beastieSelect}>
             <div
               key="unset"
@@ -167,7 +205,11 @@ export default function BeastieSelect({
                 {extraOptionText}
               </div>
             ) : null}
-            {BEASTIES.map((beastie) => (
+            {BEASTIES.filter(
+              (beastie) =>
+                beastie.name.toLowerCase().includes(search.toLowerCase()) &&
+                filterFunction(beastie),
+            ).map((beastie) => (
               <BeastieButton
                 key={beastie.id}
                 beastie={beastie}
@@ -175,9 +217,6 @@ export default function BeastieSelect({
                 isSpoiler={isSpoiler(beastie.id)}
                 selectable={!isSelectable || isSelectable(beastie)}
                 nonSelectableReason={nonSelectableReason}
-                visible={beastie.name
-                  .toLowerCase()
-                  .includes(search.toLowerCase())}
               />
             ))}
           </div>

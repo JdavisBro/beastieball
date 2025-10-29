@@ -8,11 +8,14 @@ import ENCOUNTER_DATA, {
 import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
 import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider";
-import EncounterBeastieElem from "./EncounterBeastieElem";
+import EncounterBeastieElem, {
+  encounterToTeamBeastie,
+} from "./EncounterBeastieElem";
 import getLevelBonus from "./getLevelBonus";
 import { useState } from "react";
 import MoveModalProvider from "../../shared/MoveModalProvider";
 import AiInfo from "./AiInfo";
+import { createPid } from "../Builder/createBeastie";
 
 declare global {
   interface Window {
@@ -88,6 +91,26 @@ export default function Encounters() {
           bossesDefeated,
         )
       : 0;
+
+  const openTeamInBuilder = (forceLevel?: number) => {
+    if (!encounter) {
+      return;
+    }
+    const team = encounter.team
+      .slice(0, 5)
+      .map((encBeastie, index) =>
+        encounterToTeamBeastie(
+          createPid(),
+          encBeastie,
+          forceLevel ?? encBeastie.level + bonus_levels,
+          encounter.id,
+          index,
+        ),
+      );
+    localStorage.setItem("teamBuilderTeam", JSON.stringify(team));
+    navigate("/team/builder/");
+  };
+  const openInBuilderDisabled = !(encounter && encounter.team.length);
 
   return (
     <>
@@ -175,6 +198,22 @@ export default function Encounters() {
               : null}
           </BeastieRenderProvider>
         </MoveModalProvider>
+      </div>
+      <div className={styles.box}>
+        Open in Team Builder:{" "}
+        <button
+          disabled={openInBuilderDisabled}
+          onClick={() => openTeamInBuilder()}
+        >
+          At Current Levels
+        </button>
+        {" - "}
+        <button
+          disabled={openInBuilderDisabled}
+          onClick={() => openTeamInBuilder(50)}
+        >
+          At Level 50
+        </button>
       </div>
     </>
   );

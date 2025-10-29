@@ -312,6 +312,12 @@
   gap: 4px;
 }
 
+.beastieSelectOptions {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 .beastieSelect {
   display: flex;
   flex-wrap: wrap;

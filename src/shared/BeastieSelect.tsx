@@ -139,7 +139,7 @@ export default function BeastieSelect({
         hashValue="BeastieSelect"
       >
         <div className={styles.beastieSelectContainer}>
-          <div>
+          <div className={styles.beastieSelectOptions}>
             <label tabIndex={0}>
               Search:{" "}
               <input

@@ -296,9 +296,12 @@ export default function EditBeastie({
                       ...accum,
                       newBeastie.attklist.includes(moveId)
                         ? moveId
-                        : (newBeastie.attklist.find(
-                            (newMoveId) => !accum.includes(newMoveId),
-                          ) ?? newBeastie.attklist[0]),
+                        : ((
+                            newBeastie.learnset.find(
+                              ([, newMoveId]) =>
+                                !accum.includes(newMoveId as string),
+                            ) as [number, string]
+                          )[1] ?? newBeastie.attklist[0]),
                     ],
                     [],
                   ),

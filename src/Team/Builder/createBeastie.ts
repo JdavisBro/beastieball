@@ -30,11 +30,9 @@ export default function createBeastie(
     scale: 0.5,
     vibe: 0,
     ability_index: 0,
-    attklist: beastie?.attklist.slice(0, 3) ?? [
-      "careful",
-      "callout",
-      "refresh",
-    ],
+    attklist: beastie?.learnset
+      .slice(0, 3)
+      .map(([_, name]) => name as string) ?? ["careful", "callout", "refresh"],
 
     ba_r: 1,
     ha_r: 1,

@@ -841,7 +841,7 @@
         "collides": true,
         "cost": 1,
         "dest_level": "sphinx",
-        "dest_object": "@ref object(objBallcenter)",
+        "dest_object": "@ref object(objAcademymarker)",
         "id": "rematch",
         "parent": null,
         "prereq": { "field": 0, "type": [0] },
@@ -927,11 +927,33 @@
         "alt_complete_flag": -1,
         "collides": true,
         "cost": 1,
-        "dest_level": "jasper",
-        "dest_object": "@ref object(objDiner)",
-        "id": "diner",
+        "dest_level": "forest_lake",
+        "dest_object": "@ref object(objHeadmaster)",
+        "id": "final",
         "parent": null,
-        "prereq": { "field": "jasper", "type": [3, 4] },
+        "prereq": {
+          "field": [
+            {
+              "comparison": 5,
+              "editor_openable": false,
+              "key": "crown_series",
+              "lastcheck": null,
+              "name": "datacheck",
+              "needscheck": true,
+              "value": 8
+            },
+            {
+              "comparison": 1,
+              "editor_openable": false,
+              "key": "callisto_locked",
+              "lastcheck": null,
+              "name": "datacheck",
+              "needscheck": true,
+              "value": 1
+            }
+          ],
+          "type": [2, 5, 4]
+        },
         "rankup": false
       },
       {
@@ -950,7 +972,7 @@
     "img": 0,
     "loneliness": 0.9,
     "max_hearts": 6,
-    "name": "socialssetup_classsocial_008",
+    "name": "Callisto",
     "object": "@ref object(objHeadmaster)",
     "plays": [
       "careful",

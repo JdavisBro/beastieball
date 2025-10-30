@@ -12,7 +12,7 @@
     "id": "academy",
     "levels": 5.5,
     "min_rank": 4.5,
-    "music": 14,
+    "music": 23,
     "obj": "@ref object(objHeadmaster)",
     "rank": 1,
     "scale_rank_start_offset": 0,

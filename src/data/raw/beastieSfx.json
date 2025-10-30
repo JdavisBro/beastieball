@@ -79,6 +79,11 @@
     "cheer": 4,
     "hello": 4
   },
+  "clam": {
+    "boo": 4,
+    "cheer": 4,
+    "hello": 4
+  },
   "clown": {
     "boo": 4,
     "cheer": 4,
@@ -179,6 +184,16 @@
     "cheer": 4,
     "hello": 4
   },
+  "ibis": {
+    "boo": 4,
+    "cheer": 4,
+    "hello": 4
+  },
+  "jellyfish1": {
+    "boo": 4,
+    "cheer": 4,
+    "hello": 4
+  },
   "jellyfish2": {
     "boo": 4,
     "cheer": 4,
@@ -190,6 +205,16 @@
     "hello": 4
   },
   "kangaroo1": {
+    "boo": 4,
+    "cheer": 4,
+    "hello": 4
+  },
+  "kettle": {
+    "boo": 4,
+    "cheer": 4,
+    "hello": 4
+  },
+  "kettle1": {
     "boo": 4,
     "cheer": 4,
     "hello": 4
@@ -279,12 +304,27 @@
     "cheer": 4,
     "hello": 4
   },
+  "opossum": {
+    "boo": 4,
+    "cheer": 4,
+    "hello": 4
+  },
   "platypus": {
     "boo": 4,
     "cheer": 4,
     "hello": 4
   },
   "platypus1": {
+    "boo": 4,
+    "cheer": 4,
+    "hello": 4
+  },
+  "platypus2": {
+    "boo": 5,
+    "cheer": 4,
+    "hello": 4
+  },
+  "possum": {
     "boo": 4,
     "cheer": 4,
     "hello": 4

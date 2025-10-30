@@ -101,7 +101,9 @@ export default function saveGif(
 
   const maxTransitioned = Math.max(...Object.values(transitionedto));
   let basegroup = frames.findIndex(
-    (_value, index) => transitionedto[index] == maxTransitioned,
+    (value, index) =>
+      transitionedto[index] == maxTransitioned &&
+      !value.transitions?.every((transition) => transition == transition),
   );
   basegroup =
     basegroup != -1 &&

@@ -68,6 +68,7 @@ export function setupFrameCallback(
 
     animState.frameTime += time - animState.prevTime;
     if (animState.frameLength == undefined) {
+      setFrame(startFrame);
       updateHold(animState, beastieSpeed);
     } else if (
       animState.frameTime >

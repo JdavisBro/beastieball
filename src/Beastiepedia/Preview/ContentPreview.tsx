@@ -295,7 +295,13 @@ export default function ContentPreview(props: Props): React.ReactNode {
     }
 
     if (anim && anim != animStateRef.current.anim) {
-      animStateRef.current.anim = anim;
+      animStateRef.current = {
+        ...animStateRef.current,
+        state: undefined,
+        frameLength: undefined,
+        anim: anim,
+        frame: undefined,
+      };
     }
     if (!animStateRef.current.anim) {
       return;
@@ -320,16 +326,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
       animdata.__anim_speed ?? 1,
     );
   }, [setFrame, anim, allFramesLoaded, animdata.__anim_speed, paused]);
-
-  useEffect(() => {
-    animStateRef.current = {
-      ...animStateRef.current,
-      state: undefined,
-      frameLength: 0,
-      anim: anim,
-      frame: undefined,
-    };
-  }, [anim]);
 
   useEffect(() => {
     if (animStateRef.current.frame) {

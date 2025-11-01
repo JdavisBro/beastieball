@@ -426,8 +426,6 @@ export function getMoveDesc(move: Move) {
   return desc_str;
 }
 
-const MAX_FRIENDS = ["riley", "riven", "streamer"];
-
 export default function MoveView(props: {
   move: Move;
   noLearner?: boolean;
@@ -446,18 +444,21 @@ export default function MoveView(props: {
   const friendSpoiler = friend ? isSpoilerFriend(friend.id) : false;
   let friend_hearts = 0;
   let learned_text;
+  let stop_on_no_collide = false;
   if (friend) {
     const friend_rank = Math.floor(friend.plays.indexOf(props.move.id) / 4) + 1;
     let rank = 0;
     let found;
     for (const event of friend.events) {
-      if (!MAX_FRIENDS.includes(friend.id)) {
-        if (event.prereq.type[0] == 4 || event.prereq.type[0] == 1) {
-          continue;
-        }
-        if (event.alt_complete_flag == -1 && event.dest_level == "") {
+      if (!event.collides && stop_on_no_collide) {
+        break;
+      }
+      if (event.prereq.type[0] == 1) {
+        if (!event.collides) {
           break;
         }
+        stop_on_no_collide = true;
+        continue;
       }
       friend_hearts += 1;
       if (event.rankup) {

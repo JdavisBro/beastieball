@@ -116,12 +116,17 @@ export default function PlayDex() {
     ) {
       return false;
     }
+    let stop_on_no_collide = false;
     for (const event of friend.events) {
-      if (event.prereq.type[0] == 4 || event.prereq.type[0] == 1) {
-        continue;
+      if (!event.collides && stop_on_no_collide) {
+        break;
       }
-      if (event.alt_complete_flag == -1 && event.dest_level == "") {
-        return false;
+      if (event.prereq.type[0] == 1) {
+        if (!event.collides) {
+          break;
+        }
+        stop_on_no_collide = true;
+        continue;
       }
       if (event.rankup) {
         return true;

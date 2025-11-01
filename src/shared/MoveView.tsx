@@ -328,7 +328,7 @@ function getEffectString(
     case 85:
       return "If ally also BLOCKS:";
     case 86:
-      return `Charges each turn on field, up to ${effect.pow}.`;
+      return `Must charge up for ${effect.pow} turns.`;
     case 87:
       return "";
     case 88:

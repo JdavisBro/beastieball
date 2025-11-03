@@ -217,7 +217,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ma", 2],
     "type_focus": 1
   },
@@ -443,7 +442,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ma", 1],
     "type_focus": 1
   },
@@ -736,7 +734,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ha", 3],
     "type_focus": 1
   },
@@ -960,7 +957,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["ha", 1],
     "type_focus": 1
   },
@@ -1162,7 +1158,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["bd", 2, "md", 2],
     "type_focus": 0
   },
@@ -1375,7 +1370,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": 1,
     "tyield": ["hd", 2],
     "type_focus": 1
   },
@@ -1584,7 +1578,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["ha", 3],
     "type_focus": 1
   },
@@ -1839,7 +1832,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["md", 3],
     "type_focus": 2
   },
@@ -2055,7 +2047,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["md", 1],
     "type_focus": 2
   },
@@ -2294,7 +2285,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["md", 2],
     "type_focus": 2
   },
@@ -2509,7 +2499,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["ba", 3],
     "type_focus": 0
   },
@@ -2714,7 +2703,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ba", 1],
     "type_focus": 0
   },
@@ -2920,7 +2908,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ba", 2],
     "type_focus": 0
   },
@@ -3150,7 +3137,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["hd", 2],
     "type_focus": 0
   },
@@ -3356,7 +3342,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["hd", 1],
     "type_focus": 1
   },
@@ -3577,7 +3562,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["ba", 3],
     "type_focus": 0
   },
@@ -3799,7 +3783,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ba", 2, "bd", 2],
     "type_focus": 0
   },
@@ -3997,7 +3980,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ba", 2, "ma", 2],
     "type_focus": 2
   },
@@ -4231,7 +4213,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ba", 1, "ma", 1],
     "type_focus": 2
   },
@@ -4460,7 +4441,6 @@
     "spr_alt": ["sprCrab_alt"],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ba", 2, "ha", 1],
     "type_focus": 0
   },
@@ -4678,7 +4658,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["bd", 2],
     "type_focus": 0
   },
@@ -4917,7 +4896,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ha", 2],
     "type_focus": 0
   },
@@ -5145,7 +5123,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ha", 1],
     "type_focus": 0
   },
@@ -5375,7 +5352,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["hd", 2],
     "type_focus": 1
   },
@@ -5655,7 +5631,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["hd", 1, "bd", 1],
     "type_focus": 1
   },
@@ -5929,7 +5904,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["hd", 1],
     "type_focus": 1
   },
@@ -6162,7 +6136,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["hd", 1],
     "type_focus": 1
   },
@@ -6411,7 +6384,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["bd", 3],
     "type_focus": 0
   },
@@ -6627,7 +6599,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["bd", 1],
     "type_focus": 0
   },
@@ -6853,7 +6824,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["bd", 2],
     "type_focus": 0
   },
@@ -7066,7 +7036,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ma", 3],
     "type_focus": 2
   },
@@ -7292,7 +7261,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ma", 2],
     "type_focus": 2
   },
@@ -7494,7 +7462,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["ha", 3],
     "type_focus": 1
   },
@@ -7705,7 +7672,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ha", 1],
     "type_focus": 1
   },
@@ -7920,7 +7886,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ha", 2],
     "type_focus": 1
   },
@@ -8136,7 +8101,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["bd", 3],
     "type_focus": 2
   },
@@ -8337,7 +8301,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["bd", 1],
     "type_focus": 2
   },
@@ -8523,7 +8486,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["bd", 2],
     "type_focus": 2
   },
@@ -8739,7 +8701,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ma", 2],
     "type_focus": 2
   },
@@ -8949,7 +8910,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["bd", 2, "md", 1],
     "type_focus": 1
   },
@@ -9236,7 +9196,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ma", 3],
     "type_focus": 2
   },
@@ -9416,7 +9375,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["hd", 3],
     "type_focus": 1
   },
@@ -9617,7 +9575,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["hd", 1],
     "type_focus": 1
   },
@@ -9799,7 +9756,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["hd", 2],
     "type_focus": 1
   },
@@ -10036,7 +9992,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["md", 2],
     "type_focus": 2
   },
@@ -10263,7 +10218,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["md", 1],
     "type_focus": 2
   },
@@ -10495,7 +10449,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["hd", 3],
     "type_focus": 1
   },
@@ -10703,7 +10656,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["hd", 1],
     "type_focus": 1
   },
@@ -10946,7 +10898,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ha", 2],
     "type_focus": 1
   },
@@ -11172,7 +11123,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["ha", 1],
     "type_focus": 1
   },
@@ -11433,7 +11383,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ba", 2, "ma", 2],
     "type_focus": 2
   },
@@ -11634,7 +11583,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["ma", 1, "ba", 1],
     "type_focus": 2
   },
@@ -11842,7 +11790,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["bd", 2, "md", 2],
     "type_focus": 0
   },
@@ -12061,7 +12008,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["md", 2],
     "type_focus": 2
   },
@@ -12268,7 +12214,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["md", 2],
     "type_focus": 0
   },
@@ -12466,7 +12411,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["md", 1],
     "type_focus": 0
   },
@@ -12700,7 +12644,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ha", 2],
     "type_focus": 1
   },
@@ -12921,7 +12864,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ha", 2, "ma", 2],
     "type_focus": 1
   },
@@ -13122,7 +13064,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["ma", 1],
     "type_focus": 2
   },
@@ -13353,7 +13294,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["hd", 1, "md", 1],
     "type_focus": 2
   },
@@ -13566,7 +13506,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["hd", 2],
     "type_focus": 1
   },
@@ -13776,7 +13715,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["md", 3],
     "type_focus": 2
   },
@@ -13972,7 +13910,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["md", 1],
     "type_focus": 2
   },
@@ -14189,7 +14126,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["md", 2],
     "type_focus": 2
   },
@@ -14395,7 +14331,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["ma", 2, "md", 2],
     "type_focus": 2
   },
@@ -14577,7 +14512,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["md", 1],
     "type_focus": 2
   },
@@ -14831,7 +14765,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ba", 2, "ha", 2],
     "type_focus": 0
   },
@@ -15033,7 +14966,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["md", 3],
     "type_focus": 2
   },
@@ -15228,7 +15160,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["ma", 1],
     "type_focus": 2
   },
@@ -15481,7 +15412,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ma", 2],
     "type_focus": 2
   },
@@ -15715,7 +15645,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["bd", 3],
     "type_focus": 0
   },
@@ -15939,7 +15868,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["bd", 1],
     "type_focus": 0
   },
@@ -16176,7 +16104,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["bd", 2],
     "type_focus": 0
   },
@@ -16398,7 +16325,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ma", 3],
     "type_focus": 2
   },
@@ -16693,7 +16619,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ha", 1, "ma", 1, "ba", 1],
     "type_focus": 2
   },
@@ -16908,7 +16833,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["hd", 1, "md", 1, "bd", 1],
     "type_focus": 0
   },
@@ -17184,7 +17108,6 @@
     "spr_alt": ["sprRat_alt"],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["hd", 2],
     "type_focus": 2
   },
@@ -17402,7 +17325,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["bd", 3],
     "type_focus": 0
   },
@@ -17610,7 +17532,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["bd", 1],
     "type_focus": 0
   },
@@ -17819,7 +17740,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["bd", 2],
     "type_focus": 0
   },
@@ -18053,7 +17973,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ha", 2, "ma", 2],
     "type_focus": 1
   },
@@ -18272,7 +18191,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["ha", 1, "ma", 1],
     "type_focus": 1
   },
@@ -18488,7 +18406,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ba", 2, "bd", 2],
     "type_focus": 0
   },
@@ -18696,7 +18613,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ba", 1],
     "type_focus": 0
   },
@@ -18919,7 +18835,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": 1,
     "tyield": ["ba", 2, "ha", 1],
     "type_focus": 1
   },
@@ -19146,7 +19061,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ba", 1],
     "type_focus": 0
   },
@@ -19351,7 +19265,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ba", 3],
     "type_focus": 0
   },
@@ -19541,7 +19454,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ba", 2],
     "type_focus": 0
   },
@@ -19765,7 +19677,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["hd", 1],
     "type_focus": 1
   },
@@ -20030,7 +19941,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ba", 1, "bd", 1],
     "type_focus": 0
   },
@@ -20281,7 +20191,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ma", 1, "md", 1],
     "type_focus": 2
   },
@@ -20528,7 +20437,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ha", 1, "hd", 1],
     "type_focus": 1
   },
@@ -20774,7 +20682,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["bd", 2, "hd", 2, "md", 2],
     "type_focus": 0
   },
@@ -20982,7 +20889,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["md", 2],
     "type_focus": 1
   },
@@ -21194,7 +21100,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ba", 2],
     "type_focus": 0
   },
@@ -21419,7 +21324,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["ba", 3],
     "type_focus": 0
   },
@@ -21643,7 +21547,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["ha", 3],
     "type_focus": 1
   },
@@ -21873,7 +21776,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ha", 1, "ba", 1],
     "type_focus": 1
   },
@@ -22107,7 +22009,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ba", 2],
     "type_focus": 0
   },
@@ -22363,7 +22264,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["ma", 3],
     "type_focus": 2
   },
@@ -22624,7 +22524,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["ma", 1],
     "type_focus": 2
   },
@@ -22876,7 +22775,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["hd", 3],
     "type_focus": 0
   },
@@ -23099,7 +22997,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
-    "tex_age": -1,
     "tyield": ["hd", 1],
     "type_focus": 0
   },
@@ -23333,7 +23230,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_age": -1,
     "tyield": ["hd", 2],
     "type_focus": 0
   },
@@ -23558,7 +23454,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
-    "tex_age": -1,
     "tyield": ["md", 3],
     "type_focus": 1
   },
@@ -23806,7 +23701,6 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
-    "tex_age": -1,
     "tyield": ["hd", 3],
     "type_focus": 0
   }

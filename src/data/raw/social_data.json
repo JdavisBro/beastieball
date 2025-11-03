@@ -169,7 +169,7 @@
       "protect",
       "rush",
       "cover",
-      "pipe",
+      "allycover",
       "allyrush",
       "juggle",
       "freeball"
@@ -412,7 +412,7 @@
       "rest",
       "mindpass",
       "dropshot",
-      "chillout",
+      "chill",
       "meditate",
       "mindup",
       "moon",
@@ -1098,7 +1098,7 @@
       "skillswap",
       "taunt",
       "dispel",
-      "introduce",
+      "introduction",
       "noisytag"
     ],
     "spr": "sprStreamer"

@@ -284,7 +284,11 @@ export default function EditBeastie({
                 changeValue("specie", beastieId);
                 changeValue(
                   "xp",
-                  (beastie.xp / beastiedata.growth) * newBeastie.growth,
+                  Math.floor(
+                    Math.cbrt(Math.round(beastie.xp / beastiedata.growth)),
+                  ) **
+                    3 *
+                    newBeastie.growth,
                 );
                 if (beastie.name == beastiedata.name) {
                   changeValue("name", newBeastie.name);

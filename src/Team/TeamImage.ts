@@ -337,7 +337,7 @@ async function createTeamImage(
       const num_text = `#${beastie.number}`;
       const level = atLevel
         ? atLevel
-        : Math.floor(Math.cbrt(beastie.xp / beastiedata.growth));
+        : Math.floor(Math.cbrt(Math.ceil(beastie.xp / beastiedata.growth)));
       const level_text = ` Lvl ${level}`;
 
       const display_name = beastie.name || beastiedata.name;

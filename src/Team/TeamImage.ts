@@ -142,6 +142,9 @@ export function createTeamImageCanvas(
       canvas_in_use = false;
     })
     .then(() => {
+      if (!canvas_in_use) {
+        return;
+      }
       if (copy) {
         canvas.toBlob((blob) => {
           if (!blob) {

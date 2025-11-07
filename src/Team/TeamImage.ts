@@ -96,6 +96,8 @@ function getSize(mode: DrawMode, count: number) {
   }
 }
 
+let canvas_in_use = false;
+
 export function createTeamImageCanvas(
   canvas: HTMLCanvasElement,
   team: TeamBeastie[],
@@ -107,6 +109,10 @@ export function createTeamImageCanvas(
   maxCoaching?: boolean,
   copy?: boolean,
 ) {
+  if (canvas_in_use) {
+    return;
+  }
+  canvas_in_use = true;
   const size = getSize(mode, team.length);
   if (
     !(
@@ -131,7 +137,10 @@ export function createTeamImageCanvas(
     atLevel,
     maxCoaching,
   )
-    .catch((reason) => console.log(reason))
+    .catch((reason) => {
+      console.log(reason);
+      canvas_in_use = false;
+    })
     .then(() => {
       if (copy) {
         canvas.toBlob((blob) => {
@@ -146,6 +155,7 @@ export function createTeamImageCanvas(
         a.href = canvas.toDataURL("image/png");
         a.click();
       }
+      canvas_in_use = false;
     });
 }
 

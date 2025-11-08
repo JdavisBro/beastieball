@@ -44,9 +44,11 @@ function findLanguageText(text: string[], langs: string[]) {
 
 export default function Carousel({
   children,
+  bigmoonOld,
   bigmoonReload,
 }: {
   children: React.ReactNode;
+  bigmoonOld: boolean;
   bigmoonReload: () => void;
 }) {
   const [carouselData, carouselReload] = useGameData<CarouselData>(
@@ -60,21 +62,48 @@ export default function Carousel({
   const [tab, setTab] = useState(0);
   const lastReload = useRef(0);
 
+  const bigmoonPos = bigmoonOld ? 1 : 0;
+
   const datas = noData
     ? []
     : carouselData.data.filter((data) => !data.img.startsWith("bigmoon"));
 
-  const tabs = [
-    EMOJI_MAP.bigmoon,
-    ...datas.map((data) => {
-      for (const key of EMOJI_SWAPPED) {
-        if (data.img.startsWith(key) || data.img.endsWith(key + ".png")) {
-          return EMOJI_MAP[key];
-        }
+  const tabs = datas.map((data) => {
+    for (const key of EMOJI_SWAPPED) {
+      if (data.img.startsWith(key) || data.img.endsWith(key + ".png")) {
+        return EMOJI_MAP[key];
       }
-      return EMOJI_MAP.default;
-    }),
-  ];
+    }
+    return EMOJI_MAP.default;
+  });
+  tabs.splice(bigmoonPos, 0, EMOJI_MAP.bigmoon);
+
+  const parts: React.ReactNode[] = datas.map((data) => (
+    <div key={data.img} className={styles.eventBlock}>
+      <div className={styles.eventImage}>
+        <img
+          src={`https://dumbandfat.com/beastieball/${data.img}`}
+          onLoad={(event) => {
+            event.currentTarget.classList.remove(styles.eventImageFailed);
+          }}
+          onError={(event) => {
+            event.currentTarget.classList.add(styles.eventImageFailed);
+          }}
+        />
+      </div>
+      <Link
+        className={styles.carouselItemText}
+        to={data.url}
+        target="_blank"
+        rel="noopener"
+      >
+        <div className={styles.carouselItemText}>
+          {findLanguageText(data.text, data.langs)}
+        </div>
+      </Link>
+    </div>
+  ));
+  parts.splice(bigmoonPos, 0, children);
 
   return (
     <>
@@ -83,34 +112,7 @@ export default function Carousel({
           className={styles.carouselRow}
           style={{ transform: `translateX(-${tab * 100}%)` }}
         >
-          {children}
-          {datas.map((data) => (
-            <div key={data.img} className={styles.eventBlock}>
-              <div className={styles.eventImage}>
-                <img
-                  src={`https://dumbandfat.com/beastieball/${data.img}`}
-                  onLoad={(event) => {
-                    event.currentTarget.classList.remove(
-                      styles.eventImageFailed,
-                    );
-                  }}
-                  onError={(event) => {
-                    event.currentTarget.classList.add(styles.eventImageFailed);
-                  }}
-                />
-              </div>
-              <Link
-                className={styles.carouselItemText}
-                to={data.url}
-                target="_blank"
-                rel="noopener"
-              >
-                <div className={styles.carouselItemText}>
-                  {findLanguageText(data.text, data.langs)}
-                </div>
-              </Link>
-            </div>
-          ))}
+          {parts}
         </div>
       </div>
       <div

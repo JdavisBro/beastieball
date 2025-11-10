@@ -317,6 +317,8 @@ function getEffectString(
       return `[sprIcon,0][sprIcon,2]DEF${boost} to ${target}.`;
     case 79:
       return `[sprIcon,1][sprIcon,2]DEF${boost} to ${target}.`;
+    case 80:
+      return `${feels} ${effect.pow} [sprStatus,18]SAD (ignores HEALS + BOOSTs)${dot}`;
     case 81:
       return `Changes ${target} trait to user's trait.`;
     case 82:

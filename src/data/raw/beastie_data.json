@@ -7290,6 +7290,7 @@
       "noisytag",
       "introduction",
       "skillswap",
+      "speech",
       "storedpower",
       "dragontail",
       "stomp",
@@ -7491,6 +7492,7 @@
       "noisytag",
       "introduction",
       "skillswap",
+      "speech",
       "storedpower",
       "dragontail",
       "stomp",
@@ -7701,6 +7703,7 @@
       "noisytag",
       "introduction",
       "skillswap",
+      "speech",
       "storedpower",
       "dragontail",
       "stomp",
@@ -7918,6 +7921,7 @@
       "eerie",
       "sweatall",
       "rattle",
+      "sad",
       "bamboozle",
       "menace",
       "targethp",
@@ -8133,6 +8137,7 @@
       "eerie",
       "sweatall",
       "rattle",
+      "sad",
       "bamboozle",
       "menace",
       "targethp",
@@ -8333,6 +8338,7 @@
       "eerie",
       "sweatall",
       "rattle",
+      "sad",
       "bamboozle",
       "menace",
       "targethp",
@@ -9228,7 +9234,8 @@
       "protect",
       "minddown",
       "teleport",
-      "allycover"
+      "allycover",
+      "sad"
     ],
     "attklist_randomize": -1,
     "ba": 16,
@@ -9407,7 +9414,8 @@
       "protect",
       "minddown",
       "teleport",
-      "allycover"
+      "allycover",
+      "sad"
     ],
     "attklist_randomize": -1,
     "ba": 14,
@@ -9607,7 +9615,8 @@
       "protect",
       "minddown",
       "teleport",
-      "allycover"
+      "allycover",
+      "sad"
     ],
     "attklist_randomize": -1,
     "ba": 14,
@@ -12677,6 +12686,8 @@
       "splinter",
       "rattle",
       "heartd",
+      "sad",
+      "speech",
       "bamboozle",
       "rest",
       "healbell",
@@ -12897,6 +12908,8 @@
       "splinter",
       "rattle",
       "heartd",
+      "sad",
+      "speech",
       "bamboozle",
       "rest",
       "healbell",
@@ -13097,6 +13110,8 @@
       "splinter",
       "rattle",
       "heartd",
+      "sad",
+      "speech",
       "bamboozle",
       "rest",
       "healbell",
@@ -16368,6 +16383,7 @@
       "juggle",
       "hdefup",
       "cook",
+      "sad",
       "toughattack",
       "swordsdance",
       "mimic"
@@ -16662,6 +16678,7 @@
       "juggle",
       "hdefup",
       "cook",
+      "sad",
       "toughattack",
       "swordsdance",
       "mimic"
@@ -20714,7 +20731,8 @@
       "lifepass",
       "followme",
       "fieldclear",
-      "protect"
+      "protect",
+      "sad"
     ],
     "attklist_randomize": -1,
     "ba": 30,
@@ -23268,6 +23286,7 @@
       "mdefup",
       "flight",
       "cook",
+      "speech",
       "healbell",
       "starterheart"
     ],

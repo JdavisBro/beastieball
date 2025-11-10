@@ -827,14 +827,14 @@
     "use": 0
   },
   "hazeball": {
-    "bt_tags": [2, 10],
+    "bt_tags": [2, 10, 38],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 34, "pow": 1, "targ": 3 }],
+    "eff": [{ "eff": 80, "pow": 1, "targ": 3 }],
     "id": "hazeball",
     "name": "Numbshot",
-    "pow": 70,
+    "pow": 65,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1785,6 +1785,19 @@
     "type": 0,
     "use": 1
   },
+  "sad": {
+    "bt_tags": [38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 80, "pow": 2, "targ": 3 }],
+    "id": "sad",
+    "name": "Gloom",
+    "pow": 0,
+    "targ": 4,
+    "type": 5,
+    "use": 0
+  },
   "scoreboosted": {
     "bt_tags": [1, 10],
     "desc_tagids": [],
@@ -2000,6 +2013,19 @@
     "pow": 70,
     "targ": 0,
     "type": 1,
+    "use": 0
+  },
+  "speech": {
+    "bt_tags": [31, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 80, "pow": 1, "targ": 7 }],
+    "id": "speech",
+    "name": "Soliloquy",
+    "pow": 0,
+    "targ": 1,
+    "type": 5,
     "use": 0
   },
   "spitball": {

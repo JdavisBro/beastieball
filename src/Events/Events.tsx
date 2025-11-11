@@ -7,7 +7,7 @@ import BigmoonBlock from "./Bigmoon";
 import Carousel from "./Carousel";
 import { useLocalStorage } from "usehooks-ts";
 
-const OLD_DAYS = 3;
+const OLD_DAYS = 1;
 
 export default function Events() {
   const [open, setOpen] = useLocalStorage("eventsOpen", true);

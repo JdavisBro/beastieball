@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 const EMOJI_MAP: Record<string, string> = {
   bigmoon: "🌙",
   experimental: "🧪",
+  sadness: "🧪",
   milestone: "⏫",
   update: "⏫",
   ost: "💿",
@@ -19,6 +20,8 @@ const EMOJI_MAP: Record<string, string> = {
   default: "❓",
 };
 const EMOJI_SWAPPED = Object.keys(EMOJI_MAP);
+
+const EXPERIMENTAL_PREFIXES = ["experimental", "sadness"];
 
 const LANG_MAP: Record<string, string> = {
   English: "en",
@@ -62,7 +65,13 @@ export default function Carousel({
   const [tab, setTab] = useState(0);
   const lastReload = useRef(0);
 
-  const bigmoonPos = bigmoonOld ? 1 : 0;
+  const bigmoonPos = bigmoonOld
+    ? noData
+      ? 1
+      : carouselData.data.findIndex((data) =>
+          EXPERIMENTAL_PREFIXES.some((exp) => data.img.startsWith(exp)),
+        ) + 1 || 1
+    : 0;
 
   const datas = noData
     ? []
@@ -91,16 +100,21 @@ export default function Carousel({
           }}
         />
       </div>
-      <Link
-        className={styles.carouselItemText}
-        to={data.url}
-        target="_blank"
-        rel="noopener"
-      >
-        <div className={styles.carouselItemText}>
+      <div className={styles.carouselItemText}>
+        <Link to={data.url} target="_blank" rel="noopener">
           {findLanguageText(data.text, data.langs)}
-        </div>
-      </Link>
+        </Link>
+        {import.meta.env.VITE_EXPERIMENTAL != "true" &&
+        EXPERIMENTAL_PREFIXES.some((exp) => data.img.startsWith(exp)) ? (
+          <Link
+            to={`https://${import.meta.env.VITE_URL_EXPERIMENTAL}/`}
+            target="_blank"
+            rel="noopener"
+          >
+            View the 🧪experimental site.
+          </Link>
+        ) : null}
+      </div>
     </div>
   ));
   parts.splice(bigmoonPos, 0, children);

@@ -1790,7 +1790,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 80, "pow": 2, "targ": 3 }],
+    "eff": [{ "eff": 80, "pow": 1, "targ": 3 }],
     "id": "sad",
     "name": "Gloom",
     "pow": 0,

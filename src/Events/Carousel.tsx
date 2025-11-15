@@ -106,11 +106,7 @@ export default function Carousel({
         </Link>
         {import.meta.env.VITE_EXPERIMENTAL != "true" &&
         EXPERIMENTAL_PREFIXES.some((exp) => data.img.startsWith(exp)) ? (
-          <Link
-            to={`https://${import.meta.env.VITE_URL_EXPERIMENTAL}/`}
-            target="_blank"
-            rel="noopener"
-          >
+          <Link to={`https://${import.meta.env.VITE_URL_EXPERIMENTAL}/`}>
             View the 🧪experimental site.
           </Link>
         ) : null}

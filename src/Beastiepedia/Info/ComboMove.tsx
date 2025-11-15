@@ -47,9 +47,8 @@ export default function ComboMove({
 
   const effects: MoveEffect[] = [];
   const used_effects: Record<number, MoveEffect> = {};
-  (friend ? [beastiedata, friend] : [beastiedata])
-    .sort((beastie, beastie2) => beastie.number - beastie2.number)
-    .forEach((beastie, beastieIndex) => {
+  (friend ? [beastiedata, friend] : [beastiedata]).forEach(
+    (beastie, beastieIndex) => {
       for (let i = 0; i < beastie.combos[type].length; i += 3) {
         const neweff = {
           eff: beastie.combos[type][i],
@@ -215,7 +214,8 @@ export default function ComboMove({
           }
         }
       }
-    });
+    },
+  );
 
   const navigate = useNavigate();
 

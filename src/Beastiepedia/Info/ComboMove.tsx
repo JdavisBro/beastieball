@@ -152,14 +152,8 @@ export default function ComboMove({
                 Math.sign(oldeff.pow) == Math.sign(neweff.pow))
             ) {
               oldeff.targ = 2;
-              let newpow = oldeff.pow + (neweff.pow - oldeff.pow) * 0.5;
-              if (neweff.eff == 8) {
-                newpow = Math.round(newpow * 20) / 20;
-              } else {
-                newpow = Math.round(newpow);
-              }
-              oldeff.pow = newpow;
-              if (newpow == 0) {
+              oldeff.pow = oldeff.pow + (neweff.pow - oldeff.pow) * 0.5;
+              if (oldeff.pow == 0) {
                 effects.splice(
                   effects.findIndex((value) => value == oldeff),
                   1,
@@ -183,6 +177,11 @@ export default function ComboMove({
                 1,
               );
             }
+          }
+          if (neweff.eff == 8) {
+            oldeff.pow = Math.round(oldeff.pow * 20) / 20;
+          } else {
+            oldeff.pow = Math.round(oldeff.pow);
           }
         }
 

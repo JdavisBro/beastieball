@@ -33,16 +33,13 @@ export default function EncounterPopup({
           if (!oldBeastieData) {
             return null;
           }
-          const babyBeastieData = BEASTIE_DATA.get(oldBeastieData.family);
-          if (!babyBeastieData) {
-            return null;
-          }
-          const beastieData =
-            getMetamorphAtLevel(
-              babyBeastieData,
-              beastie.level,
-              oldBeastieData.id,
-            ) ?? oldBeastieData;
+          const beastieData = beastie.evolves
+            ? (getMetamorphAtLevel(
+                BEASTIE_DATA.get(oldBeastieData.family) ?? oldBeastieData,
+                beastie.level,
+                oldBeastieData.id,
+              ) ?? oldBeastieData)
+            : oldBeastieData;
           const isWild = beastie.specie == "";
           const isSpoiler = isWild || isSpoilerFn(beastie.specie);
 

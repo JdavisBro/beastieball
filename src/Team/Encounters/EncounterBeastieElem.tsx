@@ -30,13 +30,13 @@ export function encounterToTeamBeastie(
   if (!beastieDataPre) {
     return null;
   }
-  const beastieFamily = BEASTIE_DATA.get(beastieDataPre.family);
-  if (!beastieFamily) {
-    return null;
-  }
-  const beastieData =
-    getMetamorphAtLevel(beastieFamily, level, beastieDataPre.id) ??
-    beastieDataPre;
+  const beastieData = encBeastie.evolves
+    ? (getMetamorphAtLevel(
+        BEASTIE_DATA.get(beastieDataPre.family) ?? beastieDataPre,
+        level,
+        beastieDataPre.id,
+      ) ?? beastieDataPre)
+    : beastieDataPre;
 
   const fromEncounter = encBeastie.from_encounter ?? encounterId;
   const fromEncounterIndex = encBeastie.from_encounter_index ?? index;

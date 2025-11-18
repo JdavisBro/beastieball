@@ -106,7 +106,9 @@ export default function Save(): React.ReactElement {
                 return;
               }
               const a = document.createElement("a");
-              const blob = new Blob([pako.deflate(JSON.stringify(save))]);
+              const blob = new Blob([pako.deflate(JSON.stringify(save))], {
+                type: "application/octet-stream",
+              });
               a.download = filename;
               a.href = URL.createObjectURL(blob);
               a.click();

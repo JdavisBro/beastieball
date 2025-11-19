@@ -1,5 +1,6 @@
 import styles from "./Beastie.module.css";
 import BEASTIE_DATA from "../../data/BeastieData";
+import VIBES from "../../data/raw/vibes.json";
 import { BeastieImage } from "../../shared/beastieRender/BeastieImage";
 import { TeamBeastie } from "../Types";
 import StatDistribution from "./StatDistribution";
@@ -8,6 +9,7 @@ import abilities from "../../data/abilities";
 import MOVE_DIC from "../../data/MoveData";
 import BeastieMove from "./BeastieMove";
 import { Link } from "react-router-dom";
+import parseDate from "../../utils/gmdate";
 
 const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
   1: "colors",
@@ -20,6 +22,14 @@ const altSearchMap: { [key: number]: string } = {
   2: "raremorph",
   3: "alt",
 };
+
+const DATETIME_FORMATTER: Intl.DateTimeFormat = new Intl.DateTimeFormat(
+  undefined,
+  {
+    dateStyle: "medium",
+    timeStyle: "short",
+  },
+);
 
 export default function Beastie({
   teamBeastie,
@@ -63,7 +73,12 @@ export default function Beastie({
     <div className={styles.beastie}>
       <div className={styles.row}>
         <div className={styles.column}>
-          <span className={styles.name}>
+          <span
+            className={styles.name}
+            title={`Vibe: ${VIBES[teamBeastie.vibe] ?? "???"}
+Size: ${Math.round(teamBeastie.scale * 10000) / 100}% (${Math.round((beastiedata.scale[0] + (beastiedata.scale[1] - beastiedata.scale[0]) * teamBeastie.scale) * 1000) / 1000}x)
+Recruited: ${DATETIME_FORMATTER.format(parseDate(teamBeastie.date))}`}
+          >
             {teamBeastie.name || beastiedata.name}
             <span className={styles.number}>#{teamBeastie.number}</span>{" "}
             <span

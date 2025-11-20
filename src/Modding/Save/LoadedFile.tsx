@@ -2,104 +2,136 @@ import SaveData, { SaveBeastie } from "./SaveType";
 import styles from "./Save.module.css";
 import Beastie from "./Beastie";
 import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider";
-import { PropsWithChildren, useState } from "react";
-import { BoxHeader } from "../../shared/InfoBox";
+import { Fragment, memo, useState } from "react";
+import InfoTabberHeader from "../../shared/InfoTabber";
 
-function FoldableSection(
-  props: PropsWithChildren & { title: string; defaultOpen?: boolean },
-): React.ReactElement {
-  const [open, setOpen] = useState(props.defaultOpen ?? true);
+const BeastieMemo = memo(Beastie);
 
+function BeastieContainer({
+  beasties,
+  visible,
+}: {
+  beasties: SaveBeastie[];
+  visible: boolean;
+}) {
+  const container = visible
+    ? styles.beastiecontainer
+    : styles.beastiecontainerhidden;
+  if (!beasties.length) {
+    return <div className={container}>No Beasties</div>;
+  }
   return (
-    <>
-      <div onClick={() => setOpen(!open)} className={styles.foldableHeader}>
-        <span className={open ? styles.upArrow : ""}>V</span> {props.title}
-      </div>
-      <div className={open ? styles.foldable : styles.folded}>
-        {props.children}
-      </div>
-    </>
+    <div className={container}>
+      {beasties.map((value) => (
+        <BeastieMemo key={value.pid} beastie={value} />
+      ))}
+    </div>
   );
 }
 
-export default function LoadedFile(props: {
-  save: SaveData;
-}): React.ReactElement {
-  const awayteam = props.save.away_games?.team ?? [];
+function BeastieSection({ save }: { save: SaveData }) {
+  const [beastieTab, setBeastieTab] = useState(0);
 
-  const reserve = Object.values(props.save.team_registry).filter(
+  const awayteam =
+    save.away_games?.team.map((pid) => save.beastie_bank[pid] as SaveBeastie) ??
+    [];
+
+  const reserve = Object.values(save.team_registry).filter(
     (value): value is SaveBeastie =>
       typeof value != "string" &&
-      !awayteam.some((awayId) => awayId == value.pid),
+      !awayteam.some((away) => away.pid == value.pid),
   );
-  const others = Object.values(props.save.beastie_bank).filter(
+  const others = Object.values(save.beastie_bank).filter(
     (value): value is SaveBeastie => typeof value != "string",
   );
 
   return (
+    <>
+      <InfoTabberHeader
+        tab={beastieTab}
+        setTab={setBeastieTab}
+        tabs={[
+          "Team Beasties",
+          "Reserve Beasties",
+          "Other Beasties",
+          "Away Team",
+        ]}
+      />
+      <BeastieContainer beasties={save.team_party} visible={beastieTab == 0} />
+      <BeastieContainer beasties={reserve} visible={beastieTab == 1} />
+      <BeastieContainer beasties={others} visible={beastieTab == 2} />
+      <BeastieContainer beasties={awayteam} visible={beastieTab == 3} />
+    </>
+  );
+}
+
+const BeastieSectionMemo = memo(BeastieSection);
+
+export default function LoadedFile({
+  save,
+}: {
+  save: SaveData;
+}): React.ReactElement {
+  const [tab, setTab] = useState(0);
+
+  return (
     <BeastieRenderProvider>
-      <FoldableSection title="Team Beasties">
-        <div className={styles.beastiecontainer}>
-          {props.save.team_party.map((value) => (
-            <Beastie key={value.pid} beastie={value} />
-          ))}
-        </div>
-      </FoldableSection>
-      <FoldableSection title="Away Team" defaultOpen={false}>
-        <div className={styles.beastiecontainer}>
-          {awayteam ? (
-            awayteam.map((pid) =>
-              props.save.beastie_bank[pid] ? (
-                <Beastie
-                  key={pid}
-                  beastie={props.save.beastie_bank[pid] as SaveBeastie}
-                />
-              ) : null,
-            )
-          ) : (
-            <h1>No Away Team</h1>
-          )}
-        </div>
-      </FoldableSection>
-      <FoldableSection title="Reserve Beasties" defaultOpen={false}>
-        <div className={styles.beastiecontainer}>
-          {reserve ? (
-            reserve.map((value) => <Beastie key={value.pid} beastie={value} />)
-          ) : (
-            <h1>No Reserve Beasties</h1>
-          )}
-        </div>
-      </FoldableSection>
-      <FoldableSection title="Other Beasties" defaultOpen={false}>
-        <div className={styles.beastiecontainer}>
-          {others.map((value) => (
-            <Beastie key={value.pid} beastie={value} />
-          ))}
-        </div>
-      </FoldableSection>
-      <BoxHeader>All Values</BoxHeader>
-      <div className={styles.datatable}>
-        {Object.keys(props.save)
-          .sort((a, b) => a.localeCompare(b))
-          .map((key) => (
-            <div key={key} className={styles.datarow}>
-              <div>{key}</div>
-              <textarea
-                onChange={(event) =>
-                  (props.save[key] = JSON.parse(event.currentTarget.value))
-                }
-                defaultValue={JSON.stringify(props.save[key])}
-              ></textarea>
+      <InfoTabberHeader
+        tab={tab}
+        setTab={setTab}
+        tabs={["Beasties", "All Values"]}
+      />
+      <div className={tab == 0 ? undefined : styles.sectionhidden}>
+        <BeastieSectionMemo save={save} />
+      </div>
+      <div className={tab == 1 ? undefined : styles.sectionhidden}>
+        <ValuesSection save={save} />
+      </div>
+    </BeastieRenderProvider>
+  );
+}
+function ValuesSection({ save }: { save: SaveData }) {
+  const [search, setSearch] = useState("");
+  const searchStr = search.toLowerCase().replace(/ /g, "_");
+
+  return (
+    <div className={styles.datatable}>
+      <div className={styles.visible}>
+        Key{" "}
+        <input
+          type="search"
+          onChange={(event) => setSearch(event.currentTarget.value)}
+          value={search}
+        />
+      </div>
+      <div className={styles.visible}>Value</div>
+      <div className={styles.visible}>Copy</div>
+      {Object.keys(save)
+        .sort((a, b) => a.localeCompare(b))
+        .map((key) => {
+          const visible = !search || key.toLowerCase().includes(searchStr);
+          return (
+            <Fragment key={key}>
+              <div className={visible ? styles.datakey : undefined}>{key}</div>
+              <div className={visible ? styles.dataval : undefined}>
+                <textarea
+                  onChange={(event) =>
+                    (save[key] = JSON.parse(event.currentTarget.value))
+                  }
+                  defaultValue={JSON.stringify(save[key])}
+                ></textarea>
+              </div>
               <button
+                className={visible ? styles.visible : undefined}
                 onClick={() =>
-                  navigator.clipboard.writeText(JSON.stringify(props.save[key]))
+                  navigator.clipboard.writeText(JSON.stringify(save[key]))
                 }
               >
                 Copy
               </button>
-            </div>
-          ))}
-      </div>
-    </BeastieRenderProvider>
+            </Fragment>
+          );
+        })}
+    </div>
   );
 }

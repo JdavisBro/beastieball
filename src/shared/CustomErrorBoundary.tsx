@@ -25,7 +25,7 @@ export function Fallback({
       <br />
       <p>{String(error)}</p>
       <br />
-      <pre>{error.stack}</pre>
+      <pre style={{ maxHeight: "50%", overflowY: "scroll" }}>{error.stack}</pre>
     </div>
   );
 }

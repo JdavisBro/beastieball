@@ -18,12 +18,12 @@ export default function TeamImageButton({
   const [mode, setMode] = useState(DrawMode.VGrid);
 
   const saveImage = (copy: boolean) => {
-    if (team && team.length && canvasRef.current && beastieRender)
+    if (team && team.length && canvasRef.current)
       createTeamImageCanvas(
         canvasRef.current,
         team,
         mode,
-        beastieRender.renderQuick,
+        beastieRender ? beastieRender.renderQuick : undefined,
         atLevel,
         maxCoaching,
         copy,

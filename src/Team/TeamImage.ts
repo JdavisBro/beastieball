@@ -102,9 +102,11 @@ export function createTeamImageCanvas(
   canvas: HTMLCanvasElement,
   team: TeamBeastie[],
   mode: DrawMode,
-  beastieRender: (
-    beastie: RenderBeastieType,
-  ) => Promise<[HTMLCanvasElement, BBox | null] | null>,
+  beastieRender:
+    | ((
+        beastie: RenderBeastieType,
+      ) => Promise<[HTMLCanvasElement, BBox | null] | null>)
+    | undefined,
   atLevel?: number,
   maxCoaching?: boolean,
   copy?: boolean,
@@ -314,9 +316,11 @@ async function createTeamImage(
   ctx: CanvasRenderingContext2D,
   team: TeamBeastie[],
   mode: DrawMode,
-  beastieRender: (
-    beastie: RenderBeastieType,
-  ) => Promise<[HTMLCanvasElement, BBox | null] | null>,
+  beastieRender:
+    | ((
+        beastie: RenderBeastieType,
+      ) => Promise<[HTMLCanvasElement, BBox | null] | null>)
+    | undefined,
   loadImage: (src: string) => Promise<HTMLImageElement>,
   atLevel?: number,
   maxCoaching?: boolean,
@@ -387,16 +391,23 @@ async function createTeamImage(
         (value) => value - Math.ceil(value) + 1,
       );
 
-      const result = await beastieRender({
-        id: beastiedata.id,
-        colors: beastieColors,
-        colorAlt: altMap[Math.ceil(beastie.color[0])],
-        sprAlt: beastie.spr_index,
-      });
-      if (!result) {
-        throw new Error("Could not render Beastie.");
+      let canvas: HTMLCanvasElement | HTMLImageElement;
+      let bbox: BBox | null;
+      if (beastieRender) {
+        const result = await beastieRender({
+          id: beastiedata.id,
+          colors: beastieColors,
+          colorAlt: altMap[Math.ceil(beastie.color[0])],
+          sprAlt: beastie.spr_index,
+        });
+        if (!result) {
+          throw new Error("Could not render Beastie.");
+        }
+        [canvas, bbox] = result;
+      } else {
+        canvas = await loadImage(`/icons/${beastie.name}.png`);
+        bbox = { x: 0, y: 0, width: canvas.width, height: canvas.height };
       }
-      const [canvas, bbox] = result;
       if (bbox) {
         const width =
           bbox.width > bbox.height

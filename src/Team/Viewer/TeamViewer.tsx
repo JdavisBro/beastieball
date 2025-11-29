@@ -242,7 +242,7 @@ export default function Viewer() {
               onClick={() => {
                 if (team) {
                   let newTeam = team.team;
-                  if (levelOverwrite) {
+                  if (isLevelOverwritten) {
                     newTeam = newTeam.map((beastie) => ({
                       ...beastie,
                       xp:

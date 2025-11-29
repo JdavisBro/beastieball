@@ -16,6 +16,7 @@ import TeamImageButton from "../TeamImageButton.tsx";
 import FeaturedSection from "./FeaturedSection.tsx";
 import useScreenOrientation from "../../utils/useScreenOrientation.ts";
 import BEASTIE_DATA from "../../data/BeastieData.ts";
+import { useLocalStorage } from "usehooks-ts";
 
 declare global {
   interface Window {
@@ -63,9 +64,18 @@ export default function Viewer() {
   const { code }: { code?: string } = useParams();
   const [team, setTeam] = useState<Team | null>(null);
   const [error, setError] = useState(false);
-  const [isLevelOverwritten, setIsLevelOverwritten] = useState(false);
-  const [levelOverwrite, setLevelOverwrite] = useState(50);
-  const [maxCoaching, setMaxCoaching] = useState(false);
+  const [isLevelOverwritten, setIsLevelOverwritten] = useLocalStorage(
+    "viewerLevelOverwritten",
+    false,
+  );
+  const [levelOverwrite, setLevelOverwrite] = useLocalStorage(
+    "viewerLevelOverwrite",
+    50,
+  );
+  const [maxCoaching, setMaxCoaching] = useLocalStorage(
+    "viewerMaxCoaching",
+    false,
+  );
   const orientation = useScreenOrientation(800);
 
   const navigate = useNavigate();
@@ -200,7 +210,7 @@ export default function Viewer() {
                       key={beastie.pid}
                       teamBeastie={beastie}
                       levelOverwrite={
-                        isLevelOverwritten ? levelOverwrite : undefined
+                        isLevelOverwritten ? levelOverwrite || 1 : undefined
                       }
                       maxCoaching={maxCoaching}
                     />
@@ -215,16 +225,22 @@ export default function Viewer() {
                 onChange={(event) =>
                   setIsLevelOverwritten(event.currentTarget.checked)
                 }
+                checked={isLevelOverwritten}
               />
               At Level{" "}
               <input
                 type="number"
                 onChange={(event) =>
-                  setLevelOverwrite(Number(event.currentTarget.value))
+                  setLevelOverwrite(
+                    Math.max(
+                      0,
+                      Math.min(100, Number(event.currentTarget.value)),
+                    ),
+                  )
                 }
                 min={1}
                 max={100}
-                defaultValue={50}
+                value={levelOverwrite || ""}
               />
             </label>
             {orientation ? <br /> : " - "}
@@ -234,6 +250,7 @@ export default function Viewer() {
                 onChange={(event) =>
                   setMaxCoaching(event.currentTarget.checked)
                 }
+                checked={maxCoaching}
               />
               Max Coaching
             </label>
@@ -246,7 +263,7 @@ export default function Viewer() {
                     newTeam = newTeam.map((beastie) => ({
                       ...beastie,
                       xp:
-                        levelOverwrite ** 3 *
+                        (levelOverwrite || 1) ** 3 *
                         (BEASTIE_DATA.get(beastie.specie)?.growth ?? 1),
                     }));
                   }
@@ -275,7 +292,7 @@ export default function Viewer() {
             {orientation ? <br /> : " - "}
             <TeamImageButton
               team={team?.team}
-              atLevel={isLevelOverwritten ? levelOverwrite : undefined}
+              atLevel={isLevelOverwritten ? levelOverwrite || 1 : undefined}
               maxCoaching={maxCoaching}
             />
           </div>

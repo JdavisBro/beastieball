@@ -36,6 +36,7 @@ const EffectFilters: {
   { name: "Feeling: TIRED", effects: [29] },
   { name: "Feeling: TENDER", effects: [38, [33, 12]] },
   { name: "Feeling: STRESSED", effects: [39] },
+  { name: "Feeling: WEEPY", effects: [80, [33, 12]] },
   // Field Effects
   { name: "Field: TRAP", effects: [42] },
   { name: "Field: RALLY", effects: [43, [33, 25]] },

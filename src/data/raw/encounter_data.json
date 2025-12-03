@@ -22404,6 +22404,140 @@
       }
     ]
   },
+  "korwin2": {
+    "ai": {
+      "actions": -0.05,
+      "blocking": 0.5,
+      "boost": 1,
+      "damage": 1,
+      "erratic": 0.1,
+      "fall": 1,
+      "field": 1,
+      "foe_boost": 1,
+      "foe_field": 1,
+      "foe_status": 1,
+      "force": 1,
+      "knockout": 1,
+      "lane": 2,
+      "lane_cover": 0.5,
+      "lane_prediction": 0,
+      "lane_sideways_fear": 0.5,
+      "lane_straight_fear": 1,
+      "meter": 1,
+      "point": 1,
+      "prediction": 1,
+      "prefer_target": -1,
+      "secondary": 0,
+      "stamina": 1,
+      "status": 1,
+      "tag_penalty": -80,
+      "usable_attack": 1
+    },
+    "id": "korwin2",
+    "scales": false,
+    "team": [
+      {
+        "ability": -1,
+        "aggro": false,
+        "at_net": false,
+        "canBeShiny": false,
+        "color": -1,
+        "encounter_inherited": false,
+        "evolves": true,
+        "favor": 1,
+        "from_encounter": null,
+        "from_encounter_index": null,
+        "hp": -1,
+        "level": 64,
+        "moves": [["thrash", "damagedattack", "desperate"], "dig", "libero"],
+        "name": "Korwin",
+        "neverRandomize": false,
+        "number": "",
+        "size": -1,
+        "specie": "dog",
+        "status": -1,
+        "trained": 1,
+        "training": [1, 1, 1, 1, 1, 1],
+        "variant": 0,
+        "vibe": -1
+      },
+      {
+        "ability": -1,
+        "aggro": false,
+        "at_net": false,
+        "canBeShiny": false,
+        "color": -1,
+        "encounter_inherited": false,
+        "evolves": true,
+        "favor": 1,
+        "from_encounter": null,
+        "from_encounter_index": null,
+        "hp": -1,
+        "level": 57,
+        "moves": ["starterside", ["heartdown", "float"], "lowattks"],
+        "name": "",
+        "neverRandomize": false,
+        "number": "",
+        "size": -1,
+        "specie": "gremlin",
+        "status": -1,
+        "trained": 0,
+        "training": [1, 1, 1, 1, 1, 1],
+        "variant": -1,
+        "vibe": -1
+      },
+      {
+        "ability": -1,
+        "aggro": false,
+        "at_net": false,
+        "canBeShiny": false,
+        "color": -1,
+        "encounter_inherited": false,
+        "evolves": true,
+        "favor": 1,
+        "from_encounter": null,
+        "from_encounter_index": null,
+        "hp": -1,
+        "level": 58,
+        "moves": ["cut", "rush", "protect"],
+        "name": "",
+        "neverRandomize": false,
+        "number": "",
+        "size": -1,
+        "specie": "serval",
+        "status": -1,
+        "trained": 0,
+        "training": [1, 1, 1, 1, 1, 1],
+        "variant": -1,
+        "vibe": -1
+      },
+      {
+        "ability": 1,
+        "aggro": false,
+        "at_net": false,
+        "canBeShiny": false,
+        "color": -1,
+        "encounter_inherited": false,
+        "evolves": true,
+        "favor": 1,
+        "from_encounter": null,
+        "from_encounter_index": null,
+        "hp": -1,
+        "level": 58,
+        "moves": [["dump", "sidespin"], "rush", "shaken"],
+        "name": "",
+        "neverRandomize": false,
+        "number": "",
+        "size": -1,
+        "specie": "disruptor",
+        "status": -1,
+        "trained": 0,
+        "training": [1, 1, 1, 1, 1, 1],
+        "variant": -1,
+        "vibe": -1
+      }
+    ]
+  },
   "mainstreet_0": {
     "ai": {
       "actions": -0.05,
@@ -23494,7 +23628,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -23523,7 +23657,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -23615,7 +23749,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -23644,7 +23778,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -23732,7 +23866,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -23761,7 +23895,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -23849,7 +23983,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -23878,7 +24012,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -23907,7 +24041,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 0
       },
       {
         "ability": 0,
@@ -23999,7 +24133,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -24028,7 +24162,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -24057,7 +24191,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 0
       },
       {
         "ability": 0,
@@ -24145,7 +24279,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -24174,7 +24308,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -24203,7 +24337,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 0
       },
       {
         "ability": 0,
@@ -24291,7 +24425,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -24320,7 +24454,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -24349,7 +24483,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 0
       },
       {
         "ability": 0,
@@ -24441,7 +24575,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -24470,7 +24604,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -24499,7 +24633,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 0
       },
       {
         "ability": 0,
@@ -24587,7 +24721,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -24616,7 +24750,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -24645,7 +24779,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 0
       },
       {
         "ability": 0,
@@ -24733,7 +24867,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -24762,7 +24896,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -24791,7 +24925,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 0
       },
       {
         "ability": 0,
@@ -24820,7 +24954,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 6
       },
       {
         "ability": 0,
@@ -24912,7 +25046,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -24941,7 +25075,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -24970,7 +25104,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 0
       },
       {
         "ability": 0,
@@ -24999,7 +25133,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 6
       },
       {
         "ability": 0,
@@ -25087,7 +25221,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -25116,7 +25250,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -25145,7 +25279,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 0
       },
       {
         "ability": 0,
@@ -25174,7 +25308,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 6
       },
       {
         "ability": 0,
@@ -25262,7 +25396,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -25291,7 +25425,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -25320,7 +25454,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 0
       },
       {
         "ability": 0,
@@ -25349,7 +25483,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 6
       },
       {
         "ability": 0,
@@ -25441,7 +25575,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -25470,7 +25604,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -25499,7 +25633,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 0
       },
       {
         "ability": 0,
@@ -25528,7 +25662,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 6
       },
       {
         "ability": 0,
@@ -25616,7 +25750,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -25645,7 +25779,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -25674,7 +25808,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 0
       },
       {
         "ability": 0,
@@ -25703,7 +25837,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 6
       },
       {
         "ability": 0,
@@ -25791,7 +25925,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -25820,7 +25954,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -25912,7 +26046,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -25941,7 +26075,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -26029,7 +26163,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -26058,7 +26192,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -26146,7 +26280,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": 1,
-        "vibe": -1
+        "vibe": 23
       },
       {
         "ability": 0,
@@ -26175,7 +26309,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 16
       },
       {
         "ability": 0,
@@ -26204,7 +26338,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 0
       },
       {
         "ability": 0,
@@ -26233,7 +26367,7 @@
         "trained": 0,
         "training": [1, 1, 1, 1, 1, 1],
         "variant": -1,
-        "vibe": -1
+        "vibe": 6
       },
       {
         "ability": 0,

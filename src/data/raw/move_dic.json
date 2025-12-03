@@ -692,7 +692,7 @@
     "eff": [{ "eff": 33, "pow": 12, "targ": 0 }],
     "id": "facade",
     "name": "Grit",
-    "pow": 60,
+    "pow": 55,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -717,7 +717,7 @@
     "description": null,
     "eff": [
       { "eff": 46, "pow": 0, "targ": 7 },
-      { "eff": 8, "pow": 0.1, "targ": 6 }
+      { "eff": 8, "pow": 0.08, "targ": 6 }
     ],
     "id": "fieldclear",
     "name": "Clear Field",
@@ -827,14 +827,14 @@
     "use": 0
   },
   "hazeball": {
-    "bt_tags": [2, 10],
+    "bt_tags": [2, 10, 50, 38, 48],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 34, "pow": 1, "targ": 3 }],
+    "eff": [{ "eff": 80, "pow": 1, "targ": 3 }],
     "id": "hazeball",
-    "name": "Numbshot",
-    "pow": 70,
+    "name": "Stinger",
+    "pow": 65,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1110,7 +1110,7 @@
     "description": null,
     "eff": [
       { "eff": 8, "pow": -1, "targ": 0 },
-      { "eff": 82, "pow": -10, "targ": 0 },
+      { "eff": 82, "pow": -20, "targ": 0 },
       { "eff": 47, "pow": 1, "targ": 3 },
       { "eff": 30, "pow": 1, "targ": 3 }
     ],
@@ -1363,7 +1363,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 88, "pow": 40, "targ": 0 },
+      { "eff": 88, "pow": 34, "targ": 0 },
       { "eff": 26, "pow": 1, "targ": 0 }
     ],
     "id": "myheartpass",
@@ -1663,7 +1663,7 @@
     "description": null,
     "eff": [
       { "eff": 32, "pow": 1, "targ": 0 },
-      { "eff": 22, "pow": 4, "targ": 0 }
+      { "eff": 22, "pow": 3, "targ": 0 }
     ],
     "id": "rest",
     "name": "Exhaust",
@@ -1699,17 +1699,14 @@
     "use": 0
   },
   "ricochet": {
-    "bt_tags": [2, 20, 47, 10],
+    "bt_tags": [2, 8, 20, 47, 10],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 17, "pow": 0, "targ": 0 },
-      { "eff": 33, "pow": 18, "targ": 0 }
-    ],
+    "eff": [{ "eff": 69, "pow": 0, "targ": 0 }],
     "id": "ricochet",
     "name": "Ricochet",
-    "pow": 80,
+    "pow": 110,
     "targ": 0,
     "type": 2,
     "use": 2
@@ -1784,6 +1781,19 @@
     "targ": 0,
     "type": 0,
     "use": 1
+  },
+  "sad": {
+    "bt_tags": [50, 38, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 80, "pow": 1, "targ": 3 }],
+    "id": "sad",
+    "name": "Gloom",
+    "pow": 0,
+    "targ": 4,
+    "type": 5,
+    "use": 0
   },
   "scoreboosted": {
     "bt_tags": [1, 10],
@@ -2000,6 +2010,19 @@
     "pow": 70,
     "targ": 0,
     "type": 1,
+    "use": 0
+  },
+  "speech": {
+    "bt_tags": [31, 50, 38, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 80, "pow": 1, "targ": 7 }],
+    "id": "speech",
+    "name": "Soliloquy",
+    "pow": 0,
+    "targ": 1,
+    "type": 5,
     "use": 0
   },
   "spitball": {
@@ -2244,17 +2267,17 @@
     "use": 0
   },
   "sweatall": {
-    "bt_tags": [31, 36, 38, 48],
+    "bt_tags": [20, 47, 31, 36, 38, 48],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 23, "pow": 1, "targ": 7 }],
+    "eff": [{ "eff": 23, "pow": -1, "targ": 7 }],
     "id": "sweatall",
     "name": "Heat Wave",
     "pow": 0,
     "targ": 1,
     "type": 5,
-    "use": 0
+    "use": 2
   },
   "sweatup": {
     "bt_tags": [36, 38, 48],
@@ -2405,7 +2428,7 @@
     "eff": [{ "eff": 33, "pow": 31, "targ": 0 }],
     "id": "thrash",
     "name": "Thrash",
-    "pow": 80,
+    "pow": 60,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2522,10 +2545,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 27, "pow": -2, "targ": 3 },
-      { "eff": 8, "pow": -0.1, "targ": 0 }
-    ],
+    "eff": [{ "eff": 27, "pow": -2, "targ": 3 }],
     "id": "wall",
     "name": "Wall",
     "pow": 0,
@@ -2563,19 +2583,19 @@
     "use": 0
   },
   "wornout": {
-    "bt_tags": [24, 38, 31],
+    "bt_tags": [38, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 29, "pow": 6, "targ": 3 },
-      { "eff": 22, "pow": 4, "targ": 0 }
+      { "eff": 22, "pow": 1, "targ": 3 },
+      { "eff": 29, "pow": 4, "targ": 0 }
     ],
     "id": "wornout",
     "name": "Hex",
     "pow": 0,
     "targ": 4,
-    "type": 4,
+    "type": 5,
     "use": 0
   },
   "xtra": {

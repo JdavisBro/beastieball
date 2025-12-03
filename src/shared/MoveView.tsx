@@ -200,7 +200,7 @@ function getEffectString(
         case 11:
           return "POW +100% for each [sprBoost,0]BOOST on target.";
         case 12:
-          return "POW x2 when [sprStatus,6]SWEATY, [sprStatus,0]NERVOUS, or [sprStatus,11]TENDER.";
+          return "POW x2 when [sprStatus,6]SWEATY, [sprStatus,0]NERVOUS, [sprStatus,11]TENDER or [sprStatus,18]WEEPY.";
         case 13:
           return "POW x2 if target has a bad FEELING.";
         case 14:
@@ -235,7 +235,7 @@ function getEffectString(
         case 30:
           return "POW x1.5 if user has 2+ ACTIONs.";
         case 31:
-          return "POW x1.5 if user feels [sprStatus,8]JAZZED.";
+          return "POW x2 if user feels [sprStatus,8]JAZZED.";
         case 32:
           return "POW x¾ if user has any FEELINGs.";
       }
@@ -283,7 +283,7 @@ function getEffectString(
       args.joiningEffects = 0;
       return "";
     case 56:
-      return `Build a WALL in front of ${target}.`;
+      return `Build a BARRIER in front of ${target}.`;
     case 57:
       return ""; // shows on a few that are only used on back row but not others?
     case 60:
@@ -317,6 +317,8 @@ function getEffectString(
       return `[sprIcon,0][sprIcon,2]DEF${boost} to ${target}.`;
     case 79:
       return `[sprIcon,1][sprIcon,2]DEF${boost} to ${target}.`;
+    case 80:
+      return `${feels} ${effect.pow} [sprStatus,18]WEEPY (ignores HEALS + BOOSTs)${dot}`;
     case 81:
       return `Changes ${target} trait to user's trait.`;
     case 82:
@@ -357,8 +359,13 @@ export function getMoveDesc(move: Move) {
       break;
   }
 
-  if (move.eff.find((effect) => effect.eff == 69)) {
-    desc.push("Only used when ball is hittable.");
+  const hittable_eff = move.eff.find((effect) => effect.eff == 69);
+  if (hittable_eff) {
+    desc.push(
+      hittable_eff.pow
+        ? "Only used when ball is hittable."
+        : "Only used when ball is NOT hittable.",
+    );
   } else if (
     move.type == Type.Volley &&
     !move.eff.some((eff) => eff.eff == 20) // Eff 20: Ball goes to TARGET. Does not have volley text

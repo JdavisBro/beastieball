@@ -4,7 +4,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 13,
+    "animator": 14,
     "attklist": [
       "lockon",
       "stun",
@@ -16,7 +16,6 @@
       "tool",
       "moon",
       "freeball",
-      "mindpass",
       "refresh",
       "teleport",
       "meditate",
@@ -32,7 +31,7 @@
     ],
     "attklist_randomize": -1,
     "ba": 33,
-    "base_exp": 193.67,
+    "base_exp": 191.744,
     "bd": 73,
     "body_color_index": 0,
     "codename": "c49afea3aa4dc321d7cdb2330c6d82ab979510af",
@@ -68,7 +67,7 @@
       [2, 2, 1, 5, 2, 1, 4, 2, 1]
     ],
     "desc": "They often hunt with the help of a Gastic's illusions. Their motivation for frightening humans is not fully understood.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -92,7 +91,7 @@
     "learnset": [
       [0, "mindbomb"],
       [0, "lockon"],
-      [10, "mindpass"],
+      [10, "mark"],
       [14, "dropshot"],
       [20, "meditate"],
       [25, "taunt"],
@@ -131,7 +130,7 @@
       "stretchiness": 0
     },
     "ma": 88,
-    "md": 49,
+    "md": 46,
     "name": "Albrax",
     "number": 38,
     "palettes": 1,
@@ -225,7 +224,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "lockon",
       "stun",
@@ -237,7 +236,6 @@
       "tool",
       "moon",
       "freeball",
-      "mindpass",
       "refresh",
       "teleport",
       "meditate",
@@ -296,7 +294,7 @@
       [2, 2, 1, 5, 2, 1, 4, 2, 1]
     ],
     "desc": "There are numerous reports of coaches seeing their Beasties swooped up by Yueffowl at night, only to find them returned unharmed in the morning.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -320,7 +318,7 @@
     "learnset": [
       [0, "mindbomb"],
       [0, "lockon"],
-      [7, "mindpass"],
+      [7, "mark"],
       [11, "dropshot"],
       [17, "meditate"],
       [22, "taunt"],
@@ -450,7 +448,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "careful",
@@ -543,7 +541,7 @@
       [26, 2, 1, 8, 2, 0.15]
     ],
     "desc": "They nurture the children on their belly until they're strong enough to forage for themselves. Their pups maintain an exclusive diet of fresh fruit juice.",
-    "designer": 4,
+    "designer": 5,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -558,7 +556,7 @@
     "foot_size": 77,
     "foot_type": 0,
     "growth": 1.02,
-    "ha": 98,
+    "ha": 93,
     "hd": 90,
     "hidden": false,
     "hidden_counter": null,
@@ -742,7 +740,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [13, 10],
+    "animator": [14, 11],
     "attklist": [
       "starterheart",
       "careful",
@@ -814,7 +812,7 @@
       [26, 2, 1, 8, 2, 0.15]
     ],
     "desc": "They use all their energy to fly and are constantly foraging for sources of sugar to replenish themselves. Their overall health has been in decline in recent years.",
-    "designer": 4,
+    "designer": 5,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -965,7 +963,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "storedpower",
       "sensihit",
@@ -1031,7 +1029,7 @@
       [52, 1, 1, 8, 1, 0.5]
     ],
     "desc": "They live at high elevations, absorbing moisture from clouds. They communicate with flashes of light from their antennae.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -1114,16 +1112,16 @@
     },
     "recruit_value": 3.05,
     "roamer_style": {
-      "_name": "STOP_AND_STARE",
+      "_name": "FLOAT",
       "can_react": true,
-      "can_socialize": true,
+      "can_socialize": false,
       "can_volley": true,
       "cancel_on_player_invincible": false,
       "checking_player_distance": true,
       "colliding": false,
-      "default_locomote": true,
-      "default_physics": true,
-      "flying": false,
+      "default_locomote": false,
+      "default_physics": false,
+      "flying": true,
       "interact_force": false,
       "render_go_direction": false,
       "render_guard_radius": false,
@@ -1166,7 +1164,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "jazzpass",
       "lifedew",
@@ -1230,7 +1228,7 @@
       [8, 0, -0.34, 56, 2, 0]
     ],
     "desc": "They lack any aggression at all. Using their tail as a lure, they invite other Beasties into their burrow to offer them food.",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -1378,7 +1376,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 20,
-    "animator": 10,
+    "animator": 0,
     "attklist": [
       "jazzpass",
       "lifedew",
@@ -1444,7 +1442,7 @@
       [8, 0, -0.34, 56, 2, 0]
     ],
     "desc": "Celia's Notes: They seem very capable of murder. Watch out for those tusks.",
-    "designer": 11,
+    "designer": 12,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -1586,7 +1584,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "bounce",
       "set",
@@ -1675,7 +1673,7 @@
       [2, 0, 2]
     ],
     "desc": "A single Bandicraft will manage 20 acres of land. They construct homes and care for other Beasties in their territory.",
-    "designer": [5, 3, 0, 8],
+    "designer": [6, 4, 1, 9],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -1840,7 +1838,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "set",
@@ -1918,7 +1916,7 @@
       [2, 0, 2]
     ],
     "desc": "Their busy mind is only at rest while they dig. They'll hyperfocus for days on a single burrow.",
-    "designer": [5, 8],
+    "designer": [6, 9],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -2055,7 +2053,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "bounce",
       "set",
@@ -2140,7 +2138,7 @@
       [2, 0, 2]
     ],
     "desc": "Following fires, rockslides, or other natural disasters, Handicoots often appear and help out.",
-    "designer": [5, 8],
+    "designer": [6, 9],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -2293,7 +2291,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "healhit",
@@ -2319,6 +2317,7 @@
       "flatten",
       "vigor",
       "breakswipe",
+      "shakeoff",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -2366,7 +2365,7 @@
       [0, 0, 2]
     ],
     "desc": "They have an intense daily training regimen. If they miss it for some reason, they aren't able to sleep at night.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -2389,16 +2388,16 @@
     "isBaby": false,
     "learnset": [
       [0, "starterbody"],
-      [0, "rush"],
-      [15, "defheal"],
-      [18, "breakswipe"],
-      [20, "curse"],
-      [23, "pushattack"],
-      [28, "recover"],
+      [0, "shakeoff"],
+      [14, "curse"],
+      [17, "breakswipe"],
+      [20, "protect"],
+      [22, "pushattack"],
+      [25, "rush"],
       [32, "body"],
-      [36, "protect"],
+      [36, "defheal"],
       [39, "rushattack"],
-      [43, "preblock"],
+      [43, "powswitch"],
       [49, "vigor"]
     ],
     "learnset_randomize": -1,
@@ -2507,7 +2506,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "healhit",
@@ -2533,6 +2532,7 @@
       "flatten",
       "vigor",
       "breakswipe",
+      "shakeoff",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -2577,7 +2577,7 @@
       [0, 0, 2]
     ],
     "desc": "Anytime they encounter something new, they kick it. Kicking is their way of understanding the world.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -2600,16 +2600,16 @@
     "isBaby": true,
     "learnset": [
       [0, "starterbody"],
-      [0, "rush"],
-      [7, "defheal"],
-      [10, "breakswipe"],
-      [12, "curse"],
-      [15, "pushattack"],
-      [20, "recover"],
+      [0, "shakeoff"],
+      [6, "curse"],
+      [9, "breakswipe"],
+      [12, "protect"],
+      [14, "pushattack"],
+      [17, "rush"],
       [24, "body"],
-      [28, "protect"],
+      [28, "defheal"],
       [31, "rushattack"],
-      [35, "preblock"],
+      [35, "powswitch"],
       [41, "vigor"]
     ],
     "learnset_randomize": -1,
@@ -2711,7 +2711,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "healhit",
@@ -2737,6 +2737,7 @@
       "flatten",
       "vigor",
       "breakswipe",
+      "shakeoff",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -2782,7 +2783,7 @@
       [0, 0, 2]
     ],
     "desc": "Despite their powerful legs they insist on using their head for everything. As a result they have frequent headaches and are usually grumpy.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -2805,16 +2806,16 @@
     "isBaby": false,
     "learnset": [
       [0, "starterbody"],
-      [0, "rush"],
-      [11, "defheal"],
-      [14, "breakswipe"],
-      [16, "curse"],
-      [19, "pushattack"],
-      [24, "recover"],
+      [0, "shakeoff"],
+      [10, "curse"],
+      [13, "breakswipe"],
+      [16, "protect"],
+      [18, "pushattack"],
+      [21, "rush"],
       [28, "body"],
-      [32, "protect"],
+      [32, "defheal"],
       [35, "rushattack"],
-      [39, "preblock"],
+      [39, "powswitch"],
       [45, "vigor"]
     ],
     "learnset_randomize": -1,
@@ -2916,7 +2917,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "introduction",
       "freeball",
@@ -2985,7 +2986,7 @@
       [32, 6, 1]
     ],
     "desc": "Its fluff is made of incredibly thin strands of wax, bundled like wool. If a Cherrily makes you a pom, it considers you a treasured friend.",
-    "designer": [2, 8],
+    "designer": [3, 9],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -3145,7 +3146,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,
-    "animator": [10, 8],
+    "animator": [11, 9],
     "attklist": [
       "introduction",
       "freeball",
@@ -3214,7 +3215,7 @@
       [32, 6, 1]
     ],
     "desc": "It's extremely light and drifts with air currents. Groups of Merrifly will hold onto each other so as not to drift apart.",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -3350,7 +3351,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 20,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "introduction",
       "freeball",
@@ -3429,7 +3430,7 @@
       [32, 6, 1]
     ],
     "desc": "Celia's Notes: Most of what you see is a display. The real body is hidden inside... Perhaps it's a defensive adaptation?",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -3570,7 +3571,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "bounce",
       "passattack",
@@ -3635,7 +3636,7 @@
       [4, 7, 2, 5, 7, 2]
     ],
     "desc": "Their dense internal structure is 99% made up of muscle. They can easily lift 20x their own body weight.",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -3791,7 +3792,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "topspin",
       "moon",
@@ -3802,7 +3803,6 @@
       "sidespin",
       "poisonhit",
       "passattack",
-      "wornattack",
       "bodypass",
       "set",
       "cheer",
@@ -3813,6 +3813,7 @@
       "protect",
       "skillswap",
       "shakeoff",
+      "ricochet",
       "starterside"
     ],
     "attklist_randomize": -1,
@@ -3853,7 +3854,7 @@
       [15, 0, 1, 16, 0, 1]
     ],
     "desc": "They have an incredible sense of balance and can juggle a ball while standing at any angle on any surface.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -3988,7 +3989,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "topspin",
       "moon",
@@ -3999,7 +4000,6 @@
       "sidespin",
       "poisonhit",
       "passattack",
-      "wornattack",
       "bodypass",
       "set",
       "cheer",
@@ -4010,6 +4010,7 @@
       "protect",
       "skillswap",
       "shakeoff",
+      "ricochet",
       "starterside"
     ],
     "attklist_randomize": -1,
@@ -4072,7 +4073,7 @@
       [15, 0, 1, 16, 0, 1]
     ],
     "desc": "They relentlessly practice acrobatic tricks while dangling from treetops and frequently fall. Luckily they can simply curl up and bounce to safety.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -4221,7 +4222,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterbody",
       "sensihit",
@@ -4294,7 +4295,7 @@
       [51, 0, 2, 14, 0, 1, 16, 0, 1]
     ],
     "desc": "A leg from their molted shell is kept as a cane. They perform intricate dances in unison to bond and to attract mates.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -4449,7 +4450,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "lockon",
       "lowattks",
@@ -4478,6 +4479,7 @@
       "splinter",
       "rattle",
       "menace",
+      "trap",
       "netattack"
     ],
     "attklist_randomize": -1,
@@ -4525,7 +4527,7 @@
       [15, 9, -2]
     ],
     "desc": "An ambush predator. They lie perfectly still blending in with foliage and then snap with jaws that could shred metal.",
-    "designer": 7,
+    "designer": 8,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -4666,7 +4668,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": [14, 11],
     "attklist": [
       "dare",
       "contest",
@@ -4753,7 +4755,7 @@
       [1, 0, 2]
     ],
     "desc": "Their top speed is over 100kmph. They race across the desert, then curl up into balls and cool off in any shadow they can find.",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -4904,7 +4906,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 10,
+    "animator": [14, 11],
     "attklist": [
       "dare",
       "contest",
@@ -4989,7 +4991,7 @@
       [1, 0, 2]
     ],
     "desc": "Hyper-competitive, they begin playing Beastieball at a much earlier age than other juvenile Beasties. They will race against anything that moves near them, including trains.",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -5131,7 +5133,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "lockon",
       "shaken",
@@ -5163,7 +5165,7 @@
     ],
     "attklist_randomize": -1,
     "ba": 40,
-    "base_exp": 141.3775,
+    "base_exp": 139.195,
     "bd": 50,
     "body_color_index": 0,
     "codename": "f211e75822fb285a7af7092092eb3ea283ce1ab3",
@@ -5213,7 +5215,7 @@
       [15, 8, -1]
     ],
     "desc": "They'll chase away perceived invaders with cacophonous sound. Their drum and screeching can be heard from 3 kilometers away.",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -5238,10 +5240,10 @@
       [0, "rattle"],
       [0, "distraction"],
       [9, "shaken"],
-      [16, "sidespin"],
+      [16, "shieldbreaker"],
       [19, "rhythm"],
       [23, "rush"],
-      [27, "hazeball"],
+      [27, "sidespin"],
       [31, "lock"],
       [35, "scream"],
       [40, "stress"],
@@ -5276,7 +5278,7 @@
       "stretchiness": 0.1
     },
     "ma": 73,
-    "md": 85,
+    "md": 80,
     "name": "Noizard",
     "number": 33,
     "palettes": 1,
@@ -5360,7 +5362,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [13, 10],
+    "animator": [14, 11],
     "attklist": [
       "bounce",
       "libero",
@@ -5369,11 +5371,9 @@
       "desperate",
       "damagedattack",
       "rushattack",
-      "allyrush",
       "pepshot",
       "rush",
       "cover",
-      "heartpass",
       "juggle",
       "mark",
       "protect",
@@ -5477,7 +5477,7 @@
       [26, 2, 3]
     ],
     "desc": "They easily scale cliffsides with huge leaps. They're guardians who make sure small Beasties don't go astray in the mountains.",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -5639,7 +5639,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [13, 10, 8],
+    "animator": [14, 11, 9],
     "attklist": [
       "bounce",
       "libero",
@@ -5648,11 +5648,9 @@
       "desperate",
       "damagedattack",
       "rushattack",
-      "allyrush",
       "pepshot",
       "rush",
       "cover",
-      "heartpass",
       "juggle",
       "mark",
       "protect",
@@ -5755,7 +5753,7 @@
       [26, 2, 3]
     ],
     "desc": "They are obsessed with chasing balls. It's said that they see the moon itself as a giant Beastieball which they yearn to chase.",
-    "designer": [3, 8],
+    "designer": [4, 9],
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -5912,7 +5910,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [10],
+    "animator": [11],
     "attklist": [
       "pepshot",
       "careful",
@@ -5990,7 +5988,7 @@
       [15, 2, 2, 16, 2, -1]
     ],
     "desc": "Their bodies are made from hard translucent chitin. Depending on the arrangement of their cells, they refract light differently and can appear as vastly different colors.",
-    "designer": [5, 8],
+    "designer": [6, 9],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -6144,7 +6142,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -6170,6 +6168,7 @@
       "fieldclear",
       "callout",
       "tailwind",
+      "tagattack",
       "bodypass",
       "mindpass",
       "heartd",
@@ -6220,7 +6219,7 @@
       [16, 0, 3, 6, 0, 3]
     ],
     "desc": "Compressed air in their joints gives them explosive power. They can aim a Beastieball at targets 300m away.",
-    "designer": 2,
+    "designer": 3,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -6392,7 +6391,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -6417,7 +6416,8 @@
       "heartup",
       "fieldclear",
       "callout",
-      "tailwind"
+      "tailwind",
+      "tagattack"
     ],
     "attklist_randomize": -1,
     "ba": 48,
@@ -6456,7 +6456,7 @@
       [16, 0, 3, 6, 0, 3]
     ],
     "desc": "They run head-first, full speed into anything they encounter. Their exoskeleton gradually hardens from repeated impacts.",
-    "designer": 2,
+    "designer": 3,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -6607,7 +6607,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -6632,7 +6632,8 @@
       "heartup",
       "fieldclear",
       "callout",
-      "tailwind"
+      "tailwind",
+      "tagattack"
     ],
     "attklist_randomize": -1,
     "ba": 60,
@@ -6679,7 +6680,7 @@
       [16, 0, 3, 6, 0, 3]
     ],
     "desc": "Their armor is as tough as steel. They settle their frequent territorial disputes with contests of strength.",
-    "designer": 2,
+    "designer": 3,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -6832,7 +6833,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "rollshot",
@@ -6890,7 +6891,7 @@
       [27, 8, -1]
     ],
     "desc": "Using harvested venomous cells, they deliver a painful sting at the slightest touch. Their venom is known to cause vivid hallucination.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -7044,7 +7045,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "rollshot",
@@ -7110,7 +7111,7 @@
       [27, 8, -1]
     ],
     "desc": "Their parents swam far upriver to deposit Seakit eggs in the forest. They harvest stinging cells from Petula to mature.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -7269,7 +7270,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "pepshot",
       "heart",
@@ -7290,6 +7291,7 @@
       "noisytag",
       "introduction",
       "skillswap",
+      "speech",
       "storedpower",
       "dragontail",
       "stomp",
@@ -7341,7 +7343,7 @@
       [44, 2, 6]
     ],
     "desc": "Seldom seen, but commonly known for their haunting singing heard across lakes and rivers. In folklore their voice guides spirits to the afterlife.",
-    "designer": [0, 3],
+    "designer": [1, 4],
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -7470,7 +7472,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "pepshot",
       "heart",
@@ -7491,6 +7493,7 @@
       "noisytag",
       "introduction",
       "skillswap",
+      "speech",
       "storedpower",
       "dragontail",
       "stomp",
@@ -7541,7 +7544,7 @@
       [44, 2, 6]
     ],
     "desc": "They crave attention. They can hardly spend time with their own kind because they compete for an audience.",
-    "designer": [0, 3],
+    "designer": [1, 4],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -7680,7 +7683,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "pepshot",
       "heart",
@@ -7701,6 +7704,7 @@
       "noisytag",
       "introduction",
       "skillswap",
+      "speech",
       "storedpower",
       "dragontail",
       "stomp",
@@ -7752,7 +7756,7 @@
       [44, 2, 6]
     ],
     "desc": "They are constantly, restlessly performing. If anyone around them isn't happy it only encourages them further.",
-    "designer": [0, 3],
+    "designer": [1, 4],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -7894,11 +7898,10 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "wornout",
       "mindbomb",
-      "hazeball",
       "sidespin",
       "poisonhit",
       "cover",
@@ -7918,6 +7921,7 @@
       "eerie",
       "sweatall",
       "rattle",
+      "sad",
       "bamboozle",
       "menace",
       "targethp",
@@ -7967,7 +7971,7 @@
       [3, 0, 4]
     ],
     "desc": "They seem to enjoy performing for other Beasties. They conjure the most impressive displays when seducing a mate.",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -7998,9 +8002,9 @@
       [33, "wornout"],
       [36, "stun"],
       [39, "teleport"],
-      [44, "sweatall"],
+      [44, "eerie"],
       [49, "targethp"],
-      [54, "eerie"]
+      [54, "sad"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -8109,11 +8113,10 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "wornout",
       "mindbomb",
-      "hazeball",
       "sidespin",
       "poisonhit",
       "cover",
@@ -8133,6 +8136,7 @@
       "eerie",
       "sweatall",
       "rattle",
+      "sad",
       "bamboozle",
       "menace",
       "targethp",
@@ -8183,7 +8187,7 @@
       [3, 0, 4]
     ],
     "desc": "They deftly manipulate gas to create a threat display. They are known for their distinctive sour smell when they're nearby.",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -8214,9 +8218,9 @@
       [27, "wornout"],
       [30, "stun"],
       [33, "teleport"],
-      [38, "sweatall"],
+      [38, "eerie"],
       [43, "targethp"],
-      [48, "eerie"]
+      [48, "sad"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -8309,11 +8313,10 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [13, 10],
+    "animator": [14, 11],
     "attklist": [
       "wornout",
       "mindbomb",
-      "hazeball",
       "sidespin",
       "poisonhit",
       "cover",
@@ -8333,6 +8336,7 @@
       "eerie",
       "sweatall",
       "rattle",
+      "sad",
       "bamboozle",
       "menace",
       "targethp",
@@ -8370,7 +8374,7 @@
       [3, 0, 4]
     ],
     "desc": "They are able to control the density of their gas to manipulate solid matter. The gas is mostly harmless to inhale.",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -8401,9 +8405,9 @@
       [30, "wornout"],
       [33, "stun"],
       [36, "teleport"],
-      [41, "sweatall"],
+      [41, "eerie"],
       [46, "targethp"],
-      [51, "eerie"]
+      [51, "sad"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -8494,14 +8498,13 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "mindbomb",
       "protect",
       "cover",
       "tool",
       "moon",
-      "hazeball",
       "float",
       "heartdown",
       "starterside",
@@ -8518,7 +8521,8 @@
       "stress",
       "steal",
       "eerie",
-      "basecover"
+      "basecover",
+      "hazeball"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -8565,7 +8569,7 @@
       [39, 9, 1, 6, 9, 1]
     ],
     "desc": "A notorious urban pest, known for opportunistically stealing from humans. They are considered one of the smartest Beasties.",
-    "designer": [6, 8, 3],
+    "designer": [7, 9, 4],
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -8594,10 +8598,10 @@
       [18, "steal"],
       [24, "mindbomb"],
       [29, "taunt"],
-      [33, "hazeball"],
+      [33, "heartdown"],
       [38, "stress"],
       [45, "libero"],
-      [49, "heartdown"]
+      [49, "moon"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -8709,7 +8713,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "starterheart",
       "steamattack",
@@ -8786,7 +8790,7 @@
       [16, 1, 3, 29, 0, 2]
     ],
     "desc": "An ancient Beastie that has hardly changed in 400 million years. Their ability to play Beastieball both on land and deep undersea has allowed them to thrive through climate shifts.",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -8918,7 +8922,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "enemylowered",
@@ -9028,7 +9032,7 @@
       [2, 2, 1, 1, 8, -2]
     ],
     "desc": "They nest in bins and hoard garbage. They mimic one anothers' adornments in pursuit of glamor, creating trends of trash fashion.",
-    "designer": [0, 3, 9],
+    "designer": [1, 4, 10],
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -9204,7 +9208,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "careful",
@@ -9228,7 +9232,8 @@
       "protect",
       "minddown",
       "teleport",
-      "allycover"
+      "allycover",
+      "sad"
     ],
     "attklist_randomize": -1,
     "ba": 16,
@@ -9260,7 +9265,7 @@
       [29, 8, 2, 8, 0, -0.2]
     ],
     "desc": "Their hive mind can be slow to make decisions, leaving them inert for long periods. Inert Orgella are frequently mistaken for fruit.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -9383,7 +9388,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "careful",
@@ -9407,7 +9412,8 @@
       "protect",
       "minddown",
       "teleport",
-      "allycover"
+      "allycover",
+      "sad"
     ],
     "attklist_randomize": -1,
     "ba": 14,
@@ -9440,7 +9446,7 @@
       [29, 8, 2, 8, 0, -0.2]
     ],
     "desc": "They're extraordinarily simple and underdeveloped. They swim with single-minded desire to join with other Petula.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -9583,7 +9589,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "careful",
@@ -9607,7 +9613,8 @@
       "protect",
       "minddown",
       "teleport",
-      "allycover"
+      "allycover",
+      "sad"
     ],
     "attklist_randomize": -1,
     "ba": 14,
@@ -9640,7 +9647,7 @@
       [29, 8, 2, 8, 0, -0.2]
     ],
     "desc": "A collection of Petula working together as one. Each takes on a different function as part of the collective.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -9764,7 +9771,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [10, 8],
+    "animator": [11, 9],
     "attklist": [
       "bounce",
       "breakswipe",
@@ -9775,7 +9782,6 @@
       "rollshot",
       "pursuit",
       "heartdown",
-      "hazeball",
       "juggle",
       "allyrush",
       "rest",
@@ -9796,6 +9802,7 @@
       "spitball",
       "chill",
       "rattle",
+      "hazeball",
       "tool",
       "startermind"
     ],
@@ -9851,7 +9858,7 @@
       [12, 8, 2]
     ],
     "desc": "Even at their calmest, they communicate in piercing shrieks. The loudest Garood tends to be the leader of the flock.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -10000,7 +10007,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "breakswipe",
@@ -10011,7 +10018,6 @@
       "rollshot",
       "pursuit",
       "heartdown",
-      "hazeball",
       "juggle",
       "allyrush",
       "rest",
@@ -10032,6 +10038,7 @@
       "spitball",
       "chill",
       "rattle",
+      "hazeball",
       "tool",
       "startermind"
     ],
@@ -10082,7 +10089,7 @@
       [12, 8, 2]
     ],
     "desc": "They are skilled at mimicry and can even learn human words. They especially favor sounds which get a rise out of others.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -10226,7 +10233,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "steamattack",
       "sweatup",
@@ -10309,7 +10316,7 @@
       [34, 8, 1, 23, 8, -1]
     ],
     "desc": "Their body is dense with fatty tissue storage, which constantly metabolizes into heat and steam. They migrate from arctic climates to raise Druppa near hot springs.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -10457,7 +10464,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "steamattack",
       "sweatup",
@@ -10532,7 +10539,7 @@
       [34, 8, 1, 23, 8, -1]
     ],
     "desc": "Despite their intensely high body temperature, they constantly seek heat sources as though they were cold. Take care when handling them directly.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -10664,7 +10671,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "flight",
       "flyback",
@@ -10676,7 +10683,7 @@
       "heartpass",
       "switch",
       "bench",
-      "heartup",
+      "fieldclear",
       "bellydrum",
       "protect",
       "whirlwind",
@@ -10738,7 +10745,7 @@
       [7, 2, 0, 4, 2, 1]
     ],
     "desc": "They protect forests from fire by raking soil to encourage plant decomposition. When fires do break out, they attentively manage them.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -10766,7 +10773,7 @@
       [14, "dragontail"],
       [20, "whirlwind"],
       [24, "heart"],
-      [29, "heartpass"],
+      [29, "fieldclear"],
       [35, "flyback"],
       [40, "rush"],
       [44, "bellydrum"],
@@ -10906,7 +10913,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "flight",
       "flyback",
@@ -10918,7 +10925,7 @@
       "heartpass",
       "switch",
       "bench",
-      "heartup",
+      "fieldclear",
       "bellydrum",
       "protect",
       "whirlwind",
@@ -10972,7 +10979,7 @@
       [7, 2, 0, 4, 2, 1]
     ],
     "desc": "They are constantly in motion. Their colorful plumage is a point of pride and they sometimes accessorize it with flower petals.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -11000,7 +11007,7 @@
       [10, "dragontail"],
       [16, "whirlwind"],
       [20, "heart"],
-      [25, "heartpass"],
+      [25, "fieldclear"],
       [31, "flyback"],
       [36, "rush"],
       [40, "bellydrum"],
@@ -11131,7 +11138,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "callout",
       "switch",
@@ -11216,7 +11223,7 @@
       [2, 2, 1, 42, 3, 2]
     ],
     "desc": "They receive gifts from one another on their pikes. A heavily laden Magpike is a popular one.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -11391,7 +11398,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,
-    "animator": [8, 10],
+    "animator": [9, 11],
     "attklist": [
       "callout",
       "switch",
@@ -11457,7 +11464,7 @@
       [2, 2, 1, 42, 3, 2]
     ],
     "desc": "They identify themselves through song. Tight cliques will often form around a common melody.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -11591,7 +11598,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 20,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "callout",
       "switch",
@@ -11670,7 +11677,7 @@
       [2, 2, 1, 42, 3, 2]
     ],
     "desc": "Celia's Notes: Their scream is tremendous! In prehistoric times it might have been for warning, or mating, or both.",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -11798,7 +11805,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "blockattack",
       "thunder",
@@ -11822,8 +11829,9 @@
       "set",
       "jump",
       "wall",
+      "wornattack",
+      "splinter",
       "recover",
-      "ricochet",
       "netattack",
       "enemylowered"
     ],
@@ -11873,7 +11881,7 @@
       [27, 9, -3]
     ],
     "desc": "They'll stand perfectly still in plain sight, mimicking a tree. When prey least suspects it, they strike with blinding speed.",
-    "designer": [0, 1, 8],
+    "designer": [1, 2, 9],
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -11903,9 +11911,9 @@
       [17, "distraction"],
       [23, "netattack"],
       [30, "lock"],
-      [34, "ricochet"],
+      [34, "thunder"],
       [38, "wall"],
-      [42, "thunder"],
+      [42, "splinter"],
       [46, "recover"]
     ],
     "learnset_randomize": -1,
@@ -12016,7 +12024,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterbody",
       "sideshot",
@@ -12025,8 +12033,6 @@
       "blockattack",
       "body",
       "superpower",
-      "mindpass",
-      "allyrush",
       "allycover",
       "lockon",
       "quake",
@@ -12080,7 +12086,7 @@
       [39, 8, 1]
     ],
     "desc": "They swing their armored head at high velocities to break through rock. The tunnels they create often become homes for other cave-dwellers.",
-    "designer": [4, 0],
+    "designer": [5, 1],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -12222,7 +12228,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "starterbody",
       "sideshot",
@@ -12231,8 +12237,6 @@
       "blockattack",
       "body",
       "superpower",
-      "mindpass",
-      "allyrush",
       "allycover",
       "lockon",
       "quake",
@@ -12284,7 +12288,7 @@
       [39, 8, 1]
     ],
     "desc": "They are diligent excavators. They are often at work clearing away debris left over from Demolipede activity.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -12419,7 +12423,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "myheartpass",
@@ -12506,7 +12510,7 @@
       [43, 7, 4, 7, 8, 0]
     ],
     "desc": "They exhibit complex social behavior and mediate disputes between other Beasties. Brighter-chested Grazadas tend to be leaders.",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -12652,7 +12656,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "facade",
       "scoreboosted",
@@ -12677,6 +12681,8 @@
       "splinter",
       "rattle",
       "heartd",
+      "sad",
+      "speech",
       "bamboozle",
       "rest",
       "healbell",
@@ -12729,7 +12735,7 @@
       [4, 2, 2]
     ],
     "desc": "They can manipulate emotions with potent pheromones. Anyone who touches their mask, made from all the material they collected as a pupa, will face their wrath.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -12872,7 +12878,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "facade",
       "scoreboosted",
@@ -12897,6 +12903,8 @@
       "splinter",
       "rattle",
       "heartd",
+      "sad",
+      "speech",
       "bamboozle",
       "rest",
       "healbell",
@@ -12937,7 +12945,7 @@
       [4, 2, 2]
     ],
     "desc": "Their spines naturally collect plant detritus as they move about, building up their protective coat.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -13072,7 +13080,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "facade",
       "scoreboosted",
@@ -13097,6 +13105,8 @@
       "splinter",
       "rattle",
       "heartd",
+      "sad",
+      "speech",
       "bamboozle",
       "rest",
       "healbell",
@@ -13158,7 +13168,7 @@
       [4, 2, 2]
     ],
     "desc": "This Beastie hides in its cocoon and pilots a constructed decoy. They build masks and experiment with personas they might grow into.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -13302,7 +13312,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "poisonhit",
       "stun",
@@ -13376,7 +13386,7 @@
       [56, 0, 0]
     ],
     "desc": "They can keep cool and moist in any environment. They're known for their relaxed demeanor, but they'll dance provocatively for any romantic interest.",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -13514,7 +13524,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "shakenmind",
@@ -13523,7 +13533,6 @@
       "heartd",
       "mind",
       "moon",
-      "hazeball",
       "storedpower",
       "cover",
       "mindpass",
@@ -13539,6 +13548,7 @@
       "telekinesis",
       "mindup",
       "dispel",
+      "hazeball",
       "tool"
     ],
     "attklist_randomize": -1,
@@ -13586,7 +13596,7 @@
       [42, 3, 4]
     ],
     "desc": "They're attracted to the hum of computers. It's every network engineer's nightmare to flick the lights on in the server room, only to find a Debugly.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -13723,7 +13733,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "startermind",
       "shakenmind",
@@ -13732,7 +13742,6 @@
       "heartd",
       "mind",
       "moon",
-      "hazeball",
       "storedpower",
       "cover",
       "mindpass",
@@ -13748,6 +13757,7 @@
       "telekinesis",
       "mindup",
       "dispel",
+      "hazeball",
       "tool"
     ],
     "attklist_randomize": -1,
@@ -13788,7 +13798,7 @@
       [42, 3, 4]
     ],
     "desc": "They make their home in office desks where they can readily access their favorite food: paper. Math homework is especially enticing for them.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -13918,7 +13928,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "startermind",
       "shakenmind",
@@ -13989,7 +13999,7 @@
       [38, 8, 1]
     ],
     "desc": "The existence of this Beastie was long disputed. They only become fully visible to those they trust deeply.",
-    "designer": [3, 8],
+    "designer": [4, 9],
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -14134,7 +14144,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "protect",
@@ -14162,6 +14172,7 @@
       "basecover",
       "rocket",
       "menace",
+      "ego",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -14202,7 +14213,7 @@
       [47, 0, 1, 29, 0, 2]
     ],
     "desc": "They have incredible regenerative abilities. Many folk tales about sea monsters were most likely inspired by Hydrolm.",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -14339,7 +14350,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "protect",
@@ -14367,6 +14378,7 @@
       "basecover",
       "rocket",
       "menace",
+      "ego",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -14393,7 +14405,7 @@
       [47, 0, 1, 29, 0, 2]
     ],
     "desc": "Their heart beats only twice per minute. Their \"eyes\" are fake; in fact, they are blind. They live in dark, wet places and are active only when playing Beastieball.",
-    "designer": [3],
+    "designer": [4],
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -14520,7 +14532,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterbody",
       "sensihit",
@@ -14615,7 +14627,7 @@
       [19, 0, 1, 14, 0, 1, 12, 0, 4]
     ],
     "desc": "Although infamous for picking fights, they keep troublesome Beasties like Gremlur in check. If they lose at sports they will avoid shame by pretending they've died.",
-    "designer": [12],
+    "designer": [13],
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -14773,7 +14785,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 20,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "markattack",
       "startermind",
@@ -14846,7 +14858,7 @@
       [23, 8, -2]
     ],
     "desc": "Celia's Notes: Their spines somehow store electricity. It's conducted through their teeth when they bite into something.",
-    "designer": 4,
+    "designer": 5,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -14878,7 +14890,7 @@
       [34, "mark"],
       [40, "snipe"],
       [44, "mindup"],
-      [50, "dump"]
+      [50, "ricochet"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -14974,7 +14986,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "markattack",
       "startermind",
@@ -15045,7 +15057,7 @@
       [23, 8, -2]
     ],
     "desc": "They use their bill to detect electrical fields. They heavily rely on this sense while the rest of their body develops.",
-    "designer": [3, 4],
+    "designer": [4, 5],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -15077,7 +15089,7 @@
       [30, "mark"],
       [36, "stun"],
       [40, "telekinesis"],
-      [46, "dump"]
+      [46, "ricochet"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -15168,7 +15180,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "markattack",
       "startermind",
@@ -15246,7 +15258,7 @@
       [23, 8, -2]
     ],
     "desc": "They have honed their electroreceptive sensitivity, allowing them to foresee the movements of other Beasties.",
-    "designer": [8, 4, 3],
+    "designer": [9, 5, 4],
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -15316,7 +15328,7 @@
       [35, "mark"],
       [41, "stun"],
       [45, "telekinesis"],
-      [51, "dump"]
+      [51, "ricochet"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -15420,7 +15432,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [8, 13],
+    "animator": [9, 14],
     "attklist": [
       "bounce",
       "body",
@@ -15499,7 +15511,7 @@
       [16, 2, 1]
     ],
     "desc": "They're fearless solo foragers who will challenge anyone. They don't seem to remember they were once tiny Shooga.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -15653,7 +15665,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "body",
@@ -15728,7 +15740,7 @@
       [16, 2, 1]
     ],
     "desc": "Their semitransparent ears shield their eyes from wind as they glide. They feel safest in large groups, especially with watchful Sefren.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -15876,7 +15888,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "body",
@@ -15958,7 +15970,7 @@
       [16, 2, 1]
     ],
     "desc": "They can hear the footsteps of distant predators. They'll hide for as long as it takes for danger to pass.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -16112,7 +16124,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "sweatup",
       "startermind",
@@ -16136,6 +16148,8 @@
       "protect",
       "rest",
       "basecover",
+      "hex",
+      "stun",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -16183,7 +16197,7 @@
       [5, 0, 4]
     ],
     "desc": "Scientists still don't understand how this Beastie adapted psychokinetic abilities. Psylusc are known to influence the tides to protect their precious coral reefs.",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -16333,7 +16347,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "pepshot",
       "commit",
@@ -16368,6 +16382,7 @@
       "juggle",
       "hdefup",
       "cook",
+      "sad",
       "toughattack",
       "swordsdance",
       "mimic"
@@ -16439,7 +16454,7 @@
       [16, 0, 2]
     ],
     "desc": "Each one has a unique ink color. They tend to form colonies of similar color and mark their territory with vivid graffiti.",
-    "designer": 4,
+    "designer": 5,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -16627,7 +16642,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 20,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "pepshot",
       "commit",
@@ -16662,6 +16677,7 @@
       "juggle",
       "hdefup",
       "cook",
+      "sad",
       "toughattack",
       "swordsdance",
       "mimic"
@@ -16702,7 +16718,7 @@
       [16, 0, 2]
     ],
     "desc": "Celia's Notes: Their bioluminescent body likely helps them navigate the deep sea and hypnotize prey. However, at lower pressures, they liquify.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -16725,14 +16741,14 @@
     "isBaby": false,
     "learnset": [
       [0, "pepshot"],
-      [0, "callout"],
+      [0, "sad"],
       [10, "mimic"],
       [14, "mind"],
       [17, "minddown"],
       [23, "swordsdance"],
       [28, "storedpower"],
       [34, "noisytag"],
-      [38, "moon"],
+      [37, "moon"],
       [43, "superpower"],
       [48, "skillswap"],
       [52, "contest"]
@@ -16841,7 +16857,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "starterbody",
       "superfang",
@@ -16944,7 +16960,7 @@
       [15, 8, -1]
     ],
     "desc": "They are often found in dumpsters. When they outgrow their can, Trats will gather with many others to exchange for larger cans.",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -17116,7 +17132,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 11,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -17146,6 +17162,7 @@
       "protect",
       "swordsdance",
       "menace",
+      "shakeoff",
       "starterbody",
       "quake",
       "bomb"
@@ -17197,7 +17214,7 @@
       [8, 0, 0.5]
     ],
     "desc": "Their tail carries most of their weight. They bludgeon would-be predators into a stupor before making their escape.",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -17333,7 +17350,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -17363,6 +17380,7 @@
       "protect",
       "swordsdance",
       "menace",
+      "shakeoff",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -17410,7 +17428,7 @@
       [8, 0, 0.5]
     ],
     "desc": "They enjoy basking in the sun, but this leaves them vulnerable. They stick out their tongue to intimidate predators.",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -17540,7 +17558,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 11,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -17570,6 +17588,7 @@
       "protect",
       "swordsdance",
       "menace",
+      "shakeoff",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -17618,7 +17637,7 @@
       [8, 0, 0.5]
     ],
     "desc": "Their decoy tail draws predators' attention away from their head. In a pinch, they'll drop their tail and quickly grow a new one.",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -17748,7 +17767,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "nightshade",
@@ -17837,7 +17856,7 @@
       [19, 0, 1, 8, 0, 0.15]
     ],
     "desc": "Known to travel vast distances and through any weather, they can stay airborne for a week without rest and then float on the water's surface.",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -17981,7 +18000,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "startermind",
       "nightshade",
@@ -18061,7 +18080,7 @@
       [19, 0, 1, 8, 0, 0.15]
     ],
     "desc": "Juveniles will float on the ocean with their mouth open skyward awaiting food from their parents. Their brightly-colored neck pouch makes them visible from afar.",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -18199,7 +18218,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "bounce",
       "healhit",
@@ -18274,7 +18293,7 @@
       [0, 2, 1, 3, 2, 1, 8, 2, 0.15]
     ],
     "desc": "They comb their hair with a special wax produced in their flippers. This keeps them incredibly smooth and able to glide over any surface.",
-    "designer": [3, 8],
+    "designer": [4, 9],
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -18414,7 +18433,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "bounce",
       "healhit",
@@ -18486,7 +18505,7 @@
       [0, 2, 1, 3, 2, 1, 8, 2, 0.15]
     ],
     "desc": "Their incredibly dense hair keeps them well insulated even in cold ocean waters. Their actual body is quite small.",
-    "designer": [8, 3],
+    "designer": [9, 4],
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -18621,7 +18640,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [10, 8],
+    "animator": [11, 9],
     "attklist": [
       "bounce",
       "jump",
@@ -18697,7 +18716,7 @@
       [16, 8, -2]
     ],
     "desc": "They leap high enough to snatch birds straight out of the sky. They'll leave claw marks on high places as a form of competition.",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -18843,7 +18862,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "bounce",
       "jump",
@@ -18918,7 +18937,7 @@
       [16, 8, -2]
     ],
     "desc": "When on the hunt, they'll often allow prey to escape so that they can continue the chase and practice their pounce more.",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -19069,7 +19088,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "body",
       "rocksmash",
@@ -19132,7 +19151,7 @@
       [3, 2, 2]
     ],
     "desc": "They can swing their whip-like tail incredibly fast. Underwater, it creates shockwaves that stuns prey senseless.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -19273,7 +19292,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "body",
       "rocksmash",
@@ -19329,7 +19348,7 @@
       [3, 2, 2]
     ],
     "desc": "Their tail communicates everything. Rather than fight, Waglash compete by making the biggest splashes they can with their tail.",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -19462,11 +19481,10 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "careful",
       "bomb",
-      "hazeball",
       "dropshot",
       "rocksmash",
       "healhit",
@@ -19486,7 +19504,8 @@
       "chill",
       "sweatup",
       "enemyboosts",
-      "flatten"
+      "flatten",
+      "snipe"
     ],
     "attklist_randomize": -1,
     "ba": 45,
@@ -19534,7 +19553,7 @@
       [52, 2, 1, 8, 2, 0.3]
     ],
     "desc": "Its body is covered in microscopic fungal feelers, making it feel sticky. They tend to all varieties of plant life.",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -19569,7 +19588,7 @@
       [19, "fieldclear"],
       [24, "enemyboosts"],
       [30, "mark"],
-      [35, "hazeball"],
+      [35, "snipe"],
       [39, "allyrush"],
       [43, "flatten"]
     ],
@@ -19685,11 +19704,10 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "careful",
       "bomb",
-      "hazeball",
       "dropshot",
       "rocksmash",
       "healhit",
@@ -19710,6 +19728,7 @@
       "sweatup",
       "enemyboosts",
       "flatten",
+      "snipe",
       "rhythm",
       "blockattack",
       "vigor",
@@ -19774,7 +19793,7 @@
       [52, 2, 1, 8, 2, 0.3]
     ],
     "desc": "The vibration of their belly drum promotes the growth of plants. Their habitats are always lush and overgrown.",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -19949,11 +19968,10 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "careful",
       "bomb",
-      "hazeball",
       "dropshot",
       "rocksmash",
       "healhit",
@@ -19974,6 +19992,7 @@
       "sweatup",
       "enemyboosts",
       "flatten",
+      "snipe",
       "trap",
       "markattack",
       "netattack",
@@ -19981,8 +20000,8 @@
       "distraction",
       "sting",
       "starterside",
-      "snipe",
-      "sidespin"
+      "sidespin",
+      "hazeball"
     ],
     "attklist_randomize": -1,
     "ba": 65,
@@ -20031,7 +20050,7 @@
       [52, 2, 1, 8, 2, 0.3]
     ],
     "desc": "Though eerily quiet, they are constantly sending and receiving signals with nearby mycelia. As a result they have uncanny environmental awareness.",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -20080,11 +20099,11 @@
       [5, "refresh"],
       [9, "markattack"],
       [12, "distraction"],
-      [17, "hazeball"],
+      [17, "snipe"],
       [20, "protect"],
-      [25, "mark"],
-      [31, "netattack"],
-      [36, "allyrush"],
+      [25, "netattack"],
+      [31, "mark"],
+      [36, "hazeball"],
       [40, "sting"],
       [44, "dump"],
       [48, "fieldclear"]
@@ -20199,11 +20218,10 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "careful",
       "bomb",
-      "hazeball",
       "dropshot",
       "rocksmash",
       "healhit",
@@ -20224,6 +20242,7 @@
       "sweatup",
       "enemyboosts",
       "flatten",
+      "snipe",
       "crowd",
       "heart",
       "minddown",
@@ -20280,7 +20299,7 @@
       [52, 2, 1, 8, 2, 0.3]
     ],
     "desc": "This Beastie can lie in serenity for days, then suddenly fly into action. They are deeply attuned to the feelings of other Beasties.",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -20445,11 +20464,10 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "careful",
       "bomb",
-      "hazeball",
       "dropshot",
       "rocksmash",
       "healhit",
@@ -20470,6 +20488,7 @@
       "sweatup",
       "enemyboosts",
       "flatten",
+      "snipe",
       "rhythm",
       "blockattack",
       "topspin",
@@ -20491,7 +20510,6 @@
       "distraction",
       "sting",
       "starterside",
-      "snipe",
       "sidespin",
       "eerie",
       "3actions",
@@ -20546,7 +20564,7 @@
       [52, 2, 1, 8, 2, 0.3]
     ],
     "desc": "Celia's Notes: Their growths are proto-Beastieballs. This might be the missing link between fungi and Beastie!",
-    "designer": [1, 8],
+    "designer": [2, 9],
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -20690,7 +20708,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "dragontail",
@@ -20714,7 +20732,8 @@
       "lifepass",
       "followme",
       "fieldclear",
-      "protect"
+      "protect",
+      "sad"
     ],
     "attklist_randomize": -1,
     "ba": 30,
@@ -20766,7 +20785,7 @@
       [34, 8, 1, 26, 2, 1]
     ],
     "desc": "Chloroplasts from the plants they eat are absorbed and stored in their tails. This provides them camouflage as well as photosynthetic energy.",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -20897,7 +20916,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterbody",
       "storedpower",
@@ -20919,12 +20938,13 @@
       "basecover",
       "protect",
       "stress",
-      "batonpass"
+      "batonpass",
+      "shakeoff"
     ],
     "attklist_randomize": -1,
     "ba": 91,
-    "base_exp": 166.088,
-    "bd": 70,
+    "base_exp": 170.768,
+    "bd": 80,
     "body_color_index": 0,
     "codename": "d5c9dacef3f7d48514c67fd80fe55486a8cc0e07",
     "colormeta": null,
@@ -20966,7 +20986,7 @@
       [8, 0, 0.3, 0, 0, 1]
     ],
     "desc": "They remove lightbulbs and take their place, feeding on the power supply. The bioluminescent fibres in their head glow brighter when they're well fed. ",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -20981,7 +21001,7 @@
     "foot_size": 36,
     "foot_type": 0,
     "growth": 1.04,
-    "ha": 39,
+    "ha": 29,
     "hd": 104,
     "hidden": false,
     "hidden_counter": null,
@@ -21108,7 +21128,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "healhit",
@@ -21172,7 +21192,7 @@
       [45, 7, 6, 8, 2, 0.15]
     ],
     "desc": "Their smaller wings help them conserve heat but became useless for flying. They're carnivores, and in extreme cases, will devour other Beasties.",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -21332,7 +21352,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "healhit",
@@ -21397,7 +21417,7 @@
       [43, 7, 6]
     ],
     "desc": "A superpollinator often found in lush flower fields. They will viciously hunt down any creature which endangers their flowers.",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -21555,7 +21575,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "starterheart",
       "healhit",
@@ -21634,7 +21654,7 @@
       [15, 2, 1]
     ],
     "desc": "They fly tirelessly through any condition to find flowers to feed on. Seeing one is considered a lucky charm.",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -21784,7 +21804,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterbody",
       "storedpower",
@@ -21873,7 +21893,7 @@
       [11, 0, 1, 16, 0, 1]
     ],
     "desc": "The fastest known flier of all. They use echolocation to rapidly navigate narrow cave systems.",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -22017,13 +22037,12 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "sidespin",
       "backswitch",
       "shakenmind",
       "sideshot",
-      "hazeball",
       "shakenhit",
       "sensihit",
       "poisonhit",
@@ -22048,6 +22067,8 @@
       "skillswap",
       "rattle",
       "dig",
+      "ricochet",
+      "hazeball",
       "passattack",
       "starterside"
     ],
@@ -22117,7 +22138,7 @@
       [6, 8, 1]
     ],
     "desc": "This pair is inseparable. Despite their highly developed sociability, they often remain solitary, perfectly satisfied with their own company.",
-    "designer": 4,
+    "designer": 5,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -22272,13 +22293,12 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 10,
+    "animator": [9, 11],
     "attklist": [
       "sidespin",
       "backswitch",
       "shakenmind",
       "sideshot",
-      "hazeball",
       "shakenhit",
       "sensihit",
       "poisonhit",
@@ -22303,6 +22323,8 @@
       "skillswap",
       "rattle",
       "dig",
+      "ricochet",
+      "hazeball",
       "passattack",
       "starterside"
     ],
@@ -22372,7 +22394,7 @@
       [6, 8, 1]
     ],
     "desc": "Their life cycle begins in caves, but they journey to the forest in adulthood. Each one selects a companion rock who they talk to as though it were alive.",
-    "designer": [4, 8],
+    "designer": [5, 9],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -22532,7 +22554,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "preblock",
       "recover",
@@ -22618,7 +22640,7 @@
       [19, 2, 1, 12, 2, 2]
     ],
     "desc": "Their large shells become mini-ecosystems supporting barnacles and sponges. Crews of Turogue will make their home there too.",
-    "designer": [2, 8],
+    "designer": [3, 9],
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -22783,7 +22805,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "preblock",
       "recover",
@@ -22854,7 +22876,7 @@
       [19, 2, 1, 12, 2, 2]
     ],
     "desc": "A group of Turogue is called a \"crew.\" When they're together they will turn anything into a competition.",
-    "designer": 2,
+    "designer": 3,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -23005,7 +23027,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "preblock",
       "recover",
@@ -23090,7 +23112,7 @@
       [19, 2, 1, 12, 2, 2]
     ],
     "desc": "They aren't great swimmers, but their bouyant shell keeps them afloat when they're in the water.",
-    "designer": [2, 9],
+    "designer": [3, 10],
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -23238,7 +23260,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "cut",
       "blockattack",
@@ -23268,6 +23290,7 @@
       "mdefup",
       "flight",
       "cook",
+      "speech",
       "healbell",
       "starterheart"
     ],
@@ -23323,7 +23346,7 @@
       [16, 0, 1, 7, 0, 1]
     ],
     "desc": "Their feathers are exceptionally tough and lustrous. When they're loosed by ball impacts it makes Conjarr appear to sparkle.",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -23356,7 +23379,7 @@
       [36, "distraction"],
       [41, "cut"],
       [45, "eerie"],
-      [49, "threat"]
+      [49, "speech"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -23462,7 +23485,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "allycover",
       "curse",
@@ -23551,7 +23574,7 @@
       [0, 2, 1, 1, 8, -2]
     ],
     "desc": "Once thought to be solitary creatures. It was discovered they communicate with one another across mountain peaks with reflected light from their horn ice.",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [

@@ -62,7 +62,7 @@ const EffectFilters: {
   // { name: "Additional Damage", effects: [36] },
   { name: "Add Actions", effects: [10] },
   { name: "Requires More Actions", effects: [40, 41] },
-  { name: "Wall", effects: [56] },
+  { name: "BARRIER", effects: [56] },
   { name: "Swap Traits", effects: [63] },
   {
     name: "Based on Target DEF",

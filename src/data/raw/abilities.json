@@ -94,6 +94,11 @@
     "id": "dauntless",
     "name": "Dauntless"
   },
+  "decoy": {
+    "desc": "When at the net and not [sprStatus,4]TOUGH, all attacks go to this Beastie",
+    "id": "decoy",
+    "name": "Decoy"
+  },
   "defender": {
     "desc": "DEF x1.3 while any ally is [sprStatus,5]WIPED",
     "id": "defender",
@@ -180,7 +185,7 @@
     "name": "Galaxy Brain"
   },
   "ghost": {
-    "desc": "Immune to [sprIcon,0] attacks",
+    "desc": "[sprIcon,0] attacks do 0 damage and change this Beastie's trait to Tangible",
     "id": "ghost",
     "name": "Intangible"
   },
@@ -190,7 +195,7 @@
     "name": "Crowing"
   },
   "guts": {
-    "desc": "Does [sprStatus,18]WEEPYx damage when [sprStatus,6]SWEATY, [sprStatus,0]NERVOUS, [sprStatus,11]TENDER or [sprStatus,18]WEEPY",
+    "desc": "Does 1.3x damage when [sprStatus,6]SWEATY, [sprStatus,0]NERVOUS, [sprStatus,11]TENDER or [sprStatus,18]WEEPY",
     "id": "guts",
     "name": "Determination"
   },
@@ -484,6 +489,11 @@
     "id": "sturdy",
     "name": "Bunker"
   },
+  "superarmor": {
+    "desc": "DEF x2 while STAMINA is at least ¾ filled",
+    "id": "superarmor",
+    "name": "Super Armor"
+  },
   "superblock": {
     "desc": "DEF x1.5 when the attacker is [sprStatus,9]BLOCKED",
     "id": "superblock",
@@ -539,6 +549,7 @@
     "id": "unangry",
     "name": "Chill"
   },
+  "unghost": { "desc": "Not intangible", "id": "unghost", "name": "Tangible" },
   "unlazy": {
     "desc": "Never feels [sprStatus,10]TIRED",
     "id": "unlazy",

@@ -478,7 +478,7 @@
       "lifepass"
     ],
     "attklist_randomize": -1,
-    "ba": 74,
+    "ba": 79,
     "base_exp": 177.276,
     "bd": 50,
     "body_color_index": 0,
@@ -3002,7 +3002,7 @@
           {
             "conditions": [
               {
-                "effect_type": 89,
+                "effect_type": 90,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
@@ -3078,7 +3078,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 90,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3288,7 +3288,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 90,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3500,7 +3500,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 90,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -5391,6 +5391,7 @@
       "shakeoff",
       "thrash",
       "myheartpass",
+      "allyrush",
       "scoreboosted"
     ],
     "attklist_randomize": -1,
@@ -5668,6 +5669,7 @@
       "shakeoff",
       "thrash",
       "myheartpass",
+      "allyrush",
       "scoreboosted"
     ],
     "attklist_randomize": -1,
@@ -7414,7 +7416,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 90,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7615,7 +7617,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 90,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7829,7 +7831,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 90,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -11836,7 +11838,7 @@
       "enemylowered"
     ],
     "attklist_randomize": -1,
-    "ba": 70,
+    "ba": 75,
     "base_exp": 196.86,
     "bd": 80,
     "body_color_index": 0,
@@ -12046,6 +12048,8 @@
       "distraction",
       "flatten",
       "dig",
+      "allyrush",
+      "fieldclear",
       "mark",
       "tagattack"
     ],
@@ -12250,6 +12254,8 @@
       "distraction",
       "flatten",
       "dig",
+      "allyrush",
+      "fieldclear",
       "mark"
     ],
     "attklist_randomize": -1,
@@ -14176,7 +14182,7 @@
       "chill"
     ],
     "attklist_randomize": -1,
-    "ba": 85,
+    "ba": 90,
     "base_exp": 231,
     "bd": 60,
     "body_color_index": 0,
@@ -14929,7 +14935,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 90,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15128,7 +15134,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 90,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15367,7 +15373,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 90,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17128,7 +17134,7 @@
     "type_focus": 2
   },
   "rocklizard": {
-    "ability": ["heavy", "multiscale"],
+    "ability": ["decoy", "superarmor"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
@@ -17286,7 +17292,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 90,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17500,7 +17506,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 90,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17709,7 +17715,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 90,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -20856,7 +20862,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 90,
           "event": null,
           "freq": -1,
           "my_data": null,

@@ -413,17 +413,20 @@
     "use": 0
   },
   "cover": {
-    "bt_tags": [23],
+    "bt_tags": [23, 20, 47, 29, 46],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 7, "pow": 0, "targ": 0 }],
+    "eff": [
+      { "eff": 16, "pow": 1, "targ": 0 },
+      { "eff": 7, "pow": 0, "targ": 0 }
+    ],
     "id": "cover",
     "name": "Cover",
     "pow": 0,
     "targ": 2,
     "type": 3,
-    "use": 0
+    "use": 2
   },
   "crowd": {
     "bt_tags": [24, 13],

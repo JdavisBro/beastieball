@@ -1,4 +1,5 @@
 const MOVE_RECENTLY_UPDATED: string[] = [
+  "cover",
   "facade",
   "fieldclear",
   "hazeball",

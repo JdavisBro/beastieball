@@ -8711,7 +8711,7 @@
     "type_focus": 2
   },
   "horseshoe": {
-    "ability": ["sturdy"],
+    "ability": ["multiscale"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,

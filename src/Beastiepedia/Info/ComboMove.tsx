@@ -5,7 +5,7 @@ import styles from "./ContentInfo.module.css";
 import BEASTIE_DATA, { BeastieType } from "../../data/BeastieData";
 import InfoBox from "../../shared/InfoBox";
 import MoveView from "../../shared/MoveView";
-import { MoveEffect } from "../../data/MoveData";
+import { NumberEffect } from "../../data/MoveData";
 import BeastieSelect from "../../shared/BeastieSelect";
 
 enum ComboType {
@@ -45,16 +45,16 @@ export default function ComboMove({
           : // Rivals
             getRivalsType(beastiedata, friend);
 
-  const effects: MoveEffect[] = [];
-  const used_effects: Record<number, MoveEffect> = {};
+  const effects: NumberEffect[] = [];
+  const used_effects: Record<number, NumberEffect> = {};
   (friend ? [beastiedata, friend] : [beastiedata]).forEach(
     (beastie, beastieIndex) => {
       for (let i = 0; i < beastie.combos[type].length; i += 3) {
-        const neweff = {
+        const neweff: NumberEffect = {
           eff: beastie.combos[type][i],
           targ: beastie.combos[type][i + 1],
           pow: beastie.combos[type][i + 2],
-        };
+        } as NumberEffect;
         switch (neweff.eff) {
           case 49:
             target =

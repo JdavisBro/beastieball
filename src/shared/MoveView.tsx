@@ -8,7 +8,6 @@ import SOCIAL_DATA from "../data/SocialData";
 import { useIsSpoilerFriend } from "./useSpoiler";
 import { useLocalStorage } from "usehooks-ts";
 import abilities from "../data/abilities";
-import { abilityDesc } from "../Beastiepedia/Filter.module.css";
 
 // reuqired: targ=12 says Targets SIDEWAYS.
 

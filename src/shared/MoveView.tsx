@@ -7,6 +7,8 @@ import { useContext, useMemo } from "react";
 import SOCIAL_DATA from "../data/SocialData";
 import { useIsSpoilerFriend } from "./useSpoiler";
 import { useLocalStorage } from "usehooks-ts";
+import abilities from "../data/abilities";
+import { abilityDesc } from "../Beastiepedia/Filter.module.css";
 
 // reuqired: targ=12 says Targets SIDEWAYS.
 
@@ -53,11 +55,12 @@ function getEffectString(
   args: { joiningEffects: null | number },
   move: Move,
 ) {
-  let pow = Math.min(5, Math.abs(Math.floor(effect.pow)) - 1); // Max 6 boosts at once?
+  const num_pow = typeof effect.pow == "number" ? effect.pow : 0;
+  let pow = Math.min(5, Math.abs(Math.floor(num_pow)) - 1); // Max 6 boosts at once?
   let boost = "";
   while (pow >= 0) {
     boost +=
-      effect.pow > 0
+      num_pow > 0
         ? `[sprBoost,${Math.min(2, pow)}]`
         : `[sprBoost,${Math.min(2, pow) + 3}]`;
     pow -= 3;
@@ -235,7 +238,7 @@ function getEffectString(
         case 30:
           return "POW x1.5 if user has 2+ ACTIONs.";
         case 31:
-          return "POW x2 if user feels [sprStatus,8]JAZZED.";
+          return "POW x1.5 if user feels [sprStatus,8]JAZZED.";
         case 32:
           return "POW x¾ if user has any FEELINGs.";
       }
@@ -262,7 +265,7 @@ function getEffectString(
     case 42:
       return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} TRAP (Tag-ins lose 8 stamina per trap).`;
     case 43:
-      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RALLY ([sprIcon,1]POW +50%, [sprIcon,2]POW x¾).`;
+      return `${FIELD_TARGET[effect.targ]} gets +${effect.pow} RALLY ([sprIcon,1] damage +15, [sprIcon,2] damage x¾).`;
     case 44:
       return `${FIELD_TARGET[effect.targ]} fills with RHYTHM (Healing and protection).`;
     case 45:
@@ -335,6 +338,10 @@ function getEffectString(
       return "";
     case 88:
       return `If STAMINA is over ${effect.pow}:`;
+    case 89: {
+      const ability = abilities[effect.pow];
+      return `Target and self trait changes to ${ability.name} (${ability.desc})`;
+    }
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

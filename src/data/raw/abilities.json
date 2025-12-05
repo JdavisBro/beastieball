@@ -204,6 +204,11 @@
     "id": "handsfree",
     "name": "No-Hands"
   },
+  "haunted": {
+    "desc": "Feels +1 [sprStatus,10]TIRED each turn",
+    "id": "haunted",
+    "name": "Haunted"
+  },
   "heavy": {
     "desc": "Opponents can't [sprBoost,3]BOOST their stats or move them",
     "id": "heavy",
@@ -490,7 +495,7 @@
     "name": "Bunker"
   },
   "superarmor": {
-    "desc": "DEF x2 while STAMINA is at least ¾ filled",
+    "desc": "DEF x1.5 while STAMINA is at least ¾ filled",
     "id": "superarmor",
     "name": "Super Armor"
   },
@@ -596,7 +601,7 @@
     "name": "Torpor"
   },
   "watcher": {
-    "desc": "Receives attacks in place of adjacent allies ",
+    "desc": "When not [sprStatus,4]TOUGH, receives attacks in place of adjacent allies ",
     "id": "watcher",
     "name": "Watchtower"
   },

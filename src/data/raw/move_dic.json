@@ -407,7 +407,7 @@
     "eff": [{ "eff": 4, "pow": -1, "targ": 4 }],
     "id": "cook",
     "name": "Cook",
-    "pow": 55,
+    "pow": 50,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -601,7 +601,7 @@
     "eff": [{ "eff": 30, "pow": 1, "targ": 3 }],
     "id": "dragontail",
     "name": "Tornadoball",
-    "pow": 60,
+    "pow": 50,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2431,7 +2431,7 @@
     "eff": [{ "eff": 33, "pow": 31, "targ": 0 }],
     "id": "thrash",
     "name": "Thrash",
-    "pow": 60,
+    "pow": 80,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2586,14 +2586,11 @@
     "use": 0
   },
   "wornout": {
-    "bt_tags": [38, 31],
+    "bt_tags": [],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 22, "pow": 1, "targ": 3 },
-      { "eff": 29, "pow": 4, "targ": 0 }
-    ],
+    "eff": [{ "eff": 89, "pow": "haunted", "targ": 12 }],
     "id": "wornout",
     "name": "Hex",
     "pow": 0,

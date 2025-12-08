@@ -3002,7 +3002,7 @@
           {
             "conditions": [
               {
-                "effect_type": 90,
+                "effect_type": 91,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
@@ -3078,7 +3078,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 90,
+          "effect_type": 91,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3288,7 +3288,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 90,
+          "effect_type": 91,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3500,7 +3500,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 90,
+          "effect_type": 91,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -4683,7 +4683,7 @@
       "overheat",
       "enemyboosts",
       "rush",
-      "allyrush",
+      "allycover",
       "dig",
       "substitute",
       "bench",
@@ -4921,7 +4921,7 @@
       "overheat",
       "enemyboosts",
       "rush",
-      "allyrush",
+      "allycover",
       "dig",
       "substitute",
       "bench",
@@ -6174,7 +6174,8 @@
       "bodypass",
       "mindpass",
       "heartd",
-      "freeball"
+      "freeball",
+      "wornattack"
     ],
     "attklist_randomize": -1,
     "ba": 68,
@@ -7416,7 +7417,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 90,
+          "effect_type": 91,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7617,7 +7618,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 90,
+          "effect_type": 91,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7831,7 +7832,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 90,
+          "effect_type": 91,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7926,6 +7927,7 @@
       "sad",
       "bamboozle",
       "menace",
+      "rest",
       "targethp",
       "stun",
       "shaken"
@@ -8141,6 +8143,7 @@
       "sad",
       "bamboozle",
       "menace",
+      "rest",
       "targethp",
       "stun",
       "shaken"
@@ -8341,6 +8344,7 @@
       "sad",
       "bamboozle",
       "menace",
+      "rest",
       "targethp",
       "stun",
       "shaken"
@@ -8864,19 +8868,17 @@
     "recruit": {
       "conditions": [
         {
-          "damage": 99,
           "event": null,
           "freq": -1,
-          "func": null,
           "my_data": null,
-          "player": 2,
+          "player": [0, 1],
           "rel_color": -1,
           "type": 14
         }
       ],
-      "description": "Deal 99 damage with an attack"
+      "description": "beastiesetup_023"
     },
-    "recruit_value": 2.7,
+    "recruit_value": 9,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -9234,7 +9236,6 @@
       "protect",
       "minddown",
       "teleport",
-      "allycover",
       "sad"
     ],
     "attklist_randomize": -1,
@@ -9414,7 +9415,6 @@
       "protect",
       "minddown",
       "teleport",
-      "allycover",
       "sad"
     ],
     "attklist_randomize": -1,
@@ -9615,7 +9615,6 @@
       "protect",
       "minddown",
       "teleport",
-      "allycover",
       "sad"
     ],
     "attklist_randomize": -1,
@@ -10247,7 +10246,7 @@
       "float",
       "pursuit",
       "myheartpass",
-      "allyrush",
+      "allycover",
       "freeball",
       "bellydrum",
       "followme",
@@ -10346,7 +10345,7 @@
       [17, "sweatup"],
       [22, "protect"],
       [27, "heart"],
-      [32, "substitute"],
+      [32, "allycover"],
       [37, "inferno"],
       [41, "followme"],
       [45, "fieldclear"],
@@ -10478,7 +10477,7 @@
       "float",
       "pursuit",
       "myheartpass",
-      "allyrush",
+      "allycover",
       "freeball",
       "bellydrum",
       "followme",
@@ -10569,7 +10568,7 @@
       [14, "sweatup"],
       [19, "protect"],
       [24, "heart"],
-      [29, "substitute"],
+      [29, "allycover"],
       [34, "inferno"],
       [38, "followme"],
       [42, "fieldclear"],
@@ -12035,7 +12034,6 @@
       "blockattack",
       "body",
       "superpower",
-      "allycover",
       "lockon",
       "quake",
       "lowattks",
@@ -12115,13 +12113,13 @@
       [0, "starterbody"],
       [0, "dig"],
       [10, "sideshot"],
-      [14, "allycover"],
+      [14, "quake"],
       [19, "flatten"],
-      [25, "rest"],
+      [25, "fieldclear"],
       [30, "protect"],
       [36, "body"],
       [40, "mark"],
-      [44, "quake"],
+      [44, "rest"],
       [48, "superpower"]
     ],
     "learnset_randomize": -1,
@@ -12241,7 +12239,6 @@
       "blockattack",
       "body",
       "superpower",
-      "allycover",
       "lockon",
       "quake",
       "lowattks",
@@ -12319,13 +12316,13 @@
       [0, "starterbody"],
       [0, "dig"],
       [6, "sideshot"],
-      [10, "allycover"],
+      [10, "quake"],
       [15, "flatten"],
-      [21, "rest"],
+      [21, "fieldclear"],
       [26, "protect"],
       [32, "body"],
       [36, "mark"],
-      [40, "quake"],
+      [40, "rest"],
       [44, "superpower"]
     ],
     "learnset_randomize": -1,
@@ -12460,7 +12457,8 @@
       "pepshot",
       "toughattack",
       "dare",
-      "healbell"
+      "healbell",
+      "allycover"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -14167,7 +14165,6 @@
       "blockattack",
       "mind",
       "mindbomb",
-      "allycover",
       "mindpass",
       "recover",
       "curse",
@@ -14373,7 +14370,6 @@
       "blockattack",
       "mind",
       "mindbomb",
-      "allycover",
       "mindpass",
       "recover",
       "curse",
@@ -14821,7 +14817,6 @@
       "snipe",
       "sweatup",
       "bamboozle",
-      "set",
       "ricochet",
       "threat"
     ],
@@ -14935,7 +14930,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 90,
+          "effect_type": 91,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15022,7 +15017,6 @@
       "snipe",
       "sweatup",
       "bamboozle",
-      "set",
       "ricochet"
     ],
     "attklist_randomize": -1,
@@ -15134,7 +15128,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 90,
+          "effect_type": 91,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15216,7 +15210,6 @@
       "snipe",
       "sweatup",
       "bamboozle",
-      "set",
       "ricochet"
     ],
     "attklist_randomize": -1,
@@ -15373,7 +15366,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 90,
+          "effect_type": 91,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17154,7 +17147,6 @@
       "mind",
       "dig",
       "allyrush",
-      "allycover",
       "recover",
       "feint",
       "taunt",
@@ -17292,7 +17284,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 90,
+          "effect_type": 91,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17372,7 +17364,6 @@
       "mind",
       "dig",
       "allyrush",
-      "allycover",
       "recover",
       "feint",
       "taunt",
@@ -17506,7 +17497,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 90,
+          "effect_type": 91,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17580,7 +17571,6 @@
       "mind",
       "dig",
       "allyrush",
-      "allycover",
       "recover",
       "feint",
       "taunt",
@@ -17715,7 +17705,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 90,
+          "effect_type": 91,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -18230,7 +18220,6 @@
       "healhit",
       "serve",
       "dump",
-      "allycover",
       "allyrush",
       "batonpass",
       "superpower",
@@ -18445,7 +18434,6 @@
       "healhit",
       "serve",
       "dump",
-      "allycover",
       "allyrush",
       "batonpass",
       "superpower",
@@ -20517,6 +20505,7 @@
       "sting",
       "starterside",
       "sidespin",
+      "hazeball",
       "eerie",
       "3actions",
       "snore",
@@ -20862,7 +20851,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 90,
+          "effect_type": 91,
           "event": null,
           "freq": -1,
           "my_data": null,

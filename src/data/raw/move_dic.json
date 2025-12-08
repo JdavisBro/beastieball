@@ -39,11 +39,15 @@
     "use": 2
   },
   "allycover": {
-    "bt_tags": [23],
+    "bt_tags": [23, 32, 6],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 7, "pow": 0, "targ": 1 }],
+    "eff": [
+      { "eff": 7, "pow": 0, "targ": 1 },
+      { "eff": 90, "pow": 1, "targ": 0 },
+      { "eff": 26, "pow": 1, "targ": 1 }
+    ],
     "id": "allycover",
     "name": "Pipe",
     "pow": 0,

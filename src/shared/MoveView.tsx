@@ -24,6 +24,7 @@ const TARGET_STRINGS: Record<number, string> = {
   9: "nearest enemy",
   10: "front row active team",
   11: "active team",
+  12: "target and self",
 };
 
 const ALT_TARGET_STRINGS: Record<number, string> = {
@@ -339,8 +340,10 @@ function getEffectString(
       return `If STAMINA is over ${effect.pow}:`;
     case 89: {
       const ability = abilities[effect.pow];
-      return `Target and self trait changes to ${ability.name} (${ability.desc})`;
+      return `${targetStart} trait changes to ${ability.name} (${ability.desc})`;
     }
+    case 90:
+      return "If successful:";
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

@@ -41,7 +41,7 @@ function SidebarBeastie(props: Props): React.ReactElement {
               : `/icons/${beastiedata.name}.png`
           }
           style={props.isSpoiler ? { filter: "brightness(50%)" } : undefined}
-          alt={`${props.isSpoiler ? "Hidden" : beastiedata.name} Icon`}
+          alt={`${props.isSpoiler ? "Hidden Beastie" : beastiedata.name}`}
           loading="lazy"
         />
         <div className={styles.gridInfo}>

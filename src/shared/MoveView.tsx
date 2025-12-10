@@ -321,7 +321,7 @@ function getEffectString(
     case 79:
       return `[sprIcon,1][sprIcon,2]DEF${boost} to ${target}.`;
     case 80:
-      return `${feels} ${effect.pow} [sprStatus,18]WEEPY (ignores HEALS + BOOSTs)${dot}`;
+      return `${feels} ${effect.pow} [sprStatus,18]WEEPY (ignores BOOSTs)${dot}`;
     case 81:
       return `Changes ${target} trait to user's trait.`;
     case 82:

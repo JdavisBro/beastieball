@@ -1,5 +1,6 @@
 const MOVE_RECENTLY_UPDATED: string[] = [
   "allycover",
+  "bolt",
   "cover",
   "crowd",
   "facade",

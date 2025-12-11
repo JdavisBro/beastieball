@@ -224,6 +224,19 @@
     "type": 3,
     "use": 0
   },
+  "bolt": {
+    "bt_tags": [0, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 91, "pow": 0, "targ": 0 }],
+    "id": "bolt",
+    "name": "Bolt",
+    "pow": 90,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
   "bomb": {
     "bt_tags": [0, 10, 43, 48],
     "desc_tagids": [],
@@ -1369,10 +1382,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 88, "pow": 34, "targ": 0 },
-      { "eff": 26, "pow": 1, "targ": 0 }
-    ],
+    "eff": [{ "eff": 26, "pow": 1, "targ": 0 }],
     "id": "myheartpass",
     "name": "Excited Pass",
     "pow": 0,

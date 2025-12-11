@@ -989,7 +989,8 @@
       "shakeoff",
       "bomb",
       "flatten",
-      "wall"
+      "wall",
+      "bolt"
     ],
     "attklist_randomize": -1,
     "ba": 89,
@@ -1058,7 +1059,7 @@
       [17, "refresh"],
       [21, "blockattack"],
       [26, "haze"],
-      [32, "thunder"],
+      [32, "bolt"],
       [36, "libero"],
       [41, "whirlwind"],
       [47, "hyperbeam"]
@@ -3002,7 +3003,7 @@
           {
             "conditions": [
               {
-                "effect_type": 91,
+                "effect_type": 92,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
@@ -3078,7 +3079,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 91,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3288,7 +3289,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 91,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3500,7 +3501,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 91,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -5392,6 +5393,7 @@
       "thrash",
       "myheartpass",
       "allyrush",
+      "bolt",
       "scoreboosted"
     ],
     "attklist_randomize": -1,
@@ -5670,6 +5672,7 @@
       "thrash",
       "myheartpass",
       "allyrush",
+      "bolt",
       "scoreboosted"
     ],
     "attklist_randomize": -1,
@@ -7286,7 +7289,6 @@
       "heartup",
       "followme",
       "healbell",
-      "myheartpass",
       "heartpass",
       "cheer",
       "rhythm",
@@ -7370,12 +7372,12 @@
     "learnset": [
       [0, "pepshot"],
       [0, "cheer"],
-      [15, "myheartpass"],
+      [15, "heartup"],
       [19, "minddown"],
       [23, "rhythm"],
       [27, "noisytag"],
       [31, "heart"],
-      [36, "heartup"],
+      [36, "stomp"],
       [40, "introduction"],
       [44, "commit"],
       [49, "healbell"]
@@ -7417,7 +7419,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 91,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7488,7 +7490,6 @@
       "heartup",
       "followme",
       "healbell",
-      "myheartpass",
       "heartpass",
       "cheer",
       "rhythm",
@@ -7571,12 +7572,12 @@
     "learnset": [
       [0, "pepshot"],
       [0, "cheer"],
-      [7, "myheartpass"],
+      [7, "heartup"],
       [11, "minddown"],
       [15, "rhythm"],
       [19, "noisytag"],
       [23, "heart"],
-      [28, "heartup"],
+      [28, "stomp"],
       [32, "introduction"],
       [36, "commit"],
       [41, "healbell"]
@@ -7618,7 +7619,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 91,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7699,7 +7700,6 @@
       "heartup",
       "followme",
       "healbell",
-      "myheartpass",
       "heartpass",
       "cheer",
       "rhythm",
@@ -7783,12 +7783,12 @@
     "learnset": [
       [0, "pepshot"],
       [0, "cheer"],
-      [11, "myheartpass"],
+      [11, "heartup"],
       [15, "minddown"],
       [19, "rhythm"],
       [23, "noisytag"],
       [27, "heart"],
-      [32, "heartup"],
+      [32, "stomp"],
       [36, "introduction"],
       [40, "commit"],
       [45, "healbell"]
@@ -7832,7 +7832,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 91,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7934,8 +7934,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 15,
-    "base_exp": 225.5,
-    "bd": 135,
+    "base_exp": 202.4,
+    "bd": 110,
     "body_color_index": 0,
     "codename": "16920848e5e284efa05f185975beaa72ff7ee3c7",
     "colormeta": null,
@@ -7991,7 +7991,7 @@
     "foot_type": 0,
     "growth": 1.1,
     "ha": 50,
-    "hd": 55,
+    "hd": 50,
     "hidden": false,
     "hidden_counter": null,
     "id": "ghost",
@@ -8039,7 +8039,7 @@
       "stretchiness": 0.1
     },
     "ma": 85,
-    "md": 85,
+    "md": 80,
     "name": "Mistic",
     "number": 46,
     "palettes": 1,
@@ -8150,8 +8150,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 5,
-    "base_exp": 98.78,
-    "bd": 92,
+    "base_exp": 91.52,
+    "bd": 77,
     "body_color_index": 0,
     "codename": "965cb6e78995dcc94726277564f5b4ddfeae96af",
     "colormeta": null,
@@ -8208,7 +8208,7 @@
     "foot_type": 1,
     "growth": 1.1,
     "ha": 32,
-    "hd": 25,
+    "hd": 18,
     "hidden": false,
     "hidden_counter": null,
     "id": "ghost1",
@@ -8351,8 +8351,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 10,
-    "base_exp": 144.485,
-    "bd": 110,
+    "base_exp": 130.625,
+    "bd": 90,
     "body_color_index": 0,
     "codename": "ce96d2d48110d3cb9c90b293cfed8a036de5da99",
     "colormeta": null,
@@ -8396,7 +8396,7 @@
     "foot_type": 0,
     "growth": 1.1,
     "ha": 50,
-    "hd": 35,
+    "hd": 30,
     "hidden": false,
     "hidden_counter": null,
     "id": "ghost2",
@@ -8444,7 +8444,7 @@
       "stretchiness": 0.1
     },
     "ma": 70,
-    "md": 58,
+    "md": 55,
     "name": "Wisper",
     "number": 45,
     "palettes": 1,
@@ -11168,6 +11168,7 @@
       "bamboozle",
       "healbell",
       "markattack",
+      "bolt",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11428,6 +11429,7 @@
       "bamboozle",
       "healbell",
       "markattack",
+      "bolt",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11628,6 +11630,7 @@
       "bamboozle",
       "healbell",
       "markattack",
+      "bolt",
       "startermind",
       "stomp",
       "swordsdance",
@@ -11832,6 +11835,7 @@
       "wall",
       "wornattack",
       "splinter",
+      "bolt",
       "recover",
       "netattack",
       "enemylowered"
@@ -14176,6 +14180,7 @@
       "rocket",
       "menace",
       "ego",
+      "bolt",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -14381,6 +14386,7 @@
       "rocket",
       "menace",
       "ego",
+      "bolt",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -14930,7 +14936,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 91,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15128,7 +15134,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 91,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15366,7 +15372,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 91,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15434,7 +15440,6 @@
     "animator": [9, 14],
     "attklist": [
       "bounce",
-      "body",
       "rocksmash",
       "flatten",
       "dig",
@@ -15453,6 +15458,7 @@
       "haze",
       "toughattack",
       "thunder",
+      "bolt",
       "construct",
       "tagattack",
       "set",
@@ -15540,7 +15546,7 @@
       [21, "tagattack"],
       [25, "dig"],
       [29, "curse"],
-      [35, "body"],
+      [35, "bolt"],
       [39, "construct"],
       [44, "vigor"],
       [49, "batonpass"]
@@ -15667,7 +15673,6 @@
     "animator": 9,
     "attklist": [
       "bounce",
-      "body",
       "rocksmash",
       "flatten",
       "dig",
@@ -15686,6 +15691,7 @@
       "haze",
       "toughattack",
       "thunder",
+      "bolt",
       "construct",
       "tagattack"
     ],
@@ -15769,7 +15775,7 @@
       [15, "tagattack"],
       [19, "dig"],
       [23, "curse"],
-      [29, "body"],
+      [29, "bolt"],
       [33, "construct"],
       [38, "vigor"],
       [43, "batonpass"]
@@ -15890,7 +15896,6 @@
     "animator": 9,
     "attklist": [
       "bounce",
-      "body",
       "rocksmash",
       "flatten",
       "dig",
@@ -15909,6 +15914,7 @@
       "haze",
       "toughattack",
       "thunder",
+      "bolt",
       "construct",
       "tagattack",
       "set"
@@ -15999,7 +16005,7 @@
       [18, "tagattack"],
       [22, "dig"],
       [26, "curse"],
-      [32, "body"],
+      [32, "bolt"],
       [36, "construct"],
       [41, "vigor"],
       [46, "batonpass"]
@@ -17284,7 +17290,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 91,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17497,7 +17503,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 91,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17705,7 +17711,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 91,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -20851,7 +20857,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 91,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -20935,7 +20941,8 @@
       "stress",
       "batonpass",
       "shakeoff",
-      "bdefup"
+      "bdefup",
+      "bolt"
     ],
     "attklist_randomize": -1,
     "ba": 91,
@@ -21008,10 +21015,10 @@
       [0, "rest"],
       [6, "storedpower"],
       [10, "refresh"],
-      [14, "sensihit"],
+      [14, "healhit2"],
       [18, "defheal"],
       [23, "preblock"],
-      [26, "healhit2"],
+      [26, "bolt"],
       [30, "recover"],
       [34, "thunder"],
       [39, "batonpass"],
@@ -23288,6 +23295,7 @@
       "cook",
       "speech",
       "healbell",
+      "bolt",
       "starterheart"
     ],
     "attklist_randomize": -1,

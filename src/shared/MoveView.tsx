@@ -344,6 +344,8 @@ function getEffectString(
     }
     case 90:
       return "If successful:";
+    case 91:
+      return "Ignores Traits.";
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

@@ -231,8 +231,8 @@
     "description": null,
     "eff": [{ "eff": 91, "pow": 0, "targ": 0 }],
     "id": "bolt",
-    "name": "Bolt",
-    "pow": 90,
+    "name": "True Strike",
+    "pow": 85,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -987,6 +987,19 @@
     "pow": 55,
     "targ": 0,
     "type": 2,
+    "use": 0
+  },
+  "hum": {
+    "bt_tags": [24, 28],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 1, "pow": 1, "targ": 0 }],
+    "id": "hum",
+    "name": "Hum",
+    "pow": 0,
+    "targ": 1,
+    "type": 4,
     "use": 0
   },
   "hyperbeam": {

@@ -21421,7 +21421,7 @@
         "hp": -1,
         "level": 12,
         "moves": [
-          "cheer",
+          "hum",
           ["scoreboosted", "shieldbreaker", "starterheart"],
           ["substitute", "sweatup", "hdefup"]
         ],
@@ -22069,7 +22069,7 @@
         "hp": -1,
         "level": 9,
         "moves": [
-          "cheer",
+          "hum",
           ["scoreboosted", "shieldbreaker", "starterheart"],
           ["substitute", "sweatup", "hdefup"]
         ],

@@ -185,7 +185,7 @@
     "name": "Galaxy Brain"
   },
   "ghost": {
-    "desc": "[sprIcon,0] attacks do 0 damage and change this Beastie's trait to Tangible",
+    "desc": "Immune to [sprIcon,0] attacks",
     "id": "ghost",
     "name": "Intangible"
   },

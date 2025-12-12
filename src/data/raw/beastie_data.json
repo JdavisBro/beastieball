@@ -4249,7 +4249,8 @@
       "noisytag",
       "protect",
       "rest",
-      "flatten"
+      "flatten",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 108,
@@ -5938,6 +5939,7 @@
       "whirlwind",
       "distraction",
       "protect",
+      "hum",
       "freeball",
       "followme"
     ],
@@ -6017,7 +6019,7 @@
     "learnset": [
       [0, "careful"],
       [0, "rush"],
-      [6, "heartup"],
+      [6, "hum"],
       [12, "dragontail"],
       [17, "shieldbreaker"],
       [23, "heartpass"],
@@ -7301,7 +7303,8 @@
       "dragontail",
       "stomp",
       "healhit",
-      "jazzattack"
+      "jazzattack",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 64,
@@ -7371,13 +7374,13 @@
     "isBaby": false,
     "learnset": [
       [0, "pepshot"],
-      [0, "cheer"],
+      [0, "hum"],
       [15, "heartup"],
       [19, "minddown"],
       [23, "rhythm"],
       [27, "noisytag"],
       [31, "heart"],
-      [36, "stomp"],
+      [36, "cheer"],
       [40, "introduction"],
       [44, "commit"],
       [49, "healbell"]
@@ -7502,7 +7505,8 @@
       "dragontail",
       "stomp",
       "healhit",
-      "jazzattack"
+      "jazzattack",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 37,
@@ -7571,13 +7575,13 @@
     "isBaby": true,
     "learnset": [
       [0, "pepshot"],
-      [0, "cheer"],
+      [0, "hum"],
       [7, "heartup"],
       [11, "minddown"],
       [15, "rhythm"],
       [19, "noisytag"],
       [23, "heart"],
-      [28, "stomp"],
+      [28, "cheer"],
       [32, "introduction"],
       [36, "commit"],
       [41, "healbell"]
@@ -7712,7 +7716,8 @@
       "dragontail",
       "stomp",
       "healhit",
-      "jazzattack"
+      "jazzattack",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 48,
@@ -7782,13 +7787,13 @@
     "isBaby": false,
     "learnset": [
       [0, "pepshot"],
-      [0, "cheer"],
+      [0, "hum"],
       [11, "heartup"],
       [15, "minddown"],
       [19, "rhythm"],
       [23, "noisytag"],
       [27, "heart"],
-      [32, "stomp"],
+      [32, "cheer"],
       [36, "introduction"],
       [40, "commit"],
       [45, "healbell"]
@@ -7934,8 +7939,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 15,
-    "base_exp": 202.4,
-    "bd": 110,
+    "base_exp": 199.1,
+    "bd": 105,
     "body_color_index": 0,
     "codename": "16920848e5e284efa05f185975beaa72ff7ee3c7",
     "colormeta": null,
@@ -9236,7 +9241,8 @@
       "protect",
       "minddown",
       "teleport",
-      "sad"
+      "sad",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 16,
@@ -9615,7 +9621,8 @@
       "protect",
       "minddown",
       "teleport",
-      "sad"
+      "sad",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 14,
@@ -10260,7 +10267,8 @@
       "spitball",
       "eerie",
       "sweatall",
-      "cook"
+      "cook",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -10491,7 +10499,8 @@
       "spitball",
       "eerie",
       "sweatall",
-      "cook"
+      "cook",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 35,
@@ -20941,8 +20950,7 @@
       "stress",
       "batonpass",
       "shakeoff",
-      "bdefup",
-      "bolt"
+      "bdefup"
     ],
     "attklist_randomize": -1,
     "ba": 91,
@@ -21015,10 +21023,10 @@
       [0, "rest"],
       [6, "storedpower"],
       [10, "refresh"],
-      [14, "healhit2"],
+      [14, "sensihit"],
       [18, "defheal"],
       [23, "preblock"],
-      [26, "bolt"],
+      [26, "healhit2"],
       [30, "recover"],
       [34, "thunder"],
       [39, "batonpass"],
@@ -21150,6 +21158,7 @@
       "noisytag",
       "rest",
       "sweatup",
+      "hum",
       "tagattack",
       "healhit2",
       "jump",
@@ -21219,7 +21228,7 @@
     "learnset": [
       [0, "starterheart"],
       [0, "eerie"],
-      [13, "cheer"],
+      [13, "hum"],
       [17, "healhit"],
       [21, "noisytag"],
       [27, "shieldbreaker"],
@@ -21374,6 +21383,7 @@
       "noisytag",
       "rest",
       "sweatup",
+      "hum",
       "crowd",
       "reversal",
       "jazzattack",
@@ -21444,7 +21454,7 @@
     "learnset": [
       [0, "starterheart"],
       [0, "crowd"],
-      [13, "cheer"],
+      [13, "hum"],
       [17, "healhit"],
       [21, "noisytag"],
       [27, "shieldbreaker"],
@@ -21596,7 +21606,8 @@
       "protect",
       "noisytag",
       "rest",
-      "sweatup"
+      "sweatup",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 65,
@@ -21684,7 +21695,7 @@
     "learnset": [
       [0, "starterheart"],
       [0, "rest"],
-      [8, "cheer"],
+      [8, "hum"],
       [12, "healhit"],
       [17, "shieldbreaker"],
       [22, "noisytag"],
@@ -23296,6 +23307,7 @@
       "speech",
       "healbell",
       "bolt",
+      "hum",
       "starterheart"
     ],
     "attklist_randomize": -1,

@@ -240,6 +240,7 @@ export default function Filter({
         <Modal
           header="Filter Beasties"
           open={open}
+          makeOpen={() => setOpen(true)}
           onClose={() => setOpen(false)}
           hashValue="Filter"
         >

@@ -19,6 +19,7 @@ export default function Modal(
     header: string;
     open: boolean;
     hashValue: string;
+    makeOpen?: () => void;
     onClose: () => void;
   },
 ) {
@@ -91,6 +92,19 @@ export default function Modal(
       dialogRef.current.close();
     }
   }, [props.open, props.hashValue, navigate, location]);
+
+  useEffect(() => {
+    const hashCorrect =
+      decodeURIComponent(location.hash) == "#" + props.hashValue;
+    if (
+      hashCorrect &&
+      props.makeOpen &&
+      !props.open &&
+      !(dialogRef.current && dialogRef.current.open)
+    ) {
+      props.makeOpen();
+    }
+  }, [location]);
 
   return (
     <dialog

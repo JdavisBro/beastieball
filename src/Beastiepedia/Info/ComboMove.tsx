@@ -227,7 +227,11 @@ export default function ComboMove({
         <option value={ComboType.Support}>Bestie/Sweetheart Support</option>
         <option value={ComboType.Defense}>Bestie Defense</option>
       </select>
-      <BeastieSelect beastieId={friendId} setBeastieId={setFriendId} />
+      <BeastieSelect
+        beastieId={friendId}
+        setBeastieId={setFriendId}
+        hashName="Combo"
+      />
       <button
         onClick={() => {
           if (friend) {

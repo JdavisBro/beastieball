@@ -75,13 +75,19 @@ export function Box({ children }: { children: React.ReactNode }) {
 
 function NoBeastie({
   setBeastieId,
+  index,
 }: {
   setBeastieId: (beastieId: string | undefined) => void;
+  index: number;
 }) {
   return (
     <div className={styles.noBeastie}>
       No Beastie
-      <BeastieSelect beastieId={undefined} setBeastieId={setBeastieId} />
+      <BeastieSelect
+        beastieId={undefined}
+        setBeastieId={setBeastieId}
+        hashName={`New: ${index + 1}`}
+      />
     </div>
   );
 }
@@ -144,6 +150,7 @@ export default function TeamBuilder() {
                             setEditingBeastie(index);
                           }
                         }}
+                        index={index}
                       />
                     )}
                     <button

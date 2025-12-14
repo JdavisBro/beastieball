@@ -52,6 +52,7 @@ export function BeastieDoesntExist({
               setBeastieId(beastieId);
             }
           }}
+          hashName="Species"
         />
       </label>
     </Box>
@@ -312,6 +313,7 @@ export default function EditBeastie({
                 );
               }
             }}
+            hashName="Species"
           />
         </label>
         <label>

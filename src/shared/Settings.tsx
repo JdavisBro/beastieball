@@ -48,10 +48,10 @@ function Toggles() {
 
 export default function Settings({
   open,
-  onClose,
+  setOpen,
 }: {
   open: boolean;
-  onClose: () => void;
+  setOpen: (open: boolean) => void;
 }) {
   const experimental = import.meta.env.VITE_EXPERIMENTAL == "true";
   const experimental_different =
@@ -67,7 +67,8 @@ export default function Settings({
       header={`${import.meta.env.VITE_BRANDING} Settings`}
       open={open}
       hashValue={"Settings"}
-      onClose={onClose}
+      makeOpen={() => setOpen(true)}
+      onClose={() => setOpen(false)}
     >
       <div className={styles.settingsContainer}>
         <Toggles />

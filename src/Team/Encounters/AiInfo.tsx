@@ -41,6 +41,7 @@ export default function AiInfo({ encounter }: { encounter: Encounter }) {
       <Modal
         header="AI Info"
         open={open}
+        makeOpen={() => setOpen(true)}
         onClose={() => setOpen(false)}
         hashValue="AiInfo"
       >

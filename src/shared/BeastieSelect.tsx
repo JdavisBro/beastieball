@@ -63,6 +63,7 @@ enum FilterMode {
 export default function BeastieSelect({
   beastieId,
   setBeastieId,
+  hashName,
   textOverride,
   extraOptionText,
   extraOption,
@@ -71,6 +72,7 @@ export default function BeastieSelect({
 }: {
   beastieId: string | undefined;
   setBeastieId: (beastie: string | undefined) => void;
+  hashName: string;
   textOverride?: string;
   extraOptionText?: string;
   extraOption?: string;
@@ -135,8 +137,9 @@ export default function BeastieSelect({
       <Modal
         header="Select Beastie"
         open={open}
+        makeOpen={() => setOpen(true)}
         onClose={onClose}
-        hashValue="BeastieSelect"
+        hashValue={`BeastieSelect-${hashName}`}
       >
         <div className={styles.beastieSelectContainer}>
           <div className={styles.beastieSelectOptions}>

@@ -35,7 +35,7 @@ export default function NavIcons(): React.ReactElement {
         />
       </div>
       <div>
-        <Settings open={settingsOpen} onClose={() => setSettingsOpen(false)} />
+        <Settings open={settingsOpen} setOpen={setSettingsOpen} />
       </div>
     </div>
   );

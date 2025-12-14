@@ -45,6 +45,7 @@ export default function SavedTeams({
         header="Saved Teams"
         hashValue="SavedTeams"
         open={open}
+        makeOpen={() => setOpen(true)}
         onClose={() => setOpen(false)}
       >
         <div className={styles.savedTeams}>

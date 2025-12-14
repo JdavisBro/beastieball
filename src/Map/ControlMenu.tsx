@@ -82,6 +82,7 @@ function ItemSection({
       <Modal
         header="Select Item"
         open={itemSelector}
+        makeOpen={() => setItemSelector(true)}
         onClose={onClose}
         hashValue="SelectItem"
       >
@@ -285,6 +286,7 @@ function ControlMenuInner({
           <BeastieSelect
             beastieId={huntedBeastie}
             setBeastieId={setHuntedBeastie}
+            hashName="Track"
             extraOptionText="Show All"
             extraOption="all"
             isSelectable={(beastie) => SPAWNABLE_BEASTIES.includes(beastie.id)}

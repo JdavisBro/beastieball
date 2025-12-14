@@ -11,7 +11,6 @@ import { useIsSpoiler } from "./useSpoiler";
 import useScreenOrientation from "../utils/useScreenOrientation";
 
 export default function MoveModalProvider(props: PropsWithChildren) {
-  // const hash = decodeURIComponent(window.location.hash);
   const hash = decodeURIComponent(useLocation().hash);
   const hashMoveName = hash.startsWith("#Play: ") && hash.slice(7);
   const hashMove =
@@ -50,13 +49,14 @@ export default function MoveModalProvider(props: PropsWithChildren) {
   const orientation = useScreenOrientation(800);
   const levelSeparator = orientation ? <br /> : " - ";
 
+  const hashValue = `Play: ${move?.name}`;
   return (
     <MoveModalContext.Provider value={setMove}>
       <Modal
         header={`Play: ${move?.name}`}
         open={move != null}
         onClose={() => setMove(null)}
-        hashValue={`Play: ${move?.name}`}
+        hashValue={hashValue}
       >
         <div className={styles.movemodalview}>
           {move ? <MoveView move={move} noLearner={true} /> : null}
@@ -72,7 +72,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                   <Link
                     to={
                       isSpoiler
-                        ? "#Play"
+                        ? hashValue
                         : `/beastiepedia/${beastie[0].name}?play=${move?.name}`
                     }
                     key={beastie[0].id}
@@ -106,7 +106,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                 const isSpoiler = isSpoilerFn(beastie.id);
                 return (
                   <Link
-                    to={isSpoiler ? "#Play" : `/beastiepedia/${beastie.name}`}
+                    to={isSpoiler ? hashValue : `/beastiepedia/${beastie.name}`}
                     key={beastie.id}
                     onClick={() =>
                       handleClick(isSpoiler ? beastie.id : undefined)

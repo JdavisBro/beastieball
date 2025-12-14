@@ -152,11 +152,11 @@
 }
 
 .moveothercolor {
-  composes: moveothercolor from "../../Shared/Shared.module.css";
+  composes: moveothercolor from "/src/Shared/Shared.module.css";
 }
 
 .movehalftone {
-  composes: movehalftone from "../../Shared/Shared.module.css";
+  composes: movehalftone from "/src/Shared/Shared.module.css";
   background:
     var(--dot) 0 0/ 1em 1em,
     var(--dot) 0.5em 0.5em/ 1em 1em,

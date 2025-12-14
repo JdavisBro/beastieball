@@ -1,17 +1,24 @@
 import { PropsWithChildren, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import styles from "./Shared.module.css";
 import MoveModalContext from "./MoveModalContext";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
-import { Move } from "../data/MoveData";
+import MOVE_DIC, { Move } from "../data/MoveData";
 import Modal from "./Modal";
 import MoveView from "./MoveView";
 import { useIsSpoiler } from "./useSpoiler";
 import useScreenOrientation from "../utils/useScreenOrientation";
 
 export default function MoveModalProvider(props: PropsWithChildren) {
-  const [move, setMove] = useState<null | Move>(null);
+  // const hash = decodeURIComponent(window.location.hash);
+  const hash = decodeURIComponent(useLocation().hash);
+  const hashMoveName = hash.startsWith("#Play: ") && hash.slice(7);
+  const hashMove =
+    hashMoveName &&
+    Object.values(MOVE_DIC).find((move) => move.name == hashMoveName);
+  const [moveState, setMove] = useState<null | Move>(hashMove || null);
+  const move = moveState ?? (hashMove || null);
 
   const levelBeasties: [BeastieType, number][] = [];
   const friendBeasties: BeastieType[] = [];
@@ -49,7 +56,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
         header={`Play: ${move?.name}`}
         open={move != null}
         onClose={() => setMove(null)}
-        hashValue="Play"
+        hashValue={`Play: ${move?.name}`}
       >
         <div className={styles.movemodalview}>
           {move ? <MoveView move={move} noLearner={true} /> : null}

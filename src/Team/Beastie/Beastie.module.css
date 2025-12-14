@@ -124,6 +124,7 @@
 
 .move {
   display: flex;
+  position: relative;
   flex: 1 1 0;
   width: 100px;
   min-width: 27%;
@@ -148,6 +149,18 @@
   background-repeat: no-repeat;
   background-blend-mode: multiply, normal;
   flex: 0 0 auto;
+}
+
+.moveothercolor {
+  composes: moveothercolor from "../../Shared/Shared.module.css";
+}
+
+.movehalftone {
+  composes: movehalftone from "../../Shared/Shared.module.css";
+  background:
+    var(--dot) 0 0/ 1em 1em,
+    var(--dot) 0.5em 0.5em/ 1em 1em,
+    linear-gradient(330deg, #777, #eee);
 }
 
 .movename {

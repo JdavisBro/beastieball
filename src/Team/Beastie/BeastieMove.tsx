@@ -4,6 +4,7 @@ import styles from "./Beastie.module.css";
 import { Move } from "../../data/MoveData";
 import { TypeData } from "../../data/TypeColor";
 import MoveModalContext from "../../shared/MoveModalContext";
+import { useLocalStorage } from "usehooks-ts";
 
 export default function BeastieMove({
   move,
@@ -14,13 +15,18 @@ export default function BeastieMove({
 }) {
   const setModalMove = useContext(MoveModalContext);
 
+  const [simpleMoves] = useLocalStorage("simpleMoves", false);
+
+  const type = move.type >= 10 ? move.type - 10 : move.type;
+  const typedata = TypeData[type] ?? TypeData[0];
   return (
     <div
       className={styles.move}
       style={
         {
-          "--move-color": TypeData[move.type].color,
-          "--move-url": `url("/gameassets/sprType/${move.type}.png")`,
+          "--move-color": typedata.color,
+          "--move-dark": typedata.darkColor,
+          "--move-url": `url("/gameassets/sprType/${type}.png")`,
         } as React.CSSProperties
       }
       onClick={() => {
@@ -29,6 +35,11 @@ export default function BeastieMove({
         }
       }}
     >
+      {simpleMoves ? null : (
+        <div className={styles.moveothercolor}>
+          <div className={styles.movehalftone}></div>
+        </div>
+      )}
       <div className={styles.moveblock}></div>
       {impossible ? (
         <div title="This Beastie cannot learn this Play.">⚠️</div>

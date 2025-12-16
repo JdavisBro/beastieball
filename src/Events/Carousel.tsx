@@ -65,17 +65,17 @@ export default function Carousel({
   const [tab, setTab] = useState(0);
   const lastReload = useRef(0);
 
-  const bigmoonPos = bigmoonOld
-    ? noData
-      ? 1
-      : carouselData.data.findIndex((data) =>
-          EXPERIMENTAL_PREFIXES.some((exp) => data.img.startsWith(exp)),
-        ) + 1 || 1
-    : 0;
-
   const datas = noData
     ? []
     : carouselData.data.filter((data) => !data.img.startsWith("bigmoon"));
+
+  const bigmoonPos = bigmoonOld
+    ? noData
+      ? 1
+      : datas.findIndex((data) =>
+          EXPERIMENTAL_PREFIXES.some((exp) => data.img.startsWith(exp)),
+        ) + 1 || 1
+    : 0;
 
   const tabs = datas.map((data) => {
     for (const key of EMOJI_SWAPPED) {

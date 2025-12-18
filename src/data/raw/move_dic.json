@@ -1927,7 +1927,7 @@
     "eff": [{ "eff": 13, "pow": 1, "targ": 3 }],
     "id": "shakenmind",
     "name": "Twist",
-    "pow": 40,
+    "pow": 30,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -2297,17 +2297,17 @@
     "use": 0
   },
   "sweatall": {
-    "bt_tags": [20, 47, 31, 36, 38, 48],
+    "bt_tags": [24, 31, 36, 38, 48],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 23, "pow": -1, "targ": 7 }],
+    "eff": [{ "eff": 23, "pow": 1, "targ": 7 }],
     "id": "sweatall",
     "name": "Heat Wave",
     "pow": 0,
     "targ": 1,
-    "type": 5,
-    "use": 2
+    "type": 4,
+    "use": 0
   },
   "sweatup": {
     "bt_tags": [36, 38, 48],
@@ -2613,7 +2613,7 @@
     "use": 0
   },
   "wornout": {
-    "bt_tags": [],
+    "bt_tags": [24],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
@@ -2622,7 +2622,7 @@
     "name": "Hex",
     "pow": 0,
     "targ": 4,
-    "type": 5,
+    "type": 4,
     "use": 0
   },
   "xtra": {

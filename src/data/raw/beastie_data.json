@@ -1616,8 +1616,8 @@
       "batonpass",
       "myheartpass",
       "passattack",
-      "dig",
       "startermind",
+      "dig",
       "nightshade"
     ],
     "attklist_randomize": -1,
@@ -1696,8 +1696,8 @@
     "id": "bilby",
     "isBaby": false,
     "learnset": [
-      [0, "startermind"],
       [0, "dig"],
+      [0, "startermind"],
       [15, "allyrush"],
       [18, "mind"],
       [21, "set"],
@@ -1870,8 +1870,8 @@
       "batonpass",
       "myheartpass",
       "passattack",
-      "dig",
-      "startermind"
+      "startermind",
+      "dig"
     ],
     "attklist_randomize": -1,
     "ba": 28,
@@ -1939,8 +1939,8 @@
     "id": "bilby1",
     "isBaby": true,
     "learnset": [
-      [0, "startermind"],
       [0, "dig"],
+      [0, "startermind"],
       [7, "allyrush"],
       [10, "mind"],
       [13, "set"],
@@ -2085,8 +2085,8 @@
       "batonpass",
       "myheartpass",
       "passattack",
-      "dig",
-      "startermind"
+      "startermind",
+      "dig"
     ],
     "attklist_randomize": -1,
     "ba": 43,
@@ -2161,8 +2161,8 @@
     "id": "bilby2",
     "isBaby": false,
     "learnset": [
-      [0, "startermind"],
       [0, "dig"],
+      [0, "startermind"],
       [11, "allyrush"],
       [14, "mind"],
       [17, "set"],
@@ -2318,8 +2318,8 @@
       "flatten",
       "vigor",
       "breakswipe",
-      "shakeoff",
-      "starterbody"
+      "starterbody",
+      "shakeoff"
     ],
     "attklist_randomize": -1,
     "ba": 115,
@@ -2388,8 +2388,8 @@
     "id": "cassowary",
     "isBaby": false,
     "learnset": [
-      [0, "starterbody"],
       [0, "shakeoff"],
+      [0, "starterbody"],
       [14, "curse"],
       [17, "breakswipe"],
       [20, "protect"],
@@ -2533,8 +2533,8 @@
       "flatten",
       "vigor",
       "breakswipe",
-      "shakeoff",
-      "starterbody"
+      "starterbody",
+      "shakeoff"
     ],
     "attklist_randomize": -1,
     "ba": 75,
@@ -2600,8 +2600,8 @@
     "id": "cassowary1",
     "isBaby": true,
     "learnset": [
-      [0, "starterbody"],
       [0, "shakeoff"],
+      [0, "starterbody"],
       [6, "curse"],
       [9, "breakswipe"],
       [12, "protect"],
@@ -2738,8 +2738,8 @@
       "flatten",
       "vigor",
       "breakswipe",
-      "shakeoff",
-      "starterbody"
+      "starterbody",
+      "shakeoff"
     ],
     "attklist_randomize": -1,
     "ba": 87,
@@ -2806,8 +2806,8 @@
     "id": "cassowary2",
     "isBaby": false,
     "learnset": [
-      [0, "starterbody"],
       [0, "shakeoff"],
+      [0, "starterbody"],
       [10, "curse"],
       [13, "breakswipe"],
       [16, "protect"],
@@ -4669,7 +4669,7 @@
     "ability": ["acrobat", "noboosts"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 60,
+    "anim_progress": 100,
     "animator": [14, 11],
     "attklist": [
       "dare",
@@ -4698,6 +4698,7 @@
       "superpower",
       "toughattack",
       "tailwind",
+      "rest",
       "backswitch",
       "taunt",
       "starterheart"
@@ -4808,11 +4809,13 @@
       "hop_wobble": 0,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
-      "move_pause_frames": [],
+      "move_pause_frames": [34, 35],
       "move_speed": 1,
       "move_speed_start": 0,
-      "move_to_idle_transition_anim": "",
-      "move_to_idle_transition_frames": [],
+      "move_to_idle_transition_anim": "stop",
+      "move_to_idle_transition_frames": [
+        8, 9, 10, 11, 12, 13, 46, 45, 44, 43, 42, 41, 40
+      ],
       "offset_freq": 2000,
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
@@ -4907,7 +4910,7 @@
     "ability": ["acrobat", "noboosts"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 100,
     "animator": [14, 11],
     "attklist": [
       "dare",
@@ -4936,6 +4939,7 @@
       "superpower",
       "toughattack",
       "tailwind",
+      "rest",
       "backswitch",
       "taunt",
       "starterheart"
@@ -5043,11 +5047,11 @@
       "hop_shake": 0,
       "hop_wobble": 0,
       "move_accel": 0.03,
-      "move_decel": 0.33,
+      "move_decel": 0.5,
       "move_pause_frames": [],
-      "move_speed": 1.3,
+      "move_speed": 1,
       "move_speed_start": 0,
-      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_anim": "stop",
       "move_to_idle_transition_frames": [],
       "offset_freq": 2000,
       "offset_rand_range": 0,
@@ -7373,8 +7377,8 @@
     "id": "frog",
     "isBaby": false,
     "learnset": [
-      [0, "pepshot"],
       [0, "hum"],
+      [0, "pepshot"],
       [15, "heartup"],
       [19, "minddown"],
       [23, "rhythm"],
@@ -7574,8 +7578,8 @@
     "id": "frog1",
     "isBaby": true,
     "learnset": [
-      [0, "pepshot"],
       [0, "hum"],
+      [0, "pepshot"],
       [7, "heartup"],
       [11, "minddown"],
       [15, "rhythm"],
@@ -7786,8 +7790,8 @@
     "id": "frog2",
     "isBaby": false,
     "learnset": [
-      [0, "pepshot"],
       [0, "hum"],
+      [0, "pepshot"],
       [11, "heartup"],
       [15, "minddown"],
       [19, "rhythm"],
@@ -10680,7 +10684,7 @@
     "ability": ["moldbreaker", "unmarked"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 100,
     "animator": 9,
     "attklist": [
       "flight",
@@ -12242,7 +12246,7 @@
     "ability": ["watcher", "breaker"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 80,
+    "anim_progress": 100,
     "animator": 11,
     "attklist": [
       "starterbody",
@@ -16757,7 +16761,7 @@
       [0, "pepshot"],
       [0, "sad"],
       [10, "mimic"],
-      [14, "mind"],
+      [14, "spitball"],
       [17, "minddown"],
       [23, "swordsdance"],
       [28, "storedpower"],
@@ -17145,7 +17149,7 @@
     "ability": ["decoy", "superarmor"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 100,
     "animator": 11,
     "attklist": [
       "bounce",
@@ -17266,7 +17270,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 95,
+      "char_width": 103.5,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -17569,7 +17573,7 @@
     "ability": ["heavy", "multiscale"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
+    "anim_progress": 60,
     "animator": 11,
     "attklist": [
       "bounce",
@@ -17687,7 +17691,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 96,
+      "char_width": 106,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -22306,7 +22310,7 @@
     "ability": ["static"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 60,
+    "anim_progress": 100,
     "animator": [9, 11],
     "attklist": [
       "sidespin",

@@ -1,5 +1,19 @@
 import boss_data from "./raw/boss_data.json";
 
+type ScribbleEffect = {
+  effect: boolean;
+  font_index: number;
+  font_loaded: boolean;
+  font_yoffset: number;
+  ref: {
+    ref: { ref: null };
+    spr: string;
+    sprite_alias: string;
+  };
+  set: number;
+  text: string;
+};
+
 export type Boss = {
   color: number;
   crowd: string[];
@@ -13,6 +27,7 @@ export type Boss = {
   title: {
     color: number;
     gender: number;
+    scribbles: ScribbleEffect[] | null;
     wordA: string;
     wordB: string;
   };

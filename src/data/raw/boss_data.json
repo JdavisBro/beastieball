@@ -17,8 +17,49 @@
     "rank": 1,
     "scale_rank_start_offset": 0,
     "title": {
-      "color": -1,
+      "color": 12268098,
       "gender": 1,
+      "scribbles": [
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite712",
+            "sprite_alias": "sprTyped_ref_sprite_712"
+          },
+          "set": 0,
+          "text": "The"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite713",
+            "sprite_alias": "sprTyped_ref_sprite_713"
+          },
+          "set": 0,
+          "text": "Magic"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite714",
+            "sprite_alias": "sprTyped_ref_sprite_714"
+          },
+          "set": 0,
+          "text": "Moons"
+        }
+      ],
       "wordA": "magic_desc",
       "wordB": "moons"
     }
@@ -38,7 +79,53 @@
     "obj": "@ref object(objCeleb)",
     "rank": 1,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 0, "wordA": "golden", "wordB": "gods" }
+    "title": {
+      "color": 2068168,
+      "gender": 0,
+      "scribbles": [
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite697",
+            "sprite_alias": "sprTyped_ref_sprite_697"
+          },
+          "set": 0,
+          "text": "The"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite698",
+            "sprite_alias": "sprTyped_ref_sprite_698"
+          },
+          "set": 0,
+          "text": "Golden"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite699",
+            "sprite_alias": "sprTyped_ref_sprite_699"
+          },
+          "set": 0,
+          "text": "Gods"
+        }
+      ],
+      "wordA": "golden",
+      "wordB": "gods"
+    }
   },
   "champion": {
     "color": 14610175,
@@ -53,6 +140,7 @@
     "title": {
       "color": -1,
       "gender": 1,
+      "scribbles": null,
       "wordA": "radical",
       "wordB": "kings|queens|royals"
     }
@@ -67,7 +155,13 @@
     "obj": -1,
     "rank": 0,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 2, "wordA": "", "wordB": "" }
+    "title": {
+      "color": -1,
+      "gender": 2,
+      "scribbles": null,
+      "wordA": "",
+      "wordB": ""
+    }
   },
   "cycle": {
     "color": 6375753,
@@ -82,6 +176,7 @@
     "title": {
       "color": -1,
       "gender": 0,
+      "scribbles": null,
       "wordA": "midnight",
       "wordB": "machines"
     }
@@ -96,7 +191,13 @@
     "obj": "@ref object(objRedd)",
     "rank": 1,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 0, "wordA": "wild", "wordB": "beasts" }
+    "title": {
+      "color": -1,
+      "gender": 0,
+      "scribbles": null,
+      "wordA": "wild",
+      "wordB": "beasts"
+    }
   },
   "kaz": {
     "color": 18687,
@@ -116,7 +217,53 @@
     "obj": "@ref object(objKaz)",
     "rank": 1,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 0, "wordA": "raging", "wordB": "blazes" }
+    "title": {
+      "color": 18687,
+      "gender": 0,
+      "scribbles": [
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite691",
+            "sprite_alias": "sprTyped_ref_sprite_691"
+          },
+          "set": 0,
+          "text": "The"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite692",
+            "sprite_alias": "sprTyped_ref_sprite_692"
+          },
+          "set": 0,
+          "text": "Raging"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite693",
+            "sprite_alias": "sprTyped_ref_sprite_693"
+          },
+          "set": 0,
+          "text": "Blazes"
+        }
+      ],
+      "wordA": "raging",
+      "wordB": "blazes"
+    }
   },
   "mask": {
     "color": 15952127,
@@ -128,7 +275,13 @@
     "obj": "@ref object(objMask)",
     "rank": 0,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 0, "wordA": "mega", "wordB": "beasts" }
+    "title": {
+      "color": -1,
+      "gender": 0,
+      "scribbles": null,
+      "wordA": "mega",
+      "wordB": "beasts"
+    }
   },
   "pirate": {
     "color": 13631311,
@@ -146,7 +299,53 @@
     "obj": "@ref object(objPirate)",
     "rank": 1,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 1, "wordA": "party", "wordB": "pirates" }
+    "title": {
+      "color": 13631311,
+      "gender": 1,
+      "scribbles": [
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite700",
+            "sprite_alias": "sprTyped_ref_sprite_700"
+          },
+          "set": 0,
+          "text": "The"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite701",
+            "sprite_alias": "sprTyped_ref_sprite_701"
+          },
+          "set": 0,
+          "text": "Party"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite702",
+            "sprite_alias": "sprTyped_ref_sprite_702"
+          },
+          "set": 0,
+          "text": "Pirates"
+        }
+      ],
+      "wordA": "party",
+      "wordB": "pirates"
+    }
   },
   "racer": {
     "color": 1909204,
@@ -171,11 +370,17 @@
     "id": "racer",
     "levels": 0,
     "min_rank": 9.5,
-    "music": 6,
+    "music": 24,
     "obj": "@ref object(objRacer)",
     "rank": 1,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 0, "wordA": "crimson", "wordB": "racers" }
+    "title": {
+      "color": -1,
+      "gender": 0,
+      "scribbles": null,
+      "wordA": "crimson",
+      "wordB": "racers"
+    }
   },
   "redd": {
     "color": 1820671,
@@ -198,6 +403,7 @@
     "title": {
       "color": -1,
       "gender": 0,
+      "scribbles": null,
       "wordA": "rutile",
       "wordB": "all-stars"
     }
@@ -215,6 +421,7 @@
     "title": {
       "color": -1,
       "gender": 0,
+      "scribbles": null,
       "wordA": "rutile",
       "wordB": "all-stars"
     }
@@ -229,7 +436,13 @@
     "obj": -1,
     "rank": 0,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 2, "wordA": "", "wordB": "" }
+    "title": {
+      "color": -1,
+      "gender": 2,
+      "scribbles": null,
+      "wordA": "",
+      "wordB": ""
+    }
   },
   "riven": {
     "color": 16711818,
@@ -248,8 +461,49 @@
     "rank": 1,
     "scale_rank_start_offset": 0,
     "title": {
-      "color": -1,
+      "color": 16711818,
       "gender": 1,
+      "scribbles": [
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite694",
+            "sprite_alias": "sprTyped_ref_sprite_694"
+          },
+          "set": 0,
+          "text": "The"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite695",
+            "sprite_alias": "sprTyped_ref_sprite_695"
+          },
+          "set": 0,
+          "text": "Mythic"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite696",
+            "sprite_alias": "sprTyped_ref_sprite_696"
+          },
+          "set": 0,
+          "text": "Dreamers"
+        }
+      ],
       "wordA": "mythic",
       "wordB": "dreamers"
     }
@@ -268,7 +522,53 @@
     "obj": "@ref object(objScience)",
     "rank": 1,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 2, "wordA": "wild", "wordB": "flowers" }
+    "title": {
+      "color": 4251151,
+      "gender": 2,
+      "scribbles": [
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite703",
+            "sprite_alias": "sprTyped_ref_sprite_703"
+          },
+          "set": 0,
+          "text": "The"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite704",
+            "sprite_alias": "sprTyped_ref_sprite_704"
+          },
+          "set": 0,
+          "text": "Wild"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite705",
+            "sprite_alias": "sprTyped_ref_sprite_705"
+          },
+          "set": 0,
+          "text": "Flowers"
+        }
+      ],
+      "wordA": "wild",
+      "wordB": "flowers"
+    }
   },
   "shroom_path_boss": {
     "color": 0,
@@ -280,7 +580,13 @@
     "obj": -1,
     "rank": 0,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 2, "wordA": "", "wordB": "" }
+    "title": {
+      "color": -1,
+      "gender": 2,
+      "scribbles": null,
+      "wordA": "",
+      "wordB": ""
+    }
   },
   "streamer": {
     "color": 12460543,
@@ -298,7 +604,53 @@
     "obj": "@ref object(objStreamer)",
     "rank": 1,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 1, "wordA": "hello", "wordB": "freaks" }
+    "title": {
+      "color": 12460543,
+      "gender": 1,
+      "scribbles": [
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite706",
+            "sprite_alias": "sprTyped_ref_sprite_706"
+          },
+          "set": 0,
+          "text": "The"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite707",
+            "sprite_alias": "sprTyped_ref_sprite_707"
+          },
+          "set": 0,
+          "text": "Hello"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite708",
+            "sprite_alias": "sprTyped_ref_sprite_708"
+          },
+          "set": 0,
+          "text": "Freaks"
+        }
+      ],
+      "wordA": "hello",
+      "wordB": "freaks"
+    }
   },
   "warrior": {
     "color": 14341053,
@@ -319,8 +671,49 @@
     "rank": 1,
     "scale_rank_start_offset": 0,
     "title": {
-      "color": -1,
+      "color": 14341053,
       "gender": 0,
+      "scribbles": [
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite709",
+            "sprite_alias": "sprTyped_ref_sprite_709"
+          },
+          "set": 0,
+          "text": "The"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite710",
+            "sprite_alias": "sprTyped_ref_sprite_710"
+          },
+          "set": 0,
+          "text": "Silent"
+        },
+        {
+          "effect": true,
+          "font_index": -1,
+          "font_loaded": false,
+          "font_yoffset": 0,
+          "ref": {
+            "ref": { "ref": null },
+            "spr": "__newsprite711",
+            "sprite_alias": "sprTyped_ref_sprite_711"
+          },
+          "set": 0,
+          "text": "Warriors"
+        }
+      ],
       "wordA": "silent",
       "wordB": "warriors"
     }

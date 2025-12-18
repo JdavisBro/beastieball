@@ -205,7 +205,7 @@
     "name": "No-Hands"
   },
   "haunted": {
-    "desc": "Always feels [sprStatus,10]TIRED",
+    "desc": "Always feels 4 [sprStatus,10]TIRED",
     "id": "haunted",
     "name": "Haunted"
   },

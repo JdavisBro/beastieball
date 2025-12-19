@@ -99,11 +99,15 @@ export default function saveGif(
     }
   });
 
+  const everyTransition = frames
+    .flatMap((frame) => frame.transitions ?? [])
+    .filter((v, i, a) => a.indexOf(v) == i);
   const maxTransitioned = Math.max(...Object.values(transitionedto));
   let basegroup = frames.findIndex(
     (value, index) =>
       transitionedto[index] == maxTransitioned &&
-      !value.transitions?.every((transition) => transition == index),
+      (!value.transitions?.every((transition) => transition == index) ||
+        (everyTransition.length == 1 && everyTransition[0] == index)),
   );
   basegroup =
     basegroup != -1 &&

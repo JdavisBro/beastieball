@@ -242,7 +242,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
         ) {
           if (!loadedImages[i % drawnsprite.frames]) {
             allFramesLoaded = false;
-            console.log(i, loadedImages);
           }
           const framebbox = drawnsprite.bboxes[i % drawnsprite.frames];
           if (!framebbox) {

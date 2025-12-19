@@ -74,7 +74,9 @@ export default function Modal(
       decodeURIComponent(window.location.hash) == "#" + props.hashValue;
     if (props.open) {
       if (!dialogOpen) {
-        dialogRef.current.showModal();
+        try {
+          dialogRef.current.showModal();
+        } catch (e) {} // can error if dialog is not visible
         if (hashCorrect) {
           const old = new URL(window.location.href);
           old.hash = "";

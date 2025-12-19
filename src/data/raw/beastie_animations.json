@@ -171,9 +171,9 @@
       "move": {
         "frames": [
           {
-            "endFrame": 12,
+            "endFrame": 15,
             "holds": { "12": 1, "9": 3 },
-            "sounds": { "12": 0, "8": 0 },
+            "sounds": { "12": 0, "13": 1, "15": 0, "8": -1 },
             "startFrame": 8,
             "transitions": [0, 0, 0, 0, 1]
           },
@@ -194,7 +194,7 @@
               "33": 3
             },
             "sounds": { "15": 0, "20": 2 },
-            "startFrame": 13,
+            "startFrame": 16,
             "transitions": [0]
           }
         ]
@@ -2918,7 +2918,14 @@
         "frames": [
           {
             "endFrame": 43,
-            "holds": { "34": 3, "37": 3, "38": 3, "39": 3, "42": 3, "43": 3 },
+            "holds": {
+              "34": 3,
+              "37": 3,
+              "38": 3,
+              "39": 3,
+              "42": [3, 3, 4],
+              "43": [3, 3, 4, 5]
+            },
             "startFrame": 34,
             "transitions": [0, 0, 0, 0, 1]
           },
@@ -10113,7 +10120,7 @@
   "_sprRat_alt": {
     "anim_data": { "__Elephant_Circular_Ref__": 5790 },
     "ball": { "x": 154.8, "y": -261.6 },
-    "colors": { "__Elephant_Circular_Ref__": 7225 },
+    "colors": { "__Elephant_Circular_Ref__": 7227 },
     "colors2": null,
     "evo1": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -10127,7 +10134,7 @@
       "y": -1.2
     },
     "ready": { "x": 139.4285714286, "y": -286.8571428571 },
-    "shiny": { "__Elephant_Circular_Ref__": 7274 },
+    "shiny": { "__Elephant_Circular_Ref__": 7276 },
     "splash": {
       "angle": 344.1231689453,
       "anim": "volley",

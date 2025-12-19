@@ -13340,7 +13340,6 @@
       "pursuit",
       "hex",
       "float",
-      "dump",
       "refresh",
       "dig",
       "allyrush",
@@ -13469,7 +13468,7 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 83,
+    "ma": 73,
     "md": 62,
     "name": "Mudslee",
     "number": 69,

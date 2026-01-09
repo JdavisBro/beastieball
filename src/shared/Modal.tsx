@@ -1,4 +1,10 @@
-import { PropsWithChildren, useCallback, useEffect, useRef } from "react";
+import {
+  PropsWithChildren,
+  startTransition,
+  useCallback,
+  useEffect,
+  useRef,
+} from "react";
 import InfoBox from "./InfoBox";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -67,7 +73,7 @@ export default function Modal(
 
   useEffect(() => {
     const hashCorrect =
-      decodeURIComponent(location.hash) == "#" + props.hashValue;
+      decodeURIComponent(window.location.hash) == "#" + props.hashValue;
     if (
       hashCorrect &&
       props.makeOpen &&
@@ -117,10 +123,15 @@ export default function Modal(
         }
       }}
       onClose={() => {
-        if (decodeURIComponent(window.location.hash) == "#" + props.hashValue) {
-          navigate(-1);
-        }
-        props.onClose();
+        startTransition(() => {
+          if (
+            decodeURIComponent(window.location.hash) ==
+            "#" + props.hashValue
+          ) {
+            navigate(-1);
+          }
+          props.onClose();
+        });
       }}
     >
       <InfoBox

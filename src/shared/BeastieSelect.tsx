@@ -88,26 +88,23 @@ export default function BeastieSelect({
 
   const clickedRef = useRef<[boolean, string | undefined]>([false, undefined]);
 
-  const handleClick = useCallback(
-    (beastieId: string, isSpoiler: boolean) => {
-      if (isSpoiler) {
-        setSeen(beastieId);
-        return;
-      }
-      clickedRef.current = [true, beastieId];
-      setOpen(false);
-    },
-    [setSeen],
-  );
+  const handleClick = useCallback((beastieId: string, isSpoiler: boolean) => {
+    if (isSpoiler) {
+      setSeen(beastieId);
+      return;
+    }
+    clickedRef.current = [true, beastieId];
+    setOpen(false);
+  }, []);
 
-  const onClose = () => {
+  const onClose = useCallback(() => {
     setOpen(false);
     const [clicked, clickedBeastie] = clickedRef.current;
     if (clicked) {
       setBeastieId(clickedBeastie);
     }
     clickedRef.current = [false, undefined];
-  };
+  }, []);
 
   const [filterMode, setFilterMode] = useLocalStorage(
     "beastieSelectFilterMode",

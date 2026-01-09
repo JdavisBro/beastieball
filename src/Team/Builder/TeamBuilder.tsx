@@ -250,7 +250,7 @@ export default function TeamBuilder() {
             </Box>
             {team[editingBeastie] ? (
               <EditBeastie
-                key={team[editingBeastie].pid + team[editingBeastie].specie}
+                key={team[editingBeastie].pid + editingBeastie}
                 beastie={team[editingBeastie]}
                 setBeastie={(beastie) =>
                   setBeastie(

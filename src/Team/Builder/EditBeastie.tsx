@@ -433,7 +433,7 @@ export default function EditBeastie({
         ) : null}
       </Box>
       <MoveSelect
-        beastieMovelist={beastiedata.attklist}
+        beastiedata={beastiedata}
         teamBeastieMovelist={beastie.attklist}
         setMove={(index, move) => {
           beastie.attklist[index] = move;

@@ -10,6 +10,7 @@ import { useLocalStorage } from "usehooks-ts";
 import useLocalization, {
   LocalizationFunction,
 } from "../localization/useLocalization";
+import abilities from "../data/abilities";
 
 // reuqired: targ=12 says Targets SIDEWAYS.
 
@@ -26,6 +27,7 @@ const TARGET_STRINGS: Record<number, string> = {
   9: "movedefine_041", // nearest enemy
   10: "movedefine_051", // front row active team
   11: "movedefine_034", // active team
+  12: "target and self",
 };
 
 const ALT_TARGET_STRINGS: Record<number, string> = {
@@ -71,11 +73,12 @@ function getEffectString(
   move: Move,
   L: LocalizationFunction,
 ): string {
-  let pow = Math.min(5, Math.abs(Math.floor(effect.pow)) - 1); // Max 6 boosts at once?
+  const num_pow = typeof effect.pow == "number" ? effect.pow : 0;
+  let pow = Math.min(5, Math.abs(Math.floor(num_pow)) - 1); // Max 6 boosts at once?
   let boost = "";
   while (pow >= 0) {
     boost +=
-      effect.pow > 0
+      num_pow > 0
         ? `[sprBoost,${Math.min(2, pow)}]`
         : `[sprBoost,${Math.min(2, pow) + 3}]`;
     pow -= 3;
@@ -354,7 +357,7 @@ function getEffectString(
           "1":
             effect.eff == 42
               ? L("fieldeffectstuff_008", { "1": "8" })
-              : L("fieldeffectstuff_007", { "1": "+50", "2": "¾" }),
+              : L("fieldeffectstuff_007", { "1": "+15", "2": "¾" }),
         }),
       });
     case 44:
@@ -450,6 +453,8 @@ function getEffectString(
         "1": boost,
         target: target,
       });
+    case 80:
+      return `${feels} ${effect.pow} [sprStatus,18]WEEPY (ignores BOOSTs)${dot}`;
     case 81:
       return L("movedefine_descadd_098", { target: target });
     case 82:
@@ -473,6 +478,14 @@ function getEffectString(
       return "";
     case 88:
       return L("movedefine_descadd_103", { "0": String(effect.pow) });
+    case 89: {
+      const ability = abilities[effect.pow];
+      return `${targetStart} trait changes to ${ability.name} (${ability.desc})`;
+    }
+    case 90:
+      return "If successful:";
+    case 91:
+      return "Ignores Traits.";
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,
@@ -499,8 +512,13 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
       break;
   }
 
-  if (move.eff.find((effect) => effect.eff == 69)) {
-    desc.push(L("movedefine_descadd_009"));
+  const hittable_eff = move.eff.find((effect) => effect.eff == 69);
+  if (hittable_eff) {
+    desc.push(
+      hittable_eff.pow
+        ? L("movedefine_descadd_009")
+        : L("movedefine_descadd_107"),
+    );
   } else if (
     move.type == Type.Volley &&
     !move.eff.some((eff) => eff.eff == 20) // Eff 20: Ball goes to TARGET. Does not have volley text
@@ -567,8 +585,6 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
   return desc_str;
 }
 
-const MAX_FRIENDS = ["riley", "riven", "streamer"];
-
 export default function MoveView(props: {
   move: Move;
   noLearner?: boolean;
@@ -589,18 +605,21 @@ export default function MoveView(props: {
   const friendSpoiler = friend ? isSpoilerFriend(friend.id) : false;
   let friend_hearts = 0;
   let learned_text;
+  let stop_on_no_collide = false;
   if (friend) {
     const friend_rank = Math.floor(friend.plays.indexOf(props.move.id) / 4) + 1;
     let rank = 0;
     let found;
     for (const event of friend.events) {
-      if (!MAX_FRIENDS.includes(friend.id)) {
-        if (event.prereq.type[0] == 4 || event.prereq.type[0] == 1) {
-          continue;
-        }
-        if (event.alt_complete_flag == -1 && event.dest_level == "") {
+      if (!event.collides && stop_on_no_collide) {
+        break;
+      }
+      if (event.prereq.type[0] == 1) {
+        if (!event.collides) {
           break;
         }
+        stop_on_no_collide = true;
+        continue;
       }
       friend_hearts += 1;
       if (event.rankup) {

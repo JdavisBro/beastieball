@@ -5,20 +5,19 @@ import Modal from "./Modal";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import { useIsSpoiler } from "./useSpoiler";
 import useLocalization from "../localization/useLocalization";
+import { useLocalStorage } from "usehooks-ts";
 
 const BEASTIES = [...BEASTIE_DATA.values()];
 
 function BeastieButton({
   beastie,
   isSpoiler,
-  visible,
   selectable,
   nonSelectableReason,
   handleClick,
 }: {
   beastie: BeastieType;
   isSpoiler: boolean;
-  visible: boolean;
   selectable: boolean;
   nonSelectableReason?: string;
   handleClick: (beastieId: string, isSpoiler: boolean) => void;
@@ -29,9 +28,6 @@ function BeastieButton({
     <div
       key={beastie.id}
       role="button"
-      style={{
-        display: visible ? "flex" : "none",
-      }}
       tabIndex={selectable ? 0 : -1}
       className={
         selectable
@@ -61,9 +57,16 @@ function BeastieButton({
   );
 }
 
+enum FilterMode {
+  None,
+  NoMetamorph,
+  Metamorphs,
+}
+
 export default function BeastieSelect({
   beastieId,
   setBeastieId,
+  hashName,
   textOverride,
   extraOptionText,
   extraOption,
@@ -72,6 +75,7 @@ export default function BeastieSelect({
 }: {
   beastieId: string | undefined;
   setBeastieId: (beastie: string | undefined) => void;
+  hashName: string;
   textOverride?: string;
   extraOptionText?: string;
   extraOption?: string;
@@ -89,26 +93,41 @@ export default function BeastieSelect({
 
   const clickedRef = useRef<[boolean, string | undefined]>([false, undefined]);
 
-  const handleClick = useCallback(
-    (beastieId: string, isSpoiler: boolean) => {
-      if (isSpoiler) {
-        setSeen(beastieId);
-        return;
-      }
-      clickedRef.current = [true, beastieId];
-      setOpen(false);
-    },
-    [setSeen],
-  );
+  const handleClick = useCallback((beastieId: string, isSpoiler: boolean) => {
+    if (isSpoiler) {
+      setSeen(beastieId);
+      return;
+    }
+    clickedRef.current = [true, beastieId];
+    setOpen(false);
+  }, []);
 
-  const onClose = () => {
+  const onClose = useCallback(() => {
     setOpen(false);
     const [clicked, clickedBeastie] = clickedRef.current;
     if (clicked) {
       setBeastieId(clickedBeastie);
     }
     clickedRef.current = [false, undefined];
-  };
+  }, []);
+
+  const [filterMode, setFilterMode] = useLocalStorage(
+    "beastieSelectFilterMode",
+    FilterMode.None,
+  );
+
+  const filterFunction: (beastie: BeastieType) => Boolean =
+    filterMode == FilterMode.None
+      ? () => true
+      : filterMode == FilterMode.Metamorphs
+        ? (beastie: BeastieType) =>
+            !!beastie.evolution?.length &&
+            beastie.evolution.some((evo) => evo.condition[0] != 7)
+        : filterMode == FilterMode.NoMetamorph
+          ? (beastie: BeastieType) =>
+              !beastie.evolution?.length ||
+              beastie.evolution.every((evo) => evo.condition[0] == 7)
+          : () => true;
 
   return (
     <>
@@ -126,19 +145,38 @@ export default function BeastieSelect({
       <Modal
         header={L("common.beastieSelect.title")}
         open={open}
+        makeOpen={() => setOpen(true)}
         onClose={onClose}
-        hashValue="BeastieSelect"
+        hashValue={`BeastieSelect-${hashName}`}
       >
         <div className={styles.beastieSelectContainer}>
-          <label tabIndex={0}>
-            {L("common.searchPrefix")}
-            <input
-              type="search"
-              onChange={(event) => setSearch(event.currentTarget.value)}
-              onFocus={(event) => event.currentTarget.select()}
-              value={search}
-            />
-          </label>
+          <div className={styles.beastieSelectOptions}>
+            <label tabIndex={0}>
+              {L("common.searchPrefix")}
+              <input
+                type="search"
+                onChange={(event) => setSearch(event.currentTarget.value)}
+                onFocus={(event) => event.currentTarget.select()}
+                value={search}
+              />
+            </label>
+            {" - "}
+            <label>
+              Filter:{" "}
+              <select
+                value={filterMode}
+                onChange={(event) =>
+                  setFilterMode(Number(event.currentTarget.value))
+                }
+              >
+                <option value={FilterMode.None}>None</option>
+                <option value={FilterMode.NoMetamorph}>
+                  Can not Metamorph
+                </option>
+                <option value={FilterMode.Metamorphs}>Can Metamorph</option>
+              </select>
+            </label>
+          </div>
           <div className={styles.beastieSelect}>
             <div
               key="unset"
@@ -178,7 +216,11 @@ export default function BeastieSelect({
                 {extraOptionText}
               </div>
             ) : null}
-            {BEASTIES.map((beastie) => (
+            {BEASTIES.filter(
+              (beastie) =>
+                beastie.name.toLowerCase().includes(search.toLowerCase()) &&
+                filterFunction(beastie),
+            ).map((beastie) => (
               <BeastieButton
                 key={beastie.id}
                 beastie={beastie}
@@ -186,9 +228,6 @@ export default function BeastieSelect({
                 isSpoiler={isSpoiler(beastie.id)}
                 selectable={!isSelectable || isSelectable(beastie)}
                 nonSelectableReason={nonSelectableReason}
-                visible={L(beastie.name)
-                  .toLowerCase()
-                  .includes(search.toLowerCase())}
               />
             ))}
           </div>

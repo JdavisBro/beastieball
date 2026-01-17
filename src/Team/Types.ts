@@ -31,3 +31,5 @@ export type Team = {
   code: string;
   team: TeamBeastie[];
 };
+
+export type BuilderTeam = (TeamBeastie | null)[];

@@ -65,13 +65,22 @@ const ANIMATION_LIST = [
   "stop",
   "hug", // troglum
   "special", // conjarr
+  "bug_idle", // varkabond
+  "bug_walk",
+  "bug_cheer",
 ];
 
 const ANIMATION_ALWAYS_ENABLED = ["idle", "menu"];
-const ANIMATION_UNIQUE = ["hug", "special"];
+const ANIMATION_UNIQUE = [
+  "hug", // troglum
+  "special", // conjarr
+  "bug_idle", // varkabond
+  "bug_walk",
+  "bug_cheer",
+];
 
-const IDLE_EXCEPTIONS = ["sprServal", "sprDragonfly", "sprOppossum"];
-const MOVE_EXCEPTIONS = ["sprSeal", "sprDragonfly"];
+const IDLE_EXCEPTIONS = ["sprOpossum"];
+const MOVE_EXCEPTIONS = ["sprSeal"];
 
 function anim_check(anim: string, beastie: BeastieType) {
   if (secrets) return anim;
@@ -165,6 +174,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   animStateRef.current.userSpeed = userSpeed;
 
   const [paused, setPaused] = useState(false);
+  const [pausedFrame, setPausedFrame] = useState(0);
 
   const frameInputRef = useRef<HTMLInputElement>(null);
 
@@ -182,12 +192,15 @@ export default function ContentPreview(props: Props): React.ReactNode {
         if (frameInputRef.current) {
           frameInputRef.current.value = String(frame);
         }
+        if (paused) {
+          setPausedFrame(frame);
+        }
       } else if (!loadedImages[frame % drawnsprite.frames]) {
         setNoDisplayRender(true);
         setNoDisplayReason("common.loading");
       }
     },
-    [loadedImages, drawnsprite.frames],
+    [loadedImages, drawnsprite.frames, paused],
   );
 
   const changeFrame = useCallback(
@@ -258,7 +271,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
     }
     let bbox;
     if (!edges) {
-      bbox = drawnsprite.bbox;
+      bbox =
+        drawnsprite.bboxes[animStateRef.current.frame ?? 0] ?? drawnsprite.bbox;
     } else {
       bbox = {
         x: edges.x,
@@ -268,7 +282,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
       };
     }
     return [bbox, allFramesLoaded];
-  }, [anim, drawnsprite, loadedImages, paused]);
+  }, [anim, drawnsprite, loadedImages, paused && pausedFrame]);
 
   const beastiescale =
     bbox.width > bbox.height
@@ -287,7 +301,13 @@ export default function ContentPreview(props: Props): React.ReactNode {
     }
 
     if (anim && anim != animStateRef.current.anim) {
-      animStateRef.current.anim = anim;
+      animStateRef.current = {
+        ...animStateRef.current,
+        state: undefined,
+        frameLength: undefined,
+        anim: anim,
+        frame: undefined,
+      };
     }
     if (!animStateRef.current.anim) {
       return;
@@ -312,16 +332,6 @@ export default function ContentPreview(props: Props): React.ReactNode {
       animdata.__anim_speed ?? 1,
     );
   }, [setFrame, anim, allFramesLoaded, animdata.__anim_speed, paused]);
-
-  useEffect(() => {
-    animStateRef.current = {
-      ...animStateRef.current,
-      state: undefined,
-      frameLength: 0,
-      anim: anim,
-      frame: undefined,
-    };
-  }, [anim]);
 
   useEffect(() => {
     if (animStateRef.current.frame) {

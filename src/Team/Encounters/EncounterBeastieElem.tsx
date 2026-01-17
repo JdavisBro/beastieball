@@ -7,7 +7,10 @@ import getMoveset from "./getMoveset";
 import getMetamorphAtLevel from "./getMetamorphAtLevel";
 import Randomizer from "../../utils/Randomizer";
 import { useMemo } from "react";
-import useLocalization from "../../localization/useLocalization";
+import useLocalization, {
+  LocalizationFunction,
+} from "../../localization/useLocalization";
+import { TeamBeastie } from "../Types";
 
 function hashCode(text: string) {
   let hash = 0;
@@ -19,34 +22,25 @@ function hashCode(text: string) {
   return hash;
 }
 
-export default function EncounterBeastieElem({
-  encounterId,
-  encBeastie,
-  index,
-  bonus_levels,
-}: {
-  encounterId: string;
-  encBeastie: EncounterBeastie;
-  index: number;
-  bonus_levels: number;
-}) {
-  const { L } = useLocalization();
-
-  const level = encBeastie.level + Math.floor(bonus_levels);
-
-  const pid = useMemo(createPid, [encounterId]);
-
+export function encounterToTeamBeastie(
+  pid: string,
+  encBeastie: EncounterBeastie,
+  level: number,
+  encounterId: string,
+  index: number,
+  L: LocalizationFunction,
+): TeamBeastie | null {
   const beastieDataPre = BEASTIE_DATA.get(encBeastie.specie || "shroom1");
   if (!beastieDataPre) {
     return null;
   }
-  const beastieFamily = BEASTIE_DATA.get(beastieDataPre.family);
-  if (!beastieFamily) {
-    return null;
-  }
-  const beastieData =
-    getMetamorphAtLevel(beastieFamily, level, beastieDataPre.id) ??
-    beastieDataPre;
+  const beastieData = encBeastie.evolves
+    ? (getMetamorphAtLevel(
+        BEASTIE_DATA.get(beastieDataPre.family) ?? beastieDataPre,
+        level,
+        beastieDataPre.id,
+      ) ?? beastieDataPre)
+    : beastieDataPre;
 
   const fromEncounter = encBeastie.from_encounter ?? encounterId;
   const fromEncounterIndex = encBeastie.from_encounter_index ?? index;
@@ -119,36 +113,62 @@ export default function EncounterBeastieElem({
     training.md_t = getStat(encBeastie.training[5]);
   }
 
+  return {
+    pid: pid,
+    specie: beastieData.id,
+    date: 1,
+    number: (encBeastie.number &&
+    (typeof encBeastie.number == "string" || encBeastie.number > -1)
+      ? String(encBeastie.number)
+      : String(index + 1)
+    ).padStart(2, "0"),
+    color: color,
+    name: L(encBeastie.name ?? ""),
+    spr_index: spr_index,
+    xp: level ** 3 * beastieData.growth,
+    scale: encBeastie.size && encBeastie.size > 0 ? encBeastie.size : 0.5,
+    vibe: encBeastie.vibe && encBeastie.vibe > 0 ? encBeastie.vibe : 0,
+    ability_index: ability_index,
+    attklist: getMoveset(encBeastie, beastieData, level),
+    ba_r: 1,
+    ha_r: 1,
+    ma_r: 1,
+    bd_r: 1,
+    md_r: 1,
+    hd_r: 1,
+    ...training,
+  };
+}
+
+export default function EncounterBeastieElem({
+  encounterId,
+  encBeastie,
+  index,
+  bonus_levels,
+}: {
+  encounterId: string;
+  encBeastie: EncounterBeastie;
+  index: number;
+  bonus_levels: number;
+}) {
+  const { L } = useLocalization();
+
+  const level = encBeastie.level + Math.floor(bonus_levels);
+
+  const pid = useMemo(createPid, [encounterId]);
+
+  const teamBeastie = useMemo(
+    () => encounterToTeamBeastie(pid, encBeastie, level, encounterId, index, L),
+    [pid, encBeastie, level, encounterId, index],
+  );
+
+  if (!teamBeastie) {
+    return null;
+  }
+
   return (
     <div className={styles.beastieContainer}>
-      <Beastie
-        teamBeastie={{
-          pid: pid,
-          specie: beastieData.id,
-          date: 1,
-          number: (encBeastie.number &&
-          (typeof encBeastie.number == "string" || encBeastie.number > -1)
-            ? String(encBeastie.number)
-            : String(index + 1)
-          ).padStart(2, "0"),
-          color: color,
-          name: L(encBeastie.name ?? ""),
-          spr_index: spr_index,
-          xp: level ** 3 * beastieData.growth,
-          scale: encBeastie.size && encBeastie.size > 0 ? encBeastie.size : 0.5,
-          vibe: encBeastie.vibe && encBeastie.vibe > 0 ? encBeastie.vibe : 0,
-          ability_index: ability_index,
-          attklist: getMoveset(encBeastie, beastieData, level),
-          ba_r: 1,
-          ha_r: 1,
-          ma_r: 1,
-          bd_r: 1,
-          md_r: 1,
-          hd_r: 1,
-          ...training,
-        }}
-        noMoveWarning={true}
-      />
+      <Beastie teamBeastie={teamBeastie} noMoveWarning={true} />
     </div>
   );
 }

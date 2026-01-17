@@ -93,6 +93,7 @@ export default function FeaturedSection({
           <BeastieSelect
             beastieId={filterBeastie}
             setBeastieId={setFilterBeastie}
+            hashName="FilterTeams"
           />
         ) : (
           <input

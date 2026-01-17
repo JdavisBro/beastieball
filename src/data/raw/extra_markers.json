@@ -4,19 +4,19 @@
       "id": "beryl_gym",
       "items": [["train_md", 4.0]],
       "x": -13283,
-      "y": 14266
+      "y": 14272
     },
     {
       "id": "gift_beryl_0",
       "items": [["energy3", 1.0]],
       "x": -13400,
-      "y": 12178
+      "y": 12184
     },
     {
       "id": "hometown_west_b",
       "items": [["status_b", 1.0]],
-      "x": -6839,
-      "y": 6408
+      "x": -6828,
+      "y": 6671
     },
     {
       "id": "hometown_north_a",
@@ -298,7 +298,7 @@
       "id": "gift_city_neighborhood_0",
       "items": [["train_level", 1.0]],
       "x": -6607,
-      "y": -13193
+      "y": -13135
     },
     {
       "id": "gift_city_neighborhood_1",
@@ -308,13 +308,13 @@
         ["train_md", 4.0]
       ],
       "x": -7878,
-      "y": -18360
+      "y": -18302
     },
     {
       "id": "gift_city_neighborhood_2",
       "items": [["sell3", 1.0]],
       "x": -6924,
-      "y": -15847
+      "y": -15789
     },
     {
       "id": "gift_city_rail_east_0",
@@ -656,7 +656,7 @@
   ],
   "walls": {
     "beryl_rail": [
-      { "position": [-12688, 12617], "angle": 0 },
+      { "position": [-12688, 12623], "angle": 0 },
       { "position": [-12767.0, 10955], "angle": 0 }
     ],
     "hometown_railgate": [{ "position": [2183, 5757], "angle": 279.46 }],
@@ -722,10 +722,10 @@
     "reserve_lake5": [{ "position": [-11608, 4501], "angle": 76.8462905884 }]
   },
   "encounters": [
-    { "position": [-14028, 7587], "encounter": "cliff_train_cave_guard" },
-    { "position": [-8906, 7125], "encounter": "reserve_west1" },
-    { "position": [-5686, 7159], "encounter": "reserve_west3" },
-    { "position": [-7278, 8284], "encounter": "reserve_west2" },
+    { "position": [-14017, 7850], "encounter": "cliff_train_cave_guard" },
+    { "position": [-8895, 7388], "encounter": "reserve_west1" },
+    { "position": [-5675, 7422], "encounter": "reserve_west3" },
+    { "position": [-7267, 8547], "encounter": "reserve_west2" },
     { "position": [-532, -10276], "encounter": "hometown_north1" },
     { "position": [-645, -10976], "encounter": "hometown_north2" },
     { "position": [-3684, 12386], "encounter": "hometown_south2" },

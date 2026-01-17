@@ -1,4 +1,5 @@
 import { LocalizationFunction } from "../../localization/useLocalization";
+import BEASTIE_DATA from "../../data/BeastieData";
 import type { TeamBeastie } from "../Types";
 
 const PID_CHARS = "0123456789abcdef";
@@ -15,21 +16,25 @@ export function createPid() {
 
 export default function createBeastie(
   number: string,
+  beastieId: string = "shroom1",
   L?: LocalizationFunction,
 ): TeamBeastie {
+  const beastie = BEASTIE_DATA.get(beastieId) ?? BEASTIE_DATA.get("shroom1");
   return {
     pid: createPid(),
-    specie: "shroom1",
+    specie: beastie?.id ?? "shroom1",
     date: 1,
     number: number,
-    color: [0.5, 0.5, 0.5, 0.5, 0.5],
-    name: L ? L("beastiesetup_name_001") : "Sprecko",
+    color: [0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
+    name: L ? L(beastie?.name ?? "beastiesetup_name_001") : "Sprecko",
     spr_index: 0,
-    xp: 125000,
+    xp: 125000 * (beastie?.growth ?? 1),
     scale: 0.5,
     vibe: 0,
     ability_index: 0,
-    attklist: ["careful", "callout", "refresh"],
+    attklist: beastie?.learnset
+      .slice(0, 3)
+      .map(([_, name]) => name as string) ?? ["careful", "callout", "refresh"],
 
     ba_r: 1,
     ha_r: 1,

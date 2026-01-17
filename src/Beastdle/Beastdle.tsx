@@ -120,6 +120,7 @@ export default function Beastdle() {
               <BeastieSelect
                 beastieId={undefined}
                 setBeastieId={guess}
+                hashName="Guess"
                 textOverride="Select Beastie"
               />
               <button

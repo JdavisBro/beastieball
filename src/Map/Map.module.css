@@ -272,12 +272,15 @@
 
 .controlSectionClosed {
   composes: controlSection;
+}
+
+.controlSectionClosed:not(:has(dialog[open])) {
   height: 3em;
   filter: drop-shadow(white 0 0 2px);
   pointer-events: none;
 }
 
-.controlSectionClosed :global(.infoboxHeader) {
+.controlSectionClosed:not(:has(dialog[open])) :global(.infoboxHeader) {
   margin-left: 100%;
   transform: translateX(-100%);
 }
@@ -287,7 +290,7 @@
   pointer-events: auto;
 }
 
-.controlSectionClosed :global(.infoBoxContent) {
+.controlSectionClosed:not(:has(dialog[open])) :global(.infoBoxContent) {
   clip-path: polygon(
     calc(100% - 4px) 0,
     calc(100% - 4px) 0,

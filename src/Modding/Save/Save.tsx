@@ -10,7 +10,7 @@ import InfoBox from "../../shared/InfoBox";
 
 function CopyableString(props: { children: string }) {
   return (
-    <span className={styles.copyablestring}>
+    <span>
       <code>{props.children}</code>
       <button onClick={() => navigator.clipboard.writeText(props.children)}>
         Copy
@@ -32,7 +32,7 @@ export default function Save(): React.ReactElement {
   window.save = save;
 
   return (
-    <div className={styles.container}>
+    <div>
       <OpenGraph
         title="Beastieball Save Viewer"
         image="gameassets/sprMainmenu/10.png"
@@ -45,8 +45,7 @@ export default function Save(): React.ReactElement {
         returnButtonTo="/modding/"
         secretPage={true}
       />
-      <div className={styles.belowheader}>
-        <br />
+      <div className={styles.container}>
         <InfoBox header="Save Locations">
           Windows:{" "}
           <CopyableString>%localappdata%\beastieball\save\</CopyableString>
@@ -56,9 +55,9 @@ export default function Save(): React.ReactElement {
             ~/Library/Application Support/com.wishes.beastieball/save/
           </CopyableString>
           <br />
-          Linux (proton, demo):{" "}
+          Linux (proton):{" "}
           <CopyableString>
-            ~/.local/share/Steam/steamapps/compatdata/2404130/pfx/drive_c/users/steamuser/AppData/Local/beastieball/save/
+            ~/.local/share/Steam/steamapps/compatdata/1864950/pfx/drive_c/users/steamuser/AppData/Local/beastieball/save/
           </CopyableString>
         </InfoBox>
         <InfoBox header="Load/Save File">
@@ -106,7 +105,9 @@ export default function Save(): React.ReactElement {
                 return;
               }
               const a = document.createElement("a");
-              const blob = new Blob([pako.deflate(JSON.stringify(save))]);
+              const blob = new Blob([pako.deflate(JSON.stringify(save))], {
+                type: "application/octet-stream",
+              });
               a.download = filename;
               a.href = URL.createObjectURL(blob);
               a.click();

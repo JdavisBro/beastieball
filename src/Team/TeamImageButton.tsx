@@ -22,18 +22,20 @@ export default function TeamImageButton({
   const [mode, setMode] = useState(DrawMode.VGrid);
 
   const saveImage = (copy: boolean) => {
-    if (team && canvasRef.current && beastieRender)
+    if (team && team.length && canvasRef.current)
       createTeamImageCanvas(
         canvasRef.current,
         team,
         mode,
         Localization,
-        beastieRender.renderQuick,
+        beastieRender ? beastieRender.renderQuick : undefined,
         atLevel,
         maxCoaching,
         copy,
       );
   };
+
+  const buttonsDisabled = !team || !team.length;
 
   return (
     <span>
@@ -53,10 +55,10 @@ export default function TeamImageButton({
           </option>
         </select>
       </label>
-      <button disabled={!team} onClick={() => saveImage(false)}>
+      <button disabled={buttonsDisabled} onClick={() => saveImage(false)}>
         {L("teams.image.save")}
       </button>
-      <button disabled={!team} onClick={() => saveImage(true)}>
+      <button disabled={buttonsDisabled} onClick={() => saveImage(true)}>
         {L("teams.image.copy")}
       </button>
       <canvas ref={canvasRef} style={{ display: "none" }} />

@@ -87,6 +87,7 @@ function ItemSection({
       <Modal
         header={Loc("map.items.selectHeader")}
         open={itemSelector}
+        makeOpen={() => setItemSelector(true)}
         onClose={onClose}
         hashValue="SelectItem"
       >
@@ -292,6 +293,7 @@ function ControlMenuInner({
           <BeastieSelect
             beastieId={huntedBeastie}
             setBeastieId={setHuntedBeastie}
+            hashName="Track"
             extraOptionText={Loc("map.beastie.showAll")}
             extraOption="all"
             isSelectable={(beastie) => SPAWNABLE_BEASTIES.includes(beastie.id)}

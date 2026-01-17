@@ -12,12 +12,12 @@
     "id": "academy",
     "levels": 5.5,
     "min_rank": 4.5,
-    "music": 14,
+    "music": 23,
     "obj": "@ref object(objHeadmaster)",
     "rank": 1,
     "scale_rank_start_offset": 0,
     "title": {
-      "color": -1,
+      "color": 12268098,
       "gender": 1,
       "wordA": "magic_desc",
       "wordB": "moons"
@@ -38,7 +38,12 @@
     "obj": "@ref object(objCeleb)",
     "rank": 1,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 0, "wordA": "golden", "wordB": "gods" }
+    "title": {
+      "color": 2068168,
+      "gender": 0,
+      "wordA": "golden",
+      "wordB": "gods"
+    }
   },
   "champion": {
     "color": 14610175,
@@ -116,7 +121,12 @@
     "obj": "@ref object(objKaz)",
     "rank": 1,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 0, "wordA": "raging", "wordB": "blazes" }
+    "title": {
+      "color": 18687,
+      "gender": 0,
+      "wordA": "raging",
+      "wordB": "blazes"
+    }
   },
   "mask": {
     "color": 15952127,
@@ -146,7 +156,12 @@
     "obj": "@ref object(objPirate)",
     "rank": 1,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 1, "wordA": "party", "wordB": "pirates" }
+    "title": {
+      "color": 13631311,
+      "gender": 1,
+      "wordA": "party",
+      "wordB": "pirates"
+    }
   },
   "racer": {
     "color": 1909204,
@@ -171,7 +186,7 @@
     "id": "racer",
     "levels": 0,
     "min_rank": 9.5,
-    "music": 6,
+    "music": 24,
     "obj": "@ref object(objRacer)",
     "rank": 1,
     "scale_rank_start_offset": 0,
@@ -248,7 +263,7 @@
     "rank": 1,
     "scale_rank_start_offset": 0,
     "title": {
-      "color": -1,
+      "color": 16711818,
       "gender": 1,
       "wordA": "mythic",
       "wordB": "dreamers"
@@ -268,7 +283,12 @@
     "obj": "@ref object(objScience)",
     "rank": 1,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 2, "wordA": "wild", "wordB": "flowers" }
+    "title": {
+      "color": 4251151,
+      "gender": 2,
+      "wordA": "wild",
+      "wordB": "flowers"
+    }
   },
   "shroom_path_boss": {
     "color": 0,
@@ -298,7 +318,12 @@
     "obj": "@ref object(objStreamer)",
     "rank": 1,
     "scale_rank_start_offset": 0,
-    "title": { "color": -1, "gender": 1, "wordA": "hello", "wordB": "freaks" }
+    "title": {
+      "color": 12460543,
+      "gender": 1,
+      "wordA": "hello",
+      "wordB": "freaks"
+    }
   },
   "warrior": {
     "color": 14341053,
@@ -319,7 +344,7 @@
     "rank": 1,
     "scale_rank_start_offset": 0,
     "title": {
-      "color": -1,
+      "color": 14341053,
       "gender": 0,
       "wordA": "silent",
       "wordB": "warriors"

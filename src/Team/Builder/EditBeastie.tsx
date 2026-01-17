@@ -37,21 +37,28 @@ type ChangeValueType = <T extends keyof TeamBeastie>(
   value: TeamBeastie[T],
 ) => void;
 
-function BeastieDoesntExist({ changeValue }: { changeValue: ChangeValueType }) {
+export function BeastieDoesntExist({
+  changeBeastieId: setBeastieId,
+}: {
+  changeBeastieId: (beastieId: string) => void;
+}) {
   const { L } = useLocalization();
 
   return (
-    <label>
-      {L("teams.builder.species")}
-      <BeastieSelect
-        beastieId={undefined}
-        setBeastieId={(beastieId) => {
-          if (beastieId) {
-            changeValue("specie", beastieId);
-          }
-        }}
-      />
-    </label>
+    <Box>
+      <label>
+        {L("teams.builder.speciess")}
+        <BeastieSelect
+          beastieId={undefined}
+          setBeastieId={(beastieId) => {
+            if (beastieId) {
+              setBeastieId(beastieId);
+            }
+          }}
+          hashName="Species"
+        />
+      </label>
+    </Box>
   );
 }
 
@@ -263,16 +270,20 @@ export default function EditBeastie({
   setBeastie,
 }: {
   beastie: TeamBeastie;
-  setBeastie: React.Dispatch<React.SetStateAction<TeamBeastie>>;
+  setBeastie: React.Dispatch<React.SetStateAction<TeamBeastie | null>>;
 }) {
   const { L } = useLocalization();
 
   const changeValue: ChangeValueType = (key, value) => {
-    setBeastie((beastie) => ({ ...beastie, [key]: value }));
+    setBeastie((beastie) => (beastie ? { ...beastie, [key]: value } : beastie));
   };
   const beastiedata = BEASTIE_DATA.get(beastie.specie);
   if (!beastiedata) {
-    return <BeastieDoesntExist changeValue={changeValue} />;
+    return (
+      <BeastieDoesntExist
+        changeBeastieId={(beastieId) => changeValue("specie", beastieId)}
+      />
+    );
   }
 
   return (
@@ -283,7 +294,9 @@ export default function EditBeastie({
           <BeastieSelect
             beastieId={beastie.specie}
             setBeastieId={(beastieId) => {
-              if (beastieId) {
+              if (beastieId === undefined) {
+                setBeastie(null);
+              } else if (beastieId) {
                 const newBeastie = BEASTIE_DATA.get(beastieId);
                 if (!newBeastie) {
                   return;
@@ -291,7 +304,11 @@ export default function EditBeastie({
                 changeValue("specie", beastieId);
                 changeValue(
                   "xp",
-                  (beastie.xp / beastiedata.growth) * newBeastie.growth,
+                  Math.floor(
+                    Math.cbrt(Math.round(beastie.xp / beastiedata.growth)),
+                  ) **
+                    3 *
+                    newBeastie.growth,
                 );
                 if (beastie.name == beastiedata.name) {
                   changeValue("name", newBeastie.name);
@@ -303,15 +320,19 @@ export default function EditBeastie({
                       ...accum,
                       newBeastie.attklist.includes(moveId)
                         ? moveId
-                        : (newBeastie.attklist.find(
-                            (newMoveId) => !accum.includes(newMoveId),
-                          ) ?? newBeastie.attklist[0]),
+                        : ((
+                            newBeastie.learnset.find(
+                              ([, newMoveId]) =>
+                                !accum.includes(newMoveId as string),
+                            ) as [number, string]
+                          )[1] ?? newBeastie.attklist[0]),
                     ],
                     [],
                   ),
                 );
               }
             }}
+            hashName="Species"
           />
         </label>
         <label>
@@ -437,7 +458,7 @@ export default function EditBeastie({
         ) : null}
       </Box>
       <MoveSelect
-        beastieMovelist={beastiedata.attklist}
+        beastiedata={beastiedata}
         teamBeastieMovelist={beastie.attklist}
         setMove={(index, move) => {
           beastie.attklist[index] = move;

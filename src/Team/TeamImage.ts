@@ -32,11 +32,6 @@ export enum DrawMode {
   VGrid,
 }
 
-const MODE_SIZES = [
-  [BEASTIE_SIZE[0] * 5 + BEASTIE_GAP * 4, BEASTIE_SIZE[1]],
-  [BEASTIE_SIZE[0], BEASTIE_SIZE[1] * 5 + BEASTIE_GAP * 4],
-  [BEASTIE_SIZE[0] * 2 + BEASTIE_GAP, BEASTIE_SIZE[1] * 3 + BEASTIE_GAP * 2],
-];
 const MODE_POS = [
   [
     [0, 0],
@@ -64,23 +59,65 @@ const MODE_POS = [
   ],
 ];
 
+const POS_VGRID_3_CENTER = [
+  (BEASTIE_SIZE[0] + BEASTIE_GAP) * 0.5,
+  BEASTIE_SIZE[1] + BEASTIE_GAP,
+];
+
 const BEASITE_COLORS = ["#ddd1bd", "#d5c9b5"];
 const BAR_COLORS = ["#232323", "#1c1c1c"];
 const COLOR_HEIGHT = 4;
+
+function getSize(mode: DrawMode, count: number) {
+  switch (mode) {
+    case DrawMode.Horizontal:
+      return [
+        BEASTIE_SIZE[0] * count + BEASTIE_GAP * (count - 1),
+        BEASTIE_SIZE[1],
+      ];
+    case DrawMode.Vertical:
+      return [
+        BEASTIE_SIZE[0],
+        BEASTIE_SIZE[1] * count + BEASTIE_GAP * (count - 1),
+      ];
+    case DrawMode.VGrid: {
+      switch (count) {
+        case 0:
+          return [1, 1];
+        case 1:
+          return BEASTIE_SIZE;
+        default:
+          return [
+            BEASTIE_SIZE[0] * 2 + BEASTIE_GAP,
+            BEASTIE_SIZE[1] * Math.ceil(count / 2) +
+              BEASTIE_GAP * Math.ceil(count / 2 - 1),
+          ];
+      }
+    }
+  }
+}
+
+let canvas_in_use = false;
 
 export function createTeamImageCanvas(
   canvas: HTMLCanvasElement,
   team: TeamBeastie[],
   mode: DrawMode,
   Localization: LocalizationType,
-  beastieRender: (
-    beastie: RenderBeastieType,
-  ) => Promise<[HTMLCanvasElement, BBox | null] | null>,
+  beastieRender:
+    | ((
+        beastie: RenderBeastieType,
+      ) => Promise<[HTMLCanvasElement, BBox | null] | null>)
+    | undefined,
   atLevel?: number,
   maxCoaching?: boolean,
   copy?: boolean,
 ) {
-  const size = MODE_SIZES[mode];
+  if (canvas_in_use) {
+    return;
+  }
+  canvas_in_use = true;
+  const size = getSize(mode, team.length);
   // if (
   //   !(
   //     document.fonts.check("16px 'Go Banana', BalsamiqSans") &&
@@ -105,8 +142,14 @@ export function createTeamImageCanvas(
     atLevel,
     maxCoaching,
   )
-    .catch((reason) => console.log(reason))
+    .catch((reason) => {
+      console.log(reason);
+      canvas_in_use = false;
+    })
     .then(() => {
+      if (!canvas_in_use) {
+        return;
+      }
       if (copy) {
         canvas.toBlob((blob) => {
           if (!blob) {
@@ -120,6 +163,7 @@ export function createTeamImageCanvas(
         a.href = canvas.toDataURL("image/png");
         a.click();
       }
+      canvas_in_use = false;
     });
 }
 
@@ -275,9 +319,11 @@ async function createTeamImage(
   team: TeamBeastie[],
   mode: DrawMode,
   Localization: LocalizationType,
-  beastieRender: (
-    beastie: RenderBeastieType,
-  ) => Promise<[HTMLCanvasElement, BBox | null] | null>,
+  beastieRender:
+    | ((
+        beastie: RenderBeastieType,
+      ) => Promise<[HTMLCanvasElement, BBox | null] | null>)
+    | undefined,
   loadImage: (src: string) => Promise<HTMLImageElement>,
   atLevel?: number,
   maxCoaching?: boolean,
@@ -299,19 +345,22 @@ async function createTeamImage(
   }
 
   for (let i = 0; i < 5; i++) {
-    const [startx, starty] = MODE_POS[mode][i];
-    drawLines(
-      ctx,
-      startx,
-      starty,
-      BEASTIE_SIZE[0],
-      BEASTIE_SIZE[1],
-      BEASITE_COLORS[0],
-      BEASITE_COLORS[1],
-    );
     const beastie = team[i];
     const beastiedata = beastie ? BEASTIE_DATA.get(beastie.specie) : undefined;
     if (beastie && beastiedata) {
+      const [startx, starty] =
+        mode == DrawMode.VGrid && team.length == 3 && i == 2
+          ? POS_VGRID_3_CENTER
+          : MODE_POS[mode][i];
+      drawLines(
+        ctx,
+        startx,
+        starty,
+        BEASTIE_SIZE[0],
+        BEASTIE_SIZE[1],
+        BEASITE_COLORS[0],
+        BEASITE_COLORS[1],
+      );
       ctx.letterSpacing = "1px";
       ctx.textBaseline = "top";
       ctx.textAlign = "left";
@@ -319,7 +368,7 @@ async function createTeamImage(
       const num_text = `#${beastie.number}`;
       const level = atLevel
         ? atLevel
-        : Math.floor(Math.cbrt(beastie.xp / beastiedata.growth));
+        : Math.floor(Math.cbrt(Math.ceil(beastie.xp / beastiedata.growth)));
       const level_text = L("teams.beastie.lvl", { level: String(level) });
 
       const beastieName = L(beastiedata.name);
@@ -360,16 +409,23 @@ async function createTeamImage(
         (value) => value - Math.ceil(value) + 1,
       );
 
-      const result = await beastieRender({
-        id: beastiedata.id,
-        colors: beastieColors,
-        colorAlt: altMap[Math.ceil(beastie.color[0])],
-        sprAlt: beastie.spr_index,
-      });
-      if (!result) {
-        throw new Error("Could not render Beastie.");
+      let canvas: HTMLCanvasElement | HTMLImageElement;
+      let bbox: BBox | null;
+      if (beastieRender) {
+        const result = await beastieRender({
+          id: beastiedata.id,
+          colors: beastieColors,
+          colorAlt: altMap[Math.ceil(beastie.color[0])],
+          sprAlt: beastie.spr_index,
+        });
+        if (!result) {
+          throw new Error("Could not render Beastie.");
+        }
+        [canvas, bbox] = result;
+      } else {
+        canvas = await loadImage(`/icons/${beastie.name}.png`);
+        bbox = { x: 0, y: 0, width: canvas.width, height: canvas.height };
       }
-      const [canvas, bbox] = result;
       if (bbox) {
         const width =
           bbox.width > bbox.height

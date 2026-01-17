@@ -1,12 +1,12 @@
 import { Fragment, useRef, useState } from "react";
 
 import styles from "./TeamBuilder.module.css";
-import type { TeamBeastie } from "../Types";
+import type { BuilderTeam, TeamBeastie } from "../Types";
 import OpenGraph from "../../shared/OpenGraph";
 import Header from "../../shared/Header";
 import Beastie from "../Beastie/Beastie";
 import createBeastie from "./createBeastie";
-import EditBeastie from "./EditBeastie";
+import EditBeastie, { BeastieDoesntExist } from "./EditBeastie";
 import { useLocalStorage } from "usehooks-ts";
 import MoveModalProvider from "../../shared/MoveModalProvider";
 import useScreenOrientation from "../../utils/useScreenOrientation";
@@ -16,35 +16,23 @@ import TeamImageButton from "../TeamImageButton";
 import useLocalization, {
   LocalizationFunction,
 } from "../../localization/useLocalization";
+import BeastieSelect from "../../shared/BeastieSelect";
+import BEASTIE_DATA from "../../data/BeastieData";
 
 const CONTROL_BEASTIE = createBeastie("01");
 const BEASTIE_KEYS = Object.keys(CONTROL_BEASTIE) as Array<keyof TeamBeastie>;
 
-function createTeam(L: LocalizationFunction) {
-  return [
-    createBeastie("01", L),
-    createBeastie("02", L),
-    createBeastie("03", L),
-    createBeastie("04", L),
-    createBeastie("05", L),
-  ];
-}
-
 type TeamHook = [
-  TeamBeastie[],
-  React.Dispatch<React.SetStateAction<TeamBeastie[]>>,
+  BuilderTeam,
+  React.Dispatch<React.SetStateAction<BuilderTeam>>,
   () => void,
 ];
 
 const emptyTeamArr = [...new Array(5).keys()];
 
-function ensureFullTeam(
-  [team, setTeam, removeTeam]: TeamHook,
-  L: LocalizationFunction,
-): TeamHook {
-  const newTeam = createTeam(L);
+function ensureFullTeam([team, setTeam, removeTeam]: TeamHook): TeamHook {
   return [
-    emptyTeamArr.map((index) => team[index] ?? newTeam[index]),
+    emptyTeamArr.map((index) => team[index] ?? null),
     setTeam,
     removeTeam,
   ];
@@ -54,35 +42,57 @@ function verifyTeamJson(json: unknown) {
   if (!Array.isArray(json)) {
     return false;
   }
-  if (
-    !json.every((beastie) =>
-      BEASTIE_KEYS.every(
-        (key) => typeof beastie[key] == typeof CONTROL_BEASTIE[key],
-      ),
-    )
-  ) {
+  try {
+    return json.every(
+      (beastie) =>
+        beastie == null ||
+        BEASTIE_KEYS.every(
+          (key) => typeof beastie[key] == typeof CONTROL_BEASTIE[key],
+        ),
+    );
+  } catch {
     return false;
   }
-  return true;
 }
 
-export function Box({ children }: { children: React.ReactNode[] }) {
+export function Box({ children }: { children: React.ReactNode }) {
   const sep = useLocalization().L("teams.builder.sep");
 
   return (
     <div className={styles.box}>
-      {children
-        .filter((c) => c)
-        .map((c, index) =>
-          index > 0 ? (
-            <Fragment key={index}>
-              {sep}
-              {c}
-            </Fragment>
-          ) : (
-            c
-          ),
-        )}
+      {Array.isArray(children)
+        ? children
+            .filter((c) => c)
+            .map((c, index) =>
+              index > 0 ? (
+                <Fragment key={index}>
+                  {sep}
+                  {c}
+                </Fragment>
+              ) : (
+                c
+              ),
+            )
+        : children}
+    </div>
+  );
+}
+
+function NoBeastie({
+  setBeastieId,
+  index,
+}: {
+  setBeastieId: (beastieId: string | undefined) => void;
+  index: number;
+}) {
+  return (
+    <div className={styles.noBeastie}>
+      No Beastie
+      <BeastieSelect
+        beastieId={undefined}
+        setBeastieId={setBeastieId}
+        hashName={`New: ${index + 1}`}
+      />
     </div>
   );
 }
@@ -91,11 +101,10 @@ export default function TeamBuilder() {
   const { L } = useLocalization();
 
   const [team, setTeam] = ensureFullTeam(
-    useLocalStorage<TeamBeastie[]>("teamBuilderTeam", []),
-    L,
+    useLocalStorage<BuilderTeam>("teamBuilderTeam", []),
   );
 
-  const setBeastie = (teamIndex: number, beastie: TeamBeastie) => {
+  const setBeastie = (teamIndex: number, beastie: TeamBeastie | null) => {
     team[teamIndex] = beastie;
     setTeam((team) => {
       const newTeam = [...team];
@@ -138,9 +147,24 @@ export default function TeamBuilder() {
           <MoveModalProvider>
             <div className={teamScroll ? styles.teamScroll : styles.team}>
               {team.map((beastie, index) => (
-                <Fragment key={beastie.pid}>
+                <Fragment key={beastie?.pid ?? index}>
                   <div className={styles.beastieContainer}>
-                    <Beastie teamBeastie={beastie} />
+                    {beastie && BEASTIE_DATA.has(beastie.specie) ? (
+                      <Beastie teamBeastie={beastie} />
+                    ) : (
+                      <NoBeastie
+                        setBeastieId={(beastieId) => {
+                          if (beastieId) {
+                            setBeastie(
+                              index,
+                              createBeastie(`0${index + 1}`, beastieId),
+                            );
+                            setEditingBeastie(index);
+                          }
+                        }}
+                        index={index}
+                      />
+                    )}
                     <button
                       disabled={editingBeastie == index}
                       onClick={() => setEditingBeastie(index)}
@@ -177,7 +201,7 @@ export default function TeamBuilder() {
                   }
                 />
               </label>
-              <TeamImageButton team={team} />
+              <TeamImageButton team={team.filter((beastie) => !!beastie)} />
             </Box>
             <Box>
               <SavedTeams
@@ -203,8 +227,7 @@ export default function TeamBuilder() {
                         }
                         setTeam(
                           [...new Array(5).keys()].map(
-                            (index) =>
-                              newteam[index] ?? createBeastie("0" + index),
+                            (index) => newteam[index] ?? null,
                           ),
                         );
                       });
@@ -235,22 +258,35 @@ export default function TeamBuilder() {
               >
                 {L("teams.builder.loadJson")}
               </button>
-              <button onClick={() => setTeam(createTeam(L))}>
+              <button onClick={() => setTeam(emptyTeamArr.map(() => null))}>
                 {L("teams.builder.reset")}
               </button>
             </Box>
-            <EditBeastie
-              key={team[editingBeastie].pid + team[editingBeastie].specie}
-              beastie={team[editingBeastie]}
-              setBeastie={(beastie) =>
-                setBeastie(
-                  editingBeastie,
-                  typeof beastie == "function"
-                    ? beastie(team[editingBeastie])
-                    : beastie,
-                )
-              }
-            />
+            {team[editingBeastie] ? (
+              <EditBeastie
+                key={team[editingBeastie].pid + editingBeastie}
+                beastie={team[editingBeastie]}
+                setBeastie={(beastie) =>
+                  setBeastie(
+                    editingBeastie,
+                    typeof beastie == "function"
+                      ? team[editingBeastie]
+                        ? beastie(team[editingBeastie])
+                        : createBeastie("01")
+                      : beastie,
+                  )
+                }
+              />
+            ) : (
+              <BeastieDoesntExist
+                changeBeastieId={(beastieId) =>
+                  setBeastie(
+                    editingBeastie,
+                    createBeastie(`0${editingBeastie}`, beastieId),
+                  )
+                }
+              />
+            )}
           </div>
         </div>
       </BeastieRenderProvider>

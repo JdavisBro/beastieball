@@ -392,6 +392,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
             setBeastieId={(beastieId: undefined | string) =>
               setDiffBeastieColors(beastieId ? beastieId : "none")
             }
+            hashName="PaletteSwap"
             isSelectable={(beastie) => beastie.id != props.beastiedata.id}
             nonSelectableReason={L(
               "beastiepedia.preview.color.paletteSwapModalCurrentBeastie",

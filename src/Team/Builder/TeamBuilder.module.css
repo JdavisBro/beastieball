@@ -61,6 +61,19 @@
   white-space: nowrap;
 }
 
+.noBeastie {
+  composes: animBoxBackground from global;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: black;
+  height: 253.7px;
+  max-width: 370px;
+  width: 100%;
+}
+
 .edit {
   flex: 1 1 auto;
   margin: 4px;
@@ -77,17 +90,25 @@
 
 .moveSelectModal {
   display: flex;
+  flex-direction: column;
+  padding-top: 4px;
+  max-width: calc(
+    round(down, calc(90vw - 40px), min(calc(90vw - 40px), 468px)) + 13px
+  );
+  height: 90vh;
+  box-sizing: border-box;
+  gap: 4px;
+}
+
+.moveSelectGrid {
+  display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  padding-top: 4px;
   justify-content: center;
   align-items: start;
   align-content: start;
   overflow-y: scroll;
-  height: 90vh;
-  max-width: calc(
-    round(down, calc(90vw - 40px), min(calc(90vw - 40px), 468px)) + 13px
-  );
+  width: 100%;
   box-sizing: border-box;
 }
 

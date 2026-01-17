@@ -4,9 +4,10 @@ import {
   useEffect,
   useMemo,
   useRef,
+  useState,
 } from "react";
 
-import setupWebGL, { setColorUniforms, setImage } from "./WebGL";
+import setupWebGL, { setColorUniforms, setImage, WebGLError } from "./WebGL";
 import {
   BeastieRenderContext,
   RenderBeastieType,
@@ -31,6 +32,8 @@ export default function BeastieRenderProvider(
     gl: WebGLRenderingContext;
     program: WebGLProgram;
   } | null>(null);
+
+  const [noWebGL, setNoWebGL] = useState(false);
 
   const frame = useCallback(() => {
     if (renderJobs.current.length > 0) {
@@ -162,12 +165,20 @@ export default function BeastieRenderProvider(
     if (!canvasRef.current || glRef.current) {
       return;
     }
-    glRef.current = setupWebGL(canvasRef.current);
+    try {
+      glRef.current = setupWebGL(canvasRef.current);
+      setNoWebGL(false);
+    } catch (error) {
+      if (error instanceof WebGLError) {
+        console.log(error.message);
+        setNoWebGL(true);
+      }
+    }
   }, []);
 
   const value = useMemo(
-    () => ({ render, cancel, renderQuick }),
-    [render, cancel, renderQuick],
+    () => (noWebGL ? null : { render, cancel, renderQuick }),
+    [render, cancel, renderQuick, noWebGL],
   );
 
   return (

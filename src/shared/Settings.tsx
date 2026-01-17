@@ -52,10 +52,10 @@ function Toggles() {
 
 export default function Settings({
   open,
-  onClose,
+  setOpen,
 }: {
   open: boolean;
-  onClose: () => void;
+  setOpen: (open: boolean) => void;
 }) {
   const { L } = useLocalization();
 
@@ -75,7 +75,8 @@ export default function Settings({
       })}
       open={open}
       hashValue={"Settings"}
-      onClose={onClose}
+      makeOpen={() => setOpen(true)}
+      onClose={() => setOpen(false)}
     >
       <div className={styles.settingsContainer}>
         <Language />

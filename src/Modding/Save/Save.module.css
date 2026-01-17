@@ -1,71 +1,59 @@
 .container {
-  composes: animBackground from global;
-  min-width: 100vw;
-  min-height: 100vh;
-  height: fit-content;
+  margin-top: 8px;
 }
 
-.belowheader {
-  min-height: calc(100% - var(--header-height));
-}
-
-.foldableHeader {
-  composes: animSelectableBackground from global;
-  width: fit-content;
-  z-index: 1;
-  padding: 4px 12px 4px 12px;
-  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
-  position: relative;
-  left: 10px;
-  color: black;
-  user-select: none;
-}
-
-.foldableHeader:hover {
-  background-image: repeating-linear-gradient(
-    135deg,
-    #ffaa55,
-    #ffaa55 10px,
-    #ff8e4a 10px,
-    #ff8e4a 20px
-  ) !important;
-}
-
-.upArrow {
-  display: inline-block;
-  transform: scaleY(-1);
-}
-
-.foldable {
-}
-
-.folded {
-  display: none;
+.container :global(.tabber) {
+  margin: 0 0 4px 10px;
+  font-size: 1.15em;
 }
 
 .beastiecontainer {
   display: flex;
   flex-wrap: wrap;
+  gap: 4px;
+}
+
+.sectionhidden {
+  display: none;
+}
+
+.beastiecontainerhidden {
+  composes: beastiecontainer;
+  display: none;
 }
 
 .datatable {
   composes: infoBoxContent from global;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  top: -8px;
+  max-width: 100%;
   width: 100%;
-  padding: 0 10px 0 10px;
+  padding: 4px 10px 0 10px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
 }
 
-.datarow {
-  display: flex;
-  flex-direction: row;
+.datatable div,
+.datatable button {
+  display: none;
 }
 
-.datarow div,
-.datarow textarea {
-  flex: 1 1;
+.datakey,
+.dataval {
+  display: block !important;
 }
-.datarow textarea {
-  flex-grow: 3;
+
+.visible {
+  display: block !important;
+}
+
+.datakey:nth-child(odd of .datakey),
+.dataval:nth-child(odd of .dataval) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.datatable textarea {
+  resize: vertical;
+  width: 100%;
 }

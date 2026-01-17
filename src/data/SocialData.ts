@@ -21,7 +21,7 @@ type SocialEvent = {
   rankup: boolean;
   prereq: {
     type: number[];
-    field: string | number | DataCheck;
+    field: string | number | DataCheck | DataCheck[];
   };
 };
 

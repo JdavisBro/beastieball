@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
 import { EventResponse, NoData } from "./Types";
@@ -7,11 +6,14 @@ import { useGameData } from "./useGameData";
 import BigmoonBlock from "./Bigmoon";
 import Carousel from "./Carousel";
 import useLocalization from "../localization/useLocalization";
+import { useLocalStorage } from "usehooks-ts";
+
+const OLD_DAYS = 1;
 
 export default function Events() {
   const { L } = useLocalization();
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useLocalStorage("eventsOpen", true);
 
   const [bigmoonData, bigmoonReload] = useGameData<EventResponse>(
     "events",
@@ -24,10 +26,14 @@ export default function Events() {
 
   const now = new Date(Date.now());
   let bigmoonActive = false;
+  let bigmoonOld = false;
   if (bigmoon) {
     const startDate = new Date(bigmoon.times[0][0]);
     const endDate = new Date(bigmoon.times[0][1]);
     bigmoonActive = now > startDate && now < endDate;
+    const oldDate = new Date(endDate);
+    oldDate.setDate(oldDate.getDate() + OLD_DAYS);
+    bigmoonOld = now > oldDate;
   }
 
   return (
@@ -51,7 +57,7 @@ export default function Events() {
         </div>
         <div className={open ? styles.openBox : styles.closedBox}>
           {open ? (
-            <Carousel bigmoonReload={bigmoonReload}>
+            <Carousel bigmoonOld={bigmoonOld} bigmoonReload={bigmoonReload}>
               <BigmoonBlock
                 bigmoon={bigmoonData}
                 bigmoonReload={bigmoonReload}

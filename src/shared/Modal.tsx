@@ -1,4 +1,10 @@
-import { PropsWithChildren, useCallback, useEffect, useRef } from "react";
+import {
+  PropsWithChildren,
+  startTransition,
+  useCallback,
+  useEffect,
+  useRef,
+} from "react";
 import InfoBox from "./InfoBox";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -19,6 +25,7 @@ export default function Modal(
     header: string;
     open: boolean;
     hashValue: string;
+    makeOpen?: () => void;
     onClose: () => void;
   },
 ) {
@@ -65,6 +72,19 @@ export default function Modal(
   const location = useLocation();
 
   useEffect(() => {
+    const hashCorrect =
+      decodeURIComponent(window.location.hash) == "#" + props.hashValue;
+    if (
+      hashCorrect &&
+      props.makeOpen &&
+      !props.open &&
+      !(dialogRef.current && dialogRef.current.open)
+    ) {
+      props.makeOpen();
+    }
+  }, [location]);
+
+  useEffect(() => {
     if (!dialogRef.current) {
       return;
     }
@@ -73,7 +93,9 @@ export default function Modal(
       decodeURIComponent(window.location.hash) == "#" + props.hashValue;
     if (props.open) {
       if (!dialogOpen) {
-        dialogRef.current.showModal();
+        try {
+          dialogRef.current.showModal();
+        } catch (e) {} // can error if dialog is not visible
         if (hashCorrect) {
           const old = new URL(window.location.href);
           old.hash = "";
@@ -101,10 +123,15 @@ export default function Modal(
         }
       }}
       onClose={() => {
-        if (decodeURIComponent(window.location.hash) == "#" + props.hashValue) {
-          navigate(-1);
-        }
-        props.onClose();
+        startTransition(() => {
+          if (
+            decodeURIComponent(window.location.hash) ==
+            "#" + props.hashValue
+          ) {
+            navigate(-1);
+          }
+          props.onClose();
+        });
       }}
     >
       <InfoBox

@@ -5,7 +5,7 @@ import styles from "./ContentInfo.module.css";
 import BEASTIE_DATA, { BeastieType } from "../../data/BeastieData";
 import InfoBox from "../../shared/InfoBox";
 import MoveView from "../../shared/MoveView";
-import { MoveEffect } from "../../data/MoveData";
+import { NumberEffect } from "../../data/MoveData";
 import BeastieSelect from "../../shared/BeastieSelect";
 import useLocalization from "../../localization/useLocalization";
 
@@ -48,17 +48,16 @@ export default function ComboMove({
           : // Rivals
             getRivalsType(beastiedata, friend);
 
-  const effects: MoveEffect[] = [];
-  const used_effects: Record<number, MoveEffect> = {};
-  (friend ? [beastiedata, friend] : [beastiedata])
-    .sort((beastie, beastie2) => beastie.number - beastie2.number)
-    .forEach((beastie, beastieIndex) => {
+  const effects: NumberEffect[] = [];
+  const used_effects: Record<number, NumberEffect> = {};
+  (friend ? [beastiedata, friend] : [beastiedata]).forEach(
+    (beastie, beastieIndex) => {
       for (let i = 0; i < beastie.combos[type].length; i += 3) {
-        const neweff = {
+        const neweff: NumberEffect = {
           eff: beastie.combos[type][i],
           targ: beastie.combos[type][i + 1],
           pow: beastie.combos[type][i + 2],
-        };
+        } as NumberEffect;
         switch (neweff.eff) {
           case 49:
             target =
@@ -155,14 +154,8 @@ export default function ComboMove({
                 Math.sign(oldeff.pow) == Math.sign(neweff.pow))
             ) {
               oldeff.targ = 2;
-              let newpow = oldeff.pow + (neweff.pow - oldeff.pow) * 0.5;
-              if (neweff.eff == 8) {
-                newpow = Math.round(newpow * 20) / 20;
-              } else {
-                newpow = Math.round(newpow);
-              }
-              oldeff.pow = newpow;
-              if (newpow == 0) {
+              oldeff.pow = oldeff.pow + (neweff.pow - oldeff.pow) * 0.5;
+              if (oldeff.pow == 0) {
                 effects.splice(
                   effects.findIndex((value) => value == oldeff),
                   1,
@@ -186,6 +179,11 @@ export default function ComboMove({
                 1,
               );
             }
+          }
+          if (neweff.eff == 8) {
+            oldeff.pow = Math.round(oldeff.pow * 20) / 20;
+          } else {
+            oldeff.pow = Math.round(oldeff.pow);
           }
         }
 
@@ -219,7 +217,8 @@ export default function ComboMove({
           }
         }
       }
-    });
+    },
+  );
 
   const navigate = useNavigate();
 
@@ -242,7 +241,11 @@ export default function ComboMove({
           {L("beastiepedia.info.combo.dropdown.defense")}
         </option>
       </select>
-      <BeastieSelect beastieId={friendId} setBeastieId={setFriendId} />
+      <BeastieSelect
+        beastieId={friendId}
+        setBeastieId={setFriendId}
+        hashName="Combo"
+      />
       <button
         onClick={() => {
           if (friend) {

@@ -1,7 +1,21 @@
 .beastie {
   display: flex;
-  height: fit-content;
-  width: 50%;
+  max-width: 600px;
+  width: 49%;
+}
+
+@media all and (max-width: 800px) {
+  .beastie {
+    gap: 2px;
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.beastie-noevent {
+  display: flex;
+  max-width: 100%;
 }
 
 .beastiepreview {

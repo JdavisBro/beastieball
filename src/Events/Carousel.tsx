@@ -11,6 +11,7 @@ import useLocalization, {
 const EMOJI_MAP: Record<string, string> = {
   bigmoon: "🌙",
   experimental: "🧪",
+  sadness: "🧪",
   milestone: "⏫",
   update: "⏫",
   ost: "💿",
@@ -19,15 +20,20 @@ const EMOJI_MAP: Record<string, string> = {
   tournament: "🏆",
   heatwave: "🏆",
   heatup: "🏆",
+  print: "🗺️", // roadmap
   default: "❓",
 };
 const EMOJI_SWAPPED = Object.keys(EMOJI_MAP);
 
+const EXPERIMENTAL_PREFIXES = ["experimental", "sadness"];
+
 export default function Carousel({
   children,
+  bigmoonOld,
   bigmoonReload,
 }: {
   children: React.ReactNode;
+  bigmoonOld: boolean;
   bigmoonReload: () => void;
 }) {
   const { L, currentLanguage } = useLocalization();
@@ -47,17 +53,56 @@ export default function Carousel({
     ? []
     : carouselData.data.filter((data) => !data.img.startsWith("bigmoon"));
 
-  const tabs = [
-    EMOJI_MAP.bigmoon,
-    ...datas.map((data) => {
-      for (const key of EMOJI_SWAPPED) {
-        if (data.img.startsWith(key) || data.img.endsWith(key + ".png")) {
-          return EMOJI_MAP[key];
-        }
+  const bigmoonPos = bigmoonOld
+    ? noData
+      ? 1
+      : datas.findIndex((data) =>
+          EXPERIMENTAL_PREFIXES.some((exp) => data.img.startsWith(exp)),
+        ) + 1 || 1
+    : 0;
+
+  const tabs = datas.map((data) => {
+    for (const key of EMOJI_SWAPPED) {
+      if (data.img.startsWith(key) || data.img.endsWith(key + ".png")) {
+        return EMOJI_MAP[key];
       }
-      return EMOJI_MAP.default;
-    }),
-  ];
+    }
+    return EMOJI_MAP.default;
+  });
+  tabs.splice(bigmoonPos, 0, EMOJI_MAP.bigmoon);
+
+  const parts: React.ReactNode[] = datas.map((data) => (
+    <div key={data.img} className={styles.eventBlock}>
+      <div className={styles.eventImage}>
+        <img
+          src={`https://dumbandfat.com/beastieball/${data.img}`}
+          onLoad={(event) => {
+            event.currentTarget.classList.remove(styles.eventImageFailed);
+          }}
+          onError={(event) => {
+            event.currentTarget.classList.add(styles.eventImageFailed);
+          }}
+        />
+      </div>
+      <div className={styles.carouselItemText}>
+        <Link to={data.url} target="_blank" rel="noopener">
+          {data.text[
+            Math.max(
+              0,
+              data.langs.indexOf(LANGUAGE_NAMES[currentLanguage] ?? "en"),
+            )
+          ] ?? data.text[0]}
+        </Link>
+        {import.meta.env.VITE_EXPERIMENTAL != "true" &&
+        EXPERIMENTAL_PREFIXES.some((exp) => data.img.startsWith(exp)) ? (
+          <Link to={`https://${import.meta.env.VITE_URL_EXPERIMENTAL}/`}>
+            View the 🧪experimental site.
+          </Link>
+        ) : null}
+      </div>
+    </div>
+  ));
+  parts.splice(bigmoonPos, 0, children);
 
   return (
     <>
@@ -66,41 +111,7 @@ export default function Carousel({
           className={styles.carouselRow}
           style={{ transform: `translateX(-${tab * 100}%)` }}
         >
-          {children}
-          {datas.map((data) => (
-            <div key={data.img} className={styles.eventBlock}>
-              <div className={styles.eventImage}>
-                <img
-                  src={`https://dumbandfat.com/beastieball/${data.img}`}
-                  onLoad={(event) => {
-                    event.currentTarget.classList.remove(
-                      styles.eventImageFailed,
-                    );
-                  }}
-                  onError={(event) => {
-                    event.currentTarget.classList.add(styles.eventImageFailed);
-                  }}
-                />
-              </div>
-              <Link
-                className={styles.carouselItemText}
-                to={data.url}
-                target="_blank"
-                rel="noopener"
-              >
-                <div className={styles.carouselItemText}>
-                  {data.text[
-                    Math.max(
-                      0,
-                      data.langs.indexOf(
-                        LANGUAGE_NAMES[currentLanguage] ?? "en",
-                      ),
-                    )
-                  ] ?? data.text[0]}
-                </div>
-              </Link>
-            </div>
-          ))}
+          {parts}
         </div>
       </div>
       <div

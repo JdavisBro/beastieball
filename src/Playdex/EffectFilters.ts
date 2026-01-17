@@ -53,6 +53,11 @@ const EffectFilters: {
     effects: [38, [33, 12]],
   },
   { name: "feeling", placeholderKey: "statuseffectstuff_013", effects: [39] },
+  {
+    name: "feeling",
+    placeholderKey: "statuseffectstuff_029",
+    effects: [80, [33, 12]],
+  },
   // Field Effects
   {
     name: "field",

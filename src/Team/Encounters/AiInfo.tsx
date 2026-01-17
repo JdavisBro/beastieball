@@ -1,45 +1,55 @@
 import { useState } from "react";
 import Modal from "../../shared/Modal";
 import { Encounter } from "../../data/EncounterData";
+import useLocalization from "../../localization/useLocalization";
 
 export default function AiInfo({ encounter }: { encounter: Encounter }) {
+  const { L } = useLocalization();
+
   const [open, setOpen] = useState(false);
 
   const ai = encounter.ai;
 
   const data: ([string, number | string] | null)[] = [
-    ["Erraticness", ai.erratic],
-    ["Damage", ai.damage],
-    ["Free Points", ai.point],
-    ["Stamina", ai.stamina],
-    ["Lane Coverage", ai.lane],
-    ["Lane Coverage (Offense only)", ai.lane_cover],
-    ["Straight Fear", ai.lane_straight_fear],
-    ["Sideways Fear", ai.lane_sideways_fear],
-    ["Ally Field", ai.field],
-    ["Foe Field", ai.foe_field],
-    ["Ally Feelings", ai.status],
-    ["Foe Feelings", ai.foe_status],
-    ["Ally Boosts", ai.boost],
-    ["Foe Boosts", ai.foe_boost],
-    ["Blocking", ai.blocking],
-    ["Ally Knockout Potential", ai.fall],
-    ["Foe Knockout Potential", ai.knockout],
-    ["Non-easy Recieve Bonus", ai.force],
-    ["Consider Attack Secondary Effects", ai.secondary ? "true" : "false"],
-    ["Tag Penalty", String(ai.tag_penalty)],
-    ["Usable Attack", ai.usable_attack],
+    ["erratic", ai.erratic],
+    ["damage", ai.damage],
+    ["point", ai.point],
+    ["stamina", ai.stamina],
+    ["lane", ai.lane],
+    ["lane_offense", ai.lane_cover],
+    ["straight_fear", ai.lane_straight_fear],
+    ["sideways_fear", ai.lane_sideways_fear],
+    ["field", ai.field],
+    ["foe_field", ai.foe_field],
+    ["feeling", ai.status],
+    ["foe_feeling", ai.foe_status],
+    ["boosts", ai.boost],
+    ["foe_boosts", ai.foe_boost],
+    ["blocking", ai.blocking],
+    ["knockout", ai.fall],
+    ["foe_knockout", ai.knockout],
+    ["non_easy", ai.force],
+    [
+      "secondary",
+      ai.secondary
+        ? L("teams.encounters.aiinfo.true")
+        : L("teams.encounters.aiinfo.false"),
+    ],
+    ["tag", String(ai.tag_penalty)],
+    ["usable", ai.usable_attack],
 
     encounter.team.some((beastie) => beastie.aggro)
-      ? ["Rowdy Meter", ai.meter]
+      ? ["rowdy", ai.meter]
       : null,
   ];
 
   return (
     <>
-      <button onClick={() => setOpen(true)}>AI Info</button>
+      <button onClick={() => setOpen(true)}>
+        {L("teams.encounters.aiinfo.title")}
+      </button>
       <Modal
-        header="AI Info"
+        header={L("teams.encounters.aiinfo.title")}
         open={open}
         makeOpen={() => setOpen(true)}
         onClose={() => setOpen(false)}
@@ -47,14 +57,14 @@ export default function AiInfo({ encounter }: { encounter: Encounter }) {
       >
         <table>
           <tr>
-            <th>Type</th>
-            <th>Multiplier / Value / Enabled</th>
+            <th>{L("teams.encounters.aiinfo.type")}</th>
+            <th>{L("teams.encounters.aiinfo.value")}</th>
           </tr>
           {data
             .filter((v) => !!v)
             .map(([desc, value]) => (
               <tr key={desc}>
-                <td>{desc}</td>
+                <td>{L("teams.encounters.aiinfo." + desc)}</td>
                 <td>{typeof value == "number" ? `${value}x` : value}</td>
               </tr>
             ))}

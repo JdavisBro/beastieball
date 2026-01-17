@@ -12,7 +12,7 @@
 .list {
   max-height: 80dvh;
   height: 80dvh;
-  align-content: start;
+  align-content: stretch;
   overflow-y: auto;
   user-select: none;
   width: calc(
@@ -52,7 +52,6 @@
 }
 
 .abilityDesc {
-  overflow-y: auto;
   font-size: 0.9em;
 }
 

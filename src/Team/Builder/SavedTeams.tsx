@@ -6,6 +6,7 @@ import Modal from "../../shared/Modal";
 import { BuilderTeam, TeamBeastie } from "../Types";
 import BEASTIE_DATA from "../../data/BeastieData";
 import { createPid } from "./createBeastie";
+import useLocalization from "../../localization/useLocalization";
 
 type SavedTeam = { name: string; team: BuilderTeam };
 
@@ -18,6 +19,8 @@ export default function SavedTeams({
   setCurrentTeam: React.Dispatch<React.SetStateAction<BuilderTeam>>;
   setCurrentBeastie: (beastie: TeamBeastie) => void;
 }) {
+  const { L } = useLocalization();
+
   const [open, setOpen] = useState(false);
   const [savedTeams, setSavedTeams] = useLocalStorage<SavedTeam[]>(
     "teamBuilderSavedTeams",
@@ -40,9 +43,11 @@ export default function SavedTeams({
 
   return (
     <>
-      <button onClick={() => setOpen(true)}>Saved Teams</button>
+      <button onClick={() => setOpen(true)}>
+        {L("teams.builder.savedTeams.title")}
+      </button>
       <Modal
-        header="Saved Teams"
+        header={L("teams.builder.savedTeams.title")}
         hashValue="SavedTeams"
         open={open}
         makeOpen={() => setOpen(true)}
@@ -66,53 +71,53 @@ export default function SavedTeams({
                       beastie ? (
                         <div key={beastie.pid}>
                           <img
-                            src={`/icons/${BEASTIE_DATA.get(beastie.specie)?.name}.png`}
+                            src={`/icons/${L(BEASTIE_DATA.get(beastie.specie)?.name ?? "beastiesetup_name_001", undefined, true)}.png`}
                           />
                           <button
-                            title="Overwrites the Beastie you're currently editing."
+                            title={L("teams.builder.savedTeams.copyDesc")}
                             onClick={() => {
                               const newBeastie = structuredClone(beastie);
                               newBeastie.pid = createPid();
                               setCurrentBeastie(newBeastie);
                             }}
                           >
-                            Copy
+                            {L("teams.builder.savedTeams.copy")}
                           </button>
                         </div>
                       ) : null,
                     )}
                   </div>
                   <button
-                    title="Saves your Current Team over this one."
+                    title={L("teams.builder.savedTeams.saveDesc")}
                     disabled={disableSaving}
                     onClick={() => setSavedTeam(index, [...currentTeam])}
                   >
-                    Overwrite
+                    {L("teams.builder.savedTeams.save")}
                   </button>
                   <button
-                    title="Loads this Team as your Current Team."
+                    title={L("teams.builder.savedTeams.loadDesc")}
                     onClick={() => setCurrentTeam([...team.team])}
                   >
-                    Load
+                    {L("teams.builder.savedTeams.load")}
                   </button>
                   <button
-                    title="Deletes this Team from your Saved Teams."
+                    title={L("teams.builder.savedTeams.deleteDesc")}
                     onClick={() => {
                       savedTeams.splice(index, 1);
                       setSavedTeams([...savedTeams]);
                     }}
                   >
-                    Delete
+                    {L("teams.builder.savedTeams.delete")}
                   </button>
                 </div>
               ))
-            : "No Saved Teams"}
+            : L("teams.builder.savedTeams.noTeams")}
         </div>
         <button
           disabled={disableSaving}
           onClick={() => setSavedTeam(savedTeams.length, currentTeam)}
         >
-          Save Current Team as New Team
+          {L("teams.builder.savedTeams.saveCurrent")}
         </button>
       </Modal>
     </>

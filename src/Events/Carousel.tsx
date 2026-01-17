@@ -4,6 +4,9 @@ import styles from "./Events.module.css";
 import { CarouselData, NoData } from "./Types";
 import { useGameData } from "./useGameData";
 import { Link } from "react-router-dom";
+import useLocalization, {
+  LANGUAGE_NAMES,
+} from "../localization/useLocalization";
 
 const EMOJI_MAP: Record<string, string> = {
   bigmoon: "🌙",
@@ -24,28 +27,6 @@ const EMOJI_SWAPPED = Object.keys(EMOJI_MAP);
 
 const EXPERIMENTAL_PREFIXES = ["experimental", "sadness"];
 
-const LANG_MAP: Record<string, string> = {
-  English: "en",
-  Русский: "ru",
-  简体中文: "zh-CN",
-};
-
-function findLanguageText(text: string[], langs: string[]) {
-  for (const lang of navigator.languages) {
-    for (let i = 0; i < langs.length; i++) {
-      const lang_code = LANG_MAP[langs[i]];
-      if (!lang_code) {
-        console.log("MISSING LANG", langs[i]);
-        continue;
-      }
-      if (lang.startsWith(lang_code)) {
-        return text[i];
-      }
-    }
-  }
-  return text[0];
-}
-
 export default function Carousel({
   children,
   bigmoonOld,
@@ -55,6 +36,8 @@ export default function Carousel({
   bigmoonOld: boolean;
   bigmoonReload: () => void;
 }) {
+  const { L, currentLanguage } = useLocalization();
+
   const [carouselData, carouselReload] = useGameData<CarouselData>(
     "carousel",
     "carouselData",
@@ -103,12 +86,17 @@ export default function Carousel({
       </div>
       <div className={styles.carouselItemText}>
         <Link to={data.url} target="_blank" rel="noopener">
-          {findLanguageText(data.text, data.langs)}
+          {data.text[
+            Math.max(
+              0,
+              data.langs.indexOf(LANGUAGE_NAMES[currentLanguage] ?? "en"),
+            )
+          ] ?? data.text[0]}
         </Link>
         {import.meta.env.VITE_EXPERIMENTAL != "true" &&
         EXPERIMENTAL_PREFIXES.some((exp) => data.img.startsWith(exp)) ? (
           <Link to={`https://${import.meta.env.VITE_URL_EXPERIMENTAL}/`}>
-            View the 🧪experimental site.
+            {L("events.experimental")}
           </Link>
         ) : null}
       </div>
@@ -127,7 +115,7 @@ export default function Carousel({
         </div>
       </div>
       <div
-        title="Check for Update"
+        title={L("events.checkForUpdate")}
         className={styles.eventReloadButton}
         onClick={(event) => {
           if (Date.now() < lastReload.current + 10000) {

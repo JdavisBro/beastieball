@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import styles from "./NavigationMenu.module.css";
 import NavIcons from "./NavIcons";
+import useLocalization from "../localization/useLocalization";
 
 export function NavigationMenuOption(props: {
   text: string;
@@ -10,10 +11,11 @@ export function NavigationMenuOption(props: {
   location: string;
   target?: string;
 }) {
+  const { getLink } = useLocalization();
   return (
     <Link
       className={styles.menulink}
-      to={props.location}
+      to={getLink(props.location)}
       target={props.target ? props.target : "_self"}
     >
       <div className={styles.menuoption}>
@@ -32,13 +34,16 @@ export function NavigationMenu(props: {
   title?: string;
   note?: React.ReactNode;
 }): React.ReactNode {
+  const { L } = useLocalization();
+
   return (
     <div className={styles.navmenu}>
       <div className={styles.sep}></div>
       <h1 className={styles.header}>
         {props.title ??
-          (import.meta.env.VITE_EXPERIMENTAL == "true" ? "🧪 " : "") +
-            import.meta.env.VITE_BRANDING}
+          (import.meta.env.VITE_EXPERIMENTAL == "true"
+            ? L("common.experimentalPrefix")
+            : "") + import.meta.env.VITE_BRANDING}
       </h1>
       {props.note}
       <div className={styles.options}>{props.children}</div>

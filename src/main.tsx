@@ -7,7 +7,6 @@ import { routes } from "./routes";
 import OpenGraph from "./shared/OpenGraph";
 import { useLocalStorage } from "usehooks-ts";
 import { HelmetProvider } from "react-helmet-async";
-import SpoilerWarning from "./SpoilerWarning";
 import CustomErrorBoundary from "./shared/CustomErrorBoundary";
 import { ErrorBoundary } from "react-error-boundary";
 
@@ -44,11 +43,9 @@ createRoot(container).render(
         description="A website with information about the game Beastieball!"
       />
       <Container>
-        <SpoilerWarning>
-          <ErrorBoundary fallback={<></>}>
-            <RouterProvider router={createBrowserRouter(routes, {})} />
-          </ErrorBoundary>
-        </SpoilerWarning>
+        <ErrorBoundary fallback={<></>}>
+          <RouterProvider router={createBrowserRouter(routes, {})} />
+        </ErrorBoundary>
       </Container>
     </HelmetProvider>
   </StrictMode>,

@@ -3,6 +3,7 @@ import { BeastieType } from "../../data/BeastieData";
 import BEASTIE_SFX from "../../data/BeastieSfx";
 import InfoBox from "../../shared/InfoBox";
 import styles from "./ContentInfo.module.css";
+import useLocalization from "../../localization/useLocalization";
 
 function TypeList({
   type,
@@ -15,11 +16,13 @@ function TypeList({
   currentSound: string;
   changeSound: (target: string) => void;
 }) {
+  const { L } = useLocalization();
+
   return (
     <div>
       <div className={styles.voiceType}>
-        {type.charAt(0).toUpperCase() + type.slice(1)}:
-      </div>{" "}
+        {L("beastiepedia.info.voice." + type)}
+      </div>
       {[...new Array(count)].map((_, index) => (
         <button
           key={index}
@@ -38,6 +41,8 @@ function TypeList({
 }
 
 export default function Sfx({ beastiedata }: { beastiedata: BeastieType }) {
+  const { L } = useLocalization();
+
   const sfx = BEASTIE_SFX[beastiedata.id];
 
   const [sound, setSound] = useState("hello_1");
@@ -53,7 +58,7 @@ export default function Sfx({ beastiedata }: { beastiedata: BeastieType }) {
   }
 
   return (
-    <InfoBox header="Voice">
+    <InfoBox header={L("beastiepedia.info.voice.title")}>
       <audio
         onCanPlayThrough={(event) => {
           if (playSound == beastiedata.id) {

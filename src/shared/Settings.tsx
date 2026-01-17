@@ -4,6 +4,8 @@ import styles from "./Shared.module.css";
 import Modal from "./Modal";
 import SpoilerOptions from "./SpoilerOptions";
 import { Link } from "react-router-dom";
+import { Language } from "./Language";
+import useLocalization from "../localization/useLocalization";
 
 function ToggleCheckbox({
   storageKey,
@@ -30,17 +32,19 @@ function ToggleCheckbox({
 }
 
 function Toggles() {
+  const { L } = useLocalization();
+
   return (
     <>
       <ToggleCheckbox
         storageKey="noAnimations"
-        text="Disable Animations"
-        hoverText="Removes background and header scrolling animations which can be distracting and has an impact on performance."
+        text={L("common.settings.disableAnimations")}
+        hoverText={L("common.settings.disableAnimationsDesc")}
       />
       <ToggleCheckbox
         storageKey="simpleMoves"
-        text="Simple Play Background"
-        hoverText="Disables halftones on Play boxes, which has an impact on performance when there are many."
+        text={L("common.settings.simplePlay")}
+        hoverText={L("common.settings.simplePlayDesc")}
       />
     </>
   );
@@ -53,6 +57,8 @@ export default function Settings({
   open: boolean;
   setOpen: (open: boolean) => void;
 }) {
+  const { L } = useLocalization();
+
   const experimental = import.meta.env.VITE_EXPERIMENTAL == "true";
   const experimental_different =
     import.meta.env.VITE_EXPERIMENTAL_DIFFERENT == "true";
@@ -64,19 +70,25 @@ export default function Settings({
 
   return (
     <Modal
-      header={`${import.meta.env.VITE_BRANDING} Settings`}
+      header={L("common.settings.title", {
+        branding: import.meta.env.VITE_BRANDING,
+      })}
       open={open}
       hashValue={"Settings"}
       makeOpen={() => setOpen(true)}
       onClose={() => setOpen(false)}
     >
       <div className={styles.settingsContainer}>
+        <Language />
         <Toggles />
         <SpoilerOptions />
         {experimental || experimental_different ? (
           <Link to={experimental_target.href}>
-            Visit the {experimental ? "non-experimental" : "🧪experimental"}{" "}
-            site.
+            {L("common.settings.visit", {
+              version: experimental
+                ? L("common.settings.normal")
+                : L("common.settings.experimental"),
+            })}
           </Link>
         ) : null}
       </div>

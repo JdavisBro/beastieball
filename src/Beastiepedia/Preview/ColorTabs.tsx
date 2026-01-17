@@ -11,6 +11,7 @@ import type { BeastieType } from "../../data/BeastieData";
 import { useLocalStorage } from "usehooks-ts";
 import BEASTIE_DATA from "../../data/BeastieData";
 import BeastieSelect from "../../shared/BeastieSelect";
+import useLocalization from "../../localization/useLocalization";
 import InfoTabberHeader from "../../shared/InfoTabber";
 
 function defaultColor(
@@ -97,6 +98,8 @@ function useStoredTypes(): HookType {
 }
 
 export default function ColorTabs(props: Props): React.ReactNode {
+  const { L } = useLocalization();
+
   const colorChange = props.colorChange;
 
   const [diffBeastieColors, setDiffBeastieColors] = useState("none");
@@ -248,10 +251,10 @@ export default function ColorTabs(props: Props): React.ReactNode {
         tab={currentTab}
         setTab={setCurrentTab}
         tabs={{
-          color: "Regular",
-          ...(beastiedata.colors2 ? { color2: "Variant" } : {}),
-          shiny: "Raremorph",
-          custom: "Custom",
+          color: L("common.color.regular"),
+          ...(beastiedata.colors2 ? { color2: L("common.color.variant") } : {}),
+          shiny: L("common.color.raremorph"),
+          custom: L("beastiepedia.preview.color.custom"),
         }}
       />
       <div className={styles.tabcontainer}>
@@ -342,7 +345,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
               )
             }
           >
-            Reset Colors
+            {L("beastiepedia.preview.color.reset")}
           </button>
           <button
             onClick={() =>
@@ -359,7 +362,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
               )
             }
           >
-            Randomize Colors
+            {L("beastiepedia.preview.color.random")}
           </button>
           <button
             onClick={() => {
@@ -371,11 +374,11 @@ export default function ColorTabs(props: Props): React.ReactNode {
               navigator.clipboard.writeText(url.toString());
             }}
           >
-            Copy Link with Colors
+            {L("beastiepedia.preview.color.copyLink")}
           </button>
         </div>
         <label className={styles.taboffset}>
-          Rowdy:{" "}
+          {L("beastiepedia.preview.color.rowdyLabel")}
           <input
             type="checkbox"
             onChange={(event) => props.setRowdy(event.currentTarget.checked)}
@@ -383,7 +386,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
           />
         </label>
         <div className={styles.taboffset}>
-          Palette Swap:{" "}
+          {L("beastiepedia.preview.color.paletteSwapLabel")}
           <BeastieSelect
             beastieId={isDiffBeastie ? diffBeastieColors : undefined}
             setBeastieId={(beastieId: undefined | string) =>
@@ -391,7 +394,9 @@ export default function ColorTabs(props: Props): React.ReactNode {
             }
             hashName="PaletteSwap"
             isSelectable={(beastie) => beastie.id != props.beastiedata.id}
-            nonSelectableReason="Select Unset to use this Beastie's regular colors."
+            nonSelectableReason={L(
+              "beastiepedia.preview.color.paletteSwapModalCurrentBeastie",
+            )}
           />
         </div>
       </div>
@@ -414,6 +419,8 @@ function BeastieColorTabContent(props: {
   colorChange: (change_index: number, color: number[]) => void;
   linkedColors: Record<string, number>;
 }) {
+  const { L } = useLocalization();
+
   const current = props.tab == props.currentTab;
 
   const colorValues = useRef(props.colorMax.map(() => 0.5));
@@ -580,10 +587,10 @@ function BeastieColorTabContent(props: {
         ) : null,
       )}
       <button onClick={() => setColors(colorMax.map(() => 0.5))}>
-        Reset Colors
+        {L("beastiepedia.preview.color.reset")}
       </button>
       <button onClick={() => setColors(colorMax.map(() => Math.random()))}>
-        Randomize Colors
+        {L("beastiepedia.preview.color.random")}
       </button>
       <button
         onClick={() => {
@@ -595,7 +602,7 @@ function BeastieColorTabContent(props: {
           navigator.clipboard.writeText(url.toString());
         }}
       >
-        Copy Link with Colors
+        {L("beastiepedia.preview.color.copyLink")}
       </button>
     </div>
   );

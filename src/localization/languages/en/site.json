@@ -1,0 +1,644 @@
+{
+  "common": {
+    "title": "{page} - {branding}",
+    "description": "A website with information about the game Beastieball!",
+    "header": {
+      "enabledMenu": "Enabled Menu",
+      "disabledMenu": "Disabled Menu",
+      "return": "Return to {place}",
+      "defaultPlace": "{branding} Home"
+    },
+    "navIcons": {
+      "githubImg": "GitHub Logo",
+      "githubOpen": "Open GitHub Repository",
+      "settingsImg": "Settings Menu",
+      "settingsOpen": "Open {branding} Settings"
+    },
+    "settings": {
+      "title": "{branding} Settings",
+      "disableAnimations": "Disable Animations",
+      "disableAnimationsDesc": "Removes background and header scrolling animations which can be distracting and has an impact on performance.",
+      "simplePlay": "Simple Play Background",
+      "simplePlayDesc": "Disables halftones on Play boxes, which has an impact on performance when there are many.",
+      "visit": "Visit the {version} site.",
+      "normal": "non-experimental",
+      "experimental": "🧪experimental"
+    },
+    "spoilerOptions": {
+      "showLabel": "Show: ",
+      "seen": "Seen Beasties/Characters",
+      "all": "All Beasties/Characters",
+      "reset": "Reset Seen Beasties/Characters"
+    },
+    "languageLabel": "Language: ",
+    "experimentalPrefix": "🧪 ",
+    "pow": "POW",
+    "def": "DEF",
+    "types": {
+      "body": "Body",
+      "spirit": "Spirit",
+      "mind": "Mind",
+      "volley": "Volley",
+      "support": "Support",
+      "defense": "Defense",
+      "move": "Move",
+      "tag": "Tag Out",
+      "bodyPow": "Body POW",
+      "spiritPow": "Spirit POW",
+      "mindPow": "Mind POW",
+      "bodyDef": "Body DEF",
+      "spiritDef": "Spirit DEF",
+      "mindDef": "Mind DEF"
+    },
+    "boosts": {
+      "up1": "1 up boost",
+      "up2": "2 up boost",
+      "up3": "3 up boost",
+      "down1": "1 down boost",
+      "down2": "2 down boost",
+      "down3": "3 down boost"
+    },
+    "loading": "Loading...",
+    "loadingNoDot": "Loading",
+    "loadingDot": ".",
+    "searchPrefix": "Search: ",
+    "altSprite": {
+      "normal": "Normal",
+      "alternate": "Alternate",
+      "alternateNumbered": "Alternate {num}"
+    },
+    "color": {
+      "regular": "Regular",
+      "variant": "Variant",
+      "raremorph": "Raremorph"
+    },
+    "spoiler": "???",
+    "hiddenBeastie": "Hidden Beastie",
+    "beastieNum": "Beastie #{num}",
+    "beastieSelect": {
+      "title": "Select Beastie",
+      "label": "Select Beastie: {beastie}",
+      "unset": "Unset",
+      "sep": " - ",
+      "filter": "Filter: ",
+      "none": "None",
+      "metamorph": "Can Metamorph",
+      "noMetamorph": "Can not Metamorph"
+    },
+    "moveView": {
+      "learnedFriend": "Learned from {friend} at {hearts} hearts.",
+      "viewLearners": "View Beasties that learn this play.",
+      "playText": "{type} Play"
+    },
+    "moveModal": {
+      "title": "Play: {name}",
+      "level": "From Level",
+      "friends": "From Friends",
+      "levelFormat": "{beastie} - {level}",
+      "levelFormatMobile": "{beastie}\n{level}"
+    }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "goHome": "Go to Home"
+  },
+  "error": {
+    "title": "Error!",
+    "reset": "Reset",
+    "copy": "Copy Error",
+    "github": "Report on GitHub Issues"
+  },
+  "notice": {
+    "title": "Notice!",
+    "unofficial": "{branding} is an unofficial resource for Beastieball!",
+    "wishes": "It may contain content that doesn't appear in the game, posting of this content in official Wishes Unlimited channels (e.g Wishes Unlimited Discord) is not allowed as per Wishes Unlimited's rules.",
+    "spoilers": "{branding} will also contain spoilers for the full game, in order to avoid spoilers you can set to only show beasties/characters you've clicked on. All other beasties/characters will have images and names hidden until you click on them.",
+    "confirm": "Confirm"
+  },
+  "secrets": {
+    "title": "Secrets",
+    "single": "Secret",
+    "disclamer": "Secrets enables viewing of information that is unused and may appear in the game in future, any of this information should not be talked about in official Wishes Unlimited channels.",
+    "label": "Secrets: ",
+    "beastiepedia": "Beastiepedia\nUnused Animations",
+    "map": "Map\nEncounter Locations"
+  },
+  "events": {
+    "title": "Events/News",
+    "bigmoon": "Bigmoon Bash",
+    "guildSep": " VS ",
+    "guildSuffix": "",
+    "bannedSep": ", ",
+    "bannedSuffix": " banned",
+    "noEvent": " No Event ",
+    "experimental": "View the 🧪experimental site.",
+    "checkForUpdate": "Check for Update",
+    "from": "From: {date}",
+    "until": "Until: {date}",
+    "startsIn": "Starts in {time}",
+    "endsIn": "Ends in {time}",
+    "ended": "Ended {time} ago",
+    "days": "{num} days",
+    "day": "{num} day",
+    "hours": "{num} hours",
+    "hour": "{num} hour",
+    "minutes": "{num} minutes",
+    "minute": "{num} minute",
+    "seconds": "{num} seconds",
+    "second": "{num} second",
+    "secondsMinis": "{num}s",
+    "secondsMini": "{num}s",
+    "timeSep": ", "
+  },
+  "beastiepedia": {
+    "title": "Beastiepedia",
+    "titleBeastie": "{beastie} - Beastiepedia",
+    "description": "View information and previews of the Beasties from Beastieball!",
+    "noBeastie": {
+      "text": "No Beastie Selected",
+      "menuEnabled": "Select a Beastie in the sidebar.",
+      "menuDisabled": "Select a Beastie by toggling the menu in the top left."
+    },
+    "sidebar": {
+      "search": "Search Beasties..",
+      "sort": {
+        "ascending": "↑",
+        "descending": "↓",
+        "number": "Number",
+        "name": "Name",
+        "totalStats": "Stat Total",
+        "totalPow": "POW Total",
+        "highestPow": "Highest Pow",
+        "totalDef": "DEF Total",
+        "bodyPow": "Body POW",
+        "bodyDef": "Body DEF",
+        "spiritPow": "Spirit POW",
+        "spiritDef": "Spirit DEF",
+        "mindPow": "Mind POW",
+        "mindDef": "Mind DEF",
+        "recruit": "Recruit $",
+        "development": "Dev %"
+      },
+      "toggleGrid": "Toggle Grid View",
+      "filter": {
+        "title": "Filter Beasties",
+        "clear": "Clear Filter",
+        "trait": "Trait",
+        "plays": "Plays",
+        "other": "Other",
+        "allyTraining": "Ally Training:",
+        "metamorphosis": {
+          "title": "Metamorphosis:",
+          "doesNot": "Does not Metamorph",
+          "does": "Does Metamorph",
+          "disclamer": "(Except for specific Metamorphosis types)"
+        },
+        "recentlyUpdated": {
+          "title": "Recently Updated:",
+          "playsTraitsStats": "Plays, Traits, or Stats",
+          "spritesColors": "Sprites or Colors"
+        },
+        "string": {
+          "diffTypeSep": " + ",
+          "innerTypeSep": ", ",
+          "trait": "Has Trait: ",
+          "play": "Learns Play: ",
+          "plays": "Learns Plays: ",
+          "allyTraining": "Trains Allies: ",
+          "metamorphosis": "Metamorphs: ",
+          "yes": "Yes",
+          "no": "No",
+          "recentlyUpdated": "Recently Updated: "
+        }
+      },
+      "statDisplaySeparator": " - "
+    },
+    "preview": {
+      "failed": "Beastie Preview Failed",
+      "canvasAlt": "Beastie Preview Image",
+      "options": {
+        "text": "Preview Options",
+        "open": "▼ ",
+        "closed": "▲ "
+      },
+      "animationOptions": {
+        "header": "Animation",
+        "altSpriteLabel": "Alt Sprite: ",
+        "animLabel": "Animation: ",
+        "prev": "<-",
+        "next": "->",
+        "play": "PLAY",
+        "pause": "PAUSE",
+        "frameLabel": "Frame: ",
+        "speedLabel": "Speed: x",
+        "speedReset": "Reset"
+      },
+      "color": {
+        "custom": "Custom",
+        "reset": "Reset Colors",
+        "random": "Randomize Colors",
+        "copyLink": "Copy Link with Colors",
+        "rowdyLabel": "Rowdy: ",
+        "paletteSwapLabel": "Palette Swap: ",
+        "paletteSwapModalCurrentBeastie": "Select Unset to use this Beastie's regular colors."
+      },
+      "settings": {
+        "header": "Settings",
+        "savePNG": "Save PNG",
+        "copyPNG": "Copy PNG",
+        "saveGIF": "Save GIF",
+        "gifSpeedNote": "When using a high speed, GIFs might not save the speed correctly.",
+        "displaySizeLabel": "Display Size: ",
+        "backgroundLabel": "Background: ",
+        "cropLabel": "Crop to Beastie: "
+      },
+      "anim": {
+        "idle": "Idle",
+        "move": "Move",
+        "ready": "Ready",
+        "spike": "Spike",
+        "volley": "Volley",
+        "good": "Good",
+        "bad": "Bad",
+        "fall": "Fall",
+        "air": "Air",
+        "stop": "Stop",
+        "menu": "Menu",
+        "hug": "Hug",
+        "special": "Special"
+      }
+    },
+    "info": {
+      "number": "Number",
+      "name": "Name",
+      "development": "Development",
+      "metamorphosis": {
+        "title": "Metamorphosis",
+        "fromNone": "Does not Metamorph from any Beastie",
+        "from": "Metamorphs from ",
+        "toNone": "Does not Metamorph into any Beastie",
+        "to": "Metamorphs to ",
+        "level": " at level {level}",
+        "location": " at {location}",
+        "viewInMap": "View Metamorphosis Location on the Map",
+        "relationships": " after forming {num} relationships",
+        "homeYearning": " at level {level} after fulfilling the Yearning.",
+        "homeYearningMore": "- The yearning will appear after enough trust is reached.\n- Trust is raised when the Beastie is on-field during a game.",
+        "variantRegular": " at level {level} if the Beastie has Regular colors",
+        "variantRegularRaremorph": "- or if it's a Raremorph and you're not in the Alto Alps",
+        "variantVariant": " at level {level} if the Beastie has Variant colors",
+        "variantVariantRaremorph": "- or if it's a Raremorph and you're in the Alto Alps",
+        "ancientMorePrefix": "- ",
+        "petula": " after beating {num} Petula",
+        "fallback": " idk when though",
+        "joiner": " or",
+        "spoiler": "Possible spoiler. Click to reveal."
+      },
+      "description": "Description",
+      "traits": {
+        "title": "Traits",
+        "recessive": " (recessive)",
+        "error": "Unknown Trait: {value}"
+      },
+      "statDistribution": "Stat Distribution",
+      "recruit": {
+        "title": "Recruit Condition",
+        "sponsor": "Staying Power Fitness Sponsor",
+        "noRecruit": "Cannot be recruited from the wild."
+      },
+      "allyTraining": "Ally Training",
+      "allyTrainingPlus": "+{num} ",
+      "expForLevel": "Exp for Level ",
+      "plays": {
+        "title": "Plays",
+        "fromLevels": "From Levels:",
+        "fromFriends": "From Friends:",
+        "selectedPlay": "Selected Play"
+      },
+      "combo": {
+        "title": "Combo Plays",
+        "dropdown": {
+          "rivals": "Rivals Attack",
+          "partners": "Partners Volley",
+          "support": "Bestie/Sweetheart Support",
+          "defense": "Bestie Defense"
+        },
+        "beastieCombine": "{beastie} + {friend} {type}",
+        "noFriend": "???",
+        "type": {
+          "0": "Rivals",
+          "1": "Partners",
+          "2": "Support",
+          "3": "Defense"
+        },
+        "rivalsTypeDesc": "Rivals Move type is the type with the highest total POW of both Beasties, which could change depending on coaching and training."
+      },
+      "research": {
+        "title": "Research",
+        "prev": "<Prev",
+        "next": "Next>",
+        "current": "{num}/{max}",
+        "researcher": "Researcher: ",
+        "researchers": "Researchers: ",
+        "videographer": "Videographer: ",
+        "videographers": "Videographers: ",
+        "joiner": ", "
+      },
+      "voice": {
+        "title": "Voice",
+        "hello": "Hello: ",
+        "cheer": "Cheer: ",
+        "boo": "Boo: "
+      }
+    }
+  },
+  "playdex": {
+    "title": "PlayDex",
+    "description": "List of moves/plays from Beastieball.",
+    "sort": {
+      "label": "Sort By: ",
+      "type": "Type",
+      "alphabetical": "Alphabetical",
+      "effect": "Effect",
+      "target": "Target"
+    },
+    "type": "Type: ",
+    "all": "All",
+    "effect": {
+      "label": "Effect: ",
+      "allPow": "All POW",
+      "allDef": "All DEF",
+      "useFromBack": "Usage Condition: From Back",
+      "useFromNet": "Usage Condition: From Net",
+      "useBallHittable": "Usage Condition: Ball Hittable",
+      "targetStraight": "Targets: Straight Ahead",
+      "targetFront": "Targets: Front Row",
+      "targetBack": "Targets: Back Row",
+      "targetSideways": "Targets: Sideways",
+      "targetNearest": "Targets: Nearest Opponent",
+      "feeling": "Feeling: {0}",
+      "field": "Field: {0}",
+      "move": "Shift/Move",
+      "switch": "Switch Places",
+      "healDamage": "Heal/Direct Damage",
+      "volleyTake": "Volley Ball/Take Ball",
+      "hitWithoutVolleying": "Hit Without Volleying",
+      "easyReceive": " Easy Receive",
+      "tagOut": "TAG OUT",
+      "transferBoosts": "Transfer Boosts",
+      "clearFeelings": "Clear Feelings",
+      "restore": "Restore Stamina and Feelings",
+      "clearField": "Clear Field",
+      "ignore": "Ignores Shields/Boosts/Feelings",
+      "addActions": "Add Actions",
+      "requiresActions": "Requires More Actions",
+      "wall": "BARRIER",
+      "swapTrait": "Swap Traits",
+      "basedOnDef": "Based on Target DEF",
+      "powStamina": "POW Condition: STAMINA",
+      "powTag": "POW Condition: TAGGED IN",
+      "powServe": "POW Condition: Serve",
+      "powBoost": "POW Condition: Boost",
+      "powFeeling": "POW Condition: Bad Feeling",
+      "powPoints": "POW Condition: Tied/Behind",
+      "powBack": "POW Condition: Back-row Target",
+      "powRecieved": "POW Condition: Recieved",
+      "powVolley": "POW Condition: Volley",
+      "powMoved": "POW Condition: Changed Row/Lane"
+    },
+    "favor": "Favor: ",
+    "favorNone": "None",
+    "recentlyChanged": "Recently Changed: ",
+    "settingsSep": " - "
+  },
+  "map": {
+    "title": "Map",
+    "description": "A map of the world of Beastieball",
+    "header": "Beastieball Map",
+    "markers": {
+      "title": "Markers",
+      "text": "Text",
+      "regionNames": "Region Names",
+      "areaNames": "Area Names",
+      "markers": "Markers",
+      "beastieballCenter": "Beastieball Center",
+      "railhouse": "Railhouse / Boathouse /\nCamp / Zip Station",
+      "gym": "Gym",
+      "clothes": "Clothes Shop",
+      "caves": "Caves",
+      "other": "Other",
+      "beasties": "Beasties",
+      "beastieSpawns": "Beastie Spawns",
+      "extinctUnseen": "??? Beastie Locations",
+      "extinct": "Extinct Beastie Locations",
+      "metamorphosis": "Metamorphosis Locations",
+      "encounters": "Encounters",
+      "exploration": "Exploration",
+      "insideOverlay": "Inside Overlays",
+      "items": "Items",
+      "switchesGates": "Switches and Gates"
+    },
+    "beastie": {
+      "title": "Beasties",
+      "track": "Track: ",
+      "showAll": "Show All",
+      "noWild": "Beastie has no wild habitat.",
+      "postgame": "Postgame Spawns",
+      "attractSpray": "Attract Spray",
+      "spawnRate": "{percent}%",
+      "variantChance": "Variant Chance: {percent}%",
+      "level": "Level {levels}",
+      "levelRange": "{0} - {1}"
+    },
+    "items": {
+      "title": "Items",
+      "find": "Find: ",
+      "selectHeader": "Select Item",
+      "selectButton": "Select Item: {item}",
+      "unset": "Unset"
+    },
+    "metamorphosis": {
+      "arrow": "→",
+      "sprecko": "By communing with the Mushroom Colony",
+      "troglum": "By interacting with a Bugestie"
+    },
+    "spawnLocation": "{name} spawn location.",
+    "extinctFoundHerePre": "",
+    "extinctFoundHerePost": " is found here initially.",
+    "encounterMarker": "Encounter Marker",
+    "encounterPopup": {
+      "loadingEncounters": "Loading Encounters",
+      "encounterNotFound": "Encounter not found: {encounterId}",
+      "lvl": " Lvl {level}",
+      "scalingNote": "Beastie level and metamorphosis may be higher due to scaling.",
+      "wild": "Nearby Wild Beastie",
+      "moreDetailsLink": "View more details."
+    },
+    "gate": "Gate",
+    "gateMarker": "Gate Marker",
+    "switch": "Switch",
+    "switchMarker": "Switch Marker"
+  },
+  "teams": {
+    "title": "Teams",
+    "description": "Team Viewer and Builder for Beastieball!",
+    "home": "Home",
+    "return": "{branding} Team Page",
+    "image": {
+      "imageLabel": "Image: ",
+      "drawMode": {
+        "grid": "Grid",
+        "horizontal": "Horizontal",
+        "vertical": "Vertical"
+      },
+      "save": "Save",
+      "copy": "Copy"
+    },
+    "beastie": {
+      "extra": "Vibe: {vibe}\nSize: {size}% ({scale}x)\nRecruited: {date}",
+      "lvl": " Lvl {level}",
+      "species": "({species})",
+      "maxLevel": "Max Level",
+      "expToNext": "To next level: {num}/{max} ({left} left)",
+      "openWithColors": "Open {beastie} with these colors in the Beastiepedia",
+      "statTooltip": "Coached: {coached}%\nTraining: {training}",
+      "impossibleMove": "This Beastie cannot learn this Play."
+    },
+    "viewer": {
+      "title": "Team Viewer",
+      "titleCommunity": "{team} - Team Viewer - {branding}",
+      "description": "Online Team Viewer for SportsNet download codes from Beastieball!",
+      "codeLabel": "Team Code: ",
+      "findButton": "Find",
+      "invalidCode": "Invalid Code: {code}",
+      "loadingTeam": "Loading Team...",
+      "noTeam": "No Team Loaded",
+      "atLevelLabel": "At Level ",
+      "maxCoachingLabel": "Max Coaching",
+      "teamBuilderButton": "Open in Team Builder",
+      "community": {
+        "menuHint": "View Community Teams by toggling the menu in the top left.",
+        "loading": "Loading Community Teams...",
+        "all": "All Teams",
+        "filter": {
+          "label": "Filter: ",
+          "name": "Name",
+          "author": "Author",
+          "beastie": "Beastie"
+        },
+        "add": "Want your team added? ",
+        "addLink": "Make an issue on GitHub.",
+        "issueDefaultText": "Name: Insert Team Name Here\nDescription: Insert Team Description Here\nCode: Insert Team Code Here (shared from in game)\nAuthor: Insert Author Name Here (how you'd like to be credited)",
+        "longDescSuffix": "...",
+        "longDescExpand": "V Hover / Tap to Expand V",
+        "by": "By {author}",
+        "joiner": " - ",
+        "code": "#{code}"
+      }
+    },
+    "builder": {
+      "title": "Team Builder",
+      "description": "Team Builder for Beastieball!",
+      "edit": "Edit",
+      "editing": "Editing",
+      "noBeastie": "No Beastie",
+      "swap": "⇄",
+      "scrollsHorizontally": "Team Scrolls Horizontally: ",
+      "saveJson": "Save Team JSON",
+      "loadJson": "Load Team JSON",
+      "loadError": "Invalid Team Data. Report on GitHub if you think this is incorrect.",
+      "reset": "Reset Team",
+      "savedTeams": {
+        "title": "Saved Teams",
+        "copy": "Copy",
+        "copyDesc": "Overwrites the Beastie you're currently editing.",
+        "save": "Save",
+        "saveDesc": "Saves your Current Team over this one.",
+        "load": "Load",
+        "loadDesc": "Loads this Team as your current Team.",
+        "delete": "Delete",
+        "deleteDesc": "Deletes this Team from your Saved Teams.",
+        "noTeams": "No Saved Teams",
+        "saveCurrent": "Save Current Team as New Team"
+      },
+      "species": "Species: ",
+      "level": "Level: ",
+      "trait": "Trait: ",
+      "name": "Name: ",
+      "number": "Number: ",
+      "color": "Color: ",
+      "colorCopy": "Copy from Beastiepedia",
+      "sprite": "Sprite: ",
+      "coaching": "Coaching",
+      "coachingMin": "All to 0%",
+      "coachingMax": "All to 100%",
+      "training": "Training",
+      "trainingPoint": "{num} Point Left",
+      "trainingPoints": "{num} Points Left",
+      "trainingClear": "Clear",
+      "plays": "Plays: ",
+      "playSelect": {
+        "title": "Select Play {num}",
+        "num": "Play {num}: ",
+        "unset": "Unset",
+        "type": {
+          "label": "Type: ",
+          "any": "Any"
+        },
+        "from": {
+          "label": "From: ",
+          "any": "Any",
+          "level": "Level Up",
+          "friend": "Friends"
+        }
+      },
+      "playUnset": "Unset",
+      "selectPlay": "Select Play {num}",
+      "sep": " - "
+    },
+    "encounters": {
+      "title": "Encounters",
+      "description": "View Teams from encounters in Beastieball!",
+      "encounterSelect": "Encounter: ",
+      "noneSelected": "None",
+      "scales": "Scales with {boss}: +{levels} levels",
+      "noScaling": "No scaling",
+      "defeatedBoss": "Defeated: ",
+      "resetBoss": "Reset",
+      "sep": " - ",
+      "openInBuilder": "Open in Team Builder: ",
+      "atCurrentLevels": "At Current Levels",
+      "atLevel50": "At Level 50",
+      "aiinfo": {
+        "title": "AI Info",
+        "type": "Type",
+        "value": "Multiplier / Value / Enabled",
+        "true": "True",
+        "false": "False",
+
+        "erratic": "Erraticness",
+        "damage": "Damage",
+        "point": "Free Points",
+        "stamina": "Stamina",
+        "lane": "Lane Coverage",
+        "lane_offense": "Lane Coverage (Offense only)",
+        "straight_fear": "Straight Fear",
+        "sideways_fear": "Sideways Fear",
+        "field": "Ally Field",
+        "foe_field": "Foe Field",
+        "feeling": "Ally Feelings",
+        "foe_feeling": "Foe Feelings",
+        "boosts": "Ally Boosts",
+        "foe_boosts": "Foe Boosts",
+        "blocking": "Blocking",
+        "knockout": "Ally Knockout Potential",
+        "foe_knockout": "Foe Knockout Potential",
+        "non_easy": "Non-easy Recieve Bonus",
+        "secondary": "Consider Attack Secondary Effects",
+        "tag": "Tag Penalty",
+        "usable": "Usable Attack",
+        "rowdy": "Rowdy Meter"
+      }
+    }
+  }
+}

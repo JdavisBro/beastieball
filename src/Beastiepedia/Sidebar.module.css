@@ -115,8 +115,8 @@
 
 .gridnumber {
   composes: boxHeaderBackground from global;
+  composes: numberFont from global;
   padding: 0 6px 0 6px;
-  font-family: SportsJersey, "Go Banana", sans-serif;
   color: white;
   clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 4px) 0);
   z-index: 1;

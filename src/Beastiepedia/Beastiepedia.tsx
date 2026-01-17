@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import Header from "../shared/Header";
 import Sidebar from "./Sidebar";
@@ -12,6 +12,7 @@ import CustomErrorBoundary from "../shared/CustomErrorBoundary";
 import ContentPreview from "./Preview/ContentPreview";
 import ContentInfo from "./Info/ContentInfo";
 import { useIsSpoiler } from "../shared/useSpoiler";
+import useLocalization from "../localization/useLocalization";
 
 declare global {
   interface Window {
@@ -21,19 +22,40 @@ declare global {
 }
 
 export default function Beastiepedia(): React.ReactNode {
+  const { L, getLink, beastieNames } = useLocalization();
+
   const orientation = useScreenOrientation();
   const { beastie }: { beastie?: string } = useParams();
 
   const [beastieid, beastiedata] = useMemo(() => {
-    if (beastie !== null) {
+    if (beastie) {
       for (const [key, value] of BEASTIE_DATA) {
-        if (value.name == beastie) {
+        if (
+          Object.values(
+            beastieNames[value.name.slice(1, value.name.length - 1)],
+          ).includes(beastie)
+        ) {
           return [key, value];
         }
       }
     }
     return [undefined, undefined];
-  }, [beastie]);
+  }, [beastieNames, beastie]);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!beastiedata || beastie == L(beastiedata.name)) {
+      return;
+    }
+    navigate(
+      {
+        pathname: getLink(`/beastiepedia/${L(beastiedata.name)}`),
+        hash: location.hash,
+      },
+      { replace: true },
+    );
+  }, [L, getLink, beastie, beastiedata, navigate]);
 
   const [sidebarvisible, setSidebarvisible] = useState(
     !(beastieid !== undefined && orientation),
@@ -55,24 +77,26 @@ export default function Beastiepedia(): React.ReactNode {
   window.BEASTIE_DATA = BEASTIE_DATA;
   window.beastie = beastiedata;
 
+  const pageTitle = beastiedata
+    ? L("beastiepedia.titleBeastie", { beastie: L(beastiedata.name) })
+    : L("beastiepedia.title");
+
   return (
     <div className={styles.container}>
       <OpenGraph
-        title={beastiedata ? `${beastie} - Beastiepedia` : "Beastiepedia"}
+        title={pageTitle}
         image={
           beastiedata
-            ? `icons/${beastiedata.name}.png`
+            ? `icons/${L(beastiedata.name, undefined, true)}.png`
             : "gameassets/sprMainmenu/0.png" // beastiepedia icon
         }
-        url={beastiedata ? `beastiepedia/${beastiedata.name}` : `beastiepedia/`}
+        url={beastiedata ? `beastiepedia/${beastie}` : `beastiepedia/`}
         description={
-          beastiedata
-            ? beastiedata.desc
-            : "View information and previews of the Beasties from Beastieball!"
+          beastiedata ? L(beastiedata.desc) : L("beastiepedia.description")
         }
       />
       <Header
-        title={(beastie ? `${beastie} - ` : "") + "Beastiepedia"}
+        title={pageTitle}
         menuButton={true}
         menuButtonState={sidebarvisible}
         onMenuButtonPressed={() => setSidebarvisible((visible) => !visible)}
@@ -104,12 +128,11 @@ export default function Beastiepedia(): React.ReactNode {
               </>
             ) : (
               <h1 className={styles.notselectedtext}>
-                No Beastie Selected
+                {L("beastiepedia.noBeastie.text")}
                 <br />
                 {sidebarvisible
-                  ? "Select a beastie in the sidebar"
-                  : "Select a beastie by toggling the menu in the top left"}
-                .
+                  ? L("beastiepedia.noBeastie.menuEnabled")
+                  : L("beastiepedia.noBeastie.menuDisabled")}
               </h1>
             )}
           </div>

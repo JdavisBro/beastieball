@@ -5,11 +5,14 @@ import styles from "./Events.module.css";
 import { useGameData } from "./useGameData";
 import BigmoonBlock from "./Bigmoon";
 import Carousel from "./Carousel";
+import useLocalization from "../localization/useLocalization";
 import { useLocalStorage } from "usehooks-ts";
 
 const OLD_DAYS = 1;
 
 export default function Events() {
+  const { L } = useLocalization();
+
   const [open, setOpen] = useLocalStorage("eventsOpen", true);
 
   const [bigmoonData, bigmoonReload] = useGameData<EventResponse>(
@@ -50,7 +53,7 @@ export default function Events() {
           onClick={() => setOpen(!open)}
           tabIndex={0}
         >
-          Events/News
+          {L("events.title")}
         </div>
         <div className={open ? styles.openBox : styles.closedBox}>
           {open ? (

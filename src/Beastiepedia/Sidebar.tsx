@@ -11,6 +11,7 @@ import Filter, {
 import { useIsSpoiler } from "../shared/useSpoiler";
 import { useNavigate } from "react-router-dom";
 import { SORT_CATEGORIES } from "./sortCategories";
+import useLocalization from "../localization/useLocalization";
 
 const BEASTIES = [...BEASTIE_DATA.values()];
 
@@ -20,6 +21,7 @@ type Props = {
 };
 
 export default function Sidebar(props: Props): React.ReactElement {
+  const { getLink, L } = useLocalization();
   const beastieid = props.beastieid;
 
   const [search, setSearch] = useState("");
@@ -29,9 +31,9 @@ export default function Sidebar(props: Props): React.ReactElement {
   const sortMult = sortDec ? -1 : 1;
   const sortFunc: (beastie1: BeastieType, beastie2: BeastieType) => number =
     sort.compare
-      ? (beastie1, beastie2) => sort.compare(beastie1, beastie2) * sortMult
+      ? (beastie1, beastie2) => sort.compare(beastie1, beastie2, L) * sortMult
       : (beastie1, beastie2) =>
-          (sort.value(beastie1) - sort.value(beastie2)) * sortMult ||
+          (sort.value(beastie1, L) - sort.value(beastie2, L)) * sortMult ||
           beastie1.number - beastie2.number;
   const [grid, setGrid] = useLocalStorage("beastiepediaGrid", false);
 
@@ -46,9 +48,9 @@ export default function Sidebar(props: Props): React.ReactElement {
   const handleSpoiler = useCallback(
     (beastieId: string, name: string) => {
       setSeen(beastieId);
-      navigate(`/beastiepedia/${name}`);
+      navigate(getLink(`/beastiepedia/${name}`));
     },
-    [setSeen, navigate],
+    [setSeen, navigate, getLink],
   );
 
   return (
@@ -57,7 +59,7 @@ export default function Sidebar(props: Props): React.ReactElement {
         <div className={styles.controls}>
           <input
             type="search"
-            placeholder="Search Beasties.."
+            placeholder={L("beastiepedia.sidebar.search")}
             className={styles.sidebarsearch}
             onChange={(event) => setSearch(event.currentTarget.value)}
             onFocus={(event) => event.currentTarget.select()}
@@ -74,18 +76,20 @@ export default function Sidebar(props: Props): React.ReactElement {
           >
             {SORT_CATEGORIES.map((sort) => (
               <option key={sort.name} value={sort.name}>
-                {sort.name}
+                {L("beastiepedia.sidebar.sort." + sort.name)}
               </option>
             ))}
           </select>
           <button onClick={() => setSortDec(!sortDec)}>
-            {sortDec ? "↓" : "↑"}
+            {sortDec
+              ? L("beastiepedia.sidebar.sort.descending")
+              : L("beastiepedia.sidebar.sort.ascending")}
           </button>
           <Filter filters={filters} setFilters={setFilters} />
           <div
             className={grid ? styles.gridimage : styles.gridimageGrid}
             tabIndex={0}
-            title="Toggle Grid View"
+            title={L("beastiepedia.sidebar.toggleGrid")}
             role="button"
             onClick={() => setGrid(!grid)}
             onKeyDown={(event) => {
@@ -96,7 +100,7 @@ export default function Sidebar(props: Props): React.ReactElement {
           />
         </div>
         <div className={styles.filterText}>
-          {filters ? createFilterString(filters) : null}
+          {filters ? createFilterString(filters, L) : null}
         </div>
       </div>
       <div
@@ -108,11 +112,13 @@ export default function Sidebar(props: Props): React.ReactElement {
             beastieid={beastie.id}
             beastiedata={beastie}
             statDisplay={
-              sort.display ? sort.display(beastie, grid) : sort.value(beastie)
+              sort.display
+                ? sort.display(beastie, grid, L)
+                : sort.value(beastie, L)
             }
             selected={beastieid == beastie.id}
             visible={
-              beastie.name.toLowerCase().includes(search.toLowerCase()) &&
+              L(beastie.name).toLowerCase().includes(search.toLowerCase()) &&
               (!filterFunc || filterFunc(beastie))
             }
             isSpoiler={isSpoiler(beastie.id)}

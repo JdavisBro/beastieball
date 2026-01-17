@@ -27,7 +27,7 @@ const TARGET_STRINGS: Record<number, string> = {
   9: "movedefine_041", // nearest enemy
   10: "movedefine_051", // front row active team
   11: "movedefine_034", // active team
-  12: "target and self",
+  12: "movedefine_052", // target and self
 };
 
 const ALT_TARGET_STRINGS: Record<number, string> = {
@@ -63,6 +63,7 @@ const FEELING_EFF_MAP: Record<number, [string, string, string]> = {
   29: ["[sprStatus,10]", "statuseffectstuff_011", "statuseffectstuff_024"],
   38: ["[sprStatus,11]", "statuseffectstuff_012", "statuseffectstuff_025"],
   39: ["[sprStatus,12]", "statuseffectstuff_013", "statuseffectstuff_026"],
+  80: ["[sprStatus,18]", "statuseffectstuff_029", "statuseffectstuff_030"],
 };
 
 function getEffectString(
@@ -126,7 +127,8 @@ function getEffectString(
     case 27:
     case 29:
     case 38:
-    case 39: {
+    case 39:
+    case 80: {
       const [im, nameKey, descKey] = FEELING_EFF_MAP[Math.abs(effect.eff)];
       const feelingText = `${im}${L(nameKey)} ${L(descKey)}`;
       const feelTarget = target[0].toUpperCase() + target.slice(1);
@@ -278,6 +280,7 @@ function getEffectString(
             "0": "[sprStatus,6]" + L("statuseffectstuff_007"),
             "1": "[sprStatus,0]" + L("statuseffectstuff_001"),
             "2": "[sprStatus,11]" + L("statuseffectstuff_012"),
+            "3": "[sprStatus,18]" + L("statuseffectstuff_029"),
           });
         case 13:
           return L("movedefine_descadd_068", { "0": "2" });
@@ -322,6 +325,7 @@ function getEffectString(
         case 31:
           return L("movedefine_descadd_100", {
             "0": "[sprStatus,8]" + L("statuseffectstuff_009"),
+            "1": "1.5",
           });
         case 32:
           return L("movedefine_descadd_104", { "0": "¾" });
@@ -357,7 +361,7 @@ function getEffectString(
           "1":
             effect.eff == 42
               ? L("fieldeffectstuff_008", { "1": "8" })
-              : L("fieldeffectstuff_007", { "1": "+15", "2": "¾" }),
+              : L("fieldeffectstuff_007", { "3": "15", "2": "¾" }),
         }),
       });
     case 44:
@@ -453,8 +457,6 @@ function getEffectString(
         "1": boost,
         target: target,
       });
-    case 80:
-      return `${feels} ${effect.pow} [sprStatus,18]WEEPY (ignores BOOSTs)${dot}`;
     case 81:
       return L("movedefine_descadd_098", { target: target });
     case 82:
@@ -473,19 +475,23 @@ function getEffectString(
     case 85:
       return L("movedefine_descadd_105");
     case 86:
-      return L("movedefine_descadd_106");
+      return L("movedefine_descadd_106", { "0": String(effect.pow) });
     case 87:
       return "";
     case 88:
       return L("movedefine_descadd_103", { "0": String(effect.pow) });
     case 89: {
       const ability = abilities[effect.pow];
-      return `${targetStart} trait changes to ${ability.name} (${ability.desc})`;
+      return L("movedefine_descadd_108", {
+        Target: target[0].toUpperCase() + target.slice(1),
+        "0": L(ability.name),
+        "1": L(ability.desc),
+      });
     }
     case 90:
-      return "If successful:";
+      return L("movedefine_053");
     case 91:
-      return "Ignores Traits.";
+      return L("movedefine_descadd_109");
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

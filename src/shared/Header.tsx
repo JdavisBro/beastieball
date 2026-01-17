@@ -58,7 +58,9 @@ export default function Header(props: Props): React.ReactNode {
           {props.title}
         </div>
         <div className={styles.externallinkcontainer}>
-          {props.secretPage ? <Link to="/secrets/">Secret</Link> : null}
+          {props.secretPage ? (
+            <Link to="/secrets/">{L("secrets.single")}</Link>
+          ) : null}
           <NavIcons />
         </div>
       </div>

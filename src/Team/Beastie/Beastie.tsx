@@ -24,14 +24,6 @@ const altSearchMap: { [key: number]: string } = {
   3: "alt",
 };
 
-const DATETIME_FORMATTER: Intl.DateTimeFormat = new Intl.DateTimeFormat(
-  undefined,
-  {
-    dateStyle: "medium",
-    timeStyle: "short",
-  },
-);
-
 export default function Beastie({
   teamBeastie,
   levelOverwrite,
@@ -43,7 +35,7 @@ export default function Beastie({
   maxCoaching?: boolean;
   noMoveWarning?: boolean;
 }) {
-  const { L, getLink } = useLocalization();
+  const { L, getLink, currentLanguage } = useLocalization();
 
   const beastiedata = BEASTIE_DATA.get(teamBeastie.specie);
   if (!beastiedata) {
@@ -74,15 +66,35 @@ export default function Beastie({
 
   const beastieName = L(beastiedata.name);
 
+  const datetime_formatter = new Intl.DateTimeFormat(
+    navigator.language.startsWith(currentLanguage)
+      ? undefined
+      : currentLanguage,
+    {
+      dateStyle: "medium",
+      timeStyle: "short",
+    },
+  );
+
   return (
     <div className={styles.beastie}>
       <div className={styles.row}>
         <div className={styles.column}>
           <span
             className={styles.name}
-            title={`Vibe: ${VIBES[teamBeastie.vibe] ?? "???"}
-Size: ${Math.round(teamBeastie.scale * 10000) / 100}% (${Math.round((beastiedata.scale[0] + (beastiedata.scale[1] - beastiedata.scale[0]) * teamBeastie.scale) * 1000) / 1000}x)
-Recruited: ${DATETIME_FORMATTER.format(parseDate(teamBeastie.date))}`}
+            title={L("teams.beastie.extra", {
+              vibe: L(VIBES[teamBeastie.vibe] ?? "???"),
+              size: String(Math.round(teamBeastie.scale * 10000) / 100),
+              scale: String(
+                Math.round(
+                  (beastiedata.scale[0] +
+                    (beastiedata.scale[1] - beastiedata.scale[0]) *
+                      teamBeastie.scale) *
+                    1000,
+                ) / 1000,
+              ),
+              date: datetime_formatter.format(parseDate(teamBeastie.date)),
+            })}
           >
             {teamBeastie.name || beastieName}
             <span className={styles.number}>#{teamBeastie.number}</span>

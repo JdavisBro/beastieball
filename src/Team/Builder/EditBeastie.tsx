@@ -47,7 +47,7 @@ export function BeastieDoesntExist({
   return (
     <Box>
       <label>
-        {L("teams.builder.speciess")}
+        {L("teams.builder.species")}
         <BeastieSelect
           beastieId={undefined}
           setBeastieId={(beastieId) => {
@@ -310,8 +310,8 @@ export default function EditBeastie({
                     3 *
                     newBeastie.growth,
                 );
-                if (beastie.name == beastiedata.name) {
-                  changeValue("name", newBeastie.name);
+                if (beastie.name == L(beastiedata.name)) {
+                  changeValue("name", L(newBeastie.name));
                 }
                 changeValue(
                   "attklist",

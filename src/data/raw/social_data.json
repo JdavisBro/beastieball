@@ -169,7 +169,7 @@
       "protect",
       "rush",
       "cover",
-      "pipe",
+      "allycover",
       "allyrush",
       "juggle",
       "freeball"
@@ -412,7 +412,7 @@
       "rest",
       "mindpass",
       "dropshot",
-      "chillout",
+      "chill",
       "meditate",
       "mindup",
       "moon",
@@ -769,7 +769,7 @@
             "needscheck": true,
             "value": 1
           },
-          "type": [1]
+          "type": [2]
         },
         "rankup": false
       },
@@ -832,7 +832,7 @@
             "needscheck": true,
             "value": 8
           },
-          "type": [4]
+          "type": [2]
         },
         "rankup": true
       },
@@ -841,7 +841,7 @@
         "collides": true,
         "cost": 1,
         "dest_level": "sphinx",
-        "dest_object": "@ref object(objBallcenter)",
+        "dest_object": "@ref object(objAcademymarker)",
         "id": "rematch",
         "parent": null,
         "prereq": { "field": 0, "type": [0] },
@@ -932,16 +932,27 @@
         "id": "final",
         "parent": null,
         "prereq": {
-          "field": {
-            "comparison": 5,
-            "editor_openable": false,
-            "key": "crown_series",
-            "lastcheck": null,
-            "name": "datacheck",
-            "needscheck": true,
-            "value": 8
-          },
-          "type": [2, 4]
+          "field": [
+            {
+              "comparison": 5,
+              "editor_openable": false,
+              "key": "crown_series",
+              "lastcheck": null,
+              "name": "datacheck",
+              "needscheck": true,
+              "value": 8
+            },
+            {
+              "comparison": 1,
+              "editor_openable": false,
+              "key": "callisto_locked",
+              "lastcheck": null,
+              "name": "datacheck",
+              "needscheck": true,
+              "value": 1
+            }
+          ],
+          "type": [2, 5, 4]
         },
         "rankup": false
       },
@@ -961,7 +972,7 @@
     "img": 0,
     "loneliness": 0.9,
     "max_hearts": 6,
-    "name": "socialssetup_classsocial_008",
+    "name": "¦socialssetup_classsocial_008¦",
     "object": "@ref object(objHeadmaster)",
     "plays": [
       "careful",
@@ -1087,7 +1098,7 @@
       "skillswap",
       "taunt",
       "dispel",
-      "introduce",
+      "introduction",
       "noisytag"
     ],
     "spr": "sprStreamer"
@@ -1183,7 +1194,7 @@
     "img": 11,
     "loneliness": 0.9,
     "max_hearts": 1,
-    "name": "socialssetup_classsocial_011",
+    "name": "¦socialssetup_classsocial_011¦",
     "object": "@ref object(objValerie)",
     "plays": [],
     "spr": "sprValerie"
@@ -1206,7 +1217,7 @@
     "img": 4,
     "loneliness": 0.6,
     "max_hearts": 1,
-    "name": "socialssetup_classsocial_012",
+    "name": "¦socialssetup_classsocial_012¦",
     "object": "@ref object(objKing)",
     "plays": [],
     "spr": "sprKing"

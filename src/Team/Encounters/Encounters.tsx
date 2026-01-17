@@ -100,7 +100,7 @@ export default function Encounters() {
         )
       : 0;
 
-  const bossSep = L("teams.encounters.bossSep");
+  const sep = L("teams.encounters.sep");
 
   const scalesBossKey = encounter
     ? BOSSES_MAP[
@@ -125,6 +125,7 @@ export default function Encounters() {
           forceLevel ?? encBeastie.level + bonus_levels,
           encounter.id,
           index,
+          L,
         ),
       );
     localStorage.setItem("teamBuilderTeam", JSON.stringify(team));
@@ -192,7 +193,7 @@ export default function Encounters() {
         <span className={styles.bosses}>
           {DEFEATABLE_BOSSES.map((bossId, index) => (
             <>
-              {index == 0 ? null : bossSep}
+              {index == 0 ? null : sep}
               <label key={bossId}>
                 <input
                   type="checkbox"
@@ -210,7 +211,7 @@ export default function Encounters() {
               </label>
             </>
           ))}
-          {bossSep}
+          {sep}
           <button onClick={() => setBossesDefeated({ redd: true })}>
             {L("teams.encounters.resetBoss")}
           </button>
@@ -234,19 +235,19 @@ export default function Encounters() {
         </MoveModalProvider>
       </div>
       <div className={styles.box}>
-        Open in Team Builder:{" "}
+        {L("teams.encounters.openInBuilder")}
         <button
           disabled={openInBuilderDisabled}
           onClick={() => openTeamInBuilder()}
         >
-          At Current Levels
+          {L("teams.encounters.atCurrentLevels")}
         </button>
-        {" - "}
+        {sep}
         <button
           disabled={openInBuilderDisabled}
           onClick={() => openTeamInBuilder(50)}
         >
-          At Level 50
+          {L("teams.encounters.atLevel50")}
         </button>
       </div>
     </>

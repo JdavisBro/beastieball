@@ -85,9 +85,11 @@ function NoBeastie({
   setBeastieId: (beastieId: string | undefined) => void;
   index: number;
 }) {
+  const { L } = useLocalization();
+
   return (
     <div className={styles.noBeastie}>
-      No Beastie
+      {L("teams.builder.noBeastie")}
       <BeastieSelect
         beastieId={undefined}
         setBeastieId={setBeastieId}
@@ -157,7 +159,7 @@ export default function TeamBuilder() {
                           if (beastieId) {
                             setBeastie(
                               index,
-                              createBeastie(`0${index + 1}`, beastieId),
+                              createBeastie(`0${index + 1}`, beastieId, L),
                             );
                             setEditingBeastie(index);
                           }
@@ -220,9 +222,7 @@ export default function TeamBuilder() {
                       files[0].text().then((text) => {
                         const newteam = JSON.parse(text);
                         if (!verifyTeamJson(newteam)) {
-                          window.alert(
-                            "Invalid Team Data. Report on GitHub if you think this is incorrect.",
-                          );
+                          window.alert(L("teams.builder.loadError"));
                           return;
                         }
                         setTeam(
@@ -272,7 +272,7 @@ export default function TeamBuilder() {
                     typeof beastie == "function"
                       ? team[editingBeastie]
                         ? beastie(team[editingBeastie])
-                        : createBeastie("01")
+                        : createBeastie("01", undefined, L)
                       : beastie,
                   )
                 }
@@ -282,7 +282,7 @@ export default function TeamBuilder() {
                 changeBeastieId={(beastieId) =>
                   setBeastie(
                     editingBeastie,
-                    createBeastie(`0${editingBeastie}`, beastieId),
+                    createBeastie(`0${editingBeastie}`, beastieId, L),
                   )
                 }
               />

@@ -226,8 +226,8 @@ export default function PlayDex() {
             {char_list.map((friend) => (
               <option key={friend.id} value={friend.id}>
                 {isSpoilerFriend(friend.id)
-                  ? friend.name.slice(0, 2) + "..."
-                  : friend.name}
+                  ? L(friend.name).slice(0, 2) + "..."
+                  : L(friend.name)}
               </option>
             ))}
           </select>

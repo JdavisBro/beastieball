@@ -73,7 +73,7 @@ export default function MoveSelect({
   return (
     <div className={styles.box}>
       <Modal
-        header={L("teams.builder.selectPlay", {
+        header={L("teams.builder.playSelect.title", {
           num: String((selecting ?? 0) + 1),
         })}
         open={selecting !== undefined}
@@ -83,34 +83,42 @@ export default function MoveSelect({
         <div className={styles.moveSelectModal}>
           <div>
             <label>
-              Type:{" "}
+              {L("teams.builder.playSelect.type.label")}
               <select
                 value={filterType}
                 onChange={(event) =>
                   setFilterType(Number(event.currentTarget.value))
                 }
               >
-                <option value={-1}>Any</option>
-                <option value={0}>Body</option>
-                <option value={1}>Spirit</option>
-                <option value={2}>Mind</option>
-                <option value={3}>Volley</option>
-                <option value={4}>Support</option>
-                <option value={5}>Defense</option>
+                <option value={-1}>
+                  {L("teams.builder.playSelect.type.any")}
+                </option>
+                <option value={0}>{L("common.types.body")}</option>
+                <option value={1}>{L("common.types.spirit")}</option>
+                <option value={2}>{L("common.types.mind")}</option>
+                <option value={3}>{L("common.types.volley")}</option>
+                <option value={4}>{L("common.types.support")}</option>
+                <option value={5}>{L("common.types.defense")}</option>
               </select>
             </label>
-            {" - "}
+            {L("teams.builder.sep")}
             <label>
-              From:{" "}
+              {L("teams.builder.playSelect.from.label")}
               <select
                 value={filterMode}
                 onChange={(event) =>
                   setFilterMode(Number(event.currentTarget.value))
                 }
               >
-                <option value={MoveFilterMode.None}>Any</option>
-                <option value={MoveFilterMode.Level}>Level Up</option>
-                <option value={MoveFilterMode.Friend}>Friends</option>
+                <option value={MoveFilterMode.None}>
+                  {L("teams.builder.playSelect.from.any")}
+                </option>
+                <option value={MoveFilterMode.Level}>
+                  {L("teams.builder.playSelect.from.level")}
+                </option>
+                <option value={MoveFilterMode.Friend}>
+                  {L("teams.builder.playSelect.from.friend")}
+                </option>
               </select>
             </label>
           </div>
@@ -129,22 +137,22 @@ export default function MoveSelect({
       </Modal>
       {L("teams.builder.plays")}
       <button onClick={() => setSelecting(0)}>
-        {L("teams.builder.playNum", { num: "1" })}
+        {L("teams.builder.playSelect.num", { num: "1" })}
         {MOVE_DIC[teamBeastieMovelist[0]]
           ? L(MOVE_DIC[teamBeastieMovelist[0]].name)
-          : L("teams.builder.playUnset")}
+          : L("teams.builder.playSelect.unset")}
       </button>
       <button onClick={() => setSelecting(1)}>
-        {L("teams.builder.playNum", { num: "2" })}
+        {L("teams.builder.playSelect.num", { num: "2" })}
         {MOVE_DIC[teamBeastieMovelist[1]]
           ? L(MOVE_DIC[teamBeastieMovelist[1]].name)
-          : L("teams.builder.playUnset")}
+          : L("teams.builder.playSelect.unset")}
       </button>
       <button onClick={() => setSelecting(2)}>
-        {L("teams.builder.playNum", { num: "3" })}
+        {L("teams.builder.playSelect.num", { num: "3" })}
         {MOVE_DIC[teamBeastieMovelist[2]]
           ? L(MOVE_DIC[teamBeastieMovelist[2]].name)
-          : L("teams.builder.playUnset")}
+          : L("teams.builder.playSelect.unset")}
       </button>
     </div>
   );

@@ -160,20 +160,24 @@ export default function BeastieSelect({
                 value={search}
               />
             </label>
-            {" - "}
+            {L("common.beastieSelect.sep")}
             <label>
-              Filter:{" "}
+              {L("common.beastieSelect.filter")}
               <select
                 value={filterMode}
                 onChange={(event) =>
                   setFilterMode(Number(event.currentTarget.value))
                 }
               >
-                <option value={FilterMode.None}>None</option>
-                <option value={FilterMode.NoMetamorph}>
-                  Can not Metamorph
+                <option value={FilterMode.None}>
+                  {L("common.beastieSelect.none")}
                 </option>
-                <option value={FilterMode.Metamorphs}>Can Metamorph</option>
+                <option value={FilterMode.NoMetamorph}>
+                  {L("common.beastieSelect.noMetamorph")}
+                </option>
+                <option value={FilterMode.Metamorphs}>
+                  {L("common.beastieSelect.metamorph")}
+                </option>
               </select>
             </label>
           </div>

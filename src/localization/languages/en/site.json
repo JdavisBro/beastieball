@@ -78,7 +78,12 @@
     "beastieSelect": {
       "title": "Select Beastie",
       "label": "Select Beastie: {beastie}",
-      "unset": "Unset"
+      "unset": "Unset",
+      "sep": " - ",
+      "filter": "Filter: ",
+      "none": "None",
+      "metamorph": "Can Metamorph",
+      "noMetamorph": "Can not Metamorph"
     },
     "moveView": {
       "learnedFriend": "Learned from {friend} at {hearts} hearts.",
@@ -110,6 +115,14 @@
     "spoilers": "{branding} will also contain spoilers for the full game, in order to avoid spoilers you can set to only show beasties/characters you've clicked on. All other beasties/characters will have images and names hidden until you click on them.",
     "confirm": "Confirm"
   },
+  "secrets": {
+    "title": "Secrets",
+    "single": "Secret",
+    "disclamer": "Secrets enables viewing of information that is unused and may appear in the game in future, any of this information should not be talked about in official Wishes Unlimited channels.",
+    "label": "Secrets: ",
+    "beastiepedia": "Beastiepedia\nUnused Animations",
+    "map": "Map\nEncounter Locations"
+  },
   "events": {
     "title": "Events/News",
     "bigmoon": "Bigmoon Bash",
@@ -118,6 +131,7 @@
     "bannedSep": ", ",
     "bannedSuffix": " banned",
     "noEvent": " No Event ",
+    "experimental": "View the 🧪experimental site.",
     "checkForUpdate": "Check for Update",
     "from": "From: {date}",
     "until": "Until: {date}",
@@ -378,7 +392,7 @@
       "ignore": "Ignores Shields/Boosts/Feelings",
       "addActions": "Add Actions",
       "requiresActions": "Requires More Actions",
-      "wall": "Wall",
+      "wall": "BARRIER",
       "swapTrait": "Swap Traits",
       "basedOnDef": "Based on Target DEF",
       "powStamina": "POW Condition: STAMINA",
@@ -481,6 +495,7 @@
       "copy": "Copy"
     },
     "beastie": {
+      "extra": "Vibe: {vibe}\nSize: {size}% ({scale}x)\nRecruited: {date}",
       "lvl": " Lvl {level}",
       "species": "({species})",
       "maxLevel": "Max Level",
@@ -526,10 +541,12 @@
       "description": "Team Builder for Beastieball!",
       "edit": "Edit",
       "editing": "Editing",
+      "noBeastie": "No Beastie",
       "swap": "⇄",
       "scrollsHorizontally": "Team Scrolls Horizontally: ",
       "saveJson": "Save Team JSON",
       "loadJson": "Load Team JSON",
+      "loadError": "Invalid Team Data. Report on GitHub if you think this is incorrect.",
       "reset": "Reset Team",
       "savedTeams": {
         "title": "Saved Teams",
@@ -560,7 +577,21 @@
       "trainingPoints": "{num} Points Left",
       "trainingClear": "Clear",
       "plays": "Plays: ",
-      "playNum": "Play {num}: ",
+      "playSelect": {
+        "title": "Select Play {num}",
+        "num": "Play {num}: ",
+        "unset": "Unset",
+        "type": {
+          "label": "Type: ",
+          "any": "Any"
+        },
+        "from": {
+          "label": "From: ",
+          "any": "Any",
+          "level": "Level Up",
+          "friend": "Friends"
+        }
+      },
       "playUnset": "Unset",
       "selectPlay": "Select Play {num}",
       "sep": " - "
@@ -574,7 +605,40 @@
       "noScaling": "No scaling",
       "defeatedBoss": "Defeated: ",
       "resetBoss": "Reset",
-      "bossSep": " - "
+      "sep": " - ",
+      "openInBuilder": "Open in Team Builder: ",
+      "atCurrentLevels": "At Current Levels",
+      "atLevel50": "At Level 50",
+      "aiinfo": {
+        "title": "AI Info",
+        "type": "Type",
+        "value": "Multiplier / Value / Enabled",
+        "true": "True",
+        "false": "False",
+
+        "erratic": "Erraticness",
+        "damage": "Damage",
+        "point": "Free Points",
+        "stamina": "Stamina",
+        "lane": "Lane Coverage",
+        "lane_offense": "Lane Coverage (Offense only)",
+        "straight_fear": "Straight Fear",
+        "sideways_fear": "Sideways Fear",
+        "field": "Ally Field",
+        "foe_field": "Foe Field",
+        "feeling": "Ally Feelings",
+        "foe_feeling": "Foe Feelings",
+        "boosts": "Ally Boosts",
+        "foe_boosts": "Foe Boosts",
+        "blocking": "Blocking",
+        "knockout": "Ally Knockout Potential",
+        "foe_knockout": "Foe Knockout Potential",
+        "non_easy": "Non-easy Recieve Bonus",
+        "secondary": "Consider Attack Secondary Effects",
+        "tag": "Tag Penalty",
+        "usable": "Usable Attack",
+        "rowdy": "Rowdy Meter"
+      }
     }
   }
 }

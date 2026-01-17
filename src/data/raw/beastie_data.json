@@ -3,8 +3,8 @@
     "ability": ["notag"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": 14,
     "attklist": [
       "lockon",
       "stun",
@@ -16,7 +16,6 @@
       "tool",
       "moon",
       "freeball",
-      "mindpass",
       "refresh",
       "teleport",
       "meditate",
@@ -32,7 +31,7 @@
     ],
     "attklist_randomize": -1,
     "ba": 33,
-    "base_exp": 193.67,
+    "base_exp": 191.744,
     "bd": 73,
     "body_color_index": 0,
     "codename": "c49afea3aa4dc321d7cdb2330c6d82ab979510af",
@@ -64,11 +63,11 @@
     "combos": [
       [50, 0, 0.65, 70, 5, 2],
       [2, 1, 1, 8, 1, 0.15],
-      [20, 1, 1, 2, 1, 1],
+      [20, 1, 2, 2, 1, 1],
       [2, 2, 1, 5, 2, 1, 4, 2, 1]
     ],
     "desc": "¦beastiesetup_desc_038¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -92,7 +91,7 @@
     "learnset": [
       [0, "mindbomb"],
       [0, "lockon"],
-      [10, "mindpass"],
+      [10, "mark"],
       [14, "dropshot"],
       [20, "meditate"],
       [25, "taunt"],
@@ -118,7 +117,7 @@
       "hop_wobble": 0,
       "move_accel": 0.1,
       "move_decel": 0.6,
-      "move_pause_frames": [],
+      "move_pause_frames": [19],
       "move_speed": 1,
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
@@ -131,7 +130,7 @@
       "stretchiness": 0
     },
     "ma": 88,
-    "md": 49,
+    "md": 46,
     "name": "¦beastiesetup_name_038¦",
     "number": 38,
     "palettes": 1,
@@ -189,7 +188,7 @@
       "seeking_interact": false
     },
     "roguelvl": -1,
-    "scale": [0.85, 1],
+    "scale": [0.901, 1.06],
     "shiny": [
       {
         "array": [
@@ -224,8 +223,8 @@
     "ability": ["notag"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 60,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": 11,
     "attklist": [
       "lockon",
       "stun",
@@ -237,7 +236,6 @@
       "tool",
       "moon",
       "freeball",
-      "mindpass",
       "refresh",
       "teleport",
       "meditate",
@@ -292,11 +290,11 @@
     "combos": [
       [50, 0, 0.65, 70, 5, 2],
       [2, 1, 1, 8, 1, 0.15],
-      [20, 1, 1, 2, 1, 1],
+      [20, 1, 2, 2, 1, 1],
       [2, 2, 1, 5, 2, 1, 4, 2, 1]
     ],
     "desc": "¦beastiesetup_desc_037¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -320,7 +318,7 @@
     "learnset": [
       [0, "mindbomb"],
       [0, "lockon"],
-      [7, "mindpass"],
+      [7, "mark"],
       [11, "dropshot"],
       [17, "meditate"],
       [22, "taunt"],
@@ -334,7 +332,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 74.25,
+      "char_width": 100,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -450,7 +448,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "careful",
@@ -480,7 +478,7 @@
       "lifepass"
     ],
     "attklist_randomize": -1,
-    "ba": 74,
+    "ba": 79,
     "base_exp": 177.276,
     "bd": 50,
     "body_color_index": 0,
@@ -543,7 +541,7 @@
       [26, 2, 1, 8, 2, 0.15]
     ],
     "desc": "¦beastiesetup_desc_087¦",
-    "designer": 4,
+    "designer": 5,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -558,7 +556,7 @@
     "foot_size": 77,
     "foot_type": 0,
     "growth": 1.02,
-    "ha": 98,
+    "ha": 93,
     "hd": 90,
     "hidden": false,
     "hidden_counter": null,
@@ -741,8 +739,8 @@
     "ability": ["regenerator"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 60,
-    "animator": 10,
+    "anim_progress": 100,
+    "animator": [14, 11],
     "attklist": [
       "starterheart",
       "careful",
@@ -814,7 +812,7 @@
       [26, 2, 1, 8, 2, 0.15]
     ],
     "desc": "¦beastiesetup_desc_086¦",
-    "designer": 4,
+    "designer": 5,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -862,13 +860,15 @@
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 5,
-      "move_accel": 0.4444444444,
+      "move_accel": 0.4,
       "move_decel": 0.6666666667,
-      "move_pause_frames": [],
-      "move_speed": 1,
+      "move_pause_frames": [28, 34, 8],
+      "move_speed": 1.1,
       "move_speed_start": 0,
-      "move_to_idle_transition_anim": "",
-      "move_to_idle_transition_frames": [],
+      "move_to_idle_transition_anim": "stop",
+      "move_to_idle_transition_frames": [
+        12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 31, 25, 30, 36
+      ],
       "offset_freq": 2000,
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
@@ -963,7 +963,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "storedpower",
       "sensihit",
@@ -989,7 +989,8 @@
       "shakeoff",
       "bomb",
       "flatten",
-      "wall"
+      "wall",
+      "bolt"
     ],
     "attklist_randomize": -1,
     "ba": 89,
@@ -1029,7 +1030,7 @@
       [52, 1, 1, 8, 1, 0.5]
     ],
     "desc": "¦beastiesetup_desc_099¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -1058,7 +1059,7 @@
       [17, "refresh"],
       [21, "blockattack"],
       [26, "haze"],
-      [32, "thunder"],
+      [32, "bolt"],
       [36, "libero"],
       [41, "whirlwind"],
       [47, "hyperbeam"]
@@ -1112,16 +1113,16 @@
     },
     "recruit_value": 3.05,
     "roamer_style": {
-      "_name": "STOP_AND_STARE",
+      "_name": "FLOAT",
       "can_react": true,
-      "can_socialize": true,
+      "can_socialize": false,
       "can_volley": true,
       "cancel_on_player_invincible": false,
       "checking_player_distance": true,
       "colliding": false,
-      "default_locomote": true,
-      "default_physics": true,
-      "flying": false,
+      "default_locomote": false,
+      "default_physics": false,
+      "flying": true,
       "interact_force": false,
       "render_go_direction": false,
       "render_guard_radius": false,
@@ -1164,7 +1165,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "jazzpass",
       "lifedew",
@@ -1228,7 +1229,7 @@
       [8, 0, -0.34, 56, 2, 0]
     ],
     "desc": "¦beastiesetup_desc_034¦",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -1376,7 +1377,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 20,
-    "animator": 10,
+    "animator": 0,
     "attklist": [
       "jazzpass",
       "lifedew",
@@ -1442,7 +1443,7 @@
       [8, 0, -0.34, 56, 2, 0]
     ],
     "desc": "¦beastiesetup_desc_102¦",
-    "designer": 11,
+    "designer": 12,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -1584,7 +1585,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "bounce",
       "set",
@@ -1615,8 +1616,8 @@
       "batonpass",
       "myheartpass",
       "passattack",
-      "dig",
       "startermind",
+      "dig",
       "nightshade"
     ],
     "attklist_randomize": -1,
@@ -1673,7 +1674,7 @@
       [2, 0, 2]
     ],
     "desc": "¦beastiesetup_desc_013¦",
-    "designer": [5, 3, 0, 8],
+    "designer": [6, 4, 1, 9],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -1695,8 +1696,8 @@
     "id": "bilby",
     "isBaby": false,
     "learnset": [
-      [0, "startermind"],
       [0, "dig"],
+      [0, "startermind"],
       [15, "allyrush"],
       [18, "mind"],
       [21, "set"],
@@ -1838,7 +1839,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "set",
@@ -1869,8 +1870,8 @@
       "batonpass",
       "myheartpass",
       "passattack",
-      "dig",
-      "startermind"
+      "startermind",
+      "dig"
     ],
     "attklist_randomize": -1,
     "ba": 28,
@@ -1916,7 +1917,7 @@
       [2, 0, 2]
     ],
     "desc": "¦beastiesetup_desc_011¦",
-    "designer": [5, 8],
+    "designer": [6, 9],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -1938,8 +1939,8 @@
     "id": "bilby1",
     "isBaby": true,
     "learnset": [
-      [0, "startermind"],
       [0, "dig"],
+      [0, "startermind"],
       [7, "allyrush"],
       [10, "mind"],
       [13, "set"],
@@ -2053,7 +2054,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "bounce",
       "set",
@@ -2084,8 +2085,8 @@
       "batonpass",
       "myheartpass",
       "passattack",
-      "dig",
-      "startermind"
+      "startermind",
+      "dig"
     ],
     "attklist_randomize": -1,
     "ba": 43,
@@ -2138,7 +2139,7 @@
       [2, 0, 2]
     ],
     "desc": "¦beastiesetup_desc_012¦",
-    "designer": [5, 8],
+    "designer": [6, 9],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -2160,8 +2161,8 @@
     "id": "bilby2",
     "isBaby": false,
     "learnset": [
-      [0, "startermind"],
       [0, "dig"],
+      [0, "startermind"],
       [11, "allyrush"],
       [14, "mind"],
       [17, "set"],
@@ -2291,7 +2292,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "healhit",
@@ -2317,7 +2318,8 @@
       "flatten",
       "vigor",
       "breakswipe",
-      "starterbody"
+      "starterbody",
+      "shakeoff"
     ],
     "attklist_randomize": -1,
     "ba": 115,
@@ -2364,7 +2366,7 @@
       [0, 0, 2]
     ],
     "desc": "¦beastiesetup_desc_007¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -2386,17 +2388,17 @@
     "id": "cassowary",
     "isBaby": false,
     "learnset": [
+      [0, "shakeoff"],
       [0, "starterbody"],
-      [0, "rush"],
-      [15, "defheal"],
-      [18, "breakswipe"],
-      [20, "curse"],
-      [23, "pushattack"],
-      [28, "recover"],
+      [14, "curse"],
+      [17, "breakswipe"],
+      [20, "protect"],
+      [22, "pushattack"],
+      [25, "rush"],
       [32, "body"],
-      [36, "protect"],
+      [36, "defheal"],
       [39, "rushattack"],
-      [43, "preblock"],
+      [43, "powswitch"],
       [49, "vigor"]
     ],
     "learnset_randomize": -1,
@@ -2505,7 +2507,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "healhit",
@@ -2531,7 +2533,8 @@
       "flatten",
       "vigor",
       "breakswipe",
-      "starterbody"
+      "starterbody",
+      "shakeoff"
     ],
     "attklist_randomize": -1,
     "ba": 75,
@@ -2575,7 +2578,7 @@
       [0, 0, 2]
     ],
     "desc": "¦beastiesetup_desc_005¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -2597,17 +2600,17 @@
     "id": "cassowary1",
     "isBaby": true,
     "learnset": [
+      [0, "shakeoff"],
       [0, "starterbody"],
-      [0, "rush"],
-      [7, "defheal"],
-      [10, "breakswipe"],
-      [12, "curse"],
-      [15, "pushattack"],
-      [20, "recover"],
+      [6, "curse"],
+      [9, "breakswipe"],
+      [12, "protect"],
+      [14, "pushattack"],
+      [17, "rush"],
       [24, "body"],
-      [28, "protect"],
+      [28, "defheal"],
       [31, "rushattack"],
-      [35, "preblock"],
+      [35, "powswitch"],
       [41, "vigor"]
     ],
     "learnset_randomize": -1,
@@ -2709,7 +2712,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "healhit",
@@ -2735,7 +2738,8 @@
       "flatten",
       "vigor",
       "breakswipe",
-      "starterbody"
+      "starterbody",
+      "shakeoff"
     ],
     "attklist_randomize": -1,
     "ba": 87,
@@ -2780,7 +2784,7 @@
       [0, 0, 2]
     ],
     "desc": "¦beastiesetup_desc_006¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -2802,17 +2806,17 @@
     "id": "cassowary2",
     "isBaby": false,
     "learnset": [
+      [0, "shakeoff"],
       [0, "starterbody"],
-      [0, "rush"],
-      [11, "defheal"],
-      [14, "breakswipe"],
-      [16, "curse"],
-      [19, "pushattack"],
-      [24, "recover"],
+      [10, "curse"],
+      [13, "breakswipe"],
+      [16, "protect"],
+      [18, "pushattack"],
+      [21, "rush"],
       [28, "body"],
-      [32, "protect"],
+      [32, "defheal"],
       [35, "rushattack"],
-      [39, "preblock"],
+      [39, "powswitch"],
       [45, "vigor"]
     ],
     "learnset_randomize": -1,
@@ -2914,7 +2918,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "introduction",
       "freeball",
@@ -2983,7 +2987,7 @@
       [32, 6, 1]
     ],
     "desc": "¦beastiesetup_desc_036¦",
-    "designer": [2, 8],
+    "designer": [3, 9],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -2999,7 +3003,7 @@
           {
             "conditions": [
               {
-                "effect_type": 89,
+                "effect_type": 92,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
@@ -3075,7 +3079,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3143,7 +3147,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,
-    "animator": [10, 8],
+    "animator": [11, 9],
     "attklist": [
       "introduction",
       "freeball",
@@ -3212,7 +3216,7 @@
       [32, 6, 1]
     ],
     "desc": "¦beastiesetup_desc_035¦",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -3285,7 +3289,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3348,7 +3352,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 20,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "introduction",
       "freeball",
@@ -3427,7 +3431,7 @@
       [32, 6, 1]
     ],
     "desc": "¦beastiesetup_desc_103¦",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -3497,7 +3501,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3568,7 +3572,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "bounce",
       "passattack",
@@ -3633,7 +3637,7 @@
       [4, 7, 2, 5, 7, 2]
     ],
     "desc": "¦beastiesetup_desc_071¦",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -3789,7 +3793,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "topspin",
       "moon",
@@ -3800,7 +3804,6 @@
       "sidespin",
       "poisonhit",
       "passattack",
-      "wornattack",
       "bodypass",
       "set",
       "cheer",
@@ -3811,6 +3814,7 @@
       "protect",
       "skillswap",
       "shakeoff",
+      "ricochet",
       "starterside"
     ],
     "attklist_randomize": -1,
@@ -3851,7 +3855,7 @@
       [15, 0, 1, 16, 0, 1]
     ],
     "desc": "¦beastiesetup_desc_043¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -3986,7 +3990,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "topspin",
       "moon",
@@ -3997,7 +4001,6 @@
       "sidespin",
       "poisonhit",
       "passattack",
-      "wornattack",
       "bodypass",
       "set",
       "cheer",
@@ -4008,6 +4011,7 @@
       "protect",
       "skillswap",
       "shakeoff",
+      "ricochet",
       "starterside"
     ],
     "attklist_randomize": -1,
@@ -4070,7 +4074,7 @@
       [15, 0, 1, 16, 0, 1]
     ],
     "desc": "¦beastiesetup_desc_042¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -4219,7 +4223,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterbody",
       "sensihit",
@@ -4245,7 +4249,8 @@
       "noisytag",
       "protect",
       "rest",
-      "flatten"
+      "flatten",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 108,
@@ -4288,11 +4293,11 @@
     "combos": [
       [17, 0, 0, 38, 3, 2, 50, 0, 1],
       [20, 0, 1, 0, 2, 1],
-      [20, 1, 1, 0, 1, 1],
+      [20, 1, 2, 0, 1, 1],
       [51, 0, 2, 14, 0, 1, 16, 0, 1]
     ],
     "desc": "¦beastiesetup_desc_066¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -4447,7 +4452,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "lockon",
       "lowattks",
@@ -4476,6 +4481,7 @@
       "splinter",
       "rattle",
       "menace",
+      "trap",
       "netattack"
     ],
     "attklist_randomize": -1,
@@ -4523,7 +4529,7 @@
       [15, 9, -2]
     ],
     "desc": "¦beastiesetup_desc_070¦",
-    "designer": 7,
+    "designer": 8,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -4663,8 +4669,8 @@
     "ability": ["acrobat", "noboosts"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 60,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": [14, 11],
     "attklist": [
       "dare",
       "contest",
@@ -4679,7 +4685,7 @@
       "overheat",
       "enemyboosts",
       "rush",
-      "allyrush",
+      "allycover",
       "dig",
       "substitute",
       "bench",
@@ -4692,6 +4698,7 @@
       "superpower",
       "toughattack",
       "tailwind",
+      "rest",
       "backswitch",
       "taunt",
       "starterheart"
@@ -4751,7 +4758,7 @@
       [1, 0, 2]
     ],
     "desc": "¦beastiesetup_desc_032¦",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -4802,11 +4809,13 @@
       "hop_wobble": 0,
       "move_accel": 0.4444444444,
       "move_decel": 0.6666666667,
-      "move_pause_frames": [],
+      "move_pause_frames": [34, 35],
       "move_speed": 1,
       "move_speed_start": 0,
-      "move_to_idle_transition_anim": "",
-      "move_to_idle_transition_frames": [],
+      "move_to_idle_transition_anim": "stop",
+      "move_to_idle_transition_frames": [
+        8, 9, 10, 11, 12, 13, 46, 45, 44, 43, 42, 41, 40
+      ],
       "offset_freq": 2000,
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
@@ -4901,8 +4910,8 @@
     "ability": ["acrobat", "noboosts"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 10,
+    "anim_progress": 100,
+    "animator": [14, 11],
     "attklist": [
       "dare",
       "contest",
@@ -4917,7 +4926,7 @@
       "overheat",
       "enemyboosts",
       "rush",
-      "allyrush",
+      "allycover",
       "dig",
       "substitute",
       "bench",
@@ -4930,6 +4939,7 @@
       "superpower",
       "toughattack",
       "tailwind",
+      "rest",
       "backswitch",
       "taunt",
       "starterheart"
@@ -4987,7 +4997,7 @@
       [1, 0, 2]
     ],
     "desc": "¦beastiesetup_desc_031¦",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -5037,11 +5047,11 @@
       "hop_shake": 0,
       "hop_wobble": 0,
       "move_accel": 0.03,
-      "move_decel": 0.33,
+      "move_decel": 0.5,
       "move_pause_frames": [],
-      "move_speed": 1.3,
+      "move_speed": 1,
       "move_speed_start": 0,
-      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_anim": "stop",
       "move_to_idle_transition_frames": [],
       "offset_freq": 2000,
       "offset_rand_range": 0,
@@ -5129,7 +5139,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "lockon",
       "shaken",
@@ -5161,7 +5171,7 @@
     ],
     "attklist_randomize": -1,
     "ba": 40,
-    "base_exp": 141.3775,
+    "base_exp": 139.195,
     "bd": 50,
     "body_color_index": 0,
     "codename": "f211e75822fb285a7af7092092eb3ea283ce1ab3",
@@ -5211,7 +5221,7 @@
       [15, 8, -1]
     ],
     "desc": "¦beastiesetup_desc_033¦",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -5236,10 +5246,10 @@
       [0, "rattle"],
       [0, "distraction"],
       [9, "shaken"],
-      [16, "sidespin"],
+      [16, "shieldbreaker"],
       [19, "rhythm"],
       [23, "rush"],
-      [27, "hazeball"],
+      [27, "sidespin"],
       [31, "lock"],
       [35, "scream"],
       [40, "stress"],
@@ -5274,7 +5284,7 @@
       "stretchiness": 0.1
     },
     "ma": 73,
-    "md": 85,
+    "md": 80,
     "name": "¦beastiesetup_name_033¦",
     "number": 33,
     "palettes": 1,
@@ -5358,7 +5368,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [13, 10],
+    "animator": [14, 11],
     "attklist": [
       "bounce",
       "libero",
@@ -5367,11 +5377,9 @@
       "desperate",
       "damagedattack",
       "rushattack",
-      "allyrush",
       "pepshot",
       "rush",
       "cover",
-      "heartpass",
       "juggle",
       "mark",
       "protect",
@@ -5389,6 +5397,8 @@
       "shakeoff",
       "thrash",
       "myheartpass",
+      "allyrush",
+      "bolt",
       "scoreboosted"
     ],
     "attklist_randomize": -1,
@@ -5475,7 +5485,7 @@
       [26, 2, 3]
     ],
     "desc": "¦beastiesetup_desc_023¦",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -5637,7 +5647,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [13, 10, 8],
+    "animator": [14, 11, 9],
     "attklist": [
       "bounce",
       "libero",
@@ -5646,11 +5656,9 @@
       "desperate",
       "damagedattack",
       "rushattack",
-      "allyrush",
       "pepshot",
       "rush",
       "cover",
-      "heartpass",
       "juggle",
       "mark",
       "protect",
@@ -5668,6 +5676,8 @@
       "shakeoff",
       "thrash",
       "myheartpass",
+      "allyrush",
+      "bolt",
       "scoreboosted"
     ],
     "attklist_randomize": -1,
@@ -5753,7 +5763,7 @@
       [26, 2, 3]
     ],
     "desc": "¦beastiesetup_desc_022¦",
-    "designer": [3, 8],
+    "designer": [4, 9],
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -5910,7 +5920,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [10],
+    "animator": [11],
     "attklist": [
       "pepshot",
       "careful",
@@ -5933,6 +5943,7 @@
       "whirlwind",
       "distraction",
       "protect",
+      "hum",
       "freeball",
       "followme"
     ],
@@ -5988,7 +5999,7 @@
       [15, 2, 2, 16, 2, -1]
     ],
     "desc": "¦beastiesetup_desc_026¦",
-    "designer": [5, 8],
+    "designer": [6, 9],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -6012,7 +6023,7 @@
     "learnset": [
       [0, "careful"],
       [0, "rush"],
-      [6, "heartup"],
+      [6, "hum"],
       [12, "dragontail"],
       [17, "shieldbreaker"],
       [23, "heartpass"],
@@ -6142,7 +6153,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -6168,10 +6179,12 @@
       "fieldclear",
       "callout",
       "tailwind",
+      "tagattack",
       "bodypass",
       "mindpass",
       "heartd",
-      "freeball"
+      "freeball",
+      "wornattack"
     ],
     "attklist_randomize": -1,
     "ba": 68,
@@ -6218,7 +6231,7 @@
       [16, 0, 3, 6, 0, 3]
     ],
     "desc": "¦beastiesetup_desc_041¦",
-    "designer": 2,
+    "designer": 3,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -6390,7 +6403,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -6415,7 +6428,8 @@
       "heartup",
       "fieldclear",
       "callout",
-      "tailwind"
+      "tailwind",
+      "tagattack"
     ],
     "attklist_randomize": -1,
     "ba": 48,
@@ -6454,7 +6468,7 @@
       [16, 0, 3, 6, 0, 3]
     ],
     "desc": "¦beastiesetup_desc_039¦",
-    "designer": 2,
+    "designer": 3,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -6605,7 +6619,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -6630,7 +6644,8 @@
       "heartup",
       "fieldclear",
       "callout",
-      "tailwind"
+      "tailwind",
+      "tagattack"
     ],
     "attklist_randomize": -1,
     "ba": 60,
@@ -6677,7 +6692,7 @@
       [16, 0, 3, 6, 0, 3]
     ],
     "desc": "¦beastiesetup_desc_040¦",
-    "designer": 2,
+    "designer": 3,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -6830,7 +6845,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "rollshot",
@@ -6888,7 +6903,7 @@
       [27, 8, -1]
     ],
     "desc": "¦beastiesetup_desc_054¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -7042,7 +7057,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "rollshot",
@@ -7108,7 +7123,7 @@
       [27, 8, -1]
     ],
     "desc": "¦beastiesetup_desc_053¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -7267,7 +7282,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "pepshot",
       "heart",
@@ -7280,7 +7295,6 @@
       "heartup",
       "followme",
       "healbell",
-      "myheartpass",
       "heartpass",
       "cheer",
       "rhythm",
@@ -7288,11 +7302,13 @@
       "noisytag",
       "introduction",
       "skillswap",
+      "speech",
       "storedpower",
       "dragontail",
       "stomp",
       "healhit",
-      "jazzattack"
+      "jazzattack",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 64,
@@ -7339,7 +7355,7 @@
       [44, 2, 6]
     ],
     "desc": "¦beastiesetup_desc_010¦",
-    "designer": [0, 3],
+    "designer": [1, 4],
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -7361,14 +7377,14 @@
     "id": "frog",
     "isBaby": false,
     "learnset": [
+      [0, "hum"],
       [0, "pepshot"],
-      [0, "cheer"],
-      [15, "myheartpass"],
+      [15, "heartup"],
       [19, "minddown"],
       [23, "rhythm"],
       [27, "noisytag"],
       [31, "heart"],
-      [36, "heartup"],
+      [36, "cheer"],
       [40, "introduction"],
       [44, "commit"],
       [49, "healbell"]
@@ -7410,7 +7426,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7468,7 +7484,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "pepshot",
       "heart",
@@ -7481,7 +7497,6 @@
       "heartup",
       "followme",
       "healbell",
-      "myheartpass",
       "heartpass",
       "cheer",
       "rhythm",
@@ -7489,11 +7504,13 @@
       "noisytag",
       "introduction",
       "skillswap",
+      "speech",
       "storedpower",
       "dragontail",
       "stomp",
       "healhit",
-      "jazzattack"
+      "jazzattack",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 37,
@@ -7539,7 +7556,7 @@
       [44, 2, 6]
     ],
     "desc": "¦beastiesetup_desc_008¦",
-    "designer": [0, 3],
+    "designer": [1, 4],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -7561,14 +7578,14 @@
     "id": "frog1",
     "isBaby": true,
     "learnset": [
+      [0, "hum"],
       [0, "pepshot"],
-      [0, "cheer"],
-      [7, "myheartpass"],
+      [7, "heartup"],
       [11, "minddown"],
       [15, "rhythm"],
       [19, "noisytag"],
       [23, "heart"],
-      [28, "heartup"],
+      [28, "cheer"],
       [32, "introduction"],
       [36, "commit"],
       [41, "healbell"]
@@ -7610,7 +7627,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7678,7 +7695,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "pepshot",
       "heart",
@@ -7691,7 +7708,6 @@
       "heartup",
       "followme",
       "healbell",
-      "myheartpass",
       "heartpass",
       "cheer",
       "rhythm",
@@ -7699,11 +7715,13 @@
       "noisytag",
       "introduction",
       "skillswap",
+      "speech",
       "storedpower",
       "dragontail",
       "stomp",
       "healhit",
-      "jazzattack"
+      "jazzattack",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 48,
@@ -7750,7 +7768,7 @@
       [44, 2, 6]
     ],
     "desc": "¦beastiesetup_desc_009¦",
-    "designer": [0, 3],
+    "designer": [1, 4],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -7772,14 +7790,14 @@
     "id": "frog2",
     "isBaby": false,
     "learnset": [
+      [0, "hum"],
       [0, "pepshot"],
-      [0, "cheer"],
-      [11, "myheartpass"],
+      [11, "heartup"],
       [15, "minddown"],
       [19, "rhythm"],
       [23, "noisytag"],
       [27, "heart"],
-      [32, "heartup"],
+      [32, "cheer"],
       [36, "introduction"],
       [40, "commit"],
       [45, "healbell"]
@@ -7823,7 +7841,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7891,12 +7909,11 @@
     "ability": ["ghost"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": 11,
     "attklist": [
       "wornout",
       "mindbomb",
-      "hazeball",
       "sidespin",
       "poisonhit",
       "cover",
@@ -7916,8 +7933,10 @@
       "eerie",
       "sweatall",
       "rattle",
+      "sad",
       "bamboozle",
       "menace",
+      "rest",
       "targethp",
       "stun",
       "shaken"
@@ -7965,7 +7984,7 @@
       [3, 0, 4]
     ],
     "desc": "¦beastiesetup_desc_046¦",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -7996,9 +8015,9 @@
       [33, "wornout"],
       [36, "stun"],
       [39, "teleport"],
-      [44, "sweatall"],
+      [44, "eerie"],
       [49, "targethp"],
-      [54, "eerie"]
+      [54, "sad"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -8006,8 +8025,8 @@
       "anim_min_speed": 0.2,
       "char_width": 151.75,
       "emote_hop_height": 25,
-      "float_dist": 50,
-      "float_wave": 8,
+      "float_dist": 20,
+      "float_wave": 0,
       "float_wave_freq": 1000,
       "hop_height": 0,
       "hop_length": 1.5,
@@ -8067,7 +8086,7 @@
       "seeking_interact": false
     },
     "roguelvl": -1,
-    "scale": [0.85, 1],
+    "scale": [0.765, 0.9],
     "shiny": [
       {
         "array": [
@@ -8107,11 +8126,10 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "wornout",
       "mindbomb",
-      "hazeball",
       "sidespin",
       "poisonhit",
       "cover",
@@ -8131,8 +8149,10 @@
       "eerie",
       "sweatall",
       "rattle",
+      "sad",
       "bamboozle",
       "menace",
+      "rest",
       "targethp",
       "stun",
       "shaken"
@@ -8181,7 +8201,7 @@
       [3, 0, 4]
     ],
     "desc": "¦beastiesetup_desc_044¦",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -8212,9 +8232,9 @@
       [27, "wornout"],
       [30, "stun"],
       [33, "teleport"],
-      [38, "sweatall"],
+      [38, "eerie"],
       [43, "targethp"],
-      [48, "eerie"]
+      [48, "sad"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -8283,7 +8303,7 @@
       "seeking_interact": false
     },
     "roguelvl": 1,
-    "scale": [0.85, 1],
+    "scale": [0.765, 0.9],
     "shiny": [
       {
         "array": [
@@ -8306,12 +8326,11 @@
     "ability": ["ghost"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": [14, 11],
     "attklist": [
       "wornout",
       "mindbomb",
-      "hazeball",
       "sidespin",
       "poisonhit",
       "cover",
@@ -8331,8 +8350,10 @@
       "eerie",
       "sweatall",
       "rattle",
+      "sad",
       "bamboozle",
       "menace",
+      "rest",
       "targethp",
       "stun",
       "shaken"
@@ -8368,7 +8389,7 @@
       [3, 0, 4]
     ],
     "desc": "¦beastiesetup_desc_045¦",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -8399,9 +8420,9 @@
       [30, "wornout"],
       [33, "stun"],
       [36, "teleport"],
-      [41, "sweatall"],
+      [41, "eerie"],
       [46, "targethp"],
-      [51, "eerie"]
+      [51, "sad"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -8409,7 +8430,7 @@
       "anim_min_speed": 0.2,
       "char_width": 106.25,
       "emote_hop_height": 25,
-      "float_dist": 80,
+      "float_dist": 40,
       "float_wave": 8,
       "float_wave_freq": 1000,
       "hop_height": 0,
@@ -8424,9 +8445,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
-      "offset_freq": 2500,
-      "offset_rand_range": 30,
-      "offset_seconds": 1,
+      "offset_freq": 3000,
+      "offset_rand_range": 8,
+      "offset_seconds": 1.5,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -8470,7 +8491,7 @@
       "seeking_interact": false
     },
     "roguelvl": -1,
-    "scale": [0.85, 1],
+    "scale": [0.765, 0.9],
     "shiny": [
       {
         "array": [
@@ -8492,14 +8513,13 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "mindbomb",
       "protect",
       "cover",
       "tool",
       "moon",
-      "hazeball",
       "float",
       "heartdown",
       "starterside",
@@ -8516,7 +8536,8 @@
       "stress",
       "steal",
       "eerie",
-      "basecover"
+      "basecover",
+      "hazeball"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -8563,7 +8584,7 @@
       [39, 9, 1, 6, 9, 1]
     ],
     "desc": "¦beastiesetup_desc_089¦",
-    "designer": [6, 8, 3],
+    "designer": [7, 9, 4],
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -8592,10 +8613,10 @@
       [18, "steal"],
       [24, "mindbomb"],
       [29, "taunt"],
-      [33, "hazeball"],
+      [33, "heartdown"],
       [38, "stress"],
       [45, "libero"],
-      [49, "heartdown"]
+      [49, "moon"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -8703,11 +8724,11 @@
     "type_focus": 2
   },
   "horseshoe": {
-    "ability": ["sturdy"],
+    "ability": ["multiscale"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "starterheart",
       "steamattack",
@@ -8784,7 +8805,7 @@
       [16, 1, 3, 29, 0, 2]
     ],
     "desc": "¦beastiesetup_desc_072¦",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -8856,19 +8877,17 @@
     "recruit": {
       "conditions": [
         {
-          "damage": 99,
           "event": null,
           "freq": -1,
-          "func": null,
           "my_data": null,
-          "player": 2,
+          "player": [0, 1],
           "rel_color": -1,
           "type": 14
         }
       ],
-      "description": "¦beastiesetup_classrecruit_060¦"
+      "description": "¦beastiesetup_023¦"
     },
-    "recruit_value": 2.7,
+    "recruit_value": 9,
     "roamer_style": {
       "_name": "STOP_AND_STARE",
       "can_react": true,
@@ -8916,7 +8935,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "enemylowered",
@@ -9026,7 +9045,7 @@
       [2, 2, 1, 1, 8, -2]
     ],
     "desc": "¦beastiesetup_desc_088¦",
-    "designer": [0, 3, 9],
+    "designer": [1, 4, 10],
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -9202,7 +9221,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "careful",
@@ -9226,7 +9245,8 @@
       "protect",
       "minddown",
       "teleport",
-      "allycover"
+      "sad",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 16,
@@ -9258,7 +9278,7 @@
       [29, 8, 2, 8, 0, -0.2]
     ],
     "desc": "¦beastiesetup_desc_064¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -9381,7 +9401,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "careful",
@@ -9405,7 +9425,7 @@
       "protect",
       "minddown",
       "teleport",
-      "allycover"
+      "sad"
     ],
     "attklist_randomize": -1,
     "ba": 14,
@@ -9438,7 +9458,7 @@
       [29, 8, 2, 8, 0, -0.2]
     ],
     "desc": "¦beastiesetup_desc_062¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -9581,7 +9601,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "careful",
@@ -9605,7 +9625,8 @@
       "protect",
       "minddown",
       "teleport",
-      "allycover"
+      "sad",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 14,
@@ -9638,7 +9659,7 @@
       [29, 8, 2, 8, 0, -0.2]
     ],
     "desc": "¦beastiesetup_desc_063¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -9762,7 +9783,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [10, 8],
+    "animator": [11, 9],
     "attklist": [
       "bounce",
       "breakswipe",
@@ -9773,7 +9794,6 @@
       "rollshot",
       "pursuit",
       "heartdown",
-      "hazeball",
       "juggle",
       "allyrush",
       "rest",
@@ -9794,6 +9814,7 @@
       "spitball",
       "chill",
       "rattle",
+      "hazeball",
       "tool",
       "startermind"
     ],
@@ -9849,7 +9870,7 @@
       [12, 8, 2]
     ],
     "desc": "¦beastiesetup_desc_025¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -9998,7 +10019,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "breakswipe",
@@ -10009,7 +10030,6 @@
       "rollshot",
       "pursuit",
       "heartdown",
-      "hazeball",
       "juggle",
       "allyrush",
       "rest",
@@ -10030,6 +10050,7 @@
       "spitball",
       "chill",
       "rattle",
+      "hazeball",
       "tool",
       "startermind"
     ],
@@ -10080,7 +10101,7 @@
       [12, 8, 2]
     ],
     "desc": "¦beastiesetup_desc_024¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -10224,7 +10245,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "steamattack",
       "sweatup",
@@ -10236,7 +10257,7 @@
       "float",
       "pursuit",
       "myheartpass",
-      "allyrush",
+      "allycover",
       "freeball",
       "bellydrum",
       "followme",
@@ -10250,7 +10271,8 @@
       "spitball",
       "eerie",
       "sweatall",
-      "cook"
+      "cook",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -10307,7 +10329,7 @@
       [34, 8, 1, 23, 8, -1]
     ],
     "desc": "¦beastiesetup_desc_095¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -10335,7 +10357,7 @@
       [17, "sweatup"],
       [22, "protect"],
       [27, "heart"],
-      [32, "substitute"],
+      [32, "allycover"],
       [37, "inferno"],
       [41, "followme"],
       [45, "fieldclear"],
@@ -10455,7 +10477,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "steamattack",
       "sweatup",
@@ -10467,7 +10489,7 @@
       "float",
       "pursuit",
       "myheartpass",
-      "allyrush",
+      "allycover",
       "freeball",
       "bellydrum",
       "followme",
@@ -10481,7 +10503,8 @@
       "spitball",
       "eerie",
       "sweatall",
-      "cook"
+      "cook",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 35,
@@ -10530,7 +10553,7 @@
       [34, 8, 1, 23, 8, -1]
     ],
     "desc": "¦beastiesetup_desc_094¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -10558,7 +10581,7 @@
       [14, "sweatup"],
       [19, "protect"],
       [24, "heart"],
-      [29, "substitute"],
+      [29, "allycover"],
       [34, "inferno"],
       [38, "followme"],
       [42, "fieldclear"],
@@ -10661,8 +10684,8 @@
     "ability": ["moldbreaker", "unmarked"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": 9,
     "attklist": [
       "flight",
       "flyback",
@@ -10674,7 +10697,7 @@
       "heartpass",
       "switch",
       "bench",
-      "heartup",
+      "fieldclear",
       "bellydrum",
       "protect",
       "whirlwind",
@@ -10736,7 +10759,7 @@
       [7, 2, 0, 4, 2, 1]
     ],
     "desc": "¦beastiesetup_desc_021¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -10764,7 +10787,7 @@
       [14, "dragontail"],
       [20, "whirlwind"],
       [24, "heart"],
-      [29, "heartpass"],
+      [29, "fieldclear"],
       [35, "flyback"],
       [40, "rush"],
       [44, "bellydrum"],
@@ -10904,7 +10927,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "flight",
       "flyback",
@@ -10916,7 +10939,7 @@
       "heartpass",
       "switch",
       "bench",
-      "heartup",
+      "fieldclear",
       "bellydrum",
       "protect",
       "whirlwind",
@@ -10970,7 +10993,7 @@
       [7, 2, 0, 4, 2, 1]
     ],
     "desc": "¦beastiesetup_desc_020¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -10998,7 +11021,7 @@
       [10, "dragontail"],
       [16, "whirlwind"],
       [20, "heart"],
-      [25, "heartpass"],
+      [25, "fieldclear"],
       [31, "flyback"],
       [36, "rush"],
       [40, "bellydrum"],
@@ -11129,7 +11152,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "callout",
       "switch",
@@ -11158,6 +11181,7 @@
       "bamboozle",
       "healbell",
       "markattack",
+      "bolt",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11214,7 +11238,7 @@
       [2, 2, 1, 42, 3, 2]
     ],
     "desc": "¦beastiesetup_desc_082¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -11389,7 +11413,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,
-    "animator": [8, 10],
+    "animator": [9, 11],
     "attklist": [
       "callout",
       "switch",
@@ -11418,6 +11442,7 @@
       "bamboozle",
       "healbell",
       "markattack",
+      "bolt",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11455,7 +11480,7 @@
       [2, 2, 1, 42, 3, 2]
     ],
     "desc": "¦beastiesetup_desc_081¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -11589,7 +11614,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 20,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "callout",
       "switch",
@@ -11618,6 +11643,7 @@
       "bamboozle",
       "healbell",
       "markattack",
+      "bolt",
       "startermind",
       "stomp",
       "swordsdance",
@@ -11668,7 +11694,7 @@
       [2, 2, 1, 42, 3, 2]
     ],
     "desc": "¦beastiesetup_desc_105¦",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -11796,7 +11822,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "blockattack",
       "thunder",
@@ -11820,13 +11846,15 @@
       "set",
       "jump",
       "wall",
+      "wornattack",
+      "splinter",
+      "bolt",
       "recover",
-      "ricochet",
       "netattack",
       "enemylowered"
     ],
     "attklist_randomize": -1,
-    "ba": 70,
+    "ba": 75,
     "base_exp": 196.86,
     "bd": 80,
     "body_color_index": 0,
@@ -11871,7 +11899,7 @@
       [27, 9, -3]
     ],
     "desc": "¦beastiesetup_desc_051¦",
-    "designer": [0, 1, 8],
+    "designer": [1, 2, 9],
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -11901,9 +11929,9 @@
       [17, "distraction"],
       [23, "netattack"],
       [30, "lock"],
-      [34, "ricochet"],
+      [34, "thunder"],
       [38, "wall"],
-      [42, "thunder"],
+      [42, "splinter"],
       [46, "recover"]
     ],
     "learnset_randomize": -1,
@@ -12014,7 +12042,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterbody",
       "sideshot",
@@ -12023,9 +12051,6 @@
       "blockattack",
       "body",
       "superpower",
-      "mindpass",
-      "allyrush",
-      "allycover",
       "lockon",
       "quake",
       "lowattks",
@@ -12038,6 +12063,8 @@
       "distraction",
       "flatten",
       "dig",
+      "allyrush",
+      "fieldclear",
       "mark",
       "tagattack"
     ],
@@ -12078,7 +12105,7 @@
       [39, 8, 1]
     ],
     "desc": "¦beastiesetup_desc_079¦",
-    "designer": [4, 0],
+    "designer": [5, 1],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -12103,13 +12130,13 @@
       [0, "starterbody"],
       [0, "dig"],
       [10, "sideshot"],
-      [14, "allycover"],
+      [14, "quake"],
       [19, "flatten"],
-      [25, "rest"],
+      [25, "fieldclear"],
       [30, "protect"],
       [36, "body"],
       [40, "mark"],
-      [44, "quake"],
+      [44, "rest"],
       [48, "superpower"]
     ],
     "learnset_randomize": -1,
@@ -12219,8 +12246,8 @@
     "ability": ["watcher", "breaker"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 80,
-    "animator": 10,
+    "anim_progress": 100,
+    "animator": 11,
     "attklist": [
       "starterbody",
       "sideshot",
@@ -12229,9 +12256,6 @@
       "blockattack",
       "body",
       "superpower",
-      "mindpass",
-      "allyrush",
-      "allycover",
       "lockon",
       "quake",
       "lowattks",
@@ -12244,6 +12268,8 @@
       "distraction",
       "flatten",
       "dig",
+      "allyrush",
+      "fieldclear",
       "mark"
     ],
     "attklist_randomize": -1,
@@ -12282,7 +12308,7 @@
       [39, 8, 1]
     ],
     "desc": "¦beastiesetup_desc_078¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -12307,13 +12333,13 @@
       [0, "starterbody"],
       [0, "dig"],
       [6, "sideshot"],
-      [10, "allycover"],
+      [10, "quake"],
       [15, "flatten"],
-      [21, "rest"],
+      [21, "fieldclear"],
       [26, "protect"],
       [32, "body"],
       [36, "mark"],
-      [40, "quake"],
+      [40, "rest"],
       [44, "superpower"]
     ],
     "learnset_randomize": -1,
@@ -12417,7 +12443,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "myheartpass",
@@ -12448,7 +12474,8 @@
       "pepshot",
       "toughattack",
       "dare",
-      "healbell"
+      "healbell",
+      "allycover"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -12504,7 +12531,7 @@
       [43, 7, 4, 7, 8, 0]
     ],
     "desc": "¦beastiesetup_desc_052¦",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -12650,7 +12677,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "facade",
       "scoreboosted",
@@ -12675,6 +12702,8 @@
       "splinter",
       "rattle",
       "heartd",
+      "sad",
+      "speech",
       "bamboozle",
       "rest",
       "healbell",
@@ -12727,7 +12756,7 @@
       [4, 2, 2]
     ],
     "desc": "¦beastiesetup_desc_016¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -12769,7 +12798,7 @@
       "char_width": 89.75,
       "emote_hop_height": 25,
       "float_dist": 50,
-      "float_wave": 0,
+      "float_wave": 8,
       "float_wave_freq": 1000,
       "hop_height": 0,
       "hop_length": 1.5,
@@ -12870,7 +12899,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "facade",
       "scoreboosted",
@@ -12895,6 +12924,8 @@
       "splinter",
       "rattle",
       "heartd",
+      "sad",
+      "speech",
       "bamboozle",
       "rest",
       "healbell",
@@ -12935,7 +12966,7 @@
       [4, 2, 2]
     ],
     "desc": "¦beastiesetup_desc_014¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -13070,7 +13101,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "facade",
       "scoreboosted",
@@ -13095,6 +13126,8 @@
       "splinter",
       "rattle",
       "heartd",
+      "sad",
+      "speech",
       "bamboozle",
       "rest",
       "healbell",
@@ -13156,7 +13189,7 @@
       [4, 2, 2]
     ],
     "desc": "¦beastiesetup_desc_015¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -13300,14 +13333,13 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "poisonhit",
       "stun",
       "pursuit",
       "hex",
       "float",
-      "dump",
       "refresh",
       "dig",
       "allyrush",
@@ -13374,7 +13406,7 @@
       [56, 0, 0]
     ],
     "desc": "¦beastiesetup_desc_069¦",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -13436,7 +13468,7 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 83,
+    "ma": 73,
     "md": 62,
     "name": "¦beastiesetup_name_068¦",
     "number": 69,
@@ -13512,7 +13544,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "shakenmind",
@@ -13521,7 +13553,6 @@
       "heartd",
       "mind",
       "moon",
-      "hazeball",
       "storedpower",
       "cover",
       "mindpass",
@@ -13537,6 +13568,7 @@
       "telekinesis",
       "mindup",
       "dispel",
+      "hazeball",
       "tool"
     ],
     "attklist_randomize": -1,
@@ -13584,7 +13616,7 @@
       [42, 3, 4]
     ],
     "desc": "¦beastiesetup_desc_084¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -13721,7 +13753,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "startermind",
       "shakenmind",
@@ -13730,7 +13762,6 @@
       "heartd",
       "mind",
       "moon",
-      "hazeball",
       "storedpower",
       "cover",
       "mindpass",
@@ -13746,6 +13777,7 @@
       "telekinesis",
       "mindup",
       "dispel",
+      "hazeball",
       "tool"
     ],
     "attklist_randomize": -1,
@@ -13786,7 +13818,7 @@
       [42, 3, 4]
     ],
     "desc": "¦beastiesetup_desc_083¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -13915,8 +13947,8 @@
     "ability": ["teleport"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": 9,
     "attklist": [
       "startermind",
       "shakenmind",
@@ -13987,7 +14019,7 @@
       [38, 8, 1]
     ],
     "desc": "¦beastiesetup_desc_050¦",
-    "designer": [3, 8],
+    "designer": [4, 9],
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -14037,11 +14069,11 @@
       "hop_wobble": 0,
       "move_accel": 0.1,
       "move_decel": 0.6666666667,
-      "move_pause_frames": [],
+      "move_pause_frames": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
       "move_speed": 1,
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "stop",
-      "move_to_idle_transition_frames": [],
+      "move_to_idle_transition_frames": [22],
       "offset_freq": 2000,
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
@@ -14132,7 +14164,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "protect",
@@ -14149,7 +14181,6 @@
       "blockattack",
       "mind",
       "mindbomb",
-      "allycover",
       "mindpass",
       "recover",
       "curse",
@@ -14160,10 +14191,12 @@
       "basecover",
       "rocket",
       "menace",
+      "ego",
+      "bolt",
       "chill"
     ],
     "attklist_randomize": -1,
-    "ba": 85,
+    "ba": 90,
     "base_exp": 231,
     "bd": 60,
     "body_color_index": 0,
@@ -14200,7 +14233,7 @@
       [47, 0, 1, 29, 0, 2]
     ],
     "desc": "¦beastiesetup_desc_093¦",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -14337,7 +14370,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "protect",
@@ -14354,7 +14387,6 @@
       "blockattack",
       "mind",
       "mindbomb",
-      "allycover",
       "mindpass",
       "recover",
       "curse",
@@ -14365,6 +14397,8 @@
       "basecover",
       "rocket",
       "menace",
+      "ego",
+      "bolt",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -14391,7 +14425,7 @@
       [47, 0, 1, 29, 0, 2]
     ],
     "desc": "¦beastiesetup_desc_092¦",
-    "designer": [3],
+    "designer": [4],
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -14518,7 +14552,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterbody",
       "sensihit",
@@ -14613,7 +14647,7 @@
       [19, 0, 1, 14, 0, 1, 12, 0, 4]
     ],
     "desc": "¦beastiesetup_desc_090¦",
-    "designer": [12],
+    "designer": [13],
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -14771,7 +14805,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 20,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "markattack",
       "startermind",
@@ -14801,7 +14835,6 @@
       "snipe",
       "sweatup",
       "bamboozle",
-      "set",
       "ricochet",
       "threat"
     ],
@@ -14844,7 +14877,7 @@
       [23, 8, -2]
     ],
     "desc": "¦beastiesetup_desc_101¦",
-    "designer": 4,
+    "designer": 5,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -14876,7 +14909,7 @@
       [34, "mark"],
       [40, "snipe"],
       [44, "mindup"],
-      [50, "dump"]
+      [50, "ricochet"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -14915,7 +14948,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -14972,7 +15005,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "markattack",
       "startermind",
@@ -15002,7 +15035,6 @@
       "snipe",
       "sweatup",
       "bamboozle",
-      "set",
       "ricochet"
     ],
     "attklist_randomize": -1,
@@ -15043,7 +15075,7 @@
       [23, 8, -2]
     ],
     "desc": "¦beastiesetup_desc_027¦",
-    "designer": [3, 4],
+    "designer": [4, 5],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -15075,7 +15107,7 @@
       [30, "mark"],
       [36, "stun"],
       [40, "telekinesis"],
-      [46, "dump"]
+      [46, "ricochet"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -15114,7 +15146,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15166,7 +15198,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "markattack",
       "startermind",
@@ -15196,7 +15228,6 @@
       "snipe",
       "sweatup",
       "bamboozle",
-      "set",
       "ricochet"
     ],
     "attklist_randomize": -1,
@@ -15244,7 +15275,7 @@
       [23, 8, -2]
     ],
     "desc": "¦beastiesetup_desc_028¦",
-    "designer": [8, 4, 3],
+    "designer": [9, 5, 4],
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -15314,7 +15345,7 @@
       [35, "mark"],
       [41, "stun"],
       [45, "telekinesis"],
-      [51, "dump"]
+      [51, "ricochet"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -15353,7 +15384,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15418,10 +15449,9 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [8, 13],
+    "animator": [9, 14],
     "attklist": [
       "bounce",
-      "body",
       "rocksmash",
       "flatten",
       "dig",
@@ -15440,6 +15470,7 @@
       "haze",
       "toughattack",
       "thunder",
+      "bolt",
       "construct",
       "tagattack",
       "set",
@@ -15497,7 +15528,7 @@
       [16, 2, 1]
     ],
     "desc": "¦beastiesetup_desc_019¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -15527,7 +15558,7 @@
       [21, "tagattack"],
       [25, "dig"],
       [29, "curse"],
-      [35, "body"],
+      [35, "bolt"],
       [39, "construct"],
       [44, "vigor"],
       [49, "batonpass"]
@@ -15651,10 +15682,9 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
-      "body",
       "rocksmash",
       "flatten",
       "dig",
@@ -15673,6 +15703,7 @@
       "haze",
       "toughattack",
       "thunder",
+      "bolt",
       "construct",
       "tagattack"
     ],
@@ -15726,7 +15757,7 @@
       [16, 2, 1]
     ],
     "desc": "¦beastiesetup_desc_017¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -15756,7 +15787,7 @@
       [15, "tagattack"],
       [19, "dig"],
       [23, "curse"],
-      [29, "body"],
+      [29, "bolt"],
       [33, "construct"],
       [38, "vigor"],
       [43, "batonpass"]
@@ -15874,10 +15905,9 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
-      "body",
       "rocksmash",
       "flatten",
       "dig",
@@ -15896,6 +15926,7 @@
       "haze",
       "toughattack",
       "thunder",
+      "bolt",
       "construct",
       "tagattack",
       "set"
@@ -15956,7 +15987,7 @@
       [16, 2, 1]
     ],
     "desc": "¦beastiesetup_desc_018¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -15986,7 +16017,7 @@
       [18, "tagattack"],
       [22, "dig"],
       [26, "curse"],
-      [32, "body"],
+      [32, "bolt"],
       [36, "construct"],
       [41, "vigor"],
       [46, "batonpass"]
@@ -16110,7 +16141,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "sweatup",
       "startermind",
@@ -16134,6 +16165,8 @@
       "protect",
       "rest",
       "basecover",
+      "hex",
+      "stun",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -16181,7 +16214,7 @@
       [5, 0, 4]
     ],
     "desc": "¦beastiesetup_desc_073¦",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -16331,7 +16364,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "pepshot",
       "commit",
@@ -16366,6 +16399,7 @@
       "juggle",
       "hdefup",
       "cook",
+      "sad",
       "toughattack",
       "swordsdance",
       "mimic"
@@ -16437,7 +16471,7 @@
       [16, 0, 2]
     ],
     "desc": "¦beastiesetup_desc_065¦",
-    "designer": 4,
+    "designer": 5,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -16625,7 +16659,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 20,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "pepshot",
       "commit",
@@ -16660,6 +16694,7 @@
       "juggle",
       "hdefup",
       "cook",
+      "sad",
       "toughattack",
       "swordsdance",
       "mimic"
@@ -16700,7 +16735,7 @@
       [16, 0, 2]
     ],
     "desc": "¦beastiesetup_desc_104¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -16723,14 +16758,14 @@
     "isBaby": false,
     "learnset": [
       [0, "pepshot"],
-      [0, "callout"],
+      [0, "sad"],
       [10, "mimic"],
-      [14, "mind"],
+      [14, "spitball"],
       [17, "minddown"],
       [23, "swordsdance"],
       [28, "storedpower"],
       [34, "noisytag"],
-      [38, "moon"],
+      [37, "moon"],
       [43, "superpower"],
       [48, "skillswap"],
       [52, "contest"]
@@ -16839,7 +16874,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "starterbody",
       "superfang",
@@ -16942,7 +16977,7 @@
       [15, 8, -1]
     ],
     "desc": "¦beastiesetup_desc_080¦",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -17110,11 +17145,11 @@
     "type_focus": 2
   },
   "rocklizard": {
-    "ability": ["heavy", "multiscale"],
+    "ability": ["decoy", "superarmor"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 8,
+    "anim_progress": 100,
+    "animator": 11,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -17130,7 +17165,6 @@
       "mind",
       "dig",
       "allyrush",
-      "allycover",
       "recover",
       "feint",
       "taunt",
@@ -17144,6 +17178,7 @@
       "protect",
       "swordsdance",
       "menace",
+      "shakeoff",
       "starterbody",
       "quake",
       "bomb"
@@ -17195,7 +17230,7 @@
       [8, 0, 0.5]
     ],
     "desc": "¦beastiesetup_desc_077¦",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -17234,7 +17269,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 95,
+      "char_width": 103.5,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -17267,7 +17302,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17331,7 +17366,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -17347,7 +17382,6 @@
       "mind",
       "dig",
       "allyrush",
-      "allycover",
       "recover",
       "feint",
       "taunt",
@@ -17361,6 +17395,7 @@
       "protect",
       "swordsdance",
       "menace",
+      "shakeoff",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -17408,7 +17443,7 @@
       [8, 0, 0.5]
     ],
     "desc": "¦beastiesetup_desc_075¦",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -17480,7 +17515,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17537,8 +17572,8 @@
     "ability": ["heavy", "multiscale"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 8,
+    "anim_progress": 60,
+    "animator": 11,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -17554,7 +17589,6 @@
       "mind",
       "dig",
       "allyrush",
-      "allycover",
       "recover",
       "feint",
       "taunt",
@@ -17568,6 +17602,7 @@
       "protect",
       "swordsdance",
       "menace",
+      "shakeoff",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -17616,7 +17651,7 @@
       [8, 0, 0.5]
     ],
     "desc": "¦beastiesetup_desc_076¦",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -17655,7 +17690,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 96,
+      "char_width": 106,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -17688,7 +17723,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17746,7 +17781,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "startermind",
       "nightshade",
@@ -17835,7 +17870,7 @@
       [19, 0, 1, 8, 0, 0.15]
     ],
     "desc": "¦beastiesetup_desc_061¦",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -17979,7 +18014,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "startermind",
       "nightshade",
@@ -18059,7 +18094,7 @@
       [19, 0, 1, 8, 0, 0.15]
     ],
     "desc": "¦beastiesetup_desc_060¦",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -18197,13 +18232,12 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "bounce",
       "healhit",
       "serve",
       "dump",
-      "allycover",
       "allyrush",
       "batonpass",
       "superpower",
@@ -18272,7 +18306,7 @@
       [0, 2, 1, 3, 2, 1, 8, 2, 0.15]
     ],
     "desc": "¦beastiesetup_desc_068¦",
-    "designer": [3, 8],
+    "designer": [4, 9],
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -18295,16 +18329,18 @@
     "isBaby": false,
     "learnset": [
       [0, "starterbody"],
+      [0, "curse"],
       [0, "tailwind"],
-      [6, "set"],
+      [6, "dig"],
       [11, "healhit"],
-      [16, "dig"],
+      [16, "swordsdance"],
       [21, "serve"],
-      [26, "swordsdance"],
-      [31, "batonpass"],
+      [26, "batonpass"],
+      [31, "set"],
       [36, "nice"],
       [40, "jazzpass"],
-      [45, "superpower"]
+      [44, "slide"],
+      [49, "superpower"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -18410,13 +18446,12 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "bounce",
       "healhit",
       "serve",
       "dump",
-      "allycover",
       "allyrush",
       "batonpass",
       "superpower",
@@ -18482,7 +18517,7 @@
       [0, 2, 1, 3, 2, 1, 8, 2, 0.15]
     ],
     "desc": "¦beastiesetup_desc_067¦",
-    "designer": [8, 3],
+    "designer": [9, 4],
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -18617,7 +18652,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": [10, 8],
+    "animator": [11, 9],
     "attklist": [
       "bounce",
       "jump",
@@ -18693,7 +18728,7 @@
       [16, 8, -2]
     ],
     "desc": "¦beastiesetup_desc_030¦",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -18839,7 +18874,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "bounce",
       "jump",
@@ -18914,7 +18949,7 @@
       [16, 8, -2]
     ],
     "desc": "¦beastiesetup_desc_029¦",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -19065,7 +19100,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "body",
       "rocksmash",
@@ -19128,7 +19163,7 @@
       [3, 2, 2]
     ],
     "desc": "¦beastiesetup_desc_059¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -19269,7 +19304,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "body",
       "rocksmash",
@@ -19325,7 +19360,7 @@
       [3, 2, 2]
     ],
     "desc": "¦beastiesetup_desc_058¦",
-    "designer": 8,
+    "designer": 9,
     "dlc": 0,
     "eat_type": 1,
     "evo_pose": [
@@ -19458,11 +19493,10 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 8,
+    "animator": 9,
     "attklist": [
       "careful",
       "bomb",
-      "hazeball",
       "dropshot",
       "rocksmash",
       "healhit",
@@ -19482,7 +19516,8 @@
       "chill",
       "sweatup",
       "enemyboosts",
-      "flatten"
+      "flatten",
+      "snipe"
     ],
     "attklist_randomize": -1,
     "ba": 45,
@@ -19530,7 +19565,7 @@
       [52, 2, 1, 8, 2, 0.3]
     ],
     "desc": "¦beastiesetup_desc_001¦",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -19565,7 +19600,7 @@
       [19, "fieldclear"],
       [24, "enemyboosts"],
       [30, "mark"],
-      [35, "hazeball"],
+      [35, "snipe"],
       [39, "allyrush"],
       [43, "flatten"]
     ],
@@ -19681,11 +19716,10 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "careful",
       "bomb",
-      "hazeball",
       "dropshot",
       "rocksmash",
       "healhit",
@@ -19706,6 +19740,7 @@
       "sweatup",
       "enemyboosts",
       "flatten",
+      "snipe",
       "rhythm",
       "blockattack",
       "vigor",
@@ -19770,7 +19805,7 @@
       [52, 2, 1, 8, 2, 0.3]
     ],
     "desc": "¦beastiesetup_desc_002¦",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -19945,11 +19980,10 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "careful",
       "bomb",
-      "hazeball",
       "dropshot",
       "rocksmash",
       "healhit",
@@ -19970,6 +20004,7 @@
       "sweatup",
       "enemyboosts",
       "flatten",
+      "snipe",
       "trap",
       "markattack",
       "netattack",
@@ -19977,8 +20012,8 @@
       "distraction",
       "sting",
       "starterside",
-      "snipe",
-      "sidespin"
+      "sidespin",
+      "hazeball"
     ],
     "attklist_randomize": -1,
     "ba": 65,
@@ -20027,7 +20062,7 @@
       [52, 2, 1, 8, 2, 0.3]
     ],
     "desc": "¦beastiesetup_desc_004¦",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -20076,11 +20111,11 @@
       [5, "refresh"],
       [9, "markattack"],
       [12, "distraction"],
-      [17, "hazeball"],
+      [17, "snipe"],
       [20, "protect"],
-      [25, "mark"],
-      [31, "netattack"],
-      [36, "allyrush"],
+      [25, "netattack"],
+      [31, "mark"],
+      [36, "hazeball"],
       [40, "sting"],
       [44, "dump"],
       [48, "fieldclear"]
@@ -20195,11 +20230,10 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "careful",
       "bomb",
-      "hazeball",
       "dropshot",
       "rocksmash",
       "healhit",
@@ -20220,6 +20254,7 @@
       "sweatup",
       "enemyboosts",
       "flatten",
+      "snipe",
       "crowd",
       "heart",
       "minddown",
@@ -20276,7 +20311,7 @@
       [52, 2, 1, 8, 2, 0.3]
     ],
     "desc": "¦beastiesetup_desc_003¦",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -20441,11 +20476,10 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "careful",
       "bomb",
-      "hazeball",
       "dropshot",
       "rocksmash",
       "healhit",
@@ -20466,6 +20500,7 @@
       "sweatup",
       "enemyboosts",
       "flatten",
+      "snipe",
       "rhythm",
       "blockattack",
       "topspin",
@@ -20487,8 +20522,8 @@
       "distraction",
       "sting",
       "starterside",
-      "snipe",
       "sidespin",
+      "hazeball",
       "eerie",
       "3actions",
       "snore",
@@ -20542,7 +20577,7 @@
       [52, 2, 1, 8, 2, 0.3]
     ],
     "desc": "¦beastiesetup_desc_106¦",
-    "designer": [1, 8],
+    "designer": [2, 9],
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -20686,7 +20721,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "dragontail",
@@ -20710,7 +20745,8 @@
       "lifepass",
       "followme",
       "fieldclear",
-      "protect"
+      "protect",
+      "sad"
     ],
     "attklist_randomize": -1,
     "ba": 30,
@@ -20762,7 +20798,7 @@
       [34, 8, 1, 26, 2, 1]
     ],
     "desc": "¦beastiesetup_desc_047¦",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -20833,7 +20869,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 89,
+          "effect_type": 92,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -20893,7 +20929,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterbody",
       "storedpower",
@@ -20915,12 +20951,14 @@
       "basecover",
       "protect",
       "stress",
-      "batonpass"
+      "batonpass",
+      "shakeoff",
+      "bdefup"
     ],
     "attklist_randomize": -1,
     "ba": 91,
-    "base_exp": 166.088,
-    "bd": 70,
+    "base_exp": 170.768,
+    "bd": 80,
     "body_color_index": 0,
     "codename": "d5c9dacef3f7d48514c67fd80fe55486a8cc0e07",
     "colormeta": null,
@@ -20962,7 +21000,7 @@
       [8, 0, 0.3, 0, 0, 1]
     ],
     "desc": "¦beastiesetup_desc_085¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -20977,7 +21015,7 @@
     "foot_size": 36,
     "foot_type": 0,
     "growth": 1.04,
-    "ha": 39,
+    "ha": 29,
     "hd": 104,
     "hidden": false,
     "hidden_counter": null,
@@ -20990,7 +21028,7 @@
       [10, "refresh"],
       [14, "sensihit"],
       [18, "defheal"],
-      [23, "rush"],
+      [23, "preblock"],
       [26, "healhit2"],
       [30, "recover"],
       [34, "thunder"],
@@ -21104,7 +21142,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "healhit",
@@ -21123,6 +21161,7 @@
       "noisytag",
       "rest",
       "sweatup",
+      "hum",
       "tagattack",
       "healhit2",
       "jump",
@@ -21168,7 +21207,7 @@
       [45, 7, 6, 8, 2, 0.15]
     ],
     "desc": "¦beastiesetup_desc_098¦",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -21192,7 +21231,7 @@
     "learnset": [
       [0, "starterheart"],
       [0, "eerie"],
-      [13, "cheer"],
+      [13, "hum"],
       [17, "healhit"],
       [21, "noisytag"],
       [27, "shieldbreaker"],
@@ -21328,7 +21367,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterheart",
       "healhit",
@@ -21347,6 +21386,7 @@
       "noisytag",
       "rest",
       "sweatup",
+      "hum",
       "crowd",
       "reversal",
       "jazzattack",
@@ -21393,7 +21433,7 @@
       [43, 7, 6]
     ],
     "desc": "¦beastiesetup_desc_097¦",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -21417,7 +21457,7 @@
     "learnset": [
       [0, "starterheart"],
       [0, "crowd"],
-      [13, "cheer"],
+      [13, "hum"],
       [17, "healhit"],
       [21, "noisytag"],
       [27, "shieldbreaker"],
@@ -21551,7 +21591,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "starterheart",
       "healhit",
@@ -21569,7 +21609,8 @@
       "protect",
       "noisytag",
       "rest",
-      "sweatup"
+      "sweatup",
+      "hum"
     ],
     "attklist_randomize": -1,
     "ba": 65,
@@ -21630,7 +21671,7 @@
       [15, 2, 1]
     ],
     "desc": "¦beastiesetup_desc_096¦",
-    "designer": 3,
+    "designer": 4,
     "dlc": 0,
     "eat_type": 3,
     "evo_pose": [
@@ -21657,7 +21698,7 @@
     "learnset": [
       [0, "starterheart"],
       [0, "rest"],
-      [8, "cheer"],
+      [8, "hum"],
       [12, "healhit"],
       [17, "shieldbreaker"],
       [22, "noisytag"],
@@ -21780,7 +21821,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "starterbody",
       "storedpower",
@@ -21869,7 +21910,7 @@
       [11, 0, 1, 16, 0, 1]
     ],
     "desc": "¦beastiesetup_desc_091¦",
-    "designer": 5,
+    "designer": 6,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -22013,13 +22054,12 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "sidespin",
       "backswitch",
       "shakenmind",
       "sideshot",
-      "hazeball",
       "shakenhit",
       "sensihit",
       "poisonhit",
@@ -22044,6 +22084,8 @@
       "skillswap",
       "rattle",
       "dig",
+      "ricochet",
+      "hazeball",
       "passattack",
       "starterside"
     ],
@@ -22113,7 +22155,7 @@
       [6, 8, 1]
     ],
     "desc": "¦beastiesetup_desc_049¦",
-    "designer": 4,
+    "designer": 5,
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -22267,14 +22309,13 @@
     "ability": ["static"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 60,
-    "animator": 10,
+    "anim_progress": 100,
+    "animator": [9, 11],
     "attklist": [
       "sidespin",
       "backswitch",
       "shakenmind",
       "sideshot",
-      "hazeball",
       "shakenhit",
       "sensihit",
       "poisonhit",
@@ -22299,6 +22340,8 @@
       "skillswap",
       "rattle",
       "dig",
+      "ricochet",
+      "hazeball",
       "passattack",
       "starterside"
     ],
@@ -22368,7 +22411,7 @@
       [6, 8, 1]
     ],
     "desc": "¦beastiesetup_desc_048¦",
-    "designer": [4, 8],
+    "designer": [5, 9],
     "dlc": 0,
     "eat_type": 0,
     "evo_pose": [
@@ -22528,7 +22571,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "preblock",
       "recover",
@@ -22614,7 +22657,7 @@
       [19, 2, 1, 12, 2, 2]
     ],
     "desc": "¦beastiesetup_desc_057¦",
-    "designer": [2, 8],
+    "designer": [3, 9],
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [
@@ -22779,7 +22822,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "preblock",
       "recover",
@@ -22850,7 +22893,7 @@
       [19, 2, 1, 12, 2, 2]
     ],
     "desc": "¦beastiesetup_desc_055¦",
-    "designer": 2,
+    "designer": 3,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -23001,7 +23044,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "preblock",
       "recover",
@@ -23086,7 +23129,7 @@
       [19, 2, 1, 12, 2, 2]
     ],
     "desc": "¦beastiesetup_desc_056¦",
-    "designer": [2, 9],
+    "designer": [3, 10],
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -23234,7 +23277,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 8,
+    "animator": 0,
     "attklist": [
       "cut",
       "blockattack",
@@ -23264,7 +23307,10 @@
       "mdefup",
       "flight",
       "cook",
+      "speech",
       "healbell",
+      "bolt",
+      "hum",
       "starterheart"
     ],
     "attklist_randomize": -1,
@@ -23319,7 +23365,7 @@
       [16, 0, 1, 7, 0, 1]
     ],
     "desc": "¦beastiesetup_desc_074¦",
-    "designer": 1,
+    "designer": 2,
     "dlc": 0,
     "eat_type": 4,
     "evo_pose": [
@@ -23352,7 +23398,7 @@
       [36, "distraction"],
       [41, "cut"],
       [45, "eerie"],
-      [49, "threat"]
+      [49, "speech"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -23458,7 +23504,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 10,
+    "animator": 11,
     "attklist": [
       "allycover",
       "curse",
@@ -23547,7 +23593,7 @@
       [0, 2, 1, 1, 8, -2]
     ],
     "desc": "¦beastiesetup_desc_100¦",
-    "designer": 0,
+    "designer": 1,
     "dlc": 0,
     "eat_type": 2,
     "evo_pose": [

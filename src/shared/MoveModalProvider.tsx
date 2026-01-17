@@ -18,7 +18,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
   const hashMoveName = hash.startsWith("#Play: ") && hash.slice(7);
   const hashMove =
     hashMoveName &&
-    Object.values(MOVE_DIC).find((move) => move.name == hashMoveName);
+    Object.values(MOVE_DIC).find((move) => L(move.name) == hashMoveName);
   const [moveState, setMove] = useState<null | Move>(hashMove || null);
   const move = moveState ?? (hashMove || null);
 
@@ -53,7 +53,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
 
   const moveName = move && L(move.name);
 
-  const hashValue = `Play: ${move?.name}`;
+  const hashValue = `Play: ${moveName}`;
   return (
     <MoveModalContext.Provider value={setMove}>
       <Modal

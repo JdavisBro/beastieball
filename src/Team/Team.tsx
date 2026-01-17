@@ -38,7 +38,7 @@ export default function Team() {
       />
       {secrets ? (
         <NavigationMenuOption
-          text="Encounters"
+          text={L("teams.encounters.title")}
           image="/gameassets/sprMainmenu/27.png"
           hoverImage="/gameassets/sprMainmenu/28.png"
           location="/team/encounters/"

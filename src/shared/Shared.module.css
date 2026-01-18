@@ -322,6 +322,7 @@
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  white-space-collapse: preserve-spaces;
 }
 
 .beastieSelect {

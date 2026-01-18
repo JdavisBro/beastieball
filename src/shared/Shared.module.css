@@ -190,6 +190,10 @@
   z-index: 1;
 }
 
+:root:lang(zh, ja, kr) .movename {
+  font-size: 1.6em;
+}
+
 .movenamelong {
   composes: movename;
   font-size: 1.6em;

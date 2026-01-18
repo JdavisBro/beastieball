@@ -130,7 +130,10 @@ function getEffectString(
     case 39:
     case 80: {
       const [im, nameKey, descKey] = FEELING_EFF_MAP[Math.abs(effect.eff)];
-      const feelingText = `${im}${L(nameKey)} ${L(descKey)}`;
+      const no_desc = effect.eff == 23 && effect.pow > 0 && effect.targ == 7;
+      const feelingText = no_desc
+        ? `${im}${L(nameKey)}`
+        : `${im}${L(nameKey)} ${L(descKey)}`;
       const feelTarget = target[0].toUpperCase() + target.slice(1);
       const placeholders = {
         "0": (effect.pow < 0 ? "+" : "") + String(Math.abs(effect.pow)),

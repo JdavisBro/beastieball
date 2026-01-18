@@ -39,8 +39,8 @@
 }
 
 :root:lang(en, zh, ja, kr) {
-  --go-banana: "Go Banana", BalsamiqSans, sans-serif;
-  --sports-jersey: "SportsJersey", "WDXLLubrifontTC", sans-serif;
+  --go-banana: "Go Banana", sans-serif;
+  --sports-jersey: "SportsJersey", sans-serif;
 }
 
 :root:lang(ru, fr, es, de) {
@@ -48,7 +48,7 @@
 }
 
 .latinText {
-  font-family: "Go Banana", BalsamiqSans, sans-serif;
+  font-family: "Go Banana", sans-serif;
   letter-spacing: 1px;
 }
 

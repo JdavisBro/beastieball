@@ -53,7 +53,7 @@ function generateSitemap(url: string) {
     }
   }
   sitemap.end();
-  writeFile("dist/robots.txt", `Sitemap: ${url}/sitemap.txt`, () => {});
+  writeFile("dist/robots.txt", `Sitemap: ${url}/sitemap.xml`, () => {});
 }
 
 // https://vitejs.dev/config/

@@ -13,9 +13,7 @@ import useScreenOrientation from "../../utils/useScreenOrientation";
 import BeastieRenderProvider from "../../shared/beastieRender/BeastieRenderProvider";
 import SavedTeams from "./SavedTeams";
 import TeamImageButton from "../TeamImageButton";
-import useLocalization, {
-  LocalizationFunction,
-} from "../../localization/useLocalization";
+import useLocalization from "../../localization/useLocalization";
 import BeastieSelect from "../../shared/BeastieSelect";
 import BEASTIE_DATA from "../../data/BeastieData";
 

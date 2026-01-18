@@ -334,7 +334,7 @@
 .itemSelectItem {
   display: flex;
   width: 240px;
-  height: 120px;
+  min-height: 120px;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
   color: white;

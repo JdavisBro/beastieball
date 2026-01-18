@@ -162,7 +162,7 @@
     "img": 7,
     "loneliness": 1,
     "max_hearts": 7,
-    "name": "Riley",
+    "name": "¦socialssetup_classsocial_001¦",
     "object": "@ref object(objRiley)",
     "plays": [
       "steal",
@@ -301,7 +301,7 @@
     "img": 6,
     "loneliness": 1.3,
     "max_hearts": 7,
-    "name": "Reese",
+    "name": "¦socialssetup_classsocial_002¦",
     "object": "@ref object(objResearcher)",
     "plays": ["_FIREUP", "_TRACK"],
     "spr": "sprResearcher"
@@ -406,7 +406,7 @@
     "img": 8,
     "loneliness": 1.3,
     "max_hearts": 6,
-    "name": "Riven",
+    "name": "¦socialssetup_classsocial_003¦",
     "object": "@ref object(objRiven)",
     "plays": [
       "rest",
@@ -471,7 +471,7 @@
     "img": 5,
     "loneliness": 0.5,
     "max_hearts": 4,
-    "name": "Marcy",
+    "name": "¦socialssetup_classsocial_004¦",
     "object": "@ref object(objPirate)",
     "plays": [
       "rhythm",
@@ -599,7 +599,7 @@
     "img": 3,
     "loneliness": 0.7,
     "max_hearts": 6,
-    "name": "Kaz",
+    "name": "¦socialssetup_classsocial_005¦",
     "object": "@ref object(objKaz)",
     "plays": [
       "crowd",
@@ -716,7 +716,7 @@
     "img": 10,
     "loneliness": 0.6,
     "max_hearts": 7,
-    "name": "Sunsoo",
+    "name": "¦socialssetup_classsocial_006¦",
     "object": "@ref object(objCeleb)",
     "plays": [
       "serve",
@@ -852,7 +852,7 @@
     "img": 1,
     "loneliness": 1.6,
     "max_hearts": 6,
-    "name": "Celia",
+    "name": "¦socialssetup_classsocial_007¦",
     "object": "@ref object(objScience)",
     "plays": [
       "trap",
@@ -972,7 +972,7 @@
     "img": 0,
     "loneliness": 0.9,
     "max_hearts": 6,
-    "name": "Callisto",
+    "name": "¦socialssetup_classsocial_008¦",
     "object": "@ref object(objHeadmaster)",
     "plays": [
       "careful",
@@ -1089,7 +1089,7 @@
     "img": 9,
     "loneliness": 1.1,
     "max_hearts": 6,
-    "name": "Elena",
+    "name": "¦socialssetup_classsocial_009¦",
     "object": "@ref object(objStreamer)",
     "plays": [
       "sweatup",
@@ -1162,7 +1162,7 @@
     "img": 2,
     "loneliness": 1.8,
     "max_hearts": 4,
-    "name": "Dominic",
+    "name": "¦socialssetup_classsocial_010¦",
     "object": "@ref object(objWarrior)",
     "plays": [
       "substitute",
@@ -1194,7 +1194,7 @@
     "img": 11,
     "loneliness": 0.9,
     "max_hearts": 1,
-    "name": "Valerie",
+    "name": "¦socialssetup_classsocial_011¦",
     "object": "@ref object(objValerie)",
     "plays": [],
     "spr": "sprValerie"
@@ -1217,7 +1217,7 @@
     "img": 4,
     "loneliness": 0.6,
     "max_hearts": 1,
-    "name": "Sports King",
+    "name": "¦socialssetup_classsocial_012¦",
     "object": "@ref object(objKing)",
     "plays": [],
     "spr": "sprKing"

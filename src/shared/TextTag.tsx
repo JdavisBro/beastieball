@@ -1,3 +1,6 @@
+import useLocalization, {
+  LocalizationFunction,
+} from "../localization/useLocalization";
 import { bgrDecimalToHex } from "../utils/color";
 import styles from "./Shared.module.css";
 
@@ -5,14 +8,18 @@ import styles from "./Shared.module.css";
 // effects not added
 
 const IMAGE_ALTS: Record<string, Record<number, string>> = {
-  sprIcon: { 0: "Body", 1: "Spirit", 2: "Mind" },
+  sprIcon: {
+    0: "common.types.body",
+    1: "common.types.spirit",
+    2: "common.types.mind",
+  },
   sprBoost: {
-    0: "1 up arrow boost",
-    1: "2 up arrow boost",
-    2: "3 up arrow boost",
-    3: "1 down arrow boost",
-    4: "2 down arrow boost",
-    5: "3 down arrow boost",
+    0: "common.boosts.up1",
+    1: "common.boosts.up2",
+    2: "common.boosts.up3",
+    3: "common.boosts.down1",
+    4: "common.boosts.down2",
+    5: "common.boosts.down3",
   },
 };
 
@@ -66,6 +73,8 @@ class TagBuilder {
   style: React.CSSProperties = { ...DEFAULT_STYLE };
   animations: string[] = [];
 
+  L: LocalizationFunction;
+
   imgNobreak: React.ReactElement[] = [];
 
   typeOccurances: Record<"text" | "img" | "imgText", number> = {
@@ -74,12 +83,20 @@ class TagBuilder {
     imgText: 0,
   }; // element counts of each type, for keys.
 
+  constructor(L: LocalizationFunction) {
+    this.L = L;
+  }
+
   applyTag(tag: string, value?: string) {
     if (tag.startsWith("spr")) {
+      const altKey =
+        tag in IMAGE_ALTS ? IMAGE_ALTS[tag][Number(value ?? 0)] : undefined;
       const alt =
-        tag in IMAGE_ALTS
-          ? (IMAGE_ALTS[tag][Number(value ?? 0)] ?? undefined)
-          : undefined;
+        altKey !== undefined
+          ? this.L(altKey)
+          : altKey == ""
+            ? altKey
+            : undefined;
       if (!alt && !ALT_EXCEPTIONS.includes(tag)) {
         console.log(`NO ALT TEXT: '${tag}' frame ${value}`);
       }
@@ -88,7 +105,7 @@ class TagBuilder {
           key={`img-${this.typeOccurances.img}`}
           className={styles.smallimage}
           style={{ ...this.style }}
-          alt={alt}
+          alt={alt || undefined}
           src={`/gameassets/${tag}/${value ?? "0"}.png`}
         />,
       );
@@ -246,6 +263,7 @@ type Props = {
 };
 
 export default function TextTag(props: Props): React.ReactElement {
+  const { L } = useLocalization();
   let text;
   if (Array.isArray(props.children)) {
     text = props.children.join("");
@@ -255,7 +273,7 @@ export default function TextTag(props: Props): React.ReactElement {
   if (!text.includes("[")) {
     return <span className={styles.texttag}>{text}</span>;
   }
-  const builder = new TagBuilder();
+  const builder = new TagBuilder(L);
   // gets text before next tag or end of string (match[1]) (match[2] is [ when [[) + next tag (match[3]) + value (match[4])
   const regex = /([^[]*)(?:\[(\[)|\[(.*?)(?:,(.*?))?\]|$)/g;
   let match = regex.exec(text);

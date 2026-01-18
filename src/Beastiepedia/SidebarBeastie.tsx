@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./Sidebar.module.css";
 import type { BeastieType } from "../data/BeastieData";
 import { memo } from "react";
+import useLocalization from "../localization/useLocalization";
 
 type Props = {
   beastieid: string;
@@ -15,7 +16,12 @@ type Props = {
 };
 
 function SidebarBeastie(props: Props): React.ReactElement {
+  const { L, getLink } = useLocalization();
+
   const beastiedata = props.beastiedata;
+  const beastieName = L(beastiedata.name);
+  const beastieEnName = L(beastiedata.name, undefined, true);
+
   const selected = props.selected;
   const content = selected
     ? `${styles.beastiecontent} ${styles.selected}`
@@ -23,12 +29,12 @@ function SidebarBeastie(props: Props): React.ReactElement {
 
   return (
     <Link
-      to={props.isSpoiler ? "#" : `/beastiepedia/${beastiedata.name}`}
+      to={props.isSpoiler ? "#" : getLink(`/beastiepedia/${beastieName}`)}
       className={styles.beastie}
       style={{ display: props.visible ? "block" : "none" }}
       onClick={() => {
         if (props.isSpoiler) {
-          props.handleSpoilerClick(beastiedata.id, beastiedata.name);
+          props.handleSpoilerClick(beastiedata.id, beastieName);
         }
       }}
     >
@@ -38,10 +44,10 @@ function SidebarBeastie(props: Props): React.ReactElement {
           src={
             props.isSpoiler
               ? "/gameassets/sprExclam_1.png"
-              : `/icons/${beastiedata.name}.png`
+              : `/icons/${beastieEnName}.png`
           }
           style={props.isSpoiler ? { filter: "brightness(50%)" } : undefined}
-          alt={`${props.isSpoiler ? "Hidden Beastie" : beastiedata.name}`}
+          alt={props.isSpoiler ? L("common.hiddenBeastie") : beastieName}
           loading="lazy"
         />
         <div className={styles.gridInfo}>
@@ -60,12 +66,12 @@ function SidebarBeastie(props: Props): React.ReactElement {
             <span>{String(beastiedata.number).padStart(2, "0")}</span>
             {props.statDisplay && !props.isSpoiler ? (
               <span>
-                {" - "}
+                {L("beastiepedia.sidebar.statDisplaySeparator")}
                 <span className={styles.statDisplay}>{props.statDisplay}</span>
               </span>
             ) : null}
           </div>
-          <div>{props.isSpoiler ? "???" : beastiedata.name}</div>
+          <div>{props.isSpoiler ? L("common.spoiler") : beastieName}</div>
         </div>
       </div>
     </Link>

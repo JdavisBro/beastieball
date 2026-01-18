@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import NavIcons from "./NavIcons";
 import styles from "./Header.module.css";
+import useLocalization from "../localization/useLocalization";
 
 type Props = {
   title: string | undefined;
@@ -14,6 +15,11 @@ type Props = {
 };
 
 export default function Header(props: Props): React.ReactNode {
+  const { L, getLink } = useLocalization();
+
+  const menuText = props.menuButtonState
+    ? L("common.header.enabledMenu")
+    : L("common.header.disabledMenu");
   return (
     <>
       <div className={styles.header}>
@@ -23,9 +29,8 @@ export default function Header(props: Props): React.ReactNode {
               props.menuButtonState ? styles.toggleicon : styles.toggleiconOff
             }
             src={"/gameassets/sprOptions_small_0.png"}
-            title={props.menuButtonState ? "Enable Menu" : "Disable Menu"}
-            alt={props.menuButtonState ? "Enable Menu" : "Disable Menu"}
-            aria-haspopup="menu"
+            title={menuText}
+            alt={menuText}
             role="button"
             tabIndex={0}
             onClick={props.onMenuButtonPressed}
@@ -34,18 +39,28 @@ export default function Header(props: Props): React.ReactNode {
           />
         ) : null}
         <Link
-          to={props.returnButtonTo ?? "/"}
+          to={getLink(props.returnButtonTo ?? "/")}
           className={styles.homelink}
-          title={`Return to ${props.returnButtonTitle ?? `${import.meta.env.VITE_BRANDING} Home`}`}
+          title={L("common.header.return", {
+            place:
+              props.returnButtonTitle ??
+              L("common.header.defaultPlace", {
+                branding: import.meta.env.VITE_BRANDING,
+              }),
+          })}
         >
           <div className={styles.homeicon}></div>
         </Link>
         <div className={styles.title}>
-          {import.meta.env.VITE_EXPERIMENTAL == "true" ? "🧪 " : ""}
+          {import.meta.env.VITE_EXPERIMENTAL == "true"
+            ? L("common.experimentalPrefix")
+            : ""}
           {props.title}
         </div>
         <div className={styles.externallinkcontainer}>
-          {props.secretPage ? <Link to="/secrets/">Secret</Link> : null}
+          {props.secretPage ? (
+            <Link to="/secrets/">{L("secrets.single")}</Link>
+          ) : null}
           <NavIcons />
         </div>
       </div>

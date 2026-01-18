@@ -5,11 +5,10 @@ import {
   LayerGroup,
   MapContainer,
   Marker,
-  Polyline,
   Popup,
   useMapEvents,
 } from "react-leaflet";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 
 import WORLD_DATA, { EXTRA_MARKERS } from "../data/WorldData";
 import styles from "./Map.module.css";
@@ -24,11 +23,11 @@ import { useIsSpoiler } from "../shared/useSpoiler";
 import OTHER_AREAS from "./OtherLayerAreas";
 import SpecialBeastieMarker from "./SpecialBeastieMarker";
 import { EXTINCT_BEASTIES, METAMORPH_LOCATIONS } from "./SpecialBeasties";
-import DivIconMarker from "./DivIconMarker";
 import createBeastieBox from "./createBeastieBox";
 import { ControlMenu } from "./ControlMenu";
-import EncounterPopup from "./EncounterPopup";
-import { EncounterDataType } from "../data/EncounterData";
+import useLocalization from "../localization/useLocalization";
+import SwitchMarkers from "./SwitchMarkers";
+import Encounters from "./Encounters";
 
 const secrets = localStorage.getItem("secrets") == "true";
 
@@ -55,6 +54,9 @@ function MapEvents() {
 }
 
 export default function Map(): React.ReactNode {
+  const Localization = useLocalization();
+  const { L: Loc } = Localization;
+
   // these are estimates based on comparing the map to a screenshot but they should be about right for now
   const bounds = new L.LatLngBounds([0, 0], [1, 1]);
   const map_bg_bounds = new L.LatLngBounds([83000, -160000], [-42333, 14762]);
@@ -99,7 +101,7 @@ export default function Map(): React.ReactNode {
   const searchParams = new URL(window.location.href).searchParams;
   const searchHuntedName = searchParams.get("track");
   const searchHunted = BEASTIE_ARRAY.find(
-    (beastie) => beastie.name == searchHuntedName,
+    (beastie) => Loc(beastie.name) == searchHuntedName,
   )?.id;
 
   const [huntedBeastie, setHuntedBeastieState] = useState<string | undefined>(
@@ -109,10 +111,10 @@ export default function Map(): React.ReactNode {
   );
   const setHuntedBeastie = (beastieId?: string) => {
     setHuntedBeastieState(beastieId);
-    setQueryParam(
-      "track",
-      beastieId ? BEASTIE_DATA.get(beastieId)?.name : undefined,
-    );
+    const beastieName = beastieId
+      ? BEASTIE_DATA.get(beastieId)?.name
+      : undefined;
+    setQueryParam("track", beastieName ? Loc(beastieName) : undefined);
   };
 
   const [beastiesLevel, setBeastiesLevel] = useState("");
@@ -120,13 +122,15 @@ export default function Map(): React.ReactNode {
   const searchItemName = searchParams.get("item");
   const searchItemId =
     searchItemName &&
-    Object.values(ITEM_DIC).find((item) => searchItemName == item.name)?.id;
+    Object.values(ITEM_DIC).find((item) => searchItemName == Loc(item.name))
+      ?.id;
   const [huntedItem, setHuntedItemState] = useState<string | undefined>(
     searchItemId ?? undefined,
   );
   const setHuntedItem = (itemId?: string) => {
     setHuntedItemState(itemId);
-    setQueryParam("item", itemId ? ITEM_DIC[itemId]?.name : undefined);
+    const itemName = itemId ? ITEM_DIC[itemId]?.name : undefined;
+    setQueryParam("item", itemName ? Loc(itemName) : undefined);
   };
 
   WORLD_DATA.level_stumps_array.forEach((level) => {
@@ -242,6 +246,7 @@ export default function Map(): React.ReactNode {
           setSeen,
           huntedBeastie,
           attractSpray,
+          Localization,
         ),
       );
     }
@@ -267,7 +272,7 @@ export default function Map(): React.ReactNode {
     bigtitleheaders: React.ReactElement[];
     titleheaders: React.ReactElement[];
     imgheaders: { [key: string]: React.ReactElement[] };
-  } = useMemo(createMarkers, []);
+  } = useMemo(() => createMarkers(Loc), [Loc]);
 
   const extinctIsSpoiler = !EXTINCT_BEASTIES.some(
     (extinct) => !isSpoiler(extinct.beastieId),
@@ -276,39 +281,28 @@ export default function Map(): React.ReactNode {
   const marker_name = searchParams.get("marker");
   const marker = marker_name
     ? METAMORPH_LOCATIONS.find(
-        (value) => BEASTIE_DATA.get(value.to)?.name == marker_name,
+        (value) => Loc(BEASTIE_DATA.get(value.to)?.name ?? "") == marker_name,
       ) ||
       EXTINCT_BEASTIES.find(
-        (value) => BEASTIE_DATA.get(value.beastieId)?.name == marker_name,
+        (value) =>
+          Loc(BEASTIE_DATA.get(value.beastieId)?.name ?? "") == marker_name,
       )
     : undefined;
   const center = marker ? marker.position : L.latLng(0, 0);
   const zoom = marker ? -4 : -5.5;
 
-  const [encounterData, setEncounterData] = useState<
-    EncounterDataType | undefined
-  >(undefined);
-  const loadingEncounterDataRef = useRef(false);
-
-  const loadEncounterData = useCallback(() => {
-    if (loadingEncounterDataRef.current) {
-      return;
-    }
-    loadingEncounterDataRef.current = true;
-    import("../data/EncounterData").then((data) =>
-      setEncounterData(data.default),
-    );
-  }, []);
-
   return (
     <>
       <OpenGraph
-        title={`Map - ${import.meta.env.VITE_BRANDING}`}
+        title={Loc("common.title", {
+          page: Loc("map.title"),
+          branding: import.meta.env.VITE_BRANDING,
+        })}
         image="gameassets/sprMainmenu/3.png"
         url="map/"
-        description="A map of the world of Beastieball"
+        description={Loc("map.description")}
       />
-      <Header title="Beastieball Map" />
+      <Header title={Loc("map.header")} />
       <MapContainer
         className={styles.map}
         minZoom={-7}
@@ -329,32 +323,32 @@ export default function Map(): React.ReactNode {
         <ControlMenu
           layers={[
             {
-              category: "Text",
-              title: "Region Names",
+              category: "text",
+              title: "regionNames",
               children: bigtitleheaders,
             },
             {
-              title: "Area Names",
+              title: "areaNames",
               children: titleheaders,
             },
             ...Object.keys(imgheaders)
               .map((key, index) =>
-                key == "Other" && imgheaders[key].length == 0
+                key == "other" && imgheaders[key].length == 0
                   ? null
                   : {
-                      category: index == 0 ? "Markers" : undefined,
+                      category: index == 0 ? "markers" : undefined,
                       title: key,
                       children: imgheaders[key],
                     },
               )
               .filter((layer) => !!layer),
             {
-              category: "Beasties",
-              title: "Beastie Spawns",
+              category: "beasties",
+              title: "beastieSpawns",
               children: beastieSpawnsOverlays,
             },
             {
-              title: `${extinctIsSpoiler ? "???" : "Extinct"} Beastie Locations`,
+              title: extinctIsSpoiler ? "extinctUnseen" : "extinct",
               children: EXTINCT_BEASTIES.map((extinct) => (
                 <SpecialBeastieMarker
                   key={extinct.beastieId}
@@ -370,7 +364,7 @@ export default function Map(): React.ReactNode {
               )),
             },
             {
-              title: "Metamorphosis Locations",
+              title: "metamorphosis",
               children: METAMORPH_LOCATIONS.map((metamorph) => (
                 <SpecialBeastieMarker
                   key={metamorph.to}
@@ -389,47 +383,17 @@ export default function Map(): React.ReactNode {
             },
             secrets
               ? {
-                  title: "Encounters",
-                  children: EXTRA_MARKERS.encounters.map((encounter) => (
-                    <DivIconMarker
-                      key={`${encounter.position[0]}-${encounter.position[1]}-${encounter.encounter}`}
-                      tagName="div"
-                      icon={{
-                        className: styles.hidemarker,
-                        iconSize: [15, 30],
-                      }}
-                      markerprops={{
-                        position: L.latLng(
-                          -encounter.position[1],
-                          encounter.position[0],
-                        ),
-                      }}
-                      className={styles.encounterImgmarker}
-                      popup={
-                        <Popup>
-                          <EncounterPopup
-                            encounterId={encounter.encounter}
-                            encounterData={encounterData}
-                            loadEncounterData={loadEncounterData}
-                          />
-                        </Popup>
-                      }
-                    >
-                      <img
-                        src="/gameassets/sprSponsors/5.png"
-                        alt="Encounter Marker"
-                      />
-                    </DivIconMarker>
-                  )),
+                  title: "encounters",
+                  children: <Encounters />,
                 }
               : undefined,
             {
-              category: "Exploration",
-              title: "Inside Overlays",
+              category: "exploration",
+              title: "insideOverlay",
               children: inside_overlays,
             },
             {
-              title: "Items",
+              title: "items",
               children: EXTRA_MARKERS.gifts
                 .filter(
                   (gift) =>
@@ -456,9 +420,9 @@ export default function Map(): React.ReactNode {
                             />
                             <div>
                               <span>
-                                {ITEM_DIC[item].name} x{count}
+                                {Loc(ITEM_DIC[item].name)} x{count}
                               </span>
-                              <TextTag>{ITEM_DIC[item].desc}</TextTag>
+                              <TextTag>{Loc(ITEM_DIC[item].desc)}</TextTag>
                             </div>
                           </div>
                         ))}
@@ -468,73 +432,8 @@ export default function Map(): React.ReactNode {
                 )),
             },
             {
-              title: "Switches and Gates",
-              children: [
-                EXTRA_MARKERS.switches
-                  .map((lever, index) => {
-                    const leverPos = L.latLng(
-                      -lever.position[1],
-                      lever.position[0],
-                    );
-                    const walls = EXTRA_MARKERS.walls[lever.lever_id];
-                    const lineCol = `hsl(${Math.floor(Math.abs(lever.position[0] + lever.position[1]) % 360) & 0xaaaaaa}, 100%, 50%)`;
-                    return [
-                      <DivIconMarker
-                        key={`${index}_lever`}
-                        tagName="div"
-                        className={styles.imgmarker}
-                        markerprops={{ position: leverPos }}
-                        icon={{
-                          className: styles.hidemarker,
-                          iconSize: [15, 30],
-                        }}
-                        popup={<Popup>Switch</Popup>}
-                      >
-                        <img src="/map_icon/switch.png" alt="Switch Marker" />
-                      </DivIconMarker>,
-                      walls.map((wall, wallIndex) => {
-                        const rad = ((wall.angle - 180) * Math.PI) / 180;
-                        const gatePos = L.latLng(
-                          -wall.position[1] + Math.sin(rad) * 125,
-                          wall.position[0] + Math.cos(rad) * 250,
-                        );
-                        return (
-                          <Polyline
-                            key={`${index}_line_${wallIndex}`}
-                            positions={[leverPos, gatePos]}
-                            weight={6}
-                            color={lineCol}
-                          />
-                        );
-                      }),
-                    ];
-                  })
-                  .flat(),
-                Object.values(EXTRA_MARKERS.walls)
-                  .flat()
-                  .map((wall, index) => {
-                    const rad = ((wall.angle - 180) * Math.PI) / 180;
-                    const gatePos = L.latLng(
-                      -wall.position[1] + Math.sin(rad) * 125,
-                      wall.position[0] + Math.cos(rad) * 250,
-                    );
-                    return (
-                      <DivIconMarker
-                        key={`${index}_gate`}
-                        tagName="div"
-                        className={styles.imgmarker}
-                        markerprops={{ position: gatePos }}
-                        icon={{
-                          className: styles.hidemarker,
-                          iconSize: [15, 30],
-                        }}
-                        popup={<Popup>Gate</Popup>}
-                      >
-                        <img src="/map_icon/gate.png" alt="Gate Marker" />
-                      </DivIconMarker>
-                    );
-                  }),
-              ],
+              title: "switchesGates",
+              children: <SwitchMarkers />,
             },
           ].filter((layer) => layer !== undefined)}
           huntedBeastie={huntedBeastie}

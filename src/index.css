@@ -1,29 +1,60 @@
 @font-face {
   font-family: "Go Banana";
-  src: url("/fonts/Go Banana.woff") format("woff");
   src: url("/fonts/Go Banana.woff2") format("woff2");
+  src: url("/fonts/Go Banana.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BalsamiqSans";
+  src: url("/fonts/BalsamiqSans-Regular.woff2") format("woff2");
+  src: url("/fonts/BalsamiqSans-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "SportsJersey";
-  src: url("/fonts/SportsJersey.woff") format("woff");
   src: url("/fonts/SportsJersey.woff2") format("woff2");
+  src: url("/fonts/SportsJersey.woff") format("woff");
   unicode-range:
     U+30-39, U+41-5A, U+61-7A; /* sports jersey only supports 0 to z and so this makes it fallback on regular fonts */
+}
+
+@font-face {
+  font-family: "WDXLLubrifontTC";
+  src: url("/fonts/WDXLLubrifontTC-Regular.woff2") format("woff2");
 }
 
 :root {
   font-family: var(--go-banana);
   font-size: 1.1em;
   letter-spacing: 1px;
+  line-height: 1.1;
 
   color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
-  --go-banana: "Go Banana", sans-serif;
-  --sports-jersey: "SportsJersey", "Go Banana", sans-serif;
+  --go-banana: BalsamiqSans, sans-serif;
+  --sports-jersey: "WDXLLubrifontTC", "Go Banana", sans-serif;
   --header-height: 50px;
+}
+
+:root:lang(en, zh, ja, kr) {
+  --go-banana: "Go Banana", sans-serif;
+  --sports-jersey: "SportsJersey", sans-serif;
+}
+
+:root:lang(ru, fr, es, de) {
+  letter-spacing: normal;
+}
+
+.latinText {
+  font-family: "Go Banana", sans-serif;
+  letter-spacing: 1px;
+}
+
+.numberFont {
+  font-family: "SportsJersey", sans-serif;
+  letter-spacing: 1px;
 }
 
 body {
@@ -63,14 +94,6 @@ select {
 }
 
 .container {
-  background-image: repeating-linear-gradient(
-    rgb(7, 7, 7),
-    rgb(7, 7, 7) 4px,
-    black 4px,
-    black 8px
-  );
-  background-size: 100% 200%;
-  animation: bg-scroll 2s linear infinite;
   position: absolute;
   top: 0;
   left: 0;
@@ -80,6 +103,14 @@ select {
   width: 100dvw;
   min-height: 100dvh;
   height: fit-content;
+  background-image: repeating-linear-gradient(
+    rgb(7, 7, 7),
+    rgb(7, 7, 7) 4px,
+    black 4px,
+    black 8px
+  );
+  background-size: 100% 200%;
+  animation: bg-scroll 2s linear infinite;
 }
 
 .commoncontainer {

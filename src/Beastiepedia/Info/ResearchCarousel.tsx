@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styles from "./ResearchCarousel.module.css";
 import Modal from "../../shared/Modal";
 import untyped_research_data from "../../data/raw/research_data.json";
+import useLocalization from "../../localization/useLocalization";
 
 const research_data: { [key: string]: number } = untyped_research_data;
 
@@ -15,26 +16,33 @@ function Controls({
   changeIndex: (targetIndex: number) => void;
   totalImages: number;
 }) {
+  const { L } = useLocalization();
+
   return (
     <div className={styles.controls}>
       <button
         disabled={imageIndex == 0}
         onClick={() => changeIndex(imageIndex - 1)}
       >
-        {"<"}Prev
+        {L("beastiepedia.info.research.prev")}
       </button>
-      {imageIndex + 1}/{totalImages}
+      {L("beastiepedia.info.research.current", {
+        num: String(imageIndex + 1),
+        max: String(totalImages),
+      })}
       <button
         disabled={imageIndex == totalImages - 1}
         onClick={() => changeIndex(imageIndex + 1)}
       >
-        Next{">"}
+        {L("beastiepedia.info.research.next")}
       </button>
     </div>
   );
 }
 
 export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
+  const { L } = useLocalization();
+
   const [imageIndex, setImageIndex] = useState(0);
   const [bigImage, setBigImage] = useState<boolean>(false);
 
@@ -83,7 +91,7 @@ export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
         totalImages={images.length}
       />
       <Modal
-        header="Research"
+        header={L("beastiepedia.info.research.title")}
         open={bigImage}
         makeOpen={() => setBigImage(true)}
         onClose={() => {
@@ -108,7 +116,7 @@ export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
           <div
             className={loading ? styles.loadingtext : styles.loadingtexthidden}
           >
-            <div>Loading...</div>
+            <div>{L("common.loading")}</div>
           </div>
         </div>
         <Controls

@@ -1,3 +1,4 @@
+import useLocalization from "../../localization/useLocalization";
 import InfoBox from "../../shared/InfoBox";
 import styles from "./ContentPreview.module.css";
 
@@ -15,21 +16,26 @@ type Props = {
 };
 
 export default function PreviewSettings(props: Props): React.ReactElement {
+  const { L } = useLocalization();
   return (
     <>
       <InfoBox
-        header="Settings"
+        header={L("beastiepedia.preview.settings.header")}
         container={{ className: styles.previewSettings }}
       >
         <div>
-          <button onClick={() => props.downloadImage()}>Save PNG</button>
-          <button onClick={() => props.downloadImage(true)}>Copy PNG</button>
+          <button onClick={() => props.downloadImage()}>
+            {L("beastiepedia.preview.settings.savePNG")}
+          </button>
+          <button onClick={() => props.downloadImage(true)}>
+            {L("beastiepedia.preview.settings.copyPNG")}
+          </button>
           <button onClick={props.downloadGif} disabled={props.gifDisabled}>
-            Save GIF
+            {L("beastiepedia.preview.settings.saveGIF")}
           </button>
           {props.userSpeed > 1.2 ? (
             <span
-              title="When using a high speed, GIFs might not save the speed correctly."
+              title={L("beastiepedia.preview.settings.gifSpeedNote")}
               style={{ cursor: "help", userSelect: "none" }}
             >
               ⚠
@@ -37,7 +43,7 @@ export default function PreviewSettings(props: Props): React.ReactElement {
           ) : null}
         </div>
         <label>
-          Display Size:{" "}
+          {L("beastiepedia.preview.settings.displaySizeLabel")}
           <input
             type="range"
             min={25}
@@ -56,7 +62,7 @@ export default function PreviewSettings(props: Props): React.ReactElement {
         </label>
         <div>
           <label htmlFor="whitebg" style={{ userSelect: "none" }}>
-            Background:
+            {L("beastiepedia.preview.settings.backgroundLabel")}
             <input
               id="whitebg"
               type="checkbox"
@@ -74,7 +80,7 @@ export default function PreviewSettings(props: Props): React.ReactElement {
           </label>
         </div>
         <label>
-          Crop to Beastie:
+          {L("beastiepedia.preview.settings.cropLabel")}
           <input
             type="checkbox"
             defaultChecked={props.fitBeastie}

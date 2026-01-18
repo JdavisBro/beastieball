@@ -14,6 +14,9 @@ import EncounterBeastieElem, {
 import getLevelBonus from "./getLevelBonus";
 import { useState } from "react";
 import MoveModalProvider from "../../shared/MoveModalProvider";
+import useLocalization, {
+  LocalizationFunction,
+} from "../../localization/useLocalization";
 import AiInfo from "./AiInfo";
 import { createPid } from "../Builder/createBeastie";
 
@@ -34,28 +37,31 @@ function prettyName(name: string) {
 }
 
 // only rowdy bosses, overworld ranked coaches, valerie. can be "defeated"
-const BOSSES_MAP: Record<string, string> = {
-  kaz: "Kaz",
-  riven: "Riven",
-  science: "Celia",
-  pirate: "Marcy",
-  celeb: "Sunsoo",
-  streamer: "Elena",
-  academy: "Callisto",
-  warrior: "Dominic",
-  coral_shroom_0: "Surgus",
-  shroom_path_boss: "Illugus",
-  reserve_boss: "Bongus",
+const BOSSES_MAP: Record<
+  string,
+  string | ((L: LocalizationFunction) => string)
+> = {
+  kaz: "¦socialssetup_classsocial_005¦",
+  riven: "¦socialssetup_classsocial_003¦",
+  science: "¦socialssetup_classsocial_007¦",
+  pirate: "¦socialssetup_classsocial_004¦",
+  celeb: "¦socialssetup_classsocial_006¦",
+  streamer: "¦socialssetup_classsocial_009¦",
+  academy: "¦Headmaster_Create0npcname_001¦",
+  warrior: "¦socialssetup_classsocial_010¦",
+  coral_shroom_0: "¦beastiesetup_name_003¦",
+  shroom_path_boss: "¦beastiesetup_name_004¦",
+  reserve_boss: "¦beastiesetup_name_002¦",
 
-  redd: "Marlin", // always true
+  redd: "¦Redd_Create0npcname_001¦", // always true
 
   // non-defeatable
   default: "Default", // can't
-  racer: "Barnes", // no defeated_ tag
-  cycle: "Gene", // no defeated_ tag
-  redd2: "Marlin 2", // no defeated_ tag
-  mask: "Jack", // no defeated_ tag
-  champion: "Valerie",
+  racer: "¦Racer_Create0npcname_001¦", // no defeated_ tag
+  cycle: "¦Cycle_Create0npcname_001¦", // no defeated_ tag
+  redd2: (L) => L("¦Redd_Create0npcname_001¦") + " 2", // no defeated_ tag
+  mask: "¦Mask_Create0npcname_001¦", // no defeated_ tag
+  champion: "¦Valerie_Create0npcname_001¦",
 };
 
 const DEFEATABLE_BOSSES = [
@@ -74,6 +80,8 @@ const DEFEATABLE_BOSSES = [
 ];
 
 export default function Encounters() {
+  const { L, getLink } = useLocalization();
+
   const navigate = useNavigate();
   const encounterId = useParams().encounterId;
   const encounter = encounterId ? ENCOUNTER_DATA[encounterId] : undefined;
@@ -92,6 +100,18 @@ export default function Encounters() {
         )
       : 0;
 
+  const sep = L("teams.encounters.sep");
+
+  const scalesBossKey = encounter
+    ? BOSSES_MAP[
+        typeof encounter.scales == "string" ? encounter.scales : "redd"
+      ]
+    : undefined;
+  const scalesBossName = scalesBossKey
+    ? typeof scalesBossKey == "string"
+      ? L(scalesBossKey)
+      : scalesBossKey(L)
+    : "";
   const openTeamInBuilder = (forceLevel?: number) => {
     if (!encounter) {
       return;
@@ -105,6 +125,7 @@ export default function Encounters() {
           forceLevel ?? encBeastie.level + bonus_levels,
           encounter.id,
           index,
+          L,
         ),
       );
     localStorage.setItem("teamBuilderTeam", JSON.stringify(team));
@@ -115,15 +136,20 @@ export default function Encounters() {
   return (
     <>
       <OpenGraph
-        title={`Encounters - ${import.meta.env.VITE_BRANDING}`}
-        description="View Teams from encounters in Beastieball!"
+        title={L("common.title", {
+          page: L("teams.encounters.title"),
+          branding: import.meta.env.VITE_BRANDING,
+        })}
+        description={L("teams.encounters.description")}
         image="gameassets/sprMainmenu/27.png"
         url="team/encounters/"
       />
       <Header
-        title="Encounters"
+        title={L("teams.encounters.title")}
         returnButtonTo="/team/"
-        returnButtonTitle={`${import.meta.env.VITE_BRANDING} Team Page`}
+        returnButtonTitle={L("teams.return", {
+          branding: import.meta.env.VITE_BRANDING,
+        })}
         secretPage={true}
       />
       <div className={styles.box}>
@@ -132,12 +158,16 @@ export default function Encounters() {
           <select
             onChange={(event) =>
               navigate(
-                `/team/encounters/${event.target.value == "undefined" ? "" : event.target.value}`,
+                getLink(
+                  `/team/encounters/${event.target.value == "undefined" ? "" : event.target.value}`,
+                ),
               )
             }
             value={String(encounterId)}
           >
-            <option value={"undefined"}>None</option>
+            <option value={"undefined"}>
+              {L("teams.encounters.noneSelected")}
+            </option>
             {ENCOUNTER_LIST.map((encounter) => (
               <option key={encounter.id} value={encounter.id}>
                 {prettyName(encounter.id)}
@@ -149,18 +179,21 @@ export default function Encounters() {
           <>
             <br />
             {encounter.scales
-              ? `Scales with ${BOSSES_MAP[typeof encounter.scales == "string" ? encounter.scales : "redd"]}: +${Math.floor(bonus_levels)} levels`
-              : "No scaling"}{" "}
+              ? L("teams.encounters.scales", {
+                  boss: scalesBossName,
+                  levels: String(Math.floor(bonus_levels)),
+                })
+              : L("teams.encounters.noScaling")}{" "}
             <AiInfo encounter={encounter} />
           </>
         ) : null}
       </div>
       <div className={styles.box}>
-        Defeated:{" "}
+        {L("teams.encounters.defeatedBoss")}
         <span className={styles.bosses}>
           {DEFEATABLE_BOSSES.map((bossId, index) => (
             <>
-              {index == 0 ? null : " - "}
+              {index == 0 ? null : sep}
               <label key={bossId}>
                 <input
                   type="checkbox"
@@ -172,13 +205,15 @@ export default function Encounters() {
                     }))
                   }
                 />
-                {BOSSES_MAP[bossId]}
+                {typeof BOSSES_MAP[bossId] == "string"
+                  ? L(BOSSES_MAP[bossId])
+                  : BOSSES_MAP[bossId](L)}
               </label>
             </>
           ))}
-          {" - "}
+          {sep}
           <button onClick={() => setBossesDefeated({ redd: true })}>
-            Reset
+            {L("teams.encounters.resetBoss")}
           </button>
         </span>
       </div>
@@ -200,19 +235,19 @@ export default function Encounters() {
         </MoveModalProvider>
       </div>
       <div className={styles.box}>
-        Open in Team Builder:{" "}
+        {L("teams.encounters.openInBuilder")}
         <button
           disabled={openInBuilderDisabled}
           onClick={() => openTeamInBuilder()}
         >
-          At Current Levels
+          {L("teams.encounters.atCurrentLevels")}
         </button>
-        {" - "}
+        {sep}
         <button
           disabled={openInBuilderDisabled}
           onClick={() => openTeamInBuilder(50)}
         >
-          At Level 50
+          {L("teams.encounters.atLevel50")}
         </button>
       </div>
     </>

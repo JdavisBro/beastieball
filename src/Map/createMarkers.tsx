@@ -3,6 +3,7 @@ import { Popup } from "react-leaflet";
 import styles from "./Map.module.css";
 import WORLD_DATA, { MapIcon } from "../data/WorldData";
 import DivIconMarker from "./DivIconMarker";
+import { LocalizationFunction } from "../localization/useLocalization";
 
 function getKey(icon: MapIcon) {
   if (icon.is_cave) {
@@ -23,30 +24,28 @@ const CONDITIONAL_CHECK: Record<string, number> = {
   region_discovered_mtn: 1,
 };
 
-const railhouseStr = "Railhouse / Boathouse /\nCamp / Zip Station";
-
-export function createMarkers() {
+export function createMarkers(Loc: LocalizationFunction) {
   const bigtitleheaders: React.ReactElement[] = [];
   const titleheaders: React.ReactElement[] = [];
 
   const objtypes: { [key: string]: string } = {
-    objBallcenter: "Beastieball Center",
-    objRailhouse: railhouseStr,
-    objBoathouse: railhouseStr,
-    objCamp: railhouseStr,
-    objGymdoor: "Gym",
-    objClothesShop: "Clothes Shop",
-    objZipstation: railhouseStr,
-    objMall: railhouseStr,
+    objBallcenter: "beastieballCenter",
+    objRailhouse: "railhouse",
+    objBoathouse: "railhouse",
+    objCamp: "railhouse",
+    objGymdoor: "gym",
+    objClothesShop: "clothes",
+    objZipstation: "railhouse",
+    objMall: "railhouse",
   };
 
   const imgheaders: { [key: string]: React.ReactElement[] } = {
-    "Beastieball Center": [],
-    [railhouseStr]: [],
-    Gym: [],
-    "Clothes Shop": [],
-    Caves: [],
-    Other: [],
+    beastieballCenter: [],
+    railhouse: [],
+    gym: [],
+    clothes: [],
+    caves: [],
+    other: [],
   };
 
   function createMarker(value: MapIcon) {
@@ -58,17 +57,22 @@ export function createMarkers() {
     if (value.img) {
       markertype =
         value.is_cave == 1
-          ? imgheaders["Caves"]
+          ? imgheaders.caves
           : value.from_object
             ? imgheaders[objtypes[value.from_object]]
-            : imgheaders["Other"];
+            : imgheaders.other;
       if (markertype == undefined) {
-        markertype = imgheaders["Other"];
+        markertype = imgheaders.other;
       }
       markerup = <img src={`/gameassets/sprSponsors/${value.img}.png`} />;
-      popup = (
-        <Popup>{value.revealed_text ? value.revealed_text : value.text}</Popup>
-      );
+      const revealed =
+        value.revealed_text &&
+        value.revealed_text.replace(
+          /(.+?)(?: \((.+?)\)|$)/,
+          (_, g1, g2) =>
+            `${Loc("_map_" + g1)}${g2 ? ` (${Loc("_map_" + g2)})` : ""}`,
+        );
+      popup = <Popup>{revealed ? revealed : Loc("_map_" + value.text)}</Popup>;
     } else {
       if (value.has_conditional && value.conditional) {
         if (
@@ -79,7 +83,7 @@ export function createMarkers() {
       }
       containerclass =
         value.superheader == 1 ? styles.bigtextmarker : styles.textmarker;
-      markerup = value.text ? <>{value.text}</> : null;
+      markerup = value.text ? <>{Loc("_map_" + value.text)}</> : null;
       zindex = value.superheader == 1 ? 1100 : 1000;
     }
 

@@ -11,6 +11,9 @@ import {
   BEASTIE_STUFF_RECENTLY_UPDATED,
   BEASITE_SPRITES_RECENTLY_UPDATED,
 } from "./RecentlyUpdated";
+import useLocalization, {
+  LocalizationFunction,
+} from "../localization/useLocalization";
 import InfoTabberHeader from "../shared/InfoTabber";
 
 export enum FilterTypes {
@@ -24,12 +27,12 @@ export enum FilterTypes {
 type TrainingTypes = "ba" | "ha" | "ma" | "bd" | "hd" | "md";
 const STATS: TrainingTypes[] = ["ba", "bd", "ha", "hd", "ma", "md"];
 const TRAINING_TYPES = {
-  ba: "Body POW",
-  ha: "Spirit POW",
-  ma: "Mind POW",
-  bd: "Body DEF",
-  hd: "Spirit DEF",
-  md: "Mind DEF",
+  ba: "bodyPow",
+  ha: "spiritPow",
+  ma: "mindPow",
+  bd: "bodyDef",
+  hd: "spiritDef",
+  md: "mindDef",
 };
 
 enum RecentlyUpdatedTypes {
@@ -62,22 +65,12 @@ BEASTIE_DATA.forEach((beastie) => {
   });
 });
 
-beastie_abilities.sort((ability, ability2) =>
-  ability.name.localeCompare(ability2.name),
-);
-beastie_moves.sort(
-  (move1, move2) =>
-    move1.type - move2.type ||
-    move2.pow - move1.pow ||
-    move1.name.localeCompare(move2.name),
-);
-
 const FILTER_TYPE_PREFIX: Record<FilterTypes, string> = {
-  [FilterTypes.Ability]: "Has Trait: ",
-  [FilterTypes.Move]: "Learns Play(s): ",
-  [FilterTypes.Training]: "Trains Allies: ",
-  [FilterTypes.Metamorphs]: "Metamorphs: ",
-  [FilterTypes.RecentlyUpdated]: "Recently Updated: ",
+  [FilterTypes.Ability]: "trait",
+  [FilterTypes.Move]: "play",
+  [FilterTypes.Training]: "allyTraining",
+  [FilterTypes.Metamorphs]: "metamorphosis",
+  [FilterTypes.RecentlyUpdated]: "recentlyUpdated",
 };
 
 const FILTER_TYPES = [
@@ -88,7 +81,12 @@ const FILTER_TYPES = [
   FilterTypes.RecentlyUpdated,
 ];
 
-export function createFilterString(filters: FilterType[]) {
+const Lpre = "beastiepedia.sidebar.filter.";
+
+export function createFilterString(
+  filters: FilterType[],
+  L: LocalizationFunction,
+) {
   const types: Record<FilterTypes, FilterType[]> = {
     [FilterTypes.Ability]: [],
     [FilterTypes.Move]: [],
@@ -100,29 +98,41 @@ export function createFilterString(filters: FilterType[]) {
     types[filter[0]].push(filter);
   }
 
+  const diffTypeSep = L(Lpre + "string.diffTypeSep");
+  const innerTypeSep = L(Lpre + "string.innerTypeSep");
+
   return FILTER_TYPES.map<[FilterTypes, string]>((type) => [
     type,
     types[type].reduce(
       (accum2, filter) =>
         accum2 +
-        (accum2 ? ", " : "") +
+        (accum2 ? innerTypeSep : "") +
         (filter[0] == FilterTypes.Training
-          ? TRAINING_TYPES[filter[1]]
+          ? L("common.types." + TRAINING_TYPES[filter[1]])
           : filter[0] == FilterTypes.Metamorphs
             ? filter[1]
-              ? "Yes"
-              : "No"
+              ? L(Lpre + "string.yes")
+              : L(Lpre + "string.no")
             : filter[0] == FilterTypes.RecentlyUpdated
               ? filter[1] == RecentlyUpdatedTypes.Stuff
-                ? "Plays, Traits, or Stats"
-                : "Sprites or Colors"
-              : filter[1].name),
+                ? L(Lpre + "recentlyUpdated.playsTraitsStats")
+                : L(Lpre + "recentlyUpdated.spritesColors")
+              : L(filter[1].name)),
       "",
     ),
   ]).reduce(
     (accum, [type, values]) =>
       accum +
-      (values ? (accum ? " + " : "") + FILTER_TYPE_PREFIX[type] + values : ""),
+      (values
+        ? (accum ? diffTypeSep : "") +
+          L(
+            Lpre +
+              "string." +
+              FILTER_TYPE_PREFIX[type] +
+              (types[type].length > 1 ? "s" : ""),
+          ) +
+          values
+        : ""),
     "",
   );
 }
@@ -166,6 +176,8 @@ function AbilityButton({
   selected: boolean;
   handleClick: () => void;
 }) {
+  const { L } = useLocalization();
+
   return (
     <div
       key={ability.id}
@@ -177,9 +189,9 @@ function AbilityButton({
       className={selected ? styles.abilitySelected : styles.ability}
     >
       <div className={styles.abilityInner}>
-        <div>{ability.name}</div>
+        <div>{L(ability.name)}</div>
         <div className={styles.abilityDesc}>
-          <TextTag>{ability.desc.replace(/\|/g, "\n")}</TextTag>
+          <TextTag>{L(ability.desc).replace(/\|/g, "\n")}</TextTag>
         </div>
       </div>
     </div>
@@ -193,6 +205,18 @@ export default function Filter({
   filters: FilterType[];
   setFilters: React.Dispatch<React.SetStateAction<FilterType[]>>;
 }) {
+  const { L } = useLocalization();
+
+  beastie_abilities.sort((ability, ability2) =>
+    L(ability.name).localeCompare(L(ability2.name)),
+  );
+  beastie_moves.sort(
+    (move1, move2) =>
+      move1.type - move2.type ||
+      move2.pow - move1.pow ||
+      L(move1.name).localeCompare(L(move2.name)),
+  );
+
   const [open, setOpen] = useState(false);
 
   const handleToggleFilter = useCallback(
@@ -232,13 +256,13 @@ export default function Filter({
     <div
       className={styles.filterButton}
       role="button"
-      title="Sort by Filters"
+      title={L("beastiepedia.sidebar.filter.title")}
       tabIndex={0}
       onClick={() => setOpen(true)}
     >
       <div title="">
         <Modal
-          header="Filter Beasties"
+          header={L("beastiepedia.sidebar.filter.title")}
           open={open}
           makeOpen={() => setOpen(true)}
           onClose={() => setOpen(false)}
@@ -250,18 +274,22 @@ export default function Filter({
               setFilters([]);
             }}
           >
-            Clear Filter
+            {L("beastiepedia.sidebar.filter.clear")}
           </button>
-          {" " + createFilterString(filters)}
+          {" " + createFilterString(filters, L)}
           <InfoTabberHeader
             tab={tab}
             setTab={changeTab}
-            tabs={["Trait", "Plays", "Other"]}
+            tabs={[
+              L("beastiepedia.sidebar.filter.trait"),
+              L("beastiepedia.sidebar.filter.plays"),
+              L("beastiepedia.sidebar.filter.other"),
+            ]}
             className={styles.tabSelect}
           />
           {tab < 2 ? (
             <label>
-              Search:{" "}
+              {L("common.searchPrefix")}
               <input
                 type="search"
                 onChange={(event) => setSearch(event.currentTarget.value)}
@@ -284,7 +312,9 @@ export default function Filter({
                         filter[0] == FilterTypes.Ability &&
                         filter[1].id == ability.id,
                     ) ||
-                    ability.name.toLowerCase().includes(search.toLowerCase()),
+                    L(ability.name)
+                      .toLowerCase()
+                      .includes(search.toLowerCase()),
                 )
                 .map((ability) => (
                   <AbilityButton
@@ -312,7 +342,7 @@ export default function Filter({
                         filter[0] == FilterTypes.Move &&
                         filter[1].id == move.id,
                     ) ||
-                    move.name.toLowerCase().includes(search.toLowerCase()),
+                    L(move.name).toLowerCase().includes(search.toLowerCase()),
                 )
                 .map((move) => (
                   <div
@@ -333,7 +363,7 @@ export default function Filter({
                 ))
             ) : tab == 2 ? (
               <>
-                Ally Training:
+                {L("beastiepedia.sidebar.filter.allyTraining")}
                 <br />
                 {STATS.map((type) => (
                   <button
@@ -345,11 +375,11 @@ export default function Filter({
                       handleToggleFilter([FilterTypes.Training, type], true)
                     }
                   >
-                    {TRAINING_TYPES[type]}
+                    {L("common.types." + TRAINING_TYPES[type])}
                   </button>
                 ))}
                 <br />
-                Metamorphosis:
+                {L("beastiepedia.sidebar.filter.metamorphosis.title")}
                 <br />
                 <button
                   className={
@@ -359,7 +389,7 @@ export default function Filter({
                     handleToggleFilter([FilterTypes.Metamorphs, false], true)
                   }
                 >
-                  Does not Metamorph
+                  {L("beastiepedia.sidebar.filter.metamorphosis.doesNot")}
                 </button>
                 <button
                   className={
@@ -369,12 +399,12 @@ export default function Filter({
                     handleToggleFilter([FilterTypes.Metamorphs, true], true)
                   }
                 >
-                  Does Metamorph
+                  {L("beastiepedia.sidebar.filter.metamorphosis.does")}
                 </button>
                 <br />
-                (Except for specific Metamorphosis types)
+                {L("beastiepedia.sidebar.filter.metamorphosis.disclamer")}
                 <br />
-                Recently Updated:
+                {L("beastiepedia.sidebar.filter.recentlyUpdated.title")}
                 <br />
                 <button
                   className={
@@ -393,7 +423,9 @@ export default function Filter({
                     )
                   }
                 >
-                  Plays, Traits, or Stats
+                  {L(
+                    "beastiepedia.sidebar.filter.recentlyUpdated.playsTraitsStats",
+                  )}
                 </button>
                 <button
                   className={
@@ -415,7 +447,9 @@ export default function Filter({
                     )
                   }
                 >
-                  Sprites or Colors
+                  {L(
+                    "beastiepedia.sidebar.filter.recentlyUpdated.spritesColors",
+                  )}
                 </button>
               </>
             ) : null}

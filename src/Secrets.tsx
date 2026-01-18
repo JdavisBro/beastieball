@@ -1,21 +1,20 @@
 import { useLocalStorage } from "usehooks-ts";
 import { NavigationMenu, NavigationMenuOption } from "./shared/NavigationMenu";
+import useLocalization from "./localization/useLocalization";
 
 export default function Secrets() {
+  const { L } = useLocalization();
+
   const [secrets, setSecrets] = useLocalStorage("secrets", false);
   return (
     <>
       <NavigationMenu
-        title="Secrets"
+        title={L("secrets.title")}
         note={
           <>
-            <div>
-              Secrets enables viewing of information that is unused and may
-              appear in the game in future, any of this information should not
-              be talked about in official Wishes Unlimited channels.
-            </div>
+            <div>{L("secrets.disclamer")}</div>
             <label style={{ marginBottom: "1em" }}>
-              Secrets:{" "}
+              {L("secrets.label")}
               <input
                 type="checkbox"
                 checked={secrets}
@@ -28,20 +27,20 @@ export default function Secrets() {
         {secrets ? (
           <>
             <NavigationMenuOption
-              text={"Beastiepedia\nUnused Animations"}
+              text={L("secrets.beastiepedia")}
               image="/gameassets/sprMainmenu/0.png"
               hoverImage="/gameassets/sprMainmenu/1.png"
               location="/beastiepedia/"
             />
 
             <NavigationMenuOption
-              text="Encounters"
+              text={L("teams.encounters.title")}
               image="/gameassets/sprMainmenu/27.png"
               hoverImage="/gameassets/sprMainmenu/28.png"
               location="/team/encounters/"
             />
             <NavigationMenuOption
-              text={"Map\nEncounter Locations"}
+              text={L("secrets.map")}
               image="/gameassets/sprMainmenu/2.png"
               hoverImage="/gameassets/sprMainmenu/3.png"
               location="/map/"

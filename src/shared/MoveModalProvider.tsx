@@ -9,13 +9,16 @@ import Modal from "./Modal";
 import MoveView from "./MoveView";
 import { useIsSpoiler } from "./useSpoiler";
 import useScreenOrientation from "../utils/useScreenOrientation";
+import useLocalization from "../localization/useLocalization";
 
 export default function MoveModalProvider(props: PropsWithChildren) {
+  const { L, getLink } = useLocalization();
+
   const hash = decodeURIComponent(useLocation().hash);
   const hashMoveName = hash.startsWith("#Play: ") && hash.slice(7);
   const hashMove =
     hashMoveName &&
-    Object.values(MOVE_DIC).find((move) => move.name == hashMoveName);
+    Object.values(MOVE_DIC).find((move) => L(move.name) == hashMoveName);
   const [moveState, setMove] = useState<null | Move>(hashMove || null);
   const move = moveState ?? (hashMove || null);
 
@@ -47,13 +50,14 @@ export default function MoveModalProvider(props: PropsWithChildren) {
   };
 
   const orientation = useScreenOrientation(800);
-  const levelSeparator = orientation ? <br /> : " - ";
 
-  const hashValue = `Play: ${move?.name}`;
+  const moveName = move && L(move.name);
+
+  const hashValue = `Play: ${moveName}`;
   return (
     <MoveModalContext.Provider value={setMove}>
       <Modal
-        header={`Play: ${move?.name}`}
+        header={L("common.moveModal.title", { name: moveName ?? "" })}
         open={move != null}
         onClose={() => setMove(null)}
         hashValue={hashValue}
@@ -61,19 +65,24 @@ export default function MoveModalProvider(props: PropsWithChildren) {
         <div className={styles.movemodalview}>
           {move ? <MoveView move={move} noLearner={true} /> : null}
           <div className={styles.movebeastietitle}>
-            <div>{levelBeasties.length ? "From Level" : ""}</div>
-            <div>{friendBeasties.length ? "From Friends" : ""}</div>
+            <div>{levelBeasties.length ? L("common.moveModal.level") : ""}</div>
+            <div>
+              {friendBeasties.length ? L("common.moveModal.friends") : ""}
+            </div>
           </div>
           <div className={styles.movebeastierow}>
             <div className={styles.movebeastielist}>
               {levelBeasties.map((beastie) => {
                 const isSpoiler = isSpoilerFn(beastie[0].id);
+                const beastieName = L(beastie[0].name);
                 return (
                   <Link
                     to={
                       isSpoiler
                         ? hashValue
-                        : `/beastiepedia/${beastie[0].name}?play=${move?.name}`
+                        : getLink(
+                            `/beastiepedia/${beastieName}?play=${moveName}`,
+                          )
                     }
                     key={beastie[0].id}
                     onClick={() =>
@@ -84,18 +93,26 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                       src={
                         isSpoiler
                           ? "/gameassets/sprExclam_1.png"
-                          : `/icons/${beastie[0].name}.png`
+                          : `/icons/${L(beastie[0].name, undefined, true)}.png`
                       }
                       style={
                         isSpoiler ? { filter: "brightness(50%)" } : undefined
                       }
                     />
-                    <div>
-                      {isSpoiler
-                        ? `Beastie #${beastie[0].number}`
-                        : beastie[0].name}
-                      {levelSeparator}
-                      {beastie[1]}
+                    <div style={{ whiteSpace: "pre-wrap" }}>
+                      {L(
+                        orientation
+                          ? "common.moveModal.levelFormatMobile"
+                          : "common.moveModal.levelFormat",
+                        {
+                          beastie: isSpoiler
+                            ? L("common.beastieNum", {
+                                num: String(beastie[0].number),
+                              })
+                            : beastieName,
+                          level: String(beastie[1]),
+                        },
+                      )}
                     </div>
                   </Link>
                 );
@@ -104,9 +121,14 @@ export default function MoveModalProvider(props: PropsWithChildren) {
             <div className={styles.movebeastielist}>
               {friendBeasties.map((beastie) => {
                 const isSpoiler = isSpoilerFn(beastie.id);
+                const beastieName = L(beastie.name);
                 return (
                   <Link
-                    to={isSpoiler ? hashValue : `/beastiepedia/${beastie.name}`}
+                    to={
+                      isSpoiler
+                        ? hashValue
+                        : getLink(`/beastiepedia/${beastieName}`)
+                    }
                     key={beastie.id}
                     onClick={() =>
                       handleClick(isSpoiler ? beastie.id : undefined)
@@ -116,13 +138,17 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                       src={
                         isSpoiler
                           ? "/gameassets/sprExclam_1.png"
-                          : `/icons/${beastie.name}.png`
+                          : `/icons/${L(beastie.name, undefined, true)}.png`
                       }
                       style={
                         isSpoiler ? { filter: "brightness(50%)" } : undefined
                       }
                     />
-                    {isSpoiler ? `Beastie #${beastie.number}` : beastie.name}
+                    {isSpoiler
+                      ? L("common.beastieNum", {
+                          num: String(beastie.number),
+                        })
+                      : beastieName}
                   </Link>
                 );
               })}

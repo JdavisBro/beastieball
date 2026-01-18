@@ -1,6 +1,7 @@
 import styles from "./StatDistribution.module.css";
 import TypeColor from "../../data/TypeColor";
 import type { BeastieType } from "../../data/BeastieData";
+import useLocalization from "../../localization/useLocalization";
 
 type BarProps = {
   value: number;
@@ -38,11 +39,13 @@ type Props = {
 };
 
 export default function StatDistribution(props: Props): React.ReactElement {
+  const { L } = useLocalization();
+
   const beastiedata = props.beastiedata;
   return (
     <div className={styles.container}>
       <div className={styles.statcontainer}>
-        <div className={styles.barcontainer}>POW</div>
+        <div className={styles.barcontainer}>{L("common.pow")}</div>
         <StatBar value={beastiedata.ba} right={false} color={TypeColor.Body} />
         <StatBar
           value={beastiedata.ha}
@@ -59,13 +62,13 @@ export default function StatDistribution(props: Props): React.ReactElement {
       </div>
       <div className={styles.midblock}>
         <div className={styles.barcontainer}></div>
-        <img src="/gameassets/sprIcon/0.png" alt="Body" />
-        <img src="/gameassets/sprIcon/1.png" alt="Spirit" />
-        <img src="/gameassets/sprIcon/2.png" alt="Mind" />
+        <img src="/gameassets/sprIcon/0.png" alt={L("common.types.body")} />
+        <img src="/gameassets/sprIcon/1.png" alt={L("common.types.spirit")} />
+        <img src="/gameassets/sprIcon/2.png" alt={L("common.types.mind")} />
       </div>
       <div className={styles.statcontainer}>
         <div className={`${styles.barcontainer} ${styles.barcontainerright}`}>
-          DEF
+          {L("common.def")}
         </div>
         <StatBar
           value={beastiedata.bd}

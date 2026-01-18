@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
+import useLocalization from "../../localization/useLocalization";
 import styles from "./ContentPreview.module.css";
 
 export default function ImageContextMenu({
@@ -19,6 +20,8 @@ export default function ImageContextMenu({
   className?: string;
   style?: React.CSSProperties;
 }) {
+  const { L } = useLocalization();
+
   const popoverRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -57,20 +60,20 @@ export default function ImageContextMenu({
             className={styles.contextButton}
             onClick={() => downloadImage(true)}
           >
-            Copy PNG
+            {L("beastiepedia.preview.settings.copyPNG")}
           </button>
           <button
             className={styles.contextButton}
             onClick={() => downloadImage()}
           >
-            Save PNG
+            {L("beastiepedia.preview.settings.savePNG")}
           </button>
           <button
             className={styles.contextButton}
             onClick={() => downloadGif()}
             disabled={gifDisabled}
           >
-            Save GIF
+            {L("beastiepedia.preview.settings.saveGIF")}
           </button>
         </div>
       </div>

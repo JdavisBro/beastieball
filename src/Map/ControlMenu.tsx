@@ -11,6 +11,7 @@ import ITEM_DIC from "../data/ItemData";
 import Modal from "../shared/Modal";
 import { EXTRA_MARKERS } from "../data/WorldData";
 import TextTag from "../shared/TextTag";
+import useLocalization from "../localization/useLocalization";
 
 export function ControlSection({
   header,
@@ -58,6 +59,8 @@ function ItemSection({
   huntedItem: string | undefined;
   setHuntedItem: (item: string | undefined) => void;
 }) {
+  const { L: Loc } = useLocalization();
+
   const item = huntedItem && ITEM_DIC[huntedItem];
   const [itemSelector, setItemSelector] = useState(false);
 
@@ -74,13 +77,15 @@ function ItemSection({
   return (
     <>
       <label>
-        Find:{" "}
+        {Loc("map.items.find")}
         <button onClick={() => setItemSelector(true)}>
-          Select Item: {item ? item.name : "Unset"}
+          {Loc("map.items.selectButton", {
+            item: item ? Loc(item.name) : Loc("map.items.unset"),
+          })}
         </button>
       </label>
       <Modal
-        header="Select Item"
+        header={Loc("map.items.selectHeader")}
         open={itemSelector}
         makeOpen={() => setItemSelector(true)}
         onClose={onClose}
@@ -95,7 +100,7 @@ function ItemSection({
               setItemSelector(false);
             }}
           >
-            Unset
+            {Loc("map.items.unset")}
           </div>
           {WILD_ITEMS.map((item) => (
             <div
@@ -108,9 +113,9 @@ function ItemSection({
             >
               <img src={`/gameassets/sprItems/${item.img}.png`} />
               <div className={styles.itemSelectText}>
-                <div className={styles.itemSelectName}>{item.name}</div>
+                <div className={styles.itemSelectName}>{Loc(item.name)}</div>
                 <div className={styles.itemSelectDesc}>
-                  <TextTag>{item.desc}</TextTag>
+                  <TextTag>{Loc(item.desc)}</TextTag>
                 </div>
               </div>
             </div>
@@ -188,6 +193,8 @@ function ControlMenuInner({
   huntedItem,
   setHuntedItem,
 }: Props) {
+  const { L: Loc } = useLocalization();
+
   const [visibleSection, setVisibleSection] = useState<string | undefined>(
     undefined,
   );
@@ -239,7 +246,7 @@ function ControlMenuInner({
   return (
     <>
       <ControlSection
-        header="Markers"
+        header={Loc("map.markers.title")}
         sectionName="markers"
         visibleSection={visibleSection}
         setVisibleSection={setVisibleSection}
@@ -253,7 +260,7 @@ function ControlMenuInner({
                 tabIndex={0}
                 role="button"
               >
-                {layer.category}
+                {Loc("map.markers." + layer.category)}
               </div>
             )}
             <Checkbox
@@ -266,7 +273,7 @@ function ControlMenuInner({
                       value(layersVisible[layer.title] ?? !layer.defaultHidden),
                     )
               }
-              text={layer.title}
+              text={Loc("map.markers." + layer.title)}
             />
             {(layersVisible[layer.title] ??
             (layer.defaultHidden ? false : true)) ? (
@@ -276,36 +283,42 @@ function ControlMenuInner({
         ))}
       </ControlSection>
       <ControlSection
-        header="Beasties"
+        header={Loc("map.beastie.title")}
         sectionName="beasties"
         visibleSection={visibleSection}
         setVisibleSection={setVisibleSection}
       >
         <label>
-          Track:{" "}
+          {Loc("map.beastie.track")}
           <BeastieSelect
             beastieId={huntedBeastie}
             setBeastieId={setHuntedBeastie}
             hashName="Track"
-            extraOptionText="Show All"
+            extraOptionText={Loc("map.beastie.showAll")}
             extraOption="all"
             isSelectable={(beastie) => SPAWNABLE_BEASTIES.includes(beastie.id)}
-            nonSelectableReason="Beastie has no wild habitat."
+            nonSelectableReason={Loc("map.beastie.noWild")}
           />
         </label>
         <Checkbox
           checked={postgame}
-          handleChange={setPostgame}
-          text="Postgame Spawns"
+          handleChange={(value) =>
+            setPostgame(typeof value == "boolean" ? value : value(postgame))
+          }
+          text={Loc("map.beastie.postgame")}
         />
         <Checkbox
           checked={attractSpray}
-          handleChange={setAttractSpray}
-          text="Attract Spray"
+          handleChange={(value) =>
+            setAttractSpray(
+              typeof value == "boolean" ? value : value(attractSpray),
+            )
+          }
+          text={Loc("map.beastie.attractSpray")}
         />
       </ControlSection>
       <ControlSection
-        header="Items"
+        header={Loc("map.items.title")}
         sectionName="items"
         visibleSection={visibleSection}
         setVisibleSection={setVisibleSection}

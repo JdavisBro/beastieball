@@ -32,25 +32,25 @@ export const METAMORPH_LOCATIONS: {
   {
     from: "shroom1",
     to: "shroom_b",
-    by: "By communing with the Mushroom Colony",
+    by: "sprecko",
     position: latLng(7298, -11348),
   },
   {
     from: "shroom1",
     to: "shroom_s",
-    by: "By communing with the Mushroom Colony",
+    by: "sprecko",
     position: latLng(-36448, -47526),
   },
   {
     from: "shroom1",
     to: "shroom_m",
-    by: "By communing with the Mushroom Colony",
+    by: "sprecko",
     position: latLng(39000, -28655),
   },
   {
     from: "tricky1",
     to: "tricky",
-    by: "By interacting with a Bugestie",
+    by: "troglum",
     position: latLng(34366, -15454),
   },
 ];

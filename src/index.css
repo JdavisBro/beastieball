@@ -38,12 +38,19 @@
   --header-height: 50px;
 }
 
-:root:lang(en, zh, ja, kr) {
+/* chrome/safari doesn't support comma separated lists of languages... */
+:root:lang(en),
+:root:lang(zh),
+:root:lang(ja),
+:root:lang(kr) {
   --go-banana: "Go Banana", sans-serif;
   --sports-jersey: "SportsJersey", sans-serif;
 }
 
-:root:lang(ru, fr, es, de) {
+:root:lang(ru),
+:root:lang(fr),
+:root:lang(es),
+:root:lang(de) {
   letter-spacing: normal;
 }
 

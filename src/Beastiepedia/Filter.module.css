@@ -12,7 +12,7 @@
 .list {
   max-height: 80dvh;
   height: 80dvh;
-  align-content: stretch;
+  align-content: start;
   overflow-y: auto;
   user-select: none;
   width: calc(

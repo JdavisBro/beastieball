@@ -222,7 +222,7 @@ export default function BeastieSelect({
             ) : null}
             {BEASTIES.filter(
               (beastie) =>
-                beastie.name.toLowerCase().includes(search.toLowerCase()) &&
+                L(beastie.name).toLowerCase().includes(search.toLowerCase()) &&
                 filterFunction(beastie),
             ).map((beastie) => (
               <BeastieButton

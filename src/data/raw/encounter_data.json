@@ -2016,7 +2016,7 @@
         "specie": "frog",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2041,7 +2041,7 @@
         "specie": "frog",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2066,7 +2066,7 @@
         "specie": "frog",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2141,7 +2141,7 @@
         "specie": "frog",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2166,7 +2166,7 @@
         "specie": "frog",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2191,7 +2191,7 @@
         "specie": "frog",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2216,7 +2216,7 @@
         "specie": "bilby",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2316,7 +2316,7 @@
         "specie": "bilby",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2391,7 +2391,7 @@
         "specie": "bilby",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2416,7 +2416,7 @@
         "specie": "cassowary",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2441,7 +2441,7 @@
         "specie": "cassowary",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2466,7 +2466,7 @@
         "specie": "cassowary",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2491,7 +2491,7 @@
         "specie": "cassowary",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2516,7 +2516,7 @@
         "specie": "cassowary",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2541,7 +2541,7 @@
         "specie": "cassowary",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2566,7 +2566,7 @@
         "specie": "cassowary",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2591,7 +2591,7 @@
         "specie": "cassowary",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2616,7 +2616,7 @@
         "specie": "shroom_b",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2641,7 +2641,7 @@
         "specie": "shroom_b",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2691,7 +2691,7 @@
         "specie": "shroom_b",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2716,7 +2716,7 @@
         "specie": "shroom_b",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2791,7 +2791,7 @@
         "specie": "shroom_b",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2816,7 +2816,7 @@
         "specie": "shroom_s",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2841,7 +2841,7 @@
         "specie": "shroom_s",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2866,7 +2866,7 @@
         "specie": "shroom_s",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2891,7 +2891,7 @@
         "specie": "shroom_s",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2916,7 +2916,7 @@
         "specie": "shroom_s",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2941,7 +2941,7 @@
         "specie": "shroom_s",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2966,7 +2966,7 @@
         "specie": "shroom_s",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -2991,7 +2991,7 @@
         "specie": "shroom_s",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3008,7 +3008,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
-        "moves": ["bomb", "allyrush", "sting"],
+        "moves": ["sidespin", "allyrush", "sting"],
         "name": "¦encounterssetup_classbeastieencounter_592¦",
         "neverRandomize": false,
         "number": -1,
@@ -3033,7 +3033,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
-        "moves": ["sidespin", "refresh", "trap"],
+        "moves": ["hazeball", "refresh", "trap"],
         "name": "",
         "neverRandomize": false,
         "number": -1,
@@ -3046,7 +3046,7 @@
         "vibe": -1
       },
       {
-        "ability": 0,
+        "ability": 1,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -3208,6 +3208,206 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
+        "moves": ["sidespin", "allyrush", "sting"],
+        "name": "¦encounterssetup_classbeastieencounter_592¦",
+        "neverRandomize": false,
+        "number": -1,
+        "size": -1,
+        "specie": "shroom_m",
+        "status": -1,
+        "trained": 0,
+        "training": [0, 0, 0, 1, 1, 1],
+        "variant": -1,
+        "vibe": -1
+      },
+      {
+        "ability": 0,
+        "aggro": false,
+        "at_net": false,
+        "canBeShiny": false,
+        "color": -1,
+        "encounter_inherited": false,
+        "evolves": true,
+        "favor": 1,
+        "from_encounter": null,
+        "from_encounter_index": null,
+        "hp": -1,
+        "level": 50,
+        "moves": ["hazeball", "refresh", "trap"],
+        "name": "",
+        "neverRandomize": false,
+        "number": -1,
+        "size": -1,
+        "specie": "shroom_m",
+        "status": -1,
+        "trained": 0,
+        "training": [0, 0, 0, 1, 1, 1],
+        "variant": -1,
+        "vibe": -1
+      },
+      {
+        "ability": 1,
+        "aggro": false,
+        "at_net": false,
+        "canBeShiny": false,
+        "color": -1,
+        "encounter_inherited": false,
+        "evolves": true,
+        "favor": 1,
+        "from_encounter": null,
+        "from_encounter_index": null,
+        "hp": -1,
+        "level": 50,
+        "moves": ["snipe", "trap", "protect"],
+        "name": "",
+        "neverRandomize": false,
+        "number": -1,
+        "size": -1,
+        "specie": "shroom_m",
+        "status": -1,
+        "trained": 0,
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
+        "variant": -1,
+        "vibe": -1
+      },
+      {
+        "ability": 1,
+        "aggro": false,
+        "at_net": false,
+        "canBeShiny": false,
+        "color": -1,
+        "encounter_inherited": false,
+        "evolves": true,
+        "favor": 1,
+        "from_encounter": null,
+        "from_encounter_index": null,
+        "hp": -1,
+        "level": 50,
+        "moves": ["netattack", "dump", "protect"],
+        "name": "",
+        "neverRandomize": false,
+        "number": -1,
+        "size": -1,
+        "specie": "shroom_m",
+        "status": -1,
+        "trained": 0,
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
+        "variant": -1,
+        "vibe": -1
+      },
+      {
+        "ability": 1,
+        "aggro": false,
+        "at_net": false,
+        "canBeShiny": false,
+        "color": -1,
+        "encounter_inherited": false,
+        "evolves": true,
+        "favor": 1,
+        "from_encounter": null,
+        "from_encounter_index": null,
+        "hp": -1,
+        "level": 50,
+        "moves": ["netattack", "dump", "lifepass"],
+        "name": "",
+        "neverRandomize": false,
+        "number": -1,
+        "size": -1,
+        "specie": "shroom_m",
+        "status": -1,
+        "trained": 0,
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
+        "variant": -1,
+        "vibe": -1
+      },
+      {
+        "ability": 0,
+        "aggro": false,
+        "at_net": false,
+        "canBeShiny": false,
+        "color": -1,
+        "encounter_inherited": false,
+        "evolves": true,
+        "favor": 1,
+        "from_encounter": null,
+        "from_encounter_index": null,
+        "hp": -1,
+        "level": 50,
+        "moves": ["hazeball", "refresh", "sweatup"],
+        "name": "",
+        "neverRandomize": false,
+        "number": -1,
+        "size": -1,
+        "specie": "shroom_m",
+        "status": -1,
+        "trained": 0,
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
+        "variant": -1,
+        "vibe": -1
+      },
+      {
+        "ability": 0,
+        "aggro": false,
+        "at_net": false,
+        "canBeShiny": false,
+        "color": -1,
+        "encounter_inherited": false,
+        "evolves": true,
+        "favor": 1,
+        "from_encounter": null,
+        "from_encounter_index": null,
+        "hp": -1,
+        "level": 50,
+        "moves": ["hazeball", "dig", "lifepass"],
+        "name": "",
+        "neverRandomize": false,
+        "number": -1,
+        "size": -1,
+        "specie": "shroom_m",
+        "status": -1,
+        "trained": 0,
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
+        "variant": -1,
+        "vibe": -1
+      },
+      {
+        "ability": 0,
+        "aggro": false,
+        "at_net": false,
+        "canBeShiny": false,
+        "color": -1,
+        "encounter_inherited": false,
+        "evolves": true,
+        "favor": 1,
+        "from_encounter": null,
+        "from_encounter_index": null,
+        "hp": -1,
+        "level": 50,
+        "moves": ["netattack", "substitute", "distraction"],
+        "name": "",
+        "neverRandomize": false,
+        "number": -1,
+        "size": -1,
+        "specie": "shroom_m",
+        "status": -1,
+        "trained": 0,
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
+        "variant": -1,
+        "vibe": -1
+      },
+      {
+        "ability": 0,
+        "aggro": false,
+        "at_net": false,
+        "canBeShiny": false,
+        "color": -1,
+        "encounter_inherited": false,
+        "evolves": true,
+        "favor": 1,
+        "from_encounter": null,
+        "from_encounter_index": null,
+        "hp": -1,
+        "level": 50,
         "moves": ["scream", "taunt", "noisytag"],
         "name": "",
         "neverRandomize": false,
@@ -3216,7 +3416,7 @@
         "specie": "moth",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 1, 1, 1, 1],
+        "training": [0, 1, 1, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -3241,7 +3441,7 @@
         "specie": "moth",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3266,7 +3466,7 @@
         "specie": "moth",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 1, 1, 1, 1],
+        "training": [0, 1, 1, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -3291,7 +3491,7 @@
         "specie": "moth",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3316,7 +3516,7 @@
         "specie": "moth",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3341,7 +3541,7 @@
         "specie": "moth",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3366,7 +3566,7 @@
         "specie": "moth",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3391,7 +3591,7 @@
         "specie": "moth",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3441,7 +3641,7 @@
         "specie": "possum",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3466,7 +3666,7 @@
         "specie": "possum",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3491,7 +3691,7 @@
         "specie": "possum",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3541,7 +3741,7 @@
         "specie": "possum",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3566,7 +3766,7 @@
         "specie": "possum",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3591,7 +3791,7 @@
         "specie": "possum",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3616,7 +3816,7 @@
         "specie": "lyrebird",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3641,7 +3841,7 @@
         "specie": "lyrebird",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3666,7 +3866,7 @@
         "specie": "lyrebird",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3691,7 +3891,7 @@
         "specie": "lyrebird",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3716,7 +3916,7 @@
         "specie": "lyrebird",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3741,7 +3941,7 @@
         "specie": "lyrebird",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3791,7 +3991,7 @@
         "specie": "lyrebird",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3816,7 +4016,7 @@
         "specie": "dog",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3841,7 +4041,7 @@
         "specie": "dog",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3866,7 +4066,7 @@
         "specie": "dog",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3891,7 +4091,7 @@
         "specie": "dog",
         "status": -1,
         "trained": 0,
-        "training": [1, 1, 0, 1, 1, 1],
+        "training": [1, 1, 0, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -3916,7 +4116,7 @@
         "specie": "dog",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3941,7 +4141,7 @@
         "specie": "dog",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3966,7 +4166,7 @@
         "specie": "dog",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -3991,7 +4191,7 @@
         "specie": "dog",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4016,7 +4216,7 @@
         "specie": "kangaroo",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4116,7 +4316,7 @@
         "specie": "kangaroo",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4141,7 +4341,7 @@
         "specie": "kangaroo",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4166,7 +4366,7 @@
         "specie": "kangaroo",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4216,7 +4416,7 @@
         "specie": "dragonfly",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4241,7 +4441,7 @@
         "specie": "dragonfly",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4291,7 +4491,7 @@
         "specie": "dragonfly",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4366,7 +4566,7 @@
         "specie": "dragonfly",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4416,7 +4616,7 @@
         "specie": "platypus2",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4441,7 +4641,7 @@
         "specie": "platypus2",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4466,7 +4666,7 @@
         "specie": "platypus2",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4491,7 +4691,7 @@
         "specie": "platypus2",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4516,7 +4716,7 @@
         "specie": "platypus2",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4541,7 +4741,7 @@
         "specie": "platypus2",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4566,7 +4766,7 @@
         "specie": "platypus2",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4591,7 +4791,7 @@
         "specie": "platypus2",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4616,7 +4816,7 @@
         "specie": "serval",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4641,7 +4841,7 @@
         "specie": "serval",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4666,7 +4866,7 @@
         "specie": "serval",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4691,7 +4891,7 @@
         "specie": "serval",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4716,7 +4916,7 @@
         "specie": "serval",
         "status": -1,
         "trained": 0,
-        "training": [1, 1, 0, 1, 1, 1],
+        "training": [1, 1, 0, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -4741,7 +4941,7 @@
         "specie": "serval",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4766,7 +4966,7 @@
         "specie": "serval",
         "status": -1,
         "trained": 0,
-        "training": [1, 1, 0, 1, 1, 1],
+        "training": [1, 1, 0, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -4791,7 +4991,7 @@
         "specie": "serval",
         "status": -1,
         "trained": 0,
-        "training": [1, 1, 0, 1, 1, 1],
+        "training": [1, 1, 0, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -4816,7 +5016,7 @@
         "specie": "daredevil",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4841,7 +5041,7 @@
         "specie": "daredevil",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4866,7 +5066,7 @@
         "specie": "daredevil",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4891,7 +5091,7 @@
         "specie": "daredevil",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4916,7 +5116,7 @@
         "specie": "daredevil",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4941,7 +5141,7 @@
         "specie": "daredevil",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4966,7 +5166,7 @@
         "specie": "daredevil",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -4991,7 +5191,7 @@
         "specie": "daredevil",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5041,7 +5241,7 @@
         "specie": "disruptor",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5116,7 +5316,7 @@
         "specie": "disruptor",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5141,7 +5341,7 @@
         "specie": "disruptor",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5166,7 +5366,7 @@
         "specie": "disruptor",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5191,7 +5391,7 @@
         "specie": "disruptor",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5466,7 +5666,7 @@
         "specie": "cheerleader",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5616,7 +5816,7 @@
         "specie": "mantis",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5641,7 +5841,7 @@
         "specie": "mantis",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5666,7 +5866,7 @@
         "specie": "mantis",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5691,7 +5891,7 @@
         "specie": "mantis",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5716,7 +5916,7 @@
         "specie": "mantis",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5741,7 +5941,7 @@
         "specie": "mantis",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5766,7 +5966,7 @@
         "specie": "mantis",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 1, 1, 1, 1],
+        "training": [1, 0, 1, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -5791,7 +5991,7 @@
         "specie": "mantis",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 1, 1, 1, 1],
+        "training": [1, 0, 1, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -5816,7 +6016,7 @@
         "specie": "clown",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5841,7 +6041,7 @@
         "specie": "clown",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5866,7 +6066,7 @@
         "specie": "clown",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5891,7 +6091,7 @@
         "specie": "clown",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5941,7 +6141,7 @@
         "specie": "clown",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5966,7 +6166,7 @@
         "specie": "clown",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -5991,7 +6191,7 @@
         "specie": "clown",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6041,7 +6241,7 @@
         "specie": "football",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6066,7 +6266,7 @@
         "specie": "football",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6091,7 +6291,7 @@
         "specie": "football",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6141,7 +6341,7 @@
         "specie": "football",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6166,7 +6366,7 @@
         "specie": "football",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6216,7 +6416,7 @@
         "specie": "okapi",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6241,7 +6441,7 @@
         "specie": "okapi",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6266,7 +6466,7 @@
         "specie": "okapi",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6291,7 +6491,7 @@
         "specie": "okapi",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6316,7 +6516,7 @@
         "specie": "okapi",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6341,7 +6541,7 @@
         "specie": "okapi",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6366,7 +6566,7 @@
         "specie": "okapi",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 1, 1, 1, 1],
+        "training": [0, 1, 1, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -6416,7 +6616,7 @@
         "specie": "fox",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6441,7 +6641,7 @@
         "specie": "fox",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6466,7 +6666,7 @@
         "specie": "fox",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6491,7 +6691,7 @@
         "specie": "fox",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6516,7 +6716,7 @@
         "specie": "fox",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6541,7 +6741,7 @@
         "specie": "fox",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -6566,7 +6766,7 @@
         "specie": "fox",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7091,7 +7291,7 @@
         "specie": "shy",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7166,7 +7366,7 @@
         "specie": "shy",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7216,7 +7416,7 @@
         "specie": "tricky",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7241,7 +7441,7 @@
         "specie": "tricky",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7266,7 +7466,7 @@
         "specie": "tricky",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7291,7 +7491,7 @@
         "specie": "tricky",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7316,7 +7516,7 @@
         "specie": "tricky",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7341,7 +7541,7 @@
         "specie": "tricky",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7366,7 +7566,7 @@
         "specie": "tricky",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7391,7 +7591,7 @@
         "specie": "tricky",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7416,7 +7616,7 @@
         "specie": "spirit",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7441,7 +7641,7 @@
         "specie": "spirit",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7466,7 +7666,7 @@
         "specie": "spirit",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7491,7 +7691,7 @@
         "specie": "spirit",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7516,7 +7716,7 @@
         "specie": "spirit",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7541,7 +7741,7 @@
         "specie": "spirit",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7566,7 +7766,7 @@
         "specie": "spirit",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7591,7 +7791,7 @@
         "specie": "spirit",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7616,7 +7816,7 @@
         "specie": "snowspirit",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7641,7 +7841,7 @@
         "specie": "snowspirit",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7666,7 +7866,7 @@
         "specie": "snowspirit",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7691,7 +7891,7 @@
         "specie": "snowspirit",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7741,7 +7941,7 @@
         "specie": "snowspirit",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7766,7 +7966,7 @@
         "specie": "snowspirit",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7791,7 +7991,7 @@
         "specie": "snowspirit",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7816,7 +8016,7 @@
         "specie": "turtle",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7866,7 +8066,7 @@
         "specie": "turtle",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7916,7 +8116,7 @@
         "specie": "turtle",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -7966,7 +8166,7 @@
         "specie": "turtle",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8016,7 +8216,7 @@
         "specie": "shark",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8041,7 +8241,7 @@
         "specie": "shark",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8066,7 +8266,7 @@
         "specie": "shark",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8091,7 +8291,7 @@
         "specie": "shark",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8116,7 +8316,7 @@
         "specie": "shark",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8141,7 +8341,7 @@
         "specie": "shark",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8166,7 +8366,7 @@
         "specie": "shark",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8191,7 +8391,7 @@
         "specie": "shark",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8216,7 +8416,7 @@
         "specie": "seabird",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8241,7 +8441,7 @@
         "specie": "seabird",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8266,7 +8466,7 @@
         "specie": "seabird",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8291,7 +8491,7 @@
         "specie": "seabird",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8341,7 +8541,7 @@
         "specie": "seabird",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8366,7 +8566,7 @@
         "specie": "seabird",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8391,7 +8591,7 @@
         "specie": "seabird",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 1, 1, 1, 1],
+        "training": [0, 1, 1, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -8441,7 +8641,7 @@
         "specie": "jellyfish",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8491,7 +8691,7 @@
         "specie": "jellyfish",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8516,7 +8716,7 @@
         "specie": "jellyfish",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8541,7 +8741,7 @@
         "specie": "jellyfish",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8566,7 +8766,7 @@
         "specie": "jellyfish",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8591,7 +8791,7 @@
         "specie": "jellyfish",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8641,7 +8841,7 @@
         "specie": "rainbow",
         "status": -1,
         "trained": 0,
-        "training": [1, 1, 1, 1, 1, 1],
+        "training": [1, 1, 1, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -8666,7 +8866,7 @@
         "specie": "rainbow",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8691,7 +8891,7 @@
         "specie": "rainbow",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8716,7 +8916,7 @@
         "specie": "rainbow",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8741,7 +8941,7 @@
         "specie": "rainbow",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8766,7 +8966,7 @@
         "specie": "rainbow",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8816,7 +9016,7 @@
         "specie": "rainbow",
         "status": -1,
         "trained": 0,
-        "training": [1, 1, 1, 1, 1, 1],
+        "training": [1, 1, 1, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -8841,7 +9041,7 @@
         "specie": "seal",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8866,7 +9066,7 @@
         "specie": "seal",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8891,7 +9091,7 @@
         "specie": "seal",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8916,7 +9116,7 @@
         "specie": "seal",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8941,7 +9141,7 @@
         "specie": "seal",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8966,7 +9166,7 @@
         "specie": "seal",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -8991,7 +9191,7 @@
         "specie": "seal",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 1, 1, 1, 1],
+        "training": [1, 0, 1, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -9058,7 +9258,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
-        "moves": ["refresh", "fieldclear", "haze"],
+        "moves": ["stun", "fieldclear", "haze"],
         "name": "",
         "neverRandomize": false,
         "number": -1,
@@ -9066,7 +9266,7 @@
         "specie": "mudskipper",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 0, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9141,7 +9341,7 @@
         "specie": "mudskipper",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9191,7 +9391,7 @@
         "specie": "mudskipper",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9208,7 +9408,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
-        "moves": ["dump", "stun", "lifedew"],
+        "moves": ["spitball", "refresh", "lifedew"],
         "name": "",
         "neverRandomize": false,
         "number": -1,
@@ -9216,7 +9416,7 @@
         "specie": "mudskipper",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9241,7 +9441,7 @@
         "specie": "croc",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9266,7 +9466,7 @@
         "specie": "croc",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9291,7 +9491,7 @@
         "specie": "croc",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9316,7 +9516,7 @@
         "specie": "croc",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9341,7 +9541,7 @@
         "specie": "croc",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9366,7 +9566,7 @@
         "specie": "croc",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9391,7 +9591,7 @@
         "specie": "croc",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9416,7 +9616,7 @@
         "specie": "croc",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9441,7 +9641,7 @@
         "specie": "clam",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9466,7 +9666,7 @@
         "specie": "clam",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9491,7 +9691,7 @@
         "specie": "clam",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9516,7 +9716,7 @@
         "specie": "clam",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9541,7 +9741,7 @@
         "specie": "clam",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9566,7 +9766,7 @@
         "specie": "clam",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9591,7 +9791,7 @@
         "specie": "clam",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9616,7 +9816,7 @@
         "specie": "clam",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9641,7 +9841,7 @@
         "specie": "horseshoe",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9716,7 +9916,7 @@
         "specie": "horseshoe",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9841,7 +10041,7 @@
         "specie": "psychic",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9866,7 +10066,7 @@
         "specie": "psychic",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9891,7 +10091,7 @@
         "specie": "psychic",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9916,7 +10116,7 @@
         "specie": "psychic",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9941,7 +10141,7 @@
         "specie": "psychic",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9966,7 +10166,7 @@
         "specie": "psychic",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -9991,7 +10191,7 @@
         "specie": "psychic",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10016,7 +10216,7 @@
         "specie": "psychic",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10041,7 +10241,7 @@
         "specie": "rocklizard",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10066,7 +10266,7 @@
         "specie": "rocklizard",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10091,7 +10291,7 @@
         "specie": "rocklizard",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10116,7 +10316,7 @@
         "specie": "rocklizard",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10166,7 +10366,7 @@
         "specie": "rocklizard",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10191,7 +10391,7 @@
         "specie": "rocklizard",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10216,7 +10416,7 @@
         "specie": "rocklizard",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10241,7 +10441,7 @@
         "specie": "millipede",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10266,7 +10466,7 @@
         "specie": "millipede",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10291,7 +10491,7 @@
         "specie": "millipede",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10341,7 +10541,7 @@
         "specie": "millipede",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10416,7 +10616,7 @@
         "specie": "millipede",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10641,7 +10841,7 @@
         "specie": "magpie",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10666,7 +10866,7 @@
         "specie": "magpie",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10691,7 +10891,7 @@
         "specie": "magpie",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 1, 1, 1, 1],
+        "training": [1, 0, 1, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -10716,7 +10916,7 @@
         "specie": "magpie",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10741,7 +10941,7 @@
         "specie": "magpie",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10766,7 +10966,7 @@
         "specie": "magpie",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 1, 1, 1, 1],
+        "training": [1, 0, 1, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -10816,7 +11016,7 @@
         "specie": "magpie",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 1, 1, 1, 1],
+        "training": [1, 0, 1, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -10841,7 +11041,7 @@
         "specie": "nerd",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10866,7 +11066,7 @@
         "specie": "nerd",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10891,7 +11091,7 @@
         "specie": "nerd",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10941,7 +11141,7 @@
         "specie": "nerd",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -10966,7 +11166,7 @@
         "specie": "nerd",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11016,7 +11216,7 @@
         "specie": "nerd",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11041,7 +11241,7 @@
         "specie": "ibis",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11066,7 +11266,7 @@
         "specie": "ibis",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11091,7 +11291,7 @@
         "specie": "ibis",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11116,7 +11316,7 @@
         "specie": "ibis",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11141,7 +11341,7 @@
         "specie": "ibis",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11166,7 +11366,7 @@
         "specie": "ibis",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11191,7 +11391,7 @@
         "specie": "ibis",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11216,7 +11416,7 @@
         "specie": "ibis",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11266,7 +11466,7 @@
         "specie": "bat",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11291,7 +11491,7 @@
         "specie": "bat",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11316,7 +11516,7 @@
         "specie": "bat",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11341,7 +11541,7 @@
         "specie": "bat",
         "status": -1,
         "trained": 0,
-        "training": [1, 1, 0, 1, 1, 1],
+        "training": [1, 1, 0, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -11366,7 +11566,7 @@
         "specie": "bat",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11391,7 +11591,7 @@
         "specie": "bat",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11441,7 +11641,7 @@
         "specie": "gremlin",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11466,7 +11666,7 @@
         "specie": "gremlin",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11491,7 +11691,7 @@
         "specie": "gremlin",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11516,7 +11716,7 @@
         "specie": "gremlin",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11566,7 +11766,7 @@
         "specie": "gremlin",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11591,7 +11791,7 @@
         "specie": "gremlin",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11616,7 +11816,7 @@
         "specie": "gremlin",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11641,7 +11841,7 @@
         "specie": "opossum",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11666,7 +11866,7 @@
         "specie": "opossum",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11691,7 +11891,7 @@
         "specie": "opossum",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11716,7 +11916,7 @@
         "specie": "opossum",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11741,7 +11941,7 @@
         "specie": "opossum",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11766,7 +11966,7 @@
         "specie": "opossum",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11791,7 +11991,7 @@
         "specie": "opossum",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11816,7 +12016,7 @@
         "specie": "opossum",
         "status": -1,
         "trained": 0,
-        "training": [1, 1, 0, 1, 1, 1],
+        "training": [1, 1, 0, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -11841,7 +12041,7 @@
         "specie": "snake",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11866,7 +12066,7 @@
         "specie": "snake",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11891,7 +12091,7 @@
         "specie": "snake",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11916,7 +12116,7 @@
         "specie": "snake",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11941,7 +12141,7 @@
         "specie": "snake",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11966,7 +12166,7 @@
         "specie": "snake",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -11991,7 +12191,7 @@
         "specie": "snake",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12016,7 +12216,7 @@
         "specie": "snake",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12041,7 +12241,7 @@
         "specie": "kettle",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12116,7 +12316,7 @@
         "specie": "kettle",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12166,7 +12366,7 @@
         "specie": "kettle",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12191,7 +12391,7 @@
         "specie": "kettle",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12266,7 +12466,7 @@
         "specie": "monkey",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12291,7 +12491,7 @@
         "specie": "monkey",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12316,7 +12516,7 @@
         "specie": "monkey",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12416,7 +12616,7 @@
         "specie": "monkey",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12441,7 +12641,7 @@
         "specie": "swift",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12466,7 +12666,7 @@
         "specie": "swift",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12491,7 +12691,7 @@
         "specie": "swift",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12516,7 +12716,7 @@
         "specie": "swift",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12541,7 +12741,7 @@
         "specie": "swift",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12566,7 +12766,7 @@
         "specie": "swift",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12591,7 +12791,7 @@
         "specie": "swift",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12616,7 +12816,7 @@
         "specie": "swift",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12641,7 +12841,7 @@
         "specie": "swift",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12666,7 +12866,7 @@
         "specie": "alien",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12716,7 +12916,7 @@
         "specie": "alien",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12741,7 +12941,7 @@
         "specie": "alien",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12766,7 +12966,7 @@
         "specie": "alien",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12791,7 +12991,7 @@
         "specie": "alien",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12816,7 +13016,7 @@
         "specie": "alien",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12841,7 +13041,7 @@
         "specie": "alien",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12866,7 +13066,7 @@
         "specie": "crab",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12891,7 +13091,7 @@
         "specie": "crab",
         "status": -1,
         "trained": 0,
-        "training": [1, 1, 0, 1, 1, 1],
+        "training": [1, 1, 0, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -12916,7 +13116,7 @@
         "specie": "crab",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12941,7 +13141,7 @@
         "specie": "crab",
         "status": -1,
         "trained": 0,
-        "training": [1, 1, 0, 1, 1, 1],
+        "training": [1, 1, 0, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -12966,7 +13166,7 @@
         "specie": "crab",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -12991,7 +13191,7 @@
         "specie": "crab",
         "status": -1,
         "trained": 0,
-        "training": [1, 1, 0, 1, 1, 1],
+        "training": [1, 1, 0, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -13016,7 +13216,7 @@
         "specie": "crab",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13066,7 +13266,7 @@
         "specie": "olm",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13091,7 +13291,7 @@
         "specie": "olm",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13116,7 +13316,7 @@
         "specie": "olm",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13141,7 +13341,7 @@
         "specie": "olm",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13166,7 +13366,7 @@
         "specie": "olm",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13216,7 +13416,7 @@
         "specie": "olm",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13241,7 +13441,7 @@
         "specie": "olm",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13266,7 +13466,7 @@
         "specie": "yeti",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13291,7 +13491,7 @@
         "specie": "yeti",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13316,7 +13516,7 @@
         "specie": "yeti",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13366,7 +13566,7 @@
         "specie": "yeti",
         "status": -1,
         "trained": 0,
-        "training": [1, 1, 0, 1, 1, 1],
+        "training": [1, 1, 0, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -13391,7 +13591,7 @@
         "specie": "yeti",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13441,7 +13641,7 @@
         "specie": "yeti",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13491,7 +13691,7 @@
         "specie": "beluga",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13516,7 +13716,7 @@
         "specie": "beluga",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13541,7 +13741,7 @@
         "specie": "beluga",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13666,7 +13866,7 @@
         "specie": "bestiemon",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13691,7 +13891,7 @@
         "specie": "bestiemon",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13716,7 +13916,7 @@
         "specie": "bestiemon",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13741,7 +13941,7 @@
         "specie": "bestiemon",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13766,7 +13966,7 @@
         "specie": "bestiemon",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13791,7 +13991,7 @@
         "specie": "bestiemon",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13816,7 +14016,7 @@
         "specie": "bestiemon",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13841,7 +14041,7 @@
         "specie": "bestiemon",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13866,7 +14066,7 @@
         "specie": "cheerleadermon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13891,7 +14091,7 @@
         "specie": "cheerleadermon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13916,7 +14116,7 @@
         "specie": "cheerleadermon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13941,7 +14141,7 @@
         "specie": "cheerleadermon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13966,7 +14166,7 @@
         "specie": "cheerleadermon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -13991,7 +14191,7 @@
         "specie": "cheerleadermon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14016,7 +14216,7 @@
         "specie": "cheerleadermon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14066,7 +14266,7 @@
         "specie": "magpiemon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14091,7 +14291,7 @@
         "specie": "magpiemon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14116,7 +14316,7 @@
         "specie": "magpiemon",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14141,7 +14341,7 @@
         "specie": "magpiemon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14166,7 +14366,7 @@
         "specie": "magpiemon",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14191,7 +14391,7 @@
         "specie": "magpiemon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14216,7 +14416,7 @@
         "specie": "magpiemon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14241,7 +14441,7 @@
         "specie": "magpiemon",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14266,7 +14466,7 @@
         "specie": "platypus",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14291,7 +14491,7 @@
         "specie": "platypus",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14316,7 +14516,7 @@
         "specie": "platypus",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14416,7 +14616,7 @@
         "specie": "platypus",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14566,7 +14766,7 @@
         "specie": "rainbowmon",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14591,7 +14791,7 @@
         "specie": "rainbowmon",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14616,7 +14816,7 @@
         "specie": "rainbowmon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14666,7 +14866,7 @@
         "specie": "shroommon",
         "status": -1,
         "trained": 0,
-        "training": [1, 1, 1, 1, 1, 1],
+        "training": [1, 1, 1, 0, 0, 0],
         "variant": -1,
         "vibe": -1
       },
@@ -14691,7 +14891,7 @@
         "specie": "shroommon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14716,7 +14916,7 @@
         "specie": "shroommon",
         "status": -1,
         "trained": 0,
-        "training": [1, 0, 0, 1, 1, 1],
+        "training": [1, 0, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14741,7 +14941,7 @@
         "specie": "shroommon",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14766,7 +14966,7 @@
         "specie": "shroommon",
         "status": -1,
         "trained": 0,
-        "training": [0, 1, 0, 1, 1, 1],
+        "training": [0, 1, 0, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14791,7 +14991,7 @@
         "specie": "shroommon",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },
@@ -14816,7 +15016,7 @@
         "specie": "shroommon",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 0, 1, 0.33, 0.33, 0.33],
         "variant": -1,
         "vibe": -1
       },

@@ -1137,6 +1137,17 @@
       },
       {
         "alt_complete_flag": -1,
+        "collides": true,
+        "cost": 1,
+        "dest_level": "city_neighborhood",
+        "dest_object": "@ref object(objWarrior)",
+        "id": "puzzle",
+        "parent": null,
+        "prereq": { "field": 0, "type": [1] },
+        "rankup": false
+      },
+      {
+        "alt_complete_flag": -1,
         "collides": false,
         "cost": 1,
         "dest_level": "city_neighborhood",
@@ -1144,15 +1155,37 @@
         "id": "swap",
         "parent": null,
         "prereq": { "field": 0, "type": [1] },
-        "rankup": false
+        "rankup": true
       },
       {
         "alt_complete_flag": -1,
         "collides": true,
         "cost": 1,
-        "dest_level": "",
-        "dest_object": -1,
-        "id": "",
+        "dest_level": "park_edge",
+        "dest_object": "@ref object(objWarrior)",
+        "id": "park",
+        "parent": null,
+        "prereq": {
+          "field": {
+            "comparison": 5,
+            "editor_openable": false,
+            "key": "dominic_marlin_hello",
+            "lastcheck": null,
+            "name": "datacheck",
+            "needscheck": true,
+            "value": 1
+          },
+          "type": [1]
+        },
+        "rankup": false
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": false,
+        "cost": 1,
+        "dest_level": "city_neighborhood",
+        "dest_object": "@ref object(objBallcenter)",
+        "id": "rematch",
         "parent": null,
         "prereq": { "field": 0, "type": [1] },
         "rankup": false
@@ -1161,13 +1194,13 @@
     "id": "warrior",
     "img": 2,
     "loneliness": 1.8,
-    "max_hearts": 4,
+    "max_hearts": 5,
     "name": "¦socialssetup_classsocial_010¦",
     "object": "@ref object(objWarrior)",
     "plays": [
       "substitute",
       "fieldclear",
-      "rushattack",
+      "bolt",
       "mark",
       "bench",
       "libero",

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import InfoTabberHeader from "../shared/InfoTabber";
 import styles from "./Events.module.css";
 import { CarouselData, NoData } from "./Types";
@@ -28,6 +28,8 @@ const EMOJI_SWAPPED = Object.keys(EMOJI_MAP);
 
 const EXPERIMENTAL_PREFIXES = ["experimental", "sadness"];
 
+const AUTO_SWAP_TIME = 5000; //ms
+
 export default function Carousel({
   children,
   bigmoonOld,
@@ -50,6 +52,8 @@ export default function Carousel({
   const [tab, setTab] = useState(0);
   const lastReload = useRef(0);
 
+  const [autoChangeTab, setAutoChangeTab] = useState(bigmoonOld);
+
   const datas = noData
     ? []
     : carouselData.data.filter((data) => !data.img.startsWith("bigmoon"));
@@ -71,6 +75,21 @@ export default function Carousel({
     return EMOJI_MAP.default;
   });
   tabs.splice(bigmoonPos, 0, EMOJI_MAP.bigmoon);
+
+  const tabCount = tabs.length;
+
+  const nextTabFunction = useCallback(() => {
+    if (!document.getElementById("carousel")?.matches(":hover")) {
+      setTab((tab) => (tab + 1) % tabCount);
+    }
+  }, [tabCount]);
+
+  useEffect(() => {
+    if (autoChangeTab) {
+      const interval = setInterval(nextTabFunction, AUTO_SWAP_TIME);
+      return () => clearInterval(interval);
+    }
+  }, [autoChangeTab]);
 
   const parts: React.ReactNode[] = datas.map((data) => (
     <div key={data.img} className={styles.eventBlock}>
@@ -107,7 +126,7 @@ export default function Carousel({
 
   return (
     <>
-      <div className={styles.carouselHide}>
+      <div id="carousel" className={styles.carouselHide}>
         <div
           className={styles.carouselRow}
           style={{ transform: `translateX(-${tab * 100}%)` }}
@@ -137,7 +156,14 @@ export default function Carousel({
         ⟳
       </div>
       <div className={styles.tabber}>
-        <InfoTabberHeader tab={tab} setTab={setTab} tabs={tabs} />
+        <InfoTabberHeader
+          tab={tab}
+          setTab={(tab) => {
+            setAutoChangeTab(false);
+            setTab(tab);
+          }}
+          tabs={tabs}
+        />
       </div>
     </>
   );

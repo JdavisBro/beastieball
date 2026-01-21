@@ -33,7 +33,24 @@ const secrets = localStorage.getItem("secrets") == "true";
 
 const BEASTIE_ARRAY = [...BEASTIE_DATA.values()];
 
-export const SPAWNABLE_BEASTIES = Object.values(SPAWN_DATA)
+const MAP_SPAWNS = WORLD_DATA.level_stumps_array
+  .filter(
+    (level) =>
+      !(level.map_hidden || level.area_id == undefined) &&
+      ((level.world_layer ?? 0) == 0 ||
+        OTHER_AREAS.some((area) => level.name.startsWith(area.prefix))),
+  )
+  .flatMap((level) => level.spawn_name)
+  .flatMap((spawnId) =>
+    spawnId + "_postgame" in SPAWN_DATA
+      ? [spawnId, spawnId + "_postgame"]
+      : spawnId,
+  )
+  .filter((value, index, array) => value && array.indexOf(value) == index);
+
+export const SPAWNABLE_BEASTIES = MAP_SPAWNS.map(
+  (spawnId) => SPAWN_DATA[spawnId],
+)
   .map((spawns) => spawns.group?.map((spawn) => spawn.specie))
   .flat()
   .filter((beastie) => typeof beastie === "string")

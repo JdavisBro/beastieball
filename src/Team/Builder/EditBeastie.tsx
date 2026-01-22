@@ -55,7 +55,7 @@ export function BeastieDoesntExist({
               setBeastieId(beastieId);
             }
           }}
-          hashName="Species"
+          hashName="SpeciesNew"
         />
       </label>
     </Box>

@@ -22,6 +22,14 @@ import useLocalization from "./localization/useLocalization";
 import { Fallback } from "./shared/CustomErrorBoundary";
 import LocalizationProvider from "./localization/LocalizationProvider";
 
+declare global {
+  interface Window {
+    prerenderReady: boolean;
+  }
+}
+
+const IS_PRERENDER = navigator.userAgent.includes("prerender");
+
 const LOADING_TIME = 20; // ms
 
 function Root() {
@@ -30,6 +38,8 @@ function Root() {
   const timedOut = useRef(false);
   if (navigation.state != "loading") {
     timedOut.current = false;
+  } else if (IS_PRERENDER) {
+    window.prerenderReady = false;
   }
 
   useEffect(() => {
@@ -39,6 +49,8 @@ function Root() {
         timedOut.current = true;
       }, LOADING_TIME);
       return () => clearTimeout(timeout);
+    } else if (IS_PRERENDER) {
+      window.prerenderReady = true;
     }
   }, [navigation.state]);
 

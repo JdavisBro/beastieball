@@ -527,10 +527,11 @@ async function createTeamImage(
             beastiedata.ability.length == 1 ? 0 : beastie.ability_index
           ]
         ];
+      const text_width = BEASTIE_SIZE[0] / 2;
       const [lines, images] = splitText(
         L(ability.desc).replace(/\|/, ""),
         ctx,
-        BEASTIE_SIZE[0] / 2,
+        text_width,
         loadImage,
       );
       const line_height = lines.length < 4 ? 24 : lines.length < 5 ? 20 : 16;
@@ -548,6 +549,7 @@ async function createTeamImage(
           lines[i],
           startx + text_middle,
           starty + trait_begin + line_height * (i + 1),
+          text_width,
         );
       }
       for (const image of images) {

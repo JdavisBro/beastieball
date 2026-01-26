@@ -563,7 +563,7 @@
       },
       "shareCode": {
         "title": "Share Code",
-        "note": "Team Share codes are mainly for PVP, so they don't include most data to reduce length.\nName, number, level, specific colors, and coaching won't be the same when the code is loaded.",
+        "note": "Team Share codes are mainly for PVP, so they don't include most data to reduce length.\nName, number, level, specific colors, and coaching won't be the same when the code is loaded.\nCodes may break when the game is updated, specifically when a Beastie's learnable Plays are changed.",
         "current": "Current Team Code: ",
         "loadLabel": "Load Team Code: ",
         "loadButton": "Load",

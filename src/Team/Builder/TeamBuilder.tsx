@@ -1,4 +1,4 @@
-import { Fragment, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 import styles from "./TeamBuilder.module.css";
 import type { BuilderTeam, TeamBeastie } from "../Types";
@@ -16,6 +16,9 @@ import TeamImageButton from "../TeamImageButton";
 import useLocalization from "../../localization/useLocalization";
 import BeastieSelect from "../../shared/BeastieSelect";
 import BEASTIE_DATA from "../../data/BeastieData";
+import TeamShareCode from "./TeamShareCode";
+import { decodeTeam } from "./encodeTeam";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const CONTROL_BEASTIE = createBeastie("01");
 const BEASTIE_KEYS = Object.keys(CONTROL_BEASTIE) as Array<keyof TeamBeastie>;
@@ -103,6 +106,18 @@ export default function TeamBuilder() {
   const [team, setTeam] = ensureFullTeam(
     useLocalStorage<BuilderTeam>("teamBuilderTeam", []),
   );
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const code = params.get("code");
+    if (code) {
+      setTeam(decodeTeam(code, L));
+      navigate({ search: "" });
+    }
+  }, [location, navigate]);
 
   const setBeastie = (teamIndex: number, beastie: TeamBeastie | null) => {
     team[teamIndex] = beastie;
@@ -256,6 +271,10 @@ export default function TeamBuilder() {
               >
                 {L("teams.builder.loadJson")}
               </button>
+              <TeamShareCode
+                team={team.filter((beastie) => !!beastie)}
+                setTeam={setTeam}
+              />
               <button onClick={() => setTeam(emptyTeamArr.map(() => null))}>
                 {L("teams.builder.reset")}
               </button>

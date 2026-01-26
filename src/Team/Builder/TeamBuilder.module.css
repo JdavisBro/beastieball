@@ -61,6 +61,25 @@
   white-space: nowrap;
 }
 
+.shareModal {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+}
+
+.shareModal > label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.shareModal > div {
+  white-space: pre-wrap;
+}
+
 .noBeastie {
   composes: animBoxBackground from global;
   display: flex;

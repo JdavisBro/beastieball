@@ -561,6 +561,16 @@
         "noTeams": "No Saved Teams",
         "saveCurrent": "Save Current Team as New Team"
       },
+      "shareCode": {
+        "title": "Share Code",
+        "note": "Team Share codes are mainly for PVP, so they don't include most data to reduce length.\nName, number, level, specific colors, and coaching won't be the same when the code is loaded.",
+        "current": "Current Team Code: ",
+        "loadLabel": "Load Team Code: ",
+        "loadButton": "Load",
+        "copy": "Copy",
+        "copyLink": "Copy Link",
+        "failed": "Load Failed"
+      },
       "species": "Species: ",
       "level": "Level: ",
       "trait": "Trait: ",

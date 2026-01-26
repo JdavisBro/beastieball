@@ -107,18 +107,6 @@ export default function TeamBuilder() {
     useLocalStorage<BuilderTeam>("teamBuilderTeam", []),
   );
 
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const code = params.get("code");
-    if (code) {
-      setTeam(decodeTeam(code, L));
-      navigate({ search: "" });
-    }
-  }, [location, navigate]);
-
   const setBeastie = (teamIndex: number, beastie: TeamBeastie | null) => {
     team[teamIndex] = beastie;
     setTeam((team) => {

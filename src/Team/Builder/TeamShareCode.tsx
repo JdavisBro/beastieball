@@ -1,9 +1,11 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import useLocalization from "../../localization/useLocalization";
 import Modal from "../../shared/Modal";
 import { BuilderTeam, TeamBeastie } from "../Types";
 import { decodeTeam, encodeTeam } from "./encodeTeam";
 import styles from "./TeamBuilder.module.css";
+import { useLocation, useNavigate } from "react-router-dom";
+import BEASTIE_DATA from "../../data/BeastieData";
 
 export default function TeamShareCode({
   team,
@@ -14,11 +16,22 @@ export default function TeamShareCode({
 }) {
   const { L } = useLocalization();
 
-  const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const [loadFailed, setLoadFailed] = useState(false);
+  const params = new URLSearchParams(location.search);
+  const code = params.get("code");
 
-  const loadRef = useRef<HTMLInputElement>(null);
+  const [loadCode, setLoadCode] = useState(code);
+
+  let load_team: null | TeamBeastie[] = null;
+  if (loadCode) {
+    try {
+      load_team = decodeTeam(loadCode, L);
+    } catch {}
+  }
+
+  const [open, setOpen] = useState(!!load_team);
 
   const teamCode = open ? encodeTeam(team) : "";
 
@@ -59,23 +72,36 @@ export default function TeamShareCode({
           </label>
           <label>
             {L("teams.builder.shareCode.loadLabel")}
-            <input type="text" ref={loadRef} />
-            <button
-              onClick={() => {
-                if (loadRef.current) {
-                  try {
-                    setTeam(decodeTeam(loadRef.current.value, L));
-                    setLoadFailed(false);
-                  } catch {
-                    setLoadFailed(true);
-                  }
-                }
-              }}
-            >
-              {L("teams.builder.shareCode.loadButton")}
-            </button>
+            <input
+              type="text"
+              value={loadCode ?? ""}
+              onChange={(event) => setLoadCode(event.target.value)}
+            />
           </label>
-          {loadFailed ? <div>{L("teams.builder.shareCode.failed")}</div> : null}
+          {load_team ? (
+            <>
+              <div>{L("teams.builder.shareCode.loading")}</div>
+              <div className={styles.savedTeamBeasties}>
+                {load_team.map((beastie) => (
+                  <img
+                    src={`/icons/${L(BEASTIE_DATA.get(beastie.specie)?.name ?? "beastiesetup_name_001", undefined, true)}.png`}
+                  />
+                ))}
+              </div>
+              <button
+                onClick={() => {
+                  setTeam(load_team);
+                  setOpen(false);
+                  setLoadCode(null);
+                  navigate({ search: "" });
+                }}
+              >
+                {L("teams.builder.shareCode.loadButton")}
+              </button>
+            </>
+          ) : loadCode ? (
+            L("teams.builder.shareCode.invalid")
+          ) : null}
         </div>
       </Modal>
     </>

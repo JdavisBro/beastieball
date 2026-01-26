@@ -569,7 +569,8 @@
         "loadButton": "Load",
         "copy": "Copy",
         "copyLink": "Copy Link",
-        "failed": "Load Failed"
+        "invalid": "Invalid Team",
+        "loading": "Loading Team:"
       },
       "species": "Species: ",
       "level": "Level: ",

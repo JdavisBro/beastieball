@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 
 import styles from "./TeamBuilder.module.css";
 import type { BuilderTeam, TeamBeastie } from "../Types";
@@ -17,8 +17,6 @@ import useLocalization from "../../localization/useLocalization";
 import BeastieSelect from "../../shared/BeastieSelect";
 import BEASTIE_DATA from "../../data/BeastieData";
 import TeamShareCode from "./TeamShareCode";
-import { decodeTeam } from "./encodeTeam";
-import { useLocation, useNavigate } from "react-router-dom";
 
 const CONTROL_BEASTIE = createBeastie("01");
 const BEASTIE_KEYS = Object.keys(CONTROL_BEASTIE) as Array<keyof TeamBeastie>;

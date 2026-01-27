@@ -28,7 +28,7 @@ declare global {
   }
 }
 
-const IS_PRERENDER = navigator.userAgent.includes("prerender");
+const IS_PRERENDER = navigator.userAgent.toLowerCase().includes("prerender");
 
 const LOADING_TIME = 20; // ms
 

@@ -22,6 +22,16 @@ function hashCode(text: string) {
   return hash;
 }
 
+const TRAINING_TYPE: ("ba_t" | "ha_t" | "ma_t" | "bd_t" | "hd_t" | "md_t")[] = [
+  "ba_t",
+  "ha_t",
+  "ma_t",
+  "bd_t",
+  "hd_t",
+  "md_t",
+];
+const MAX_TRAINING_POINTS = 240;
+
 export function encounterToTeamBeastie(
   pid: string,
   encBeastie: EncounterBeastie,
@@ -99,7 +109,7 @@ export function encounterToTeamBeastie(
   };
   const trained = overwrittenTrained ?? encBeastie.trained;
   if (trained && trained > 0 && Array.isArray(encBeastie.training)) {
-    const total_points = Math.round(240 * trained);
+    const total_points = Math.round(MAX_TRAINING_POINTS * trained);
     const total_alloc = encBeastie.training.reduce((p, n) => p + n);
     const getStat = (num: number) =>
       Math.min(120, Math.round((total_points * num) / total_alloc));
@@ -109,6 +119,19 @@ export function encounterToTeamBeastie(
     training.bd_t = getStat(encBeastie.training[3]);
     training.hd_t = getStat(encBeastie.training[4]);
     training.md_t = getStat(encBeastie.training[5]);
+
+    // ensure not over max points
+    let points_used = 0;
+    for (const type of TRAINING_TYPE) {
+      if (points_used > MAX_TRAINING_POINTS) {
+        training[type] = 0;
+        continue;
+      }
+      points_used += training[type];
+      if (points_used > MAX_TRAINING_POINTS) {
+        training[type] = training[type] - (points_used - MAX_TRAINING_POINTS);
+      }
+    }
   }
 
   return {

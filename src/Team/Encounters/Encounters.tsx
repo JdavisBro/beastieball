@@ -19,6 +19,7 @@ import useLocalization, {
 } from "../../localization/useLocalization";
 import AiInfo from "./AiInfo";
 import { createPid } from "../Builder/createBeastie";
+import BeastieSelect from "../../shared/BeastieSelect";
 
 declare global {
   interface Window {
@@ -89,6 +90,15 @@ export default function Encounters() {
     { redd: true },
   );
 
+  const [overwrittenTrained, setOverwrittenTrained] = useState<
+    undefined | number
+  >(undefined);
+  const [beastieFilter, setBeastieFilter] = useState<undefined | string>(
+    "shroom_b",
+  );
+
+  const isBattleTower = encounterId == "bt";
+
   window.encounter = encounter;
   window.ENCOUNTER_DATA = ENCOUNTER_DATA;
 
@@ -125,6 +135,7 @@ export default function Encounters() {
           forceLevel ?? encBeastie.level + bonus_levels,
           encounter.id,
           index,
+          overwrittenTrained,
           L,
         ),
       );
@@ -185,6 +196,51 @@ export default function Encounters() {
                 })
               : L("teams.encounters.noScaling")}{" "}
             <AiInfo encounter={encounter} />
+            {isBattleTower ? (
+              <>
+                <div className={styles.rowAlign}>
+                  {L("teams.encounters.trained")}
+                  <input
+                    type="range"
+                    value={Math.round((overwrittenTrained ?? 0) * 100)}
+                    min={0}
+                    max={100}
+                    step={1}
+                    onChange={(event) =>
+                      setOverwrittenTrained(
+                        Number(event.currentTarget.value) / 100,
+                      )
+                    }
+                  />
+                  <input
+                    type="number"
+                    value={Math.round((overwrittenTrained ?? 0) * 100)}
+                    min={0}
+                    max={100}
+                    step={1}
+                    onChange={(event) =>
+                      setOverwrittenTrained(
+                        Number(event.currentTarget.value) / 100,
+                      )
+                    }
+                  />
+                  %
+                </div>
+                <div>
+                  {L("teams.encounters.beastieFilter")}
+                  <BeastieSelect
+                    beastieId={beastieFilter}
+                    setBeastieId={setBeastieFilter}
+                    hashName={"Filter"}
+                    isSelectable={(beastie) =>
+                      encounter.team.some(
+                        (encBeastie) => encBeastie.specie == beastie.id,
+                      )
+                    }
+                  />
+                </div>
+              </>
+            ) : undefined}
           </>
         ) : null}
       </div>
@@ -221,15 +277,18 @@ export default function Encounters() {
         <MoveModalProvider>
           <BeastieRenderProvider>
             {encounter
-              ? encounter.team.map((encBeastie, index) => (
-                  <EncounterBeastieElem
-                    key={index}
-                    encounterId={encounter.id}
-                    encBeastie={encBeastie}
-                    index={index}
-                    bonus_levels={bonus_levels}
-                  />
-                ))
+              ? encounter.team.map((encBeastie, index) =>
+                  !isBattleTower || encBeastie.specie == beastieFilter ? (
+                    <EncounterBeastieElem
+                      key={index}
+                      encounterId={encounter.id}
+                      encBeastie={encBeastie}
+                      index={index}
+                      bonus_levels={bonus_levels}
+                      overwrittenTrained={overwrittenTrained}
+                    />
+                  ) : null,
+                )
               : null}
           </BeastieRenderProvider>
         </MoveModalProvider>

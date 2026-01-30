@@ -617,6 +617,8 @@
       "noScaling": "No scaling",
       "defeatedBoss": "Defeated: ",
       "resetBoss": "Reset",
+      "trained": "Trained: ",
+      "beastieFilter": "Filter: ",
       "sep": " - ",
       "openInBuilder": "Open in Team Builder: ",
       "atCurrentLevels": "At Current Levels",

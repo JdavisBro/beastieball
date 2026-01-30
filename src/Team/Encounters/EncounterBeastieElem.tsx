@@ -28,6 +28,7 @@ export function encounterToTeamBeastie(
   level: number,
   encounterId: string,
   index: number,
+  overwrittenTrained: undefined | number,
   L: LocalizationFunction,
 ): TeamBeastie | null {
   const beastieDataPre = BEASTIE_DATA.get(encBeastie.specie || "shroom1");
@@ -96,12 +97,9 @@ export function encounterToTeamBeastie(
     hd_t: 0,
     md_t: 0,
   };
-  if (
-    encBeastie.trained &&
-    encBeastie.trained > 0 &&
-    Array.isArray(encBeastie.training)
-  ) {
-    const total_points = Math.round(240 * encBeastie.trained);
+  const trained = overwrittenTrained ?? encBeastie.trained;
+  if (trained && trained > 0 && Array.isArray(encBeastie.training)) {
+    const total_points = Math.round(240 * trained);
     const total_alloc = encBeastie.training.reduce((p, n) => p + n);
     const getStat = (num: number) =>
       Math.min(120, Math.round((total_points * num) / total_alloc));
@@ -145,11 +143,13 @@ export default function EncounterBeastieElem({
   encBeastie,
   index,
   bonus_levels,
+  overwrittenTrained,
 }: {
   encounterId: string;
   encBeastie: EncounterBeastie;
   index: number;
   bonus_levels: number;
+  overwrittenTrained?: number;
 }) {
   const { L } = useLocalization();
 
@@ -158,8 +158,17 @@ export default function EncounterBeastieElem({
   const pid = useMemo(createPid, [encounterId]);
 
   const teamBeastie = useMemo(
-    () => encounterToTeamBeastie(pid, encBeastie, level, encounterId, index, L),
-    [pid, encBeastie, level, encounterId, index],
+    () =>
+      encounterToTeamBeastie(
+        pid,
+        encBeastie,
+        level,
+        encounterId,
+        index,
+        overwrittenTrained,
+        L,
+      ),
+    [pid, encBeastie, level, encounterId, index, overwrittenTrained],
   );
 
   if (!teamBeastie) {

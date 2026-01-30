@@ -9,6 +9,10 @@
   clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
 }
 
+.rowAlign {
+  display: flex;
+}
+
 .bosses {
   user-select: none;
 }

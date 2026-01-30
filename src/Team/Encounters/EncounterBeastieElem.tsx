@@ -121,7 +121,7 @@ export function encounterToTeamBeastie(
       : String(index + 1)
     ).padStart(2, "0"),
     color: color,
-    name: L(encBeastie.name ?? ""),
+    name: encBeastie.name ? L(encBeastie.name) : "",
     spr_index: spr_index,
     xp: level ** 3 * beastieData.growth,
     scale: encBeastie.size && encBeastie.size > 0 ? encBeastie.size : 0.5,

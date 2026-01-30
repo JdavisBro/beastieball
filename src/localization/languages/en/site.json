@@ -126,6 +126,7 @@
   "events": {
     "title": "Events/News",
     "bigmoon": "Bigmoon Bash",
+    "random": "Bigmoon Bash: Random Teams",
     "guildSep": " VS ",
     "guildSuffix": "",
     "bannedSep": ", ",

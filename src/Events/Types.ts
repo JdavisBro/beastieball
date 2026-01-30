@@ -14,6 +14,7 @@ export type BallEvent = {
     can_autowin: boolean;
     can_recruit: boolean;
     manual_points_to_win: number;
+    mode?: number;
     set_level: number;
     combos: boolean;
     can_undo: boolean;

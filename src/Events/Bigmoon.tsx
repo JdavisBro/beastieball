@@ -169,6 +169,8 @@ function Bigmoon({ bigmoon }: { bigmoon: BallEvent }) {
         ) + L("events.bannedSuffix")
       : undefined;
 
+  const random_teams = bigmoon.rules.mode == 1;
+
   return (
     <EventBlock>
       <div className={styles.eventImage}>
@@ -189,9 +191,9 @@ function Bigmoon({ bigmoon }: { bigmoon: BallEvent }) {
           target="_blank"
           rel="noopener"
         >
-          {L("events.bigmoon")}
+          {random_teams ? L("events.random") : L("events.bigmoon")}
           <br />
-          <div className={styles.eventSubtitle}>{guilds ?? bans ?? ""} </div>
+          <div className={styles.eventSubtitle}>{guilds ?? bans ?? null}</div>
         </Link>
         <TimeDelta startDate={startDate} endDate={endDate} />
         <div>

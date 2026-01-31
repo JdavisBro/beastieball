@@ -266,7 +266,10 @@
         "stop": "Stop",
         "menu": "Menu",
         "hug": "Hug",
-        "special": "Special"
+        "special": "Special",
+        "bug_idle": "Bug Idle",
+        "bug_walk": "Bug Walk",
+        "bug_cheer": "Bug Cheer"
       }
     },
     "info": {

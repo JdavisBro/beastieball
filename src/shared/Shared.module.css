@@ -410,6 +410,10 @@
   align-items: stretch;
 }
 
+.copyImageFallback div {
+  max-width: 100%;
+}
+
 .copyImageFallback img {
   object-fit: contain;
   flex-shrink: 1;

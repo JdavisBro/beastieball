@@ -112,6 +112,7 @@ export function createTeamImageCanvas(
   atLevel?: number,
   maxCoaching?: boolean,
   copy?: boolean,
+  setCopyFallback?: (imageUrl?: string) => void,
 ) {
   if (canvas_in_use) {
     return;
@@ -151,11 +152,19 @@ export function createTeamImageCanvas(
         return;
       }
       if (copy) {
+        if (!navigator.clipboard && setCopyFallback) {
+          setCopyFallback(canvas.toDataURL("image/png"));
+        }
         canvas.toBlob((blob) => {
           if (!blob) {
             return;
           }
-          navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+          navigator.clipboard
+            .write([new ClipboardItem({ "image/png": blob })])
+            .catch(() => {
+              if (setCopyFallback)
+                setCopyFallback(canvas.toDataURL("image/png"));
+            });
         }, "image/png");
       } else {
         const a = document.createElement("a");

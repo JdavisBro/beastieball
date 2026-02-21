@@ -3,6 +3,7 @@ import { TeamBeastie } from "./Types";
 import { createTeamImageCanvas, DrawMode } from "./TeamImage";
 import { BeastieRenderContext } from "../shared/beastieRender/BeastieRenderContext";
 import useLocalization from "../localization/useLocalization";
+import CopyImageFallback from "../shared/CopyImageFallback";
 
 export default function TeamImageButton({
   team,
@@ -21,6 +22,10 @@ export default function TeamImageButton({
 
   const [mode, setMode] = useState(DrawMode.VGrid);
 
+  const [copyFallback, setCopyFallback] = useState<undefined | string>(
+    undefined,
+  );
+
   const saveImage = (copy: boolean) => {
     if (team && team.length && canvasRef.current)
       createTeamImageCanvas(
@@ -32,6 +37,7 @@ export default function TeamImageButton({
         atLevel,
         maxCoaching,
         copy,
+        setCopyFallback,
       );
   };
 
@@ -62,6 +68,12 @@ export default function TeamImageButton({
         {L("teams.image.copy")}
       </button>
       <canvas ref={canvasRef} style={{ display: "none" }} />
+      {copyFallback ? (
+        <CopyImageFallback
+          imageUrl={copyFallback}
+          setImageUrl={setCopyFallback}
+        />
+      ) : null}
     </span>
   );
 }

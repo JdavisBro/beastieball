@@ -30,6 +30,7 @@ import useScreenOrientation from "../../utils/useScreenOrientation";
 import { AnimationState, setupFrameCallback } from "./frameCallback.ts";
 import useLocalization from "../../localization/useLocalization.ts";
 import ImageContextMenu from "./ImageContextMenu.tsx";
+import CopyImageFallback from "../../shared/CopyImageFallback.tsx";
 
 const DevUtil = import.meta.env.DEV
   ? lazy(() => import("./DevUtil.tsx"))
@@ -403,6 +404,10 @@ export default function ContentPreview(props: Props): React.ReactNode {
     [setColors],
   );
 
+  const [copyFallback, setCopyFallback] = useState<undefined | string>(
+    undefined,
+  );
+
   const downloadImage = useCallback(
     (copy: boolean = false) => {
       if (!canvasRef.current || !cropCanvasRef.current) {
@@ -428,12 +433,18 @@ export default function ContentPreview(props: Props): React.ReactNode {
         a.href = canvas.toDataURL("image/png");
         a.click();
       } else {
-        canvas.toBlob((blob) => {
-          if (!blob) {
-            return;
-          }
-          navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
-        }, "image/png");
+        if (!navigator.clipboard) {
+          setCopyFallback(canvas.toDataURL("image/png"));
+        } else {
+          canvas.toBlob((blob) => {
+            if (!blob) {
+              return;
+            }
+            navigator.clipboard
+              .write([new ClipboardItem({ "image/png": blob })])
+              .catch(() => setCopyFallback(canvas.toDataURL("image/png")));
+          }, "image/png");
+        }
       }
     },
     [fitBeastie, drawnsprite, beastieName],
@@ -549,6 +560,13 @@ export default function ContentPreview(props: Props): React.ReactNode {
           <div>{L(noDisplayReason)}</div>
         </div>
       </ImageContextMenu>
+
+      {copyFallback ? (
+        <CopyImageFallback
+          imageUrl={copyFallback}
+          setImageUrl={setCopyFallback}
+        />
+      ) : null}
 
       <button
         className={styles.previewOptionsButton}

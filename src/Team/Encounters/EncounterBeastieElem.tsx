@@ -59,9 +59,9 @@ export function encounterToTeamBeastie(
   const randomizer = new Randomizer(1);
   randomizer.randomizer_seed(hashCode(fromEncounter) + fromEncounterIndex);
   randomizer.spam_random(9);
-  const random_ability = Math.floor(
-    randomizer.random(beastieData.ability.length),
-  );
+  const random_ability = beastieData.ability_hidden
+    ? 0
+    : Math.floor(randomizer.random(beastieData.ability.length));
   const random_colors = new Array(beastieData.colors.length)
     .fill(0.5)
     .map(() => randomizer.random());

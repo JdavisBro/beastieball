@@ -53,7 +53,7 @@ function EncounterPopup({
               babyBeastieData,
               beastie.level,
               oldBeastieData.id,
-            ) ?? oldBeastieData;
+            )[0] ?? oldBeastieData;
           const isWild = beastie.specie == "";
           const isSpoiler = isWild || isSpoilerFn(beastie.specie);
 

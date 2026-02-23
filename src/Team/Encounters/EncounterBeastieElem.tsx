@@ -45,12 +45,15 @@ export function encounterToTeamBeastie(
   if (!beastieDataPre) {
     return null;
   }
-  const beastieData = encBeastie.evolves
-    ? (getMetamorphAtLevel(
+  const [metamorphBeastie, metamorphPath] = encBeastie.evolves
+    ? getMetamorphAtLevel(
         BEASTIE_DATA.get(beastieDataPre.family) ?? beastieDataPre,
         level,
         beastieDataPre.id,
-      ) ?? beastieDataPre)
+      )
+    : [null, null];
+  const beastieData = encBeastie.evolves
+    ? (metamorphBeastie ?? beastieDataPre)
     : beastieDataPre;
 
   const fromEncounter = encBeastie.from_encounter ?? encounterId;
@@ -82,6 +85,18 @@ export function encounterToTeamBeastie(
   const color = Array.isArray(encBeastie.color)
     ? encBeastie.color
     : random_colors.map((c) => (c += variant));
+
+  if (metamorphPath?.length && metamorphPath.length > 1) {
+    for (const beastieId of metamorphPath.slice(1)) {
+      const metaData = BEASTIE_DATA.get(beastieId);
+      if (metaData?.colormeta?.length) {
+        for (let i = 0; i < metaData.colormeta.length; i++) {
+          color[i] = color[metaData.colormeta[i]];
+        }
+      }
+    }
+  }
+
   const spr_index =
     beastieData.id == "ibis"
       ? ibisIndex

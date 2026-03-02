@@ -173,10 +173,12 @@ function EvoCondition({
 }
 
 function EvoText({
+  currentBeastie,
   evo,
   into,
   isSpoiler,
 }: {
+  currentBeastie: BeastieType;
   evo: { beastie: BeastieType; evolution: EvolutionType };
   into: boolean;
   isSpoiler: boolean;
@@ -208,6 +210,15 @@ function EvoText({
       )}
       <Link to={getLink(`/beastiepedia/${evoName}`)}>
         {isSpoiler ? L("common.spoiler") : evoName}
+      </Link>
+      <Link
+        to={getLink(
+          `/beastiepedia/${evoName}?copy${into ? "Up" : "Down"}=${L(currentBeastie.name)}`,
+        )}
+        title={L("beastiepedia.info.metamorphosis.goWithColors")}
+        style={{ textDecoration: "none" }}
+      >
+        🎨
       </Link>
       {conds}
     </div>
@@ -282,6 +293,7 @@ export default function Evolution({
         preEvos.map((evo, index) => (
           <EvoText
             key={`${evo.beastie.id}${index}`}
+            currentBeastie={beastiedata}
             evo={evo}
             into={false}
             isSpoiler={evo ? isSpoiler(evo.beastie.id) : false}
@@ -295,6 +307,7 @@ export default function Evolution({
         evolutions.length ? (
           evolutions.map((evo, index) => (
             <EvoText
+              currentBeastie={beastiedata}
               key={evo.beastie.id + index}
               evo={evo}
               into={true}

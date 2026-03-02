@@ -53,6 +53,8 @@ type StoredType = {
   };
 };
 
+type TabKeys = "color" | "color2" | "shiny" | "custom";
+
 type HookType = [StoredType, React.Dispatch<React.SetStateAction<StoredType>>];
 
 function isNumberArray(array: unknown) {
@@ -97,6 +99,8 @@ function useStoredTypes(): HookType {
   return [storedColors, setHook];
 }
 
+const BEASTIE_ARRAY = [...BEASTIE_DATA.values()];
+
 export default function ColorTabs(props: Props): React.ReactNode {
   const { L } = useLocalization();
 
@@ -104,7 +108,7 @@ export default function ColorTabs(props: Props): React.ReactNode {
 
   const [diffBeastieColors, setDiffBeastieColors] = useState("none");
 
-  const [currentTabActual, setCurrentTab] = useState("color");
+  const [currentTabActual, setCurrentTab] = useState<TabKeys>("color");
 
   const isDiffBeastie =
     diffBeastieColors != "none" && diffBeastieColors != props.beastiedata.id;
@@ -176,6 +180,38 @@ export default function ColorTabs(props: Props): React.ReactNode {
         case "custom": {
           setCurrentTab("custom");
           storedColors[props.beastiedata.id].custom = value.split(",");
+          break;
+        }
+        case "copyUp":
+        case "copyDown": {
+          const up = key == "copyUp";
+          const prevBeastie = BEASTIE_ARRAY.find(
+            (beastie) => L(beastie.name) == value,
+          );
+          if (!prevBeastie) continue;
+          const colormeta = up
+            ? props.beastiedata.colormeta
+            : prevBeastie.colormeta;
+          if (!(prevBeastie.id in storedColors)) {
+            storedColors[props.beastiedata.id][currentTab] = new Array(
+              props.beastiedata.colors.length,
+            ).fill(0.5);
+            continue;
+          }
+          const prevColor = storedColors[prevBeastie.id][currentTab];
+          const newColor = [...prevColor];
+          if (colormeta) {
+            for (let i = 0; i < prevColor.length && i < colormeta.length; i++) {
+              const copyToColor = colormeta[i] ?? i;
+              if (copyToColor < 0) continue;
+              while (copyToColor >= newColor.length) {
+                newColor.push(typeof newColor[0] == "string" ? "#999999" : 0.5);
+              }
+              newColor[up ? copyToColor : i] = prevColor[up ? i : copyToColor];
+            }
+          }
+          storedColors[props.beastiedata.id][currentTab] =
+            newColor as number[] & string[];
         }
       }
     }

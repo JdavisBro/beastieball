@@ -215,7 +215,11 @@ function EvoText({
         to={getLink(
           `/beastiepedia/${evoName}?copy${into ? "Up" : "Down"}=${L(currentBeastie.name)}`,
         )}
-        title={L("beastiepedia.info.metamorphosis.goWithColors")}
+        title={
+          into
+            ? L("beastiepedia.info.metamorphosis.goWithColorsTo")
+            : L("beastiepedia.info.metamorphosis.goWithColorsFrom")
+        }
         style={{ textDecoration: "none" }}
       >
         🎨

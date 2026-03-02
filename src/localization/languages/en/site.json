@@ -282,7 +282,8 @@
       "development": "Development",
       "metamorphosis": {
         "title": "Metamorphosis",
-        "goWithColors": "View with this Beastie's colors after Metamorphosis",
+        "goWithColorsFrom": "View with this Beastie's colors before Metamorphosis",
+        "goWithColorsTo": "View with this Beastie's colors after Metamorphosis",
         "fromNone": "Does not Metamorph from any Beastie",
         "from": "Metamorphs from ",
         "toNone": "Does not Metamorph into any Beastie",

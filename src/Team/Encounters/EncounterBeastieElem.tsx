@@ -86,17 +86,6 @@ export function encounterToTeamBeastie(
     ? encBeastie.color
     : random_colors.map((c) => (c += variant));
 
-  if (metamorphPath?.length && metamorphPath.length > 1) {
-    for (const beastieId of metamorphPath.slice(1)) {
-      const metaData = BEASTIE_DATA.get(beastieId);
-      if (metaData?.colormeta?.length) {
-        for (let i = 0; i < metaData.colormeta.length; i++) {
-          color[i] = color[metaData.colormeta[i]];
-        }
-      }
-    }
-  }
-
   const spr_index =
     beastieData.id == "ibis"
       ? ibisIndex
@@ -106,6 +95,41 @@ export function encounterToTeamBeastie(
               (beastieData.spr_alt.length + 1),
           )
         : 0;
+
+  const number =
+    encBeastie.number &&
+    (typeof encBeastie.number == "string" || encBeastie.number > -1)
+      ? String(encBeastie.number)
+      : String(Math.floor(randomizer.random() ** 3 * randomizer.random(10))) +
+        String(Math.round(randomizer.random(9)));
+
+  if (encBeastie.variant && encBeastie.specie == "crab") {
+    randomizer.random();
+  }
+
+  if (metamorphPath?.length && metamorphPath.length > 1) {
+    for (const beastieId of metamorphPath.slice(
+      metamorphPath.findIndex((id) => id == beastieDataPre.id),
+    )) {
+      const metaData = BEASTIE_DATA.get(beastieId);
+      if (metaData?.colormeta?.length) {
+        while (color.length < metaData.colors.length) {
+          color.push(variant + randomizer.random());
+        }
+        const origColor = [...color];
+        for (
+          let i = 0;
+          i < metaData.colormeta.length && i < metaData.colors.length;
+          i++
+        ) {
+          console.log(metaData.colormeta[i]);
+          if (metaData.colormeta[i] >= 0)
+            color[metaData.colormeta[i]] = origColor[i];
+        }
+      }
+    }
+  }
+  color.length = beastieData.colors.length;
 
   const ability_index =
     encBeastie.ability !== undefined && encBeastie.ability != -1
@@ -153,11 +177,7 @@ export function encounterToTeamBeastie(
     pid: pid,
     specie: beastieData.id,
     date: 1,
-    number: (encBeastie.number &&
-    (typeof encBeastie.number == "string" || encBeastie.number > -1)
-      ? String(encBeastie.number)
-      : String(index + 1)
-    ).padStart(2, "0"),
+    number: number.padStart(2, "0"),
     color: color,
     name: encBeastie.name ? L(encBeastie.name) : "",
     spr_index: spr_index,

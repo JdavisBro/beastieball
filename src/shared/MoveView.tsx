@@ -370,7 +370,7 @@ function getEffectString(
           "1":
             effect.eff == 42
               ? L("fieldeffectstuff_008", { "1": "8" })
-              : L("fieldeffectstuff_007", { "3": "15", "2": "¾" }),
+              : L("fieldeffectstuff_007", { "3": "20", "2": "¾" }),
         }),
       });
     case 44:

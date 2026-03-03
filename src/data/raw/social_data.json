@@ -398,7 +398,7 @@
         "dest_object": "@ref object(objBallcenter)",
         "id": "rematch",
         "parent": null,
-        "prereq": { "field": 0, "type": [0] },
+        "prereq": { "field": 0, "type": [4] },
         "rankup": false
       }
     ],
@@ -844,7 +844,7 @@
         "dest_object": "@ref object(objAcademymarker)",
         "id": "rematch",
         "parent": null,
-        "prereq": { "field": 0, "type": [0] },
+        "prereq": { "field": 0, "type": [4] },
         "rankup": false
       }
     ],
@@ -964,7 +964,7 @@
         "dest_object": "@ref object(objAcademymarker)",
         "id": "rematch",
         "parent": null,
-        "prereq": { "field": 0, "type": [0] },
+        "prereq": { "field": 0, "type": [4] },
         "rankup": false
       }
     ],
@@ -1140,7 +1140,7 @@
         "collides": true,
         "cost": 1,
         "dest_level": "city_neighborhood",
-        "dest_object": "@ref object(objWarrior)",
+        "dest_object": "@ref object(objBallcenter)",
         "id": "puzzle",
         "parent": null,
         "prereq": { "field": 0, "type": [1] },
@@ -1161,19 +1161,52 @@
         "alt_complete_flag": -1,
         "collides": true,
         "cost": 1,
-        "dest_level": "park_edge",
+        "dest_level": "rockybeach",
         "dest_object": "@ref object(objWarrior)",
         "id": "park",
+        "parent": null,
+        "prereq": {
+          "field": [
+            {
+              "comparison": 5,
+              "editor_openable": false,
+              "key": "crown_series",
+              "lastcheck": null,
+              "name": "datacheck",
+              "needscheck": true,
+              "value": 8
+            },
+            {
+              "comparison": 5,
+              "editor_openable": false,
+              "key": "dominic_marlin_hello",
+              "lastcheck": null,
+              "name": "datacheck",
+              "needscheck": true,
+              "value": 1
+            }
+          ],
+          "type": [1, 2]
+        },
+        "rankup": false
+      },
+      {
+        "alt_complete_flag": -1,
+        "collides": false,
+        "cost": 0,
+        "dest_level": "city_neighborhood",
+        "dest_object": "@ref object(objBallcenter)",
+        "id": "marlin",
         "parent": null,
         "prereq": {
           "field": {
             "comparison": 5,
             "editor_openable": false,
-            "key": "dominic_marlin_hello",
+            "key": "dominic_marlin_challenge",
             "lastcheck": null,
             "name": "datacheck",
             "needscheck": true,
-            "value": 1
+            "value": 2
           },
           "type": [1]
         },
@@ -1181,7 +1214,7 @@
       },
       {
         "alt_complete_flag": -1,
-        "collides": false,
+        "collides": true,
         "cost": 1,
         "dest_level": "city_neighborhood",
         "dest_object": "@ref object(objBallcenter)",
@@ -1194,7 +1227,7 @@
     "id": "warrior",
     "img": 2,
     "loneliness": 1.8,
-    "max_hearts": 5,
+    "max_hearts": 6,
     "name": "¦socialssetup_classsocial_010¦",
     "object": "@ref object(objWarrior)",
     "plays": [

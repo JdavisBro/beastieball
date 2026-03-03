@@ -95,7 +95,7 @@
     "name": "¦abilitiessetup_abilitydefine_191¦"
   },
   "decoy": {
-    "desc": "¦abilitiessetup_abilitydefine_279¬0¬[sprStatus,4]¦statuseffectstuff_005¦¦",
+    "desc": "¦abilitiessetup_abilitydefine_279¦",
     "id": "decoy",
     "name": "¦abilitiessetup_abilitydefine_280¦"
   },
@@ -143,6 +143,11 @@
     "desc": "¦abilitiessetup_abilitydefine_122¦",
     "id": "extraheal",
     "name": "¦abilitiessetup_abilitydefine_121¦"
+  },
+  "extrovert": {
+    "desc": "¦abilitiessetup_abilitydefine_298¦",
+    "id": "extrovert",
+    "name": "¦abilitiessetup_abilitydefine_297¦"
   },
   "fetch": {
     "desc": "¦abilitiessetup_abilitydefine_021¬0¬[sprStatus,8]¦statuseffectstuff_009¦ ¦statuseffectstuff_022¦¦",
@@ -440,17 +445,17 @@
     "name": "¦abilitiessetup_abilitydefine_006¦"
   },
   "starter_b": {
-    "desc": "¦abilitiessetup_abilitydefine_019¬0¬50¬1¬34¦",
+    "desc": "¦abilitiessetup_abilitydefine_019¬0¬15¬1¬34¦",
     "id": "starter_b",
     "name": "¦abilitiessetup_abilitydefine_020¦"
   },
   "starter_h": {
-    "desc": "¦abilitiessetup_abilitydefine_025¬0¬50¬1¬34¦",
+    "desc": "¦abilitiessetup_abilitydefine_025¬0¬15¬1¬34¦",
     "id": "starter_h",
     "name": "¦abilitiessetup_abilitydefine_026¦"
   },
   "starter_m": {
-    "desc": "¦abilitiessetup_abilitydefine_027¬0¬50¬1¬34¦",
+    "desc": "¦abilitiessetup_abilitydefine_027¬0¬15¬1¬34¦",
     "id": "starter_m",
     "name": "¦abilitiessetup_abilitydefine_028¦"
   },
@@ -503,6 +508,11 @@
     "desc": "¦abilitiessetup_abilitydefine_129¬0¬1.5¬1¬[sprStatus,9]¦statuseffectstuff_010¦¦",
     "id": "superblock",
     "name": "¦abilitiessetup_abilitydefine_130¦"
+  },
+  "synchronize": {
+    "desc": "¦abilitiessetup_abilitydefine_293¦",
+    "id": "synchronize",
+    "name": "¦abilitiessetup_abilitydefine_294¦"
   },
   "tagheal": {
     "desc": "¦abilitiessetup_abilitydefine_187¬0¬35¦",
@@ -585,7 +595,7 @@
     "name": "¦abilitiessetup_abilitydefine_046¦"
   },
   "vampire": {
-    "desc": "¦abilitiessetup_abilitydefine_135¬0¬1/3¦",
+    "desc": "¦abilitiessetup_abilitydefine_135¬0¬¼¦",
     "id": "vampire",
     "name": "¦abilitiessetup_abilitydefine_136¦"
   },
@@ -605,7 +615,7 @@
     "name": "¦abilitiessetup_abilitydefine_123¦"
   },
   "watcher": {
-    "desc": "¦abilitiessetup_abilitydefine_098¬1¬[sprStatus,4]¦statuseffectstuff_005¦¦",
+    "desc": "¦abilitiessetup_abilitydefine_098¦",
     "id": "watcher",
     "name": "¦abilitiessetup_abilitydefine_097¦"
   },

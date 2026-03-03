@@ -171,8 +171,8 @@
     {
       "id": "gift_chartreuse_0",
       "items": [["sell1", 1.0]],
-      "x": -30144,
-      "y": 25919
+      "x": -30158,
+      "y": 25934
     },
     {
       "id": "gift_coral_island_0",
@@ -391,8 +391,8 @@
     {
       "id": "gift_mangrove_4_2",
       "items": [["train_level", 1.0]],
-      "x": -63246,
-      "y": 2862
+      "x": -63892,
+      "y": 3239
     },
     {
       "id": "gift_mangrove_4_1",
@@ -527,8 +527,8 @@
     {
       "id": "gift_pirate_0",
       "items": [["sell1", 1.0]],
-      "x": -62152,
-      "y": 24106
+      "x": -62004.5,
+      "y": 24124
     },
     {
       "id": "gift_reserve_secret_0",
@@ -611,7 +611,7 @@
     {
       "id": "gift_hometown_0",
       "items": [["sell1", 1.0]],
-      "x": -1698,
+      "x": -1672,
       "y": 1646
     },
     {
@@ -752,17 +752,17 @@
     { "position": [-39182, 10076], "encounter": "beach_cliff1_0" },
     { "position": [-35123, 7173], "encounter": "rockybeach_4" },
     { "position": [-45265, 36894.0], "encounter": "coral_island_0" },
-    { "position": [-36783, 29403], "encounter": "ocean_0" },
-    { "position": [-30004, 14789], "encounter": "ocean_1" },
-    { "position": [-43393, 22683], "encounter": "ocean_3" },
-    { "position": [-22137, 19605], "encounter": "ocean_2" },
-    { "position": [-11223, 24393], "encounter": "ocean_4" },
-    { "position": [-12301, 35898], "encounter": "ocean_5" },
-    { "position": [-26977, 37576], "encounter": "ocean_6" },
-    { "position": [-54264, 34870], "encounter": "ocean_7" },
-    { "position": [-61869, 15493], "encounter": "ocean_8" },
-    { "position": [-55055, 23877], "encounter": "ocean_9" },
-    { "position": [-67337, 30014], "encounter": "ocean_10" },
+    { "position": [-36783, 29413], "encounter": "ocean_0" },
+    { "position": [-30004, 14799], "encounter": "ocean_1" },
+    { "position": [-43393, 22693], "encounter": "ocean_3" },
+    { "position": [-22137, 19615], "encounter": "ocean_2" },
+    { "position": [-11223, 24403], "encounter": "ocean_4" },
+    { "position": [-12301, 35908], "encounter": "ocean_5" },
+    { "position": [-26977, 37586], "encounter": "ocean_6" },
+    { "position": [-54264, 34880], "encounter": "ocean_7" },
+    { "position": [-61869, 15503], "encounter": "ocean_8" },
+    { "position": [-55055, 23887], "encounter": "ocean_9" },
+    { "position": [-67337, 30024], "encounter": "ocean_10" },
     { "position": [-32567, 11967], "encounter": "rockybeach_0" },
     { "position": [-34501, 12218], "encounter": "rockybeach_2" },
     { "position": [-32411, 10326], "encounter": "rockybeach_5" },
@@ -780,7 +780,7 @@
     { "position": [-22175, -917], "encounter": "canyon_2_1" },
     { "position": [-25275, -4157], "encounter": "canyon_3_1" },
     { "position": [-24086, -6825], "encounter": "korwin" },
-    { "position": [-17003, -7245], "encounter": "train_boss" },
+    { "position": [-16005, -7385], "encounter": "train_boss" },
     { "position": [-12733, -16759], "encounter": "cityhill_0" },
     { "position": [-14756, -18886], "encounter": "cityhill_1" },
     { "position": [-37477, -14700], "encounter": "citysquare_0" },
@@ -803,7 +803,7 @@
     { "position": [-61767, 6359], "encounter": "mangrove_4_0" },
     { "position": [-56746, 7361], "encounter": "mangrove_boss" },
     { "position": [-34966, -33776], "encounter": "meadows_2_0" },
-    { "position": [-43816, -36407], "encounter": "mountain_1_0" },
+    { "position": [-43616, -36301], "encounter": "mountain_1_0" },
     { "position": [-47304, -36554], "encounter": "mountain_2_0" },
     { "position": [-49474, -41534], "encounter": "mountain_3_1" },
     { "position": [-49107, -39933], "encounter": "mountain_3_0" },

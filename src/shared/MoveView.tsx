@@ -173,7 +173,11 @@ function getEffectString(
     case -7:
     case 7: {
       const key =
-        attack && effect.eff > 0 ? "movedefine_019" : "movedefine_014";
+        attack && effect.eff > 0
+          ? "movedefine_019"
+          : attack && effect.targ > 0 && effect.pow == 1
+            ? "movedefine_009"
+            : "movedefine_014";
 
       return L(key, {
         "0": L(
@@ -322,7 +326,7 @@ function getEffectString(
           });
 
         case 29:
-          return L("movedefine_descadd_094");
+          return L("movedefine_descadd_094", { "0": "2" });
         case 30:
           return L("movedefine_descadd_095");
         case 31:
@@ -332,6 +336,8 @@ function getEffectString(
           });
         case 32:
           return L("movedefine_descadd_104", { "0": "¾" });
+        case 33:
+          return "";
       }
       console.log(
         `Undefined POW COND ${effect.pow}. E ${effect.eff} T ${effect.targ}`,
@@ -495,6 +501,10 @@ function getEffectString(
       return L("movedefine_053");
     case 91:
       return L("movedefine_descadd_109");
+    case 92:
+      return L("movedefine_descadd_111", { target: target });
+    case 93:
+      return L("movedefine_descadd_112", { target: target, "0": boost });
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,
@@ -571,27 +581,35 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
         desc.push(L("movedefine_descadd_001"));
       }
     }
+  } else {
+    switch (move.targ) {
+      case 5:
+        desc.push(L("movedefine_descadd_110")); // can target opponents or allies
+        break;
+    }
   }
 
   const args = { joiningEffects: null };
 
-  const desc_str = desc
-    .concat(
-      move.eff
-        .map((effect) =>
-          getEffectString(
-            effect,
-            attack,
-            !attack && (move.targ == 0 || move.targ == 8),
-            args,
-            move,
-            L,
-          ),
-        )
-        .filter((effect) => !!effect),
-    )
-    .join(" ");
-  return desc_str;
+  const desc_full = desc.concat(
+    move.eff
+      .map((effect) =>
+        getEffectString(
+          effect,
+          attack,
+          !attack && (move.targ == 0 || move.targ == 8),
+          args,
+          move,
+          L,
+        ),
+      )
+      .filter((effect) => !!effect),
+  );
+
+  if (move.targ == 7) {
+    desc_full.push(L("movedefine_descadd_113"));
+  }
+  return desc_full.join(" ");
 }
 
 export default function MoveView(props: {

@@ -353,7 +353,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 80, "pow": 1, "targ": 0 },
+      { "eff": 80, "pow": -1, "targ": 0 },
       { "eff": 0, "pow": -2, "targ": 3 },
       { "eff": 27, "pow": -1, "targ": 3 }
     ],
@@ -602,15 +602,18 @@
     "use": 0
   },
   "distraction": {
-    "bt_tags": [20, 47, 34, 49],
+    "bt_tags": [20, 47, 34, 49, 37],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 14, "pow": 1, "targ": 0 }],
+    "eff": [
+      { "eff": 14, "pow": 1, "targ": 0 },
+      { "eff": 15, "pow": -1, "targ": 3 }
+    ],
     "id": "distraction",
     "name": "¦movessetup_movedefine_170¦",
     "pow": 0,
-    "targ": 1,
+    "targ": 4,
     "type": 5,
     "use": 2
   },
@@ -822,14 +825,13 @@
     "use": 2
   },
   "followme": {
-    "bt_tags": [24, 34, 49, 32],
+    "bt_tags": [24, 34, 49, 46],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 53, "pow": 0, "targ": 0 },
       { "eff": 14, "pow": 1, "targ": 0 },
-      { "eff": 26, "pow": 1, "targ": 0 }
+      { "eff": 8, "pow": 0.15, "targ": 0 }
     ],
     "id": "followme",
     "name": "¦movessetup_movedefine_120¦",
@@ -1578,12 +1580,13 @@
     "use": 0
   },
   "powswitch": {
-    "bt_tags": [6, 51, 19],
+    "bt_tags": [6, 51, 31, 19],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
       { "eff": 15, "pow": 1, "targ": 3 },
+      { "eff": 12, "pow": 2, "targ": 3 },
       { "eff": 30, "pow": 1, "targ": 3 }
     ],
     "id": "powswitch",

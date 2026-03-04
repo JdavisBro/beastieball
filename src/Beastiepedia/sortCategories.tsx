@@ -24,6 +24,7 @@ type SortValueType = {
     grid: boolean,
     L: LocalizationFunction,
   ) => React.ReactNode | undefined; // undefined = use value result, return value undefined: no show
+  flipDirection: boolean;
 };
 
 type SortCompareType = Omit<SortValueType, "value" | "compare"> & {
@@ -73,6 +74,7 @@ export const SORT_CATEGORIES: SortType[] = [
     name: "number",
     value: (beastie) => beastie.number,
     display: () => undefined,
+    flipDirection: false,
   },
   {
     name: "name",
@@ -80,15 +82,18 @@ export const SORT_CATEGORIES: SortType[] = [
     compare: (beastie1, beastie2, L) =>
       L(beastie1.name).localeCompare(L(beastie2.name)),
     display: (beastie, grid, L) => (grid ? L(beastie.name) : undefined),
+    flipDirection: false,
   },
 
   {
     name: "totalStats",
     value: (beastie) => STATS.reduce((accum, stat) => accum + beastie[stat], 0),
+    flipDirection: true,
   },
   {
     name: "totalPow",
     value: (beastie) => beastie.ba + beastie.ha + beastie.ma,
+    flipDirection: true,
   },
   {
     name: "highestPow",
@@ -101,34 +106,42 @@ export const SORT_CATEGORIES: SortType[] = [
     display: (beastie, _, L) => (
       <StatText beastie={beastie} stats={getMaxStat(beastie)[0]} L={L} />
     ),
+    flipDirection: true,
   },
   {
     name: "totalDef",
     value: (beastie) => beastie.bd + beastie.hd + beastie.md,
+    flipDirection: true,
   },
   {
     name: "bodyPow",
     value: (beastie) => beastie.ba,
+    flipDirection: true,
   },
   {
     name: "bodyDef",
     value: (beastie) => beastie.bd,
+    flipDirection: true,
   },
   {
     name: "spiritPow",
     value: (beastie) => beastie.ha,
+    flipDirection: true,
   },
   {
     name: "spiritDef",
     value: (beastie) => beastie.hd,
+    flipDirection: true,
   },
   {
     name: "mindPow",
     value: (beastie) => beastie.ma,
+    flipDirection: true,
   },
   {
     name: "mindDef",
     value: (beastie) => beastie.md,
+    flipDirection: true,
   },
   {
     name: "recruit",
@@ -138,10 +151,12 @@ export const SORT_CATEGORIES: SortType[] = [
       NUMBER_FORMAT.format(
         beastie.recruit_value != 0.5 ? beastie.recruit_value : 0,
       ),
+    flipDirection: true,
   },
   {
     name: "development",
     value: (beastie) => beastie.anim_progress,
     display: (beastie) => beastie.anim_progress + "%",
+    flipDirection: true,
   },
 ];

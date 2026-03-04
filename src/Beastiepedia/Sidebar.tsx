@@ -65,13 +65,15 @@ export default function Sidebar(props: Props): React.ReactElement {
             onFocus={(event) => event.currentTarget.select()}
           />
           <select
-            onChange={(event) =>
-              setSort(
+            onChange={(event) => {
+              const new_sort =
                 SORT_CATEGORIES.find(
                   (sortCat) => sortCat.name == event.currentTarget.value,
-                ) ?? SORT_CATEGORIES[0],
-              )
-            }
+                ) ?? SORT_CATEGORIES[0];
+              if (new_sort.flipDirection != sort.flipDirection)
+                setSortDec(!sortDec);
+              setSort(new_sort);
+            }}
             className={styles.sidebarselect}
           >
             {SORT_CATEGORIES.map((sort) => (

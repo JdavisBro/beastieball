@@ -130,6 +130,7 @@ function getEffectString(
     case 39:
     case 80: {
       const [im, nameKey, descKey] = FEELING_EFF_MAP[Math.abs(effect.eff)];
+      if (move.eff.length >= 3) console.log(effect, move.id, L(move.name));
       const no_desc = effect.eff == 23 && effect.pow > 0 && effect.targ == 7;
       const feelingText = no_desc
         ? `${im}${L(nameKey)}`

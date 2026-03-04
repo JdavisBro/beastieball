@@ -476,6 +476,7 @@
       "cook",
       "charm",
       "swarm",
+      "followme",
       "lifepass"
     ],
     "attklist_randomize": -1,
@@ -768,7 +769,8 @@
       "scream",
       "cook",
       "charm",
-      "swarm"
+      "swarm",
+      "followme"
     ],
     "attklist_randomize": -1,
     "ba": 72,
@@ -5403,7 +5405,6 @@
       "myheartpass",
       "allyrush",
       "bolt",
-      "alljazzattack",
       "scoreboosted"
     ],
     "attklist_randomize": -1,
@@ -5683,7 +5684,6 @@
       "myheartpass",
       "allyrush",
       "bolt",
-      "alljazzattack",
       "scoreboosted"
     ],
     "attklist_randomize": -1,
@@ -10738,7 +10738,6 @@
       "backswitch",
       "dragontail",
       "noisytag",
-      "swarm",
       "starterheart"
     ],
     "attklist_randomize": -1,
@@ -10981,7 +10980,6 @@
       "backswitch",
       "dragontail",
       "noisytag",
-      "swarm",
       "starterheart"
     ],
     "attklist_randomize": -1,
@@ -11216,6 +11214,7 @@
       "sweep",
       "heartpass",
       "allycover",
+      "crowd",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11477,6 +11476,7 @@
       "sweep",
       "heartpass",
       "allycover",
+      "crowd",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11678,10 +11678,10 @@
       "sweep",
       "heartpass",
       "allycover",
+      "crowd",
       "startermind",
       "stomp",
       "swordsdance",
-      "distraction",
       "tool"
     ],
     "attklist_randomize": -1,
@@ -12096,7 +12096,6 @@
       "mdefup",
       "hdefup",
       "stress",
-      "distraction",
       "flatten",
       "dig",
       "allyrush",
@@ -12301,7 +12300,6 @@
       "mdefup",
       "hdefup",
       "stress",
-      "distraction",
       "flatten",
       "dig",
       "allyrush",
@@ -12501,7 +12499,6 @@
       "rest",
       "preblock",
       "taunt",
-      "distraction",
       "noisytag",
       "batonpass",
       "protect",
@@ -19815,7 +19812,8 @@
       "stomp",
       "lifedew",
       "allyprotect",
-      "topspin"
+      "topspin",
+      "sweep"
     ],
     "attklist_randomize": -1,
     "ba": 75,
@@ -20080,12 +20078,12 @@
       "markattack",
       "netattack",
       "dump",
-      "distraction",
       "sting",
       "starterside",
       "sidespin",
       "hazeball",
-      "sweep"
+      "sweep",
+      "distraction"
     ],
     "attklist_randomize": -1,
     "ba": 65,
@@ -20677,7 +20675,7 @@
       [0, "careful"],
       [0, "quake"],
       [5, "rest"],
-      [9, "distraction"],
+      [9, "lifedew"],
       [12, "blockattack"],
       [17, "protect"],
       [20, "mark"],
@@ -21467,7 +21465,6 @@
       "reversal",
       "jazzattack",
       "inferno",
-      "distraction",
       "sweatall",
       "cook"
     ],
@@ -21541,7 +21538,7 @@
       [34, "rush"],
       [39, "scoreboosted"],
       [44, "jazzattack"],
-      [48, "distraction"],
+      [48, "sweatall"],
       [53, "reversal"]
     ],
     "learnset_randomize": -1,
@@ -23372,7 +23369,6 @@
       "allyprotect",
       "lowattks",
       "allnervous",
-      "distraction",
       "mark",
       "enemyboosts",
       "threat",
@@ -23476,7 +23472,7 @@
       [22, "mark"],
       [26, "cook"],
       [31, "lock"],
-      [36, "distraction"],
+      [36, "healbell"],
       [41, "cut"],
       [45, "eerie"],
       [49, "speech"]

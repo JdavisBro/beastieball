@@ -558,7 +558,7 @@
     "foot_size": 77,
     "foot_type": 0,
     "growth": 1.02,
-    "ha": 93,
+    "ha": 86,
     "hd": 90,
     "hidden": false,
     "hidden_counter": null,
@@ -831,7 +831,7 @@
     "foot_size": 39,
     "foot_type": 0,
     "growth": 1.02,
-    "ha": 78,
+    "ha": 76,
     "hd": 68,
     "hidden": false,
     "hidden_counter": null,
@@ -5948,7 +5948,6 @@
       "bellydrum",
       "heartup",
       "whirlwind",
-      "distraction",
       "protect",
       "hum",
       "freeball",
@@ -8738,7 +8737,7 @@
     "animator": 11,
     "attklist": [
       "starterheart",
-      "sweatall",
+      "steamattack",
       "careful",
       "enemyboosts",
       "scoreboosted",
@@ -10280,6 +10279,7 @@
     "animator": 0,
     "attklist": [
       "sweatup",
+      "steamattack",
       "snore",
       "heart",
       "inferno",
@@ -10383,15 +10383,15 @@
     "id": "kettle",
     "isBaby": false,
     "learnset": [
-      [0, "sweatall"],
+      [0, "steamattack"],
       [0, "rest"],
       [10, "cook"],
       [17, "sweatup"],
       [22, "protect"],
-      [27, "heart"],
+      [27, "inferno"],
       [32, "allycover"],
       [37, "reign"],
-      [41, "inferno"],
+      [41, "sweatall"],
       [45, "followme"],
       [48, "fieldclear"],
       [53, "overheat"]
@@ -10512,6 +10512,7 @@
     "animator": 0,
     "attklist": [
       "sweatup",
+      "steamattack",
       "snore",
       "heart",
       "inferno",
@@ -10607,15 +10608,15 @@
     "id": "kettle1",
     "isBaby": true,
     "learnset": [
-      [0, "sweatall"],
+      [0, "steamattack"],
       [0, "rest"],
       [7, "cook"],
       [14, "sweatup"],
       [19, "protect"],
-      [24, "heart"],
+      [24, "inferno"],
       [29, "allycover"],
       [34, "reign"],
-      [38, "inferno"],
+      [38, "sweatall"],
       [42, "followme"],
       [45, "fieldclear"],
       [50, "overheat"]
@@ -10738,6 +10739,7 @@
       "backswitch",
       "dragontail",
       "noisytag",
+      "swarm",
       "starterheart"
     ],
     "attklist_randomize": -1,
@@ -10980,6 +10982,7 @@
       "backswitch",
       "dragontail",
       "noisytag",
+      "swarm",
       "starterheart"
     ],
     "attklist_randomize": -1,
@@ -11215,6 +11218,7 @@
       "heartpass",
       "allycover",
       "crowd",
+      "lockon",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11477,6 +11481,7 @@
       "heartpass",
       "allycover",
       "crowd",
+      "lockon",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11644,7 +11649,7 @@
     "type_focus": 2
   },
   "magpiemon": {
-    "ability": ["wipekiller", "noiseattack"],
+    "ability": ["wipekiller", "redirectkiller"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 20,
@@ -11679,6 +11684,7 @@
       "heartpass",
       "allycover",
       "crowd",
+      "lockon",
       "startermind",
       "stomp",
       "swordsdance",
@@ -11755,7 +11761,7 @@
       [11, "healhit"],
       [17, "substitute"],
       [22, "pursuit"],
-      [27, "mindup"],
+      [27, "lockon"],
       [32, "heartdown"],
       [35, "protect"],
       [41, "stomp"],
@@ -14052,7 +14058,7 @@
     "colors2": null,
     "combos": [
       [-7, 0, 2, 51, 0, 2, 49, 0, 4, 50, 0, 1],
-      [28, 1, 1, 2, 0, 1],
+      [20, 0, 2, 11, 1, 1, 2, 0, 1],
       [38, 9, 1, 6, 9, 1],
       [38, 8, 1]
     ],
@@ -16429,7 +16435,7 @@
       "superpower",
       "distraction",
       "breakswipe",
-      "sweatall",
+      "steamattack",
       "crowd",
       "noisytag",
       "jazzattack",
@@ -16723,7 +16729,7 @@
       "superpower",
       "distraction",
       "breakswipe",
-      "sweatall",
+      "steamattack",
       "crowd",
       "noisytag",
       "jazzattack",
@@ -19812,8 +19818,7 @@
       "stomp",
       "lifedew",
       "allyprotect",
-      "topspin",
-      "sweep"
+      "topspin"
     ],
     "attklist_randomize": -1,
     "ba": 75,
@@ -20597,6 +20602,7 @@
       "starterside",
       "sidespin",
       "hazeball",
+      "sweep",
       "eerie",
       "3actions",
       "snore",
@@ -21980,7 +21986,7 @@
     "colors2": null,
     "combos": [
       [50, 0, 0.9, 33, 0, 26],
-      [20, 0, 1, 7, 0, 1, 0, 0, 1],
+      [20, 0, 2, 7, 0, 1, 0, 0, 1],
       [28, 1, 1, 0, 0, 1],
       [11, 0, 1, 16, 0, 1]
     ],

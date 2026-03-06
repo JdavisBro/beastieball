@@ -1411,7 +1411,7 @@
   "movedefine_descadd_014": "Targets SIDEWAYS.",
   "movedefine_descadd_015": "Targets straight ahead.",
   "movedefine_descadd_017": "Damage equals {0}% of target's remaining STAMINA.",
-  "movedefine_descadd_018": "Always does {0} damage.",
+  "movedefine_descadd_018": "This attack does {0} damage.",
   "movedefine_descadd_019": "VOLLEY.",
   "movedefine_descadd_021": "{0}POW{1} to {target}.",
   "movedefine_descadd_024": "{0}DEF{1} to {target}.",

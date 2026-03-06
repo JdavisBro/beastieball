@@ -30,7 +30,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 26, "pow": -2, "targ": 2 }],
+    "eff": [{ "eff": 26, "pow": -2, "targ": 11 }],
     "id": "alljazzattack",
     "name": "¦movessetup_movedefine_193¦",
     "pow": 65,
@@ -825,14 +825,11 @@
     "use": 2
   },
   "followme": {
-    "bt_tags": [24, 34, 49, 46],
+    "bt_tags": [24, 34, 49],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 14, "pow": 1, "targ": 0 },
-      { "eff": 8, "pow": 0.15, "targ": 0 }
-    ],
+    "eff": [{ "eff": 14, "pow": 1, "targ": 0 }],
     "id": "followme",
     "name": "¦movessetup_movedefine_120¦",
     "pow": 0,
@@ -1621,7 +1618,7 @@
     "eff": [
       { "eff": 53, "pow": 0, "targ": 0 },
       { "eff": 19, "pow": 1, "targ": 0 },
-      { "eff": 12, "pow": 2, "targ": 0 }
+      { "eff": 12, "pow": 3, "targ": 0 }
     ],
     "id": "protect",
     "name": "¦movessetup_movedefine_152¦",
@@ -2216,6 +2213,19 @@
     "pow": 0,
     "targ": 1,
     "type": 4,
+    "use": 0
+  },
+  "steamattack": {
+    "bt_tags": [1, 10, 36, 38, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 23, "pow": 2, "targ": 3 }],
+    "id": "steamattack",
+    "name": "Steamer",
+    "pow": 10,
+    "targ": 0,
+    "type": 1,
     "use": 0
   },
   "sting": {

@@ -20825,7 +20825,8 @@
       "protect",
       "sad",
       "fortify",
-      "set"
+      "set",
+      "cover"
     ],
     "attklist_randomize": -1,
     "ba": 30,
@@ -22131,8 +22132,8 @@
     "type_focus": 0
   },
   "tricky": {
-    "ability": ["static"],
-    "ability_hidden": false,
+    "ability": ["static", "redirectkiller"],
+    "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 0,
@@ -22388,8 +22389,8 @@
     "type_focus": 2
   },
   "tricky1": {
-    "ability": ["static"],
-    "ability_hidden": false,
+    "ability": ["static", "redirectkiller"],
+    "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [9, 11],

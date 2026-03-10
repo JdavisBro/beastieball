@@ -370,7 +370,7 @@
     "name": "¦abilitiessetup_abilitydefine_068¦"
   },
   "redirectkiller": {
-    "desc": "Attacks do +50% damage when their target is changed",
+    "desc": "+50% POW when their target is changed",
     "id": "redirectkiller",
     "name": "Deviant"
   },

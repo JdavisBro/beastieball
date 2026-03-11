@@ -487,6 +487,18 @@
       }
     ]
   },
+  "gulls": {
+    "group": [
+      {
+        "freq": 100,
+        "lvlA": 5,
+        "lvlB": 7,
+        "percent": 100,
+        "specie": "seabird1",
+        "variant": 0.1
+      }
+    ]
+  },
   "hometown": {
     "group": [
       {

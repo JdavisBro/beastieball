@@ -10555,10 +10555,30 @@
         "speed": 1.5
       },
       "ready": { "frames": { "endFrame": 2, "startFrame": 2 } },
-      "special": { "frames": {} },
+      "special": {
+        "frames": [
+          {
+            "endFrame": 105,
+            "sounds": { "100": -1, "101": 4 },
+            "startFrame": 96,
+            "transitions": [1]
+          },
+          {
+            "endFrame": 111,
+            "sounds": { "108": 4 },
+            "startFrame": 106,
+            "transitions": [1, 1, 2, 2]
+          },
+          { "endFrame": 115, "startFrame": 112, "transitions": [1, 2, 2, 2] }
+        ]
+      },
       "spike": { "frames": { "endFrame": 7, "startFrame": 7 } },
       "stop": {
-        "frames": { "endFrame": 125, "startFrame": 116 },
+        "frames": {
+          "endFrame": 125,
+          "sounds": { "118": 4, "121": 4, "122": 3 },
+          "startFrame": 116
+        },
         "loop": [""]
       },
       "volley": { "frames": { "endFrame": 3, "startFrame": 3 } }

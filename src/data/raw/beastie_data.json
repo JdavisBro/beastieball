@@ -8963,7 +8963,7 @@
       "protect",
       "threat",
       "noisytag",
-      "mindup",
+      "distraction",
       "bamboozle",
       "fieldclear",
       "wink"
@@ -9082,7 +9082,7 @@
       [17, "steal"],
       [23, "netattack"],
       [28, "threat"],
-      [32, "mindup"],
+      [32, "distraction"],
       [35, "rollshot"],
       [40, "taunt"],
       [47, "dump"]

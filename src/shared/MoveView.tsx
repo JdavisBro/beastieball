@@ -92,11 +92,18 @@ function getEffectString(
   }
   const target = L(targKey);
 
-  let target_field = FIELD_TARGET[effect.targ];
-  if (target_field) {
-    target_field = L(target_field);
-    target_field = target_field[0].toUpperCase() + target_field.slice(1);
-  }
+  let target_field = FIELD_TARGET[effect.targ]
+    ? L(FIELD_TARGET[effect.targ])
+    : "";
+
+  const target_placeholders = {
+    target: target,
+    Target: target[0].toUpperCase() + target.slice(1),
+    field: target_field ?? "",
+    Field: target_field
+      ? target_field[0].toUpperCase() + target_field.slice(1)
+      : "",
+  };
 
   switch (effect.eff) {
     case 0:
@@ -105,7 +112,7 @@ function getEffectString(
       return L("movedefine_descadd_021", {
         "0": `[sprIcon,${effect.eff}]`,
         "1": boost,
-        target: target,
+        ...target_placeholders,
       });
     case 3:
     case 4:
@@ -113,7 +120,7 @@ function getEffectString(
       return L("movedefine_descadd_024", {
         "0": `[sprIcon,${effect.eff - 3}]`,
         "1": boost,
-        target: target,
+        ...target_placeholders,
       });
     case 6:
     case 12:
@@ -130,16 +137,14 @@ function getEffectString(
     case 39:
     case 80: {
       const [im, nameKey, descKey] = FEELING_EFF_MAP[Math.abs(effect.eff)];
-      if (move.eff.length >= 3) console.log(effect, move.id, L(move.name));
       const no_desc = effect.eff == 23 && effect.pow > 0 && effect.targ == 7;
       const feelingText = no_desc
         ? `${im}${L(nameKey)}`
         : `${im}${L(nameKey)} ${L(descKey)}`;
-      const feelTarget = target[0].toUpperCase() + target.slice(1);
       const placeholders = {
         "0": (effect.pow < 0 ? "+" : "") + String(Math.abs(effect.pow)),
         "1": feelingText,
-        Target: feelTarget,
+        ...target_placeholders,
       };
       if (args.joiningEffects == true) {
         args.joiningEffects = placeholders;
@@ -150,7 +155,7 @@ function getEffectString(
           "1": args.joiningEffects["1"],
           "2": placeholders["0"],
           "3": placeholders["1"],
-          Target: feelTarget,
+          ...target_placeholders,
         };
         args.joiningEffects = null;
         return L(
@@ -193,7 +198,7 @@ function getEffectString(
             "movedefine_018",
           ][effect.pow],
         ),
-        target: target,
+        ...target_placeholders,
       });
     }
     case 8: {
@@ -202,10 +207,16 @@ function getEffectString(
         if (effect.targ == 0) {
           return L("movedefine_descadd_034", { "0": hp });
         } else {
-          return L("movedefine_descadd_035", { "0": hp, target: target });
+          return L("movedefine_descadd_035", {
+            "0": hp,
+            ...target_placeholders,
+          });
         }
       } else {
-        return L("movedefine_descadd_033", { "0": "+" + hp, target: target });
+        return L("movedefine_descadd_033", {
+          "0": "+" + hp,
+          ...target_placeholders,
+        });
       }
     }
     case 10:
@@ -216,13 +227,13 @@ function getEffectString(
       return L("movedefine_descadd_021", {
         "0": "[sprIcon,0][sprIcon,1][sprIcon,2]",
         "1": boost,
-        target: target,
+        ...target_placeholders,
       });
     case 16:
       return L("movedefine_descadd_024", {
         "0": "[sprIcon,0][sprIcon,1][sprIcon,2]",
         "1": boost,
-        target: target,
+        ...target_placeholders,
       });
     case 17:
       return L("movedefine_descadd_042");
@@ -235,7 +246,7 @@ function getEffectString(
       if (effect.targ == 1) {
         return L("movedefine_descadd_045");
       } else {
-        return L("movedefine_descadd_044", { target: target });
+        return L("movedefine_descadd_044", { ...target_placeholders });
       }
     case 28:
       return L("movedefine_descadd_041");
@@ -249,18 +260,18 @@ function getEffectString(
           ? L("movedefine_descadd_038")
           : L("movedefine_descadd_039");
       } else {
-        return L("movedefine_descadd_040", { target: target });
+        return L("movedefine_descadd_040", { ...target_placeholders });
       }
     case 31:
       return L("movedefine_descadd_052", {
         "0": "[sprBoost,2]",
         "1": "[sprBoost,5]",
-        target: target,
+        ...target_placeholders,
       });
     case 32:
       return L("movedefine_descadd_053", {
         "0": "[sprStatus,1]" + L("statuseffectstuff_002"),
-        target: target,
+        ...target_placeholders,
       });
     case 33: {
       switch (effect.pow) {
@@ -346,14 +357,14 @@ function getEffectString(
       return `POW COND ${effect.pow}`;
     }
     case 34:
-      return L("movedefine_descadd_055", { target: target });
+      return L("movedefine_descadd_055", { ...target_placeholders });
     case 36:
       if (effect.targ == 5 && effect.pow == 1) {
         return L("movedefine_descadd_048");
       }
       return L("movedefine_descadd_049", {
         "0": String(effect.pow * 100),
-        target: target,
+        ...target_placeholders,
       });
     case 40:
       return L("movedefine_descadd_056");
@@ -362,7 +373,7 @@ function getEffectString(
     case 42:
     case 43:
       return L("movedefine_descadd_083", {
-        Field: target_field,
+        ...target_placeholders,
         "0": `+${effect.pow}`,
         "1": L("fieldeffectstuff_006", {
           "0": L(
@@ -377,7 +388,7 @@ function getEffectString(
     case 44:
     case 45:
       return L("movedefine_descadd_097", {
-        Field: target_field,
+        ...target_placeholders,
         "1": L("fieldeffectstuff_006", {
           "0": L(
             effect.eff == 44 ? "fieldeffectstuff_003" : "fieldeffectstuff_004",
@@ -396,17 +407,17 @@ function getEffectString(
       if (effect.targ == 0) {
         return L("movedefine_descadd_031");
       }
-      return L("movedefine_descadd_032", { target: target });
+      return L("movedefine_descadd_032", { ...target_placeholders });
     case 52:
       return L("movedefine_descadd_054", {
-        target: target,
+        ...target_placeholders,
         "0": "[sprStatus,1]" + L("statuseffectstuff_002"),
       });
     case 53:
       args.joiningEffects = true;
       return "";
     case 56:
-      return L("movedefine_descadd_084", { target: target });
+      return L("movedefine_descadd_084", { ...target_placeholders });
     case 57:
       return ""; // shows on a few that are only used on back row but not others?
     case 60:
@@ -417,13 +428,16 @@ function getEffectString(
         "1": "[sprStatus,10]" + L("statuseffectstuff_011"),
         "2": "[sprStatus,5]" + L("statuseffectstuff_006"),
       });
-    case 63:
+    case 63: {
+      const targ = L(TARGET_STRINGS[effect.targ]);
       return L("movedefine_descadd_085", {
-        target: L(TARGET_STRINGS[effect.targ]),
+        target: targ,
+        Target: targ[0].toUpperCase() + targ.slice(1),
       });
+    }
     case 64:
       return L("movedefine_descadd_029", {
-        field: target_field.toLowerCase(),
+        ...target_placeholders,
         "0": L(`fieldeffectstuff_${String(effect.pow + 1).padStart(3, "0")}`),
       });
     case 69:
@@ -432,6 +446,7 @@ function getEffectString(
       const firstQuake =
         move.eff.find((ieff) => ieff.eff == effect.eff) == effect;
       return L("movedefine_descadd_083", {
+        ...target_placeholders,
         "0": String(effect.pow),
         "1": firstQuake
           ? L("fieldeffectstuff_006", {
@@ -439,7 +454,6 @@ function getEffectString(
               "1": L("fieldeffectstuff_011", { "1": "25" }),
             })
           : L("fieldeffectstuff_005"),
-        Field: target_field,
       });
     }
     case 71:
@@ -456,7 +470,7 @@ function getEffectString(
         "0": `[sprIcon,${effect.eff == 76 ? "1" : "0"}]`,
         "2": `[sprIcon,${effect.eff == 74 ? "1" : "2"}]`,
         "1": boost,
-        target: target,
+        ...target_placeholders,
       });
     case 77:
     case 78:
@@ -465,14 +479,14 @@ function getEffectString(
         "0": `[sprIcon,${effect.eff == 79 ? "1" : "0"}]`,
         "2": `[sprIcon,${effect.eff == 77 ? "1" : "2"}]`,
         "1": boost,
-        target: target,
+        ...target_placeholders,
       });
     case 81:
-      return L("movedefine_descadd_098", { target: target });
+      return L("movedefine_descadd_098", { ...target_placeholders });
     case 82:
       if (effect.targ != 0) {
         return L("movedefine_descadd_099", {
-          target: target,
+          ...target_placeholders,
           "0": String(effect.pow),
         });
       } else {
@@ -493,7 +507,7 @@ function getEffectString(
     case 89: {
       const ability = abilities[effect.pow];
       return L("movedefine_descadd_108", {
-        Target: target[0].toUpperCase() + target.slice(1),
+        ...target_placeholders,
         "0": L(ability.name),
         "1": L(ability.desc),
       });
@@ -503,9 +517,12 @@ function getEffectString(
     case 91:
       return L("movedefine_descadd_109");
     case 92:
-      return L("movedefine_descadd_111", { target: target });
+      return L("movedefine_descadd_111", { ...target_placeholders });
     case 93:
-      return L("movedefine_descadd_112", { target: target, "0": boost });
+      return L("movedefine_descadd_112", {
+        ...target_placeholders,
+        "0": boost,
+      });
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

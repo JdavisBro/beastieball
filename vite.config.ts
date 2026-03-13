@@ -3,8 +3,8 @@ import react from "@vitejs/plugin-react";
 import { writeFile, createWriteStream } from "fs";
 import { LinkItem, SitemapStream } from "sitemap";
 
-type SupportedLanguage = "en" | "ru" | "zh-CN";
-const SUPPORTED_LANGUAGES: SupportedLanguage[] = ["en", "ru", "zh-CN"];
+type SupportedLanguage = "en" | "ru" | "zh-CN" | "es";
+const SUPPORTED_LANGUAGES: SupportedLanguage[] = ["en", "ru", "zh-CN", "es"];
 
 import beastie_data from "./src/data/raw/beastie_data.json";
 const BEASTIE_DATA: Record<string, { name: string }> = beastie_data;

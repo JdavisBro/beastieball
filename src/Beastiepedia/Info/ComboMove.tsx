@@ -5,9 +5,11 @@ import styles from "./ContentInfo.module.css";
 import BEASTIE_DATA, { BeastieType } from "../../data/BeastieData";
 import InfoBox from "../../shared/InfoBox";
 import MoveView from "../../shared/MoveView";
-import { NumberEffect } from "../../data/MoveData";
+import { Move, NumberEffect } from "../../data/MoveData";
 import BeastieSelect from "../../shared/BeastieSelect";
-import useLocalization from "../../localization/useLocalization";
+import useLocalization, {
+  LocalizationFunction,
+} from "../../localization/useLocalization";
 
 enum ComboType {
   Rivals,
@@ -23,18 +25,12 @@ function getRivalsType(beastiedata: BeastieType, friend?: BeastieType) {
   return ma > ba && ma > ha ? 2 : ha > ba ? 1 : 0;
 }
 
-export default function ComboMove({
-  beastiedata,
-}: {
-  beastiedata: BeastieType;
-}) {
-  const { L } = useLocalization();
-
-  const [type, setType] = useState<ComboType>(ComboType.Rivals);
-
-  const [friendId, setFriendId] = useState<string | undefined>(undefined);
-  const friend = friendId ? BEASTIE_DATA.get(friendId) : undefined;
-
+function createComboMove(
+  type: ComboType,
+  beastiedata: BeastieType,
+  friend: BeastieType | undefined,
+  L: LocalizationFunction,
+): Move {
   const powMults: number[] = [1, 1];
   let target = type == ComboType.Rivals ? 0 : type == ComboType.Defense ? 1 : 2;
   let use = 0;
@@ -50,8 +46,9 @@ export default function ComboMove({
 
   const effects: NumberEffect[] = [];
   const used_effects: Record<number, NumberEffect> = {};
-  (friend ? [beastiedata, friend] : [beastiedata]).forEach(
-    (beastie, beastieIndex) => {
+  (friend ? [beastiedata, friend] : [beastiedata])
+    .sort((a, b) => a.id.localeCompare(b.id))
+    .forEach((beastie, beastieIndex) => {
       for (let i = 0; i < beastie.combos[type].length; i += 3) {
         const neweff: NumberEffect = {
           eff: beastie.combos[type][i],
@@ -217,8 +214,39 @@ export default function ComboMove({
           }
         }
       }
-    },
-  );
+    });
+  return {
+    id: `${type}${beastiedata.id}${friend?.id}`,
+    targ: target,
+    desc_tagids: [],
+    description: null,
+    bt_tags: [],
+    use: use,
+    desc_tags: [],
+    name: L("beastiepedia.info.combo.beastieCombine", {
+      beastie: L(beastiedata.name),
+      friend: friend ? L(friend.name) : L("beastiepedia.info.combo.noFriend"),
+      type: L("beastiepedia.info.combo.type." + type),
+    }),
+    type: moveType,
+    pow: Math.round(((powMults[0] + powMults[1]) * 50) / 5) * 5,
+    eff: effects,
+  };
+}
+
+export default function ComboMove({
+  beastiedata,
+}: {
+  beastiedata: BeastieType;
+}) {
+  const { L } = useLocalization();
+
+  const [type, setType] = useState<ComboType>(ComboType.Rivals);
+
+  const [friendId, setFriendId] = useState<string | undefined>(undefined);
+  const friend = friendId ? BEASTIE_DATA.get(friendId) : undefined;
+
+  var move = createComboMove(type, beastiedata, friend, L);
 
   const navigate = useNavigate();
 
@@ -258,25 +286,7 @@ export default function ComboMove({
         Swap
       </button>
       <MoveView
-        move={{
-          id: `${type}${beastiedata.id}${friend?.id}`,
-          targ: target,
-          desc_tagids: [],
-          description: null,
-          bt_tags: [],
-          use: use,
-          desc_tags: [],
-          name: L("beastiepedia.info.combo.beastieCombine", {
-            beastie: L(beastiedata.name),
-            friend: friend
-              ? L(friend.name)
-              : L("beastiepedia.info.combo.noFriend"),
-            type: L("beastiepedia.info.combo.type." + type),
-          }),
-          type: moveType,
-          pow: Math.round(((powMults[0] + powMults[1]) * 50) / 5) * 5,
-          eff: effects,
-        }}
+        move={move}
         noLearner={true}
         typeText={
           type == ComboType.Rivals

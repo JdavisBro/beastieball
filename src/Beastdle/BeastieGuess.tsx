@@ -1,6 +1,7 @@
 import styles from "./Beastdle.module.css";
 import { BeastieType } from "../data/BeastieData";
 import { TYPES } from "./Beastdle";
+import useLocalization from "../localization/useLocalization";
 
 const UPARROW = <img src="/gameassets/sprBoost/0.png" alt="Up" />;
 const DOWNARROW = <img src="/gameassets/sprBoost/3.png" alt="Down" />;
@@ -21,6 +22,8 @@ export default function BeastieGuess({
   beastie: BeastieType | undefined;
   target: BeastieType;
 }) {
+  const { L } = useLocalization();
+
   if (!beastie) {
     return null;
   }
@@ -88,8 +91,11 @@ export default function BeastieGuess({
     <tr>
       <td className={styles.guessSectionBlank}>{num}</td>
       <td className={correct ? styles.guessSection : styles.guessSectionWrong}>
-        <img src={`/icons/${beastie.name}.png`} alt={`${beastie.name} Icon`} />
-        {beastie.name}
+        <img
+          src={`/icons/${L(beastie.name, {}, true)}.png`}
+          alt={`${L(beastie.name)} Icon`}
+        />
+        {L(beastie.name)}
       </td>
       {TYPES.map((type) => (
         <StatComp type={type} powdef="a" key={type.name} />

@@ -137,7 +137,10 @@ function getEffectString(
     case 39:
     case 80: {
       const [im, nameKey, descKey] = FEELING_EFF_MAP[Math.abs(effect.eff)];
-      const no_desc = effect.eff == 23 && effect.pow > 0 && effect.targ == 7;
+      const no_desc =
+        (effect.eff == 23 && effect.pow > 0) ||
+        (move.eff.filter((eff) => eff.eff != 53 && eff.eff != 87).length >= 3 &&
+          move.id != "protectcheer"); // probably not correct, but matches the game now
       const feelingText = no_desc
         ? `${im}${L(nameKey)}`
         : `${im}${L(nameKey)} ${L(descKey)}`;
@@ -164,8 +167,10 @@ function getEffectString(
         );
       }
       const key =
-        effect.eff == 23 && effect.pow > 0 && effect.targ == 7
-          ? "movedefine_048" // Every non-{1} fielded player feels {0} {1}.
+        effect.eff == 23 && effect.pow > 0
+          ? effect.targ == 7
+            ? "movedefine_048" // Every non-{1} fielded player feels {0} {1}.
+            : "movedefine_049" // Non-{1} {target} feels {0} {1}.
           : effect.eff < 0 && attack
             ? effect.targ == 0
               ? "movedefine_007" // Feel {0} {1} before contact.
@@ -238,10 +243,7 @@ function getEffectString(
     case 17:
       return L("movedefine_descadd_042"); // Can hit without volleying.
     case 18:
-      if (effect.targ == 3) {
-        return L("movedefine_descadd_043"); // Easy receive.
-      }
-      return L("movedefine_descadd_004"); // Pass to an opponent and skip your turn. Can always be used.
+      return L("movedefine_descadd_043"); // Easy receive.
     case 20:
       if (effect.targ == 1) {
         return L("movedefine_descadd_045"); // Ally's ball becomes hittable.
@@ -443,17 +445,13 @@ function getEffectString(
     case 69:
       return ""; // Only when hittable - i do this elsewhere since it needs to be first.
     case 70: {
-      const firstQuake =
-        move.eff.find((ieff) => ieff.eff == effect.eff) == effect;
       return L("movedefine_descadd_083", { // {Field} gets {0} {1}.
         ...target_placeholders,
         "0": String(effect.pow),
-        "1": firstQuake
-          ? L("fieldeffectstuff_006", { // {0} ({1})
-              "0": L("fieldeffectstuff_005"), // QUAKE
-              "1": L("fieldeffectstuff_011", { "1": "25" }), // Volleys deal {1} damage
-            })
-          : L("fieldeffectstuff_005"), // QUAKE
+        "1": L("fieldeffectstuff_006", { // {0} ({1})
+          "0": L("fieldeffectstuff_005"), // QUAKE
+          "1": L("fieldeffectstuff_011", { "1": "25" }), // Volleys deal {1} damage
+        }),
       });
     }
     case 71:
@@ -533,6 +531,17 @@ function getEffectString(
 export function getMoveDesc(move: Move, L: LocalizationFunction) {
   const desc = [];
 
+  switch (move.id) {
+    case "move":
+      return L("movedefine_descadd_002"); // MOVE to a selected space.
+    case "tagout":
+      return L("movedefine_descadd_003"); // TAG OUT with a benched ally, only during defense.
+    case "chance":
+      return L("movedefine_descadd_004"); // Pass to an opponent and skip your turn. Can always be used.
+    case "volley":
+      return L("movedefine_descadd_005"); // A basic VOLLEY.
+  }
+
   const attack = move.type < 3;
 
   switch (move.use) {
@@ -556,7 +565,8 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
         ? L("movedefine_descadd_009") // Only used when ball is hittable.
         : L("movedefine_descadd_107"), // Only used when ball is NOT hittable.
     );
-  } else if (
+  }
+  if (
     move.type == Type.Volley &&
     !move.eff.some((eff) => eff.eff == 20) // Eff 20: Ball goes to TARGET. Does not have volley text
   ) {
@@ -591,13 +601,13 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
     } else if (move.pow > -1 && move.pow < 0) {
       desc.push(L("movedefine_descadd_017", { "0": String(-move.pow * 100) })); // Damage equals {0}% of target's remaining STAMINA.
     }
-
-    if (!desc.length && move.eff.length < 2) {
-      if (move.eff.length == 0) {
-        desc.push(L("movedefine_descadd_088", { "0": String(move.type) })); // A [sprIcon,{0}] ATTACK.
-      } else {
-        desc.push(L("movedefine_descadd_001")); // ATTACK.
-      }
+    if (move.eff.length == 0 && desc.length == 0) {
+      desc.push(L("movedefine_descadd_088", { "0": String(move.type) })); // A [sprIcon,{0}] ATTACK.
+    } else if (
+      (move.eff.length == 1 && move.targ == 0 && move.use == 0) ||
+      move.id == "careful"
+    ) {
+      desc.unshift(L("movedefine_descadd_001")); // ATTACK.
     }
   } else {
     switch (move.targ) {

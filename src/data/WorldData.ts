@@ -25,11 +25,9 @@ export const EXTRA_MARKERS: {
 } = extra_markers;
 
 export type MapIcon = {
-  _: string;
   cave_loc_a?: string;
   cave_loc_b?: string;
   conditional?: {
-    _: string;
     key: string;
     value: number;
   };
@@ -53,7 +51,6 @@ export type MapIcon = {
 };
 
 export type Portal = {
-  _: string;
   destination?: string;
   direction?: number;
   door?: number;
@@ -67,7 +64,6 @@ export type Portal = {
 };
 
 export type LevelStump = {
-  _: string;
   area_id?: number;
   color?: number;
   display_name?: string;
@@ -87,17 +83,13 @@ export type LevelStump = {
 };
 
 export type World = {
-  _: string;
   icons_array: MapIcon[];
   // level_quadtree_size: number;
   level_stumps_array: LevelStump[];
   map_position_data: {
-    _: string;
     [key: string]: { x: number; y: number } | string;
   };
-  model_data: {
-    _: string;
-  };
+  model_data: {};
 };
 
 const WORLD_DATA: World = world;

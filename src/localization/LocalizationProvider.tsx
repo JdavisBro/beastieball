@@ -16,6 +16,7 @@ import {
 } from "./useLocalization";
 import BEASTIE_NAMES_UNTYPED from "./beastie_names.json";
 import Loading from "../Loading";
+import PageNotFound from "../PageNotFound";
 
 declare global {
   interface Window {
@@ -213,7 +214,15 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
 
   return (
     <LocalizationContext.Provider value={contextValue}>
-      {children}
+      {paramLang?.length &&
+      !location.pathname.startsWith(`/${paramLang}/`) &&
+      !SUPPORTED_LANGUAGES.includes(
+        (paramLang ?? "en") as SupportedLanguage,
+      ) ? (
+        <PageNotFound />
+      ) : (
+        children
+      )}
     </LocalizationContext.Provider>
   );
 }

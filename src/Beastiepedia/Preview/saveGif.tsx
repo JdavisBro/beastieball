@@ -180,7 +180,8 @@ export default function saveGif(
             Math.floor(Math.random() * group.transitions.length)
           ];
         group.transitions.splice(group.transitions.indexOf(groupindex), 1);
-      } while (frames[groupindex].sport_mode);
+      } while (frames[groupindex]?.sport_mode);
+      if (!frames[groupindex] && !group.transitions.length) break;
     } else {
       if (
         group.transitions.every(

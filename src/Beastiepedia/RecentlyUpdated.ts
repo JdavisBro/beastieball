@@ -36,6 +36,8 @@ export const BEASTIE_STUFF_RECENTLY_UPDATED: string[] = [
   "okapi",
   "mantis",
   "monkey",
+  "shark1",
+  "shark",
   "seabird1",
   "seabird",
   "jellyfish1",
@@ -72,10 +74,23 @@ export const BEASTIE_STUFF_RECENTLY_UPDATED: string[] = [
   "bestiemon",
   "rainbowmon",
   "magpiemon",
+  "shroommon",
 ];
 
 export const BEASITE_SPRITES_RECENTLY_UPDATED: string[] = [
   "shroom_b",
   "shroom_m",
+  "turtle1",
+  "turtle2",
+  "turtle",
+  "shark1",
+  "shark",
+  "seabird1",
+  "seabird",
+  "jellyfish1",
+  "jellyfish2",
   "jellyfish",
+  "seal1",
+  "seal",
+  "horseshoe",
 ];

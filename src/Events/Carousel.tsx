@@ -36,30 +36,40 @@ const CAROUSEL_URL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vTDni6WmInMS_ys4y0eH4CnAK6nS1oaZaPFTaB7FLcOgdnV67xh325Ne4tdOkh1_D8oaD-1WmRdR3kV/pub?gid=0&single=true&output=csv";
 
 function lineSplit(text: string) {
-  const regex = /("*)((?:(?!\1(?:,|$))[\w\W])+)\1?(?:,|$)/g;
+  let count = -1;
+  const regex = /("*)((?:(?!\1(?:,|$))[\w\W])+)\1?(?:,|$)/gm;
   text = text.trimEnd();
-  const matches: string[] = [];
+  const lines: string[][] = [];
+  let matches: string[] = [];
   let match;
   while ((match = regex.exec(text)) !== null) {
+    if (count == -1 && match[2].startsWith("https")) {
+      count = matches.length;
+      lines.push(matches);
+      matches = [];
+    }
     matches.push(match[2]);
+    if (matches.length == count) {
+      lines.push(matches);
+      matches = [];
+    }
   }
-  return matches;
+  return lines;
 }
 
 async function fetchCarouselData(): Promise<CarouselData> {
   const text_full = await fetch(CAROUSEL_URL).then((res) => res.text());
-  const split = text_full.split("\n");
-  const line0 = lineSplit(split[0]);
+  // const split = text_full.split("\n");
+  const lines = lineSplit(text_full);
   const datas: CarouselData = [];
+  const line0 = lines[0];
   const LINK = line0.indexOf("LINK");
   const IMAGE = line0.indexOf("IMAGE");
   const lang_indexes = SUPPORTED_LANGUAGES.map((lang) =>
     line0.indexOf(LANGUAGE_NAMES[lang as SupportedLanguage]),
   );
-  for (let i = 1; i < split.length; i++) {
-    const line = split[i];
-    if (!line.length) continue;
-    const line_split = lineSplit(line);
+  for (let i = 1; i < lines.length; i++) {
+    const line_split = lines[i];
     const text: Record<string, string> = {};
     for (let lang_i = 0; lang_i < lang_indexes.length; lang_i++) {
       text[SUPPORTED_LANGUAGES[lang_i]] = line_split[lang_indexes[lang_i]];

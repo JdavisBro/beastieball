@@ -6,6 +6,8 @@ import { useGameData } from "./useGameData";
 import { Link } from "react-router-dom";
 import useLocalization, {
   LANGUAGE_NAMES,
+  SUPPORTED_LANGUAGES,
+  SupportedLanguage,
 } from "../localization/useLocalization";
 
 const EMOJI_MAP: Record<string, string> = {
@@ -30,6 +32,47 @@ const EXPERIMENTAL_PREFIXES = ["experimental", "sadness"];
 
 const AUTO_SWAP_TIME = 5000; //ms
 
+const CAROUSEL_URL =
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vTDni6WmInMS_ys4y0eH4CnAK6nS1oaZaPFTaB7FLcOgdnV67xh325Ne4tdOkh1_D8oaD-1WmRdR3kV/pub?gid=0&single=true&output=csv";
+
+function lineSplit(text: string) {
+  const regex = /("*)((?:(?!\1(?:,|$))[\w\W])+)\1?(?:,|$)/g;
+  text = text.slice(0, text.length - 1);
+  const matches: string[] = [];
+  let match;
+  while ((match = regex.exec(text)) !== null) {
+    matches.push(match[2]);
+  }
+  return matches;
+}
+
+async function fetchCarouselData(): Promise<CarouselData> {
+  const text_full = await fetch(CAROUSEL_URL).then((res) => res.text());
+  const split = text_full.split("\n");
+  const line0 = lineSplit(split[0]);
+  const datas: CarouselData = [];
+  const LINK = line0.indexOf("LINK");
+  const IMAGE = line0.indexOf("IMAGE");
+  const lang_indexes = SUPPORTED_LANGUAGES.map((lang) =>
+    line0.indexOf(LANGUAGE_NAMES[lang as SupportedLanguage]),
+  );
+  for (let i = 1; i < split.length; i++) {
+    const line = split[i];
+    if (!line.length) continue;
+    const line_split = lineSplit(line);
+    const text: Record<string, string> = {};
+    for (let lang_i = 0; lang_i < lang_indexes.length; lang_i++) {
+      text[SUPPORTED_LANGUAGES[lang_i]] = line_split[lang_indexes[lang_i]];
+    }
+    datas.push({
+      url: line_split[LINK],
+      img: line_split[IMAGE],
+      text: text,
+    });
+  }
+  return datas;
+}
+
 export default function Carousel({
   children,
   bigmoonOld,
@@ -42,8 +85,8 @@ export default function Carousel({
   const { L, currentLanguage } = useLocalization();
 
   const [carouselData, carouselReload] = useGameData<CarouselData>(
-    "carousel",
-    "carouselData",
+    fetchCarouselData,
+    "carouselData2",
     true,
   );
   const noData =
@@ -56,7 +99,7 @@ export default function Carousel({
 
   const datas = noData
     ? []
-    : carouselData.data.filter((data) => !data.img.startsWith("bigmoon"));
+    : carouselData.filter((data) => !data.img.startsWith("bigmoon"));
 
   const bigmoonPos = bigmoonOld
     ? noData
@@ -106,12 +149,7 @@ export default function Carousel({
       </div>
       <div className={styles.carouselItemText}>
         <Link to={data.url} target="_blank" rel="noopener">
-          {data.text[
-            Math.max(
-              0,
-              data.langs.indexOf(LANGUAGE_NAMES[currentLanguage] ?? "en"),
-            )
-          ] ?? data.text[0]}
+          {data.text[currentLanguage] ?? data.text.en}
         </Link>
         {import.meta.env.VITE_EXPERIMENTAL != "true" &&
         EXPERIMENTAL_PREFIXES.some((exp) => data.img.startsWith(exp)) ? (

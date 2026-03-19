@@ -1,3 +1,5 @@
+import { SupportedLanguage } from "../localization/useLocalization";
+
 export enum NoData {
   WaitingForResponse,
   NoData,
@@ -30,11 +32,9 @@ export type BallEvent = {
 
 export type EventResponse = { currentEvent: BallEvent };
 
-export type CarouselData = {
-  data: {
-    url: string;
-    img: string;
-    text: string[];
-    langs: string[];
-  }[];
+export type CarouselItem = {
+  url: string;
+  img: string;
+  text: Record<SupportedLanguage, string>;
 };
+export type CarouselData = CarouselItem[];

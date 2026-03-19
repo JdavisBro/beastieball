@@ -3,16 +3,15 @@ import { NoData } from "./Types";
 
 const EVENT_RESPONSE_EXPIRE = 12 * 60 * 60 * 1000;
 function updateGameData<T>(
-  path: string,
+  fetchGameData: () => Promise<T>,
   setGameData: (gameData: T | NoData) => void,
 ) {
-  fetch(`https://api.beastieballgame.com/api/${path}`)
-    .then((res) => res.json())
+  fetchGameData()
     .then((data) => setGameData(data))
     .catch(() => setGameData(NoData.NoData));
 }
 export function useGameData<T>(
-  path: string,
+  fetchGameData: () => Promise<T>,
   storage: string,
   open: boolean,
 ): [NoData | T, () => void] {
@@ -44,7 +43,7 @@ export function useGameData<T>(
 
   const forceReload = () => {
     if (gameData != NoData.WaitingForResponse) {
-      updateGameData(path, handleSetGameData);
+      updateGameData(fetchGameData, handleSetGameData);
     }
   };
 
@@ -54,7 +53,7 @@ export function useGameData<T>(
         if (!open) {
           return;
         }
-        return updateGameData(path, handleSetGameData);
+        return updateGameData(fetchGameData, handleSetGameData);
       }
       setGameData(storageItem);
     }
@@ -66,7 +65,7 @@ export function useGameData<T>(
       Number(localStorage.getItem(storage + "Expire") ?? 0) +
       EVENT_RESPONSE_EXPIRE;
     if (response_expire < now) {
-      updateGameData(path, handleSetGameData);
+      updateGameData(fetchGameData, handleSetGameData);
     }
   }, [open]);
 

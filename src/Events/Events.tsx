@@ -16,7 +16,10 @@ export default function Events() {
   const [open, setOpen] = useLocalStorage("eventsOpen", true);
 
   const [bigmoonData, bigmoonReload] = useGameData<EventResponse>(
-    "events",
+    () =>
+      fetch("https://api.beastieballgame.com/api/events").then((res) =>
+        res.json(),
+      ),
     "gameEvent",
     open,
   );

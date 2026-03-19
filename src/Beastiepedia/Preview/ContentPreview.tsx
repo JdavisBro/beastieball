@@ -230,7 +230,10 @@ export default function ContentPreview(props: Props): React.ReactNode {
         const state = frames[possibleFrames[i]];
         if (state.transitions?.length) {
           for (const transition of state.transitions) {
-            if (!possibleFrames.includes(transition)) {
+            if (
+              !possibleFrames.includes(transition) &&
+              transition < frames.length
+            ) {
               possibleFrames.push(transition);
             }
           }

@@ -525,6 +525,7 @@
   "movessetup_movedefine_033": "Vigor Beam",
   "movessetup_movedefine_034": "Hyperspike",
   "movessetup_movedefine_035": "Ultimate Attack",
+  "movessetup_movedefine_036": "Steamer",
   "movessetup_movedefine_037": "Pepshot",
   "movessetup_movedefine_038": "Careful Shot",
   "movessetup_movedefine_040": "Relentless",
@@ -1575,7 +1576,7 @@
   "abilitiessetup_abilitydefine_259": "Feels 1 {0} when they attack",
   "abilitiessetup_abilitydefine_260": "Roaring",
   "movedefine_descadd_103": "If STAMINA is {0} or higher:",
-  "movedefine_descadd_104": "POW x{0} if user has any FEELINGs",
+  "movedefine_descadd_104": "POW x{0} if user has any FEELINGs.",
   "movedefine_descadd_105": "If ally also BLOCKS:",
   "movedefine_descadd_106": "Must charge up for {0} turns.",
   "movedefine_051": "front row active team",
@@ -1615,5 +1616,7 @@
   "movessetup_movedefine_198": "Fortify",
   "abilitiessetup_abilitydefine_297": "Extrovert",
   "abilitiessetup_abilitydefine_298": "This Beastie's attacks are always strengthened by RALLY",
-  "movessetup_movedefine_199": "Swarm"
+  "movessetup_movedefine_199": "Swarm",
+  "abilitiessetup_abilitydefine_301": "Does {0}x damage when their target is changed",
+  "abilitiessetup_abilitydefine_302": "Deviant"
 }

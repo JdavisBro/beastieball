@@ -525,6 +525,7 @@
   "movessetup_movedefine_033": "Rayo vigoroso",
   "movessetup_movedefine_034": "Ultrarremate",
   "movessetup_movedefine_035": "Ataque definitivo",
+  "movessetup_movedefine_036": "Pestañeo",
   "movessetup_movedefine_037": "Golpe alentador",
   "movessetup_movedefine_038": "Golpe cauto",
   "movessetup_movedefine_040": "Golpe implacable",
@@ -1615,5 +1616,7 @@
   "movessetup_movedefine_198": "Fortificar",
   "abilitiessetup_abilitydefine_297": "Extrovertido",
   "abilitiessetup_abilitydefine_298": "Los ataques de este besti siempre se potencian con el efecto CONVOCAR.",
-  "movessetup_movedefine_199": "Enjambre"
+  "movessetup_movedefine_199": "Enjambre",
+  "abilitiessetup_abilitydefine_301": "Does {0}x damage when their target is changed",
+  "abilitiessetup_abilitydefine_302": "Deviant"
 }

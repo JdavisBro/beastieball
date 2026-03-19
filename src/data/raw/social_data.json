@@ -675,7 +675,7 @@
         "dest_object": "@ref object(objBallcenter)",
         "id": "rematch1",
         "parent": null,
-        "prereq": { "field": 0, "type": [1] },
+        "prereq": { "field": 0, "type": [4] },
         "rankup": true
       },
       {
@@ -686,7 +686,7 @@
         "dest_object": "@ref object(objCeleb)",
         "id": "travel",
         "parent": null,
-        "prereq": { "field": 0, "type": [1] },
+        "prereq": { "field": 0, "type": [4] },
         "rankup": false
       },
       {
@@ -697,25 +697,14 @@
         "dest_object": "@ref object(objBallcenter)",
         "id": "rematch",
         "parent": null,
-        "prereq": { "field": 0, "type": [1] },
-        "rankup": false
-      },
-      {
-        "alt_complete_flag": -1,
-        "collides": true,
-        "cost": 1,
-        "dest_level": "",
-        "dest_object": -1,
-        "id": "",
-        "parent": null,
-        "prereq": { "field": 0, "type": [1] },
+        "prereq": { "field": 0, "type": [4] },
         "rankup": false
       }
     ],
     "id": "celeb",
     "img": 10,
     "loneliness": 0.6,
-    "max_hearts": 7,
+    "max_hearts": 6,
     "name": "¦socialssetup_classsocial_006¦",
     "object": "@ref object(objCeleb)",
     "plays": [

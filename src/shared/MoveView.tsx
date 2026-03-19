@@ -349,7 +349,7 @@ function getEffectString(
             "1": "1.5",
           });
         case 32:
-          return L("movedefine_descadd_104", { "0": "¾" }); // POW x{0} if user has any FEELINGs
+          return L("movedefine_descadd_104", { "0": "¾" }); // POW x{0} if user has any FEELINGs.
         case 33:
           return "";
       }

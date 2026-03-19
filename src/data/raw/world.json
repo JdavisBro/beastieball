@@ -45,10 +45,10 @@
       "revealed_text": "Boathouse (Gamboge)",
       "text": "Boathouse",
       "transit": 2,
-      "world_x": -60102,
-      "world_y": 25106,
-      "x": -60102,
-      "y": 25506,
+      "world_x": -59954.5,
+      "world_y": 25124,
+      "x": -59954.5,
+      "y": 25524,
       "zoom_view": true
     },
     {
@@ -105,10 +105,10 @@
       "revealed_text": "Boathouse (Chartreuse Island)",
       "text": "Boathouse",
       "transit": 2,
-      "world_x": -36060,
-      "world_y": 27120,
-      "x": -36060,
-      "y": 27520,
+      "world_x": -36074,
+      "world_y": 27134,
+      "x": -36074,
+      "y": 27534,
       "zoom_view": true
     },
     {
@@ -210,9 +210,9 @@
       "revealed_text": "Railhouse (Rutile)",
       "text": "Railhouse",
       "transit": 1,
-      "world_x": 2940,
+      "world_x": 2966,
       "world_y": 2458,
-      "x": 2940,
+      "x": 2966,
       "y": 2858,
       "zoom_view": true
     },
@@ -1615,9 +1615,9 @@
           "revealed_text": "Gym (Beryl)",
           "text": "Gym",
           "world_x": -12544,
-          "world_y": 14053,
+          "world_y": 14052,
           "x": 2084,
-          "y": 1862
+          "y": 1861
         },
         {
           "from_level": "beryl",
@@ -1655,7 +1655,7 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["gulls"],
+      "spawn_name": ["gulls", "hometown_south"],
       "world_x1": -14628,
       "world_x2": -7342,
       "world_y1": 12491,
@@ -3015,9 +3015,9 @@
           "revealed_text": "Gym (Chartreuse Island)",
           "text": "Gym",
           "world_x": -31618,
-          "world_y": 24930,
+          "world_y": 24928,
           "x": 5942,
-          "y": 2760
+          "y": 2758
         },
         {
           "from_level": "chartreuse",
@@ -3028,9 +3028,9 @@
           "revealed_text": "Clothes Shop (Chartreuse Island)",
           "text": "Clothes Shop",
           "world_x": -35277,
-          "world_y": 25167,
+          "world_y": 25165,
           "x": 2283,
-          "y": 2997
+          "y": 2995
         },
         {
           "from_level": "chartreuse",
@@ -3058,7 +3058,7 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["gulls"],
+      "spawn_name": ["gulls", "ocean1"],
       "world_x1": -37560,
       "world_x2": -28872,
       "world_y1": 22470,
@@ -3755,7 +3755,7 @@
           "z_offset": 250
         }
       ],
-      "spawn_name": ["ocean2"],
+      "spawn_name": ["reserve_inner2"],
       "world_layer": 1,
       "world_x1": -6733,
       "world_x2": -2738,
@@ -3891,7 +3891,7 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["gulls"],
+      "spawn_name": ["gulls", "beach"],
       "world_x1": -38968,
       "world_x2": -33339,
       "world_y1": 3921,
@@ -4424,7 +4424,7 @@
           "z1": -300
         }
       ],
-      "spawn_name": ["gulls"],
+      "spawn_name": ["gulls", "ocean2"],
       "world_x1": -62744.5,
       "world_x2": -58177.5,
       "world_y1": 21024,
@@ -9106,7 +9106,7 @@
     "beach_cliff1_0": { "x": -39182, "y": 10476 },
     "beryl:objBallcenter": { "x": -8420, "y": 16287 },
     "beryl:objBoathouse": { "x": -12729, "y": 15824 },
-    "beryl:objGymdoor": { "x": -12544, "y": 14353 },
+    "beryl:objGymdoor": { "x": -12544, "y": 14352 },
     "beryl:objRiven": { "x": -13512, "y": 12658 },
     "beryl:objSimge": { "x": -9401, "y": 15254 },
     "beryl_railpath_end_0": { "x": -8698, "y": 10498 },
@@ -9116,10 +9116,10 @@
     "central_station:objMall": { "x": -37753, "y": -10498 },
     "central_station:objRacer": { "x": -40139, "y": -10044 },
     "central_station:objRailhouse": { "x": 0, "y": 0 },
-    "chartreuse:objBallcenter": { "x": -33219, "y": 24026 },
-    "chartreuse:objCeleb": { "x": -30905, "y": 24448 },
-    "chartreuse:objClub": { "x": -30419, "y": 26999 },
-    "chartreuse:objGymdoor": { "x": -31604, "y": 25215 },
+    "chartreuse:objBallcenter": { "x": -33233, "y": 24039 },
+    "chartreuse:objCeleb": { "x": -30919, "y": 24463 },
+    "chartreuse:objClub": { "x": -30433, "y": 27013 },
+    "chartreuse:objGymdoor": { "x": -31618, "y": 25228 },
     "city_market:objBallcenter": { "x": -50359, "y": -17448 },
     "city_market:objNaveen": { "x": -48669, "y": -17666 },
     "city_market:objStreamer": { "x": -48010, "y": -20089 },
@@ -9141,10 +9141,10 @@
     "dogpark:objResearcher": { "x": -40198, "y": -8176 },
     "forest_lake:objHeadmaster": { "x": -12543, "y": -34130 },
     "forest_lake_0": { "x": -15214, "y": -34070 },
-    "hometown:objBallcenter": { "x": 535, "y": 201 },
-    "hometown:objReserveplaque": { "x": 1953, "y": 2721 },
-    "hometown:objRiley": { "x": 778, "y": 2211 },
-    "hometown:objTutorialtext": { "x": 536, "y": -167 },
+    "hometown:objBallcenter": { "x": 561, "y": 201 },
+    "hometown:objReserveplaque": { "x": 1979, "y": 2721 },
+    "hometown:objRiley": { "x": 804, "y": 2211 },
+    "hometown:objTutorialtext": { "x": 562, "y": -167 },
     "hometown_north": { "x": -647, "y": -3720 },
     "hometown_north1": { "x": -532, "y": -9976 },
     "hometown_north2": { "x": -645, "y": -10976 },
@@ -9172,7 +9172,7 @@
     "mangrove_4_0": { "x": -61767, "y": 6559 },
     "mangrove_end:objGameplay": { "x": -56772, "y": 7477 },
     "meadows_2_0": { "x": -34966, "y": -33576 },
-    "mountain_1_0": { "x": -43816, "y": -36107 },
+    "mountain_1_0": { "x": -43616, "y": -36001 },
     "mountain_3_1": { "x": -49474, "y": -40884 },
     "mountain_5_0": { "x": -59388, "y": -42530 },
     "mountain_6_0": { "x": -55229, "y": -45484 },
@@ -9183,7 +9183,7 @@
     "myth_forest_secret:objGameplay": { "x": -11892, "y": -44517 },
     "myth_forest_west": { "x": -22847, "y": -40376 },
     "none": { "x": -56066, "y": -45737 },
-    "ocean_0": { "x": -36783, "y": 29403 },
+    "ocean_0": { "x": -36783, "y": 29413 },
     "ocean_1": { "x": -30320, "y": 12943 },
     "park1_1": { "x": -27076.5, "y": -17828.5 },
     "park_boss": { "x": -16726, "y": -9727 },
@@ -9193,9 +9193,9 @@
     "park_south3:objScience": { "x": -12645, "y": -10149 },
     "park_south_0": { "x": -26781, "y": -12644 },
     "park_south_end:objGameplay": { "x": -16726, "y": -9630 },
-    "pirate:objBallcenter": { "x": -60798, "y": 21699 },
-    "pirate:objLogan": { "x": -61757, "y": 21592 },
-    "pirate:objRiven": { "x": -59584, "y": 25657 },
+    "pirate:objBallcenter": { "x": -60650.5, "y": 21715 },
+    "pirate:objLogan": { "x": -61609.5, "y": 21610 },
+    "pirate:objRiven": { "x": -59436.5, "y": 25675 },
     "railbridge_0": { "x": -34267, "y": -16924 },
     "railtrail_2_0": { "x": -5089, "y": -11673 },
     "reserve2": { "x": -14865, "y": -636 },
@@ -9210,6 +9210,7 @@
     "rockybeach_4": { "x": -34709, "y": 10530 },
     "rockybeach_5": { "x": -32411, "y": 11126 },
     "rubberfarm:objScience": { "x": -39991, "y": -26906 },
+    "sassafrass:objJulian": { "x": 0, "y": 0 },
     "seacave4_0": { "x": -40338, "y": 2789 },
     "seaside_cliff_0": { "x": 9291, "y": -9411 },
     "shroom_path:objScience": { "x": -30417, "y": -30807 },

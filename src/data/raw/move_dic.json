@@ -2222,7 +2222,7 @@
     "description": null,
     "eff": [{ "eff": 23, "pow": -2, "targ": 3 }],
     "id": "steamattack",
-    "name": "Steamer",
+    "name": "¦movessetup_movedefine_036¦",
     "pow": 10,
     "targ": 0,
     "type": 1,

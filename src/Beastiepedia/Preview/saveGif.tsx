@@ -174,9 +174,13 @@ export default function saveGif(
       break;
     }
     if (groupindex == basegroup) {
-      groupindex =
-        group.transitions[Math.floor(Math.random() * group.transitions.length)];
-      group.transitions.splice(group.transitions.indexOf(groupindex), 1);
+      do {
+        groupindex =
+          group.transitions[
+            Math.floor(Math.random() * group.transitions.length)
+          ];
+        group.transitions.splice(group.transitions.indexOf(groupindex), 1);
+      } while (frames[groupindex].sport_mode);
     } else {
       if (
         group.transitions.every(

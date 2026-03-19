@@ -7,6 +7,7 @@ export type BeastieFrames = {
   endFrame?: number;
   holds?: Record<string, number[] | number | string | undefined>;
   sounds?: Record<string, number | string | undefined>;
+  sport_mode?: number;
   transitions?: number[];
 };
 

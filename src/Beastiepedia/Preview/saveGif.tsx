@@ -68,7 +68,7 @@ export default function saveGif(
     1000 / (24 * anim_speed) / (anim.speed ? anim.speed : 1) / user_speed;
 
   let bbox: { x: number; y: number; endx: number; endy: number } | undefined =
-    crop ? undefined : { x: 0, y: 0, endx: 1000, endy: 1000 };
+    crop ? undefined : { x: 0, y: 0, endx: sprite.width, endy: sprite.height };
   function setBbox(framebbox: BBox | null) {
     if (!crop || !framebbox) {
       return;
@@ -215,7 +215,7 @@ export default function saveGif(
     const data = new Uint8Array(width * height * 4);
     gl.readPixels(
       bbox.x,
-      1000 - bbox.endy, // flipped image means what we want is at the top
+      sprite.height - bbox.endy, // flipped image means what we want is at the top
       width,
       height,
       gl.RGBA,

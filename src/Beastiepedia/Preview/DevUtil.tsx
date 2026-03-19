@@ -2,10 +2,14 @@ import BEASTIE_DATA from "../../data/BeastieData";
 import BEASTIE_ANIMATIONS, {
   BeastieAnimData,
 } from "../../data/BeastieAnimations";
-import SPRITE_INFO, { BBox } from "../../data/SpriteInfo";
+import SPRITE_INFO, { BBox, Sprite } from "../../data/SpriteInfo";
 import { useRef } from "react";
 import JSZip from "jszip";
-import { setColorUniforms, setImage } from "../../shared/beastieRender/WebGL";
+import {
+  setColorUniforms,
+  setImage,
+  setViewportSize,
+} from "../../shared/beastieRender/WebGL";
 import { bgrDecimalToHex, getColorInBeastieColors } from "../../utils/color";
 import { BeastieType } from "../../data/BeastieData";
 import useLocalization from "../../localization/useLocalization";
@@ -37,6 +41,7 @@ export default function DevUtil(props: {
       {
         img: HTMLImageElement;
         crop: BBox;
+        sprite: Sprite;
         colors: {
           array: {
             color: number;
@@ -66,7 +71,10 @@ export default function DevUtil(props: {
     cropCanvas.height = ICON_SIZE;
     const zip = new JSZip();
     Object.keys(loadingRef.current).forEach((name) => {
-      const { img, crop, colors } = loadingRef.current[name];
+      const { img, crop, sprite, colors } = loadingRef.current[name];
+      canvas.width = sprite.width;
+      canvas.height = sprite.height;
+      setViewportSize(gl, sprite);
       setColorUniforms(
         gl,
         program,
@@ -166,9 +174,10 @@ export default function DevUtil(props: {
         crop: sprite.bboxes[frame % sprite.frames] ?? {
           x: 0,
           y: 0,
-          width: 1000,
-          height: 1000,
+          width: sprite.width,
+          height: sprite.height,
         },
+        sprite: sprite,
         colors: raremorph ? beastie.shiny : beastie.colors,
       };
       beastieCountRef.current += 1;

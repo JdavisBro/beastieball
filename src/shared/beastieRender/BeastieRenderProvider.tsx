@@ -7,7 +7,12 @@ import {
   useState,
 } from "react";
 
-import setupWebGL, { setColorUniforms, setImage, WebGLError } from "./WebGL";
+import setupWebGL, {
+  setColorUniforms,
+  setImage,
+  setViewportSize,
+  WebGLError,
+} from "./WebGL";
 import {
   BeastieRenderContext,
   RenderBeastieType,
@@ -70,6 +75,9 @@ export default function BeastieRenderProvider(
       );
       return null;
     }
+    canvasRef.current.width = drawn_sprite.width;
+    canvasRef.current.height = drawn_sprite.height;
+    setViewportSize(glRef.current.gl, drawn_sprite);
     const animations = BEASTIE_ANIMATIONS.get(`_${beastie_data.spr}`);
     let frames = (animations?.anim_data as BeastieAnimData).menu.frames;
     if (frames && Array.isArray(frames)) {

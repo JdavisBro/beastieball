@@ -9,7 +9,11 @@ export class WebGLError extends Error {
   }
 }
 
-export default function setupWebGL(canvas: HTMLCanvasElement, rowdy?: boolean) {
+export default function setupWebGL(
+  canvas: HTMLCanvasElement,
+  size: { width: number; height: number } = { width: 1000, height: 1000 },
+  rowdy?: boolean,
+) {
   const gl = canvas.getContext("webgl", { preserveDrawingBuffer: true });
   if (!gl) {
     throw new WebGLError("No WebGL.");
@@ -22,7 +26,7 @@ export default function setupWebGL(canvas: HTMLCanvasElement, rowdy?: boolean) {
 
   createTexture(gl);
 
-  gl.viewport(0, 0, 1000, 1000);
+  gl.viewport(0, 0, size.width, size.height);
 
   gl.clearColor(0, 0, 0, 0);
   gl.clear(gl.COLOR_BUFFER_BIT);
@@ -30,6 +34,13 @@ export default function setupWebGL(canvas: HTMLCanvasElement, rowdy?: boolean) {
   gl.useProgram(program);
 
   return { gl: gl, program: program };
+}
+
+export function setViewportSize(
+  gl: WebGLRenderingContext,
+  size: { width: number; height: number },
+) {
+  gl.viewport(0, 0, size.width, size.height);
 }
 
 export function setColorUniforms(

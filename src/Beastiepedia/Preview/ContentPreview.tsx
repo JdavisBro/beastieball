@@ -12,6 +12,7 @@ import setupWebGL, {
   WebGLError,
   setColorUniforms,
   setImage,
+  setViewportSize,
 } from "../../shared/beastieRender/WebGL";
 import styles from "./ContentPreview.module.css";
 import type { BeastieType } from "../../data/BeastieData";
@@ -289,7 +290,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   }, [anim, drawnsprite, loadedImages, paused && pausedFrame]);
 
   const beastiescale =
-    bbox.width > bbox.height
+    drawnsprite.width / bbox.width < drawnsprite.height / bbox.height
       ? drawnsprite.width / bbox.width
       : drawnsprite.height / bbox.height;
   const crop = `scale(${beastiescale}) translate(${((-bbox.x - bbox.width / 2 + drawnsprite.width / 2) / drawnsprite.width) * 100}%, ${((-bbox.y - bbox.height / 2 + drawnsprite.height / 2) / drawnsprite.height) * 100}%)`;
@@ -341,6 +342,9 @@ export default function ContentPreview(props: Props): React.ReactNode {
     if (animStateRef.current.frame) {
       setFrame(animStateRef.current.frame);
     }
+    if (glRef.current) {
+      setViewportSize(glRef.current, drawnsprite);
+    }
   }, [drawnsprite, setFrame]);
 
   useEffect(() => {
@@ -358,7 +362,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         !programRef.current)
     ) {
       try {
-        const newGl = setupWebGL(canvasRef.current, rowdy);
+        const newGl = setupWebGL(canvasRef.current, drawnsprite, rowdy);
         glRef.current = newGl.gl;
         programRef.current = newGl.program;
         // if rowdy was changed, recreating the program will cause the image + uniforms to be reset.
@@ -540,8 +544,8 @@ export default function ContentPreview(props: Props): React.ReactNode {
             display: noDisplayRender ? "none" : "block",
             transform: fitBeastie ? crop : "",
           }}
-          width={1000}
-          height={1000}
+          width={drawnsprite.width}
+          height={drawnsprite.height}
           ref={canvasRef}
         >
           {L("beastiepedia.preview.canvasAlt")}

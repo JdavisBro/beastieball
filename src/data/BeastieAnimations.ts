@@ -1,7 +1,7 @@
 import beastie_animations from "./raw/beastie_animations.json";
 
 export type BeastieFrames = {
-  bpm?: boolean | number;
+  bpm_paired?: number[];
   startFrame?: number;
   endFrame?: number;
   holds?: Record<string, number[] | number | string | undefined>;

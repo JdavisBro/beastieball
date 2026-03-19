@@ -75,9 +75,6 @@ export default function BeastieRenderProvider(
       );
       return null;
     }
-    canvasRef.current.width = drawn_sprite.width;
-    canvasRef.current.height = drawn_sprite.height;
-    setViewportSize(glRef.current.gl, drawn_sprite);
     const animations = BEASTIE_ANIMATIONS.get(`_${beastie_data.spr}`);
     let frames = (animations?.anim_data as BeastieAnimData).menu.frames;
     if (frames && Array.isArray(frames)) {
@@ -95,8 +92,6 @@ export default function BeastieRenderProvider(
     if (!img) {
       return null;
     }
-    setImage(glRef.current.gl, img);
-
     const beastieColors =
       beastie.colorAlt == "colors2" && beastie_data.colors2
         ? beastie_data.colors2
@@ -108,8 +103,12 @@ export default function BeastieRenderProvider(
       const x = colors.length <= value ? 0.5 : colors[value];
       return getColorInBeastieColors(x, beastieColors[value].array);
     });
-    setColorUniforms(glRef.current.gl, glRef.current.program, cols);
     const sprite_bbox = drawn_sprite.bboxes[beastie_frame];
+    canvasRef.current.width = drawn_sprite.width;
+    canvasRef.current.height = drawn_sprite.height;
+    setViewportSize(glRef.current.gl, drawn_sprite);
+    setImage(glRef.current.gl, img);
+    setColorUniforms(glRef.current.gl, glRef.current.program, cols);
     return [canvasRef.current, sprite_bbox] as [HTMLCanvasElement, BBox | null];
   }, []);
 

@@ -37,7 +37,7 @@ const CAROUSEL_URL =
 
 function lineSplit(text: string) {
   const regex = /("*)((?:(?!\1(?:,|$))[\w\W])+)\1?(?:,|$)/g;
-  text = text.slice(0, text.length - 1);
+  text = text.trimEnd();
   const matches: string[] = [];
   let match;
   while ((match = regex.exec(text)) !== null) {

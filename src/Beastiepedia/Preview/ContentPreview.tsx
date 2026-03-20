@@ -9,6 +9,7 @@ import {
 } from "react";
 
 import setupWebGL, {
+  ShaderEffectType,
   WebGLError,
   setColorUniforms,
   setImage,
@@ -130,7 +131,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
   const programRef = useRef<WebGLProgram>(null);
   const cropCanvasRef = useRef<HTMLCanvasElement>(null);
 
-  const [rowdy, setRowdy] = useState(false);
+  const [shaderEffect, setShaderEffect] = useState(ShaderEffectType.None);
 
   const [animationState, setAnimation] = useState("idle");
   const animdata: BeastieAnimData | undefined = BEASTIE_ANIMATIONS.get(
@@ -362,7 +363,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         !programRef.current)
     ) {
       try {
-        const newGl = setupWebGL(canvasRef.current, drawnsprite, rowdy);
+        const newGl = setupWebGL(canvasRef.current, drawnsprite, shaderEffect);
         glRef.current = newGl.gl;
         programRef.current = newGl.program;
         // if rowdy was changed, recreating the program will cause the image + uniforms to be reset.
@@ -384,7 +385,7 @@ export default function ContentPreview(props: Props): React.ReactNode {
         }
       }
     }
-  }, [colors, props.beastiedata.colors.length, rowdy, setFrame, L]);
+  }, [colors, props.beastiedata.colors.length, shaderEffect, setFrame, L]);
 
   useEffect(() => {
     if (glRef.current && programRef.current) {
@@ -613,10 +614,12 @@ export default function ContentPreview(props: Props): React.ReactNode {
         <ColorTabs
           beastiedata={props.beastiedata}
           colorChange={colorChange}
-          rowdy={rowdy}
-          setRowdy={(value) => {
-            setRowdy(value);
-            glRef.current = null;
+          shaderEffect={shaderEffect}
+          setShaderEffect={(value) => {
+            if (value != shaderEffect) {
+              setShaderEffect(value);
+              glRef.current = null;
+            }
           }}
         />
 

@@ -243,7 +243,11 @@
         "reset": "Reset Colors",
         "random": "Randomize Colors",
         "copyLink": "Copy Link with Colors",
-        "rowdyLabel": "Rowdy: ",
+        "shaderEffectLabel": "Effect: ",
+        "shaderEffect": {
+          "none": "None",
+          "rowdy": "Rowdy"
+        },
         "paletteSwapLabel": "Palette Swap: ",
         "paletteSwapModalCurrentBeastie": "Select Unset to use this Beastie's regular colors."
       },

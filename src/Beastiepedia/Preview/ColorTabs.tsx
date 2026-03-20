@@ -13,6 +13,10 @@ import BEASTIE_DATA from "../../data/BeastieData";
 import BeastieSelect from "../../shared/BeastieSelect";
 import useLocalization from "../../localization/useLocalization";
 import InfoTabberHeader from "../../shared/InfoTabber";
+import {
+  SHADER_EFFECT_LOC,
+  ShaderEffectType,
+} from "../../shared/beastieRender/WebGL";
 
 function defaultColor(
   colors: number[],
@@ -40,8 +44,8 @@ function defaultColor(
 type Props = {
   beastiedata: BeastieType;
   colorChange: (change_index: number, color: number[]) => void;
-  rowdy: boolean;
-  setRowdy: (rowdy: boolean) => void;
+  shaderEffect: ShaderEffectType;
+  setShaderEffect: (shaderEffect: ShaderEffectType) => void;
 };
 
 type StoredType = {
@@ -414,12 +418,17 @@ export default function ColorTabs(props: Props): React.ReactNode {
           </button>
         </div>
         <label className={styles.taboffset}>
-          {L("beastiepedia.preview.color.rowdyLabel")}
-          <input
-            type="checkbox"
-            onChange={(event) => props.setRowdy(event.currentTarget.checked)}
-            checked={props.rowdy}
-          />
+          {L("beastiepedia.preview.color.shaderEffectLabel")}
+          <select
+            onChange={(event) =>
+              props.setShaderEffect(Number(event.currentTarget.value))
+            }
+            value={props.shaderEffect}
+          >
+            {SHADER_EFFECT_LOC.map((eff, index) => (
+              <option value={index}>{L(eff)}</option>
+            ))}
+          </select>
         </label>
         <div className={styles.taboffset}>
           {L("beastiepedia.preview.color.paletteSwapLabel")}

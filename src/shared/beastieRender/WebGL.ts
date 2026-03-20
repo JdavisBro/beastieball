@@ -1,6 +1,7 @@
 import vertex from "./vertex.glsl?raw";
 import fragment from "./fragment.glsl?raw";
 import rowdyFragment from "./rowdyFragment.glsl?raw";
+import hauntedFragment from "./hauntedFragment.glsl?raw";
 
 export class WebGLError extends Error {
   constructor(msg: string) {
@@ -9,17 +10,39 @@ export class WebGLError extends Error {
   }
 }
 
+export enum ShaderEffectType {
+  None,
+  Rowdy,
+  Haunted,
+}
+
+export const SHADER_EFFECT_LOC: string[] = [
+  "beastiepedia.preview.color.shaderEffect.none",
+  "beastiepedia.preview.color.shaderEffect.rowdy",
+  "abilitiessetup_abilitydefine_282",
+];
+
+const SHADER_MAP: Record<ShaderEffectType, string> = {
+  [ShaderEffectType.None]: fragment,
+  [ShaderEffectType.Rowdy]: rowdyFragment,
+  [ShaderEffectType.Haunted]: hauntedFragment,
+};
+
 export default function setupWebGL(
   canvas: HTMLCanvasElement,
   size: { width: number; height: number } = { width: 1000, height: 1000 },
-  rowdy?: boolean,
+  shaderEffect: ShaderEffectType = ShaderEffectType.None,
 ) {
   const gl = canvas.getContext("webgl", { preserveDrawingBuffer: true });
   if (!gl) {
     throw new WebGLError("No WebGL.");
   }
 
-  const program = createProgram(gl, vertex, rowdy ? rowdyFragment : fragment);
+  const program = createProgram(
+    gl,
+    vertex,
+    SHADER_MAP[shaderEffect] ?? SHADER_MAP[ShaderEffectType.None],
+  );
 
   createTexCoordAttribute(gl, program);
   createPositionAttribute(gl, program);

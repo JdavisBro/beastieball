@@ -231,6 +231,7 @@ function createComboMove(
     type: moveType,
     pow: Math.round(((powMults[0] + powMults[1]) * 50) / 5) * 5,
     eff: effects,
+    price: 0,
   };
 }
 

@@ -53,6 +53,8 @@ export default function MoveModalProvider(props: PropsWithChildren) {
 
   const moveName = move && L(move.name);
 
+  const showPrice = levelBeasties.length > 0 || friendBeasties.length > 0;
+
   const hashValue = `Play: ${moveName}`;
   return (
     <MoveModalContext.Provider value={setMove}>
@@ -63,7 +65,16 @@ export default function MoveModalProvider(props: PropsWithChildren) {
         hashValue={hashValue}
       >
         <div className={styles.movemodalview}>
-          {move ? <MoveView move={move} noLearner={true} /> : null}
+          {move ? (
+            <div>
+              <MoveView move={move} noLearner={true} />
+              <div className={styles.movemodalprice}>
+                {showPrice
+                  ? L("common.moveModal.price", { price: String(move.price) })
+                  : null}
+              </div>
+            </div>
+          ) : null}
           <div className={styles.movebeastietitle}>
             <div>{levelBeasties.length ? L("common.moveModal.level") : ""}</div>
             <div>

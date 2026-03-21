@@ -19370,7 +19370,7 @@
       "hop_height": 35,
       "hop_length": 1.25,
       "hop_min_speed": 0.04,
-      "hop_shake": 0.7,
+      "hop_shake": 0,
       "hop_wobble": 0,
       "move_accel": 0.4,
       "move_decel": 0.6666666667,

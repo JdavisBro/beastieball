@@ -92,6 +92,7 @@
     },
     "moveModal": {
       "title": "Play: {name}",
+      "price": "Tutoring Cost: {price} Sports Points",
       "level": "From Level",
       "friends": "From Friends",
       "levelFormat": "{beastie} - {level}",

@@ -44,6 +44,7 @@ export type Move = {
   desc_tags: number[];
   pow: number;
   name: string;
+  price: number;
 };
 
 export const MOVE_DIC: Record<string, Move> = move_dic as Record<string, Move>;

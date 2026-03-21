@@ -525,7 +525,7 @@
   "movessetup_movedefine_033": "Луч энергии",
   "movessetup_movedefine_034": "Гиперконтроль",
   "movessetup_movedefine_035": "Главная атака",
-  "movessetup_movedefine_036": "Кокетство",
+  "movessetup_movedefine_036": "Паровоз",
   "movessetup_movedefine_037": "Одухотворение",
   "movessetup_movedefine_038": "Осторожный удар",
   "movessetup_movedefine_040": "Неотступность",
@@ -1415,7 +1415,7 @@
   "movedefine_descadd_014": "Бьет ГОРИЗОНТАЛЬНО.",
   "movedefine_descadd_015": "Бьет прямо перед собой.",
   "movedefine_descadd_017": "Урон в размере {0}% от оставшейся ВЫНОСЛИВОСТИ цели.",
-  "movedefine_descadd_018": "Всегда наносит {0} ед. урона.",
+  "movedefine_descadd_018": "Эта атака наносит {0} ед. урона.",
   "movedefine_descadd_019": "ПЕРЕДАЧА.",
   "movedefine_descadd_021": "{target}: {0}СИЛ{1}.",
   "movedefine_descadd_024": "{target}: {0}ЗАЩ{1}.",
@@ -1576,7 +1576,7 @@
   "abilitiessetup_abilitydefine_259": "Атакуя, чувствует {0} (1)",
   "abilitiessetup_abilitydefine_260": "Рёв",
   "movedefine_descadd_103": "Если ВЫНОСЛИВОСТЬ {0} или выше:",
-  "movedefine_descadd_104": "СИЛ x{0}, если этот зверек испытывает любое ОЩУЩЕНИЕ",
+  "movedefine_descadd_104": "СИЛ x{0}, если этот зверек испытывает любое ОЩУЩЕНИЕ.",
   "movedefine_descadd_105": "Если товарищ тоже применяет БЛОК:",
   "movedefine_descadd_106": "Заряжается несколько ходов ({0}).",
   "movedefine_051": "активная команда, передняя линия",
@@ -1617,6 +1617,6 @@
   "abilitiessetup_abilitydefine_297": "Экстраверт",
   "abilitiessetup_abilitydefine_298": "СБОР всегда усиливает атаки этого зверька",
   "movessetup_movedefine_199": "Рой",
-  "abilitiessetup_abilitydefine_301": "Does {0}x damage when their target is changed",
-  "abilitiessetup_abilitydefine_302": "Deviant"
+  "abilitiessetup_abilitydefine_301": "Наносит урон x{0}, если случайно попадает не в ту цель",
+  "abilitiessetup_abilitydefine_302": "Раздражение"
 }

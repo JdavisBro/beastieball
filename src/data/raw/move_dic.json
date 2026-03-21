@@ -8,6 +8,7 @@
     "id": "3actions",
     "name": "¦movessetup_movedefine_035¦",
     "pow": 220,
+    "price": 100,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -21,6 +22,7 @@
     "id": "???",
     "name": "¦movessetup_movedefine_001¦",
     "pow": 0,
+    "price": 10,
     "targ": 0,
     "type": 6,
     "use": 0
@@ -34,6 +36,7 @@
     "id": "alljazzattack",
     "name": "¦movessetup_movedefine_193¦",
     "pow": 65,
+    "price": 55,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -47,6 +50,7 @@
     "id": "allnervous",
     "name": "¦movessetup_movedefine_168¦",
     "pow": 0,
+    "price": 80,
     "targ": 1,
     "type": 5,
     "use": 2
@@ -64,6 +68,7 @@
     "id": "allycover",
     "name": "¦movessetup_movedefine_102¦",
     "pow": 0,
+    "price": 35,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -81,6 +86,7 @@
     "id": "allyprotect",
     "name": "¦movessetup_movedefine_153¦",
     "pow": 0,
+    "price": 50,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -94,6 +100,7 @@
     "id": "allyrush",
     "name": "¦movessetup_movedefine_101¦",
     "pow": 0,
+    "price": 30,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -107,6 +114,7 @@
     "id": "backswitch",
     "name": "¦movessetup_movedefine_158¦",
     "pow": 0,
+    "price": 25,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -120,6 +128,7 @@
     "id": "bamboozle",
     "name": "¦movessetup_movedefine_184¦",
     "pow": 80,
+    "price": 50,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -136,6 +145,7 @@
     "id": "basecover",
     "name": "¦movessetup_movedefine_157¦",
     "pow": 0,
+    "price": 45,
     "targ": 3,
     "type": 5,
     "use": 0
@@ -152,6 +162,7 @@
     "id": "batonpass",
     "name": "¦movessetup_movedefine_159¦",
     "pow": 0,
+    "price": 65,
     "targ": 8,
     "type": 5,
     "use": 0
@@ -165,6 +176,7 @@
     "id": "bdefup",
     "name": "¦movessetup_movedefine_154¦",
     "pow": 0,
+    "price": 30,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -181,6 +193,7 @@
     "id": "bellydrum",
     "name": "¦movessetup_movedefine_126¦",
     "pow": 0,
+    "price": 30,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -194,6 +207,7 @@
     "id": "bench",
     "name": "¦movessetup_movedefine_133¦",
     "pow": 0,
+    "price": 30,
     "targ": 8,
     "type": 4,
     "use": 0
@@ -207,6 +221,7 @@
     "id": "blockattack",
     "name": "¦movessetup_movedefine_025¦",
     "pow": 80,
+    "price": 20,
     "targ": 1,
     "type": 0,
     "use": 2
@@ -220,6 +235,7 @@
     "id": "body",
     "name": "¦movessetup_movedefine_027¦",
     "pow": 90,
+    "price": 30,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -233,6 +249,7 @@
     "id": "bodypass",
     "name": "¦movessetup_movedefine_098¦",
     "pow": 0,
+    "price": 25,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -246,6 +263,7 @@
     "id": "bolt",
     "name": "¦movessetup_movedefine_191¦",
     "pow": 80,
+    "price": 25,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -259,6 +277,7 @@
     "id": "bomb",
     "name": "¦movessetup_movedefine_042¦",
     "pow": 55,
+    "price": 25,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -272,6 +291,7 @@
     "id": "bounce",
     "name": "¦movessetup_movedefine_011¦",
     "pow": 35,
+    "price": 10,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -285,6 +305,7 @@
     "id": "breakswipe",
     "name": "¦movessetup_movedefine_018¦",
     "pow": 60,
+    "price": 20,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -298,6 +319,7 @@
     "id": "brine",
     "name": "¦movessetup_movedefine_017¦",
     "pow": 55,
+    "price": 25,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -314,6 +336,7 @@
     "id": "callout",
     "name": "¦movessetup_movedefine_111¦",
     "pow": 0,
+    "price": 30,
     "targ": 2,
     "type": 4,
     "use": 0
@@ -327,6 +350,7 @@
     "id": "careful",
     "name": "¦movessetup_movedefine_038¦",
     "pow": 45,
+    "price": 50,
     "targ": 12,
     "type": 1,
     "use": 0
@@ -343,6 +367,7 @@
     "id": "chance",
     "name": "¦movessetup_movedefine_002¦",
     "pow": -1,
+    "price": 10,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -360,6 +385,7 @@
     "id": "charm",
     "name": "¦movessetup_movedefine_130¦",
     "pow": 0,
+    "price": 50,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -373,6 +399,7 @@
     "id": "cheer",
     "name": "¦movessetup_movedefine_110¦",
     "pow": 0,
+    "price": 20,
     "targ": 2,
     "type": 4,
     "use": 0
@@ -389,6 +416,7 @@
     "id": "chill",
     "name": "¦movessetup_movedefine_131¦",
     "pow": 0,
+    "price": 30,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -402,6 +430,7 @@
     "id": "commit",
     "name": "¦movessetup_movedefine_055¦",
     "pow": 100,
+    "price": 45,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -419,6 +448,7 @@
     "id": "construct",
     "name": "¦movessetup_movedefine_138¦",
     "pow": 0,
+    "price": 55,
     "targ": 0,
     "type": 4,
     "use": 1
@@ -432,6 +462,7 @@
     "id": "contest",
     "name": "¦movessetup_movedefine_056¦",
     "pow": 110,
+    "price": 50,
     "targ": 0,
     "type": 1,
     "use": 2
@@ -445,6 +476,7 @@
     "id": "cook",
     "name": "¦movessetup_movedefine_174¦",
     "pow": 50,
+    "price": 25,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -461,6 +493,7 @@
     "id": "cover",
     "name": "¦movessetup_movedefine_093¦",
     "pow": 0,
+    "price": 25,
     "targ": 2,
     "type": 3,
     "use": 2
@@ -474,6 +507,7 @@
     "id": "crowd",
     "name": "¦movessetup_movedefine_141¦",
     "pow": 0,
+    "price": 60,
     "targ": 0,
     "type": 4,
     "use": 0
@@ -490,6 +524,7 @@
     "id": "curse",
     "name": "¦movessetup_movedefine_114¦",
     "pow": 0,
+    "price": 20,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -503,6 +538,7 @@
     "id": "cut",
     "name": "¦movessetup_movedefine_052¦",
     "pow": 80,
+    "price": 55,
     "targ": 4,
     "type": 1,
     "use": 2
@@ -516,6 +552,7 @@
     "id": "damagedattack",
     "name": "¦movessetup_movedefine_051¦",
     "pow": 75,
+    "price": 45,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -529,6 +566,7 @@
     "id": "dare",
     "name": "¦movessetup_movedefine_054¦",
     "pow": 95,
+    "price": 35,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -542,6 +580,7 @@
     "id": "defense",
     "name": "¦movessetup_movedefine_006¦",
     "pow": 0,
+    "price": 20,
     "targ": 4,
     "type": 5,
     "use": 2
@@ -555,6 +594,7 @@
     "id": "defheal",
     "name": "¦movessetup_movedefine_151¦",
     "pow": 0,
+    "price": 50,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -571,6 +611,7 @@
     "id": "desperate",
     "name": "¦movessetup_movedefine_050¦",
     "pow": 75,
+    "price": 30,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -584,6 +625,7 @@
     "id": "dig",
     "name": "¦movessetup_movedefine_095¦",
     "pow": 0,
+    "price": 50,
     "targ": 1,
     "type": 3,
     "use": 0
@@ -597,6 +639,7 @@
     "id": "dispel",
     "name": "¦movessetup_movedefine_123¦",
     "pow": 0,
+    "price": 55,
     "targ": 2,
     "type": 4,
     "use": 0
@@ -613,6 +656,7 @@
     "id": "distraction",
     "name": "¦movessetup_movedefine_170¦",
     "pow": 0,
+    "price": 45,
     "targ": 4,
     "type": 5,
     "use": 2
@@ -629,6 +673,7 @@
     "id": "doubleblock",
     "name": "¦movessetup_movedefine_188¦",
     "pow": 0,
+    "price": 45,
     "targ": 4,
     "type": 15,
     "use": 2
@@ -642,6 +687,7 @@
     "id": "dragontail",
     "name": "¦movessetup_movedefine_045¦",
     "pow": 50,
+    "price": 25,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -655,6 +701,7 @@
     "id": "dropshot",
     "name": "¦movessetup_movedefine_069¦",
     "pow": 55,
+    "price": 20,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -668,6 +715,7 @@
     "id": "dump",
     "name": "¦movessetup_movedefine_082¦",
     "pow": 60,
+    "price": 55,
     "targ": 4,
     "type": 2,
     "use": 2
@@ -684,6 +732,7 @@
     "id": "eerie",
     "name": "¦movessetup_movedefine_144¦",
     "pow": 0,
+    "price": 80,
     "targ": 0,
     "type": 4,
     "use": 0
@@ -697,6 +746,7 @@
     "id": "ego",
     "name": "¦movessetup_movedefine_075¦",
     "pow": 80,
+    "price": 50,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -710,6 +760,7 @@
     "id": "enemyboosts",
     "name": "¦movessetup_movedefine_041¦",
     "pow": 50,
+    "price": 25,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -723,6 +774,7 @@
     "id": "enemylowered",
     "name": "¦movessetup_movedefine_067¦",
     "pow": 60,
+    "price": 30,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -736,6 +788,7 @@
     "id": "facade",
     "name": "¦movessetup_movedefine_046¦",
     "pow": 55,
+    "price": 25,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -749,6 +802,7 @@
     "id": "feint",
     "name": "¦movessetup_movedefine_107¦",
     "pow": 0,
+    "price": 20,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -765,6 +819,7 @@
     "id": "fieldclear",
     "name": "¦movessetup_movedefine_140¦",
     "pow": 0,
+    "price": 55,
     "targ": 0,
     "type": 4,
     "use": 0
@@ -778,6 +833,7 @@
     "id": "flatten",
     "name": "¦movessetup_movedefine_173¦",
     "pow": 80,
+    "price": 45,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -791,6 +847,7 @@
     "id": "flight",
     "name": "¦movessetup_movedefine_175¦",
     "pow": 70,
+    "price": 45,
     "targ": 3,
     "type": 1,
     "use": 0
@@ -804,6 +861,7 @@
     "id": "float",
     "name": "¦movessetup_movedefine_073¦",
     "pow": 65,
+    "price": 30,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -820,6 +878,7 @@
     "id": "flyback",
     "name": "¦movessetup_movedefine_058¦",
     "pow": 115,
+    "price": 30,
     "targ": 0,
     "type": 1,
     "use": 2
@@ -833,6 +892,7 @@
     "id": "followme",
     "name": "¦movessetup_movedefine_120¦",
     "pow": 0,
+    "price": 30,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -846,6 +906,7 @@
     "id": "fortify",
     "name": "¦movessetup_movedefine_198¦",
     "pow": 0,
+    "price": 85,
     "targ": 2,
     "type": 5,
     "use": 0
@@ -862,6 +923,7 @@
     "id": "freeball",
     "name": "¦movessetup_movedefine_097¦",
     "pow": 0,
+    "price": 95,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -878,6 +940,7 @@
     "id": "haze",
     "name": "¦movessetup_movedefine_145¦",
     "pow": 0,
+    "price": 50,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -891,6 +954,7 @@
     "id": "hazeball",
     "name": "¦movessetup_movedefine_076¦",
     "pow": 65,
+    "price": 25,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -904,6 +968,7 @@
     "id": "hdefup",
     "name": "¦movessetup_movedefine_155¦",
     "pow": 0,
+    "price": 30,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -917,6 +982,7 @@
     "id": "healbell",
     "name": "¦movessetup_movedefine_135¦",
     "pow": 0,
+    "price": 30,
     "targ": 9,
     "type": 4,
     "use": 0
@@ -930,6 +996,7 @@
     "id": "healhit",
     "name": "¦movessetup_movedefine_016¦",
     "pow": 50,
+    "price": 25,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -943,6 +1010,7 @@
     "id": "healhit2",
     "name": "¦movessetup_movedefine_023¦",
     "pow": 75,
+    "price": 45,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -956,6 +1024,7 @@
     "id": "heart",
     "name": "¦movessetup_movedefine_053¦",
     "pow": 85,
+    "price": 30,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -969,6 +1038,7 @@
     "id": "heartd",
     "name": "¦movessetup_movedefine_071¦",
     "pow": 60,
+    "price": 20,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -982,6 +1052,7 @@
     "id": "heartdown",
     "name": "¦movessetup_movedefine_080¦",
     "pow": 75,
+    "price": 30,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -995,6 +1066,7 @@
     "id": "heartpass",
     "name": "¦movessetup_movedefine_099¦",
     "pow": 0,
+    "price": 25,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -1008,6 +1080,7 @@
     "id": "heartup",
     "name": "¦movessetup_movedefine_147¦",
     "pow": 0,
+    "price": 60,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -1021,6 +1094,7 @@
     "id": "hex",
     "name": "¦movessetup_movedefine_074¦",
     "pow": 55,
+    "price": 25,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1034,6 +1108,7 @@
     "id": "hum",
     "name": "¦movessetup_movedefine_192¦",
     "pow": 0,
+    "price": 15,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -1051,6 +1126,7 @@
     "id": "hyperbeam",
     "name": "¦movessetup_movedefine_034¦",
     "pow": 130,
+    "price": 55,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -1067,6 +1143,7 @@
     "id": "inferno",
     "name": "¦movessetup_movedefine_048¦",
     "pow": 60,
+    "price": 60,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1080,6 +1157,7 @@
     "id": "introduction",
     "name": "¦movessetup_movedefine_134¦",
     "pow": 0,
+    "price": 30,
     "targ": 8,
     "type": 4,
     "use": 0
@@ -1093,6 +1171,7 @@
     "id": "jazzattack",
     "name": "¦movessetup_movedefine_044¦",
     "pow": 65,
+    "price": 30,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1109,6 +1188,7 @@
     "id": "jazzpass",
     "name": "¦movessetup_movedefine_104¦",
     "pow": 0,
+    "price": 50,
     "targ": 2,
     "type": 3,
     "use": 2
@@ -1126,6 +1206,7 @@
     "id": "juggle",
     "name": "¦movessetup_movedefine_103¦",
     "pow": 0,
+    "price": 100,
     "targ": 1,
     "type": 3,
     "use": 0
@@ -1139,6 +1220,7 @@
     "id": "jump",
     "name": "¦movessetup_movedefine_029¦",
     "pow": 100,
+    "price": 25,
     "targ": 0,
     "type": 0,
     "use": 2
@@ -1155,6 +1237,7 @@
     "id": "libero",
     "name": "¦movessetup_movedefine_150¦",
     "pow": 0,
+    "price": 35,
     "targ": 4,
     "type": 5,
     "use": 0
@@ -1168,6 +1251,7 @@
     "id": "lifedew",
     "name": "¦movessetup_movedefine_116¦",
     "pow": 0,
+    "price": 50,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -1186,6 +1270,7 @@
     "id": "lifepass",
     "name": "¦movessetup_movedefine_160¦",
     "pow": 0,
+    "price": 85,
     "targ": 8,
     "type": 5,
     "use": 0
@@ -1202,6 +1287,7 @@
     "id": "lock",
     "name": "¦movessetup_movedefine_163¦",
     "pow": 0,
+    "price": 60,
     "targ": 4,
     "type": 5,
     "use": 0
@@ -1215,6 +1301,7 @@
     "id": "lockon",
     "name": "¦movessetup_movedefine_128¦",
     "pow": 0,
+    "price": 30,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -1228,6 +1315,7 @@
     "id": "lowattks",
     "name": "¦movessetup_movedefine_129¦",
     "pow": 0,
+    "price": 15,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -1241,6 +1329,7 @@
     "id": "mark",
     "name": "¦movessetup_movedefine_132¦",
     "pow": 0,
+    "price": 25,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -1254,6 +1343,7 @@
     "id": "markattack",
     "name": "¦movessetup_movedefine_064¦",
     "pow": 45,
+    "price": 20,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1267,6 +1357,7 @@
     "id": "mdefup",
     "name": "¦movessetup_movedefine_156¦",
     "pow": 0,
+    "price": 30,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -1283,6 +1374,7 @@
     "id": "meditate",
     "name": "¦movessetup_movedefine_113¦",
     "pow": 0,
+    "price": 25,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -1299,6 +1391,7 @@
     "id": "menace",
     "name": "¦movessetup_movedefine_187¦",
     "pow": 0,
+    "price": 60,
     "targ": 4,
     "type": 5,
     "use": 0
@@ -1315,6 +1408,7 @@
     "id": "meter",
     "name": "¦movessetup_movedefine_007¦",
     "pow": 0,
+    "price": 30,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -1331,6 +1425,7 @@
     "id": "mimic",
     "name": "¦movessetup_movedefine_189¦",
     "pow": -1,
+    "price": 60,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -1344,6 +1439,7 @@
     "id": "mind",
     "name": "¦movessetup_movedefine_077¦",
     "pow": 70,
+    "price": 25,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1357,6 +1453,7 @@
     "id": "mindbomb",
     "name": "¦movessetup_movedefine_065¦",
     "pow": 30,
+    "price": 15,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1370,6 +1467,7 @@
     "id": "minddown",
     "name": "¦movessetup_movedefine_049¦",
     "pow": 70,
+    "price": 25,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1383,6 +1481,7 @@
     "id": "mindpass",
     "name": "¦movessetup_movedefine_100¦",
     "pow": 0,
+    "price": 25,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -1396,6 +1495,7 @@
     "id": "mindup",
     "name": "¦movessetup_movedefine_148¦",
     "pow": 0,
+    "price": 35,
     "targ": 12,
     "type": 5,
     "use": 0
@@ -1409,6 +1509,7 @@
     "id": "moon",
     "name": "¦movessetup_movedefine_085¦",
     "pow": 100,
+    "price": 45,
     "targ": 8,
     "type": 2,
     "use": 1
@@ -1422,6 +1523,7 @@
     "id": "move",
     "name": "¦movessetup_movedefine_004¦",
     "pow": 0,
+    "price": 10,
     "targ": 0,
     "type": 8,
     "use": 0
@@ -1435,6 +1537,7 @@
     "id": "myheartpass",
     "name": "¦movessetup_movedefine_105¦",
     "pow": 0,
+    "price": 50,
     "targ": 1,
     "type": 3,
     "use": 0
@@ -1448,6 +1551,7 @@
     "id": "netattack",
     "name": "¦movessetup_movedefine_078¦",
     "pow": 75,
+    "price": 30,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1461,6 +1565,7 @@
     "id": "nettle",
     "name": "¦movessetup_movedefine_137¦",
     "pow": 0,
+    "price": 25,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -1474,6 +1579,7 @@
     "id": "nice",
     "name": "¦movessetup_movedefine_028¦",
     "pow": 95,
+    "price": 35,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -1487,6 +1593,7 @@
     "id": "nightshade",
     "name": "¦movessetup_movedefine_060¦",
     "pow": -30,
+    "price": 20,
     "targ": 8,
     "type": 2,
     "use": 0
@@ -1504,6 +1611,7 @@
     "id": "noisytag",
     "name": "¦movessetup_movedefine_169¦",
     "pow": 0,
+    "price": 80,
     "targ": 8,
     "type": 5,
     "use": 0
@@ -1517,6 +1625,7 @@
     "id": "overheat",
     "name": "¦movessetup_movedefine_057¦",
     "pow": 110,
+    "price": 50,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1533,6 +1642,7 @@
     "id": "overthink",
     "name": "¦movessetup_movedefine_127¦",
     "pow": 0,
+    "price": 55,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -1546,6 +1656,7 @@
     "id": "passattack",
     "name": "¦movessetup_movedefine_068¦",
     "pow": 50,
+    "price": 25,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1559,6 +1670,7 @@
     "id": "pepshot",
     "name": "¦movessetup_movedefine_037¦",
     "pow": 40,
+    "price": 15,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1572,6 +1684,7 @@
     "id": "poisonhit",
     "name": "¦movessetup_movedefine_061¦",
     "pow": 25,
+    "price": 15,
     "targ": 8,
     "type": 2,
     "use": 0
@@ -1589,6 +1702,7 @@
     "id": "powswitch",
     "name": "¦movessetup_movedefine_161¦",
     "pow": 0,
+    "price": 60,
     "targ": 8,
     "type": 5,
     "use": 0
@@ -1606,6 +1720,7 @@
     "id": "preblock",
     "name": "¦movessetup_movedefine_119¦",
     "pow": 0,
+    "price": 30,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -1623,6 +1738,7 @@
     "id": "protect",
     "name": "¦movessetup_movedefine_152¦",
     "pow": 0,
+    "price": 50,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -1641,6 +1757,7 @@
     "id": "protectcheer",
     "name": "¦movessetup_movedefine_149¦",
     "pow": 0,
+    "price": 60,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -1654,6 +1771,7 @@
     "id": "pursuit",
     "name": "¦movessetup_movedefine_066¦",
     "pow": 55,
+    "price": 25,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1667,6 +1785,7 @@
     "id": "pushattack",
     "name": "¦movessetup_movedefine_024¦",
     "pow": 75,
+    "price": 20,
     "targ": 0,
     "type": 0,
     "use": 2
@@ -1680,6 +1799,7 @@
     "id": "quake",
     "name": "¦movessetup_movedefine_179¦",
     "pow": 0,
+    "price": 30,
     "targ": 0,
     "type": 4,
     "use": 0
@@ -1693,6 +1813,7 @@
     "id": "rattle",
     "name": "¦movessetup_movedefine_178¦",
     "pow": 50,
+    "price": 25,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1706,6 +1827,7 @@
     "id": "recover",
     "name": "¦movessetup_movedefine_112¦",
     "pow": 0,
+    "price": 30,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -1719,6 +1841,7 @@
     "id": "refresh",
     "name": "¦movessetup_movedefine_096¦",
     "pow": 0,
+    "price": 50,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -1735,6 +1858,7 @@
     "id": "reign",
     "name": "¦movessetup_movedefine_197¦",
     "pow": 0,
+    "price": 50,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -1751,6 +1875,7 @@
     "id": "rest",
     "name": "¦movessetup_movedefine_115¦",
     "pow": 0,
+    "price": 25,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -1764,6 +1889,7 @@
     "id": "reversal",
     "name": "¦movessetup_movedefine_059¦",
     "pow": 55,
+    "price": 45,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1777,6 +1903,7 @@
     "id": "rhythm",
     "name": "¦movessetup_movedefine_143¦",
     "pow": 0,
+    "price": 60,
     "targ": 0,
     "type": 4,
     "use": 0
@@ -1790,6 +1917,7 @@
     "id": "ricochet",
     "name": "¦movessetup_movedefine_081¦",
     "pow": 110,
+    "price": 30,
     "targ": 0,
     "type": 2,
     "use": 2
@@ -1806,6 +1934,7 @@
     "id": "rocket",
     "name": "¦movessetup_movedefine_021¦",
     "pow": 70,
+    "price": 45,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -1819,6 +1948,7 @@
     "id": "rocksmash",
     "name": "¦movessetup_movedefine_014¦",
     "pow": 50,
+    "price": 20,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -1832,6 +1962,7 @@
     "id": "rollshot",
     "name": "¦movessetup_movedefine_083¦",
     "pow": 90,
+    "price": 30,
     "targ": 8,
     "type": 2,
     "use": 2
@@ -1845,6 +1976,7 @@
     "id": "rush",
     "name": "¦movessetup_movedefine_092¦",
     "pow": 0,
+    "price": 30,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -1861,6 +1993,7 @@
     "id": "rushattack",
     "name": "¦movessetup_movedefine_030¦",
     "pow": 100,
+    "price": 50,
     "targ": 0,
     "type": 0,
     "use": 1
@@ -1874,6 +2007,7 @@
     "id": "sad",
     "name": "¦movessetup_movedefine_181¦",
     "pow": 0,
+    "price": 20,
     "targ": 4,
     "type": 5,
     "use": 0
@@ -1887,6 +2021,7 @@
     "id": "scoreboosted",
     "name": "¦movessetup_movedefine_043¦",
     "pow": 60,
+    "price": 30,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1900,6 +2035,7 @@
     "id": "scream",
     "name": "¦movessetup_movedefine_176¦",
     "pow": 90,
+    "price": 60,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1913,6 +2049,7 @@
     "id": "sensihit",
     "name": "¦movessetup_movedefine_012¦",
     "pow": 40,
+    "price": 20,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -1926,6 +2063,7 @@
     "id": "serve",
     "name": "¦movessetup_movedefine_020¦",
     "pow": 80,
+    "price": 50,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -1942,6 +2080,7 @@
     "id": "set",
     "name": "¦movessetup_movedefine_094¦",
     "pow": 0,
+    "price": 50,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -1955,6 +2094,7 @@
     "id": "shaken",
     "name": "¦movessetup_movedefine_165¦",
     "pow": 0,
+    "price": 50,
     "targ": 4,
     "type": 5,
     "use": 0
@@ -1968,6 +2108,7 @@
     "id": "shakenhit",
     "name": "¦movessetup_movedefine_008¦",
     "pow": -1,
+    "price": 20,
     "targ": 4,
     "type": 0,
     "use": 0
@@ -1981,6 +2122,7 @@
     "id": "shakenmind",
     "name": "¦movessetup_movedefine_063¦",
     "pow": 30,
+    "price": 15,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1997,6 +2139,7 @@
     "id": "shakeoff",
     "name": "¦movessetup_movedefine_136¦",
     "pow": 0,
+    "price": 55,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -2010,6 +2153,7 @@
     "id": "share",
     "name": "¦movessetup_movedefine_195¦",
     "pow": 0,
+    "price": 50,
     "targ": 7,
     "type": 4,
     "use": 0
@@ -2026,6 +2170,7 @@
     "id": "shieldbreaker",
     "name": "¦movessetup_movedefine_047¦",
     "pow": 65,
+    "price": 30,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2039,6 +2184,7 @@
     "id": "sideshot",
     "name": "¦movessetup_movedefine_010¦",
     "pow": 35,
+    "price": 50,
     "targ": 12,
     "type": 0,
     "use": 0
@@ -2052,6 +2198,7 @@
     "id": "sidespin",
     "name": "¦movessetup_movedefine_070¦",
     "pow": 60,
+    "price": 55,
     "targ": 12,
     "type": 2,
     "use": 0
@@ -2065,6 +2212,7 @@
     "id": "skillswap",
     "name": "¦movessetup_movedefine_139¦",
     "pow": 0,
+    "price": 30,
     "targ": 5,
     "type": 4,
     "use": 0
@@ -2078,6 +2226,7 @@
     "id": "slide",
     "name": "¦movessetup_movedefine_022¦",
     "pow": 70,
+    "price": 45,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -2091,6 +2240,7 @@
     "id": "snipe",
     "name": "¦movessetup_movedefine_072¦",
     "pow": 65,
+    "price": 30,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -2104,6 +2254,7 @@
     "id": "snore",
     "name": "¦movessetup_movedefine_040¦",
     "pow": 70,
+    "price": 30,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2117,6 +2268,7 @@
     "id": "speech",
     "name": "¦movessetup_movedefine_182¦",
     "pow": 0,
+    "price": 55,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -2130,6 +2282,7 @@
     "id": "spitball",
     "name": "¦movessetup_movedefine_079¦",
     "pow": 75,
+    "price": 45,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -2143,6 +2296,7 @@
     "id": "splinter",
     "name": "¦movessetup_movedefine_177¦",
     "pow": 70,
+    "price": 45,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -2156,6 +2310,7 @@
     "id": "starterbody",
     "name": "¦movessetup_movedefine_088¦",
     "pow": 50,
+    "price": 15,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -2169,6 +2324,7 @@
     "id": "starterheart",
     "name": "¦movessetup_movedefine_089¦",
     "pow": 45,
+    "price": 10,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2182,6 +2338,7 @@
     "id": "startermind",
     "name": "¦movessetup_movedefine_090¦",
     "pow": 40,
+    "price": 10,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -2195,6 +2352,7 @@
     "id": "starterside",
     "name": "¦movessetup_movedefine_091¦",
     "pow": 35,
+    "price": 50,
     "targ": 12,
     "type": 2,
     "use": 0
@@ -2211,6 +2369,7 @@
     "id": "steal",
     "name": "¦movessetup_movedefine_122¦",
     "pow": 0,
+    "price": 50,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -2224,6 +2383,7 @@
     "id": "steamattack",
     "name": "¦movessetup_movedefine_036¦",
     "pow": 10,
+    "price": 30,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2240,6 +2400,7 @@
     "id": "sting",
     "name": "¦movessetup_movedefine_166¦",
     "pow": 0,
+    "price": 85,
     "targ": 4,
     "type": 5,
     "use": 0
@@ -2257,6 +2418,7 @@
     "id": "stomp",
     "name": "¦movessetup_movedefine_026¦",
     "pow": 85,
+    "price": 45,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -2270,6 +2432,7 @@
     "id": "storedpower",
     "name": "¦movessetup_movedefine_013¦",
     "pow": 45,
+    "price": 30,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -2283,6 +2446,7 @@
     "id": "stress",
     "name": "¦movessetup_movedefine_167¦",
     "pow": 0,
+    "price": 35,
     "targ": 4,
     "type": 5,
     "use": 0
@@ -2300,6 +2464,7 @@
     "id": "stresspass",
     "name": "¦movessetup_movedefine_106¦",
     "pow": 0,
+    "price": 60,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -2313,6 +2478,7 @@
     "id": "stun",
     "name": "¦movessetup_movedefine_062¦",
     "pow": 80,
+    "price": 50,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -2329,6 +2495,7 @@
     "id": "substitute",
     "name": "¦movessetup_movedefine_118¦",
     "pow": 0,
+    "price": 45,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -2342,6 +2509,7 @@
     "id": "superfang",
     "name": "¦movessetup_movedefine_009¦",
     "pow": -0.5,
+    "price": 25,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -2358,6 +2526,7 @@
     "id": "superpower",
     "name": "¦movessetup_movedefine_032¦",
     "pow": 110,
+    "price": 50,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -2371,6 +2540,7 @@
     "id": "swarm",
     "name": "¦movessetup_movedefine_199¦",
     "pow": 40,
+    "price": 15,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2384,6 +2554,7 @@
     "id": "sweatall",
     "name": "¦movessetup_movedefine_172¦",
     "pow": 1,
+    "price": 20,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2397,6 +2568,7 @@
     "id": "sweatup",
     "name": "¦movessetup_movedefine_171¦",
     "pow": 0,
+    "price": 50,
     "targ": 4,
     "type": 5,
     "use": 0
@@ -2414,6 +2586,7 @@
     "id": "sweep",
     "name": "¦movessetup_movedefine_194¦",
     "pow": 50,
+    "price": 50,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -2427,6 +2600,7 @@
     "id": "switch",
     "name": "¦movessetup_movedefine_108¦",
     "pow": 0,
+    "price": 15,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -2443,6 +2617,7 @@
     "id": "swordsdance",
     "name": "¦movessetup_movedefine_146¦",
     "pow": 0,
+    "price": 45,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -2456,6 +2631,7 @@
     "id": "tagattack",
     "name": "¦movessetup_movedefine_019¦",
     "pow": 55,
+    "price": 25,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -2469,6 +2645,7 @@
     "id": "tagout",
     "name": "¦movessetup_movedefine_005¦",
     "pow": 0,
+    "price": 10,
     "targ": 0,
     "type": 9,
     "use": 0
@@ -2487,6 +2664,7 @@
     "id": "tailwind",
     "name": "¦movessetup_movedefine_125¦",
     "pow": 0,
+    "price": 80,
     "targ": 1,
     "type": 4,
     "use": 1
@@ -2500,6 +2678,7 @@
     "id": "targethp",
     "name": "¦movessetup_movedefine_086¦",
     "pow": 110,
+    "price": 65,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -2513,6 +2692,7 @@
     "id": "taunt",
     "name": "¦movessetup_movedefine_117¦",
     "pow": 0,
+    "price": 30,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -2529,6 +2709,7 @@
     "id": "telekinesis",
     "name": "¦movessetup_movedefine_121¦",
     "pow": 0,
+    "price": 45,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -2542,6 +2723,7 @@
     "id": "teleport",
     "name": "¦movessetup_movedefine_109¦",
     "pow": 0,
+    "price": 15,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -2555,6 +2737,7 @@
     "id": "thrash",
     "name": "¦movessetup_movedefine_185¦",
     "pow": 80,
+    "price": 50,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2568,6 +2751,7 @@
     "id": "threat",
     "name": "¦movessetup_movedefine_164¦",
     "pow": 0,
+    "price": 35,
     "targ": 4,
     "type": 5,
     "use": 0
@@ -2581,6 +2765,7 @@
     "id": "thunder",
     "name": "¦movessetup_movedefine_031¦",
     "pow": 110,
+    "price": 30,
     "targ": 8,
     "type": 0,
     "use": 2
@@ -2594,6 +2779,7 @@
     "id": "tool",
     "name": "¦movessetup_movedefine_084¦",
     "pow": 95,
+    "price": 45,
     "targ": 13,
     "type": 2,
     "use": 0
@@ -2607,6 +2793,7 @@
     "id": "topspin",
     "name": "¦movessetup_movedefine_015¦",
     "pow": 70,
+    "price": 65,
     "targ": 12,
     "type": 0,
     "use": 0
@@ -2620,6 +2807,7 @@
     "id": "trap",
     "name": "¦movessetup_movedefine_142¦",
     "pow": 0,
+    "price": 30,
     "targ": 0,
     "type": 4,
     "use": 0
@@ -2633,6 +2821,7 @@
     "id": "vigor",
     "name": "¦movessetup_movedefine_033¦",
     "pow": 20,
+    "price": 50,
     "targ": 0,
     "type": 0,
     "use": 2
@@ -2646,6 +2835,7 @@
     "id": "volley",
     "name": "¦movessetup_movedefine_003¦",
     "pow": 0,
+    "price": 10,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -2659,6 +2849,7 @@
     "id": "wall",
     "name": "¦movessetup_movedefine_186¦",
     "pow": 0,
+    "price": 45,
     "targ": 4,
     "type": 5,
     "use": 2
@@ -2672,6 +2863,7 @@
     "id": "whirlwind",
     "name": "¦movessetup_movedefine_162¦",
     "pow": 0,
+    "price": 50,
     "targ": 4,
     "type": 5,
     "use": 0
@@ -2685,6 +2877,7 @@
     "id": "wink",
     "name": "¦movessetup_movedefine_196¦",
     "pow": 0,
+    "price": 50,
     "targ": 5,
     "type": 4,
     "use": 0
@@ -2701,6 +2894,7 @@
     "id": "wornattack",
     "name": "¦movessetup_movedefine_087¦",
     "pow": 125,
+    "price": 85,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -2714,6 +2908,7 @@
     "id": "wornout",
     "name": "¦movessetup_movedefine_124¦",
     "pow": 0,
+    "price": 30,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -2727,6 +2922,7 @@
     "id": "xtra",
     "name": "Bonus",
     "pow": 0,
+    "price": 10,
     "targ": 0,
     "type": 6,
     "use": 0

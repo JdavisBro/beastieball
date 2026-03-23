@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import styles from "./Shared.module.css";
 import Modal from "./Modal";
@@ -93,13 +93,17 @@ export default function BeastieSelect({
 
   const clickedRef = useRef<[boolean, string | undefined]>([false, undefined]);
 
+  const setBeastie = (beastie?: string) => {
+    clickedRef.current = [true, beastie];
+    setOpen(false);
+  };
+
   const handleClick = useCallback((beastieId: string, isSpoiler: boolean) => {
     if (isSpoiler) {
       setSeen(beastieId);
       return;
     }
-    clickedRef.current = [true, beastieId];
-    setOpen(false);
+    setBeastie(beastieId);
   }, []);
 
   const onClose = useCallback(() => {
@@ -129,9 +133,51 @@ export default function BeastieSelect({
               beastie.evolution.every((evo) => evo.condition[0] == 7)
           : () => true;
 
+  const makeOpen = () => {
+    console.trace("MAKED OPEN");
+    setOpen(true);
+    setSearch("");
+  };
+
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (open) {
+      searchRef.current?.focus();
+    }
+  }, [open]);
+
+  const handleSearchKey: React.KeyboardEventHandler<HTMLInputElement> = (
+    event,
+  ) => {
+    if (event.key == "Enter" && search.length) {
+      event.preventDefault();
+      event.stopPropagation();
+      const searchLower = search.toLowerCase();
+      if ("unset".includes(searchLower)) setBeastie(undefined);
+      if (
+        extraOption &&
+        extraOptionText &&
+        extraOptionText.toLowerCase().includes(searchLower)
+      ) {
+        setBeastie(extraOption);
+        return;
+      }
+      const matching = BEASTIES.filter(
+        (beastie) =>
+          L(beastie.name).toLowerCase().includes(searchLower) &&
+          filterFunction(beastie),
+      );
+      if (matching.length && (!isSelectable || isSelectable(matching[0]))) {
+        handleClick(matching[0].id, isSpoiler(matching[0].id));
+        return;
+      }
+    }
+  };
+
   return (
     <>
-      <button onClick={() => setOpen(true)}>
+      <button onClick={makeOpen}>
         {textOverride
           ? textOverride
           : L("common.beastieSelect.label", {
@@ -145,7 +191,7 @@ export default function BeastieSelect({
       <Modal
         header={L("common.beastieSelect.title")}
         open={open}
-        makeOpen={() => setOpen(true)}
+        makeOpen={makeOpen}
         onClose={onClose}
         hashValue={`BeastieSelect-${hashName}`}
       >
@@ -157,7 +203,9 @@ export default function BeastieSelect({
                 type="search"
                 onChange={(event) => setSearch(event.currentTarget.value)}
                 onFocus={(event) => event.currentTarget.select()}
+                onKeyDown={handleSearchKey}
                 value={search}
+                ref={searchRef}
               />
             </label>
             {L("common.beastieSelect.sep")}
@@ -192,10 +240,7 @@ export default function BeastieSelect({
               }}
               tabIndex={0}
               className={styles.beastieSelectBeastie}
-              onClick={() => {
-                clickedRef.current = [true, undefined];
-                setOpen(false);
-              }}
+              onClick={() => setBeastie(undefined)}
             >
               {L("common.beastieSelect.unset")}
             </div>
@@ -212,10 +257,7 @@ export default function BeastieSelect({
                 }}
                 tabIndex={0}
                 className={styles.beastieSelectBeastie}
-                onClick={() => {
-                  clickedRef.current = [true, extraOption];
-                  setOpen(false);
-                }}
+                onClick={() => setBeastie(extraOption)}
               >
                 {extraOptionText}
               </div>

@@ -597,7 +597,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -609,7 +609,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 21,
-        "moves": ["breakswipe", "heartd", "substitute"],
+        "moves": ["bolt", "snipe", "substitute"],
         "name": "¦encounterssetup_classbeastieencounter_171¦",
         "neverRandomize": false,
         "number": -1,
@@ -865,7 +865,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -877,7 +877,7 @@
         "from_encounter_index": 3,
         "hp": -1,
         "level": 50,
-        "moves": ["breakswipe", "heartd", "substitute"],
+        "moves": ["bolt", "snipe", "substitute"],
         "name": "¦encounterssetup_classbeastieencounter_171¦",
         "neverRandomize": false,
         "number": -1,
@@ -17630,7 +17630,7 @@
     "scales": false,
     "team": [
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -17642,7 +17642,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 43,
-        "moves": ["healhit", "pursuit", "trap"],
+        "moves": ["healhit2", "pursuit", "trap"],
         "name": "¦encounterssetup_classbeastieencounter_474¦",
         "neverRandomize": false,
         "number": "16",
@@ -18069,7 +18069,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -18081,7 +18081,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 21,
-        "moves": [["heartd", "pursuit"], "healhit", "substitute"],
+        "moves": ["mindpass", "snipe", "substitute"],
         "name": "¦encounterssetup_classbeastieencounter_402¦",
         "neverRandomize": false,
         "number": "86",
@@ -22567,7 +22567,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -32076,7 +32076,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -33877,7 +33877,7 @@
     "scales": false,
     "team": [
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -33889,7 +33889,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 38,
-        "moves": ["pursuit", "trap", "mindpass"],
+        "moves": ["snipe", "trap", "mindpass"],
         "name": "¦encounterssetup_classbeastieencounter_439¦",
         "neverRandomize": false,
         "number": -1,
@@ -34266,7 +34266,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 45,
-        "moves": ["jump", "heartdown", "protect"],
+        "moves": ["jump", "snipe", "protect"],
         "name": "¦encounterssetup_classbeastieencounter_490¦",
         "neverRandomize": false,
         "number": -1,
@@ -34279,7 +34279,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -34291,7 +34291,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 45,
-        "moves": ["rocksmash", "markattack", "mindpass"],
+        "moves": ["bolt", "snipe", "mindpass"],
         "name": "¦encounterssetup_classbeastieencounter_491¦",
         "neverRandomize": false,
         "number": -1,
@@ -37612,7 +37612,7 @@
         "vibe": 1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -37624,7 +37624,7 @@
         "from_encounter_index": 2,
         "hp": -1,
         "level": 22,
-        "moves": ["heartd", "mindpass", "protect"],
+        "moves": ["snipe", "mindpass", "protect"],
         "name": "¦encounterssetup_classbeastieencounter_048¦",
         "neverRandomize": false,
         "number": "131",
@@ -37917,7 +37917,7 @@
         "vibe": 1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -37929,7 +37929,7 @@
         "from_encounter_index": 2,
         "hp": -1,
         "level": 22,
-        "moves": ["heartd", "mindpass", "protect"],
+        "moves": ["snipe", "mindpass", "protect"],
         "name": "¦encounterssetup_classbeastieencounter_048¦",
         "neverRandomize": false,
         "number": "131",
@@ -40894,7 +40894,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -40906,7 +40906,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 38,
-        "moves": ["healhit", "heartd", "mindup"],
+        "moves": ["healhit2", "snipe", "mindup"],
         "name": "¦encounterssetup_classbeastieencounter_515¦",
         "neverRandomize": false,
         "number": -1,
@@ -43276,7 +43276,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -43288,7 +43288,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 52,
-        "moves": ["pursuit", "healhit", "protect"],
+        "moves": ["snipe", "healhit2", "protect"],
         "name": "¦encounterssetup_classbeastieencounter_495¦",
         "neverRandomize": false,
         "number": -1,

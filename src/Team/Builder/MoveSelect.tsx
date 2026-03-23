@@ -113,6 +113,7 @@ export default function MoveSelect({
               <input
                 type="search"
                 onChange={(event) => setSearch(event.currentTarget.value)}
+                onFocus={(event) => event.currentTarget.select()}
                 onKeyDown={handleSearchKey}
                 value={search}
                 ref={searchRef}

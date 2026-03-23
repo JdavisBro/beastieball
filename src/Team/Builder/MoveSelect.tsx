@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Modal from "../../shared/Modal";
 import MoveView from "../../shared/MoveView";
@@ -24,6 +24,8 @@ export default function MoveSelect({
   setMove: (index: number, move: string) => void;
 }) {
   const { L } = useLocalization();
+
+  const [search, setSearch] = useState("");
 
   const hash = decodeURIComponent(useLocation().hash);
   const hashMoveNum =
@@ -66,9 +68,30 @@ export default function MoveSelect({
               ? (move) => !levelMoves.includes(move.id)
               : () => true,
           );
+  possibleMoves = possibleMoves.filter((move) =>
+    L(move.name).toLowerCase().includes(search.toLowerCase()),
+  );
   if (filterType != -1) {
     possibleMoves = possibleMoves.filter((move) => move.type == filterType);
   }
+
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (selecting !== undefined && searchRef.current) {
+      searchRef.current.select();
+    }
+  }, [selecting]);
+
+  const handleSearchKey: React.KeyboardEventHandler<HTMLInputElement> = (
+    event,
+  ) => {
+    if (event.key == "Enter" && search.length && possibleMoves.length) {
+      event.preventDefault();
+      event.stopPropagation();
+      selectMove(possibleMoves[0].id);
+    }
+  };
 
   return (
     <div className={styles.box}>
@@ -77,11 +100,25 @@ export default function MoveSelect({
           num: String((selecting ?? 0) + 1),
         })}
         open={selecting !== undefined}
-        onClose={() => setSelecting(undefined)}
+        onClose={() => {
+          setSearch("");
+          setSelecting(undefined);
+        }}
         hashValue={`SelectPlay: ${(selecting ?? 0) + 1}`}
       >
         <div className={styles.moveSelectModal}>
-          <div>
+          <div className={styles.moveSelectOptions}>
+            <label>
+              {L("common.searchPrefix")}
+              <input
+                type="search"
+                onChange={(event) => setSearch(event.currentTarget.value)}
+                onKeyDown={handleSearchKey}
+                value={search}
+                ref={searchRef}
+              />
+            </label>
+            {L("teams.builder.sep")}
             <label>
               {L("teams.builder.playSelect.type.label")}
               <select

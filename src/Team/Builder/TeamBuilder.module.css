@@ -111,12 +111,17 @@
   display: flex;
   flex-direction: column;
   padding-top: 4px;
-  max-width: calc(
-    round(down, calc(90vw - 40px), min(calc(90vw - 40px), 468px)) + 13px
+  width: calc(
+    round(down, calc(90vw - 60px), min(calc(90vw - 60px), 468px)) + 13px
   );
+  max-width: calc(90vw - 60px);
   height: 90vh;
   box-sizing: border-box;
   gap: 4px;
+}
+
+.moveSelectOptions {
+  width: 100%;
 }
 
 .moveSelectGrid {

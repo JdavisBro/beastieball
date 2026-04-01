@@ -41,14 +41,23 @@ export default function FeaturedSection({
     );
   }
 
+  const selectedCategory = selectedTab
+    ? selectedTab.categories
+      ? selectedTab.categories[subTab]
+      : selectedTab
+    : undefined;
   const teams = allSelected
     ? featuredCategories.flatMap((root) =>
         root.teams
-          ? root.teams
-          : root.categories.flatMap((category) => category.teams),
+          ? root.teams.map((team) => ({ team, category: root }))
+          : root.categories.flatMap((category) =>
+              category.teams.map((team) => ({ team, category })),
+            ),
       )
-    : (selectedTab.categories ? selectedTab.categories[subTab] : selectedTab)
-        ?.teams;
+    : (selectedCategory?.teams.map((team) => ({
+        team,
+        category: selectedCategory,
+      })) ?? []);
 
   return (
     <>
@@ -106,24 +115,21 @@ export default function FeaturedSection({
       </div>
       <div className={styles.featuredList}>
         {teams
-          .filter((featuredTeam) =>
+          .filter(({ team }) =>
             filterType == FilterType.Beastie
-              ? featuredTeam.team.team.some(
+              ? team.team.team.some(
                   (teamBeastie) =>
                     !filterBeastie || teamBeastie.specie == filterBeastie,
                 )
-              : (filterType == FilterType.Author
-                  ? featuredTeam.author
-                  : featuredTeam.name
-                )
+              : (filterType == FilterType.Author ? team.author : team.name)
                   .toLowerCase()
                   .includes(filterText.toLowerCase()),
           )
-          .map((featuredteam) => (
+          .map(({ team, category }) => (
             <FeaturedTeam
-              key={featuredteam.team.code}
-              team={featuredteam}
-              selected={code == featuredteam.team.code}
+              key={team.team.code + category.header}
+              team={team}
+              selected={code == team.team.code}
             />
           ))}
       </div>

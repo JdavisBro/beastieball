@@ -25,37 +25,47 @@ export default function Beastiepedia(): React.ReactNode {
   const { L, getLink, beastieNames } = useLocalization();
 
   const orientation = useScreenOrientation();
-  const { beastie }: { beastie?: string } = useParams();
+  const { number: numberStr, beastie }: { number?: string; beastie?: string } =
+    useParams();
 
+  const number = Number(numberStr);
   const [beastieid, beastiedata] = useMemo(() => {
     if (beastie) {
       for (const [key, value] of BEASTIE_DATA) {
+        const loc_key = value.name.slice(1, value.name.length - 1);
         if (
-          Object.values(
-            beastieNames[value.name.slice(1, value.name.length - 1)],
-          ).includes(beastie)
+          (Object.values(
+            loc_key in beastieNames ? beastieNames[loc_key] : loc_key,
+          ).includes(beastie) &&
+            !numberStr?.length) ||
+          number == value.number
         ) {
           return [key, value];
         }
       }
     }
     return [undefined, undefined];
-  }, [beastieNames, beastie]);
+  }, [beastieNames, beastie, number]);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!beastiedata || beastie == L(beastiedata.name)) {
+    if (
+      !beastiedata ||
+      (beastie == L(beastiedata.name) && number == beastiedata.number)
+    ) {
       return;
     }
     navigate(
       {
-        pathname: getLink(`/beastiepedia/${L(beastiedata.name)}`),
+        pathname: getLink(
+          `/humanpedia/${L(beastiedata.name)}/${beastiedata.number}`,
+        ),
         hash: location.hash,
       },
       { replace: true },
     );
-  }, [L, getLink, beastie, beastiedata, navigate]);
+  }, [L, getLink, beastie, beastiedata, navigate, number]);
 
   const [sidebarvisible, setSidebarvisible] = useState(
     !(beastieid !== undefined && orientation),
@@ -90,7 +100,11 @@ export default function Beastiepedia(): React.ReactNode {
             ? `icons/${L(beastiedata.name, undefined, true)}.png`
             : "gameassets/sprMainmenu/0.png" // beastiepedia icon
         }
-        url={beastiedata ? `beastiepedia/${beastie}` : `beastiepedia/`}
+        url={
+          beastiedata
+            ? `humanpedia/${beastie}/${beastiedata.number}`
+            : `humanpedia/`
+        }
         description={
           beastiedata ? L(beastiedata.desc) : L("beastiepedia.description")
         }

@@ -30,7 +30,7 @@ export default function Secrets() {
               text={L("secrets.beastiepedia")}
               image="/gameassets/sprMainmenu/0.png"
               hoverImage="/gameassets/sprMainmenu/1.png"
-              location="/beastiepedia/"
+              location="/humanpedia/"
             />
 
             <NavigationMenuOption

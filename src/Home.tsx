@@ -24,7 +24,7 @@ export default function Home(): React.ReactNode {
         text={L("beastiepedia.title")}
         image={"/gameassets/sprMainmenu/0.png"}
         hoverImage={"/gameassets/sprMainmenu/1.png"}
-        location={"/beastiepedia/"}
+        location={"/humanpedia/"}
       />
       <NavigationMenuOption
         text={L("map.title")}

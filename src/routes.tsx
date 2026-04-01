@@ -128,7 +128,7 @@ const routes: Array<RouteObject> = [
       },
       {
         element: <LoaderComponent />,
-        path: "beastiepedia/:beastie?",
+        path: "humanpedia/:beastie?/:number?",
         loader: () =>
           import("./Beastiepedia/Beastiepedia").then((m) => ({
             component: m.default,

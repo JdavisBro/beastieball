@@ -114,7 +114,9 @@ export default function createBeastieBox(
         }}
       >
         <Popup offset={[0, -5]}>
-          <Link to={getLink(`/beastiepedia/${Loc(beastie.name)}`)}>
+          <Link
+            to={getLink(`/humanpedia/${Loc(beastie.name)}/${beastie.number}`)}
+          >
             {Loc(beastie.name)}
           </Link>
           <br />

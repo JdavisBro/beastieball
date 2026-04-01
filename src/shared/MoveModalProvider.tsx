@@ -92,7 +92,7 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                       isSpoiler
                         ? hashValue
                         : getLink(
-                            `/beastiepedia/${beastieName}?play=${moveName}`,
+                            `/humanpedia/${beastieName}/${beastie[0].number}?play=${moveName}`,
                           )
                     }
                     key={beastie[0].id}
@@ -138,7 +138,9 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                     to={
                       isSpoiler
                         ? hashValue
-                        : getLink(`/beastiepedia/${beastieName}`)
+                        : getLink(
+                            `/humanpedia/${beastieName}/${beastie.number}`,
+                          )
                     }
                     key={beastie.id}
                     onClick={() =>

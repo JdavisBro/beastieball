@@ -63,7 +63,7 @@ function EncounterPopup({
                 to={
                   isWild || isSpoiler
                     ? ""
-                    : `/beastiepedia/${Loc(beastieData.name)}`
+                    : `/humanpedia/${Loc(beastieData.name)}/${beastieData.number}`
                 }
                 onClick={isSpoiler ? () => setSeen(beastieData.id) : undefined}
               >

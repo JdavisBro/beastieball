@@ -46,9 +46,9 @@ export default function Sidebar(props: Props): React.ReactElement {
   const navigate = useNavigate();
 
   const handleSpoiler = useCallback(
-    (beastieId: string, name: string) => {
+    (beastieId: string, name: string, number: number) => {
       setSeen(beastieId);
-      navigate(getLink(`/beastiepedia/${name}`));
+      navigate(getLink(`/humanpedia/${name}/${number}`));
     },
     [setSeen, navigate, getLink],
   );

@@ -19,11 +19,11 @@ function generateSitemap(url: string) {
     BEASTIE_DATA,
   ).map(
     (id) => (lang) =>
-      `beastiepedia/${BEASTIE_NAMES[BEASTIE_DATA[id].name.slice(1, BEASTIE_DATA[id].name.length - 1)][lang]}`,
+      `humanpedia/${BEASTIE_NAMES[BEASTIE_DATA[id].name.slice(1, BEASTIE_DATA[id].name.length - 1)][lang]}`,
   );
   const paths: (string | ((lang: SupportedLanguage) => string))[] = [
     "",
-    "beastiepedia/",
+    "humanpedia/",
     ...beasties,
     "playdex/",
     "map/",

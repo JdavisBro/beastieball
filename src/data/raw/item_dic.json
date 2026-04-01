@@ -400,7 +400,7 @@
     "value": -1
   },
   "train_ba": {
-    "desc": "¦itemsinit_itemdefine_041¦",
+    "desc": "¦itemsinit_itemdefine_041¬0¬{0}¦",
     "eff": [3, 0, 4],
     "id": "train_ba",
     "img": 14,
@@ -410,7 +410,7 @@
     "value": 10
   },
   "train_bd": {
-    "desc": "¦itemsinit_itemdefine_047¦",
+    "desc": "¦itemsinit_itemdefine_047¬0¬{0}¦",
     "eff": [3, 3, 4],
     "id": "train_bd",
     "img": 17,
@@ -420,7 +420,7 @@
     "value": 10
   },
   "train_ha": {
-    "desc": "¦itemsinit_itemdefine_043¦",
+    "desc": "¦itemsinit_itemdefine_043¬0¬{0}¦",
     "eff": [3, 1, 4],
     "id": "train_ha",
     "img": 15,
@@ -430,7 +430,7 @@
     "value": 10
   },
   "train_hd": {
-    "desc": "¦itemsinit_itemdefine_049¦",
+    "desc": "¦itemsinit_itemdefine_049¬0¬{0}¦",
     "eff": [3, 4, 4],
     "id": "train_hd",
     "img": 18,
@@ -450,7 +450,7 @@
     "value": 120
   },
   "train_ma": {
-    "desc": "¦itemsinit_itemdefine_045¦",
+    "desc": "¦itemsinit_itemdefine_045¬0¬{0}¦",
     "eff": [3, 2, 4],
     "id": "train_ma",
     "img": 16,
@@ -460,7 +460,7 @@
     "value": 10
   },
   "train_md": {
-    "desc": "¦itemsinit_itemdefine_051¦",
+    "desc": "¦itemsinit_itemdefine_051¬0¬{0}¦",
     "eff": [3, 5, 4],
     "id": "train_md",
     "img": 19,

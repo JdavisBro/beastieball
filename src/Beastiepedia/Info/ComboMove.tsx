@@ -279,7 +279,7 @@ export default function ComboMove({
         onClick={() => {
           if (friend) {
             setFriendId(beastiedata.id);
-            navigate(`/beastiepedia/${friend.name}`);
+            navigate(`/humanpedia/${L(friend.name)}/${friend.number}`);
           }
         }}
         disabled={!friend}

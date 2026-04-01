@@ -208,12 +208,12 @@ function EvoText({
           ? "beastiepedia.info.metamorphosis.to"
           : "beastiepedia.info.metamorphosis.from",
       )}
-      <Link to={getLink(`/beastiepedia/${evoName}`)}>
+      <Link to={getLink(`/humanpedia/${evoName}/${evo.beastie.number}`)}>
         {isSpoiler ? L("common.spoiler") : evoName}
       </Link>
       <Link
         to={getLink(
-          `/beastiepedia/${evoName}?copy${into ? "Up" : "Down"}=${L(currentBeastie.name)}`,
+          `/humanpedia/${evoName}/${evo.beastie.number}?copy${into ? "Up" : "Down"}=${L(currentBeastie.name)}`,
         )}
         title={
           into

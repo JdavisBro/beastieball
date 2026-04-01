@@ -1,7 +1,7 @@
 {
   "common": {
     "title": "{page} - {branding}",
-    "description": "A website with information about the game Beastieball!",
+    "description": "A website with information about the game Humanball!",
     "header": {
       "enabledMenu": "Enabled Menu",
       "disabledMenu": "Disabled Menu",
@@ -26,9 +26,9 @@
     },
     "spoilerOptions": {
       "showLabel": "Show: ",
-      "seen": "Seen Beasties/Characters",
-      "all": "All Beasties/Characters",
-      "reset": "Reset Seen Beasties/Characters"
+      "seen": "Seen Humans/Characters",
+      "all": "All Humans/Characters",
+      "reset": "Reset Seen Humans/Characters"
     },
     "languageLabel": "Language: ",
     "experimentalPrefix": "🧪 ",
@@ -73,11 +73,11 @@
       "raremorph": "Raremorph"
     },
     "spoiler": "???",
-    "hiddenBeastie": "Hidden Beastie",
-    "beastieNum": "Beastie #{num}",
+    "hiddenBeastie": "Hidden Human",
+    "beastieNum": "Human #{num}",
     "beastieSelect": {
-      "title": "Select Beastie",
-      "label": "Select Beastie: {beastie}",
+      "title": "Select Human",
+      "label": "Select Human: {beastie}",
       "unset": "Unset",
       "sep": " - ",
       "filter": "Filter: ",
@@ -87,7 +87,7 @@
     },
     "moveView": {
       "learnedFriend": "Learned from {friend} at {hearts} hearts.",
-      "viewLearners": "View Beasties that learn this play.",
+      "viewLearners": "View Humans that learn this play.",
       "playText": "{type} Play"
     },
     "moveModal": {
@@ -115,7 +115,7 @@
   },
   "notice": {
     "title": "Notice!",
-    "unofficial": "{branding} is an unofficial resource for Beastieball!",
+    "unofficial": "{branding} is an unofficial resource for Humanball!",
     "wishes": "It may contain content that doesn't appear in the game, posting of this content in official Wishes Unlimited channels (e.g Wishes Unlimited Discord) is not allowed as per Wishes Unlimited's rules.",
     "spoilers": "{branding} will also contain spoilers for the full game, in order to avoid spoilers you can set to only show beasties/characters you've clicked on. All other beasties/characters will have images and names hidden until you click on them.",
     "confirm": "Confirm"
@@ -125,7 +125,7 @@
     "single": "Secret",
     "disclamer": "Secrets enables viewing of information that is unused and may appear in the game in future, any of this information should not be talked about in official Wishes Unlimited channels.",
     "label": "Secrets: ",
-    "beastiepedia": "Beastiepedia\nUnused Animations",
+    "beastiepedia": "Humanpedia\nUnused Animations",
     "map": "Map\nEncounter Locations"
   },
   "events": {
@@ -157,16 +157,16 @@
     "timeSep": ", "
   },
   "beastiepedia": {
-    "title": "Beastiepedia",
-    "titleBeastie": "{beastie} - Beastiepedia",
-    "description": "View information and previews of the Beasties from Beastieball!",
+    "title": "Humanpedia",
+    "titleBeastie": "{beastie} - Humanpedia",
+    "description": "View information and previews of the Humans from Beastieball!",
     "noBeastie": {
-      "text": "No Beastie Selected",
-      "menuEnabled": "Select a Beastie in the sidebar.",
-      "menuDisabled": "Select a Beastie by toggling the menu in the top left."
+      "text": "No Human Selected",
+      "menuEnabled": "Select a Human in the sidebar.",
+      "menuDisabled": "Select a Human by toggling the menu in the top left."
     },
     "sidebar": {
-      "search": "Search Beasties..",
+      "search": "Search Humans..",
       "sort": {
         "ascending": "↑",
         "descending": "↓",
@@ -187,7 +187,7 @@
       },
       "toggleGrid": "Toggle Grid View",
       "filter": {
-        "title": "Filter Beasties",
+        "title": "Filter Humans",
         "clear": "Clear Filter",
         "trait": "Trait",
         "plays": "Plays",
@@ -220,8 +220,8 @@
       "statDisplaySeparator": " - "
     },
     "preview": {
-      "failed": "Beastie Preview Failed",
-      "canvasAlt": "Beastie Preview Image",
+      "failed": "Human Preview Failed",
+      "canvasAlt": "Human Preview Image",
       "options": {
         "text": "Preview Options",
         "open": "▼ ",
@@ -250,7 +250,7 @@
           "rowdy": "Rowdy"
         },
         "paletteSwapLabel": "Palette Swap: ",
-        "paletteSwapModalCurrentBeastie": "Select Unset to use this Beastie's regular colors."
+        "paletteSwapModalCurrentBeastie": "Select Unset to use this Human's regular colors."
       },
       "settings": {
         "header": "Settings",
@@ -260,7 +260,7 @@
         "gifSpeedNote": "When using a high speed, GIFs might not save the speed correctly.",
         "displaySizeLabel": "Display Size: ",
         "backgroundLabel": "Background: ",
-        "cropLabel": "Crop to Beastie: "
+        "cropLabel": "Crop to Human: "
       },
       "anim": {
         "idle": "Idle",
@@ -287,21 +287,21 @@
       "development": "Development",
       "metamorphosis": {
         "title": "Metamorphosis",
-        "goWithColorsFrom": "View with this Beastie's colors before Metamorphosis",
-        "goWithColorsTo": "View with this Beastie's colors after Metamorphosis",
-        "fromNone": "Does not Metamorph from any Beastie",
+        "goWithColorsFrom": "View with this Human's colors before Metamorphosis",
+        "goWithColorsTo": "View with this Human's colors after Metamorphosis",
+        "fromNone": "Does not Metamorph from any Human",
         "from": "Metamorphs from ",
-        "toNone": "Does not Metamorph into any Beastie",
+        "toNone": "Does not Metamorph into any Human",
         "to": "Metamorphs to ",
         "level": " at level {level}",
         "location": " at {location}",
         "viewInMap": "View Metamorphosis Location on the Map",
         "relationships": " after forming {num} relationships",
         "homeYearning": " at level {level} after fulfilling the Yearning.",
-        "homeYearningMore": "- The yearning will appear after enough trust is reached.\n- Trust is raised when the Beastie is on-field during a game.",
-        "variantRegular": " at level {level} if the Beastie has Regular colors",
+        "homeYearningMore": "- The yearning will appear after enough trust is reached.\n- Trust is raised when the Human is on-field during a game.",
+        "variantRegular": " at level {level} if the Human has Regular colors",
         "variantRegularRaremorph": "- or if it's a Raremorph and you're not in the Alto Alps",
-        "variantVariant": " at level {level} if the Beastie has Variant colors",
+        "variantVariant": " at level {level} if the Human has Variant colors",
         "variantVariantRaremorph": "- or if it's a Raremorph and you're in the Alto Alps",
         "ancientMorePrefix": "- ",
         "petula": " after beating {num} Petula",
@@ -346,7 +346,7 @@
           "2": "Support",
           "3": "Defense"
         },
-        "rivalsTypeDesc": "Rivals Move type is the type with the highest total POW of both Beasties, which could change depending on coaching and training."
+        "rivalsTypeDesc": "Rivals Move type is the type with the highest total POW of both Humans, which could change depending on coaching and training."
       },
       "research": {
         "title": "Research",
@@ -369,7 +369,7 @@
   },
   "playdex": {
     "title": "PlayDex",
-    "description": "List of moves/plays from Beastieball.",
+    "description": "List of moves/plays from Humanball.",
     "sort": {
       "label": "Sort By: ",
       "type": "Type",
@@ -428,24 +428,24 @@
   },
   "map": {
     "title": "Map",
-    "description": "A map of the world of Beastieball",
-    "header": "Beastieball Map",
+    "description": "A map of the world of Humanball",
+    "header": "Humanball Map",
     "markers": {
       "title": "Markers",
       "text": "Text",
       "regionNames": "Region Names",
       "areaNames": "Area Names",
       "markers": "Markers",
-      "beastieballCenter": "Beastieball Center",
+      "beastieballCenter": "Humanball Center",
       "railhouse": "Railhouse / Boathouse /\nCamp / Zip Station",
       "gym": "Gym",
       "clothes": "Clothes Shop",
       "caves": "Caves",
       "other": "Other",
-      "beasties": "Beasties",
-      "beastieSpawns": "Beastie Spawns",
-      "extinctUnseen": "??? Beastie Locations",
-      "extinct": "Extinct Beastie Locations",
+      "beasties": "Humans",
+      "beastieSpawns": "Human Spawns",
+      "extinctUnseen": "??? Human Locations",
+      "extinct": "Extinct Human Locations",
       "metamorphosis": "Metamorphosis Locations",
       "encounters": "Encounters",
       "exploration": "Exploration",
@@ -454,10 +454,10 @@
       "switchesGates": "Switches and Gates"
     },
     "beastie": {
-      "title": "Beasties",
+      "title": "Humans",
       "track": "Track: ",
       "showAll": "Show All",
-      "noWild": "Beastie has no wild habitat.",
+      "noWild": "Human has no wild habitat.",
       "postgame": "Postgame Spawns",
       "attractSpray": "Attract Spray",
       "spawnRate": "{percent}%",
@@ -485,8 +485,8 @@
       "loadingEncounters": "Loading Encounters",
       "encounterNotFound": "Encounter not found: {encounterId}",
       "lvl": " Lvl {level}",
-      "scalingNote": "Beastie level and metamorphosis may be higher due to scaling.",
-      "wild": "Nearby Wild Beastie",
+      "scalingNote": "Human level and metamorphosis may be higher due to scaling.",
+      "wild": "Nearby Wild Human",
       "moreDetailsLink": "View more details."
     },
     "gate": "Gate",
@@ -496,7 +496,7 @@
   },
   "teams": {
     "title": "Teams",
-    "description": "Team Viewer and Builder for Beastieball!",
+    "description": "Team Viewer and Builder for Humanball!",
     "home": "Home",
     "return": "{branding} Team Page",
     "image": {
@@ -515,14 +515,14 @@
       "species": "({species})",
       "maxLevel": "Max Level",
       "expToNext": "To next level: {num}/{max} ({left} left)",
-      "openWithColors": "Open {beastie} with these colors in the Beastiepedia",
+      "openWithColors": "Open {beastie} with these colors in the Humanpedia",
       "statTooltip": "Coached: {coached}%\nTraining: {training}",
-      "impossibleMove": "This Beastie cannot learn this Play."
+      "impossibleMove": "This Human cannot learn this Play."
     },
     "viewer": {
       "title": "Team Viewer",
       "titleCommunity": "{team} - Team Viewer - {branding}",
-      "description": "Online Team Viewer for SportsNet download codes from Beastieball!",
+      "description": "Online Team Viewer for SportsNet download codes from Humanball!",
       "codeLabel": "Team Code: ",
       "findButton": "Find",
       "invalidCode": "Invalid Code: {code}",
@@ -539,7 +539,7 @@
           "label": "Filter: ",
           "name": "Name",
           "author": "Author",
-          "beastie": "Beastie"
+          "beastie": "Human"
         },
         "add": "Want your team added? ",
         "addLink": "Make an issue on GitHub.",
@@ -553,10 +553,10 @@
     },
     "builder": {
       "title": "Team Builder",
-      "description": "Team Builder for Beastieball!",
+      "description": "Team Builder for Humanball!",
       "edit": "Edit",
       "editing": "Editing",
-      "noBeastie": "No Beastie",
+      "noBeastie": "No Human",
       "swap": "⇄",
       "scrollsHorizontally": "Team Scrolls Horizontally: ",
       "saveJson": "Save Team JSON",
@@ -566,7 +566,7 @@
       "savedTeams": {
         "title": "Saved Teams",
         "copy": "Copy",
-        "copyDesc": "Overwrites the Beastie you're currently editing.",
+        "copyDesc": "Overwrites the Human you're currently editing.",
         "save": "Save",
         "saveDesc": "Saves your Current Team over this one.",
         "load": "Load",
@@ -578,7 +578,7 @@
       },
       "shareCode": {
         "title": "Share Code",
-        "note": "Team Share codes allow you to turn teams into codes that can be loaded in the Team Builder, they do not work in-game.\nTeam Share codes are mainly for PVP, so they don't include most data to reduce length.\nName, number, level, specific colors, and coaching won't be the same when the code is loaded.\nCodes may break when the game is updated, specifically when a Beastie's learnable Plays are changed.",
+        "note": "Team Share codes allow you to turn teams into codes that can be loaded in the Team Builder, they do not work in-game.\nTeam Share codes are mainly for PVP, so they don't include most data to reduce length.\nName, number, level, specific colors, and coaching won't be the same when the code is loaded.\nCodes may break when the game is updated, specifically when a Human's learnable Plays are changed.",
         "current": "Current Team Code: ",
         "loadLabel": "Load Team Code: ",
         "loadButton": "Load",
@@ -593,7 +593,7 @@
       "name": "Name: ",
       "number": "Number: ",
       "color": "Color: ",
-      "colorCopy": "Copy from Beastiepedia",
+      "colorCopy": "Copy from Humanpedia",
       "sprite": "Sprite: ",
       "coaching": "Coaching",
       "coachingMin": "All to 0%",
@@ -624,7 +624,7 @@
     },
     "encounters": {
       "title": "Encounters",
-      "description": "View Teams from encounters in Beastieball!",
+      "description": "View Teams from encounters in Humanball!",
       "encounterSelect": "Encounter: ",
       "noneSelected": "None",
       "scales": "Scales with {boss}: +{levels} levels",

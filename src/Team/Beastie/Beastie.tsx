@@ -124,7 +124,7 @@ export default function Beastie({
           ) : null}
           <Link
             to={getLink(
-              `/beastiepedia/${beastieName}?${searchParam}=${beastieColors.join(",")}`,
+              `/humanpedia/${beastieName}/${beastiedata.number}?${searchParam}=${beastieColors.join(",")}`,
             )}
             title={L("teams.beastie.openWithColors", { beastie: beastieName })}
           >

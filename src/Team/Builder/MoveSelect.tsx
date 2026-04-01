@@ -59,7 +59,6 @@ export default function MoveSelect({
           .map((moveId) => MOVE_DIC[moveId])
           .sort(
             (move1, move2) =>
-              Number(move2.id == "spork") - Number(move1.id == "spork") ||
               move1.type - move2.type ||
               move2.pow - move1.pow ||
               L(move1.name).localeCompare(L(move2.name)),

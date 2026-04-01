@@ -1,5 +1,6 @@
 import Events from "./Events/Events";
 import useLocalization from "./localization/useLocalization";
+import { BoxHeader } from "./shared/InfoBox";
 import { NavigationMenu, NavigationMenuOption } from "./shared/NavigationMenu";
 import OpenGraph from "./shared/OpenGraph";
 
@@ -7,7 +8,14 @@ export default function Home(): React.ReactNode {
   const { L } = useLocalization();
 
   return (
-    <NavigationMenu note={<Events />}>
+    <NavigationMenu
+      note={
+        <>
+          <BoxHeader>April Fools 2026</BoxHeader>
+          <Events />
+        </>
+      }
+    >
       <OpenGraph
         title={import.meta.env.VITE_BRANDING}
         image="ball.png"

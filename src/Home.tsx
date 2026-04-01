@@ -1,9 +1,17 @@
 import Events from "./Events/Events";
+import { BoxHeader } from "./shared/InfoBox";
 import { NavigationMenu, NavigationMenuOption } from "./shared/NavigationMenu";
 
 export default function Home(): React.ReactNode {
   return (
-    <NavigationMenu note={<Events />}>
+    <NavigationMenu
+      note={
+        <>
+          <BoxHeader>April Fools 2025</BoxHeader>
+          <Events />
+        </>
+      }
+    >
       <NavigationMenuOption
         text={"Playdex"}
         image={"/gameassets/sprMainmenu/6.png"}

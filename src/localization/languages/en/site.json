@@ -159,7 +159,7 @@
   "beastiepedia": {
     "title": "Humanpedia",
     "titleBeastie": "{beastie} - Humanpedia",
-    "description": "View information and previews of the Humans from Beastieball!",
+    "description": "View information and previews of the Humans from Humanball!",
     "noBeastie": {
       "text": "No Human Selected",
       "menuEnabled": "Select a Human in the sidebar.",

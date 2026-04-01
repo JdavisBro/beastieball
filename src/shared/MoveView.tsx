@@ -596,7 +596,7 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
         break;
     }
 
-    if (move.pow < -1) {
+    if (move.pow <= -1) {
       desc.push(L("movedefine_descadd_018", { "0": String(-move.pow) })); // This attack does {0} damage.
     } else if (move.pow > -1 && move.pow < 0) {
       desc.push(L("movedefine_descadd_017", { "0": String(-move.pow * 100) })); // Damage equals {0}% of target's remaining STAMINA.

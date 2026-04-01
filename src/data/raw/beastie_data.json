@@ -2339,7 +2339,8 @@
       "vigor",
       "breakswipe",
       "starterbody",
-      "shakeoff"
+      "shakeoff",
+      "spork"
     ],
     "attklist_randomize": -1,
     "ba": 115,
@@ -2419,7 +2420,8 @@
       [36, "defheal"],
       [39, "rushattack"],
       [43, "powswitch"],
-      [49, "vigor"]
+      [49, "vigor"],
+      [100, "spork"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},

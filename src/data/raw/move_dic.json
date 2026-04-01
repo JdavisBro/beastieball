@@ -1211,6 +1211,20 @@
     "type": 3,
     "use": 0
   },
+  "spork": {
+    "bt_tags": [0, 8, 20, 47, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 36, "pow": 100, "targ": 0 }],
+    "id": "spork",
+    "name": "Spork",
+    "pow": -1.0,
+    "price": 25,
+    "targ": 0,
+    "type": 0,
+    "use": 2
+  },
   "jump": {
     "bt_tags": [0, 8, 20, 47, 10],
     "desc_tagids": [],

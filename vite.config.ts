@@ -62,15 +62,6 @@ export default defineConfig(() => {
   const url = env.VITE_URL != "" ? env.VITE_URL : "https://beastieball.info";
   return {
     build: { sourcemap: true },
-    plugins: [
-      react(),
-      {
-        name: "Sitemap",
-        closeBundle() {
-          if (process.env.VITE_EXPERIMENTAL == "true") return;
-          generateSitemap(url);
-        },
-      },
-    ],
+    plugins: [react()],
   };
 });

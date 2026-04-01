@@ -122,7 +122,6 @@ export function encounterToTeamBeastie(
           i < metaData.colormeta.length && i < metaData.colors.length;
           i++
         ) {
-          console.log(metaData.colormeta[i]);
           if (metaData.colormeta[i] >= 0)
             color[metaData.colormeta[i]] = origColor[i];
         }

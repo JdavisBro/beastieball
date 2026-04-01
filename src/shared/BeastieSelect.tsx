@@ -134,7 +134,6 @@ export default function BeastieSelect({
           : () => true;
 
   const makeOpen = () => {
-    console.trace("MAKED OPEN");
     setOpen(true);
     setSearch("");
   };

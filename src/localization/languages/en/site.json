@@ -338,6 +338,7 @@
           "support": "Bestie/Sweetheart Support",
           "defense": "Bestie Defense"
         },
+        "swap": "Swap",
         "beastieCombine": "{beastie} + {friend} {type}",
         "noFriend": "???",
         "type": {

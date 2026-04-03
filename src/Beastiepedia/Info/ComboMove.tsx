@@ -279,12 +279,12 @@ export default function ComboMove({
         onClick={() => {
           if (friend) {
             setFriendId(beastiedata.id);
-            navigate(`/beastiepedia/${friend.name}`);
+            navigate(`/beastiepedia/${L(friend.name)}`);
           }
         }}
         disabled={!friend}
       >
-        Swap
+        {L("beastiepedia.info.combo.swap")}
       </button>
       <MoveView
         move={move}

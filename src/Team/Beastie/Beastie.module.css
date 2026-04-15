@@ -157,6 +157,10 @@
   flex: 0 0 auto;
 }
 
+.move div {
+  isolation: isolate;
+}
+
 .moveothercolor {
   position: absolute;
   top: 0;

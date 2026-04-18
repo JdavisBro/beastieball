@@ -94,6 +94,11 @@ export default function Viewer() {
     code,
     featuredCategories,
   );
+  const [featuredGoodCodes, setFeaturedGoodCodes] = useState<string[]>([]);
+  const [featuredBadCodes, setFeaturedBadCodes] = useLocalStorage<string[]>(
+    "featuredBadCodes",
+    [],
+  );
 
   useEffect(() => {
     if (
@@ -107,7 +112,8 @@ export default function Viewer() {
     if (selectedFeatured) {
       setMobileFeatured(false);
       setTeam(selectedFeatured.team);
-      return;
+      if (featuredBadCodes.includes(code) || featuredGoodCodes.includes(code))
+        return;
     }
     if (code.split("").some((char) => !VALID_CHARACTERS.includes(char))) {
       setError(true);
@@ -120,7 +126,11 @@ export default function Viewer() {
       },
     )
       .then((res) => {
-        if (res.status == 200) {
+        if (selectedFeatured) {
+          if (res.status != 200)
+            setFeaturedBadCodes([...featuredBadCodes, code]);
+          else setFeaturedGoodCodes([...featuredGoodCodes, code]);
+        } else if (res.status == 200) {
           res.json().then((json) => {
             setTeam(json);
             setError(false);
@@ -208,13 +218,23 @@ export default function Viewer() {
           <button onClick={submitCode}>{L("teams.viewer.findButton")}</button>
         </div>
         <div className={styles.sectionheader}>
-          {team && team.code == code
-            ? `${team.code}${selectedFeatured ? ` - ${selectedCategoryName} - ${selectedFeatured.name}` : ""}`
-            : error
-              ? L("teams.viewer.invalidCode", { code: code ?? "" })
-              : code
-                ? L("teams.viewer.loadingTeam")
-                : L("teams.viewer.noTeam")}
+          {team && team.code == code ? (
+            <>
+              {team.code}
+              {selectedFeatured && featuredBadCodes.includes(team.code) ? (
+                <span title={L("teams.viewer.featuredBadCode")}>⚠️</span>
+              ) : null}
+              {selectedFeatured
+                ? ` - ${selectedCategoryName} - ${selectedFeatured.name}`
+                : ""}
+            </>
+          ) : error ? (
+            L("teams.viewer.invalidCode", { code: code ?? "" })
+          ) : code ? (
+            L("teams.viewer.loadingTeam")
+          ) : (
+            L("teams.viewer.noTeam")
+          )}
         </div>
         <BeastieRenderProvider>
           <div className={styles.team}>

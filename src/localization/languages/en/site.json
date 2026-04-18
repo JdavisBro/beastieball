@@ -526,6 +526,7 @@
       "description": "Online Team Viewer for SportsNet download codes from Beastieball!",
       "codeLabel": "Team Code: ",
       "findButton": "Find",
+      "featuredBadCode": "Team Code no longer works in-game, since it was deleted.",
       "invalidCode": "Invalid Code: {code}",
       "loadingTeam": "Loading Team...",
       "noTeam": "No Team Loaded",

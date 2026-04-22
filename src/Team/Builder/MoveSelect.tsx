@@ -14,14 +14,29 @@ enum MoveFilterMode {
   Friend,
 }
 
+const IGNORED_MOVES = [
+  "xtra",
+  "???",
+  "volley",
+  "move",
+  "defense",
+  "doubleblock",
+  "tagout",
+];
+const ALL_MOVES = Object.values(MOVE_DIC).filter(
+  (move) => !IGNORED_MOVES.includes(move.id),
+);
+
 export default function MoveSelect({
   beastiedata,
   teamBeastieMovelist,
   setMove,
+  chaosMode,
 }: {
   beastiedata: BeastieType;
   teamBeastieMovelist: string[];
   setMove: (index: number, move: string) => void;
+  chaosMode: boolean;
 }) {
   const { L } = useLocalization();
 
@@ -53,10 +68,11 @@ export default function MoveSelect({
     .sort(([level], [level2]) => (level as number) - (level2 as number))
     .map(([, moveId]) => moveId);
   let possibleMoves =
-    filterMode == MoveFilterMode.Level
-      ? levelMoves.map((moveId) => MOVE_DIC[moveId])
-      : beastiedata.attklist
-          .map((moveId) => MOVE_DIC[moveId])
+    filterMode != MoveFilterMode.Level || chaosMode
+      ? (chaosMode
+          ? ALL_MOVES
+          : beastiedata.attklist.map((moveId) => MOVE_DIC[moveId])
+        )
           .sort(
             (move1, move2) =>
               move1.type - move2.type ||
@@ -64,10 +80,11 @@ export default function MoveSelect({
               L(move1.name).localeCompare(L(move2.name)),
           )
           .filter(
-            filterMode == MoveFilterMode.Friend
+            filterMode == MoveFilterMode.Friend && !chaosMode
               ? (move) => !levelMoves.includes(move.id)
               : () => true,
-          );
+          )
+      : levelMoves.map((moveId) => MOVE_DIC[moveId]);
   possibleMoves = possibleMoves.filter((move) =>
     L(move.name).toLowerCase().includes(search.toLowerCase()),
   );
@@ -147,6 +164,8 @@ export default function MoveSelect({
                 onChange={(event) =>
                   setFilterMode(Number(event.currentTarget.value))
                 }
+                disabled={chaosMode}
+                style={{ opacity: chaosMode ? "0.5" : undefined }}
               >
                 <option value={MoveFilterMode.None}>
                   {L("teams.builder.playSelect.from.any")}

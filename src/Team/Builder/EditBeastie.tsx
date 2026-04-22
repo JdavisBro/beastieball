@@ -268,9 +268,11 @@ function StatOptions({
 export default function EditBeastie({
   beastie,
   setBeastie,
+  chaosMode,
 }: {
   beastie: TeamBeastie;
   setBeastie: React.Dispatch<React.SetStateAction<TeamBeastie | null>>;
+  chaosMode: boolean;
 }) {
   const { L } = useLocalization();
 
@@ -464,6 +466,7 @@ export default function EditBeastie({
           beastie.attklist[index] = move;
           changeValue("attklist", beastie.attklist);
         }}
+        chaosMode={chaosMode}
       />
       <StatOptions beastie={beastie} changeValue={changeValue} />
     </>

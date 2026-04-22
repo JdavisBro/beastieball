@@ -120,6 +120,10 @@ export default function TeamBuilder() {
     "teamBuilderScroll",
     useScreenOrientation(),
   );
+  const [chaosMode, setChaosMode] = useLocalStorage(
+    "teamBuilderChaosMode",
+    false,
+  );
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -151,7 +155,10 @@ export default function TeamBuilder() {
                 <Fragment key={beastie?.pid ?? index}>
                   <div className={styles.beastieContainer}>
                     {beastie && BEASTIE_DATA.has(beastie.specie) ? (
-                      <Beastie teamBeastie={beastie} />
+                      <Beastie
+                        teamBeastie={beastie}
+                        noMoveWarning={chaosMode}
+                      />
                     ) : (
                       <NoBeastie
                         setBeastieId={(beastieId) => {
@@ -196,13 +203,23 @@ export default function TeamBuilder() {
                 {L("teams.builder.scrollsHorizontally")}
                 <input
                   type="checkbox"
-                  defaultChecked={teamScroll}
+                  checked={teamScroll}
                   onChange={(event) =>
                     setTeamScroll(event.currentTarget.checked)
                   }
                 />
               </label>
               <TeamImageButton team={team.filter((beastie) => !!beastie)} />
+              <label title={L("teams.builder.chaosModeDesc")}>
+                {L("teams.builder.chaosMode")}
+                <input
+                  type="checkbox"
+                  checked={chaosMode}
+                  onChange={(event) =>
+                    setChaosMode(event.currentTarget.checked)
+                  }
+                />
+              </label>
             </Box>
             <Box>
               <SavedTeams
@@ -279,6 +296,7 @@ export default function TeamBuilder() {
                       : beastie,
                   )
                 }
+                chaosMode={chaosMode}
               />
             ) : (
               <BeastieDoesntExist

@@ -561,6 +561,8 @@
       "noBeastie": "No Beastie",
       "swap": "⇄",
       "scrollsHorizontally": "Team Scrolls Horizontally: ",
+      "chaosMode": "Chaos Mode: ",
+      "chaosModeDesc": "Allows Beasties to learn Plays they usually can't.",
       "saveJson": "Save Team JSON",
       "loadJson": "Load Team JSON",
       "loadError": "Invalid Team Data. Report on GitHub if you think this is incorrect.",

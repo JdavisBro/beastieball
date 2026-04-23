@@ -5,9 +5,11 @@ import styles from "./Shared.module.css";
 export default function CopyImageFallback({
   imageUrl,
   setImageUrl,
+  blackBg,
 }: {
   imageUrl?: string;
   setImageUrl: (imageUrl?: string) => void;
+  blackBg?: boolean;
 }): React.ReactNode {
   const { L } = useLocalization();
   if (!imageUrl) {
@@ -22,7 +24,10 @@ export default function CopyImageFallback({
     >
       <div className={styles.copyImageFallback}>
         <div>{L("common.copyImageFallback.instructions")}</div>
-        <img src={imageUrl} />
+        <img
+          src={imageUrl}
+          className={blackBg ? styles.copyImageFallbackImgBlack : undefined}
+        />
       </div>
     </Modal>
   );

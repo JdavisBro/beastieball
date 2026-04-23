@@ -72,6 +72,7 @@ export default function TeamImageButton({
         <CopyImageFallback
           imageUrl={copyFallback}
           setImageUrl={setCopyFallback}
+          blackBg={true}
         />
       ) : null}
     </span>

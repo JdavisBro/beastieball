@@ -426,3 +426,7 @@
   width: 100%;
   height: 100%;
 }
+
+.copyImageFallbackImgBlack {
+  composes: animBackground from global;
+}

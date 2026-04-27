@@ -13,15 +13,15 @@ import useLocalization from "../../localization/useLocalization";
 import parseDate from "../../utils/gmdate";
 
 const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
-  1: "colors",
-  2: "shiny",
-  3: "colors2",
+  0: "colors",
+  1: "shiny",
+  2: "colors2",
 };
 
 const altSearchMap: { [key: number]: string } = {
-  1: "color",
-  2: "raremorph",
-  3: "alt",
+  0: "color",
+  1: "raremorph",
+  2: "alt",
 };
 
 export default function Beastie({
@@ -42,10 +42,10 @@ export default function Beastie({
     return null;
   }
 
-  const searchParam = altSearchMap[Math.ceil(teamBeastie.color[0])] ?? "color";
+  const searchParam = altSearchMap[Math.floor(teamBeastie.color[0])] ?? "color";
 
   const beastieColors = teamBeastie.color.map(
-    (value) => value - Math.ceil(value) + 1,
+    (value) => value - Math.floor(value),
   );
 
   const level =
@@ -134,7 +134,7 @@ export default function Beastie({
               beastie={{
                 id: beastiedata.id,
                 colors: beastieColors,
-                colorAlt: altMap[Math.ceil(teamBeastie.color[0])],
+                colorAlt: altMap[Math.floor(teamBeastie.color[0])],
                 sprAlt: teamBeastie.spr_index,
               }}
               className={styles.beastieImg}

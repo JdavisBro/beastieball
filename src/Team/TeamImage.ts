@@ -318,9 +318,9 @@ function statCalc(
 }
 
 const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
-  1: "colors",
-  2: "shiny",
-  3: "colors2",
+  0: "colors",
+  1: "shiny",
+  2: "colors2",
 };
 
 async function createTeamImage(
@@ -415,7 +415,7 @@ async function createTeamImage(
       }
 
       const beastieColors = beastie.color.map(
-        (value) => value - Math.ceil(value) + 1,
+        (value) => value - Math.floor(value),
       );
 
       let canvas: HTMLCanvasElement | HTMLImageElement;
@@ -424,7 +424,7 @@ async function createTeamImage(
         const result = await beastieRender({
           id: beastiedata.id,
           colors: beastieColors,
-          colorAlt: altMap[Math.ceil(beastie.color[0])],
+          colorAlt: altMap[Math.floor(beastie.color[0])],
           sprAlt: beastie.spr_index,
         });
         if (!result) {

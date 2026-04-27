@@ -25,7 +25,7 @@ const COLOR_TYPE: Record<number, "color" | "shiny" | "color2"> = {
   2: "color2",
 };
 
-const MIN_BEASITE_COLOR = 0.000000000000001;
+const MIN_BEASITE_COLOR = 0;
 const MAX_BEASITE_COLOR = 0.999999999999999;
 
 function clampColor(color: number) {
@@ -402,7 +402,7 @@ export default function EditBeastie({
                   "color",
                   beastie.color.map(
                     (color) =>
-                      clampColor(color - Math.ceil(color) + 1) +
+                      clampColor(color - Math.floor(color)) +
                       Number(event.target.value),
                   ),
                 )

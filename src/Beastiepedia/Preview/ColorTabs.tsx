@@ -426,7 +426,9 @@ export default function ColorTabs(props: Props): React.ReactNode {
             value={props.shaderEffect}
           >
             {SHADER_EFFECT_LOC.map((eff, index) => (
-              <option value={index}>{L(eff)}</option>
+              <option value={index} key={eff}>
+                {L(eff)}
+              </option>
             ))}
           </select>
         </label>

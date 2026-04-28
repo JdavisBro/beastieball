@@ -76,7 +76,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
           {index != 0 ? <br /> : null}
           <span>
             {L("beastiepedia.info.allyTrainingPlus", {
-              num: String(array[index + 1]),
+              num: String(Math.round(((array[index + 1] as number) / 4) * 100)),
             })}
           </span>
           <img src={src} alt={L(altKey)} className={styles.trainingImage} />

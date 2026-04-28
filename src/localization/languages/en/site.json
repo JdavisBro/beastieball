@@ -322,7 +322,7 @@
         "noRecruit": "Cannot be recruited from the wild."
       },
       "allyTraining": "Ally Training",
-      "allyTrainingPlus": "+{num} ",
+      "allyTrainingPlus": "+{num}% ",
       "expForLevel": "Exp for Level ",
       "plays": {
         "title": "Plays",

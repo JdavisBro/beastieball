@@ -146,7 +146,7 @@
           "player": 2,
           "rel_color": -1,
           "tag_in": 0,
-          "type": 19
+          "type": 20
         },
         {
           "event": null,
@@ -156,7 +156,7 @@
           "player": 2,
           "rel_color": -1,
           "tag_in": 0,
-          "type": 19
+          "type": 20
         },
         {
           "event": null,
@@ -166,7 +166,7 @@
           "player": 2,
           "rel_color": -1,
           "tag_in": 0,
-          "type": 19
+          "type": 20
         }
       ],
       "description": "¦beastiesetup_classrecruit_032¦"
@@ -374,7 +374,7 @@
           "player": 2,
           "rel_color": -1,
           "tag_in": 0,
-          "type": 19
+          "type": 20
         },
         {
           "event": null,
@@ -384,7 +384,7 @@
           "player": 2,
           "rel_color": -1,
           "tag_in": 0,
-          "type": 19
+          "type": 20
         }
       ],
       "description": "¦beastiesetup_classrecruit_031¦"
@@ -625,7 +625,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         },
         {
           "effect_pow": ">0",
@@ -636,7 +636,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         },
         {
           "effect_pow": ">0",
@@ -647,7 +647,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         },
         {
           "effect_pow": ">0",
@@ -658,7 +658,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         },
         {
           "effect_pow": ">0",
@@ -669,7 +669,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_074¦"
@@ -901,7 +901,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         },
         {
           "effect_pow": ">0",
@@ -912,7 +912,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_073¦"
@@ -1114,7 +1114,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_085¦"
@@ -1189,7 +1189,7 @@
       "refresh",
       "allyrush",
       "healbell",
-      "distraction",
+      "followme",
       "defheal",
       "libero",
       "lifepass",
@@ -1261,7 +1261,7 @@
                 "my_data": null,
                 "player": 0,
                 "rel_color": -1,
-                "type": 14
+                "type": 15
               }
             ],
             "description": "¦beastiesetup_009¦"
@@ -1337,7 +1337,7 @@
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
-          "type": 16
+          "type": 17
         }
       ],
       "description": "¦beastiesetup_classrecruit_028¦"
@@ -1404,7 +1404,7 @@
       "refresh",
       "allyrush",
       "healbell",
-      "distraction",
+      "followme",
       "defheal",
       "libero",
       "lifepass",
@@ -1537,7 +1537,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         },
         {
           "effect_pow": ">0",
@@ -1548,7 +1548,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_088¦"
@@ -1767,7 +1767,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -1775,7 +1775,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -1783,7 +1783,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -1791,7 +1791,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         }
       ],
       "description": "¦beastiesetup_004¦"
@@ -2012,7 +2012,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -2020,7 +2020,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         }
       ],
       "description": "¦beastiesetup_002¦"
@@ -2236,7 +2236,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -2244,7 +2244,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -2252,7 +2252,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         }
       ],
       "description": "¦beastiesetup_003¦"
@@ -2464,7 +2464,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_007¦"
@@ -2677,7 +2677,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_005¦"
@@ -2884,7 +2884,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_006¦"
@@ -3026,13 +3026,13 @@
           {
             "conditions": [
               {
-                "effect_type": 95,
+                "effect_type": 96,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
                 "rel_color": -1,
                 "target": 0,
-                "type": 45
+                "type": 46
               }
             ],
             "description": "¦beastiesetup_010¬0¬¦fieldeffectstuff_003¦¦"
@@ -3103,13 +3103,13 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 95,
+          "effect_type": 96,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_030¦"
@@ -3314,13 +3314,13 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 95,
+          "effect_type": 96,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_029¦"
@@ -3527,13 +3527,13 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 95,
+          "effect_type": 96,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_089¦"
@@ -3742,7 +3742,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 0,
@@ -3752,7 +3752,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 0,
@@ -3762,7 +3762,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_059¦"
@@ -3961,7 +3961,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 8
+          "type": 9
         }
       ],
       "description": "¦beastiesetup_012¦"
@@ -4182,7 +4182,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 8
+          "type": 9
         }
       ],
       "description": "¦beastiesetup_011¦"
@@ -4408,7 +4408,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 12
+          "type": 13
         },
         {
           "event": null,
@@ -4417,7 +4417,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 12
+          "type": 13
         }
       ],
       "description": "¦beastiesetup_classrecruit_096¦"
@@ -4634,7 +4634,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_058¦"
@@ -4865,7 +4865,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 11
+          "type": 12
         },
         {
           "event": null,
@@ -4873,7 +4873,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 11
+          "type": 12
         }
       ],
       "description": "¦beastiesetup_classrecruit_026¦"
@@ -5103,7 +5103,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 11
+          "type": 12
         }
       ],
       "description": "¦beastiesetup_classrecruit_025¦"
@@ -5329,7 +5329,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_027¬0¬[sprStatus,3]¦statuseffectstuff_004¦¬1¬[sprStatus,8]¦statuseffectstuff_009¦¦"
@@ -5593,7 +5593,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         },
         {
           "event": null,
@@ -5602,7 +5602,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         },
         {
           "event": null,
@@ -5611,7 +5611,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_020¦"
@@ -5872,7 +5872,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         },
         {
           "event": null,
@@ -5881,7 +5881,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         },
         {
           "event": null,
@@ -5890,7 +5890,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_019¦"
@@ -6111,7 +6111,7 @@
           "player": 2,
           "rel_color": -1,
           "target": [0, 1],
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_022¦"
@@ -6342,7 +6342,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 48
+          "type": 49
         },
         {
           "event": null,
@@ -6351,7 +6351,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 48
+          "type": 49
         },
         {
           "event": null,
@@ -6360,7 +6360,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 48
+          "type": 49
         },
         {
           "event": null,
@@ -6369,7 +6369,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 48
+          "type": 49
         }
       ],
       "description": "¦beastiesetup_classrecruit_035¦"
@@ -6580,7 +6580,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 48
+          "type": 49
         },
         {
           "event": null,
@@ -6589,7 +6589,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 48
+          "type": 49
         },
         {
           "event": null,
@@ -6598,7 +6598,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 48
+          "type": 49
         }
       ],
       "description": "¦beastiesetup_classrecruit_033¦"
@@ -6805,7 +6805,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 48
+          "type": 49
         },
         {
           "event": null,
@@ -6814,7 +6814,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 48
+          "type": 49
         },
         {
           "event": null,
@@ -6823,7 +6823,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 48
+          "type": 49
         }
       ],
       "description": "¦beastiesetup_classrecruit_034¦"
@@ -7020,7 +7020,7 @@
           "player": 2,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 2,
@@ -7031,7 +7031,7 @@
           "player": 2,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 2,
@@ -7042,7 +7042,7 @@
           "player": 2,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_046¦"
@@ -7186,7 +7186,7 @@
       "freq": -1,
       "my_data": null,
       "rel_color": -1,
-      "type": 29
+      "type": 30
     },
     "id": "fox1",
     "isBaby": true,
@@ -7250,7 +7250,7 @@
           "player": 2,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 2,
@@ -7261,7 +7261,7 @@
           "player": 2,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_045¦"
@@ -7465,13 +7465,13 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 95,
+          "effect_type": 96,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_010¦"
@@ -7667,13 +7667,13 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 95,
+          "effect_type": 96,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_008¦"
@@ -7882,13 +7882,13 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 95,
+          "effect_type": 96,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_009¦"
@@ -8105,7 +8105,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_038¦"
@@ -8323,7 +8323,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_036¦"
@@ -8512,7 +8512,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_037¦"
@@ -8707,7 +8707,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_075¬0¬[sprStatus,0]¦statuseffectstuff_001¦¬1¬[sprStatus,12]¦statuseffectstuff_013¦¬2¬[sprStatus,2]¦statuseffectstuff_003¦¦"
@@ -8928,7 +8928,7 @@
           "my_data": null,
           "player": [0, 1],
           "rel_color": -1,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_023¦"
@@ -9170,7 +9170,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 8
+          "type": 9
         }
       ],
       "description": "¦beastiesetup_021¦"
@@ -9415,7 +9415,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 42
+          "type": 43
         }
       ],
       "description": "¦beastiesetup_classrecruit_052¦"
@@ -9556,7 +9556,7 @@
       "freq": -1,
       "my_data": null,
       "rel_color": -1,
-      "type": 32
+      "type": 33
     },
     "id": "jellyfish1",
     "isBaby": true,
@@ -9619,7 +9619,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         },
         {
           "effect_type": [12, 25, 26, 27, 6, 14, 13, 23, 22, 29, 39, 19, 38],
@@ -9629,7 +9629,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_017¦"
@@ -9812,7 +9812,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 42
+          "type": 43
         }
       ],
       "description": "¦beastiesetup_classrecruit_051¦"
@@ -10026,7 +10026,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -10034,7 +10034,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -10042,7 +10042,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         }
       ],
       "description": "¦beastiesetup_classrecruit_021¦"
@@ -10256,7 +10256,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -10264,7 +10264,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         }
       ],
       "description": "¦beastiesetup_005¦"
@@ -10487,7 +10487,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         },
         {
           "effect_type": [23, 29, 39, 38],
@@ -10497,7 +10497,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_081¬0¬[sprStatus,6]¦statuseffectstuff_007¦¬1¬[sprStatus,10]¦statuseffectstuff_011¦¬2¬[sprStatus,12]¦statuseffectstuff_013¦¬3¬[sprStatus,11]¦statuseffectstuff_012¦¦"
@@ -10713,7 +10713,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_080¬0¬[sprStatus,6]¦statuseffectstuff_007¦¬1¬[sprStatus,10]¦statuseffectstuff_011¦¬2¬[sprStatus,12]¦statuseffectstuff_013¦¬3¬[sprStatus,11]¦statuseffectstuff_012¦¦"
@@ -10920,7 +10920,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 48
         },
         {
           "event": null,
@@ -10929,7 +10929,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 48
         },
         {
           "event": null,
@@ -10938,7 +10938,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 48
         },
         {
           "event": null,
@@ -10947,7 +10947,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 48
         }
       ],
       "description": "¦beastiesetup_classrecruit_018¦"
@@ -11156,7 +11156,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 48
         },
         {
           "event": null,
@@ -11165,7 +11165,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 48
         },
         {
           "event": null,
@@ -11174,7 +11174,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 47
+          "type": 48
         }
       ],
       "description": "¦beastiesetup_classrecruit_017¦"
@@ -11349,7 +11349,7 @@
                 "player": 0,
                 "rel_color": -1,
                 "target": 0,
-                "type": 45
+                "type": 46
               }
             ],
             "description": "¦beastiesetup_020¦"
@@ -11427,7 +11427,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_069¦"
@@ -11654,7 +11654,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_068¦"
@@ -11863,7 +11863,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_091¦"
@@ -12074,7 +12074,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_043¦"
@@ -12277,7 +12277,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 11
+          "type": 12
         },
         {
           "event": null,
@@ -12285,7 +12285,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 11
+          "type": 12
         }
       ],
       "description": "¦beastiesetup_classrecruit_067¦"
@@ -12480,7 +12480,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 11
+          "type": 12
         }
       ],
       "description": "¦beastiesetup_classrecruit_066¦"
@@ -12706,7 +12706,7 @@
           "my_data": null,
           "player": 0,
           "rel_color": -1,
-          "type": 44
+          "type": 45
         }
       ],
       "description": "¦beastiesetup_classrecruit_044¦"
@@ -12932,7 +12932,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "¦beastiesetup_classrecruit_013¦"
@@ -13143,7 +13143,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "¦beastiesetup_classrecruit_011¦"
@@ -13367,7 +13367,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "¦beastiesetup_classrecruit_012¦"
@@ -13586,7 +13586,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_057¬0¬[sprStatus,1]¦statuseffectstuff_002¦¬1¬[sprStatus,6]¦statuseffectstuff_007¦¦"
@@ -13798,7 +13798,7 @@
           "rel_color": -1,
           "target": 0,
           "target_post_hp": ">0",
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_071¦"
@@ -14001,7 +14001,7 @@
           "rel_color": -1,
           "target": 0,
           "target_post_hp": ">0",
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_070¦"
@@ -14203,7 +14203,7 @@
           "my_data": null,
           "player": [0, 1],
           "rel_color": -1,
-          "type": 52
+          "type": 53
         }
       ],
       "description": "¦beastiesetup_classrecruit_042¦"
@@ -14423,7 +14423,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_079¦"
@@ -14616,7 +14616,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_078¦"
@@ -14838,7 +14838,7 @@
           "rel_color": -1,
           "target": 0,
           "target_post_hp": ">0",
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_076¦"
@@ -15059,13 +15059,13 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 95,
+          "effect_type": 96,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_087¦"
@@ -15258,13 +15258,13 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 95,
+          "effect_type": 96,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_023¦"
@@ -15408,7 +15408,7 @@
                 "my_data": null,
                 "rel_color": -1,
                 "target": 0,
-                "type": 14
+                "type": 15
               },
               {
                 "event": null,
@@ -15417,7 +15417,7 @@
                 "my_data": null,
                 "rel_color": -1,
                 "target": 0,
-                "type": 14
+                "type": 15
               },
               {
                 "event": null,
@@ -15426,7 +15426,7 @@
                 "my_data": null,
                 "rel_color": -1,
                 "target": 0,
-                "type": 14
+                "type": 15
               }
             ],
             "description": "¦beastiesetup_006¦"
@@ -15497,13 +15497,13 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 95,
+          "effect_type": 96,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_024¦"
@@ -15720,7 +15720,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 23
+          "type": 24
         }
       ],
       "description": "¦beastiesetup_classrecruit_016¦"
@@ -15952,7 +15952,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 23
+          "type": 24
         }
       ],
       "description": "¦beastiesetup_classrecruit_014¦"
@@ -16181,7 +16181,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 23
+          "type": 24
         }
       ],
       "description": "¦beastiesetup_classrecruit_015¦"
@@ -16412,7 +16412,7 @@
           "player": 2,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 2,
@@ -16423,7 +16423,7 @@
           "player": 2,
           "rel_color": -1,
           "target": 0,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_061¦"
@@ -16610,7 +16610,7 @@
                 "my_data": null,
                 "player": 0,
                 "rel_color": -1,
-                "type": 45
+                "type": 46
               }
             ],
             "description": "¦beastiesetup_018¦"
@@ -16689,7 +16689,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 1,
@@ -16699,7 +16699,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 2,
@@ -16709,7 +16709,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_053¦"
@@ -16933,7 +16933,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 0,
@@ -16943,7 +16943,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 0,
@@ -16953,7 +16953,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_090¦"
@@ -17177,7 +17177,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -17185,7 +17185,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         }
       ],
       "description": "¦beastiesetup_019¦"
@@ -17425,13 +17425,13 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 95,
+          "effect_type": 96,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_065¦"
@@ -17639,13 +17639,13 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 95,
+          "effect_type": 96,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_063¦"
@@ -17848,13 +17848,13 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 95,
+          "effect_type": 96,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_064¦"
@@ -18073,7 +18073,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 8
+          "type": 9
         },
         {
           "event": null,
@@ -18081,7 +18081,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 8
+          "type": 9
         }
       ],
       "description": "¦beastiesetup_classrecruit_050¦"
@@ -18325,7 +18325,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 8
+          "type": 9
         },
         {
           "event": null,
@@ -18333,7 +18333,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 8
+          "type": 9
         }
       ],
       "description": "¦beastiesetup_classrecruit_049¦"
@@ -18542,7 +18542,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 12
+          "type": 13
         },
         {
           "event": null,
@@ -18551,7 +18551,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 12
+          "type": 13
         }
       ],
       "description": "¦beastiesetup_classrecruit_056¦"
@@ -18753,7 +18753,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": 0,
-          "type": 12
+          "type": 13
         }
       ],
       "description": "¦beastiesetup_classrecruit_055¦"
@@ -18964,7 +18964,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 8
+          "type": 9
         },
         {
           "event": null,
@@ -18972,7 +18972,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 8
+          "type": 9
         },
         {
           "event": null,
@@ -18980,7 +18980,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 8
+          "type": 9
         }
       ],
       "description": "¦beastiesetup_008¦"
@@ -19186,7 +19186,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 8
+          "type": 9
         },
         {
           "event": null,
@@ -19194,7 +19194,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 8
+          "type": 9
         }
       ],
       "description": "¦beastiesetup_007¦"
@@ -19403,7 +19403,7 @@
           "player": 0,
           "rel_color": -1,
           "target": 2,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_048¦"
@@ -19600,7 +19600,7 @@
           "player": 0,
           "rel_color": -1,
           "target": 2,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_047¦"
@@ -19809,7 +19809,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_001¦"
@@ -19989,7 +19989,7 @@
                 "my_data": null,
                 "player": 0,
                 "rel_color": -1,
-                "type": 14
+                "type": 15
               }
             ],
             "description": "¦beastiesetup_001¦"
@@ -20069,7 +20069,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_002¦"
@@ -20251,7 +20251,7 @@
                 "my_data": null,
                 "player": 0,
                 "rel_color": -1,
-                "type": 14
+                "type": 15
               }
             ],
             "description": "¦beastiesetup_001¦"
@@ -20331,7 +20331,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_004¦"
@@ -20504,7 +20504,7 @@
                 "my_data": null,
                 "player": 0,
                 "rel_color": -1,
-                "type": 14
+                "type": 15
               }
             ],
             "description": "¦beastiesetup_001¦"
@@ -20584,7 +20584,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_003¦"
@@ -20830,7 +20830,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": ""
@@ -21044,13 +21044,13 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 95,
+          "effect_type": 96,
           "event": null,
           "freq": -1,
           "my_data": null,
           "rel_color": -1,
           "target": 2,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_039¦"
@@ -21253,7 +21253,7 @@
           "my_data": null,
           "player": 0,
           "rel_color": -1,
-          "type": 41
+          "type": 42
         }
       ],
       "description": "¦beastiesetup_classrecruit_072¦"
@@ -21463,7 +21463,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 0,
@@ -21473,7 +21473,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 0,
@@ -21483,7 +21483,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_084¦"
@@ -21690,7 +21690,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 1,
@@ -21700,7 +21700,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 1,
@@ -21710,7 +21710,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_083¦"
@@ -21932,7 +21932,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         },
         {
           "attack_type": 1,
@@ -21942,7 +21942,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 14
+          "type": 15
         }
       ],
       "description": "¦beastiesetup_classrecruit_082¦"
@@ -22172,7 +22172,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         },
         {
           "effect_type": [7, -7],
@@ -22182,7 +22182,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_077¦"
@@ -22415,7 +22415,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": [0, 1],
-          "type": 46
+          "type": 47
         }
       ],
       "description": "¦beastiesetup_classrecruit_041¦"
@@ -22673,7 +22673,7 @@
           "my_data": null,
           "rel_color": -1,
           "target": [0, 1],
-          "type": 46
+          "type": 47
         }
       ],
       "description": "¦beastiesetup_classrecruit_040¦"
@@ -22921,7 +22921,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -22929,7 +22929,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -22937,7 +22937,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -22945,7 +22945,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         }
       ],
       "description": "¦beastiesetup_016¦"
@@ -23158,7 +23158,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -23166,7 +23166,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         }
       ],
       "description": "¦beastiesetup_014¦"
@@ -23395,7 +23395,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -23403,7 +23403,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         },
         {
           "event": null,
@@ -23411,7 +23411,7 @@
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 50
+          "type": 51
         }
       ],
       "description": "¦beastiesetup_015¦"
@@ -23634,7 +23634,7 @@
           "my_data": null,
           "player": 0,
           "rel_color": -1,
-          "type": 40
+          "type": 41
         }
       ],
       "description": "¦beastiesetup_classrecruit_062¬0¬[sprStatus,9]¦statuseffectstuff_010¦¦"
@@ -23864,7 +23864,7 @@
           "player": 2,
           "rel_color": -1,
           "target": 0,
-          "type": 45
+          "type": 46
         }
       ],
       "description": "¦beastiesetup_classrecruit_086¦"

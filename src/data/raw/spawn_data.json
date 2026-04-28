@@ -159,50 +159,6 @@
       }
     ]
   },
-  "city_construction": {
-    "group": [
-      {
-        "freq": 5.2631578947,
-        "lvlA": 29,
-        "lvlB": 31,
-        "percent": 5.2631578947,
-        "specie": "snake",
-        "variant": 0.1
-      },
-      {
-        "freq": 26.3157894737,
-        "lvlA": 30,
-        "lvlB": 32,
-        "percent": 21.0526315789,
-        "specie": "bat1",
-        "variant": 0.1
-      },
-      {
-        "freq": 57.8947368421,
-        "lvlA": 32,
-        "lvlB": 33,
-        "percent": 31.5789473684,
-        "specie": "millipede",
-        "variant": 0.1
-      },
-      {
-        "freq": 78.9473684211,
-        "lvlA": 29,
-        "lvlB": 31,
-        "percent": 21.0526315789,
-        "specie": "nerd1",
-        "variant": 0.1
-      },
-      {
-        "freq": 100,
-        "lvlA": 29,
-        "lvlB": 31,
-        "percent": 21.0526315789,
-        "specie": "magpie1",
-        "variant": 0.1
-      }
-    ]
-  },
   "city_rail": {
     "group": [
       {
@@ -307,50 +263,6 @@
         "lvlB": 29,
         "percent": 12.5,
         "specie": "dragonfly",
-        "variant": 0.1
-      }
-    ]
-  },
-  "city_suburb": {
-    "group": [
-      {
-        "freq": 30.4347826087,
-        "lvlA": 29,
-        "lvlB": 31,
-        "percent": 30.4347826087,
-        "specie": "millipede",
-        "variant": 0.1
-      },
-      {
-        "freq": 73.9130434783,
-        "lvlA": 30,
-        "lvlB": 31,
-        "percent": 43.4782608696,
-        "specie": "nerd1",
-        "variant": 0.1
-      },
-      {
-        "freq": 91.3043478261,
-        "lvlA": 29,
-        "lvlB": 29,
-        "percent": 17.3913043478,
-        "specie": "bat1",
-        "variant": 0.1
-      },
-      {
-        "freq": 100,
-        "lvlA": 28,
-        "lvlB": 30,
-        "percent": 8.6956521739,
-        "specie": "rat",
-        "variant": 0.1
-      },
-      {
-        "freq": 0,
-        "lvlA": 28,
-        "lvlB": 30,
-        "percent": 0,
-        "specie": "snake",
         "variant": 0.1
       }
     ]

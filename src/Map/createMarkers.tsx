@@ -24,22 +24,40 @@ const CONDITIONAL_CHECK: Record<string, number> = {
   region_discovered_mtn: 1,
 };
 
+type ObjectNames =
+  | "objBallcenter"
+  | "objRailhouse"
+  | "objBoathouse"
+  | "objCamp"
+  | "objGymdoor"
+  | "objClothesShop"
+  | "objZipstation"
+  | "objMall";
+
+type MarkerNames =
+  | "beastieballCenter"
+  | "railhouse"
+  | "gym"
+  | "clothes"
+  | "caves"
+  | "other";
+
+const objtypes: Record<ObjectNames, MarkerNames> = {
+  objBallcenter: "beastieballCenter",
+  objRailhouse: "railhouse",
+  objBoathouse: "railhouse",
+  objCamp: "railhouse",
+  objGymdoor: "gym",
+  objClothesShop: "clothes",
+  objZipstation: "railhouse",
+  objMall: "railhouse",
+};
+
 export function createMarkers(Loc: LocalizationFunction) {
   const bigtitleheaders: React.ReactElement[] = [];
   const titleheaders: React.ReactElement[] = [];
 
-  const objtypes: { [key: string]: string } = {
-    objBallcenter: "beastieballCenter",
-    objRailhouse: "railhouse",
-    objBoathouse: "railhouse",
-    objCamp: "railhouse",
-    objGymdoor: "gym",
-    objClothesShop: "clothes",
-    objZipstation: "railhouse",
-    objMall: "railhouse",
-  };
-
-  const imgheaders: { [key: string]: React.ReactElement[] } = {
+  const imgheaders: Record<MarkerNames, React.ReactElement[]> = {
     beastieballCenter: [],
     railhouse: [],
     gym: [],
@@ -54,25 +72,27 @@ export function createMarkers(Loc: LocalizationFunction) {
     let markerup: React.ReactElement | null;
     let popup = undefined;
     let zindex = 0;
+    const revealed =
+      value.revealed_text &&
+      value.revealed_text.replace(
+        /(.+?)(?: \((.+?)\)|$)/,
+        (_, g1, g2) =>
+          `${Loc("_map_" + g1)}${g2 ? ` (${Loc("_map_" + g2)})` : ""}`,
+      );
+    const text = value.text && Loc("_map_" + value.text);
     if (value.img) {
+      if (value.from_object == "objBallcenter") return;
       markertype =
         value.is_cave == 1
           ? imgheaders.caves
           : value.from_object
-            ? imgheaders[objtypes[value.from_object]]
+            ? imgheaders[objtypes[value.from_object as ObjectNames]]
             : imgheaders.other;
       if (markertype == undefined) {
         markertype = imgheaders.other;
       }
       markerup = <img src={`/gameassets/sprSponsors/${value.img}.png`} />;
-      const revealed =
-        value.revealed_text &&
-        value.revealed_text.replace(
-          /(.+?)(?: \((.+?)\)|$)/,
-          (_, g1, g2) =>
-            `${Loc("_map_" + g1)}${g2 ? ` (${Loc("_map_" + g2)})` : ""}`,
-        );
-      popup = <Popup>{revealed ? revealed : Loc("_map_" + value.text)}</Popup>;
+      popup = <Popup>{revealed ? revealed : text}</Popup>;
     } else {
       if (value.has_conditional && value.conditional) {
         if (
@@ -83,7 +103,7 @@ export function createMarkers(Loc: LocalizationFunction) {
       }
       containerclass =
         value.superheader == 1 ? styles.bigtextmarker : styles.textmarker;
-      markerup = value.text ? <>{Loc("_map_" + value.text)}</> : null;
+      markerup = text ? <>{text}</> : null;
       zindex = value.superheader == 1 ? 1100 : 1000;
     }
 
@@ -92,7 +112,7 @@ export function createMarkers(Loc: LocalizationFunction) {
         key={getKey(value)}
         markerprops={{
           position: new L.LatLng(-value.world_y, value.world_x),
-          alt: value.revealed_text ? value.revealed_text : value.text,
+          alt: revealed ? revealed : text,
           zIndexOffset: zindex,
         }}
         tagName="div"
@@ -109,6 +129,25 @@ export function createMarkers(Loc: LocalizationFunction) {
   WORLD_DATA.level_stumps_array.forEach((value) => {
     if (!value.world_layer) {
       value.icons_array.forEach(createMarker);
+    }
+  });
+  Object.entries(WORLD_DATA.map_position_data).forEach(([key, position]) => {
+    if (key.endsWith("objBallcenter")) {
+      imgheaders.beastieballCenter.push(
+        <DivIconMarker
+          key={key}
+          markerprops={{
+            position: new L.LatLng(-position.y, position.x),
+            alt: Loc("_map_Beastieball Center"),
+          }}
+          tagName="div"
+          className={styles.imgmarker}
+          icon={{ className: styles.hidemarker }}
+          popup={<Popup>{Loc("_map_Beastieball Center")}</Popup>}
+        >
+          <img src="/gameassets/sprSponsors/5.png" />
+        </DivIconMarker>,
+      );
     }
   });
 

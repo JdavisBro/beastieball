@@ -86,9 +86,7 @@ export type World = {
   icons_array: MapIcon[];
   // level_quadtree_size: number;
   level_stumps_array: LevelStump[];
-  map_position_data: {
-    [key: string]: { x: number; y: number } | string;
-  };
+  map_position_data: Record<string, { x: number; y: number }>;
   model_data: {};
 };
 

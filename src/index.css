@@ -435,10 +435,10 @@ input[type="checkbox"] {
   vertical-align: middle;
 
   background-image: repeating-linear-gradient(
-    rgb(7, 7, 7),
-    rgb(7, 7, 7) 4px,
-    black 4px,
-    black 8px
+    #000000,
+    #000000 4px,
+    #161616 4px,
+    #161616 8px
   );
   background-size: 100% 200%;
   animation: bg-scroll 2s linear infinite;
@@ -460,25 +460,24 @@ input[type="checkbox"]::before {
   );
   background-size: 56px 56px;
   animation: small-selectable-scroll 4s linear infinite;
-  width: 40%;
+  width: 50%;
   height: 90%;
   text-align: center;
   top: 5%;
   left: 5%;
-  margin-left: 0%;
 
   transition:
-    margin-left 0.5s,
+    left 0.5s,
     width 0.5s;
   clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
 }
 
 input[type="checkbox"]:hover:not(:disabled)::before {
-  width: 50%;
+  width: 60%;
 }
 
 input[type="checkbox"]:hover:not(:disabled):checked::before {
-  margin-left: 40%;
+  left: 35%;
 }
 
 input[type="checkbox"]:disabled::before {
@@ -497,6 +496,5 @@ input[type="checkbox"]:checked::before {
     #ff8e4a 12px
   ) !important;
 
-  /*transform: translateX(125%);*/
-  margin-left: 50%;
+  left: 45%;
 }

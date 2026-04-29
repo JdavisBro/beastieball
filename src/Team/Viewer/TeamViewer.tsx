@@ -254,7 +254,7 @@ export default function Viewer() {
             </MoveModalProvider>
           </div>
           <div className={styles.sectionheader}>
-            <label>
+            <label className="checkboxLabel">
               <input
                 type="checkbox"
                 onChange={(event) =>
@@ -279,7 +279,7 @@ export default function Viewer() {
               />
             </label>
             {orientation ? <br /> : " - "}
-            <label>
+            <label className="checkboxLabel">
               <input
                 type="checkbox"
                 onChange={(event) =>

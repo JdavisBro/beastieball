@@ -61,7 +61,7 @@ export default function PreviewSettings(props: Props): React.ReactElement {
           />
         </label>
         <div>
-          <label htmlFor="whitebg" style={{ userSelect: "none" }}>
+          <label className="checkboxLabel">
             {L("beastiepedia.preview.settings.backgroundLabel")}
             <input
               id="whitebg"
@@ -79,7 +79,7 @@ export default function PreviewSettings(props: Props): React.ReactElement {
             />
           </label>
         </div>
-        <label>
+        <label className="checkbboxLabel">
           {L("beastiepedia.preview.settings.cropLabel")}
           <input
             type="checkbox"

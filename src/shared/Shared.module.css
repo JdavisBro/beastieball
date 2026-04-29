@@ -309,12 +309,6 @@
   }
 }
 
-.animationtoggle {
-  display: flex;
-  user-select: none;
-  align-items: center;
-}
-
 .beastieSelectContainer {
   width: calc(round(down, 90vw, 245px) + 13px);
   height: 90dvh;

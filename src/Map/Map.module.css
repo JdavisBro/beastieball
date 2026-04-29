@@ -316,7 +316,7 @@
 }
 
 .controlCheckLabel {
-  display: flex;
+  composes: checkboxLabel from global;
   gap: 6px;
   line-height: 1.2em;
   white-space: pre;

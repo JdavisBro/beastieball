@@ -250,7 +250,7 @@ export default function Encounters() {
           {DEFEATABLE_BOSSES.map((bossId, index) => (
             <>
               {index == 0 ? null : sep}
-              <label key={bossId}>
+              <label key={bossId} className="checkboxLabel">
                 <input
                   type="checkbox"
                   checked={bossesDefeated[bossId] == true}

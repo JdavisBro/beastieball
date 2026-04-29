@@ -20,7 +20,7 @@ function ToggleCheckbox({
 }) {
   const [value, setValue] = useLocalStorage(storageKey, defaultValue ?? false);
   return (
-    <label className={styles.animationtoggle} title={hoverText}>
+    <label className="checkboxLabel" title={hoverText}>
       <input
         checked={value}
         type="checkbox"

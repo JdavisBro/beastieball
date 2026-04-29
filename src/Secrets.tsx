@@ -13,7 +13,10 @@ export default function Secrets() {
         note={
           <>
             <div>{L("secrets.disclamer")}</div>
-            <label style={{ marginBottom: "1em" }}>
+            <label
+              style={{ margin: "1em 0" }}
+              className="infoBoxContent checkboxLabel"
+            >
               {L("secrets.label")}
               <input
                 type="checkbox"

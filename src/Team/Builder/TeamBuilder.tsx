@@ -199,7 +199,7 @@ export default function TeamBuilder() {
           </MoveModalProvider>
           <div className={teamScroll ? styles.editScrolls : styles.edit}>
             <Box>
-              <label>
+              <label className="checkboxLabel">
                 {L("teams.builder.scrollsHorizontally")}
                 <input
                   type="checkbox"
@@ -210,7 +210,10 @@ export default function TeamBuilder() {
                 />
               </label>
               <TeamImageButton team={team.filter((beastie) => !!beastie)} />
-              <label title={L("teams.builder.chaosModeDesc")}>
+              <label
+                title={L("teams.builder.chaosModeDesc")}
+                className="checkboxLabel"
+              >
                 {L("teams.builder.chaosMode")}
                 <input
                   type="checkbox"

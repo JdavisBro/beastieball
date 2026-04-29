@@ -233,7 +233,7 @@ export default function PlayDex() {
           </select>
         </label>
         {settingsSep}
-        <label>
+        <label className="checkboxLabel">
           {L("playdex.recentlyChanged")}
           <input
             type="checkbox"

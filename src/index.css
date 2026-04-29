@@ -189,7 +189,9 @@ select {
 }
 
 .noanim,
-.noanim * {
+.noanim *,
+.noanim *::before,
+.noanim *::after {
   /* animation-duration: 0s !important; */
   animation-play-state: paused !important;
 }
@@ -406,4 +408,94 @@ a:visited {
 
 .tabberSelected {
   background-color: #ffaa55a8 !important;
+}
+
+@keyframes small-selectable-scroll {
+  from {
+    background-position: -17px -17px;
+  }
+  to {
+    background-position: 0px 0px;
+  }
+}
+
+.checkboxLabel {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  vertical-align: middle;
+  white-space-collapse: preserve-spaces;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 2.5em;
+  height: 1.5em;
+  position: relative;
+  vertical-align: middle;
+
+  background-image: repeating-linear-gradient(
+    rgb(7, 7, 7),
+    rgb(7, 7, 7) 4px,
+    black 4px,
+    black 8px
+  );
+  background-size: 100% 200%;
+  animation: bg-scroll 2s linear infinite;
+
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+}
+
+input[type="checkbox"]::before {
+  content: "✖";
+  position: absolute;
+
+  background-image: repeating-linear-gradient(
+    135deg,
+    #ddd1bd,
+    #ddd1bd 6px,
+    #d5c9b5 6px,
+    #d5c9b5 12px
+  );
+  background-size: 56px 56px;
+  animation: small-selectable-scroll 4s linear infinite;
+  width: 40%;
+  height: 90%;
+  text-align: center;
+  top: 5%;
+  left: 5%;
+  margin-left: 0%;
+
+  transition:
+    margin-left 0.5s,
+    width 0.5s;
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
+}
+
+input[type="checkbox"]:hover:not(:disabled)::before {
+  width: 50%;
+}
+
+input[type="checkbox"]:hover:not(:disabled):checked::before {
+  margin-left: 40%;
+}
+
+input[type="checkbox"]:disabled::before {
+  opacity: 0.7;
+  animation-play-state: paused;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "✔";
+
+  background-image: repeating-linear-gradient(
+    135deg,
+    #ffaa55,
+    #ffaa55 6px,
+    #ff8e4a 6px,
+    #ff8e4a 12px
+  ) !important;
+
+  /*transform: translateX(125%);*/
+  margin-left: 50%;
 }

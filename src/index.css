@@ -446,6 +446,15 @@ input[type="checkbox"] {
   clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
 }
 
+input[type="checkbox"]:focus {
+  background-image: repeating-linear-gradient(
+    #002a85,
+    #002a85 4px,
+    #0036ac 4px,
+    #0036ac 8px
+  );
+}
+
 input[type="checkbox"]::before {
   content: "✖";
   position: absolute;

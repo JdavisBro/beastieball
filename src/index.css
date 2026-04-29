@@ -449,6 +449,7 @@ input[type="checkbox"] {
 input[type="checkbox"]::before {
   content: "✖";
   position: absolute;
+  color: black;
 
   background-image: repeating-linear-gradient(
     135deg,

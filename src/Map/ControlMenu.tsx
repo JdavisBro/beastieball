@@ -1,4 +1,11 @@
-import { Fragment, useCallback, useMemo, useRef, useState } from "react";
+import {
+  Fragment,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import Control from "react-leaflet-custom-control";
 
 import styles from "./Map.module.css";
@@ -137,26 +144,29 @@ function Checkbox({
   handleChange: ReactStateBool;
   text: string;
 }) {
-  const handleChangeActual: React.MouseEventHandler = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    handleChange((value) => !value);
-  };
-  // weird react things that breaks labels on checkboxes on mobile
+  // react evil react stuff because of the stupid way this control has to work -- reworked to not recreate the checkbox for transition to work.
+  const inputRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (inputRef.current) inputRef.current.checked = checked;
+    }, 0);
+    return () => clearTimeout(timeout);
+  }, [checked]);
+
   return (
     <label
-      tabIndex={0}
       className={styles.controlCheckLabel}
-      onClick={handleChangeActual}
+      onClick={(event) => {
+        event.stopPropagation();
+        event.preventDefault();
+        handleChange(!checked);
+      }}
     >
       <input
         type="checkbox"
         checked={checked}
-        /* react yells at your for having checked without onChange */
-        onChange={() => {}}
-        /* checked value doesn't update properly when clicking directly on the checkbox */
-        key={String(checked)}
-        tabIndex={-1}
+        onChange={() => handleChange(!checked)}
+        ref={inputRef}
       />
       {text}
     </label>

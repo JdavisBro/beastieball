@@ -18,13 +18,15 @@
   justify-content: center;
 }
 
-.teamScroll {
-  composes: team;
-  flex: 0 0 auto;
-  flex-wrap: nowrap;
-  justify-content: start;
-  padding: 5px 10px 0 10px;
-  overflow-x: auto;
+@media all and (max-width: 1880px) {
+  .teamScroll {
+    composes: team;
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+    justify-content: start;
+    padding: 5px 10px 0 10px;
+    overflow-x: auto;
+  }
 }
 
 .beastieContainer {

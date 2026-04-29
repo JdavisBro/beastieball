@@ -43,6 +43,14 @@ export default function Modal(
     event.preventDefault();
   }, []);
 
+  const handleWheel = useCallback(
+    (event: WheelEvent) => {
+      if (event.ctrlKey) return;
+      preventDefault(event);
+    },
+    [preventDefault],
+  );
+
   const preventScrollKeys = useCallback(
     (event: KeyboardEvent) => {
       if (SCROLL_KEYS.includes(event.key)) {
@@ -55,14 +63,14 @@ export default function Modal(
   useEffect(() => {
     const dialog = dialogRef.current;
     if (dialog) {
-      dialog.addEventListener("wheel", preventDefault, {
+      dialog.addEventListener("wheel", handleWheel, {
         passive: false,
       });
       dialog.addEventListener("keydown", preventScrollKeys, {
         passive: false,
       });
       return () => {
-        dialog.removeEventListener("wheel", preventDefault);
+        dialog.removeEventListener("wheel", handleWheel);
         dialog.removeEventListener("keydown", preventScrollKeys);
       };
     }

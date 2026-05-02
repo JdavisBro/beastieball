@@ -11,6 +11,8 @@
     "prettier": "prettier --config .prettierrc src/**/*.{ts,tsx,css,json} --write"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.6.1",
+    "@types/three": "^0.184.0",
     "gifenc": "^1.0.3",
     "leaflet": "^1.9.4",
     "pako": "^2.1.0",
@@ -21,6 +23,7 @@
     "react-leaflet": "^5.0.0",
     "react-leaflet-custom-control": "^1.5.0",
     "react-router-dom": "^7.8.1",
+    "three": "^0.184.0",
     "usehooks-ts": "^3.1.1"
   },
   "devDependencies": {

@@ -88,6 +88,7 @@ export type World = {
   level_stumps_array: LevelStump[];
   map_position_data: Record<string, { x: number; y: number }>;
   model_data: {};
+  palettes: Record<string, number[]>;
 };
 
 const WORLD_DATA: World = world;

@@ -1,6 +1,6 @@
 // MARK: Palette Reference
 
-type PaletteReference = {
+export type PaletteReference = {
   _: "class_palette_reference";
   dual?: boolean; // true
   base_index?: number; // 0
@@ -69,7 +69,7 @@ type ModelSpawnArray = {
 };
 
 /* prettier-ignore */
-type Model = {
+export type Model = {
   _: "class_model";
   name?: string;
   model_filename?: string;
@@ -135,6 +135,7 @@ export type Shape = {
   solid?: boolean;
   thickness?: number;
   water?: boolean;
+  wall_collider: boolean;
 
   flat?: number;
   grass_model_array?: ModelSpawnArray;

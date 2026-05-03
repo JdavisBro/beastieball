@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
 import { Suspense, useEffect, useRef, useState } from "react";
@@ -6,14 +6,9 @@ import { GameObject, LevelData } from "./types";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import {
-  Canvas,
-  extend,
-  useFrame,
-  useLoader,
-  useThree,
-} from "@react-three/fiber";
+import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
 import ShapeGroup, { LevelFloor } from "./ShapeGroup";
+import { Models } from "./Models";
 
 const AREA_ID_DIRS = [
   "etc/",
@@ -82,13 +77,23 @@ function pointInsidePolygon(x: number, y: number, vs: number[][]) {
   return inside;
 }
 
-function findFloorPosition(x: number, y: number, levelData: LevelData) {
+export function findFloorPosition(
+  x: number,
+  y: number,
+  levelData: LevelData,
+  doDebugPrint?: boolean,
+) {
   let highest_z = 0;
   if (levelData.shape_groups_array) {
     for (const group of levelData.shape_groups_array) {
       if (group.shapes_array) {
         for (const shape of group.shapes_array) {
-          if (shape.points_array) {
+          if (
+            shape.points_array &&
+            (shape.solid || shape.water) &&
+            shape.flat &&
+            !shape.wall_collider
+          ) {
             const poly = [];
             const shape_x = (group.x ?? 0) + (shape.x ?? 0);
             const shape_y = (group.y ?? 0) + (shape.y ?? 0);
@@ -99,6 +104,7 @@ function findFloorPosition(x: number, y: number, levelData: LevelData) {
               ]);
             }
             if (pointInsidePolygon(x, y, poly)) {
+              if (doDebugPrint) console.log(shape);
               const z = (group.z ?? 0) + (shape.z ?? 0) + shape.points_array[2];
               if (z > highest_z) highest_z = z;
             }
@@ -150,18 +156,29 @@ function OrbitControlsElement({ levelStump }: { levelStump: LevelStump }) {
     gl: { domElement },
   } = useThree();
 
+  const ref = useRef<OrbitControls>(null);
+
   useEffect(() => {
+    const orbit = ref.current;
+    if (!orbit) return;
     camera.near = 3;
     camera.far = 250000;
-    camera.position.setX(-((levelStump.world_x2 - levelStump.world_x1) / 2));
-    camera.position.setY((levelStump.world_y2 - levelStump.world_y1) / 2);
-    camera.position.setZ(500);
+    orbit.target.set(
+      -((levelStump.world_x2 - levelStump.world_x1) / 2),
+      (levelStump.world_y2 - levelStump.world_y1) / 2,
+      500,
+    );
+    camera.position.set(
+      -(levelStump.world_x2 - levelStump.world_x1) / 2,
+      levelStump.world_y2 - levelStump.world_y1 + 2000,
+      2000,
+    );
+    camera.rotation.set(0, 0, 0);
     camera.updateProjectionMatrix();
+    orbit.update();
   }, [levelStump]);
 
-  return (
-    <OrbitControls_Element args={[camera, domElement]}></OrbitControls_Element>
-  );
+  return <OrbitControls_Element args={[camera, domElement]} ref={ref} />;
 }
 
 function Scene({
@@ -174,14 +191,20 @@ function Scene({
   return (
     <>
       <OrbitControlsElement levelStump={levelStump} />
-      <ambientLight intensity={Math.PI / 2} />
-      <directionalLight position={[500, 500, 500]} intensity={Math.PI} />
+      <ambientLight intensity={1} />
+      <directionalLight
+        position={[500, 500, 500]}
+        // intensity={Math.PI}
+        castShadow
+        shadow-mapsize={[1024, 1024]}
+      />
       {levelData.objects_array?.map((object) => (
         <GameObjectElem object={object} levelData={levelData} />
       ))}
       {levelData.shape_groups_array?.map((shape_group) => (
         <ShapeGroup shapeGroup={shape_group} levelData={levelData} />
       ))}
+      <Models levelStump={levelStump} levelData={levelData} />
       <LevelFloor levelStump={levelStump} levelData={levelData} />
     </>
   );
@@ -214,6 +237,8 @@ export default function LevelEditor() {
       });
   }, [level]);
 
+  const navigate = useNavigate();
+
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100dvh" }}>
       <OpenGraph
@@ -223,7 +248,24 @@ export default function LevelEditor() {
         description={"Level Editor for Beastieball"}
       />
       <Header title="Level Editor" />
-      <Canvas style={{ flexGrow: 1 }}>
+      <label>
+        Level:{" "}
+        <select
+          value={level}
+          onChange={(event) =>
+            navigate(`/modding/level/${event.currentTarget.value}`)
+          }
+        >
+          {WORLD_DATA.level_stumps_array
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((level) => (
+              <option key={level.name} value={level.name}>
+                {level.name}
+              </option>
+            ))}
+        </select>
+      </label>
+      <Canvas style={{ flexGrow: 1 }} shadows>
         <Suspense fallback={null}>
           {levelStump && levelData && (
             <Scene levelStump={levelStump} levelData={levelData} />

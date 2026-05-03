@@ -446,7 +446,7 @@ input[type="checkbox"] {
   clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
 }
 
-input[type="checkbox"]:focus {
+input[type="checkbox"]:focus-visible {
   background-image: repeating-linear-gradient(
     #002a85,
     #002a85 4px,
@@ -481,12 +481,20 @@ input[type="checkbox"]::before {
   clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 100%, 2px 100%);
 }
 
-input[type="checkbox"]:hover:not(:disabled)::before {
+input[type="checkbox"]:is(:hover, :active):not(:disabled)::before {
   width: 60%;
 }
 
-input[type="checkbox"]:hover:not(:disabled):checked::before {
+input[type="checkbox"]:is(:hover, :active):not(:disabled):checked::before {
   left: 35%;
+}
+
+input[type="checkbox"]:hover:active::before {
+  width: 70%;
+}
+
+input[type="checkbox"]:hover:active:checked::before {
+  left: 25%;
 }
 
 input[type="checkbox"]:disabled::before {

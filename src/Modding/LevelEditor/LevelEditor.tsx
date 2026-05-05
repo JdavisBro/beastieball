@@ -188,10 +188,18 @@ function Scene({
       <ambientLight intensity={1} />
       <directionalLight position={[500, 500, 500]} intensity={Math.PI} />
       {levelData.objects_array?.map((object) => (
-        <GameObjectElem object={object} levelData={levelData} />
+        <GameObjectElem
+          key={object.obj_guid}
+          object={object}
+          levelData={levelData}
+        />
       ))}
-      {levelData.shape_groups_array?.map((shape_group) => (
-        <ShapeGroup shapeGroup={shape_group} levelData={levelData} />
+      {levelData.shape_groups_array?.map((shape_group, index) => (
+        <ShapeGroup
+          key={`${index}${shape_group.x}${shape_group.y}${shape_group.z}`}
+          shapeGroup={shape_group}
+          levelData={levelData}
+        />
       ))}
       <Models levelStump={levelStump} levelData={levelData} />
       <LevelFloor levelStump={levelStump} levelData={levelData} />

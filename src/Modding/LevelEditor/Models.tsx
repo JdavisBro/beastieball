@@ -133,6 +133,10 @@ export function Models({
   levelData: LevelData;
 }) {
   return levelData.models_array?.map((model) => (
-    <Model model={model} levelData={levelData} />
+    <Model
+      key={`${model.model_filename}${model.name}${model.x}${model.y}${model.z}`}
+      model={model}
+      levelData={levelData}
+    />
   ));
 }

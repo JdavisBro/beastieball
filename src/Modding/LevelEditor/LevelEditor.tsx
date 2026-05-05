@@ -77,12 +77,7 @@ function pointInsidePolygon(x: number, y: number, vs: number[][]) {
   return inside;
 }
 
-export function findFloorPosition(
-  x: number,
-  y: number,
-  levelData: LevelData,
-  doDebugPrint?: boolean,
-) {
+export function findFloorPosition(x: number, y: number, levelData: LevelData) {
   let highest_z = 0;
   if (levelData.shape_groups_array) {
     for (const group of levelData.shape_groups_array) {
@@ -104,7 +99,6 @@ export function findFloorPosition(
               ]);
             }
             if (pointInsidePolygon(x, y, poly)) {
-              if (doDebugPrint) console.log(shape);
               const z = (group.z ?? 0) + (shape.z ?? 0) + shape.points_array[2];
               if (z > highest_z) highest_z = z;
             }
@@ -194,7 +188,7 @@ function Scene({
       <ambientLight intensity={1} />
       <directionalLight
         position={[500, 500, 500]}
-        // intensity={Math.PI}
+        intensity={Math.PI}
         castShadow
         shadow-mapsize={[1024, 1024]}
       />
@@ -265,7 +259,7 @@ export default function LevelEditor() {
             ))}
         </select>
       </label>
-      <Canvas style={{ flexGrow: 1 }} shadows>
+      <Canvas style={{ flexGrow: 1 }}>
         <Suspense fallback={null}>
           {levelStump && levelData && (
             <Scene levelStump={levelStump} levelData={levelData} />

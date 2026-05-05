@@ -3,9 +3,20 @@ import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { useLoader } from "@react-three/fiber";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
 import type { LevelData, Model } from "./types";
-import { Mesh, Object3D, RepeatWrapping, TextureLoader } from "three";
+import {
+  DoubleSide,
+  Mesh,
+  Object3D,
+  RepeatWrapping,
+  TextureLoader,
+} from "three";
 import { findFloorPosition } from "./LevelEditor";
-import { MaterialShader, TexturedShader } from "./MaterialShader";
+import {
+  MaterialShader,
+  MeshColoredShader,
+  TexturedColoredShader,
+  TexturedShader,
+} from "./MaterialShader";
 import { bgrDecimalToHex } from "../../utils/color";
 
 function deg2rad(deg: number) {
@@ -29,15 +40,30 @@ function ModelChild({
   z: number;
   u_scale: number;
 }) {
-  const [name, texture_name, texture_slot, palette_slot, index, colorS] =
+  const [name, texture_name, texture_slotS, palette_slot, index, colorS] =
     child.name.split("#");
-  const collider =
-    name.includes("COLLIDER") && !name.includes("COLLIDER_VISIBLE");
+
+  const collider = name.includes("COLLIDER") && !name.includes("VISIBLE");
+
   if (collider) return null;
+
+  const texture_slot = Number(texture_slotS);
   const color = Number(colorS);
+  const palette = WORLD_DATA.palettes[levelData.palette_name ?? "cliffs"];
+  const paletteRef =
+    model?.palettes?.array?.[
+      Math.max(0, Number(palette_slot) - 1) % model.palettes.array.length
+    ];
+
   return (child as { isMesh: boolean }).isMesh ? (
     <mesh
-      onClick={() => console.log(model, child)}
+      onClick={() =>
+        console.log(
+          model,
+          child,
+          WORLD_DATA.palettes[levelData.palette_name ?? "cliffs"],
+        )
+      }
       castShadow
       receiveShadow
       position={[-x, y, z]}
@@ -53,21 +79,21 @@ function ModelChild({
         (model.z_scale ?? 300) * u_scale,
       ]}
     >
-      {texture_name.length && false ? (
+      {texture_slot >= 100 ? (
         <TexturedShader textureName={texture_name} />
-      ) : color > -1 ? (
-        <meshBasicMaterial color={"#" + bgrDecimalToHex(color)} />
-      ) : (
-        <MaterialShader
-          palette={WORLD_DATA.palettes[levelData.palette_name ?? "cliffs"]}
-          paletteTop={
-            model?.palettes?.array?.[
-              Math.max(0, Number(palette_slot) - 1) %
-                model.palettes.array.length
-            ]
-          }
-          doubleSide={true}
+      ) : texture_slot >= 99 ? (
+        <TexturedColoredShader
+          textureName={texture_name}
+          paletteRef={paletteRef}
+          palette={palette}
         />
+      ) : color > -1 ? (
+        <meshBasicMaterial
+          color={"#" + bgrDecimalToHex(color)}
+          side={DoubleSide}
+        />
+      ) : (
+        <MeshColoredShader palette={palette} paletteRef={paletteRef} />
       )}
     </mesh>
   ) : null;
@@ -79,11 +105,10 @@ function Model({ model, levelData }: { model: Model; levelData: LevelData }) {
     `${import.meta.env.VITE_DATA_URL}models_obj/${model.model_filename}.obj`,
   );
 
+  if ((model.effect_layer ?? 0) > 0) return;
   const x = model.x ?? 0;
   const y = model.y ?? 0;
-  const z =
-    findFloorPosition(x, y, levelData, model.model_filename == "sport_shop") +
-    (model.z ?? 0);
+  const z = findFloorPosition(x, y, levelData) + (model.z ?? 0);
   if (model.model_filename == "sport_shop")
     console.log(model.model_filename, z);
   // const z = ;

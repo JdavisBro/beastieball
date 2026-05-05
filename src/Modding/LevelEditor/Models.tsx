@@ -64,8 +64,6 @@ function ModelChild({
           WORLD_DATA.palettes[levelData.palette_name ?? "cliffs"],
         )
       }
-      castShadow
-      receiveShadow
       position={[-x, y, z]}
       rotation={[
         deg2rad(model.x_angle ?? 0),

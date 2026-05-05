@@ -22,12 +22,7 @@ function ShapeTexture({
   onClick?: React.MouseEventHandler;
 }) {
   return (
-    <mesh
-      castShadow
-      receiveShadow
-      position={[-position[0], position[1], position[2]]}
-      onClick={onClick}
-    >
+    <mesh position={[-position[0], position[1], position[2]]} onClick={onClick}>
       <extrudeGeometry args={[shape_three, { depth: thickness }]} />
       <MaterialShader
         paletteTop={paletteTop}

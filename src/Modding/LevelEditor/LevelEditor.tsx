@@ -186,12 +186,7 @@ function Scene({
     <>
       <OrbitControlsElement levelStump={levelStump} />
       <ambientLight intensity={1} />
-      <directionalLight
-        position={[500, 500, 500]}
-        intensity={Math.PI}
-        castShadow
-        shadow-mapsize={[1024, 1024]}
-      />
+      <directionalLight position={[500, 500, 500]} intensity={Math.PI} />
       {levelData.objects_array?.map((object) => (
         <GameObjectElem object={object} levelData={levelData} />
       ))}

@@ -1,7 +1,12 @@
 import { useLoader } from "@react-three/fiber";
 import { bgrDecimalToRgb } from "../../utils/color";
 import { PaletteReference } from "./types";
-import { DoubleSide, RepeatWrapping, TextureLoader, NearestFilter } from "three";
+import {
+  DoubleSide,
+  RepeatWrapping,
+  TextureLoader,
+  NearestFilter,
+} from "three";
 
 import SPRITE_INFO_FULL from "../../data/raw/sprite_info_full.json";
 

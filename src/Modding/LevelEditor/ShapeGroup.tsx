@@ -91,8 +91,9 @@ export default function ShapeGroup({
   levelData: LevelData;
 }) {
   const palette = WORLD_DATA.palettes[levelData.palette_name ?? "cliffs"];
-  return shapeGroup.shapes_array?.map((shape) => (
+  return shapeGroup.shapes_array?.map((shape, index) => (
     <Shape
+      key={index}
       position={[shapeGroup.x ?? 0, shapeGroup.y ?? 0, shapeGroup.z ?? 0]}
       shape={shape}
       palette={palette}

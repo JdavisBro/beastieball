@@ -125,6 +125,7 @@ export function ModelElem({
   const u_scale = model.u_scale ?? 1;
   return model_obj.children.map((child) => (
     <ModelChild
+      key={child.name}
       child={child}
       model={model}
       levelData={levelData}
@@ -143,11 +144,7 @@ export function Models({
   levelStump: LevelStump;
   levelData: LevelData;
 }) {
-  return levelData.models_array?.map((model) => (
-    <ModelElem
-      key={`${model.model_filename}${model.name}${model.x}${model.y}${model.z}`}
-      model={model}
-      levelData={levelData}
-    />
+  return levelData.models_array?.map((model, index) => (
+    <ModelElem key={index} model={model} levelData={levelData} />
   ));
 }

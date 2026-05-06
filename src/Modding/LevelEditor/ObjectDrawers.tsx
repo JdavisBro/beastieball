@@ -384,7 +384,7 @@ const OBJECT_DRAWER_MAP: Record<
 };
 
 export default function ObjectDrawers({ levelData }: { levelData: LevelData }) {
-  return levelData.objects_array?.map((object) => {
+  return levelData.objects_array?.map((object, index) => {
     const Component =
       OBJECT_DRAWER_MAP[object.object ?? "objNode"] ?? TextDrawer;
     const position: [number, number, number] = [
@@ -395,7 +395,7 @@ export default function ObjectDrawers({ levelData }: { levelData: LevelData }) {
     ];
     return (
       <Component
-        key={`${object.obj_guid}${object.x}${object.y}${object.z}`}
+        key={index}
         object={object}
         position={position}
         levelData={levelData}

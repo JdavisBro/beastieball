@@ -164,7 +164,7 @@ function Scene({
       <directionalLight position={[500, 500, 500]} intensity={Math.PI} />
       {levelData.shape_groups_array?.map((shape_group, index) => (
         <ShapeGroup
-          key={`${index}${shape_group.x}${shape_group.y}${shape_group.z}`}
+          key={index}
           shapeGroup={shape_group}
           levelData={levelData}
         />

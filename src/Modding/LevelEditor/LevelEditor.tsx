@@ -208,23 +208,37 @@ export default function LevelEditor() {
         description={"Level Editor for Beastieball"}
       />
       <Header title="Level Editor" />
-      <label>
-        Level:{" "}
-        <select
-          value={level}
-          onChange={(event) =>
-            navigate(`/modding/level/${event.currentTarget.value}`)
-          }
-        >
-          {WORLD_DATA.level_stumps_array
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .map((level) => (
-              <option key={level.name} value={level.name}>
-                {level.name}
-              </option>
-            ))}
-        </select>
-      </label>
+      <div>
+        <label>
+          Level:{" "}
+          <select
+            value={level}
+            onChange={(event) =>
+              navigate(`/modding/level/${event.currentTarget.value}`)
+            }
+          >
+            {WORLD_DATA.level_stumps_array
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((level) => (
+                <option key={level.name} value={level.name}>
+                  {level.name}
+                </option>
+              ))}
+          </select>
+        </label>
+        <label>
+          Custom:{" "}
+          <input
+            type="file"
+            onChange={(event) => {
+              const files = event.currentTarget.files;
+              if (files) {
+                files[0].text().then((data) => setLevelData(JSON.parse(data)));
+              }
+            }}
+          />
+        </label>
+      </div>
       <Canvas style={{ flexGrow: 1 }}>
         <Suspense fallback={null}>
           {levelStump && levelData && (
@@ -232,7 +246,6 @@ export default function LevelEditor() {
           )}
         </Suspense>
       </Canvas>
-      {/* {levelData ? <pre>{JSON.stringify(levelData, null, 2)}</pre> : null} */}
     </div>
   );
 }

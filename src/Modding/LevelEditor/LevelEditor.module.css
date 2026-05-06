@@ -1,0 +1,11 @@
+.label {
+  display: none;
+}
+
+.labelVisible {
+  display: block;
+  transform: translate(-50%, -200%) !important;
+  user-select: none;
+  pointer-events: none;
+  background-color: black;
+}

@@ -97,7 +97,13 @@ function ModelChild({
   ) : null;
 }
 
-function Model({ model, levelData }: { model: Model; levelData: LevelData }) {
+export function ModelElem({
+  model,
+  levelData,
+}: {
+  model: Model;
+  levelData: LevelData;
+}) {
   const model_obj = useLoader(
     OBJLoader,
     `${import.meta.env.VITE_DATA_URL}models_obj/${model.model_filename}.obj`,
@@ -133,7 +139,7 @@ export function Models({
   levelData: LevelData;
 }) {
   return levelData.models_array?.map((model) => (
-    <Model
+    <ModelElem
       key={`${model.model_filename}${model.name}${model.x}${model.y}${model.z}`}
       model={model}
       levelData={levelData}

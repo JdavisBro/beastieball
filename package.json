@@ -11,6 +11,7 @@
     "prettier": "prettier --config .prettierrc src/**/*.{ts,tsx,css,json} --write"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
     "@types/three": "^0.184.0",
     "gifenc": "^1.0.3",

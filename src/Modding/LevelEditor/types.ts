@@ -95,12 +95,16 @@ export type Model = {
 // MARK: Objects
 
 /* prettier-ignore */
+export type GameObjectTypes = "objPlayer" | "objCameralook" | "objGift" | "objGymdoor" | "objRailhouse" | "objBallcenter" | "objCarlos" | "objJavier" | "objNatalia" | "objAutumn" | "objTrent" | "objBoathouse" | "objPier_land" | "objRailwall" | "objRiven" | "objNode" | "objSit" | "objKing" | "objRoamerPOI" | "objGameplay" | "objMask" | "objJay" | "objAudioPlayer" | "objSimge" | "objIcecream" | "objVending" | "objSpawner" | "objBallshrooms" | "objBossElevator" | "objBallman" | "objBossroom" | "objLockerroom" | "objToilet" | "objCeleb" | "objCycle" | "objKaz" | "objResearcher" | "objIngredientCollect" | "objRailswitch" | "objClothesShop" | "objBored1" | "objBored2" | "objBored3" | "objGfxtee" | "objHatlady" | "objHatguy" | "objDiner" | "objSteven" | "objInteractable" | "objHiker" | "objCamp" | "objMolehill" | "objCity" | "objLeafs" | "objRope" | "objScience" | "objCraig" | "objRubberplaque" | "objRubberfamrer" | "objEvolveshroom" | "objAcademymarker" | "objLisa" | "objBrodie" | "objLena" | "objTianyi" | "objMiranda" | "objWeaver" | "objMerrick" | "objFarzaneh" | "objBouncer" | "objClub" | "objKisy" | "objOleh" | "objIsabelle" | "objLucille" | "objFabio" | "objGaia" | "objGenesa" | "objClemens" | "objBeachedTurtle" | "objOcean" | "objPier_sea" | "objGameplay_turtle" | "objBoreal" | "objTrizah" | "objRufus" | "objWarrior" | "objBalldispenser" | "objStreamer" | "objHeadmaster" | "objWitchinstructor" | "objAcademygate" | "objKids" | "objValerie" | "objAcademyroom" | "objBouncy" | "objRain" | "objUnderConstruction" | "objKorwin" | "objTrainboss" | "objLeagueTower" | "objRiley" | "objAthan" | "objJiyun" | "objMall" | "objRacer" | "objFlycars" | "objTrashbin" | "objBooster" | "objDiana" | "objJini" | "objJesse" | "objAd" | "objFanspike" | "objFanbro" | "objFankid" | "objZipstation" | "objNaveen" | "objRahma" | "objKaan" | "objAnton" | "objPaula" | "objTomislav" | "objMod" | "objOdina" | "objKarma" | "objVilma" | "objIzuchukwu" | "objCynthia" | "objBeatrice" | "objLillian" | "objLeagueman" | "objRaymond" | "objYamileidys" | "objStadiumMusic" | "objDad" | "objBee" | "objHSmate" | "objHSgirl" | "objHShero" | "objMagdalena" | "objPreston" | "objEvolvetrickies" | "objMangroveboss" | "objRex" | "objWindvolume" | "objDeathplane" | "objMartin" | "objSecretYeti" | "objAcademyRoomModel" | "objSpinner" | "objHena" | "objIndie" | "objPirate" | "objZara" | "objRuben" | "objYoandy" | "objKatya" | "objLogan" | "objVuk" | "objPirate_1" | "objHiddenObject" | "objPirate_2" | "objSecretReserve" | "objApocalypse" | "objEtienne" | "objStadiumTrailer" | "objStadiumCredits" | "objShroomgod" | "objSunkenplaque" | "objSunkenboss" | "objSunkenlock" | "objAnnabel" | "objJackie" | "objDaniel" | "objRedd" | "objConstructionguy" | "objReserveplaque" | "objTutorialtext" | "objThrowable_ball" | "objHometownBedroom" | "objWardrobe" | "objBedrest" | "objHomeotwnNorthGuard" | "objTutorial" | "objStarters" | "objTVprop" | "objNetroom" | "objTitle"
+
+/* prettier-ignore */
 export type GameObject = {
   _: "class_object";
   name?: string;
   obj_guid?: string;
-  object?: string;
+  object?: GameObjectTypes;
   x?: number; y?: number; z?: number;
+  [key: string]: any;
 }
 
 type ObjectReference = {

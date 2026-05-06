@@ -9,6 +9,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
 import ShapeGroup, { LevelFloor } from "./ShapeGroup";
 import { Models } from "./Models";
+import ObjectDrawers from "./ObjectDrawers";
 
 const AREA_ID_DIRS = [
   "etc/",
@@ -110,38 +111,6 @@ export function findFloorPosition(x: number, y: number, levelData: LevelData) {
   return highest_z;
 }
 
-function GameObjectElem({
-  object,
-  levelData,
-}: {
-  object: GameObject;
-  levelData: LevelData;
-}) {
-  const meshRef = useRef<THREE.Mesh>(null!);
-  const [active, setActive] = useState(false);
-  useFrame((_state, delta) => (meshRef.current.rotation.x += delta));
-  if (active) console.log(object);
-
-  const position: [number, number, number] = [
-    -(object.x ?? 0),
-    object.y ?? 0,
-    object.z ?? 0,
-  ];
-  position[2] += findFloorPosition(-position[0], position[1], levelData);
-
-  return (
-    <mesh
-      ref={meshRef}
-      scale={active ? 5 : 1}
-      onClick={() => setActive(!active)}
-      position={position}
-    >
-      <boxGeometry args={[100, 100, 100]} />
-      <meshStandardMaterial color={"red"} />
-    </mesh>
-  );
-}
-
 const OrbitControls_Element = extend(OrbitControls);
 
 function OrbitControlsElement({ levelStump }: { levelStump: LevelStump }) {
@@ -187,13 +156,6 @@ function Scene({
       <OrbitControlsElement levelStump={levelStump} />
       <ambientLight intensity={1} />
       <directionalLight position={[500, 500, 500]} intensity={Math.PI} />
-      {levelData.objects_array?.map((object) => (
-        <GameObjectElem
-          key={object.obj_guid}
-          object={object}
-          levelData={levelData}
-        />
-      ))}
       {levelData.shape_groups_array?.map((shape_group, index) => (
         <ShapeGroup
           key={`${index}${shape_group.x}${shape_group.y}${shape_group.z}`}
@@ -202,6 +164,7 @@ function Scene({
         />
       ))}
       <Models levelStump={levelStump} levelData={levelData} />
+      <ObjectDrawers levelData={levelData} />
       <LevelFloor levelStump={levelStump} levelData={levelData} />
     </>
   );

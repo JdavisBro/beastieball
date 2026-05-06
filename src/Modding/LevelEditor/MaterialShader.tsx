@@ -1,7 +1,7 @@
 import { useLoader } from "@react-three/fiber";
 import { bgrDecimalToRgb } from "../../utils/color";
 import { PaletteReference } from "./types";
-import { DoubleSide, RepeatWrapping, TextureLoader } from "three";
+import { DoubleSide, RepeatWrapping, TextureLoader, NearestFilter } from "three";
 
 import SPRITE_INFO_FULL from "../../data/raw/sprite_info_full.json";
 
@@ -65,6 +65,8 @@ export function MaterialShader({
     TextureLoader,
     `${import.meta.env.VITE_DATA_URL}sprites/sprMASTER_TEXTURE/0.png`,
   );
+  texture.magFilter = NearestFilter;
+  texture.minFilter = NearestFilter;
   texture.wrapS = RepeatWrapping;
   texture.wrapT = RepeatWrapping;
 
@@ -112,6 +114,8 @@ export function TexturedShader({ textureName }: { textureName: string }) {
     TextureLoader,
     `${import.meta.env.VITE_DATA_URL}sprites/${textureSpriteName}/0.png`,
   );
+  texture.magFilter = NearestFilter;
+  texture.minFilter = NearestFilter;
   texture.wrapS = RepeatWrapping;
   texture.wrapT = RepeatWrapping;
 
@@ -160,8 +164,14 @@ export function TexturedColoredShader({
     TextureLoader,
     `${import.meta.env.VITE_DATA_URL}sprites/sprMASTER_TEXTURE/0.png`,
   );
+  texture.magFilter = NearestFilter;
+  texture.minFilter = NearestFilter;
   texture.wrapS = RepeatWrapping;
   texture.wrapT = RepeatWrapping;
+  masterTexture.magFilter = NearestFilter;
+  masterTexture.minFilter = NearestFilter;
+  masterTexture.wrapS = RepeatWrapping;
+  masterTexture.wrapT = RepeatWrapping;
 
   const [colorA, colorB] = getPaletteColors(palette, paletteRef);
 
@@ -221,6 +231,8 @@ export function MeshColoredShader({
     TextureLoader,
     `${import.meta.env.VITE_DATA_URL}sprites/sprMASTER_TEXTURE/0.png`,
   );
+  texture.magFilter = NearestFilter;
+  texture.minFilter = NearestFilter;
   texture.wrapS = RepeatWrapping;
   texture.wrapT = RepeatWrapping;
 

@@ -100,9 +100,11 @@ function ModelChild({
 export function ModelElem({
   model,
   levelData,
+  useFloorPos,
 }: {
   model: Model;
   levelData: LevelData;
+  useFloorPos?: boolean;
 }) {
   const model_obj = useLoader(
     OBJLoader,
@@ -112,7 +114,10 @@ export function ModelElem({
   if ((model.effect_layer ?? 0) > 0) return;
   const x = model.x ?? 0;
   const y = model.y ?? 0;
-  const z = findFloorPosition(x, y, levelData) + (model.z ?? 0);
+  const z =
+    (useFloorPos ?? true)
+      ? findFloorPosition(x, y, levelData) + (model.z ?? 0)
+      : (model?.z ?? 0);
   if (model.model_filename == "sport_shop")
     console.log(model.model_filename, z);
   // const z = ;

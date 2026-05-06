@@ -49,8 +49,25 @@ function CharacterDrawer({
   );
 }
 
-function ModelDrawer({ model, levelData }: { model: Model } & DrawerProps) {
-  return <ModelElem model={model} levelData={levelData} />;
+function ModelDrawer({
+  object,
+  model,
+  palettes,
+  position,
+  levelData,
+}: { model: Model; palettes?: number } & DrawerProps) {
+  model.x = model.x ?? -position[0];
+  model.y = model.y ?? position[1];
+  model.z = model.z ?? position[2];
+  if (palettes) {
+    model.palettes = {
+      _: "class_palette_array",
+      array: [...new Array(palettes)].map(
+        (_, index) => object["palette_" + (index + 1)],
+      ),
+    };
+  }
+  return <ModelElem model={model} levelData={levelData} useFloorPos={false} />;
 }
 
 function TextDrawer({ position, object }: DrawerProps) {
@@ -199,13 +216,38 @@ const OBJECT_DRAWER_MAP: Record<
   objMartin: undefined,
 
   objCameralook: undefined,
-  objGift: undefined,
+  objGift: (props) => (
+    <ModelDrawer
+      model={useMemo(
+        () => ({
+          _: "class_model",
+          model_filename: "gift",
+        }),
+        [],
+      )}
+      palettes={2}
+      {...props}
+    />
+  ),
   objGymdoor: undefined,
   objRailhouse: undefined,
   objBallcenter: undefined,
   objBoathouse: undefined,
   objPier_land: undefined,
-  objRailwall: undefined,
+  objRailwall: (props) => (
+    <ModelDrawer
+      model={useMemo(
+        () => ({
+          _: "class_model",
+          model_filename: "traincross_down",
+          z_angle: props.object.angle,
+        }),
+        [props.object],
+      )}
+      palettes={1}
+      {...props}
+    />
+  ),
   objNode: undefined,
   objSit: undefined,
   objRoamerPOI: undefined,
@@ -217,9 +259,6 @@ const OBJECT_DRAWER_MAP: Record<
         () => ({
           _: "class_model",
           model_filename: "vending_machine",
-          x: props.object.x,
-          y: props.object.y,
-          z: props.object.z,
           z_angle: 90 + ((props.object.angle ?? 0) as number),
         }),
         [props.object],
@@ -228,13 +267,36 @@ const OBJECT_DRAWER_MAP: Record<
     />
   ),
   objSpawner: undefined,
-  objBallshrooms: undefined,
+  objBallshrooms: (props) => (
+    <ModelDrawer
+      model={useMemo(
+        () => ({
+          _: "class_model",
+          model_filename: "shroom_cluster",
+        }),
+        [],
+      )}
+      {...props}
+    />
+  ),
   objBossElevator: undefined,
   objBossroom: undefined,
   objLockerroom: undefined,
   objToilet: undefined,
   objIngredientCollect: undefined,
-  objRailswitch: undefined,
+  objRailswitch: (props) => (
+    <ModelDrawer
+      model={useMemo(
+        () => ({
+          _: "class_model",
+          model_filename: "rail_lever_up",
+        }),
+        [],
+      )}
+      palettes={1}
+      {...props}
+    />
+  ),
   objClothesShop: undefined,
   objDiner: undefined,
   objInteractable: undefined,
@@ -242,7 +304,29 @@ const OBJECT_DRAWER_MAP: Record<
   objMolehill: undefined,
   objCity: undefined,
   objLeafs: undefined,
-  objRope: undefined,
+  objRope: (props) => {
+    const angle = props.object.angle ?? 0;
+    const angle_rad = (angle / 180) * Math.PI;
+    const dist = props.object.rope_dist ?? 150;
+    const x = (props.object.x ?? 0) + Math.sin(angle_rad) * dist;
+    const y = (props.object.y ?? 0) + Math.cos(angle_rad) * dist;
+    return (
+      <ModelDrawer
+        model={useMemo(
+          () => ({
+            _: "class_model",
+            model_filename: "rope_down",
+            x: x,
+            y: y,
+            z_angle: props.object.angle,
+          }),
+          [props.object],
+        )}
+        palettes={2}
+        {...props}
+      />
+    );
+  },
   objRubberplaque: undefined,
   objRubberfamrer: undefined,
   objEvolveshroom: undefined,

@@ -2,11 +2,11 @@ import { useNavigate, useParams } from "react-router-dom";
 import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
 import { Suspense, useEffect, useRef, useState } from "react";
-import { GameObject, LevelData } from "./types";
+import { LevelData } from "./types";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, extend, useThree } from "@react-three/fiber";
 import ShapeGroup, { LevelFloor } from "./ShapeGroup";
 import { Models } from "./Models";
 import ObjectDrawers from "./ObjectDrawers";
@@ -78,8 +78,14 @@ function pointInsidePolygon(x: number, y: number, vs: number[][]) {
   return inside;
 }
 
-export function findFloorPosition(x: number, y: number, levelData: LevelData) {
+export function findFloorPosition(
+  x: number,
+  y: number,
+  levelData: LevelData,
+  z_max?: number,
+) {
   let highest_z = 0;
+  const z_test = z_max !== undefined;
   if (levelData.shape_groups_array) {
     for (const group of levelData.shape_groups_array) {
       if (group.shapes_array) {
@@ -99,8 +105,8 @@ export function findFloorPosition(x: number, y: number, levelData: LevelData) {
                 shape_y + shape.points_array[i + 1],
               ]);
             }
-            if (pointInsidePolygon(x, y, poly)) {
-              const z = (group.z ?? 0) + (shape.z ?? 0) + shape.points_array[2];
+            const z = (group.z ?? 0) + (shape.z ?? 0) + shape.points_array[2];
+            if ((!z_test || z_max > z) && pointInsidePolygon(x, y, poly)) {
               if (z > highest_z) highest_z = z;
             }
           }
@@ -125,7 +131,7 @@ function OrbitControlsElement({ levelStump }: { levelStump: LevelStump }) {
     const orbit = ref.current;
     if (!orbit) return;
     camera.near = 3;
-    camera.far = 250000;
+    camera.far = 50000;
     orbit.target.set(
       -((levelStump.world_x2 - levelStump.world_x1) / 2),
       (levelStump.world_y2 - levelStump.world_y1) / 2,

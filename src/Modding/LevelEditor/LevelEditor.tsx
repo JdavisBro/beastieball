@@ -227,7 +227,7 @@ export default function LevelEditor() {
   const navigate = useNavigate();
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100dvh" }}>
+    <div className={styles.container}>
       <OpenGraph
         title={`Level Editor - ${import.meta.env.VITE_BRANDING}`}
         image={"/gameassets/sprMainmenu/3.png"}
@@ -283,7 +283,7 @@ export default function LevelEditor() {
           </select>
         </label>
       </div>
-      <Canvas style={{ flexGrow: 1 }} frameloop="demand">
+      <Canvas className={styles.canvas} frameloop="demand">
         <LevelEditorContext.Provider
           value={useMemo(() => ({ viewMode: viewMode }), [viewMode])}
         >

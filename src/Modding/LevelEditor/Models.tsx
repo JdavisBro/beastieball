@@ -31,7 +31,7 @@ function ModelChild({
   const collider = name.includes("COLLIDER");
   const visible = !collider || name.includes("VISIBLE");
 
-  const { viewMode, palette } = useLevelEditor();
+  const { viewMode } = useLevelEditor();
   if (
     !(
       viewMode == EditorViewMode.All ||
@@ -71,7 +71,6 @@ function ModelChild({
         <TexturedColoredShader
           textureName={texture_name}
           paletteRef={paletteRef}
-          palette={palette}
         />
       ) : color > -1 ? (
         <meshBasicMaterial
@@ -79,7 +78,7 @@ function ModelChild({
           side={DoubleSide}
         />
       ) : (
-        <MeshColoredShader palette={palette} paletteRef={paletteRef} />
+        <MeshColoredShader paletteRef={paletteRef} />
       )}
     </mesh>
   ) : null;

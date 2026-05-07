@@ -10,6 +10,8 @@ import {
 import { Object3D, Vector3 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { Canvas, extend, useThree } from "@react-three/fiber";
+import { Html, useProgress } from "@react-three/drei";
+import { ErrorBoundary } from "react-error-boundary";
 
 import { LevelData } from "./types";
 import ShapeGroup, { LevelFloor } from "./ShapeGroup";
@@ -20,7 +22,6 @@ import { EditorViewMode, LevelEditorContext } from "./useLevelEditor";
 import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
-import { Html, useProgress } from "@react-three/drei";
 
 const AREA_ID_DIRS = [
   "etc/",
@@ -218,12 +219,25 @@ function Loading() {
   );
 }
 
+function Error({ reason }: { reason?: string }) {
+  const network = reason?.includes("NetworkError");
+
+  return (
+    <Html className={styles.loading}>
+      Error...
+      <img src="/nojs.png" />
+      {network ? "Level does not exist" : reason}
+    </Html>
+  );
+}
+
 export default function LevelEditor() {
   const { level } = useParams();
 
   Object3D.DEFAULT_UP = new Vector3(0, 0, 1);
 
   const [levelData, setLevelData] = useState<undefined | LevelData>(undefined);
+  const [loadFailed, setLoadFailed] = useState("");
 
   const levelStump =
     level != undefined
@@ -238,9 +252,12 @@ export default function LevelEditor() {
       `${import.meta.env.VITE_DATA_URL}world_data/${level_prefix}${level}.json`,
     )
       .then((res) => res.json())
-      .then((data) => setLevelData(ParseLevelData(data, []) as LevelData))
+      .then((data) => {
+        setLevelData(ParseLevelData(data, []) as LevelData);
+        setLoadFailed("");
+      })
       .catch((reason) => {
-        console.log(reason);
+        setLoadFailed((reason as TypeError).message);
         setLevelData(undefined);
       });
   }, [level]);
@@ -310,11 +327,19 @@ export default function LevelEditor() {
         <LevelEditorContext.Provider
           value={useMemo(() => ({ viewMode: viewMode }), [viewMode])}
         >
-          <Suspense fallback={<Loading />}>
-            {levelStump && levelData && (
-              <Scene levelStump={levelStump} levelData={levelData} />
-            )}
-          </Suspense>
+          {loadFailed.length ? (
+            <Error reason={loadFailed} />
+          ) : (
+            <ErrorBoundary
+              fallbackRender={(props) => <Error reason={props.error} />}
+            >
+              <Suspense fallback={<Loading />}>
+                {levelStump && levelData && (
+                  <Scene levelStump={levelStump} levelData={levelData} />
+                )}
+              </Suspense>
+            </ErrorBoundary>
+          )}
         </LevelEditorContext.Provider>
       </Canvas>
     </div>

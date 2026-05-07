@@ -9,6 +9,11 @@
   flex-grow: 1;
 }
 
+.loading {
+  text-align: center;
+  transform: translate(-50%, -50%) !important;
+}
+
 .label {
   display: none;
 }

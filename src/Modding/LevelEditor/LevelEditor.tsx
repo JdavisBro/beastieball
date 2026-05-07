@@ -20,6 +20,7 @@ import { EditorViewMode, LevelEditorContext } from "./useLevelEditor";
 import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
+import { Html, useProgress } from "@react-three/drei";
 
 const AREA_ID_DIRS = [
   "etc/",
@@ -195,6 +196,28 @@ function Scene({
   );
 }
 
+function Loading() {
+  const progress = useProgress();
+  console.log(progress);
+  const itemSplit = progress.item.split("/");
+
+  const model = progress.item.endsWith(".obj");
+
+  const item = model
+    ? itemSplit[itemSplit.length - 1].split(".")[0]
+    : itemSplit[itemSplit.length - 2];
+
+  return (
+    <Html className={styles.loading}>
+      Loading...
+      <br />
+      {model ? "Model" : "Texture"}
+      <br />
+      {item}
+    </Html>
+  );
+}
+
 export default function LevelEditor() {
   const { level } = useParams();
 
@@ -287,7 +310,7 @@ export default function LevelEditor() {
         <LevelEditorContext.Provider
           value={useMemo(() => ({ viewMode: viewMode }), [viewMode])}
         >
-          <Suspense fallback={null}>
+          <Suspense fallback={<Loading />}>
             {levelStump && levelData && (
               <Scene levelStump={levelStump} levelData={levelData} />
             )}

@@ -22,7 +22,13 @@ function CharacterDrawer({
   sprite,
   index,
   path,
-}: { sprite: string; index?: string; path?: string } & DrawerProps) {
+  scale,
+}: {
+  sprite: string;
+  index?: string;
+  path?: string;
+  scale?: number;
+} & DrawerProps) {
   const texture = useLoader(
     TextureLoader,
     path ??
@@ -39,11 +45,16 @@ function CharacterDrawer({
       position={[
         position[0],
         position[1],
-        position[2] + sprite_data.height / 4,
+        position[2] + (sprite_data.height / 4) * (scale ?? 0),
       ]}
       rotation={[Math.PI / 2, Math.PI, 0]}
     >
-      <planeGeometry args={[sprite_data.width / 2, sprite_data.height / 2]} />
+      <planeGeometry
+        args={[
+          (sprite_data.width / 2) * (scale ?? 0),
+          (sprite_data.height / 2) * (scale ?? 0),
+        ]}
+      />
       <meshBasicMaterial map={texture} side={DoubleSide} transparent />
     </mesh>
   );
@@ -213,6 +224,9 @@ const OBJECT_DRAWER_MAP: Record<
   objFankid: undefined,
   objRex: undefined,
   objMartin: undefined,
+  objConstructionguy: undefined,
+  objRubberfamrer: undefined,
+  objUnderConstruction: undefined,
 
   objCameralook: undefined,
   objGift: (props) => (
@@ -299,35 +313,64 @@ const OBJECT_DRAWER_MAP: Record<
   objClothesShop: undefined,
   objDiner: undefined,
   objInteractable: undefined,
-  objCamp: undefined,
-  objMolehill: undefined,
-  objCity: undefined,
-  objLeafs: undefined,
-  objRope: (props) => {
-    const angle = props.object.angle ?? 0;
-    const angle_rad = (angle / 180) * Math.PI;
-    const dist = props.object.rope_dist ?? 150;
-    const x = (props.object.x ?? 0) + Math.sin(angle_rad) * dist;
-    const y = (props.object.y ?? 0) + Math.cos(angle_rad) * dist;
-    return (
+  objCamp: (props) =>
+    (props.object.model_keep ?? true) ? (
       <ModelDrawer
         model={useMemo(
           () => ({
             _: "class_model",
-            model_filename: "rope_down",
-            x: x,
-            y: y,
-            z_angle: props.object.angle,
+            model_filename: "reserve_camp_young",
           }),
           [props.object],
         )}
-        palettes={2}
+        palettes={3}
         {...props}
       />
-    );
-  },
+    ) : (
+      <TextDrawer {...props} />
+    ),
+  objMolehill: (props) => (
+    <ModelDrawer
+      model={useMemo(
+        () => ({
+          _: "class_model",
+          model_filename: "molehill",
+          palettes: {
+            _: "class_palette_array",
+            array: [
+              {
+                _: "class_palette_reference",
+                base_index: 0,
+                channel_index: 1,
+                texture_index: 1,
+              },
+            ],
+          },
+        }),
+        [props.object],
+      )}
+      {...props}
+    />
+  ),
+  objCity: undefined,
+  objLeafs: undefined,
+  objRope: (props) => (
+    <ModelDrawer
+      model={useMemo(
+        () => ({
+          _: "class_model",
+          model_filename: "rope_down",
+          x: props.object.x ?? 0,
+          y: props.object.y ?? 0,
+          z_angle: props.object.angle,
+        }),
+        [props.object],
+      )}
+      palettes={2}
+      {...props}
+    />
+  ),
   objRubberplaque: undefined,
-  objRubberfamrer: undefined,
   objEvolveshroom: undefined,
   objAcademymarker: undefined,
   objClub: undefined,
@@ -335,20 +378,125 @@ const OBJECT_DRAWER_MAP: Record<
   objOcean: undefined,
   objPier_sea: undefined,
   objGameplay_turtle: undefined,
-  objBalldispenser: undefined,
-  objAcademygate: undefined,
+  objBalldispenser: (props) => (
+    <ModelDrawer
+      model={useMemo(
+        () => ({
+          _: "class_model",
+          model_filename: "ball_dispenser_2",
+        }),
+        [props.object],
+      )}
+      {...props}
+    />
+  ),
+  objAcademygate: (props) => (
+    <ModelDrawer
+      model={useMemo(
+        () => ({
+          _: "class_model",
+          model_filename: "academy_gate",
+          x: 1982.5,
+          y: 1992,
+        }),
+        [props.object],
+      )}
+      {...props}
+    />
+  ),
   objAcademyroom: undefined,
-  objBouncy: undefined,
+  objBouncy: (props) => (
+    <ModelDrawer
+      model={useMemo(
+        () => ({
+          _: "class_model",
+          model_filename: "bouncy",
+          z: props.object.wall
+            ? props.position[2] + (props.object.z_up ?? 100)
+            : undefined,
+          y_angle: props.object.wall ? -90 : 0,
+          z_angle: props.object.wall ? props.object.angle : 0,
+          palettes: {
+            _: "class_palette_array",
+            array: [
+              props.object.palette_3,
+              props.object.palette_2,
+              props.object.palette_1,
+            ],
+          },
+        }),
+        [props.object],
+      )}
+      {...props}
+    />
+  ),
   objRain: undefined,
-  objUnderConstruction: undefined,
   objKorwin: undefined,
   objTrainboss: undefined,
   objLeagueTower: undefined,
   objMall: undefined,
   objFlycars: undefined,
-  objTrashbin: undefined,
-  objBooster: undefined,
-  objAd: undefined,
+  objTrashbin: (props) => {
+    const { levelData } = useLevelEditor();
+    return (
+      <ModelDrawer
+        model={useMemo(
+          () => ({
+            _: "class_model",
+            model_filename: levelData.name?.includes("park")
+              ? "city_trashcan_b"
+              : "city_trashcan_a",
+            z_angle: props.object.angle,
+            palettes: {
+              _: "class_palette_array",
+              array: [
+                {
+                  _: "class_palette_reference",
+                  base_index: 4,
+                  channel_index: 4,
+                },
+              ],
+            },
+          }),
+          [props.object],
+        )}
+        palettes={4}
+        {...props}
+      />
+    );
+  },
+  objBooster: (props) => (
+    <ModelDrawer
+      model={useMemo(
+        () => ({
+          _: "class_model",
+          model_filename: "booster",
+          z_angle: props.object.angle,
+        }),
+        [props.object],
+      )}
+      palettes={4}
+      {...props}
+    />
+  ),
+  objAd: (props) => (
+    <ModelDrawer
+      model={useMemo(
+        () => ({
+          _: "class_model",
+          model_filename: "billboard",
+          z:
+            props.position[2] +
+            (props.object.z ?? 0) +
+            (props.object.z_up ?? 500),
+          z_angle: props.object.angle,
+        }),
+        [props.object],
+      )}
+      palettes={4}
+      {...props}
+    />
+  ),
   objZipstation: undefined,
   objStadiumMusic: undefined,
   objEvolvetrickies: undefined,
@@ -367,10 +515,16 @@ const OBJECT_DRAWER_MAP: Record<
   objSunkenplaque: undefined,
   objSunkenboss: undefined,
   objSunkenlock: undefined,
-  objConstructionguy: undefined,
   objReserveplaque: undefined,
   objTutorialtext: undefined,
-  objThrowable_ball: undefined,
+  objThrowable_ball: (props) => (
+    <CharacterDrawer
+      sprite={"sprBall"}
+      index={props.object.natural ? "2" : "0"}
+      scale={1 / 3}
+      {...props}
+    />
+  ),
   objHometownBedroom: undefined,
   objWardrobe: undefined,
   objBedrest: undefined,

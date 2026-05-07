@@ -51,12 +51,14 @@ function ModelChild({
 
   return (child as { isMesh: boolean }).isMesh ? (
     <mesh
-      onClick={() => console.log(model, child)}
+      onClick={(event) => console.log(model, event.object)}
       position={position}
       rotation={[
+        // still broken probably
         deg2rad(model.x_angle ?? 0),
         deg2rad(model.y_angle ?? 0),
         deg2rad(model.z_angle ?? 0),
+        "ZYX",
       ]}
       geometry={(child as Mesh).geometry}
       scale={[

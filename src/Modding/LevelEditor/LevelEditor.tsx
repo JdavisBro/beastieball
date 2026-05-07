@@ -256,13 +256,10 @@ export default function LevelEditor() {
       ? WORLD_DATA.level_stumps_array.find((stump) => stump.name == level)
       : undefined;
 
-  const [loadingLevel, setLoadingLevel] = useState(levelStump !== undefined);
-
   useEffect(() => {
     setLevelData(undefined);
     if (levelStump == undefined) return;
     const level_prefix = AREA_ID_DIRS[(levelStump.area_id ?? -1) + 1];
-    setLoadingLevel(true);
     fetch(
       `${import.meta.env.VITE_DATA_URL}world_data/${level_prefix}${level}.json`,
     )
@@ -270,12 +267,10 @@ export default function LevelEditor() {
       .then((data) => {
         setLevelData(ParseLevelData(data, []) as LevelData);
         setLoadFailed("");
-        setLoadingLevel(false);
       })
       .catch((reason) => {
         setLoadFailed((reason as TypeError).message);
         setLevelData(undefined);
-        setLoadingLevel(false);
       });
   }, [level]);
 

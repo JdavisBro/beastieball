@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
-import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { LevelData } from "./types";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
 import * as THREE from "three";
@@ -123,6 +123,7 @@ function OrbitControlsElement({ levelStump }: { levelStump: LevelStump }) {
   const {
     camera,
     gl: { domElement },
+    invalidate,
   } = useThree();
 
   const ref = useRef<OrbitControls>(null);
@@ -145,7 +146,15 @@ function OrbitControlsElement({ levelStump }: { levelStump: LevelStump }) {
     camera.rotation.set(0, 0, 0);
     camera.updateProjectionMatrix();
     orbit.update();
+    invalidate();
   }, [levelStump]);
+
+  const handleChange = useCallback(() => invalidate(), [invalidate]);
+
+  useEffect(() => {
+    ref.current?.addEventListener("change", handleChange);
+    return () => ref.current?.removeEventListener("change", handleChange);
+  });
 
   return <OrbitControls_Element args={[camera, domElement]} ref={ref} />;
 }
@@ -245,7 +254,7 @@ export default function LevelEditor() {
           />
         </label>
       </div>
-      <Canvas style={{ flexGrow: 1 }}>
+      <Canvas style={{ flexGrow: 1 }} frameloop="demand">
         <Suspense fallback={null}>
           {levelStump && levelData && (
             <Scene levelStump={levelStump} levelData={levelData} />

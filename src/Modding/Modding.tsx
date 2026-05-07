@@ -25,6 +25,12 @@ export default function Modding(): React.ReactElement {
           hoverImage={"/gameassets/sprMainmenu/11.png"}
           location={"/modding/save/"}
         />
+        <NavigationMenuOption
+          text={"Level Editor"}
+          image={"/gameassets/sprMainmenu/2.png"}
+          hoverImage={"/gameassets/sprMainmenu/3.png"}
+          location={"/modding/level/"}
+        />
       </NavigationMenu>
     </>
   );

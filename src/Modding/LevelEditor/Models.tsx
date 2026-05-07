@@ -3,21 +3,15 @@ import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { useLoader } from "@react-three/fiber";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
 import type { LevelData, Model } from "./types";
-import {
-  DoubleSide,
-  Mesh,
-  Object3D,
-  RepeatWrapping,
-  TextureLoader,
-} from "three";
+import { DoubleSide, Mesh, Object3D } from "three";
 import { findFloorPosition } from "./LevelEditor";
 import {
-  MaterialShader,
   MeshColoredShader,
   TexturedColoredShader,
   TexturedShader,
 } from "./MaterialShader";
 import { bgrDecimalToHex } from "../../utils/color";
+import useLevelEditor, { EditorViewMode } from "./useLevelEditor";
 
 function deg2rad(deg: number) {
   return (deg / 180) * Math.PI;
@@ -40,12 +34,21 @@ function ModelChild({
   z: number;
   u_scale: number;
 }) {
-  const [name, texture_name, texture_slotS, palette_slot, index, colorS] =
+  const [name, texture_name, texture_slotS, palette_slot, _index, colorS] =
     child.name.split("#");
 
-  const collider = name.includes("COLLIDER") && !name.includes("VISIBLE");
+  const collider = name.includes("COLLIDER");
+  const visible = !collider || name.includes("VISIBLE");
 
-  if (collider) return null;
+  const { viewMode } = useLevelEditor();
+  if (
+    !(
+      viewMode == EditorViewMode.All ||
+      (viewMode == EditorViewMode.Collision && collider) ||
+      (viewMode == EditorViewMode.Visible && visible)
+    )
+  )
+    return null;
 
   const texture_slot = Number(texture_slotS);
   const color = Number(colorS);
@@ -118,10 +121,6 @@ export function ModelElem({
     (useFloorPos ?? true)
       ? findFloorPosition(x, y, levelData) + (model.z ?? 0)
       : (model?.z ?? 0);
-  if (model.model_filename == "sport_shop")
-    console.log(model.model_filename, z);
-  // const z = ;
-  //
   const u_scale = model.u_scale ?? 1;
   return model_obj.children.map((child) => (
     <ModelChild
@@ -138,7 +137,6 @@ export function ModelElem({
 }
 
 export function Models({
-  levelStump,
   levelData,
 }: {
   levelStump: LevelStump;

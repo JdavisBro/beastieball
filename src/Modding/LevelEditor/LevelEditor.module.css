@@ -9,3 +9,13 @@
   pointer-events: none;
   background-color: black;
 }
+
+.settings {
+  composes: animBoxBackground from global;
+  color: black;
+  text-align: center;
+  margin: 6px auto;
+  padding: 4px 8px;
+  width: fit-content;
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
+}

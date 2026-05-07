@@ -1,33 +1,43 @@
-import * as THREE from "three";
-
+import { Shape as ShapeThree } from "three";
 import type { LevelData, ShapeGroup, Shape, PaletteReference } from "./types";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
 import { MaterialShader } from "./MaterialShader";
+import useLevelEditor, { EditorViewMode } from "./useLevelEditor";
 
 function ShapeTexture({
   position,
+  rotation,
   shape_three,
   thickness,
   paletteTop,
   paletteSide,
   palette,
+  clipTop,
   onClick,
 }: {
   position: number[];
-  shape_three: THREE.Shape;
+  rotation?: [number, number, number];
+  shape_three: ShapeThree;
   thickness: number;
   paletteTop?: PaletteReference;
   paletteSide?: PaletteReference;
   palette: number[];
+  clipTop?: boolean;
   onClick?: React.MouseEventHandler;
 }) {
   return (
-    <mesh position={[-position[0], position[1], position[2]]} onClick={onClick}>
+    <mesh
+      position={[-position[0], position[1], position[2]]}
+      rotation={rotation}
+      onClick={onClick}
+    >
       <extrudeGeometry args={[shape_three, { depth: thickness }]} />
       <MaterialShader
         paletteTop={paletteTop}
         paletteSide={paletteSide}
         palette={palette}
+        clipTop={clipTop}
+        doubleSide={clipTop}
       />
     </mesh>
   );
@@ -42,13 +52,22 @@ function Shape({
   shape: Shape;
   palette: number[];
 }) {
-  const shape_three = new THREE.Shape();
+  const shape_three = new ShapeThree();
 
   const z = (shape.z ?? 0) + (shape?.points_array?.[2] ?? 0);
   const thickness = (shape.thickness ?? 0) || (shape.z ?? 0);
   position[2] += (z - thickness) / 2;
-  const solid = shape.solid ? true : false;
-  if (shape.points_array && shape.flat && (shape.visible ?? true)) {
+
+  const { viewMode } = useLevelEditor();
+
+  const solid = (shape.solid ?? false) || (shape.water ?? false);
+  const flat = shape.flat ?? false;
+  const visible =
+    viewMode == EditorViewMode.All ||
+    (viewMode == EditorViewMode.Collision && solid && flat) ||
+    (viewMode == EditorViewMode.Visible && (shape.visible ?? true));
+
+  if (shape.points_array && visible) {
     const x = -(shape.x ?? 0);
     const y = shape.y ?? 0;
     for (let i = 0; i < shape.points_array?.length; i += 3) {
@@ -66,7 +85,7 @@ function Shape({
     }
   }
 
-  if (!(shape.visible ?? true) || (!solid && !shape.water)) {
+  if (!visible) {
     return null;
   }
 
@@ -77,7 +96,9 @@ function Shape({
       paletteSide={shape.side_palette_reference}
       position={position}
       shape_three={shape_three}
-      thickness={thickness || z}
+      thickness={flat ? thickness || (solid && z) || 1 : 1}
+      rotation={flat ? undefined : [-Math.PI / 2, 0, 0]}
+      clipTop={shape.wall_collider}
       onClick={() => console.log(shape)}
     />
   );
@@ -112,7 +133,7 @@ export function LevelFloor({
     return null;
   }
 
-  const shape = new THREE.Shape();
+  const shape = new ShapeThree();
   const width = -((levelStump?.world_x2 ?? 0) - (levelStump?.world_x1 ?? 0));
   const height = (levelStump?.world_y2 ?? 0) - (levelStump?.world_y1 ?? 0);
   shape.moveTo(0, 0);

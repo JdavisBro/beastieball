@@ -1,15 +1,24 @@
 import { useNavigate, useParams } from "react-router-dom";
 import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
-import { Suspense, useCallback, useEffect, useRef, useState } from "react";
+import {
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { LevelData } from "./types";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
-import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { Canvas, extend, useThree } from "@react-three/fiber";
 import ShapeGroup, { LevelFloor } from "./ShapeGroup";
 import { Models } from "./Models";
 import ObjectDrawers from "./ObjectDrawers";
+import { Object3D, Vector3 } from "three";
+import styles from "./LevelEditor.module.css";
+import { EditorViewMode, LevelEditorContext } from "./useLevelEditor";
 
 const AREA_ID_DIRS = [
   "etc/",
@@ -188,7 +197,7 @@ function Scene({
 export default function LevelEditor() {
   const { level } = useParams();
 
-  THREE.Object3D.DEFAULT_UP = new THREE.Vector3(0, 0, 1);
+  Object3D.DEFAULT_UP = new Vector3(0, 0, 1);
 
   const [levelData, setLevelData] = useState<undefined | LevelData>(undefined);
 
@@ -212,6 +221,8 @@ export default function LevelEditor() {
       });
   }, [level]);
 
+  const [viewMode, setViewMode] = useState(EditorViewMode.Visible);
+
   const navigate = useNavigate();
 
   return (
@@ -222,8 +233,13 @@ export default function LevelEditor() {
         url={"/modding/level/"}
         description={"Level Editor for Beastieball"}
       />
-      <Header title="Level Editor" />
-      <div>
+      <Header
+        title="Level Editor"
+        returnButtonTitle="Beastieball Modding Tools"
+        returnButtonTo="/modding/"
+        secretPage={true}
+      />
+      <div className={styles.settings}>
         <label>
           Level:{" "}
           <select
@@ -241,6 +257,7 @@ export default function LevelEditor() {
               ))}
           </select>
         </label>
+        {" - "}
         <label>
           Custom:{" "}
           <input
@@ -253,13 +270,28 @@ export default function LevelEditor() {
             }}
           />
         </label>
+        {" - "}
+        <label>
+          View:{" "}
+          <select
+            onChange={(event) => setViewMode(Number(event.currentTarget.value))}
+          >
+            <option value={EditorViewMode.Visible}>Only Visible</option>
+            <option value={EditorViewMode.Collision}>Only Collision</option>
+            <option value={EditorViewMode.All}>All</option>
+          </select>
+        </label>
       </div>
       <Canvas style={{ flexGrow: 1 }} frameloop="demand">
-        <Suspense fallback={null}>
-          {levelStump && levelData && (
-            <Scene levelStump={levelStump} levelData={levelData} />
-          )}
-        </Suspense>
+        <LevelEditorContext.Provider
+          value={useMemo(() => ({ viewMode: viewMode }), [viewMode])}
+        >
+          <Suspense fallback={null}>
+            {levelStump && levelData && (
+              <Scene levelStump={levelStump} levelData={levelData} />
+            )}
+          </Suspense>
+        </LevelEditorContext.Provider>
       </Canvas>
     </div>
   );

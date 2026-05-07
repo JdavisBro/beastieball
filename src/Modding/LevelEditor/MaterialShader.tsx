@@ -31,7 +31,6 @@ void main() {
 const SHADER_FRAGMENT = `
 varying vec2 vUv;
 varying vec3 vNormal;
-uniform bool uUvType;
 uniform sampler2D uTexture;
 uniform int uChannel;
 uniform vec3 uBaseColor;
@@ -39,15 +38,16 @@ uniform vec3 uTexColor;
 uniform int uChannelSide;
 uniform vec3 uBaseColorSide;
 uniform vec3 uTexColorSide;
+uniform bool uHideTop;
 void main(void)
 {
-  vec2 new_uv = uUvType ? vUv : vUv * 0.0005;
-  bool is_top = vNormal.z > 0.99;
+  vec2 new_uv = vUv * 0.0005;
+  bool is_top = vNormal.z == 1.0 || vNormal.z == -1.0;
+  if (uHideTop && is_top) discard;
   int channel = is_top ? uChannel : uChannelSide; 
   float blend_factor = pow(texture2D(uTexture, new_uv)[channel]*texture2D(uTexture, vec2(new_uv.x*-1.618, new_uv.y*1.413))[channel], .5); 
   gl_FragColor.rgb = is_top ? mix(uBaseColor, uTexColor, blend_factor) : mix(uBaseColorSide, uTexColorSide, blend_factor); 
   gl_FragColor.a = 1.0;
-  // gl_FragColor = vec4(new_uv, 1.0, 1.0);
 }
 `;
 
@@ -56,11 +56,13 @@ export function MaterialShader({
   paletteSide,
   palette,
   doubleSide,
+  clipTop,
 }: {
   palette: number[];
   paletteTop?: PaletteReference;
   paletteSide?: PaletteReference;
   doubleSide?: boolean;
+  clipTop?: boolean;
 }) {
   const texture = useLoader(
     TextureLoader,
@@ -80,25 +82,25 @@ export function MaterialShader({
         uTexture: { value: texture },
         uBaseColor: { value: bgrDecimalToRgb(colorA) },
         uTexColor: { value: bgrDecimalToRgb(colorB) },
-        uChannelTop: { value: paletteTop?.channel_index ?? 0 },
+        uChannel: { value: paletteTop?.channel_index ?? 0 },
         uBaseColorSide: { value: bgrDecimalToRgb(sideColorA) },
         uTexColorSide: { value: bgrDecimalToRgb(sideColorB) },
         uChannelSide: { value: sidePalette?.channel_index ?? 0 },
-        uUvType: { value: doubleSide },
+        uHideTop: { value: clipTop },
       }}
       side={doubleSide ? DoubleSide : undefined}
     />
   );
 }
 
-const SHADER_TEXTURED_FRAGMENT = `
-varying vec2 vUv;
-uniform sampler2D uTexture;
-void main(void)
-{
-  gl_FragColor = texture2D(uTexture, vUv);
-}
-`;
+// const SHADER_TEXTURED_FRAGMENT = `
+// varying vec2 vUv;
+// uniform sampler2D uTexture;
+// void main(void)
+// {
+//   gl_FragColor = texture2D(uTexture, vUv);
+// }
+// `;
 
 export function TexturedShader({ textureName }: { textureName: string }) {
   const otherSpriteTextureName = `sprTex_${textureName}`;

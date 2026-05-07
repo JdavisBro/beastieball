@@ -2,7 +2,7 @@ import { DoubleSide, Mesh, Object3D } from "three";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { useLoader } from "@react-three/fiber";
 
-import type { LevelData, Model } from "./types";
+import type { Model } from "./types";
 import { findFloorPosition } from "./LevelEditor";
 import {
   MeshColoredShader,
@@ -10,7 +10,6 @@ import {
   TexturedShader,
 } from "./MaterialShader";
 import useLevelEditor, { EditorViewMode } from "./useLevelEditor";
-import WORLD_DATA, { LevelStump } from "../../data/WorldData";
 import { bgrDecimalToHex } from "../../utils/color";
 
 function deg2rad(deg: number) {
@@ -20,19 +19,11 @@ function deg2rad(deg: number) {
 function ModelChild({
   child,
   model,
-  levelData,
-  x,
-  y,
-  z,
-  u_scale,
+  position,
 }: {
   child: Mesh | Object3D;
   model: Model;
-  levelData: LevelData;
-  x: number;
-  y: number;
-  z: number;
-  u_scale: number;
+  position: [number, number, number];
 }) {
   const [name, texture_name, texture_slotS, palette_slot, _index, colorS] =
     child.name.split("#");
@@ -40,7 +31,7 @@ function ModelChild({
   const collider = name.includes("COLLIDER");
   const visible = !collider || name.includes("VISIBLE");
 
-  const { viewMode } = useLevelEditor();
+  const { viewMode, palette } = useLevelEditor();
   if (
     !(
       viewMode == EditorViewMode.All ||
@@ -50,9 +41,9 @@ function ModelChild({
   )
     return null;
 
+  const u_scale = model.u_scale ?? 1;
   const texture_slot = Number(texture_slotS);
   const color = Number(colorS);
-  const palette = WORLD_DATA.palettes[levelData.palette_name ?? "cliffs"];
   const paletteRef =
     model?.palettes?.array?.[
       Math.max(0, Number(palette_slot) - 1) % model.palettes.array.length
@@ -60,14 +51,8 @@ function ModelChild({
 
   return (child as { isMesh: boolean }).isMesh ? (
     <mesh
-      onClick={() =>
-        console.log(
-          model,
-          child,
-          WORLD_DATA.palettes[levelData.palette_name ?? "cliffs"],
-        )
-      }
-      position={[-x, y, z]}
+      onClick={() => console.log(model, child)}
+      position={position}
       rotation={[
         deg2rad(model.x_angle ?? 0),
         deg2rad(model.y_angle ?? 0),
@@ -102,13 +87,12 @@ function ModelChild({
 
 export function ModelElem({
   model,
-  levelData,
   useFloorPos,
 }: {
   model: Model;
-  levelData: LevelData;
   useFloorPos?: boolean;
 }) {
+  const { levelData } = useLevelEditor();
   const model_obj = useLoader(
     OBJLoader,
     `${import.meta.env.VITE_DATA_URL}models_obj/${model.model_filename}.obj`,
@@ -123,28 +107,19 @@ export function ModelElem({
     (useFloorPos ?? true)
       ? findFloorPosition(x, y, levelData) + (model.z ?? 0)
       : (model?.z ?? 0);
-  const u_scale = model.u_scale ?? 1;
   return model_obj.children.map((child) => (
     <ModelChild
       key={child.name}
       child={child}
       model={model}
-      levelData={levelData}
-      x={x}
-      y={y}
-      z={z}
-      u_scale={u_scale}
+      position={[-x, y, z]}
     />
   ));
 }
 
-export function Models({
-  levelData,
-}: {
-  levelStump: LevelStump;
-  levelData: LevelData;
-}) {
+export function Models() {
+  const { levelData } = useLevelEditor();
   return levelData.models_array?.map((model, index) => (
-    <ModelElem key={index} model={model} levelData={levelData} />
+    <ModelElem key={index} model={model} />
   ));
 }

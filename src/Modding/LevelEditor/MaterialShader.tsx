@@ -5,6 +5,7 @@ import { PaletteReference } from "./types";
 import setTextureDefaults from "./defaults";
 import { bgrDecimalToRgb } from "../../utils/color";
 import SPRITE_INFO_FULL from "../../data/raw/sprite_info_full.json";
+import useLevelEditor from "./useLevelEditor";
 
 function getPaletteColors(
   palette: number[],
@@ -54,11 +55,9 @@ void main(void)
 export function MaterialShader({
   paletteTop,
   paletteSide,
-  palette,
   doubleSide,
   clipTop,
 }: {
-  palette: number[];
   paletteTop?: PaletteReference;
   paletteSide?: PaletteReference;
   doubleSide?: boolean;
@@ -70,6 +69,7 @@ export function MaterialShader({
   );
   setTextureDefaults(texture);
 
+  const { palette } = useLevelEditor();
   const [colorA, colorB] = getPaletteColors(palette, paletteTop);
   const sidePalette = paletteSide ?? paletteTop;
   const [sideColorA, sideColorB] = getPaletteColors(palette, sidePalette);
@@ -140,11 +140,9 @@ void main(void)
 export function TexturedColoredShader({
   textureName,
   paletteRef,
-  palette,
 }: {
   textureName: string;
   paletteRef?: PaletteReference;
-  palette: number[];
 }) {
   const otherSpriteTextureName = `sprTex_${textureName}`;
   const textureSpriteName =
@@ -164,6 +162,7 @@ export function TexturedColoredShader({
   setTextureDefaults(texture);
   setTextureDefaults(masterTexture);
 
+  const { palette } = useLevelEditor();
   const [colorA, colorB] = getPaletteColors(palette, paletteRef);
 
   return (
@@ -213,10 +212,8 @@ void main(void)
 
 export function MeshColoredShader({
   paletteRef,
-  palette,
 }: {
   paletteRef?: PaletteReference;
-  palette: number[];
 }) {
   const texture = useLoader(
     TextureLoader,
@@ -224,6 +221,7 @@ export function MeshColoredShader({
   );
   setTextureDefaults(texture);
 
+  const { palette } = useLevelEditor();
   const [colorA, colorB] = getPaletteColors(palette, paletteRef);
 
   return (

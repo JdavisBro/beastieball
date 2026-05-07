@@ -3,18 +3,18 @@ import { DoubleSide, TextureLoader } from "three";
 import { useLoader } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 
-import type { GameObject, GameObjectTypes, LevelData, Model } from "./types";
+import type { GameObject, GameObjectTypes, Model } from "./types";
 import styles from "./LevelEditor.module.css";
 import { findFloorPosition } from "./LevelEditor";
 import { ModelElem } from "./Models";
 import setTextureDefaults from "./defaults";
 import SPRITE_INFO_FULL from "../../data/raw/sprite_info_full.json";
 import { Sprite } from "../../data/SpriteInfo";
+import useLevelEditor from "./useLevelEditor";
 
 type DrawerProps = {
   object: GameObject;
   position: [number, number, number];
-  levelData: LevelData;
 };
 
 function CharacterDrawer({
@@ -54,7 +54,6 @@ function ModelDrawer({
   model,
   palettes,
   position,
-  levelData,
 }: { model: Model; palettes?: number } & DrawerProps) {
   model.x = model.x ?? -position[0];
   model.y = model.y ?? position[1];
@@ -67,7 +66,7 @@ function ModelDrawer({
       ),
     };
   }
-  return <ModelElem model={model} levelData={levelData} useFloorPos={false} />;
+  return <ModelElem model={model} useFloorPos={false} />;
 }
 
 function TextDrawer({ position, object }: DrawerProps) {
@@ -383,7 +382,8 @@ const OBJECT_DRAWER_MAP: Record<
   objTitle: undefined,
 };
 
-export default function ObjectDrawers({ levelData }: { levelData: LevelData }) {
+export default function ObjectDrawers() {
+  const { levelData } = useLevelEditor();
   return levelData.objects_array?.map((object, index) => {
     const Component =
       OBJECT_DRAWER_MAP[object.object ?? "objNode"] ?? TextDrawer;
@@ -393,13 +393,6 @@ export default function ObjectDrawers({ levelData }: { levelData: LevelData }) {
       findFloorPosition(object.x ?? 0, object.y ?? 0, levelData) +
         (object.z ?? 0),
     ];
-    return (
-      <Component
-        key={index}
-        object={object}
-        position={position}
-        levelData={levelData}
-      />
-    );
+    return <Component key={index} object={object} position={position} />;
   });
 }

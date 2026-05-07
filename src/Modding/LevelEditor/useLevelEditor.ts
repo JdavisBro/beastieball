@@ -1,4 +1,6 @@
 import { createContext, useContext } from "react";
+import { LevelData } from "./types";
+import { LevelStump } from "../../data/WorldData";
 
 export enum EditorViewMode {
   Visible,
@@ -8,11 +10,14 @@ export enum EditorViewMode {
 
 export type LevelEditorContextType = {
   viewMode: EditorViewMode;
+  levelData: LevelData;
+  levelStump: LevelStump;
+  palette: number[];
 };
 
-export const LevelEditorContext = createContext<LevelEditorContextType>({
-  viewMode: EditorViewMode.Visible,
-});
+export const LevelEditorContext = createContext<LevelEditorContextType>(
+  {} as LevelEditorContextType,
+);
 
 export default function useLevelEditor() {
   return useContext(LevelEditorContext);

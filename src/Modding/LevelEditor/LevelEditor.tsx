@@ -14,11 +14,15 @@ import { Html, useProgress } from "@react-three/drei";
 import { ErrorBoundary } from "react-error-boundary";
 
 import { LevelData } from "./types";
-import ShapeGroup, { LevelFloor } from "./ShapeGroup";
+import ShapeGroups, { LevelFloor } from "./ShapeGroup";
 import { Models } from "./Models";
 import ObjectDrawers from "./ObjectDrawers";
 import styles from "./LevelEditor.module.css";
-import { EditorViewMode, LevelEditorContext } from "./useLevelEditor";
+import useLevelEditor, {
+  EditorViewMode,
+  LevelEditorContext,
+  LevelEditorContextType,
+} from "./useLevelEditor";
 import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
@@ -48,7 +52,6 @@ function ParseLevelData(
   if (!Array.isArray(levelData) && ELEPHANT_CIRCULAR in levelData) {
     if (typeof levelData[ELEPHANT_CIRCULAR] != "number")
       console.log("NON NUMBER CIRCULAR REFERENCE");
-    console.log(levelData[ELEPHANT_CIRCULAR], circular_refs);
     return circular_refs[(levelData[ELEPHANT_CIRCULAR] as number) + 1];
   }
   circular_refs.push(levelData);
@@ -131,12 +134,14 @@ export function findFloorPosition(
 
 const OrbitControls_Element = extend(OrbitControls);
 
-function OrbitControlsElement({ levelStump }: { levelStump: LevelStump }) {
+function OrbitControlsElement() {
   const {
     camera,
     gl: { domElement },
     invalidate,
   } = useThree();
+
+  const { levelStump } = useLevelEditor();
 
   const ref = useRef<OrbitControls>(null);
 
@@ -171,63 +176,70 @@ function OrbitControlsElement({ levelStump }: { levelStump: LevelStump }) {
   return <OrbitControls_Element args={[camera, domElement]} ref={ref} />;
 }
 
-function Scene({
-  levelStump,
-  levelData,
-}: {
-  levelStump: LevelStump;
-  levelData: LevelData;
-}) {
+function Scene() {
   return (
     <>
-      <OrbitControlsElement levelStump={levelStump} />
+      <OrbitControlsElement />
       <ambientLight intensity={1} />
       <directionalLight position={[500, 500, 500]} intensity={Math.PI} />
-      {levelData.shape_groups_array?.map((shape_group, index) => (
-        <ShapeGroup
-          key={index}
-          shapeGroup={shape_group}
-          levelData={levelData}
-        />
-      ))}
-      <Models levelStump={levelStump} levelData={levelData} />
-      <ObjectDrawers levelData={levelData} />
-      <LevelFloor levelStump={levelStump} levelData={levelData} />
+      <ShapeGroups />
+      <Models />
+      <ObjectDrawers />
+      <LevelFloor />
     </>
   );
 }
 
-function Loading() {
-  const progress = useProgress();
-  console.log(progress);
-  const itemSplit = progress.item.split("/");
-
-  const model = progress.item.endsWith(".obj");
-
-  const item = model
-    ? itemSplit[itemSplit.length - 1].split(".")[0]
-    : itemSplit[itemSplit.length - 2];
-
+function FullscreenHtml({ children }: { children: React.ReactNode }) {
   return (
-    <Html className={styles.loading}>
-      Loading...
-      <br />
-      {model ? "Model" : "Texture"}
-      <br />
-      {item}
+    <Html
+      className={styles.fullbox}
+      fullscreen
+      prepend
+      calculatePosition={(_el, _camera, { width, height }) => [
+        width / 2,
+        height / 2,
+      ]}
+    >
+      <div>{children}</div>
     </Html>
   );
 }
 
-function Error({ reason }: { reason?: string }) {
-  const network = reason?.includes("NetworkError");
+function Loading({ level }: { level?: string }) {
+  const progress = useProgress();
+
+  const itemSplit = progress.item.split("/");
+  const model = progress.item.endsWith(".obj");
+
+  const item = level
+    ? level
+    : model
+      ? itemSplit[itemSplit.length - 1].split(".")[0]
+      : itemSplit[itemSplit.length - 2];
 
   return (
-    <Html className={styles.loading}>
+    <FullscreenHtml>
+      Loading...
+      <br />
+      {level ? "Level Data" : model ? "Model" : "Texture"}
+      <br />
+      {item}
+    </FullscreenHtml>
+  );
+}
+
+function Error({ reason }: { reason?: string }) {
+  const level =
+    typeof reason == "string" &&
+    (reason.includes("NetworkError") || reason.includes("JSON.parse"));
+
+  return (
+    <FullscreenHtml>
       Error...
       <img src="/nojs.png" />
-      {network ? "Level does not exist" : reason}
-    </Html>
+      {level ? "Level Loading Failed" : reason}
+    </FullscreenHtml>
   );
 }
 
@@ -244,10 +256,13 @@ export default function LevelEditor() {
       ? WORLD_DATA.level_stumps_array.find((stump) => stump.name == level)
       : undefined;
 
+  const [loadingLevel, setLoadingLevel] = useState(levelStump !== undefined);
+
   useEffect(() => {
     setLevelData(undefined);
     if (levelStump == undefined) return;
     const level_prefix = AREA_ID_DIRS[(levelStump.area_id ?? -1) + 1];
+    setLoadingLevel(true);
     fetch(
       `${import.meta.env.VITE_DATA_URL}world_data/${level_prefix}${level}.json`,
     )
@@ -255,16 +270,28 @@ export default function LevelEditor() {
       .then((data) => {
         setLevelData(ParseLevelData(data, []) as LevelData);
         setLoadFailed("");
+        setLoadingLevel(false);
       })
       .catch((reason) => {
         setLoadFailed((reason as TypeError).message);
         setLevelData(undefined);
+        setLoadingLevel(false);
       });
   }, [level]);
 
   const [viewMode, setViewMode] = useState(EditorViewMode.Visible);
 
   const navigate = useNavigate();
+
+  const context = useMemo<LevelEditorContextType>(
+    () => ({
+      viewMode,
+      levelData: levelData as LevelData,
+      levelStump: levelStump as LevelStump,
+      palette: WORLD_DATA.palettes[levelData?.palette_name ?? "default"],
+    }),
+    [viewMode, levelData, levelStump],
+  );
 
   return (
     <div className={styles.container}>
@@ -324,23 +351,25 @@ export default function LevelEditor() {
         </label>
       </div>
       <Canvas className={styles.canvas} frameloop="demand">
-        <LevelEditorContext.Provider
-          value={useMemo(() => ({ viewMode: viewMode }), [viewMode])}
-        >
-          {loadFailed.length ? (
-            <Error reason={loadFailed} />
-          ) : (
+        {loadFailed.length ? (
+          <Error reason={loadFailed} />
+        ) : (
+          <LevelEditorContext.Provider value={context}>
             <ErrorBoundary
               fallbackRender={(props) => <Error reason={props.error} />}
             >
               <Suspense fallback={<Loading />}>
-                {levelStump && levelData && (
-                  <Scene levelStump={levelStump} levelData={levelData} />
-                )}
+                {levelStump ? (
+                  !levelData ? (
+                    <Loading level={level} />
+                  ) : (
+                    <Scene />
+                  )
+                ) : null}
               </Suspense>
             </ErrorBoundary>
-          )}
-        </LevelEditorContext.Provider>
+          </LevelEditorContext.Provider>
+        )}
       </Canvas>
     </div>
   );

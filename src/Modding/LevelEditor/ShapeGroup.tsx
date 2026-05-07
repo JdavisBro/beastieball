@@ -1,9 +1,8 @@
 import { Shape as ShapeThree } from "three";
 
-import type { LevelData, ShapeGroup, Shape, PaletteReference } from "./types";
+import type { ShapeGroup, Shape, PaletteReference } from "./types";
 import { MaterialShader } from "./MaterialShader";
 import useLevelEditor, { EditorViewMode } from "./useLevelEditor";
-import WORLD_DATA, { LevelStump } from "../../data/WorldData";
 
 function ShapeTexture({
   position,
@@ -12,7 +11,6 @@ function ShapeTexture({
   thickness,
   paletteTop,
   paletteSide,
-  palette,
   clipTop,
   onClick,
 }: {
@@ -22,7 +20,6 @@ function ShapeTexture({
   thickness: number;
   paletteTop?: PaletteReference;
   paletteSide?: PaletteReference;
-  palette: number[];
   clipTop?: boolean;
   onClick?: React.MouseEventHandler;
 }) {
@@ -36,7 +33,6 @@ function ShapeTexture({
       <MaterialShader
         paletteTop={paletteTop}
         paletteSide={paletteSide}
-        palette={palette}
         clipTop={clipTop}
         doubleSide={clipTop}
       />
@@ -44,15 +40,7 @@ function ShapeTexture({
   );
 }
 
-function Shape({
-  position,
-  shape,
-  palette,
-}: {
-  position: number[];
-  shape: Shape;
-  palette: number[];
-}) {
+function Shape({ position, shape }: { position: number[]; shape: Shape }) {
   const shape_three = new ShapeThree();
 
   const z = (shape.z ?? 0) + (shape?.points_array?.[2] ?? 0);
@@ -88,13 +76,8 @@ function Shape({
     }
   }
 
-  if (!visible) {
-    return null;
-  }
-
-  return (
+  return visible ? (
     <ShapeTexture
-      palette={palette}
       paletteTop={shape.palette_reference}
       paletteSide={shape.side_palette_reference}
       position={position}
@@ -104,34 +87,28 @@ function Shape({
       clipTop={shape.wall_collider}
       onClick={() => console.log(shape)}
     />
-  );
+  ) : null;
 }
 
-export default function ShapeGroup({
-  shapeGroup,
-  levelData,
-}: {
-  shapeGroup: ShapeGroup;
-  levelData: LevelData;
-}) {
-  const palette = WORLD_DATA.palettes[levelData.palette_name ?? "cliffs"];
+function ShapeGroup({ shapeGroup }: { shapeGroup: ShapeGroup }) {
   return shapeGroup.shapes_array?.map((shape, index) => (
     <Shape
       key={index}
       position={[shapeGroup.x ?? 0, shapeGroup.y ?? 0, shapeGroup.z ?? 0]}
       shape={shape}
-      palette={palette}
     />
   ));
 }
 
-export function LevelFloor({
-  levelStump,
-  levelData,
-}: {
-  levelStump: LevelStump;
-  levelData: LevelData;
-}) {
+export default function ShapeGroups() {
+  const { levelData } = useLevelEditor();
+  return levelData.shape_groups_array?.map((shape_group, index) => (
+    <ShapeGroup key={index} shapeGroup={shape_group} />
+  ));
+}
+
+export function LevelFloor() {
+  const { levelData, levelStump } = useLevelEditor();
   if (levelData.floor_style == 2 || (levelStump.is_indoor ?? false)) {
     return null;
   }
@@ -144,11 +121,8 @@ export function LevelFloor({
   shape.lineTo(width, height);
   shape.lineTo(0, height);
 
-  const palette = WORLD_DATA.palettes[levelData.palette_name ?? "cliffs"];
-
   return (
     <ShapeTexture
-      palette={palette}
       paletteTop={levelData.palette_reference}
       position={[0, 0, -1]}
       shape_three={shape}

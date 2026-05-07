@@ -114,7 +114,9 @@ export function ModelElem({
     `${import.meta.env.VITE_DATA_URL}models_obj/${model.model_filename}.obj`,
   );
 
-  if ((model.effect_layer ?? 0) > 0) return;
+  const { viewMode } = useLevelEditor();
+  if (viewMode == EditorViewMode.Visible && (model.effect_layer ?? 0) > 0)
+    return;
   const x = model.x ?? 0;
   const y = model.y ?? 0;
   const z =

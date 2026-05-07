@@ -11,6 +11,7 @@ import setTextureDefaults from "./defaults";
 import SPRITE_INFO_FULL from "../../data/raw/sprite_info_full.json";
 import { Sprite } from "../../data/SpriteInfo";
 import useLevelEditor from "./useLevelEditor";
+import { ScaleControl } from "react-leaflet";
 
 type DrawerProps = {
   object: GameObject;
@@ -489,6 +490,7 @@ const OBJECT_DRAWER_MAP: Record<
             props.position[2] +
             (props.object.z ?? 0) +
             (props.object.z_up ?? 500),
+          u_scale: props.object.scale,
           z_angle: props.object.angle,
         }),
         [props.object],

@@ -2,13 +2,14 @@ import { Html } from "@react-three/drei";
 import type { GameObject, GameObjectTypes, LevelData, Model } from "./types";
 import { useMemo, useRef } from "react";
 import { useLoader } from "@react-three/fiber";
-import { DoubleSide, TextureLoader, NearestFilter } from "three";
+import { DoubleSide, TextureLoader } from "three";
 
 import styles from "./LevelEditor.module.css";
 import SPRITE_INFO_FULL from "../../data/raw/sprite_info_full.json";
 import { Sprite } from "../../data/SpriteInfo";
 import { findFloorPosition } from "./LevelEditor";
 import { ModelElem } from "./Models";
+import setTextureDefaults from "./defaults";
 
 type DrawerProps = {
   object: GameObject;
@@ -27,8 +28,7 @@ function CharacterDrawer({
     path ??
       `${import.meta.env.VITE_DATA_URL}sprites/${sprite}/${index ?? 0}.png`,
   );
-  texture.magFilter = NearestFilter;
-  texture.minFilter = NearestFilter;
+  setTextureDefaults(texture);
 
   const sprite_data = SPRITE_INFO_FULL[
     sprite as keyof typeof SPRITE_INFO_FULL

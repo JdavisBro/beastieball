@@ -1,14 +1,10 @@
 import { useLoader } from "@react-three/fiber";
 import { bgrDecimalToRgb } from "../../utils/color";
 import { PaletteReference } from "./types";
-import {
-  DoubleSide,
-  RepeatWrapping,
-  TextureLoader,
-  NearestFilter,
-} from "three";
+import { DoubleSide, TextureLoader } from "three";
 
 import SPRITE_INFO_FULL from "../../data/raw/sprite_info_full.json";
+import setTextureDefaults from "./defaults";
 
 function getPaletteColors(
   palette: number[],
@@ -70,10 +66,7 @@ export function MaterialShader({
     TextureLoader,
     `${import.meta.env.VITE_DATA_URL}sprites/sprMASTER_TEXTURE/0.png`,
   );
-  texture.magFilter = NearestFilter;
-  texture.minFilter = NearestFilter;
-  texture.wrapS = RepeatWrapping;
-  texture.wrapT = RepeatWrapping;
+  setTextureDefaults(texture);
 
   const [colorA, colorB] = getPaletteColors(palette, paletteTop);
   const sidePalette = paletteSide ?? paletteTop;
@@ -119,10 +112,7 @@ export function TexturedShader({ textureName }: { textureName: string }) {
     TextureLoader,
     `${import.meta.env.VITE_DATA_URL}sprites/${textureSpriteName}/0.png`,
   );
-  texture.magFilter = NearestFilter;
-  texture.minFilter = NearestFilter;
-  texture.wrapS = RepeatWrapping;
-  texture.wrapT = RepeatWrapping;
+  setTextureDefaults(texture);
 
   return <meshPhongMaterial map={texture} side={DoubleSide} transparent />;
 }
@@ -169,14 +159,8 @@ export function TexturedColoredShader({
     TextureLoader,
     `${import.meta.env.VITE_DATA_URL}sprites/sprMASTER_TEXTURE/0.png`,
   );
-  texture.magFilter = NearestFilter;
-  texture.minFilter = NearestFilter;
-  texture.wrapS = RepeatWrapping;
-  texture.wrapT = RepeatWrapping;
-  masterTexture.magFilter = NearestFilter;
-  masterTexture.minFilter = NearestFilter;
-  masterTexture.wrapS = RepeatWrapping;
-  masterTexture.wrapT = RepeatWrapping;
+  setTextureDefaults(texture);
+  setTextureDefaults(masterTexture);
 
   const [colorA, colorB] = getPaletteColors(palette, paletteRef);
 
@@ -236,10 +220,7 @@ export function MeshColoredShader({
     TextureLoader,
     `${import.meta.env.VITE_DATA_URL}sprites/sprMASTER_TEXTURE/0.png`,
   );
-  texture.magFilter = NearestFilter;
-  texture.minFilter = NearestFilter;
-  texture.wrapS = RepeatWrapping;
-  texture.wrapT = RepeatWrapping;
+  setTextureDefaults(texture);
 
   const [colorA, colorB] = getPaletteColors(palette, paletteRef);
 

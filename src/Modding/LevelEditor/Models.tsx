@@ -1,17 +1,17 @@
-import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
-
-import { useLoader } from "@react-three/fiber";
-import WORLD_DATA, { LevelStump } from "../../data/WorldData";
-import type { LevelData, Model } from "./types";
 import { DoubleSide, Mesh, Object3D } from "three";
+import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
+import { useLoader } from "@react-three/fiber";
+
+import type { LevelData, Model } from "./types";
 import { findFloorPosition } from "./LevelEditor";
 import {
   MeshColoredShader,
   TexturedColoredShader,
   TexturedShader,
 } from "./MaterialShader";
-import { bgrDecimalToHex } from "../../utils/color";
 import useLevelEditor, { EditorViewMode } from "./useLevelEditor";
+import WORLD_DATA, { LevelStump } from "../../data/WorldData";
+import { bgrDecimalToHex } from "../../utils/color";
 
 function deg2rad(deg: number) {
   return (deg / 180) * Math.PI;

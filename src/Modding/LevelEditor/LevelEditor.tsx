@@ -1,6 +1,4 @@
 import { useNavigate, useParams } from "react-router-dom";
-import Header from "../../shared/Header";
-import OpenGraph from "../../shared/OpenGraph";
 import {
   Suspense,
   useCallback,
@@ -9,16 +7,19 @@ import {
   useRef,
   useState,
 } from "react";
-import { LevelData } from "./types";
-import WORLD_DATA, { LevelStump } from "../../data/WorldData";
+import { Object3D, Vector3 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { Canvas, extend, useThree } from "@react-three/fiber";
+
+import { LevelData } from "./types";
 import ShapeGroup, { LevelFloor } from "./ShapeGroup";
 import { Models } from "./Models";
 import ObjectDrawers from "./ObjectDrawers";
-import { Object3D, Vector3 } from "three";
 import styles from "./LevelEditor.module.css";
 import { EditorViewMode, LevelEditorContext } from "./useLevelEditor";
+import Header from "../../shared/Header";
+import OpenGraph from "../../shared/OpenGraph";
+import WORLD_DATA, { LevelStump } from "../../data/WorldData";
 
 const AREA_ID_DIRS = [
   "etc/",

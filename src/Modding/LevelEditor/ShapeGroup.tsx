@@ -1,8 +1,9 @@
 import { Shape as ShapeThree } from "three";
+
 import type { LevelData, ShapeGroup, Shape, PaletteReference } from "./types";
-import WORLD_DATA, { LevelStump } from "../../data/WorldData";
 import { MaterialShader } from "./MaterialShader";
 import useLevelEditor, { EditorViewMode } from "./useLevelEditor";
+import WORLD_DATA, { LevelStump } from "../../data/WorldData";
 
 function ShapeTexture({
   position,

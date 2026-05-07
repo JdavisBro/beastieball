@@ -472,7 +472,7 @@ const OBJECT_DRAWER_MAP: Record<
         () => ({
           _: "class_model",
           model_filename: "booster",
-          z_angle: props.object.angle,
+          z_angle: props.object.angle + 180,
         }),
         [props.object],
       )}

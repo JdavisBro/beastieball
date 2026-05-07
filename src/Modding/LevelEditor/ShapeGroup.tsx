@@ -57,7 +57,9 @@ function Shape({
 
   const z = (shape.z ?? 0) + (shape?.points_array?.[2] ?? 0);
   const thickness = (shape.thickness ?? 0) || (shape.z ?? 0);
-  position[2] += (z - thickness) / 2;
+  // yeah idk
+  if (import.meta.env.DEV) position[2] += (z - thickness) / 2;
+  else position[2] += z - thickness;
 
   const { viewMode } = useLevelEditor();
 

@@ -265,6 +265,7 @@ diffuseColor.rgb = mix(uBaseColor, uTexColor, blend);
         uTexColor: { value: bgrDecimalToRgb(colorB) },
         uChannel: { value: paletteRef?.channel_index ?? 0 },
       }}
+      alphaTest={0.01} //idk why but this fixes some annoying caching(??) issues
       doubleSide
     />
   );

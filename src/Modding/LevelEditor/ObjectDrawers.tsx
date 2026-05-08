@@ -227,8 +227,7 @@ const OBJECT_DRAWER_MAP: Record<
   objConstructionguy: undefined,
   objRubberfamrer: undefined,
   objUnderConstruction: undefined,
-
-  objCameralook: undefined,
+  // MARK: Models
   objGift: (props) => (
     <ModelDrawer
       model={useMemo(
@@ -242,11 +241,6 @@ const OBJECT_DRAWER_MAP: Record<
       {...props}
     />
   ),
-  objGymdoor: undefined,
-  objRailhouse: undefined,
-  objBallcenter: undefined,
-  objBoathouse: undefined,
-  objPier_land: undefined,
   objRailwall: (props) => (
     <ModelDrawer
       model={useMemo(
@@ -261,11 +255,6 @@ const OBJECT_DRAWER_MAP: Record<
       {...props}
     />
   ),
-  objNode: undefined,
-  objSit: undefined,
-  objRoamerPOI: undefined,
-  objGameplay: undefined,
-  objAudioPlayer: undefined,
   objVending: (props) => (
     <ModelDrawer
       model={useMemo(
@@ -279,7 +268,6 @@ const OBJECT_DRAWER_MAP: Record<
       {...props}
     />
   ),
-  objSpawner: undefined,
   objBallshrooms: (props) => (
     <ModelDrawer
       model={useMemo(
@@ -292,11 +280,6 @@ const OBJECT_DRAWER_MAP: Record<
       {...props}
     />
   ),
-  objBossElevator: undefined,
-  objBossroom: undefined,
-  objLockerroom: undefined,
-  objToilet: undefined,
-  objIngredientCollect: undefined,
   objRailswitch: (props) => (
     <ModelDrawer
       model={useMemo(
@@ -310,9 +293,6 @@ const OBJECT_DRAWER_MAP: Record<
       {...props}
     />
   ),
-  objClothesShop: undefined,
-  objDiner: undefined,
-  objInteractable: undefined,
   objCamp: (props) =>
     (props.object.model_keep ?? true) ? (
       <ModelDrawer
@@ -352,8 +332,6 @@ const OBJECT_DRAWER_MAP: Record<
       {...props}
     />
   ),
-  objCity: undefined,
-  objLeafs: undefined,
   objRope: (props) => (
     <ModelDrawer
       model={useMemo(
@@ -370,28 +348,6 @@ const OBJECT_DRAWER_MAP: Record<
       {...props}
     />
   ),
-  objRubberplaque: undefined,
-  objEvolveshroom: undefined,
-  objAcademymarker: undefined,
-  objClub: undefined,
-  objBeachedTurtle: (props) =>
-    [...new Array(8)].map((_, index) => (
-      <CharacterDrawer
-        key={index}
-        sprite="sprGiantTurtleHead"
-        index={String(index)}
-        {...props}
-        position={[
-          props.position[0],
-          props.position[1] - 20 - index * 10,
-          props.position[2],
-        ]}
-        scale={2}
-      />
-    )),
-  objOcean: undefined,
-  objPier_sea: undefined,
-  objGameplay_turtle: undefined,
   objBalldispenser: (props) => (
     <ModelDrawer
       model={useMemo(
@@ -418,7 +374,6 @@ const OBJECT_DRAWER_MAP: Record<
       {...props}
     />
   ),
-  objAcademyroom: undefined,
   objBouncy: (props) => (
     <ModelDrawer
       model={useMemo(
@@ -444,12 +399,6 @@ const OBJECT_DRAWER_MAP: Record<
       {...props}
     />
   ),
-  objRain: undefined,
-  objKorwin: undefined,
-  objTrainboss: undefined,
-  objLeagueTower: undefined,
-  objMall: undefined,
-  objFlycars: undefined,
   objTrashbin: (props) => {
     const { levelData } = useLevelEditor();
     return (
@@ -512,14 +461,6 @@ const OBJECT_DRAWER_MAP: Record<
       {...props}
     />
   ),
-  objZipstation: undefined,
-  objStadiumMusic: undefined,
-  objEvolvetrickies: undefined,
-  objMangroveboss: undefined,
-  objWindvolume: undefined,
-  objDeathplane: undefined,
-  objSecretYeti: undefined,
-  objAcademyRoomModel: undefined,
   objSpinner: (props) => (
     <ModelDrawer
       model={useMemo(
@@ -540,17 +481,22 @@ const OBJECT_DRAWER_MAP: Record<
       {...props}
     />
   ),
-  objHiddenObject: undefined,
-  objSecretReserve: undefined,
-  objApocalypse: undefined,
-  objStadiumTrailer: undefined,
-  objStadiumCredits: undefined,
-  objShroomgod: undefined,
-  objSunkenplaque: undefined,
-  objSunkenboss: undefined,
-  objSunkenlock: undefined,
-  objReserveplaque: undefined,
-  objTutorialtext: undefined,
+  // MARK: Sprites
+  objBeachedTurtle: (props) =>
+    [...new Array(8)].map((_, index) => (
+      <CharacterDrawer
+        key={index}
+        sprite="sprGiantTurtleHead"
+        index={String(index)}
+        {...props}
+        position={[
+          props.position[0],
+          props.position[1] - 20 - index * 10,
+          props.position[2],
+        ]}
+        scale={2}
+      />
+    )),
   objThrowable_ball: (props) => (
     <CharacterDrawer
       sprite={"sprBall"}
@@ -559,6 +505,63 @@ const OBJECT_DRAWER_MAP: Record<
       {...props}
     />
   ),
+  // MARK: Beasties
+  objKorwin: undefined,
+  objSecretYeti: undefined,
+  objSecretReserve: undefined,
+  objTrainboss: undefined,
+  objSunkenboss: undefined,
+  objMangroveboss: undefined,
+  objShroomgod: undefined,
+  // MARK: Position / Range
+  objCameralook: undefined,
+  objGymdoor: undefined,
+  objRailhouse: undefined,
+  objBallcenter: undefined,
+  objBoathouse: undefined,
+  objPier_land: undefined,
+  objNode: undefined,
+  objSit: undefined,
+  objRoamerPOI: undefined,
+  objGameplay: undefined,
+  objAudioPlayer: undefined,
+  objSpawner: undefined,
+  objBossElevator: undefined,
+  objBossroom: undefined,
+  objLockerroom: undefined,
+  objToilet: undefined,
+  objIngredientCollect: undefined,
+  objClothesShop: undefined,
+  objDiner: undefined,
+  objInteractable: undefined,
+  objCity: undefined,
+  objLeafs: undefined,
+  objRubberplaque: undefined,
+  objEvolveshroom: undefined,
+  objAcademymarker: undefined,
+  objClub: undefined,
+  objOcean: undefined,
+  objPier_sea: undefined,
+  objGameplay_turtle: undefined,
+  objAcademyroom: undefined,
+  objRain: undefined,
+  objLeagueTower: undefined,
+  objMall: undefined,
+  objFlycars: undefined,
+  objZipstation: undefined,
+  objStadiumMusic: undefined,
+  objEvolvetrickies: undefined,
+  objWindvolume: undefined,
+  objDeathplane: undefined,
+  objAcademyRoomModel: undefined,
+  objHiddenObject: undefined,
+  objApocalypse: undefined,
+  objStadiumTrailer: undefined,
+  objStadiumCredits: undefined,
+  objSunkenplaque: undefined,
+  objSunkenlock: undefined,
+  objReserveplaque: undefined,
+  objTutorialtext: undefined,
   objHometownBedroom: undefined,
   objWardrobe: undefined,
   objBedrest: undefined,

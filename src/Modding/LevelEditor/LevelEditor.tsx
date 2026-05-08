@@ -1,17 +1,20 @@
 import { useNavigate, useParams } from "react-router-dom";
 import {
+  RefObject,
   Suspense,
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
 } from "react";
-import { Object3D, Vector3 } from "three";
+import { DirectionalLight, Object3D, Vector3 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { Canvas, extend, useThree } from "@react-three/fiber";
+import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
 import { Html, useProgress } from "@react-three/drei";
 import { ErrorBoundary } from "react-error-boundary";
+import { useLocalStorage } from "usehooks-ts";
 
 import { LevelData } from "./types";
 import ShapeGroups, { LevelFloor } from "./ShapeGroup";
@@ -134,7 +137,11 @@ export function findFloorPosition(
 
 const OrbitControls_Element = extend(OrbitControls);
 
-function OrbitControlsElement() {
+function OrbitControlsElement({
+  orbitRef,
+}: {
+  orbitRef: RefObject<OrbitControls | null>;
+}) {
   const {
     camera,
     gl: { domElement },
@@ -143,10 +150,8 @@ function OrbitControlsElement() {
 
   const { levelStump } = useLevelEditor();
 
-  const ref = useRef<OrbitControls>(null);
-
   useEffect(() => {
-    const orbit = ref.current;
+    const orbit = orbitRef.current;
     if (!orbit) return;
     camera.near = 3;
     camera.far = 50000;
@@ -169,19 +174,90 @@ function OrbitControlsElement() {
   const handleChange = useCallback(() => invalidate(), [invalidate]);
 
   useEffect(() => {
-    ref.current?.addEventListener("change", handleChange);
-    return () => ref.current?.removeEventListener("change", handleChange);
+    orbitRef.current?.addEventListener("change", handleChange);
+    return () => orbitRef.current?.removeEventListener("change", handleChange);
   });
 
-  return <OrbitControls_Element args={[camera, domElement]} ref={ref} />;
+  return <OrbitControls_Element args={[camera, domElement]} ref={orbitRef} />;
 }
 
+const SUN_DISTANCE = 8200;
+
 function Scene() {
+  const { levelStump, levelData } = useLevelEditor();
+
+  const levelCenterX = -(levelStump.world_x2 - levelStump.world_x1) / 2;
+  const levelCenterY = (levelStump.world_y2 - levelStump.world_y1) / 2;
+
+  const sun_dir = ((levelData.sunlight_direction ?? 45) / 180) * Math.PI;
+  const sun_ele = ((levelData.sunlight_elevation ?? 45) / 180) * Math.PI;
+  const sunlightVector = new Vector3(
+    Math.cos(sun_dir) * Math.cos(sun_ele),
+    -Math.sin(sun_dir) * Math.cos(sun_ele),
+    -Math.sin(sun_ele),
+  );
+  sunlightVector.normalize();
+  const bigLevel = levelCenterX < -5000 || levelCenterY > 5000;
+
+  const { invalidate } = useThree();
+
+  const lightRef = useRef<DirectionalLight>(null);
+
+  const orbitRef = useRef<OrbitControls>(null);
+
+  useLayoutEffect(() => {
+    if (lightRef.current) {
+      lightRef.current.target.position.set(levelCenterX, levelCenterY, 0);
+      lightRef.current.target.updateMatrixWorld();
+      lightRef.current.shadow.camera.top = 10000;
+      lightRef.current.shadow.camera.right = 10000;
+      lightRef.current.shadow.camera.bottom = -10000;
+      lightRef.current.shadow.camera.left = -10000;
+      lightRef.current.shadow.camera.far = 12000;
+      lightRef.current.shadow.normalBias = 3;
+      lightRef.current.shadow.radius = 1;
+      lightRef.current.shadow.mapSize.set(4096, 4096);
+      lightRef.current.shadow.updateMatrices(lightRef.current);
+      invalidate();
+    }
+  }, []);
+
+  useFrame(
+    bigLevel
+      ? () => {
+          if (!lightRef.current || !orbitRef.current) return;
+          const cameraPos = orbitRef.current.target;
+          lightRef.current.target.position.set(
+            cameraPos.x,
+            cameraPos.y,
+            cameraPos.z,
+          );
+          lightRef.current.target.updateMatrixWorld();
+          lightRef.current.position.set(
+            cameraPos.x + SUN_DISTANCE * sunlightVector.x,
+            cameraPos.y - SUN_DISTANCE * sunlightVector.y,
+            cameraPos.z - SUN_DISTANCE * sunlightVector.z,
+          );
+          lightRef.current.updateMatrixWorld();
+          lightRef.current.shadow.updateMatrices(lightRef.current);
+        }
+      : () => {},
+  );
+
   return (
     <>
-      <OrbitControlsElement />
-      <ambientLight intensity={1} />
-      <directionalLight position={[500, 500, 500]} intensity={Math.PI} />
+      <OrbitControlsElement orbitRef={orbitRef} />
+      <ambientLight intensity={2} />
+      <directionalLight
+        position={[
+          levelCenterX + SUN_DISTANCE * sunlightVector.x,
+          levelCenterY - SUN_DISTANCE * sunlightVector.y,
+          -SUN_DISTANCE * sunlightVector.z,
+        ]}
+        intensity={Math.PI / 2}
+        castShadow
+        ref={lightRef}
+      />
       <ShapeGroups />
       <Models />
       <ObjectDrawers />
@@ -250,6 +326,8 @@ export default function LevelEditor() {
 
   const [levelData, setLevelData] = useState<undefined | LevelData>(undefined);
   const [loadFailed, setLoadFailed] = useState("");
+
+  const [shadows, setShadows] = useLocalStorage("levelEditorShadows", true);
 
   const levelStump =
     level != undefined
@@ -344,8 +422,23 @@ export default function LevelEditor() {
             <option value={EditorViewMode.All}>All</option>
           </select>
         </label>
+        {" - "}
+        <label>
+          Shadows:{" "}
+          <input
+            type="checkbox"
+            checked={shadows}
+            onChange={() => setShadows(!shadows)}
+          />
+        </label>
       </div>
-      <Canvas className={styles.canvas} frameloop="demand">
+      <Canvas
+        className={styles.canvas}
+        frameloop="demand"
+        shadows={shadows ? "percentage" : undefined}
+        linear
+        flat
+      >
         {loadFailed.length ? (
           <Error reason={loadFailed} />
         ) : (

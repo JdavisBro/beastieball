@@ -1,5 +1,11 @@
-import { DoubleSide, TextureLoader } from "three";
-import { useLoader } from "@react-three/fiber";
+import {
+  DoubleSide,
+  IUniform,
+  MeshPhongMaterial,
+  MeshStandardMaterial,
+  TextureLoader,
+} from "three";
+import { extend, ThreeElement, useLoader } from "@react-three/fiber";
 
 import { PaletteReference } from "./types";
 import setTextureDefaults from "./defaults";
@@ -17,40 +23,55 @@ function getPaletteColors(
   ];
 }
 
-const SHADER_VERTEX = `
-varying vec3 vPosition;
-varying vec2 vUv;
-varying vec3 vNormal;
-void main() {
-  vPosition = position * 230.0;
-  vUv = uv;
-  vNormal = normal;
-  gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
-}
-`;
+const FRAGMENT_TOP = "#include <common>\n";
+const FRAGMENT_MAP = "#include <map_fragment>\n";
+const VERTEX_TOP = "#include <common>\n";
+const VERTEX_BEGIN = "#include <begin_vertex>\n";
 
-const SHADER_FRAGMENT = `
-varying vec2 vUv;
-varying vec3 vNormal;
-uniform sampler2D uTexture;
-uniform int uChannel;
-uniform vec3 uBaseColor;
-uniform vec3 uTexColor;
-uniform int uChannelSide;
-uniform vec3 uBaseColorSide;
-uniform vec3 uTexColorSide;
-uniform bool uHideTop;
-void main(void)
-{
-  vec2 new_uv = vUv * 0.0005;
-  bool is_top = vNormal.z == 1.0 || vNormal.z == -1.0;
-  if (uHideTop && is_top) discard;
-  int channel = is_top ? uChannel : uChannelSide; 
-  float blend_factor = pow(texture2D(uTexture, new_uv)[channel]*texture2D(uTexture, vec2(new_uv.x*-1.618, new_uv.y*1.413))[channel], .5); 
-  gl_FragColor.rgb = is_top ? mix(uBaseColor, uTexColor, blend_factor) : mix(uBaseColorSide, uTexColorSide, blend_factor); 
-  gl_FragColor.a = 1.0;
+export const DefaultMaterial = extend(MeshPhongMaterial);
+
+function ExtendedMaterial({
+  uniforms,
+  fragment_top,
+  fragment_map,
+  vertex_top,
+  vertex_begin,
+  ...props
+}: {
+  uniforms?: {
+    [uniform: string]: IUniform;
+  };
+  fragment_top?: string;
+  fragment_map?: string;
+  vertex_top?: string;
+  vertex_begin?: string;
+} & ThreeElement<typeof MeshStandardMaterial>) {
+  return (
+    <DefaultMaterial
+      {...props}
+      onBeforeCompile={(shader) => {
+        shader.fragmentShader = shader.fragmentShader
+          .replace(FRAGMENT_TOP, FRAGMENT_TOP + (fragment_top ?? "") + "\n")
+          .replace(FRAGMENT_MAP, FRAGMENT_MAP + (fragment_map ?? "") + "\n");
+        shader.vertexShader = shader.vertexShader
+          .replace(VERTEX_TOP, VERTEX_TOP + (vertex_top ?? "") + "\n")
+          .replace(VERTEX_BEGIN, VERTEX_BEGIN + (vertex_begin ?? "") + "\n");
+        shader.defines = { USE_UV: true };
+        if (uniforms)
+          shader.uniforms = {
+            ...shader.uniforms,
+            ...uniforms,
+          };
+      }}
+    />
+  );
 }
-`;
+
+const SHADER_VERTEX_TOP = `varying vec3 vObjectPosition;
+varying vec3 vObjectNormal;`;
+
+const SHADER_VERTEX_BEGIN = `vObjectPosition = position * 230.0;
+vObjectNormal = normal;`;
 
 export function MaterialShader({
   paletteTop,
@@ -75,9 +96,25 @@ export function MaterialShader({
   const [sideColorA, sideColorB] = getPaletteColors(palette, sidePalette);
 
   return (
-    <shaderMaterial
-      fragmentShader={SHADER_FRAGMENT}
-      vertexShader={SHADER_VERTEX}
+    <ExtendedMaterial
+      fragment_top={`varying vec3 vObjectNormal;
+uniform sampler2D uTexture;
+uniform int uChannel;
+uniform vec3 uBaseColor;
+uniform vec3 uTexColor;
+uniform int uChannelSide;
+uniform vec3 uBaseColorSide;
+uniform vec3 uTexColorSide;
+uniform bool uHideTop;`}
+      fragment_map={`vec2 new_uv = vUv * 0.0005;
+bool is_top = vObjectNormal.z == 1.0 || vObjectNormal.z == -1.0;
+if (uHideTop && is_top) discard;
+int channel = is_top ? uChannel : uChannelSide; 
+float blend_factor = pow(texture2D(uTexture, new_uv)[channel]*texture2D(uTexture, vec2(new_uv.x*-1.618, new_uv.y*1.413))[channel], .5); 
+diffuseColor.rgb = is_top ? mix(uBaseColor, uTexColor, blend_factor) : mix(uBaseColorSide, uTexColorSide, blend_factor); 
+diffuseColor.a = 1.0;`}
+      vertex_top={SHADER_VERTEX_TOP}
+      vertex_begin={SHADER_VERTEX_BEGIN}
       uniforms={{
         uTexture: { value: texture },
         uBaseColor: { value: bgrDecimalToRgb(colorA) },
@@ -93,15 +130,6 @@ export function MaterialShader({
   );
 }
 
-// const SHADER_TEXTURED_FRAGMENT = `
-// varying vec2 vUv;
-// uniform sampler2D uTexture;
-// void main(void)
-// {
-//   gl_FragColor = texture2D(uTexture, vUv);
-// }
-// `;
-
 export function TexturedShader({ textureName }: { textureName: string }) {
   const otherSpriteTextureName = `sprTex_${textureName}`;
   const textureSpriteName =
@@ -116,26 +144,15 @@ export function TexturedShader({ textureName }: { textureName: string }) {
   );
   setTextureDefaults(texture);
 
-  return <meshPhongMaterial map={texture} side={DoubleSide} transparent />;
+  return (
+    <DefaultMaterial
+      map={texture}
+      alphaTest={0.1}
+      side={DoubleSide}
+      transparent
+    />
+  );
 }
-
-const SHADER_TEXTURED_COLORED_FRAGMENT = `
-varying vec2 vUv;
-uniform sampler2D uTexture;
-uniform sampler2D uMasterTexture;
-uniform int uChannel;
-uniform vec3 uBaseColor;
-uniform vec3 uTexColor;
-void main(void)
-{
-  gl_FragColor = texture2D(uTexture, vUv);
-  if (uBaseColor != vec3(1.0) && uTexColor != vec3(1.0)) {
-    float blend_factor = texture2D(uMasterTexture, vUv)[uChannel];
-    vec3 blendColor = mix(uBaseColor, uTexColor, blend_factor);
-    gl_FragColor.rgb = blendColor * gl_FragColor.r;
-  }
-}
-`;
 
 export function TexturedColoredShader({
   textureName,
@@ -166,9 +183,18 @@ export function TexturedColoredShader({
   const [colorA, colorB] = getPaletteColors(palette, paletteRef);
 
   return (
-    <shaderMaterial
-      fragmentShader={SHADER_TEXTURED_COLORED_FRAGMENT}
-      vertexShader={SHADER_VERTEX}
+    <ExtendedMaterial
+      fragment_top={`uniform sampler2D uTexture;
+uniform sampler2D uMasterTexture;
+uniform int uChannel;
+uniform vec3 uBaseColor;
+uniform vec3 uTexColor;`}
+      fragment_map={`diffuseColor  = texture2D(uTexture, vUv);
+if (uBaseColor != vec3(1.0) && uTexColor != vec3(1.0)) {
+float blend_factor = texture2D(uMasterTexture, vUv)[uChannel];
+vec3 blendColor = mix(uBaseColor, uTexColor, blend_factor);
+diffuseColor.rgb = blendColor * diffuseColor.r;
+}`}
       uniforms={{
         uTexture: { value: texture },
         uMasterTexture: { value: masterTexture },
@@ -176,39 +202,12 @@ export function TexturedColoredShader({
         uTexColor: { value: bgrDecimalToRgb(colorB) },
         uChannel: { value: paletteRef?.channel_index ?? 0 },
       }}
+      alphaTest={0.75}
       side={DoubleSide}
       transparent
     />
   );
 }
-
-const SHADER_MESH_COLORED_FRAGMENT = `
-varying vec3 vPosition;
-varying vec2 vUv;
-varying vec3 vNormal;
-uniform sampler2D uTexture;
-uniform int uChannel;
-uniform vec3 uBaseColor;
-uniform vec3 uTexColor;
-void main(void)
-{
-  vec2 xUV = (1.0/512.0) * vPosition.yz;
-  vec2 yUV = (1.0/512.0) * vPosition.xz;
-  vec2 zUV = (1.0/512.0) * vPosition.xy;
-  if (vNormal.x < 0.0) xUV.x = -xUV.x;
-	if (vNormal.y < 0.0) yUV.x = -yUV.x; 
-	if (vNormal.z < 0.0) zUV.x = -zUV.x; 
-  vec3 absNormal = abs(vNormal); 
-	vec3 blendWeight = absNormal / (absNormal.x + absNormal.y + absNormal.z); 
-  gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
-  float blend = blendWeight.x * texture2D(uTexture, xUV)[uChannel]
-    + blendWeight.y * texture2D(uTexture, yUV + 0.33)[uChannel]
-    + blendWeight.z * texture2D(uTexture, zUV + 0.66)[uChannel];
-  if (uBaseColor != vec3(0.0) || uTexColor != vec3(0.0)) {
-    gl_FragColor.rgb = mix(uBaseColor, uTexColor, blend);
-  }
-}
-`;
 
 export function MeshColoredShader({
   paletteRef,
@@ -225,9 +224,30 @@ export function MeshColoredShader({
   const [colorA, colorB] = getPaletteColors(palette, paletteRef);
 
   return (
-    <shaderMaterial
-      fragmentShader={SHADER_MESH_COLORED_FRAGMENT}
-      vertexShader={SHADER_VERTEX}
+    <ExtendedMaterial
+      fragment_top={`varying vec3 vObjectPosition;
+varying vec3 vObjectNormal;
+uniform sampler2D uTexture;
+uniform int uChannel;
+uniform vec3 uBaseColor;
+uniform vec3 uTexColor;`}
+      fragment_map={`vec2 xUV = (1.0/512.0) * vObjectPosition.yz;
+vec2 yUV = (1.0/512.0) * vObjectPosition.xz;
+vec2 zUV = (1.0/512.0) * vObjectPosition.xy;
+if (vObjectNormal.x < 0.0) xUV.x = -xUV.x;
+if (vObjectNormal.y < 0.0) yUV.x = -yUV.x; 
+if (vObjectNormal.z < 0.0) zUV.x = -zUV.x; 
+vec3 absNormal = abs(vObjectNormal); 
+vec3 blendWeight = absNormal / (absNormal.x + absNormal.y + absNormal.z); 
+diffuseColor = vec4(0.0, 0.0, 0.0, 1.0);
+float blend = blendWeight.x * texture2D(uTexture, xUV)[uChannel]
++ blendWeight.y * texture2D(uTexture, yUV + 0.33)[uChannel]
++ blendWeight.z * texture2D(uTexture, zUV + 0.66)[uChannel];
+if (uBaseColor != vec3(0.0) || uTexColor != vec3(0.0)) {
+diffuseColor.rgb = mix(uBaseColor, uTexColor, blend);
+}`}
+      vertex_top={SHADER_VERTEX_TOP}
+      vertex_begin={SHADER_VERTEX_BEGIN}
       uniforms={{
         uTexture: { value: texture },
         uBaseColor: { value: bgrDecimalToRgb(colorA) },

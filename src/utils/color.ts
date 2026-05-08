@@ -9,7 +9,7 @@ export function hexToRgb(hex: string) {
     : [0, 0, 0];
 }
 
-export function bgrDecimalToRgb(bgr: number) {
+export function bgrDecimalToRgb(bgr: number): [number, number, number] {
   return [
     (bgr & 0xff) / 255,
     ((bgr >> 8) & 0xff) / 255,

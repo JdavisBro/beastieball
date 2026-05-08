@@ -192,6 +192,7 @@ export type LevelData = {
   shadow_coolor?: number;
   shape_groups_array: ShapeGroup[];
   sky_gradient?: PaletteReference;
+  sunlight_direction?: number;
   sunlight_elevation?: number;
   water_color?: PaletteReference;
 };

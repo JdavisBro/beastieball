@@ -11,6 +11,7 @@ import setTextureDefaults from "./defaults";
 import SPRITE_INFO_FULL from "../../data/raw/sprite_info_full.json";
 import { Sprite } from "../../data/SpriteInfo";
 import useLevelEditor from "./useLevelEditor";
+import { DefaultMaterial } from "./MaterialShader";
 
 type DrawerProps = {
   object: GameObject;
@@ -48,6 +49,8 @@ function CharacterDrawer({
         position[2] + (sprite_data.height / 4) * (scale ?? 1),
       ]}
       rotation={[Math.PI / 2, Math.PI, 0]}
+      castShadow
+      receiveShadow
     >
       <planeGeometry
         args={[
@@ -55,10 +58,10 @@ function CharacterDrawer({
           (sprite_data.height / 2) * (scale ?? 1),
         ]}
       />
-      <meshStandardMaterial
+      <DefaultMaterial
         map={texture}
         side={DoubleSide}
-        alphaTest={0.00001}
+        alphaTest={0.2}
         transparent
       />
     </mesh>
@@ -106,6 +109,8 @@ function TextDrawer({ position, object }: DrawerProps) {
         onPointerLeave={() =>
           ref.current?.classList.remove(styles.labelVisible)
         }
+        castShadow
+        receiveShadow
       >
         <sphereGeometry args={[24]} />
         <meshBasicMaterial color="red" />

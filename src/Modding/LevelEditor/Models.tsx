@@ -5,12 +5,13 @@ import { useLoader } from "@react-three/fiber";
 import type { Model } from "./types";
 import { findFloorPosition } from "./LevelEditor";
 import {
+  DefaultMaterial,
   MeshColoredShader,
   TexturedColoredShader,
   TexturedShader,
 } from "./MaterialShader";
 import useLevelEditor, { EditorViewMode } from "./useLevelEditor";
-import { bgrDecimalToHex } from "../../utils/color";
+import { bgrDecimalToRgb } from "../../utils/color";
 
 function deg2rad(deg: number) {
   return (deg / 180) * Math.PI;
@@ -30,6 +31,7 @@ function ModelChild({
 
   const collider = name.includes("COLLIDER");
   const visible = !collider || name.includes("VISIBLE");
+  const shadow_caster = visible && !name.includes("NOSHADOW");
 
   const { viewMode } = useLevelEditor();
   if (
@@ -51,7 +53,7 @@ function ModelChild({
 
   return (child as { isMesh: boolean }).isMesh ? (
     <mesh
-      onClick={(event) => console.log(model, event.object)}
+      onClick={(event) => console.log(model, child, event.object)}
       position={position}
       rotation={[
         // still broken probably
@@ -66,6 +68,8 @@ function ModelChild({
         (model.y_scale ?? 300) * u_scale,
         (model.z_scale ?? 300) * u_scale,
       ]}
+      castShadow={shadow_caster}
+      receiveShadow
     >
       {texture_slot >= 100 ? (
         <TexturedShader textureName={texture_name} />
@@ -75,10 +79,7 @@ function ModelChild({
           paletteRef={paletteRef}
         />
       ) : color > -1 ? (
-        <meshBasicMaterial
-          color={"#" + bgrDecimalToHex(color)}
-          side={DoubleSide}
-        />
+        <DefaultMaterial color={bgrDecimalToRgb(color)} side={DoubleSide} />
       ) : (
         <MeshColoredShader paletteRef={paletteRef} />
       )}

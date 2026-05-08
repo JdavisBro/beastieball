@@ -28,6 +28,8 @@ function ShapeTexture({
       position={[-position[0], position[1], position[2]]}
       rotation={rotation}
       onClick={onClick}
+      castShadow
+      receiveShadow
     >
       <extrudeGeometry args={[shape_three, { depth: thickness }]} />
       <MaterialShader
@@ -56,7 +58,7 @@ function Shape({ position, shape }: { position: number[]; shape: Shape }) {
   const visible =
     viewMode == EditorViewMode.All ||
     (viewMode == EditorViewMode.Collision && solid && flat) ||
-    (viewMode == EditorViewMode.Visible && (shape.visible ?? true));
+    (viewMode == EditorViewMode.Visible && (shape.visible ?? true) && solid);
 
   if (shape.points_array && visible) {
     const x = -(shape.x ?? 0);

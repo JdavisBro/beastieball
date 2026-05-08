@@ -1,4 +1,4 @@
-import { useMemo, useRef } from "react";
+import { useRef } from "react";
 import { DoubleSide, TextureLoader } from "three";
 import { useLoader } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
@@ -230,65 +230,50 @@ const OBJECT_DRAWER_MAP: Record<
   // MARK: Models
   objGift: (props) => (
     <ModelDrawer
-      model={useMemo(
-        () => ({
-          _: "class_model",
-          model_filename: "gift",
-        }),
-        [],
-      )}
+      model={{
+        _: "class_model",
+        model_filename: "gift",
+      }}
       palettes={2}
       {...props}
     />
   ),
   objRailwall: (props) => (
     <ModelDrawer
-      model={useMemo(
-        () => ({
-          _: "class_model",
-          model_filename: "traincross_down",
-          z_angle: props.object.angle,
-        }),
-        [props.object],
-      )}
+      model={{
+        _: "class_model",
+        model_filename: "traincross_down",
+        z_angle: props.object.angle,
+      }}
       palettes={1}
       {...props}
     />
   ),
   objVending: (props) => (
     <ModelDrawer
-      model={useMemo(
-        () => ({
-          _: "class_model",
-          model_filename: "vending_machine",
-          z_angle: 90 + ((props.object.angle ?? 0) as number),
-        }),
-        [props.object],
-      )}
+      model={{
+        _: "class_model",
+        model_filename: "vending_machine",
+        z_angle: 90 + ((props.object.angle ?? 0) as number),
+      }}
       {...props}
     />
   ),
   objBallshrooms: (props) => (
     <ModelDrawer
-      model={useMemo(
-        () => ({
-          _: "class_model",
-          model_filename: "shroom_cluster",
-        }),
-        [],
-      )}
+      model={{
+        _: "class_model",
+        model_filename: "shroom_cluster",
+      }}
       {...props}
     />
   ),
   objRailswitch: (props) => (
     <ModelDrawer
-      model={useMemo(
-        () => ({
-          _: "class_model",
-          model_filename: "rail_lever_up",
-        }),
-        [],
-      )}
+      model={{
+        _: "class_model",
+        model_filename: "rail_lever_up",
+      }}
       palettes={1}
       {...props}
     />
@@ -296,13 +281,10 @@ const OBJECT_DRAWER_MAP: Record<
   objCamp: (props) =>
     (props.object.model_keep ?? true) ? (
       <ModelDrawer
-        model={useMemo(
-          () => ({
-            _: "class_model",
-            model_filename: "reserve_camp_young",
-          }),
-          [props.object],
-        )}
+        model={{
+          _: "class_model",
+          model_filename: "reserve_camp_young",
+        }}
         palettes={3}
         {...props}
       />
@@ -311,91 +293,76 @@ const OBJECT_DRAWER_MAP: Record<
     ),
   objMolehill: (props) => (
     <ModelDrawer
-      model={useMemo(
-        () => ({
-          _: "class_model",
-          model_filename: "molehill",
-          palettes: {
-            _: "class_palette_array",
-            array: [
-              {
-                _: "class_palette_reference",
-                base_index: 0,
-                channel_index: 1,
-                texture_index: 1,
-              },
-            ],
-          },
-        }),
-        [props.object],
-      )}
+      model={{
+        _: "class_model",
+        model_filename: "molehill",
+        palettes: {
+          _: "class_palette_array",
+          array: [
+            {
+              _: "class_palette_reference",
+              base_index: 0,
+              channel_index: 1,
+              texture_index: 1,
+            },
+          ],
+        },
+      }}
       {...props}
     />
   ),
   objRope: (props) => (
     <ModelDrawer
-      model={useMemo(
-        () => ({
-          _: "class_model",
-          model_filename: "rope_down",
-          x: props.object.x ?? 0,
-          y: props.object.y ?? 0,
-          z_angle: props.object.angle,
-        }),
-        [props.object],
-      )}
+      model={{
+        _: "class_model",
+        model_filename: "rope_down",
+        x: props.object.x ?? 0,
+        y: props.object.y ?? 0,
+        z_angle: props.object.angle,
+      }}
       palettes={2}
       {...props}
     />
   ),
   objBalldispenser: (props) => (
     <ModelDrawer
-      model={useMemo(
-        () => ({
-          _: "class_model",
-          model_filename: "ball_dispenser_2",
-        }),
-        [props.object],
-      )}
+      model={{
+        _: "class_model",
+        model_filename: "ball_dispenser_2",
+      }}
       {...props}
     />
   ),
   objAcademygate: (props) => (
     <ModelDrawer
-      model={useMemo(
-        () => ({
-          _: "class_model",
-          model_filename: "academy_gate",
-          x: 1982.5,
-          y: 1992,
-        }),
-        [props.object],
-      )}
+      model={{
+        _: "class_model",
+        model_filename: "academy_gate",
+        x: 1982.5,
+        y: 1992,
+      }}
       {...props}
     />
   ),
   objBouncy: (props) => (
     <ModelDrawer
-      model={useMemo(
-        () => ({
-          _: "class_model",
-          model_filename: "bouncy",
-          z: props.object.wall
-            ? props.position[2] + (props.object.z_up ?? 100)
-            : undefined,
-          y_angle: props.object.wall ? -90 : 0,
-          z_angle: props.object.wall ? props.object.angle : 0,
-          palettes: {
-            _: "class_palette_array",
-            array: [
-              props.object.palette_3,
-              props.object.palette_2,
-              props.object.palette_1,
-            ],
-          },
-        }),
-        [props.object],
-      )}
+      model={{
+        _: "class_model",
+        model_filename: "bouncy",
+        z: props.object.wall
+          ? props.position[2] + (props.object.z_up ?? 100)
+          : undefined,
+        y_angle: props.object.wall ? -90 : 0,
+        z_angle: props.object.wall ? props.object.angle : 0,
+        palettes: {
+          _: "class_palette_array",
+          array: [
+            props.object.palette_3,
+            props.object.palette_2,
+            props.object.palette_1,
+          ],
+        },
+      }}
       {...props}
     />
   ),
@@ -403,26 +370,23 @@ const OBJECT_DRAWER_MAP: Record<
     const { levelData } = useLevelEditor();
     return (
       <ModelDrawer
-        model={useMemo(
-          () => ({
-            _: "class_model",
-            model_filename: levelData.name?.includes("park")
-              ? "city_trashcan_b"
-              : "city_trashcan_a",
-            z_angle: props.object.angle,
-            palettes: {
-              _: "class_palette_array",
-              array: [
-                {
-                  _: "class_palette_reference",
-                  base_index: 4,
-                  channel_index: 4,
-                },
-              ],
-            },
-          }),
-          [props.object],
-        )}
+        model={{
+          _: "class_model",
+          model_filename: levelData.name?.includes("park")
+            ? "city_trashcan_b"
+            : "city_trashcan_a",
+          z_angle: props.object.angle,
+          palettes: {
+            _: "class_palette_array",
+            array: [
+              {
+                _: "class_palette_reference",
+                base_index: 4,
+                channel_index: 4,
+              },
+            ],
+          },
+        }}
         palettes={4}
         {...props}
       />
@@ -430,53 +394,44 @@ const OBJECT_DRAWER_MAP: Record<
   },
   objBooster: (props) => (
     <ModelDrawer
-      model={useMemo(
-        () => ({
-          _: "class_model",
-          model_filename: "booster",
-          z_angle: props.object.angle + 180,
-        }),
-        [props.object],
-      )}
+      model={{
+        _: "class_model",
+        model_filename: "booster",
+        z_angle: props.object.angle + 180,
+      }}
       palettes={4}
       {...props}
     />
   ),
   objAd: (props) => (
     <ModelDrawer
-      model={useMemo(
-        () => ({
-          _: "class_model",
-          model_filename: "billboard",
-          z:
-            props.position[2] +
-            (props.object.z ?? 0) +
-            (props.object.z_up ?? 500),
-          u_scale: props.object.scale,
-          z_angle: props.object.angle,
-        }),
-        [props.object],
-      )}
+      model={{
+        _: "class_model",
+        model_filename: "billboard",
+        z:
+          props.position[2] +
+          (props.object.z ?? 0) +
+          (props.object.z_up ?? 500),
+        u_scale: props.object.scale,
+        z_angle: props.object.angle,
+      }}
       palettes={4}
       {...props}
     />
   ),
   objSpinner: (props) => (
     <ModelDrawer
-      model={useMemo(
-        () => ({
-          _: "class_model",
-          model_filename: !props.object.mode
-            ? "spinner"
-            : props.object.mode == 1
-              ? "spinwall"
-              : props.object.wall_platform
-                ? "spinwall_tall_platform"
-                : "spinwall_tall",
-          z_angle: props.object.start_angle ?? 0,
-        }),
-        [props.object],
-      )}
+      model={{
+        _: "class_model",
+        model_filename: !props.object.mode
+          ? "spinner"
+          : props.object.mode == 1
+            ? "spinwall"
+            : props.object.wall_platform
+              ? "spinwall_tall_platform"
+              : "spinwall_tall",
+        z_angle: props.object.start_angle ?? 0,
+      }}
       palettes={4}
       {...props}
     />

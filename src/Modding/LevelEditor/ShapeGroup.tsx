@@ -1,7 +1,7 @@
 import { Shape as ShapeThree } from "three";
 
 import type { ShapeGroup, Shape, PaletteReference } from "./types";
-import { MaterialShader } from "./MaterialShader";
+import { MaterialShader, WaterShiny } from "./MaterialShader";
 import useLevelEditor, { EditorViewMode } from "./useLevelEditor";
 
 function ShapeTexture({
@@ -42,7 +42,13 @@ function ShapeTexture({
   );
 }
 
-function Shape({ position, shape }: { position: number[]; shape: Shape }) {
+function Shape({
+  position,
+  shape,
+}: {
+  position: [number, number, number];
+  shape: Shape;
+}) {
   const shape_three = new ShapeThree();
 
   const z = (shape.z ?? 0) + (shape?.points_array?.[2] ?? 0);
@@ -51,7 +57,7 @@ function Shape({ position, shape }: { position: number[]; shape: Shape }) {
   if (import.meta.env.DEV) position[2] += (z - thickness) / 2;
   else position[2] += z - thickness;
 
-  const { viewMode } = useLevelEditor();
+  const { viewMode, levelData } = useLevelEditor();
 
   const solid = (shape.solid ?? false) || (shape.water ?? false);
   const flat = shape.flat ?? false;
@@ -77,18 +83,41 @@ function Shape({ position, shape }: { position: number[]; shape: Shape }) {
       }
     }
   }
+  let paletteTop = shape.palette_reference;
+  let paletteSide = shape.side_palette_reference;
+  if (shape.water) {
+    const water_palette = levelData.water_color;
+    const base = water_palette?.base_index ?? 0;
+    paletteTop = {
+      _: "class_palette_reference",
+      base_index: base,
+      texture_index: base,
+    };
+    paletteSide = paletteTop;
+  }
 
   return visible ? (
-    <ShapeTexture
-      paletteTop={shape.palette_reference}
-      paletteSide={shape.side_palette_reference}
-      position={position}
-      shape_three={shape_three}
-      thickness={flat ? thickness || (solid && z) || 1 : 1}
-      rotation={flat ? undefined : [-Math.PI / 2, 0, 0]}
-      clipTop={shape.wall_collider}
-      onClick={() => console.log(shape)}
-    />
+    <>
+      <ShapeTexture
+        paletteTop={paletteTop}
+        paletteSide={paletteSide}
+        position={position}
+        shape_three={shape_three}
+        thickness={flat ? thickness || (solid && z) || 1 : 1}
+        rotation={flat ? undefined : [-Math.PI / 2, 0, 0]}
+        clipTop={shape.wall_collider}
+        onClick={() => console.log(shape)}
+      />
+      {shape.water && (
+        <mesh
+          position={[-position[0], position[1], position[2] + thickness + 15]}
+          receiveShadow
+        >
+          <shapeGeometry args={[shape_three]} />
+          <WaterShiny />
+        </mesh>
+      )}
+    </>
   ) : null;
 }
 

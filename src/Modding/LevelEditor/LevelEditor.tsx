@@ -12,7 +12,7 @@ import {
 import { DirectionalLight, Object3D, Vector3 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
-import { Html, PerformanceMonitor, useProgress } from "@react-three/drei";
+import { Html, useProgress } from "@react-three/drei";
 import { ErrorBoundary } from "react-error-boundary";
 import { useLocalStorage } from "usehooks-ts";
 
@@ -29,7 +29,6 @@ import useLevelEditor, {
 import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
-import GUI from "three/examples/jsm/libs/lil-gui.module.min.js";
 
 const AREA_ID_DIRS = [
   "etc/",

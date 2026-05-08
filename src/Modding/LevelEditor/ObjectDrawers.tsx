@@ -45,14 +45,14 @@ function CharacterDrawer({
       position={[
         position[0],
         position[1],
-        position[2] + (sprite_data.height / 4) * (scale ?? 0),
+        position[2] + (sprite_data.height / 4) * (scale ?? 1),
       ]}
       rotation={[Math.PI / 2, Math.PI, 0]}
     >
       <planeGeometry
         args={[
-          (sprite_data.width / 2) * (scale ?? 0),
-          (sprite_data.height / 2) * (scale ?? 0),
+          (sprite_data.width / 2) * (scale ?? 1),
+          (sprite_data.height / 2) * (scale ?? 1),
         ]}
       />
       <meshBasicMaterial map={texture} side={DoubleSide} transparent />

@@ -374,7 +374,21 @@ const OBJECT_DRAWER_MAP: Record<
   objEvolveshroom: undefined,
   objAcademymarker: undefined,
   objClub: undefined,
-  objBeachedTurtle: undefined,
+  objBeachedTurtle: (props) =>
+    [...new Array(8)].map((_, index) => (
+      <CharacterDrawer
+        key={index}
+        sprite="sprGiantTurtleHead"
+        index={String(index)}
+        {...props}
+        position={[
+          props.position[0],
+          props.position[1] - 20 - index * 10,
+          props.position[2],
+        ]}
+        scale={2}
+      />
+    )),
   objOcean: undefined,
   objPier_sea: undefined,
   objGameplay_turtle: undefined,
@@ -506,7 +520,26 @@ const OBJECT_DRAWER_MAP: Record<
   objDeathplane: undefined,
   objSecretYeti: undefined,
   objAcademyRoomModel: undefined,
-  objSpinner: undefined,
+  objSpinner: (props) => (
+    <ModelDrawer
+      model={useMemo(
+        () => ({
+          _: "class_model",
+          model_filename: !props.object.mode
+            ? "spinner"
+            : props.object.mode == 1
+              ? "spinwall"
+              : props.object.wall_platform
+                ? "spinwall_tall_platform"
+                : "spinwall_tall",
+          z_angle: props.object.start_angle ?? 0,
+        }),
+        [props.object],
+      )}
+      palettes={4}
+      {...props}
+    />
+  ),
   objHiddenObject: undefined,
   objSecretReserve: undefined,
   objApocalypse: undefined,

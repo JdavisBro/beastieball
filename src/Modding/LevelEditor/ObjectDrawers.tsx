@@ -124,7 +124,9 @@ const OBJECT_DRAWER_MAP: Record<
   ((props: DrawerProps) => React.ReactNode) | undefined
 > = {
   // MARK: Characters
-  objPlayer: undefined,
+  objPlayer: (props) => (
+    <CharacterDrawer {...props} path="/level_editor/Ace.png" sprite="sprChar" />
+  ),
   objRiley: (props) => <CharacterDrawer {...props} sprite="sprRiley" />,
   objRedd: (props) => <CharacterDrawer {...props} sprite="sprRedd" />,
   objRiven: (props) => <CharacterDrawer {...props} sprite="sprRiven" />,
@@ -479,13 +481,56 @@ const OBJECT_DRAWER_MAP: Record<
     />
   ),
   // MARK: Beasties
-  objKorwin: undefined,
-  objSecretYeti: undefined,
-  objSecretReserve: undefined,
-  objTrainboss: undefined,
-  objSunkenboss: undefined,
-  objMangroveboss: undefined,
-  objShroomgod: undefined,
+  objKorwin: (props) => (
+    <CharacterDrawer
+      {...props}
+      path="/level_editor/Korwin.png"
+      sprite="sprDog"
+      scale={1 / 2}
+    />
+  ),
+  objSecretYeti: (props) => (
+    <CharacterDrawer
+      {...props}
+      path="/level_editor/Mascurry.png"
+      sprite="sprCheerleadermon"
+    />
+  ),
+  objSecretReserve: (props) => (
+    <CharacterDrawer
+      {...props}
+      path="/level_editor/Duggout.png"
+      sprite="sprBestiemon"
+    />
+  ),
+  objTrainboss: (props) => (
+    <CharacterDrawer
+      {...props}
+      path="/level_editor/Maraptor.png"
+      sprite="sprMagpiemon"
+    />
+  ),
+  objSunkenboss: (props) => (
+    <CharacterDrawer
+      {...props}
+      path="/level_editor/Diabloceras.png"
+      sprite="sprRainbowmon"
+    />
+  ),
+  objMangroveboss: (props) => (
+    <CharacterDrawer
+      {...props}
+      path="/level_editor/Pladion.png"
+      sprite="sprPlatypus"
+    />
+  ),
+  objShroomgod: (props) => (
+    <CharacterDrawer
+      {...props}
+      path="/level_editor/Shloom.png"
+      sprite="sprShroommon"
+    />
+  ),
   // MARK: Position / Range
   objCameralook: undefined,
   objGymdoor: undefined,

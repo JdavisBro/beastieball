@@ -292,7 +292,7 @@ function Loading({ level }: { level?: string }) {
 
   const item = level
     ? level
-    : model
+    : model || progress.item.includes("level_editor")
       ? itemSplit[itemSplit.length - 1].split(".")[0]
       : itemSplit[itemSplit.length - 2];
 

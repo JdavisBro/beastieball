@@ -70,7 +70,7 @@ function ExtendedMaterial({
             ...uniforms,
           };
       }}
-      side={doubleSide ? DoubleSide : undefined}
+      side={doubleSide ? DoubleSide : props.side}
     />
   );
 }
@@ -133,6 +133,9 @@ diffuseColor.a = 1.0;`}
         uChannelSide: { value: sidePalette?.channel_index ?? 0 },
         uHideTop: { value: clipTop ?? false },
       }}
+      customProgramCacheKey={() =>
+        doubleSide ? "material-shader-doubleSide" : "material-shader"
+      }
       doubleSide={doubleSide}
     />
   );
@@ -214,6 +217,7 @@ diffuseColor.rgb = blendColor * diffuseColor.r;
         uChannel: { value: color == -1 ? (paletteRef?.channel_index ?? 0) : 0 },
       }}
       alphaTest={0.75}
+      customProgramCacheKey={() => "colored-textured-mesh"}
       doubleSide
       transparent
     />
@@ -265,7 +269,7 @@ diffuseColor.rgb = mix(uBaseColor, uTexColor, blend);
         uTexColor: { value: bgrDecimalToRgb(colorB) },
         uChannel: { value: paletteRef?.channel_index ?? 0 },
       }}
-      alphaTest={0.01} //idk why but this fixes some annoying caching(??) issues
+      customProgramCacheKey={() => "colored-mesh"}
       doubleSide
     />
   );

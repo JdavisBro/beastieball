@@ -165,9 +165,11 @@ export function TexturedShader({ textureName }: { textureName: string }) {
 export function TexturedColoredShader({
   textureName,
   paletteRef,
+  color,
 }: {
   textureName: string;
   paletteRef?: PaletteReference;
+  color: number;
 }) {
   const otherSpriteTextureName = `sprTex_${textureName}`;
   const textureSpriteName =
@@ -188,7 +190,8 @@ export function TexturedColoredShader({
   setTextureDefaults(masterTexture);
 
   const { palette } = useLevelEditor();
-  const [colorA, colorB] = getPaletteColors(palette, paletteRef);
+  const [colorA, colorB] =
+    color == -1 ? getPaletteColors(palette, paletteRef) : [color, color];
 
   return (
     <ExtendedMaterial
@@ -208,7 +211,7 @@ diffuseColor.rgb = blendColor * diffuseColor.r;
         uMasterTexture: { value: masterTexture },
         uBaseColor: { value: bgrDecimalToRgb(colorA) },
         uTexColor: { value: bgrDecimalToRgb(colorB) },
-        uChannel: { value: paletteRef?.channel_index ?? 0 },
+        uChannel: { value: color == -1 ? (paletteRef?.channel_index ?? 0) : 0 },
       }}
       alphaTest={0.75}
       doubleSide

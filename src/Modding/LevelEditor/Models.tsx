@@ -77,6 +77,7 @@ function ModelChild({
         <TexturedColoredShader
           textureName={texture_name}
           paletteRef={paletteRef}
+          color={color}
         />
       ) : color > -1 ? (
         <DefaultMaterial color={bgrDecimalToRgb(color)} side={DoubleSide} />

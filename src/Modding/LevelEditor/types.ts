@@ -139,7 +139,8 @@ export type Shape = {
   solid?: boolean;
   thickness?: number;
   water?: boolean;
-  wall_collider: boolean;
+  wall_collider?: boolean;
+  shadow_caster?: boolean;
 
   flat?: number;
   grass_model_array?: ModelSpawnArray;

@@ -112,7 +112,9 @@ export function findFloorPosition(
             shape.points_array &&
             (shape.solid || shape.water) &&
             shape.flat &&
-            !shape.wall_collider
+            shape.solid &&
+            !shape.wall_collider &&
+            !shape.shadow_caster
           ) {
             const poly = [];
             const shape_x = (group.x ?? 0) + (shape.x ?? 0);

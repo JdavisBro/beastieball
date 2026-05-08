@@ -11,7 +11,6 @@ import setTextureDefaults from "./defaults";
 import SPRITE_INFO_FULL from "../../data/raw/sprite_info_full.json";
 import { Sprite } from "../../data/SpriteInfo";
 import useLevelEditor from "./useLevelEditor";
-import { ScaleControl } from "react-leaflet";
 
 type DrawerProps = {
   object: GameObject;

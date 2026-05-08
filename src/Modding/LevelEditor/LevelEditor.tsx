@@ -12,7 +12,7 @@ import {
 import { DirectionalLight, Object3D, Vector3 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
-import { Html, useProgress } from "@react-three/drei";
+import { Html, PerformanceMonitor, useProgress } from "@react-three/drei";
 import { ErrorBoundary } from "react-error-boundary";
 import { useLocalStorage } from "usehooks-ts";
 
@@ -29,6 +29,7 @@ import useLevelEditor, {
 import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
+import GUI from "three/examples/jsm/libs/lil-gui.module.min.js";
 
 const AREA_ID_DIRS = [
   "etc/",
@@ -209,13 +210,14 @@ function Scene() {
     if (lightRef.current) {
       lightRef.current.target.position.set(levelCenterX, levelCenterY, 0);
       lightRef.current.target.updateMatrixWorld();
-      lightRef.current.shadow.camera.top = 10000;
-      lightRef.current.shadow.camera.right = 10000;
-      lightRef.current.shadow.camera.bottom = -10000;
-      lightRef.current.shadow.camera.left = -10000;
+      lightRef.current.shadow.camera.top = 6000;
+      lightRef.current.shadow.camera.right = 6000;
+      lightRef.current.shadow.camera.bottom = -6000;
+      lightRef.current.shadow.camera.left = -6000;
       lightRef.current.shadow.camera.far = 12000;
-      lightRef.current.shadow.normalBias = 3;
-      lightRef.current.shadow.radius = 1;
+      lightRef.current.shadow.bias = -0.0005;
+      lightRef.current.shadow.normalBias = 6;
+      lightRef.current.shadow.radius = 2;
       lightRef.current.shadow.mapSize.set(4096, 4096);
       lightRef.current.shadow.updateMatrices(lightRef.current);
       invalidate();

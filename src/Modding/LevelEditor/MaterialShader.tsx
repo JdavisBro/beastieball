@@ -32,10 +32,12 @@ export const DefaultMaterial = extend(MeshPhongMaterial);
 
 function ExtendedMaterial({
   uniforms,
+  defines,
   fragment_top,
   fragment_map,
   vertex_top,
   vertex_begin,
+  doubleSide,
   ...props
 }: {
   uniforms?: {
@@ -45,6 +47,7 @@ function ExtendedMaterial({
   fragment_map?: string;
   vertex_top?: string;
   vertex_begin?: string;
+  doubleSide?: boolean;
 } & ThreeElement<typeof MeshStandardMaterial>) {
   return (
     <DefaultMaterial
@@ -56,13 +59,18 @@ function ExtendedMaterial({
         shader.vertexShader = shader.vertexShader
           .replace(VERTEX_TOP, VERTEX_TOP + (vertex_top ?? "") + "\n")
           .replace(VERTEX_BEGIN, VERTEX_BEGIN + (vertex_begin ?? "") + "\n");
-        shader.defines = { USE_UV: true };
+        shader.defines = {
+          ...shader.defines,
+          ...defines,
+          USE_UV: true,
+        };
         if (uniforms)
           shader.uniforms = {
             ...shader.uniforms,
             ...uniforms,
           };
       }}
+      side={doubleSide ? DoubleSide : undefined}
     />
   );
 }
@@ -123,9 +131,9 @@ diffuseColor.a = 1.0;`}
         uBaseColorSide: { value: bgrDecimalToRgb(sideColorA) },
         uTexColorSide: { value: bgrDecimalToRgb(sideColorB) },
         uChannelSide: { value: sidePalette?.channel_index ?? 0 },
-        uHideTop: { value: clipTop },
+        uHideTop: { value: clipTop ?? false },
       }}
-      side={doubleSide ? DoubleSide : undefined}
+      doubleSide={doubleSide}
     />
   );
 }
@@ -203,7 +211,7 @@ diffuseColor.rgb = blendColor * diffuseColor.r;
         uChannel: { value: paletteRef?.channel_index ?? 0 },
       }}
       alphaTest={0.75}
-      side={DoubleSide}
+      doubleSide
       transparent
     />
   );
@@ -254,7 +262,7 @@ diffuseColor.rgb = mix(uBaseColor, uTexColor, blend);
         uTexColor: { value: bgrDecimalToRgb(colorB) },
         uChannel: { value: paletteRef?.channel_index ?? 0 },
       }}
-      side={DoubleSide}
+      doubleSide
     />
   );
 }

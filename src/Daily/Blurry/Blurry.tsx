@@ -120,11 +120,17 @@ export default function Blurry() {
           </div>
         )}
         <div className={styles.guesses}>
-          {guesses.map((guess) => {
+          {guesses.map((guess, index) => {
             const beastie = BEASTIE_DATA.get(guess);
-            if (!beastie) return <div className={styles.guess}>Skip</div>;
+            if (!beastie)
+              return (
+                <div key={"skip" + index} className={styles.guess}>
+                  Skip
+                </div>
+              );
             return (
               <div
+                key={guess}
                 className={
                   guess == target.id ? styles.correctGuess : styles.guess
                 }

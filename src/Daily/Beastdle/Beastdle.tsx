@@ -1,14 +1,10 @@
 import styles from "./Beastdle.module.css";
-import BeastieSelect from "../shared/BeastieSelect";
-import Header from "../shared/Header";
-import OpenGraph from "../shared/OpenGraph";
-import BEASTIE_DATA from "../data/BeastieData";
-import { useState } from "react";
+import BeastieSelect from "../../shared/BeastieSelect";
+import Header from "../../shared/Header";
+import OpenGraph from "../../shared/OpenGraph";
+import BEASTIE_DATA from "../../data/BeastieData";
 import BeastieGuess from "./BeastieGuess";
-
-const RNG_M = 0x80000000;
-const RNG_A = 1103515245;
-const RNG_C = 12345;
+import { useDaily } from "../dailyShared";
 
 export const TYPES = [
   { name: "Body", char: "b", image: 0 },
@@ -16,48 +12,31 @@ export const TYPES = [
   { name: "Mind", char: "m", image: 2 },
 ];
 
-function getDaySeed() {
-  const date = new Date();
-  return Number(
-    String(date.getUTCFullYear()) +
-      String(date.getUTCMonth()) +
-      String(date.getUTCDate()),
-  );
-}
-
 export default function Beastdle() {
-  const [seed, setSeed] = useState(getDaySeed());
-
-  const target = Array.from(BEASTIE_DATA.values())[
-    Math.floor(
-      (((RNG_A * Number(seed) + RNG_C) % RNG_M) / RNG_M) * BEASTIE_DATA.size,
-    )
-  ];
-
-  const [guesses, setGuesses] = useState<string[]>([]);
-  const correct = guesses.includes(target.id);
-
-  const guess = (beastieId: string | undefined) => {
-    if (beastieId && !guesses.includes(beastieId)) {
-      setGuesses([beastieId, ...guesses]);
-    }
-  };
-  const isDaily = seed == getDaySeed();
-  const date = new Date();
-  const reset = new Date();
-  reset.setUTCDate(date.getUTCDate() + 1);
-  reset.setUTCHours(0);
-  reset.setUTCMinutes(0);
+  const {
+    setSeed,
+    resetSeed,
+    isDaily,
+    target,
+    correct,
+    guesses,
+    handleGuess,
+    resetDate,
+  } = useDaily("beastdleDailyGuesses", 83457513);
 
   return (
     <>
       <OpenGraph
         title={`Beastdle - ${import.meta.env.VITE_BRANDING}`}
         image="gameassets/sprMainmenu/25.png"
-        url="beastdle/"
+        url="daily/beastdle/"
         description="Beastieball Beastie Guessing Game!"
       />
-      <Header title="Beastdle" />
+      <Header
+        title="Beastdle"
+        returnButtonTo="/daily/"
+        returnButtonTitle="Beastieball.info Daily Menu"
+      />
       <div className={styles.container}>
         Guess a beastie and the table will show how that guessed beastie
         compares to the target beastie
@@ -81,21 +60,10 @@ export default function Beastdle() {
           </div>
         </div>
         <span>
-          <button
-            onClick={() => {
-              setSeed(getDaySeed());
-              setGuesses([]);
-            }}
-            disabled={isDaily}
-          >
+          <button onClick={resetSeed} disabled={isDaily}>
             Daily
           </button>
-          <button
-            onClick={() => {
-              setSeed(Math.random() * 100000);
-              setGuesses([]);
-            }}
-          >
+          <button onClick={() => setSeed(Math.random() * 100000)}>
             Random
           </button>
         </span>
@@ -103,11 +71,13 @@ export default function Beastdle() {
           <>
             <span>
               Daily:{" "}
-              {new Date(date.toUTCString().replace(" GMT", "")).toDateString()}
+              {new Date(
+                new Date().toUTCString().replace(" GMT", ""),
+              ).toDateString()}
             </span>
             <span>
-              New at: {String(reset.getHours()).padStart(2, "0")}:
-              {String(reset.getMinutes()).padStart(2, "0")}
+              New at: {String(resetDate.getHours()).padStart(2, "0")}:
+              {String(resetDate.getMinutes()).padStart(2, "0")}
             </span>
           </>
         ) : null}
@@ -119,14 +89,11 @@ export default function Beastdle() {
             <>
               <BeastieSelect
                 beastieId={undefined}
-                setBeastieId={guess}
+                setBeastieId={handleGuess}
                 hashName="Guess"
                 textOverride="Select Beastie"
               />
-              <button
-                onClick={() => setGuesses([target.id, ...guesses])}
-                disabled={correct}
-              >
+              <button onClick={() => handleGuess(target.id)} disabled={correct}>
                 Give Up
               </button>
             </>

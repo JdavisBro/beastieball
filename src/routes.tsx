@@ -149,11 +149,36 @@ const routes: Array<RouteObject> = [
           import("./Map/Map").then((m) => ({ component: m.default })),
         shouldRevalidate: shouldRevalidate,
       },
+
       {
         element: <LoaderComponent />,
-        path: "beastdle/",
+        path: "daily/",
         loader: () =>
-          import("./Beastdle/Beastdle").then((m) => ({ component: m.default })),
+          import("./Daily/Daily").then((m) => ({
+            component: m.default,
+          })),
+        shouldRevalidate: shouldRevalidate,
+      },
+      {
+        element: <NavigateLocalized to="/daily/beastdle" />,
+        path: "beastdle/",
+      },
+      {
+        element: <LoaderComponent />,
+        path: "daily/beastdle",
+        loader: () =>
+          import("./Daily/Beastdle/Beastdle").then((m) => ({
+            component: m.default,
+          })),
+        shouldRevalidate: shouldRevalidate,
+      },
+      {
+        element: <LoaderComponent />,
+        path: "daily/blurry",
+        loader: () =>
+          import("./Daily/Blurry/Blurry").then((m) => ({
+            component: m.default,
+          })),
         shouldRevalidate: shouldRevalidate,
       },
 

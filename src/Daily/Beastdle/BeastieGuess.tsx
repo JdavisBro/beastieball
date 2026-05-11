@@ -1,7 +1,7 @@
 import styles from "./Beastdle.module.css";
-import { BeastieType } from "../data/BeastieData";
+import { BeastieType } from "../../data/BeastieData";
 import { TYPES } from "./Beastdle";
-import useLocalization from "../localization/useLocalization";
+import useLocalization from "../../localization/useLocalization";
 
 const UPARROW = <img src="/gameassets/sprBoost/0.png" alt="Up" />;
 const DOWNARROW = <img src="/gameassets/sprBoost/3.png" alt="Down" />;
@@ -110,7 +110,7 @@ export default function BeastieGuess({
             : styles.guessSectionWrong
         }
       >
-        {beastie.evolution ? "Yes" : "No"}
+        {beastie.evolution ? "Metamorphs" : "Doesn't Metamorph"}
       </td>
       <td
         className={

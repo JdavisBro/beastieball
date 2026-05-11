@@ -89,9 +89,7 @@ export default function Blurry() {
           <button onClick={() => resetSeed()} disabled={isDaily}>
             Daily
           </button>
-          <button onClick={() => setSeed(Math.random() * 100000)}>
-            Random
-          </button>
+          <button onClick={() => setSeed(Math.random(), true)}>Random</button>
         </span>
         {isDaily ? (
           <>

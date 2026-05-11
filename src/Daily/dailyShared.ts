@@ -47,7 +47,7 @@ export function setDailyGuesses(key: string, seed: number, data: string[]) {
 
 type DailyType = {
   seed: number;
-  setSeed: (seed: number) => void;
+  setSeed: (seed: number, percent?: boolean) => void;
   resetSeed: () => void;
   isDaily: boolean;
   target: BeastieType;
@@ -71,7 +71,8 @@ export function useDaily(storageKey: string, seedOffset: number): DailyType {
   );
   const correct = guesses.includes(target.id);
 
-  const handleSetSeed = (seed: number) => {
+  const handleSetSeed = (seed: number, percent?: boolean) => {
+    if (percent) seed = Math.floor(RNG_M * seed);
     setSeed(seed);
     setGuesses(seed == getDaySeed() ? getDailyGuesses(storageKey) : []);
   };

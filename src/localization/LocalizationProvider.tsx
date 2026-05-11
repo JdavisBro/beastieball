@@ -150,8 +150,9 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
     (lang: SupportedLanguage) => {
       const prefix = lang == "en" ? "/" : `/${lang}/`;
       const path = location.pathname;
-      let currentPrefix =
-        !paramLang || paramLang == "en" ? "/" : `/${paramLang}/`;
+      const noParamLang =
+        !paramLang || !paramLang.split("-").every((code) => code.length == 2);
+      let currentPrefix = noParamLang ? "/" : `/${paramLang}/`;
       for (const supportedLang of SUPPORTED_LANGUAGES) {
         if (path.startsWith(`/${supportedLang}/`)) {
           currentPrefix = `/${supportedLang}/`;
@@ -180,7 +181,7 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
   );
 
   useEffect(() => {
-    if (paramLang != storedLang) {
+    if (paramLang != storedLang || paramLang == "en") {
       setParamLang(storedLang);
     }
   }, [storedLang, paramLang, setParamLang]);

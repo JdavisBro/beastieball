@@ -82,7 +82,7 @@ export function useDaily(storageKey: string, seedOffset: number): DailyType {
       (!beastieId.length || !guesses.includes(beastieId))
     ) {
       setGuesses((guesses) => {
-        if (guesses.includes(beastieId)) return guesses;
+        if (beastieId.length && guesses.includes(beastieId)) return guesses;
         const newGuesses = [beastieId, ...guesses];
         if (seed == getDaySeed()) setDailyGuesses(storageKey, seed, newGuesses);
         return newGuesses;

@@ -129,6 +129,7 @@ function generateSitemap(url: string) {
       `beastiepedia/${BEASTIE_NAMES[BEASTIE_DATA[id].name.slice(1, BEASTIE_DATA[id].name.length - 1)][lang]}`,
   );
 
+  let redirect_rules = "";
   const indexHtml = readFileSync("dist/index.html").toString();
   const branding = process.env.VITE_BRANDING ?? "Beastieball.info";
   for (const lang of SUPPORTED_LANGUAGES) {
@@ -148,6 +149,7 @@ function generateSitemap(url: string) {
       ...Object.values(BEASTIE_DATA).map((beastie) => {
         const name_key = beastie.name.slice(1, beastie.name.length - 1);
         const name = BEASTIE_NAMES[name_key][lang];
+        redirect_rules += `/beastiepedia/${name} /beastiepedia/${name}.html 200\n`;
         return {
           name: getSiteLoc(site_loc, "beastiepedia.titleBeastie", {
             beastie: name,
@@ -160,6 +162,12 @@ function generateSitemap(url: string) {
         };
       }),
     ];
+    const redirect_rules_in = readFileSync("dist/_redirects").toString();
+    writeFile(
+      "dist/_redirects",
+      redirect_rules_in.replace("# INSERT", redirect_rules),
+      () => {},
+    );
     const pathPrefix = lang == "en" ? "" : `/${lang}`;
     for (const page of prerender_pages) {
       const title = page.noLoc ? page.name : getSiteLoc(site_loc, page.name);

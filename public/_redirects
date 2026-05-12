@@ -4,4 +4,5 @@ https://experimental--beastieball.netlify.app/* https://experimental.beastieball
 /team/viewer/* /team/viewer/index.html 200
 /team/encounters/* /team/encounters/index.html 200
 # INSERT
-/*  /404.html  404
+/beastiepedia/* /beastiepedia/index.html 200
+/* /404.html 404

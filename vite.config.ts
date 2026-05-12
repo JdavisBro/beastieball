@@ -164,12 +164,6 @@ function generateSitemap(url: string) {
         };
       }),
     ];
-    const redirect_rules_in = readFileSync("dist/_redirects").toString();
-    writeFile(
-      "dist/_redirects",
-      redirect_rules_in.replace("# INSERT", redirect_rules),
-      () => {},
-    );
     const pathPrefix = lang == "en" ? "" : `/${lang}`;
     for (const page of prerender_pages) {
       const title = page.noLoc ? page.name : getSiteLoc(site_loc, page.name);
@@ -193,6 +187,12 @@ function generateSitemap(url: string) {
       writeFile(path, html, () => {});
     }
   }
+  const redirect_rules_in = readFileSync("dist/_redirects").toString();
+  writeFile(
+    "dist/_redirects",
+    redirect_rules_in.replace("# INSERT", redirect_rules),
+    () => {},
+  );
 
   const paths: (string | ((lang: SupportedLanguage) => string))[] = [
     "",

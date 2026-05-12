@@ -145,12 +145,13 @@ function generateSitemap(url: string) {
         `src/localization/languages/${lang_site ? lang : "en"}/site.json`,
       ).toString(),
     );
+    const pathPrefix = lang == "en" ? "" : `/${lang}`;
     const prerender_pages: PrerenderPage[] = [
       ...PRERENDER_PAGES,
       ...Object.values(BEASTIE_DATA).map((beastie) => {
         const name_key = beastie.name.slice(1, beastie.name.length - 1);
         const name = BEASTIE_NAMES[name_key][lang];
-        redirect_rules += `/beastiepedia/${name} /beastiepedia/${name}_page.html 200\n`;
+        redirect_rules += `${pathPrefix}/beastiepedia/${name} ${pathPrefix}/beastiepedia/${name}_page.html 200\n`;
         return {
           name: getSiteLoc(site_loc, "beastiepedia.titleBeastie", {
             beastie: name,
@@ -164,7 +165,6 @@ function generateSitemap(url: string) {
         };
       }),
     ];
-    const pathPrefix = lang == "en" ? "" : `/${lang}`;
     for (const page of prerender_pages) {
       const title = page.noLoc ? page.name : getSiteLoc(site_loc, page.name);
       const placeholders: Record<string, string> = {

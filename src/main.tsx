@@ -4,7 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css";
 import { routes } from "./routes";
-import OpenGraph from "./shared/OpenGraph";
 import { useLocalStorage } from "usehooks-ts";
 import { HelmetProvider } from "react-helmet-async";
 import CustomErrorBoundary from "./shared/CustomErrorBoundary";
@@ -36,12 +35,6 @@ function Container(props: { children: React.ReactNode }): React.ReactNode {
 createRoot(container).render(
   <StrictMode>
     <HelmetProvider>
-      <OpenGraph
-        title={import.meta.env.VITE_BRANDING}
-        image="ball.png"
-        url=""
-        description="A website with information about the game Beastieball!"
-      />
       <Container>
         <ErrorBoundary fallback={<></>}>
           <RouterProvider router={createBrowserRouter(routes, {})} />

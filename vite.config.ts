@@ -151,7 +151,7 @@ function generateSitemap(url: string) {
       ...Object.values(BEASTIE_DATA).map((beastie) => {
         const name_key = beastie.name.slice(1, beastie.name.length - 1);
         const name = BEASTIE_NAMES[name_key][lang];
-        redirect_rules += `${pathPrefix}/beastiepedia/${name} ${pathPrefix}/beastiepedia/${name}_page.html 200\n`;
+        redirect_rules += `${pathPrefix}/beastiepedia/${encodeURIComponent(name)} ${pathPrefix}/beastiepedia/${encodeURIComponent(name)}_page.html 200\n`;
         return {
           name: getSiteLoc(site_loc, "beastiepedia.titleBeastie", {
             beastie: name,

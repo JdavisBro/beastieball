@@ -98,6 +98,52 @@ const PRERENDER_PAGES: PrerenderPage[] = [
     image: "/gameassets/sprMainmenu/27.png",
     path: "/team/encounters/",
   },
+
+  {
+    name: "Daily",
+    description: "Daily games for Beastieball",
+    useBranding: true,
+    image: "/gameassets/sprMainmenu/25.png",
+    path: "/daily/",
+  },
+  {
+    name: "Beastdle",
+    description: "Beastieball Beastie Guessing Game!",
+    useBranding: true,
+    image: "/gameassets/sprMainmenu/25.png",
+    path: "/daily/beastdle/",
+  },
+  {
+    name: "Blurry",
+    description: "Blurry Beastie Guessing Game",
+    useBranding: true,
+    image: "/gameassets/sprMainmenu/29.png",
+    path: "/daily/blurry/",
+  },
+
+  {
+    name: "Secrets",
+    description: "common.description",
+    useBranding: true,
+    image: "/gameassets/sprMainmenu/27.png",
+    path: "/secrets/",
+  },
+  {
+    name: "Modding",
+    description: "Modding Tools for Beastieball",
+    useBranding: true,
+    image: "/gameassets/sprMainmenu/12.png",
+    path: "/modding/",
+    noLoc: true,
+  },
+  {
+    name: "Save Viewer",
+    description: "Save Viewer/Editor for Beastieball",
+    useBranding: true,
+    image: "/gameassets/sprMainmenu/10.png",
+    path: "/modding/save/",
+    noLoc: true,
+  },
 ];
 
 function getSiteLoc(

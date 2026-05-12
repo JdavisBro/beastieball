@@ -33,6 +33,7 @@ type PrerenderPage = {
   useBranding?: boolean;
   isDirectory?: boolean;
   noLoc?: boolean;
+  pathSuffix?: string;
 };
 
 const PRERENDER_PAGES: PrerenderPage[] = [
@@ -149,7 +150,7 @@ function generateSitemap(url: string) {
       ...Object.values(BEASTIE_DATA).map((beastie) => {
         const name_key = beastie.name.slice(1, beastie.name.length - 1);
         const name = BEASTIE_NAMES[name_key][lang];
-        redirect_rules += `/beastiepedia/${name} /beastiepedia/${name}.html 200\n`;
+        redirect_rules += `/beastiepedia/${name} /beastiepedia/${name}_page.html 200\n`;
         return {
           name: getSiteLoc(site_loc, "beastiepedia.titleBeastie", {
             beastie: name,
@@ -159,6 +160,7 @@ function generateSitemap(url: string) {
           image: `/icons/${BEASTIE_NAMES[name_key].en}.png`,
           path: `/beastiepedia/${name}`,
           noLoc: true,
+          pathSuffix: "_page",
         };
       }),
     ];
@@ -187,7 +189,7 @@ function generateSitemap(url: string) {
       );
       const dir = page.path.endsWith("/");
       if (dir) mkdirSync(`dist${pathPrefix}${page.path}`, { recursive: true });
-      const path = `dist${pathPrefix}${page.path}${dir ? "index" : ""}.html`;
+      const path = `dist${pathPrefix}${page.path}${page.pathSuffix ?? ""}${dir ? "index" : ""}.html`;
       writeFile(path, html, () => {});
     }
   }

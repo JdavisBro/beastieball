@@ -1,3 +1,8 @@
 https://beastieball.netlify.app/* https://beastieball.info/:splat 301!
 https://experimental--beastieball.netlify.app/* https://experimental.beastieball.info/:splat 301!
-/*  /index.html  200
+
+/team/viewer/* /team/viewer/index.html 200
+/team/encounters/* /team/encounters/index.html 200
+# INSERT
+/beastiepedia/* /beastiepedia/index.html 200
+/* /404.html 404

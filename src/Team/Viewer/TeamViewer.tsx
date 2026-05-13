@@ -18,7 +18,6 @@ import useScreenOrientation from "../../utils/useScreenOrientation.ts";
 import BEASTIE_DATA from "../../data/BeastieData.ts";
 import useLocalization from "../../localization/useLocalization.ts";
 import { useLocalStorage } from "usehooks-ts";
-import isCrawler from "../../utils/isCrawler.ts";
 
 declare global {
   interface Window {

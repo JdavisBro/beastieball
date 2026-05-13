@@ -1,4 +1,5 @@
 import { useLocalStorage } from "usehooks-ts";
+import isCrawler from "../utils/isCrawler";
 
 export enum SpoilerMode {
   OnlySeen,
@@ -15,9 +16,7 @@ export const DEFAULT_SEEN = {
 export function useSpoilerMode() {
   return useLocalStorage<SpoilerMode>(
     "spoilerMode",
-    window.navigator.userAgent.toLowerCase().includes("prerender")
-      ? SpoilerMode.All
-      : SpoilerMode.OnlySeen,
+    isCrawler ? SpoilerMode.All : SpoilerMode.OnlySeen,
   );
 }
 

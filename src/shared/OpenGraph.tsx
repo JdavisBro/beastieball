@@ -31,10 +31,6 @@ export default function OpenGraph(props: Props): React.ReactElement {
       <link rel="canonical" href={link} />
       <meta name="twitter:card" content="summary" />
       <meta
-        name="prerender-status-code"
-        content={props.notfound ? "404" : "200"}
-      ></meta>
-      <meta
         name="robots"
         content={
           props.noindex || import.meta.env.VITE_EXPERIMENTAL == "true"

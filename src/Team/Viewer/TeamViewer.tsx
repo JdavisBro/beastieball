@@ -18,6 +18,7 @@ import useScreenOrientation from "../../utils/useScreenOrientation.ts";
 import BEASTIE_DATA from "../../data/BeastieData.ts";
 import useLocalization from "../../localization/useLocalization.ts";
 import { useLocalStorage } from "usehooks-ts";
+import isCrawler from "../../utils/isCrawler.ts";
 
 declare global {
   interface Window {
@@ -101,12 +102,7 @@ export default function Viewer() {
   );
 
   useEffect(() => {
-    if (
-      team?.code == code ||
-      !code ||
-      // Don't make request on prerender
-      window.navigator.userAgent.toLowerCase().includes("prerender")
-    ) {
+    if (team?.code == code || !code) {
       return;
     }
     if (selectedFeatured) {

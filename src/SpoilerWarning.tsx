@@ -3,6 +3,7 @@ import SpoilerOptions from "./shared/SpoilerOptions";
 import { Language } from "./shared/Language";
 import { PropsWithChildren } from "react";
 import useLocalization from "./localization/useLocalization";
+import isCrawler from "./utils/isCrawler";
 
 export default function SpoilerWarning({ children }: PropsWithChildren) {
   const [spoilersOk, setSpoilersOk] = useLocalStorage("spoilersOk2", false, {
@@ -13,8 +14,7 @@ export default function SpoilerWarning({ children }: PropsWithChildren) {
 
   const site = import.meta.env.VITE_BRANDING;
 
-  return spoilersOk ||
-    window.navigator.userAgent.toLowerCase().includes("prerender") ? (
+  return spoilersOk || isCrawler ? (
     children
   ) : (
     <div className="commoncontainer">

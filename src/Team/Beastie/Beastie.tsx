@@ -97,7 +97,9 @@ export default function Beastie({
             })}
           >
             {teamBeastie.name || beastieName}
-            <span className={styles.number}>#{teamBeastie.number}</span>
+            {teamBeastie.number.length ? (
+              <span className={styles.number}>#{teamBeastie.number}</span>
+            ) : null}
             <span
               title={
                 levelOverwrite

@@ -101,8 +101,8 @@ export function encounterToTeamBeastie(
         : 0;
 
   const number =
-    encBeastie.number &&
-    (typeof encBeastie.number == "string" || encBeastie.number > -1)
+    typeof encBeastie.number == "string" ||
+    (encBeastie.number && encBeastie.number > -1)
       ? String(encBeastie.number)
       : String(Math.floor(randomizer.random() ** 3 * randomizer.random(10))) +
         String(Math.round(randomizer.random(9)));
@@ -180,7 +180,7 @@ export function encounterToTeamBeastie(
     pid: pid,
     specie: beastieData.id,
     date: 1,
-    number: number.padStart(2, "0"),
+    number: number.length ? number.padStart(2, "0") : number,
     color: color,
     name: encBeastie.name ? L(encBeastie.name) : "",
     spr_index: spr_index,

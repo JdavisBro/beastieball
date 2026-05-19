@@ -11,6 +11,7 @@ import useLocalization, {
   LocalizationFunction,
 } from "../../localization/useLocalization";
 import { TeamBeastie } from "../Types";
+import VIBES from "../../data/raw/vibes.json";
 
 function hashCode(text: string) {
   let hash = 0;
@@ -61,7 +62,10 @@ export function encounterToTeamBeastie(
 
   const randomizer = new Randomizer(1);
   randomizer.randomizer_seed(hashCode(fromEncounter) + fromEncounterIndex);
-  randomizer.spam_random(9);
+  randomizer.spam_random(6); // trainings
+  const scale = randomizer.random();
+  const vibe = Math.floor(randomizer.random() * VIBES.length);
+  randomizer.random(); // xp
   const random_ability = beastieData.ability_hidden
     ? 0
     : Math.floor(randomizer.random(beastieData.ability.length));
@@ -181,8 +185,8 @@ export function encounterToTeamBeastie(
     name: encBeastie.name ? L(encBeastie.name) : "",
     spr_index: spr_index,
     xp: level ** 3 * beastieData.growth,
-    scale: encBeastie.size && encBeastie.size > 0 ? encBeastie.size : 0.5,
-    vibe: encBeastie.vibe && encBeastie.vibe > 0 ? encBeastie.vibe : 0,
+    scale: encBeastie.size && encBeastie.size > 0 ? encBeastie.size : scale,
+    vibe: encBeastie.vibe && encBeastie.vibe > 0 ? encBeastie.vibe : vibe,
     ability_index: ability_index,
     attklist: getMoveset(encBeastie, beastieData, level),
     ba_r: 1,

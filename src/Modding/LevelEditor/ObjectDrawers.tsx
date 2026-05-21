@@ -5,7 +5,6 @@ import { Html } from "@react-three/drei";
 
 import type { GameObject, GameObjectTypes, Model } from "./types";
 import styles from "./LevelEditor.module.css";
-import { findFloorPosition } from "./LevelEditor";
 import { ModelElem } from "./Models";
 import setTextureDefaults from "./defaults";
 import SPRITE_INFO_FULL from "../../data/raw/sprite_info_full.json";
@@ -592,15 +591,14 @@ const OBJECT_DRAWER_MAP: Record<
 };
 
 export default function ObjectDrawers() {
-  const { levelData } = useLevelEditor();
+  const { levelData, getFloorPos } = useLevelEditor();
   return levelData.objects_array?.map((object, index) => {
     const Component =
       OBJECT_DRAWER_MAP[object.object ?? "objNode"] ?? TextDrawer;
     const position: [number, number, number] = [
       -(object.x ?? 0),
       object.y ?? 0,
-      findFloorPosition(object.x ?? 0, object.y ?? 0, levelData) +
-        (object.z ?? 0),
+      getFloorPos(object.x ?? 0, object.y ?? 0) + (object.z ?? 0),
     ];
     return <Component key={index} object={object} position={position} />;
   });

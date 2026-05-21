@@ -9,7 +9,15 @@ import {
   useRef,
   useState,
 } from "react";
-import { DirectionalLight, Object3D, Vector3 } from "three";
+import {
+  BufferGeometry,
+  DirectionalLight,
+  Mesh,
+  MeshBasicMaterial,
+  Object3D,
+  Raycaster,
+  Vector3,
+} from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
 import { Html, useProgress } from "@react-three/drei";
@@ -17,7 +25,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import { useLocalStorage } from "usehooks-ts";
 
 import { LevelData } from "./types";
-import ShapeGroups, { LevelFloor } from "./ShapeGroup";
+import ShapeGroups, { createShapeGeometry, LevelFloor } from "./ShapeGroup";
 import { Models } from "./Models";
 import ObjectDrawers from "./ObjectDrawers";
 import styles from "./LevelEditor.module.css";
@@ -77,65 +85,6 @@ function ParseLevelData(
     }
   }
   return levelData;
-}
-
-function pointInsidePolygon(x: number, y: number, vs: number[][]) {
-  // ray-casting algorithm based on
-  // https://wrf.ecse.rpi.edu/Research/Short_Notes/pnpoly.html
-  let inside = false;
-  for (var i = 0, j = vs.length - 1; i < vs.length; j = i++) {
-    const xi = vs[i][0],
-      yi = vs[i][1];
-    const xj = vs[j][0],
-      yj = vs[j][1];
-
-    const intersect =
-      yi > y != yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi;
-    if (intersect) inside = !inside;
-  }
-
-  return inside;
-}
-
-export function findFloorPosition(
-  x: number,
-  y: number,
-  levelData: LevelData,
-  z_max?: number,
-) {
-  let highest_z = 0;
-  const z_test = z_max !== undefined;
-  if (levelData.shape_groups_array) {
-    for (const group of levelData.shape_groups_array) {
-      if (group.shapes_array) {
-        for (const shape of group.shapes_array) {
-          if (
-            shape.points_array &&
-            (shape.solid || shape.water) &&
-            shape.flat &&
-            shape.solid &&
-            !shape.wall_collider &&
-            !shape.shadow_caster
-          ) {
-            const poly = [];
-            const shape_x = (group.x ?? 0) + (shape.x ?? 0);
-            const shape_y = (group.y ?? 0) + (shape.y ?? 0);
-            for (let i = 0; i < shape.points_array.length; i += 3) {
-              poly.push([
-                shape_x + shape.points_array[i],
-                shape_y + shape.points_array[i + 1],
-              ]);
-            }
-            const z = (group.z ?? 0) + (shape.z ?? 0) + shape.points_array[2];
-            if ((!z_test || z_max > z) && pointInsidePolygon(x, y, poly)) {
-              if (z > highest_z) highest_z = z;
-            }
-          }
-        }
-      }
-    }
-  }
-  return highest_z;
 }
 
 const OrbitControls_Element = extend(OrbitControls);
@@ -324,6 +273,42 @@ function Error({ reason }: { reason?: string }) {
   );
 }
 
+function createFloorPosGetter(levelData?: LevelData) {
+  if (!levelData) return () => 0;
+  const objs: Mesh[] = [];
+  for (const shape_group of levelData.shape_groups_array) {
+    if (shape_group.shapes_array) {
+      for (const shape of shape_group.shapes_array) {
+        if (
+          (shape.solid || shape.water) &&
+          shape.flat &&
+          shape.solid &&
+          !shape.wall_collider &&
+          !shape.shadow_caster
+        ) {
+          const mesh = new Mesh(createShapeGeometry(shape, 0));
+          mesh.position.set(
+            -(shape_group.x ?? 0),
+            shape_group.y ?? 0,
+            shape_group.z ?? 0,
+          );
+          mesh.updateMatrixWorld();
+          objs.push(mesh);
+        }
+      }
+    }
+  }
+  return (x: number, y: number, z_max?: number) => {
+    const ray = new Raycaster(
+      new Vector3(-x, y, z_max ?? 999999),
+      new Vector3(0, 0, -1),
+    );
+    const intersects = ray.intersectObjects(objs);
+    if (!intersects.length) return 0;
+    return intersects[0].point.z;
+  };
+}
+
 export default function LevelEditor() {
   const { level } = useParams();
 
@@ -367,6 +352,7 @@ export default function LevelEditor() {
       levelData: levelData as LevelData,
       levelStump: levelStump as LevelStump,
       palette: WORLD_DATA.palettes[levelData?.palette_name ?? "default"],
+      getFloorPos: createFloorPosGetter(levelData),
     }),
     [viewMode, levelData, levelStump],
   );

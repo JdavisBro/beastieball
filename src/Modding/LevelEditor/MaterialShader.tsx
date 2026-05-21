@@ -116,7 +116,7 @@ uniform vec3 uBaseColorSide;
 uniform vec3 uTexColorSide;
 uniform bool uHideTop;`}
       fragment_map={`vec2 new_uv = vUv * 0.0005;
-bool is_top = vObjectNormal.z == 1.0 || vObjectNormal.z == -1.0;
+bool is_top = vObjectNormal.z > 0.0 || vObjectNormal.z < 0.0;
 if (uHideTop && is_top) discard;
 int channel = is_top ? uChannel : uChannelSide; 
 float blend_factor = pow(texture2D(uTexture, new_uv)[channel]*texture2D(uTexture, vec2(new_uv.x*-1.618, new_uv.y*1.413))[channel], .5); 

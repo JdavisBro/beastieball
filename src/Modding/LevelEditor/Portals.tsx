@@ -1,12 +1,11 @@
 import useLevelEditor from "./useLevelEditor";
 import type { Portal } from "../../data/WorldData";
-import { findFloorPosition } from "./LevelEditor";
 import { Wireframe } from "@react-three/drei";
 
 function Portal({ portal }: { portal: Portal }) {
-  const { levelData } = useLevelEditor();
+  const { getFloorPos } = useLevelEditor();
 
-  const floor_z = findFloorPosition(portal.x ?? 0, portal.y ?? 0, levelData);
+  const floor_z = getFloorPos(portal.x ?? 0, portal.y ?? 0);
 
   const width = (portal.x2 ?? 0) - (portal.x1 ?? 0);
   const height = (portal.y2 ?? 0) - (portal.y1 ?? 0);

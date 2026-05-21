@@ -1,4 +1,11 @@
-import { Shape as ShapeThree } from "three";
+import {
+  BufferAttribute,
+  BufferGeometry,
+  Shape as ShapeThree,
+  Vector3,
+} from "three";
+import { useMemo } from "react";
+import { Earcut } from "three/src/extras/Earcut.js";
 
 import type { ShapeGroup, Shape, PaletteReference } from "./types";
 import { MaterialShader, WaterShiny } from "./MaterialShader";
@@ -7,8 +14,7 @@ import useLevelEditor, { EditorViewMode } from "./useLevelEditor";
 function ShapeTexture({
   position,
   rotation,
-  shape_three,
-  thickness,
+  geometry,
   paletteTop,
   paletteSide,
   clipTop,
@@ -16,7 +22,7 @@ function ShapeTexture({
 }: {
   position: number[];
   rotation?: [number, number, number];
-  shape_three: ShapeThree;
+  geometry: BufferGeometry;
   thickness: number;
   paletteTop?: PaletteReference;
   paletteSide?: PaletteReference;
@@ -31,7 +37,7 @@ function ShapeTexture({
       castShadow
       receiveShadow
     >
-      <extrudeGeometry args={[shape_three, { depth: thickness }]} />
+      <primitive object={geometry} />
       <MaterialShader
         paletteTop={paletteTop}
         paletteSide={paletteSide}
@@ -40,6 +46,101 @@ function ShapeTexture({
       />
     </mesh>
   );
+}
+
+export function createShapeGeometry(shape: Shape, thickness: number) {
+  const geometry = new BufferGeometry();
+  const points = shape.points_array;
+  if (!points) return geometry;
+  const top = Earcut.triangulate(points, [], 3);
+  const point_count = thickness > 0 ? points.length : 0;
+  const position = new Float32Array(point_count * 3 * 2 + top.length * 3 * 2);
+  const uv = new Float32Array(point_count * 2 * 2 + top.length * 2 * 2);
+  const x = shape.x ?? 0;
+  const y = shape.y ?? 0;
+  const z = shape.z ?? 0;
+
+  const insertTriangle = (
+    index: number,
+    pos1: [number, number, number],
+    pos2: [number, number, number],
+    pos3: [number, number, number],
+    up: boolean,
+  ) => {
+    const i3 = index * 3 * 3;
+    const i2 = index * 3 * 2;
+    const poses = [pos1, pos2, pos3];
+    const uv_offsets = [x, y, z];
+    let uv_x = 0;
+    let uv_y = 1;
+    if (!up) {
+      const x_diff = Math.abs(pos1[0] - pos2[0] || pos2[0] - pos3[0]);
+      const y_diff = Math.abs(pos1[1] - pos2[1] || pos2[1] - pos3[1]);
+      uv_x = x_diff > y_diff ? 0 : 1;
+      uv_y = 2;
+    }
+    for (let i = 0; i < 3; i++) {
+      const pos = poses[i];
+      position[i * 3 + i3] = -(pos[0] + x);
+      position[i * 3 + i3 + 1] = pos[1] + y;
+      position[i * 3 + i3 + 2] = pos[2] + z;
+      uv[i * 2 + i2] = (pos[uv_x] + uv_offsets[uv_x]) * (uv_x == 0 ? -1 : 1);
+      uv[i * 2 + i2 + 1] =
+        (pos[uv_y] + uv_offsets[uv_y]) * (uv_y == 0 ? -1 : 1);
+    }
+  };
+
+  for (let i = 0; i < top.length; i += 3) {
+    const point1 = top[i] * 3;
+    const point2 = top[i + 1] * 3;
+    const point3 = top[i + 2] * 3;
+    const tri = i / 3;
+    insertTriangle(
+      (point_count / 3) * 2 + tri,
+      [points[point2], points[point2 + 1], points[point2 + 2]],
+      [points[point1], points[point1 + 1], points[point1 + 2]],
+      [points[point3], points[point3 + 1], points[point3 + 2]],
+      true,
+    );
+    insertTriangle(
+      (point_count / 3) * 2 + top.length / 3 + tri,
+      [points[point1], points[point1 + 1], points[point1 + 2] - thickness],
+      [points[point2], points[point2 + 1], points[point2 + 2] - thickness],
+      [points[point3], points[point3 + 1], points[point3 + 2] - thickness],
+      true,
+    );
+  }
+  if (point_count) {
+    let v2 = new Vector3(
+      points[points.length - 3],
+      points[points.length - 2],
+      points[points.length - 1],
+    );
+    for (let i = 0; i < points.length; i += 3) {
+      const v1 = new Vector3(points[i], points[i + 1], points[i + 2]);
+
+      const tri = (i / 3) * 2;
+      insertTriangle(
+        tri,
+        [v2.x, v2.y, v2.z],
+        [v2.x, v2.y, v2.z - thickness],
+        [v1.x, v1.y, v1.z],
+        false,
+      );
+      insertTriangle(
+        tri + 1,
+        [v1.x, v1.y, v1.z],
+        [v2.x, v2.y, v2.z - thickness],
+        [v1.x, v1.y, v1.z - thickness],
+        false,
+      );
+      v2 = v1;
+    }
+  }
+  geometry.setAttribute("position", new BufferAttribute(position, 3));
+  geometry.setAttribute("uv", new BufferAttribute(uv, 2));
+  geometry.computeVertexNormals();
+  return geometry;
 }
 
 function Shape({
@@ -51,11 +152,12 @@ function Shape({
 }) {
   const shape_three = new ShapeThree();
 
-  const z = (shape.z ?? 0) + (shape?.points_array?.[2] ?? 0);
-  const thickness = (shape.thickness ?? 0) || (shape.z ?? 0);
-  // yeah idk
-  if (import.meta.env.DEV) position[2] += (z - thickness) / 2;
-  else position[2] += z - thickness;
+  const thickness =
+    shape.flat && shape.solid
+      ? shape.thickness && shape.thickness > 0
+        ? shape.thickness
+        : (shape.z ?? 0)
+      : 0;
 
   const { viewMode, levelData } = useLevelEditor();
 
@@ -66,23 +168,11 @@ function Shape({
     (viewMode == EditorViewMode.Collision && solid && flat) ||
     (viewMode == EditorViewMode.Visible && (shape.visible ?? true) && solid);
 
-  if (shape.points_array && visible) {
-    const x = -(shape.x ?? 0);
-    const y = shape.y ?? 0;
-    for (let i = 0; i < shape.points_array?.length; i += 3) {
-      if (i == 0) {
-        shape_three.moveTo(
-          x + -shape.points_array[i],
-          y + shape.points_array[i + 1],
-        );
-      } else {
-        shape_three.lineTo(
-          x + -shape.points_array[i],
-          y + shape.points_array[i + 1],
-        );
-      }
-    }
-  }
+  const geometry = useMemo(
+    () => createShapeGeometry(shape, thickness),
+    [shape],
+  );
+
   let paletteTop = shape.palette_reference;
   let paletteSide = shape.side_palette_reference;
   if (shape.water) {
@@ -102,8 +192,8 @@ function Shape({
         paletteTop={paletteTop}
         paletteSide={paletteSide}
         position={position}
-        shape_three={shape_three}
-        thickness={flat ? thickness || (solid && z) || 1 : 1}
+        geometry={geometry}
+        thickness={thickness}
         rotation={flat ? undefined : [-Math.PI / 2, 0, 0]}
         clipTop={shape.wall_collider}
         onClick={() => console.log(shape)}
@@ -153,11 +243,9 @@ export function LevelFloor() {
   shape.lineTo(0, height);
 
   return (
-    <ShapeTexture
-      paletteTop={levelData.palette_reference}
-      position={[0, 0, -1]}
-      shape_three={shape}
-      thickness={0}
-    />
+    <mesh position={[0, 0, -1]} castShadow receiveShadow>
+      <shapeGeometry args={[shape]} />
+      <MaterialShader paletteTop={levelData.palette_reference} doubleSide />
+    </mesh>
   );
 }

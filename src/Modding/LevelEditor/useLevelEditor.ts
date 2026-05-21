@@ -13,6 +13,7 @@ export type LevelEditorContextType = {
   levelData: LevelData;
   levelStump: LevelStump;
   palette: number[];
+  getFloorPos: (x: number, y: number, z_max?: number) => number;
 };
 
 export const LevelEditorContext = createContext<LevelEditorContextType>(

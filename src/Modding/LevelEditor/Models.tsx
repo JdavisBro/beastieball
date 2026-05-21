@@ -3,7 +3,6 @@ import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { useLoader } from "@react-three/fiber";
 
 import type { Model } from "./types";
-import { findFloorPosition } from "./LevelEditor";
 import {
   DefaultMaterial,
   MeshColoredShader,
@@ -95,7 +94,7 @@ export function ModelElem({
   model: Model;
   useFloorPos?: boolean;
 }) {
-  const { levelData } = useLevelEditor();
+  const { getFloorPos } = useLevelEditor();
   const model_obj = useLoader(
     OBJLoader,
     `${import.meta.env.VITE_DATA_URL}models_obj/${model.model_filename}.obj`,
@@ -108,7 +107,7 @@ export function ModelElem({
   const y = model.y ?? 0;
   const z =
     (useFloorPos ?? true)
-      ? findFloorPosition(x, y, levelData) + (model.z ?? 0)
+      ? getFloorPos(x, y) + (model.z ?? 0)
       : (model?.z ?? 0);
   return model_obj.children.map((child) => (
     <ModelChild

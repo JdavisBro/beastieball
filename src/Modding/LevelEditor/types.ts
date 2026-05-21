@@ -142,6 +142,7 @@ export type Shape = {
   wall_collider?: boolean;
   shadow_caster?: boolean;
 
+  fan?: number;
   flat?: number;
   grass_model_array?: ModelSpawnArray;
   grass_cover_update_v1?: number;

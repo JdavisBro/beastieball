@@ -48,6 +48,20 @@ function ShapeTexture({
   );
 }
 
+function pointDirection(v0: Vector3, v1: Vector3) {
+  const x = v1.x - v0.x;
+  const y = v1.y - v0.y;
+  if (x == 0) {
+    if (y > 0) return 270;
+    else if (y < 0) return 90;
+    return 0;
+  } else {
+    const dd = Math.atan2(y, x);
+    if (dd <= 0) return -dd;
+    return Math.PI * 2 - dd;
+  }
+}
+
 export function createShapeGeometry(shape: Shape, thickness: number) {
   const geometry = new BufferGeometry();
   const points = shape.points_array;
@@ -72,19 +86,16 @@ export function createShapeGeometry(shape: Shape, thickness: number) {
     const poses = [pos1, pos2, pos3];
     const uv_offsets = [x, y, z];
     let uv_x = 0;
-    let uv_y = 1;
-    if (!up) {
-      const x_diff = Math.abs(pos1[0] - pos2[0] || pos2[0] - pos3[0]);
-      const y_diff = Math.abs(pos1[1] - pos2[1] || pos2[1] - pos3[1]);
-      uv_x = x_diff > y_diff ? 0 : 1;
-      uv_y = 2;
-    }
+    let uv_y = up ? 1 : 2;
     for (let i = 0; i < 3; i++) {
       const pos = poses[i];
       position[i * 3 + i3] = -(pos[0] + x);
       position[i * 3 + i3 + 1] = pos[1] + y;
       position[i * 3 + i3 + 2] = pos[2] + z;
-      uv[i * 2 + i2] = (pos[uv_x] + uv_offsets[uv_x]) * (uv_x == 0 ? -1 : 1);
+      uv[i * 2 + i2] =
+        (100_000 +
+          (up ? pos[uv_x] + uv_offsets[uv_x] : pos[0] - pos[1] + x - y)) *
+        (up ? -1 : 1);
       uv[i * 2 + i2 + 1] =
         (pos[uv_y] + uv_offsets[uv_y]) * (uv_y == 0 ? -1 : 1);
     }
@@ -111,30 +122,60 @@ export function createShapeGeometry(shape: Shape, thickness: number) {
     );
   }
   if (point_count) {
-    let v2 = new Vector3(
+    let v0 = new Vector3(
+      points[points.length - 6],
+      points[points.length - 5],
+      points[points.length - 4],
+    );
+    let v1 = new Vector3(
       points[points.length - 3],
       points[points.length - 2],
       points[points.length - 1],
     );
     for (let i = 0; i < points.length; i += 3) {
-      const v1 = new Vector3(points[i], points[i + 1], points[i + 2]);
+      const v2 = new Vector3(points[i], points[i + 1], points[i + 2]);
+      let o_x1 = 0;
+      let o_x2 = 0;
+      let o_y1 = 0;
+      let o_y2 = 0;
+      if (shape.fan) {
+        const fan = shape.fan ?? 0;
+        const v3 = new Vector3(points[i + 3], points[i + 4], points[i + 5]);
+        const a0 = pointDirection(v0, v1) + Math.PI / 2;
+        const a1 = pointDirection(v1, v2) + Math.PI / 2;
+        const a2 = pointDirection(v2, v3) + Math.PI / 2;
+        const normal_x1 = Math.cos(a0) + Math.cos(a1);
+        const normal_y1 = -Math.sin(a0) - Math.sin(a1);
+        const inverse_length1 =
+          1 / Math.sqrt(normal_x1 * normal_x1 + normal_y1 * normal_y1);
+        o_x1 = normal_x1 * inverse_length1 * fan;
+        o_y1 = normal_y1 * inverse_length1 * fan;
+
+        let normal_x2 = Math.cos(a1) + Math.cos(a2);
+        let normal_y2 = -Math.sin(a1) - Math.sin(a2);
+        const inverse_length2 =
+          1 / Math.sqrt(normal_x2 * normal_x2 + normal_y2 * normal_y2);
+        o_x2 = normal_x2 * inverse_length2 * fan;
+        o_y2 = normal_y2 * inverse_length2 * fan;
+      }
 
       const tri = (i / 3) * 2;
       insertTriangle(
         tri,
-        [v2.x, v2.y, v2.z],
-        [v2.x, v2.y, v2.z - thickness],
         [v1.x, v1.y, v1.z],
+        [v1.x - o_x1, v1.y - o_y1, v1.z - thickness],
+        [v2.x - o_x2, v2.y - o_y2, v2.z - thickness],
         false,
       );
       insertTriangle(
         tri + 1,
         [v1.x, v1.y, v1.z],
-        [v2.x, v2.y, v2.z - thickness],
-        [v1.x, v1.y, v1.z - thickness],
+        [v2.x - o_x2, v2.y - o_y2, v2.z - thickness],
+        [v2.x, v2.y, v2.z],
         false,
       );
-      v2 = v1;
+      v0 = v1;
+      v1 = v2;
     }
   }
   geometry.setAttribute("position", new BufferAttribute(position, 3));

@@ -29,6 +29,7 @@ import useLevelEditor, {
 import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
+import Portals from "./Portals";
 
 const AREA_ID_DIRS = [
   "etc/",
@@ -264,6 +265,7 @@ function Scene() {
       <ShapeGroups />
       <Models />
       <ObjectDrawers />
+      <Portals />
       <LevelFloor />
     </>
   );

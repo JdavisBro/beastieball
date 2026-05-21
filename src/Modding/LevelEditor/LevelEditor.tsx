@@ -9,15 +9,7 @@ import {
   useRef,
   useState,
 } from "react";
-import {
-  BufferGeometry,
-  DirectionalLight,
-  Mesh,
-  MeshBasicMaterial,
-  Object3D,
-  Raycaster,
-  Vector3,
-} from "three";
+import { DirectionalLight, Mesh, Object3D, Raycaster, Vector3 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
 import { Html, useProgress } from "@react-three/drei";

@@ -184,6 +184,23 @@ function Shape({
       texture_index: base,
     };
     paletteSide = paletteTop;
+    if (shape.points_array && visible) {
+      const x = -(shape.x ?? 0);
+      const y = shape.y ?? 0;
+      for (let i = 0; i < shape.points_array?.length; i += 3) {
+        if (i == 0) {
+          shape_three.moveTo(
+            x + -shape.points_array[i],
+            y + shape.points_array[i + 1],
+          );
+        } else {
+          shape_three.lineTo(
+            x + -shape.points_array[i],
+            y + shape.points_array[i + 1],
+          );
+        }
+      }
+    }
   }
 
   return visible ? (
@@ -200,7 +217,11 @@ function Shape({
       />
       {shape.water && (
         <mesh
-          position={[-position[0], position[1], position[2] + thickness + 15]}
+          position={[
+            -position[0],
+            position[1],
+            position[2] + thickness + 15 + (shape.z ?? 0),
+          ]}
           receiveShadow
         >
           <shapeGeometry args={[shape_three]} />

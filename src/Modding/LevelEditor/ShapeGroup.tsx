@@ -85,19 +85,19 @@ export function createShapeGeometry(shape: Shape, thickness: number) {
     const i2 = index * 3 * 2;
     const poses = [pos1, pos2, pos3];
     const uv_offsets = [x, y, z];
-    const x_dist = Math.abs(pos1[0] - pos2[0] || pos2[0] - pos3[0]);
-    const y_dist = Math.abs(pos1[1] - pos2[1] || pos2[1] - pos3[1]);
-    const z_dist = Math.abs(pos1[2] - pos2[2] || pos2[2] - pos3[2]);
-    const uv_x = x_dist > y_dist || x_dist > z_dist ? 0 : 1;
-    const uv_y = uv_x != 1 && y_dist > z_dist ? 1 : 2;
+    let uv_x = 0;
+    let uv_y = up ? 1 : 2;
     for (let i = 0; i < 3; i++) {
       const pos = poses[i];
       position[i * 3 + i3] = -(pos[0] + x);
       position[i * 3 + i3 + 1] = pos[1] + y;
       position[i * 3 + i3 + 2] = pos[2] + z;
       uv[i * 2 + i2] =
-        (100_000 + (pos[uv_x] + uv_offsets[uv_x])) * (up ? -1 : 1);
-      uv[i * 2 + i2 + 1] = pos[uv_y] + uv_offsets[uv_y];
+        (100_000 +
+          (up ? pos[uv_x] + uv_offsets[uv_x] : pos[0] - pos[1] + x - y)) *
+        (up ? -1 : 1);
+      uv[i * 2 + i2 + 1] =
+        (pos[uv_y] + uv_offsets[uv_y]) * (uv_y == 0 ? -1 : 1);
     }
   };
 

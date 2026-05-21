@@ -199,24 +199,23 @@ export function TexturedColoredShader({
 
   return (
     <ExtendedMaterial
-      fragment_top={`uniform sampler2D uTexture;
-uniform sampler2D uMasterTexture;
+      fragment_top={`uniform sampler2D uMasterTexture;
 uniform int uChannel;
 uniform vec3 uBaseColor;
 uniform vec3 uTexColor;`}
-      fragment_map={`diffuseColor  = texture2D(uTexture, vUv);
+      fragment_map={`diffuseColor  = texture2D(map, vUv);
 if (uBaseColor != vec3(1.0) && uTexColor != vec3(1.0)) {
 float blend_factor = texture2D(uMasterTexture, vUv)[uChannel];
 vec3 blendColor = mix(uBaseColor, uTexColor, blend_factor);
 diffuseColor.rgb = blendColor * diffuseColor.r;
 }`}
       uniforms={{
-        uTexture: { value: texture },
         uMasterTexture: { value: masterTexture },
         uBaseColor: { value: bgrDecimalToRgb(colorA) },
         uTexColor: { value: bgrDecimalToRgb(colorB) },
         uChannel: { value: color == -1 ? (paletteRef?.channel_index ?? 0) : 0 },
       }}
+      map={texture}
       alphaTest={0.75}
       customProgramCacheKey={() => "colored-textured-mesh"}
       doubleSide

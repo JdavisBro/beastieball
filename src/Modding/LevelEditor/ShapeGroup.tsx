@@ -94,7 +94,7 @@ export function createShapeGeometry(shape: Shape, thickness: number) {
       position[i * 3 + i3 + 2] = pos[2] + z;
       uv[i * 2 + i2] =
         (100_000 +
-          (up ? pos[uv_x] + uv_offsets[uv_x] : pos[0] - pos[1] + x - y)) *
+          (up ? pos[uv_x] + uv_offsets[uv_x] : pos[0] + x + pos[1] + y)) *
         (up ? -1 : 1);
       uv[i * 2 + i2 + 1] =
         (pos[uv_y] + uv_offsets[uv_y]) * (uv_y == 0 ? -1 : 1);

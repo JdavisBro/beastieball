@@ -144,6 +144,14 @@ const PRERENDER_PAGES: PrerenderPage[] = [
     path: "/modding/save/",
     noLoc: true,
   },
+  {
+    name: "Level Viewer",
+    description: "Level Viewer for Beastieball",
+    useBranding: true,
+    image: "/gameassets/sprMainmenu/10.png",
+    path: "/modding/level/",
+    noLoc: true,
+  },
 ];
 
 function getSiteLoc(

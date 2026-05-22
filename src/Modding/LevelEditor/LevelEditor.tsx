@@ -352,13 +352,13 @@ export default function LevelEditor() {
   return (
     <div className={styles.container}>
       <OpenGraph
-        title={`Level Editor - ${import.meta.env.VITE_BRANDING}`}
+        title={`Level Viewer - ${import.meta.env.VITE_BRANDING}`}
         image={"/gameassets/sprMainmenu/3.png"}
         url={"/modding/level/"}
-        description={"Level Editor for Beastieball"}
+        description={"Level Viewer for Beastieball"}
       />
       <Header
-        title="Level Editor"
+        title="Level Viewer"
         returnButtonTitle="Beastieball Modding Tools"
         returnButtonTo="/modding/"
         secretPage={true}

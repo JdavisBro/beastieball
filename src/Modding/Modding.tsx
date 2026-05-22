@@ -26,7 +26,7 @@ export default function Modding(): React.ReactElement {
           location={"/modding/save/"}
         />
         <NavigationMenuOption
-          text={"Level Editor"}
+          text={"Level Viewer"}
           image={"/gameassets/sprMainmenu/2.png"}
           hoverImage={"/gameassets/sprMainmenu/3.png"}
           location={"/modding/level/"}

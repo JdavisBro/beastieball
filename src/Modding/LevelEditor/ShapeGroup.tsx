@@ -256,19 +256,15 @@ function Shape({
         clipTop={shape.wall_collider}
         onClick={() => console.log(shape)}
       />
-      {shape.water && (
+      {shape.water ? (
         <mesh
-          position={[
-            -position[0],
-            position[1],
-            position[2] + thickness + 15 + (shape.z ?? 0),
-          ]}
+          position={[-position[0], position[1], position[2] + thickness + 15]}
           receiveShadow
         >
           <shapeGeometry args={[shape_three]} />
           <WaterShiny />
         </mesh>
-      )}
+      ) : null}
     </>
   ) : null;
 }

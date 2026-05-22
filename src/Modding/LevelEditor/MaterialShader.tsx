@@ -293,7 +293,7 @@ float a2 = texture2D(uTexture, (used_uv * 0.08 + vec2(time, -time * 0.7)) * vec2
 float a3 = mix(a1, a2, 0.5);
 if (a3 < 0.43) diffuseColor = vec4(0.2,0.2,0.2,a3); 
 else if (a3 > 0.7) diffuseColor = vec4(0.5,0.5,0.5,a3); 
-else diffuseColor = vec4(0.0);
+else discard;
 `}
       uniforms={{
         uTexture: { value: texture },

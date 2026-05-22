@@ -26,6 +26,7 @@ function Portal({ portal }: { portal: Portal }) {
         fillOpacity={0}
         fillMix={1}
         thickness={0.025}
+        alphaTest={0.5}
         transparent
         backfaceStroke={"#ff0000"}
       />

@@ -19,6 +19,9 @@ import Modal from "../shared/Modal";
 import { EXTRA_MARKERS } from "../data/WorldData";
 import TextTag from "../shared/TextTag";
 import useLocalization from "../localization/useLocalization";
+import { Link } from "react-router-dom";
+
+const secrets = localStorage.getItem("secrets") == "true";
 
 export function ControlSection({
   header,
@@ -190,6 +193,7 @@ type Props = {
   setAttractSpray: ReactStateBool;
   huntedItem: string | undefined;
   setHuntedItem: (itemId: string | undefined) => void;
+  beastiesLevel?: string;
 };
 
 function ControlMenuInner({
@@ -202,6 +206,7 @@ function ControlMenuInner({
   setAttractSpray,
   huntedItem,
   setHuntedItem,
+  beastiesLevel,
 }: Props) {
   const { L: Loc } = useLocalization();
 
@@ -335,6 +340,21 @@ function ControlMenuInner({
       >
         <ItemSection huntedItem={huntedItem} setHuntedItem={setHuntedItem} />
       </ControlSection>
+      {secrets ? (
+        <ControlSection
+          header={Loc("map.info.title")}
+          sectionName="info"
+          visibleSection={visibleSection}
+          setVisibleSection={setVisibleSection}
+        >
+          {Loc("map.info.levelName", {
+            name: beastiesLevel || Loc("map.info.noneSelected"),
+          })}
+          <Link to={beastiesLevel ? `/modding/level/${beastiesLevel}` : ""}>
+            {Loc("map.info.levelEditor")}
+          </Link>
+        </ControlSection>
+      ) : null}
     </>
   );
 }

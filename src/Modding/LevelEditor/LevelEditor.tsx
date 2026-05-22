@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   RefObject,
   Suspense,
@@ -414,6 +414,8 @@ export default function LevelEditor() {
             onChange={() => setShadows(!shadows)}
           />
         </label>
+        {" - "}
+        <Link to="/map/">Map</Link>
       </div>
       <Canvas
         className={styles.canvas}

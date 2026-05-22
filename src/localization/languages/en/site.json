@@ -473,6 +473,12 @@
       "selectButton": "Select Item: {item}",
       "unset": "Unset"
     },
+    "info": {
+      "title": "Info (Secret)",
+      "levelName": "Level Name: {name}",
+      "noneSelected": "None Selected",
+      "levelEditor": "Open in Level Viewer"
+    },
     "metamorphosis": {
       "arrow": "→",
       "sprecko": "By communing with the Mushroom Colony",

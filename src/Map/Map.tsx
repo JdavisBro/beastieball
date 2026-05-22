@@ -461,6 +461,7 @@ export default function Map(): React.ReactNode {
           setAttractSpray={setAttractSpray}
           huntedItem={huntedItem}
           setHuntedItem={setHuntedItem}
+          beastiesLevel={beastiesLevel}
         />
       </MapContainer>
     </>

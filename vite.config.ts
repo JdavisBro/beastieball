@@ -148,7 +148,7 @@ const PRERENDER_PAGES: PrerenderPage[] = [
     name: "Level Viewer",
     description: "Level Viewer for Beastieball",
     useBranding: true,
-    image: "/gameassets/sprMainmenu/10.png",
+    image: "/gameassets/sprMainmenu/3.png",
     path: "/modding/level/",
     noLoc: true,
   },

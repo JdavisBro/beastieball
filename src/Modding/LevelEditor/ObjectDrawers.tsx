@@ -108,7 +108,6 @@ function TextDrawer({ position, object }: DrawerProps) {
         onPointerLeave={() =>
           ref.current?.classList.remove(styles.labelVisible)
         }
-        castShadow
         receiveShadow
       >
         <sphereGeometry args={[24]} />

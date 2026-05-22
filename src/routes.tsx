@@ -234,6 +234,15 @@ const routes: Array<RouteObject> = [
       },
       {
         element: <LoaderComponent />,
+        path: "modding/level/:level?",
+        loader: () =>
+          import("./Modding/LevelEditor/LevelEditor").then((m) => ({
+            component: m.default,
+          })),
+        shouldRevalidate: shouldRevalidate,
+      },
+      {
+        element: <LoaderComponent />,
         path: "modding/",
         loader: () =>
           import("./Modding/Modding").then((m) => ({ component: m.default })),

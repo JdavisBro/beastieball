@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  height: 100vh;
+}
+
+.canvas {
+  flex-grow: 1;
+}
+
+.fullbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullbox > div {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: none;
+}
+
+.labelVisible {
+  display: block;
+  transform: translate(-50%, -200%) !important;
+  user-select: none;
+  pointer-events: none;
+  background-color: black;
+}
+
+.settings {
+  composes: animBoxBackground from global;
+  color: black;
+  text-align: center;
+  margin: 6px auto;
+  padding: 4px 8px;
+  width: fit-content;
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 100%, 4px 100%);
+}

@@ -54,13 +54,15 @@ export type Portal = {
   destination?: string;
   direction?: number;
   door?: number;
-  x: number;
-  x1: number;
-  x2: number;
-  y: number;
-  y1: number;
-  y2: number;
+  x?: number;
+  x1?: number;
+  x2?: number;
+  y?: number;
+  y1?: number;
+  y2?: number;
+  z_offset?: number;
   z1?: number;
+  z2?: number;
 };
 
 export type LevelStump = {
@@ -88,6 +90,7 @@ export type World = {
   level_stumps_array: LevelStump[];
   map_position_data: Record<string, { x: number; y: number }>;
   model_data: {};
+  palettes: Record<string, number[]>;
 };
 
 const WORLD_DATA: World = world;

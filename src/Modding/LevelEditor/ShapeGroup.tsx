@@ -258,7 +258,11 @@ function Shape({
       />
       {shape.water ? (
         <mesh
-          position={[-position[0], position[1], position[2] + thickness + 15]}
+          position={[
+            -position[0],
+            position[1],
+            position[2] + (shape.z ?? 0) + 15,
+          ]}
           receiveShadow
         >
           <shapeGeometry args={[shape_three]} />

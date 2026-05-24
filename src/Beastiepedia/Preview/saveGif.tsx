@@ -99,6 +99,8 @@ export default function saveGif(
     }
   });
 
+  let anim_loops = !anim.loop || anim.loop[0] != "";
+
   const everyTransition = frames
     .flatMap((frame) => frame.transitions ?? [])
     .filter((v, i, a) => a.indexOf(v) == i);
@@ -115,14 +117,13 @@ export default function saveGif(
       ? basegroup
       : 0;
 
+  if (!anim_loops) basegroup = 0;
   let groupindex = basegroup;
 
   const grouptransition: Record<number, number> = {};
   Object.keys(transitionedto).forEach(
     (_value, index) => (grouptransition[index] = 0),
   );
-
-  let anim_loops = !anim.loop;
 
   let loop_count = 0;
   /*eslint no-constant-condition: ["error", { "checkLoops": false }]*/

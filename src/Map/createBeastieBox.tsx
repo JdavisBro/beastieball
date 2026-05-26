@@ -29,18 +29,12 @@ export default function createBeastieBox(
     };
   } = {};
   const non_dupe_beasties: string[] = [];
-  let previous_freq = 0;
-  group.forEach((value, index) => {
-    const freq = attractSpray
-      ? value.freq + ((100 * (index + 1)) / group.length - value.freq) * 0.5
-      : value.freq;
-    const percent = freq - previous_freq;
-    previous_freq = freq;
+  group.forEach((value) => {
     if (beastie_filter != "all" && beastie_filter != value.specie) {
       return;
     }
     if (overall_percent[value.specie]) {
-      overall_percent[value.specie].percent += percent;
+      overall_percent[value.specie].percent += value.percent * 100;
       overall_percent[value.specie].levelMin = Math.min(
         overall_percent[value.specie].levelMin,
         value.lvlA,
@@ -52,7 +46,7 @@ export default function createBeastieBox(
     } else {
       non_dupe_beasties.push(value.specie);
       overall_percent[value.specie] = {
-        percent: percent,
+        percent: value.percent * 100,
         levelMin: value.lvlA,
         levelMax: value.lvlB,
         variant: value.variant,

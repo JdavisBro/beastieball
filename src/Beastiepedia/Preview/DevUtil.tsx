@@ -167,7 +167,7 @@ export default function DevUtil(props: {
       img.src = `/gameassets/beasties/${beastie.spr}/${frame % sprite.frames}.webp`;
       loadingRef.current[
         numbered
-          ? `${String(beastie.number).padStart(3, "0")}-${L(beastie.name)}`
+          ? `${String(beastie.order + 1).padStart(3, "0")}-${L(beastie.name)}`
           : L(beastie.name)
       ] = {
         img: img,

@@ -72,7 +72,7 @@ function getMaxStat(beastie: BeastieType): [StatType[], number] {
 export const SORT_CATEGORIES: SortType[] = [
   {
     name: "number",
-    value: (beastie) => beastie.number,
+    value: (beastie) => beastie.order,
     display: () => undefined,
     flipDirection: false,
   },

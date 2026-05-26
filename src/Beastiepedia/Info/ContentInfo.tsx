@@ -92,7 +92,7 @@ export default function ContentInfo(props: Props): React.ReactNode {
     <div className={styles.info}>
       <div className={styles.wrapinfoboxes}>
         <InfoBox header={L("beastiepedia.info.number")}>
-          #{beastiedata.number}
+          #{beastiedata.hidden ? L("common.hiddenNumber") : beastiedata.number}
         </InfoBox>
         <InfoBox header={L("beastiepedia.info.name")}>
           {L(beastiedata.name)}

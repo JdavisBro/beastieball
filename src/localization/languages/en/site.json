@@ -72,6 +72,7 @@
       "variant": "Variant",
       "raremorph": "Raremorph"
     },
+    "hiddenNumber": "???",
     "spoiler": "???",
     "hiddenBeastie": "Hidden Beastie",
     "beastieNum": "Beastie #{num}",

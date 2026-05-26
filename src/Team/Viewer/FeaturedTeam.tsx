@@ -68,7 +68,11 @@ export default function FeaturedTeam({
           }
           const isSpoiler = isSpoilerFn(beastie.id);
           const alt = isSpoiler
-            ? L("common.beastieNum", { num: String(beastie.number) })
+            ? L("common.beastieNum", {
+                num: beastie.hidden
+                  ? L("common.hiddenNumber")
+                  : String(beastie.number),
+              })
             : L(beastie.name);
           return (
             <img

@@ -49,9 +49,12 @@ function BeastieButton({
       />
       <div className={styles.beastieSelectNameNum}>
         <div className={styles.beastieSelectNum}>
-          #{String(beastie.number).padStart(2, "0")}
+          #
+          {beastie.hidden
+            ? L("common.hiddenNumber")
+            : String(beastie.number).padStart(2, "0")}
         </div>
-        <div>{isSpoiler ? "???" : L(beastie.name)}</div>
+        <div>{isSpoiler ? L("common.spoiler") : L(beastie.name)}</div>
       </div>
     </div>
   );

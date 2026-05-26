@@ -34,7 +34,7 @@ export default function Sidebar(props: Props): React.ReactElement {
       ? (beastie1, beastie2) => sort.compare(beastie1, beastie2, L) * sortMult
       : (beastie1, beastie2) =>
           (sort.value(beastie1, L) - sort.value(beastie2, L)) * sortMult ||
-          beastie1.number - beastie2.number;
+          beastie1.order - beastie2.order;
   const [grid, setGrid] = useLocalStorage("beastiepediaGrid", false);
 
   const [filters, setFilters] = useState<FilterType[]>([]);

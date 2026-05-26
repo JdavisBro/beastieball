@@ -49,7 +49,7 @@ export function encodeTeam(team: TeamBeastie[]): string {
   for (const beastie of team) {
     const beastie_data = BEASTIE_DATA.get(beastie.specie);
     if (!beastie_data) continue;
-    let beastie_number = beastie_data.number;
+    let beastie_number = beastie_data.order + 1;
     beastie_number |= BEASTIE_ABILITY_MASK * beastie.ability_index;
     const color_floor = Math.floor(beastie.color[0]);
     beastie_number |= color_floor == 1 ? BEASTIE_SHINY_MASK : 0;
@@ -88,9 +88,9 @@ export function decodeTeam(
   while (i < data.length) {
     const beastie_field = decodeBase(data.slice(i, i + 2));
     i += 2;
-    const beastie_num = beastie_field & BEASTIE_NUM_MASK;
+    const beastie_num = (beastie_field & BEASTIE_NUM_MASK) - 1;
     const beastie_data = [...BEASTIE_DATA.values()].find(
-      (beastie) => beastie.number == beastie_num,
+      (beastie) => beastie.order == beastie_num,
     );
     if (!beastie_data) throw new DecodeError("Invalid Beastie Number");
     const beastie = createBeastie(

@@ -2,7 +2,7 @@ import { useState } from "react";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 
 export const SORTED_BEASTIES = Array.from(BEASTIE_DATA.values()).sort(
-  (a, b) => a.number - b.number,
+  (a, b) => a.order - b.order,
 );
 
 const RNG_M = 0x80000000;

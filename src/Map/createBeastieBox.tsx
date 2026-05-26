@@ -62,7 +62,11 @@ export default function createBeastieBox(
     const isSpoiler = isSpoilerFn(beastie.id);
     const alt = Loc("map.spawnLocation", {
       name: isSpoiler
-        ? Loc("common.beastieNum", { num: String(beastie.number) })
+        ? Loc("common.beastieNum", {
+            num: beastie.hidden
+              ? Loc("common.hiddenNumber")
+              : String(beastie.number),
+          })
         : Loc(beastie.name),
     });
     const iconScale = beastie.id != huntedBeastie ? 1 : 1.5;

@@ -118,7 +118,9 @@ export default function MoveModalProvider(props: PropsWithChildren) {
                         {
                           beastie: isSpoiler
                             ? L("common.beastieNum", {
-                                num: String(beastie[0].number),
+                                num: beastie[0].hidden
+                                  ? L("common.hiddenNumber")
+                                  : String(beastie[0].number),
                               })
                             : beastieName,
                           level: String(beastie[1]),

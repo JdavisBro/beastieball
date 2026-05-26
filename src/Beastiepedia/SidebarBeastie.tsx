@@ -27,6 +27,10 @@ function SidebarBeastie(props: Props): React.ReactElement {
     ? `${styles.beastiecontent} ${styles.selected}`
     : styles.beastiecontent;
 
+  const numberText = beastiedata.hidden
+    ? L("common.hiddenNumber")
+    : String(beastiedata.number).padStart(2, "0");
+
   return (
     <Link
       to={props.isSpoiler ? "#" : getLink(`/beastiepedia/${beastieName}`)}
@@ -53,7 +57,7 @@ function SidebarBeastie(props: Props): React.ReactElement {
         <div className={styles.gridInfo}>
           <div className={styles.gridnumber}>
             <span className={styles.hash}>#</span>
-            {String(beastiedata.number).padStart(2, "0")}
+            {numberText}
           </div>
           <div className={styles.gridInfoMiddle}></div>
           <div className={styles.gridnumberright}>
@@ -63,7 +67,7 @@ function SidebarBeastie(props: Props): React.ReactElement {
         <div className={styles.name}>
           <div className={styles.number}>
             <span className={styles.hash}>#</span>
-            <span>{String(beastiedata.number).padStart(2, "0")}</span>
+            <span>{numberText}</span>
             {props.statDisplay && !props.isSpoiler ? (
               <span>
                 {L("beastiepedia.sidebar.statDisplaySeparator")}

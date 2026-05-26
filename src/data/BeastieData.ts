@@ -186,7 +186,7 @@ export type BeastieType = {
 const BEASTIE_DATA: Map<string, BeastieType> = new Map();
 
 const sorted = Object.entries(beastie_data).sort(
-  ([, a], [, b]) => a.number - b.number,
+  ([, a], [, b]) => a.order - b.order,
 );
 
 for (const [key, value] of sorted) {

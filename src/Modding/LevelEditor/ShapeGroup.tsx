@@ -101,6 +101,7 @@ export function createShapeGeometry(shape: Shape, thickness: number) {
     }
   };
 
+  const fan = shape.fan ?? 0;
   for (let i = 0; i < top.length; i += 3) {
     const point1 = top[i] * 3;
     const point2 = top[i + 1] * 3;
@@ -113,13 +114,15 @@ export function createShapeGeometry(shape: Shape, thickness: number) {
       [points[point3], points[point3 + 1], points[point3 + 2]],
       true,
     );
-    insertTriangle(
-      (point_count / 3) * 2 + top.length / 3 + tri,
-      [points[point1], points[point1 + 1], points[point1 + 2] - thickness],
-      [points[point2], points[point2 + 1], points[point2 + 2] - thickness],
-      [points[point3], points[point3 + 1], points[point3 + 2] - thickness],
-      true,
-    );
+    if (!fan)
+      // Remove bottom on fan shapes
+      insertTriangle(
+        (point_count / 3) * 2 + top.length / 3 + tri,
+        [points[point1], points[point1 + 1], points[point1 + 2] - thickness],
+        [points[point2], points[point2 + 1], points[point2 + 2] - thickness],
+        [points[point3], points[point3 + 1], points[point3 + 2] - thickness],
+        true,
+      );
   }
   if (point_count) {
     let v0 = new Vector3(
@@ -138,8 +141,7 @@ export function createShapeGeometry(shape: Shape, thickness: number) {
       let o_x2 = 0;
       let o_y1 = 0;
       let o_y2 = 0;
-      if (shape.fan) {
-        const fan = shape.fan ?? 0;
+      if (fan) {
         const v3 = new Vector3(points[i + 3], points[i + 4], points[i + 5]);
         const a0 = pointDirection(v0, v1) + Math.PI / 2;
         const a1 = pointDirection(v1, v2) + Math.PI / 2;

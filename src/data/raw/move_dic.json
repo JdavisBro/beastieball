@@ -422,15 +422,15 @@
     "use": 0
   },
   "commit": {
-    "bt_tags": [1, 8, 10, 31],
+    "bt_tags": [1, 10, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [{ "eff": 6, "pow": 1, "targ": 0 }],
     "id": "commit",
     "name": "¦movessetup_movedefine_055¦",
-    "pow": 100,
-    "price": 45,
+    "pow": 95,
+    "price": 0,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -479,6 +479,20 @@
     "price": 25,
     "targ": 0,
     "type": 1,
+    "use": 0
+  },
+  "copycat": {
+    "bt_tags": [24],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 65, "pow": 1, "targ": 3 }],
+    "id": "copycat",
+    "name": "Copycat",
+    "pow": 0,
+    "price": 0,
+    "targ": 5,
+    "type": 4,
     "use": 0
   },
   "cover": {
@@ -802,7 +816,7 @@
     "id": "feint",
     "name": "¦movessetup_movedefine_107¦",
     "pow": 0,
-    "price": 20,
+    "price": 0,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -1066,7 +1080,7 @@
     "id": "heartpass",
     "name": "¦movessetup_movedefine_099¦",
     "pow": 0,
-    "price": 25,
+    "price": 0,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -1301,7 +1315,7 @@
     "id": "lockon",
     "name": "¦movessetup_movedefine_128¦",
     "pow": 0,
-    "price": 30,
+    "price": 0,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -1329,7 +1343,7 @@
     "id": "mark",
     "name": "¦movessetup_movedefine_132¦",
     "pow": 0,
-    "price": 25,
+    "price": 0,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -1661,6 +1675,20 @@
     "type": 2,
     "use": 0
   },
+  "passionstrike": {
+    "bt_tags": [1, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": -80, "pow": 1, "targ": 0 }],
+    "id": "passionstrike",
+    "name": "Passion Strike",
+    "pow": 95,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
   "pepshot": {
     "bt_tags": [1, 10, 28],
     "desc_tagids": [],
@@ -1917,7 +1945,7 @@
     "id": "ricochet",
     "name": "¦movessetup_movedefine_081¦",
     "pow": 110,
-    "price": 30,
+    "price": 0,
     "targ": 0,
     "type": 2,
     "use": 2
@@ -2153,7 +2181,7 @@
     "id": "share",
     "name": "¦movessetup_movedefine_195¦",
     "pow": 0,
-    "price": 50,
+    "price": 0,
     "targ": 7,
     "type": 4,
     "use": 0

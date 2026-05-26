@@ -137,6 +137,7 @@ export type BeastieType = {
   };
   name: string;
   number: number;
+  order: number;
   palettes: number;
   // moved
   // partner_impact: {
@@ -177,6 +178,7 @@ export type BeastieType = {
   spr_alt: string[];
   tamecond: null;
   tamelvl: number;
+  tex_group_suffix: string;
   tyield: Array<string | number>;
   type_focus: number;
 };

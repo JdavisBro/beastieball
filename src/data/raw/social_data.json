@@ -439,9 +439,9 @@
         "cost": 1,
         "dest_level": "pirate",
         "dest_object": "@ref object(objLogan)",
-        "id": "logan",
+        "id": "pest",
         "parent": null,
-        "prereq": { "field": "pirate", "type": [1, 4] },
+        "prereq": { "field": 0, "type": [1, 4] },
         "rankup": true
       },
       {
@@ -449,7 +449,7 @@
         "collides": false,
         "cost": 1,
         "dest_level": "central_station",
-        "dest_object": "@ref object(objRailhouse)",
+        "dest_object": "@ref object(objMall)",
         "id": "shop",
         "parent": null,
         "prereq": { "field": "central_station", "type": [3, 4] },
@@ -457,13 +457,13 @@
       },
       {
         "alt_complete_flag": -1,
-        "collides": true,
+        "collides": false,
         "cost": 1,
-        "dest_level": "",
-        "dest_object": -1,
-        "id": "",
+        "dest_level": "pirate",
+        "dest_object": "@ref object(objLogan)",
+        "id": "rehearse",
         "parent": null,
-        "prereq": { "field": 0, "type": [1] },
+        "prereq": { "field": 0, "type": [4] },
         "rankup": false
       }
     ],

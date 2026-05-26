@@ -331,14 +331,8 @@
     {
       "id": "gift_city_trainyard_0",
       "items": [["train_level", 1.0]],
-      "x": -35773,
-      "y": -9558
-    },
-    {
-      "id": "gift_city_trainyard_1",
-      "items": [["train_ma", 4.0]],
-      "x": -34988,
-      "y": -9688
+      "x": -35769,
+      "y": -9791
     },
     {
       "id": "gift_forest_lake_0",
@@ -641,6 +635,7 @@
     { "lever_id": "canyon_end", "position": [-24964, -10206] },
     { "lever_id": "canyon_secret_1", "position": [-20731, -5430] },
     { "lever_id": "canyon_secret_2", "position": [-20646, -7267] },
+    { "lever_id": "suburb_south", "position": [-34749, -6855] },
     { "lever_id": "CITY_south", "position": [-36545, 2370] },
     { "lever_id": "mtn_windy", "position": [-60373, -46062] },
     { "lever_id": "park_1", "position": [-27085, -12728] },
@@ -703,11 +698,16 @@
     ],
     "suburb_south": [
       { "position": [-35033, -5983], "angle": 0 },
-      { "position": [-34967, -4600], "angle": 0 }
+      { "position": [-34982, -8188], "angle": 0 },
+      { "position": [-34967, -4601], "angle": 0 },
+      { "position": [-35092, -9433], "angle": 0 }
     ],
     "seapuzzle3": [
       { "position": [-38429, 1698], "angle": 145.3840179443 },
       { "position": [-39949, 2237], "angle": 321.9529418945 }
+    ],
+    "suburb_side_alwaysdown": [
+      { "position": [-40917, -3431], "angle": 69.4439544678 }
     ],
     "never_opened": [{ "position": [-36218, -11675], "angle": 90 }],
     "mtn_windy": [{ "position": [-60218, -46850], "angle": 0 }],
@@ -785,15 +785,16 @@
     { "position": [-14756, -18886], "encounter": "cityhill_1" },
     { "position": [-37477, -14700], "encounter": "citysquare_0" },
     { "position": [-40768, -17325], "encounter": "citysquare_1" },
-    { "position": [-34203, -6911], "encounter": "city_railalley_0" },
+    { "position": [-34708, -6810], "encounter": "city_railalley_1" },
     { "position": [-28764, -12077], "encounter": "city_rail_east_0" },
     { "position": [-35278, -1868], "encounter": "city_seacave_0" },
-    { "position": [-35287, -2876], "encounter": "city_seacave_0" },
+    { "position": [-35287, -2875], "encounter": "city_seacave_0" },
+    { "position": [-40643, -3640], "encounter": "city_suburb1_0" },
     { "position": [-35338, -10239], "encounter": "city_trainyard_0" },
     { "position": [-15167, 7958], "encounter": "cliff_train_cave_guard" },
     { "position": [-15214, -34270], "encounter": "forest_lake_0" },
     { "position": [-14893, -35700], "encounter": "forest_lake_1" },
-    { "position": [-44974, -14218], "encounter": "mainstreet_0" },
+    { "position": [-44535, -12027], "encounter": "mainstreet_0" },
     { "position": [-45204, -15586], "encounter": "mainstreet_1" },
     { "position": [-44690, -17813], "encounter": "mainstreet_2" },
     { "position": [-51256, 10060], "encounter": "mangrove_1_0" },

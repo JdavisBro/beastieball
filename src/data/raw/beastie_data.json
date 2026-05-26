@@ -134,8 +134,9 @@
     "md": 46,
     "name": "¦beastiesetup_name_038¦",
     "number": 38,
+    "order": 37,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["albrax"],
     "recruit": {
       "conditions": [
         {
@@ -217,6 +218,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ma", 2],
     "type_focus": 1
   },
@@ -362,8 +364,9 @@
     "md": 30,
     "name": "¦beastiesetup_name_037¦",
     "number": 37,
+    "order": 36,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["yueffowl"],
     "recruit": {
       "conditions": [
         {
@@ -442,6 +445,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ma", 1],
     "type_focus": 1
   },
@@ -568,7 +572,7 @@
     "isBaby": false,
     "learnset": [
       [0, "starterheart"],
-      [0, "bench"],
+      [0, "charm"],
       [12, "rest"],
       [17, "careful"],
       [21, "refresh"],
@@ -576,7 +580,7 @@
       [28, "healhit2"],
       [33, "lifedew"],
       [37, "heart"],
-      [41, "heartpass"],
+      [41, "bench"],
       [45, "scream"]
     ],
     "learnset_randomize": -1,
@@ -612,8 +616,9 @@
     "md": 83,
     "name": "¦beastiesetup_name_086¦",
     "number": 87,
+    "order": 86,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["froofulks"],
     "recruit": {
       "conditions": [
         {
@@ -737,6 +742,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ha", 3],
     "type_focus": 1
   },
@@ -842,7 +848,7 @@
     "isBaby": true,
     "learnset": [
       [0, "starterheart"],
-      [0, "bench"],
+      [0, "charm"],
       [8, "rest"],
       [13, "careful"],
       [17, "refresh"],
@@ -850,7 +856,7 @@
       [24, "healhit2"],
       [29, "lifedew"],
       [33, "heart"],
-      [37, "heartpass"],
+      [37, "bench"],
       [41, "scream"]
     ],
     "learnset_randomize": -1,
@@ -888,8 +894,9 @@
     "md": 55,
     "name": "¦beastiesetup_name_085¦",
     "number": 86,
+    "order": 85,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["jellibat"],
     "recruit": {
       "conditions": [
         {
@@ -963,6 +970,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["ha", 1],
     "type_focus": 1
   },
@@ -1104,8 +1112,9 @@
     "md": 99,
     "name": "¦beastiesetup_name_098¦",
     "number": 99,
+    "order": 98,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["deluja"],
     "recruit": {
       "conditions": [
         {
@@ -1165,6 +1174,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["bd", 2, "md", 2],
     "type_focus": 0
   },
@@ -1328,8 +1338,9 @@
     "md": 75,
     "name": "¦beastiesetup_name_034¦",
     "number": 34,
+    "order": 33,
     "palettes": 1,
-    "prev_ids": ["caretaker", "bestie"],
+    "prev_ids": ["caretaker", "bestie", "diggum"],
     "recruit": {
       "conditions": [
         {
@@ -1380,6 +1391,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["hd", 2],
     "type_focus": 1
   },
@@ -1523,9 +1535,10 @@
     "ma": 25,
     "md": 75,
     "name": "¦beastiesetup_name_101¦",
-    "number": 102,
+    "number": 101,
+    "order": 101,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["duggout"],
     "recruit": {
       "conditions": [
         {
@@ -1591,6 +1604,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["ha", 3],
     "type_focus": 1
   },
@@ -1757,8 +1771,9 @@
     "md": 118,
     "name": "¦beastiesetup_name_013¦",
     "number": 13,
+    "order": 12,
     "palettes": 1,
-    "prev_ids": ["setter"],
+    "prev_ids": ["setter", "bandicraft"],
     "recruit": {
       "conditions": [
         {
@@ -1847,6 +1862,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["md", 3],
     "type_focus": 2
   },
@@ -2002,6 +2018,7 @@
     "md": 70,
     "name": "¦beastiesetup_name_011¦",
     "number": 11,
+    "order": 10,
     "palettes": 1,
     "prev_ids": ["setter1"],
     "recruit": {
@@ -2064,6 +2081,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["md", 1],
     "type_focus": 2
   },
@@ -2226,8 +2244,9 @@
     "md": 95,
     "name": "¦beastiesetup_name_012¦",
     "number": 12,
+    "order": 11,
     "palettes": 1,
-    "prev_ids": ["setter1"],
+    "prev_ids": ["setter1", "handicoot"],
     "recruit": {
       "conditions": [
         {
@@ -2304,6 +2323,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["md", 2],
     "type_focus": 2
   },
@@ -2454,8 +2474,9 @@
     "md": 80,
     "name": "¦beastiesetup_name_007¦",
     "number": 7,
+    "order": 6,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["kasaleet"],
     "recruit": {
       "conditions": [
         {
@@ -2520,6 +2541,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["ba", 3],
     "type_focus": 0
   },
@@ -2667,8 +2689,9 @@
     "md": 45,
     "name": "¦beastiesetup_name_005¦",
     "number": 5,
+    "order": 4,
     "palettes": 1,
-    "prev_ids": ["bunny"],
+    "prev_ids": ["bunny", "kichik"],
     "recruit": {
       "conditions": [
         {
@@ -2726,6 +2749,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ba", 1],
     "type_focus": 0
   },
@@ -2874,8 +2898,9 @@
     "md": 65,
     "name": "¦beastiesetup_name_006¦",
     "number": 6,
+    "order": 5,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["ostrisigh"],
     "recruit": {
       "conditions": [
         {
@@ -2933,6 +2958,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ba", 2],
     "type_focus": 0
   },
@@ -2951,8 +2977,6 @@
       "healhit",
       "breakswipe",
       "set",
-      "heartpass",
-      "bodypass",
       "followme",
       "tailwind",
       "swordsdance",
@@ -2965,6 +2989,7 @@
       "protect",
       "dispel",
       "myheartpass",
+      "swarm",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -3026,7 +3051,7 @@
           {
             "conditions": [
               {
-                "effect_type": 96,
+                "effect_type": 97,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
@@ -3098,12 +3123,13 @@
     "md": 57,
     "name": "¦beastiesetup_name_036¦",
     "number": 36,
+    "order": 35,
     "palettes": 1,
-    "prev_ids": ["support"],
+    "prev_ids": ["support", "cherrily"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 96,
+          "effect_type": 97,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3163,6 +3189,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["hd", 2],
     "type_focus": 0
   },
@@ -3181,8 +3208,6 @@
       "healhit",
       "breakswipe",
       "set",
-      "heartpass",
-      "bodypass",
       "followme",
       "tailwind",
       "swordsdance",
@@ -3195,6 +3220,7 @@
       "protect",
       "dispel",
       "myheartpass",
+      "swarm",
       "starterbody"
     ],
     "attklist_randomize": -1,
@@ -3309,12 +3335,13 @@
     "md": 40,
     "name": "¦beastiesetup_name_035¦",
     "number": 35,
+    "order": 34,
     "palettes": 1,
-    "prev_ids": ["support1"],
+    "prev_ids": ["support1", "merrifly"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 96,
+          "effect_type": 97,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3369,6 +3396,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["hd", 1],
     "type_focus": 1
   },
@@ -3387,8 +3415,6 @@
       "healhit",
       "breakswipe",
       "set",
-      "heartpass",
-      "bodypass",
       "followme",
       "tailwind",
       "swordsdance",
@@ -3401,8 +3427,10 @@
       "protect",
       "dispel",
       "myheartpass",
+      "swarm",
       "starterbody",
-      "stomp"
+      "stomp",
+      "bodypass"
     ],
     "attklist_randomize": -1,
     "ba": 98,
@@ -3521,13 +3549,14 @@
     "ma": 30,
     "md": 54,
     "name": "¦beastiesetup_name_102¦",
-    "number": 103,
+    "number": 101,
+    "order": 102,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["mascurry"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 96,
+          "effect_type": 97,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3590,6 +3619,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["ba", 3],
     "type_focus": 0
   },
@@ -3730,8 +3760,9 @@
     "md": 38,
     "name": "¦beastiesetup_name_070¦",
     "number": 71,
+    "order": 70,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["musselbound"],
     "recruit": {
       "conditions": [
         {
@@ -3812,6 +3843,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ba", 2, "bd", 2],
     "type_focus": 0
   },
@@ -3951,8 +3983,9 @@
     "md": 85,
     "name": "¦beastiesetup_name_043¦",
     "number": 43,
+    "order": 42,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["goofsder"],
     "recruit": {
       "conditions": [
         {
@@ -4011,6 +4044,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ba", 2, "ma", 2],
     "type_focus": 2
   },
@@ -4172,8 +4206,9 @@
     "md": 55,
     "name": "¦beastiesetup_name_042¦",
     "number": 42,
+    "order": 41,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["webbounce"],
     "recruit": {
       "conditions": [
         {
@@ -4246,6 +4281,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ba", 1, "ma", 1],
     "type_focus": 2
   },
@@ -4283,7 +4319,8 @@
       "hum",
       "batonpass",
       "alljazzattack",
-      "slide"
+      "slide",
+      "passionstrike"
     ],
     "attklist_randomize": -1,
     "ba": 108,
@@ -4397,8 +4434,9 @@
     "md": 74,
     "name": "¦beastiesetup_name_065¦",
     "number": 66,
+    "order": 65,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["crabaret"],
     "recruit": {
       "conditions": [
         {
@@ -4469,6 +4507,7 @@
     "spr_alt": ["sprCrab_alt"],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ba", 2, "ha", 1],
     "type_focus": 0
   },
@@ -4623,8 +4662,9 @@
     "md": 60,
     "name": "¦beastiesetup_name_069¦",
     "number": 70,
+    "order": 69,
     "palettes": 1,
-    "prev_ids": ["counter", "killa"],
+    "prev_ids": ["counter", "killa", "crawlurk"],
     "recruit": {
       "conditions": [
         {
@@ -4689,6 +4729,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["bd", 2],
     "type_focus": 0
   },
@@ -4726,6 +4767,7 @@
       "tailwind",
       "rest",
       "swarm",
+      "heartpass",
       "backswitch",
       "taunt",
       "starterheart"
@@ -4810,7 +4852,7 @@
       [0, "starterheart"],
       [0, "taunt"],
       [13, "facade"],
-      [16, "bodypass"],
+      [16, "heartpass"],
       [23, "desperate"],
       [27, "substitute"],
       [31, "tagattack"],
@@ -4855,8 +4897,9 @@
     "md": 65,
     "name": "¦beastiesetup_name_032¦",
     "number": 32,
+    "order": 31,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["daredillo"],
     "recruit": {
       "conditions": [
         {
@@ -4931,6 +4974,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ha", 2],
     "type_focus": 0
   },
@@ -4968,6 +5012,7 @@
       "tailwind",
       "rest",
       "swarm",
+      "heartpass",
       "backswitch",
       "taunt",
       "starterheart"
@@ -5050,7 +5095,7 @@
       [0, "starterheart"],
       [0, "taunt"],
       [9, "facade"],
-      [12, "bodypass"],
+      [12, "heartpass"],
       [19, "desperate"],
       [23, "substitute"],
       [27, "tagattack"],
@@ -5093,8 +5138,9 @@
     "md": 38,
     "name": "¦beastiesetup_name_031¦",
     "number": 31,
+    "order": 30,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["radillo"],
     "recruit": {
       "conditions": [
         {
@@ -5160,6 +5206,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ha", 1],
     "type_focus": 0
   },
@@ -5317,8 +5364,9 @@
     "md": 80,
     "name": "¦beastiesetup_name_033¦",
     "number": 33,
+    "order": 32,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["noizard"],
     "recruit": {
       "conditions": [
         {
@@ -5390,6 +5438,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["hd", 2],
     "type_focus": 1
   },
@@ -5582,8 +5631,9 @@
     "md": 50,
     "name": "¦beastiesetup_name_023¦",
     "number": 23,
+    "order": 22,
     "palettes": 2,
-    "prev_ids": [],
+    "prev_ids": ["fetcham"],
     "recruit": {
       "conditions": [
         {
@@ -5670,6 +5720,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["hd", 1, "bd", 1],
     "type_focus": 1
   },
@@ -5861,8 +5912,9 @@
     "md": 42,
     "name": "¦beastiesetup_name_022¦",
     "number": 22,
+    "order": 21,
     "palettes": 2,
-    "prev_ids": [],
+    "prev_ids": ["woollie"],
     "recruit": {
       "conditions": [
         {
@@ -5944,6 +5996,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["hd", 1],
     "type_focus": 1
   },
@@ -6098,8 +6151,9 @@
     "md": 74,
     "name": "¦beastiesetup_name_026¦",
     "number": 26,
+    "order": 25,
     "palettes": 1,
-    "prev_ids": ["dragonfly1"],
+    "prev_ids": ["dragonfly1", "kaleidarn"],
     "recruit": {
       "conditions": [
         {
@@ -6178,6 +6232,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["hd", 1],
     "type_focus": 1
   },
@@ -6213,11 +6268,13 @@
       "callout",
       "tailwind",
       "tagattack",
+      "mark",
       "bodypass",
       "mindpass",
       "heartd",
       "freeball",
-      "wornattack"
+      "wornattack",
+      "lockon"
     ],
     "attklist_randomize": -1,
     "ba": 68,
@@ -6287,7 +6344,7 @@
     "isBaby": false,
     "learnset": [
       [0, "rocksmash"],
-      [0, "tailwind"],
+      [0, "bodypass"],
       [11, "shakeoff"],
       [15, "nightshade"],
       [19, "powswitch"],
@@ -6331,8 +6388,9 @@
     "md": 104,
     "name": "¦beastiesetup_name_041¦",
     "number": 41,
+    "order": 40,
     "palettes": 1,
-    "prev_ids": ["quarterback"],
+    "prev_ids": ["quarterback", "beetlback"],
     "recruit": {
       "conditions": [
         {
@@ -6429,6 +6487,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["bd", 3],
     "type_focus": 0
   },
@@ -6463,7 +6522,8 @@
       "fieldclear",
       "callout",
       "tailwind",
-      "tagattack"
+      "tagattack",
+      "mark"
     ],
     "attklist_randomize": -1,
     "ba": 48,
@@ -6569,8 +6629,9 @@
     "md": 50,
     "name": "¦beastiesetup_name_039¦",
     "number": 39,
+    "order": 38,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["scrubbub"],
     "recruit": {
       "conditions": [
         {
@@ -6646,6 +6707,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["bd", 1],
     "type_focus": 0
   },
@@ -6680,7 +6742,8 @@
       "fieldclear",
       "callout",
       "tailwind",
-      "tagattack"
+      "tagattack",
+      "mark"
     ],
     "attklist_randomize": -1,
     "ba": 60,
@@ -6794,8 +6857,9 @@
     "md": 70,
     "name": "¦beastiesetup_name_040¦",
     "number": 40,
+    "order": 39,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["grubiron"],
     "recruit": {
       "conditions": [
         {
@@ -6873,6 +6937,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["bd", 2],
     "type_focus": 0
   },
@@ -7007,8 +7072,9 @@
     "md": 59,
     "name": "¦beastiesetup_name_053¦",
     "number": 54,
+    "order": 53,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["vultoxin"],
     "recruit": {
       "conditions": [
         {
@@ -7086,6 +7152,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ma", 3],
     "type_focus": 2
   },
@@ -7237,8 +7304,9 @@
     "md": 40,
     "name": "¦beastiesetup_name_052¦",
     "number": 53,
+    "order": 52,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["seakit"],
     "recruit": {
       "conditions": [
         {
@@ -7312,6 +7380,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ma", 2],
     "type_focus": 2
   },
@@ -7333,7 +7402,6 @@
       "heartup",
       "followme",
       "healbell",
-      "heartpass",
       "cheer",
       "rhythm",
       "protect",
@@ -7460,12 +7528,13 @@
     "md": 55,
     "name": "¦beastiesetup_name_010¦",
     "number": 10,
+    "order": 9,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["hopra"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 96,
+          "effect_type": 97,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7515,6 +7584,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["ha", 3],
     "type_focus": 1
   },
@@ -7536,7 +7606,6 @@
       "heartup",
       "followme",
       "healbell",
-      "heartpass",
       "cheer",
       "rhythm",
       "protect",
@@ -7662,12 +7731,13 @@
     "md": 33,
     "name": "¦beastiesetup_name_008¦",
     "number": 8,
+    "order": 7,
     "palettes": 1,
-    "prev_ids": ["tadpole"],
+    "prev_ids": ["tadpole", "axolati"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 96,
+          "effect_type": 97,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7727,6 +7797,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ha", 1],
     "type_focus": 1
   },
@@ -7748,7 +7819,6 @@
       "heartup",
       "followme",
       "healbell",
-      "heartpass",
       "cheer",
       "rhythm",
       "protect",
@@ -7877,12 +7947,13 @@
     "md": 50,
     "name": "¦beastiesetup_name_009¦",
     "number": 9,
+    "order": 8,
     "palettes": 1,
-    "prev_ids": ["frogmid"],
+    "prev_ids": ["frogmid", "hopsong"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 96,
+          "effect_type": 97,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7943,6 +8014,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ha", 2],
     "type_focus": 1
   },
@@ -8093,8 +8165,9 @@
     "md": 80,
     "name": "¦beastiesetup_name_046¦",
     "number": 46,
+    "order": 45,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["mistic"],
     "recruit": {
       "conditions": [
         {
@@ -8160,6 +8233,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["bd", 3],
     "type_focus": 2
   },
@@ -8311,8 +8385,9 @@
     "md": 49,
     "name": "¦beastiesetup_name_044¦",
     "number": 44,
+    "order": 43,
     "palettes": 1,
-    "prev_ids": ["ghost0"],
+    "prev_ids": ["gastic"],
     "recruit": {
       "conditions": [
         {
@@ -8362,6 +8437,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["bd", 1],
     "type_focus": 2
   },
@@ -8500,8 +8576,9 @@
     "md": 55,
     "name": "¦beastiesetup_name_045¦",
     "number": 45,
+    "order": 44,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["wisper"],
     "recruit": {
       "conditions": [
         {
@@ -8549,6 +8626,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["bd", 2],
     "type_focus": 2
   },
@@ -8581,7 +8659,8 @@
       "steal",
       "eerie",
       "basecover",
-      "hazeball"
+      "hazeball",
+      "copycat"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -8651,8 +8730,8 @@
     "isBaby": false,
     "learnset": [
       [0, "starterside"],
-      [0, "cover"],
-      [7, "lowattks"],
+      [0, "lowattks"],
+      [7, "copycat"],
       [13, "float"],
       [18, "steal"],
       [24, "mindbomb"],
@@ -8695,8 +8774,9 @@
     "md": 45,
     "name": "¦beastiesetup_name_088¦",
     "number": 89,
+    "order": 88,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["gremlur"],
     "recruit": {
       "conditions": [
         {
@@ -8765,6 +8845,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ma", 2],
     "type_focus": 2
   },
@@ -8918,8 +8999,9 @@
     "md": 107,
     "name": "¦beastiesetup_name_071¦",
     "number": 72,
+    "order": 71,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["xiphosaur"],
     "recruit": {
       "conditions": [
         {
@@ -8973,6 +9055,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["bd", 2, "md", 1],
     "type_focus": 1
   },
@@ -9160,8 +9243,9 @@
     "md": 88,
     "name": "¦beastiesetup_name_087¦",
     "number": 88,
+    "order": 87,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["bindiva"],
     "recruit": {
       "conditions": [
         {
@@ -9262,6 +9346,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ma", 3],
     "type_focus": 2
   },
@@ -9296,6 +9381,7 @@
       "teleport",
       "sad",
       "swarm",
+      "passionstrike",
       "hum"
     ],
     "attklist_randomize": -1,
@@ -9404,8 +9490,9 @@
     "md": 79,
     "name": "¦beastiesetup_name_063¦",
     "number": 64,
+    "order": 63,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["orgella"],
     "recruit": {
       "conditions": [
         {
@@ -9464,6 +9551,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["hd", 3],
     "type_focus": 1
   },
@@ -9497,7 +9585,8 @@
       "minddown",
       "teleport",
       "sad",
-      "swarm"
+      "swarm",
+      "passionstrike"
     ],
     "attklist_randomize": -1,
     "ba": 14,
@@ -9607,8 +9696,9 @@
     "md": 52,
     "name": "¦beastiesetup_name_061¦",
     "number": 62,
+    "order": 61,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["petula"],
     "recruit": {
       "conditions": [
         {
@@ -9666,6 +9756,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["hd", 1],
     "type_focus": 1
   },
@@ -9700,6 +9791,7 @@
       "teleport",
       "sad",
       "swarm",
+      "passionstrike",
       "hum"
     ],
     "attklist_randomize": -1,
@@ -9801,8 +9893,9 @@
     "md": 52,
     "name": "¦beastiesetup_name_062¦",
     "number": 63,
+    "order": 62,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["flowish"],
     "recruit": {
       "conditions": [
         {
@@ -9850,6 +9943,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["hd", 2],
     "type_focus": 1
   },
@@ -10016,8 +10110,9 @@
     "md": 90,
     "name": "¦beastiesetup_name_025¦",
     "number": 25,
+    "order": 24,
     "palettes": 1,
-    "prev_ids": ["meanie"],
+    "prev_ids": ["meanie", "garood"],
     "recruit": {
       "conditions": [
         {
@@ -10087,6 +10182,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["md", 2],
     "type_focus": 2
   },
@@ -10246,6 +10342,7 @@
     "md": 80,
     "name": "¦beastiesetup_name_024¦",
     "number": 24,
+    "order": 23,
     "palettes": 1,
     "prev_ids": ["rookee", "rookee1"],
     "recruit": {
@@ -10314,6 +10411,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["md", 1],
     "type_focus": 2
   },
@@ -10475,8 +10573,9 @@
     "md": 65,
     "name": "¦beastiesetup_name_094¦",
     "number": 95,
+    "order": 94,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["scauldra"],
     "recruit": {
       "conditions": [
         {
@@ -10548,6 +10647,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["hd", 3],
     "type_focus": 1
   },
@@ -10701,8 +10801,9 @@
     "md": 55,
     "name": "¦beastiesetup_name_093¦",
     "number": 94,
+    "order": 93,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["druppa"],
     "recruit": {
       "conditions": [
         {
@@ -10758,6 +10859,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["hd", 1],
     "type_focus": 1
   },
@@ -10909,8 +11011,9 @@
     "md": 85,
     "name": "¦beastiesetup_name_021¦",
     "number": 21,
+    "order": 20,
     "palettes": 1,
-    "prev_ids": ["angel"],
+    "prev_ids": ["angel", "zefyre"],
     "recruit": {
       "conditions": [
         {
@@ -11002,6 +11105,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ha", 2],
     "type_focus": 1
   },
@@ -11145,8 +11249,9 @@
     "md": 35,
     "name": "¦beastiesetup_name_020¦",
     "number": 20,
+    "order": 19,
     "palettes": 1,
-    "prev_ids": ["angel1"],
+    "prev_ids": ["angel1", "sefren"],
     "recruit": {
       "conditions": [
         {
@@ -11229,6 +11334,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["ha", 1],
     "type_focus": 1
   },
@@ -11415,8 +11521,9 @@
     "md": 99,
     "name": "¦beastiesetup_name_081¦",
     "number": 82,
+    "order": 81,
     "palettes": 1,
-    "prev_ids": ["mindbody"],
+    "prev_ids": ["mindbody", "magpike"],
     "recruit": {
       "conditions": [
         {
@@ -11493,6 +11600,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ba", 2, "ma", 2],
     "type_focus": 2
   },
@@ -11642,8 +11750,9 @@
     "md": 67,
     "name": "¦beastiesetup_name_080¦",
     "number": 81,
+    "order": 80,
     "palettes": 1,
-    "prev_ids": ["mindbody1"],
+    "prev_ids": ["mindbody1", "punkchirp"],
     "recruit": {
       "conditions": [
         {
@@ -11697,6 +11806,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["ma", 1, "ba", 1],
     "type_focus": 2
   },
@@ -11852,9 +11962,10 @@
     "ma": 87,
     "md": 86,
     "name": "¦beastiesetup_name_104¦",
-    "number": 105,
+    "number": 101,
+    "order": 104,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["maraptor"],
     "recruit": {
       "conditions": [
         {
@@ -11907,11 +12018,12 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["bd", 2, "md", 2],
     "type_focus": 0
   },
   "mantis": {
-    "ability": ["monster", "blocker"],
+    "ability": ["monster", "fortress"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
@@ -11944,7 +12056,7 @@
       "bolt",
       "sweep",
       "fortify",
-      "recover",
+      "ricochet",
       "netattack",
       "enemylowered"
     ],
@@ -12027,7 +12139,7 @@
       [34, "thunder"],
       [38, "wall"],
       [42, "splinter"],
-      [46, "recover"]
+      [46, "ricochet"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -12062,8 +12174,9 @@
     "md": 105,
     "name": "¦beastiesetup_name_050¦",
     "number": 51,
+    "order": 50,
     "palettes": 1,
-    "prev_ids": ["tsuki1", "mantis1"],
+    "prev_ids": ["tsuki1", "mantis1", "armantis"],
     "recruit": {
       "conditions": [
         {
@@ -12130,6 +12243,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["md", 2],
     "type_focus": 2
   },
@@ -12267,8 +12381,9 @@
     "md": 98,
     "name": "¦beastiesetup_name_078¦",
     "number": 79,
+    "order": 78,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["demolipede"],
     "recruit": {
       "conditions": [
         {
@@ -12335,6 +12450,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["md", 2],
     "type_focus": 0
   },
@@ -12470,8 +12586,9 @@
     "md": 81,
     "name": "¦beastiesetup_name_077¦",
     "number": 78,
+    "order": 77,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["milimine"],
     "recruit": {
       "conditions": [
         {
@@ -12531,6 +12648,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["md", 1],
     "type_focus": 0
   },
@@ -12695,8 +12813,9 @@
     "md": 65,
     "name": "¦beastiesetup_name_051¦",
     "number": 52,
+    "order": 51,
     "palettes": 1,
-    "prev_ids": ["gelada"],
+    "prev_ids": ["gelada", "grazada"],
     "recruit": {
       "conditions": [
         {
@@ -12766,6 +12885,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ha", 2],
     "type_focus": 1
   },
@@ -12779,7 +12899,6 @@
       "facade",
       "scoreboosted",
       "substitute",
-      "overheat",
       "wornattack",
       "overthink",
       "preblock",
@@ -12807,7 +12926,8 @@
       "startermind",
       "crowd",
       "scream",
-      "alljazzattack"
+      "alljazzattack",
+      "passionstrike"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -12885,7 +13005,7 @@
       [29, "ego"],
       [33, "taunt"],
       [38, "overthink"],
-      [42, "scream"],
+      [42, "passionstrike"],
       [46, "wornattack"],
       [51, "eerie"]
     ],
@@ -12922,8 +13042,9 @@
     "md": 75,
     "name": "¦beastiesetup_name_016¦",
     "number": 16,
+    "order": 15,
     "palettes": 1,
-    "prev_ids": ["heartmind"],
+    "prev_ids": ["heartmind", "plumask"],
     "recruit": {
       "conditions": [
         {
@@ -12990,6 +13111,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ha", 2, "ma", 2],
     "type_focus": 1
   },
@@ -13003,7 +13125,6 @@
       "facade",
       "scoreboosted",
       "substitute",
-      "overheat",
       "wornattack",
       "overthink",
       "preblock",
@@ -13133,8 +13254,9 @@
     "md": 50,
     "name": "¦beastiesetup_name_014¦",
     "number": 14,
+    "order": 13,
     "palettes": 1,
-    "prev_ids": ["mindbug1"],
+    "prev_ids": ["mindbug1", "collarva"],
     "recruit": {
       "conditions": [
         {
@@ -13193,6 +13315,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["ma", 1],
     "type_focus": 2
   },
@@ -13206,7 +13329,6 @@
       "facade",
       "scoreboosted",
       "substitute",
-      "overheat",
       "wornattack",
       "overthink",
       "preblock",
@@ -13357,8 +13479,9 @@
     "md": 60,
     "name": "¦beastiesetup_name_015¦",
     "number": 15,
+    "order": 14,
     "palettes": 1,
-    "prev_ids": ["mindbug2"],
+    "prev_ids": ["mindbug2", "wormask"],
     "recruit": {
       "conditions": [
         {
@@ -13426,6 +13549,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["hd", 1, "md", 1],
     "type_focus": 2
   },
@@ -13574,8 +13698,9 @@
     "md": 62,
     "name": "¦beastiesetup_name_068¦",
     "number": 69,
+    "order": 68,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["mudslee"],
     "recruit": {
       "conditions": [
         {
@@ -13638,6 +13763,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["hd", 2],
     "type_focus": 1
   },
@@ -13785,8 +13911,9 @@
     "md": 99,
     "name": "¦beastiesetup_name_083¦",
     "number": 84,
+    "order": 83,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["debugly"],
     "recruit": {
       "conditions": [
         {
@@ -13848,6 +13975,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["md", 3],
     "type_focus": 2
   },
@@ -13988,8 +14116,9 @@
     "md": 80,
     "name": "¦beastiesetup_name_082¦",
     "number": 83,
+    "order": 82,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["calcroach"],
     "recruit": {
       "conditions": [
         {
@@ -14044,6 +14173,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["md", 1],
     "type_focus": 2
   },
@@ -14193,8 +14323,9 @@
     "md": 104,
     "name": "¦beastiesetup_name_049¦",
     "number": 50,
+    "order": 49,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["skulkapi"],
     "recruit": {
       "conditions": [
         {
@@ -14264,6 +14395,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["md", 2],
     "type_focus": 2
   },
@@ -14410,8 +14542,9 @@
     "md": 100,
     "name": "¦beastiesetup_name_092¦",
     "number": 93,
+    "order": 92,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["hydrolm"],
     "recruit": {
       "conditions": [
         {
@@ -14471,6 +14604,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["ma", 2, "md", 2],
     "type_focus": 2
   },
@@ -14603,8 +14737,9 @@
     "md": 70,
     "name": "¦beastiesetup_name_091¦",
     "number": 92,
+    "order": 91,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["proteos"],
     "recruit": {
       "conditions": [
         {
@@ -14654,6 +14789,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["md", 1],
     "type_focus": 2
   },
@@ -14693,7 +14829,8 @@
       "shakeoff",
       "vigor",
       "shieldbreaker",
-      "wall"
+      "wall",
+      "heartpass"
     ],
     "attklist_randomize": -1,
     "ba": 95,
@@ -14824,8 +14961,9 @@
     "md": 60,
     "name": "¦beastiesetup_name_089¦",
     "number": 90,
+    "order": 89,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["opposur"],
     "recruit": {
       "conditions": [
         {
@@ -14907,6 +15045,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ba", 2, "ha", 2],
     "type_focus": 0
   },
@@ -15054,12 +15193,13 @@
     "md": 108,
     "name": "¦beastiesetup_name_100¦",
     "number": 101,
+    "order": 100,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["pladion"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 96,
+          "effect_type": 97,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15108,6 +15248,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["md", 3],
     "type_focus": 2
   },
@@ -15253,12 +15394,13 @@
     "md": 75,
     "name": "¦beastiesetup_name_027¦",
     "number": 27,
+    "order": 26,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["platenna"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 96,
+          "effect_type": 97,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15302,6 +15444,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["ma", 1],
     "type_focus": 2
   },
@@ -15441,7 +15584,7 @@
     "foot_type": 0,
     "growth": 1.01,
     "ha": 51,
-    "hd": 85,
+    "hd": 90,
     "hidden": false,
     "hidden_counter": null,
     "id": "platypus2",
@@ -15489,15 +15632,16 @@
       "stretchiness": 0.1
     },
     "ma": 99,
-    "md": 120,
+    "md": 115,
     "name": "¦beastiesetup_name_028¦",
     "number": 28,
+    "order": 27,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["platypulse"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 96,
+          "effect_type": 97,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15554,6 +15698,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ma", 2],
     "type_focus": 2
   },
@@ -15709,8 +15854,9 @@
     "md": 95,
     "name": "¦beastiesetup_name_019¦",
     "number": 19,
+    "order": 18,
     "palettes": 1,
-    "prev_ids": ["libero"],
+    "prev_ids": ["libero", "supilero"],
     "recruit": {
       "conditions": [
         {
@@ -15723,7 +15869,7 @@
           "type": 24
         }
       ],
-      "description": "¦beastiesetup_classrecruit_016¦"
+      "description": "¦beastiesetup_classrecruit_014¦"
     },
     "recruit_value": 8.4,
     "roamer_style": {
@@ -15788,6 +15934,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["bd", 3],
     "type_focus": 0
   },
@@ -15941,8 +16088,9 @@
     "md": 57,
     "name": "¦beastiesetup_name_017¦",
     "number": 17,
+    "order": 16,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["shooga"],
     "recruit": {
       "conditions": [
         {
@@ -16012,6 +16160,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["bd", 1],
     "type_focus": 0
   },
@@ -16170,8 +16319,9 @@
     "md": 75,
     "name": "¦beastiesetup_name_018¦",
     "number": 18,
+    "order": 17,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["supassum"],
     "recruit": {
       "conditions": [
         {
@@ -16184,7 +16334,7 @@
           "type": 24
         }
       ],
-      "description": "¦beastiesetup_classrecruit_015¦"
+      "description": "¦beastiesetup_classrecruit_014¦"
     },
     "recruit_value": 8.4,
     "roamer_style": {
@@ -16249,6 +16399,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["bd", 2],
     "type_focus": 0
   },
@@ -16399,8 +16550,9 @@
     "md": 100,
     "name": "¦beastiesetup_name_072¦",
     "number": 73,
+    "order": 72,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["psylusc"],
     "recruit": {
       "conditions": [
         {
@@ -16474,6 +16626,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ma", 3],
     "type_focus": 2
   },
@@ -16485,10 +16638,8 @@
     "animator": 11,
     "attklist": [
       "pepshot",
-      "commit",
       "moon",
       "protect",
-      "dare",
       "contest",
       "spitball",
       "minddown",
@@ -16518,6 +16669,7 @@
       "hdefup",
       "cook",
       "sad",
+      "passionstrike",
       "swordsdance",
       "mimic"
     ],
@@ -16677,8 +16829,9 @@
     "md": 69,
     "name": "¦beastiesetup_name_064¦",
     "number": 65,
+    "order": 64,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["squimage"],
     "recruit": {
       "conditions": [
         {
@@ -16769,6 +16922,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ha", 1, "ma", 1, "ba", 1],
     "type_focus": 2
   },
@@ -16780,10 +16934,8 @@
     "animator": 0,
     "attklist": [
       "pepshot",
-      "commit",
       "moon",
       "protect",
-      "dare",
       "contest",
       "spitball",
       "minddown",
@@ -16813,6 +16965,7 @@
       "hdefup",
       "cook",
       "sad",
+      "passionstrike",
       "swordsdance",
       "mimic",
       "reign"
@@ -16920,9 +17073,10 @@
     "ma": 66,
     "md": 68,
     "name": "¦beastiesetup_name_103¦",
-    "number": 104,
+    "number": 101,
+    "order": 103,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["diabloceras"],
     "recruit": {
       "conditions": [
         {
@@ -16985,6 +17139,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["hd", 1, "md", 1, "bd", 1],
     "type_focus": 0
   },
@@ -17167,8 +17322,9 @@
     "md": 84,
     "name": "¦beastiesetup_name_079¦",
     "number": 80,
+    "order": 79,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["trat"],
     "recruit": {
       "conditions": [
         {
@@ -17263,6 +17419,7 @@
     "spr_alt": ["sprRat_alt"],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["hd", 2],
     "type_focus": 2
   },
@@ -17420,12 +17577,13 @@
     "md": 55,
     "name": "¦beastiesetup_name_076¦",
     "number": 77,
+    "order": 76,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["boldlur"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 96,
+          "effect_type": 97,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17481,6 +17639,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["bd", 3],
     "type_focus": 0
   },
@@ -17634,12 +17793,13 @@
     "md": 23,
     "name": "¦beastiesetup_name_074¦",
     "number": 75,
+    "order": 74,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["skibble"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 96,
+          "effect_type": 97,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17689,6 +17849,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["bd", 1],
     "type_focus": 0
   },
@@ -17843,12 +18004,13 @@
     "md": 35,
     "name": "¦beastiesetup_name_075¦",
     "number": 76,
+    "order": 75,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["skorock"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 96,
+          "effect_type": 97,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17898,6 +18060,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["bd", 2],
     "type_focus": 0
   },
@@ -18063,8 +18226,9 @@
     "md": 69,
     "name": "¦beastiesetup_name_060¦",
     "number": 61,
+    "order": 60,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["skiffrig"],
     "recruit": {
       "conditions": [
         {
@@ -18159,6 +18323,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ha", 2, "ma", 2],
     "type_focus": 1
   },
@@ -18315,8 +18480,9 @@
     "md": 40,
     "name": "¦beastiesetup_name_059¦",
     "number": 60,
+    "order": 59,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["gullit"],
     "recruit": {
       "conditions": [
         {
@@ -18378,6 +18544,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["ha", 1, "ma", 1],
     "type_focus": 1
   },
@@ -18531,8 +18698,9 @@
     "md": 75,
     "name": "¦beastiesetup_name_067¦",
     "number": 68,
+    "order": 67,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["broslidon"],
     "recruit": {
       "conditions": [
         {
@@ -18595,6 +18763,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ba", 2, "bd", 2],
     "type_focus": 0
   },
@@ -18742,8 +18911,9 @@
     "md": 68,
     "name": "¦beastiesetup_name_066¦",
     "number": 67,
+    "order": 66,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["leobro"],
     "recruit": {
       "conditions": [
         {
@@ -18802,6 +18972,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ba", 1],
     "type_focus": 0
   },
@@ -18954,8 +19125,9 @@
     "md": 30,
     "name": "¦beastiesetup_name_030¦",
     "number": 30,
+    "order": 29,
     "palettes": 1,
-    "prev_ids": ["decoy", "hinata"],
+    "prev_ids": ["decoy", "hinata", "servace"],
     "recruit": {
       "conditions": [
         {
@@ -19025,6 +19197,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ba", 2, "ha", 1],
     "type_focus": 1
   },
@@ -19176,8 +19349,9 @@
     "md": 21,
     "name": "¦beastiesetup_name_029¦",
     "number": 29,
+    "order": 28,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["servitt"],
     "recruit": {
       "conditions": [
         {
@@ -19252,6 +19426,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ba", 1],
     "type_focus": 0
   },
@@ -19390,8 +19565,9 @@
     "md": 105,
     "name": "¦beastiesetup_name_058¦",
     "number": 59,
+    "order": 58,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["riplash"],
     "recruit": {
       "conditions": [
         {
@@ -19456,6 +19632,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ba", 3],
     "type_focus": 0
   },
@@ -19587,8 +19764,9 @@
     "md": 75,
     "name": "¦beastiesetup_name_057¦",
     "number": 58,
+    "order": 57,
     "palettes": 1,
-    "prev_ids": ["lilshark"],
+    "prev_ids": ["lilshark", "waglash"],
     "recruit": {
       "conditions": [
         {
@@ -19645,6 +19823,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ba", 2],
     "type_focus": 0
   },
@@ -19797,8 +19976,9 @@
     "md": 55,
     "name": "¦beastiesetup_name_001¦",
     "number": 1,
+    "order": 0,
     "palettes": 1,
-    "prev_ids": ["tree1"],
+    "prev_ids": ["tree1", "sprecko"],
     "recruit": {
       "conditions": [
         {
@@ -19869,6 +20049,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["hd", 1],
     "type_focus": 1
   },
@@ -20057,8 +20238,9 @@
     "md": 65,
     "name": "¦beastiesetup_name_002¦",
     "number": 2,
+    "order": 1,
     "palettes": 1,
-    "prev_ids": ["tree_b"],
+    "prev_ids": ["tree_b", "bongus"],
     "recruit": {
       "conditions": [
         {
@@ -20137,6 +20319,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ba", 1, "bd", 1],
     "type_focus": 0
   },
@@ -20179,6 +20362,7 @@
       "sidespin",
       "hazeball",
       "sweep",
+      "feint",
       "distraction"
     ],
     "attklist_randomize": -1,
@@ -20319,8 +20503,9 @@
     "md": 110,
     "name": "¦beastiesetup_name_004¦",
     "number": 4,
+    "order": 3,
     "palettes": 1,
-    "prev_ids": ["tree_m"],
+    "prev_ids": ["tree_m", "illugus"],
     "recruit": {
       "conditions": [
         {
@@ -20392,6 +20577,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ma", 1, "md", 1],
     "type_focus": 2
   },
@@ -20572,8 +20758,9 @@
     "md": 65,
     "name": "¦beastiesetup_name_003¦",
     "number": 3,
+    "order": 2,
     "palettes": 1,
-    "prev_ids": ["tree_s"],
+    "prev_ids": ["tree_s", "surgus"],
     "recruit": {
       "conditions": [
         {
@@ -20639,6 +20826,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ha", 1, "hd", 1],
     "type_focus": 1
   },
@@ -20696,6 +20884,7 @@
       "sidespin",
       "hazeball",
       "sweep",
+      "feint",
       "eerie",
       "3actions",
       "snore",
@@ -20817,9 +21006,10 @@
     "ma": 110,
     "md": 90,
     "name": "¦beastiesetup_name_105¦",
-    "number": 106,
+    "number": 101,
+    "order": 105,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["shloom"],
     "recruit": {
       "conditions": [
         {
@@ -20886,6 +21076,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["bd", 2, "hd", 2, "md", 2],
     "type_focus": 0
   },
@@ -20907,7 +21098,6 @@
       "preblock",
       "allycover",
       "allyrush",
-      "heartpass",
       "substitute",
       "rest",
       "charm",
@@ -21039,12 +21229,13 @@
     "md": 112,
     "name": "¦beastiesetup_name_047¦",
     "number": 47,
+    "order": 46,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["wottle"],
     "recruit": {
       "conditions": [
         {
-          "effect_type": 96,
+          "effect_type": 97,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -21096,6 +21287,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["md", 2],
     "type_focus": 1
   },
@@ -21243,8 +21435,9 @@
     "md": 92,
     "name": "¦beastiesetup_name_084¦",
     "number": 85,
+    "order": 84,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["beelb"],
     "recruit": {
       "conditions": [
         {
@@ -21309,6 +21502,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ba", 2],
     "type_focus": 0
   },
@@ -21451,8 +21645,9 @@
     "md": 55,
     "name": "¦beastiesetup_name_097¦",
     "number": 98,
+    "order": 97,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["lunaptra"],
     "recruit": {
       "conditions": [
         {
@@ -21536,6 +21731,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["ba", 3],
     "type_focus": 0
   },
@@ -21678,8 +21874,9 @@
     "md": 75,
     "name": "¦beastiesetup_name_096¦",
     "number": 97,
+    "order": 96,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["heliath"],
     "recruit": {
       "conditions": [
         {
@@ -21761,6 +21958,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["ha", 3],
     "type_focus": 1
   },
@@ -21920,8 +22118,9 @@
     "md": 55,
     "name": "¦beastiesetup_name_095¦",
     "number": 96,
+    "order": 95,
     "palettes": 2,
-    "prev_ids": [],
+    "prev_ids": ["humflit"],
     "recruit": {
       "conditions": [
         {
@@ -21993,6 +22192,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ha", 1, "ba", 1],
     "type_focus": 1
   },
@@ -22160,8 +22360,9 @@
     "md": 47,
     "name": "¦beastiesetup_name_090¦",
     "number": 91,
+    "order": 90,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["blitzwift"],
     "recruit": {
       "conditions": [
         {
@@ -22228,6 +22429,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ba", 2],
     "type_focus": 0
   },
@@ -22405,8 +22607,9 @@
     "md": 100,
     "name": "¦beastiesetup_name_048¦",
     "number": 49,
+    "order": 48,
     "palettes": 1,
-    "prev_ids": ["trickshot"],
+    "prev_ids": ["trickshot", "varkabond"],
     "recruit": {
       "conditions": [
         {
@@ -22486,6 +22689,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["ma", 3],
     "type_focus": 2
   },
@@ -22663,8 +22867,9 @@
     "md": 57,
     "name": "¦beastiesetup_013¦",
     "number": 48,
+    "order": 47,
     "palettes": 1,
-    "prev_ids": [],
+    "prev_ids": ["troglum"],
     "recruit": {
       "conditions": [
         {
@@ -22749,6 +22954,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["ma", 1],
     "type_focus": 2
   },
@@ -22770,7 +22976,6 @@
       "healhit",
       "cover",
       "refresh",
-      "heartpass",
       "allyprotect",
       "rhythm",
       "callout",
@@ -22911,8 +23116,9 @@
     "md": 55,
     "name": "¦beastiesetup_name_056¦",
     "number": 57,
+    "order": 56,
     "palettes": 1,
-    "prev_ids": ["tank"],
+    "prev_ids": ["tank", "tortanchor"],
     "recruit": {
       "conditions": [
         {
@@ -23001,6 +23207,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["hd", 3],
     "type_focus": 0
   },
@@ -23022,7 +23229,6 @@
       "healhit",
       "cover",
       "refresh",
-      "heartpass",
       "allyprotect",
       "rhythm",
       "callout",
@@ -23148,8 +23354,9 @@
     "md": 40,
     "name": "¦beastiesetup_name_054¦",
     "number": 55,
+    "order": 54,
     "palettes": 1,
-    "prev_ids": ["tank1"],
+    "prev_ids": ["tank1", "turogue"],
     "recruit": {
       "conditions": [
         {
@@ -23224,6 +23431,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 1,
+    "tex_group_suffix": "",
     "tyield": ["hd", 1],
     "type_focus": 0
   },
@@ -23245,7 +23453,6 @@
       "healhit",
       "cover",
       "refresh",
-      "heartpass",
       "allyprotect",
       "rhythm",
       "callout",
@@ -23385,8 +23592,9 @@
     "md": 45,
     "name": "¦beastiesetup_name_055¦",
     "number": 56,
+    "order": 55,
     "palettes": 1,
-    "prev_ids": ["tank2"],
+    "prev_ids": ["tank2", "turtaneer"],
     "recruit": {
       "conditions": [
         {
@@ -23458,6 +23666,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
+    "tex_group_suffix": "",
     "tyield": ["hd", 2],
     "type_focus": 0
   },
@@ -23622,8 +23831,9 @@
     "md": 63,
     "name": "¦beastiesetup_name_073¦",
     "number": 74,
+    "order": 73,
     "palettes": 1,
-    "prev_ids": ["netsupport"],
+    "prev_ids": ["netsupport", "conjarr"],
     "recruit": {
       "conditions": [
         {
@@ -23686,6 +23896,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 3,
+    "tex_group_suffix": "",
     "tyield": ["md", 3],
     "type_focus": 1
   },
@@ -23850,8 +24061,9 @@
     "md": 64,
     "name": "¦beastiesetup_name_099¦",
     "number": 100,
+    "order": 99,
     "palettes": 1,
-    "prev_ids": ["snorlax"],
+    "prev_ids": ["snorlax", "yamyth"],
     "recruit": {
       "conditions": [
         {
@@ -23934,6 +24146,7 @@
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 4,
+    "tex_group_suffix": "",
     "tyield": ["hd", 3],
     "type_focus": 0
   }

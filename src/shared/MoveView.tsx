@@ -135,7 +135,8 @@ function getEffectString(
     case 29:
     case 38:
     case 39:
-    case 80: {
+    case 80:
+    case -80: {
       const [im, nameKey, descKey] = FEELING_EFF_MAP[Math.abs(effect.eff)];
       const no_desc =
         (effect.eff == 23 && effect.pow > 0) ||
@@ -442,6 +443,8 @@ function getEffectString(
         ...target_placeholders,
         "0": L(`fieldeffectstuff_${String(effect.pow + 1).padStart(3, "0")}`),
       });
+    case 65:
+      return L("movedefine_descadd_086", { ...target_placeholders }); // Copies {target}'s Trait.
     case 69:
       return ""; // Only when hittable - i do this elsewhere since it needs to be first.
     case 70: {

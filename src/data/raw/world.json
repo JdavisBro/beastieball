@@ -356,7 +356,7 @@
       "world_y": -13191,
       "x": -34295,
       "y": -13191,
-      "zoom_view": 0.5
+      "zoom_view": 1
     },
     {
       "cave_loc_a": "canyon_cave",
@@ -369,7 +369,7 @@
       "world_y": -9660,
       "x": -26698,
       "y": -9660,
-      "zoom_view": 0.5
+      "zoom_view": 1
     },
     {
       "cave_loc_a": "seacave4",
@@ -382,7 +382,7 @@
       "world_y": 1718,
       "x": -39424,
       "y": 1718,
-      "zoom_view": 0.5
+      "zoom_view": 1
     },
     {
       "cave_loc_a": "beach_cliff1",
@@ -447,7 +447,7 @@
       "world_y": -25177,
       "x": -1282,
       "y": -25177,
-      "zoom_view": 0.5
+      "zoom_view": 1
     },
     {
       "cave_loc_a": "canyon_cave",
@@ -527,13 +527,11 @@
       "from_object": "objCamp",
       "from_object_guid": "d1d4d867dd8a282dfbf4c83b97e56e1e",
       "img": 8,
-      "object_x": -1123,
-      "object_y": -1336,
       "revealed_text": "Campsite (Neptune Stadium)",
       "text": "Campsite",
       "transit": 3,
-      "world_x": -22423,
-      "world_y": 37824,
+      "world_x": -21300,
+      "world_y": 39160,
       "x": -21300,
       "y": 39160,
       "zoom_view": true
@@ -2804,11 +2802,12 @@
           "destination": "beach_cliff1",
           "direction": 2,
           "ground_z": 150,
+          "varied_spawn": true,
           "x": 118,
           "x1": -630,
           "x2": 79,
           "y": 4672,
-          "y1": -276,
+          "y1": -513,
           "y2": 971,
           "z1": -50
         },
@@ -2821,17 +2820,6 @@
           "y": 2633,
           "y1": -1802,
           "y2": -93,
-          "z1": -50
-        },
-        {
-          "destination": "city_construction6",
-          "ground_z": 1800,
-          "x": 9383,
-          "x1": -462,
-          "x2": 1041,
-          "y": 2591,
-          "y1": -2277,
-          "y2": -152,
           "z1": -50
         }
       ],
@@ -3077,13 +3065,14 @@
         {
           "destination": "rockybeach",
           "direction": 0,
-          "ground_z": 116.4357988586,
+          "ground_z": 150,
+          "varied_spawn": true,
           "x": 3560,
           "x1": -79,
           "x2": 497,
           "y": 3950,
-          "y1": -299,
-          "y2": 896,
+          "y1": -704,
+          "y2": 1118,
           "z1": -50
         },
         {
@@ -3755,7 +3744,7 @@
           "z_offset": 250
         }
       ],
-      "spawn_name": ["downtown"],
+      "spawn_name": ["shroom_path"],
       "world_layer": 1,
       "world_x1": -6733,
       "world_x2": -2738,
@@ -4395,18 +4384,6 @@
           "world_y": 22798,
           "x": 2901,
           "y": 2074
-        },
-        {
-          "from_level": "pirate",
-          "from_object": "objGymdoor",
-          "from_object_guid": "5934b249a6f7bbe40a1fd04408967ed7",
-          "img": 1,
-          "object_y": -300,
-          "text": "Gym",
-          "world_x": -60673.5,
-          "world_y": 21467,
-          "x": 2071,
-          "y": 743
         }
       ],
       "name": "pirate",
@@ -4876,7 +4853,7 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["hometown_seaside"],
+      "spawn_name": ["ocean2"],
       "world_layer": 1,
       "world_x1": -8485.5,
       "world_x2": -4546.5,
@@ -5763,8 +5740,8 @@
           "x1": -357,
           "x2": 341,
           "y": 3870,
-          "y1": -112,
-          "y2": 360,
+          "y1": 144,
+          "y2": 533,
           "z1": -50
         },
         {
@@ -5790,8 +5767,8 @@
     {
       "area_id": 4,
       "color": 16620976,
-      "display_name": "none",
-      "encounters": ["city_seacave_0"],
+      "display_name": "Burblog",
+      "encounters": ["city_seacave_0", "city_suburb1_0"],
       "has_spawns": true,
       "icons_array": [],
       "name": "city_suburb1",
@@ -5800,7 +5777,7 @@
         {
           "destination": "city_seacave",
           "direction": 3,
-          "ground_z": 102,
+          "ground_z": 101,
           "x": 5853,
           "x1": -455,
           "x2": 410,
@@ -5811,7 +5788,7 @@
         },
         {
           "destination": "city_railalley",
-          "ground_z": 102,
+          "ground_z": 101,
           "x": 5874,
           "x1": -413,
           "x2": 414,
@@ -5829,6 +5806,17 @@
           "y": 858,
           "y1": -957,
           "y2": -50,
+          "z1": -50
+        },
+        {
+          "destination": "city_construction1",
+          "direction": 0,
+          "x": 7275,
+          "x1": -107,
+          "x2": 566,
+          "y": 1760,
+          "y1": -1584,
+          "y2": 1076,
           "z1": -50
         }
       ],
@@ -5892,7 +5880,7 @@
     {
       "area_id": 4,
       "color": 16620976,
-      "encounters": [],
+      "encounters": ["city_railalley_1"],
       "has_spawns": true,
       "icons_array": [],
       "name": "city_railalley",
@@ -5947,7 +5935,7 @@
       ],
       "spawn_name": ["city_rail"],
       "world_x1": -36538,
-      "world_x2": -33075,
+      "world_x2": -32656,
       "world_y1": -9255,
       "world_y2": -5710
     },
@@ -6013,18 +6001,6 @@
           "z1": -50
         },
         {
-          "destination": "alleyway",
-          "direction": 2,
-          "x": 755,
-          "x1": -667,
-          "x2": 100,
-          "y": 4903,
-          "y1": -350,
-          "y2": 400,
-          "z1": 500,
-          "z2": 1000
-        },
-        {
           "destination": "citysquare",
           "direction": 0,
           "ground_z": 250,
@@ -6080,20 +6056,6 @@
       "world_x2": -42796,
       "world_y1": -18445,
       "world_y2": -8691
-    },
-    {
-      "color": 16620976,
-      "display_name": "Mainframe",
-      "encounters": [],
-      "icons_array": [],
-      "name": "alleyway",
-      "palette_name": "city",
-      "portals_array": [],
-      "spawn_name": ["default"],
-      "world_x1": -48796,
-      "world_x2": -46796,
-      "world_y1": -14363,
-      "world_y2": -12363
     },
     {
       "area_id": 4,
@@ -9187,7 +9149,7 @@
       "name": "net_island",
       "palette_name": "island",
       "portals_array": [],
-      "spawn_name": ["squid"],
+      "spawn_name": ["mangrove"],
       "world_layer": 1,
       "world_x1": -47508.5,
       "world_x2": -42534.5,
@@ -9257,7 +9219,7 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["mythwood1"],
+      "spawn_name": ["ocean2"],
       "world_layer": 1,
       "world_x1": -4400.5,
       "world_x2": -461.5,
@@ -9272,7 +9234,7 @@
       "icons_array": [],
       "name": "net_cliffs",
       "portals_array": [],
-      "spawn_name": ["hometown_seaside"],
+      "spawn_name": ["ocean2"],
       "world_layer": 1,
       "world_x1": -12444.5,
       "world_x2": -8485.5,
@@ -9316,7 +9278,7 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["downtown"],
+      "spawn_name": ["park"],
       "world_layer": 1,
       "world_x1": -43980.5,
       "world_x2": -40041.5,
@@ -9389,7 +9351,9 @@
     "city_neighborhood:objGymdoor": { "x": -8792, "y": -17688 },
     "city_neighborhood:objWarrior": { "x": -8651, "y": -17568 },
     "city_rail_east_0": { "x": -28764, "y": -11372 },
+    "city_railalley_1": { "x": -34708, "y": -6810 },
     "city_seacave_0": { "x": -35278, "y": -1316 },
+    "city_suburb1_0": { "x": -40942, "y": -3458 },
     "city_trainyard_0": { "x": -35338, "y": -10239 },
     "cityhill:objResearcher": { "x": -12474, "y": -16559 },
     "cityhill_1": { "x": -14756, "y": -18886 },
@@ -9545,7 +9509,7 @@
     ],
     "ridge": [
       4270627, 4931375, 6501004, 4143455, 5405951, 9660671, 6167119, 4597697,
-      3282012, 2557218, 11913305, 12298306
+      3282012, 2557218, 11913305, 12298306, 23140
     ],
     "woods": [
       7916304, 5633201, 6078190, 7234541, 9607936, 5176022, 14926624, 13631269,

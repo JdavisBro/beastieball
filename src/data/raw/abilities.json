@@ -39,6 +39,11 @@
     "id": "avenger",
     "name": "¦abilitiessetup_abilitydefine_054¦"
   },
+  "biting": {
+    "desc": "abilitiessetup_abilitydefine_304",
+    "id": "biting",
+    "name": "abilitiessetup_abilitydefine_305"
+  },
   "blocker": {
     "desc": "¦abilitiessetup_abilitydefine_059¬0¬[sprStatus,8]¦statuseffectstuff_009¦¦",
     "id": "blocker",
@@ -122,7 +127,12 @@
   "doubler": {
     "desc": "¦abilitiessetup_abilitydefine_239¦",
     "id": "doubler",
-    "name": "¦abilitiessetup_abilitydefine_012¦"
+    "name": "abilitiessetup_abilitydefine_303"
+  },
+  "dreadheal": {
+    "desc": "¦abilitiessetup_abilitydefine_227¬0¬¦fieldeffectstuff_004¦¬1¬3¦",
+    "id": "dreadheal",
+    "name": "¦abilitiessetup_abilitydefine_228¦"
   },
   "dreadlock": {
     "desc": "¦abilitiessetup_abilitydefine_213¬0¬¦fieldeffectstuff_004¦¬1¬[sprStatus,0]¦statuseffectstuff_001¦¦",
@@ -168,6 +178,11 @@
     "desc": "¦abilitiessetup_abilitydefine_037¬0¬50¦",
     "id": "flee",
     "name": "¦abilitiessetup_abilitydefine_038¦"
+  },
+  "fortress": {
+    "desc": "While at net, can attack without volleying and restores 20 STAMINA after Defense.",
+    "id": "fortress",
+    "name": "Fortress"
   },
   "freemove": {
     "desc": "¦abilitiessetup_abilitydefine_112¦",
@@ -325,7 +340,7 @@
     "name": "¦abilitiessetup_abilitydefine_179¦"
   },
   "nostatus": {
-    "desc": "¦abilitiessetup_abilitydefine_036¦",
+    "desc": "¦abilitiessetup_abilitydefine_036¬0¬[sprStatus,9]¦statuseffectstuff_010¦¦",
     "id": "nostatus",
     "name": "¦abilitiessetup_abilitydefine_035¦"
   },
@@ -333,11 +348,6 @@
     "desc": "¦abilitiessetup_abilitydefine_145¬0¬[sprStatus,5]¦statuseffectstuff_006¦¦",
     "id": "notag",
     "name": "¦abilitiessetup_abilitydefine_146¦"
-  },
-  "notraits": {
-    "desc": "¦abilitiessetup_abilitydefine_204¦",
-    "id": "notraits",
-    "name": "¦abilitiessetup_abilitydefine_203¦"
   },
   "novolley": {
     "desc": "¦abilitiessetup_abilitydefine_150¦",
@@ -370,7 +380,7 @@
     "name": "¦abilitiessetup_abilitydefine_068¦"
   },
   "redirectkiller": {
-    "desc": "¦abilitiessetup_abilitydefine_301¬0¬1.5¦",
+    "desc": "¦abilitiessetup_abilitydefine_301¬0¬1.5¬1¬[sprStatus,9]¦statuseffectstuff_010¦¦",
     "id": "redirectkiller",
     "name": "¦abilitiessetup_abilitydefine_302¦"
   },
@@ -428,6 +438,11 @@
     "desc": "¦abilitiessetup_abilitydefine_082¦",
     "id": "shy",
     "name": "¦abilitiessetup_abilitydefine_081¦"
+  },
+  "sidebody": {
+    "desc": "¦abilitiessetup_abilitydefine_296¦",
+    "id": "sidebody",
+    "name": "¦abilitiessetup_abilitydefine_295¦"
   },
   "silencer": {
     "desc": "¦abilitiessetup_abilitydefine_153¬1¬1.5¬0¬[sprStatus,3]¦statuseffectstuff_004¦¦",
@@ -620,7 +635,7 @@
     "name": "¦abilitiessetup_abilitydefine_123¦"
   },
   "watcher": {
-    "desc": "¦abilitiessetup_abilitydefine_098¦",
+    "desc": "¦abilitiessetup_abilitydefine_098¬0¬[sprStatus,9]¦statuseffectstuff_010¦¦",
     "id": "watcher",
     "name": "¦abilitiessetup_abilitydefine_097¦"
   },

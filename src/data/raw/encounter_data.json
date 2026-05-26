@@ -3074,7 +3074,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
-        "moves": ["netattack", "substitute", "distraction"],
+        "moves": ["netattack", "dig", "distraction"],
         "name": "",
         "neverRandomize": false,
         "number": -1,
@@ -3082,7 +3082,7 @@
         "specie": "shroom_m",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 0.33, 0.33, 0.33],
+        "training": [0, 0, 0.5, 1, 1, 1],
         "variant": -1,
         "vibe": -1
       },

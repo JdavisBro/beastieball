@@ -617,6 +617,9 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
       case 5:
         desc.push(L("movedefine_descadd_110")); // Can target opponents or allies.
         break;
+      case 7:
+        desc.push("Target any nearby fielded Beastie.");
+        break;
     }
   }
 
@@ -636,10 +639,6 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
       )
       .filter((effect) => !!effect),
   );
-
-  if (move.targ == 7) {
-    desc_full.push(L("movedefine_descadd_113")); // Can target opponents from the net.
-  }
   return desc_full.join(" ");
 }
 

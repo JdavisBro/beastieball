@@ -1,6 +1,5 @@
 import useLevelEditor from "./useLevelEditor";
 import type { Portal } from "../../data/WorldData";
-import { Wireframe } from "@react-three/drei";
 
 function Portal({ portal }: { portal: Portal }) {
   const { getFloorPos } = useLevelEditor();
@@ -22,14 +21,7 @@ function Portal({ portal }: { portal: Portal }) {
       }
     >
       <boxGeometry args={[width, height, depth]} />
-      <Wireframe
-        fillOpacity={0}
-        fillMix={1}
-        thickness={0.025}
-        alphaTest={0.5}
-        transparent
-        backfaceStroke={"#ff0000"}
-      />
+      <meshBasicMaterial wireframe color="red" />
     </mesh>
   );
 }

@@ -42,7 +42,7 @@ function ShapeTexture({
         paletteTop={paletteTop}
         paletteSide={paletteSide}
         clipTop={clipTop}
-        doubleSide={clipTop}
+        doubleSide
       />
     </mesh>
   );

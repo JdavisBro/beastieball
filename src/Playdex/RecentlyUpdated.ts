@@ -1,6 +1,8 @@
 const MOVE_RECENTLY_UPDATED: string[] = [
+  "alljazzattack",
   "commit",
   "copycat",
+  "distraction",
   "feint",
   "heartpass",
   "lockon",
@@ -8,6 +10,7 @@ const MOVE_RECENTLY_UPDATED: string[] = [
   "passionstrike",
   "ricochet",
   "share",
+  "swarm",
 ];
 
 export default MOVE_RECENTLY_UPDATED;

@@ -8,6 +8,7 @@ export const BEASTIE_STUFF_RECENTLY_UPDATED: string[] = [
   "moth",
   "dog1",
   "dog",
+  "platypus1",
   "platypus2",
   "daredevil1",
   "daredevil",
@@ -30,6 +31,7 @@ export const BEASTIE_STUFF_RECENTLY_UPDATED: string[] = [
   "jellyfish",
   "rainbow",
   "crab",
+  "rocklizard",
   "millipede1",
   "millipede",
   "bat1",
@@ -38,6 +40,7 @@ export const BEASTIE_STUFF_RECENTLY_UPDATED: string[] = [
   "opossum",
   "cheerleadermon",
   "magpiemon",
+  "platypus",
   "rainbowmon",
   "shroommon",
 ];

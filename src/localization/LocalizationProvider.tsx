@@ -60,6 +60,11 @@ const LANGUAGES: Record<SupportedLanguage, () => Promise<LanguageData>> = {
       import("./languages/es/game.json"),
       import("./languages/en/site.json"),
     ),
+  "pt-BR": () =>
+    loadLanguageData(
+      import("./languages/pt-BR/game.json"),
+      import("./languages/en/site.json"),
+    ),
 };
 
 const KEY_QUOTE = "¦";

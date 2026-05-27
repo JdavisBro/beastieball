@@ -2,18 +2,20 @@ import { useContext } from "react";
 import { createContext } from "react";
 import BEASTIE_NAMES_UNTYPED from "./beastie_names.json";
 
-export type SupportedLanguage = "en" | "ru" | "zh-CN" | "es";
+export type SupportedLanguage = "en" | "ru" | "zh-CN" | "es" | "pt-BR";
 export const SUPPORTED_LANGUAGES: SupportedLanguage[] = [
   "en",
   "ru",
   "zh-CN",
   "es",
+  "pt-BR",
 ];
 export const LANGUAGE_NAMES: Record<SupportedLanguage, string> = {
   en: "English",
   ru: "Русский",
   "zh-CN": "简体中文",
   es: "Español",
+  "pt-BR": "Português Brasileiro",
 };
 
 export type LocalizationFunction = (

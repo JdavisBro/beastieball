@@ -81,6 +81,7 @@ LANG_CODES = {
   "简体中文": "zh-CN",
   "Русский": "ru",
   "Español": "es",
+  "Português Brasileiro": "pt-BR",
 }
 
 beastie_names = {}

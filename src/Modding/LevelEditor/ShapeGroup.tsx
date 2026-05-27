@@ -114,7 +114,7 @@ export function createShapeGeometry(shape: Shape, thickness: number) {
       [points[point3], points[point3 + 1], points[point3 + 2]],
       true,
     );
-    if (!fan)
+    if (thickness && !fan)
       // Remove bottom on fan shapes
       insertTriangle(
         (point_count / 3) * 2 + top.length / 3 + tri,

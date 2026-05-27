@@ -3429,8 +3429,7 @@
       "myheartpass",
       "swarm",
       "starterbody",
-      "stomp",
-      "bodypass"
+      "stomp"
     ],
     "attklist_randomize": -1,
     "ba": 98,
@@ -3852,7 +3851,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 0,
+    "animator": 9,
     "attklist": [
       "topspin",
       "moon",
@@ -4053,7 +4052,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 0,
+    "animator": 9,
     "attklist": [
       "topspin",
       "moon",
@@ -5215,7 +5214,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
-    "animator": 0,
+    "animator": 14,
     "attklist": [
       "lockon",
       "shaken",
@@ -6241,7 +6240,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 0,
+    "animator": 11,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -6496,7 +6495,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 80,
-    "animator": 0,
+    "animator": [11, 15],
     "attklist": [
       "bounce",
       "rocksmash",
@@ -6716,7 +6715,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 0,
+    "animator": 11,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -12027,7 +12026,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 0,
+    "animator": 11,
     "attklist": [
       "blockattack",
       "thunder",
@@ -15084,8 +15083,9 @@
       "snipe",
       "sweatup",
       "bamboozle",
-      "ricochet",
-      "threat"
+      "passattack",
+      "threat",
+      "ricochet"
     ],
     "attklist_randomize": -1,
     "ba": 40,
@@ -15287,7 +15287,7 @@
       "snipe",
       "sweatup",
       "bamboozle",
-      "ricochet"
+      "passattack"
     ],
     "attklist_randomize": -1,
     "ba": 18,
@@ -15359,7 +15359,7 @@
       [30, "mark"],
       [36, "stun"],
       [40, "telekinesis"],
-      [46, "ricochet"]
+      [46, "bamboozle"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -15483,7 +15483,7 @@
       "snipe",
       "sweatup",
       "bamboozle",
-      "ricochet"
+      "passattack"
     ],
     "attklist_randomize": -1,
     "ba": 26,
@@ -15600,7 +15600,7 @@
       [35, "mark"],
       [41, "stun"],
       [45, "telekinesis"],
-      [51, "ricochet"]
+      [51, "bamboozle"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -17424,7 +17424,7 @@
     "type_focus": 2
   },
   "rocklizard": {
-    "ability": ["decoy", "superarmor"],
+    "ability": ["decoy2", "superarmor"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
@@ -21085,7 +21085,7 @@
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 0,
+    "animator": 14,
     "attklist": [
       "starterheart",
       "dragontail",
@@ -21110,7 +21110,8 @@
       "sad",
       "fortify",
       "set",
-      "cover"
+      "cover",
+      "flight"
     ],
     "attklist_randomize": -1,
     "ba": 30,
@@ -22438,7 +22439,7 @@
     "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
-    "animator": 0,
+    "animator": [9, 11],
     "attklist": [
       "sidespin",
       "backswitch",
@@ -22881,7 +22882,7 @@
           "type": 47
         }
       ],
-      "description": "¦beastiesetup_classrecruit_040¦"
+      "description": "¦beastiesetup_classrecruit_041¦"
     },
     "recruit_value": 5.65,
     "roamer_style": {

@@ -102,6 +102,11 @@
   "decoy": {
     "desc": "¦abilitiessetup_abilitydefine_279¦",
     "id": "decoy",
+    "name": "Goalie"
+  },
+  "decoy2": {
+    "desc": "While at the net, becomes the target of opponent Support and Defense plays",
+    "id": "decoy2",
     "name": "¦abilitiessetup_abilitydefine_280¦"
   },
   "defender": {
@@ -180,7 +185,7 @@
     "name": "¦abilitiessetup_abilitydefine_038¦"
   },
   "fortress": {
-    "desc": "While at net, can attack without volleying and restores 20 STAMINA after Defense.",
+    "desc": "While at net, can attack without volleying and restores 12 STAMINA after Defense.",
     "id": "fortress",
     "name": "Fortress"
   },

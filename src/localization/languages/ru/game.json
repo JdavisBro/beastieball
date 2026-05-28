@@ -95,7 +95,6 @@
   "beastiesetup_desc_046": "Любят красоваться перед другими зверьками. Во время брачного танца создают удивительные картинки.",
   "beastiesetup_classrecruit_039": "Повысь зверьку [sprIcon,1]ЗАЩИТУ на [sprBoost,0][sprBoost,0][sprBoost,0] или больше",
   "beastiesetup_desc_047": "Этот зверек питается растениями. Хвост пухолипта наполняется хлоропластами, служит ему камуфляжем и позволяет получать энергию от фотосинтеза.",
-  "beastiesetup_classrecruit_040": "ВЫБЕЙ зверька ГОРИЗОНТАЛЬНОЙ атакой",
   "beastiesetup_desc_048": "Эти зверьки начинают жизнь в пещерах, но, повзрослев, отправляются в лес. Каждый тьмыш выбирает себе в спутники камешек, с которым общается как с живым другом.",
   "beastiesetup_classrecruit_041": "ВЫБЕЙ зверька ГОРИЗОНТАЛЬНОЙ атакой",
   "beastiesetup_desc_049": "Неразлучная пара. Хотя эти зверьки очень социальные, они часто остаются в одиночестве, наслаждаясь собственной компанией.",
@@ -1615,5 +1614,11 @@
   "abilitiessetup_abilitydefine_298": "СБОР всегда усиливает атаки этого зверька",
   "movessetup_movedefine_199": "Рой",
   "abilitiessetup_abilitydefine_301": "Наносит урон x{0}, если случайно попадает не в ту цель",
-  "abilitiessetup_abilitydefine_302": "Раздражение"
+  "abilitiessetup_abilitydefine_302": "Раздражение",
+  "abilitiessetup_abilitydefine_306": "Goalie",
+  "abilitiessetup_abilitydefine_307": "While at the net, opponent Support and Defense plays target them instead of their ally",
+  "abilitiessetup_abilitydefine_308": "While at net, can attack without volleying and restores {0} STAMINA after Defense.",
+  "abilitiessetup_abilitydefine_309": "Fortress",
+  "movessetup_movedefine_201": "Passion Strike",
+  "movessetup_movedefine_202": "Copycat"
 }

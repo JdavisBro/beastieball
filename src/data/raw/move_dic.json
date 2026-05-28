@@ -488,7 +488,7 @@
     "description": null,
     "eff": [{ "eff": 65, "pow": 1, "targ": 3 }],
     "id": "copycat",
-    "name": "Copycat",
+    "name": "¦movessetup_movedefine_202¦",
     "pow": 0,
     "price": 0,
     "targ": 5,
@@ -667,8 +667,8 @@
     "id": "distraction",
     "name": "¦movessetup_movedefine_170¦",
     "pow": 0,
-    "price": 30,
-    "targ": 4,
+    "price": 0,
+    "targ": 1,
     "type": 5,
     "use": 2
   },
@@ -712,7 +712,7 @@
     "id": "dropshot",
     "name": "¦movessetup_movedefine_069¦",
     "pow": 55,
-    "price": 20,
+    "price": 0,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -858,7 +858,7 @@
     "id": "flight",
     "name": "¦movessetup_movedefine_175¦",
     "pow": 70,
-    "price": 45,
+    "price": 0,
     "targ": 3,
     "type": 1,
     "use": 0
@@ -1679,8 +1679,8 @@
     "description": null,
     "eff": [{ "eff": -80, "pow": 1, "targ": 0 }],
     "id": "passionstrike",
-    "name": "Passion Strike",
-    "pow": 100,
+    "name": "¦movessetup_movedefine_201¦",
+    "pow": 105,
     "price": 0,
     "targ": 0,
     "type": 1,
@@ -2007,18 +2007,15 @@
     "use": 0
   },
   "rushattack": {
-    "bt_tags": [0, 8, 21, 10],
+    "bt_tags": [0, 21, 10],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": -7, "pow": 1, "targ": 0 },
-      { "eff": 57, "pow": 0, "targ": 0 }
-    ],
+    "eff": [{ "eff": -7, "pow": 1, "targ": 0 }],
     "id": "rushattack",
     "name": "¦movessetup_movedefine_030¦",
-    "pow": 100,
-    "price": 50,
+    "pow": 65,
+    "price": 25,
     "targ": 0,
     "type": 0,
     "use": 1

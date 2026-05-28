@@ -102,10 +102,10 @@
   "decoy": {
     "desc": "¦abilitiessetup_abilitydefine_279¦",
     "id": "decoy",
-    "name": "Goalie"
+    "name": "¦abilitiessetup_abilitydefine_306¦"
   },
   "decoy2": {
-    "desc": "While at the net, becomes the target of opponent Support and Defense plays",
+    "desc": "¦abilitiessetup_abilitydefine_307¦",
     "id": "decoy2",
     "name": "¦abilitiessetup_abilitydefine_280¦"
   },
@@ -185,9 +185,9 @@
     "name": "¦abilitiessetup_abilitydefine_038¦"
   },
   "fortress": {
-    "desc": "While at net, can attack without volleying and restores 12 STAMINA after Defense.",
+    "desc": "¦abilitiessetup_abilitydefine_308¬0¬12¦",
     "id": "fortress",
-    "name": "Fortress"
+    "name": "¦abilitiessetup_abilitydefine_309¦"
   },
   "freemove": {
     "desc": "¦abilitiessetup_abilitydefine_112¦",
@@ -265,7 +265,7 @@
     "name": "¦abilitiessetup_abilitydefine_117¦"
   },
   "mask": {
-    "desc": "¦abilitiessetup_abilitydefine_237¬0¬¦fieldeffectstuff_001¦¬1¬¦fieldeffectstuff_004¦¬2¬66¦",
+    "desc": "¦abilitiessetup_abilitydefine_237¬0¬¦fieldeffectstuff_001¦¬1¬¦fieldeffectstuff_004¦¬2¬50¦",
     "id": "mask",
     "name": "¦abilitiessetup_abilitydefine_238¦"
   },

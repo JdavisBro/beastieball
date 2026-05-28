@@ -95,7 +95,6 @@
   "beastiesetup_desc_046": "Parece que le gusta actuar para otros bestis. Las actuaciones que prepara para el cortejo son de los más impresionantes.",
   "beastiesetup_classrecruit_039": "Altera la DEF[sprIcon,1] [sprBoost,0][sprBoost,0][sprBoost,0] o más de un besti.",
   "beastiesetup_desc_047": "Absorbe y almacena en la cola los cloroplastos de las plantas que consume. Eso le proporciona camuflaje y energía fotosintética.",
-  "beastiesetup_classrecruit_040": "ELIMINA a un besti con un ataque LATERAL.",
   "beastiesetup_desc_048": "Aunque nace en cuevas, se aventura a los bosques cuando alcanza la adultez. Cada miembro de la especie elige a una roca como su compañera con la que habla como si estuviera viva.",
   "beastiesetup_classrecruit_041": "ELIMINA a un besti con un ataque LATERAL.",
   "beastiesetup_desc_049": "Este par son inseparables. A pesar de ser muy sociables, muchas veces prefieren la soledad y disfrutar de su mutua compañía.",
@@ -1615,5 +1614,11 @@
   "abilitiessetup_abilitydefine_298": "Los ataques de este besti siempre se potencian con el efecto CONVOCAR.",
   "movessetup_movedefine_199": "Enjambre",
   "abilitiessetup_abilitydefine_301": "Inflige x{0} de daño si cambia el objetivo del ataque.",
-  "abilitiessetup_abilitydefine_302": "Frustrado"
+  "abilitiessetup_abilitydefine_302": "Frustrado",
+  "abilitiessetup_abilitydefine_306": "Goalie",
+  "abilitiessetup_abilitydefine_307": "While at the net, opponent Support and Defense plays target them instead of their ally",
+  "abilitiessetup_abilitydefine_308": "While at net, can attack without volleying and restores {0} STAMINA after Defense.",
+  "abilitiessetup_abilitydefine_309": "Fortress",
+  "movessetup_movedefine_201": "Passion Strike",
+  "movessetup_movedefine_202": "Copycat"
 }

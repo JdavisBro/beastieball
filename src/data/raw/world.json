@@ -4853,7 +4853,7 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["ocean2"],
+      "spawn_name": ["shroom_path"],
       "world_layer": 1,
       "world_x1": -8485.5,
       "world_x2": -4546.5,
@@ -5604,7 +5604,7 @@
           "x2": 198,
           "y": 547,
           "y1": -603,
-          "y2": -18,
+          "y2": 75,
           "z1": -50
         }
       ],
@@ -9219,7 +9219,7 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["ocean2"],
+      "spawn_name": ["meadow"],
       "world_layer": 1,
       "world_x1": -4400.5,
       "world_x2": -461.5,
@@ -9310,7 +9310,7 @@
       "name": "net_city",
       "palette_name": "city",
       "portals_array": [],
-      "spawn_name": ["downtown"],
+      "spawn_name": ["witchwood"],
       "world_layer": 1,
       "world_x1": -53767,
       "world_x2": -49767,

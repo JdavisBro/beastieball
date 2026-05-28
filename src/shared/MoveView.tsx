@@ -187,7 +187,7 @@ function getEffectString(
       const key =
         attack && effect.eff > 0
           ? "movedefine_019" // SHIFTs {target} to {0} after hitting.
-          : attack && effect.targ > 0 && effect.pow == 1
+          : attack
             ? "movedefine_009" // Before contact, SHIFTs {target} to {0}.
             : "movedefine_014"; // SHIFTs {target} to {0}.
 

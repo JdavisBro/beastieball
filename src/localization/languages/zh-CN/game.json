@@ -95,7 +95,6 @@
   "beastiesetup_desc_046": "它们似乎很乐意为其他杯丝特表演，而在求偶时更能施展出最令人惊叹的把戏。",
   "beastiesetup_classrecruit_039": "对一只杯丝特的[sprIcon,1]防御施加至少[sprBoost,0][sprBoost,0][sprBoost,0]层属性状态",
   "beastiesetup_desc_047": "它们将吃下植物的叶绿体吸收并储存在尾部，这既为它们提供了光合能量，又形成了天然伪装。",
-  "beastiesetup_classrecruit_040": "用侧向攻击使一只杯丝特力竭",
   "beastiesetup_desc_048": "它们的生命始于洞穴，成年后便会迁徙至森林。每个个体都会选择一块伴侣岩石，与之交谈时宛如面对活物。",
   "beastiesetup_classrecruit_041": "用侧向攻击使一只杯丝特力竭",
   "beastiesetup_desc_049": "这对搭档形影不离。尽管它们拥有高度发达的社交能力，却常常独来独往，仅与彼此为伴便已心满意足。",
@@ -1615,5 +1614,11 @@
   "abilitiessetup_abilitydefine_298": "这只杯丝特的攻击总会受召集强化",
   "movessetup_movedefine_199": "蜂拥",
   "abilitiessetup_abilitydefine_301": "当目标被更改时，造成{0}x伤害",
-  "abilitiessetup_abilitydefine_302": "偏折"
+  "abilitiessetup_abilitydefine_302": "偏折",
+  "abilitiessetup_abilitydefine_306": "Goalie",
+  "abilitiessetup_abilitydefine_307": "While at the net, opponent Support and Defense plays target them instead of their ally",
+  "abilitiessetup_abilitydefine_308": "While at net, can attack without volleying and restores {0} STAMINA after Defense.",
+  "abilitiessetup_abilitydefine_309": "Fortress",
+  "movessetup_movedefine_201": "Passion Strike",
+  "movessetup_movedefine_202": "Copycat"
 }

@@ -174,8 +174,8 @@ function getEffectString(
             : "movedefine_049" // Non-{1} {target} feels {0} {1}.
           : effect.eff < 0 && attack
             ? effect.targ == 0
-              ? "movedefine_007" // Feel {0} {1} before contact.
-              : "movedefine_008" // {Target} feels {0} {1} before contact.
+              ? "movedefine_007" // Feel {0} {1} before hit.
+              : "movedefine_008" // {Target} feels {0} {1} before hit.
             : effect.targ == 0
               ? "movedefine_003" // Feel {0} {1}.
               : "movedefine_004"; // {Target} feels {0} {1}.
@@ -186,22 +186,22 @@ function getEffectString(
     case 7: {
       const key =
         attack && effect.eff > 0
-          ? "movedefine_019" // SHIFTs {target} to {0} after hitting.
+          ? "movedefine_019" // SHIFTs {target} {0} after hitting.
           : attack
-            ? "movedefine_009" // Before contact, SHIFTs {target} to {0}.
-            : "movedefine_014"; // SHIFTs {target} to {0}.
+            ? "movedefine_009" // Before hit, SHIFTs {target} {0}.
+            : "movedefine_014"; // SHIFTs {target} {0}.
 
       return L(key, {
         "0": L(
           [
-            "movedefine_015", // back row
-            "movedefine_016", // front row
-            "movedefine_017", // opposite lane
+            "movedefine_015", // backward
+            "movedefine_016", // forward
+            "movedefine_017", // sideways
             "3",
             "4",
             "5",
             "6",
-            "movedefine_018", // opposite row
+            "movedefine_018", // to opposite row
           ][effect.pow],
         ),
         ...target_placeholders,
@@ -352,6 +352,8 @@ function getEffectString(
         case 32:
           return L("movedefine_descadd_104", { "0": "¾" }); // POW x{0} if user has any FEELINGs.
         case 33:
+          return "";
+        case 36:
           return "";
       }
       console.log(
@@ -556,7 +558,11 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
       if (move.targ == 4 && attack) {
         desc.push(L("movedefine_descadd_006")); // Used from net. Targets front row.
       } else {
-        desc.push(L("movedefine_descadd_008")); // Only used from net.
+        desc.push(
+          move.eff.some((eff) => eff.eff == 33 && eff.pow == 36)
+            ? "Used from net, with net damage bonus." // NO LOCALIZATION
+            : L("movedefine_descadd_008"), // Only used from net.
+        );
       }
       break;
   }

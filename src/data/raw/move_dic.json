@@ -884,12 +884,13 @@
     "description": null,
     "eff": [
       { "eff": -7, "pow": 0, "targ": 0 },
+      { "eff": 33, "pow": 36, "targ": 0 },
       { "eff": 57, "pow": 1, "targ": 0 }
     ],
     "id": "flyback",
     "name": "¦movessetup_movedefine_058¦",
     "pow": 115,
-    "price": 30,
+    "price": 55,
     "targ": 0,
     "type": 1,
     "use": 2

@@ -1,5 +1,6 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import {
+  PropsWithChildren,
   RefObject,
   Suspense,
   useCallback,
@@ -9,7 +10,14 @@ import {
   useRef,
   useState,
 } from "react";
-import { DirectionalLight, Mesh, Object3D, Raycaster, Vector3 } from "three";
+import {
+  DirectionalLight,
+  Euler,
+  Mesh,
+  Object3D,
+  Raycaster,
+  Vector3,
+} from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
 import { Html, useProgress } from "@react-three/drei";
@@ -92,11 +100,11 @@ function OrbitControlsElement({
     invalidate,
   } = useThree();
 
-  const { levelStump } = useLevelEditor();
+  const { levelStump, isVr } = useLevelEditor();
 
   useEffect(() => {
     const orbit = orbitRef.current;
-    if (!orbit) return;
+    if (!orbit || isVr) return;
     camera.near = 3;
     camera.far = 50000;
     orbit.target.set(
@@ -128,7 +136,7 @@ function OrbitControlsElement({
 const SUN_DISTANCE = 8200;
 
 function Scene() {
-  const { levelStump, levelData } = useLevelEditor();
+  const { levelStump, levelData, isVr } = useLevelEditor();
 
   const levelCenterX = -(levelStump.world_x2 - levelStump.world_x1) / 2;
   const levelCenterY = (levelStump.world_y2 - levelStump.world_y1) / 2;
@@ -191,23 +199,29 @@ function Scene() {
 
   return (
     <>
-      <OrbitControlsElement orbitRef={orbitRef} />
-      <ambientLight intensity={2} />
-      <directionalLight
-        position={[
-          levelCenterX + SUN_DISTANCE * sunlightVector.x,
-          levelCenterY - SUN_DISTANCE * sunlightVector.y,
-          -SUN_DISTANCE * sunlightVector.z,
-        ]}
-        intensity={Math.PI / 2}
-        castShadow
-        ref={lightRef}
-      />
-      <ShapeGroups />
-      <Models />
-      <ObjectDrawers />
-      <Portals />
-      <LevelFloor />
+      <group
+        scale={isVr ? VR_WORLD_SCALE : 1}
+        rotation={isVr ? VR_ROTATION : NO_ROTATION}
+      >
+        <OrbitControlsElement orbitRef={orbitRef} />
+        <ambientLight intensity={2} />
+        <directionalLight
+          position={[
+            levelCenterX + SUN_DISTANCE * sunlightVector.x,
+            levelCenterY - SUN_DISTANCE * sunlightVector.y,
+            -SUN_DISTANCE * sunlightVector.z,
+          ]}
+          intensity={Math.PI / 2}
+          castShadow
+          ref={lightRef}
+        />
+        <ShapeGroups />
+        <Models />
+        <ObjectDrawers />
+        <Portals />
+        <LevelFloor />
+      </group>
+      {isVr ? <VR /> : undefined}
     </>
   );
 }
@@ -301,8 +315,30 @@ function createFloorPosGetter(levelData?: LevelData) {
   };
 }
 
+const VR_WORLD_SCALE = 0.005;
+const VR_ROTATION = new Euler(-Math.PI / 2);
+const NO_ROTATION = new Euler();
+
+function VR({ children }: PropsWithChildren) {
+  const { isVr } = useLevelEditor();
+
+  const [vrModule, setVrModule] = useState<typeof import("./VR.tsx") | null>(
+    null,
+  );
+  useEffect(() => {
+    if (!isVr || vrModule) return;
+    import("./VR.tsx").then((module) => setVrModule(module));
+  }, [isVr]);
+
+  const Wrapper = vrModule?.VRWrapper;
+
+  return isVr && Wrapper ? <Wrapper>{children}</Wrapper> : children;
+}
+
 export default function LevelEditor() {
   const { level } = useParams();
+
+  const [isVr, setIsVr] = useState(false);
 
   Object3D.DEFAULT_UP = new Vector3(0, 0, 1);
 
@@ -345,8 +381,9 @@ export default function LevelEditor() {
       levelStump: levelStump as LevelStump,
       palette: WORLD_DATA.palettes[levelData?.palette_name ?? "default"],
       getFloorPos: createFloorPosGetter(levelData),
+      isVr,
     }),
-    [viewMode, levelData, levelStump],
+    [viewMode, levelData, levelStump, isVr],
   );
 
   return (
@@ -416,6 +453,8 @@ export default function LevelEditor() {
         </label>
         {" - "}
         <Link to="/map/">Map</Link>
+        {" - "}
+        <button onClick={() => setIsVr(true)}>Enter VR</button>
       </div>
       <Canvas
         className={styles.canvas}
@@ -428,19 +467,21 @@ export default function LevelEditor() {
           <Error reason={loadFailed} />
         ) : (
           <LevelEditorContext.Provider value={context}>
-            <ErrorBoundary
-              fallbackRender={(props) => <Error reason={props.error} />}
-            >
-              <Suspense fallback={<Loading />}>
-                {levelStump ? (
-                  !levelData ? (
-                    <Loading level={level} />
-                  ) : (
-                    <Scene />
-                  )
-                ) : null}
-              </Suspense>
-            </ErrorBoundary>
+            <VR>
+              <ErrorBoundary
+                fallbackRender={(props) => <Error reason={props.error} />}
+              >
+                <Suspense fallback={<Loading />}>
+                  {levelStump ? (
+                    !levelData ? (
+                      <Loading level={level} />
+                    ) : (
+                      <Scene />
+                    )
+                  ) : null}
+                </Suspense>
+              </ErrorBoundary>
+            </VR>
           </LevelEditorContext.Provider>
         )}
       </Canvas>

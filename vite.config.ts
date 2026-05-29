@@ -1,4 +1,5 @@
 import { defineConfig, loadEnv } from "vite";
+import basicSsl from "@vitejs/plugin-basic-ssl";
 import react from "@vitejs/plugin-react";
 import {
   writeFile,
@@ -288,8 +289,15 @@ export default defineConfig(() => {
   const env = loadEnv("mock", process.cwd(), "");
   const url = env.VITE_URL != "" ? env.VITE_URL : "https://beastieball.info";
   return {
-    build: { sourcemap: true },
+    build: {
+      sourcemap: true,
+      rollupOptions: {
+        external: (file) =>
+          file.includes("@iwer") || file.includes("xr/dist/emulate.js"), // exclude VR emulation
+      },
+    },
     plugins: [
+      // basicSsl(), // use for testing VR
       react(),
       {
         name: "Sitemap",

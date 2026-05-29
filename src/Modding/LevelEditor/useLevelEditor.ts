@@ -14,6 +14,7 @@ export type LevelEditorContextType = {
   levelStump: LevelStump;
   palette: number[];
   getFloorPos: (x: number, y: number, z_max?: number) => number;
+  isVr: boolean;
 };
 
 export const LevelEditorContext = createContext<LevelEditorContextType>(

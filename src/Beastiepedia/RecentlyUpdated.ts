@@ -1,5 +1,6 @@
 export const BEASTIE_STUFF_RECENTLY_UPDATED: string[] = [
   "shroom_b",
+  "shroom_s",
   "shroom_m",
   "frog1",
   "frog2",

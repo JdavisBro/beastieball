@@ -537,6 +537,11 @@
   "synchronize": {
     "desc": "¦abilitiessetup_abilitydefine_293¦",
     "id": "synchronize",
+    "name": "¦abilitiessetup_abilitydefine_310¦"
+  },
+  "synchronize2": {
+    "desc": "¦abilitiessetup_abilitydefine_311¦",
+    "id": "synchronize2",
     "name": "¦abilitiessetup_abilitydefine_294¦"
   },
   "tagheal": {

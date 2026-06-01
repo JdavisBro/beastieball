@@ -672,6 +672,23 @@
     "type": 5,
     "use": 2
   },
+  "dodge": {
+    "bt_tags": [42, 38, 46, 19],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 27, "pow": -1, "targ": 9 },
+      { "eff": 30, "pow": 1, "targ": 3 }
+    ],
+    "id": "dodge",
+    "name": "¦movessetup_movedefine_203¦",
+    "pow": 0,
+    "price": 0,
+    "targ": 8,
+    "type": 5,
+    "use": 0
+  },
   "doubleblock": {
     "bt_tags": [20, 47, 42, 38, 46],
     "desc_tagids": [],

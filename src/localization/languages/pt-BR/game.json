@@ -1616,9 +1616,13 @@
   "abilitiessetup_abilitydefine_301": "Inflige dano x{0} quando o seu alvo muda",
   "abilitiessetup_abilitydefine_302": "Rancoroso",
   "abilitiessetup_abilitydefine_306": "Goalie",
-  "abilitiessetup_abilitydefine_307": "While at the net, opponent Support and Defense plays target them instead of their ally",
+  "abilitiessetup_abilitydefine_307": "Always the nearest to opponents. Becomes the target of opponent Support and Defense plays.",
   "abilitiessetup_abilitydefine_308": "While at net, can attack without volleying and restores {0} STAMINA after Defense.",
   "abilitiessetup_abilitydefine_309": "Fortress",
   "movessetup_movedefine_201": "Passion Strike",
-  "movessetup_movedefine_202": "Copycat"
+  "movessetup_movedefine_202": "Copycat",
+  "abilitiessetup_abilitydefine_310": "Admirer",
+  "abilitiessetup_abilitydefine_311": "Gets any [sprBoost,0]BOOSTs that their ally gets",
+  "movessetup_movedefine_203": "Dodge Roll",
+  "_map_Under\\nConstruczone": "Under\\nConstruczone"
 }

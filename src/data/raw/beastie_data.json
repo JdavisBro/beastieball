@@ -4284,8 +4284,8 @@
     "type_focus": 2
   },
   "crab": {
-    "ability": ["rhythmpow", "synchronize"],
-    "ability_hidden": true,
+    "ability": ["rhythmpow", "synchronize2"],
+    "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 0,
@@ -4318,7 +4318,8 @@
       "batonpass",
       "alljazzattack",
       "slide",
-      "passionstrike"
+      "passionstrike",
+      "heartpass"
     ],
     "attklist_randomize": -1,
     "ba": 108,
@@ -4391,13 +4392,13 @@
       [0, "rhythm"],
       [6, "followme"],
       [11, "sensihit"],
-      [16, "skillswap"],
-      [20, "tagattack"],
+      [16, "cheer"],
+      [20, "damagedattack"],
       [25, "juggle"],
-      [31, "damagedattack"],
-      [36, "stomp"],
+      [31, "flatten"],
+      [36, "skillswap"],
       [41, "noisytag"],
-      [47, "flatten"]
+      [47, "stomp"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -4766,6 +4767,7 @@
       "rest",
       "swarm",
       "heartpass",
+      "dodge",
       "backswitch",
       "taunt",
       "starterheart"
@@ -5011,6 +5013,7 @@
       "rest",
       "swarm",
       "heartpass",
+      "dodge",
       "backswitch",
       "taunt",
       "starterheart"
@@ -14811,6 +14814,7 @@
       "scoreboosted",
       "facade",
       "dare",
+      "damagedattack",
       "contest",
       "rush",
       "dig",
@@ -16645,7 +16649,6 @@
       "contest",
       "spitball",
       "minddown",
-      "damagedattack",
       "mind",
       "hyperbeam",
       "wornattack",
@@ -16942,7 +16945,6 @@
       "contest",
       "spitball",
       "minddown",
-      "damagedattack",
       "mind",
       "hyperbeam",
       "wornattack",
@@ -20715,14 +20717,14 @@
     "id": "shroom_s",
     "isBaby": false,
     "learnset": [
-      [0, "snore"],
+      [0, "enemyboosts"],
       [0, "crowd"],
       [5, "refresh"],
       [9, "taunt"],
       [12, "minddown"],
       [17, "protect"],
       [20, "mark"],
-      [25, "enemyboosts"],
+      [25, "snore"],
       [31, "fieldclear"],
       [36, "heart"],
       [40, "sweatup"],
@@ -21115,7 +21117,8 @@
       "fortify",
       "set",
       "cover",
-      "flight"
+      "flight",
+      "dodge"
     ],
     "attklist_randomize": -1,
     "ba": 30,
@@ -21196,7 +21199,7 @@
       [16, "bench"],
       [21, "libero"],
       [25, "dragontail"],
-      [31, "allyrush"],
+      [31, "dodge"],
       [36, "preblock"],
       [41, "heart"],
       [47, "haze"]

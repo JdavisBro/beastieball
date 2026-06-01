@@ -4224,7 +4224,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
-        "moves": ["damagedattack", "followme", "protect"],
+        "moves": ["damagedattack", "followme", "myheartpass"],
         "name": "",
         "neverRandomize": false,
         "number": -1,
@@ -18307,7 +18307,12 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 18,
-        "moves": [["heart", "snore"], ["mark", ""], "crowd", ["careful"]],
+        "moves": [
+          ["heart", "snore", "enemyboosts"],
+          ["mark", ""],
+          "crowd",
+          ["careful"]
+        ],
         "name": "",
         "neverRandomize": false,
         "number": "",

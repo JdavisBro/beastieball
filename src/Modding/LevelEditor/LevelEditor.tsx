@@ -46,6 +46,7 @@ const AREA_ID_DIRS = [
   "area02/",
   "area03/",
   "area04/",
+  "area04/",
   "",
 ];
 

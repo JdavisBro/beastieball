@@ -134,7 +134,22 @@
     "cheer": 4,
     "hello": 4
   },
+  "football": {
+    "boo": 4,
+    "cheer": 4,
+    "hello": 4
+  },
   "football1": {
+    "boo": 4,
+    "cheer": 4,
+    "hello": 4
+  },
+  "football2": {
+    "boo": 4,
+    "cheer": 4,
+    "hello": 4
+  },
+  "fox": {
     "boo": 4,
     "cheer": 4,
     "hello": 4
@@ -189,6 +204,11 @@
     "cheer": 4,
     "hello": 4
   },
+  "jellyfish": {
+    "boo": 4,
+    "cheer": 4,
+    "hello": 4
+  },
   "jellyfish1": {
     "boo": 4,
     "cheer": 4,
@@ -225,6 +245,11 @@
     "hello": 4
   },
   "lyrebird1": {
+    "boo": 4,
+    "cheer": 4,
+    "hello": 4
+  },
+  "magpie": {
     "boo": 4,
     "cheer": 4,
     "hello": 4
@@ -405,6 +430,11 @@
     "hello": 4
   },
   "shark": {
+    "boo": 4,
+    "cheer": 4,
+    "hello": 4
+  },
+  "shark1": {
     "boo": 4,
     "cheer": 4,
     "hello": 4

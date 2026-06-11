@@ -289,6 +289,12 @@
       "y": -18759
     },
     {
+      "id": "gift_city_construction_side_0",
+      "items": [["train_ma", 8.0]],
+      "x": -32152,
+      "y": -7814
+    },
+    {
       "id": "gift_city_market_0",
       "items": [["lure_b", 1.0]],
       "x": -50890,
@@ -329,10 +335,22 @@
       "y": 2175
     },
     {
+      "id": "gift_city_suburb2_0",
+      "items": [["train_level", 1.0]],
+      "x": -43484,
+      "y": -3601
+    },
+    {
       "id": "gift_city_trainyard_0",
       "items": [["train_level", 1.0]],
       "x": -35769,
       "y": -9791
+    },
+    {
+      "id": "gift_city_trainyard_2",
+      "items": [["sell2", 1.0]],
+      "x": -34988,
+      "y": -9688
     },
     {
       "id": "gift_forest_lake_0",
@@ -555,6 +573,12 @@
       "y": 5851
     },
     {
+      "id": "gift_suburb_rail_0",
+      "items": [["train_ha", 4.0]],
+      "x": -46064,
+      "y": -2804
+    },
+    {
       "id": "gift_sunken_stadium_0",
       "items": [["heal_max", 1.0]],
       "x": -19977,
@@ -637,6 +661,7 @@
     { "lever_id": "canyon_secret_2", "position": [-20646, -7267] },
     { "lever_id": "suburb_south", "position": [-34749, -6855] },
     { "lever_id": "CITY_south", "position": [-36545, 2370] },
+    { "lever_id": "suburb_back", "position": [-44095, -3617] },
     { "lever_id": "mtn_windy", "position": [-60373, -46062] },
     { "lever_id": "park_1", "position": [-27085, -12728] },
     { "lever_id": "abandoned_rail", "position": [-6070, -9745] },
@@ -699,7 +724,7 @@
     "suburb_south": [
       { "position": [-35033, -5983], "angle": 0 },
       { "position": [-34982, -8188], "angle": 0 },
-      { "position": [-34967, -4601], "angle": 0 },
+      { "position": [-34967, -4602], "angle": 0 },
       { "position": [-35092, -9433], "angle": 0 }
     ],
     "seapuzzle3": [
@@ -709,6 +734,7 @@
     "suburb_side_alwaysdown": [
       { "position": [-40917, -3431], "angle": 69.4439544678 }
     ],
+    "suburb_back": [{ "position": [-42239, -3711], "angle": 87.2736816406 }],
     "never_opened": [{ "position": [-36218, -11675], "angle": 90 }],
     "mtn_windy": [{ "position": [-60218, -46850], "angle": 0 }],
     "park_1": [{ "position": [-21878.5, -12294.5], "angle": 290.8544616699 }],
@@ -719,6 +745,7 @@
     "seapuzzle1": [{ "position": [-43308, 2883], "angle": 0 }],
     "seapuzzle2": [{ "position": [-42222, 1183], "angle": 282.5288085938 }],
     "seacave_side": [{ "position": [-40319, 6057], "angle": 274.2363891602 }],
+    "none": [{ "position": [-49752, -3465], "angle": 61.9275131226 }],
     "reserve_lake5": [{ "position": [-11608, 4501], "angle": 76.8462905884 }]
   },
   "encounters": [
@@ -785,13 +812,17 @@
     { "position": [-14756, -18886], "encounter": "cityhill_1" },
     { "position": [-37477, -14700], "encounter": "citysquare_0" },
     { "position": [-40768, -17325], "encounter": "citysquare_1" },
+    { "position": [-31193, -3780], "encounter": "city_construction1_0" },
+    { "position": [-30611, -7116], "encounter": "city_construction_side_0" },
     { "position": [-34708, -6810], "encounter": "city_railalley_1" },
     { "position": [-28764, -12077], "encounter": "city_rail_east_0" },
     { "position": [-35278, -1868], "encounter": "city_seacave_0" },
-    { "position": [-35287, -2875], "encounter": "city_seacave_0" },
-    { "position": [-40643, -3640], "encounter": "city_suburb1_0" },
+    { "position": [-35287, -2876], "encounter": "city_seacave_0" },
+    { "position": [-40164, -4774], "encounter": "city_suburb1_0" },
+    { "position": [-43255, -1678], "encounter": "city_suburb2_0" },
     { "position": [-35338, -10239], "encounter": "city_trainyard_0" },
     { "position": [-15167, 7958], "encounter": "cliff_train_cave_guard" },
+    { "position": [-40141, -5602], "encounter": "city_suburb1_0" },
     { "position": [-15214, -34270], "encounter": "forest_lake_0" },
     { "position": [-14893, -35700], "encounter": "forest_lake_1" },
     { "position": [-44535, -12027], "encounter": "mainstreet_0" },
@@ -837,6 +868,7 @@
     { "position": [-40338, 2189], "encounter": "seacave4_0" },
     { "position": [-41142, 6577], "encounter": "seacave_side_0" },
     { "position": [-48668, -6773], "encounter": "stadium_road_0" },
+    { "position": [-49570, -3181], "encounter": "suburb_rail_0" },
     { "position": [-22162, 37437], "encounter": "sunken_stadium_0" },
     { "position": [-20243, 40407], "encounter": "sunken_stadium_1" },
     { "position": [-26698, 48347], "encounter": "sunken_boss" },

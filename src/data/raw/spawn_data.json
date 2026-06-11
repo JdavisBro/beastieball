@@ -194,7 +194,7 @@
         "lvlA": 18,
         "lvlB": 19,
         "percent": 0.0952380952,
-        "specie": "nerd1",
+        "specie": "rocklizard1",
         "variant": 0.1
       },
       {
@@ -272,7 +272,7 @@
         "lvlA": 30,
         "lvlB": 31,
         "percent": 0.25,
-        "specie": "magpie1",
+        "specie": "rat",
         "variant": 0.1
       },
       {
@@ -287,6 +287,45 @@
     "level_max": 31,
     "level_min": 27,
     "total": 80
+  },
+  "city_suburb": {
+    "group": [
+      {
+        "freq": 45,
+        "lvlA": 30,
+        "lvlB": 31,
+        "percent": 0.5,
+        "specie": "nerd1",
+        "variant": 0.1
+      },
+      {
+        "freq": 20,
+        "lvlA": 29,
+        "lvlB": 29,
+        "percent": 0.2222222222,
+        "specie": "bat1",
+        "variant": 0.1
+      },
+      {
+        "freq": 10,
+        "lvlA": 28,
+        "lvlB": 30,
+        "percent": 0.1111111111,
+        "specie": "rat",
+        "variant": 0.1
+      },
+      {
+        "freq": 15,
+        "lvlA": 28,
+        "lvlB": 30,
+        "percent": 0.1666666667,
+        "specie": "magpie1",
+        "variant": 0.1
+      }
+    ],
+    "level_max": 31,
+    "level_min": 28,
+    "total": 90
   },
   "coral": {
     "group": [
@@ -405,7 +444,7 @@
         "lvlA": 19,
         "lvlB": 20,
         "percent": 0.1578947368,
-        "specie": "magpie1",
+        "specie": "nerd1",
         "variant": 0.1
       },
       {

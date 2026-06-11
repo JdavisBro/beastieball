@@ -591,6 +591,21 @@
       "x": -37753,
       "y": -10498,
       "zoom_view": true
+    },
+    {
+      "from_level": "suburb_rail",
+      "from_object": "objZipstation",
+      "from_object_guid": "b8315ba638388367e8d656f47f22debb",
+      "img": 9,
+      "object_y": -400,
+      "revealed_text": "Zip Station (Burblog)",
+      "text": "Zip Station",
+      "transit": 4,
+      "world_x": -46457,
+      "world_y": -2287,
+      "x": -46457,
+      "y": -1887,
+      "zoom_view": true
     }
   ],
   "level_stumps_array": [
@@ -2693,13 +2708,13 @@
           "destination": "myth_forest_secret",
           "direction": 0.5,
           "ground_z": 350,
-          "x": 1535,
+          "x": 1543,
           "x1": -229,
-          "x2": 232,
-          "y": 498,
-          "y1": -886,
+          "x2": 2338,
+          "y": 387,
+          "y1": -2049,
           "y2": 324,
-          "z1": -50,
+          "z1": -400,
           "z_offset": -400
         }
       ],
@@ -5777,7 +5792,7 @@
         {
           "destination": "city_seacave",
           "direction": 3,
-          "ground_z": 101,
+          "ground_z": 102,
           "x": 5853,
           "x1": -455,
           "x2": 410,
@@ -5788,7 +5803,7 @@
         },
         {
           "destination": "city_railalley",
-          "ground_z": 101,
+          "ground_z": 102,
           "x": 5874,
           "x1": -413,
           "x2": 414,
@@ -5818,9 +5833,21 @@
           "y1": -1584,
           "y2": 1076,
           "z1": -50
+        },
+        {
+          "destination": "city_suburb2",
+          "direction": 2,
+          "ground_z": 102,
+          "x": 543,
+          "x1": -636,
+          "x2": -234,
+          "y": 2214,
+          "y1": -283,
+          "y2": 311,
+          "z1": -50
         }
       ],
-      "spawn_name": ["city_rail"],
+      "spawn_name": ["city_suburb"],
       "world_x1": -41151,
       "world_x2": -33499,
       "world_y1": -5703,
@@ -5830,7 +5857,7 @@
       "area_id": 4,
       "color": 16620976,
       "display_name": "Rollback Loop",
-      "encounters": [],
+      "encounters": ["city_suburb1_0"],
       "has_spawns": true,
       "icons_array": [
         {
@@ -5865,7 +5892,7 @@
           "x": 2356,
           "x1": -525,
           "x2": 524,
-          "y": 3372,
+          "y": 3845,
           "y1": -57,
           "y2": 404,
           "z1": -50
@@ -5930,6 +5957,18 @@
           "y": 46090,
           "y1": -100,
           "y2": 100,
+          "z1": -50
+        },
+        {
+          "destination": "city_construction_side",
+          "direction": 0,
+          "ground_z": 200,
+          "x": 3393,
+          "x1": 96,
+          "x2": 943,
+          "y": 2835,
+          "y1": -262,
+          "y2": 391,
           "z1": -50
         }
       ],
@@ -9316,6 +9355,198 @@
       "world_x2": -49767,
       "world_y1": -33575,
       "world_y2": -23821
+    },
+    {
+      "area_id": 5,
+      "color": 16620976,
+      "display_name": "Burblog",
+      "encounters": ["suburb_rail_0"],
+      "icons_array": [
+        {
+          "from_level": "suburb_rail",
+          "header": true,
+          "header_size": 0.75,
+          "text": "Burblog",
+          "world_x": -45868,
+          "world_y": -4729,
+          "x": 4946,
+          "y": -500
+        }
+      ],
+      "name": "suburb_rail",
+      "palette_name": "city",
+      "portals_array": [
+        {
+          "destination": "city_suburb2",
+          "direction": 0,
+          "index": 0,
+          "x": 5410,
+          "x1": -258,
+          "x2": 363,
+          "y": 2446,
+          "y1": -285,
+          "y2": 533,
+          "z1": -50
+        },
+        {
+          "destination": "city_suburb2",
+          "direction": 0,
+          "index": 1,
+          "x": 3906,
+          "x1": -76,
+          "x2": 1938,
+          "y": 1062,
+          "y1": -861,
+          "y2": 243,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["city_suburb"],
+      "world_x1": -50814,
+      "world_x2": -45257,
+      "world_y1": -4229,
+      "world_y2": -371
+    },
+    {
+      "area_id": 5,
+      "color": 16620976,
+      "display_name": "none",
+      "encounters": [],
+      "has_spawns": true,
+      "icons_array": [],
+      "name": "city_construction_side",
+      "palette_name": "city",
+      "portals_array": [
+        {
+          "destination": "city_construction1",
+          "direction": 3,
+          "x": 2811,
+          "x1": -283,
+          "x2": 283,
+          "y": 2366,
+          "y1": 60,
+          "y2": 567,
+          "z1": -50
+        },
+        {
+          "destination": "city_railalley",
+          "direction": 2,
+          "ground_z": 150,
+          "x": 428,
+          "x1": -537,
+          "x2": 78,
+          "y": 1881,
+          "y1": -143,
+          "y2": 455,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["city_rail"],
+      "world_x1": -32652,
+      "world_x2": -29071,
+      "world_y1": -8394,
+      "world_y2": -5716
+    },
+    {
+      "area_id": 5,
+      "color": 16620976,
+      "display_name": "none",
+      "encounters": ["city_construction1_0"],
+      "icons_array": [],
+      "name": "city_construction1",
+      "palette_name": "city",
+      "portals_array": [
+        {
+          "destination": "city_suburb1",
+          "direction": 2,
+          "ground_z": 200,
+          "x": 263,
+          "x1": -762,
+          "x2": 100,
+          "y": 1716,
+          "y1": -1077,
+          "y2": 1329,
+          "z1": -50
+        },
+        {
+          "destination": "city_construction_side",
+          "x": 3825,
+          "x1": -374,
+          "x2": 246,
+          "y": 863,
+          "y1": -927,
+          "y2": 6,
+          "z1": -50
+        },
+        {
+          "x": -22402,
+          "x1": -100,
+          "x2": 100,
+          "y": -27680,
+          "y1": -100,
+          "y2": 100,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["city_rail"],
+      "world_x1": -33533,
+      "world_x2": -29094,
+      "world_y1": -5710,
+      "world_y2": -2243
+    },
+    {
+      "area_id": 5,
+      "color": 16620976,
+      "display_name": "Burblog",
+      "encounters": [],
+      "has_spawns": true,
+      "icons_array": [],
+      "name": "city_suburb2",
+      "palette_name": "city",
+      "portals_array": [
+        {
+          "destination": "city_suburb1",
+          "direction": 0,
+          "ground_z": 2,
+          "x": 3462,
+          "x1": 224,
+          "x2": 1219,
+          "y": 1008,
+          "y1": -864,
+          "y2": 221,
+          "z1": -50
+        },
+        {
+          "destination": "suburb_rail",
+          "direction": 2,
+          "ground_z": 2,
+          "index": 0,
+          "x": 357,
+          "x1": -458,
+          "x2": 40,
+          "y": 2865,
+          "y1": -317,
+          "y2": 679,
+          "z1": -50
+        },
+        {
+          "destination": "suburb_rail",
+          "direction": 2,
+          "index": 1,
+          "x": 263,
+          "x1": -327,
+          "x2": 171,
+          "y": 1315,
+          "y1": -539,
+          "y2": 404,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["city_suburb"],
+      "world_x1": -45257,
+      "world_x2": -41128,
+      "world_y1": -4642,
+      "world_y2": -1230
     }
   ],
   "map_position_data": {
@@ -9343,6 +9574,7 @@
     "chartreuse:objCeleb": { "x": -30919, "y": 24463 },
     "chartreuse:objClub": { "x": -30433, "y": 27013 },
     "chartreuse:objGymdoor": { "x": -31618, "y": 25228 },
+    "city_construction1_0": { "area_id": 5, "x": -31165, "y": -3430 },
     "city_market:objBallcenter": { "x": -50359, "y": -17448 },
     "city_market:objNaveen": { "x": -48669, "y": -17666 },
     "city_market:objStreamer": { "x": -48010, "y": -20089 },
@@ -9448,6 +9680,7 @@
     "sphinx:objKaz": { "x": -20543, "y": -28655 },
     "stadium:objBallman": { "x": -51395.5, "y": -13537 },
     "stadium_road_0": { "x": -48668, "y": -6773 },
+    "suburb_rail_0": { "area_id": 5, "x": -49798, "y": -2934 },
     "sunken_stadium:objGameplay": { "x": -20229, "y": 41184 },
     "sunken_stadium:objResearcher": { "x": -21670, "y": 39049 },
     "sunken_stadium_0": { "x": -22162, "y": 37437 },

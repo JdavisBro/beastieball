@@ -40,9 +40,9 @@
     "name": "¦abilitiessetup_abilitydefine_054¦"
   },
   "biting": {
-    "desc": "abilitiessetup_abilitydefine_304",
+    "desc": "¦abilitiessetup_abilitydefine_304¬0¬20¦",
     "id": "biting",
-    "name": "abilitiessetup_abilitydefine_305"
+    "name": "¦abilitiessetup_abilitydefine_305¦"
   },
   "blocker": {
     "desc": "¦abilitiessetup_abilitydefine_059¬0¬[sprStatus,8]¦statuseffectstuff_009¦¦",
@@ -132,7 +132,7 @@
   "doubler": {
     "desc": "¦abilitiessetup_abilitydefine_239¦",
     "id": "doubler",
-    "name": "abilitiessetup_abilitydefine_303"
+    "name": "¦abilitiessetup_abilitydefine_303¦"
   },
   "dreadheal": {
     "desc": "¦abilitiessetup_abilitydefine_227¬0¬¦fieldeffectstuff_004¦¬1¬3¦",

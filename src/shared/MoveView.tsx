@@ -560,7 +560,7 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
       } else {
         desc.push(
           move.eff.some((eff) => eff.eff == 33 && eff.pow == 36)
-            ? "Used from net, with net damage bonus." // NO LOCALIZATION
+            ? L("movedefine_057") // Used from net, with net damage bonus.
             : L("movedefine_descadd_008"), // Only used from net.
         );
       }
@@ -624,7 +624,7 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
         desc.push(L("movedefine_descadd_110")); // Can target opponents or allies.
         break;
       case 7:
-        desc.push("Target any nearby fielded Beastie.");
+        desc.push(L("movedefine_descadd_117")); // Can target any Beastie in an adjacent row.
         break;
     }
   }

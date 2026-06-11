@@ -36,7 +36,7 @@
     "id": "alljazzattack",
     "name": "¦movessetup_movedefine_193¦",
     "pow": 60,
-    "price": 0,
+    "price": 50,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -430,7 +430,7 @@
     "id": "commit",
     "name": "¦movessetup_movedefine_055¦",
     "pow": 95,
-    "price": 0,
+    "price": 35,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -490,7 +490,7 @@
     "id": "copycat",
     "name": "¦movessetup_movedefine_202¦",
     "pow": 0,
-    "price": 0,
+    "price": 30,
     "targ": 5,
     "type": 4,
     "use": 0
@@ -667,7 +667,7 @@
     "id": "distraction",
     "name": "¦movessetup_movedefine_170¦",
     "pow": 0,
-    "price": 0,
+    "price": 30,
     "targ": 1,
     "type": 5,
     "use": 2
@@ -684,7 +684,7 @@
     "id": "dodge",
     "name": "¦movessetup_movedefine_203¦",
     "pow": 0,
-    "price": 0,
+    "price": 65,
     "targ": 8,
     "type": 5,
     "use": 0
@@ -729,7 +729,7 @@
     "id": "dropshot",
     "name": "¦movessetup_movedefine_069¦",
     "pow": 55,
-    "price": 0,
+    "price": 20,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -830,7 +830,7 @@
     "id": "feint",
     "name": "¦movessetup_movedefine_107¦",
     "pow": 0,
-    "price": 0,
+    "price": 20,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -875,7 +875,7 @@
     "id": "flight",
     "name": "¦movessetup_movedefine_175¦",
     "pow": 70,
-    "price": 0,
+    "price": 45,
     "targ": 3,
     "type": 1,
     "use": 0
@@ -1095,7 +1095,7 @@
     "id": "heartpass",
     "name": "¦movessetup_movedefine_099¦",
     "pow": 0,
-    "price": 0,
+    "price": 25,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -1330,7 +1330,7 @@
     "id": "lockon",
     "name": "¦movessetup_movedefine_128¦",
     "pow": 0,
-    "price": 0,
+    "price": 30,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -1358,7 +1358,7 @@
     "id": "mark",
     "name": "¦movessetup_movedefine_132¦",
     "pow": 0,
-    "price": 0,
+    "price": 25,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -1699,7 +1699,7 @@
     "id": "passionstrike",
     "name": "¦movessetup_movedefine_201¦",
     "pow": 105,
-    "price": 0,
+    "price": 45,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1960,7 +1960,7 @@
     "id": "ricochet",
     "name": "¦movessetup_movedefine_081¦",
     "pow": 110,
-    "price": 0,
+    "price": 30,
     "targ": 0,
     "type": 2,
     "use": 2
@@ -2193,7 +2193,7 @@
     "id": "share",
     "name": "¦movessetup_movedefine_195¦",
     "pow": 0,
-    "price": 0,
+    "price": 50,
     "targ": 7,
     "type": 4,
     "use": 0
@@ -2580,7 +2580,7 @@
     "id": "swarm",
     "name": "¦movessetup_movedefine_199¦",
     "pow": 40,
-    "price": 0,
+    "price": 15,
     "targ": 0,
     "type": 1,
     "use": 0

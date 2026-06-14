@@ -12,9 +12,13 @@ voDir = gameDir / "audio" / "vo"
 
 outDir = Path("../public/gameassets/audio/")
 outFile = Path("../src/data/raw/beastieSfx.json")
+dataFile = Path("../src/data/raw/beastie_data.json")
 
 with (gameDir / "audio_data.json").open() as f:
   audio_data = {(i["name"] if "name" in i else ""): i for i in json.load(f)[0]}
+
+with dataFile.open() as f:
+  beastie_data = json.load(f)
 
 def percent_to_semitone(percent):
   if percent < 0:
@@ -47,6 +51,15 @@ for fp in voDir.glob("**/*.wav"):
     with AudioFile(str(op), "w", f.samplerate, f.num_channels) as fw:
       fw.write(shifter(f.read(f.frames), f.samplerate))
       fw.write(numpy.zeros((f.num_channels, f.samplerate))) # Add padding second
+
+for bid in beastie_data.keys():
+  if bid not in beastie_vo:
+    beastie_vo[bid] = None
+
+for bid, vo in list(beastie_vo.items()):
+  if not vo: continue
+  if all([v == 4 for v in vo.values()]):
+    beastie_vo.pop(bid)
 
 with outFile.open("w+") as f:
   json.dump(beastie_vo, f, ensure_ascii=False, sort_keys=True, indent=2)

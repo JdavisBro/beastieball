@@ -43,7 +43,8 @@ function TypeList({
 export default function Sfx({ beastiedata }: { beastiedata: BeastieType }) {
   const { L } = useLocalization();
 
-  const sfx = BEASTIE_SFX[beastiedata.id];
+  let sfx = BEASTIE_SFX[beastiedata.id];
+  if (sfx === undefined) sfx = { boo: 4, cheer: 4, hello: 4 };
 
   const [sound, setSound] = useState("hello_1");
   const [playSound, setPlaySound] = useState("");

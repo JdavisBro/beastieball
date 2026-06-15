@@ -518,6 +518,7 @@
       "copy": "Copy"
     },
     "beastie": {
+      "unknown": "Unknown Beastie",
       "extra": "Vibe: {vibe}\nSize: {size}% ({scale}x)\nRecruited: {date}",
       "lvl": " Lvl {level}",
       "species": "({species})",

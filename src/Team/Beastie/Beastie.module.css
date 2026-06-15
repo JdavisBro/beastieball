@@ -9,6 +9,14 @@
   width: 100%;
 }
 
+.invalidBeastie {
+  composes: beastie;
+  justify-content: center;
+  align-items: center;
+  height: 253.7px;
+  text-align: center;
+}
+
 .row {
   display: flex;
   flex: 1 0 0;
@@ -189,4 +197,8 @@
 }
 .movename {
   word-break: break-word;
+}
+.movenamelight {
+  word-break: break-word;
+  color: rgb(201, 201, 201);
 }

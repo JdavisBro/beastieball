@@ -39,7 +39,13 @@ export default function Beastie({
 
   const beastiedata = BEASTIE_DATA.get(teamBeastie.specie);
   if (!beastiedata) {
-    return null;
+    return (
+      <div className={styles.invalidBeastie}>
+        {L("teams.beastie.unknown")}
+        <br />
+        {teamBeastie.specie}
+      </div>
+    );
   }
 
   const searchParam = altSearchMap[Math.floor(teamBeastie.color[0])] ?? "color";
@@ -160,7 +166,7 @@ export default function Beastie({
         {teamBeastie.attklist.map((moveId, index) => (
           <BeastieMove
             key={moveId + index}
-            move={MOVE_DIC[moveId] ?? MOVE_DIC["???"]}
+            move={MOVE_DIC[moveId] ?? moveId}
             impossible={
               !noMoveWarning && !beastiedata.attklist.includes(moveId)
             }

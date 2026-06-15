@@ -11,7 +11,7 @@ export default function BeastieMove({
   move,
   impossible,
 }: {
-  move: Move;
+  move: Move | string;
   impossible: boolean;
 }) {
   const { L } = useLocalization();
@@ -20,7 +20,9 @@ export default function BeastieMove({
 
   const [simpleMoves] = useLocalStorage("simpleMoves", false);
 
-  const type = move.type >= 10 ? move.type - 10 : move.type;
+  const has_move = typeof move !== "string";
+
+  const type = has_move ? (move.type >= 10 ? move.type - 10 : move.type) : 6;
   const typedata = TypeData[type] ?? TypeData[0];
   return (
     <div
@@ -33,7 +35,7 @@ export default function BeastieMove({
         } as React.CSSProperties
       }
       onClick={() => {
-        if (setModalMove) {
+        if (setModalMove && has_move) {
           setModalMove(move);
         }
       }}
@@ -44,10 +46,12 @@ export default function BeastieMove({
         </div>
       )}
       <div className={styles.moveblock}></div>
-      {impossible ? (
+      {impossible && has_move ? (
         <div title={L("teams.beastie.impossibleMove")}>⚠️</div>
       ) : null}
-      <div className={styles.movename}>{L(move.name)}</div>
+      <div className={type < 6 ? styles.movename : styles.movenamelight}>
+        {has_move ? L(move.name) : move.charAt(0).toUpperCase() + move.slice(1)}
+      </div>
     </div>
   );
 }

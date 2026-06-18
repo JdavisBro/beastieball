@@ -63,17 +63,35 @@ const LOCATION_CONDS: Record<string, string> = {
 };
 
 function EvoCondInfo({ children }: { children: React.ReactNode }) {
+  const { L } = useLocalization();
+
   const [descShown, setDescShown] = useState(false);
 
   return (
     <>
       <span
         style={{ cursor: "pointer", userSelect: "none" }}
-        onClick={() => setDescShown(!descShown)}
         role="button"
+        aria-label={L(
+          descShown
+            ? "beastiepedia.info.metamorphosis.infoOpenAlt"
+            : "beastiepedia.info.metamorphosis.infoClosedAlt",
+        )}
+        tabIndex={0}
+        onClick={() => setDescShown(!descShown)}
+        onKeyDown={(event) => {
+          if (event.key == "Enter" || event.key == " ") {
+            setDescShown(!descShown);
+            event.preventDefault();
+          }
+        }}
       >
         {" "}
-        🛈
+        {L(
+          descShown
+            ? "beastiepedia.info.metamorphosis.infoOpen"
+            : "beastiepedia.info.metamorphosis.infoClosed",
+        )}
       </span>
       <div
         style={{

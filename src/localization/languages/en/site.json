@@ -313,6 +313,10 @@
         "petula": " after beating {num} Petula",
         "fallback": " idk when though",
         "joiner": " or",
+        "infoClosed": "ⓘ",
+        "infoClosedAlt": "Open Info",
+        "infoOpen": "ⓘ",
+        "infoOpenAlt": "Close Info",
         "spoiler": "Possible spoiler. Click to reveal."
       },
       "description": "Description",

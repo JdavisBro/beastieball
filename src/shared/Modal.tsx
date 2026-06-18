@@ -33,6 +33,7 @@ export default function Modal(
 
   const preventDefault = useCallback((event: Event) => {
     let elem: HTMLElement | null = event.target as HTMLElement;
+    if (elem == document.activeElement) return;
     while (elem && elem != dialogRef.current) {
       if (elem.scrollHeight > elem.clientHeight) {
         return;

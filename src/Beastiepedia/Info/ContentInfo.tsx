@@ -11,7 +11,11 @@ import ComboMove from "./ComboMove";
 import { useState } from "react";
 import Sfx from "./Sfx";
 import Evolution from "./Evolution";
-import useLocalization from "../../localization/useLocalization";
+import useLocalization, {
+  LANGUAGE_NAMES,
+  SUPPORTED_LANGUAGES,
+  SupportedLanguage,
+} from "../../localization/useLocalization";
 
 type Props = {
   beastiedata: BeastieType;
@@ -64,7 +68,7 @@ const TYPES: Record<string, [string, string]> = {
 };
 
 export default function ContentInfo(props: Props): React.ReactNode {
-  const { L } = useLocalization();
+  const { L, beastieNames, currentLanguage } = useLocalization();
   const beastiedata = props.beastiedata;
 
   const training = beastiedata.tyield
@@ -88,6 +92,15 @@ export default function ContentInfo(props: Props): React.ReactNode {
     })
     .filter((value) => !!value);
 
+  const [nameExpanded, setNameExpanded] = useState(false);
+  const nameKey = beastiedata.name.slice(1, beastiedata.name.length - 1);
+
+  const nameFunc = (lang: SupportedLanguage) =>
+    L("beastiepedia.info.nameLanguage", {
+      lang: LANGUAGE_NAMES[lang],
+      name: beastieNames[nameKey][lang],
+    });
+
   return (
     <div className={styles.info}>
       <div className={styles.wrapinfoboxes}>
@@ -95,7 +108,27 @@ export default function ContentInfo(props: Props): React.ReactNode {
           #{beastiedata.hidden ? L("common.hiddenNumber") : beastiedata.number}
         </InfoBox>
         <InfoBox header={L("beastiepedia.info.name")}>
-          {L(beastiedata.name)}
+          {nameExpanded ? nameFunc(currentLanguage) : L(beastiedata.name)}{" "}
+          <span
+            role="button"
+            className={styles.expandButton}
+            onClick={() => setNameExpanded(!nameExpanded)}
+          >
+            {L(
+              nameExpanded
+                ? "beastiepedia.info.expandOpen"
+                : "beastiepedia.info.expandClosed",
+            )}
+          </span>
+          {nameExpanded ? (
+            <>
+              {SUPPORTED_LANGUAGES.filter(
+                (lang) => lang != currentLanguage,
+              ).map((lang) => (
+                <div>{nameFunc(lang)}</div>
+              ))}
+            </>
+          ) : null}
         </InfoBox>
         <InfoBox header={L("beastiepedia.info.development")}>
           {beastiedata.anim_progress}%

@@ -32,6 +32,12 @@
   width: 100%;
 }
 
+.expandButton {
+  user-select: none;
+  cursor: pointer;
+  color: royalblue;
+}
+
 .levelInput {
   height: 100%;
   width: 2em;

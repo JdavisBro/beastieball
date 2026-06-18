@@ -112,7 +112,19 @@ export default function ContentInfo(props: Props): React.ReactNode {
           <span
             role="button"
             className={styles.expandButton}
+            aria-label={L(
+              nameExpanded
+                ? "beastiepedia.info.expandOpenAlt"
+                : "beastiepedia.info.expandClosedAlt",
+            )}
+            tabIndex={0}
             onClick={() => setNameExpanded(!nameExpanded)}
+            onKeyDown={(event) => {
+              if (event.key == "Enter" || event.key == " ") {
+                setNameExpanded(!nameExpanded);
+                event.preventDefault();
+              }
+            }}
           >
             {L(
               nameExpanded

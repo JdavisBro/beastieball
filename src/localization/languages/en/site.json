@@ -287,6 +287,8 @@
       "name": "Name",
       "expandClosed": "[+]",
       "expandOpen": "[-]",
+      "expandClosedAlt": "Expand",
+      "expandOpenAlt": "Collapse",
       "nameLanguage": "{lang}: {name}",
       "development": "Development",
       "metamorphosis": {

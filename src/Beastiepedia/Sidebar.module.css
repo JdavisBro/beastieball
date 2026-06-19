@@ -118,7 +118,7 @@
   composes: numberFont from global;
   padding: 0 6px 0 6px;
   color: white;
-  clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 4px) 0);
+  clip-path: polygon(0 0, 0 110%, 100% 110%, calc(100% - 4px) 0);
   z-index: 1;
 }
 
@@ -131,7 +131,7 @@
   flex: 1 0 auto;
   text-align: right;
   padding: 0 6px 0 4px;
-  clip-path: polygon(0 0, 4px 100%, 100% 100%, 100% 0) !important;
+  clip-path: polygon(0 0, 4px 110%, 100% 110%, 100% 0) !important;
   font-size: 0.9em;
   z-index: 0 !important;
 }

@@ -429,6 +429,7 @@ a:visited {
 
 input[type="checkbox"] {
   appearance: none;
+  border-radius: 0;
   width: 2.5em;
   height: 1.5em;
   position: relative;

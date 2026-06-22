@@ -51,11 +51,16 @@ export function encounterToTeamBeastie(
         BEASTIE_DATA.get(beastieDataPre.family) ?? beastieDataPre,
         level,
         beastieDataPre.id,
+        false,
+        [beastieDataPre.family],
       )
     : [null, null];
   const beastieData = encBeastie.evolves
-    ? (metamorphBeastie ?? beastieDataPre)
+    ? (BEASTIE_DATA.get(metamorphPath?.[0] ?? "") ??
+      metamorphBeastie ??
+      beastieDataPre)
     : beastieDataPre;
+  const metamorphedBeastie = metamorphBeastie ?? beastieData;
 
   const fromEncounter = encBeastie.from_encounter ?? encounterId;
   const fromEncounterIndex = encBeastie.from_encounter_index ?? index;
@@ -107,7 +112,11 @@ export function encounterToTeamBeastie(
       : String(Math.floor(randomizer.random() ** 3 * randomizer.random(10))) +
         String(Math.round(randomizer.random(9)));
 
-  if (encBeastie.variant && encBeastie.specie == "crab") {
+  if (
+    encBeastie.variant &&
+    encBeastie.variant > -1 &&
+    encBeastie.specie == "crab"
+  ) {
     randomizer.random();
   }
 
@@ -116,7 +125,11 @@ export function encounterToTeamBeastie(
       metamorphPath.findIndex((id) => id == beastieDataPre.id),
     )) {
       const metaData = BEASTIE_DATA.get(beastieId);
-      if (metaData?.colormeta?.length) {
+      if (!metaData) continue;
+      while (color.length < metaData.colors.length) {
+        color.push(randomizer.random() + variant);
+      }
+      if (metaData.colormeta?.length) {
         while (color.length < metaData.colors.length) {
           color.push(variant + randomizer.random());
         }
@@ -178,17 +191,17 @@ export function encounterToTeamBeastie(
 
   return {
     pid: pid,
-    specie: beastieData.id,
+    specie: metamorphedBeastie.id,
     date: 1,
     number: number.length ? number.padStart(2, "0") : number,
     color: color,
     name: encBeastie.name ? L(encBeastie.name) : "",
     spr_index: spr_index,
-    xp: level ** 3 * beastieData.growth,
-    scale: encBeastie.size && encBeastie.size > 0 ? encBeastie.size : scale,
-    vibe: encBeastie.vibe && encBeastie.vibe > 0 ? encBeastie.vibe : vibe,
+    xp: level ** 3 * metamorphedBeastie.growth,
+    scale: encBeastie.size && encBeastie.size >= 0 ? encBeastie.size : scale,
+    vibe: encBeastie.vibe && encBeastie.vibe >= 0 ? encBeastie.vibe : vibe,
     ability_index: ability_index,
-    attklist: getMoveset(encBeastie, beastieData, level),
+    attklist: getMoveset(encBeastie, metamorphedBeastie, level),
     ba_r: 1,
     ha_r: 1,
     ma_r: 1,

@@ -1,6 +1,7 @@
 import BEASTIE_DATA, { BeastieType } from "../../data/BeastieData";
 
-const LEVEL_METAMORPHS = [0, 4, 9, 10, 11];
+const LEVEL_METAMORPHS = [0, 4, 5, 9, 10, 11];
+// no alt humflits can get to level 40 rn so
 
 export default function getMetamorphAtLevel(
   beastie: BeastieType,

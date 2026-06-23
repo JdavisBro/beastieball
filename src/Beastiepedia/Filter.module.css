@@ -55,6 +55,12 @@
   font-size: 0.9em;
 }
 
+.movebar {
+  display: flex;
+  gap: 4px;
+  height: 40px;
+}
+
 .moveContainer {
   padding: 5px;
   flex: 0 0 95%;

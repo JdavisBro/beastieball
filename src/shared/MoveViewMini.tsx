@@ -1,22 +1,24 @@
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 
-import styles from "./Beastie.module.css";
-import { Move } from "../../data/MoveData";
-import { TypeData } from "../../data/TypeColor";
-import MoveModalContext from "../../shared/MoveModalContext";
-import useLocalization from "../../localization/useLocalization";
+import styles from "./Shared.module.css";
+import { Move } from "../data/MoveData";
+import { TypeData } from "../data/TypeColor";
+import MoveModalContext from "../shared/MoveModalContext";
+import useLocalization from "../localization/useLocalization";
 import { useLocalStorage } from "usehooks-ts";
 
-export default function BeastieMove({
+export default function MoveViewMini({
   move,
   impossible,
+  handleClick,
 }: {
   move: Move | string;
-  impossible: boolean;
+  impossible?: boolean;
+  handleClick?: (move: Move) => void;
 }) {
   const { L } = useLocalization();
 
-  const setModalMove = useContext(MoveModalContext);
+  const setModalMove = useContext(MoveModalContext) ?? handleClick;
 
   const [simpleMoves] = useLocalStorage("simpleMoves", false);
 
@@ -26,7 +28,7 @@ export default function BeastieMove({
   const typedata = TypeData[type] ?? TypeData[0];
   return (
     <div
-      className={styles.move}
+      className={setModalMove ? styles.minimoveclickable : styles.minimove}
       style={
         {
           "--move-color": typedata.color,
@@ -41,15 +43,17 @@ export default function BeastieMove({
       }}
     >
       {simpleMoves ? null : (
-        <div className={styles.moveothercolor}>
-          <div className={styles.movehalftone}></div>
+        <div className={styles.minimoveothercolor}>
+          <div className={styles.minimovehalftone}></div>
         </div>
       )}
-      <div className={styles.moveblock}></div>
+      <div className={styles.minimoveblock}></div>
       {impossible && has_move ? (
         <div title={L("teams.beastie.impossibleMove")}>⚠️</div>
       ) : null}
-      <div className={type < 6 ? styles.movename : styles.movenamelight}>
+      <div
+        className={type < 6 ? styles.minimovename : styles.minimovenamelight}
+      >
         {has_move ? L(move.name) : move.charAt(0).toUpperCase() + move.slice(1)}
       </div>
     </div>

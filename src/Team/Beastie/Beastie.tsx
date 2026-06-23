@@ -7,10 +7,10 @@ import StatDistribution from "./StatDistribution";
 import TextTag from "../../shared/TextTag";
 import abilities from "../../data/abilities";
 import MOVE_DIC from "../../data/MoveData";
-import BeastieMove from "./BeastieMove";
 import { Link } from "react-router-dom";
 import useLocalization from "../../localization/useLocalization";
 import parseDate from "../../utils/gmdate";
+import MoveViewMini from "../../shared/MoveViewMini";
 
 const altMap: { [key: number]: "colors" | "shiny" | "colors2" } = {
   0: "colors",
@@ -164,7 +164,7 @@ export default function Beastie({
       </div>
       <div className={styles.moverow}>
         {teamBeastie.attklist.map((moveId, index) => (
-          <BeastieMove
+          <MoveViewMini
             key={moveId + index}
             move={MOVE_DIC[moveId] ?? moveId}
             impossible={

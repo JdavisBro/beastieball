@@ -15,6 +15,7 @@ import useLocalization, {
   LocalizationFunction,
 } from "../localization/useLocalization";
 import InfoTabberHeader from "../shared/InfoTabber";
+import MoveViewMini from "../shared/MoveViewMini";
 
 export enum FilterTypes {
   Ability,
@@ -287,6 +288,20 @@ export default function Filter({
             ]}
             className={styles.tabSelect}
           />
+          {tab == 1 ? (
+            <div className={styles.movebar}>
+              {filters
+                .filter(([type]) => type == FilterTypes.Move)
+                .map(([, move]) => (
+                  <MoveViewMini
+                    move={move as Move}
+                    handleClick={(move) =>
+                      handleToggleFilter([FilterTypes.Move, move])
+                    }
+                  />
+                ))}
+            </div>
+          ) : null}
           {tab < 2 ? (
             <label>
               {L("common.searchPrefix")}

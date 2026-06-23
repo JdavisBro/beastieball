@@ -2,10 +2,8 @@ import social_data from "./raw/social_data.json";
 
 type DataCheck = {
   comparison: number;
-  editor_openable: boolean;
   key: string;
   lastcheck: null | number;
-  name: string;
   needscheck: boolean;
   value: number;
 };

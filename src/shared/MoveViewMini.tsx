@@ -7,6 +7,8 @@ import MoveModalContext from "../shared/MoveModalContext";
 import useLocalization from "../localization/useLocalization";
 import { useLocalStorage } from "usehooks-ts";
 
+const ID_KEYS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
 export default function MoveViewMini({
   move,
   impossible,
@@ -23,6 +25,12 @@ export default function MoveViewMini({
   const [simpleMoves] = useLocalStorage("simpleMoves", false);
 
   const has_move = typeof move !== "string";
+  const move_name =
+    (!has_move &&
+      move.slice(
+        move.split("").findIndex((char) => !ID_KEYS.includes(char)),
+      )) ||
+    "";
 
   const type = has_move ? (move.type >= 10 ? move.type - 10 : move.type) : 6;
   const typedata = TypeData[type] ?? TypeData[0];
@@ -54,7 +62,9 @@ export default function MoveViewMini({
       <div
         className={type < 6 ? styles.minimovename : styles.minimovenamelight}
       >
-        {has_move ? L(move.name) : move.charAt(0).toUpperCase() + move.slice(1)}
+        {has_move
+          ? L(move.name)
+          : move_name.charAt(0).toUpperCase() + move_name.slice(1)}
       </div>
     </div>
   );

@@ -23,6 +23,7 @@ const EMOJI_MAP: Record<string, string> = {
   heatwave: "🏆",
   heatup: "🏆",
   bth: "🏆",
+  league: "🏆",
   print: "🗺️", // roadmap
   default: "❓",
 };

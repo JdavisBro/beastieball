@@ -437,7 +437,7 @@
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  margin-bottom: 4px;
+  user-select: none;
 }
 
 .minimoveclickable {

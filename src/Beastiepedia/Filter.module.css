@@ -57,8 +57,12 @@
 
 .movebar {
   display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
   gap: 4px;
   height: 40px;
+  padding: 0 4px;
+  overflow-x: scroll;
 }
 
 .moveContainer {

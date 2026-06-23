@@ -3759,7 +3759,7 @@
           "z_offset": 250
         }
       ],
-      "spawn_name": ["shroom_path"],
+      "spawn_name": ["downtown"],
       "world_layer": 1,
       "world_x1": -6733,
       "world_x2": -2738,
@@ -5492,7 +5492,7 @@
       ],
       "spawn_name": ["seacave"],
       "world_x1": -44583,
-      "world_x2": -39799,
+      "world_x2": -39155,
       "world_y1": 264,
       "world_y2": 4881
     },
@@ -5558,8 +5558,8 @@
       "spawn_name": ["city_rail_south"],
       "world_x1": -39137,
       "world_x2": -34193,
-      "world_y1": -2377,
-      "world_y2": 3921
+      "world_y1": -2371,
+      "world_y2": 3927
     },
     {
       "area_id": 4,
@@ -5838,12 +5838,26 @@
           "destination": "city_suburb2",
           "direction": 2,
           "ground_z": 102,
+          "index": 0,
           "x": 543,
           "x1": -636,
           "x2": -234,
           "y": 2214,
           "y1": -283,
-          "y2": 311,
+          "y2": 233,
+          "z1": -50
+        },
+        {
+          "destination": "city_suburb2",
+          "direction": 2,
+          "ground_z": 102,
+          "index": 1,
+          "x": 522,
+          "x1": -641,
+          "x2": -160,
+          "y": 2635,
+          "y1": -177,
+          "y2": 265,
           "z1": -50
         }
       ],
@@ -6968,10 +6982,10 @@
         }
       ],
       "spawn_name": ["park_water"],
-      "world_x1": -27506,
-      "world_x2": -21463,
-      "world_y1": -14351,
-      "world_y2": -11551
+      "world_x1": -27758,
+      "world_x2": -21715,
+      "world_y1": -14328,
+      "world_y2": -11528
     },
     {
       "area_id": 4,
@@ -7114,6 +7128,7 @@
       "color": 16620976,
       "display_name": "Domain Park",
       "encounters": ["park_boss"],
+      "has_spawns": true,
       "icons_array": [],
       "name": "park_south_end",
       "palette_name": "city",
@@ -7132,7 +7147,7 @@
         {
           "destination": "canyon_secret",
           "direction": 2,
-          "ground_z": 30,
+          "ground_z": 40,
           "x": 813,
           "x1": -855,
           "x2": -394,
@@ -7142,7 +7157,7 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["park"],
+      "spawn_name": ["park_water"],
       "world_x1": -18893,
       "world_x2": -14561,
       "world_y1": -10959,
@@ -9203,7 +9218,7 @@
       "name": "net_woods",
       "palette_name": "woods",
       "portals_array": [],
-      "spawn_name": ["mythwood1"],
+      "spawn_name": ["witchwood"],
       "world_layer": 1,
       "world_x1": 1425.5,
       "world_x2": 5888.5,
@@ -9273,7 +9288,7 @@
       "icons_array": [],
       "name": "net_cliffs",
       "portals_array": [],
-      "spawn_name": ["ocean2"],
+      "spawn_name": ["park"],
       "world_layer": 1,
       "world_x1": -12444.5,
       "world_x2": -8485.5,
@@ -9431,7 +9446,7 @@
         {
           "destination": "city_railalley",
           "direction": 2,
-          "ground_z": 150,
+          "ground_z": 160,
           "x": 428,
           "x1": -537,
           "x2": 78,
@@ -9508,8 +9523,9 @@
           "destination": "city_suburb1",
           "direction": 0,
           "ground_z": 2,
+          "index": 0,
           "x": 3462,
-          "x1": 224,
+          "x1": 196,
           "x2": 1219,
           "y": 1008,
           "y1": -864,
@@ -9540,6 +9556,18 @@
           "y1": -539,
           "y2": 404,
           "z1": -50
+        },
+        {
+          "destination": "city_suburb1",
+          "direction": 0,
+          "index": 1,
+          "x": 3618,
+          "x1": 34,
+          "x2": 767,
+          "y": 1377,
+          "y1": -137,
+          "y2": 168,
+          "z1": -50
         }
       ],
       "spawn_name": ["city_suburb"],
@@ -9547,6 +9575,46 @@
       "world_x2": -41128,
       "world_y1": -4642,
       "world_y2": -1230
+    },
+    {
+      "area_id": 5,
+      "color": 16620976,
+      "display_name": "Burblog",
+      "encounters": [],
+      "icons_array": [
+        {
+          "from_level": "net_burb",
+          "header": true,
+          "header_size": 0.75,
+          "text": "Burblog",
+          "world_x": -43757.5,
+          "world_y": -3189,
+          "x": 4946,
+          "y": -500
+        }
+      ],
+      "name": "net_burb",
+      "palette_name": "city",
+      "portals_array": [
+        {
+          "destination": "city_suburb2",
+          "direction": 0,
+          "index": 1,
+          "x": 3906,
+          "x1": -76,
+          "x2": 1938,
+          "y": 1062,
+          "y1": -861,
+          "y2": 243,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["city_suburb"],
+      "world_layer": 1,
+      "world_x1": -48703.5,
+      "world_x2": -43146.5,
+      "world_y1": -2689,
+      "world_y2": 1169
     }
   ],
   "map_position_data": {
@@ -9569,12 +9637,11 @@
     "central_station:objLeagueTower": { "x": -40609, "y": -10415 },
     "central_station:objMall": { "x": -37753, "y": -10498 },
     "central_station:objRacer": { "x": -40139, "y": -10044 },
-    "central_station:objRailhouse": { "x": 0, "y": 0 },
     "chartreuse:objBallcenter": { "x": -33233, "y": 24039 },
     "chartreuse:objCeleb": { "x": -30919, "y": 24463 },
     "chartreuse:objClub": { "x": -30433, "y": 27013 },
     "chartreuse:objGymdoor": { "x": -31618, "y": 25228 },
-    "city_construction1_0": { "area_id": 5, "x": -31165, "y": -3430 },
+    "city_construction1_0": { "area_id": 5, "x": -31193, "y": -3430 },
     "city_market:objBallcenter": { "x": -50359, "y": -17448 },
     "city_market:objNaveen": { "x": -48669, "y": -17666 },
     "city_market:objStreamer": { "x": -48010, "y": -20089 },
@@ -9584,8 +9651,8 @@
     "city_neighborhood:objWarrior": { "x": -8651, "y": -17568 },
     "city_rail_east_0": { "x": -28764, "y": -11372 },
     "city_railalley_1": { "x": -34708, "y": -6810 },
-    "city_seacave_0": { "x": -35278, "y": -1316 },
-    "city_suburb1_0": { "x": -40942, "y": -3458 },
+    "city_seacave_0": { "x": -35278, "y": -1310 },
+    "city_suburb1_0": { "x": -40164, "y": -4672 },
     "city_trainyard_0": { "x": -35338, "y": -10239 },
     "cityhill:objResearcher": { "x": -12474, "y": -16559 },
     "cityhill_1": { "x": -14756, "y": -18886 },
@@ -9680,7 +9747,7 @@
     "sphinx:objKaz": { "x": -20543, "y": -28655 },
     "stadium:objBallman": { "x": -51395.5, "y": -13537 },
     "stadium_road_0": { "x": -48668, "y": -6773 },
-    "suburb_rail_0": { "area_id": 5, "x": -49798, "y": -2934 },
+    "suburb_rail_0": { "area_id": 5, "x": -49570, "y": -3181 },
     "sunken_stadium:objGameplay": { "x": -20229, "y": 41184 },
     "sunken_stadium:objResearcher": { "x": -21670, "y": 39049 },
     "sunken_stadium_0": { "x": -22162, "y": 37437 },

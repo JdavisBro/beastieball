@@ -1,5 +1,5 @@
-import { ErrorInfo, PropsWithChildren } from "react";
-import { ErrorBoundary, FallbackProps } from "react-error-boundary";
+import { PropsWithChildren } from "react";
+import { ErrorBoundary } from "react-error-boundary";
 import { Link } from "react-router-dom";
 import useLocalization from "../localization/useLocalization";
 
@@ -7,11 +7,15 @@ export function Fallback({
   error,
   resetErrorBoundary,
   className,
-}: Omit<FallbackProps, "resetErrorBoundary"> & {
+}: {
   className: string;
+  error: Error;
   resetErrorBoundary?: () => void;
 }) {
   const { L, anyLanguageLoaded } = useLocalization();
+
+  const filename = "fileName" in error ? error.fileName : "";
+  const lineNumber = "lineNumber" in error ? error.lineNumber : "";
 
   console.log(error);
   return (
@@ -22,7 +26,7 @@ export function Fallback({
         {anyLanguageLoaded ? L("error.reset") : "Reset"}
       </button>
       <Link
-        to={`https://github.com/JdavisBro/beastieball/issues/new?body=Describe%20what%20happened%20before%20the%20error:%20%0A%0A${String(error)}%0A${error.fileName}:${error.lineNumber}%0A%0A${error.stack}`}
+        to={`https://github.com/JdavisBro/beastieball/issues/new?body=Describe%20what%20happened%20before%20the%20error:%20%0A%0A${String(error)}%0A${filename}:${lineNumber}%0A%0A${error.stack}`}
         target="_blank"
       >
         {anyLanguageLoaded ? L("error.github") : "Report on GitHub Issues"}
@@ -37,16 +41,18 @@ export function Fallback({
 
 export default function CustomErrorBoundary(
   props: PropsWithChildren<{
-    onError?: (error: Error, info: ErrorInfo) => void;
     fallbackClassName: string;
   }>,
 ) {
   return (
     <ErrorBoundary
       fallbackRender={(fallbackprops) => (
-        <Fallback className={props.fallbackClassName} {...fallbackprops} />
+        <Fallback
+          className={props.fallbackClassName}
+          error={fallbackprops.error as Error}
+          resetErrorBoundary={fallbackprops.resetErrorBoundary}
+        />
       )}
-      {...props}
     >
       {props.children}
     </ErrorBoundary>

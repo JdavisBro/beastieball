@@ -266,16 +266,23 @@ function Loading({ level }: { level?: string }) {
   );
 }
 
-function Error({ reason }: { reason?: string }) {
+function Error({ reason }: { reason?: unknown }) {
+  const reason_string =
+    reason === undefined
+      ? undefined
+      : typeof reason == "string"
+        ? reason
+        : String(reason);
   const level =
-    typeof reason == "string" &&
-    (reason.includes("NetworkError") || reason.includes("JSON.parse"));
+    typeof reason_string == "string" &&
+    (reason_string.includes("NetworkError") ||
+      reason_string.includes("JSON.parse"));
 
   return (
     <FullscreenHtml>
       Error...
       <img src="/nojs.png" />
-      {level ? "Level Loading Failed" : reason}
+      {level ? "Level Loading Failed" : reason_string}
     </FullscreenHtml>
   );
 }

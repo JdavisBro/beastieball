@@ -83,7 +83,7 @@ function RouteError() {
       <h2>Page may have been updated. Attmepting to reload.</h2>
     </div>
   ) : (
-    <Fallback error={error} className="commoncontainer" />
+    <Fallback error={error as Error} className="commoncontainer" />
   );
 }
 

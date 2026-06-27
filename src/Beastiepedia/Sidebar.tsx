@@ -3,11 +3,7 @@ import styles from "./Sidebar.module.css";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import { useCallback, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
-import Filter, {
-  createFilterFunction,
-  createFilterString,
-  FilterType,
-} from "./Filter";
+import Filter, { createFilterFunction, FilterText, FilterType } from "./Filter";
 import { useIsSpoiler } from "../shared/useSpoiler";
 import { useNavigate } from "react-router-dom";
 import { SORT_CATEGORIES } from "./sortCategories";
@@ -102,7 +98,7 @@ export default function Sidebar(props: Props): React.ReactElement {
           />
         </div>
         <div className={styles.filterText}>
-          {filters ? createFilterString(filters, L) : null}
+          <FilterText filters={filters} setFilters={setFilters} />
         </div>
       </div>
       <div

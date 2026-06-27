@@ -216,7 +216,8 @@
           "yes": "Yes",
           "no": "No",
           "recentlyUpdated": "Recently Updated: "
-        }
+        },
+        "remove": "Remove {filter} Filter"
       },
       "statDisplaySeparator": " - "
     },

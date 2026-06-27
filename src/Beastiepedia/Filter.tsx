@@ -11,9 +11,7 @@ import {
   BEASTIE_STUFF_RECENTLY_UPDATED,
   BEASITE_SPRITES_RECENTLY_UPDATED,
 } from "./RecentlyUpdated";
-import useLocalization, {
-  LocalizationFunction,
-} from "../localization/useLocalization";
+import useLocalization from "../localization/useLocalization";
 import InfoTabberHeader from "../shared/InfoTabber";
 import MoveViewMini from "../shared/MoveViewMini";
 
@@ -84,10 +82,15 @@ const FILTER_TYPES = [
 
 const Lpre = "beastiepedia.sidebar.filter.";
 
-export function createFilterString(
-  filters: FilterType[],
-  L: LocalizationFunction,
-) {
+export function FilterText({
+  filters,
+  setFilters,
+}: {
+  filters: FilterType[];
+  setFilters: React.Dispatch<React.SetStateAction<FilterType[]>>;
+}) {
+  const { L } = useLocalization();
+
   const types: Record<FilterTypes, FilterType[]> = {
     [FilterTypes.Ability]: [],
     [FilterTypes.Move]: [],
@@ -102,40 +105,56 @@ export function createFilterString(
   const diffTypeSep = L(Lpre + "string.diffTypeSep");
   const innerTypeSep = L(Lpre + "string.innerTypeSep");
 
-  return FILTER_TYPES.map<[FilterTypes, string]>((type) => [
-    type,
-    types[type].reduce(
-      (accum2, filter) =>
-        accum2 +
-        (accum2 ? innerTypeSep : "") +
-        (filter[0] == FilterTypes.Training
-          ? L("common.types." + TRAINING_TYPES[filter[1]])
-          : filter[0] == FilterTypes.Metamorphs
-            ? filter[1]
-              ? L(Lpre + "string.yes")
-              : L(Lpre + "string.no")
-            : filter[0] == FilterTypes.RecentlyUpdated
-              ? filter[1] == RecentlyUpdatedTypes.Stuff
-                ? L(Lpre + "recentlyUpdated.playsTraitsStats")
-                : L(Lpre + "recentlyUpdated.spritesColors")
-              : L(filter[1].name)),
-      "",
-    ),
-  ]).reduce(
-    (accum, [type, values]) =>
-      accum +
-      (values
-        ? (accum ? diffTypeSep : "") +
-          L(
-            Lpre +
-              "string." +
-              FILTER_TYPE_PREFIX[type] +
-              (types[type].length > 1 ? "s" : ""),
-          ) +
-          values
-        : ""),
-    "",
-  );
+  return FILTER_TYPES.filter((type) => types[type].length)
+    .map<[FilterTypes, React.ReactNode]>((type) => [
+      type,
+      types[type].map((filter, index) => {
+        const filterText =
+          filter[0] == FilterTypes.Training
+            ? L("common.types." + TRAINING_TYPES[filter[1]])
+            : filter[0] == FilterTypes.Metamorphs
+              ? filter[1]
+                ? L(Lpre + "string.yes")
+                : L(Lpre + "string.no")
+              : filter[0] == FilterTypes.RecentlyUpdated
+                ? filter[1] == RecentlyUpdatedTypes.Stuff
+                  ? L(Lpre + "recentlyUpdated.playsTraitsStats")
+                  : L(Lpre + "recentlyUpdated.spritesColors")
+                : L(filter[1].name);
+        return (
+          <>
+            {index > 0 ? innerTypeSep : null}
+            <span
+              className={styles.filterTextItem}
+              role="button"
+              aria-label={L(Lpre + "remove", { filter: filterText })}
+              tabIndex={0}
+              onClick={() =>
+                setFilters(filters.filter((filter2) => filter2 != filter))
+              }
+              onKeyDown={(event) => {
+                if (event.key == "Enter" || event.key == " ")
+                  setFilters(filters.filter((filter2) => filter2 != filter));
+              }}
+            >
+              {filterText}
+            </span>
+          </>
+        );
+      }),
+    ])
+    .map(([type, values], index) => (
+      <>
+        {index > 0 ? diffTypeSep : null}
+        {L(
+          Lpre +
+            "string." +
+            FILTER_TYPE_PREFIX[type] +
+            (types[type].length > 1 ? "s" : ""),
+        )}
+        {values}
+      </>
+    ));
 }
 
 export function createFilterFunction(filters: FilterType[]) {
@@ -276,8 +295,8 @@ export default function Filter({
             }}
           >
             {L("beastiepedia.sidebar.filter.clear")}
-          </button>
-          {" " + createFilterString(filters, L)}
+          </button>{" "}
+          <FilterText filters={filters} setFilters={setFilters} />
           <InfoTabberHeader
             tab={tab}
             setTab={changeTab}
@@ -314,7 +333,13 @@ export default function Filter({
             </label>
           ) : null}
           <div
-            className={tab < 2 ? styles.listFlex : styles.list}
+            className={
+              tab == 1
+                ? styles.listMoves
+                : tab == 0
+                  ? styles.listFlex
+                  : styles.list
+            }
             onWheel={(event) => event.stopPropagation()}
           >
             {tab == 0 ? (

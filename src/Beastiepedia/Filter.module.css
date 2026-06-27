@@ -5,6 +5,14 @@
   aspect-ratio: 1;
 }
 
+.filterTextItem:hover,
+.filterTextItem:focus-visible {
+  text-decoration: underline;
+  color: crimson;
+  cursor: pointer;
+  user-select: none;
+}
+
 .tabSelect {
   margin: 4px 0 4px 0;
 }
@@ -26,6 +34,11 @@
   gap: 4px;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.listMoves {
+  composes: listFlex;
+  max-height: calc(80dvh - 40px);
 }
 
 .ability {

@@ -1,5 +1,7 @@
 import { BeastieType } from "../data/BeastieData";
-import { LocalizationFunction } from "../localization/useLocalization";
+import useLocalization, {
+  LocalizationFunction,
+} from "../localization/useLocalization";
 
 type StatType = "ba" | "bd" | "ha" | "hd" | "ma" | "md";
 
@@ -47,12 +49,12 @@ const NUMBER_FORMAT = Intl.NumberFormat(undefined, {
 function StatText({
   beastie,
   stats,
-  L,
 }: {
   beastie: BeastieType;
   stats: StatType[];
-  L: LocalizationFunction;
 }) {
+  const { L } = useLocalization();
+
   return (
     <>
       {stats.map((stat) => {
@@ -103,8 +105,8 @@ export const SORT_CATEGORIES: SortType[] = [
       const [[stat2], val2] = getMaxStat(beastie2);
       return val1 - val2 || stat2.localeCompare(stat1);
     },
-    display: (beastie, _, L) => (
-      <StatText beastie={beastie} stats={getMaxStat(beastie)[0]} L={L} />
+    display: (beastie) => (
+      <StatText beastie={beastie} stats={getMaxStat(beastie)[0]} />
     ),
     flipDirection: true,
   },

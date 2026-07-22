@@ -101,6 +101,14 @@ const PRERENDER_PAGES: PrerenderPage[] = [
   },
 
   {
+    name: "Workshop",
+    description: "Beastie Workshop Mod Editor",
+    useBranding: true,
+    image: "/gameassets/sprMainmenu/12.png",
+    path: "/workshop/",
+  },
+
+  {
     name: "Daily",
     description: "Daily games for Beastieball",
     useBranding: true,

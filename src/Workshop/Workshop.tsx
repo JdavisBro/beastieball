@@ -9,7 +9,7 @@ import InfoTabberHeader from "../shared/InfoTabber";
 import WorkshopEditPlay from "./Play";
 import JSZip from "jszip";
 import BEASTIE_DATA from "../data/BeastieData";
-import { MoveEffect, MoveEffectID } from "../data/MoveData";
+import { MoveEffect, MoveEffectType } from "../data/MoveData";
 
 export function StringDataInput({
   value,
@@ -273,7 +273,7 @@ async function loadZip(
       const effects: MoveEffect[] = [];
       const effSplit = String(data?.effects?.effects ?? "").split(",");
       for (let i = 0; i < effSplit.length; i += 3) {
-        const eff = Number(effSplit[i]) as MoveEffectID;
+        const eff = Number(effSplit[i]) as MoveEffectType;
         effects.push({
           eff: eff,
           targ: Number(effSplit[i + 1] ?? 0),

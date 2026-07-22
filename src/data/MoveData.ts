@@ -15,26 +15,137 @@ export enum Type {
   DoubleBlock = 15,
 }
 
-/* prettier-ignore */
-type NumberEffectID = |0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|90|91|92|93|95|96
-    |-7|-26|-30|-80
+export enum MoveEffectType {
+  // Boosts
+  BodyPowChange = 0,
+  SpiritPowChange = 1,
+  MindPowChange = 2,
+  BodyDefChange = 3,
+  SpiritDefChange = 4,
+  MindDefChange = 5,
+  BodySpiritPowChange = 74,
+  BodyMindPowChange = 75,
+  SpiritMindPowChange = 76,
+  BodySpiritDefChange = 77,
+  BodyMindDefChange = 78,
+  SpiritMindDefChange = 79,
+  AllPowChange = 15,
+  AllDefChange = 16,
+  WeakDefChange = 93,
+  TransferBoosts = 31,
+  ResetBoosts = 34,
+  // Feelings
+  FeelNervous = 6,
+  FeelAngry = 12,
+  FeelShook = 13,
+  FeelNoisy = 14,
+  FeelTough = 19,
+  FeelWiped = 22,
+  FeelSweaty = 23,
+  FeelJazzed = 26,
+  FeelBlocked = 27,
+  FeelTired = 29,
+  FeelTender = 38,
+  FeelStressed = 39,
+  FeelWeepy = 80,
+
+  FeelNervousPlus = -6,
+  FeelAngryPlus = -12,
+  FeelShookPlus = -13,
+  FeelNoisyPlus = -14,
+  FeelToughPlus = -19,
+  FeelWipedPlus = -22,
+  FeelSweatyPlus = -23,
+  FeelJazzedPlus = -26,
+  FeelBlockedPlus = -27,
+  FeelTiredPlus = -29,
+  FeelTenderPlus = -38,
+  FeelStressedPlus = -39,
+  FeelWeepyPlus = -80,
+
+  FeelingCombiner = 53,
+  FeelingCure = 95,
+  FeelingBadCure = 52,
+  FeelingAllCure = 32,
+  FeelingGoodCure = 94,
+  // Field
+  FieldTrap = 42,
+  FieldRally = 43,
+  FieldRhythm = 44,
+  FieldDread = 45,
+  FieldQuake = 70,
+  FieldBarrier = 56,
+  FieldClear = 46,
+  // Stamina
+  StaminaChange = 8,
+  MaxStaminaChange = 82,
+  FullRestore = 47,
+  StaminaSplit = 92,
+  // Move
+  Shift = 7,
+  ShiftBeforeHit = -7,
+  Swap = 11,
+  SwapNoBall = 28,
+  TagOut = 30,
+  TagOutBeforeHit = -30,
+  // Trait
+  TraitSwap = 63,
+  TraitCopy = 65,
+  TraitGive = 81,
+  TraitSet = 89, // STRING
+  // Attack
+  DamageAdjust = 33,
+  CanHitWithoutVolley = 17,
+  GivesEasyRecieve = 18,
+  VolleyOnRecieve = 71,
+  NoRedirect = 73,
+  UseWhenPreventFeeling = 61,
+  IgnoresTrait = 91,
+  Mimic = 83,
+  PowMultiply = 84,
+  // Usage
+  Pass = 20,
+  Charge = 86,
+  ChargeReset = 87,
+  AddActions = 10,
+  Requires2Actions = 40,
+  Requires3Actions = 41,
+  PreventObstructed = 57,
+  CanUseDefense = 67,
+  RequiredVolleyState = 69,
+  // Effect Conditions
+  IfHittable = 72,
+  IfSuccess = 90,
+  IfBlock = 85,
+  IfField = 64,
+  IfStamina = 88,
+  IfFeeling = 96,
+  // Unused
+  AdditionalPercent = 36,
+  // Other
+  Rowdy = 60,
+  // Combo
+  ComboTarget = 49,
+  ComboPow = 50,
+  ComboUse = 51,
+  ComboType = 62,
+}
+
+type StringEffectType = MoveEffectType.TraitSet;
 
 export type NumberEffect = {
-  eff: NumberEffectID;
+  eff: Exclude<MoveEffectType, StringEffectType>;
   pow: number;
   targ: number;
 };
 
-type StringEffectID = 89;
-
 /* prettier-ignore */
 type StringEffect = {
-  eff: StringEffectID;
+  eff: StringEffectType;
   pow: string;
   targ: number;
 };
 
-export type MoveEffectID = StringEffectID | NumberEffectID;
 export type MoveEffect = StringEffect | NumberEffect;
 
 export type Move = {

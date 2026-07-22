@@ -1,7 +1,7 @@
 import TextTag from "./TextTag";
 import styles from "./Shared.module.css";
 import { TypeData } from "../data/TypeColor";
-import { Type, Move, MoveEffect } from "../data/MoveData";
+import { Type, Move, MoveEffect, MoveEffectType } from "../data/MoveData";
 import MoveModalContext from "./MoveModalContext";
 import { useContext, useMemo } from "react";
 import SOCIAL_DATA from "../data/SocialData";
@@ -50,20 +50,21 @@ const FIELD_TARGET: Record<number, string> = {
   7: "movedefine_045", // entire field
 };
 
+/* prettier-ignore */
 const FEELING_EFF_MAP: Record<number, [string, string, string]> = {
-  6: ["[sprStatus,0]", "statuseffectstuff_001", "statuseffectstuff_014"], // NERVOUS -- (can't move)
-  12: ["[sprStatus,1]", "statuseffectstuff_002", "statuseffectstuff_015"], // ANGRY -- (only attacks)
-  13: ["[sprStatus,2]", "statuseffectstuff_003", "statuseffectstuff_016"], // SHOOK -- (can't attack)
-  14: ["[sprStatus,3]", "statuseffectstuff_004", "statuseffectstuff_017"], // NOISY -- (attracts attacks)
-  19: ["[sprStatus,4]", "statuseffectstuff_005", "statuseffectstuff_018"], // TOUGH -- (¼ damage)
-  22: ["[sprStatus,5]", "statuseffectstuff_006", "statuseffectstuff_019"], // WIPED -- (must bench)
-  23: ["[sprStatus,6]", "statuseffectstuff_007", "statuseffectstuff_020"], // SWEATY -- (losing stamina)
-  26: ["[sprStatus,8]", "statuseffectstuff_009", "statuseffectstuff_022"], // JAZZED -- (POW +50%)
-  27: ["[sprStatus,9]", "statuseffectstuff_010", "statuseffectstuff_023"], // BLOCKED -- (POW x2/3)
-  29: ["[sprStatus,10]", "statuseffectstuff_011", "statuseffectstuff_024"], // TIRED -- (only basic actions)
-  38: ["[sprStatus,11]", "statuseffectstuff_012", "statuseffectstuff_025"], // TENDER -- (DEF x½)
-  39: ["[sprStatus,12]", "statuseffectstuff_013", "statuseffectstuff_026"], // STRESSED -- (becomes [sprStatus,10]TIRED)
-  80: ["[sprStatus,18]", "statuseffectstuff_029", "statuseffectstuff_030"], // WEEPY -- (ignores BOOSTs)
+  [MoveEffectType.FeelNervous]: ["[sprStatus,0]", "statuseffectstuff_001", "statuseffectstuff_014"], // NERVOUS -- (can't move)
+  [MoveEffectType.FeelAngry]: ["[sprStatus,1]", "statuseffectstuff_002", "statuseffectstuff_015"], // ANGRY -- (only attacks)
+  [MoveEffectType.FeelShook]: ["[sprStatus,2]", "statuseffectstuff_003", "statuseffectstuff_016"], // SHOOK -- (can't attack)
+  [MoveEffectType.FeelNoisy]: ["[sprStatus,3]", "statuseffectstuff_004", "statuseffectstuff_017"], // NOISY -- (attracts attacks)
+  [MoveEffectType.FeelTough]: ["[sprStatus,4]", "statuseffectstuff_005", "statuseffectstuff_018"], // TOUGH -- (¼ damage)
+  [MoveEffectType.FeelWiped]: ["[sprStatus,5]", "statuseffectstuff_006", "statuseffectstuff_019"], // WIPED -- (must bench)
+  [MoveEffectType.FeelSweaty]: ["[sprStatus,6]", "statuseffectstuff_007", "statuseffectstuff_020"], // SWEATY -- (losing stamina)
+  [MoveEffectType.FeelJazzed]: ["[sprStatus,8]", "statuseffectstuff_009", "statuseffectstuff_022"], // JAZZED -- (POW +50%)
+  [MoveEffectType.FeelBlocked]: ["[sprStatus,9]", "statuseffectstuff_010", "statuseffectstuff_023"], // BLOCKED -- (POW x2/3)
+  [MoveEffectType.FeelTired]: ["[sprStatus,10]", "statuseffectstuff_011", "statuseffectstuff_024"], // TIRED -- (only basic actions)
+  [MoveEffectType.FeelTender]: ["[sprStatus,11]", "statuseffectstuff_012", "statuseffectstuff_025"], // TENDER -- (DEF x½)
+  [MoveEffectType.FeelStressed]: ["[sprStatus,12]", "statuseffectstuff_013", "statuseffectstuff_026"], // STRESSED -- (becomes [sprStatus,10]TIRED)
+  [MoveEffectType.FeelWeepy]: ["[sprStatus,18]", "statuseffectstuff_029", "statuseffectstuff_030"], // WEEPY -- (ignores BOOSTs)
 };
 
 function getEffectString(
@@ -106,41 +107,45 @@ function getEffectString(
   };
 
   switch (effect.eff) {
-    case 0:
-    case 1:
-    case 2:
+    case MoveEffectType.BodyPowChange:
+    case MoveEffectType.SpiritPowChange:
+    case MoveEffectType.MindPowChange:
       return L("movedefine_descadd_021", { // {0}POW{1} to {target}.
         "0": `[sprIcon,${effect.eff}]`,
         "1": boost,
         ...target_placeholders,
       });
-    case 3:
-    case 4:
-    case 5:
+    case MoveEffectType.BodyDefChange:
+    case MoveEffectType.SpiritDefChange:
+    case MoveEffectType.MindDefChange:
       return L("movedefine_descadd_024", { // {0}DEF{1} to {target}.
         "0": `[sprIcon,${effect.eff - 3}]`,
         "1": boost,
         ...target_placeholders,
       });
-    case 6:
-    case 12:
-    case 13:
-    case 14:
-    case 19:
-    case 22:
-    case 23:
-    case 26:
-    case -26:
-    case 27:
-    case 29:
-    case 38:
-    case 39:
-    case 80:
-    case -80: {
+    case MoveEffectType.FeelNervous:
+    case MoveEffectType.FeelAngry:
+    case MoveEffectType.FeelShook:
+    case MoveEffectType.FeelNoisy:
+    case MoveEffectType.FeelTough:
+    case MoveEffectType.FeelWiped:
+    case MoveEffectType.FeelSweaty:
+    case MoveEffectType.FeelJazzed:
+    case MoveEffectType.FeelJazzedPlus:
+    case MoveEffectType.FeelBlocked:
+    case MoveEffectType.FeelTired:
+    case MoveEffectType.FeelTender:
+    case MoveEffectType.FeelStressed:
+    case MoveEffectType.FeelWeepy:
+    case MoveEffectType.FeelWeepyPlus: {
       const [im, nameKey, descKey] = FEELING_EFF_MAP[Math.abs(effect.eff)];
       const no_desc =
-        (effect.eff == 23 && effect.pow > 0) ||
-        (move.eff.filter((eff) => eff.eff != 53 && eff.eff != 87).length >= 3 &&
+        (effect.eff == MoveEffectType.FeelSweaty && effect.pow > 0) ||
+        (move.eff.filter(
+          (eff) =>
+            eff.eff != MoveEffectType.FeelingCombiner &&
+            eff.eff != MoveEffectType.ChargeReset,
+        ).length >= 3 &&
           move.id != "protectcheer"); // probably not correct, but matches the game now
       const feelingText = no_desc
         ? `${im}${L(nameKey)}`
@@ -168,7 +173,7 @@ function getEffectString(
         );
       }
       const key =
-        effect.eff == 23 && effect.pow > 0
+        effect.eff == MoveEffectType.FeelSweaty && effect.pow > 0
           ? effect.targ == 7
             ? "movedefine_048" // Every non-{1} fielded player feels {0} {1}.
             : "movedefine_049" // Non-{1} {target} feels {0} {1}.
@@ -182,8 +187,8 @@ function getEffectString(
 
       return L(key, placeholders);
     }
-    case -7:
-    case 7: {
+    case MoveEffectType.ShiftBeforeHit:
+    case MoveEffectType.Shift: {
       const key =
         attack && effect.eff > 0
           ? "movedefine_019" // SHIFTs {target} {0} after hitting.
@@ -207,7 +212,7 @@ function getEffectString(
         ...target_placeholders,
       });
     }
-    case 8: {
+    case MoveEffectType.StaminaChange: {
       const hp = String(Math.floor(Math.round(effect.pow * 10000000) / 100000)); // rounds to 5dp then floors because funny float imprecision
       if (effect.pow < 0) {
         if (effect.targ == 0) {
@@ -225,39 +230,39 @@ function getEffectString(
         });
       }
     }
-    case 10:
+    case MoveEffectType.AddActions:
       return L("movedefine_descadd_036", { "0": `+${effect.pow}` }); // {0} ACTIONs.
-    case 11:
+    case MoveEffectType.Swap:
       return L("movedefine_descadd_037"); // SWITCH places with fielded ally.
-    case 15:
+    case MoveEffectType.AllPowChange:
       return L("movedefine_descadd_021", { // {0}POW{1} to {target}.
         "0": "[sprIcon,0][sprIcon,1][sprIcon,2]",
         "1": boost,
         ...target_placeholders,
       });
-    case 16:
+    case MoveEffectType.AllDefChange:
       return L("movedefine_descadd_024", { // {0}DEF{1} to {target}.
         "0": "[sprIcon,0][sprIcon,1][sprIcon,2]",
         "1": boost,
         ...target_placeholders,
       });
-    case 17:
+    case MoveEffectType.CanHitWithoutVolley:
       return L("movedefine_descadd_042"); // Can hit without volleying.
-    case 18:
+    case MoveEffectType.GivesEasyRecieve:
       return L("movedefine_descadd_043"); // Easy receive.
-    case 20:
+    case MoveEffectType.Pass:
       if (effect.targ == 1) {
         return L("movedefine_descadd_045"); // Ally's ball becomes hittable.
       } else {
         return L("movedefine_descadd_044", { ...target_placeholders }); // Ball goes to {target}.
       }
-    case 28:
+    case MoveEffectType.SwapNoBall:
       return L("movedefine_descadd_041"); // SWITCH places with ally without moving ball.
-    case -30:
+    case MoveEffectType.TagOutBeforeHit:
       return move.eff.length < 3
         ? L("movedefine_descadd_038") // TAG OUT with benched ally.
         : L("movedefine_descadd_039"); // TAG OUT.
-    case 30:
+    case MoveEffectType.TagOut:
       if (alt_target) {
         return move.eff.length < 3
           ? L("movedefine_descadd_038") // TAG OUT with benched ally.
@@ -265,18 +270,18 @@ function getEffectString(
       } else {
         return L("movedefine_descadd_040", { ...target_placeholders }); // Force {target} to TAG OUT.
       }
-    case 31:
+    case MoveEffectType.TransferBoosts:
       return L("movedefine_descadd_052", { // Transfer {0}{1}BOOSTS to {target}.
         "0": "[sprBoost,2]",
         "1": "[sprBoost,5]",
         ...target_placeholders,
       });
-    case 32:
+    case MoveEffectType.FeelingAllCure:
       return L("movedefine_descadd_053", { // Clears FEELINGs (except {0}) from {target}.
         "0": "[sprStatus,1]" + L("statuseffectstuff_002"), // ANGRY
         ...target_placeholders,
       });
-    case 33: {
+    case MoveEffectType.DamageAdjust: {
       switch (effect.pow) {
         case 0:
           return L("movedefine_descadd_058"); // Add user's STAMINA to POW.
@@ -361,9 +366,9 @@ function getEffectString(
       );
       return `POW COND ${effect.pow}`;
     }
-    case 34:
+    case MoveEffectType.ResetBoosts:
       return L("movedefine_descadd_055", { ...target_placeholders }); // Clears [sprBoost,0][sprBoost,3]BOOSTs from {target}.
-    case 36:
+    case MoveEffectType.AdditionalPercent:
       if (effect.targ == 5 && effect.pow == 1) {
         return L("movedefine_descadd_048"); // Damages both opponents.
       }
@@ -371,12 +376,12 @@ function getEffectString(
         "0": String(effect.pow * 100),
         ...target_placeholders,
       });
-    case 40:
+    case MoveEffectType.Requires2Actions:
       return L("movedefine_descadd_056"); // Requires 2 ACTIONS.
-    case 41:
+    case MoveEffectType.Requires3Actions:
       return L("movedefine_descadd_057"); // Requires 3 ACTIONS.
-    case 42:
-    case 43:
+    case MoveEffectType.FieldTrap:
+    case MoveEffectType.FieldRally:
       return L("movedefine_descadd_083", { // {Field} gets {0} {1}.
         ...target_placeholders,
         "0": `+${effect.pow}`,
@@ -390,8 +395,8 @@ function getEffectString(
               : L("fieldeffectstuff_007", { "3": "20", "2": "¾" }), // [sprIcon,1] damage +{3}, [sprIcon,2] damage x{2}
         }),
       });
-    case 44:
-    case 45:
+    case MoveEffectType.FieldRhythm:
+    case MoveEffectType.FieldDread:
       return L("movedefine_descadd_097", { // {Field} fills with {1}.
         ...target_placeholders,
         "1": L("fieldeffectstuff_006", { // {0} ({1})
@@ -403,53 +408,53 @@ function getEffectString(
           ),
         }),
       });
-    case 46:
+    case MoveEffectType.FieldClear:
       if (effect.targ == 7) {
         return L("movedefine_descadd_082"); // Clears all FIELD EFFECTS.
       }
       break;
-    case 47:
+    case MoveEffectType.FullRestore:
       if (effect.targ == 0) {
         return L("movedefine_descadd_031"); // Fully restores stamina and FEELINGS.
       }
       return L("movedefine_descadd_032", { ...target_placeholders }); // Restores {target}'s stamina and FEELINGS.
-    case 52:
+    case MoveEffectType.FeelingBadCure:
       return L("movedefine_descadd_054", { // Clears negative FEELINGs (except {0}) from {target}.
         ...target_placeholders,
         "0": "[sprStatus,1]" + L("statuseffectstuff_002"), // ANGRY
       });
-    case 53:
+    case MoveEffectType.FeelingCombiner:
       args.joiningEffects = true;
       return "";
-    case 56:
+    case MoveEffectType.FieldBarrier:
       return L("movedefine_descadd_084", { ...target_placeholders }); // Build a BARRIER in front of {target}.
-    case 57:
+    case MoveEffectType.PreventObstructed:
       return ""; // shows on a few that are only used on back row but not others?
-    case 60:
+    case MoveEffectType.Rowdy:
       return ""; // rowdy, displays as nothing, probably gives an extra rowdy point
-    case 61:
+    case MoveEffectType.UseWhenPreventFeeling:
       return L("movedefine_descadd_030", { // Can use even when {0}, {1} or {2}.
         "0": "[sprStatus,2]" + L("statuseffectstuff_003"), // SHOOK
         "1": "[sprStatus,10]" + L("statuseffectstuff_011"), // TIRED
         "2": "[sprStatus,5]" + L("statuseffectstuff_006"), // WIPED
       });
-    case 63: {
+    case MoveEffectType.TraitSwap: {
       const targ = L(TARGET_STRINGS[effect.targ]);
       return L("movedefine_descadd_085", { // Swaps Trait with {target}.
         target: targ,
         Target: targ[0].toUpperCase() + targ.slice(1),
       });
     }
-    case 64:
+    case MoveEffectType.IfField:
       return L("movedefine_descadd_029", { // If {field} has {0}: 
         ...target_placeholders,
         "0": L(`fieldeffectstuff_${String(effect.pow + 1).padStart(3, "0")}`),
       });
-    case 65:
+    case MoveEffectType.TraitCopy:
       return L("movedefine_descadd_086", { ...target_placeholders }); // Copies {target}'s Trait.
-    case 69:
+    case MoveEffectType.RequiredVolleyState:
       return ""; // Only when hittable - i do this elsewhere since it needs to be first.
-    case 70: {
+    case MoveEffectType.FieldQuake: {
       return L("movedefine_descadd_083", { // {Field} gets {0} {1}.
         ...target_placeholders,
         "0": String(effect.pow),
@@ -459,34 +464,34 @@ function getEffectString(
         }),
       });
     }
-    case 71:
+    case MoveEffectType.VolleyOnRecieve:
       return L("movedefine_descadd_046"); // Automatically VOLLEYs to target ally.
-    case 72:
+    case MoveEffectType.IfHittable:
       return L("movedefine_descadd_091"); // If ball is hittable: 
-    case 73:
+    case MoveEffectType.NoRedirect:
       return L("movedefine_descadd_096"); // Always goes where it's targeted.
 
-    case 74:
-    case 75:
-    case 76:
+    case MoveEffectType.BodySpiritPowChange:
+    case MoveEffectType.BodyMindPowChange:
+    case MoveEffectType.SpiritMindPowChange:
       return L("movedefine_descadd_089", { // {0}{2}POW{1} to {target}.
         "0": `[sprIcon,${effect.eff == 76 ? "1" : "0"}]`,
         "2": `[sprIcon,${effect.eff == 74 ? "1" : "2"}]`,
         "1": boost,
         ...target_placeholders,
       });
-    case 77:
-    case 78:
-    case 79:
+    case MoveEffectType.BodySpiritDefChange:
+    case MoveEffectType.BodyMindDefChange:
+    case MoveEffectType.SpiritMindDefChange:
       return L("movedefine_descadd_090", { // {0}{2}DEF{1} to {target}.
         "0": `[sprIcon,${effect.eff == 79 ? "1" : "0"}]`,
         "2": `[sprIcon,${effect.eff == 77 ? "1" : "2"}]`,
         "1": boost,
         ...target_placeholders,
       });
-    case 81:
+    case MoveEffectType.TraitGive:
       return L("movedefine_descadd_098", { ...target_placeholders }); // Changes {target} trait to user's trait.
-    case 82:
+    case MoveEffectType.MaxStaminaChange:
       if (effect.targ != 0) {
         return L("movedefine_descadd_099", { // {Target} Max STAMINA {0}.
           ...target_placeholders,
@@ -495,19 +500,19 @@ function getEffectString(
       } else {
         return L("movedefine_050", { "0": String(effect.pow) }); // {0} Max STAMINA.
       }
-    case 83:
+    case MoveEffectType.Mimic:
       return L("movedefine_descadd_101"); // This attack changes to the ally's first attack.
-    case 84:
+    case MoveEffectType.PowMultiply:
       return L("movedefine_descadd_102", { "0": String(effect.pow) }); // POW x{0}.
-    case 85:
+    case MoveEffectType.IfBlock:
       return L("movedefine_descadd_105"); // If ally also BLOCKS:
-    case 86:
+    case MoveEffectType.Charge:
       return L("movedefine_descadd_106", { "0": String(effect.pow) }); // Must charge up for {0} turns.
-    case 87:
+    case MoveEffectType.ChargeReset:
       return "";
-    case 88:
+    case MoveEffectType.IfStamina:
       return L("movedefine_descadd_103", { "0": String(effect.pow) }); // If STAMINA is {0} or higher:
-    case 89: {
+    case MoveEffectType.TraitSet: {
       const ability = abilities[effect.pow];
       return L("movedefine_descadd_108", { // {Target} trait changes to {0} ({1}).
         ...target_placeholders,
@@ -515,13 +520,13 @@ function getEffectString(
         "1": L(ability.desc),
       });
     }
-    case 90:
+    case MoveEffectType.IfSuccess:
       return L("movedefine_053"); // If successful:
-    case 91:
+    case MoveEffectType.IgnoresTrait:
       return L("movedefine_descadd_109"); // Ignores Traits.
-    case 92:
+    case MoveEffectType.StaminaSplit:
       return L("movedefine_descadd_111", { ...target_placeholders }); // Evenly shares STAMINA between self and {target}.
-    case 93:
+    case MoveEffectType.WeakDefChange:
       return L("movedefine_descadd_112", { // {0} to the lowest DEF on {target}.
         ...target_placeholders,
         "0": boost,
@@ -559,7 +564,9 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
         desc.push(L("movedefine_descadd_006")); // Used from net. Targets front row.
       } else {
         desc.push(
-          move.eff.some((eff) => eff.eff == 33 && eff.pow == 36)
+          move.eff.some(
+            (eff) => eff.eff == MoveEffectType.DamageAdjust && eff.pow == 36,
+          )
             ? L("movedefine_057") // Used from net, with net damage bonus.
             : L("movedefine_descadd_008"), // Only used from net.
         );
@@ -567,7 +574,9 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
       break;
   }
 
-  const hittable_eff = move.eff.find((effect) => effect.eff == 69);
+  const hittable_eff = move.eff.find(
+    (effect) => effect.eff == MoveEffectType.RequiredVolleyState,
+  );
   if (hittable_eff) {
     desc.push(
       hittable_eff.pow
@@ -577,7 +586,7 @@ export function getMoveDesc(move: Move, L: LocalizationFunction) {
   }
   if (
     move.type == Type.Volley &&
-    !move.eff.some((eff) => eff.eff == 20) // Eff 20: Ball goes to TARGET. Does not have volley text
+    !move.eff.some((eff) => eff.eff == MoveEffectType.Pass) // Eff 20: Ball goes to TARGET. Does not have volley text
   ) {
     desc.push(L("movedefine_descadd_019")); // VOLLEY.
   }

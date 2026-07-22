@@ -2,7 +2,7 @@ import { useState } from "react";
 import MoveView from "../shared/MoveView";
 import { WorkshopPlay } from "./types";
 import { StringDataInput } from "./Workshop";
-import { MoveEffect, MoveEffectID } from "../data/MoveData";
+import { MoveEffect, MoveEffectType } from "../data/MoveData";
 import abilities from "../data/abilities";
 import useLocalization from "../localization/useLocalization";
 import BeastieSelect from "../shared/BeastieSelect";
@@ -192,8 +192,8 @@ const FEELING_SELECTOR: EffectInfo = {
   ),
 };
 
-const EFFECT_INFO: Partial<Record<MoveEffectID, EffectInfo>> = {
-  33: {
+const EFFECT_INFO: Partial<Record<MoveEffectType, EffectInfo>> = {
+  [MoveEffectType.DamageAdjust]: {
     // Damage Adjust
     targetSelector: () => null,
     powSelector: ({ pow, setPow }) => (
@@ -203,7 +203,7 @@ const EFFECT_INFO: Partial<Record<MoveEffectID, EffectInfo>> = {
       />
     ),
   },
-  89: {
+  [MoveEffectType.TraitSet]: {
     powSelector: ({ pow, setPow }) => (
       <AbilityInput
         pow={typeof pow == "string" ? pow : "haunted"}
@@ -211,7 +211,7 @@ const EFFECT_INFO: Partial<Record<MoveEffectID, EffectInfo>> = {
       />
     ),
     effChangeCallback: (effect) => ({
-      eff: 89,
+      eff: MoveEffectType.TraitSet,
       targ: effect.targ,
       pow:
         typeof effect.pow == "string" && abilities[effect.pow]
@@ -219,32 +219,32 @@ const EFFECT_INFO: Partial<Record<MoveEffectID, EffectInfo>> = {
           : "haunted",
     }),
   },
-  42: DEFAULT_FIELD_TARGET,
-  43: DEFAULT_FIELD_TARGET,
-  44: DEFAULT_FIELD_TARGET,
-  45: DEFAULT_FIELD_TARGET,
-  70: DEFAULT_FIELD_TARGET,
-  56: DEFAULT_FIELD_TARGET,
-  46: DEFAULT_FIELD_TARGET,
+  [MoveEffectType.FieldTrap]: DEFAULT_FIELD_TARGET,
+  [MoveEffectType.FieldRally]: DEFAULT_FIELD_TARGET,
+  [MoveEffectType.FieldRhythm]: DEFAULT_FIELD_TARGET,
+  [MoveEffectType.FieldDread]: DEFAULT_FIELD_TARGET,
+  [MoveEffectType.FieldQuake]: DEFAULT_FIELD_TARGET,
+  [MoveEffectType.FieldBarrier]: DEFAULT_FIELD_TARGET,
+  [MoveEffectType.FieldClear]: DEFAULT_FIELD_TARGET,
 
-  17: NO_SELECTORS,
-  18: NO_SELECTORS,
-  61: NO_SELECTORS,
-  71: NO_SELECTORS,
-  73: NO_SELECTORS,
-  83: NO_SELECTORS,
-  84: { targetSelector: () => {}, step: 0.1 },
-  91: NO_SELECTORS,
+  [MoveEffectType.CanHitWithoutVolley]: NO_SELECTORS,
+  [MoveEffectType.GivesEasyRecieve]: NO_SELECTORS,
+  [MoveEffectType.UseWhenPreventFeeling]: NO_SELECTORS,
+  [MoveEffectType.VolleyOnRecieve]: NO_SELECTORS,
+  [MoveEffectType.NoRedirect]: NO_SELECTORS,
+  [MoveEffectType.Mimic]: NO_SELECTORS,
+  [MoveEffectType.PowMultiply]: { targetSelector: () => {}, step: 0.1 },
+  [MoveEffectType.IgnoresTrait]: NO_SELECTORS,
 
-  10: { targetSelector: () => {} },
-  86: { targetSelector: () => {} },
-  87: NO_SELECTORS,
+  [MoveEffectType.AddActions]: { targetSelector: () => {} },
+  [MoveEffectType.Charge]: { targetSelector: () => {} },
+  [MoveEffectType.ChargeReset]: NO_SELECTORS,
 
-  40: NO_SELECTORS,
-  41: NO_SELECTORS,
-  57: NO_SELECTORS,
-  67: NO_SELECTORS,
-  69: {
+  [MoveEffectType.Requires2Actions]: NO_SELECTORS,
+  [MoveEffectType.Requires3Actions]: NO_SELECTORS,
+  [MoveEffectType.PreventObstructed]: NO_SELECTORS,
+  [MoveEffectType.CanUseDefense]: NO_SELECTORS,
+  [MoveEffectType.RequiredVolleyState]: {
     targetSelector: () => {},
     powSelector: ({ pow, setPow }) => (
       <select
@@ -257,12 +257,12 @@ const EFFECT_INFO: Partial<Record<MoveEffectID, EffectInfo>> = {
     ),
   },
 
-  64: FIELD_SELECTOR,
+  [MoveEffectType.IfField]: FIELD_SELECTOR,
 
-  95: FEELING_SELECTOR,
-  96: FEELING_SELECTOR,
+  [MoveEffectType.FeelingCure]: FEELING_SELECTOR,
+  [MoveEffectType.IfFeeling]: FEELING_SELECTOR,
 
-  8: { step: 0.01 },
+  [MoveEffectType.StaminaChange]: { step: 0.01 },
 };
 
 function EffectSelect({

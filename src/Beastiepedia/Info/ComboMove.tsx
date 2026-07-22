@@ -5,7 +5,7 @@ import styles from "./ContentInfo.module.css";
 import BEASTIE_DATA, { BeastieType } from "../../data/BeastieData";
 import InfoBox from "../../shared/InfoBox";
 import MoveView from "../../shared/MoveView";
-import { Move, NumberEffect } from "../../data/MoveData";
+import { Move, MoveEffectType, NumberEffect } from "../../data/MoveData";
 import BeastieSelect from "../../shared/BeastieSelect";
 import useLocalization, {
   LocalizationFunction,
@@ -34,7 +34,7 @@ function createComboMove(
   const powMults: number[] = [1, 1];
   let target = type == ComboType.Rivals ? 0 : type == ComboType.Defense ? 1 : 2;
   let use = 0;
-  const moveType =
+  let moveType =
     type == ComboType.Partners
       ? 3
       : type == ComboType.Defense
@@ -56,25 +56,32 @@ function createComboMove(
           pow: beastie.combos[type][i + 2],
         } as NumberEffect;
         switch (neweff.eff) {
-          case 49:
+          case MoveEffectType.ComboTarget:
             target =
               [15, 12, 4, 13, 2, 8, 1, 0].find(
                 (newtarget) => newtarget == target || newtarget == neweff.pow,
               ) ?? target;
             continue;
-          case 50:
+          case MoveEffectType.ComboPow:
             powMults[beastieIndex] = neweff.pow;
             continue;
-          case 51:
+          case MoveEffectType.ComboUse:
             use =
               [2, 1, 0].find(
                 (newuse) => newuse == use || newuse == neweff.pow,
               ) ?? use;
             continue;
+          case MoveEffectType.ComboType:
+            moveType = neweff.pow;
+            continue;
         }
         if (
-          used_effects[47] &&
-          [8, 52, 32].includes(neweff.eff) &&
+          used_effects[MoveEffectType.FullRestore] &&
+          [
+            MoveEffectType.StaminaChange,
+            MoveEffectType.FeelingBadCure,
+            MoveEffectType.FeelingAllCure,
+          ].includes(neweff.eff) &&
           neweff.pow >= 0
         ) {
           const fr_effect = used_effects[47];
@@ -87,7 +94,7 @@ function createComboMove(
         }
 
         let do_add = false;
-        if (neweff.eff == 33) {
+        if (neweff.eff == MoveEffectType.DamageAdjust) {
           const powMods = effects.filter((eff) => eff.eff == 33);
           const newType = neweff.pow;
           do_add = true;
@@ -127,9 +134,15 @@ function createComboMove(
 
         if (
           used_effects[neweff.eff] &&
+          /* prettier-ignore */
           [
-            0, 1, 2, 3, 4, 5, 15, 16, 8, 10, 42, 43, 70, 26, 27, 23, 29, 14, 19,
-            38, 22, 12, 6, 13, 36,
+            MoveEffectType.BodyPowChange, MoveEffectType.SpiritPowChange, MoveEffectType.MindPowChange,
+            MoveEffectType.BodyDefChange, MoveEffectType.SpiritDefChange, MoveEffectType.MindDefChange,
+            MoveEffectType.AllPowChange, MoveEffectType.AllDefChange,
+            MoveEffectType.StaminaChange, MoveEffectType.AddActions,
+            MoveEffectType.FieldTrap, MoveEffectType.FieldRally, MoveEffectType.FieldQuake,
+            MoveEffectType.FeelJazzed, MoveEffectType.FeelBlocked, MoveEffectType.FeelSweaty, MoveEffectType.FeelTired, MoveEffectType.FeelNoisy, MoveEffectType.FeelTough, MoveEffectType.FeelTender, MoveEffectType.FeelWiped, MoveEffectType.FeelAngry, MoveEffectType.FeelNervous, MoveEffectType.FeelShook,
+            MoveEffectType.AdditionalPercent,
           ].includes(neweff.eff)
         ) {
           const oldeff = used_effects[neweff.eff];
@@ -177,7 +190,7 @@ function createComboMove(
               );
             }
           }
-          if (neweff.eff == 8) {
+          if (neweff.eff == MoveEffectType.StaminaChange) {
             oldeff.pow = Math.round(oldeff.pow * 20) / 20;
           } else {
             oldeff.pow = Math.round(oldeff.pow);
@@ -186,7 +199,7 @@ function createComboMove(
 
         if (do_add || !used_effects[neweff.eff]) {
           neweff.pow =
-            neweff.eff == 8
+            neweff.eff == MoveEffectType.StaminaChange
               ? Math.round(neweff.pow * 20) / 20
               : Math.round(neweff.pow);
 
@@ -196,12 +209,12 @@ function createComboMove(
           if (neweff.eff == 47) {
             for (let i = 0; i < effects.length; i++) {
               switch (effects[i].eff) {
-                case 52:
-                case 32:
+                case MoveEffectType.FeelingBadCure:
+                case MoveEffectType.FeelingAllCure:
                   effects.splice(i, 1);
                   i--;
                   break;
-                case 8: {
+                case MoveEffectType.StaminaChange: {
                   const eff = effects[i];
                   if (eff.targ == neweff.targ && eff.pow > 0) {
                     effects.splice(i, 1);

@@ -80,7 +80,14 @@ function WorkshopEditData({
           />
         </label>
         <label>
-          Minor <input type="number" value={workshopData.minor_version} />
+          Minor{" "}
+          <input
+            type="number"
+            value={workshopData.minor_version}
+            onChange={(event) =>
+              setKey("minor_version", event.currentTarget.value)
+            }
+          />
         </label>
       </div>
       <button

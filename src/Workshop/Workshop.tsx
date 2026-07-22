@@ -130,6 +130,7 @@ function WorkshopInner({
     workshopData.plays.map((play, index) => [
       `Play ${index + 1}: ${play.name}`,
       <WorkshopEditPlay
+        key={index}
         play={play}
         setPlay={(new_play) =>
           setWorkshopData((old_data) => {

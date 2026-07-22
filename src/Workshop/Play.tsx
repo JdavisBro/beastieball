@@ -288,6 +288,7 @@ function EffectSelect({
 
   return (
     <div>
+      {/* prettier-ignore */}
       <select
         value={effect ? effect.eff : -9999}
         onChange={(event) =>
@@ -306,100 +307,102 @@ function EffectSelect({
           - Add New Effect -
         </option>
         <optgroup label="Boosts">
-          <option value={0}>Body POW Change</option>
-          <option value={1}>Spirit POW Change</option>
-          <option value={2}>Mind POW Change</option>
-          <option value={3}>Body DEF Change</option>
-          <option value={4}>Spirit DEF Change</option>
-          <option value={5}>Mind DEF Change</option>
-          <option value={74}>Body + Spirit POW Change</option>
-          <option value={75}>Body + Mind POW Change</option>
-          <option value={76}>Spirit + Mind POW Change</option>
-          <option value={77}>Body + Spirit DEF Change</option>
-          <option value={78}>Body + Mind DEF Change</option>
-          <option value={79}>Spirit + Mind DEF Change</option>
-          <option value={15}>All POW Change</option>
-          <option value={16}>All DEF Change</option>
-          <option value={93}>Weakest DEF Change</option>
-          <option value={31}>Transfer Boosts to Target</option>
-          <option value={34}>Reset Boosts</option>
+          <option value={MoveEffectType.BodyPowChange}>Body POW Change</option>
+          <option value={MoveEffectType.SpiritPowChange}>Spirit POW Change</option>
+          <option value={MoveEffectType.MindPowChange}>Mind POW Change</option>
+          <option value={MoveEffectType.BodyDefChange}>Body DEF Change</option>
+          <option value={MoveEffectType.SpiritDefChange}>Spirit DEF Change</option>
+          <option value={MoveEffectType.MindDefChange}>Mind DEF Change</option>
+          <option value={MoveEffectType.BodyMindPowChange}>Body + Spirit POW Change</option>
+          <option value={MoveEffectType.BodySpiritPowChange}>Body + Mind POW Change</option>
+          <option value={MoveEffectType.SpiritMindPowChange}>Spirit + Mind POW Change</option>
+          <option value={MoveEffectType.BodyMindDefChange}>Body + Spirit DEF Change</option>
+          <option value={MoveEffectType.BodySpiritDefChange}>Body + Mind DEF Change</option>
+          <option value={MoveEffectType.SpiritMindDefChange}>Spirit + Mind DEF Change</option>
+          <option value={MoveEffectType.AllPowChange}>All POW Change</option>
+          <option value={MoveEffectType.AllDefChange}>All DEF Change</option>
+          <option value={MoveEffectType.WeakDefChange}>Weakest DEF Change</option>
+          <option value={MoveEffectType.TransferBoosts}>Transfer Boosts to Target</option>
+          <option value={MoveEffectType.ResetBoosts}>Reset Boosts</option>
         </optgroup>
         <optgroup label="Feelings">
-          <option value={6}>Feel NERVOUS</option>
-          <option value={12}>Feel ANGRY</option>
-          <option value={13}>Feel SHOOK</option>
-          <option value={14}>Feel NOISY</option>
-          <option value={19}>Feel TOUGH</option>
-          <option value={22}>Feel WIPED</option>
-          <option value={23}>Feel SWEATY</option>
-          <option value={26}>Feel JAZZED</option>
-          <option value={27}>Feel BLOCKED</option>
-          <option value={29}>Feel TIRED</option>
-          <option value={38}>Feel TENDER</option>
-          <option value={39}>Feel STRESSED</option>
-          <option value={80}>Feel WEEPY</option>
-          <option value={53}>Combine Feelings</option>
-          <option value={95}>Cure a Single Feeling</option>
-          <option value={52}>Cure Bad Feelings (except ANGRY)</option>
-          <option value={32}>Cure All Feelings (except ANGRY)</option>
-          <option value={94}>Cure Good Feelings (except ANGRY)</option>
+          <option value={MoveEffectType.FeelNervous}>Feel NERVOUS</option>
+          <option value={MoveEffectType.FeelAngry}>Feel ANGRY</option>
+          <option value={MoveEffectType.FeelShook}>Feel SHOOK</option>
+          <option value={MoveEffectType.FeelNoisy}>Feel NOISY</option>
+          <option value={MoveEffectType.FeelTough}>Feel TOUGH</option>
+          <option value={MoveEffectType.FeelWiped}>Feel WIPED</option>
+          <option value={MoveEffectType.FeelSweaty}>Feel SWEATY</option>
+          <option value={MoveEffectType.FeelJazzed}>Feel JAZZED</option>
+          <option value={MoveEffectType.FeelBlocked}>Feel BLOCKED</option>
+          <option value={MoveEffectType.FeelTired}>Feel TIRED</option>
+          <option value={MoveEffectType.FeelTender}>Feel TENDER</option>
+          <option value={MoveEffectType.FeelStressed}>Feel STRESSED</option>
+          <option value={MoveEffectType.FeelWeepy}>Feel WEEPY</option>
+          <option value={MoveEffectType.FeelingCombiner}>Combine Feelings</option>
+          <option value={MoveEffectType.FeelingCure}>Cure a Single Feeling</option>
+          <option value={MoveEffectType.FeelingBadCure}>Cure Bad Feelings (except ANGRY)</option>
+          <option value={MoveEffectType.FeelingAllCure}>Cure All Feelings (except ANGRY)</option>
+          <option value={MoveEffectType.FeelingGoodCure}>Cure Good Feelings (except ANGRY)</option>
         </optgroup>
         <optgroup label="Field">
-          <option value={42}>TRAP</option>
-          <option value={43}>RALLY</option>
-          <option value={44}>RHYTHM</option>
-          <option value={45}>DREAD</option>
-          <option value={70}>QUAKE</option>
-          <option value={56}>BARRIER</option>
-          <option value={46}>Clear Field</option>
+          <option value={MoveEffectType.FieldTrap}>TRAP</option>
+          <option value={MoveEffectType.FieldRally}>RALLY</option>
+          <option value={MoveEffectType.FieldRhythm}>RHYTHM</option>
+          <option value={MoveEffectType.FieldDread}>DREAD</option>
+          <option value={MoveEffectType.FieldQuake}>QUAKE</option>
+          <option value={MoveEffectType.FieldBarrier}>BARRIER</option>
+          <option value={MoveEffectType.FieldClear}>Clear Field</option>
         </optgroup>
         <optgroup label="Stamina">
-          <option value={8}>STAMINA Heal/Damage</option>
-          <option value={82}>Max Stamina</option>
-          <option value={47}>Fully Restore</option>
-          <option value={92}>Evenly Shares Stamina with Target</option>
+          <option value={MoveEffectType.StaminaChange}>STAMINA Heal/Damage</option>
+          <option value={MoveEffectType.MaxStaminaChange}>Max Stamina</option>
+          <option value={MoveEffectType.FullRestore}>Fully Restore</option>
+          <option value={MoveEffectType.StaminaSplit}>Evenly Shares Stamina with Target</option>
         </optgroup>
         <optgroup label="Move">
-          <option value={7}>SHIFT</option>
-          <option value={11}>Swap With Ally</option>
-          <option value={28}>Swap With Ally without moving Ball</option>
-          <option value={30}>TAG OUT</option>
+          <option value={MoveEffectType.Shift}>SHIFT</option>
+          <option value={MoveEffectType.ShiftBeforeHit}>SHIFT before hit</option>
+          <option value={MoveEffectType.Swap}>Swap With Ally</option>
+          <option value={MoveEffectType.SwapNoBall}>Swap With Ally without moving Ball</option>
+          <option value={MoveEffectType.TagOut}>TAG OUT</option>
+          <option value={MoveEffectType.TagOutBeforeHit}>TAG OUT self (attack)</option>
         </optgroup>
         <optgroup label="Trait">
-          <option value={63}>Trait Swap</option>
-          <option value={65}>User's Trait becomes Target's</option>
-          <option value={81}>Target's Trait becomes User's</option>
-          <option value={89}>Trait Set</option>
+          <option value={MoveEffectType.TraitSwap}>Trait Swap</option>
+          <option value={MoveEffectType.TraitCopy}>User's Trait becomes Target's</option>
+          <option value={MoveEffectType.TraitGive}>Target's Trait becomes User's</option>
+          <option value={MoveEffectType.TraitSet}>Trait Set</option>
         </optgroup>
         <optgroup label="Attack">
-          <option value={33}>Damage Adjust</option>
-          <option value={17}>Can use without Volleying</option>
-          <option value={18}>Gives an Easy Recieve</option>
-          <option value={71}>Automatically Volleys on recieve</option>
-          <option value={73}>Can't be redirected</option>
-          <option value={61}>Can use when TIRED, SHOOK or WIPED</option>
-          <option value={91}>Ignores Target's Trait</option>
-          <option value={83}>Mimic ally's first Attack</option>
-          <option value={84}>POW Multiply</option>
+          <option value={MoveEffectType.DamageAdjust}>Damage Adjust</option>
+          <option value={MoveEffectType.CanHitWithoutVolley}>Can use without Volleying</option>
+          <option value={MoveEffectType.GivesEasyRecieve}>Gives an Easy Recieve</option>
+          <option value={MoveEffectType.VolleyOnRecieve}>Automatically Volleys on recieve</option>
+          <option value={MoveEffectType.NoRedirect}>Can't be redirected</option>
+          <option value={MoveEffectType.UseWhenPreventFeeling}>Can use when TIRED, SHOOK or WIPED</option>
+          <option value={MoveEffectType.IgnoresTrait}>Ignores Target's Trait</option>
+          <option value={MoveEffectType.Mimic}>Mimic ally's first Attack</option>
+          <option value={MoveEffectType.PowMultiply}>POW Multiply</option>
         </optgroup>
         <optgroup label="Usage">
-          <option value={20}>Pass/Volley</option>
-          <option value={86}>Charges Up</option>
-          <option value={87}>Charge Resets on Use</option>
-          <option value={10}>+/- ACTIONs</option>
-          <option value={40}>Requires 2 ACTIONs</option>
-          <option value={41}>Requires 3 ACTIONs</option>
-          <option value={57}>Can't use if space is obstructed</option>
-          <option value={67}>Can be used during Defense</option>
-          <option value={69}>Can only be used if ball is/isn't Volleyed</option>
+          <option value={MoveEffectType.Pass}>Pass/Volley</option>
+          <option value={MoveEffectType.Charge}>Charges Up</option>
+          <option value={MoveEffectType.ChargeReset}>Charge Resets on Use</option>
+          <option value={MoveEffectType.AddActions}>+/- ACTIONs</option>
+          <option value={MoveEffectType.Requires2Actions}>Requires 2 ACTIONs</option>
+          <option value={MoveEffectType.Requires3Actions}>Requires 3 ACTIONs</option>
+          <option value={MoveEffectType.PreventObstructed}>Can't use if space is obstructed</option>
+          <option value={MoveEffectType.CanUseDefense}>Can be used during Defense</option>
+          <option value={MoveEffectType.RequiredVolleyState}>Can only be used if ball is/isn't Volleyed</option>
         </optgroup>
         <optgroup label="Effect Condition">
-          <option value={72}>If ball is hittable</option>
-          <option value={90}>If previous effect succeeded</option>
-          <option value={85}>If ally can Block</option>
-          <option value={64}>If FIELD EFFECT</option>
-          <option value={88}>If target STAMINA greater</option>
-          <option value={96}>If target feels</option>
+          <option value={MoveEffectType.IfHittable}>If ball is hittable</option>
+          <option value={MoveEffectType.IfSuccess}>If previous effect succeeded</option>
+          <option value={MoveEffectType.IfBlock}>If ally can Block</option>
+          <option value={MoveEffectType.IfField}>If FIELD EFFECT</option>
+          <option value={MoveEffectType.IfStamina}>If target STAMINA greater</option>
+          <option value={MoveEffectType.IfFeeling}>If target feels</option>
         </optgroup>
       </select>
       {effect && moveEffect && deleteEffect && (

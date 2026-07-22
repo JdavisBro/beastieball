@@ -223,7 +223,7 @@ const BANNED_FILENAMES = [
   ".", "..",
 ]
 
-function sanitizeFilename(name: string, doneFilenames: string[]) {
+function sanitizeFilename(name: string, doneFilenames?: string[]) {
   let filename = name.replace(/[:\\\/<>"|?*]/g, "-");
   if (
     BANNED_FILENAMES.includes(filename) ||
@@ -231,20 +231,23 @@ function sanitizeFilename(name: string, doneFilenames: string[]) {
     filename.endsWith(".")
   )
     filename += "_";
-  let index = 1;
   let finalFilename = filename;
-  while (doneFilenames.includes(finalFilename)) {
-    finalFilename = filename + "." + index;
-    index += 1;
+  if (doneFilenames !== undefined) {
+    let index = 1;
+    while (doneFilenames.includes(finalFilename)) {
+      finalFilename = filename + "." + index;
+      index += 1;
+    }
+    doneFilenames.push(finalFilename);
   }
-  doneFilenames.push(finalFilename);
   return finalFilename;
 }
 
 function saveZip(workshopData: WorkshopData, L: LocalizationFunction) {
   const zip = new JSZip();
+  const base = sanitizeFilename(workshopData.name);
   zip.file(
-    "config.ini",
+    `${base}/config.ini`,
     createIni({
       general: {
         name: workshopData.name,
@@ -261,7 +264,7 @@ function saveZip(workshopData: WorkshopData, L: LocalizationFunction) {
   const doneFilenames: string[] = [];
   for (const play of workshopData.plays) {
     zip.file(
-      `${sanitizeFilename(play.name, doneFilenames)}/play_data.ini`,
+      `${base}/${sanitizeFilename(play.name, doneFilenames)}/play_data.ini`,
       createIni({
         basic: {
           name: play.name,

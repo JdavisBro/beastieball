@@ -633,6 +633,7 @@ export default function WorkshopEditPlay({
           bt_tags: [],
           price: 0,
         }}
+        noLearner={true}
       />
     </>
   );

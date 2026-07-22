@@ -9,6 +9,7 @@ import InfoTabberHeader from "../shared/InfoTabber";
 import WorkshopEditPlay from "./Play";
 import JSZip from "jszip";
 import BEASTIE_DATA from "../data/BeastieData";
+import { MoveEffect, MoveEffectID } from "../data/MoveData";
 
 export function StringDataInput({
   value,
@@ -104,6 +105,18 @@ function WorkshopEditData({
         Add Play
       </button>
       <button onClick={() => saveZip(workshopData, L)}>Save</button>
+      <input
+        type="file"
+        onChange={(event) =>
+          loadZip(event.currentTarget.files?.[0], L)
+            .then((newData) => {
+              if (newData) setWorkshopData(newData);
+            })
+            .catch((reason) => console.log(reason))
+        }
+        accept=".zip,application/zip"
+        onClick={(event) => (event.currentTarget.value = "")}
+      />
     </div>
   );
 }
@@ -189,6 +202,98 @@ function newWorkshopData(): WorkshopData {
     music: [],
     beasties: [],
   };
+}
+
+function loadIni(ini: string): Record<string, Record<string, string | number>> {
+  const regex = /^(?:\[(.+?)\]|(.+?)\s* ?= ?("[\w\W]*?"|[\d-.]+))/gm;
+  let match;
+  let header = "";
+  const out: Record<string, Record<string, string | number>> = {};
+  while ((match = regex.exec(ini)) !== null) {
+    const [, newHeader, name, value] = match;
+    if (newHeader) {
+      header = newHeader;
+    } else {
+      if (!(header in out)) out[header] = {};
+      out[header][name] =
+        value[0] == '"' ? value.slice(1, value.length - 1) : Number(value);
+    }
+  }
+  return out;
+}
+
+async function loadZip(
+  file: File | undefined,
+  L: LocalizationFunction,
+): Promise<WorkshopData | undefined> {
+  if (!file) return undefined;
+  const zip = await JSZip.loadAsync(file);
+  const files = zip.files;
+  const configIni = Object.keys(files).find((name) =>
+    name.endsWith("config.ini"),
+  );
+  if (!configIni) return undefined;
+  const defaultData = newWorkshopData();
+  const config = loadIni((await zip.file(configIni)?.async("string")) ?? "");
+  const workshopData: WorkshopData = {
+    name: (config?.general?.name as string) ?? defaultData.name,
+    description:
+      (config?.general?.description as string) ?? defaultData.description,
+    author: (config?.general?.author as string) ?? defaultData.author,
+    url: (config?.general?.url as string) ?? defaultData.url,
+    major_version:
+      (config?.general?.major_version as string) ?? defaultData.major_version,
+    minor_version:
+      (config?.general?.minor_version as string) ?? defaultData.minor_version,
+    internal_id:
+      (config?.general?.internal_id as string) ?? defaultData.internal_id,
+    finished: (config?.general?.finished as string) ?? defaultData.finished,
+    plays: [],
+    music: [],
+    beasties: [],
+  };
+  const baseDir = configIni.slice(0, configIni.length - 10);
+  const dirs: string[] = [];
+  zip.folder(baseDir)?.forEach((path, file) => {
+    if (file.dir) dirs.push(path);
+  });
+  dirs.sort();
+  for (const dir of dirs) {
+    const playData = zip.file(baseDir + dir + "play_data.ini");
+    console.log(playData, dir);
+    if (playData) {
+      const data = loadIni(await playData.async("string"));
+      const effects: MoveEffect[] = [];
+      const effSplit = String(data?.effects?.effects ?? "").split(",");
+      for (let i = 0; i < effSplit.length; i += 3) {
+        const eff = Number(effSplit[i]) as MoveEffectID;
+        effects.push({
+          eff: eff,
+          targ: Number(effSplit[i + 1] ?? 0),
+          pow: eff == 89 ? effSplit[i + 2] : Number(effSplit[i + 2] ?? 0),
+        } as MoveEffect);
+      }
+      console.log(data, await playData.async("string"));
+      workshopData.plays.push({
+        name: String(data?.basic?.name ?? ""),
+        type: Number(data?.basic?.type ?? 0),
+        pow: Number(data?.basic?.pow ?? 0),
+        use: Number(data?.basic?.use ?? 0),
+        target: Number(data?.basic?.target ?? 0),
+        effects: effects,
+        learnedby: String(data?.distribution?.learnedby ?? "")
+          .split(",")
+          .map((beastieName) =>
+            [...BEASTIE_DATA.values()].find(
+              (beastie) => L(beastie.name, undefined, true) == beastieName,
+            ),
+          )
+          .filter((beastie) => !!beastie)
+          .map((beastie) => beastie.id),
+      });
+    }
+  }
+  return workshopData;
 }
 
 function iniValueToString(value: any) {

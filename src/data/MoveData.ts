@@ -15,6 +15,23 @@ export enum Type {
   DoubleBlock = 15,
 }
 
+export enum FeelingType {
+  Nervous,
+  Angry,
+  Shook,
+  Noisy,
+  Tough,
+  Wiped,
+  Sweaty,
+  Aware,
+  Jazzed,
+  Blocked,
+  Tired,
+  Tender,
+  Stressed,
+  Weepy,
+}
+
 export enum MoveEffectType {
   // Boosts
   BodyPowChange = 0,
@@ -42,6 +59,7 @@ export enum MoveEffectType {
   FeelTough = 19,
   FeelWiped = 22,
   FeelSweaty = 23,
+  FeelAware = 25,
   FeelJazzed = 26,
   FeelBlocked = 27,
   FeelTired = 29,
@@ -56,6 +74,7 @@ export enum MoveEffectType {
   FeelToughPlus = -19,
   FeelWipedPlus = -22,
   FeelSweatyPlus = -23,
+  FeelAwarePlus = -25,
   FeelJazzedPlus = -26,
   FeelBlockedPlus = -27,
   FeelTiredPlus = -29,
@@ -67,7 +86,7 @@ export enum MoveEffectType {
   FeelingCure = 95,
   FeelingBadCure = 52,
   FeelingAllCure = 32,
-  FeelingGoodCure = 94,
+  FeelingAllCureAngry = 94,
   // Field
   FieldTrap = 42,
   FieldRally = 43,

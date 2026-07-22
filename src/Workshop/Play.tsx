@@ -181,13 +181,13 @@ const FEELING_SELECTOR: EffectInfo = {
       <option value={4}>Tough</option>
       <option value={5}>Wiped</option>
       <option value={6}>Sweaty</option>
-      {/* <option value={7}>Aware</option> */}
       <option value={8}>Jazzed</option>
       <option value={9}>Blocked</option>
       <option value={10}>Tired</option>
       <option value={11}>Tender</option>
       <option value={12}>Stressed</option>
       <option value={13}>Weepy</option>
+      <option value={7}>Aware (Unused)</option>
     </select>
   ),
 };
@@ -224,7 +224,6 @@ const EFFECT_INFO: Partial<Record<MoveEffectType, EffectInfo>> = {
   [MoveEffectType.FieldRhythm]: DEFAULT_FIELD_TARGET,
   [MoveEffectType.FieldDread]: DEFAULT_FIELD_TARGET,
   [MoveEffectType.FieldQuake]: DEFAULT_FIELD_TARGET,
-  [MoveEffectType.FieldBarrier]: DEFAULT_FIELD_TARGET,
   [MoveEffectType.FieldClear]: DEFAULT_FIELD_TARGET,
 
   [MoveEffectType.CanHitWithoutVolley]: NO_SELECTORS,
@@ -343,7 +342,7 @@ function EffectSelect({
           <option value={MoveEffectType.FeelingCure}>Cure a Single Feeling</option>
           <option value={MoveEffectType.FeelingBadCure}>Cure Bad Feelings (except ANGRY)</option>
           <option value={MoveEffectType.FeelingAllCure}>Cure All Feelings (except ANGRY)</option>
-          <option value={MoveEffectType.FeelingGoodCure}>Cure Good Feelings (except ANGRY)</option>
+          <option value={MoveEffectType.FeelingAllCureAngry}>Cure All Feelings (including ANGRY)</option>
         </optgroup>
         <optgroup label="Field">
           <option value={MoveEffectType.FieldTrap}>TRAP</option>
@@ -403,6 +402,10 @@ function EffectSelect({
           <option value={MoveEffectType.IfField}>If FIELD EFFECT</option>
           <option value={MoveEffectType.IfStamina}>If target STAMINA greater</option>
           <option value={MoveEffectType.IfFeeling}>If target feels</option>
+        </optgroup>
+        <optgroup label="Unused (Not Recommended)">
+          <option value={MoveEffectType.FeelAware}>Feel AWARE</option>
+          <option value={MoveEffectType.AdditionalPercent}>Additional Damage %</option>
         </optgroup>
       </select>
       {effect && moveEffect && deleteEffect && (

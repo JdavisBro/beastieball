@@ -1,7 +1,13 @@
 import TextTag from "./TextTag";
 import styles from "./Shared.module.css";
 import { TypeData } from "../data/TypeColor";
-import { Type, Move, MoveEffect, MoveEffectType } from "../data/MoveData";
+import {
+  Type,
+  Move,
+  MoveEffect,
+  MoveEffectType,
+  FeelingType,
+} from "../data/MoveData";
 import MoveModalContext from "./MoveModalContext";
 import { useContext, useMemo } from "react";
 import SOCIAL_DATA from "../data/SocialData";
@@ -51,20 +57,46 @@ const FIELD_TARGET: Record<number, string> = {
 };
 
 /* prettier-ignore */
-const FEELING_EFF_MAP: Record<number, [string, string, string]> = {
-  [MoveEffectType.FeelNervous]: ["[sprStatus,0]", "statuseffectstuff_001", "statuseffectstuff_014"], // NERVOUS -- (can't move)
-  [MoveEffectType.FeelAngry]: ["[sprStatus,1]", "statuseffectstuff_002", "statuseffectstuff_015"], // ANGRY -- (only attacks)
-  [MoveEffectType.FeelShook]: ["[sprStatus,2]", "statuseffectstuff_003", "statuseffectstuff_016"], // SHOOK -- (can't attack)
-  [MoveEffectType.FeelNoisy]: ["[sprStatus,3]", "statuseffectstuff_004", "statuseffectstuff_017"], // NOISY -- (attracts attacks)
-  [MoveEffectType.FeelTough]: ["[sprStatus,4]", "statuseffectstuff_005", "statuseffectstuff_018"], // TOUGH -- (¼ damage)
-  [MoveEffectType.FeelWiped]: ["[sprStatus,5]", "statuseffectstuff_006", "statuseffectstuff_019"], // WIPED -- (must bench)
-  [MoveEffectType.FeelSweaty]: ["[sprStatus,6]", "statuseffectstuff_007", "statuseffectstuff_020"], // SWEATY -- (losing stamina)
-  [MoveEffectType.FeelJazzed]: ["[sprStatus,8]", "statuseffectstuff_009", "statuseffectstuff_022"], // JAZZED -- (POW +50%)
-  [MoveEffectType.FeelBlocked]: ["[sprStatus,9]", "statuseffectstuff_010", "statuseffectstuff_023"], // BLOCKED -- (POW x2/3)
-  [MoveEffectType.FeelTired]: ["[sprStatus,10]", "statuseffectstuff_011", "statuseffectstuff_024"], // TIRED -- (only basic actions)
-  [MoveEffectType.FeelTender]: ["[sprStatus,11]", "statuseffectstuff_012", "statuseffectstuff_025"], // TENDER -- (DEF x½)
-  [MoveEffectType.FeelStressed]: ["[sprStatus,12]", "statuseffectstuff_013", "statuseffectstuff_026"], // STRESSED -- (becomes [sprStatus,10]TIRED)
-  [MoveEffectType.FeelWeepy]: ["[sprStatus,18]", "statuseffectstuff_029", "statuseffectstuff_030"], // WEEPY -- (ignores BOOSTs)
+const FEELING_MAP: Record<FeelingType, [string, string, string]> = {
+  [FeelingType.Nervous]: ["[sprStatus,0]", "statuseffectstuff_001", "statuseffectstuff_014"], // NERVOUS -- (can't move)
+  [FeelingType.Angry]: ["[sprStatus,1]", "statuseffectstuff_002", "statuseffectstuff_015"], // ANGRY -- (only attacks)
+  [FeelingType.Shook]: ["[sprStatus,2]", "statuseffectstuff_003", "statuseffectstuff_016"], // SHOOK -- (can't attack)
+  [FeelingType.Noisy]: ["[sprStatus,3]", "statuseffectstuff_004", "statuseffectstuff_017"], // NOISY -- (attracts attacks)
+  [FeelingType.Tough]: ["[sprStatus,4]", "statuseffectstuff_005", "statuseffectstuff_018"], // TOUGH -- (¼ damage)
+  [FeelingType.Wiped]: ["[sprStatus,5]", "statuseffectstuff_006", "statuseffectstuff_019"], // WIPED -- (must bench)
+  [FeelingType.Sweaty]: ["[sprStatus,6]", "statuseffectstuff_007", "statuseffectstuff_020"], // SWEATY -- (losing stamina)
+  [FeelingType.Aware]: ["[sprStatus,7]", "statuseffectstuff_008", "statuseffectstuff_021"], // AWARE -- (follows ball)
+  [FeelingType.Jazzed]: ["[sprStatus,8]", "statuseffectstuff_009", "statuseffectstuff_022"], // JAZZED -- (POW +50%)
+  [FeelingType.Blocked]: ["[sprStatus,9]", "statuseffectstuff_010", "statuseffectstuff_023"], // BLOCKED -- (POW x2/3)
+  [FeelingType.Tired]: ["[sprStatus,10]", "statuseffectstuff_011", "statuseffectstuff_024"], // TIRED -- (only basic actions)
+  [FeelingType.Tender]: ["[sprStatus,11]", "statuseffectstuff_012", "statuseffectstuff_025"], // TENDER -- (DEF x½)
+  [FeelingType.Stressed]: ["[sprStatus,12]", "statuseffectstuff_013", "statuseffectstuff_026"], // STRESSED -- (becomes [sprStatus,10]TIRED)
+  [FeelingType.Weepy]: ["[sprStatus,18]", "statuseffectstuff_029", "statuseffectstuff_030"], // WEEPY -- (ignores BOOSTs)
+};
+
+const FEELING_EFF_MAP: Record<number, FeelingType> = {
+  [MoveEffectType.FeelNervous]: FeelingType.Nervous,
+  [MoveEffectType.FeelAngry]: FeelingType.Angry,
+  [MoveEffectType.FeelShook]: FeelingType.Shook,
+  [MoveEffectType.FeelNoisy]: FeelingType.Noisy,
+  [MoveEffectType.FeelTough]: FeelingType.Tough,
+  [MoveEffectType.FeelWiped]: FeelingType.Wiped,
+  [MoveEffectType.FeelSweaty]: FeelingType.Sweaty,
+  [MoveEffectType.FeelAware]: FeelingType.Aware,
+  [MoveEffectType.FeelJazzed]: FeelingType.Jazzed,
+  [MoveEffectType.FeelBlocked]: FeelingType.Blocked,
+  [MoveEffectType.FeelTired]: FeelingType.Tired,
+  [MoveEffectType.FeelTender]: FeelingType.Tender,
+  [MoveEffectType.FeelStressed]: FeelingType.Stressed,
+  [MoveEffectType.FeelWeepy]: FeelingType.Weepy,
+};
+
+const FIELD_MAP: Record<number, string> = {
+  0: "fieldeffectstuff_001", // RALLY
+  1: "fieldeffectstuff_002", // TRAP
+  2: "fieldeffectstuff_003", // RHYTHM
+  3: "fieldeffectstuff_004", // DREAD
+  5: "fieldeffectstuff_005", // QUAKE
 };
 
 function getEffectString(
@@ -124,21 +156,35 @@ function getEffectString(
         ...target_placeholders,
       });
     case MoveEffectType.FeelNervous:
+    case MoveEffectType.FeelNervousPlus:
     case MoveEffectType.FeelAngry:
+    case MoveEffectType.FeelAngryPlus:
     case MoveEffectType.FeelShook:
+    case MoveEffectType.FeelShookPlus:
     case MoveEffectType.FeelNoisy:
+    case MoveEffectType.FeelNoisyPlus:
     case MoveEffectType.FeelTough:
+    case MoveEffectType.FeelToughPlus:
     case MoveEffectType.FeelWiped:
+    case MoveEffectType.FeelWipedPlus:
     case MoveEffectType.FeelSweaty:
+    case MoveEffectType.FeelSweatyPlus:
+    case MoveEffectType.FeelAware:
+    case MoveEffectType.FeelAwarePlus:
     case MoveEffectType.FeelJazzed:
     case MoveEffectType.FeelJazzedPlus:
     case MoveEffectType.FeelBlocked:
+    case MoveEffectType.FeelBlockedPlus:
     case MoveEffectType.FeelTired:
+    case MoveEffectType.FeelTiredPlus:
     case MoveEffectType.FeelTender:
+    case MoveEffectType.FeelTenderPlus:
     case MoveEffectType.FeelStressed:
+    case MoveEffectType.FeelStressedPlus:
     case MoveEffectType.FeelWeepy:
     case MoveEffectType.FeelWeepyPlus: {
-      const [im, nameKey, descKey] = FEELING_EFF_MAP[Math.abs(effect.eff)];
+      const [im, nameKey, descKey] =
+        FEELING_MAP[FEELING_EFF_MAP[Math.abs(effect.eff)]];
       const no_desc =
         (effect.eff == MoveEffectType.FeelSweaty && effect.pow > 0) ||
         (move.eff.filter(
@@ -281,13 +327,18 @@ function getEffectString(
         "0": "[sprStatus,1]" + L("statuseffectstuff_002"), // ANGRY
         ...target_placeholders,
       });
+    case MoveEffectType.FeelingAllCureAngry:
+      return "";
     case MoveEffectType.DamageAdjust: {
       switch (effect.pow) {
         case 0:
           return L("movedefine_descadd_058"); // Add user's STAMINA to POW.
         case 1:
           return L("movedefine_descadd_059"); // Strongest when user has less STAMINA.
-
+        case 2:
+        case 3:
+        case 4:
+          return L("movedefine_029", { "0": `[sprIcon,${effect.pow - 2}]` }); // Damages based on target's {0}DEF.
         case 5:
           return L("movedefine_descadd_060"); // POW x2 if target just TAGGED IN.
         case 6:
@@ -333,6 +384,8 @@ function getEffectString(
           return L("movedefine_descadd_079"); // Damages based on target's weakest DEF.
         case 23:
           return L("movedefine_descadd_080"); // Damages based on target's strongest DEF.
+        case 24:
+          return L("movedefine_descadd_078"); // +10 damage for each [sprBoost,3]BOOST on user.
         case 25:
           return L("movedefine_descadd_081", { // Boosted by {0} instead of weakened.
             "0": L("fieldeffectstuff_001"), // RALLY
@@ -344,7 +397,11 @@ function getEffectString(
             "0": "2",
             "1": "34",
           });
-
+        case 28: {
+          return L("movedefine_descadd_093", { // Ignores users's {0} and [sprBoost,0][sprBoost,3]BOOSTS.
+            "0": "[sprStatus,8]" + L("statuseffectstuff_009"), // JAZZED
+          });
+        }
         case 29:
           return L("movedefine_descadd_094", { "0": "2" }); // POW x{0} if there are any field effects.
         case 30:
@@ -357,7 +414,8 @@ function getEffectString(
         case 32:
           return L("movedefine_descadd_104", { "0": "¾" }); // POW x{0} if user has any FEELINGs.
         case 33:
-          return "";
+        case 34:
+        case 35:
         case 36:
           return "";
       }
@@ -409,10 +467,7 @@ function getEffectString(
         }),
       });
     case MoveEffectType.FieldClear:
-      if (effect.targ == 7) {
-        return L("movedefine_descadd_082"); // Clears all FIELD EFFECTS.
-      }
-      break;
+      return L("movedefine_descadd_082"); // Clears all FIELD EFFECTS.
     case MoveEffectType.FullRestore:
       if (effect.targ == 0) {
         return L("movedefine_descadd_031"); // Fully restores stamina and FEELINGS.
@@ -448,7 +503,7 @@ function getEffectString(
     case MoveEffectType.IfField:
       return L("movedefine_descadd_029", { // If {field} has {0}: 
         ...target_placeholders,
-        "0": L(`fieldeffectstuff_${String(effect.pow + 1).padStart(3, "0")}`),
+        "0": L(FIELD_MAP[effect.pow]),
       });
     case MoveEffectType.TraitCopy:
       return L("movedefine_descadd_086", { ...target_placeholders }); // Copies {target}'s Trait.
@@ -531,6 +586,26 @@ function getEffectString(
         ...target_placeholders,
         "0": boost,
       });
+    case MoveEffectType.FeelingCure: {
+      const [im, nameKey] =
+        FEELING_MAP?.[effect.pow as FeelingType] ??
+        FEELING_MAP[FeelingType.Angry];
+      return L("movedefine_descadd_114", { // Cures {target} of {0}.
+        "0": `${im}${L(nameKey)}`,
+        ...target_placeholders,
+      });
+    }
+    case MoveEffectType.IfFeeling: {
+      const [im, nameKey] =
+        FEELING_MAP?.[effect.pow as FeelingType] ??
+        FEELING_MAP[FeelingType.Angry];
+      return L(effect.targ == 0 ? "movedefine_054" : "movedefine_055", { // If feeling {0}: -- If {target} feels {0}:
+        "0": `${im}${L(nameKey)}`,
+        ...target_placeholders,
+      });
+    }
+    case MoveEffectType.CanUseDefense:
+      return L("movedefine_descadd_087"); // Can be used during DEFENSE.
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

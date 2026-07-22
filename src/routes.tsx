@@ -227,6 +227,16 @@ const routes: Array<RouteObject> = [
 
       {
         element: <LoaderComponent />,
+        path: "workshop/",
+        loader: () =>
+          import("./Workshop/Workshop").then((m) => ({
+            component: m.default,
+          })),
+        shouldRevalidate: shouldRevalidate,
+      },
+
+      {
+        element: <LoaderComponent />,
         path: "modding/save/",
         loader: () =>
           import("./Modding/Save/Save").then((m) => ({ component: m.default })),

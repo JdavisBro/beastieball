@@ -36,3 +36,32 @@ export default class Randomizer {
     }
   }
 }
+
+const RCHAR_KEY = "0123456789BCDFGHJKLMNPQRTVWXY";
+const BASE = RCHAR_KEY.length;
+
+export function seedToString(seed: number) {
+  let value = "";
+  while (seed > 0) {
+    const mod = Math.floor(seed % BASE);
+    value = RCHAR_KEY[mod] + value;
+    seed = Math.floor(seed / BASE);
+  }
+  return value;
+}
+
+export function seedFromString(str_seed: string) {
+  str_seed = str_seed.toUpperCase();
+  let length = str_seed.length;
+  let value = 0;
+  let index = 0;
+  while (length) {
+    const pos = RCHAR_KEY.indexOf(str_seed[length - 1]);
+    if (pos != -1) {
+      value += pos * BASE ** index;
+      index += 1;
+    }
+    length -= 1;
+  }
+  return value;
+}

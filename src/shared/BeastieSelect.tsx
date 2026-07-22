@@ -116,7 +116,7 @@ export default function BeastieSelect({
       setBeastieId(clickedBeastie);
     }
     clickedRef.current = [false, undefined];
-  }, []);
+  }, [setBeastieId]);
 
   const [filterMode, setFilterMode] = useLocalStorage(
     "beastieSelectFilterMode",

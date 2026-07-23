@@ -130,6 +130,7 @@ const DEFAULT_EFFECT_INFO: EffectInfo &
       min={effectInfo.min}
       max={effectInfo.max}
       step={effectInfo.step}
+      style={{ flexGrow: "1" }}
     />
   ),
 };
@@ -304,7 +305,7 @@ function EffectSelect({
   const hasNegative = HAS_NEGATIVE.includes(Math.abs(effect?.eff ?? 0));
 
   return (
-    <div>
+    <div style={{ display: "flex" }}>
       {/* prettier-ignore */}
       <select
         value={effect ? hasNegative ? Math.abs(effect.eff) : effect.eff : -9999}
@@ -452,6 +453,7 @@ function EffectSelect({
             setPow={(pow) => setEffect({ ...effect, pow: pow } as MoveEffect)}
             effectInfo={effectInfo}
           />
+          <div style={{ flex: "1 1 0" }}></div>
           <button onClick={() => moveEffect(-1)} disabled={first}>
             ^
           </button>
@@ -614,10 +616,36 @@ export default function WorkshopEditPlay({
           ))}
         </div>
         <div>Effects:</div>
-        {play.effects.map((eff, index) => (
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          {play.effects.map((eff, index) => (
+            <EffectSelect
+              key={index}
+              effect={eff}
+              setEffect={(effect) => {
+                const callback = EFFECT_INFO[effect.eff]?.effChangeCallback;
+                if (callback) {
+                  effect = callback(effect);
+                } else if (typeof effect.pow == "string") {
+                  effect.pow = 0;
+                }
+                play.effects[index] = effect;
+                setKey("effects", play.effects);
+              }}
+              deleteEffect={() => {
+                play.effects.splice(index, 1);
+                setKey("effects", play.effects);
+              }}
+              moveEffect={(dir) => {
+                const eff2 = play.effects[index + dir];
+                play.effects[index + dir] = eff;
+                play.effects[index] = eff2;
+                setKey("effects", play.effects);
+              }}
+              first={index == 0}
+              last={index == play.effects.length - 1}
+            />
+          ))}
           <EffectSelect
-            key={index}
-            effect={eff}
             setEffect={(effect) => {
               const callback = EFFECT_INFO[effect.eff]?.effChangeCallback;
               if (callback) {
@@ -625,34 +653,10 @@ export default function WorkshopEditPlay({
               } else if (typeof effect.pow == "string") {
                 effect.pow = 0;
               }
-              play.effects[index] = effect;
-              setKey("effects", play.effects);
+              setKey("effects", [...play.effects, effect]);
             }}
-            deleteEffect={() => {
-              play.effects.splice(index, 1);
-              setKey("effects", play.effects);
-            }}
-            moveEffect={(dir) => {
-              const eff2 = play.effects[index + dir];
-              play.effects[index + dir] = eff;
-              play.effects[index] = eff2;
-              setKey("effects", play.effects);
-            }}
-            first={index == 0}
-            last={index == play.effects.length - 1}
           />
-        ))}
-        <EffectSelect
-          setEffect={(effect) => {
-            const callback = EFFECT_INFO[effect.eff]?.effChangeCallback;
-            if (callback) {
-              effect = callback(effect);
-            } else if (typeof effect.pow == "string") {
-              effect.pow = 0;
-            }
-            setKey("effects", [...play.effects, effect]);
-          }}
-        />
+        </div>
         <button onClick={deletePlay}>Delete Play</button>
       </div>
       <MoveView

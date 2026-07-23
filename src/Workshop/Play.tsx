@@ -264,6 +264,22 @@ const EFFECT_INFO: Partial<Record<MoveEffectType, EffectInfo>> = {
   [MoveEffectType.StaminaChange]: { step: 0.01 },
 };
 
+const HAS_NEGATIVE = [
+  MoveEffectType.FeelNervous,
+  MoveEffectType.FeelAngry,
+  MoveEffectType.FeelShook,
+  MoveEffectType.FeelNoisy,
+  MoveEffectType.FeelTough,
+  MoveEffectType.FeelWiped,
+  MoveEffectType.FeelSweaty,
+  MoveEffectType.FeelJazzed,
+  MoveEffectType.FeelBlocked,
+  MoveEffectType.FeelTired,
+  MoveEffectType.FeelTender,
+  MoveEffectType.FeelStressed,
+  MoveEffectType.FeelWeepy,
+];
+
 function EffectSelect({
   effect,
   setEffect,
@@ -285,11 +301,13 @@ function EffectSelect({
     effectInfo.targetSelector ?? DEFAULT_EFFECT_INFO.targetSelector;
   const PowSelector = effectInfo.powSelector ?? DEFAULT_EFFECT_INFO.powSelector;
 
+  const hasNegative = HAS_NEGATIVE.includes(Math.abs(effect?.eff ?? 0));
+
   return (
     <div>
       {/* prettier-ignore */}
       <select
-        value={effect ? effect.eff : -9999}
+        value={effect ? hasNegative ? Math.abs(effect.eff) : effect.eff : -9999}
         onChange={(event) =>
           setEffect(
             effect
@@ -410,6 +428,20 @@ function EffectSelect({
       </select>
       {effect && moveEffect && deleteEffect && (
         <>
+          {hasNegative ? (
+            <select
+              value={effect.eff > 0 ? 1 : -1}
+              onChange={(event) =>
+                setEffect({
+                  ...effect,
+                  eff: Math.abs(effect.eff) * Number(event.currentTarget.value),
+                })
+              }
+            >
+              <option value={1}>After Hit</option>
+              <option value={-1}>Before Hit</option>
+            </select>
+          ) : undefined}
           <TargetSelector
             target={effect.targ}
             setTarget={(target) => setEffect({ ...effect, targ: target })}

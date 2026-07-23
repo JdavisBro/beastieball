@@ -156,31 +156,31 @@ function getEffectString(
         ...target_placeholders,
       });
     case MoveEffectType.FeelNervous:
-    case MoveEffectType.FeelNervousPlus:
+    case MoveEffectType.FeelNervousBeforeHit:
     case MoveEffectType.FeelAngry:
-    case MoveEffectType.FeelAngryPlus:
+    case MoveEffectType.FeelAngryBeforeHit:
     case MoveEffectType.FeelShook:
-    case MoveEffectType.FeelShookPlus:
+    case MoveEffectType.FeelShookBeforeHit:
     case MoveEffectType.FeelNoisy:
-    case MoveEffectType.FeelNoisyPlus:
+    case MoveEffectType.FeelNoisyBeforeHit:
     case MoveEffectType.FeelTough:
-    case MoveEffectType.FeelToughPlus:
+    case MoveEffectType.FeelToughBeforeHit:
     case MoveEffectType.FeelWiped:
-    case MoveEffectType.FeelWipedPlus:
+    case MoveEffectType.FeelWipedBeforeHit:
     case MoveEffectType.FeelSweaty:
-    case MoveEffectType.FeelSweatyPlus:
+    case MoveEffectType.FeelSweatyBeforeHit:
     case MoveEffectType.FeelAware:
-    case MoveEffectType.FeelAwarePlus:
+    case MoveEffectType.FeelAwareBeforeHit:
     case MoveEffectType.FeelJazzed:
-    case MoveEffectType.FeelJazzedPlus:
+    case MoveEffectType.FeelJazzedBeforeHit:
     case MoveEffectType.FeelBlocked:
-    case MoveEffectType.FeelBlockedPlus:
+    case MoveEffectType.FeelBlockedBeforeHit:
     case MoveEffectType.FeelTired:
-    case MoveEffectType.FeelTiredPlus:
+    case MoveEffectType.FeelTiredBeforeHit:
     case MoveEffectType.FeelTender:
-    case MoveEffectType.FeelTenderPlus:
+    case MoveEffectType.FeelTenderBeforeHit:
     case MoveEffectType.FeelStressed:
-    case MoveEffectType.FeelStressedPlus:
+    case MoveEffectType.FeelStressedBeforeHit:
     case MoveEffectType.FeelWeepy:
     case MoveEffectType.FeelWeepyPlus: {
       const [im, nameKey, descKey] =

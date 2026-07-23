@@ -10,21 +10,27 @@ import BEASTIE_DATA from "../data/BeastieData";
 import CustomErrorBoundary from "../shared/CustomErrorBoundary";
 
 type EffectInfo = {
+  id: MoveEffectType;
+  title: string;
+  header?: string;
   targetSelector?: (props: {
     target: number;
     setTarget: (target: number) => void;
-    effectInfo: EffectInfo;
+    effectInfo: TemplateEffectInfo;
   }) => React.ReactNode;
   powSelector?: (props: {
     pow: number | string;
     setPow: (pow: number | string) => void;
-    effectInfo: EffectInfo;
+    effectInfo: TemplateEffectInfo;
   }) => React.ReactNode;
   effChangeCallback?: (effect: MoveEffect) => MoveEffect;
   min?: number;
   max?: number;
   step?: number;
+  hasNegative?: boolean;
 };
+
+type TemplateEffectInfo = Omit<EffectInfo, "id" | "title" | "header">;
 
 function AbilityInput({
   pow,
@@ -101,8 +107,8 @@ function DamageAdjustInput({
   );
 }
 
-const DEFAULT_EFFECT_INFO: EffectInfo &
-  Required<Pick<EffectInfo, "targetSelector" | "powSelector">> = {
+const DEFAULT_EFFECT_INFO: TemplateEffectInfo &
+  Required<Pick<TemplateEffectInfo, "targetSelector" | "powSelector">> = {
   targetSelector: ({ target, setTarget }) => (
     <select
       onChange={(event) => setTarget(Number(event.target.value))}
@@ -136,7 +142,7 @@ const DEFAULT_EFFECT_INFO: EffectInfo &
   ),
 };
 
-const DEFAULT_FIELD_TARGET: EffectInfo = {
+const DEFAULT_FIELD_TARGET: TemplateEffectInfo = {
   targetSelector: ({ target, setTarget }) => (
     <select
       onChange={(event) => setTarget(Number(event.target.value))}
@@ -149,12 +155,12 @@ const DEFAULT_FIELD_TARGET: EffectInfo = {
   ),
 };
 
-const NO_SELECTORS: EffectInfo = {
+const NO_SELECTORS: TemplateEffectInfo = {
   targetSelector: () => {},
   powSelector: () => {},
 };
 
-const FIELD_SELECTOR: EffectInfo = {
+const FIELD_SELECTOR: TemplateEffectInfo = {
   targetSelector: DEFAULT_FIELD_TARGET.targetSelector,
   powSelector: ({ pow, setPow }) => (
     <select
@@ -170,7 +176,7 @@ const FIELD_SELECTOR: EffectInfo = {
   ),
 };
 
-const FEELING_SELECTOR: EffectInfo = {
+const FEELING_SELECTOR: TemplateEffectInfo = {
   powSelector: ({ pow, setPow }) => (
     <select
       value={pow}
@@ -194,18 +200,115 @@ const FEELING_SELECTOR: EffectInfo = {
   ),
 };
 
-const EFFECT_INFO: Partial<Record<MoveEffectType, EffectInfo>> = {
-  [MoveEffectType.DamageAdjust]: {
-    // Damage Adjust
-    targetSelector: () => null,
-    powSelector: ({ pow, setPow }) => (
-      <DamageAdjustInput
-        pow={typeof pow == "number" ? pow : 0}
-        setPow={setPow}
-      />
-    ),
+const EFFECT_INFO: EffectInfo[] = [
+  {
+    id: MoveEffectType.BodyPowChange,
+    title: "Body POW Change",
+    header: "Boosts",
   },
-  [MoveEffectType.TraitSet]: {
+  { id: MoveEffectType.SpiritPowChange, title: "Spirit POW Change" },
+  { id: MoveEffectType.MindPowChange, title: "Mind POW Change" },
+  { id: MoveEffectType.BodyDefChange, title: "Body DEF Change" },
+  { id: MoveEffectType.SpiritDefChange, title: "Spirit DEF Change" },
+  { id: MoveEffectType.MindDefChange, title: "Mind DEF Change" },
+  { id: MoveEffectType.BodyMindPowChange, title: "Body + Spirit POW Change" },
+  { id: MoveEffectType.BodySpiritPowChange, title: "Body + Mind POW Change" },
+  { id: MoveEffectType.SpiritMindPowChange, title: "Spirit + Mind POW Change" },
+  { id: MoveEffectType.BodyMindDefChange, title: "Body + Spirit DEF Change" },
+  { id: MoveEffectType.BodySpiritDefChange, title: "Body + Mind DEF Change" },
+  { id: MoveEffectType.SpiritMindDefChange, title: "Spirit + Mind DEF Change" },
+  { id: MoveEffectType.AllPowChange, title: "All POW Change" },
+  { id: MoveEffectType.AllDefChange, title: "All DEF Change" },
+  { id: MoveEffectType.WeakDefChange, title: "Weakest DEF Change" },
+  { id: MoveEffectType.TransferBoosts, title: "Transfer Boosts to Target" },
+  { id: MoveEffectType.ResetBoosts, title: "Reset Boosts" },
+  {
+    id: MoveEffectType.FeelNervous,
+    title: "Feel NERVOUS",
+    header: "Feelings",
+    hasNegative: true,
+  },
+  { id: MoveEffectType.FeelAngry, title: "Feel ANGRY", hasNegative: true },
+  { id: MoveEffectType.FeelShook, title: "Feel SHOOK", hasNegative: true },
+  { id: MoveEffectType.FeelNoisy, title: "Feel NOISY", hasNegative: true },
+  { id: MoveEffectType.FeelTough, title: "Feel TOUGH", hasNegative: true },
+  { id: MoveEffectType.FeelWiped, title: "Feel WIPED", hasNegative: true },
+  { id: MoveEffectType.FeelSweaty, title: "Feel SWEATY", hasNegative: true },
+  { id: MoveEffectType.FeelJazzed, title: "Feel JAZZED", hasNegative: true },
+  { id: MoveEffectType.FeelBlocked, title: "Feel BLOCKED", hasNegative: true },
+  { id: MoveEffectType.FeelTired, title: "Feel TIRED", hasNegative: true },
+  { id: MoveEffectType.FeelTender, title: "Feel TENDER", hasNegative: true },
+  {
+    id: MoveEffectType.FeelStressed,
+    title: "Feel STRESSED",
+    hasNegative: true,
+  },
+  { id: MoveEffectType.FeelWeepy, title: "Feel WEEPY", hasNegative: true },
+  { id: MoveEffectType.FeelingCombiner, title: "Combine Feelings" },
+  {
+    id: MoveEffectType.FeelingCure,
+    title: "Cure a Single Feeling",
+    ...FEELING_SELECTOR,
+  },
+  {
+    id: MoveEffectType.FeelingBadCure,
+    title: "Cure Bad Feelings (except ANGRY)",
+  },
+  {
+    id: MoveEffectType.FeelingAllCure,
+    title: "Cure All Feelings (except ANGRY)",
+  },
+  {
+    id: MoveEffectType.FeelingAllCureAngry,
+    title: "Cure All Feelings (including ANGRY)",
+  },
+  {
+    id: MoveEffectType.FieldTrap,
+    title: "TRAP",
+    header: "Field",
+    ...DEFAULT_FIELD_TARGET,
+  },
+  { id: MoveEffectType.FieldRally, title: "RALLY", ...DEFAULT_FIELD_TARGET },
+  { id: MoveEffectType.FieldRhythm, title: "RHYTHM", ...DEFAULT_FIELD_TARGET },
+  { id: MoveEffectType.FieldDread, title: "DREAD", ...DEFAULT_FIELD_TARGET },
+  { id: MoveEffectType.FieldQuake, title: "QUAKE", ...DEFAULT_FIELD_TARGET },
+  {
+    id: MoveEffectType.FieldBarrier,
+    title: "BARRIER",
+    ...DEFAULT_FIELD_TARGET,
+  },
+  {
+    id: MoveEffectType.FieldClear,
+    title: "Clear Field",
+    ...DEFAULT_FIELD_TARGET,
+  },
+  {
+    id: MoveEffectType.StaminaChange,
+    title: "STAMINA Heal/Damage",
+    header: "Stamina",
+    step: 0.01,
+  },
+  { id: MoveEffectType.MaxStaminaChange, title: "Max Stamina" },
+  { id: MoveEffectType.FullRestore, title: "Fully Restore" },
+  {
+    id: MoveEffectType.StaminaSplit,
+    title: "Evenly Shares Stamina with Target",
+  },
+  { id: MoveEffectType.Shift, title: "SHIFT", header: "Move" },
+  { id: MoveEffectType.ShiftBeforeHit, title: "SHIFT before hit" },
+  { id: MoveEffectType.Swap, title: "Swap With Ally" },
+  {
+    id: MoveEffectType.SwapNoBall,
+    title: "Swap With Ally without moving Ball",
+  },
+  { id: MoveEffectType.TagOut, title: "TAG OUT" },
+  { id: MoveEffectType.TagOutBeforeHit, title: "TAG OUT self (attack)" },
+  { id: MoveEffectType.TraitSwap, title: "Trait Swap", header: "Trait" },
+  { id: MoveEffectType.TraitCopy, title: "User's Trait becomes Target's" },
+  { id: MoveEffectType.TraitGive, title: "Target's Trait becomes User's" },
+  {
+    id: MoveEffectType.TraitSet,
+    title: "Trait Set",
     powSelector: ({ pow, setPow }) => (
       <AbilityInput
         pow={typeof pow == "string" ? pow : "haunted"}
@@ -221,31 +324,94 @@ const EFFECT_INFO: Partial<Record<MoveEffectType, EffectInfo>> = {
           : "haunted",
     }),
   },
-  [MoveEffectType.FieldTrap]: DEFAULT_FIELD_TARGET,
-  [MoveEffectType.FieldRally]: DEFAULT_FIELD_TARGET,
-  [MoveEffectType.FieldRhythm]: DEFAULT_FIELD_TARGET,
-  [MoveEffectType.FieldDread]: DEFAULT_FIELD_TARGET,
-  [MoveEffectType.FieldQuake]: DEFAULT_FIELD_TARGET,
-  [MoveEffectType.FieldClear]: DEFAULT_FIELD_TARGET,
-
-  [MoveEffectType.CanHitWithoutVolley]: NO_SELECTORS,
-  [MoveEffectType.GivesEasyRecieve]: NO_SELECTORS,
-  [MoveEffectType.UseWhenPreventFeeling]: NO_SELECTORS,
-  [MoveEffectType.VolleyOnRecieve]: NO_SELECTORS,
-  [MoveEffectType.NoRedirect]: NO_SELECTORS,
-  [MoveEffectType.Mimic]: NO_SELECTORS,
-  [MoveEffectType.PowMultiply]: { targetSelector: () => {}, step: 0.1 },
-  [MoveEffectType.IgnoresTrait]: NO_SELECTORS,
-
-  [MoveEffectType.AddActions]: { targetSelector: () => {} },
-  [MoveEffectType.Charge]: { targetSelector: () => {} },
-  [MoveEffectType.ChargeReset]: NO_SELECTORS,
-
-  [MoveEffectType.Requires2Actions]: NO_SELECTORS,
-  [MoveEffectType.Requires3Actions]: NO_SELECTORS,
-  [MoveEffectType.PreventObstructed]: NO_SELECTORS,
-  [MoveEffectType.CanUseDefense]: NO_SELECTORS,
-  [MoveEffectType.RequiredVolleyState]: {
+  {
+    id: MoveEffectType.DamageAdjust,
+    title: "Damage Adjust",
+    header: "Attack",
+    targetSelector: () => null,
+    powSelector: ({ pow, setPow }) => (
+      <DamageAdjustInput
+        pow={typeof pow == "number" ? pow : 0}
+        setPow={setPow}
+      />
+    ),
+  },
+  {
+    id: MoveEffectType.CanHitWithoutVolley,
+    title: "Can use without Volleying",
+    ...NO_SELECTORS,
+  },
+  {
+    id: MoveEffectType.GivesEasyRecieve,
+    title: "Gives an Easy Recieve",
+    ...NO_SELECTORS,
+  },
+  {
+    id: MoveEffectType.VolleyOnRecieve,
+    title: "Automatically Volleys on recieve",
+    ...NO_SELECTORS,
+  },
+  {
+    id: MoveEffectType.NoRedirect,
+    title: "Can't be redirected",
+    ...NO_SELECTORS,
+  },
+  {
+    id: MoveEffectType.UseWhenPreventFeeling,
+    title: "Can use when TIRED, SHOOK or WIPED",
+    ...NO_SELECTORS,
+  },
+  {
+    id: MoveEffectType.IgnoresTrait,
+    title: "Ignores Target's Trait",
+    ...NO_SELECTORS,
+  },
+  {
+    id: MoveEffectType.Mimic,
+    title: "Mimic ally's first Attack",
+    ...NO_SELECTORS,
+  },
+  {
+    id: MoveEffectType.PowMultiply,
+    title: "POW Multiply",
+    targetSelector: () => {},
+    step: 0.1,
+  },
+  { id: MoveEffectType.Pass, title: "Pass/Volley", header: "Usage" },
+  { id: MoveEffectType.Charge, title: "Charges Up", targetSelector: () => {} },
+  {
+    id: MoveEffectType.ChargeReset,
+    title: "Charge Resets on Use",
+    ...NO_SELECTORS,
+  },
+  {
+    id: MoveEffectType.AddActions,
+    title: "+/- ACTIONs",
+    targetSelector: () => {},
+  },
+  {
+    id: MoveEffectType.Requires2Actions,
+    title: "Requires 2 ACTIONs",
+    ...NO_SELECTORS,
+  },
+  {
+    id: MoveEffectType.Requires3Actions,
+    title: "Requires 3 ACTIONs",
+    ...NO_SELECTORS,
+  },
+  {
+    id: MoveEffectType.PreventObstructed,
+    title: "Can't use if space is obstructed",
+    ...NO_SELECTORS,
+  },
+  {
+    id: MoveEffectType.CanUseDefense,
+    title: "Can be used during Defense",
+    ...NO_SELECTORS,
+  },
+  {
+    id: MoveEffectType.RequiredVolleyState,
+    title: "Can only be used if ball is/isn't Volleyed",
     targetSelector: () => {},
     powSelector: ({ pow, setPow }) => (
       <select
@@ -257,29 +423,26 @@ const EFFECT_INFO: Partial<Record<MoveEffectType, EffectInfo>> = {
       </select>
     ),
   },
-
-  [MoveEffectType.IfField]: FIELD_SELECTOR,
-
-  [MoveEffectType.FeelingCure]: FEELING_SELECTOR,
-  [MoveEffectType.IfFeeling]: FEELING_SELECTOR,
-
-  [MoveEffectType.StaminaChange]: { step: 0.01 },
-};
-
-const HAS_NEGATIVE = [
-  MoveEffectType.FeelNervous,
-  MoveEffectType.FeelAngry,
-  MoveEffectType.FeelShook,
-  MoveEffectType.FeelNoisy,
-  MoveEffectType.FeelTough,
-  MoveEffectType.FeelWiped,
-  MoveEffectType.FeelSweaty,
-  MoveEffectType.FeelJazzed,
-  MoveEffectType.FeelBlocked,
-  MoveEffectType.FeelTired,
-  MoveEffectType.FeelTender,
-  MoveEffectType.FeelStressed,
-  MoveEffectType.FeelWeepy,
+  {
+    id: MoveEffectType.IfHittable,
+    title: "If ball is hittable",
+    header: "Effect Condition",
+  },
+  { id: MoveEffectType.IfSuccess, title: "If previous effect succeeded" },
+  { id: MoveEffectType.IfBlock, title: "If ally can Block" },
+  { id: MoveEffectType.IfField, title: "If FIELD EFFECT", ...FIELD_SELECTOR },
+  { id: MoveEffectType.IfStamina, title: "If target STAMINA greater" },
+  {
+    id: MoveEffectType.IfFeeling,
+    title: "If target feels",
+    ...FEELING_SELECTOR,
+  },
+  {
+    id: MoveEffectType.FeelAware,
+    title: "Feel AWARE",
+    header: "Unused (Not Recommended)",
+  },
+  { id: MoveEffectType.AdditionalPercent, title: "Additional Damage %" },
 ];
 
 function EffectSelect({
@@ -297,19 +460,46 @@ function EffectSelect({
   first?: boolean;
   last?: boolean;
 }) {
-  const effectInfo = EFFECT_INFO[effect?.eff ?? 0] ?? DEFAULT_EFFECT_INFO;
+  const effType = effect?.eff ?? 0;
+  const effectInfo =
+    EFFECT_INFO.find((info) => info.id == effType) ??
+    EFFECT_INFO.find((info) => info.id == Math.abs(effType)) ??
+    DEFAULT_EFFECT_INFO;
 
   const TargetSelector =
     effectInfo.targetSelector ?? DEFAULT_EFFECT_INFO.targetSelector;
   const PowSelector = effectInfo.powSelector ?? DEFAULT_EFFECT_INFO.powSelector;
 
-  const hasNegative = HAS_NEGATIVE.includes(Math.abs(effect?.eff ?? 0));
+  const options = [];
+  let header = "";
+  let headerOptions: React.ReactElement[] = [];
+  for (const effect of EFFECT_INFO) {
+    if (effect.header) {
+      if (headerOptions.length) {
+        options.push(
+          <optgroup key={header} label={header}>
+            {headerOptions}
+          </optgroup>,
+        );
+        headerOptions = [];
+      }
+      header = effect.header;
+    }
+    headerOptions.push(
+      <option key={effect.id} value={effect.id}>
+        {effect.title}
+      </option>,
+    );
+  }
+  if (headerOptions.length) {
+    options.push(<optgroup label={header}>{headerOptions}</optgroup>);
+  }
 
   return (
     <div style={{ display: "flex" }}>
       {/* prettier-ignore */}
       <select
-        value={effect ? hasNegative ? Math.abs(effect.eff) : effect.eff : -9999}
+        value={effect ? effectInfo.hasNegative ? Math.abs(effect.eff) : effect.eff : -9999}
         onChange={(event) =>
           setEffect(
             effect
@@ -325,112 +515,11 @@ function EffectSelect({
         <option value={-9999} disabled>
           - Add New Effect -
         </option>
-        <optgroup label="Boosts">
-          <option value={MoveEffectType.BodyPowChange}>Body POW Change</option>
-          <option value={MoveEffectType.SpiritPowChange}>Spirit POW Change</option>
-          <option value={MoveEffectType.MindPowChange}>Mind POW Change</option>
-          <option value={MoveEffectType.BodyDefChange}>Body DEF Change</option>
-          <option value={MoveEffectType.SpiritDefChange}>Spirit DEF Change</option>
-          <option value={MoveEffectType.MindDefChange}>Mind DEF Change</option>
-          <option value={MoveEffectType.BodyMindPowChange}>Body + Spirit POW Change</option>
-          <option value={MoveEffectType.BodySpiritPowChange}>Body + Mind POW Change</option>
-          <option value={MoveEffectType.SpiritMindPowChange}>Spirit + Mind POW Change</option>
-          <option value={MoveEffectType.BodyMindDefChange}>Body + Spirit DEF Change</option>
-          <option value={MoveEffectType.BodySpiritDefChange}>Body + Mind DEF Change</option>
-          <option value={MoveEffectType.SpiritMindDefChange}>Spirit + Mind DEF Change</option>
-          <option value={MoveEffectType.AllPowChange}>All POW Change</option>
-          <option value={MoveEffectType.AllDefChange}>All DEF Change</option>
-          <option value={MoveEffectType.WeakDefChange}>Weakest DEF Change</option>
-          <option value={MoveEffectType.TransferBoosts}>Transfer Boosts to Target</option>
-          <option value={MoveEffectType.ResetBoosts}>Reset Boosts</option>
-        </optgroup>
-        <optgroup label="Feelings">
-          <option value={MoveEffectType.FeelNervous}>Feel NERVOUS</option>
-          <option value={MoveEffectType.FeelAngry}>Feel ANGRY</option>
-          <option value={MoveEffectType.FeelShook}>Feel SHOOK</option>
-          <option value={MoveEffectType.FeelNoisy}>Feel NOISY</option>
-          <option value={MoveEffectType.FeelTough}>Feel TOUGH</option>
-          <option value={MoveEffectType.FeelWiped}>Feel WIPED</option>
-          <option value={MoveEffectType.FeelSweaty}>Feel SWEATY</option>
-          <option value={MoveEffectType.FeelJazzed}>Feel JAZZED</option>
-          <option value={MoveEffectType.FeelBlocked}>Feel BLOCKED</option>
-          <option value={MoveEffectType.FeelTired}>Feel TIRED</option>
-          <option value={MoveEffectType.FeelTender}>Feel TENDER</option>
-          <option value={MoveEffectType.FeelStressed}>Feel STRESSED</option>
-          <option value={MoveEffectType.FeelWeepy}>Feel WEEPY</option>
-          <option value={MoveEffectType.FeelingCombiner}>Combine Feelings</option>
-          <option value={MoveEffectType.FeelingCure}>Cure a Single Feeling</option>
-          <option value={MoveEffectType.FeelingBadCure}>Cure Bad Feelings (except ANGRY)</option>
-          <option value={MoveEffectType.FeelingAllCure}>Cure All Feelings (except ANGRY)</option>
-          <option value={MoveEffectType.FeelingAllCureAngry}>Cure All Feelings (including ANGRY)</option>
-        </optgroup>
-        <optgroup label="Field">
-          <option value={MoveEffectType.FieldTrap}>TRAP</option>
-          <option value={MoveEffectType.FieldRally}>RALLY</option>
-          <option value={MoveEffectType.FieldRhythm}>RHYTHM</option>
-          <option value={MoveEffectType.FieldDread}>DREAD</option>
-          <option value={MoveEffectType.FieldQuake}>QUAKE</option>
-          <option value={MoveEffectType.FieldBarrier}>BARRIER</option>
-          <option value={MoveEffectType.FieldClear}>Clear Field</option>
-        </optgroup>
-        <optgroup label="Stamina">
-          <option value={MoveEffectType.StaminaChange}>STAMINA Heal/Damage</option>
-          <option value={MoveEffectType.MaxStaminaChange}>Max Stamina</option>
-          <option value={MoveEffectType.FullRestore}>Fully Restore</option>
-          <option value={MoveEffectType.StaminaSplit}>Evenly Shares Stamina with Target</option>
-        </optgroup>
-        <optgroup label="Move">
-          <option value={MoveEffectType.Shift}>SHIFT</option>
-          <option value={MoveEffectType.ShiftBeforeHit}>SHIFT before hit</option>
-          <option value={MoveEffectType.Swap}>Swap With Ally</option>
-          <option value={MoveEffectType.SwapNoBall}>Swap With Ally without moving Ball</option>
-          <option value={MoveEffectType.TagOut}>TAG OUT</option>
-          <option value={MoveEffectType.TagOutBeforeHit}>TAG OUT self (attack)</option>
-        </optgroup>
-        <optgroup label="Trait">
-          <option value={MoveEffectType.TraitSwap}>Trait Swap</option>
-          <option value={MoveEffectType.TraitCopy}>User's Trait becomes Target's</option>
-          <option value={MoveEffectType.TraitGive}>Target's Trait becomes User's</option>
-          <option value={MoveEffectType.TraitSet}>Trait Set</option>
-        </optgroup>
-        <optgroup label="Attack">
-          <option value={MoveEffectType.DamageAdjust}>Damage Adjust</option>
-          <option value={MoveEffectType.CanHitWithoutVolley}>Can use without Volleying</option>
-          <option value={MoveEffectType.GivesEasyRecieve}>Gives an Easy Recieve</option>
-          <option value={MoveEffectType.VolleyOnRecieve}>Automatically Volleys on recieve</option>
-          <option value={MoveEffectType.NoRedirect}>Can't be redirected</option>
-          <option value={MoveEffectType.UseWhenPreventFeeling}>Can use when TIRED, SHOOK or WIPED</option>
-          <option value={MoveEffectType.IgnoresTrait}>Ignores Target's Trait</option>
-          <option value={MoveEffectType.Mimic}>Mimic ally's first Attack</option>
-          <option value={MoveEffectType.PowMultiply}>POW Multiply</option>
-        </optgroup>
-        <optgroup label="Usage">
-          <option value={MoveEffectType.Pass}>Pass/Volley</option>
-          <option value={MoveEffectType.Charge}>Charges Up</option>
-          <option value={MoveEffectType.ChargeReset}>Charge Resets on Use</option>
-          <option value={MoveEffectType.AddActions}>+/- ACTIONs</option>
-          <option value={MoveEffectType.Requires2Actions}>Requires 2 ACTIONs</option>
-          <option value={MoveEffectType.Requires3Actions}>Requires 3 ACTIONs</option>
-          <option value={MoveEffectType.PreventObstructed}>Can't use if space is obstructed</option>
-          <option value={MoveEffectType.CanUseDefense}>Can be used during Defense</option>
-          <option value={MoveEffectType.RequiredVolleyState}>Can only be used if ball is/isn't Volleyed</option>
-        </optgroup>
-        <optgroup label="Effect Condition">
-          <option value={MoveEffectType.IfHittable}>If ball is hittable</option>
-          <option value={MoveEffectType.IfSuccess}>If previous effect succeeded</option>
-          <option value={MoveEffectType.IfBlock}>If ally can Block</option>
-          <option value={MoveEffectType.IfField}>If FIELD EFFECT</option>
-          <option value={MoveEffectType.IfStamina}>If target STAMINA greater</option>
-          <option value={MoveEffectType.IfFeeling}>If target feels</option>
-        </optgroup>
-        <optgroup label="Unused (Not Recommended)">
-          <option value={MoveEffectType.FeelAware}>Feel AWARE</option>
-          <option value={MoveEffectType.AdditionalPercent}>Additional Damage %</option>
-        </optgroup>
+        {options}
       </select>
       {effect && moveEffect && deleteEffect && (
         <>
-          {hasNegative ? (
+          {effectInfo.hasNegative ? (
             <select
               value={effect.eff > 0 ? 1 : -1}
               onChange={(event) =>
@@ -623,7 +712,9 @@ export default function WorkshopEditPlay({
               key={index}
               effect={eff}
               setEffect={(effect) => {
-                const callback = EFFECT_INFO[effect.eff]?.effChangeCallback;
+                const callback = EFFECT_INFO.find(
+                  (info) => info.id == effect.eff,
+                )?.effChangeCallback;
                 if (callback) {
                   effect = callback(effect);
                 } else if (typeof effect.pow == "string") {
@@ -648,7 +739,9 @@ export default function WorkshopEditPlay({
           ))}
           <EffectSelect
             setEffect={(effect) => {
-              const callback = EFFECT_INFO[effect.eff]?.effChangeCallback;
+              const callback = EFFECT_INFO.find(
+                (info) => info.id == effect.eff,
+              )?.effChangeCallback;
               if (callback) {
                 effect = callback(effect);
               } else if (typeof effect.pow == "string") {

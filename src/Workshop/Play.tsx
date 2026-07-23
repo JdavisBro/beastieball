@@ -7,6 +7,7 @@ import abilities from "../data/abilities";
 import useLocalization from "../localization/useLocalization";
 import BeastieSelect from "../shared/BeastieSelect";
 import BEASTIE_DATA from "../data/BeastieData";
+import CustomErrorBoundary from "../shared/CustomErrorBoundary";
 
 type EffectInfo = {
   targetSelector?: (props: {
@@ -659,24 +660,26 @@ export default function WorkshopEditPlay({
         </div>
         <button onClick={deletePlay}>Delete Play</button>
       </div>
-      <MoveView
-        move={{
-          id: String(idAccum),
-          name: play.name,
-          type: play.type,
-          use: play.use,
-          targ: play.target,
-          pow: play.pow,
-          eff: play.effects,
+      <CustomErrorBoundary fallbackClassName="">
+        <MoveView
+          move={{
+            id: String(idAccum),
+            name: play.name,
+            type: play.type,
+            use: play.use,
+            targ: play.target,
+            pow: play.pow,
+            eff: play.effects,
 
-          desc_tags: [],
-          desc_tagids: [],
-          description: null,
-          bt_tags: [],
-          price: 0,
-        }}
-        noLearner={true}
-      />
+            desc_tags: [],
+            desc_tagids: [],
+            description: null,
+            bt_tags: [],
+            price: 0,
+          }}
+          noLearner={true}
+        />
+      </CustomErrorBoundary>
     </>
   );
 }

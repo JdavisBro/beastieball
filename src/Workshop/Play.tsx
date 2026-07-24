@@ -121,6 +121,8 @@ function ShiftInput({
     >
       <option value={0}>Backward</option>
       <option value={1}>Forward</option>
+      <option value={2}>Opposite Lane</option>
+      <option value={3}>Opposite Row</option>
     </select>
   );
 }

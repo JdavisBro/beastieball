@@ -171,6 +171,7 @@ const DEFAULT_FIELD_TARGET: TemplateEffectInfo = {
       <option value={0}>Ally Field</option>
       <option value={3}>Opponent Field</option>
       <option value={7}>Entire Field</option>
+      <option value={12}>Either Field</option>
     </select>
   ),
 };

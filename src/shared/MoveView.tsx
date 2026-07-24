@@ -250,12 +250,12 @@ function getEffectString(
             "movedefine_015", // backward
             "movedefine_016", // forward
             "movedefine_017", // sideways
-            undefined,
+            "movedefine_018", // to opposite row
             undefined,
             undefined,
             undefined,
             "movedefine_018", // to opposite row
-          ][effect.pow] ?? "movedefine_015",
+          ][effect.pow] ?? "movedefine_015", // backward
         ),
         ...target_placeholders,
       });
@@ -526,7 +526,7 @@ function getEffectString(
       return L("movedefine_descadd_029", {
         // If {field} has {0}:
         ...target_placeholders,
-        "0": L(FIELD_MAP[effect.pow] ?? "fieldeffectstuff_001"),
+        "0": L(FIELD_MAP[effect.pow] ?? "fieldeffectstuff_001"), // RALLY
       });
     case MoveEffectType.TraitCopy:
       return L("movedefine_descadd_086", { ...target_placeholders }); // Copies {target}'s Trait.

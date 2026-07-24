@@ -592,7 +592,7 @@ const EFFECT_INFO: EffectInfo[] = [
   {
     id: MoveEffectType.IfHittable,
     title: "IfHittable",
-    header: "Effect Condition",
+    header: "EffectCondition",
     ...NO_SELECTORS,
   },
   {
@@ -611,7 +611,7 @@ const EFFECT_INFO: EffectInfo[] = [
   {
     id: MoveEffectType.FeelAware,
     title: "FeelAware",
-    header: "Unused (Not Recommended)",
+    header: "Unused",
     hasNegative: true,
   },
   {
@@ -661,7 +661,7 @@ function EffectSelect({
         );
         headerOptions = [];
       }
-      header = effect.header;
+      header = L("workshop.play.effects.header" + effect.header);
     }
     headerOptions.push(
       <option key={effect.id} value={effect.id}>

@@ -51,7 +51,7 @@
       "effects": {
         "title": "Effects:",
         "new": "- Add New Effect -",
-        "headerBoost": "Boosts",
+        "headerBoosts": "Boosts",
         "headerFeelings": "Feelings",
         "headerField": "Field",
         "headerStamina": "Stamina",

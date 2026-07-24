@@ -36,6 +36,7 @@ type EffectInfo = {
   min?: number;
   max?: number;
   step?: number;
+  displayMultiply?: number;
   hasNegative?: boolean;
 };
 
@@ -207,8 +208,14 @@ const DEFAULT_EFFECT_INFO: TemplateEffectInfo &
   powSelector: ({ pow, setPow, effectInfo }) => (
     <input
       type="number"
-      value={typeof pow == "number" ? pow : 0}
-      onChange={(event) => setPow(Number(event.currentTarget.value))}
+      value={
+        (typeof pow == "number" ? pow : 0) * (effectInfo.displayMultiply ?? 1)
+      }
+      onChange={(event) =>
+        setPow(
+          Number(event.currentTarget.value) / (effectInfo.displayMultiply ?? 1),
+        )
+      }
       min={effectInfo.min}
       max={effectInfo.max}
       step={effectInfo.step}
@@ -407,7 +414,7 @@ const EFFECT_INFO: EffectInfo[] = [
     id: MoveEffectType.StaminaChange,
     title: "StaminaChange",
     header: "Stamina",
-    step: 0.01,
+    displayMultiply: 100,
   },
   { id: MoveEffectType.MaxStaminaChange, title: "MaxStaminaChange" },
   {
@@ -607,7 +614,11 @@ const EFFECT_INFO: EffectInfo[] = [
     header: "Unused (Not Recommended)",
     hasNegative: true,
   },
-  { id: MoveEffectType.AdditionalPercent, title: "AdditionalPercent" },
+  {
+    id: MoveEffectType.AdditionalPercent,
+    title: "AdditionalPercent",
+    displayMultiply: 100,
+  },
 ];
 
 function EffectSelect({

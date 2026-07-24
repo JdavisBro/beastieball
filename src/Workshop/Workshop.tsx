@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import OpenGraph from "../shared/OpenGraph";
 import useLocalization, {
   LocalizationFunction,
@@ -37,6 +37,8 @@ function WorkshopEditData({
 }) {
   const { L } = useLocalization();
 
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   const setKey: <T extends keyof WorkshopData>(
     key: T,
     value: WorkshopData[T],
@@ -56,14 +58,14 @@ function WorkshopEditData({
       }}
     >
       <label>
-        Name:{" "}
+        {L("workshop.modInfo.name")}
         <StringDataInput
           value={workshopData.name}
           setValue={(value) => setKey("name", value)}
         />
       </label>
       <label>
-        Author:{" "}
+        {L("workshop.modInfo.author")}
         <StringDataInput
           value={workshopData.author}
           setValue={(value) => setKey("author", value)}
@@ -71,7 +73,7 @@ function WorkshopEditData({
       </label>
       <div>
         <label>
-          Version Major{" "}
+          {L("workshop.modInfo.majorVersion")}
           <input
             type="number"
             value={workshopData.major_version}
@@ -81,7 +83,7 @@ function WorkshopEditData({
           />
         </label>
         <label>
-          Minor{" "}
+          {L("workshop.modInfo.minorVersion")}
           <input
             type="number"
             value={workshopData.minor_version}
@@ -110,21 +112,34 @@ function WorkshopEditData({
           }));
         }}
       >
-        Add Play
+        {L("workshop.modInfo.addPlay")}
       </button>
-      <button onClick={() => saveZip(workshopData, L)}>Save</button>
-      <input
-        type="file"
-        onChange={(event) =>
-          loadZip(event.currentTarget.files?.[0], L)
-            .then((newData) => {
-              if (newData) setWorkshopData(newData);
-            })
-            .catch((reason) => console.log(reason))
-        }
-        accept=".zip,application/zip"
-        onClick={(event) => (event.currentTarget.value = "")}
-      />
+      <div>
+        <button onClick={() => saveZip(workshopData, L)}>
+          {L("workshop.modInfo.save")}
+        </button>
+        <button
+          onClick={() => {
+            if (fileInputRef.current) fileInputRef.current.click();
+          }}
+        >
+          {L("workshop.modInfo.load")}
+        </button>
+        <input
+          type="file"
+          onChange={(event) =>
+            loadZip(event.currentTarget.files?.[0], L)
+              .then((newData) => {
+                if (newData) setWorkshopData(newData);
+              })
+              .catch((reason) => console.log(reason))
+          }
+          accept=".zip,application/zip"
+          style={{ display: "none" }}
+          onClick={(event) => (event.currentTarget.value = "")}
+          ref={fileInputRef}
+        />
+      </div>
     </div>
   );
 }
@@ -137,11 +152,13 @@ function WorkshopInner({
   workshopData: WorkshopData;
   setWorkshopData: React.Dispatch<React.SetStateAction<WorkshopData>>;
 }) {
+  const { L } = useLocalization();
+
   const [tab, setTab] = useState(0);
 
   const tabs = [
     [
-      "Mod Info",
+      L("workshop.modInfo.title"),
       <WorkshopEditData
         workshopData={workshopData}
         setWorkshopData={setWorkshopData}
@@ -149,7 +166,7 @@ function WorkshopInner({
     ],
   ].concat(
     workshopData.plays.map((play, index) => [
-      `Play ${index + 1}: ${play.name}`,
+      L("workshop.play.title", { index: String(index + 1), name: play.name }),
       <WorkshopEditPlay
         key={index}
         play={play}
@@ -274,7 +291,6 @@ async function loadZip(
   dirs.sort();
   for (const dir of dirs) {
     const playData = zip.file(baseDir + dir + "play_data.ini");
-    console.log(playData, dir);
     if (playData) {
       const data = loadIni(await playData.async("string"));
       const effects: MoveEffect[] = [];
@@ -290,7 +306,6 @@ async function loadZip(
               : Number(effSplit[i + 2] ?? 0),
         } as MoveEffect);
       }
-      console.log(data, await playData.async("string"));
       workshopData.plays.push({
         name: String(data?.basic?.name ?? ""),
         type: Number(data?.basic?.type ?? 0),
@@ -456,7 +471,6 @@ export default function Workshop() {
     const transaction = db.transaction("Mod1");
     const store = transaction.objectStore("Mod1");
     const request = store.get("data.json");
-    console.log(request);
     request.onsuccess = () => {
       if (request.result) {
         setWorkshopData(request.result);
@@ -465,7 +479,6 @@ export default function Workshop() {
       }
     };
     request.onerror = () => {
-      console.log("boo");
       setWorkshopData(newWorkshopData());
     };
   }, [db]);
@@ -481,14 +494,14 @@ export default function Workshop() {
     <>
       <OpenGraph
         title={L("common.title", {
-          page: L("Workshop"),
+          page: L("workshop.title"),
           branding: import.meta.env.VITE_BRANDING,
         })}
-        description={L("Workshop Description")}
+        description={L("workshop.description")}
         image="gameassets/sprMainmenu/12.png"
         url="workshop/"
       />
-      <Header title={L("Workshop")} />
+      <Header title={L("workshop.title")} />
       {db && workshopData ? (
         <WorkshopInner
           db={db}
@@ -503,10 +516,12 @@ export default function Workshop() {
         />
       ) : dbError ? (
         <>
-          eror<button onClick={getDb}>tryagain</button>
+          {L("workshop.error")}
+          <br />
+          <button onClick={getDb}>{L("workshop.tryAgain")}</button>
         </>
       ) : (
-        "loading"
+        L("common.loadingNoDot")
       )}
     </>
   );

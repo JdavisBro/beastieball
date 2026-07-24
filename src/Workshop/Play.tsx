@@ -70,49 +70,79 @@ function DamageAdjustInput({
   pow: number;
   setPow: (pow: number) => void;
 }) {
+  const { L } = useLocalization();
+
   return (
     <select
       onChange={(event) => setPow(Number(event.currentTarget.value))}
       value={pow}
       ref={useAutoApply(setPow)}
     >
-      <option value={0}>Add user's STAMINA to Pow</option>
-      <option value={1}>Strongest when user has less STAMINA</option>
-      <option value={2}>Uses Body Defense</option>
-      <option value={3}>Uses Spirit Defense</option>
-      <option value={4}>Uses Mind Defense</option>
-      <option value={5}>Pow x2 if target just TAGGED IN</option>
-      <option value={6}>Pow x2 if target just MOVED</option>
-      <option value={7}>Pow x2 if used to Serve</option>
-      <option value={8}>Strongest when target has more STAMINA</option>
-      <option value={9}>Pow x2 if target STAMINA is below 50</option>
-      <option value={10}>Pow +10 for each ^BOOST on user</option>
-      <option value={11}>Pow +100% for each ^BOOST on target</option>
-      <option value={12}>Pow x2 if user SWEATY, NERVOUS, TENDER, WEEPY</option>
-      <option value={13}>Pow x2 if target has a bad feeling</option>
-      <option value={14}>Ignores shields and ^BOOSTS</option>
-      <option value={15}>Pow x1.5 if tied or behind on score</option>
-      <option value={16}>Does more damage to back-row targets</option>
-      <option value={17}>Ignores BLOCKED</option>
-      <option value={18}>Pow x1.5 if user recieved the ball</option>
-      <option value={19}>Pow +50% for each volley between allies</option>
-      <option value={20}>Pow x2 if user recently TAGGED IN</option>
-      <option value={21}>Pow +25% for each vBOOST on target</option>
-      <option value={22}>Always uses target's weakest DEF</option>
-      <option value={23}>Always uses target's strongest DEF</option>
-      <option value={24}>Pow +10 for each vBOOST on user</option>
-      <option value={25}>Always boosted by RALLY</option>
-      <option value={26}>Pow x1.5 if user changed position this turn</option>
-      <option value={27}>Pow x2 when user STAMINA is below 34</option>
-      <option value={28}>Ignores user's BOOSTs and JAZZED</option>
-      <option value={29}>Pow x2 if there are any Field Effects</option>
-      <option value={30}>Pow x1.5 if user has 2+ ACTIONs</option>
-      <option value={31}>Pow x1.5 if user is JAZZED</option>
-      <option value={32}>Pow x0.75 if user has any Feelings</option>
-      <option value={33}>Ignores damage reduction from RALLY</option>
-      <option value={34}>Pow +20 for each stack of SWEATY on user</option>
-      <option value={35}>Damages from back row</option>
-      <option value={36}>Damages from front row</option>
+      <option value={0}>{L("workshop.play.damageAdjust.addStamina")}</option>
+      <option value={1}>
+        {L("workshop.play.damageAdjust.userLowerStamina")}
+      </option>
+      <option value={2}>{L("workshop.play.damageAdjust.bodyDef")}</option>
+      <option value={3}>{L("workshop.play.damageAdjust.spiritDef")}</option>
+      <option value={4}>{L("workshop.play.damageAdjust.mindDef")}</option>
+      <option value={5}>
+        {L("workshop.play.damageAdjust.targetTaggedIn")}
+      </option>
+      <option value={6}>{L("workshop.play.damageAdjust.targetMoved")}</option>
+      <option value={7}>{L("workshop.play.damageAdjust.serve")}</option>
+      <option value={8}>
+        {L("workshop.play.damageAdjust.targetMoreStamina")}
+      </option>
+      <option value={9}>
+        {L("workshop.play.damageAdjust.targetLowStamina")}
+      </option>
+      <option value={10}>{L("workshop.play.damageAdjust.userBoost")}</option>
+      <option value={11}>{L("workshop.play.damageAdjust.targetBoost")}</option>
+      <option value={12}>
+        {L("workshop.play.damageAdjust.userBadFeeling")}
+      </option>
+      <option value={13}>
+        {L("workshop.play.damageAdjust.targetBadFeeling")}
+      </option>
+      <option value={14}>
+        {L("workshop.play.damageAdjust.ignoreShields")}
+      </option>
+      <option value={15}>{L("workshop.play.damageAdjust.scoreBehind")}</option>
+      <option value={16}>{L("workshop.play.damageAdjust.backRow")}</option>
+      <option value={17}>
+        {L("workshop.play.damageAdjust.ignoresBlocked")}
+      </option>
+      <option value={18}>{L("workshop.play.damageAdjust.userRecieved")}</option>
+      <option value={19}>{L("workshop.play.damageAdjust.volleys")}</option>
+      <option value={20}>{L("workshop.play.damageAdjust.userTaggedIn")}</option>
+      <option value={21}>
+        {L("workshop.play.damageAdjust.targetDownBoost")}
+      </option>
+      <option value={22}>
+        {L("workshop.play.damageAdjust.targetWeakestDef")}
+      </option>
+      <option value={23}>
+        {L("workshop.play.damageAdjust.targetStrongestDef")}
+      </option>
+      <option value={24}>
+        {L("workshop.play.damageAdjust.userDownBoost")}
+      </option>
+      <option value={25}>{L("workshop.play.damageAdjust.rally")}</option>
+      <option value={26}>{L("workshop.play.damageAdjust.userMoved")}</option>
+      <option value={27}>
+        {L("workshop.play.damageAdjust.userLowStamina")}
+      </option>
+      <option value={28}>
+        {L("workshop.play.damageAdjust.ignoresUserBoosts")}
+      </option>
+      <option value={29}>{L("workshop.play.damageAdjust.fieldEffects")}</option>
+      <option value={30}>{L("workshop.play.damageAdjust.actions")}</option>
+      <option value={31}>{L("workshop.play.damageAdjust.jazzed")}</option>
+      <option value={32}>{L("workshop.play.damageAdjust.feelings")}</option>
+      <option value={33}>{L("workshop.play.damageAdjust.ignoresRally")}</option>
+      <option value={34}>{L("workshop.play.damageAdjust.sweaty")}</option>
+      <option value={35}>{L("workshop.play.damageAdjust.fromBackRow")}</option>
+      <option value={36}>{L("workshop.play.damageAdjust.fromFrontRow")}</option>
     </select>
   );
 }
@@ -124,43 +154,56 @@ function ShiftInput({
   pow: string | number;
   setPow: (pow: string | number) => void;
 }) {
+  const { L } = useLocalization();
+
   return (
     <select
       value={pow}
       onChange={(event) => setPow(Number(event.currentTarget.value))}
       ref={useAutoApply(setPow)}
     >
-      <option value={0}>Backward</option>
-      <option value={1}>Forward</option>
-      <option value={2}>Opposite Lane</option>
-      <option value={3}>Opposite Row</option>
+      <option value={0}>{L("workshop.play.shift.backward")}</option>
+      <option value={1}>{L("workshop.play.shift.forward")}</option>
+      <option value={2}>{L("workshop.play.shift.oppositeLane")}</option>
+      <option value={3}>{L("workshop.play.shift.oppositeRow")}</option>
     </select>
   );
 }
 
 const DEFAULT_EFFECT_INFO: TemplateEffectInfo &
   Required<Pick<TemplateEffectInfo, "targetSelector" | "powSelector">> = {
-  targetSelector: ({ target, setTarget }) => (
-    <select
-      onChange={(event) => setTarget(Number(event.target.value))}
-      value={target}
-      ref={useAutoApply(setTarget)}
-    >
-      <option value={0}>User</option>
-      <option value={1}>Ally</option>
-      <option value={2}>Active Team</option>
-      <option value={3}>Target</option>
-      <option value={4}>Target Team</option>
-      <option value={5}>Target's Ally</option>
-      <option value={6}>Entire Team</option>
-      <option value={7}>Every Fielded Player</option>
-      <option value={8}>Other Team</option>
-      <option value={9}>Nearest Enemy</option>
-      <option value={10}>Front Row Active Team</option>
-      <option value={11}>Active Team</option>
-      <option value={12}>User and Target</option>
-    </select>
-  ),
+  targetSelector: ({ target, setTarget }) => {
+    const { L } = useLocalization();
+    return (
+      <select
+        onChange={(event) => setTarget(Number(event.target.value))}
+        value={target}
+        ref={useAutoApply(setTarget)}
+      >
+        <option value={0}>{L("workshop.play.effectTarget.user")}</option>
+        <option value={1}>{L("workshop.play.effectTarget.ally")}</option>
+        <option value={2}>{L("workshop.play.effectTarget.activeTeam")}</option>
+        <option value={3}>{L("workshop.play.effectTarget.target")}</option>
+        <option value={4}>{L("workshop.play.effectTarget.targetTeam")}</option>
+        <option value={5}>{L("workshop.play.effectTarget.targetAlly")}</option>
+        <option value={6}>{L("workshop.play.effectTarget.entireTeam")}</option>
+        <option value={7}>
+          {L("workshop.play.effectTarget.everyFieldedPlayer")}
+        </option>
+        <option value={8}>{L("workshop.play.effectTarget.otherTeam")}</option>
+        <option value={9}>
+          {L("workshop.play.effectTarget.nearestEnemy")}
+        </option>
+        <option value={10}>
+          {L("workshop.play.effectTarget.frontRowActiveTeam")}
+        </option>
+        <option value={11}>{L("workshop.play.effectTarget.activeTeam")}</option>
+        <option value={12}>
+          {L("workshop.play.effectTarget.userAndTarget")}
+        </option>
+      </select>
+    );
+  },
   powSelector: ({ pow, setPow, effectInfo }) => (
     <input
       type="number"
@@ -175,18 +218,21 @@ const DEFAULT_EFFECT_INFO: TemplateEffectInfo &
 };
 
 const DEFAULT_FIELD_TARGET: TemplateEffectInfo = {
-  targetSelector: ({ target, setTarget }) => (
-    <select
-      onChange={(event) => setTarget(Number(event.target.value))}
-      value={target}
-      ref={useAutoApply(setTarget)}
-    >
-      <option value={0}>Ally Field</option>
-      <option value={3}>Opponent Field</option>
-      <option value={7}>Entire Field</option>
-      <option value={12}>Either Field</option>
-    </select>
-  ),
+  targetSelector: ({ target, setTarget }) => {
+    const { L } = useLocalization();
+    return (
+      <select
+        onChange={(event) => setTarget(Number(event.target.value))}
+        value={target}
+        ref={useAutoApply(setTarget)}
+      >
+        <option value={0}> {L("workshop.play.field.ally")}</option>
+        <option value={3}> {L("workshop.play.field.opponent")}</option>
+        <option value={7}> {L("workshop.play.field.entire")}</option>
+        <option value={12}>{L("workshop.play.field.either")}</option>
+      </select>
+    );
+  },
 };
 
 const NO_SELECTORS: TemplateEffectInfo = {
@@ -196,204 +242,226 @@ const NO_SELECTORS: TemplateEffectInfo = {
 
 const FIELD_SELECTOR: TemplateEffectInfo = {
   targetSelector: DEFAULT_FIELD_TARGET.targetSelector,
-  powSelector: ({ pow, setPow }) => (
-    <select
-      value={pow}
-      onChange={(event) => setPow(Number(event.currentTarget.value))}
-      ref={useAutoApply(setPow)}
-    >
-      <option value={0}>Rally</option>
-      <option value={1}>Trap</option>
-      <option value={2}>Rhythm</option>
-      <option value={3}>Dread</option>
-      <option value={5}>Quake</option>
-    </select>
-  ),
+  powSelector: ({ pow, setPow }) => {
+    const { L } = useLocalization();
+    return (
+      <select
+        value={pow}
+        onChange={(event) => setPow(Number(event.currentTarget.value))}
+        ref={useAutoApply(setPow)}
+      >
+        <option value={0}>{L("fieldeffectstuff_001")}</option>
+        <option value={1}>{L("fieldeffectstuff_002")}</option>
+        <option value={2}>{L("fieldeffectstuff_003")}</option>
+        <option value={3}>{L("fieldeffectstuff_004")}</option>
+        <option value={5}>{L("fieldeffectstuff_005")}</option>
+      </select>
+    );
+  },
 };
 
 const FEELING_SELECTOR: TemplateEffectInfo = {
-  powSelector: ({ pow, setPow }) => (
-    <select
-      value={pow}
-      onChange={(event) => setPow(Number(event.currentTarget.value))}
-      ref={useAutoApply(setPow)}
-    >
-      <option value={0}>Nervous</option>
-      <option value={1}>Angry</option>
-      <option value={2}>Shook</option>
-      <option value={3}>Noisy</option>
-      <option value={4}>Tough</option>
-      <option value={5}>Wiped</option>
-      <option value={6}>Sweaty</option>
-      <option value={8}>Jazzed</option>
-      <option value={9}>Blocked</option>
-      <option value={10}>Tired</option>
-      <option value={11}>Tender</option>
-      <option value={12}>Stressed</option>
-      <option value={13}>Weepy</option>
-      <option value={7}>Aware (Unused)</option>
-    </select>
-  ),
+  powSelector: ({ pow, setPow }) => {
+    const { L } = useLocalization();
+    return (
+      <select
+        value={pow}
+        onChange={(event) => setPow(Number(event.currentTarget.value))}
+        ref={useAutoApply(setPow)}
+      >
+        <option value={0}>{L("statuseffectstuff_001")}</option>
+        <option value={1}>{L("statuseffectstuff_002")}</option>
+        <option value={2}>{L("statuseffectstuff_003")}</option>
+        <option value={3}>{L("statuseffectstuff_004")}</option>
+        <option value={4}>{L("statuseffectstuff_005")}</option>
+        <option value={5}>{L("statuseffectstuff_006")}</option>
+        <option value={6}>{L("statuseffectstuff_007")}</option>
+        <option value={8}>{L("statuseffectstuff_009")}</option>
+        <option value={9}>{L("statuseffectstuff_010")}</option>
+        <option value={10}>{L("statuseffectstuff_011")}</option>
+        <option value={11}>{L("statuseffectstuff_012")}</option>
+        <option value={12}>{L("statuseffectstuff_013")}</option>
+        <option value={13}>{L("statuseffectstuff_029")}</option>
+        <option value={7}>{L("workshop.play.aware")}</option>
+      </select>
+    );
+  },
 };
 
 const EFFECT_INFO: EffectInfo[] = [
   {
     id: MoveEffectType.BodyPowChange,
-    title: "Body POW Change",
+    title: "BodyPowChange",
     header: "Boosts",
   },
-  { id: MoveEffectType.SpiritPowChange, title: "Spirit POW Change" },
-  { id: MoveEffectType.MindPowChange, title: "Mind POW Change" },
-  { id: MoveEffectType.BodyDefChange, title: "Body DEF Change" },
-  { id: MoveEffectType.SpiritDefChange, title: "Spirit DEF Change" },
-  { id: MoveEffectType.MindDefChange, title: "Mind DEF Change" },
-  { id: MoveEffectType.BodyMindPowChange, title: "Body + Spirit POW Change" },
-  { id: MoveEffectType.BodySpiritPowChange, title: "Body + Mind POW Change" },
-  { id: MoveEffectType.SpiritMindPowChange, title: "Spirit + Mind POW Change" },
-  { id: MoveEffectType.BodyMindDefChange, title: "Body + Spirit DEF Change" },
-  { id: MoveEffectType.BodySpiritDefChange, title: "Body + Mind DEF Change" },
-  { id: MoveEffectType.SpiritMindDefChange, title: "Spirit + Mind DEF Change" },
-  { id: MoveEffectType.AllPowChange, title: "All POW Change" },
-  { id: MoveEffectType.AllDefChange, title: "All DEF Change" },
-  { id: MoveEffectType.WeakDefChange, title: "Weakest DEF Change" },
+  { id: MoveEffectType.SpiritPowChange, title: "SpiritPowChange" },
+  { id: MoveEffectType.MindPowChange, title: "MindPowChange" },
+  { id: MoveEffectType.BodyDefChange, title: "BodyDefChange" },
+  { id: MoveEffectType.SpiritDefChange, title: "SpiritDefChange" },
+  { id: MoveEffectType.MindDefChange, title: "MindDefChange" },
+  { id: MoveEffectType.BodyMindPowChange, title: "BodyMindPowChange" },
+  { id: MoveEffectType.BodySpiritPowChange, title: "BodySpiritPowChange" },
+  { id: MoveEffectType.SpiritMindPowChange, title: "SpiritMindPowChange" },
+  { id: MoveEffectType.BodyMindDefChange, title: "BodyMindDefChange" },
+  { id: MoveEffectType.BodySpiritDefChange, title: "BodySpiritDefChange" },
+  { id: MoveEffectType.SpiritMindDefChange, title: "SpiritMindDefChange" },
+  { id: MoveEffectType.AllPowChange, title: "AllPowChange" },
+  { id: MoveEffectType.AllDefChange, title: "AllDefChange" },
+  { id: MoveEffectType.WeakDefChange, title: "WeakDefChange" },
   {
     id: MoveEffectType.TransferBoosts,
-    title: "Transfer Boosts to Target",
+    title: "TransferBoosts",
     powSelector: () => {},
   },
   {
     id: MoveEffectType.ResetBoosts,
-    title: "Reset Boosts",
+    title: "ResetBoosts",
     powSelector: () => {},
   },
   {
     id: MoveEffectType.FeelNervous,
-    title: "Feel NERVOUS",
+    title: "FeelNervous",
     header: "Feelings",
     hasNegative: true,
   },
-  { id: MoveEffectType.FeelAngry, title: "Feel ANGRY", hasNegative: true },
-  { id: MoveEffectType.FeelShook, title: "Feel SHOOK", hasNegative: true },
-  { id: MoveEffectType.FeelNoisy, title: "Feel NOISY", hasNegative: true },
-  { id: MoveEffectType.FeelTough, title: "Feel TOUGH", hasNegative: true },
-  { id: MoveEffectType.FeelWiped, title: "Feel WIPED", hasNegative: true },
-  { id: MoveEffectType.FeelSweaty, title: "Feel SWEATY", hasNegative: true },
-  { id: MoveEffectType.FeelJazzed, title: "Feel JAZZED", hasNegative: true },
-  { id: MoveEffectType.FeelBlocked, title: "Feel BLOCKED", hasNegative: true },
-  { id: MoveEffectType.FeelTired, title: "Feel TIRED", hasNegative: true },
-  { id: MoveEffectType.FeelTender, title: "Feel TENDER", hasNegative: true },
+  { id: MoveEffectType.FeelAngry, title: "FeelAngry", hasNegative: true },
+  { id: MoveEffectType.FeelShook, title: "FeelShook", hasNegative: true },
+  { id: MoveEffectType.FeelNoisy, title: "FeelNoisy", hasNegative: true },
+  { id: MoveEffectType.FeelTough, title: "FeelTough", hasNegative: true },
+  { id: MoveEffectType.FeelWiped, title: "FeelWiped", hasNegative: true },
+  { id: MoveEffectType.FeelSweaty, title: "FeelSweaty", hasNegative: true },
+  { id: MoveEffectType.FeelJazzed, title: "FeelJazzed", hasNegative: true },
+  { id: MoveEffectType.FeelBlocked, title: "FeelBlocked", hasNegative: true },
+  { id: MoveEffectType.FeelTired, title: "FeelTired", hasNegative: true },
+  { id: MoveEffectType.FeelTender, title: "FeelTender", hasNegative: true },
   {
     id: MoveEffectType.FeelStressed,
-    title: "Feel STRESSED",
+    title: "FeelStressed",
     hasNegative: true,
   },
-  { id: MoveEffectType.FeelWeepy, title: "Feel WEEPY", hasNegative: true },
+  { id: MoveEffectType.FeelWeepy, title: "FeelWeepy", hasNegative: true },
   {
     id: MoveEffectType.FeelingCombiner,
-    title: "Combine Feelings",
+    title: "FeelingCombiner",
     powSelector: () => {},
   },
   {
     id: MoveEffectType.FeelingCure,
-    title: "Cure a Single Feeling",
+    title: "FeelingCure",
     ...FEELING_SELECTOR,
   },
   {
     id: MoveEffectType.FeelingBadCure,
-    title: "Cure Bad Feelings (except ANGRY)",
+    title: "FeelingBadCure",
     powSelector: () => {},
   },
   {
     id: MoveEffectType.FeelingAllCure,
-    title: "Cure All Feelings (except ANGRY)",
+    title: "FeelingAllCure",
     powSelector: () => {},
   },
   {
     id: MoveEffectType.FeelingAllCureAngry,
-    title: "Cure All Feelings (including ANGRY)",
+    title: "FeelingAllCureAngry",
     powSelector: () => {},
   },
   {
     id: MoveEffectType.FieldTrap,
-    title: "TRAP",
+    title: "FieldTrap",
     header: "Field",
     ...DEFAULT_FIELD_TARGET,
   },
-  { id: MoveEffectType.FieldRally, title: "RALLY", ...DEFAULT_FIELD_TARGET },
-  { id: MoveEffectType.FieldRhythm, title: "RHYTHM", ...DEFAULT_FIELD_TARGET },
-  { id: MoveEffectType.FieldDread, title: "DREAD", ...DEFAULT_FIELD_TARGET },
-  { id: MoveEffectType.FieldQuake, title: "QUAKE", ...DEFAULT_FIELD_TARGET },
+  {
+    id: MoveEffectType.FieldRally,
+    title: "FieldRally",
+    ...DEFAULT_FIELD_TARGET,
+  },
+  {
+    id: MoveEffectType.FieldRhythm,
+    title: "FieldRhythm",
+    ...DEFAULT_FIELD_TARGET,
+  },
+  {
+    id: MoveEffectType.FieldDread,
+    title: "FieldDread",
+    ...DEFAULT_FIELD_TARGET,
+  },
+  {
+    id: MoveEffectType.FieldQuake,
+    title: "FieldQuake",
+    ...DEFAULT_FIELD_TARGET,
+  },
   {
     id: MoveEffectType.FieldBarrier,
-    title: "BARRIER",
+    title: "FieldBarrier",
     ...DEFAULT_FIELD_TARGET,
     powSelector: () => {},
   },
   {
     id: MoveEffectType.FieldClear,
-    title: "Clear Field",
+    title: "FieldClear",
     ...DEFAULT_FIELD_TARGET,
     powSelector: () => {},
   },
   {
     id: MoveEffectType.StaminaChange,
-    title: "STAMINA Heal/Damage",
+    title: "StaminaChange",
     header: "Stamina",
     step: 0.01,
   },
-  { id: MoveEffectType.MaxStaminaChange, title: "Max Stamina" },
+  { id: MoveEffectType.MaxStaminaChange, title: "MaxStaminaChange" },
   {
     id: MoveEffectType.FullRestore,
-    title: "Fully Restore",
+    title: "FullRestore",
     powSelector: () => {},
   },
   {
     id: MoveEffectType.StaminaSplit,
-    title: "Evenly Shares Stamina with Target",
+    title: "StaminaSplit",
     powSelector: () => {},
   },
   {
     id: MoveEffectType.Shift,
-    title: "SHIFT",
+    title: "Shift",
     header: "Move",
     powSelector: ShiftInput,
   },
   {
     id: MoveEffectType.ShiftBeforeHit,
-    title: "SHIFT before hit",
+    title: "ShiftBeforeHit",
     powSelector: ShiftInput,
   },
-  { id: MoveEffectType.Swap, title: "Swap With Ally", powSelector: () => {} },
+  { id: MoveEffectType.Swap, title: "Swap", powSelector: () => {} },
   {
     id: MoveEffectType.SwapNoBall,
-    title: "Swap With Ally without moving Ball",
+    title: "SwapNoBall",
     powSelector: () => {},
   },
-  { id: MoveEffectType.TagOut, title: "TAG OUT", powSelector: () => {} },
+  { id: MoveEffectType.TagOut, title: "TagOut", powSelector: () => {} },
   {
     id: MoveEffectType.TagOutBeforeHit,
-    title: "TAG OUT self (attack)",
+    title: "TagOutBeforeHit",
     powSelector: () => {},
   },
   {
     id: MoveEffectType.TraitSwap,
-    title: "Trait Swap",
+    title: "TraitSwap",
     header: "Trait",
     powSelector: () => {},
   },
   {
     id: MoveEffectType.TraitCopy,
-    title: "User's Trait becomes Target's",
+    title: "TraitCopy",
     powSelector: () => {},
   },
   {
     id: MoveEffectType.TraitGive,
-    title: "Target's Trait becomes User's",
+    title: "TraitGive",
     powSelector: () => {},
   },
   {
     id: MoveEffectType.TraitSet,
-    title: "Trait Set",
+    title: "TraitSet",
     powSelector: ({ pow, setPow }) => (
       <AbilityInput
         pow={typeof pow == "string" ? pow : "haunted"}
@@ -411,7 +479,7 @@ const EFFECT_INFO: EffectInfo[] = [
   },
   {
     id: MoveEffectType.DamageAdjust,
-    title: "Damage Adjust",
+    title: "DamageAdjust",
     header: "Attack",
     targetSelector: () => null,
     powSelector: ({ pow, setPow }) => (
@@ -423,85 +491,85 @@ const EFFECT_INFO: EffectInfo[] = [
   },
   {
     id: MoveEffectType.CanHitWithoutVolley,
-    title: "Can use without Volleying",
+    title: "CanHitWithoutVolley",
     ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.GivesEasyRecieve,
-    title: "Gives an Easy Recieve",
+    title: "GivesEasyRecieve",
     ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.VolleyOnRecieve,
-    title: "Automatically Volleys on recieve",
+    title: "VolleyOnRecieve",
     ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.NoRedirect,
-    title: "Can't be redirected",
+    title: "NoRedirect",
     ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.UseWhenPreventFeeling,
-    title: "Can use when TIRED, SHOOK or WIPED",
+    title: "UseWhenPreventFeeling",
     ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.IgnoresTrait,
-    title: "Ignores Target's Trait",
+    title: "IgnoresTrait",
     ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.Mimic,
-    title: "Mimic ally's first Attack",
+    title: "Mimic",
     ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.PowMultiply,
-    title: "POW Multiply",
+    title: "PowMultiply",
     targetSelector: () => {},
     step: 0.1,
   },
   {
     id: MoveEffectType.Pass,
-    title: "Pass/Volley",
+    title: "Pass",
     header: "Usage",
     powSelector: () => {},
   },
-  { id: MoveEffectType.Charge, title: "Charges Up", targetSelector: () => {} },
+  { id: MoveEffectType.Charge, title: "Charge", targetSelector: () => {} },
   {
     id: MoveEffectType.ChargeReset,
-    title: "Charge Resets on Use",
+    title: "ChargeReset",
     ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.AddActions,
-    title: "+/- ACTIONs",
+    title: "AddActions",
     targetSelector: () => {},
   },
   {
     id: MoveEffectType.Requires2Actions,
-    title: "Requires 2 ACTIONs",
+    title: "Requires2Actions",
     ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.Requires3Actions,
-    title: "Requires 3 ACTIONs",
+    title: "Requires3Actions",
     ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.PreventObstructed,
-    title: "Can't use if space is obstructed",
+    title: "PreventObstructed",
     ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.CanUseDefense,
-    title: "Can be used during Defense",
+    title: "CanUseDefense",
     ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.RequiredVolleyState,
-    title: "Can only be used if ball is/isn't Volleyed",
+    title: "RequiredVolleyState",
     targetSelector: () => {},
     powSelector: ({ pow, setPow }) => (
       <select
@@ -516,30 +584,30 @@ const EFFECT_INFO: EffectInfo[] = [
   },
   {
     id: MoveEffectType.IfHittable,
-    title: "If ball is hittable",
+    title: "IfHittable",
     header: "Effect Condition",
     ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.IfSuccess,
-    title: "If previous effect succeeded",
+    title: "IfSuccess",
     ...NO_SELECTORS,
   },
-  { id: MoveEffectType.IfBlock, title: "If ally can Block", ...NO_SELECTORS },
-  { id: MoveEffectType.IfField, title: "If FIELD EFFECT", ...FIELD_SELECTOR },
-  { id: MoveEffectType.IfStamina, title: "If target STAMINA greater" },
+  { id: MoveEffectType.IfBlock, title: "IfBlock", ...NO_SELECTORS },
+  { id: MoveEffectType.IfField, title: "IfField", ...FIELD_SELECTOR },
+  { id: MoveEffectType.IfStamina, title: "IfStamina" },
   {
     id: MoveEffectType.IfFeeling,
-    title: "If target feels",
+    title: "IfFeeling",
     ...FEELING_SELECTOR,
   },
   {
     id: MoveEffectType.FeelAware,
-    title: "Feel AWARE",
+    title: "FeelAware",
     header: "Unused (Not Recommended)",
     hasNegative: true,
   },
-  { id: MoveEffectType.AdditionalPercent, title: "Additional Damage %" },
+  { id: MoveEffectType.AdditionalPercent, title: "AdditionalPercent" },
 ];
 
 function EffectSelect({
@@ -557,6 +625,8 @@ function EffectSelect({
   first?: boolean;
   last?: boolean;
 }) {
+  const { L } = useLocalization();
+
   const effType = effect?.eff ?? 0;
   const effectInfo =
     EFFECT_INFO.find((info) => info.id == effType) ??
@@ -584,7 +654,7 @@ function EffectSelect({
     }
     headerOptions.push(
       <option key={effect.id} value={effect.id}>
-        {effect.title}
+        {L("workshop.play.effects." + effect.title)}
       </option>,
     );
   }
@@ -610,7 +680,7 @@ function EffectSelect({
         }
       >
         <option value={-9999} disabled>
-          - Add New Effect -
+          {L("workshop.play.effects.new")}
         </option>
         {options}
       </select>
@@ -688,14 +758,14 @@ export default function WorkshopEditPlay({
         }}
       >
         <label>
-          Name:{" "}
+          {L("workshop.play.name")}
           <StringDataInput
             value={play.name}
             setValue={(new_value) => setKey("name", new_value)}
           />
         </label>
         <label>
-          Type:{" "}
+          {L("workshop.play.type")}
           <select
             value={String(play.type)}
             onChange={(event) => {
@@ -704,12 +774,12 @@ export default function WorkshopEditPlay({
               if (new_type < 3 != play.type < 3) setKey("target", 0);
             }}
           >
-            <option value={0}>Body</option>
-            <option value={1}>Spirit</option>
-            <option value={2}>Mind</option>
-            <option value={3}>Volley</option>
-            <option value={4}>Support</option>
-            <option value={5}>Defense</option>
+            <option value={0}>{L("common.types.body")}</option>
+            <option value={1}>{L("common.types.spirit")}</option>
+            <option value={2}>{L("common.types.mind")}</option>
+            <option value={3}>{L("common.types.volley")}</option>
+            <option value={4}>{L("common.types.support")}</option>
+            <option value={5}>{L("common.types.defense")}</option>
           </select>
         </label>
         <label>
@@ -728,49 +798,75 @@ export default function WorkshopEditPlay({
           />
         </label>
         <label>
-          Use:{" "}
+          {L("workshop.play.use.title")}
           <select
             value={String(play.use)}
             onChange={(event) => setKey("use", Number(event.target.value))}
           >
-            <option value={0}>Anywhere</option>
-            <option value={1}>Back Row</option>
-            <option value={2}>Front Row</option>
+            <option value={0}>{L("workshop.play.use.anywhere")}</option>
+            <option value={1}>{L("workshop.play.use.backRow")}</option>
+            <option value={2}>{L("workshop.play.use.frontRow")}</option>
           </select>
         </label>
         <label>
-          Target:{" "}
+          {L("workshop.play.target.title")}
           <select
             value={String(play.target)}
             onChange={(event) => setKey("target", Number(event.target.value))}
           >
             {play.type < 3 ? (
               <>
-                <option value={0}>Straight Line</option>
-                <option value={1}>Straight Ahead</option>
-                <option value={4}>Front Row</option>
-                <option value={8}>Back Row</option>
-                <option value={12}>Sideways</option>
-                <option value={13}>Nearest Opponent</option>
-                <option value={3}>Benched Ally (Straight Ahead)</option>
+                <option value={0}>
+                  {L("workshop.play.target.attack.straight")}
+                </option>
+                <option value={1}>
+                  {L("workshop.play.target.attack.ahead")}
+                </option>
+                <option value={4}>
+                  {L("workshop.play.target.attack.front")}
+                </option>
+                <option value={8}>
+                  {L("workshop.play.target.attack.back")}
+                </option>
+                <option value={12}>
+                  {L("workshop.play.target.attack.sideways")}
+                </option>
+                <option value={13}>
+                  {L("workshop.play.target.attack.nearest")}
+                </option>
+                <option value={3}>
+                  {L("workshop.play.target.attack.benchedAlly")}
+                </option>
               </>
             ) : (
               <>
-                <option value={0}>No Target</option>
-                <option value={8}>Benched Ally</option>
-                <option value={9}>Any Ally</option>
-                <option value={4}>Fielded Opponent</option>
-                <option value={5}>Fielded Beastie (except user)</option>
-                <option value={6}>Fielded Beastie</option>
+                <option value={0}>
+                  {L("workshop.play.target.support.none")}
+                </option>
+                <option value={8}>
+                  {L("workshop.play.target.support.benchedAlly")}
+                </option>
+                <option value={9}>
+                  {L("workshop.play.target.support.anyAlly")}
+                </option>
+                <option value={4}>
+                  {L("workshop.play.target.support.fieldedOpponent")}
+                </option>
+                <option value={5}>
+                  {L("workshop.play.target.support.fieldedBeastieNoUser")}
+                </option>
+                <option value={6}>
+                  {L("workshop.play.target.support.fieldedBeastie")}
+                </option>
                 <option value={7}>
-                  Fielded Ally + Fielded Opponent (at net)
+                  {L("workshop.play.target.support.fieldedAllyOpponent")}
                 </option>
               </>
             )}
           </select>
         </label>
         <div>
-          Learned By:{" "}
+          {L("workshop.play.learnedBy")}
           <BeastieSelect
             beastieId={undefined}
             setBeastieId={(beastie) => {
@@ -784,7 +880,7 @@ export default function WorkshopEditPlay({
               );
             }}
             hashName="LearnedBy"
-            textOverride="Add Beastie"
+            textOverride={L("workshop.play.addBeastie")}
           />
           {play.learnedby.map((beastie) => (
             <span>
@@ -802,7 +898,7 @@ export default function WorkshopEditPlay({
             </span>
           ))}
         </div>
-        <div>Effects:</div>
+        <div>{L("workshop.play.effects.title")}</div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           {play.effects.map((eff, index) => (
             <EffectSelect

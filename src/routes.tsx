@@ -156,7 +156,10 @@ const routes: Array<RouteObject> = [
         loader: () =>
           import("./Map/Map").then((m) => ({ component: m.default })),
         shouldRevalidate: shouldRevalidate,
-        handle: { localizationExtensions: ["encounters"], secrets: true },
+        handle: {
+          localizationExtensions: ["encounters", "site_encounters"],
+          secrets: true,
+        },
       },
 
       {
@@ -244,7 +247,7 @@ const routes: Array<RouteObject> = [
             component: m.default,
           })),
         shouldRevalidate: shouldRevalidate,
-        handle: { localizationExtensions: ["encounters"] },
+        handle: { localizationExtensions: ["encounters", "site_encounters"] },
       },
 
       {

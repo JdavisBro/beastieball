@@ -1,0 +1,61 @@
+{
+  "map": {
+    "encounterMarker": "Encounter Marker",
+    "encounterPopup": {
+      "loadingEncounters": "Loading Encounters",
+      "encounterNotFound": "Encounter not found: {encounterId}",
+      "lvl": " Lvl {level}",
+      "scalingNote": "Beastie level and metamorphosis may be higher due to scaling.",
+      "wild": "Nearby Wild Beastie",
+      "moreDetailsLink": "View more details."
+    }
+  },
+  "teams": {
+    "encounters": {
+      "title": "Encounters",
+      "description": "View Teams from encounters in Beastieball!",
+      "encounterSelect": "Encounter: ",
+      "noneSelected": "None",
+      "scales": "Scales with {boss}: +{levels} levels",
+      "noScaling": "No scaling",
+      "defeatedBoss": "Defeated: ",
+      "resetBoss": "Reset",
+      "trained": "Trained: ",
+      "beastieFilter": "Filter: ",
+      "sep": " - ",
+      "openInBuilder": "Open in Team Builder: ",
+      "atCurrentLevels": "At Current Levels",
+      "atLevel50": "At Level 50",
+      "aiinfo": {
+        "title": "AI Info",
+        "type": "Type",
+        "value": "Multiplier / Value / Enabled",
+        "true": "True",
+        "false": "False",
+
+        "erratic": "Erraticness",
+        "damage": "Damage",
+        "point": "Free Points",
+        "stamina": "Stamina",
+        "lane": "Lane Coverage",
+        "lane_offense": "Lane Coverage (Offense only)",
+        "straight_fear": "Straight Fear",
+        "sideways_fear": "Sideways Fear",
+        "field": "Ally Field",
+        "foe_field": "Foe Field",
+        "feeling": "Ally Feelings",
+        "foe_feeling": "Foe Feelings",
+        "boosts": "Ally Boosts",
+        "foe_boosts": "Foe Boosts",
+        "blocking": "Blocking",
+        "knockout": "Ally Knockout Potential",
+        "foe_knockout": "Foe Knockout Potential",
+        "non_easy": "Non-easy Recieve Bonus",
+        "secondary": "Consider Attack Secondary Effects",
+        "tag": "Tag Penalty",
+        "usable": "Usable Attack",
+        "rowdy": "Rowdy Meter"
+      }
+    }
+  }
+}

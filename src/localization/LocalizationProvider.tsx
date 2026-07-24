@@ -99,6 +99,27 @@ function localize(
       : key;
 }
 
+function isObject(obj: unknown) {
+  return obj && typeof obj == "object" && !Array.isArray(obj);
+}
+
+function merge(obj1: Record<string, any>, obj2: Record<string, any>) {
+  const new_obj: Record<string, any> = {};
+  for (const key in obj1) {
+    new_obj[key] = obj1[key];
+  }
+  for (const key in obj2) {
+    if (key in new_obj && isObject(new_obj[key])) {
+      if (isObject(obj2[key])) {
+        new_obj[key] = merge(new_obj[key], obj2[key]);
+      }
+    } else {
+      new_obj[key] = obj2[key];
+    }
+  }
+  return new_obj;
+}
+
 export default function LocalizationProvider({
   children,
   localizationExtensions,
@@ -175,7 +196,7 @@ export default function LocalizationProvider({
   const languageData = useMemo(
     () =>
       Object.values(languageExtensionsData).reduce(
-        (accum, ext) => Object.assign(accum, ext.data),
+        (accum, ext) => merge(accum, ext.data),
         {},
       ),
     [languageExtensionsData],
@@ -201,6 +222,7 @@ export default function LocalizationProvider({
         );
     }
   }, [lang]);
+  console.log(localizationExtensions, languageExtensionsData);
 
   const contextValue = useMemo<LocalizationType>(
     () => ({

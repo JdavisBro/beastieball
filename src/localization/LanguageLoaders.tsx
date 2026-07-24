@@ -2,7 +2,12 @@ import { SupportedLanguage } from "./useLocalization";
 
 export type LanguageData = { [key: string]: LanguageData | string };
 
-export type LocalizationExtension = "game" | "site" | "encounters" | "workshop";
+export type LocalizationExtension =
+  | "game"
+  | "site"
+  | "encounters"
+  | "site_encounters"
+  | "workshop";
 
 export const LANGUAGE_LOADERS: Record<
   LocalizationExtension,
@@ -17,6 +22,9 @@ export const LANGUAGE_LOADERS: Record<
   },
   site: {
     en: () => import("./languages/en/site.json"),
+  },
+  site_encounters: {
+    en: () => import("./languages/en/site_encounters.json"),
   },
   encounters: {
     en: () => import("./languages/en/encounters.json"),

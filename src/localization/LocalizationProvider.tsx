@@ -17,6 +17,11 @@ import {
 import BEASTIE_NAMES_UNTYPED from "./beastie_names.json";
 import Loading from "../Loading";
 import PageNotFound from "../PageNotFound";
+import {
+  LANGUAGE_LOADERS,
+  LanguageData,
+  LocalizationExtension,
+} from "./LanguageLoaders";
 
 declare global {
   interface Window {
@@ -28,44 +33,6 @@ const BEASTIE_NAMES: Record<
   string,
   Record<SupportedLanguage, string>
 > = BEASTIE_NAMES_UNTYPED;
-
-type LanguageData = { [key: string]: LanguageData | string };
-
-async function loadLanguageData(
-  gamePromise: Promise<{ default: LanguageData }>,
-  sitePromise: Promise<{ default: LanguageData }>,
-) {
-  const values_1 = await Promise.all([gamePromise, sitePromise]);
-  return Object.assign(values_1[0].default, values_1[1].default);
-}
-
-const LANGUAGES: Record<SupportedLanguage, () => Promise<LanguageData>> = {
-  en: () =>
-    loadLanguageData(
-      import("./languages/en/game.json"),
-      import("./languages/en/site.json"),
-    ),
-  ru: () =>
-    loadLanguageData(
-      import("./languages/ru/game.json"),
-      import("./languages/en/site.json"),
-    ),
-  "zh-CN": () =>
-    loadLanguageData(
-      import("./languages/zh-CN/game.json"),
-      import("./languages/en/site.json"),
-    ),
-  es: () =>
-    loadLanguageData(
-      import("./languages/es/game.json"),
-      import("./languages/en/site.json"),
-    ),
-  "pt-BR": () =>
-    loadLanguageData(
-      import("./languages/pt-BR/game.json"),
-      import("./languages/en/site.json"),
-    ),
-};
 
 const KEY_QUOTE = "¦";
 const KEY_SEP = "¬";
@@ -132,18 +99,21 @@ function localize(
       : key;
 }
 
-export default function LocalizationProvider({ children }: PropsWithChildren) {
+export default function LocalizationProvider({
+  children,
+  localizationExtensions,
+}: PropsWithChildren & { localizationExtensions: LocalizationExtension[] }) {
   const { lang: paramLang } = useParams();
 
   const [storedLang, setStoredLang] = useLocalStorage<SupportedLanguage>(
     "language",
-    ((paramLang && paramLang in LANGUAGES ? paramLang : undefined) ??
-      navigator.languages.find((lang) => lang in LANGUAGES) ??
+    ((paramLang && paramLang in LANGUAGE_LOADERS ? paramLang : undefined) ??
+      navigator.languages.find((lang) => lang in LANGUAGE_LOADERS) ??
       "en") as SupportedLanguage,
     {
       serializer: String,
       deserializer: (value) =>
-        (value in LANGUAGES ? value : "en") as SupportedLanguage,
+        (value in LANGUAGE_LOADERS.game ? value : "en") as SupportedLanguage,
     },
   );
 
@@ -193,15 +163,43 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
 
   const lang: SupportedLanguage = storedLang;
 
-  const [languageData, setLanguageData] = useState<LanguageData | undefined>(
-    undefined,
+  const [languageExtensionsData, setLanguageExtensionsData] = useState<
+    Partial<
+      Record<
+        LocalizationExtension,
+        { lang: SupportedLanguage; data: LanguageData }
+      >
+    >
+  >({});
+
+  const languageData = useMemo(
+    () =>
+      Object.values(languageExtensionsData).reduce(
+        (accum, ext) => Object.assign(accum, ext.data),
+        {},
+      ),
+    [languageExtensionsData],
   );
+  const allLanguageExtensionsLoaded = useMemo(() => {
+    for (const ext of localizationExtensions)
+      if (!languageExtensionsData[ext]) return false;
+    return true;
+  }, [lang, languageExtensionsData]);
 
   useEffect(() => {
-    LANGUAGES[lang]().then((data) => {
-      setLanguageData(data);
-      document.documentElement.lang = lang;
-    });
+    for (const ext of localizationExtensions) {
+      const ext_data = languageExtensionsData[ext];
+      const loaders = LANGUAGE_LOADERS[ext];
+      const languageToLoad = lang in loaders ? lang : "en";
+      const loader = loaders[languageToLoad] as () => Promise<LanguageData>;
+      if (!ext_data || ext_data.lang != languageToLoad)
+        loader().then((data) =>
+          setLanguageExtensionsData((languageExtensionsData) => ({
+            ...languageExtensionsData,
+            [ext]: { lang: languageToLoad, data: data.default },
+          })),
+        );
+    }
   }, [lang]);
 
   const contextValue = useMemo<LocalizationType>(
@@ -210,7 +208,7 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
         localize(lang, languageData ?? {}, key, placeholders, useEnName),
       languages: SUPPORTED_LANGUAGES,
       currentLanguage: lang,
-      anyLanguageLoaded: !!languageData,
+      anyLanguageLoaded: allLanguageExtensionsLoaded,
       setLanguage: setLang,
       getLink: (path) => (lang == "en" ? path : `/${lang}${path}`),
       beastieNames: BEASTIE_NAMES,
@@ -219,7 +217,7 @@ export default function LocalizationProvider({ children }: PropsWithChildren) {
   );
   window.Localization = contextValue;
 
-  if (!languageData) {
+  if (!allLanguageExtensionsLoaded) {
     return <Loading />;
   }
 

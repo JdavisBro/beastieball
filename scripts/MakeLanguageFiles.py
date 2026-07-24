@@ -19,14 +19,22 @@ INCLUDE_PREFIXES = [
   "_map_",
   "socialssetup_classsocial_",
 ]
-required_keys = [
-  "Racer_Create0npcname_001",
-  "Headmaster_Create0npcname_001",
-  "Valerie_Create0npcname_001",
-  "Cycle_Create0npcname_001",
-  "Redd_Create0npcname_001",
-  "Mask_Create0npcname_001",
-]
+
+extensions_required_keys = {
+  "game": [
+    "Racer_Create0npcname_001",
+    "Headmaster_Create0npcname_001",
+    "Valerie_Create0npcname_001",
+    "Cycle_Create0npcname_001",
+    "Redd_Create0npcname_001",
+    "Mask_Create0npcname_001",
+  ],
+  "encounters": [],
+}
+
+data_extension = {
+  "encounter_data.json": "encounters",
+}
 
 def get_keys(data) -> list[str] | None:
   if isinstance(data, str):
@@ -65,12 +73,13 @@ for fp in data_dir.iterdir():
     data = json.load(f)
   keys = get_keys(data)
   if keys:
-    required_keys += keys
+    extensions_required_keys[data_extension.get(fp.name, "game")] += keys
 
 # get keys from code
 fp = Path("../src/shared/MoveView.tsx")
 with fp.open(encoding="utf8") as f:
   text = f.read()
+  required_keys = extensions_required_keys["game"]
   # required_keys = re.findall(r'L\("([\w\W]+?)"(?:\)|,)', text, re.M)
   required_keys += re.findall(r'"(statuseffectstuff_\d+?)"', text, re.M)
   required_keys += re.findall(r'"(fieldeffectstuff_\d+?)"', text, re.M)
@@ -90,21 +99,23 @@ for lang_fp in loc_dir.iterdir():
   if lang_fp.stem not in LANG_CODES:
     continue
   lang_code = LANG_CODES[lang_fp.stem]
-  lang_out = {}
   with lang_fp.open(encoding="utf8", newline="") as f:
     reader = csv.reader(f)
-    for line in reader:
+    lines = [line for line in reader]
+  for ext, required_keys in extensions_required_keys.items():
+    lang_out = {}
+    for line in lines:
       if line[0].startswith("beastiesetup_name_") or line[0] == "beastiesetup_013": # troglum
         if line[0] not in beastie_names:
           beastie_names[line[0]] = {}
         beastie_names[line[0]][lang_code] = line[1]
-      elif line[0] in required_keys or any([line[0].startswith(i) for i in INCLUDE_PREFIXES]):
+      elif line[0] in required_keys or (ext == "game" and any([line[0].startswith(i) for i in INCLUDE_PREFIXES])):
         lang_out[line[0]] = line[1]
-  out_dir = (language_out_dir / lang_code / "game.json")
-  out_dir.parent.mkdir(exist_ok=True)
-  with out_dir.open("w+", encoding="utf8") as f:
-    json.dump(lang_out, f, ensure_ascii=False, indent=2)
-    f.write("\n")
+    out_dir = (language_out_dir / lang_code / f"{ext}.json")
+    out_dir.parent.mkdir(exist_ok=True)
+    with out_dir.open("w+", encoding="utf8") as f:
+      json.dump(lang_out, f, ensure_ascii=False, indent=2)
+      f.write("\n")
 
 beastie_fp = language_out_dir.parent / "beastie_names.json"
 with beastie_fp.open("w+", encoding="utf8") as f:

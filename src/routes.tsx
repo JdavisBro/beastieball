@@ -2,6 +2,7 @@ import {
   Navigate,
   Outlet,
   useLoaderData,
+  useMatches,
   useNavigation,
   useParams,
   useRouteError,
@@ -21,8 +22,14 @@ import PageNotFound from "./PageNotFound";
 import useLocalization from "./localization/useLocalization";
 import { Fallback } from "./shared/CustomErrorBoundary";
 import LocalizationProvider from "./localization/LocalizationProvider";
+import { LocalizationExtension } from "./localization/LanguageLoaders";
 
 const LOADING_TIME = 20; // ms
+
+type RouteHandle = {
+  localizationExtensions: LocalizationExtension[];
+  secrets?: boolean;
+};
 
 function Root() {
   const navigation = useNavigation();
@@ -42,8 +49,21 @@ function Root() {
     }
   }, [navigation.state]);
 
+  const localizationExtensions: LocalizationExtension[] = ["game", "site"];
+  const matches = useMatches();
+  const match = matches[matches.length - 1];
+  const routeHandle = match?.handle as RouteHandle | undefined;
+  if (
+    routeHandle &&
+    (!routeHandle.secrets || localStorage.getItem("secrets") == "true")
+  ) {
+    for (const ext of routeHandle.localizationExtensions) {
+      localizationExtensions.push(ext);
+    }
+  }
+
   return (
-    <LocalizationProvider>
+    <LocalizationProvider localizationExtensions={localizationExtensions}>
       {timedOut.current ? (
         <Loading />
       ) : (
@@ -102,7 +122,7 @@ const routes: Array<RouteObject> = [
     Component: Root,
     errorElement: <RouteError />,
     hydrateFallbackElement: (
-      <LocalizationProvider>
+      <LocalizationProvider localizationExtensions={["game", "site"]}>
         <Loading />
       </LocalizationProvider>
     ),
@@ -136,6 +156,7 @@ const routes: Array<RouteObject> = [
         loader: () =>
           import("./Map/Map").then((m) => ({ component: m.default })),
         shouldRevalidate: shouldRevalidate,
+        handle: { localizationExtensions: ["encounters"], secrets: true },
       },
 
       {
@@ -223,6 +244,7 @@ const routes: Array<RouteObject> = [
             component: m.default,
           })),
         shouldRevalidate: shouldRevalidate,
+        handle: { localizationExtensions: ["encounters"] },
       },
 
       {
@@ -233,6 +255,7 @@ const routes: Array<RouteObject> = [
             component: m.default,
           })),
         shouldRevalidate: shouldRevalidate,
+        handle: { localizationExtensions: ["workshop"] },
       },
 
       {

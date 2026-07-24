@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MoveView from "../shared/MoveView";
 import { WorkshopPlay } from "./types";
 import { StringDataInput } from "./Workshop";
@@ -8,6 +8,15 @@ import useLocalization from "../localization/useLocalization";
 import BeastieSelect from "../shared/BeastieSelect";
 import BEASTIE_DATA from "../data/BeastieData";
 import CustomErrorBoundary from "../shared/CustomErrorBoundary";
+
+function useAutoApply(setValue: (value: number) => void) {
+  const ref = useRef<HTMLSelectElement>(null);
+  useEffect(() => {
+    if (ref.current && isNaN(Number(ref.current.value)))
+      setValue(Number(ref.current.value));
+  }, []);
+  return ref;
+}
 
 type EffectInfo = {
   id: MoveEffectType;
@@ -65,6 +74,7 @@ function DamageAdjustInput({
     <select
       onChange={(event) => setPow(Number(event.currentTarget.value))}
       value={pow}
+      ref={useAutoApply(setPow)}
     >
       <option value={0}>Add user's STAMINA to Pow</option>
       <option value={1}>Strongest when user has less STAMINA</option>
@@ -118,6 +128,7 @@ function ShiftInput({
     <select
       value={pow}
       onChange={(event) => setPow(Number(event.currentTarget.value))}
+      ref={useAutoApply(setPow)}
     >
       <option value={0}>Backward</option>
       <option value={1}>Forward</option>
@@ -133,6 +144,7 @@ const DEFAULT_EFFECT_INFO: TemplateEffectInfo &
     <select
       onChange={(event) => setTarget(Number(event.target.value))}
       value={target}
+      ref={useAutoApply(setTarget)}
     >
       <option value={0}>User</option>
       <option value={1}>Ally</option>
@@ -167,6 +179,7 @@ const DEFAULT_FIELD_TARGET: TemplateEffectInfo = {
     <select
       onChange={(event) => setTarget(Number(event.target.value))}
       value={target}
+      ref={useAutoApply(setTarget)}
     >
       <option value={0}>Ally Field</option>
       <option value={3}>Opponent Field</option>
@@ -187,6 +200,7 @@ const FIELD_SELECTOR: TemplateEffectInfo = {
     <select
       value={pow}
       onChange={(event) => setPow(Number(event.currentTarget.value))}
+      ref={useAutoApply(setPow)}
     >
       <option value={0}>Rally</option>
       <option value={1}>Trap</option>
@@ -202,6 +216,7 @@ const FEELING_SELECTOR: TemplateEffectInfo = {
     <select
       value={pow}
       onChange={(event) => setPow(Number(event.currentTarget.value))}
+      ref={useAutoApply(setPow)}
     >
       <option value={0}>Nervous</option>
       <option value={1}>Angry</option>
@@ -492,6 +507,7 @@ const EFFECT_INFO: EffectInfo[] = [
       <select
         value={pow}
         onChange={(event) => setPow(Number(event.currentTarget.value))}
+        ref={useAutoApply(setPow)}
       >
         <option value={0}>Not Hittable</option>
         <option value={1}>Hittable</option>

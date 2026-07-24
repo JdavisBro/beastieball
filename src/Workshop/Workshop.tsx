@@ -10,6 +10,7 @@ import WorkshopEditPlay from "./Play";
 import JSZip from "jszip";
 import BEASTIE_DATA from "../data/BeastieData";
 import { MoveEffect, MoveEffectType } from "../data/MoveData";
+import abilities from "../data/abilities";
 
 export function StringDataInput({
   value,
@@ -229,6 +230,12 @@ function loadIni(ini: string): Record<string, Record<string, string | number>> {
   return out;
 }
 
+function findAbilityByName(name: string, L: LocalizationFunction) {
+  for (const ability of Object.values(abilities))
+    if (name == L(ability.name)) return ability;
+  return Object.values(abilities)[0];
+}
+
 async function loadZip(
   file: File | undefined,
   L: LocalizationFunction,
@@ -277,7 +284,10 @@ async function loadZip(
         effects.push({
           eff: eff,
           targ: Number(effSplit[i + 1] ?? 0),
-          pow: eff == 89 ? effSplit[i + 2] : Number(effSplit[i + 2] ?? 0),
+          pow:
+            eff == MoveEffectType.TraitSet
+              ? findAbilityByName(effSplit[i + 2], L).id
+              : Number(effSplit[i + 2] ?? 0),
         } as MoveEffect);
       }
       console.log(data, await playData.async("string"));
@@ -388,7 +398,13 @@ function saveZip(workshopData: WorkshopData, L: LocalizationFunction) {
         },
         effects: {
           effects: play.effects
-            .flatMap((effect) => [effect.eff, effect.targ, effect.pow])
+            .flatMap((effect) => [
+              effect.eff,
+              effect.targ,
+              effect.eff == MoveEffectType.TraitSet
+                ? L(abilities[effect.pow].name)
+                : effect.pow,
+            ])
             .join(","),
         },
         distribution: {

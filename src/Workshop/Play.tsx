@@ -241,8 +241,16 @@ const EFFECT_INFO: EffectInfo[] = [
   { id: MoveEffectType.AllPowChange, title: "All POW Change" },
   { id: MoveEffectType.AllDefChange, title: "All DEF Change" },
   { id: MoveEffectType.WeakDefChange, title: "Weakest DEF Change" },
-  { id: MoveEffectType.TransferBoosts, title: "Transfer Boosts to Target" },
-  { id: MoveEffectType.ResetBoosts, title: "Reset Boosts" },
+  {
+    id: MoveEffectType.TransferBoosts,
+    title: "Transfer Boosts to Target",
+    powSelector: () => {},
+  },
+  {
+    id: MoveEffectType.ResetBoosts,
+    title: "Reset Boosts",
+    powSelector: () => {},
+  },
   {
     id: MoveEffectType.FeelNervous,
     title: "Feel NERVOUS",
@@ -265,7 +273,11 @@ const EFFECT_INFO: EffectInfo[] = [
     hasNegative: true,
   },
   { id: MoveEffectType.FeelWeepy, title: "Feel WEEPY", hasNegative: true },
-  { id: MoveEffectType.FeelingCombiner, title: "Combine Feelings" },
+  {
+    id: MoveEffectType.FeelingCombiner,
+    title: "Combine Feelings",
+    powSelector: () => {},
+  },
   {
     id: MoveEffectType.FeelingCure,
     title: "Cure a Single Feeling",
@@ -274,14 +286,17 @@ const EFFECT_INFO: EffectInfo[] = [
   {
     id: MoveEffectType.FeelingBadCure,
     title: "Cure Bad Feelings (except ANGRY)",
+    powSelector: () => {},
   },
   {
     id: MoveEffectType.FeelingAllCure,
     title: "Cure All Feelings (except ANGRY)",
+    powSelector: () => {},
   },
   {
     id: MoveEffectType.FeelingAllCureAngry,
     title: "Cure All Feelings (including ANGRY)",
+    powSelector: () => {},
   },
   {
     id: MoveEffectType.FieldTrap,
@@ -297,11 +312,13 @@ const EFFECT_INFO: EffectInfo[] = [
     id: MoveEffectType.FieldBarrier,
     title: "BARRIER",
     ...DEFAULT_FIELD_TARGET,
+    powSelector: () => {},
   },
   {
     id: MoveEffectType.FieldClear,
     title: "Clear Field",
     ...DEFAULT_FIELD_TARGET,
+    powSelector: () => {},
   },
   {
     id: MoveEffectType.StaminaChange,
@@ -310,10 +327,15 @@ const EFFECT_INFO: EffectInfo[] = [
     step: 0.01,
   },
   { id: MoveEffectType.MaxStaminaChange, title: "Max Stamina" },
-  { id: MoveEffectType.FullRestore, title: "Fully Restore" },
+  {
+    id: MoveEffectType.FullRestore,
+    title: "Fully Restore",
+    powSelector: () => {},
+  },
   {
     id: MoveEffectType.StaminaSplit,
     title: "Evenly Shares Stamina with Target",
+    powSelector: () => {},
   },
   {
     id: MoveEffectType.Shift,
@@ -326,16 +348,34 @@ const EFFECT_INFO: EffectInfo[] = [
     title: "SHIFT before hit",
     powSelector: ShiftInput,
   },
-  { id: MoveEffectType.Swap, title: "Swap With Ally" },
+  { id: MoveEffectType.Swap, title: "Swap With Ally", powSelector: () => {} },
   {
     id: MoveEffectType.SwapNoBall,
     title: "Swap With Ally without moving Ball",
+    powSelector: () => {},
   },
-  { id: MoveEffectType.TagOut, title: "TAG OUT" },
-  { id: MoveEffectType.TagOutBeforeHit, title: "TAG OUT self (attack)" },
-  { id: MoveEffectType.TraitSwap, title: "Trait Swap", header: "Trait" },
-  { id: MoveEffectType.TraitCopy, title: "User's Trait becomes Target's" },
-  { id: MoveEffectType.TraitGive, title: "Target's Trait becomes User's" },
+  { id: MoveEffectType.TagOut, title: "TAG OUT", powSelector: () => {} },
+  {
+    id: MoveEffectType.TagOutBeforeHit,
+    title: "TAG OUT self (attack)",
+    powSelector: () => {},
+  },
+  {
+    id: MoveEffectType.TraitSwap,
+    title: "Trait Swap",
+    header: "Trait",
+    powSelector: () => {},
+  },
+  {
+    id: MoveEffectType.TraitCopy,
+    title: "User's Trait becomes Target's",
+    powSelector: () => {},
+  },
+  {
+    id: MoveEffectType.TraitGive,
+    title: "Target's Trait becomes User's",
+    powSelector: () => {},
+  },
   {
     id: MoveEffectType.TraitSet,
     title: "Trait Set",
@@ -407,7 +447,12 @@ const EFFECT_INFO: EffectInfo[] = [
     targetSelector: () => {},
     step: 0.1,
   },
-  { id: MoveEffectType.Pass, title: "Pass/Volley", header: "Usage" },
+  {
+    id: MoveEffectType.Pass,
+    title: "Pass/Volley",
+    header: "Usage",
+    powSelector: () => {},
+  },
   { id: MoveEffectType.Charge, title: "Charges Up", targetSelector: () => {} },
   {
     id: MoveEffectType.ChargeReset,
@@ -457,9 +502,14 @@ const EFFECT_INFO: EffectInfo[] = [
     id: MoveEffectType.IfHittable,
     title: "If ball is hittable",
     header: "Effect Condition",
+    ...NO_SELECTORS,
   },
-  { id: MoveEffectType.IfSuccess, title: "If previous effect succeeded" },
-  { id: MoveEffectType.IfBlock, title: "If ally can Block" },
+  {
+    id: MoveEffectType.IfSuccess,
+    title: "If previous effect succeeded",
+    ...NO_SELECTORS,
+  },
+  { id: MoveEffectType.IfBlock, title: "If ally can Block", ...NO_SELECTORS },
   { id: MoveEffectType.IfField, title: "If FIELD EFFECT", ...FIELD_SELECTOR },
   { id: MoveEffectType.IfStamina, title: "If target STAMINA greater" },
   {
@@ -471,6 +521,7 @@ const EFFECT_INFO: EffectInfo[] = [
     id: MoveEffectType.FeelAware,
     title: "Feel AWARE",
     header: "Unused (Not Recommended)",
+    hasNegative: true,
   },
   { id: MoveEffectType.AdditionalPercent, title: "Additional Damage %" },
 ];

@@ -488,7 +488,7 @@ export default function Workshop() {
         image="gameassets/sprMainmenu/12.png"
         url="workshop/"
       />
-      <Header title={L("Workshop")} returnButtonTo="/workshop/" />
+      <Header title={L("Workshop")} />
       {db && workshopData ? (
         <WorkshopInner
           db={db}

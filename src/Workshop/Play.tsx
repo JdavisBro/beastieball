@@ -107,6 +107,24 @@ function DamageAdjustInput({
   );
 }
 
+function ShiftInput({
+  pow,
+  setPow,
+}: {
+  pow: string | number;
+  setPow: (pow: string | number) => void;
+}) {
+  return (
+    <select
+      value={pow}
+      onChange={(event) => setPow(Number(event.currentTarget.value))}
+    >
+      <option value={0}>Backward</option>
+      <option value={1}>Forward</option>
+    </select>
+  );
+}
+
 const DEFAULT_EFFECT_INFO: TemplateEffectInfo &
   Required<Pick<TemplateEffectInfo, "targetSelector" | "powSelector">> = {
   targetSelector: ({ target, setTarget }) => (
@@ -294,8 +312,17 @@ const EFFECT_INFO: EffectInfo[] = [
     id: MoveEffectType.StaminaSplit,
     title: "Evenly Shares Stamina with Target",
   },
-  { id: MoveEffectType.Shift, title: "SHIFT", header: "Move" },
-  { id: MoveEffectType.ShiftBeforeHit, title: "SHIFT before hit" },
+  {
+    id: MoveEffectType.Shift,
+    title: "SHIFT",
+    header: "Move",
+    powSelector: ShiftInput,
+  },
+  {
+    id: MoveEffectType.ShiftBeforeHit,
+    title: "SHIFT before hit",
+    powSelector: ShiftInput,
+  },
   { id: MoveEffectType.Swap, title: "Swap With Ally" },
   {
     id: MoveEffectType.SwapNoBall,

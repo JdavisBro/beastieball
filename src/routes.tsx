@@ -220,6 +220,10 @@ const routes: Array<RouteObject> = [
         loader: () =>
           import("./Team/Team").then((m) => ({ component: m.default })),
         shouldRevalidate: shouldRevalidate,
+        handle: {
+          localizationExtensions: ["site_encounters"],
+          secrets: true,
+        },
       },
       {
         element: <LoaderComponent />,

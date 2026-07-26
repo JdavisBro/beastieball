@@ -205,7 +205,7 @@ export default function LocalizationProvider({
     for (const ext of localizationExtensions)
       if (!languageExtensionsData[ext]) return false;
     return true;
-  }, [lang, languageExtensionsData]);
+  }, [lang, languageExtensionsData, localizationExtensions]);
 
   useEffect(() => {
     for (const ext of localizationExtensions) {
@@ -221,8 +221,7 @@ export default function LocalizationProvider({
           })),
         );
     }
-  }, [lang]);
-  console.log(localizationExtensions, languageExtensionsData);
+  }, [lang, localizationExtensions]);
 
   const contextValue = useMemo<LocalizationType>(
     () => ({

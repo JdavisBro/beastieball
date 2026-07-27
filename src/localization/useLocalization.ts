@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { createContext } from "react";
 import BEASTIE_NAMES_UNTYPED from "./beastie_names.json";
+import { LanguageData, LocalizationExtension } from "./LanguageLoaders";
 
 export type SupportedLanguage = "en" | "ru" | "zh-CN" | "es" | "pt-BR";
 export const SUPPORTED_LANGUAGES: SupportedLanguage[] = [
@@ -24,11 +25,16 @@ export type LocalizationFunction = (
   useEnName?: boolean,
 ) => string;
 
+export type LanguageExtensionData = Partial<
+  Record<LocalizationExtension, { lang: SupportedLanguage; data: LanguageData }>
+>;
+
 export type LocalizationType = {
   L: LocalizationFunction;
   languages: SupportedLanguage[];
   currentLanguage: SupportedLanguage;
   anyLanguageLoaded: boolean;
+  languageExtensionData: LanguageExtensionData;
   setLanguage: (lang: SupportedLanguage) => void;
   getLink: (path: string) => string;
   beastieNames: Record<string, Record<SupportedLanguage, string>>;
@@ -42,6 +48,7 @@ export const LocalizationContext = createContext<LocalizationType>({
       SUPPORTED_LANGUAGES.includes(lang as SupportedLanguage),
     ) as SupportedLanguage) ?? "en",
   anyLanguageLoaded: false,
+  languageExtensionData: {},
   setLanguage: () => {},
   getLink: (path) => path,
   beastieNames: BEASTIE_NAMES_UNTYPED,

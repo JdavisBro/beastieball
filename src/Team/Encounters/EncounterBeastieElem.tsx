@@ -225,12 +225,13 @@ export default function EncounterBeastieElem({
   bonus_levels: number;
   overwrittenTrained?: number;
 }) {
-  const { L } = useLocalization();
+  const { L, languageExtensionData } = useLocalization();
 
   const level = encBeastie.level + Math.floor(bonus_levels);
 
   const pid = useMemo(createPid, [encounterId]);
 
+  const loadedLang = languageExtensionData.encounters?.lang;
   const teamBeastie = useMemo(
     () =>
       encounterToTeamBeastie(
@@ -242,7 +243,15 @@ export default function EncounterBeastieElem({
         overwrittenTrained,
         L,
       ),
-    [pid, encBeastie, level, encounterId, index, overwrittenTrained],
+    [
+      pid,
+      loadedLang,
+      encBeastie,
+      level,
+      encounterId,
+      index,
+      overwrittenTrained,
+    ],
   );
 
   if (!teamBeastie) {

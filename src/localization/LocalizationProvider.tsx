@@ -9,6 +9,7 @@ import { useLocalStorage } from "usehooks-ts";
 import { useNavigate, useParams } from "react-router-dom";
 
 import {
+  LanguageExtensionData,
   LocalizationContext,
   LocalizationType,
   SUPPORTED_LANGUAGES,
@@ -184,14 +185,8 @@ export default function LocalizationProvider({
 
   const lang: SupportedLanguage = storedLang;
 
-  const [languageExtensionsData, setLanguageExtensionsData] = useState<
-    Partial<
-      Record<
-        LocalizationExtension,
-        { lang: SupportedLanguage; data: LanguageData }
-      >
-    >
-  >({});
+  const [languageExtensionsData, setLanguageExtensionsData] =
+    useState<LanguageExtensionData>({});
 
   const languageData = useMemo(
     () =>
@@ -201,6 +196,7 @@ export default function LocalizationProvider({
       ),
     [languageExtensionsData],
   );
+
   const allLanguageExtensionsLoaded = useMemo(() => {
     for (const ext of localizationExtensions)
       if (!languageExtensionsData[ext]) return false;
@@ -230,6 +226,7 @@ export default function LocalizationProvider({
       languages: SUPPORTED_LANGUAGES,
       currentLanguage: lang,
       anyLanguageLoaded: allLanguageExtensionsLoaded,
+      languageExtensionData: languageExtensionsData,
       setLanguage: setLang,
       getLink: (path) => (lang == "en" ? path : `/${lang}${path}`),
       beastieNames: BEASTIE_NAMES,

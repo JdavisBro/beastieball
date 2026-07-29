@@ -383,7 +383,7 @@ function sanitizeFilename(name: string, doneFilenames?: string[]) {
 
 function saveZip(workshopData: WorkshopData, L: LocalizationFunction) {
   const zip = new JSZip();
-  const base = sanitizeFilename(workshopData.name);
+  const base = sanitizeFilename(workshopData.name || "Unnamed Mod");
   zip.file(
     `${base}/config.ini`,
     createIni({
@@ -434,7 +434,7 @@ function saveZip(workshopData: WorkshopData, L: LocalizationFunction) {
   }
   zip.generateAsync({ type: "blob" }).then(function (content) {
     const a = document.createElement("a");
-    a.download = `${workshopData.name}.zip`;
+    a.download = `${base}.zip`;
     a.href = URL.createObjectURL(content);
     a.click();
   });

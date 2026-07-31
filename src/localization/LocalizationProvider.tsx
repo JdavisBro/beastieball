@@ -30,6 +30,8 @@ declare global {
   }
 }
 
+const USE_LOWER_CASE_PATHS = true; // for netlify that redirects upper to lower case always for file paths
+
 const BEASTIE_NAMES: Record<
   string,
   Record<SupportedLanguage, string>
@@ -121,6 +123,13 @@ function merge(obj1: Record<string, any>, obj2: Record<string, any>) {
   return new_obj;
 }
 
+function findSupportedLang(lang: string) {
+  lang = lang.toLowerCase();
+  return SUPPORTED_LANGUAGES.find(
+    (supportedLang) => lang == supportedLang.toLowerCase(),
+  );
+}
+
 export default function LocalizationProvider({
   children,
   localizationExtensions,
@@ -129,13 +138,13 @@ export default function LocalizationProvider({
 
   const [storedLang, setStoredLang] = useLocalStorage<SupportedLanguage>(
     "language",
-    ((paramLang && paramLang in LANGUAGE_LOADERS ? paramLang : undefined) ??
-      navigator.languages.find((lang) => lang in LANGUAGE_LOADERS) ??
+    ((paramLang ? findSupportedLang(paramLang) : undefined) ??
+      navigator.languages.find((lang) => findSupportedLang(lang)) ??
       "en") as SupportedLanguage,
     {
       serializer: String,
       deserializer: (value) =>
-        (value in LANGUAGE_LOADERS.game ? value : "en") as SupportedLanguage,
+        (findSupportedLang(value) ?? "en") as SupportedLanguage,
     },
   );
 
@@ -145,7 +154,11 @@ export default function LocalizationProvider({
 
   const setParamLang = useCallback(
     (lang: SupportedLanguage) => {
-      const prefix = lang == "en" ? "/" : `/${lang}/`;
+      const prefix =
+        lang == "en"
+          ? "/"
+          : `/${USE_LOWER_CASE_PATHS ? lang.toLowerCase() : lang}/`;
+      console.log(prefix, lang);
       const path = location.pathname;
       const noParamLang =
         !paramLang || !paramLang.split("-").every((code) => code.length == 2);
@@ -153,6 +166,8 @@ export default function LocalizationProvider({
       for (const supportedLang of SUPPORTED_LANGUAGES) {
         if (path.startsWith(`/${supportedLang}/`)) {
           currentPrefix = `/${supportedLang}/`;
+        } else if (path.startsWith(`/${supportedLang.toLowerCase()}/`)) {
+          currentPrefix = `/${supportedLang.toLowerCase()}/`;
         }
       }
       if (prefix == currentPrefix) {
@@ -228,7 +243,10 @@ export default function LocalizationProvider({
       anyLanguageLoaded: allLanguageExtensionsLoaded,
       languageExtensionData: languageExtensionsData,
       setLanguage: setLang,
-      getLink: (path) => (lang == "en" ? path : `/${lang}${path}`),
+      getLink: (path) =>
+        lang == "en"
+          ? path
+          : `/${USE_LOWER_CASE_PATHS ? lang.toLowerCase() : lang}${path}`,
       beastieNames: BEASTIE_NAMES,
     }),
     [lang, languageData, setLang],

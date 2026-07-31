@@ -10,8 +10,14 @@ import {
 } from "fs";
 import { LinkItem, SitemapStream } from "sitemap";
 
-type SupportedLanguage = "en" | "ru" | "zh-CN" | "es";
-const SUPPORTED_LANGUAGES: SupportedLanguage[] = ["en", "ru", "zh-CN", "es"];
+type SupportedLanguage = "en" | "ru" | "zh-CN" | "es" | "pt-BR";
+const SUPPORTED_LANGUAGES: SupportedLanguage[] = [
+  "en",
+  "ru",
+  "zh-CN",
+  "es",
+  "pt-BR",
+];
 
 import loc from "./src/localization/languages/en/site.json";
 type LanguageData = { [key: string]: LanguageData | string };
@@ -208,7 +214,7 @@ function generateSitemap(url: string) {
         `src/localization/languages/${lang_site ? lang : "en"}/site.json`,
       ).toString(),
     );
-    const pathPrefix = lang == "en" ? "" : `/${lang}`;
+    const pathPrefix = lang == "en" ? "" : `/${lang.toLowerCase()}`;
     const prerender_pages: PrerenderPage[] = [
       ...PRERENDER_PAGES,
       ...Object.values(BEASTIE_DATA).map((beastie) => {

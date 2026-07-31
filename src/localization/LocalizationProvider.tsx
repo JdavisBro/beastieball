@@ -261,9 +261,7 @@ export default function LocalizationProvider({
     <LocalizationContext.Provider value={contextValue}>
       {paramLang?.length &&
       !location.pathname.startsWith(`/${paramLang}/`) &&
-      !SUPPORTED_LANGUAGES.includes(
-        (paramLang ?? "en") as SupportedLanguage,
-      ) ? (
+      !findSupportedLang(paramLang ?? "en") ? (
         <PageNotFound />
       ) : (
         children

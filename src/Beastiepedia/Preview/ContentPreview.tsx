@@ -33,6 +33,7 @@ import { AnimationState, setupFrameCallback } from "./frameCallback.ts";
 import useLocalization from "../../localization/useLocalization.ts";
 import ImageContextMenu from "./ImageContextMenu.tsx";
 import CopyImageFallback from "../../shared/CopyImageFallback.tsx";
+import { useLocalStorage } from "usehooks-ts";
 
 const DevUtil = import.meta.env.DEV
   ? lazy(() => import("./DevUtil.tsx"))
@@ -133,10 +134,18 @@ export default function ContentPreview(props: Props): React.ReactNode {
 
   const [shaderEffect, setShaderEffect] = useState(ShaderEffectType.None);
 
-  const [animationState, setAnimation] = useState("idle");
+  const [pausedBeastiepedia] = useLocalStorage("pausedBeastiepedia", false);
+
+  const [animationState, setAnimation] = useState(
+    pausedBeastiepedia ? "menu" : "idle",
+  );
   const animdata: BeastieAnimData | undefined = BEASTIE_ANIMATIONS.get(
     `_${props.beastiedata.spr}`,
   )?.anim_data as BeastieAnimData;
+
+  useEffect(() => {
+    if (pausedBeastiepedia && animation != "menu") setAnimation("menu");
+  }, [pausedBeastiepedia]);
 
   const animation = anim_check(animationState, props.beastiedata);
 

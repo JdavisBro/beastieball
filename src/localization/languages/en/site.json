@@ -20,6 +20,8 @@
       "disableAnimationsDesc": "Removes background and header scrolling animations which can be distracting and has an impact on performance.",
       "simplePlay": "Simple Play Background",
       "simplePlayDesc": "Disables halftones on Play boxes, which has an impact on performance when there are many.",
+      "pausedBeastiepedia": "Paused Beastiepedia",
+      "pausedBeastiepediaDesc": "Beastiepedia defaults to the 'Menu' animation.",
       "visit": "Visit the {version} site.",
       "normal": "non-experimental",
       "experimental": "🧪experimental"

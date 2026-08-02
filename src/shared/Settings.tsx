@@ -46,6 +46,11 @@ function Toggles() {
         text={L("common.settings.simplePlay")}
         hoverText={L("common.settings.simplePlayDesc")}
       />
+      <ToggleCheckbox
+        storageKey="pausedBeastiepedia"
+        text={L("common.settings.pausedBeastiepedia")}
+        hoverText={L("common.settings.pausedBeastiepediaDesc")}
+      />
     </>
   );
 }

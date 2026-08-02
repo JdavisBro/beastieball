@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import styles from "./Workshop.module.css";
 import MoveView from "../shared/MoveView";
 import { WorkshopPlay } from "./types";
 import { StringDataInput } from "./Workshop";
@@ -760,14 +761,7 @@ export default function WorkshopEditPlay({
 
   return (
     <>
-      <div
-        className="infoBoxContent"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-        }}
-      >
+      <div className={styles.boxContent}>
         <label>
           {L("workshop.play.name")}
           <StringDataInput
@@ -910,7 +904,7 @@ export default function WorkshopEditPlay({
           ))}
         </div>
         <div>{L("workshop.play.effects.title")}</div>
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div className={styles.effectBox}>
           {play.effects.map((eff, index) => (
             <EffectSelect
               key={index}
@@ -957,26 +951,28 @@ export default function WorkshopEditPlay({
         </div>
         <button onClick={deletePlay}>Delete Play</button>
       </div>
-      <CustomErrorBoundary fallbackClassName="">
-        <MoveView
-          move={{
-            id: String(idAccum),
-            name: play.name,
-            type: play.type,
-            use: play.use,
-            targ: play.target,
-            pow: play.pow,
-            eff: play.effects,
+      <div className={styles.playBox}>
+        <CustomErrorBoundary fallbackClassName="">
+          <MoveView
+            move={{
+              id: String(idAccum),
+              name: play.name,
+              type: play.type,
+              use: play.use,
+              targ: play.target,
+              pow: play.pow,
+              eff: play.effects,
 
-            desc_tags: [],
-            desc_tagids: [],
-            description: null,
-            bt_tags: [],
-            price: 0,
-          }}
-          noLearner={true}
-        />
-      </CustomErrorBoundary>
+              desc_tags: [],
+              desc_tagids: [],
+              description: null,
+              bt_tags: [],
+              price: 0,
+            }}
+            noLearner={true}
+          />
+        </CustomErrorBoundary>
+      </div>
     </>
   );
 }

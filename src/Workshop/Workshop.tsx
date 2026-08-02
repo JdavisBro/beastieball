@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import styles from "./Workshop.module.css";
 import OpenGraph from "../shared/OpenGraph";
 import useLocalization, {
   LocalizationFunction,
@@ -49,14 +50,7 @@ function WorkshopEditData({
   };
 
   return (
-    <div
-      className="infoBoxContent"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-start",
-      }}
-    >
+    <div className={styles.boxContent}>
       <label>
         {L("workshop.modInfo.name")}
         <StringDataInput

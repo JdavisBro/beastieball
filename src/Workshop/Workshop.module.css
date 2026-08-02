@@ -1,0 +1,28 @@
+.boxContent {
+  composes: infoBoxContent from global;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.effectBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.playBox {
+  width: 460px;
+  min-width: 300px;
+  max-width: calc(100dvw * 0.9);
+  height: 160px;
+  min-height: 160px;
+  max-height: calc(100dvh / 2);
+  resize: both;
+  overflow: hidden;
+}
+
+.playBox > div {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none;
+}

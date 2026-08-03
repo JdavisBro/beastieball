@@ -247,6 +247,40 @@ function findAbilityByName(name: string, L: LocalizationFunction) {
   return Object.values(abilities)[0];
 }
 
+export function loadPlayFromIni(ini: string, L: LocalizationFunction) {
+  const data = loadIni(ini);
+  const effects: MoveEffect[] = [];
+  const effSplit = String(data?.effects?.effects ?? "").split(",");
+  for (let i = 0; i < effSplit.length; i += 3) {
+    const eff = Number(effSplit[i]) as MoveEffectType;
+    effects.push({
+      eff: eff,
+      targ: Number(effSplit[i + 1] ?? 0),
+      pow:
+        eff == MoveEffectType.TraitSet
+          ? findAbilityByName(effSplit[i + 2], L).id
+          : Number(effSplit[i + 2] ?? 0),
+    } as MoveEffect);
+  }
+  return {
+    name: String(data?.basic?.name ?? ""),
+    type: Number(data?.basic?.type ?? 0),
+    pow: Number(data?.basic?.pow ?? 0),
+    use: Number(data?.basic?.use ?? 0),
+    target: Number(data?.basic?.target ?? 0),
+    effects: effects,
+    learnedby: String(data?.distribution?.learnedby ?? "")
+      .split(",")
+      .map((beastieName) =>
+        [...BEASTIE_DATA.values()].find(
+          (beastie) => L(beastie.name, undefined, true) == beastieName,
+        ),
+      )
+      .filter((beastie) => !!beastie)
+      .map((beastie) => beastie.id),
+  };
+}
+
 async function loadZip(
   file: File | undefined,
   L: LocalizationFunction,
@@ -286,37 +320,9 @@ async function loadZip(
   for (const dir of dirs) {
     const playData = zip.file(baseDir + dir + "play_data.ini");
     if (playData) {
-      const data = loadIni(await playData.async("string"));
-      const effects: MoveEffect[] = [];
-      const effSplit = String(data?.effects?.effects ?? "").split(",");
-      for (let i = 0; i < effSplit.length; i += 3) {
-        const eff = Number(effSplit[i]) as MoveEffectType;
-        effects.push({
-          eff: eff,
-          targ: Number(effSplit[i + 1] ?? 0),
-          pow:
-            eff == MoveEffectType.TraitSet
-              ? findAbilityByName(effSplit[i + 2], L).id
-              : Number(effSplit[i + 2] ?? 0),
-        } as MoveEffect);
-      }
-      workshopData.plays.push({
-        name: String(data?.basic?.name ?? ""),
-        type: Number(data?.basic?.type ?? 0),
-        pow: Number(data?.basic?.pow ?? 0),
-        use: Number(data?.basic?.use ?? 0),
-        target: Number(data?.basic?.target ?? 0),
-        effects: effects,
-        learnedby: String(data?.distribution?.learnedby ?? "")
-          .split(",")
-          .map((beastieName) =>
-            [...BEASTIE_DATA.values()].find(
-              (beastie) => L(beastie.name, undefined, true) == beastieName,
-            ),
-          )
-          .filter((beastie) => !!beastie)
-          .map((beastie) => beastie.id),
-      });
+      workshopData.plays.push(
+        loadPlayFromIni(await playData.async("string"), L),
+      );
     }
   }
   return workshopData;

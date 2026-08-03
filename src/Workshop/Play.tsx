@@ -2,13 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./Workshop.module.css";
 import MoveView from "../shared/MoveView";
 import { WorkshopPlay } from "./types";
-import { StringDataInput } from "./Workshop";
+import { loadPlayFromIni, StringDataInput } from "./Workshop";
 import { MoveEffect, MoveEffectType } from "../data/MoveData";
 import abilities from "../data/abilities";
 import useLocalization from "../localization/useLocalization";
 import BeastieSelect from "../shared/BeastieSelect";
 import BEASTIE_DATA from "../data/BeastieData";
 import CustomErrorBoundary from "../shared/CustomErrorBoundary";
+import MoveSelect from "../shared/MoveSelect";
 
 function useAutoApply(setValue: (value: number) => void) {
   const ref = useRef<HTMLSelectElement>(null);
@@ -231,7 +232,7 @@ const DEFAULT_FIELD_TARGET: TemplateEffectInfo = {
     return (
       <select
         onChange={(event) => setTarget(Number(event.target.value))}
-        value={target}
+        value={target == 5 ? 3 : target == 2 ? 0 : target}
         ref={useAutoApply(setTarget)}
       >
         <option value={0}> {L("workshop.play.field.ally")}</option>
@@ -759,6 +760,8 @@ export default function WorkshopEditPlay({
     setIdAccum(idAccum + 1);
   };
 
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   return (
     <>
       <div className={styles.boxContent}>
@@ -949,7 +952,60 @@ export default function WorkshopEditPlay({
             }}
           />
         </div>
-        <button onClick={deletePlay}>Delete Play</button>
+        <div>
+          <button onClick={deletePlay}>{L("workshop.play.delete")}</button>
+          <MoveSelect
+            move={undefined}
+            setMove={(move) => {
+              if (!move) return;
+              setPlay({
+                name: L(move.name),
+                type: move.type,
+                pow: move.pow,
+                use: move.use,
+                target: move.targ,
+                effects: move.eff,
+                learnedby: [...BEASTIE_DATA.values()]
+                  .filter(
+                    (beastie) =>
+                      beastie.attklist.some((id) => id == move.id) &&
+                      !beastie.learnset.some(([, id]) => id == move.id),
+                  )
+                  .map((beastie) => beastie.id),
+              });
+              setPow(String(move.pow));
+              setIdAccum(idAccum + 1);
+            }}
+            hashName={"Import"}
+            header={L("workshop.play.import")}
+            textOverride={L("workshop.play.import")}
+          />
+          <button
+            onClick={() => {
+              if (fileInputRef.current) fileInputRef.current.click();
+            }}
+          >
+            {L("workshop.play.importIni")}
+          </button>
+          <input
+            type="file"
+            onChange={(event) =>
+              event.currentTarget.files?.[0]
+                ?.text()
+                .then((ini) => {
+                  const play = loadPlayFromIni(ini, L);
+                  if (!play) return;
+                  setPlay(play);
+                  setIdAccum(idAccum + 1);
+                })
+                .catch((reason) => console.log(reason))
+            }
+            accept=".ini"
+            style={{ display: "none" }}
+            onClick={(event) => (event.currentTarget.value = "")}
+            ref={fileInputRef}
+          />
+        </div>
       </div>
       <div className={styles.playBox}>
         <CustomErrorBoundary fallbackClassName="">

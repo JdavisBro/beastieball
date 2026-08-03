@@ -48,6 +48,9 @@
       },
       "learnedBy": "Learned By: ",
       "addBeastie": "Add Beastie",
+      "delete": "Delete Play",
+      "import": "Import from Play",
+      "importIni": "Import from Ini",
       "effects": {
         "title": "Effects:",
         "new": "- Add New Effect -",

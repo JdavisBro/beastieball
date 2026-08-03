@@ -88,6 +88,21 @@
       "metamorph": "Can Metamorph",
       "noMetamorph": "Can not Metamorph"
     },
+    "moveSelect": {
+      "label": "Select Play: {move}",
+      "unset": "Unset",
+      "type": {
+        "label": "Type: ",
+        "any": "Any"
+      },
+      "from": {
+        "label": "From: ",
+        "any": "Any",
+        "level": "Level Up",
+        "friend": "Friends"
+      },
+      "sep": " - "
+    },
     "moveView": {
       "learnedFriend": "Learned from {friend} at {hearts} hearts.",
       "viewLearners": "View Beasties that learn this play.",
@@ -620,18 +635,8 @@
       "plays": "Plays: ",
       "playSelect": {
         "title": "Select Play {num}",
-        "num": "Play {num}: ",
-        "unset": "Unset",
-        "type": {
-          "label": "Type: ",
-          "any": "Any"
-        },
-        "from": {
-          "label": "From: ",
-          "any": "Any",
-          "level": "Level Up",
-          "friend": "Friends"
-        }
+        "num": "Play {num}: {move}",
+        "unset": "Unset"
       },
       "playUnset": "Unset",
       "selectPlay": "Select Play {num}",

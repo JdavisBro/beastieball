@@ -4,7 +4,7 @@ import BEASTIE_DATA from "../../data/BeastieData";
 import useLocalization from "../../localization/useLocalization";
 import BeastieSelect from "../../shared/BeastieSelect";
 import type { TeamBeastie } from "../Types";
-import MoveSelect from "./MoveSelect";
+import BuilderMoveSelect from "./MoveSelect";
 import { Box } from "./TeamBuilder";
 import styles from "./TeamBuilder.module.css";
 import InfoTabberHeader from "../../shared/InfoTabber";
@@ -459,7 +459,7 @@ export default function EditBeastie({
           </label>
         ) : null}
       </Box>
-      <MoveSelect
+      <BuilderMoveSelect
         beastiedata={beastiedata}
         teamBeastieMovelist={beastie.attklist}
         setMove={(index, move) => {

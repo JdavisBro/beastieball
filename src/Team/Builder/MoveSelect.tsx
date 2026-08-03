@@ -1,33 +1,13 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
-import Modal from "../../shared/Modal";
-import MoveView from "../../shared/MoveView";
-import MOVE_DIC from "../../data/MoveData";
+import MOVE_DIC, { Move } from "../../data/MoveData";
 import styles from "./TeamBuilder.module.css";
 import useLocalization from "../../localization/useLocalization";
 import { useLocation, useNavigate } from "react-router-dom";
 import { BeastieType } from "../../data/BeastieData";
+import { MoveSelectModal } from "../../shared/MoveSelect";
 
-enum MoveFilterMode {
-  None,
-  Level,
-  Friend,
-}
-
-const IGNORED_MOVES = [
-  "xtra",
-  "???",
-  "volley",
-  "move",
-  "defense",
-  "doubleblock",
-  "tagout",
-];
-const ALL_MOVES = Object.values(MOVE_DIC).filter(
-  (move) => !IGNORED_MOVES.includes(move.id),
-);
-
-export default function MoveSelect({
+export default function BuilderMoveSelect({
   beastiedata,
   teamBeastieMovelist,
   setMove,
@@ -40,11 +20,8 @@ export default function MoveSelect({
 }) {
   const { L } = useLocalization();
 
-  const [search, setSearch] = useState("");
-
   const hash = decodeURIComponent(useLocation().hash);
-  const hashMoveNum =
-    hash.startsWith("#SelectPlay: ") && Number(hash.slice(13));
+  const hashMoveNum = hash.startsWith("#SelectPlay-") && Number(hash.slice(12));
   const hashSelecting =
     hashMoveNum && hashMoveNum >= 1 && hashMoveNum <= 3 && hashMoveNum - 1;
 
@@ -55,161 +32,51 @@ export default function MoveSelect({
     selectingState ?? (hashSelecting === false ? undefined : hashSelecting);
 
   const navigate = useNavigate();
-  const selectMove = (moveId: string) => {
-    setMove(selecting ?? 0, moveId);
+  const selectMove = (move: Move | undefined) => {
+    if (move) {
+      setMove(selecting ?? 0, move.id);
+    }
     setSelecting(undefined);
     navigate(-1);
   };
 
-  const [filterType, setFilterType] = useState(-1);
-  const [filterMode, setFilterMode] = useState(MoveFilterMode.None);
-
-  const levelMoves = beastiedata.learnset
-    .sort(([level], [level2]) => (level as number) - (level2 as number))
-    .map(([, moveId]) => moveId);
-  let possibleMoves =
-    filterMode != MoveFilterMode.Level || chaosMode
-      ? (chaosMode
-          ? ALL_MOVES
-          : beastiedata.attklist.map((moveId) => MOVE_DIC[moveId])
-        )
-          .sort(
-            (move1, move2) =>
-              move1.type - move2.type ||
-              move2.pow - move1.pow ||
-              L(move1.name).localeCompare(L(move2.name)),
-          )
-          .filter(
-            filterMode == MoveFilterMode.Friend && !chaosMode
-              ? (move) => !levelMoves.includes(move.id)
-              : () => true,
-          )
-      : levelMoves.map((moveId) => MOVE_DIC[moveId]);
-  possibleMoves = possibleMoves.filter((move) =>
-    L(move.name).toLowerCase().includes(search.toLowerCase()),
-  );
-  if (filterType != -1) {
-    possibleMoves = possibleMoves.filter((move) => move.type == filterType);
-  }
-
-  const searchRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    if (selecting !== undefined && searchRef.current) {
-      searchRef.current.select();
-    }
-  }, [selecting]);
-
-  const handleSearchKey: React.KeyboardEventHandler<HTMLInputElement> = (
-    event,
-  ) => {
-    if (event.key == "Enter" && search.length && possibleMoves.length) {
-      event.preventDefault();
-      event.stopPropagation();
-      selectMove(possibleMoves[0].id);
-    }
-  };
-
   return (
     <div className={styles.box}>
-      <Modal
+      <MoveSelectModal
+        move={undefined}
+        setMove={selectMove}
+        hashName={String((selecting ?? 0) + 1)}
         header={L("teams.builder.playSelect.title", {
           num: String((selecting ?? 0) + 1),
         })}
-        open={selecting !== undefined}
-        onClose={() => {
-          setSearch("");
-          setSelecting(undefined);
-        }}
-        hashValue={`SelectPlay: ${(selecting ?? 0) + 1}`}
-      >
-        <div className={styles.moveSelectModal}>
-          <div className={styles.moveSelectOptions}>
-            <label>
-              {L("common.searchPrefix")}
-              <input
-                type="search"
-                onChange={(event) => setSearch(event.currentTarget.value)}
-                onFocus={(event) => event.currentTarget.select()}
-                onKeyDown={handleSearchKey}
-                value={search}
-                ref={searchRef}
-              />
-            </label>
-            {L("teams.builder.sep")}
-            <label>
-              {L("teams.builder.playSelect.type.label")}
-              <select
-                value={filterType}
-                onChange={(event) =>
-                  setFilterType(Number(event.currentTarget.value))
-                }
-              >
-                <option value={-1}>
-                  {L("teams.builder.playSelect.type.any")}
-                </option>
-                <option value={0}>{L("common.types.body")}</option>
-                <option value={1}>{L("common.types.spirit")}</option>
-                <option value={2}>{L("common.types.mind")}</option>
-                <option value={3}>{L("common.types.volley")}</option>
-                <option value={4}>{L("common.types.support")}</option>
-                <option value={5}>{L("common.types.defense")}</option>
-              </select>
-            </label>
-            {L("teams.builder.sep")}
-            <label>
-              {L("teams.builder.playSelect.from.label")}
-              <select
-                value={filterMode}
-                onChange={(event) =>
-                  setFilterMode(Number(event.currentTarget.value))
-                }
-                disabled={chaosMode}
-                style={{ opacity: chaosMode ? "0.5" : undefined }}
-              >
-                <option value={MoveFilterMode.None}>
-                  {L("teams.builder.playSelect.from.any")}
-                </option>
-                <option value={MoveFilterMode.Level}>
-                  {L("teams.builder.playSelect.from.level")}
-                </option>
-                <option value={MoveFilterMode.Friend}>
-                  {L("teams.builder.playSelect.from.friend")}
-                </option>
-              </select>
-            </label>
-          </div>
-          <div className={styles.moveSelectGrid}>
-            {possibleMoves.map((move) => (
-              <div
-                key={move.id}
-                className={styles.moveSelectMove}
-                onClick={() => selectMove(move.id)}
-              >
-                <MoveView move={move} noLearner={true} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </Modal>
+        open={selecting != undefined}
+        setOpen={(open) => setSelecting(open ? selecting : undefined)}
+        beastie={chaosMode ? undefined : beastiedata}
+      />
       {L("teams.builder.plays")}
       <button onClick={() => setSelecting(0)}>
-        {L("teams.builder.playSelect.num", { num: "1" })}
-        {MOVE_DIC[teamBeastieMovelist[0]]
-          ? L(MOVE_DIC[teamBeastieMovelist[0]].name)
-          : L("teams.builder.playSelect.unset")}
+        {L("teams.builder.playSelect.num", {
+          num: "1",
+          move: MOVE_DIC[teamBeastieMovelist[0]]
+            ? L(MOVE_DIC[teamBeastieMovelist[0]].name)
+            : L("teams.builder.playSelect.unset"),
+        })}
       </button>
       <button onClick={() => setSelecting(1)}>
-        {L("teams.builder.playSelect.num", { num: "2" })}
-        {MOVE_DIC[teamBeastieMovelist[1]]
-          ? L(MOVE_DIC[teamBeastieMovelist[1]].name)
-          : L("teams.builder.playSelect.unset")}
+        {L("teams.builder.playSelect.num", {
+          num: "2",
+          move: MOVE_DIC[teamBeastieMovelist[1]]
+            ? L(MOVE_DIC[teamBeastieMovelist[1]].name)
+            : L("teams.builder.playSelect.unset"),
+        })}
       </button>
       <button onClick={() => setSelecting(2)}>
-        {L("teams.builder.playSelect.num", { num: "3" })}
-        {MOVE_DIC[teamBeastieMovelist[2]]
-          ? L(MOVE_DIC[teamBeastieMovelist[2]].name)
-          : L("teams.builder.playSelect.unset")}
+        {L("teams.builder.playSelect.num", {
+          num: "3",
+          move: MOVE_DIC[teamBeastieMovelist[2]]
+            ? L(MOVE_DIC[teamBeastieMovelist[2]].name)
+            : L("teams.builder.playSelect.unset"),
+        })}
       </button>
     </div>
   );

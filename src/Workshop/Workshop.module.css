@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100dvw;
+  width: fit-content;
+  overflow-x: scroll;
 }
 
 .effectBox {

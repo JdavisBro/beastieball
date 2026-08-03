@@ -87,6 +87,7 @@ export enum MoveEffectType {
   FeelingBadCure = 52,
   FeelingAllCure = 32,
   FeelingAllCureAngry = 94,
+  FeelingAdvance = 98,
   // Field
   FieldTrap = 42,
   FieldRally = 43,
@@ -132,6 +133,7 @@ export enum MoveEffectType {
   PreventObstructed = 57,
   CanUseDefense = 67,
   RequiredVolleyState = 69,
+  AllyHasBall = 97,
   // Effect Conditions
   IfHittable = 72,
   IfSuccess = 90,

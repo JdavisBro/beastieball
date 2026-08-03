@@ -2190,6 +2190,21 @@
     "level_min": 37,
     "total": 120
   },
+  "train": {
+    "group": [
+      {
+        "freq": 35,
+        "lvlA": 20,
+        "lvlB": 25,
+        "percent": 1,
+        "specie": "magpie1",
+        "variant": 0.1
+      }
+    ],
+    "level_max": 25,
+    "level_min": 20,
+    "total": 35
+  },
   "witchwood": {
     "group": [
       {

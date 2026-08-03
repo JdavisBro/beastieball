@@ -551,7 +551,6 @@
   "movessetup_movedefine_061": "Toque esquinero",
   "movessetup_movedefine_062": "Rayo gélido",
   "movessetup_movedefine_063": "Golpe giratorio",
-  "movessetup_movedefine_064": "Punto de mira",
   "movessetup_movedefine_065": "Bomba mental",
   "movessetup_movedefine_066": "Machacón",
   "movessetup_movedefine_067": "Pinchazo",
@@ -1055,5 +1054,19 @@
   "abilitiessetup_abilitydefine_310": "Admirador",
   "abilitiessetup_abilitydefine_311": "Obtiene las mismas [sprBoost,0]ALTERACIONES que su aliado.",
   "movedefine_057": "Se usa en la red, con el bono de daño correspondiente.",
-  "movessetup_movedefine_203": "Voltereta evasiva"
+  "movessetup_movedefine_203": "Voltereta evasiva",
+  "abilitiessetup_abilitydefine_312": "Stoic",
+  "abilitiessetup_abilitydefine_313": "Corrosion",
+  "abilitiessetup_abilitydefine_314": "Each turn, reduces nearest opponent's STAMINA by {0}.",
+  "abilitiessetup_abilitydefine_315": "Immune to {0}. Doesn't experience negative effects from their own attacks.",
+  "abilitiessetup_002": "Net-boosted attacks make the target {1} {0}.",
+  "abilitiessetup_004": "Enchanter",
+  "movedefine_058": "to ally row",
+  "movedefine_descadd_120": "TAG OUT with benched ally before contact.",
+  "movedefine_descadd_121": "Advances {target}'s FEELINGs by {0} {p:{0},turn,turns}.",
+  "movedefine_descadd_123": "Used when ally has ball.",
+  "movessetup_movedefine_204": "Flying Kick",
+  "movessetup_movedefine_205": "Kick",
+  "movessetup_movedefine_206": "Explosive Spirit",
+  "movessetup_movedefine_207": "Squeeze"
 }

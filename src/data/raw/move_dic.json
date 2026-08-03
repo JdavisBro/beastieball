@@ -145,7 +145,7 @@
     "id": "basecover",
     "name": "¦movessetup_movedefine_157¦",
     "pow": 0,
-    "price": 45,
+    "price": 0,
     "targ": 3,
     "type": 5,
     "use": 0
@@ -213,15 +213,15 @@
     "use": 0
   },
   "blockattack": {
-    "bt_tags": [0, 20, 47, 10],
+    "bt_tags": [0, 8, 20, 47, 10],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 17, "pow": 0, "targ": 0 }],
+    "eff": [],
     "id": "blockattack",
     "name": "¦movessetup_movedefine_025¦",
-    "pow": 80,
-    "price": 20,
+    "pow": 110,
+    "price": 0,
     "targ": 1,
     "type": 0,
     "use": 2
@@ -324,6 +324,20 @@
     "type": 0,
     "use": 0
   },
+  "burnout": {
+    "bt_tags": [1, 8, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 8, "pow": -0.15, "targ": 0 }],
+    "id": "burnout",
+    "name": "¦movessetup_movedefine_057¦",
+    "pow": 100,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
   "callout": {
     "bt_tags": [24, 29, 7, 46],
     "desc_tagids": [],
@@ -385,7 +399,7 @@
     "id": "charm",
     "name": "¦movessetup_movedefine_130¦",
     "pow": 0,
-    "price": 50,
+    "price": 0,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -521,7 +535,7 @@
     "id": "crowd",
     "name": "¦movessetup_movedefine_141¦",
     "pow": 0,
-    "price": 60,
+    "price": 0,
     "targ": 0,
     "type": 4,
     "use": 0
@@ -608,7 +622,7 @@
     "id": "defheal",
     "name": "¦movessetup_movedefine_151¦",
     "pow": 0,
-    "price": 50,
+    "price": 0,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -912,6 +926,23 @@
     "type": 1,
     "use": 2
   },
+  "flykick": {
+    "bt_tags": [0, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 97, "pow": 1, "targ": 0 },
+      { "eff": -7, "pow": 4, "targ": 0 }
+    ],
+    "id": "flykick",
+    "name": "¦movessetup_movedefine_204¦",
+    "pow": 95,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
   "followme": {
     "bt_tags": [24, 34, 49],
     "desc_tagids": [],
@@ -983,7 +1014,7 @@
     "id": "hazeball",
     "name": "¦movessetup_movedefine_076¦",
     "pow": 65,
-    "price": 25,
+    "price": 0,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1095,7 +1126,7 @@
     "id": "heartpass",
     "name": "¦movessetup_movedefine_099¦",
     "pow": 0,
-    "price": 25,
+    "price": 0,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -1137,7 +1168,7 @@
     "id": "hum",
     "name": "¦movessetup_movedefine_192¦",
     "pow": 0,
-    "price": 15,
+    "price": 0,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -1254,6 +1285,20 @@
     "type": 0,
     "use": 2
   },
+  "kick": {
+    "bt_tags": [0],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 17, "pow": 0, "targ": 0 }],
+    "id": "kick",
+    "name": "¦movessetup_movedefine_205¦",
+    "pow": 75,
+    "price": 0,
+    "targ": 8,
+    "type": 0,
+    "use": 0
+  },
   "libero": {
     "bt_tags": [42, 38, 46],
     "desc_tagids": [],
@@ -1368,11 +1413,14 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 27, "pow": -1, "targ": 3 }],
+    "eff": [
+      { "eff": 27, "pow": -1, "targ": 3 },
+      { "eff": 33, "pow": 17, "targ": 0 }
+    ],
     "id": "markattack",
-    "name": "¦movessetup_movedefine_064¦",
+    "name": "l*movessetup_movedefine_064",
     "pow": 45,
-    "price": 20,
+    "price": 0,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1618,11 +1666,11 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [],
+    "eff": [{ "eff": 33, "pow": 14, "targ": 0 }],
     "id": "nightshade",
     "name": "¦movessetup_movedefine_060¦",
     "pow": -30,
-    "price": 20,
+    "price": 0,
     "targ": 8,
     "type": 2,
     "use": 0
@@ -1652,7 +1700,7 @@
     "description": null,
     "eff": [{ "eff": 1, "pow": -2, "targ": 0 }],
     "id": "overheat",
-    "name": "¦movessetup_movedefine_057¦",
+    "name": "¦movessetup_movedefine_206¦",
     "pow": 110,
     "price": 50,
     "targ": 0,
@@ -1699,7 +1747,7 @@
     "id": "passionstrike",
     "name": "¦movessetup_movedefine_201¦",
     "pow": 105,
-    "price": 45,
+    "price": 0,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1794,13 +1842,13 @@
     "eff": [
       { "eff": 53, "pow": 0, "targ": 0 },
       { "eff": 19, "pow": 1, "targ": 0 },
-      { "eff": 12, "pow": 2, "targ": 0 },
+      { "eff": 12, "pow": 3, "targ": 0 },
       { "eff": 15, "pow": 1, "targ": 1 }
     ],
     "id": "protectcheer",
     "name": "¦movessetup_movedefine_149¦",
     "pow": 0,
-    "price": 60,
+    "price": 0,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -2019,7 +2067,7 @@
     "id": "rush",
     "name": "¦movessetup_movedefine_092¦",
     "pow": 0,
-    "price": 30,
+    "price": 0,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -2047,7 +2095,7 @@
     "id": "sad",
     "name": "¦movessetup_movedefine_181¦",
     "pow": 0,
-    "price": 20,
+    "price": 0,
     "targ": 4,
     "type": 5,
     "use": 0
@@ -2308,7 +2356,7 @@
     "id": "speech",
     "name": "¦movessetup_movedefine_182¦",
     "pow": 0,
-    "price": 55,
+    "price": 0,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -2339,6 +2387,20 @@
     "price": 45,
     "targ": 0,
     "type": 2,
+    "use": 0
+  },
+  "squeeze": {
+    "bt_tags": [24],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 98, "pow": 1, "targ": 3 }],
+    "id": "squeeze",
+    "name": "¦movessetup_movedefine_207¦",
+    "pow": 0,
+    "price": 0,
+    "targ": 5,
+    "type": 4,
     "use": 0
   },
   "starterbody": {

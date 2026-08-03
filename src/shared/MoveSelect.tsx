@@ -101,6 +101,7 @@ export function MoveSelectModal({
       event.preventDefault();
       event.stopPropagation();
       setMove(possibleMoves[0]);
+      setOpen(false);
     }
   };
 

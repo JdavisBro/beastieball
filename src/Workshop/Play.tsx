@@ -375,6 +375,10 @@ const EFFECT_INFO: EffectInfo[] = [
     powSelector: () => {},
   },
   {
+    id: MoveEffectType.FeelingAdvance,
+    title: "FeelingAdvance",
+  },
+  {
     id: MoveEffectType.FieldTrap,
     title: "FieldTrap",
     header: "Field",
@@ -590,6 +594,11 @@ const EFFECT_INFO: EffectInfo[] = [
         <option value={1}>Hittable</option>
       </select>
     ),
+  },
+  {
+    id: MoveEffectType.AllyHasBall,
+    title: "AllyHasBall",
+    ...NO_SELECTORS,
   },
   {
     id: MoveEffectType.IfHittable,

@@ -189,6 +189,7 @@
   justify-content: end;
   align-items: center;
   z-index: 1;
+  align-self: end;
 }
 
 :root:lang(zh, ja, kr) .movename {

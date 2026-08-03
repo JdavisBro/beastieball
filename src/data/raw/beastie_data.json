@@ -484,7 +484,9 @@
       "charm",
       "swarm",
       "followme",
-      "lifepass"
+      "squeeze",
+      "lifepass",
+      "burnout"
     ],
     "attklist_randomize": -1,
     "ba": 79,
@@ -778,7 +780,8 @@
       "cook",
       "charm",
       "swarm",
-      "followme"
+      "followme",
+      "squeeze"
     ],
     "attklist_randomize": -1,
     "ba": 72,
@@ -1072,9 +1075,9 @@
       [7, "healhit"],
       [12, "rest"],
       [17, "refresh"],
-      [21, "blockattack"],
+      [21, "bolt"],
       [26, "haze"],
-      [32, "bolt"],
+      [32, "thunder"],
       [36, "libero"],
       [41, "whirlwind"],
       [47, "hyperbeam"]
@@ -1211,10 +1214,10 @@
       "set",
       "cook",
       "dropshot",
+      "squeeze",
       "share",
       "fortify",
-      "construct",
-      "chill"
+      "construct"
     ],
     "attklist_randomize": -1,
     "ba": 25,
@@ -1299,9 +1302,9 @@
       [0, "dig"],
       [0, "pepshot"],
       [5, "allyrush"],
-      [10, "chill"],
+      [10, "lifedew"],
       [13, "float"],
-      [17, "lifedew"],
+      [17, "squeeze"],
       [23, "construct"],
       [27, "heart"],
       [32, "fortify"],
@@ -1432,10 +1435,10 @@
       "set",
       "cook",
       "dropshot",
+      "squeeze",
       "share",
       "fortify",
       "construct",
-      "chill",
       "shieldbreaker",
       "damagedattack"
     ],
@@ -2371,8 +2374,9 @@
       "mark",
       "powswitch",
       "flatten",
+      "kick",
+      "flykick",
       "vigor",
-      "breakswipe",
       "starterbody",
       "shakeoff"
     ],
@@ -2446,13 +2450,13 @@
       [0, "shakeoff"],
       [0, "starterbody"],
       [14, "curse"],
-      [17, "breakswipe"],
+      [17, "kick"],
       [20, "protect"],
       [22, "pushattack"],
       [25, "rush"],
       [32, "body"],
       [36, "defheal"],
-      [39, "rushattack"],
+      [39, "flykick"],
       [43, "powswitch"],
       [49, "vigor"]
     ],
@@ -2592,8 +2596,9 @@
       "mark",
       "powswitch",
       "flatten",
+      "kick",
+      "flykick",
       "vigor",
-      "breakswipe",
       "starterbody",
       "shakeoff"
     ],
@@ -2664,13 +2669,13 @@
       [0, "shakeoff"],
       [0, "starterbody"],
       [6, "curse"],
-      [9, "breakswipe"],
+      [9, "kick"],
       [12, "protect"],
       [14, "pushattack"],
       [17, "rush"],
       [24, "body"],
       [28, "defheal"],
-      [31, "rushattack"],
+      [31, "flykick"],
       [35, "powswitch"],
       [41, "vigor"]
     ],
@@ -2803,8 +2808,9 @@
       "mark",
       "powswitch",
       "flatten",
+      "kick",
+      "flykick",
       "vigor",
-      "breakswipe",
       "starterbody",
       "shakeoff"
     ],
@@ -2876,13 +2882,13 @@
       [0, "shakeoff"],
       [0, "starterbody"],
       [10, "curse"],
-      [13, "breakswipe"],
+      [13, "kick"],
       [16, "protect"],
       [18, "pushattack"],
       [21, "rush"],
       [28, "body"],
       [32, "defheal"],
-      [35, "rushattack"],
+      [35, "flykick"],
       [39, "powswitch"],
       [45, "vigor"]
     ],
@@ -3075,7 +3081,7 @@
           {
             "conditions": [
               {
-                "effect_type": 97,
+                "effect_type": 99,
                 "event": null,
                 "freq": -1,
                 "my_data": null,
@@ -3156,7 +3162,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 97,
+          "effect_type": 99,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3371,7 +3377,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 97,
+          "effect_type": 99,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3588,7 +3594,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 97,
+          "effect_type": 99,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -3906,6 +3912,7 @@
       "shakeoff",
       "ricochet",
       "shakenmind",
+      "kick",
       "followme",
       "starterside"
     ],
@@ -4110,6 +4117,7 @@
       "shakeoff",
       "ricochet",
       "shakenmind",
+      "kick",
       "followme",
       "starterside"
     ],
@@ -4781,7 +4789,7 @@
     "type_focus": 0
   },
   "daredevil": {
-    "ability": ["acrobat", "noboosts"],
+    "ability": ["acrobat", "attackbadless"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
@@ -4797,7 +4805,7 @@
       "hyperbeam",
       "snore",
       "desperate",
-      "overheat",
+      "burnout",
       "enemyboosts",
       "rush",
       "allycover",
@@ -4904,11 +4912,11 @@
       [23, "desperate"],
       [27, "substitute"],
       [31, "tagattack"],
-      [35, "jump"],
-      [39, "damagedattack"],
+      [35, "damagedattack"],
+      [39, "superpower"],
       [42, "backswitch"],
       [46, "rush"],
-      [50, "overheat"]
+      [50, "burnout"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -5030,7 +5038,7 @@
     "type_focus": 0
   },
   "daredevil1": {
-    "ability": ["acrobat", "noboosts"],
+    "ability": ["acrobat", "attackbadless"],
     "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 100,
@@ -5046,7 +5054,7 @@
       "hyperbeam",
       "snore",
       "desperate",
-      "overheat",
+      "burnout",
       "enemyboosts",
       "rush",
       "allycover",
@@ -5151,11 +5159,11 @@
       [19, "desperate"],
       [23, "substitute"],
       [27, "tagattack"],
-      [31, "jump"],
-      [35, "damagedattack"],
+      [31, "damagedattack"],
+      [35, "superpower"],
       [38, "backswitch"],
       [42, "rush"],
-      [46, "overheat"]
+      [46, "burnout"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -7598,7 +7606,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 97,
+          "effect_type": 99,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -7804,7 +7812,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 97,
+          "effect_type": 99,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -8023,7 +8031,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 97,
+          "effect_type": 99,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -8120,6 +8128,7 @@
       "menace",
       "rest",
       "wink",
+      "squeeze",
       "targethp",
       "stun",
       "shaken"
@@ -8197,7 +8206,7 @@
       [28, "hex"],
       [33, "wornout"],
       [36, "stun"],
-      [39, "teleport"],
+      [39, "squeeze"],
       [44, "eerie"],
       [49, "targethp"],
       [54, "sad"]
@@ -8341,6 +8350,7 @@
       "menace",
       "rest",
       "wink",
+      "squeeze",
       "targethp",
       "stun",
       "shaken"
@@ -8419,7 +8429,7 @@
       [22, "hex"],
       [27, "wornout"],
       [30, "stun"],
-      [33, "teleport"],
+      [33, "squeeze"],
       [38, "eerie"],
       [43, "targethp"],
       [48, "sad"]
@@ -8547,6 +8557,7 @@
       "menace",
       "rest",
       "wink",
+      "squeeze",
       "targethp",
       "stun",
       "shaken"
@@ -8612,7 +8623,7 @@
       [25, "hex"],
       [30, "wornout"],
       [33, "stun"],
-      [36, "teleport"],
+      [36, "squeeze"],
       [41, "eerie"],
       [46, "targethp"],
       [51, "sad"]
@@ -9038,11 +9049,11 @@
       [16, "preblock"],
       [21, "allyrush"],
       [26, "careful"],
-      [30, "rest"],
+      [30, "rhythm"],
       [34, "cook"],
       [37, "trap"],
       [41, "damagedattack"],
-      [46, "lifepass"]
+      [46, "rest"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -10043,7 +10054,6 @@
     "anim_progress": 100,
     "animator": [11, 9],
     "attklist": [
-      "bounce",
       "breakswipe",
       "sensihit",
       "mind",
@@ -10073,8 +10083,8 @@
       "chill",
       "rattle",
       "hazeball",
-      "tool",
-      "startermind"
+      "kick",
+      "tool"
     ],
     "attklist_randomize": -1,
     "ba": 88,
@@ -10150,11 +10160,11 @@
     "id": "kangaroo",
     "isBaby": false,
     "learnset": [
-      [0, "startermind"],
+      [0, "sensihit"],
       [0, "lowattks"],
       [9, "taunt"],
       [13, "dropshot"],
-      [16, "sensihit"],
+      [16, "kick"],
       [20, "nettle"],
       [24, "netattack"],
       [28, "rest"],
@@ -10285,7 +10295,6 @@
     "anim_progress": 100,
     "animator": 9,
     "attklist": [
-      "bounce",
       "breakswipe",
       "sensihit",
       "mind",
@@ -10315,8 +10324,8 @@
       "chill",
       "rattle",
       "hazeball",
-      "tool",
-      "startermind"
+      "kick",
+      "tool"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -10387,11 +10396,11 @@
     "id": "kangaroo1",
     "isBaby": true,
     "learnset": [
-      [0, "startermind"],
+      [0, "sensihit"],
       [0, "lowattks"],
       [5, "taunt"],
       [9, "dropshot"],
-      [12, "sensihit"],
+      [12, "kick"],
       [16, "nettle"],
       [20, "netattack"],
       [24, "rest"],
@@ -10543,6 +10552,8 @@
       "sweatall",
       "cook",
       "hum",
+      "squeeze",
+      "burnout",
       "reign"
     ],
     "attklist_randomize": -1,
@@ -10633,7 +10644,7 @@
       [41, "sweatall"],
       [45, "followme"],
       [48, "fieldclear"],
-      [53, "overheat"]
+      [53, "burnout"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -10780,6 +10791,8 @@
       "sweatall",
       "cook",
       "hum",
+      "squeeze",
+      "burnout",
       "reign"
     ],
     "attklist_randomize": -1,
@@ -10862,7 +10875,7 @@
       [38, "sweatall"],
       [42, "followme"],
       [45, "fieldclear"],
-      [50, "overheat"]
+      [50, "burnout"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -11472,6 +11485,7 @@
       "allycover",
       "crowd",
       "lockon",
+      "kick",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11740,6 +11754,7 @@
       "allycover",
       "crowd",
       "lockon",
+      "kick",
       "startermind"
     ],
     "attklist_randomize": -1,
@@ -11948,6 +11963,7 @@
       "allycover",
       "crowd",
       "lockon",
+      "kick",
       "startermind",
       "stomp",
       "swordsdance",
@@ -12134,7 +12150,6 @@
     "animator": 11,
     "attklist": [
       "blockattack",
-      "thunder",
       "rush",
       "float",
       "heartdown",
@@ -12236,12 +12251,12 @@
       [0, "mark"],
       [0, "enemylowered"],
       [5, "breakswipe"],
-      [8, "blockattack"],
+      [8, "protect"],
       [11, "rush"],
       [17, "distraction"],
       [23, "netattack"],
       [30, "lock"],
-      [34, "thunder"],
+      [34, "blockattack"],
       [38, "wall"],
       [42, "splinter"],
       [46, "ricochet"]
@@ -12452,7 +12467,7 @@
       [30, "protect"],
       [36, "body"],
       [40, "mark"],
-      [44, "rest"],
+      [44, "blockattack"],
       [48, "superpower"]
     ],
     "learnset_randomize": -1,
@@ -12660,7 +12675,7 @@
       [26, "protect"],
       [32, "body"],
       [36, "mark"],
-      [40, "rest"],
+      [40, "blockattack"],
       [44, "superpower"]
     ],
     "learnset_randomize": -1,
@@ -13711,6 +13726,7 @@
       "sweatall",
       "shakeoff",
       "wink",
+      "squeeze",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -14569,6 +14585,7 @@
       "menace",
       "ego",
       "bolt",
+      "squeeze",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -14780,6 +14797,7 @@
       "menace",
       "ego",
       "bolt",
+      "squeeze",
       "chill"
     ],
     "attklist_randomize": -1,
@@ -14970,7 +14988,8 @@
       "vigor",
       "shieldbreaker",
       "wall",
-      "heartpass"
+      "heartpass",
+      "kick"
     ],
     "attklist_randomize": -1,
     "ba": 95,
@@ -15030,7 +15049,7 @@
       [50, 0, 1.3, 0, 3, 1, 1, 3, 1],
       [15, 7, 1],
       [8, 0, -0.25, 19, 2, 2],
-      [19, 0, 1, 14, 0, 1, 12, 0, 4]
+      [19, 2, 1, 12, 2, 3]
     ],
     "desc": "¦beastiesetup_desc_090¦",
     "designer": [13],
@@ -15059,7 +15078,7 @@
       [0, "lowattks"],
       [7, "enemyboosts"],
       [11, "shaken"],
-      [16, "facade"],
+      [16, "kick"],
       [21, "dig"],
       [25, "shieldbreaker"],
       [29, "body"],
@@ -15345,7 +15364,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 97,
+          "effect_type": 99,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15549,7 +15568,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 97,
+          "effect_type": 99,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15791,7 +15810,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 97,
+          "effect_type": 99,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -15866,7 +15885,7 @@
       "vigor",
       "juggle",
       "curse",
-      "recover",
+      "shakeoff",
       "libero",
       "allyrush",
       "cover",
@@ -15874,11 +15893,11 @@
       "mark",
       "protect",
       "bench",
-      "batonpass",
       "haze",
       "thunder",
       "bolt",
       "body",
+      "defheal",
       "construct",
       "tagattack",
       "set",
@@ -15967,9 +15986,9 @@
       [25, "dig"],
       [29, "curse"],
       [35, "bolt"],
-      [39, "construct"],
+      [39, "shakeoff"],
       [44, "vigor"],
-      [49, "batonpass"]
+      [52, "introduction"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -16104,7 +16123,7 @@
       "vigor",
       "juggle",
       "curse",
-      "recover",
+      "shakeoff",
       "libero",
       "allyrush",
       "cover",
@@ -16112,11 +16131,11 @@
       "mark",
       "protect",
       "bench",
-      "batonpass",
       "haze",
       "thunder",
       "bolt",
       "body",
+      "defheal",
       "construct",
       "tagattack"
     ],
@@ -16201,9 +16220,9 @@
       [19, "dig"],
       [23, "curse"],
       [29, "bolt"],
-      [33, "construct"],
+      [33, "shakeoff"],
       [38, "vigor"],
-      [43, "batonpass"]
+      [43, "haze"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -16332,7 +16351,7 @@
       "vigor",
       "juggle",
       "curse",
-      "recover",
+      "shakeoff",
       "libero",
       "allyrush",
       "cover",
@@ -16340,11 +16359,11 @@
       "mark",
       "protect",
       "bench",
-      "batonpass",
       "haze",
       "thunder",
       "bolt",
       "body",
+      "defheal",
       "construct",
       "tagattack",
       "set"
@@ -16436,9 +16455,9 @@
       [22, "dig"],
       [26, "curse"],
       [32, "bolt"],
-      [36, "construct"],
+      [36, "shakeoff"],
       [41, "vigor"],
-      [46, "batonpass"]
+      [46, "haze"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -17746,7 +17765,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 97,
+          "effect_type": 99,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -17965,7 +17984,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 97,
+          "effect_type": 99,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -18179,7 +18198,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 97,
+          "effect_type": 99,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -21157,10 +21176,10 @@
       [0, "quake"],
       [5, "rest"],
       [9, "lifedew"],
-      [12, "blockattack"],
+      [12, "bomb"],
       [17, "protect"],
       [20, "mark"],
-      [25, "bomb"],
+      [25, "blockattack"],
       [31, "fieldclear"],
       [36, "netattack"],
       [40, "allyrush"],
@@ -21282,15 +21301,12 @@
     "anim_progress": 100,
     "animator": 14,
     "attklist": [
-      "starterheart",
       "dragontail",
-      "shieldbreaker",
       "heart",
       "careful",
       "enemyboosts",
       "haze",
       "libero",
-      "preblock",
       "allycover",
       "allyrush",
       "substitute",
@@ -21307,6 +21323,10 @@
       "set",
       "cover",
       "flight",
+      "rush",
+      "hum",
+      "basecover",
+      "preblock",
       "dodge"
     ],
     "attklist_randomize": -1,
@@ -21381,17 +21401,17 @@
     "id": "shy",
     "isBaby": false,
     "learnset": [
-      [0, "starterheart"],
+      [0, "careful"],
       [0, "charm"],
       [6, "allycover"],
-      [10, "careful"],
+      [10, "flight"],
       [16, "bench"],
-      [21, "libero"],
+      [21, "sad"],
       [25, "dragontail"],
       [31, "dodge"],
       [36, "preblock"],
       [41, "heart"],
-      [47, "haze"]
+      [47, "lifepass"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -21435,7 +21455,7 @@
     "recruit": {
       "conditions": [
         {
-          "effect_type": 97,
+          "effect_type": 99,
           "event": null,
           "freq": -1,
           "my_data": null,
@@ -21740,7 +21760,8 @@
       "jump",
       "bodypass",
       "lifepass",
-      "eerie"
+      "eerie",
+      "kick"
     ],
     "attklist_randomize": -1,
     "ba": 105,
@@ -22401,8 +22422,8 @@
     "type_focus": 1
   },
   "swift": {
-    "ability": ["freemove"],
-    "ability_hidden": false,
+    "ability": ["freemove", "runner"],
+    "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 0,
@@ -23202,6 +23223,7 @@
       "introduction",
       "menace",
       "healbell",
+      "heartpass",
       "haze",
       "dump"
     ],
@@ -23458,6 +23480,7 @@
       "introduction",
       "menace",
       "healbell",
+      "heartpass",
       "haze",
       "dump"
     ],
@@ -23685,6 +23708,7 @@
       "introduction",
       "menace",
       "healbell",
+      "heartpass",
       "haze",
       "dump"
     ],
@@ -23891,8 +23915,8 @@
     "type_focus": 0
   },
   "wizard": {
-    "ability": ["negation", "noredirect"],
-    "ability_hidden": true,
+    "ability": ["negation", "enchanter"],
+    "ability_hidden": false,
     "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 0,

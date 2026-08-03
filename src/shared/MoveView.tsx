@@ -250,10 +250,10 @@ function getEffectString(
             "movedefine_016", // forward
             "movedefine_017", // sideways
             "movedefine_018", // to opposite row
+            "movedefine_058", // to ally row
             undefined,
             undefined,
-            undefined,
-            "movedefine_018", // to opposite row
+            "movedefine_016", // forward
           ][effect.pow] ?? "movedefine_015", // backward
         ),
         ...target_placeholders,
@@ -307,7 +307,7 @@ function getEffectString(
       return L("movedefine_descadd_041"); // SWITCH places with ally without moving ball.
     case MoveEffectType.TagOutBeforeHit:
       return move.eff.length < 3
-        ? L("movedefine_descadd_038") // TAG OUT with benched ally.
+        ? L("movedefine_descadd_120") // TAG OUT with benched ally before contact.
         : L("movedefine_descadd_039"); // TAG OUT.
     case MoveEffectType.TagOut:
       if (alt_target) {
@@ -607,6 +607,13 @@ function getEffectString(
     }
     case MoveEffectType.CanUseDefense:
       return L("movedefine_descadd_087"); // Can be used during DEFENSE.
+    case MoveEffectType.AllyHasBall:
+      return L("movedefine_descadd_123"); // Used when ally has ball.
+    case MoveEffectType.FeelingAdvance:
+      return L("movedefine_descadd_121", { // Advances {target}'s FEELINGs by {0} {p:{0},turn,turns}.
+        "0": String(effect.pow),
+        ...target_placeholders,
+      });
   }
   console.log(
     `Undefined Move Effect: E ${effect.eff} T ${effect.targ} P ${effect.pow}`,

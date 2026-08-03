@@ -4868,7 +4868,7 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["shroom_path"],
+      "spawn_name": ["park"],
       "world_layer": 1,
       "world_x1": -8485.5,
       "world_x2": -4546.5,
@@ -7488,6 +7488,7 @@
       "color": 5282300,
       "display_name": "none",
       "encounters": [],
+      "has_spawns": true,
       "icons_array": [],
       "name": "canyon_secret_2",
       "portals_array": [
@@ -7503,9 +7504,9 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["canyon"],
+      "spawn_name": ["train"],
       "world_x1": -18893,
-      "world_x2": -14284,
+      "world_x2": -14028,
       "world_y1": -8367,
       "world_y2": -5964
     },
@@ -8398,7 +8399,7 @@
           "x2": 470,
           "y": 5720,
           "y1": -4,
-          "y2": 260,
+          "y2": 657,
           "z1": -50
         },
         {
@@ -9244,7 +9245,7 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["witchwood"],
+      "spawn_name": ["meadow"],
       "world_layer": 1,
       "world_x1": 394.5,
       "world_x2": 4389.5,
@@ -9364,7 +9365,7 @@
       "name": "net_city",
       "palette_name": "city",
       "portals_array": [],
-      "spawn_name": ["witchwood"],
+      "spawn_name": ["park"],
       "world_layer": 1,
       "world_x1": -53767,
       "world_x2": -49767,
@@ -9400,7 +9401,7 @@
           "x2": 363,
           "y": 2446,
           "y1": -285,
-          "y2": 533,
+          "y2": 746,
           "z1": -50
         },
         {
@@ -9485,10 +9486,10 @@
         },
         {
           "destination": "city_construction_side",
-          "x": 3825,
+          "x": 3870,
           "x1": -374,
           "x2": 246,
-          "y": 863,
+          "y": 904,
           "y1": -927,
           "y2": 6,
           "z1": -50

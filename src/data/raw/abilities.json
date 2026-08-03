@@ -34,6 +34,11 @@
     "id": "allyheal",
     "name": "¦abilitiessetup_abilitydefine_042¦"
   },
+  "attackbadless": {
+    "desc": "¦abilitiessetup_abilitydefine_315¬0¬[sprStatus,0]¦statuseffectstuff_001¦¦",
+    "id": "attackbadless",
+    "name": "¦abilitiessetup_abilitydefine_096¦"
+  },
   "avenger": {
     "desc": "¦abilitiessetup_abilitydefine_053¬0¬1.2¬1¬[sprStatus,5]¦statuseffectstuff_006¦¦",
     "id": "avenger",
@@ -73,6 +78,11 @@
     "desc": "¦abilitiessetup_abilitydefine_015¬0¬10¦",
     "id": "cheer",
     "name": "¦abilitiessetup_abilitydefine_016¦"
+  },
+  "chip": {
+    "desc": "¦abilitiessetup_abilitydefine_314¬0¬{0}¦",
+    "id": "chip",
+    "name": "¦abilitiessetup_abilitydefine_313¦"
   },
   "competitive": {
     "desc": "¦abilitiessetup_abilitydefine_174¦",
@@ -153,6 +163,11 @@
     "desc": "¦abilitiessetup_abilitydefine_104¦",
     "id": "empath",
     "name": "¦abilitiessetup_abilitydefine_103¦"
+  },
+  "enchanter": {
+    "desc": "¦abilitiessetup_002¬1¬1¬0¬[sprStatus,2]¦statuseffectstuff_003¦¦",
+    "id": "enchanter",
+    "name": "¦abilitiessetup_004¦"
   },
   "extraheal": {
     "desc": "¦abilitiessetup_abilitydefine_122¦",
@@ -460,7 +475,7 @@
     "name": "¦abilitiessetup_abilitydefine_250¦"
   },
   "sneaky": {
-    "desc": "¦abilitiessetup_abilitydefine_066¬0¬25¦",
+    "desc": "¦abilitiessetup_abilitydefine_066¦",
     "id": "sneaky",
     "name": "¦abilitiessetup_abilitydefine_065¦"
   },
@@ -470,17 +485,17 @@
     "name": "¦abilitiessetup_abilitydefine_006¦"
   },
   "starter_b": {
-    "desc": "¦abilitiessetup_abilitydefine_019¬0¬15¬1¬34¦",
+    "desc": "¦abilitiessetup_abilitydefine_019¬0¬50%¬1¬34¦",
     "id": "starter_b",
     "name": "¦abilitiessetup_abilitydefine_020¦"
   },
   "starter_h": {
-    "desc": "¦abilitiessetup_abilitydefine_025¬0¬15¬1¬34¦",
+    "desc": "¦abilitiessetup_abilitydefine_025¬0¬50%¬1¬34¦",
     "id": "starter_h",
     "name": "¦abilitiessetup_abilitydefine_026¦"
   },
   "starter_m": {
-    "desc": "¦abilitiessetup_abilitydefine_027¬0¬15¬1¬34¦",
+    "desc": "¦abilitiessetup_abilitydefine_027¬0¬50%¬1¬34¦",
     "id": "starter_m",
     "name": "¦abilitiessetup_abilitydefine_028¦"
   },
@@ -612,7 +627,7 @@
   "unnervous": {
     "desc": "¦abilitiessetup_abilitydefine_095¬0¬[sprStatus,0]¦statuseffectstuff_001¦¬1¬[sprStatus,2]¦statuseffectstuff_003¦¬2¬[sprStatus,12]¦statuseffectstuff_013¦¦",
     "id": "unnervous",
-    "name": "¦abilitiessetup_abilitydefine_096¦"
+    "name": "¦abilitiessetup_abilitydefine_312¦"
   },
   "unshaken": {
     "desc": "¦abilitiessetup_abilitydefine_205¬0¬[sprStatus,2]¦statuseffectstuff_003¦¦",

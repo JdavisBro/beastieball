@@ -259,6 +259,12 @@
       "y": -6430
     },
     {
+      "id": "gift_canyon_secret_2_0",
+      "items": [["jersey5", 1.0]],
+      "x": -14535,
+      "y": -8345
+    },
+    {
       "id": "gift_cityhill_0",
       "items": [["train_reset", 1.0]],
       "x": -14909,
@@ -339,6 +345,12 @@
       "items": [["train_trait", 1.0]],
       "x": -38538,
       "y": 2181
+    },
+    {
+      "id": "gift_city_seacave_1",
+      "items": [["repel_b", 1.0]],
+      "x": -36500,
+      "y": 887
     },
     {
       "id": "gift_city_suburb2_0",
@@ -820,7 +832,7 @@
     { "position": [-12733, -16759], "encounter": "cityhill_0" },
     { "position": [-14756, -18886], "encounter": "cityhill_1" },
     { "position": [-37477, -14700], "encounter": "citysquare_0" },
-    { "position": [-40768, -17325], "encounter": "citysquare_1" },
+    { "position": [-40713, -17325], "encounter": "citysquare_1" },
     { "position": [-31193, -3780], "encounter": "city_construction1_0" },
     { "position": [-30611, -7116], "encounter": "city_construction_side_0" },
     { "position": [-34708, -6810], "encounter": "city_railalley_1" },

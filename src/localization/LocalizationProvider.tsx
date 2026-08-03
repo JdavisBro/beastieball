@@ -42,6 +42,20 @@ const KEY_SEP = "¬";
 
 const SITE_SEP = ".";
 
+function doPlural(text: string, placeholders: Record<string, string>) {
+  if (!text.startsWith("{p:")) return undefined;
+  const [, input, notplural, plural] =
+    /{p:(.+?),(.+?),(.+?)}/g.exec(text) ?? [];
+  if (!notplural || !plural) return notplural || plural;
+  const inputNumber = Number(
+    input.startsWith("{")
+      ? (placeholders[input.slice(1, input.length - 1)] ?? "0")
+      : input,
+  );
+  if (inputNumber == 1) return notplural;
+  return plural;
+}
+
 function localize(
   lang: SupportedLanguage,
   languageData: LanguageData,
@@ -79,8 +93,9 @@ function localize(
     }
     // return key;
     return (typeof current == "string" ? current : key).replace(
-      /\{(.+?)\}/g,
-      (match, g1) => placeholders[g1] ?? match,
+      /\{(?:p:.+?,.+?|(.+?))\}/g,
+      (match, g1) =>
+        (g1 ? placeholders[g1] : doPlural(match, placeholders)) ?? match,
     );
   }
 
@@ -94,8 +109,9 @@ function localize(
 
   return placeholders_exist
     ? (str !== undefined ? str : key).replace(
-        /\{(.+?)\}/g,
-        (match, g1) => placeholders[g1] ?? match,
+        /\{(?:p:.+?,.+?|(.+?))\}/g,
+        (match, g1) =>
+          (g1 ? placeholders[g1] : doPlural(match, placeholders)) ?? match,
       )
     : str !== undefined
       ? str

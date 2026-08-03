@@ -551,7 +551,6 @@
   "movessetup_movedefine_061": "拐角球",
   "movessetup_movedefine_062": "凝定",
   "movessetup_movedefine_063": "扭曲",
-  "movessetup_movedefine_064": "跟踪",
   "movessetup_movedefine_065": "思维场",
   "movessetup_movedefine_066": "施压",
   "movessetup_movedefine_067": "刺穿",
@@ -1055,5 +1054,19 @@
   "abilitiessetup_abilitydefine_310": "仰慕者",
   "abilitiessetup_abilitydefine_311": "获得队友获得的任意[sprBoost,0]属性效果",
   "movedefine_057": "前排使用，具有前排伤害加成。",
-  "movessetup_movedefine_203": "翻滚躲避"
+  "movessetup_movedefine_203": "翻滚躲避",
+  "abilitiessetup_abilitydefine_312": "Stoic",
+  "abilitiessetup_abilitydefine_313": "Corrosion",
+  "abilitiessetup_abilitydefine_314": "Each turn, reduces nearest opponent's STAMINA by {0}.",
+  "abilitiessetup_abilitydefine_315": "Immune to {0}. Doesn't experience negative effects from their own attacks.",
+  "abilitiessetup_002": "Net-boosted attacks make the target {1} {0}.",
+  "abilitiessetup_004": "Enchanter",
+  "movedefine_058": "to ally row",
+  "movedefine_descadd_120": "TAG OUT with benched ally before contact.",
+  "movedefine_descadd_121": "Advances {target}'s FEELINGs by {0} {p:{0},turn,turns}.",
+  "movedefine_descadd_123": "Used when ally has ball.",
+  "movessetup_movedefine_204": "Flying Kick",
+  "movessetup_movedefine_205": "Kick",
+  "movessetup_movedefine_206": "Explosive Spirit",
+  "movessetup_movedefine_207": "Squeeze"
 }

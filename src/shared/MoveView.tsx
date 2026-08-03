@@ -251,7 +251,7 @@ function getEffectString(
             "movedefine_017", // sideways
             "movedefine_018", // to opposite row
             "movedefine_058", // to ally row
-            undefined,
+            "movedefine_059", // to ally lane
             undefined,
             "movedefine_016", // forward
           ][effect.pow] ?? "movedefine_015", // backward

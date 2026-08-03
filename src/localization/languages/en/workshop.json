@@ -192,7 +192,9 @@
         "backward": "Backward",
         "forward": "Forward",
         "oppositeLane": "Opposite Lane",
-        "oppositeRow": "Opposite Row"
+        "oppositeRow": "Opposite Row",
+        "allyRow": "Ally Row",
+        "allyLane": "Ally Lane"
       },
       "effectTarget": {
         "user": "User",

@@ -169,6 +169,8 @@ function ShiftInput({
       <option value={1}>{L("workshop.play.shift.forward")}</option>
       <option value={2}>{L("workshop.play.shift.oppositeLane")}</option>
       <option value={3}>{L("workshop.play.shift.oppositeRow")}</option>
+      <option value={4}>{L("workshop.play.shift.allyRow")}</option>
+      <option value={5}>{L("workshop.play.shift.allyLane")}</option>
     </select>
   );
 }

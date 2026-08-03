@@ -1063,6 +1063,7 @@
   "abilitiessetup_002": "Net-boosted attacks make the target {1} {0}.",
   "abilitiessetup_004": "Enchanter",
   "movedefine_058": "to ally row",
+  "movedefine_059": "to ally lane",
   "movedefine_descadd_120": "TAG OUT with benched ally before contact.",
   "movedefine_descadd_121": "Advances {target}'s FEELINGs by {0} {p:{0},turn,turns}.",
   "movedefine_descadd_123": "Used when ally has ball.",

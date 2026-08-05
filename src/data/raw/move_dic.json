@@ -531,7 +531,7 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 43, "pow": 3, "targ": 7 }],
+    "eff": [{ "eff": 43, "pow": 3, "targ": 0 }],
     "id": "crowd",
     "name": "¦movessetup_movedefine_141¦",
     "pow": 0,
@@ -1293,7 +1293,7 @@
     "eff": [{ "eff": 17, "pow": 0, "targ": 0 }],
     "id": "kick",
     "name": "¦movessetup_movedefine_205¦",
-    "pow": 75,
+    "pow": 70,
     "price": 0,
     "targ": 8,
     "type": 0,
@@ -2571,6 +2571,23 @@
     "type": 3,
     "use": 0
   },
+  "stretch": {
+    "bt_tags": [24, 46, 32],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 8, "pow": 0.1, "targ": 0 },
+      { "eff": 26, "pow": 1, "targ": 0 }
+    ],
+    "id": "stretch",
+    "name": "Stretch",
+    "pow": 0,
+    "price": 0,
+    "targ": 1,
+    "type": 4,
+    "use": 0
+  },
   "stun": {
     "bt_tags": [2, 10, 30, 38],
     "desc_tagids": [],
@@ -2597,7 +2614,7 @@
     "id": "substitute",
     "name": "¦movessetup_movedefine_118¦",
     "pow": 0,
-    "price": 45,
+    "price": 0,
     "targ": 1,
     "type": 4,
     "use": 0

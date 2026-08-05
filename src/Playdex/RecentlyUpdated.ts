@@ -19,6 +19,8 @@ const MOVE_RECENTLY_UPDATED: string[] = [
   "sad",
   "speech",
   "squeeze",
+  "stretch",
+  "substitute",
 ];
 
 export default MOVE_RECENTLY_UPDATED;

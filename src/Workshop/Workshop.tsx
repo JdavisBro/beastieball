@@ -258,6 +258,7 @@ export function loadPlayFromIni(ini: string, L: LocalizationFunction) {
   const effects: MoveEffect[] = [];
   const effSplit = commaSplit(data?.effects?.effects ?? "");
   for (let i = 0; i < effSplit.length; i += 3) {
+    if (effSplit.length > i + 2) break;
     const eff = Number(effSplit[i]) as MoveEffectType;
     effects.push({
       eff: eff,

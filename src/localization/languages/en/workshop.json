@@ -9,7 +9,7 @@
       "name": "Name: ",
       "author": "Author: ",
       "majorVersion": "Version Major: ",
-      "minorVersion": " Major: ",
+      "minorVersion": " Minor: ",
       "addPlay": "Add Play",
       "save": "Save Zip",
       "load": "Load Zip"

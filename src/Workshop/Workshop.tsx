@@ -247,10 +247,16 @@ function findAbilityByName(name: string, L: LocalizationFunction) {
   return Object.values(abilities)[0];
 }
 
+function commaSplit(text: string | number) {
+  return String(text)
+    .split(",")
+    .map((sub) => sub.trim());
+}
+
 export function loadPlayFromIni(ini: string, L: LocalizationFunction) {
   const data = loadIni(ini);
   const effects: MoveEffect[] = [];
-  const effSplit = String(data?.effects?.effects ?? "").split(",");
+  const effSplit = commaSplit(data?.effects?.effects ?? "");
   for (let i = 0; i < effSplit.length; i += 3) {
     const eff = Number(effSplit[i]) as MoveEffectType;
     effects.push({
@@ -269,8 +275,7 @@ export function loadPlayFromIni(ini: string, L: LocalizationFunction) {
     use: Number(data?.basic?.use ?? 0),
     target: Number(data?.basic?.target ?? 0),
     effects: effects,
-    learnedby: String(data?.distribution?.learnedby ?? "")
-      .split(",")
+    learnedby: commaSplit(data?.distribution?.learnedby ?? "")
       .map((beastieName) =>
         [...BEASTIE_DATA.values()].find(
           (beastie) => L(beastie.name, undefined, true) == beastieName,

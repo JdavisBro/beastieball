@@ -2,11 +2,13 @@
   "academy": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -166,11 +168,13 @@
   "academy_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -276,11 +280,13 @@
   "academy_challenge_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -386,11 +392,13 @@
   "academy_challenge_2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -496,11 +504,13 @@
   "academy_challenge_3": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -631,11 +641,13 @@
   "academy_enter": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 4,
@@ -766,11 +778,13 @@
   "academy_instructor": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -926,11 +940,13 @@
   "academy_rematch": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -1086,11 +1102,13 @@
   "academy_tower": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -1246,11 +1264,13 @@
   "ambestone_west_cliff_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -1356,11 +1376,13 @@
   "beach_cliff1_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -1491,11 +1513,13 @@
   "beryl_railpath_end_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -1626,11 +1650,13 @@
   "beryl_railpath_south_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -1736,11 +1762,13 @@
   "beryl_railpath_west_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -1871,11 +1899,13 @@
   "bt": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -14731,11 +14761,13 @@
   "canyon_1_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -14841,11 +14873,13 @@
   "canyon_2_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -14976,11 +15010,13 @@
   "canyon_2_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -15111,11 +15147,13 @@
   "canyon_3_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -15221,11 +15259,13 @@
   "celeb": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -15368,11 +15408,13 @@
   "celeb_guard": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -15486,11 +15528,13 @@
   "celeb_rematch": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -15646,11 +15690,13 @@
   "celeb_tower": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -15806,11 +15852,13 @@
   "champion_a": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.4,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -15966,11 +16014,13 @@
   "champion_b": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.4,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -16126,11 +16176,13 @@
   "champion_c": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.4,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -16286,11 +16338,13 @@
   "champion_source": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -16521,11 +16575,13 @@
   "champion_spectate": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 3,
       "damage": 5,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -16606,11 +16662,13 @@
   "champion_tower": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -16766,11 +16824,13 @@
   "champion_trailer": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -16926,11 +16986,13 @@
   "city_construction_side_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -17036,11 +17098,13 @@
   "city_pets": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -17121,11 +17185,13 @@
   "city_rail_east_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -17256,11 +17322,13 @@
   "city_railalley_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -17391,11 +17459,13 @@
   "city_seacave_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -17526,11 +17596,13 @@
   "city_suburb1_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -17636,11 +17708,13 @@
   "city_suburb2_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -17746,11 +17820,13 @@
   "city_trainyard_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -17856,11 +17932,13 @@
   "cityhill_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -17991,11 +18069,13 @@
   "cityhill_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 3,
       "foe_boost": 1,
       "foe_field": 1,
@@ -18126,11 +18206,13 @@
   "citysquare_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -18240,11 +18322,13 @@
   "citysquare_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -18383,11 +18467,13 @@
   "cliff_train_cave_guard": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -18518,11 +18604,13 @@
   "coral_island_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -18636,11 +18724,13 @@
   "coral_shroom_0": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -18701,11 +18791,13 @@
   "cycle": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -18861,11 +18953,13 @@
   "cycle_beach": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -18899,11 +18993,13 @@
   "cycle_cave": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -18937,11 +19033,13 @@
   "cycle_meadows": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -18976,11 +19074,13 @@
   "cycle_tower": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -19136,11 +19236,13 @@
   "default": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -19198,11 +19300,13 @@
   "forest_lake_0": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -19258,11 +19362,13 @@
   "forest_lake_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -19393,11 +19499,13 @@
   "hatlady": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -19453,11 +19561,13 @@
   "hometown_north": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": -1,
       "boost": 1,
       "damage": -0.1,
       "erratic": 0.4,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -19514,11 +19624,13 @@
   "hometown_north1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": -1,
       "boost": 1,
       "damage": -0.1,
       "erratic": 0.4,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -19624,11 +19736,13 @@
   "hometown_north2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": -1,
       "boost": 1,
       "damage": -0.1,
       "erratic": 0.4,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -19734,11 +19848,13 @@
   "hometown_reserve_guard": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -19795,11 +19911,13 @@
   "hometown_south": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": -1,
       "boost": 1,
       "damage": -0.1,
       "erratic": 0.4,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -19856,11 +19974,13 @@
   "hometown_south1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": -1,
       "boost": 1,
       "damage": -0.1,
       "erratic": 0.4,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -19941,11 +20061,13 @@
   "hometown_south2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": -1,
       "boost": 1,
       "damage": -0.1,
       "erratic": 0.4,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -20051,11 +20173,13 @@
   "hometown_south3": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": -1,
       "boost": 1,
       "damage": -0.1,
       "erratic": 0.4,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -20173,11 +20297,13 @@
   "hs1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1.5,
       "foe_boost": 1,
       "foe_field": 1,
@@ -20283,11 +20409,13 @@
   "hs2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 2,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -20393,11 +20521,13 @@
   "hs3": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 2,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -20503,11 +20633,13 @@
   "hs4": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -20638,11 +20770,13 @@
   "indie": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -20773,11 +20907,13 @@
   "jasper_bored": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -20887,11 +21023,13 @@
   "jasper_cave_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -21005,11 +21143,13 @@
   "jasper_cave_n": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -21119,11 +21259,13 @@
   "jasper_cave_north_exit": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -21237,11 +21379,13 @@
   "jasper_cave_south_exit_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -21372,11 +21516,13 @@
   "jasper_north": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -21482,11 +21628,13 @@
   "jay": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -21592,11 +21740,13 @@
   "kaz": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -21710,11 +21860,13 @@
   "kaz_rematch": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -21853,11 +22005,13 @@
   "kaz_rematch2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 3,
       "foe_boost": 1,
       "foe_field": 1,
@@ -21996,11 +22150,13 @@
   "kaz_rematch3": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 3,
       "foe_boost": 1,
       "foe_field": 1,
@@ -22156,11 +22312,13 @@
   "kaz_series": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 3,
       "foe_boost": 1,
       "foe_field": 1,
@@ -22299,11 +22457,13 @@
   "kaz_spectate": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -22388,11 +22548,13 @@
   "kaz_tower": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 3,
       "foe_boost": 1,
       "foe_field": 1,
@@ -22548,11 +22710,13 @@
   "korwin": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -22683,11 +22847,13 @@
   "korwin2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -22818,11 +22984,13 @@
   "mainstreet_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -22928,11 +23096,13 @@
   "mainstreet_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -23038,11 +23208,13 @@
   "mainstreet_2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -23148,11 +23320,13 @@
   "mangrove_1_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -23258,11 +23432,13 @@
   "mangrove_2_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -23368,11 +23544,13 @@
   "mangrove_2_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -23478,11 +23656,13 @@
   "mangrove_3_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -23588,11 +23768,13 @@
   "mangrove_4_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -23723,11 +23905,13 @@
   "mangrove_boss": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -23858,11 +24042,13 @@
   "mask_1a": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -23980,11 +24166,13 @@
   "mask_1b": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -24098,11 +24286,13 @@
   "mask_1c": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -24216,11 +24406,13 @@
   "mask_2a": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -24367,11 +24559,13 @@
   "mask_2b": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -24514,11 +24708,13 @@
   "mask_2c": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -24661,11 +24857,13 @@
   "mask_3a": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -24812,11 +25010,13 @@
   "mask_3b": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -24959,11 +25159,13 @@
   "mask_3c": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -25106,11 +25308,13 @@
   "mask_4a": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -25286,11 +25490,13 @@
   "mask_4b": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -25462,11 +25668,13 @@
   "mask_4c": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -25638,11 +25846,13 @@
   "mask_pga": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -25818,11 +26028,13 @@
   "mask_pgb": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -25994,11 +26206,13 @@
   "mask_pgc": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -26170,11 +26384,13 @@
   "mask_shrooma": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -26292,11 +26508,13 @@
   "mask_shroomb": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -26410,11 +26628,13 @@
   "mask_shroomc": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -26528,11 +26748,13 @@
   "mask_source": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -26758,11 +26980,13 @@
   "meadows_2_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -26893,11 +27117,13 @@
   "mountain_1_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 4,
@@ -27028,11 +27254,13 @@
   "mountain_2_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -27163,11 +27391,13 @@
   "mountain_3_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -27298,11 +27528,13 @@
   "mountain_3_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -27433,11 +27665,13 @@
   "mountain_5_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -27568,11 +27802,13 @@
   "mountain_6_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 3,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -27703,11 +27939,13 @@
   "myth_forest1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -27813,11 +28051,13 @@
   "myth_forest2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -27923,11 +28163,13 @@
   "myth_forest3": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -28058,11 +28300,13 @@
   "myth_forest4": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -28193,11 +28437,13 @@
   "myth_forest5": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -28303,11 +28549,13 @@
   "myth_forest_side_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -28438,11 +28686,13 @@
   "myth_forest_west": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -28573,11 +28823,13 @@
   "myth_forest_yeti": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -28708,11 +28960,13 @@
   "ocean_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -28822,11 +29076,13 @@
   "ocean_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -28940,11 +29196,13 @@
   "ocean_10": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -29075,11 +29333,13 @@
   "ocean_2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -29185,11 +29445,13 @@
   "ocean_3": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -29320,11 +29582,13 @@
   "ocean_4": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -29430,11 +29694,13 @@
   "ocean_5": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -29540,11 +29806,13 @@
   "ocean_6": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -29650,11 +29918,13 @@
   "ocean_7": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -29768,11 +30038,13 @@
   "ocean_8": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -29928,11 +30200,13 @@
   "ocean_9": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -30038,11 +30312,13 @@
   "park1_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -30148,11 +30424,13 @@
   "park1_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -30283,11 +30561,13 @@
   "park_boss": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -30343,11 +30623,13 @@
   "park_north3_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -30478,11 +30760,13 @@
   "park_side_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -30613,11 +30897,13 @@
   "park_south2_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -30748,11 +31034,13 @@
   "park_south_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -30883,11 +31171,13 @@
   "pirate": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 3,
       "foe_boost": 1,
       "foe_field": 1,
@@ -31022,11 +31312,13 @@
   "pirate_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 3,
       "foe_boost": 1,
       "foe_field": 1,
@@ -31107,11 +31399,13 @@
   "pirate_2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 3,
       "foe_boost": 1,
       "foe_field": 1,
@@ -31229,11 +31523,13 @@
   "pirate_rematch": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 3,
       "foe_boost": 1,
       "foe_field": 1,
@@ -31393,11 +31689,13 @@
   "puzzle_10e": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -31478,11 +31776,13 @@
   "puzzle_10p": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -31563,11 +31863,13 @@
   "puzzle_12e": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -31648,11 +31950,13 @@
   "puzzle_12p": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -31733,11 +32037,13 @@
   "puzzle_13e": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -31818,11 +32124,13 @@
   "puzzle_13p": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -31953,11 +32261,13 @@
   "puzzle_1e": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -32038,11 +32348,13 @@
   "puzzle_1p": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -32123,11 +32435,13 @@
   "puzzle_2e": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -32233,11 +32547,13 @@
   "puzzle_2p": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -32318,11 +32634,13 @@
   "puzzle_3e": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -32403,11 +32721,13 @@
   "puzzle_3p": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -32513,11 +32833,13 @@
   "puzzle_4e": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -32598,11 +32920,13 @@
   "puzzle_4p": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -32683,11 +33007,13 @@
   "puzzle_5e": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -32768,11 +33094,13 @@
   "puzzle_5p": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -32853,11 +33181,13 @@
   "puzzle_6e": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -32938,11 +33268,13 @@
   "puzzle_6p": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -33023,11 +33355,13 @@
   "puzzle_7e": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -33108,11 +33442,13 @@
   "puzzle_7p": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -33193,11 +33529,13 @@
   "puzzle_9e": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 4,
@@ -33278,11 +33616,13 @@
   "puzzle_9p": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -33388,11 +33728,13 @@
   "racer": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -33548,11 +33890,13 @@
   "racer_random": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -33670,11 +34014,13 @@
   "racer_source": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -33846,11 +34192,13 @@
   "racer_spectate": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -33935,11 +34283,13 @@
   "racer_tennis": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -34086,11 +34436,13 @@
   "racer_tower": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -34246,11 +34598,13 @@
   "railbridge_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -34381,11 +34735,13 @@
   "railtrail_2_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -34516,11 +34872,13 @@
   "railtrail_3_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -34626,11 +34984,13 @@
   "railtrail_3_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -34761,11 +35121,13 @@
   "rainpath_1_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 4,
@@ -34896,11 +35258,13 @@
   "rainpath_1_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 4,
@@ -35031,11 +35395,13 @@
   "rainpath_3_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 4,
@@ -35166,11 +35532,13 @@
   "rainpath_3_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 4,
@@ -35301,11 +35669,13 @@
   "redd2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -35369,7 +35739,7 @@
         "from_encounter_index": 2,
         "hp": -1,
         "level": 40,
-        "moves": ["introduction", "bodypass", "thunder"],
+        "moves": ["introduction", "dispel", "thunder"],
         "name": "¦encounterssetup_classbeastieencounter_003¦",
         "neverRandomize": false,
         "number": "02",
@@ -35461,11 +35831,13 @@
   "redd_source": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": -0.5,
       "erratic": 0.03,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -35621,11 +35993,13 @@
   "redd_tower": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1.5,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -35643,13 +36017,13 @@
       "prediction": 1,
       "prefer_target": -1,
       "secondary": true,
-      "stamina": 1,
+      "stamina": 1.2,
       "status": 1,
       "tag_penalty": 0,
       "usable_attack": 1
     },
     "id": "redd_tower",
-    "scales": "redd2",
+    "scales": "warrior",
     "team": [
       {
         "ability": -1,
@@ -35659,11 +36033,11 @@
         "color": -1,
         "encounter_inherited": true,
         "evolves": true,
-        "favor": 1.2,
+        "favor": 1,
         "from_encounter": "redd_source",
         "from_encounter_index": 1,
         "hp": -1,
-        "level": 42,
+        "level": 53,
         "moves": ["rushattack", "protectcheer", "cut"],
         "name": "¦encounterssetup_classbeastieencounter_002¦",
         "neverRandomize": false,
@@ -35688,8 +36062,8 @@
         "from_encounter": "redd_source",
         "from_encounter_index": 2,
         "hp": -1,
-        "level": 40,
-        "moves": ["thunder", "set", "cheer"],
+        "level": 50,
+        "moves": ["swarm", "set", "cheer"],
         "name": "¦encounterssetup_classbeastieencounter_003¦",
         "neverRandomize": false,
         "number": "02",
@@ -35713,8 +36087,8 @@
         "from_encounter": "redd_source",
         "from_encounter_index": 4,
         "hp": -1,
-        "level": 41,
-        "moves": ["bolt", "allyrush", "curse"],
+        "level": 51,
+        "moves": ["bolt", "defheal", "vigor"],
         "name": "¦encounterssetup_classbeastieencounter_005¦",
         "neverRandomize": false,
         "number": "10",
@@ -35722,7 +36096,7 @@
         "specie": "possum1",
         "status": -1,
         "trained": 2,
-        "training": [1, 0, 0, 0.25, 0.5, 0.25],
+        "training": [0.67, 0, 0, 0, 1, 0.33],
         "variant": -1,
         "vibe": 8
       },
@@ -35738,8 +36112,8 @@
         "from_encounter": "redd_source",
         "from_encounter_index": 0,
         "hp": -1,
-        "level": 40,
-        "moves": ["heart", "jazzpass", "lifedew"],
+        "level": 50,
+        "moves": ["desperate", "lifedew", "lifepass"],
         "name": "¦encounterssetup_classbeastieencounter_001¦",
         "neverRandomize": false,
         "number": "06",
@@ -35747,7 +36121,7 @@
         "specie": "bestie",
         "status": -1,
         "trained": 2,
-        "training": [0, 1, 0, 0.25, 0.25, 0.5],
+        "training": [0, 0, 0, 0.5, 0.5, 1],
         "variant": -1,
         "vibe": 7
       },
@@ -35763,8 +36137,8 @@
         "from_encounter": "redd_source",
         "from_encounter_index": 3,
         "hp": -1,
-        "level": 41,
-        "moves": ["superpower", "quake", "overheat"],
+        "level": 51,
+        "moves": ["superpower", "overheat", "reign"],
         "name": "¦encounterssetup_classbeastieencounter_004¦",
         "neverRandomize": false,
         "number": "96",
@@ -35772,7 +36146,7 @@
         "specie": "yeti",
         "status": -1,
         "trained": 2,
-        "training": [0.625, 0.625, 0, 0.25, 0.25, 0.25],
+        "training": [0.5, 0.5, 0, 0.15, 0, 0.85],
         "variant": -1,
         "vibe": 19
       }
@@ -35781,11 +36155,13 @@
   "redd_trailer": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": -0.5,
       "erratic": 0.03,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -35916,11 +36292,13 @@
   "redd_trailer!": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": -0.5,
       "erratic": 0.03,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -36026,11 +36404,13 @@
   "research_asst": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -36148,11 +36528,13 @@
   "research_asst2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -36295,11 +36677,13 @@
   "research_asst_source": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -36467,11 +36851,13 @@
   "research_rematch": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -36639,11 +37025,13 @@
   "reserve1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -36753,11 +37141,13 @@
   "reserve2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -36892,11 +37282,13 @@
   "reserve4": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -37011,11 +37403,13 @@
   "reserve_boss": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -37076,11 +37470,13 @@
   "reserve_dino": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -37211,11 +37607,13 @@
   "reserve_west": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -37273,11 +37671,13 @@
   "reserve_west1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -37359,11 +37759,13 @@
   "reserve_west2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -37420,11 +37822,13 @@
   "reserve_west3": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -37506,11 +37910,13 @@
   "rex": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 3,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -37641,11 +38047,13 @@
   "riven": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -37763,11 +38171,13 @@
   "riven_rematch": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -37910,11 +38320,13 @@
   "riven_rematch2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -38070,11 +38482,13 @@
   "riven_series": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -38217,11 +38631,13 @@
   "riven_tower": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -38377,11 +38793,13 @@
   "rockybeach_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -38487,11 +38905,13 @@
   "rockybeach_2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -38597,11 +39017,13 @@
   "rockybeach_3": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -38732,11 +39154,13 @@
   "rockybeach_4": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -38879,11 +39303,13 @@
   "rockybeach_5": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -38993,11 +39419,13 @@
   "roguelike_boss": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -39203,11 +39631,13 @@
   "rufus": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -39263,11 +39693,13 @@
   "science": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1.5,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 5,
@@ -39406,11 +39838,13 @@
   "science_rematch": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1.5,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 5,
@@ -39566,11 +40000,13 @@
   "science_series": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1.5,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 5,
@@ -39709,11 +40145,13 @@
   "science_spectate": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -39794,11 +40232,13 @@
   "science_tower": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1.5,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 5,
@@ -39954,11 +40394,13 @@
   "seacave2_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -40064,11 +40506,13 @@
   "seacave3_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -40174,11 +40618,13 @@
   "seacave4_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -40309,11 +40755,13 @@
   "seacave_side_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -40444,11 +40892,13 @@
   "seaside_cliff_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -40554,11 +41004,13 @@
   "seaside_path_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -40664,11 +41116,13 @@
   "seaside_trees_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -40774,11 +41228,13 @@
   "shroom_god": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -40841,11 +41297,13 @@
   "shroom_path1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -40951,11 +41409,13 @@
   "shroom_path2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -41111,11 +41571,13 @@
   "shroom_path3": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": -1,
       "boost": 1,
       "damage": -0.1,
       "erratic": 0.4,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -41229,11 +41691,13 @@
   "shroom_path_boss": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -41294,11 +41758,13 @@
   "stadium_road_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -41429,11 +41895,13 @@
   "starter": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": -0.5,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -41564,11 +42032,13 @@
   "streamer": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 2,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -41699,11 +42169,13 @@
   "streamer_fan1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -41817,11 +42289,13 @@
   "streamer_fan2": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -41927,11 +42401,13 @@
   "streamer_meme": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -42037,11 +42513,13 @@
   "streamer_meme_rematch": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -42172,11 +42650,13 @@
   "streamer_rematch": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -42332,11 +42812,13 @@
   "streamer_series": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 2,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -42467,11 +42949,13 @@
   "streamer_tower": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -42627,11 +43111,13 @@
   "suburb_rail_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -42762,11 +43248,13 @@
   "sunken_boss": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -42897,11 +43385,13 @@
   "sunken_stadium_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -43032,11 +43522,13 @@
   "sunken_stadium_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -43150,11 +43642,13 @@
   "sunken_stadium_east_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -43285,11 +43779,13 @@
   "sunken_stadium_stairs_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -43420,11 +43916,13 @@
   "sunken_stadium_west_2_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -43530,11 +44028,13 @@
   "sunken_stadium_west_2_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -43665,11 +44165,13 @@
   "tiny_island_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -43804,11 +44306,13 @@
   "train_boss": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -43939,11 +44443,13 @@
   "tview": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -43999,11 +44505,13 @@
   "warrior": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0.5,
       "boost": 1,
       "damage": 1,
       "erratic": 0.1,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -44159,11 +44667,13 @@
   "warrior_spectate": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -44319,11 +44829,13 @@
   "warrior_tower": {
     "ai": {
       "actions": 0,
+      "bench_dmg": 0,
       "blocking": 1,
       "boost": 1,
       "damage": 1,
       "erratic": 0.05,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -44479,11 +44991,13 @@
   "weaver": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -44539,11 +45053,13 @@
   "wood_cave1_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -44649,11 +45165,13 @@
   "wood_cave2_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -44784,11 +45302,13 @@
   "wood_cave2_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -44923,11 +45443,13 @@
   "wood_east_rail_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -45033,11 +45555,13 @@
   "wood_east_rail_1": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -45143,11 +45667,13 @@
   "woods_east_cave_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,
@@ -45253,11 +45779,13 @@
   "woods_north_rail_0": {
     "ai": {
       "actions": -0.05,
+      "bench_dmg": 0,
       "blocking": 0,
       "boost": 1,
       "damage": 1,
       "erratic": 0.15,
       "fall": 1,
+      "fall_lastpoint": 1,
       "field": 1,
       "foe_boost": 1,
       "foe_field": 1,

@@ -369,6 +369,24 @@
     "type": 1,
     "use": 0
   },
+  "catwalk": {
+    "bt_tags": [24, 37, 51],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 7, "pow": 1, "targ": 0 },
+      { "eff": 90, "pow": 1, "targ": 0 },
+      { "eff": 16, "pow": -1, "targ": 9 }
+    ],
+    "id": "catwalk",
+    "name": "¦movessetup_movedefine_209¦",
+    "pow": 0,
+    "price": 20,
+    "targ": 1,
+    "type": 4,
+    "use": 0
+  },
   "chance": {
     "bt_tags": [10],
     "desc_tagids": [],
@@ -2581,7 +2599,7 @@
       { "eff": 26, "pow": 1, "targ": 0 }
     ],
     "id": "stretch",
-    "name": "Stretch",
+    "name": "¦movessetup_movedefine_208¦",
     "pow": 0,
     "price": 0,
     "targ": 1,

@@ -3759,7 +3759,7 @@
           "z_offset": 250
         }
       ],
-      "spawn_name": ["downtown"],
+      "spawn_name": ["sunken"],
       "world_layer": 1,
       "world_x1": -6733,
       "world_x2": -2738,
@@ -5540,18 +5540,6 @@
           "y": 6107,
           "y1": 112,
           "y2": 740,
-          "z1": -50
-        },
-        {
-          "destination": "none",
-          "direction": 0,
-          "ground_z": 550,
-          "x": 4164,
-          "x1": 342,
-          "x2": 978,
-          "y": 3326,
-          "y1": -384,
-          "y2": 622,
           "z1": -50
         }
       ],

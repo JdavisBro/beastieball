@@ -80,7 +80,7 @@
     "name": "¦abilitiessetup_abilitydefine_016¦"
   },
   "chip": {
-    "desc": "¦abilitiessetup_abilitydefine_314¬0¬{0}¦",
+    "desc": "¦abilitiessetup_abilitydefine_314¬0¬8¦",
     "id": "chip",
     "name": "¦abilitiessetup_abilitydefine_313¦"
   },
@@ -150,7 +150,7 @@
     "name": "¦abilitiessetup_abilitydefine_228¦"
   },
   "dreadlock": {
-    "desc": "¦abilitiessetup_abilitydefine_213¬0¬¦fieldeffectstuff_004¦¬1¬[sprStatus,0]¦statuseffectstuff_001¦¦",
+    "desc": "¦abilitiessetup_abilitydefine_213¬0¬¦fieldeffectstuff_004¦¬1¬[sprStatus,12]¦statuseffectstuff_013¦¦",
     "id": "dreadlock",
     "name": "¦abilitiessetup_abilitydefine_214¦"
   },
@@ -190,7 +190,7 @@
     "name": "¦abilitiessetup_abilitydefine_023¦"
   },
   "flashfire": {
-    "desc": "¦abilitiessetup_abilitydefine_200¦",
+    "desc": "¦abilitiessetup_abilitydefine_200¬0¬0¦",
     "id": "flashfire",
     "name": "¦abilitiessetup_abilitydefine_199¦"
   },
@@ -463,6 +463,11 @@
     "desc": "¦abilitiessetup_abilitydefine_296¦",
     "id": "sidebody",
     "name": "¦abilitiessetup_abilitydefine_295¦"
+  },
+  "sideredirect": {
+    "desc": "¦abilitiessetup_abilitydefine_317¦",
+    "id": "sideredirect",
+    "name": "¦abilitiessetup_abilitydefine_316¦"
   },
   "silencer": {
     "desc": "¦abilitiessetup_abilitydefine_153¬1¬1.5¬0¬[sprStatus,3]¦statuseffectstuff_004¦¦",

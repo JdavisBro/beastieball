@@ -9160,14 +9160,13 @@
       "enemylowered",
       "dropshot",
       "netattack",
-      "spitball",
+      "heartdown",
       "rollshot",
       "dump",
       "tool",
       "blockattack",
       "dig",
       "steal",
-      "rush",
       "jazzpass",
       "rest",
       "taunt",
@@ -9179,7 +9178,8 @@
       "distraction",
       "bamboozle",
       "fieldclear",
-      "wink"
+      "wink",
+      "catwalk"
     ],
     "attklist_randomize": -1,
     "ba": 71,
@@ -9293,9 +9293,9 @@
       [7, "lowattks"],
       [12, "enemylowered"],
       [17, "steal"],
-      [23, "netattack"],
+      [23, "heartdown"],
       [28, "threat"],
-      [32, "distraction"],
+      [32, "catwalk"],
       [35, "rollshot"],
       [40, "taunt"],
       [47, "dump"]
@@ -19206,6 +19206,7 @@
       "basecover",
       "wall",
       "stretch",
+      "catwalk",
       "protectcheer",
       "pushattack"
     ],
@@ -19435,6 +19436,7 @@
       "basecover",
       "wall",
       "stretch",
+      "catwalk",
       "protectcheer",
       "pushattack"
     ],

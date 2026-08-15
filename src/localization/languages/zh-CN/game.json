@@ -1057,7 +1057,7 @@
   "movedefine_057": "前排使用，具有前排伤害加成。",
   "movessetup_movedefine_203": "翻滚躲避",
   "abilitiessetup_abilitydefine_312": "Stoic",
-  "abilitiessetup_abilitydefine_313": "Corrosion",
+  "abilitiessetup_abilitydefine_313": "Corrosive",
   "abilitiessetup_abilitydefine_314": "Each turn, reduces nearest opponent's STAMINA by {0}.",
   "abilitiessetup_abilitydefine_315": "Immune to {0}. Doesn't experience negative effects from their own attacks.",
   "abilitiessetup_002": "Net-boosted attacks make the target {1} {0}.",
@@ -1070,5 +1070,9 @@
   "movessetup_movedefine_204": "Flying Kick",
   "movessetup_movedefine_205": "Kick",
   "movessetup_movedefine_206": "Explosive Spirit",
-  "movessetup_movedefine_207": "Squeeze"
+  "movessetup_movedefine_207": "Squeeze",
+  "abilitiessetup_abilitydefine_316": "Magnet",
+  "abilitiessetup_abilitydefine_317": "Becomes the target of all SIDEWAYS attacks",
+  "movessetup_movedefine_208": "Stretch",
+  "movessetup_movedefine_209": "Catwalk"
 }

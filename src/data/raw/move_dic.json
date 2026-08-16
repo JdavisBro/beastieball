@@ -382,7 +382,7 @@
     "id": "catwalk",
     "name": "¦movessetup_movedefine_209¦",
     "pow": 0,
-    "price": 20,
+    "price": 0,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -1967,7 +1967,7 @@
     "id": "reign",
     "name": "¦movessetup_movedefine_197¦",
     "pow": 0,
-    "price": 50,
+    "price": 0,
     "targ": 4,
     "type": 4,
     "use": 0

@@ -4411,7 +4411,7 @@
     "colors2": null,
     "combos": [
       [17, 0, 0, 38, 3, 2, 50, 0, 1],
-      [20, 0, 1, 0, 2, 1],
+      [20, 0, 2, 0, 2, 1],
       [20, 1, 2, 0, 1, 1],
       [51, 0, 2, 14, 0, 1, 16, 0, 1]
     ],
@@ -8738,13 +8738,15 @@
       "lockon",
       "lowattks",
       "libero",
-      "nettle",
       "trap",
       "stress",
       "steal",
       "eerie",
       "basecover",
       "hazeball",
+      "catwalk",
+      "reign",
+      "charm",
       "copycat"
     ],
     "attklist_randomize": -1,

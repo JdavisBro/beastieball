@@ -166,8 +166,10 @@
       "cover",
       "allycover",
       "allyrush",
+      "tailwind",
       "juggle",
-      "freeball"
+      "freeball",
+      "catwalk"
     ],
     "same_screen_scene": { "toString": { "length": 0 } },
     "spr": "sprRiley",
@@ -425,6 +427,8 @@
       "chill",
       "meditate",
       "mindup",
+      "bamboozle",
+      "overthink",
       "moon",
       "telekinesis"
     ],
@@ -520,7 +524,9 @@
       "rhythm",
       "lifedew",
       "healhit",
+      "shakeoff",
       "refresh",
+      "introduction",
       "stomp",
       "allyprotect",
       "healbell",
@@ -653,10 +659,12 @@
     "plays": [
       "crowd",
       "set",
+      "swarm",
       "shieldbreaker",
       "heartpass",
       "myheartpass",
       "heart",
+      "thrash",
       "bellydrum",
       "overheat"
     ],
@@ -771,7 +779,9 @@
       "bodypass",
       "batonpass",
       "preblock",
+      "nice",
       "jazzpass",
+      "curse",
       "powswitch",
       "swordsdance",
       "superpower"
@@ -914,6 +924,8 @@
       "poisonhit",
       "whirlwind",
       "sting",
+      "nettle",
+      "build",
       "tool"
     ],
     "same_screen_scene": { "toString": { "length": 0 } },
@@ -1036,10 +1048,12 @@
     "object": "@ref object(objHeadmaster)",
     "plays": [
       "careful",
+      "starterside",
       "sidespin",
       "topspin",
       "feint",
       "lock",
+      "lockon",
       "eerie",
       "dump",
       "cut"
@@ -1166,7 +1180,9 @@
       "skillswap",
       "taunt",
       "dispel",
-      "introduction",
+      "scream",
+      "wink",
+      "distraction",
       "noisytag"
     ],
     "same_screen_scene": { "toString": { "length": 0 } },
@@ -1303,10 +1319,12 @@
     "name": "¦socialssetup_classsocial_010¦",
     "object": "@ref object(objWarrior)",
     "plays": [
+      "stretch",
       "substitute",
       "fieldclear",
       "bolt",
       "mark",
+      "wall",
       "bench",
       "libero",
       "haze",
@@ -1340,7 +1358,7 @@
     "max_hearts": 1,
     "name": "¦socialssetup_classsocial_011¦",
     "object": "@ref object(objValerie)",
-    "plays": [],
+    "plays": ["kick", "menace", "reign", "facade"],
     "same_screen_scene": { "toString": { "length": 0 } },
     "spr": "sprValerie",
     "teach_scene": { "toString": { "length": 0 } },

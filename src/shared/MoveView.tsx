@@ -762,7 +762,8 @@ export default function MoveView(props: {
   let learned_text;
   let stop_on_no_collide = false;
   if (friend) {
-    const friend_rank = Math.floor(friend.plays.indexOf(props.move.id) / 4) + 1;
+    const friend_rank =
+      friend.plays.indexOf(props.move.id) / friend.plays.length >= 0.5 ? 2 : 1;
     let rank = 0;
     let found;
     for (const event of friend.events) {

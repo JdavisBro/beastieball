@@ -569,7 +569,7 @@ function getEffectString(
     case MoveEffectType.IfStamina:
       return L("movedefine_descadd_103", { "0": String(effect.pow) }); // If STAMINA is {0} or higher:
     case MoveEffectType.TraitSet: {
-      const ability = abilities[effect.pow];
+      const ability = abilities[effect.pow] ?? { name: effect.pow, desc: "?" };
       return L("movedefine_descadd_108", { // {Target} trait changes to {0} ({1}).
         ...target_placeholders,
         "0": L(ability.name),

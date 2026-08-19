@@ -40,6 +40,7 @@ type PrerenderPage = {
   useBranding?: boolean;
   isDirectory?: boolean;
   noLoc?: boolean;
+  usesLoc?: string;
   pathSuffix?: string;
 };
 
@@ -104,6 +105,7 @@ const PRERENDER_PAGES: PrerenderPage[] = [
     useBranding: true,
     image: "/gameassets/sprMainmenu/27.png",
     path: "/team/encounters/",
+    usesLoc: "encounters",
   },
 
   {
@@ -214,6 +216,13 @@ function generateSitemap(url: string) {
         `src/localization/languages/${lang_site ? lang : "en"}/site.json`,
       ).toString(),
     );
+    const other_locs: Record<string, LanguageData> = {
+      encounters: JSON.parse(
+        readFileSync(
+          `src/localization/languages/${lang_site ? lang : "en"}/site_encounters.json`,
+        ).toString(),
+      ),
+    };
     const pathPrefix = lang == "en" ? "" : `/${lang.toLowerCase()}`;
     const prerender_pages: PrerenderPage[] = [
       ...PRERENDER_PAGES,
@@ -235,14 +244,15 @@ function generateSitemap(url: string) {
       }),
     ];
     for (const page of prerender_pages) {
-      const title = page.noLoc ? page.name : getSiteLoc(site_loc, page.name);
+      const loc = page.usesLoc ? other_locs[page.usesLoc] : site_loc;
+      const title = page.noLoc ? page.name : getSiteLoc(loc, page.name);
       const placeholders: Record<string, string> = {
         TITLE: page.useBranding
           ? getSiteLoc(site_loc, "common.title", { page: title, branding })
           : title,
         DESCRIPTION: page.noLoc
           ? page.description
-          : getSiteLoc(site_loc, page.description),
+          : getSiteLoc(loc, page.description),
         IMAGE: page.image,
         PATH: pathPrefix + page.path,
       };

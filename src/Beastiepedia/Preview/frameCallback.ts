@@ -88,7 +88,8 @@ export function setupFrameCallback(
             ];
           animState.frame = animState.state.startFrame ?? 0;
         } else {
-          if (animState.anim.loop) {
+          const loop = animState.anim.loop;
+          if (loop || (typeof loop == "number" && loop == 0)) {
             return;
           }
           animState.frame = startFrame;

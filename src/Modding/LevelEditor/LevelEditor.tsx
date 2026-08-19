@@ -48,6 +48,8 @@ const AREA_ID_DIRS = [
   "area04/",
   "area04/",
   "",
+  "area04/",
+  "",
 ];
 
 const ELEPHANT_CIRCULAR = "__Elephant_Circular_Ref__";

@@ -1221,7 +1221,7 @@
         "id": "gym",
         "invite_scene": { "toString": { "length": 0 } },
         "parent": null,
-        "prereq": { "field": 0, "type": [1] },
+        "prereq": { "field": 0, "type": [0] },
         "rankup": true
       },
       {
@@ -1233,7 +1233,7 @@
         "id": "puzzle",
         "invite_scene": { "toString": { "length": 0 } },
         "parent": null,
-        "prereq": { "field": 0, "type": [1] },
+        "prereq": { "field": 0, "type": [0] },
         "rankup": false
       },
       {
@@ -1245,7 +1245,7 @@
         "id": "swap",
         "invite_scene": { "toString": { "length": 0 } },
         "parent": null,
-        "prereq": { "field": 0, "type": [1] },
+        "prereq": { "field": 0, "type": [0] },
         "rankup": true
       },
       {
@@ -1274,7 +1274,7 @@
               "value": 1
             }
           ],
-          "type": [1, 2]
+          "type": [2, 2]
         },
         "rankup": false
       },
@@ -1295,7 +1295,7 @@
             "needscheck": true,
             "value": 2
           },
-          "type": [1]
+          "type": [2]
         },
         "rankup": false
       },
@@ -1308,7 +1308,7 @@
         "id": "rematch",
         "invite_scene": { "toString": { "length": 0 } },
         "parent": null,
-        "prereq": { "field": 0, "type": [1] },
+        "prereq": { "field": 0, "type": [4] },
         "rankup": false
       }
     ],

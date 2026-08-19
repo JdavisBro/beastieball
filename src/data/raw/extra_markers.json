@@ -205,6 +205,12 @@
       "y": -39977
     },
     {
+      "id": "gift_alleyway_0",
+      "items": [["sell2", 1.0]],
+      "x": -47771,
+      "y": -11009
+    },
+    {
       "id": "gift_ambestone_west_cliff_1",
       "items": [["jersey3", 1.0]],
       "x": -19944.0,
@@ -295,6 +301,37 @@
       "y": -18759
     },
     {
+      "id": "gift_city_construction3_0",
+      "items": [["train_md", 8.0]],
+      "x": -29065,
+      "y": 97
+    },
+    {
+      "id": "gift_city_construction3_1",
+      "items": [["train_hd", 8.0]],
+      "x": -25417,
+      "y": -870
+    },
+    {
+      "id": "gift_city_construction4_0",
+      "items": [["train_bd", 8.0]],
+      "x": -33317,
+      "y": 2456
+    },
+    {
+      "id": "gift_city_construction5_0",
+      "items": [["heal_max", 1.0]],
+      "x": -29757,
+      "y": 3682
+    },
+    {
+      "id": "gift_city_construction5_1",
+      "items": [["train_level", 1.0]],
+      "x": -26263,
+      "y": 2092
+    },
+    { "id": "cashbox", "items": [["", 1.0]], "x": -23876, "y": 1846 },
+    {
       "id": "gift_city_construction_side_1",
       "items": [["status_a", 1.0]],
       "x": -32152,
@@ -305,6 +342,12 @@
       "items": [["train_ma", 8.0]],
       "x": -30836,
       "y": -6263
+    },
+    {
+      "id": "gift_city_construction_side2_0",
+      "items": [["sell2", 1.0]],
+      "x": -27874,
+      "y": -8058
     },
     {
       "id": "gift_city_market_0",
@@ -819,6 +862,7 @@
     { "position": [-30320, 12943], "encounter": "ocean_1" },
     { "position": [-11239, 31879], "encounter": "tiny_island_0" },
     { "position": [-9787, -35981], "encounter": "academy_0" },
+    { "position": [-47759, -11088], "encounter": "alleyway_0" },
     { "position": [-19250.0, 6358], "encounter": "ambestone_west_cliff_0" },
     { "position": [-8698.0, 10498], "encounter": "beryl_railpath_end_0" },
     { "position": [-13055.0, 10179], "encounter": "beryl_railpath_south_0" },
@@ -834,7 +878,13 @@
     { "position": [-37477, -14700], "encounter": "citysquare_0" },
     { "position": [-40713, -17325], "encounter": "citysquare_1" },
     { "position": [-31193, -3780], "encounter": "city_construction1_0" },
+    { "position": [-27755, -3708], "encounter": "city_construction2_0" },
+    { "position": [-25944, -258], "encounter": "city_construction3_0" },
+    { "position": [-32182, 1158], "encounter": "city_construction4_0" },
+    { "position": [-26351, 2390], "encounter": "city_construction5_0" },
+    { "position": [-23888, 2315], "encounter": "city_construction_boss_0" },
     { "position": [-30611, -7116], "encounter": "city_construction_side_0" },
+    { "position": [-27631, -7543], "encounter": "city_construction_side2_0" },
     { "position": [-34708, -6810], "encounter": "city_railalley_1" },
     { "position": [-28764, -12077], "encounter": "city_rail_east_0" },
     { "position": [-35278, -1862], "encounter": "city_seacave_0" },

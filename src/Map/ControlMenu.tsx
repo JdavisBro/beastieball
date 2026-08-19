@@ -58,7 +58,7 @@ export function ControlSection({
 
 const WILD_ITEMS = EXTRA_MARKERS.gifts
   .flatMap((gift) => gift.items.map((item) => item[0] as string))
-  .filter((item, index, array) => array.indexOf(item) == index)
+  .filter((item, index, array) => array.indexOf(item) == index && item.length)
   .map((itemId) => ITEM_DIC[itemId])
   .sort((item1, item2) => item1.type - item2.type || item1.img - item2.img);
 

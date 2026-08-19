@@ -19,11 +19,12 @@ function updateHold(animState: AnimationState, beastieSpeed: number) {
   let hold = 2;
   const holds = animState.state.holds?.[animState.frame];
   if (holds) {
-    if (typeof holds == "number") {
-      hold = holds;
+    if (typeof holds == "number" || typeof holds == "string") {
+      hold = Number(holds);
     } else if (Array.isArray(holds)) {
-      hold = holds[Math.floor(Math.random() * holds.length)];
+      hold = Number(holds[Math.floor(Math.random() * holds.length)]);
     }
+    if (isNaN(hold)) hold = 2;
   }
   animState.frameLength = (1000 / (24 * beastieSpeed * animSpeed)) * hold;
 }

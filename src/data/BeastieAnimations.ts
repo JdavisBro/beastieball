@@ -5,7 +5,7 @@ export type BeastieFrames = {
   bpm_paired?: number[];
   startFrame?: number;
   endFrame?: number;
-  holds?: Record<string, number[] | number | string | undefined>;
+  holds?: Record<string, (number | string)[] | number | string | undefined>;
   sounds?: Record<string, number | string | undefined>;
   sport_mode?: number;
   transitions?: number[];
@@ -14,7 +14,7 @@ export type BeastieFrames = {
 export type BeastieAnimation = {
   frames: BeastieFrames | BeastieFrames[];
   speed?: number;
-  loop?: string[];
+  loop?: string[] | number;
 };
 
 export type BeastiePos = {

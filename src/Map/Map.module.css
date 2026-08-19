@@ -69,7 +69,8 @@
 
 .textmarker {
   composes: boxHeaderBackground from global;
-  white-space: nowrap;
+  white-space: pre;
+  text-align: center;
   width: fit-content;
   height: fit-content;
   color: white;

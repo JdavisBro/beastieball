@@ -2836,6 +2836,17 @@
           "y1": -1802,
           "y2": -93,
           "z1": -50
+        },
+        {
+          "destination": "city_construction6",
+          "ground_z": 1800,
+          "x": 9383,
+          "x1": -462,
+          "x2": 1041,
+          "y": 2591,
+          "y1": -2277,
+          "y2": -152,
+          "z1": -50
         }
       ],
       "spawn_name": ["beach"],
@@ -6090,6 +6101,18 @@
           "y1": -5,
           "y2": 944,
           "z1": -50
+        },
+        {
+          "destination": "alleyway",
+          "direction": 2,
+          "x": 727,
+          "x1": -833,
+          "x2": -66,
+          "y": 5457,
+          "y1": -382,
+          "y2": 368,
+          "z1": -500,
+          "z2": 500
         }
       ],
       "spawn_name": ["downtown"],
@@ -7832,7 +7855,7 @@
         {
           "destination": "sunken_stadium_west_2",
           "direction": 0,
-          "ground_z": 171.6418879217,
+          "ground_z": 178.3415725069,
           "x": 3840,
           "x1": -288,
           "x2": 386,
@@ -9490,6 +9513,17 @@
           "y1": -100,
           "y2": 100,
           "z1": -50
+        },
+        {
+          "destination": "city_construction2",
+          "direction": 0,
+          "x": 3414,
+          "x1": 72,
+          "x2": 1038,
+          "y": 2258,
+          "y1": -471,
+          "y2": 432,
+          "z1": -50
         }
       ],
       "spawn_name": ["city_rail"],
@@ -9604,6 +9638,318 @@
       "world_x2": -43146.5,
       "world_y1": -2689,
       "world_y2": 1169
+    },
+    {
+      "area_id": 7,
+      "color": 16620976,
+      "display_name": "Mainframe",
+      "encounters": ["alleyway_0"],
+      "has_spawns": true,
+      "icons_array": [],
+      "name": "alleyway",
+      "palette_name": "city",
+      "portals_array": [
+        {
+          "destination": "mainstreet",
+          "direction": 0,
+          "x": 1497,
+          "x1": 79,
+          "x2": 654,
+          "y": 3226,
+          "y1": -286,
+          "y2": 505,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["downtown"],
+      "world_x1": -48787,
+      "world_x2": -46787,
+      "world_y1": -16345,
+      "world_y2": -10900
+    },
+    {
+      "area_id": 7,
+      "color": 16620976,
+      "display_name": "Construczone",
+      "encounters": ["city_construction_boss_0"],
+      "icons_array": [],
+      "name": "city_construction_boss",
+      "palette_name": "city",
+      "portals_array": [
+        {
+          "destination": "city_construction6",
+          "direction": 2,
+          "ground_z": 300,
+          "x": 396,
+          "x1": -832,
+          "x2": -63,
+          "y": 3594,
+          "y1": -282,
+          "y2": 257,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["default"],
+      "world_x1": -24966,
+      "world_x2": -22770,
+      "world_y1": 1519,
+      "world_y2": 5594
+    },
+    {
+      "area_id": 7,
+      "color": 16620976,
+      "display_name": "none",
+      "encounters": [],
+      "has_spawns": true,
+      "icons_array": [],
+      "name": "city_construction6",
+      "palette_name": "city",
+      "portals_array": [
+        {
+          "destination": "rockybeach",
+          "direction": 3,
+          "x": 985,
+          "x1": -579,
+          "x2": 401,
+          "y": 2470,
+          "y1": 106,
+          "y2": 3149,
+          "z1": -50
+        },
+        {
+          "destination": "city_construction_boss",
+          "direction": 0,
+          "ground_z": 1200,
+          "x": 3587,
+          "x1": 40,
+          "x2": 1006,
+          "y": 1176,
+          "y1": -255,
+          "y2": 284,
+          "z1": -50
+        },
+        {
+          "allow_exit": false,
+          "destination": "city_construction5",
+          "ground_z": 300,
+          "x": 1218,
+          "x1": -100,
+          "x2": 100,
+          "y": 1532,
+          "y1": -100,
+          "y2": 100,
+          "z1": -50,
+          "z_offset": 100
+        }
+      ],
+      "spawn_name": ["city_construction"],
+      "world_x1": -29024,
+      "world_x2": -24966,
+      "world_y1": 4753,
+      "world_y2": 7644
+    },
+    {
+      "area_id": 7,
+      "color": 16620976,
+      "display_name": "Construczone",
+      "encounters": ["city_construction4_0"],
+      "has_spawns": true,
+      "icons_array": [],
+      "name": "city_construction4",
+      "palette_name": "city",
+      "portals_array": [
+        {
+          "destination": "city_construction3",
+          "direction": 0,
+          "ground_z": 300,
+          "x": 2520,
+          "x1": 143,
+          "x2": 1317,
+          "y": 1475,
+          "y1": -349,
+          "y2": 411,
+          "z1": -50
+        },
+        {
+          "destination": "city_construction5",
+          "direction": 0,
+          "ground_z": 300,
+          "x": 2809,
+          "x1": -11,
+          "x2": 872,
+          "y": 4012,
+          "y1": -268,
+          "y2": 364,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["city_construction"],
+      "world_x1": -33476,
+      "world_x2": -30392,
+      "world_y1": -1876,
+      "world_y2": 3040
+    },
+    {
+      "area_id": 7,
+      "color": 16620976,
+      "display_name": "Construczone",
+      "encounters": [],
+      "has_spawns": true,
+      "icons_array": [],
+      "name": "city_construction3",
+      "palette_name": "city",
+      "portals_array": [
+        {
+          "destination": "city_construction2",
+          "ground_z": 300,
+          "x": 2650,
+          "x1": -177,
+          "x2": 176,
+          "y": 816,
+          "y1": -788,
+          "y2": -234,
+          "z1": -50
+        },
+        {
+          "destination": "city_construction4",
+          "direction": 2,
+          "ground_z": 300,
+          "x": 549,
+          "x1": -1255,
+          "x2": -143,
+          "y": 1651,
+          "y1": -127,
+          "y2": 586,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["city_construction"],
+      "world_x1": -30414,
+      "world_x2": -24985,
+      "world_y1": -2243,
+      "world_y2": 679
+    },
+    {
+      "area_id": 7,
+      "color": 16620976,
+      "display_name": "Construczone",
+      "encounters": [],
+      "has_spawns": true,
+      "icons_array": [],
+      "name": "city_construction_side2",
+      "palette_name": "city",
+      "portals_array": [
+        {
+          "destination": "city_construction2",
+          "direction": 3,
+          "ground_z": 300,
+          "x": 1791,
+          "x1": -288,
+          "x2": 271,
+          "y": 1965,
+          "y1": -52,
+          "y2": 1375,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["city_construction"],
+      "world_x1": -28346,
+      "world_x2": -26175,
+      "world_y1": -8339,
+      "world_y2": -6278
+    },
+    {
+      "area_id": 7,
+      "color": 16620976,
+      "display_name": "Construczone",
+      "encounters": [],
+      "has_spawns": true,
+      "icons_array": [
+        {
+          "from_level": "city_construction2",
+          "header": true,
+          "header_size": 0.7,
+          "text": "Under\\nConstruczone",
+          "world_x": -28570,
+          "world_y": 693,
+          "x": 524,
+          "y": 6969
+        }
+      ],
+      "name": "city_construction2",
+      "palette_name": "city",
+      "portals_array": [
+        {
+          "destination": "city_construction1",
+          "direction": 2,
+          "ground_z": 600,
+          "x": 505,
+          "x1": -2191,
+          "x2": -251,
+          "y": 1886,
+          "y1": -398,
+          "y2": 471,
+          "z1": -50
+        },
+        {
+          "destination": "city_construction_side2",
+          "ground_z": 50,
+          "x": 2563,
+          "x1": -271,
+          "x2": 236,
+          "y": 931,
+          "y1": -1262,
+          "y2": -42,
+          "z1": -50,
+          "z_offset": -550
+        },
+        {
+          "destination": "city_construction3",
+          "direction": 3,
+          "ground_z": 601,
+          "x": 1381,
+          "x1": -202,
+          "x2": 138,
+          "y": 3810,
+          "y1": 71,
+          "y2": 910,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["city_construction"],
+      "world_x1": -29094,
+      "world_x2": -26165,
+      "world_y1": -6276,
+      "world_y2": -2244
+    },
+    {
+      "area_id": 7,
+      "color": 16620976,
+      "display_name": "Construczone",
+      "encounters": ["city_construction5_0"],
+      "has_spawns": true,
+      "icons_array": [],
+      "name": "city_construction5",
+      "palette_name": "city",
+      "portals_array": [
+        {
+          "destination": "city_construction4",
+          "direction": 2,
+          "ground_z": 300,
+          "x": 523,
+          "x1": -1945,
+          "x2": -20,
+          "y": 1411,
+          "y1": -296,
+          "y2": 410,
+          "z1": -50
+        }
+      ],
+      "spawn_name": ["city_construction"],
+      "world_x1": -30392,
+      "world_x2": -25894,
+      "world_y1": 709,
+      "world_y2": 4753
     }
   ],
   "map_position_data": {
@@ -9613,6 +9959,7 @@
     "academy:objNode": { "x": -8342, "y": -39615 },
     "academy:objStreamer": { "x": -8131, "y": -40255 },
     "academy_0": { "x": -9787, "y": -35981 },
+    "alleyway_0": { "area_id": 7, "x": -47768, "y": -11412 },
     "beach_cliff1:objRiven": { "x": -39938, "y": 12602 },
     "beach_cliff1_0": { "x": -39182, "y": 10476 },
     "beryl:objBallcenter": { "x": -8420, "y": 16287 },
@@ -9631,6 +9978,9 @@
     "chartreuse:objClub": { "x": -30433, "y": 27013 },
     "chartreuse:objGymdoor": { "x": -31618, "y": 25228 },
     "city_construction1_0": { "area_id": 5, "x": -31193, "y": -3430 },
+    "city_construction4_0": { "area_id": 7, "x": -32182, "y": 1458 },
+    "city_construction5_0": { "area_id": 7, "x": -26351, "y": 2690 },
+    "city_construction_boss_0": { "area_id": 7, "x": -23888, "y": 3615 },
     "city_market:objBallcenter": { "x": -50359, "y": -17448 },
     "city_market:objNaveen": { "x": -48669, "y": -17666 },
     "city_market:objStreamer": { "x": -48010, "y": -20089 },

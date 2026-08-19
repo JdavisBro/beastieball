@@ -99,7 +99,9 @@ export default function saveGif(
     }
   });
 
-  let anim_loops = !anim.loop || anim.loop[0] != "";
+  let anim_loops =
+    !anim.loop ||
+    (typeof anim.loop == "number" ? anim.loop > 0 : anim.loop[0] != "");
 
   const everyTransition = frames
     .flatMap((frame) => frame.transitions ?? [])
@@ -163,11 +165,14 @@ export default function saveGif(
         if (holds[String(i)] != undefined) {
           const temphold = holds[String(i)];
           if (Array.isArray(temphold)) {
-            hold = temphold[Math.floor(Math.random() * temphold.length)];
-          } else if (typeof temphold == "number") {
-            hold = temphold;
+            hold = Number(
+              temphold[Math.floor(Math.random() * temphold.length)],
+            );
+          } else if (temphold !== undefined) {
+            hold = Number(temphold);
           }
         }
+        if (isNaN(hold)) hold = 2;
       }
       delaylist.push(Math.max(DELAY_MIN, baseDelay * hold));
     }

@@ -415,14 +415,15 @@ export default function Map(): React.ReactNode {
                 .filter(
                   (gift) =>
                     !huntedItem ||
-                    gift.items.some((item) => item[0] == huntedItem),
+                    (gift.items.some(([item]) => item == huntedItem) &&
+                      gift.items.every(([item]) => ITEM_DIC[item])),
                 )
                 .map((gift) => (
                   <Marker
                     key={gift.id}
                     position={[-gift.y, gift.x]}
                     icon={L.icon({
-                      iconUrl: `/gameassets/sprItems/${ITEM_DIC[gift.items[0][0]].img}.png`,
+                      iconUrl: `/gameassets/sprItems/${(ITEM_DIC[gift.items[0][0]] ?? { img: 0 }).img}.png`,
                       iconSize: huntedItem ? [60, 60] : [30, 30],
                       iconAnchor: huntedItem ? [30, 30] : [15, 15],
                       className: huntedItem ? styles.itemHunted : undefined,
@@ -430,19 +431,23 @@ export default function Map(): React.ReactNode {
                   >
                     <Popup offset={[0, -5]} minWidth={300}>
                       <div className={styles.itemList}>
-                        {gift.items.map(([item, count]) => (
-                          <div key={item} className={styles.item}>
-                            <img
-                              src={`/gameassets/sprItems/${ITEM_DIC[item].img}.png`}
-                            />
-                            <div>
-                              <span>
-                                {Loc(ITEM_DIC[item].name)} x{count}
-                              </span>
-                              <TextTag>{Loc(ITEM_DIC[item].desc)}</TextTag>
+                        {gift.items.map(([item_id, count]) => {
+                          const item =
+                            ITEM_DIC[item_id] ?? Object.values(ITEM_DIC)[0];
+                          return (
+                            <div key={item_id} className={styles.item}>
+                              <img
+                                src={`/gameassets/sprItems/${item.img}.png`}
+                              />
+                              <div>
+                                <span>
+                                  {Loc(item.name)} x{count}
+                                </span>
+                                <TextTag>{Loc(item.desc)}</TextTag>
+                              </div>
                             </div>
-                          </div>
-                        ))}
+                          );
+                        })}
                       </div>
                     </Popup>
                   </Marker>

@@ -66,6 +66,10 @@ export function createMarkers(Loc: LocalizationFunction) {
     other: [],
   };
 
+  function LocalizeTitle(key: string) {
+    return Loc("_map_" + key.replace(/\\n/g, "")).replace(/\\n/g, "\n");
+  }
+
   function createMarker(value: MapIcon) {
     let containerclass = styles.imgmarker;
     let markertype = value.superheader == 1 ? bigtitleheaders : titleheaders;
@@ -77,9 +81,9 @@ export function createMarkers(Loc: LocalizationFunction) {
       value.revealed_text.replace(
         /(.+?)(?: \((.+?)\)|$)/,
         (_, g1, g2) =>
-          `${Loc("_map_" + g1)}${g2 ? ` (${Loc("_map_" + g2)})` : ""}`,
+          `${LocalizeTitle(g1)}${g2 ? ` (${LocalizeTitle(g2)})` : ""}`,
       );
-    const text = value.text && Loc("_map_" + value.text);
+    const text = value.text && LocalizeTitle(value.text);
     if (value.img) {
       if (value.from_object == "objBallcenter") return;
       markertype =

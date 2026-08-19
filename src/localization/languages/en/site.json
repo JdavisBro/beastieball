@@ -499,7 +499,8 @@
       "find": "Find: ",
       "selectHeader": "Select Item",
       "selectButton": "Select Item: {item}",
-      "unset": "Unset"
+      "unset": "Unset",
+      "money": "${money}"
     },
     "info": {
       "title": "Info (Secret)",

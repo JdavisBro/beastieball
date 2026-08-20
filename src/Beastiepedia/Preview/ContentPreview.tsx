@@ -83,8 +83,8 @@ const ANIMATION_UNIQUE = [
   "bug_cheer",
 ];
 
-const IDLE_EXCEPTIONS = ["sprOpossum"];
-const MOVE_EXCEPTIONS = ["sprSeal"];
+const IDLE_EXCEPTIONS: string[] = ["sprIbis"];
+const MOVE_EXCEPTIONS: string[] = [];
 
 function anim_check(anim: string, beastie: BeastieType) {
   if (secrets) return anim;

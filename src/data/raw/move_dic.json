@@ -145,7 +145,7 @@
     "id": "basecover",
     "name": "¦movessetup_movedefine_157¦",
     "pow": 0,
-    "price": 0,
+    "price": 45,
     "targ": 3,
     "type": 5,
     "use": 0
@@ -221,7 +221,7 @@
     "id": "blockattack",
     "name": "¦movessetup_movedefine_025¦",
     "pow": 110,
-    "price": 0,
+    "price": 30,
     "targ": 1,
     "type": 0,
     "use": 2
@@ -333,7 +333,7 @@
     "id": "burnout",
     "name": "¦movessetup_movedefine_057¦",
     "pow": 100,
-    "price": 0,
+    "price": 45,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -382,7 +382,7 @@
     "id": "catwalk",
     "name": "¦movessetup_movedefine_209¦",
     "pow": 0,
-    "price": 0,
+    "price": 20,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -417,7 +417,7 @@
     "id": "charm",
     "name": "¦movessetup_movedefine_130¦",
     "pow": 0,
-    "price": 0,
+    "price": 50,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -553,7 +553,7 @@
     "id": "crowd",
     "name": "¦movessetup_movedefine_141¦",
     "pow": 0,
-    "price": 0,
+    "price": 60,
     "targ": 0,
     "type": 4,
     "use": 0
@@ -640,7 +640,7 @@
     "id": "defheal",
     "name": "¦movessetup_movedefine_151¦",
     "pow": 0,
-    "price": 0,
+    "price": 50,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -956,7 +956,7 @@
     "id": "flykick",
     "name": "¦movessetup_movedefine_204¦",
     "pow": 95,
-    "price": 0,
+    "price": 45,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -1032,7 +1032,7 @@
     "id": "hazeball",
     "name": "¦movessetup_movedefine_076¦",
     "pow": 65,
-    "price": 0,
+    "price": 25,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1144,7 +1144,7 @@
     "id": "heartpass",
     "name": "¦movessetup_movedefine_099¦",
     "pow": 0,
-    "price": 0,
+    "price": 25,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -1186,7 +1186,7 @@
     "id": "hum",
     "name": "¦movessetup_movedefine_192¦",
     "pow": 0,
-    "price": 0,
+    "price": 15,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -1312,7 +1312,7 @@
     "id": "kick",
     "name": "¦movessetup_movedefine_205¦",
     "pow": 70,
-    "price": 0,
+    "price": 30,
     "targ": 8,
     "type": 0,
     "use": 0
@@ -1438,7 +1438,7 @@
     "id": "markattack",
     "name": "¦movessetup_movedefine_064¦",
     "pow": 45,
-    "price": 0,
+    "price": 30,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1688,7 +1688,7 @@
     "id": "nightshade",
     "name": "¦movessetup_movedefine_060¦",
     "pow": -30,
-    "price": 0,
+    "price": 30,
     "targ": 8,
     "type": 2,
     "use": 0
@@ -1765,7 +1765,7 @@
     "id": "passionstrike",
     "name": "¦movessetup_movedefine_201¦",
     "pow": 105,
-    "price": 0,
+    "price": 45,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -1866,7 +1866,7 @@
     "id": "protectcheer",
     "name": "¦movessetup_movedefine_149¦",
     "pow": 0,
-    "price": 0,
+    "price": 60,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -1967,7 +1967,7 @@
     "id": "reign",
     "name": "¦movessetup_movedefine_197¦",
     "pow": 0,
-    "price": 0,
+    "price": 50,
     "targ": 4,
     "type": 4,
     "use": 0
@@ -2085,7 +2085,7 @@
     "id": "rush",
     "name": "¦movessetup_movedefine_092¦",
     "pow": 0,
-    "price": 0,
+    "price": 30,
     "targ": 2,
     "type": 3,
     "use": 0
@@ -2113,7 +2113,7 @@
     "id": "sad",
     "name": "¦movessetup_movedefine_181¦",
     "pow": 0,
-    "price": 0,
+    "price": 20,
     "targ": 4,
     "type": 5,
     "use": 0
@@ -2374,7 +2374,7 @@
     "id": "speech",
     "name": "¦movessetup_movedefine_182¦",
     "pow": 0,
-    "price": 0,
+    "price": 55,
     "targ": 1,
     "type": 5,
     "use": 0
@@ -2416,7 +2416,7 @@
     "id": "squeeze",
     "name": "¦movessetup_movedefine_207¦",
     "pow": 0,
-    "price": 0,
+    "price": 10,
     "targ": 5,
     "type": 4,
     "use": 0
@@ -2601,7 +2601,7 @@
     "id": "stretch",
     "name": "¦movessetup_movedefine_208¦",
     "pow": 0,
-    "price": 0,
+    "price": 45,
     "targ": 1,
     "type": 4,
     "use": 0
@@ -2632,7 +2632,7 @@
     "id": "substitute",
     "name": "¦movessetup_movedefine_118¦",
     "pow": 0,
-    "price": 0,
+    "price": 45,
     "targ": 1,
     "type": 4,
     "use": 0

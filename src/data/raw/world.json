@@ -9517,6 +9517,7 @@
         {
           "destination": "city_construction2",
           "direction": 0,
+          "ground_z": 1500,
           "x": 3414,
           "x1": 72,
           "x2": 1038,

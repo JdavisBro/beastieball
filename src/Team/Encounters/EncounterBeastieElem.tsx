@@ -198,8 +198,14 @@ export function encounterToTeamBeastie(
     name: encBeastie.name ? L(encBeastie.name) : "",
     spr_index: spr_index,
     xp: level ** 3 * metamorphedBeastie.growth,
-    scale: encBeastie.size && encBeastie.size >= 0 ? encBeastie.size : scale,
-    vibe: encBeastie.vibe && encBeastie.vibe >= 0 ? encBeastie.vibe : vibe,
+    scale:
+      encBeastie.size !== undefined && encBeastie.size >= 0
+        ? encBeastie.size
+        : scale,
+    vibe:
+      encBeastie.vibe !== undefined && encBeastie.vibe >= 0
+        ? encBeastie.vibe
+        : vibe,
     ability_index: ability_index,
     attklist: getMoveset(encBeastie, metamorphedBeastie, level),
     ba_r: 1,

@@ -394,7 +394,8 @@
     "description": null,
     "eff": [
       { "eff": 17, "pow": 0, "targ": 0 },
-      { "eff": 18, "pow": 0, "targ": 0 }
+      { "eff": 18, "pow": 0, "targ": 0 },
+      { "eff": 61, "pow": 1, "targ": 0 }
     ],
     "id": "chance",
     "name": "¦movessetup_movedefine_002¦",

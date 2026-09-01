@@ -1247,39 +1247,39 @@
         "freq": 25,
         "lvlA": 30,
         "lvlB": 31,
-        "percent": 0.1851851852,
+        "percent": 0.2,
         "specie": "platypus2",
-        "variant": 0.1
-      },
-      {
-        "freq": 30,
-        "lvlA": 30,
-        "lvlB": 32,
-        "percent": 0.2222222222,
-        "specie": "dragonfly",
-        "variant": 0.1
-      },
-      {
-        "freq": 35,
-        "lvlA": 31,
-        "lvlB": 32,
-        "percent": 0.2592592593,
-        "specie": "mudskipper",
         "variant": 0.1
       },
       {
         "freq": 20,
         "lvlA": 30,
         "lvlB": 32,
-        "percent": 0.1481481481,
-        "specie": "crab",
+        "percent": 0.16,
+        "specie": "dragonfly",
         "variant": 0.1
+      },
+      {
+        "freq": 30,
+        "lvlA": 31,
+        "lvlB": 32,
+        "percent": 0.24,
+        "specie": "mudskipper",
+        "variant": 0.1
+      },
+      {
+        "freq": 25,
+        "lvlA": 30,
+        "lvlB": 32,
+        "percent": 0.2,
+        "specie": "crab",
+        "variant": 2
       },
       {
         "freq": 10,
         "lvlA": 30,
         "lvlB": 32,
-        "percent": 0.0740740741,
+        "percent": 0.08,
         "specie": "horseshoe",
         "variant": 0.1
       },
@@ -1287,7 +1287,7 @@
         "freq": 10,
         "lvlA": 30,
         "lvlB": 31,
-        "percent": 0.0740740741,
+        "percent": 0.08,
         "specie": "wizard",
         "variant": 0.1
       },
@@ -1295,14 +1295,14 @@
         "freq": 5,
         "lvlA": 32,
         "lvlB": 33,
-        "percent": 0.037037037,
+        "percent": 0.04,
         "specie": "croc",
         "variant": 0.1
       }
     ],
     "level_max": 33,
     "level_min": 30,
-    "total": 135
+    "total": 125
   },
   "meadow": {
     "group": [

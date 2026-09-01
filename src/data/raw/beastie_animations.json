@@ -9642,6 +9642,7 @@
           "bpm_paired": [],
           "endFrame": 82,
           "holds": { "76": 1, "77": 1, "78": 1, "79": 1 },
+          "sounds": { "77": 7 },
           "startFrame": 76
         },
         "loop": 0
@@ -9697,6 +9698,7 @@
               "46": 1,
               "47": [8, 10, 12]
             },
+            "sounds": { "42": 7 },
             "startFrame": 38,
             "transitions": [0]
           },
@@ -12390,14 +12392,14 @@
     }
   },
   "_sprRat_alt": {
-    "anim_data": { "__Elephant_Circular_Ref__": 5703 },
+    "anim_data": { "__Elephant_Circular_Ref__": 5705 },
     "ball": { "x": 154.8, "y": -261.6 },
-    "colors": { "__Elephant_Circular_Ref__": 8478 },
+    "colors": { "__Elephant_Circular_Ref__": 8480 },
     "colors2": null,
     "evo1": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo2": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
     "evo3": { "anim": "good", "scale": 2, "x": 0, "y": 0 },
-    "loco_data": { "__Elephant_Circular_Ref__": 5781 },
+    "loco_data": { "__Elephant_Circular_Ref__": 5783 },
     "miss": { "x": 222.8571428571, "y": -114.2857142857 },
     "partner": {
       "angle": 305.217590332,
@@ -12406,7 +12408,7 @@
       "y": -1.2
     },
     "ready": { "x": 139.4285714286, "y": -286.8571428571 },
-    "shiny": { "__Elephant_Circular_Ref__": 8527 },
+    "shiny": { "__Elephant_Circular_Ref__": 8529 },
     "splash": {
       "angle": 344.1231689453,
       "anim": "volley",

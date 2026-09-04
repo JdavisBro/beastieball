@@ -15,7 +15,7 @@ import styles from "./Map.module.css";
 import OpenGraph from "../shared/OpenGraph";
 import { createMarkers } from "./createMarkers";
 import Header from "../shared/Header";
-import SPAWN_DATA from "../data/SpawnData";
+import SPAWN_DATA, { SpawnInfo } from "../data/SpawnData";
 import BEASTIE_DATA, { BeastieType } from "../data/BeastieData";
 import ITEM_DIC from "../data/ItemData";
 import TextTag from "../shared/TextTag";
@@ -228,22 +228,20 @@ export default function Map(): React.ReactNode {
     if ((!show_beasties && !beastie_filter) || !level.has_spawns) {
       return;
     }
-    const groups = level.spawn_name.map(
+    const spawns = level.spawn_name.map(
       (spawn_name) =>
-        (
-          (postgame && SPAWN_DATA[spawn_name + "_postgame"]) ||
-          SPAWN_DATA[spawn_name]
-        )?.group,
+        (postgame && SPAWN_DATA[spawn_name + "_postgame"]) ||
+        SPAWN_DATA[spawn_name],
     );
     const horizontal = level_size.x > level_size.y;
-    for (let i = 0; i < groups.length; i++) {
-      const group = groups[i];
-      if (!group) {
-        return;
+    for (let i = 0; i < spawns.length; i++) {
+      const spawn = spawns[i];
+      if (!spawn.group) {
+        continue;
       }
       const pos = { x, y };
       const size = { x: level_size.x, y: level_size.y };
-      if (groups.length == 2) {
+      if (spawns.length == 2) {
         if (horizontal) {
           size.x *= i == 1 ? 0.34 : 0.66;
           pos.x += i == 1 ? 0 : level_size.x * 0.34;
@@ -254,7 +252,7 @@ export default function Map(): React.ReactNode {
       }
       beastieSpawnsOverlays.push(
         ...createBeastieBox(
-          group,
+          spawn as Required<SpawnInfo>,
           pos,
           size,
           `${level.name}-${level.spawn_name[i]}`,

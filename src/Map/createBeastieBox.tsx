@@ -2,13 +2,13 @@ import { icon } from "leaflet";
 import { Marker, Popup } from "react-leaflet";
 import { Link } from "react-router-dom";
 
-import { SpawnGroup } from "../data/SpawnData";
+import { SpawnInfo } from "../data/SpawnData";
 import BEASTIE_DATA from "../data/BeastieData";
 import styles from "./Map.module.css";
 import { LocalizationType } from "../localization/useLocalization";
 
 export default function createBeastieBox(
-  group: SpawnGroup,
+  spawn: Required<SpawnInfo>,
   corner: { x: number; y: number },
   size: { x: number; y: number },
   key: string,
@@ -20,21 +20,33 @@ export default function createBeastieBox(
   Localization: LocalizationType,
 ) {
   const { L: Loc, getLink } = Localization;
-  const overall_percent: {
-    [key: string]: {
+  const overall_percent: Record<
+    string,
+    {
       percent: number;
       levelMin: number;
       levelMax: number;
       variant: number;
-    };
-  } = {};
+    }
+  > = {};
   const non_dupe_beasties: string[] = [];
-  group.forEach((value) => {
+  const count = spawn.group.length;
+  const total = spawn.total;
+  let prev_freq = 0;
+  spawn.group.forEach((value, index) => {
+    let freq = prev_freq + value.freq;
+    if (index == count - 1) {
+      freq = spawn.total;
+    } else if (attractSpray) {
+      freq += ((total / count) * (index + 1) - freq) * 0.5;
+    }
+    const percent = ((freq - prev_freq) / spawn.total) * 100;
+    prev_freq = freq;
     if (beastie_filter != "all" && beastie_filter != value.specie) {
       return;
     }
     if (overall_percent[value.specie]) {
-      overall_percent[value.specie].percent += value.percent * 100;
+      overall_percent[value.specie].percent += percent;
       overall_percent[value.specie].levelMin = Math.min(
         overall_percent[value.specie].levelMin,
         value.lvlA,
@@ -46,7 +58,7 @@ export default function createBeastieBox(
     } else {
       non_dupe_beasties.push(value.specie);
       overall_percent[value.specie] = {
-        percent: value.percent * 100,
+        percent: percent,
         levelMin: value.lvlA,
         levelMax: value.lvlB,
         variant: value.variant,

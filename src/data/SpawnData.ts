@@ -1,6 +1,6 @@
 import spawn_data from "./raw/spawn_data.json";
 
-export type SpawnGroup = {
+type SpawnGroup = {
   freq: number;
   percent: number;
   variant: number;
@@ -9,6 +9,8 @@ export type SpawnGroup = {
   lvlB: number;
 }[];
 
-const SPAWN_DATA: Record<string, { group?: SpawnGroup }> = spawn_data;
+export type SpawnInfo = { group?: SpawnGroup; total: number };
+
+const SPAWN_DATA: Record<string, SpawnInfo> = spawn_data;
 
 export default SPAWN_DATA;

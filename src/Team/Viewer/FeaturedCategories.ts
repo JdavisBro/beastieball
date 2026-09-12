@@ -34,8 +34,8 @@ export type FeaturedCategoryRoot =
   | FeaturedCategory;
 
 const categories: FeaturedCategoryRoot[] = [
-  BringTheHeat2,
   Community,
+  BringTheHeat2,
   Spooky,
   HeatWave,
   StarterBash,

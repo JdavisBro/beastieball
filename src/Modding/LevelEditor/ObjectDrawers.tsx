@@ -9,7 +9,7 @@ import { ModelElem } from "./Models";
 import setTextureDefaults from "./defaults";
 import SPRITE_INFO_FULL from "../../data/raw/sprite_info_full.json";
 import { Sprite } from "../../data/SpriteInfo";
-import useLevelEditor from "./useLevelEditor";
+import useLevelEditor, { EditorViewMode } from "./useLevelEditor";
 import { DefaultMaterial } from "./MaterialShader";
 
 type DrawerProps = {
@@ -89,6 +89,12 @@ function ModelDrawer({
 
 function TextDrawer({ position, object }: DrawerProps) {
   const ref = useRef<HTMLDivElement>(null);
+
+  const { viewMode } = useLevelEditor();
+
+  if (viewMode == EditorViewMode.Visible) {
+    return null;
+  }
 
   return (
     <>

@@ -3,6 +3,7 @@ import { LevelData } from "./types";
 import { LevelStump } from "../../data/WorldData";
 
 export enum EditorViewMode {
+  VisiblePlusObjects,
   Visible,
   Collision,
   All,

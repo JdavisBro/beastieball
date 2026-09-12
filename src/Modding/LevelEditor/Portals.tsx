@@ -1,4 +1,4 @@
-import useLevelEditor from "./useLevelEditor";
+import useLevelEditor, { EditorViewMode } from "./useLevelEditor";
 import type { Portal } from "../../data/WorldData";
 
 function Portal({ portal }: { portal: Portal }) {
@@ -27,7 +27,11 @@ function Portal({ portal }: { portal: Portal }) {
 }
 
 export default function Portals() {
-  const { levelStump } = useLevelEditor();
+  const { levelStump, viewMode } = useLevelEditor();
+
+  if (viewMode == EditorViewMode.Visible) {
+    return null;
+  }
 
   return levelStump.portals_array.map((portal) => <Portal portal={portal} />);
 }

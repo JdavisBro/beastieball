@@ -209,7 +209,10 @@ function Shape({
   const visible =
     viewMode == EditorViewMode.All ||
     (viewMode == EditorViewMode.Collision && solid && flat) ||
-    (viewMode == EditorViewMode.Visible && (shape.visible ?? true) && solid);
+    ((viewMode == EditorViewMode.Visible ||
+      viewMode == EditorViewMode.VisiblePlusObjects) &&
+      (shape.visible ?? true) &&
+      solid);
 
   const geometry = useMemo(
     () => createShapeGeometry(shape, thickness),

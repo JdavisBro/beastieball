@@ -37,7 +37,9 @@ function ModelChild({
     !(
       viewMode == EditorViewMode.All ||
       (viewMode == EditorViewMode.Collision && collider) ||
-      (viewMode == EditorViewMode.Visible && visible)
+      ((viewMode == EditorViewMode.Visible ||
+        viewMode == EditorViewMode.VisiblePlusObjects) &&
+        visible)
     )
   )
     return null;

@@ -380,7 +380,7 @@ export default function LevelEditor() {
       });
   }, [level]);
 
-  const [viewMode, setViewMode] = useState(EditorViewMode.Visible);
+  const [viewMode, setViewMode] = useState(EditorViewMode.VisiblePlusObjects);
 
   const navigate = useNavigate();
 
@@ -447,6 +447,9 @@ export default function LevelEditor() {
           <select
             onChange={(event) => setViewMode(Number(event.currentTarget.value))}
           >
+            <option value={EditorViewMode.VisiblePlusObjects}>
+              Only Visible + Hidden Objects
+            </option>
             <option value={EditorViewMode.Visible}>Only Visible</option>
             <option value={EditorViewMode.Collision}>Only Collision</option>
             <option value={EditorViewMode.All}>All</option>

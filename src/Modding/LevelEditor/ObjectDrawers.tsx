@@ -245,6 +245,17 @@ const OBJECT_DRAWER_MAP: Record<
   objUnderConstruction: (props) => (
     <CharacterDrawer {...props} sprite="sprNPCUC" />
   ),
+  objWessel: (props) => <CharacterDrawer {...props} sprite="sprNPC_burb1" />,
+  objEstefania: (props) => <CharacterDrawer {...props} sprite="sprNPC_burb2" />,
+  objYolla: (props) => <CharacterDrawer {...props} sprite="sprNPC_burb3" />,
+  objTetyana: (props) => <CharacterDrawer {...props} sprite="sprNPC_burb4" />,
+  objYeisy: (props) => <CharacterDrawer {...props} sprite="sprNPC_burb5" />,
+  objIngars: (props) => <CharacterDrawer {...props} sprite="sprNPC_burb6" />,
+  objMuran: (props) => <CharacterDrawer {...props} sprite="sprNPC_burb7" />,
+  objBurbkid3: (props) => <CharacterDrawer {...props} sprite="sprNPC_burb8" />,
+  objBurbkid2: (props) => <CharacterDrawer {...props} sprite="sprNPC_burb9" />,
+  objBurbkid: (props) => <CharacterDrawer {...props} sprite="sprNPC15" />,
+  objYsabella: (props) => <CharacterDrawer {...props} sprite="sprNPC36" />,
   // MARK: Models
   objGift: (props) => (
     <ModelDrawer
@@ -454,6 +465,94 @@ const OBJECT_DRAWER_MAP: Record<
       {...props}
     />
   ),
+  objSeesaw: (props) => (
+    <ModelDrawer
+      model={{
+        _: "class_model",
+        model_filename: "seesaw_flat",
+        z_angle: props.object.angle ?? 0,
+      }}
+      palettes={4}
+      {...props}
+    />
+  ),
+  objSpringride: (props) => (
+    <ModelDrawer
+      model={{
+        _: "class_model",
+        model_filename: "spring_rider_neutral",
+        z_angle: props.object.angle ?? 0,
+      }}
+      palettes={4}
+      {...props}
+    />
+  ),
+  objMerrygo: (props) => (
+    <ModelDrawer
+      model={{
+        _: "class_model",
+        model_filename: "merry_go_round",
+        z_angle: props.object.angle ?? 0,
+      }}
+      palettes={4}
+      {...props}
+    />
+  ),
+  objWebnet: (props) => (
+    <>
+      <ModelDrawer
+        model={{
+          _: "class_model",
+          model_filename: "webbounce_net_rope",
+          z_angle: props.object.angle ?? 0,
+        }}
+        palettes={4}
+        {...props}
+      />
+      <ModelDrawer
+        model={{
+          _: "class_model",
+          model_filename: "webbounce_net",
+          z_angle: props.object.angle ?? 0,
+        }}
+        palettes={4}
+        {...props}
+      />
+    </>
+  ),
+  objConstructionswitch: (props) => (
+    <>
+      <ModelDrawer
+        model={{
+          _: "class_model",
+          model_filename: "crane_switch_hand",
+          z_angle: props.object.start_angle ?? 0,
+          y_angle: -45 * (props.object.flip ? -1 : 1),
+        }}
+        palettes={4}
+        {...props}
+      />
+      <ModelDrawer
+        model={{
+          _: "class_model",
+          model_filename: "crane_switch_body",
+        }}
+        palettes={4}
+        {...props}
+      />
+    </>
+  ),
+  objCranebeam: (props) => (
+    <ModelDrawer
+      model={{
+        _: "class_model",
+        model_filename: "beam_suspended",
+        z_angle: props.object.start_angle ?? 0,
+      }}
+      palettes={4}
+      {...props}
+    />
+  ),
   // MARK: Sprites
   objBeachedTurtle: (props) =>
     [...new Array(8)].map((_, index) => (
@@ -587,6 +686,11 @@ const OBJECT_DRAWER_MAP: Record<
   objTVprop: undefined,
   objNetroom: undefined,
   objTitle: undefined,
+  objPickupgame: undefined,
+  objPhonequest: undefined,
+  objDripDump: undefined,
+  objZipline: undefined,
+  objOverMatch: undefined,
 };
 
 export default function ObjectDrawers() {

@@ -25,6 +25,33 @@ function getRivalsType(beastiedata: BeastieType, friend?: BeastieType) {
   return ma > ba && ma > ha ? 2 : ha > ba ? 1 : 0;
 }
 
+function getEffectPrio(effect: MoveEffectType) {
+  switch (effect) {
+    case MoveEffectType.ResetBoosts:
+    case MoveEffectType.FeelingAllCureAngry:
+      return 10;
+    case MoveEffectType.FieldTrap:
+    case MoveEffectType.FieldRally:
+    case MoveEffectType.FieldRhythm:
+    case MoveEffectType.FieldQuake:
+      return 5;
+    case MoveEffectType.FieldClear:
+      return 4;
+    case MoveEffectType.FullRestore:
+      return 3;
+    case MoveEffectType.FeelingBadCure:
+    case MoveEffectType.FeelingAllCure:
+      return 2;
+    case MoveEffectType.FieldDread:
+      return -1;
+    case MoveEffectType.TransferBoosts:
+      return -2;
+    case MoveEffectType.TagOut:
+      return -3;
+  }
+  return 0;
+}
+
 function createComboMove(
   type: ComboType,
   beastiedata: BeastieType,
@@ -203,7 +230,15 @@ function createComboMove(
               ? Math.round(neweff.pow * 20) / 20
               : Math.round(neweff.pow);
 
-          effects.push(neweff);
+          let insert_index = 0;
+          const prio = getEffectPrio(neweff.eff);
+          while (
+            insert_index < effects.length &&
+            getEffectPrio(effects[insert_index].eff) >= prio
+          ) {
+            insert_index++;
+          }
+          effects.splice(insert_index, 0, neweff);
           used_effects[neweff.eff] = neweff;
 
           if (neweff.eff == 47) {

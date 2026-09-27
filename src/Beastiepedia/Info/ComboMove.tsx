@@ -111,7 +111,7 @@ function createComboMove(
           ].includes(neweff.eff) &&
           neweff.pow >= 0
         ) {
-          const fr_effect = used_effects[47];
+          const fr_effect = used_effects[MoveEffectType.FullRestore];
           if (
             fr_effect.targ == neweff.targ ||
             (fr_effect.targ == 2 && (neweff.targ == 0 || neweff.targ == 1))
@@ -158,13 +158,14 @@ function createComboMove(
             }
           }
         }
-
         if (
           used_effects[neweff.eff] &&
           /* prettier-ignore */
           [
             MoveEffectType.BodyPowChange, MoveEffectType.SpiritPowChange, MoveEffectType.MindPowChange,
             MoveEffectType.BodyDefChange, MoveEffectType.SpiritDefChange, MoveEffectType.MindDefChange,
+            MoveEffectType.BodySpiritPowChange, MoveEffectType.BodyMindPowChange, MoveEffectType.SpiritMindPowChange,
+            MoveEffectType.BodySpiritDefChange, MoveEffectType.BodyMindDefChange, MoveEffectType.SpiritMindDefChange,
             MoveEffectType.AllPowChange, MoveEffectType.AllDefChange,
             MoveEffectType.StaminaChange, MoveEffectType.AddActions,
             MoveEffectType.FieldTrap, MoveEffectType.FieldRally, MoveEffectType.FieldQuake,
@@ -172,8 +173,8 @@ function createComboMove(
             MoveEffectType.AdditionalPercent,
           ].includes(neweff.eff)
         ) {
-          const oldeff = used_effects[neweff.eff];
-
+          const oldeffs = effects.filter((oldeff) => oldeff.eff == neweff.eff);
+          const oldeff = oldeffs[oldeffs.length - 1];
           if (oldeff.targ < 3 == neweff.targ < 3) {
             if (oldeff.targ == neweff.targ) {
               oldeff.pow += neweff.pow;
@@ -192,6 +193,12 @@ function createComboMove(
             ) {
               oldeff.targ = 2;
               oldeff.pow = oldeff.pow + (neweff.pow - oldeff.pow) * 0.5;
+              if (neweff.eff == MoveEffectType.StaminaChange) {
+                oldeff.pow =
+                  Math.round((Math.floor(oldeff.pow * 1000) / 1000) * 20) / 20;
+              } else {
+                oldeff.pow = Math.round(oldeff.pow);
+              }
               if (oldeff.pow == 0) {
                 effects.splice(
                   effects.findIndex((value) => value == oldeff),
@@ -199,8 +206,8 @@ function createComboMove(
                 );
               }
             } else if (
-              oldeff.eff <= 3 &&
-              neweff.eff <= 3 &&
+              oldeff.targ >= 3 &&
+              neweff.targ >= 3 &&
               oldeff.targ != 6 &&
               neweff.targ != 6
             ) {
@@ -208,28 +215,27 @@ function createComboMove(
                 [7, 8, 4, 3, 9].find(
                   (value) => value == oldeff.targ || value == neweff.targ,
                 ) ?? oldeff.targ;
-              oldeff.pow = neweff.pow;
-            } else if (Math.abs(oldeff.pow) > Math.abs(neweff.pow)) {
+              oldeff.pow += neweff.pow;
+              if (oldeff.pow == 0) {
+                effects.splice(
+                  effects.findIndex((value) => value == oldeff),
+                  1,
+                );
+              }
+            } else {
               do_add = true;
-              effects.splice(
-                effects.findIndex((value) => value == oldeff),
-                1,
-              );
             }
-          }
-          if (neweff.eff == MoveEffectType.StaminaChange) {
-            oldeff.pow = Math.round(oldeff.pow * 20) / 20;
+            if (neweff.eff == MoveEffectType.StaminaChange) {
+              neweff.pow =
+                Math.round((Math.floor(neweff.pow * 10000) / 10000) * 20) / 20;
+            } else {
+              neweff.pow = Math.round(neweff.pow);
+            }
           } else {
-            oldeff.pow = Math.round(oldeff.pow);
+            do_add = true;
           }
         }
-
         if (do_add || !used_effects[neweff.eff]) {
-          neweff.pow =
-            neweff.eff == MoveEffectType.StaminaChange
-              ? Math.round(neweff.pow * 20) / 20
-              : Math.round(neweff.pow);
-
           let insert_index = 0;
           const prio = getEffectPrio(neweff.eff);
           while (
@@ -241,7 +247,7 @@ function createComboMove(
           effects.splice(insert_index, 0, neweff);
           used_effects[neweff.eff] = neweff;
 
-          if (neweff.eff == 47) {
+          if (neweff.eff == MoveEffectType.FullRestore) {
             for (let i = 0; i < effects.length; i++) {
               switch (effects[i].eff) {
                 case MoveEffectType.FeelingBadCure:

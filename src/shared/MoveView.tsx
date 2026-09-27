@@ -260,7 +260,7 @@ function getEffectString(
       });
     }
     case MoveEffectType.StaminaChange: {
-      const hp = String(Math.floor(Math.round(effect.pow * 10000000) / 100000)); // rounds to 5dp then floors because funny float imprecision
+      const hp = String(Math.round(Math.round(effect.pow * 10000000) / 100000)); // rounds to 5dp then floors because funny float imprecision
       if (effect.pow < 0) {
         if (effect.targ == 0) {
           return L("movedefine_descadd_034", { "0": hp }); // {0} STAMINA.

@@ -23,9 +23,8 @@
       "trained": "Trained: ",
       "beastieFilter": "Filter: ",
       "sep": " - ",
-      "openInBuilder": "Open in Team Builder: ",
-      "atCurrentLevels": "At Current Levels",
-      "atLevel50": "At Level 50",
+      "openInBuilder": "Open in Team Builder",
+      "atLevel": "At Level ",
       "aiinfo": {
         "title": "AI Info",
         "type": "Type",

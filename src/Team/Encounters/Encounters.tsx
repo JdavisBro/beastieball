@@ -144,6 +144,9 @@ export default function Encounters() {
   };
   const openInBuilderDisabled = !(encounter && encounter.team.length);
 
+  const [isLevelOverwritten, setIsLevelOverwritten] = useState(false);
+  const [levelOverwrite, setLevelOverwrite] = useState(50);
+
   return (
     <>
       <OpenGraph
@@ -284,7 +287,11 @@ export default function Encounters() {
                       encounterId={encounter.id}
                       encBeastie={encBeastie}
                       index={index}
-                      bonus_levels={bonus_levels}
+                      bonus_levels={
+                        isLevelOverwritten
+                          ? levelOverwrite - encBeastie.level
+                          : bonus_levels
+                      }
                       overwrittenTrained={overwrittenTrained}
                     />
                   ) : null,
@@ -294,20 +301,36 @@ export default function Encounters() {
         </MoveModalProvider>
       </div>
       <div className={styles.box}>
-        {L("teams.encounters.openInBuilder")}
         <button
           disabled={openInBuilderDisabled}
-          onClick={() => openTeamInBuilder()}
+          onClick={() =>
+            openTeamInBuilder(isLevelOverwritten ? levelOverwrite : undefined)
+          }
         >
-          {L("teams.encounters.atCurrentLevels")}
+          {L("teams.encounters.openInBuilder")}
         </button>
         {sep}
-        <button
-          disabled={openInBuilderDisabled}
-          onClick={() => openTeamInBuilder(50)}
-        >
-          {L("teams.encounters.atLevel50")}
-        </button>
+        <label className="checkboxLabel">
+          <input
+            type="checkbox"
+            onChange={(event) =>
+              setIsLevelOverwritten(event.currentTarget.checked)
+            }
+            checked={isLevelOverwritten}
+          />
+          {L("teams.viewer.atLevelLabel")}
+          <input
+            type="number"
+            onChange={(event) =>
+              setLevelOverwrite(
+                Math.max(0, Math.min(100, Number(event.currentTarget.value))),
+              )
+            }
+            min={1}
+            max={100}
+            value={levelOverwrite || ""}
+          />
+        </label>
       </div>
     </>
   );

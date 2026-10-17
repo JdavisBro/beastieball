@@ -1,28 +1,3 @@
-const MOVE_RECENTLY_UPDATED: string[] = [
-  "basecover",
-  "blockattack",
-  "burnout",
-  "catwalk",
-  "charm",
-  "crowd",
-  "defheal",
-  "flykick",
-  "hazeball",
-  "heartpass",
-  "hum",
-  "kick",
-  "markattack",
-  "nightshade",
-  "overheat",
-  "passionstrike",
-  "protectcheer",
-  "reign",
-  "rush",
-  "sad",
-  "speech",
-  "squeeze",
-  "stretch",
-  "substitute",
-];
+const MOVE_RECENTLY_UPDATED: string[] = ["burnout", "skillswap"];
 
 export default MOVE_RECENTLY_UPDATED;

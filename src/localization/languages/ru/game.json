@@ -1078,5 +1078,10 @@
   "abilitiessetup_abilitydefine_316": "Магнит",
   "abilitiessetup_abilitydefine_317": "Становится целью всех ГОРИЗОНТАЛЬНЫХ атак",
   "movessetup_movedefine_208": "Растяжка",
-  "movessetup_movedefine_209": "Кошачья походка"
+  "movessetup_movedefine_209": "Кошачья походка",
+  "_map_Gurgle Gulch": "Gurgle Gulch",
+  "_map_Howling Bluffs": "Howling Bluffs",
+  "_map_Whisper Peak": "Whisper Peak",
+  "_map_Pitapat Switchback": "Pitapat Switchback",
+  "_map_PitapatSwitchback": "Pitapat\\nSwitchback"
 }

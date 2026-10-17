@@ -479,7 +479,7 @@
       },
       {
         "alt_complete_flag": -1,
-        "collides": false,
+        "collides": true,
         "cost": 1,
         "dest_level": "pirate",
         "dest_object": "@ref object(objLogan)",
@@ -491,7 +491,7 @@
       },
       {
         "alt_complete_flag": -1,
-        "collides": false,
+        "collides": true,
         "cost": 1,
         "dest_level": "park_edge",
         "dest_object": "@ref object(objPirate)",
@@ -499,11 +499,11 @@
         "invite_scene": { "toString": { "length": 0 } },
         "parent": null,
         "prereq": { "field": 0, "type": [4] },
-        "rankup": false
+        "rankup": true
       },
       {
         "alt_complete_flag": -1,
-        "collides": false,
+        "collides": true,
         "cost": 1,
         "dest_level": "pirate",
         "dest_object": "@ref object(objLogan)",
@@ -1354,42 +1354,24 @@
     ],
     "id": "champion",
     "img": 11,
-    "loneliness": 0.9,
+    "loneliness": 1.25,
     "max_hearts": 1,
     "name": "¦socialssetup_classsocial_011¦",
     "object": "@ref object(objValerie)",
-    "plays": ["kick", "menace", "reign", "facade"],
+    "plays": [
+      "kick",
+      "menace",
+      "reign",
+      "facade",
+      "ricochet",
+      "threat",
+      "recover",
+      "contest",
+      "wornattack",
+      "3actions"
+    ],
     "same_screen_scene": { "toString": { "length": 0 } },
     "spr": "sprValerie",
-    "teach_scene": { "toString": { "length": 0 } },
-    "tired_scene": { "toString": { "length": 0 } },
-    "unavailable_func": { "toString": { "length": 0 } }
-  },
-  {
-    "collision_scene": { "toString": { "length": 0 } },
-    "events": [
-      {
-        "alt_complete_flag": -1,
-        "collides": true,
-        "cost": 1,
-        "dest_level": "",
-        "dest_object": -1,
-        "id": { "field": 0, "type": [1] },
-        "invite_scene": { "toString": { "length": 0 } },
-        "parent": null,
-        "prereq": { "field": 0, "type": [1] },
-        "rankup": false
-      }
-    ],
-    "id": "king",
-    "img": 4,
-    "loneliness": 0.6,
-    "max_hearts": 1,
-    "name": "¦socialssetup_classsocial_012¦",
-    "object": "@ref object(objKing)",
-    "plays": [],
-    "same_screen_scene": { "toString": { "length": 0 } },
-    "spr": "sprKing",
     "teach_scene": { "toString": { "length": 0 } },
     "tired_scene": { "toString": { "length": 0 } },
     "unavailable_func": { "toString": { "length": 0 } }

@@ -293,7 +293,7 @@
   "encounterssetup_classbeastieencounter_297": "Rumpus",
   "encounterssetup_classbeastieencounter_298": "Hootenanny",
   "encounterssetup_classbeastieencounter_299": "Fiesta",
-  "encounterssetup_classbeastieencounter_300": "Parade",
+  "encounterssetup_classbeastieencounter_300": "Gala",
   "encounterssetup_classbeastieencounter_301": "Fern",
   "encounterssetup_classbeastieencounter_302": "Eucalypt",
   "encounterssetup_classbeastieencounter_303": "Succulent",
@@ -622,5 +622,7 @@
   "encounterssetup_classbeastieencounter_680": "Kay",
   "encounterssetup_classbeastieencounter_681": "Poole",
   "encounterssetup_classbeastieencounter_682": "Duncan",
-  "encounterssetup_classbeastieencounter_683": "Gummi"
+  "encounterssetup_classbeastieencounter_683": "Gummi",
+  "encounterssetup_001": "Cobalt",
+  "encounterssetup_002": "Rain"
 }

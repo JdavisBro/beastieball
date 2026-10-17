@@ -329,11 +329,11 @@
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 8, "pow": -0.15, "targ": 0 }],
+    "eff": [{ "eff": 8, "pow": -0.2, "targ": 0 }],
     "id": "burnout",
     "name": "¦movessetup_movedefine_057¦",
-    "pow": 100,
-    "price": 45,
+    "pow": 105,
+    "price": 0,
     "targ": 0,
     "type": 1,
     "use": 0
@@ -2319,7 +2319,7 @@
     "id": "skillswap",
     "name": "¦movessetup_movedefine_139¦",
     "pow": 0,
-    "price": 30,
+    "price": 0,
     "targ": 5,
     "type": 4,
     "use": 0

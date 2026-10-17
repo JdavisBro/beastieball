@@ -553,7 +553,7 @@
       "from_object_guid": "57f98e9689d274342e2454d3bf739a1a",
       "img": 8,
       "object_y": -300,
-      "revealed_text": "Campsite (Base Camp)",
+      "revealed_text": "Campsite (Gurgle Gulch)",
       "text": "Campsite",
       "transit": 3,
       "world_x": -51111,
@@ -4407,7 +4407,7 @@
           "revealed_text": "Clothes Shop (Gamboge)",
           "text": "Clothes Shop",
           "world_x": -59843.5,
-          "world_y": 22798,
+          "world_y": 22806,
           "x": 2901,
           "y": 2074
         }
@@ -4430,8 +4430,8 @@
       "spawn_name": ["gulls", "ocean2"],
       "world_x1": -62744.5,
       "world_x2": -58177.5,
-      "world_y1": 21024,
-      "world_y2": 26530
+      "world_y1": 21032,
+      "world_y2": 26538
     },
     {
       "area_id": 3,
@@ -7886,10 +7886,10 @@
           "destination": "sunken_stadium_west_2",
           "direction": 2,
           "ground_z": 200,
-          "x": 674,
+          "x": 477,
           "x1": -751,
-          "x2": 82,
-          "y": 1562,
+          "x2": 28,
+          "y": 1550,
           "y1": -404,
           "y2": 825,
           "z1": -50
@@ -8127,9 +8127,21 @@
     {
       "area_id": 4,
       "color": 16644576,
+      "display_name": "Gurgle Gulch",
       "encounters": [],
       "has_spawns": true,
-      "icons_array": [],
+      "icons_array": [
+        {
+          "from_level": "mountain_2",
+          "header": true,
+          "header_size": 0.75,
+          "text": "Gurgle Gulch",
+          "world_x": -48657,
+          "world_y": -35859,
+          "x": 1204,
+          "y": 2300
+        }
+      ],
       "name": "mountain_2",
       "palette_name": "mountain",
       "portals_array": [
@@ -8335,7 +8347,7 @@
     {
       "area_id": 4,
       "color": 16644576,
-      "display_name": "Base Camp",
+      "display_name": "Gurgle Gulch",
       "encounters": [],
       "icons_array": [],
       "name": "base_camp",
@@ -8525,8 +8537,20 @@
     {
       "area_id": 4,
       "color": 16644576,
+      "display_name": "Howling Bluffs",
       "encounters": [],
-      "icons_array": [],
+      "icons_array": [
+        {
+          "from_level": "mountain_4",
+          "header": true,
+          "header_size": 0.75,
+          "text": "Howling Bluffs",
+          "world_x": -57255,
+          "world_y": -44761,
+          "x": 103,
+          "y": -2245
+        }
+      ],
       "name": "mountain_4",
       "palette_name": "mountain",
       "portals_array": [
@@ -8564,6 +8588,7 @@
     {
       "area_id": 4,
       "color": 16644576,
+      "display_name": "Howling Bluffs",
       "encounters": [],
       "has_spawns": true,
       "icons_array": [],
@@ -8630,6 +8655,7 @@
     {
       "area_id": 4,
       "color": 16644576,
+      "display_name": "Howling Bluffs",
       "encounters": [],
       "has_spawns": true,
       "icons_array": [],
@@ -8694,6 +8720,7 @@
     {
       "area_id": 4,
       "color": 16644576,
+      "display_name": "Howling Bluffs",
       "encounters": [],
       "icons_array": [],
       "name": "mountain_7",
@@ -8826,9 +8853,21 @@
     {
       "area_id": 4,
       "color": 16644576,
+      "display_name": "Whisper Peak",
       "encounters": [],
       "has_spawns": true,
-      "icons_array": [],
+      "icons_array": [
+        {
+          "from_level": "mountain_9",
+          "header": true,
+          "header_size": 0.75,
+          "text": "Whisper Peak",
+          "world_x": -63619,
+          "world_y": -52664,
+          "x": 1572,
+          "y": 1791
+        }
+      ],
       "name": "mountain_9",
       "palette_name": "mountain",
       "portals_array": [
@@ -9159,7 +9198,7 @@
       "name": "net_pirate",
       "palette_name": "island",
       "portals_array": [],
-      "spawn_name": ["beach"],
+      "spawn_name": ["mangrove"],
       "world_layer": 1,
       "world_x1": -53666.5,
       "world_x2": -48585.5,
@@ -9300,7 +9339,7 @@
       "icons_array": [],
       "name": "net_cliffs",
       "portals_array": [],
-      "spawn_name": ["mangrove"],
+      "spawn_name": ["witchwood"],
       "world_layer": 1,
       "world_x1": -12444.5,
       "world_x2": -8485.5,
@@ -9993,6 +10032,7 @@
     "city_railalley_1": { "x": -34708, "y": -6810 },
     "city_seacave_0": { "x": -35278, "y": -1310 },
     "city_suburb1_0": { "x": -40164, "y": -4672 },
+    "city_suburb2:objPirate": { "area_id": 5, "x": -43708, "y": -2143 },
     "city_trainyard_0": { "x": -35338, "y": -10239 },
     "cityhill:objResearcher": { "x": -12474, "y": -16559 },
     "cityhill_1": { "x": -14756, "y": -18886 },

@@ -601,7 +601,7 @@
       "id": "gift_pirate_0",
       "items": [["sell1", 1.0]],
       "x": -62004.5,
-      "y": 24124
+      "y": 24132
     },
     {
       "id": "gift_reserve_secret_0",
@@ -890,7 +890,7 @@
     { "position": [-35278, -1862], "encounter": "city_seacave_0" },
     { "position": [-35287, -2876], "encounter": "city_seacave_0" },
     { "position": [-40164, -4774], "encounter": "city_suburb1_0" },
-    { "position": [-43255, -1678], "encounter": "city_suburb2_0" },
+    { "position": [-42053, -1818], "encounter": "city_suburb2_0" },
     { "position": [-35338, -10239], "encounter": "city_trainyard_0" },
     { "position": [-15167, 7958], "encounter": "cliff_train_cave_guard" },
     { "position": [-40141, -5602], "encounter": "city_suburb1_0" },

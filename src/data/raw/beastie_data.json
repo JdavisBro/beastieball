@@ -4827,7 +4827,7 @@
       "starterheart"
     ],
     "attklist_randomize": -1,
-    "ba": 95,
+    "ba": 94,
     "base_exp": 133.96,
     "bd": 101,
     "body_color_index": 1,
@@ -4896,7 +4896,7 @@
     "foot_size": 50,
     "foot_type": 0,
     "growth": 0.85,
-    "ha": 105,
+    "ha": 98,
     "hd": 30,
     "hidden": false,
     "hidden_counter": null,
@@ -6342,7 +6342,7 @@
       "lockon"
     ],
     "attklist_randomize": -1,
-    "ba": 68,
+    "ba": 70,
     "base_exp": 208.868,
     "bd": 112,
     "body_color_index": 0,
@@ -9347,7 +9347,7 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 108,
+    "ma": 100,
     "md": 88,
     "mod_data": null,
     "mod_file": "",
@@ -13735,6 +13735,7 @@
       "rest",
       "protect",
       "powswitch",
+      "skillswap",
       "allyprotect",
       "spitball",
       "sweatall",
@@ -15921,7 +15922,7 @@
       "introduction"
     ],
     "attklist_randomize": -1,
-    "ba": 70,
+    "ba": 68,
     "base_exp": 198.85,
     "bd": 120,
     "body_color_index": 0,
@@ -21325,6 +21326,9 @@
       "heart",
       "careful",
       "enemyboosts",
+      "moon",
+      "rollshot",
+      "heartdown",
       "haze",
       "libero",
       "allycover",
@@ -21346,6 +21350,7 @@
       "rush",
       "hum",
       "basecover",
+      "netattack",
       "preblock",
       "dodge"
     ],
@@ -21427,7 +21432,7 @@
       [10, "flight"],
       [16, "bench"],
       [21, "sad"],
-      [25, "dragontail"],
+      [25, "netattack"],
       [31, "dodge"],
       [36, "preblock"],
       [41, "heart"],
@@ -21462,7 +21467,7 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 60,
+    "ma": 70,
     "md": 112,
     "mod_data": null,
     "mod_file": "",
@@ -21529,7 +21534,7 @@
     "tamelvl": 3,
     "tex_group_suffix": "",
     "tyield": ["md", 2],
-    "type_focus": 1
+    "type_focus": 2
   },
   "snake": {
     "ability": ["charge"],

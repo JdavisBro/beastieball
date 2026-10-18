@@ -338,7 +338,7 @@
   "abilitiessetup_abilitydefine_063": "DEF x{0} just after moving or tagging in",
   "abilitiessetup_abilitydefine_064": "Acrobat",
   "abilitiessetup_abilitydefine_065": "Slippery",
-  "abilitiessetup_abilitydefine_066": "While in the back row, makes adjacent allies receive attacks in their place.",
+  "abilitiessetup_abilitydefine_066": "Makes adjacent allies receive attacks with base POW {0} or more.",
   "abilitiessetup_abilitydefine_067": "On TAG IN, feels {0} and ally feels {1}",
   "abilitiessetup_abilitydefine_068": "Clamor",
   "abilitiessetup_abilitydefine_069": "When they TAG IN or attack, [sprIcon,1]POW[sprBoost,{0}] to opponent team",

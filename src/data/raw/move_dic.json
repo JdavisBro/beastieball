@@ -128,7 +128,7 @@
     "id": "bamboozle",
     "name": "¦movessetup_movedefine_184¦",
     "pow": 80,
-    "price": 50,
+    "price": 0,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -956,8 +956,8 @@
     ],
     "id": "flykick",
     "name": "¦movessetup_movedefine_204¦",
-    "pow": 95,
-    "price": 45,
+    "pow": 90,
+    "price": 0,
     "targ": 0,
     "type": 0,
     "use": 0
@@ -1173,7 +1173,7 @@
     "id": "hex",
     "name": "¦movessetup_movedefine_074¦",
     "pow": 55,
-    "price": 25,
+    "price": 0,
     "targ": 0,
     "type": 2,
     "use": 0
@@ -1794,7 +1794,7 @@
     "id": "poisonhit",
     "name": "¦movessetup_movedefine_061¦",
     "pow": 25,
-    "price": 15,
+    "price": 0,
     "targ": 8,
     "type": 2,
     "use": 0
@@ -3046,7 +3046,7 @@
     "id": "wornout",
     "name": "¦movessetup_movedefine_124¦",
     "pow": 0,
-    "price": 30,
+    "price": 0,
     "targ": 4,
     "type": 4,
     "use": 0

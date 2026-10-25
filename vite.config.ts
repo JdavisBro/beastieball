@@ -193,18 +193,18 @@ function getSiteLoc(
     : value;
 }
 
-function generateSitemap(url: string) {
+function generateSitemap(url: string, env: Record<string, string>) {
   const beasties: ((lang: SupportedLanguage) => string)[] = Object.keys(
     BEASTIE_DATA,
   ).map(
     (id) => (lang) =>
       `beastiepedia/${BEASTIE_NAMES[BEASTIE_DATA[id].name.slice(1, BEASTIE_DATA[id].name.length - 1)][lang]}`,
   );
-  const experimental = process.env.VITE_EXPERIMENTAL == "true";
+  const experimental = env.VITE_EXPERIMENTAL == "true";
 
   let redirect_rules = "";
   const indexHtml = readFileSync("dist/index.html").toString();
-  const branding = process.env.VITE_BRANDING ?? "Beastieball.info";
+  const branding = env.VITE_BRANDING ?? "Beastieball.info";
   for (const lang of SUPPORTED_LANGUAGES) {
     const game_loc: Record<string, string> = JSON.parse(
       readFileSync(`src/localization/languages/${lang}/game.json`).toString(),
@@ -312,8 +312,8 @@ function generateSitemap(url: string) {
 }
 
 // https://vitejs.dev/config/
-export default defineConfig(() => {
-  const env = loadEnv("mock", process.cwd(), "");
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), "");
   const url = env.VITE_URL != "" ? env.VITE_URL : "https://beastieball.info";
   return {
     build: {
@@ -329,7 +329,7 @@ export default defineConfig(() => {
       {
         name: "Sitemap",
         closeBundle() {
-          generateSitemap(url);
+          generateSitemap(url, env);
         },
       },
     ],

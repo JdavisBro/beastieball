@@ -23,11 +23,15 @@ export default function Loading(): React.ReactElement {
   return (
     <div className="container">
       <OpenGraph
-        title={L("common.title", {
-          page: L("common.loadingNoDot"),
-          branding: import.meta.env.VITE_BRANDING,
-        })}
-        description={L("common.loading")}
+        title={
+          anyLanguageLoaded
+            ? L("common.title", {
+                page: text,
+                branding: import.meta.env.VITE_BRANDING,
+              })
+            : `${text} - ${import.meta.env.VITE_BRANDING}`
+        }
+        description={anyLanguageLoaded ? L("common.loading") : "Loading..."}
         image="gameassets/sprMainmenu/29.png"
         url=""
       />

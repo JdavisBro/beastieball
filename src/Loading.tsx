@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import useLocalization from "./localization/useLocalization";
+import OpenGraph from "./shared/OpenGraph";
 
 const MAX_DOTS = 3;
 
@@ -21,6 +22,15 @@ export default function Loading(): React.ReactElement {
 
   return (
     <div className="container">
+      <OpenGraph
+        title={L("common.title", {
+          page: L("common.loadingNoDot"),
+          branding: import.meta.env.VITE_BRANDING,
+        })}
+        description={L("common.loading")}
+        image="gameassets/sprMainmenu/29.png"
+        url=""
+      />
       <div className="commoncontainer">
         <div className="loading animSelectableBackground">
           {text}

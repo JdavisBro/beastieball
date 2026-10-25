@@ -23,7 +23,6 @@ export default function PageNotFound(): React.ReactElement {
       <OpenGraph
         title={L("common.title", {
           page: L("notFound.title"),
-          branding: import.meta.env.VITE_BRANDING,
         })}
         image="ball.png"
         url=""

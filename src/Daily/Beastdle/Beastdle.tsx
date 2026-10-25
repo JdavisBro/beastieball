@@ -5,6 +5,7 @@ import OpenGraph from "../../shared/OpenGraph";
 import BEASTIE_DATA from "../../data/BeastieData";
 import BeastieGuess from "./BeastieGuess";
 import { useDaily } from "../dailyShared";
+import useLocalization from "../../localization/useLocalization";
 
 export const TYPES = [
   { name: "Body", char: "b", image: 0 },
@@ -13,6 +14,8 @@ export const TYPES = [
 ];
 
 export default function Beastdle() {
+  const { L } = useLocalization();
+
   const {
     setSeed,
     resetSeed,
@@ -27,7 +30,7 @@ export default function Beastdle() {
   return (
     <>
       <OpenGraph
-        title={`Beastdle - ${import.meta.env.VITE_BRANDING}`}
+        title={`Beastdle - ${L("common.branding")}`}
         image="gameassets/sprMainmenu/25.png"
         url="daily/beastdle/"
         description="Beastieball Beastie Guessing Game!"

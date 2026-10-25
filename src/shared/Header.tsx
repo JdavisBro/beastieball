@@ -42,11 +42,7 @@ export default function Header(props: Props): React.ReactNode {
           to={getLink(props.returnButtonTo ?? "/")}
           className={styles.homelink}
           title={L("common.header.return", {
-            place:
-              props.returnButtonTitle ??
-              L("common.header.defaultPlace", {
-                branding: import.meta.env.VITE_BRANDING,
-              }),
+            place: props.returnButtonTitle ?? L("common.header.defaultPlace"),
           })}
         >
           <div className={styles.homeicon}></div>

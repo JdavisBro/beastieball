@@ -58,7 +58,7 @@ export default function Blurry() {
   return (
     <>
       <OpenGraph
-        title={`Blurry - ${import.meta.env.VITE_BRANDING}`}
+        title={`Blurry - ${L("common.branding")}`}
         image="gameassets/sprMainmenu/29.png"
         url="daily/blurry/"
         description="Blurry Beastie Guessing Game"

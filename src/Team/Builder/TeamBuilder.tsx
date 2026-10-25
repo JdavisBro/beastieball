@@ -132,7 +132,6 @@ export default function TeamBuilder() {
       <OpenGraph
         title={L("common.title", {
           page: L("teams.builder.title"),
-          branding: import.meta.env.VITE_BRANDING,
         })}
         description={L("teams.builder.description")}
         image="gameassets/sprMainmenu/18.png"
@@ -141,9 +140,7 @@ export default function TeamBuilder() {
       <Header
         title={L("teams.builder.title")}
         returnButtonTo="/team/"
-        returnButtonTitle={L("teams.return", {
-          branding: import.meta.env.VITE_BRANDING,
-        })}
+        returnButtonTitle={L("teams.return")}
       />
       <BeastieRenderProvider>
         <div

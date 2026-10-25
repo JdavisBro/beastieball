@@ -9,7 +9,7 @@ export default function Home(): React.ReactNode {
   return (
     <NavigationMenu note={<Events />}>
       <OpenGraph
-        title={import.meta.env.VITE_BRANDING}
+        title={L("common.branding")}
         image="ball.png"
         url=""
         description={L("common.description")}

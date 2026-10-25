@@ -1,21 +1,22 @@
 {
   "common": {
-    "title": "{page} - {branding}",
+    "branding": "Beastieball.info",
+    "title": "{page} - Beastieball.info",
     "description": "A website with information about the game Beastieball!",
     "header": {
       "enabledMenu": "Enabled Menu",
       "disabledMenu": "Disabled Menu",
       "return": "Return to {place}",
-      "defaultPlace": "{branding} Home"
+      "defaultPlace": "Beastieball.info Home"
     },
     "navIcons": {
       "githubImg": "GitHub Logo",
       "githubOpen": "Open GitHub Repository",
       "settingsImg": "Settings Menu",
-      "settingsOpen": "Open {branding} Settings"
+      "settingsOpen": "Open Beastieball.info Settings"
     },
     "settings": {
-      "title": "{branding} Settings",
+      "title": "Beastieball.info Settings",
       "disableAnimations": "Disable Animations",
       "disableAnimationsDesc": "Removes background and header scrolling animations which can be distracting and has an impact on performance.",
       "simplePlay": "Simple Play Background",
@@ -133,9 +134,9 @@
   },
   "notice": {
     "title": "Notice!",
-    "unofficial": "{branding} is an unofficial resource for Beastieball!",
+    "unofficial": "Beastieball.info is an unofficial resource for Beastieball!",
     "wishes": "It may contain content that doesn't appear in the game, posting of this content in official Wishes Unlimited channels (e.g Wishes Unlimited Discord) is not allowed as per Wishes Unlimited's rules.",
-    "spoilers": "{branding} will also contain spoilers for the full game, in order to avoid spoilers you can set to only show beasties/characters you've clicked on. All other beasties/characters will have images and names hidden until you click on them.",
+    "spoilers": "Beastieball.info will also contain spoilers for the full game, in order to avoid spoilers you can set to only show beasties/characters you've clicked on. All other beasties/characters will have images and names hidden until you click on them.",
     "confirm": "Confirm"
   },
   "secrets": {
@@ -525,7 +526,7 @@
     "title": "Teams",
     "description": "Team Viewer and Builder for Beastieball!",
     "home": "Home",
-    "return": "{branding} Team Page",
+    "return": "Beastieball.info Team Page",
     "image": {
       "imageLabel": "Image: ",
       "drawMode": {
@@ -549,7 +550,7 @@
     },
     "viewer": {
       "title": "Team Viewer",
-      "titleCommunity": "{team} - Team Viewer - {branding}",
+      "titleCommunity": "{team} - Team Viewer - Beastieball.info",
       "description": "Online Team Viewer for SportsNet download codes from Beastieball!",
       "codeLabel": "Team Code: ",
       "findButton": "Find",

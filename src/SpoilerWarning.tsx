@@ -12,8 +12,6 @@ export default function SpoilerWarning({ children }: PropsWithChildren) {
   });
   const { L } = useLocalization();
 
-  const site = import.meta.env.VITE_BRANDING;
-
   return spoilersOk || isCrawler ? (
     children
   ) : (
@@ -21,11 +19,11 @@ export default function SpoilerWarning({ children }: PropsWithChildren) {
       <img src="/gameassets/sprExclam_1.png" />
       <h1>{L("notice.title")}</h1>
       <p>
-        {L("notice.unofficial", { branding: site })}
+        {L("notice.unofficial")}
         <br />
-        {L("notice.wishes", { branding: site })}
+        {L("notice.wishes")}
         <br />
-        {L("notice.spoilers", { branding: site })}
+        {L("notice.spoilers")}
       </p>
       <SpoilerOptions />
       <br />

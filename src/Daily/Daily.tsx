@@ -9,7 +9,6 @@ export default function Daily() {
       <OpenGraph
         title={L("common.title", {
           page: "Daily",
-          branding: import.meta.env.VITE_BRANDING,
         })}
         image={"gameassets/sprMainmenu/25.png"}
         url={"daily/"}

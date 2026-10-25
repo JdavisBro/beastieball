@@ -501,7 +501,6 @@ export default function Workshop() {
       <OpenGraph
         title={L("common.title", {
           page: L("workshop.title"),
-          branding: import.meta.env.VITE_BRANDING,
         })}
         description={L("workshop.description")}
         image="gameassets/sprMainmenu/12.png"

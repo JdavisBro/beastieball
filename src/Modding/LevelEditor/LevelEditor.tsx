@@ -38,6 +38,7 @@ import Header from "../../shared/Header";
 import OpenGraph from "../../shared/OpenGraph";
 import WORLD_DATA, { LevelStump } from "../../data/WorldData";
 import Portals from "./Portals";
+import useLocalization from "../../localization/useLocalization.ts";
 
 const AREA_ID_DIRS = [
   "etc/",
@@ -346,6 +347,8 @@ function VR({ children }: PropsWithChildren) {
 }
 
 export default function LevelEditor() {
+  const { L } = useLocalization();
+
   const { level } = useParams();
 
   const [isVr, setIsVr] = useState(false);
@@ -399,7 +402,7 @@ export default function LevelEditor() {
   return (
     <div className={styles.container}>
       <OpenGraph
-        title={`Level Viewer - ${import.meta.env.VITE_BRANDING}`}
+        title={`Level Viewer - ${L("common.branding")}`}
         image={"/gameassets/sprMainmenu/3.png"}
         url={"/modding/level/"}
         description={"Level Viewer for Beastieball"}

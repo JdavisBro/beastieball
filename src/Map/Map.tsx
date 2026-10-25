@@ -311,7 +311,6 @@ export default function Map(): React.ReactNode {
       <OpenGraph
         title={Loc("common.title", {
           page: Loc("map.title"),
-          branding: import.meta.env.VITE_BRANDING,
         })}
         image="gameassets/sprMainmenu/3.png"
         url="map/"

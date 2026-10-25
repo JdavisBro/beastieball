@@ -152,7 +152,6 @@ export default function Encounters() {
       <OpenGraph
         title={L("common.title", {
           page: L("teams.encounters.title"),
-          branding: import.meta.env.VITE_BRANDING,
         })}
         description={L("teams.encounters.description")}
         image="gameassets/sprMainmenu/27.png"
@@ -161,9 +160,7 @@ export default function Encounters() {
       <Header
         title={L("teams.encounters.title")}
         returnButtonTo="/team/"
-        returnButtonTitle={L("teams.return", {
-          branding: import.meta.env.VITE_BRANDING,
-        })}
+        returnButtonTitle={L("teams.return")}
         secretPage={true}
       />
       <div className={styles.box}>

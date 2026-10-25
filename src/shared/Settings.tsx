@@ -75,9 +75,7 @@ export default function Settings({
 
   return (
     <Modal
-      header={L("common.settings.title", {
-        branding: import.meta.env.VITE_BRANDING,
-      })}
+      header={L("common.settings.title")}
       open={open}
       hashValue={"Settings"}
       makeOpen={() => setOpen(true)}

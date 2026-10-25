@@ -133,7 +133,6 @@ export default function PlayDex() {
       <OpenGraph
         title={L("common.title", {
           page: L("playdex.title"),
-          branding: import.meta.env.VITE_BRANDING,
         })}
         image="gameassets/sprMainmenu/6.png"
         url="playdex/"

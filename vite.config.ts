@@ -46,7 +46,7 @@ type PrerenderPage = {
 
 const PRERENDER_PAGES: PrerenderPage[] = [
   {
-    name: process.env.SITE_BRANDING ?? "Beastieball.info",
+    name: "Beastieball.info",
     description: "common.description",
     image: "/ball.png",
     path: "/",
@@ -204,7 +204,7 @@ function generateSitemap(url: string, env: Record<string, string>) {
 
   let redirect_rules = "";
   const indexHtml = readFileSync("dist/index.html").toString();
-  const branding = env.VITE_BRANDING ?? "Beastieball.info";
+  const branding = "Beastieball.info";
   for (const lang of SUPPORTED_LANGUAGES) {
     const game_loc: Record<string, string> = JSON.parse(
       readFileSync(`src/localization/languages/${lang}/game.json`).toString(),
@@ -251,7 +251,7 @@ function generateSitemap(url: string, env: Record<string, string>) {
         TITLE:
           (experimental ? "🧪 " : "") +
           (page.useBranding
-            ? getSiteLoc(site_loc, "common.title", { page: title, branding })
+            ? getSiteLoc(site_loc, "common.title", { page: title })
             : title),
         DESCRIPTION: page.noLoc
           ? page.description

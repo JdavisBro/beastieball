@@ -27,9 +27,8 @@ export default function Loading(): React.ReactElement {
           anyLanguageLoaded
             ? L("common.title", {
                 page: text,
-                branding: import.meta.env.VITE_BRANDING,
               })
-            : `${text} - ${import.meta.env.VITE_BRANDING}`
+            : `${text} - Beastieball.info`
         }
         description={anyLanguageLoaded ? L("common.loading") : "Loading..."}
         image="gameassets/sprMainmenu/29.png"

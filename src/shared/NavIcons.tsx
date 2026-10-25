@@ -28,9 +28,7 @@ export default function NavIcons(): React.ReactElement {
         role="button"
         className={styles.settingsButton}
         tabIndex={0}
-        title={L("common.navIcons.settingsOpen", {
-          branding: import.meta.env.VITE_BRANDING,
-        })}
+        title={L("common.navIcons.settingsOpen")}
         onClick={() => setSettingsOpen(!settingsOpen)}
       >
         <img

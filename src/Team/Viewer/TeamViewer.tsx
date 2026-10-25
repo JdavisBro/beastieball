@@ -161,11 +161,9 @@ export default function Viewer() {
           selectedFeatured
             ? L("teams.viewer.titleCommunity", {
                 team: selectedFeatured.name,
-                branding: import.meta.env.VITE_BRANDING,
               })
             : L("common.title", {
                 page: L("teams.viewer.title"),
-                branding: import.meta.env.VITE_BRANDING,
               })
         }
         description={L("teams.viewer.description")}
@@ -176,9 +174,7 @@ export default function Viewer() {
       <Header
         title={L("teams.viewer.title")}
         returnButtonTo="/team/"
-        returnButtonTitle={L("teams.return", {
-          branding: import.meta.env.VITE_BRANDING,
-        })}
+        returnButtonTitle={L("teams.return")}
         menuButton={orientation}
         menuButtonState={mobileFeatured}
         onMenuButtonPressed={() => setMobileFeatured(!mobileFeatured)}

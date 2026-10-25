@@ -43,7 +43,7 @@ export function NavigationMenu(props: {
         {props.title ??
           (import.meta.env.VITE_EXPERIMENTAL == "true"
             ? L("common.experimentalPrefix")
-            : "") + import.meta.env.VITE_BRANDING}
+            : "") + L("common.branding")}
       </h1>
       {props.note}
       <div className={styles.options}>{props.children}</div>

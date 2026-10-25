@@ -12,7 +12,6 @@ export default function Team() {
       <OpenGraph
         title={L("common.title", {
           page: L("teams.title"),
-          branding: import.meta.env.VITE_BRANDING,
         })}
         image="gameassets/sprMainmenu/20.png"
         url="/team/"

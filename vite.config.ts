@@ -200,6 +200,7 @@ function generateSitemap(url: string) {
     (id) => (lang) =>
       `beastiepedia/${BEASTIE_NAMES[BEASTIE_DATA[id].name.slice(1, BEASTIE_DATA[id].name.length - 1)][lang]}`,
   );
+  const experimental = process.env.VITE_EXPERIMENTAL == "true";
 
   let redirect_rules = "";
   const indexHtml = readFileSync("dist/index.html").toString();
@@ -247,9 +248,11 @@ function generateSitemap(url: string) {
       const loc = page.usesLoc ? other_locs[page.usesLoc] : site_loc;
       const title = page.noLoc ? page.name : getSiteLoc(loc, page.name);
       const placeholders: Record<string, string> = {
-        TITLE: page.useBranding
-          ? getSiteLoc(site_loc, "common.title", { page: title, branding })
-          : title,
+        TITLE:
+          (experimental ? "🧪 " : "") +
+          (page.useBranding
+            ? getSiteLoc(site_loc, "common.title", { page: title, branding })
+            : title),
         DESCRIPTION: page.noLoc
           ? page.description
           : getSiteLoc(loc, page.description),
@@ -326,7 +329,6 @@ export default defineConfig(() => {
       {
         name: "Sitemap",
         closeBundle() {
-          if (process.env.VITE_EXPERIMENTAL == "true") return;
           generateSitemap(url);
         },
       },

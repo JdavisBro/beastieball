@@ -44,9 +44,16 @@ function EncounterPopup({
           if (!oldBeastieData) {
             return null;
           }
-          const babyBeastieData = BEASTIE_DATA.get(oldBeastieData.family);
+          let babyBeastieData = BEASTIE_DATA.get(oldBeastieData.family);
           if (!babyBeastieData) {
             return null;
+          }
+          if (
+            babyBeastieData.evolution &&
+            babyBeastieData.evolution.length >= 2 &&
+            [6, 8].includes(babyBeastieData.evolution[1].condition[0])
+          ) {
+            babyBeastieData = oldBeastieData;
           }
           const beastieData =
             getMetamorphAtLevel(

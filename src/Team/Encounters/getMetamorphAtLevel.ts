@@ -16,7 +16,11 @@ export default function getMetamorphAtLevel(
   const levelMetamorphs = beastie.evolution.filter((evo) =>
     evo.condition.some((cond) => LEVEL_METAMORPHS.includes(cond)),
   );
-  if (!levelMetamorphs.length) {
+  if (
+    !levelMetamorphs.length ||
+    (beastie.evolution.length >= 2 &&
+      [6, 8].includes(beastie.evolution[1].condition[0]))
+  ) {
     return return_self ? [beastie, metamorph_path] : [null, null];
   }
   const possibleLevelMetamorphs = levelMetamorphs.filter(

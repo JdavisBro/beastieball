@@ -13,11 +13,12 @@ export const BEASTIE_STUFF_RECENTLY_UPDATED: string[] = [
 ];
 
 export const BEASITE_SPRITES_RECENTLY_UPDATED: string[] = [
-  "bamboozle",
-  "burnout",
-  "flykick",
-  "hex",
-  "poisonhit",
-  "skillswap",
-  "wornout",
+  "jellyfish2",
+  "crab",
+  "mudskipper",
+  "croc",
+  "psychic",
+  "bat",
+  "swift",
+  "olm",
 ];

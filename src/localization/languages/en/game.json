@@ -1059,7 +1059,7 @@
   "abilitiessetup_abilitydefine_311": "Gets any [sprBoost,0]BOOSTs that their ally gets",
   "movedefine_057": "Used from net, with net damage bonus.",
   "movessetup_movedefine_203": "Dodge Roll",
-  "_map_UnderConstruczone": "Under\\nConstruczone",
+  "_map_UnderConstruczone": "Under\nConstruczone",
   "abilitiessetup_abilitydefine_312": "Stoic",
   "abilitiessetup_abilitydefine_313": "Corrosive",
   "abilitiessetup_abilitydefine_314": "Each turn, reduces nearest opponent's STAMINA by {0}.",

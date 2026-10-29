@@ -3,13 +3,14 @@ import { createContext } from "react";
 import BEASTIE_NAMES_UNTYPED from "./beastie_names.json";
 import { LanguageData, LocalizationExtension } from "./LanguageLoaders";
 
-export type SupportedLanguage = "en" | "ru" | "zh-CN" | "es" | "pt-BR";
+export type SupportedLanguage = "en" | "ru" | "zh-CN" | "es" | "pt-BR" | "ja";
 export const SUPPORTED_LANGUAGES: SupportedLanguage[] = [
   "en",
   "ru",
   "zh-CN",
   "es",
   "pt-BR",
+  "ja",
 ];
 export const LANGUAGE_NAMES: Record<SupportedLanguage, string> = {
   en: "English",
@@ -17,6 +18,7 @@ export const LANGUAGE_NAMES: Record<SupportedLanguage, string> = {
   "zh-CN": "简体中文",
   es: "Español",
   "pt-BR": "Português Brasileiro",
+  ja: "日本語",
 };
 
 export type LocalizationFunction = (

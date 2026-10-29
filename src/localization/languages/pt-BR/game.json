@@ -1059,7 +1059,7 @@
   "abilitiessetup_abilitydefine_311": "Recebe quaisquer [sprBoost,0]IMPULSOS que o seu aliado recebe",
   "movedefine_057": "Usado na rede, com o dano bônus de atacar na rede.",
   "movessetup_movedefine_203": "Esquiva Rolante",
-  "_map_UnderConstruczone": "Zona\\nSob Construção",
+  "_map_UnderConstruczone": "Zona\nSob Construção",
   "abilitiessetup_abilitydefine_312": "Sisudo",
   "abilitiessetup_abilitydefine_313": "Corrosivo",
   "abilitiessetup_abilitydefine_314": "A cada turno, reduz a ENERGIA do oponente mais próximo em {0}.",

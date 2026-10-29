@@ -19,6 +19,7 @@ export const LANGUAGE_LOADERS: Record<
     "zh-CN": () => import("./languages/zh-CN/game.json"),
     es: () => import("./languages/es/game.json"),
     "pt-BR": () => import("./languages/pt-BR/game.json"),
+    ja: () => import("./languages/ja/game.json"),
   },
   site: {
     en: () => import("./languages/en/site.json"),
@@ -32,6 +33,7 @@ export const LANGUAGE_LOADERS: Record<
     "zh-CN": () => import("./languages/zh-CN/encounters.json"),
     es: () => import("./languages/es/encounters.json"),
     "pt-BR": () => import("./languages/pt-BR/encounters.json"),
+    ja: () => import("./languages/ja/encounters.json"),
   },
   workshop: {
     en: () => import("./languages/en/workshop.json"),

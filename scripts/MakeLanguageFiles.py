@@ -91,6 +91,7 @@ LANG_CODES = {
   "Русский": "ru",
   "Español": "es",
   "Português Brasileiro": "pt-BR",
+  "日本語": "ja",
 }
 
 beastie_names = {}
@@ -110,7 +111,7 @@ for lang_fp in loc_dir.iterdir():
           beastie_names[line[0]] = {}
         beastie_names[line[0]][lang_code] = line[1]
       elif line[0] in required_keys or (ext == "game" and any([line[0].startswith(i) for i in INCLUDE_PREFIXES])):
-        lang_out[line[0]] = line[1]
+        lang_out[line[0]] = line[1].replace("\\n", "\n")
     out_dir = (language_out_dir / lang_code / f"{ext}.json")
     out_dir.parent.mkdir(exist_ok=True)
     with out_dir.open("w+", encoding="utf8") as f:

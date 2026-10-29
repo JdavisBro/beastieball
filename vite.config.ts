@@ -10,13 +10,14 @@ import {
 } from "fs";
 import { LinkItem, SitemapStream } from "sitemap";
 
-type SupportedLanguage = "en" | "ru" | "zh-CN" | "es" | "pt-BR";
+type SupportedLanguage = "en" | "ru" | "zh-CN" | "es" | "pt-BR" | "ja";
 const SUPPORTED_LANGUAGES: SupportedLanguage[] = [
   "en",
   "ru",
   "zh-CN",
   "es",
   "pt-BR",
+  "ja",
 ];
 
 import loc from "./src/localization/languages/en/site.json";

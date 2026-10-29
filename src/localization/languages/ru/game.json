@@ -1059,7 +1059,7 @@
   "abilitiessetup_abilitydefine_311": "Получает все [sprBoost,0]УСИЛЕНИЯ, которые получает товарищ",
   "movedefine_057": "Используется от сетки и дает бонус сетки к урону.",
   "movessetup_movedefine_203": "Перекат с уклонением",
-  "_map_UnderConstruczone": "Область\\nСтройзоны",
+  "_map_UnderConstruczone": "Область\nСтройзоны",
   "abilitiessetup_abilitydefine_312": "Стоицизм",
   "abilitiessetup_abilitydefine_313": "Коррозия",
   "abilitiessetup_abilitydefine_314": "Каждый ход снижает ВЫНОСЛИВОСТЬ ближайшего противника на {0} ед.",

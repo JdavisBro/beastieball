@@ -53,7 +53,7 @@ export type MapIcon = {
 export type Portal = {
   destination?: string;
   direction?: number;
-  door?: number;
+  door?: number | boolean;
   x?: number;
   x1?: number;
   x2?: number;

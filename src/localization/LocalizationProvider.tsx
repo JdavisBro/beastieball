@@ -212,6 +212,7 @@ export default function LocalizationProvider({
     if (paramLang != storedLang || paramLang == "en") {
       setParamLang(storedLang);
     }
+    document.documentElement.lang = storedLang;
   }, [storedLang, paramLang, setParamLang]);
 
   const lang: SupportedLanguage = storedLang;

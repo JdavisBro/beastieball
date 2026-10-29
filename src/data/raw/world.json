@@ -6105,6 +6105,7 @@
         {
           "destination": "alleyway",
           "direction": 2,
+          "ground_z": 10,
           "x": 727,
           "x1": -833,
           "x2": -66,
@@ -7719,6 +7720,8 @@
         {
           "destination": "sunken_stadium_stairs",
           "direction": 2,
+          "door": true,
+          "door_side": true,
           "ground_z": 480,
           "index": 1,
           "x": 2538,
@@ -7749,6 +7752,7 @@
         {
           "destination": "sunken_stadium",
           "direction": 3,
+          "ground_z": 1,
           "x": 1502,
           "x1": -216,
           "x2": 211,
@@ -7762,12 +7766,12 @@
           "direction": 2,
           "door": 1,
           "door_side": true,
-          "x": 452,
+          "x": 469,
           "x1": -100,
-          "x2": 100,
-          "y": 1033,
+          "x2": 138,
+          "y": 1014,
           "y1": -100,
-          "y2": 100,
+          "y2": 135,
           "z1": -50
         },
         {
@@ -7838,8 +7842,8 @@
       ],
       "spawn_name": ["sunken"],
       "world_layer": 1,
-      "world_x1": -32658,
-      "world_x2": -25804,
+      "world_x1": -32634,
+      "world_x2": -25780,
       "world_y1": 36295,
       "world_y2": 38857
     },
@@ -7953,7 +7957,7 @@
         {
           "destination": "sunken_stadium",
           "direction": 0,
-          "ground_z": 600,
+          "ground_z": 602,
           "index": 1,
           "x": 2650,
           "x1": 38,
@@ -7978,8 +7982,8 @@
       ],
       "spawn_name": ["sunken"],
       "world_layer": 1,
-      "world_x1": -23571,
-      "world_x2": -19698,
+      "world_x1": -23709,
+      "world_x2": -19836,
       "world_y1": 34288,
       "world_y2": 36282
     },
@@ -7998,19 +8002,20 @@
           "ground_z": 50,
           "x": 1509,
           "x1": -360,
-          "x2": 286,
+          "x2": 260,
           "y": 1122,
           "y1": -517,
           "y2": -30,
-          "z1": 10
+          "z1": 50,
+          "z2": 250
         }
       ],
       "spawn_name": ["sunken"],
       "world_layer": 1,
-      "world_x1": -19845,
-      "world_x2": -16708,
-      "world_y1": 34462,
-      "world_y2": 38083
+      "world_x1": -19836,
+      "world_x2": -16699,
+      "world_y1": 34459,
+      "world_y2": 38080
     },
     {
       "area_id": 4,
@@ -8055,6 +8060,7 @@
         {
           "destination": "sunken_stadium_control_1",
           "door": 1,
+          "ground_z": 1,
           "x": 1181,
           "x1": -100,
           "x2": 100,
@@ -9990,6 +9996,38 @@
       "world_x2": -25894,
       "world_y1": 709,
       "world_y2": 4753
+    },
+    {
+      "area_id": 4,
+      "color": 9494518,
+      "display_name": "Neptune Stadium",
+      "encounters": [],
+      "icons_array": [],
+      "name": "net_sunken_basement",
+      "palette_name": "island",
+      "portals_array": [],
+      "spawn_name": ["sunken"],
+      "world_layer": 1,
+      "world_x1": -30437,
+      "world_x2": -24251,
+      "world_y1": 45032,
+      "world_y2": 47376
+    },
+    {
+      "area_id": 7,
+      "color": 16620976,
+      "display_name": "Mainframe",
+      "encounters": [],
+      "icons_array": [],
+      "name": "net_alleyway",
+      "palette_name": "city",
+      "portals_array": [],
+      "spawn_name": ["downtown"],
+      "world_layer": 1,
+      "world_x1": -47931,
+      "world_x2": -45931,
+      "world_y1": -9189.5,
+      "world_y2": -3744.5
     }
   ],
   "map_position_data": {

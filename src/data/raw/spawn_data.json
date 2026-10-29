@@ -1273,7 +1273,7 @@
         "lvlB": 32,
         "percent": 0.2,
         "specie": "crab",
-        "variant": 2
+        "variant": 1
       },
       {
         "freq": 10,
@@ -2034,7 +2034,7 @@
         "lvlB": 29,
         "percent": 0.2068965517,
         "specie": "crab",
-        "variant": 0.1
+        "variant": 0
       }
     ],
     "level_max": 29,
@@ -2261,7 +2261,7 @@
         "lvlB": 38,
         "percent": 0.0833333333,
         "specie": "crab",
-        "variant": 0.1
+        "variant": 0
       },
       {
         "freq": 10,

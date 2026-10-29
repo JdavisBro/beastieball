@@ -25,6 +25,7 @@ export type BeastieType = {
   allowedInPromo: boolean | number;
   anim_progress: number;
   animator: number | number[];
+  assymetric: boolean;
   attklist: Array<string>;
   attklist_randomize: number;
   ba: number;

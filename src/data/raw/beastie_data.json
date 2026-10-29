@@ -5,6 +5,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 14,
+    "assymetric": false,
     "attklist": [
       "lockon",
       "stun",
@@ -228,6 +229,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "lockon",
       "stun",
@@ -454,8 +456,9 @@
     "ability": ["nurture", "mom"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 60,
+    "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "starterheart",
       "careful",
@@ -590,7 +593,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 162.5,
+      "char_width": 150,
       "emote_hop_height": 25,
       "float_dist": 40,
       "float_wave": 5,
@@ -753,6 +756,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [14, 11],
+    "assymetric": false,
     "attklist": [
       "starterheart",
       "careful",
@@ -983,6 +987,7 @@
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "storedpower",
       "sensihit",
@@ -1190,6 +1195,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "jazzpass",
       "lifedew",
@@ -1411,6 +1417,7 @@
     "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "jazzpass",
       "lifedew",
@@ -1626,6 +1633,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "set",
@@ -1886,6 +1894,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "set",
@@ -2107,6 +2116,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "set",
@@ -2351,6 +2361,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "healhit",
@@ -2572,6 +2583,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "healhit",
@@ -2783,6 +2795,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "healhit",
@@ -2995,6 +3008,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "introduction",
       "freeball",
@@ -3229,6 +3243,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [11],
+    "assymetric": false,
     "attklist": [
       "introduction",
       "freeball",
@@ -3439,6 +3454,7 @@
     "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "introduction",
       "freeball",
@@ -3664,6 +3680,7 @@
     "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "passattack",
@@ -3889,6 +3906,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "topspin",
       "moon",
@@ -4094,6 +4112,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "topspin",
       "moon",
@@ -4337,8 +4356,9 @@
     "ability": ["rhythmpow", "synchronize2"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 0,
+    "anim_progress": 100,
+    "animator": 11,
+    "assymetric": true,
     "attklist": [
       "starterbody",
       "sensihit",
@@ -4408,7 +4428,37 @@
         ]
       }
     ],
-    "colors2": null,
+    "colors2": [
+      {
+        "array": [
+          { "color": 4799177, "x": 0 },
+          { "color": 1137867, "x": 0.07 },
+          { "color": 8621604, "x": 0.52 },
+          { "color": 10187304, "x": 0.95 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 949451, "x": 0.01 },
+          { "color": 7447990, "x": 0.2366666667 },
+          { "color": 14405500, "x": 0.49 },
+          { "color": 11715693, "x": 0.9666666667 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 1672106, "x": 0 },
+          { "color": 3367579, "x": 0.2 },
+          { "color": 4874183, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 13030109, "x": 0 },
+          { "color": 14869723, "x": 0.9666666667 }
+        ]
+      }
+    ],
     "combos": [
       [17, 0, 0, 38, 3, 2, 50, 0, 1],
       [20, 0, 2, 0, 2, 1],
@@ -4487,7 +4537,7 @@
     "name": "¦beastiesetup_name_065¦",
     "number": 66,
     "order": 65,
-    "palettes": 1,
+    "palettes": 2,
     "prev_ids": ["crabaret"],
     "recruit": {
       "conditions": [
@@ -4565,8 +4615,9 @@
     "ability": ["ace", "taghit"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 0,
+    "anim_progress": 100,
+    "animator": 14,
+    "assymetric": false,
     "attklist": [
       "lockon",
       "lowattks",
@@ -4634,7 +4685,8 @@
           { "color": 1157119, "x": 0.5 },
           { "color": 2913791, "x": 1 }
         ]
-      }
+      },
+      { "array": [{ "color": 5392861, "x": 0.5 }] }
     ],
     "colors2": null,
     "combos": [
@@ -4776,7 +4828,8 @@
           { "color": 52223, "x": 0.5 },
           { "color": 58111, "x": 1 }
         ]
-      }
+      },
+      { "array": [{ "color": 5508209, "x": 0.5 }] }
     ],
     "spr": "sprCroc",
     "spr_alt": [],
@@ -4792,6 +4845,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [14, 11],
+    "assymetric": false,
     "attklist": [
       "dare",
       "contest",
@@ -5041,6 +5095,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [14, 11],
+    "assymetric": false,
     "attklist": [
       "dare",
       "contest",
@@ -5277,6 +5332,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 14,
+    "assymetric": false,
     "attklist": [
       "lockon",
       "shaken",
@@ -5511,6 +5567,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [14, 11],
+    "assymetric": false,
     "attklist": [
       "bounce",
       "libero",
@@ -5793,6 +5850,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [14, 11, 9],
+    "assymetric": false,
     "attklist": [
       "bounce",
       "libero",
@@ -6069,6 +6127,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [11],
+    "assymetric": false,
     "attklist": [
       "pepshot",
       "swarm",
@@ -6307,6 +6366,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -6561,6 +6621,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [11, 15, 9],
+    "assymetric": false,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -6781,6 +6842,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -7013,6 +7075,7 @@
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "startermind",
       "rollshot",
@@ -7228,6 +7291,7 @@
     "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "startermind",
       "rollshot",
@@ -7457,6 +7521,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "pepshot",
       "heart",
@@ -7664,6 +7729,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "pepshot",
       "heart",
@@ -7880,6 +7946,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "pepshot",
       "heart",
@@ -8100,6 +8167,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "wornout",
       "mindbomb",
@@ -8322,6 +8390,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "wornout",
       "mindbomb",
@@ -8529,6 +8598,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [14, 11],
+    "assymetric": false,
     "attklist": [
       "wornout",
       "mindbomb",
@@ -8721,6 +8791,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [14, 11],
+    "assymetric": false,
     "attklist": [
       "mindbomb",
       "protect",
@@ -8960,6 +9031,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "starterheart",
       "steamattack",
@@ -9173,6 +9245,7 @@
     "allowedInPromo": true,
     "anim_progress": 80,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "startermind",
       "enemylowered",
@@ -9467,6 +9540,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "starterheart",
       "careful",
@@ -9674,6 +9748,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [9, 11],
+    "assymetric": false,
     "attklist": [
       "starterheart",
       "careful",
@@ -9878,8 +9953,9 @@
     "ability": ["nodie"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 80,
+    "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "starterheart",
       "careful",
@@ -10069,6 +10145,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [11, 9],
+    "assymetric": false,
     "attklist": [
       "breakswipe",
       "sensihit",
@@ -10310,6 +10387,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "breakswipe",
       "sensihit",
@@ -10541,6 +10619,7 @@
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "sweatup",
       "steamattack",
@@ -10779,6 +10858,7 @@
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "sweatup",
       "steamattack",
@@ -10994,6 +11074,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "flight",
       "flyback",
@@ -11239,6 +11320,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "flight",
       "flyback",
@@ -11468,6 +11550,7 @@
     "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "callout",
       "batonpass",
@@ -11737,6 +11820,7 @@
     "allowedInPromo": true,
     "anim_progress": 80,
     "animator": [9, 11],
+    "assymetric": false,
     "attklist": [
       "callout",
       "batonpass",
@@ -11946,6 +12030,7 @@
     "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "callout",
       "batonpass",
@@ -12162,6 +12247,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "blockattack",
       "rush",
@@ -12389,6 +12475,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 14,
+    "assymetric": false,
     "attklist": [
       "starterbody",
       "sideshot",
@@ -12595,10 +12682,11 @@
   },
   "millipede1": {
     "ability": ["watcher", "breaker"],
-    "ability_hidden": false,
+    "ability_hidden": true,
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "starterbody",
       "sideshot",
@@ -12800,6 +12888,7 @@
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "starterheart",
       "myheartpass",
@@ -13040,6 +13129,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "facade",
       "scoreboosted",
@@ -13269,6 +13359,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "facade",
       "scoreboosted",
@@ -13477,6 +13568,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "facade",
       "scoreboosted",
@@ -13713,8 +13805,9 @@
     "ability": ["unangry", "unsweaty"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 0,
+    "anim_progress": 100,
+    "animator": 14,
+    "assymetric": false,
     "attklist": [
       "poisonhit",
       "stun",
@@ -13779,7 +13872,8 @@
           { "color": 2577034, "x": 0.5 },
           { "color": 3823485, "x": 1 }
         ]
-      }
+      },
+      { "array": [{ "color": 937960, "x": 0.5 }] }
     ],
     "colors2": null,
     "combos": [
@@ -13827,7 +13921,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 76.5,
+      "char_width": 105,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -13917,7 +14011,8 @@
           { "color": 6669567, "x": 1 }
         ]
       },
-      { "array": [{ "color": 1935606, "x": 0.5 }] }
+      { "array": [{ "color": 1935606, "x": 0.5 }] },
+      { "array": [{ "color": 355053, "x": 0.5 }] }
     ],
     "spr": "sprMudskipper",
     "spr_alt": [],
@@ -13933,6 +14028,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "startermind",
       "markattack",
@@ -14147,6 +14243,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "startermind",
       "markattack",
@@ -14347,6 +14444,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "startermind",
       "shakenmind",
@@ -14570,8 +14668,9 @@
     "ability": ["extraheal", "waiting"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 0,
+    "anim_progress": 100,
+    "animator": 9,
+    "assymetric": false,
     "attklist": [
       "startermind",
       "protect",
@@ -14681,7 +14780,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 95.75,
+      "char_width": 117.5,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -14692,13 +14791,15 @@
       "hop_min_speed": 0.04,
       "hop_shake": 0,
       "hop_wobble": 0,
-      "move_accel": 0.4444444444,
+      "move_accel": 0.4,
       "move_decel": 0.6666666667,
-      "move_pause_frames": [],
+      "move_pause_frames": [51, 52, 53, 54, 55, 56, 57, 58, 59],
       "move_speed": 1,
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
-      "move_to_idle_transition_frames": [],
+      "move_to_idle_transition_frames": [
+        8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+      ],
       "offset_freq": 2000,
       "offset_rand_range": 0,
       "offset_seconds": 0.2,
@@ -14784,6 +14885,7 @@
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "startermind",
       "protect",
@@ -14972,6 +15074,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [11, 9],
+    "assymetric": false,
     "attklist": [
       "starterbody",
       "sensihit",
@@ -15231,6 +15334,7 @@
     "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "markattack",
       "startermind",
@@ -15438,6 +15542,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "markattack",
       "startermind",
@@ -15637,6 +15742,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "markattack",
       "startermind",
@@ -15892,6 +15998,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [9, 14],
+    "assymetric": false,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -16130,6 +16237,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -16358,6 +16466,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -16597,8 +16706,9 @@
     "ability": ["galaxybrain", "superblock"],
     "ability_hidden": false,
     "allowedInPromo": true,
-    "anim_progress": 60,
+    "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "sweatup",
       "startermind",
@@ -16827,6 +16937,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "pepshot",
       "moon",
@@ -17123,6 +17234,7 @@
     "allowedInPromo": true,
     "anim_progress": 20,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "pepshot",
       "moon",
@@ -17340,6 +17452,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "starterbody",
       "superfang",
@@ -17623,6 +17736,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -17846,6 +17960,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -18059,6 +18174,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "rocksmash",
@@ -18273,6 +18389,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "startermind",
       "nightshade",
@@ -18539,6 +18656,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "startermind",
       "nightshade",
@@ -18763,6 +18881,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 14,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "healhit",
@@ -18984,6 +19103,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 14,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "healhit",
@@ -19196,6 +19316,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [11, 9],
+    "assymetric": false,
     "attklist": [
       "bounce",
       "jump",
@@ -19426,6 +19547,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "bounce",
       "jump",
@@ -19660,6 +19782,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 14,
+    "assymetric": false,
     "attklist": [
       "body",
       "rocksmash",
@@ -19868,6 +19991,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 14,
+    "assymetric": false,
     "attklist": [
       "body",
       "rocksmash",
@@ -20061,6 +20185,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 9,
+    "assymetric": false,
     "attklist": [
       "careful",
       "bomb",
@@ -20289,6 +20414,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "careful",
       "bomb",
@@ -20560,6 +20686,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "careful",
       "bomb",
@@ -20819,6 +20946,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "careful",
       "bomb",
@@ -21069,6 +21197,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "careful",
       "bomb",
@@ -21321,6 +21450,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 14,
+    "assymetric": false,
     "attklist": [
       "dragontail",
       "heart",
@@ -21542,6 +21672,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 14,
+    "assymetric": false,
     "attklist": [
       "starterbody",
       "storedpower",
@@ -21760,6 +21891,7 @@
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "starterheart",
       "healhit",
@@ -21990,6 +22122,7 @@
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "starterheart",
       "healhit",
@@ -22217,6 +22350,7 @@
     "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "starterheart",
       "healhit",
@@ -22450,8 +22584,9 @@
     "ability": ["freemove", "runner"],
     "ability_hidden": true,
     "allowedInPromo": true,
-    "anim_progress": 40,
-    "animator": 0,
+    "anim_progress": 100,
+    "animator": 9,
+    "assymetric": false,
     "attklist": [
       "starterbody",
       "storedpower",
@@ -22581,7 +22716,7 @@
     "linked_colors": {},
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 80,
+      "char_width": 92.5,
       "emote_hop_height": 25,
       "float_dist": 45,
       "float_wave": 3,
@@ -22599,9 +22734,9 @@
       "move_speed_start": 0,
       "move_to_idle_transition_anim": "",
       "move_to_idle_transition_frames": [],
-      "offset_freq": 2000,
-      "offset_rand_range": 0,
-      "offset_seconds": 0.2,
+      "offset_freq": 3000,
+      "offset_rand_range": 40,
+      "offset_seconds": 5,
       "randomize_idle": true,
       "squishiness": 0.1,
       "stretchiness": 0.1
@@ -22690,6 +22825,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [11, 9],
+    "assymetric": false,
     "attklist": [
       "sidespin",
       "backswitch",
@@ -22953,6 +23089,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": [9, 11],
+    "assymetric": false,
     "attklist": [
       "sidespin",
       "backswitch",
@@ -23221,6 +23358,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "preblock",
       "recover",
@@ -23478,6 +23616,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "preblock",
       "recover",
@@ -23706,6 +23845,7 @@
     "allowedInPromo": true,
     "anim_progress": 100,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "preblock",
       "recover",
@@ -23945,6 +24085,7 @@
     "allowedInPromo": true,
     "anim_progress": 60,
     "animator": 0,
+    "assymetric": false,
     "attklist": [
       "cut",
       "blockattack",
@@ -24178,6 +24319,7 @@
     "allowedInPromo": true,
     "anim_progress": 40,
     "animator": 11,
+    "assymetric": false,
     "attklist": [
       "allycover",
       "curse",

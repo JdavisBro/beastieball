@@ -338,7 +338,7 @@
   "abilitiessetup_abilitydefine_063": "Сразу после перехода или замены ЗАЩ x{0}",
   "abilitiessetup_abilitydefine_064": "Акробатика",
   "abilitiessetup_abilitydefine_065": "Скользкий тип",
-  "abilitiessetup_abilitydefine_066": "Не принимает атаку, если это может сделать стоящий рядом товарищ.",
+  "abilitiessetup_abilitydefine_066": "Стоя на задней линии, не принимает атаку, если это может сделать стоящий рядом товарищ",
   "abilitiessetup_abilitydefine_067": "ВЫХОДЯ НА ЗАМЕНУ, ощущает {0}, а товарищ чувствует {1}",
   "abilitiessetup_abilitydefine_068": "Суматоха",
   "abilitiessetup_abilitydefine_069": "При ВЫХОДЕ НА ЗАМЕНУ или атаке [sprIcon,1]СИЛА противников [sprBoost,{0}]",
@@ -447,7 +447,7 @@
   "abilitiessetup_abilitydefine_172": "Крепыш",
   "abilitiessetup_abilitydefine_173": "Азарт",
   "abilitiessetup_abilitydefine_174": "Получает все [sprBoost,0]УСИЛЕНИЯ, которые получают противники",
-  "abilitiessetup_abilitydefine_175": "ЗАЩ x{1}, если на поле действует {0}",
+  "abilitiessetup_abilitydefine_175": "{0} +{1}, когда зверек выполняет [sprIcon,1]ЭМОЦИОНАЛЬНУЮ атаку",
   "abilitiessetup_abilitydefine_176": "Артист",
   "abilitiessetup_abilitydefine_177": "Если на поле есть {0}, на команду не действует {1}",
   "abilitiessetup_abilitydefine_178": "Поток",
@@ -1079,9 +1079,7 @@
   "abilitiessetup_abilitydefine_317": "Становится целью всех ГОРИЗОНТАЛЬНЫХ атак",
   "movessetup_movedefine_208": "Растяжка",
   "movessetup_movedefine_209": "Кошачья походка",
-  "_map_Gurgle Gulch": "Gurgle Gulch",
-  "_map_Howling Bluffs": "Howling Bluffs",
-  "_map_Whisper Peak": "Whisper Peak",
-  "_map_Pitapat Switchback": "Pitapat Switchback",
-  "_map_PitapatSwitchback": "Pitapat\\nSwitchback"
+  "_map_Gurgle Gulch": "Урчащее ущелье",
+  "_map_Howling Bluffs": "Воющие уступы",
+  "_map_Whisper Peak": "Шепчущая вершина"
 }

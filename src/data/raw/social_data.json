@@ -462,7 +462,7 @@
         "id": "pest",
         "invite_scene": { "toString": { "length": 0 } },
         "parent": null,
-        "prereq": { "field": 0, "type": [1, 4] },
+        "prereq": { "field": 0, "type": [0, 4] },
         "rankup": true
       },
       {

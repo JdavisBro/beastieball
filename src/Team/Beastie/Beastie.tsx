@@ -137,7 +137,6 @@ export default function Beastie({
             title={L("teams.beastie.openWithColors", { beastie: beastieName })}
           >
             <BeastieImage
-              key={teamBeastie.pid + teamBeastie.specie}
               defaultUrl={`/icons/${L(beastiedata.name, undefined, true)}.png`}
               beastie={{
                 id: beastiedata.id,

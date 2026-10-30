@@ -1,4 +1,4 @@
-import ENCOUNTER_DATA, { EncounterBeastie } from "../../data/EncounterData";
+import { EncounterBeastie } from "../../data/EncounterData";
 import styles from "./Encounters.module.css";
 import BEASTIE_DATA from "../../data/BeastieData";
 import Beastie from "../Beastie/Beastie";

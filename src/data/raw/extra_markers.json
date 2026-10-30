@@ -943,7 +943,7 @@
     { "position": [-22384, 37680], "encounter": "sunken_stadium_0" },
     { "position": [-20243, 40407], "encounter": "sunken_stadium_1" },
     { "position": [-26588, 48451], "encounter": "sunken_boss" },
-    { "position": [-18461, 44673], "encounter": "sunken_stadium_east_0" },
+    { "position": [-18507, 44761], "encounter": "sunken_stadium_east_0" },
     { "position": [-21776, 42925], "encounter": "sunken_stadium_stairs_0" },
     { "position": [-27989, 45494], "encounter": "sunken_stadium_west_2_0" },
     { "position": [-29662, 45679], "encounter": "sunken_stadium_west_2_1" },

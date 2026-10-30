@@ -4,7 +4,6 @@ import BEASTIE_DATA, { BeastieType } from "../../data/BeastieData";
 import Beastie from "../Beastie/Beastie";
 import { createPid } from "../Builder/createBeastie";
 import getMoveset from "./getMoveset";
-import getMetamorphAtLevel from "./getMetamorphAtLevel";
 import Randomizer from "../../utils/Randomizer";
 import { useMemo } from "react";
 import useLocalization, {

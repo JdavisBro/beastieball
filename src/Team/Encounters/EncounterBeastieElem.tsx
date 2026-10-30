@@ -119,15 +119,18 @@ export function encounterToTeamBeastie(
     }
     preMorphs.push(beastieData);
   }
+
+  let metamorphedBeastie = beastieData;
   for (let i = preMorphs.length - 1; i > 0; i--) {
-    const pre = preMorphs[i];
+    const pre = preMorphs[i] ?? beastieData;
+    if (!pre || !pre.evolution) break;
     if (
-      !pre ||
-      (pre.evolution &&
-        pre.evolution.length > 1 &&
+      pre.evolution.some((evo) => evo.condition[0] == 2) ||
+      (pre.evolution.length > 1 &&
         [6, 8].includes(pre.evolution[1].condition[0]))
     )
       break;
+    metamorphedBeastie = pre;
 
     if (pre.colormeta?.length) {
       const origColor = [...color];
@@ -140,7 +143,6 @@ export function encounterToTeamBeastie(
     }
   }
 
-  let metamorphedBeastie = preMorphs[0] ?? beastieData;
   while (metamorphedBeastie.evolution) {
     const meta =
       metamorphedBeastie.evolution &&

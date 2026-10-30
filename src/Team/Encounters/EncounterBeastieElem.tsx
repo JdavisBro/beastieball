@@ -1,4 +1,4 @@
-import { EncounterBeastie } from "../../data/EncounterData";
+import ENCOUNTER_DATA, { EncounterBeastie } from "../../data/EncounterData";
 import styles from "./Encounters.module.css";
 import BEASTIE_DATA from "../../data/BeastieData";
 import Beastie from "../Beastie/Beastie";
@@ -12,6 +12,7 @@ import useLocalization, {
 } from "../../localization/useLocalization";
 import { TeamBeastie } from "../Types";
 import VIBES from "../../data/raw/vibes.json";
+import { ENCOUNTER_LIST, encounterPrettyName } from "./Encounters";
 
 function hashCode(text: string) {
   let hash = 0;
@@ -62,11 +63,8 @@ export function encounterToTeamBeastie(
     : beastieDataPre;
   const metamorphedBeastie = metamorphBeastie ?? beastieData;
 
-  const fromEncounter = encBeastie.from_encounter ?? encounterId;
-  const fromEncounterIndex = encBeastie.from_encounter_index ?? index;
-
   const randomizer = new Randomizer(1);
-  randomizer.randomizer_seed(hashCode(fromEncounter) + fromEncounterIndex);
+  randomizer.randomizer_seed(hashCode(encounterId) + index);
   randomizer.spam_random(6); // trainings
   const scale = randomizer.random();
   const vibe = Math.floor(randomizer.random() * VIBES.length);
@@ -220,16 +218,22 @@ export function encounterToTeamBeastie(
 
 export default function EncounterBeastieElem({
   encounterId,
+  encounterIndex,
+  fromEncounterId,
+  fromEncounterIndex,
   encBeastie,
-  index,
   bonus_levels,
   overwrittenTrained,
+  setSeedOption,
 }: {
   encounterId: string;
+  encounterIndex: number;
+  fromEncounterId: string;
+  fromEncounterIndex: number;
   encBeastie: EncounterBeastie;
-  index: number;
   bonus_levels: number;
   overwrittenTrained?: number;
+  setSeedOption?: (value: string) => void;
 }) {
   const { L, languageExtensionData } = useLocalization();
 
@@ -245,7 +249,7 @@ export default function EncounterBeastieElem({
         encBeastie,
         level,
         encounterId,
-        index,
+        encounterIndex,
         overwrittenTrained,
         L,
       ),
@@ -255,7 +259,7 @@ export default function EncounterBeastieElem({
       encBeastie,
       level,
       encounterId,
-      index,
+      encounterIndex,
       overwrittenTrained,
     ],
   );
@@ -264,9 +268,39 @@ export default function EncounterBeastieElem({
     return null;
   }
 
+  const seeds =
+    setSeedOption &&
+    ENCOUNTER_LIST.flatMap((enc) =>
+      enc.team
+        .map<[EncounterBeastie, number]>((beastie, beastieIndex) => [
+          beastie,
+          beastieIndex,
+        ])
+        .filter(
+          ([beastie, beastieIndex]) =>
+            (beastie.from_encounter ?? enc.id) == fromEncounterId &&
+            (beastie.from_encounter_index ?? beastieIndex) ==
+              fromEncounterIndex,
+        )
+        .map<[string, number]>(([, beastieIndex]) => [enc.id, beastieIndex]),
+    );
+
   return (
     <div className={styles.beastieContainer}>
       <Beastie teamBeastie={teamBeastie} noMoveWarning={true} />
+      {setSeedOption && (
+        <select
+          title={`${encounterId}###${encounterIndex}`}
+          value={`${encounterId}###${encounterIndex}`}
+          onChange={(event) => setSeedOption(event.currentTarget.value)}
+        >
+          {seeds?.map(([id, ind]) => (
+            <option key={`${id}###${ind}`} value={`${id}###${ind}`}>
+              {encounterPrettyName(id)}
+            </option>
+          ))}
+        </select>
+      )}
     </div>
   );
 }

@@ -28,9 +28,9 @@ declare global {
   }
 }
 
-const ENCOUNTER_LIST = Object.values(ENCOUNTER_DATA);
+export const ENCOUNTER_LIST = Object.values(ENCOUNTER_DATA);
 
-function prettyName(name: string) {
+export function encounterPrettyName(name: string) {
   return name
     .replace(/_/g, " ")
     .replace(/(?:^| )[a-z]/g, (m) => m.toUpperCase())
@@ -122,23 +122,36 @@ export default function Encounters() {
       ? L(scalesBossKey)
       : scalesBossKey(L)
     : "";
+
+  const [seedOptions, setSeedOptions] = useState(false);
+  const [originSeed, setOriginSeed] = useState<
+    Record<string, Record<number, [string, number] | undefined>>
+  >({});
+
   const openTeamInBuilder = (forceLevel?: number) => {
     if (!encounter) {
       return;
     }
-    const team = encounter.team
-      .slice(0, 5)
-      .map((encBeastie, index) =>
-        encounterToTeamBeastie(
-          createPid(),
-          encBeastie,
-          forceLevel ?? encBeastie.level + bonus_levels,
-          encounter.id,
-          index,
-          overwrittenTrained,
-          L,
-        ),
+    const team = encounter.team.slice(0, 5).map((encBeastie, index) => {
+      const fromEncounterId = encBeastie.from_encounter ?? encounter.id;
+      const fromEncounterIndex = encBeastie.from_encounter_index ?? index;
+      const [encounterId, encounterIndex] =
+        seedOptions &&
+        originSeed[fromEncounterId] &&
+        originSeed[fromEncounterId][fromEncounterIndex]
+          ? originSeed[fromEncounterId][fromEncounterIndex]
+          : [fromEncounterId, fromEncounterIndex];
+
+      return encounterToTeamBeastie(
+        createPid(),
+        encBeastie,
+        forceLevel ?? encBeastie.level + bonus_levels,
+        encounterId,
+        encounterIndex,
+        overwrittenTrained,
+        L,
       );
+    });
     localStorage.setItem("teamBuilderTeam", JSON.stringify(team));
     navigate("/team/builder/");
   };
@@ -181,7 +194,7 @@ export default function Encounters() {
             </option>
             {ENCOUNTER_LIST.map((encounter) => (
               <option key={encounter.id} value={encounter.id}>
-                {prettyName(encounter.id)}
+                {encounterPrettyName(encounter.id)}
               </option>
             ))}
           </select>
@@ -277,22 +290,61 @@ export default function Encounters() {
         <MoveModalProvider>
           <BeastieRenderProvider>
             {encounter
-              ? encounter.team.map((encBeastie, index) =>
-                  !isBattleTower || encBeastie.specie == beastieFilter ? (
+              ? encounter.team.map((encBeastie, index) => {
+                  const fromEncounterId =
+                    encBeastie.from_encounter ?? encounter.id;
+                  const fromEncounterIndex =
+                    encBeastie.from_encounter_index ?? index;
+                  const [useEncounterId, useEncounterIndex] =
+                    seedOptions &&
+                    originSeed[fromEncounterId] &&
+                    originSeed[fromEncounterId][fromEncounterIndex]
+                      ? originSeed[fromEncounterId][fromEncounterIndex]
+                      : [fromEncounterId, fromEncounterIndex];
+
+                  const setSeedOption = seedOptions
+                    ? (value: string) => {
+                        setOriginSeed((seeds) => {
+                          const split = value.length
+                            ? value.split("###")
+                            : [undefined, undefined];
+                          const newId = split[0];
+                          const newInd = Number(split[1]);
+                          if (seeds[fromEncounterId]) {
+                            seeds[fromEncounterId][fromEncounterIndex] = newId
+                              ? [newId, newInd]
+                              : undefined;
+                          }
+                          return {
+                            [fromEncounterId]: {
+                              [fromEncounterIndex]: newId
+                                ? [newId, newInd]
+                                : undefined,
+                            },
+                            ...seeds,
+                          };
+                        });
+                      }
+                    : undefined;
+                  return !isBattleTower ||
+                    encBeastie.specie == beastieFilter ? (
                     <EncounterBeastieElem
                       key={index}
-                      encounterId={encounter.id}
+                      encounterId={useEncounterId}
+                      encounterIndex={useEncounterIndex}
+                      fromEncounterId={fromEncounterId}
+                      fromEncounterIndex={fromEncounterIndex}
                       encBeastie={encBeastie}
-                      index={index}
                       bonus_levels={
                         isLevelOverwritten
                           ? levelOverwrite - encBeastie.level
                           : bonus_levels
                       }
                       overwrittenTrained={overwrittenTrained}
+                      setSeedOption={setSeedOption}
                     />
-                  ) : null,
-                )
+                  ) : null;
+                })
               : null}
           </BeastieRenderProvider>
         </MoveModalProvider>
@@ -315,7 +367,7 @@ export default function Encounters() {
             }
             checked={isLevelOverwritten}
           />
-          {L("teams.viewer.atLevelLabel")}
+          {L("teams.encounters.atLevel")}
           <input
             type="number"
             onChange={(event) =>
@@ -326,6 +378,15 @@ export default function Encounters() {
             min={1}
             max={100}
             value={levelOverwrite || ""}
+          />
+        </label>
+        {sep}
+        <label className="checkboxLabel">
+          {L("teams.encounters.seedOptions")}
+          <input
+            type="checkbox"
+            onChange={(event) => setSeedOptions(event.currentTarget.checked)}
+            checked={seedOptions}
           />
         </label>
       </div>

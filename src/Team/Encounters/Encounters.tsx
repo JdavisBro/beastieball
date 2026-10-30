@@ -382,12 +382,12 @@ export default function Encounters() {
         </label>
         {sep}
         <label className="checkboxLabel">
-          {L("teams.encounters.seedOptions")}
           <input
             type="checkbox"
             onChange={(event) => setSeedOptions(event.currentTarget.checked)}
             checked={seedOptions}
           />
+          {L("teams.encounters.seedOptions")}
         </label>
       </div>
     </>

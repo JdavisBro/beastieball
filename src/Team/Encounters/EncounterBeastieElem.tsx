@@ -34,6 +34,12 @@ const TRAINING_TYPE: ("ba_t" | "ha_t" | "ma_t" | "bd_t" | "hd_t" | "md_t")[] = [
 ];
 const MAX_TRAINING_POINTS = 240;
 
+function linkColors(colors: number[], beastie: BeastieType) {
+  for (const [key, val] of Object.entries(beastie.linked_colors)) {
+    colors[Number(key.slice(1))] = colors[val];
+  }
+}
+
 export function encounterToTeamBeastie(
   pid: string,
   encBeastie: EncounterBeastie,
@@ -62,7 +68,7 @@ export function encounterToTeamBeastie(
     .map(() => randomizer.random());
   let ibisIndex = 0;
   if (beastieData.id == "ibis") {
-    randomizer.spam_random(4);
+    randomizer.spam_random(8);
     ibisIndex = Math.min(Math.max(Math.floor(randomizer.random(3)) / 2, 0), 1);
   }
   let randomSprite = 0;
@@ -88,20 +94,21 @@ export function encounterToTeamBeastie(
           )
         : 0;
 
+  if (
+    encBeastie.variant &&
+    encBeastie.variant > -1 &&
+    encBeastie.specie == "crab"
+  )
+    randomizer.random();
+
+  linkColors(color, beastieData);
+
   const number =
     typeof encBeastie.number == "string" ||
     (encBeastie.number && encBeastie.number > -1)
       ? String(encBeastie.number)
       : String(Math.floor(randomizer.random() ** 3 * randomizer.random(10))) +
         String(Math.round(randomizer.random(9)));
-
-  if (
-    encBeastie.variant &&
-    encBeastie.variant > -1 &&
-    encBeastie.specie == "crab"
-  ) {
-    randomizer.random();
-  }
 
   let baby = BEASTIE_DATA.get(beastieData.family);
   const preMorphs = [];
@@ -156,6 +163,7 @@ export function encounterToTeamBeastie(
           color[metamorphedBeastie.colormeta[i]] = origColor[i];
       }
     }
+    linkColors(color, beastieData);
   }
 
   const ability_index =

@@ -1,6 +1,6 @@
 import { EncounterBeastie } from "../../data/EncounterData";
 import styles from "./Encounters.module.css";
-import BEASTIE_DATA from "../../data/BeastieData";
+import BEASTIE_DATA, { BeastieType } from "../../data/BeastieData";
 import Beastie from "../Beastie/Beastie";
 import { createPid } from "../Builder/createBeastie";
 import getMoveset from "./getMoveset";
@@ -43,25 +43,10 @@ export function encounterToTeamBeastie(
   overwrittenTrained: undefined | number,
   L: LocalizationFunction,
 ): TeamBeastie | null {
-  const beastieDataPre = BEASTIE_DATA.get(encBeastie.specie || "shroom1");
-  if (!beastieDataPre) {
+  const beastieData = BEASTIE_DATA.get(encBeastie.specie || "shroom1");
+  if (!beastieData) {
     return null;
   }
-  const [metamorphBeastie, metamorphPath] = encBeastie.evolves
-    ? getMetamorphAtLevel(
-        BEASTIE_DATA.get(beastieDataPre.family) ?? beastieDataPre,
-        level,
-        beastieDataPre.id,
-        false,
-        [beastieDataPre.family],
-      )
-    : [null, null];
-  const beastieData = encBeastie.evolves
-    ? (BEASTIE_DATA.get(metamorphPath?.[0] ?? "") ??
-      metamorphBeastie ??
-      beastieDataPre)
-    : beastieDataPre;
-  const metamorphedBeastie = metamorphBeastie ?? beastieData;
 
   const randomizer = new Randomizer(1);
   randomizer.randomizer_seed(hashCode(encounterId) + index);
@@ -118,32 +103,60 @@ export function encounterToTeamBeastie(
     randomizer.random();
   }
 
-  if (metamorphPath?.length && metamorphPath.length > 1) {
-    for (const beastieId of metamorphPath.slice(
-      metamorphPath.findIndex((id) => id == beastieDataPre.id),
-    )) {
-      const metaData = BEASTIE_DATA.get(beastieId);
-      if (!metaData) continue;
-      while (color.length < metaData.colors.length) {
-        color.push(randomizer.random() + variant);
-      }
-      if (metaData.colormeta?.length) {
-        while (color.length < metaData.colors.length) {
-          color.push(variant + randomizer.random());
-        }
-        const origColor = [...color];
-        for (
-          let i = 0;
-          i < metaData.colormeta.length && i < metaData.colors.length;
-          i++
-        ) {
-          if (metaData.colormeta[i] >= 0)
-            color[metaData.colormeta[i]] = origColor[i];
-        }
+  let baby = BEASTIE_DATA.get(beastieData.family);
+  const preMorphs = [];
+  if (baby && baby.id != beastieData.id) {
+    preMorphs.push(baby);
+    while (baby?.evolution?.some((evo) => evo.specie != beastieData.id)) {
+      baby = BEASTIE_DATA.get(baby.evolution[0].specie);
+      preMorphs.push(baby);
+    }
+    preMorphs.push(beastieData);
+  }
+  for (let i = preMorphs.length - 1; i > 0; i--) {
+    const pre = preMorphs[i];
+    if (
+      !pre ||
+      (pre.evolution &&
+        pre.evolution.length > 1 &&
+        [6, 8].includes(pre.evolution[1].condition[0]))
+    )
+      break;
+
+    if (pre.colormeta?.length) {
+      const origColor = [...color];
+      if (pre.colormeta.length > color.length)
+        color.length = pre.colormeta.length;
+      for (let i = 0; i < pre.colormeta.length; i++) {
+        if (pre.colormeta[i] >= 0 && pre.colormeta[i] < color.length)
+          color[i] = origColor[pre.colormeta[i]];
       }
     }
   }
-  color.length = beastieData.colors.length;
+
+  let metamorphedBeastie = preMorphs[0] ?? beastieData;
+  while (metamorphedBeastie.evolution) {
+    const meta =
+      metamorphedBeastie.evolution &&
+      metamorphedBeastie.evolution.filter(
+        (evo) =>
+          evo.condition.some((cond) => [0, 4, 5, 9, 10, 11].includes(cond)) &&
+          typeof evo.value[0] == "number" &&
+          evo.value[0] <= level,
+      );
+    if (!meta.length) break;
+    metamorphedBeastie = BEASTIE_DATA.get(meta[0].specie) ?? beastieData;
+    while (color.length < metamorphedBeastie.colors.length) {
+      color.push(randomizer.random() + variant);
+    }
+    if (metamorphedBeastie.colormeta?.length) {
+      const origColor = [...color];
+      for (let i = 0; i < metamorphedBeastie.colormeta.length; i++) {
+        if (metamorphedBeastie.colormeta[i] >= 0)
+          color[metamorphedBeastie.colormeta[i]] = origColor[i];
+      }
+    }
+  }
 
   const ability_index =
     encBeastie.ability !== undefined && encBeastie.ability != -1

@@ -12,7 +12,7 @@ import EncounterBeastieElem, {
   encounterToTeamBeastie,
 } from "./EncounterBeastieElem";
 import getLevelBonus from "./getLevelBonus";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import MoveModalProvider from "../../shared/MoveModalProvider";
 import useLocalization, {
   LocalizationFunction,
@@ -261,7 +261,7 @@ export default function Encounters() {
         {L("teams.encounters.defeatedBoss")}
         <span className={styles.bosses}>
           {DEFEATABLE_BOSSES.map((bossId, index) => (
-            <>
+            <Fragment key={bossId}>
               {index == 0 ? null : sep}
               <label key={bossId} className="checkboxLabel">
                 <input
@@ -278,7 +278,7 @@ export default function Encounters() {
                   ? L(BOSSES_MAP[bossId])
                   : BOSSES_MAP[bossId](L)}
               </label>
-            </>
+            </Fragment>
           ))}
           {sep}
           <button onClick={() => setBossesDefeated({ redd: true })}>

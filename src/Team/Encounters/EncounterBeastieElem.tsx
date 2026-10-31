@@ -115,7 +115,7 @@ export function encounterToTeamBeastie(
     const preMorphs = [];
     if (baby && baby.id != beastieData.id) {
       preMorphs.push(baby);
-      while (baby?.evolution?.some((evo) => evo.specie != beastieData.id)) {
+      while (baby?.evolution?.every((evo) => evo.specie != beastieData.id)) {
         baby = BEASTIE_DATA.get(baby.evolution[0].specie);
         preMorphs.push(baby);
       }
@@ -123,7 +123,8 @@ export function encounterToTeamBeastie(
     }
 
     for (let i = preMorphs.length - 1; i > 0; i--) {
-      const pre = preMorphs[i] ?? beastieData;
+      const current = preMorphs[i] ?? beastieData;
+      const pre = preMorphs[i - 1] ?? current;
       if (
         !pre ||
         (pre.evolution &&
@@ -131,19 +132,19 @@ export function encounterToTeamBeastie(
           [6, 8].includes(pre.evolution[1].condition[0]))
       )
         break;
+      metamorphedBeastie = pre;
 
-      if (pre.colormeta?.length) {
+      if (i > 0 && current.colormeta?.length) {
         const origColor = [...color];
-        if (pre.colormeta.length > color.length)
-          color.length = pre.colormeta.length;
-        for (let i = 0; i < pre.colormeta.length; i++) {
-          if (pre.colormeta[i] >= 0 && pre.colormeta[i] < color.length)
-            color[i] = origColor[pre.colormeta[i]];
+        if (current.colormeta.length > color.length)
+          color.length = current.colormeta.length;
+        for (let i = 0; i < current.colormeta.length; i++) {
+          if (current.colormeta[i] >= 0 && current.colormeta[i] < color.length)
+            color[i] = origColor[current.colormeta[i]];
         }
       }
     }
 
-    metamorphedBeastie = preMorphs[0] ?? beastieData;
     while (metamorphedBeastie.evolution) {
       if (!metamorphedBeastie.evolution) break;
       let meta = metamorphedBeastie.evolution.filter(
@@ -152,7 +153,6 @@ export function encounterToTeamBeastie(
           typeof evo.value[0] == "number" &&
           evo.value[0] <= level,
       );
-      console.log(meta, beastieData.id);
       if (!meta.length) {
         meta = metamorphedBeastie.evolution.filter((evo) =>
           evo.condition.some((cond) => cond == 2 || cond == 1),

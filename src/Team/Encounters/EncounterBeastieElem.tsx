@@ -146,7 +146,6 @@ export function encounterToTeamBeastie(
     }
 
     while (metamorphedBeastie.evolution) {
-      if (!metamorphedBeastie.evolution) break;
       let meta = metamorphedBeastie.evolution.filter(
         (evo) =>
           evo.condition.some((cond) => [0, 4, 5, 9, 10, 11].includes(cond)) &&

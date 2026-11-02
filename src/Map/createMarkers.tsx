@@ -67,7 +67,7 @@ export function createMarkers(Loc: LocalizationFunction) {
   };
 
   function LocalizeTitle(key: string) {
-    return Loc("_map_" + key.replace(/\\n/g, "")).replace(/\\n/g, "\n");
+    return Loc("_map_" + key.replace(/\\n/g, ""));
   }
 
   function createMarker(value: MapIcon) {

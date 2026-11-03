@@ -174,7 +174,6 @@ export default function LocalizationProvider({
         lang == "en"
           ? "/"
           : `/${USE_LOWER_CASE_PATHS ? lang.toLowerCase() : lang}/`;
-      console.log(prefix, lang);
       const path = location.pathname;
       const noParamLang =
         !paramLang || !paramLang.split("-").every((code) => code.length == 2);

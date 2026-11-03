@@ -33,8 +33,16 @@ const TRAINING_TYPE: ("ba_t" | "ha_t" | "ma_t" | "bd_t" | "hd_t" | "md_t")[] = [
 ];
 const MAX_TRAINING_POINTS = 240;
 
-function linkColors(colors: number[], beastie: BeastieType) {
-  for (const [key, val] of Object.entries(beastie.linked_colors)) {
+function linkColors(
+  colors: number[],
+  beastie: BeastieType,
+  link_amount: number,
+) {
+  let linked_colors = Object.entries(beastie.linked_colors);
+  linked_colors = linked_colors.slice(
+    Math.floor((1 - link_amount) * linked_colors.length),
+  );
+  for (const [key, val] of linked_colors) {
     colors[Number(key.slice(1))] = colors[val];
   }
 }
@@ -65,7 +73,7 @@ export function encounterToTeamBeastie(
   const random_colors = new Array(beastieData.colors.length)
     .fill(0.5)
     .map(() => randomizer.random());
-  let ibisIndex = 0;
+  let ibisIndex = 1;
   if (beastieData.id == "ibis") {
     randomizer.spam_random(8);
     ibisIndex = Math.min(Math.max(Math.floor(randomizer.random(3)) / 2, 0), 1);
@@ -100,7 +108,7 @@ export function encounterToTeamBeastie(
   )
     randomizer.random();
 
-  linkColors(color, beastieData);
+  linkColors(color, beastieData, ibisIndex);
 
   const number =
     typeof encBeastie.number == "string" ||
@@ -173,7 +181,7 @@ export function encounterToTeamBeastie(
             color[metamorphedBeastie.colormeta[i]] = origColor[i];
         }
       }
-      linkColors(color, beastieData);
+      linkColors(color, beastieData, ibisIndex);
     }
   }
   const ability_index =

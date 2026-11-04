@@ -22792,7 +22792,7 @@
       "seeking_interact": false
     },
     "roguelvl": -1,
-    "scale": [0.85, 1],
+    "scale": [0.935, 1.1],
     "shiny": [
       { "array": [{ "color": 9984036, "x": 0 }] },
       { "array": [{ "color": 5336046, "x": 0 }] },

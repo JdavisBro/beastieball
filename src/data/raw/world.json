@@ -3770,7 +3770,7 @@
           "z_offset": 250
         }
       ],
-      "spawn_name": ["sunken"],
+      "spawn_name": ["witchwood"],
       "world_layer": 1,
       "world_x1": -6733,
       "world_x2": -2738,
@@ -9301,7 +9301,7 @@
           "z1": -50
         }
       ],
-      "spawn_name": ["meadow"],
+      "spawn_name": ["sunken"],
       "world_layer": 1,
       "world_x1": 394.5,
       "world_x2": 4389.5,

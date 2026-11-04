@@ -66,6 +66,10 @@ export function encounterToTeamBeastie(
   randomizer.spam_random(6); // trainings
   const scale = randomizer.random();
   const vibe = Math.floor(randomizer.random() * VIBES.length);
+  let randomSprite = 0;
+  if (beastieData.palettes > 1 && randomizer.random(1) < 0.1) {
+    randomSprite = 2;
+  }
   randomizer.random(); // xp
   const random_ability = beastieData.ability_hidden
     ? 0
@@ -78,11 +82,6 @@ export function encounterToTeamBeastie(
     randomizer.spam_random(8);
     ibisIndex = Math.min(Math.max(Math.floor(randomizer.random(3)) / 2, 0), 1);
   }
-  let randomSprite = 0;
-  if (beastieData.palettes > 1 && randomizer.random(1) < 0.1) {
-    randomSprite = 2;
-  }
-
   const variant =
     encBeastie.variant !== undefined && encBeastie.variant != -1
       ? encBeastie.variant

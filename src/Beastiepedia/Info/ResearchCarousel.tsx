@@ -67,8 +67,6 @@ export default function ResearchCarousel({ beastieid }: { beastieid: string }) {
 
   const [biggerImage, setBiggerImage] = useState(false);
 
-  if (!(beastieid in research_data)) return null;
-
   return (
     <div className={styles.container}>
       <div className={styles.curtains}>

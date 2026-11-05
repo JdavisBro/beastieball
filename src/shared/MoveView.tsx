@@ -415,10 +415,16 @@ function getEffectString(
         case 32:
           return L("movedefine_descadd_104", { "0": "¾" }); // POW x{0} if user has any FEELINGs.
         case 33:
-        case 34:
-        case 35:
-        case 36:
           return "";
+        case 34:
+          return L("movedefine_descadd_115", { // POW +{0} for each {1} on user.
+            "0": "20",
+            "1": "[sprStatus,6]" + L("statuseffectstuff_007"), // SWEATY
+          });
+        case 35:
+          return L("movedefine_descadd_118"); // Always damages as if from the back.
+        case 36:
+          return L("movedefine_descadd_119"); // Always damages as if from net.
       }
       console.log(
         `Undefined POW COND ${effect.pow}. E ${effect.eff} T ${effect.targ}`,

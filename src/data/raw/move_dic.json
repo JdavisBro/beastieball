@@ -2787,7 +2787,7 @@
     "description": null,
     "eff": [
       { "eff": 15, "pow": -1, "targ": 1 },
-      { "eff": 8, "pow": 0.2, "targ": 1 }
+      { "eff": 8, "pow": 0.25, "targ": 1 }
     ],
     "id": "44B86NC4618849hut",
     "name": "Hut",
@@ -2798,11 +2798,12 @@
     "use": 2
   },
   "44B86NC4618849hypeup": {
-    "bt_tags": [1, 10, 32, 51, 34, 49],
+    "bt_tags": [1, 10, 31, 47, 32, 51, 34, 49],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
+      { "eff": 40, "pow": 0, "targ": 0 },
       { "eff": 26, "pow": -2, "targ": 1 },
       { "eff": 14, "pow": 1, "targ": 1 }
     ],

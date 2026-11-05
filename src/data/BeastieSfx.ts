@@ -2,7 +2,7 @@ import beastieSfx from "./raw/beastieSfx.json";
 
 const BEASTIE_SFX: Record<
   string,
-  { hello: number; boo: number; cheer: number }
+  { hello: number; boo: number; cheer: number } | null
 > = beastieSfx;
 
 export default BEASTIE_SFX;

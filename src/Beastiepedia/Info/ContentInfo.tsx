@@ -16,6 +16,7 @@ import useLocalization, {
   SUPPORTED_LANGUAGES,
   SupportedLanguage,
 } from "../../localization/useLocalization";
+import untyped_research_data from "../../data/raw/research_data.json";
 
 type Props = {
   beastiedata: BeastieType;
@@ -210,32 +211,36 @@ export default function ContentInfo(props: Props): React.ReactNode {
         learnset={beastiedata.learnset as [number, string][]}
       />
       <ComboMove beastiedata={beastiedata} />
-      <InfoBox header={L("beastiepedia.info.research.title")}>
-        <div className={styles.research}>
-          <ResearchCarousel beastieid={beastiedata.id} />
-        </div>
-        {L(
-          Array.isArray(beastiedata.designer) && beastiedata.designer.length > 1
-            ? "beastiepedia.info.research.researchers"
-            : "beastiepedia.info.research.researcher",
-        )}
-        {Array.isArray(beastiedata.designer)
-          ? beastiedata.designer
-              .map((i) => staff_names[i])
-              .join(L("beastiepedia.info.research.joiner"))
-          : staff_names[beastiedata.designer]}
-        <br />
-        {L(
-          Array.isArray(beastiedata.animator) && beastiedata.animator.length > 1
-            ? "beastiepedia.info.research.videographers"
-            : "beastiepedia.info.research.videographer",
-        )}
-        {Array.isArray(beastiedata.animator)
-          ? beastiedata.animator
-              .map((i) => staff_names[i])
-              .join(L("beastiepedia.info.research.joiner"))
-          : staff_names[beastiedata.animator]}
-      </InfoBox>
+      {beastiedata.id in untyped_research_data && (
+        <InfoBox header={L("beastiepedia.info.research.title")}>
+          <div className={styles.research}>
+            <ResearchCarousel beastieid={beastiedata.id} />
+          </div>
+          {L(
+            Array.isArray(beastiedata.designer) &&
+              beastiedata.designer.length > 1
+              ? "beastiepedia.info.research.researchers"
+              : "beastiepedia.info.research.researcher",
+          )}
+          {Array.isArray(beastiedata.designer)
+            ? beastiedata.designer
+                .map((i) => staff_names[i])
+                .join(L("beastiepedia.info.research.joiner"))
+            : staff_names[beastiedata.designer]}
+          <br />
+          {L(
+            Array.isArray(beastiedata.animator) &&
+              beastiedata.animator.length > 1
+              ? "beastiepedia.info.research.videographers"
+              : "beastiepedia.info.research.videographer",
+          )}
+          {Array.isArray(beastiedata.animator)
+            ? beastiedata.animator
+                .map((i) => staff_names[i])
+                .join(L("beastiepedia.info.research.joiner"))
+            : staff_names[beastiedata.animator]}
+        </InfoBox>
+      )}
       <Sfx beastiedata={beastiedata} />
     </div>
   );

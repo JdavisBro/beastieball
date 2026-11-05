@@ -92,7 +92,9 @@ export default function ContentInfo(props: Props): React.ReactNode {
     })
     .filter((value) => !!value);
 
-  const [nameExpanded, setNameExpanded] = useState(false);
+  const [nameExpandedState, setNameExpanded] = useState(false);
+  const can_be_expanded = beastiedata.name[0] == "¦";
+  const nameExpanded = can_be_expanded ? nameExpandedState : false;
   const nameKey = beastiedata.name.slice(1, beastiedata.name.length - 1);
 
   const nameFunc = (lang: SupportedLanguage) =>
@@ -109,29 +111,31 @@ export default function ContentInfo(props: Props): React.ReactNode {
         </InfoBox>
         <InfoBox header={L("beastiepedia.info.name")}>
           {nameExpanded ? nameFunc(currentLanguage) : L(beastiedata.name)}{" "}
-          <span
-            role="button"
-            className={styles.expandButton}
-            aria-label={L(
-              nameExpanded
-                ? "beastiepedia.info.expandOpenAlt"
-                : "beastiepedia.info.expandClosedAlt",
-            )}
-            tabIndex={0}
-            onClick={() => setNameExpanded(!nameExpanded)}
-            onKeyDown={(event) => {
-              if (event.key == "Enter" || event.key == " ") {
-                setNameExpanded(!nameExpanded);
-                event.preventDefault();
-              }
-            }}
-          >
-            {L(
-              nameExpanded
-                ? "beastiepedia.info.expandOpen"
-                : "beastiepedia.info.expandClosed",
-            )}
-          </span>
+          {can_be_expanded && (
+            <span
+              role="button"
+              className={styles.expandButton}
+              aria-label={L(
+                nameExpanded
+                  ? "beastiepedia.info.expandOpenAlt"
+                  : "beastiepedia.info.expandClosedAlt",
+              )}
+              tabIndex={0}
+              onClick={() => setNameExpanded(!nameExpanded)}
+              onKeyDown={(event) => {
+                if (event.key == "Enter" || event.key == " ") {
+                  setNameExpanded(!nameExpanded);
+                  event.preventDefault();
+                }
+              }}
+            >
+              {L(
+                nameExpanded
+                  ? "beastiepedia.info.expandOpen"
+                  : "beastiepedia.info.expandClosed",
+              )}
+            </span>
+          )}
           {nameExpanded ? (
             <>
               {SUPPORTED_LANGUAGES.filter(

@@ -87,7 +87,6 @@ function localize(
       }
       current = current[fragment];
       if (current === undefined) {
-        console.log("Loc key not found:", key);
         return key;
       }
     }
@@ -103,9 +102,6 @@ function localize(
     return BEASTIE_NAMES[key][useEnName ? "en" : lang];
   }
   const str = languageData[key] as string;
-  if (str === undefined) {
-    console.log("Loc key not found:", key);
-  }
 
   return placeholders_exist
     ? (str !== undefined ? str : key).replace(

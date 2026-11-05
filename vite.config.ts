@@ -194,12 +194,18 @@ function getSiteLoc(
     : value;
 }
 
+function getBeastieName(beastie_name: string, lang: SupportedLanguage) {
+  return beastie_name.startsWith("¦")
+    ? BEASTIE_NAMES[beastie_name.slice(1, beastie_name.length - 1)][lang]
+    : beastie_name;
+}
+
 function generateSitemap(url: string, env: Record<string, string>) {
   const beasties: ((lang: SupportedLanguage) => string)[] = Object.keys(
     BEASTIE_DATA,
   ).map(
     (id) => (lang) =>
-      `beastiepedia/${BEASTIE_NAMES[BEASTIE_DATA[id].name.slice(1, BEASTIE_DATA[id].name.length - 1)][lang]}`,
+      `beastiepedia/${getBeastieName(BEASTIE_DATA[id].name, lang)}`,
   );
   const experimental = env.VITE_EXPERIMENTAL == "true";
 
@@ -229,8 +235,8 @@ function generateSitemap(url: string, env: Record<string, string>) {
     const prerender_pages: PrerenderPage[] = [
       ...PRERENDER_PAGES,
       ...Object.values(BEASTIE_DATA).map((beastie) => {
-        const name_key = beastie.name.slice(1, beastie.name.length - 1);
-        const name = BEASTIE_NAMES[name_key][lang];
+        const name = getBeastieName(beastie.name, lang);
+        const name_en = getBeastieName(beastie.name, "en");
         redirect_rules += `${pathPrefix}/beastiepedia/${encodeURIComponent(name)} ${pathPrefix}/beastiepedia/${encodeURIComponent(name)}_page.html 200\n`;
         return {
           name: getSiteLoc(site_loc, "beastiepedia.titleBeastie", {
@@ -238,7 +244,7 @@ function generateSitemap(url: string, env: Record<string, string>) {
           }),
           description:
             game_loc[beastie.desc.slice(1, beastie.desc.length - 1)] ?? "??",
-          image: `/icons/${BEASTIE_NAMES[name_key].en}.png`,
+          image: `/icons/${name_en}.png`,
           path: `/beastiepedia/${name}`,
           noLoc: true,
           pathSuffix: "_page",

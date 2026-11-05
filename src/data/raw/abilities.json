@@ -34,15 +34,30 @@
     "id": "allyheal",
     "name": "¦abilitiessetup_abilitydefine_042¦"
   },
+  "anticipation": {
+    "desc": "¦abilitiessetup_abilitydefine_129¬0¬1.5¬1¬[sprStatus,9]¦statuseffectstuff_010¦¦",
+    "id": "anticipation",
+    "name": "Anticipation"
+  },
   "attackbadless": {
     "desc": "¦abilitiessetup_abilitydefine_315¬0¬[sprStatus,0]¦statuseffectstuff_001¦¦",
     "id": "attackbadless",
     "name": "¦abilitiessetup_abilitydefine_096¦"
   },
+  "attentionseeker": {
+    "desc": "¦abilitiessetup_abilitydefine_293¦",
+    "id": "attentionseeker",
+    "name": "Attention Seeker"
+  },
   "avenger": {
     "desc": "¦abilitiessetup_abilitydefine_053¬0¬1.2¬1¬[sprStatus,5]¦statuseffectstuff_006¦¦",
     "id": "avenger",
     "name": "¦abilitiessetup_abilitydefine_054¦"
+  },
+  "aware": {
+    "desc": "¦abilitiessetup_abilitydefine_279¦",
+    "id": "aware",
+    "name": "Aware"
   },
   "biting": {
     "desc": "¦abilitiessetup_abilitydefine_304¬0¬20¦",
@@ -154,6 +169,11 @@
     "id": "dreadlock",
     "name": "¦abilitiessetup_abilitydefine_214¦"
   },
+  "drownout": {
+    "desc": "¦abilitiessetup_abilitydefine_215¬0¬[sprStatus,3]¦statuseffectstuff_004¦¦",
+    "id": "drownout",
+    "name": "Drown Out"
+  },
   "echo": {
     "desc": "¦abilitiessetup_abilitydefine_151¬1¬1¦",
     "id": "echo",
@@ -179,6 +199,16 @@
     "id": "extrovert",
     "name": "¦abilitiessetup_abilitydefine_297¦"
   },
+  "extrovert_1": {
+    "desc": "¦abilitiessetup_abilitydefine_298¦",
+    "id": "extrovert_1",
+    "name": "Extrovert"
+  },
+  "fearful": {
+    "desc": "¦abilitiessetup_abilitydefine_109¬0¬[sprStatus,10]¦statuseffectstuff_011¦¦",
+    "id": "fearful",
+    "name": "Fearful"
+  },
   "fetch": {
     "desc": "¦abilitiessetup_abilitydefine_021¬0¬[sprStatus,8]¦statuseffectstuff_009¦ ¦statuseffectstuff_022¦¦",
     "id": "fetch",
@@ -203,6 +233,11 @@
     "desc": "¦abilitiessetup_abilitydefine_308¬0¬12¦",
     "id": "fortress",
     "name": "¦abilitiessetup_abilitydefine_309¦"
+  },
+  "fragileego": {
+    "desc": "¦abilitiessetup_abilitydefine_003¬0¬[sprStatus,9]¦statuseffectstuff_010¦¦",
+    "id": "fragileego",
+    "name": "Fragile Ego"
   },
   "freemove": {
     "desc": "¦abilitiessetup_abilitydefine_112¦",
@@ -234,6 +269,11 @@
     "id": "gloat",
     "name": "¦abilitiessetup_abilitydefine_182¦"
   },
+  "gulper": {
+    "desc": "¦abilitiessetup_abilitydefine_021¬0¬[sprStatus,8]¦statuseffectstuff_009¦ ¦statuseffectstuff_022¦¦",
+    "id": "gulper",
+    "name": "Gulper"
+  },
   "guts": {
     "desc": "¦abilitiessetup_abilitydefine_051¬4¬1.3¬0¬[sprStatus,6]¦statuseffectstuff_007¦¬1¬[sprStatus,0]¦statuseffectstuff_001¦¬2¬[sprStatus,11]¦statuseffectstuff_012¦¬3¬[sprStatus,18]¦statuseffectstuff_029¦¦",
     "id": "guts",
@@ -263,6 +303,26 @@
     "desc": "¦abilitiessetup_abilitydefine_069¬0¬3¦",
     "id": "intimidate",
     "name": "¦abilitiessetup_abilitydefine_070¦"
+  },
+  "jet": {
+    "desc": "¦abilitiessetup_abilitydefine_112¦",
+    "id": "jet",
+    "name": " Jet"
+  },
+  "jet_1": {
+    "desc": "¦abilitiessetup_abilitydefine_112¦",
+    "id": "jet_1",
+    "name": " Jet"
+  },
+  "levitate": {
+    "desc": "¦abilitiessetup_abilitydefine_156¦",
+    "id": "levitate",
+    "name": "Levitate"
+  },
+  "levitate_1": {
+    "desc": "¦abilitiessetup_abilitydefine_156¦",
+    "id": "levitate_1",
+    "name": "Levitate"
   },
   "lifeorb": {
     "desc": "¦abilitiessetup_abilitydefine_039¬0¬1.2¬1¬15¦",
@@ -384,6 +444,11 @@
     "id": "oblivious",
     "name": "¦abilitiessetup_abilitydefine_079¦"
   },
+  "oblivious_1": {
+    "desc": "¦abilitiessetup_abilitydefine_036¬0¬[sprStatus,9]¦statuseffectstuff_010¦¦",
+    "id": "oblivious_1",
+    "name": "Oblivious"
+  },
   "overwrite": {
     "desc": "¦abilitiessetup_abilitydefine_160¦",
     "id": "overwrite",
@@ -394,6 +459,16 @@
     "id": "prankster",
     "name": "¦abilitiessetup_abilitydefine_009¦"
   },
+  "pretentious": {
+    "desc": "¦abilitiessetup_abilitydefine_194¦",
+    "id": "pretentious",
+    "name": "Pretentious"
+  },
+  "prismatic": {
+    "desc": "¦abilitiessetup_abilitydefine_116¦",
+    "id": "prismatic",
+    "name": "Prismatic"
+  },
   "redirection": {
     "desc": "¦abilitiessetup_abilitydefine_067¬0¬[sprStatus,3]¦statuseffectstuff_004¦¬1¬+1 [sprStatus,1]¦statuseffectstuff_002¦¦",
     "id": "redirection",
@@ -403,6 +478,11 @@
     "desc": "¦abilitiessetup_abilitydefine_301¬0¬1.5¬1¬[sprStatus,9]¦statuseffectstuff_010¦¦",
     "id": "redirectkiller",
     "name": "¦abilitiessetup_abilitydefine_302¦"
+  },
+  "regal": {
+    "desc": "¦abilitiessetup_abilitydefine_213¬0¬¦fieldeffectstuff_004¦¬1¬[sprStatus,12]¦statuseffectstuff_013¦¦",
+    "id": "regal",
+    "name": "Regal"
   },
   "regenerator": {
     "desc": "¦abilitiessetup_abilitydefine_001¬0¬25¦",
@@ -474,6 +554,11 @@
     "id": "silencer",
     "name": "¦abilitiessetup_abilitydefine_154¦"
   },
+  "skittish": {
+    "desc": "¦abilitiessetup_abilitydefine_037¬0¬50¦",
+    "id": "skittish",
+    "name": "Skittish"
+  },
   "smooth": {
     "desc": "¦abilitiessetup_abilitydefine_249¬0¬15¦",
     "id": "smooth",
@@ -533,6 +618,11 @@
     "desc": "¦abilitiessetup_abilitydefine_093¬0¬75¦",
     "id": "strongchance",
     "name": "¦abilitiessetup_abilitydefine_094¦"
+  },
+  "stubborn": {
+    "desc": "¦abilitiessetup_abilitydefine_003¬0¬[sprStatus,9]¦statuseffectstuff_010¦¦",
+    "id": "stubborn",
+    "name": "Stubborn"
   },
   "study": {
     "desc": "¦abilitiessetup_abilitydefine_106¬0¬1¦",
@@ -613,6 +703,11 @@
     "desc": "¦abilitiessetup_abilitydefine_113¬0¬[sprStatus,1]¦statuseffectstuff_002¦¦",
     "id": "unangry",
     "name": "¦abilitiessetup_abilitydefine_114¦"
+  },
+  "unflappable": {
+    "desc": "¦abilitiessetup_abilitydefine_118¬0¬20¦",
+    "id": "unflappable",
+    "name": "Unflappable"
   },
   "unghost": {
     "desc": "¦abilitiessetup_abilitydefine_276¦",

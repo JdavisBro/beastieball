@@ -16460,7 +16460,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
-        "moves": ["hazeball", "6WY0C8R4615906strongscent", "taunt"],
+        "moves": ["taunt", "6WY0C8R4615906strongscent", "cut"],
         "name": "",
         "neverRandomize": false,
         "number": -1,
@@ -16468,7 +16468,7 @@
         "specie": "sourbloom",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 1, 1, 1, 1],
+        "training": [0, 1, 0, 1, 1, 1],
         "variant": -1,
         "vibe": -1
       },

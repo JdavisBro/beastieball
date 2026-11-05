@@ -1,4 +1,2595 @@
 {
+  "1PJ2FYF4619276gulpmissile": {
+    "bt_tags": [0, 8, 10, 31, 47, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 40, "pow": 1, "targ": 0 },
+      { "eff": 8, "pow": -0.25, "targ": 3 }
+    ],
+    "id": "1PJ2FYF4619276gulpmissile",
+    "name": "Gulp Missile",
+    "pow": 100,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "1PJ2FYF4619276spittingpass": {
+    "bt_tags": [23, 27, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 10, "pow": 1, "targ": 0 },
+      { "eff": 13, "pow": 2, "targ": 1 },
+      { "eff": 8, "pow": -0.25, "targ": 1 }
+    ],
+    "id": "1PJ2FYF4619276spittingpass",
+    "name": "Spitting Pass",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "1VY50B84633067comment": {
+    "bt_tags": [24, 31, 50, 38, 48, 32, 51],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 80, "pow": -1, "targ": 3 },
+      { "eff": 88, "pow": 34, "targ": 3 },
+      { "eff": 95, "pow": 13, "targ": 3 },
+      { "eff": 88, "pow": 67, "targ": 3 },
+      { "eff": 26, "pow": 1, "targ": 3 }
+    ],
+    "id": "1VY50B84633067comment",
+    "name": "Comment",
+    "pow": 0,
+    "price": 0,
+    "targ": 5,
+    "type": 4,
+    "use": 0
+  },
+  "1VY50B84633067dance": {
+    "bt_tags": [14, 32, 51, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 44, "pow": -1, "targ": 7 },
+      { "eff": 11, "pow": 1, "targ": 0 },
+      { "eff": 26, "pow": -1, "targ": 2 },
+      { "eff": 26, "pow": -2, "targ": 8 }
+    ],
+    "id": "1VY50B84633067dance",
+    "name": "Dance",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "1VY50B84633067deep": {
+    "bt_tags": [1, 21],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 33, "pow": 26, "targ": 0 }],
+    "id": "1VY50B84633067deep",
+    "name": "Deep",
+    "pow": 75,
+    "price": 0,
+    "targ": 8,
+    "type": 1,
+    "use": 1
+  },
+  "1VY50B84633067desperate": {
+    "bt_tags": [32, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 20, "pow": 2, "targ": 0 },
+      { "eff": 69, "pow": 0, "targ": 0 },
+      { "eff": 53, "pow": 1, "targ": 0 },
+      { "eff": 26, "pow": 1, "targ": 0 },
+      { "eff": 39, "pow": 1, "targ": 0 }
+    ],
+    "id": "1VY50B84633067desperate",
+    "name": "Desperate",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "1VY50B84633067dodge": {
+    "bt_tags": [38, 51, 12],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 7, "pow": 2, "targ": 0 },
+      { "eff": 90, "pow": 1, "targ": 0 },
+      { "eff": 38, "pow": 1, "targ": 9 }
+    ],
+    "id": "1VY50B84633067dodge",
+    "name": "Dodge",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "1VY50B84633067echo": {
+    "bt_tags": [2, 10, 35],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 96, "pow": 3, "targ": 0 },
+      { "eff": 84, "pow": 2, "targ": 0 },
+      { "eff": 14, "pow": 1, "targ": 3 }
+    ],
+    "id": "1VY50B84633067echo",
+    "name": "Echo",
+    "pow": 55,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "1VY50B84633067fall": {
+    "bt_tags": [23, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 22, "pow": 3, "targ": 0 },
+      { "eff": 82, "pow": -10, "targ": 0 }
+    ],
+    "id": "1VY50B84633067fall",
+    "name": "Fall",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "1VY50B84633067net": {
+    "bt_tags": [2, 20, 47, 10, 30, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 6, "pow": 1, "targ": 3 },
+      { "eff": 89, "pow": "tangled", "targ": 3 }
+    ],
+    "id": "1VY50B84633067net",
+    "name": "Net",
+    "pow": 60,
+    "price": 0,
+    "targ": 13,
+    "type": 2,
+    "use": 2
+  },
+  "1VY50B84633067rush": {
+    "bt_tags": [1, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 98, "pow": 1, "targ": 3 },
+      { "eff": 98, "pow": 2, "targ": 0 }
+    ],
+    "id": "1VY50B84633067rush",
+    "name": "Rush",
+    "pow": 50,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "1VY50B84633067slam": {
+    "bt_tags": [0, 21, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 69, "pow": 0, "targ": 0 },
+      { "eff": -7, "pow": 1, "targ": 0 }
+    ],
+    "id": "1VY50B84633067slam",
+    "name": "Slam",
+    "pow": 85,
+    "price": 0,
+    "targ": 13,
+    "type": 0,
+    "use": 1
+  },
+  "21MW9NP4627187despairtune": {
+    "bt_tags": [24, 8, 21, 37, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 79, "pow": -1, "targ": 7 },
+      { "eff": 7, "pow": 1, "targ": 0 },
+      { "eff": 27, "pow": -1, "targ": 0 }
+    ],
+    "id": "21MW9NP4627187despairtune",
+    "name": "Despair Tune",
+    "pow": 100,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 1
+  },
+  "2MYFRYR4626004lusterpurge": {
+    "bt_tags": [1, 10, 29, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 21, "targ": 0 },
+      { "eff": 34, "pow": 1, "targ": 3 },
+      { "eff": 64, "pow": 3, "targ": 3 },
+      { "eff": 8, "pow": -0.2, "targ": 3 }
+    ],
+    "id": "2MYFRYR4626004lusterpurge",
+    "name": "Luster Purge",
+    "pow": 45,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2MYFRYR4626004mistball": {
+    "bt_tags": [23, 41, 48, 37],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 45, "pow": 3, "targ": 7 },
+      { "eff": 15, "pow": -1, "targ": 7 }
+    ],
+    "id": "2MYFRYR4626004mistball",
+    "name": "Mist Ball",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "2Q1X7BC4618470absorb": {
+    "bt_tags": [2, 10, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 10, "targ": 0 },
+      { "eff": 88, "pow": 50, "targ": 3 },
+      { "eff": 8, "pow": 0.25, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470absorb",
+    "name": "Absorb",
+    "pow": 50,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470aim": {
+    "bt_tags": [35, 28],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 14, "pow": 1, "targ": 3 },
+      { "eff": 75, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470aim",
+    "name": "Aim",
+    "pow": 0,
+    "price": 0,
+    "targ": 4,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470aircompress": {
+    "bt_tags": [31, 28, 29, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 7, "pow": 0, "targ": 0 },
+      { "eff": 90, "pow": 0, "targ": 0 },
+      { "eff": 6, "pow": 1, "targ": 0 },
+      { "eff": 15, "pow": 1, "targ": 0 },
+      { "eff": 16, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470aircompress",
+    "name": "Air Compress",
+    "pow": 0,
+    "price": 0,
+    "targ": 4,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470append": {
+    "bt_tags": [23, 17, 46, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 8, "pow": 0.3, "targ": 1 },
+      { "eff": 8, "pow": -0.3, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470append",
+    "name": "Append",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "2Q1X7BC4618470backflip": {
+    "bt_tags": [24, 20, 47, 28, 32],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 7, "pow": 0, "targ": 0 },
+      { "eff": 90, "pow": 0, "targ": 0 },
+      { "eff": 0, "pow": 1, "targ": 0 },
+      { "eff": 26, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470backflip",
+    "name": "Backflip",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 2
+  },
+  "2Q1X7BC4618470bandicraftbash!!!!": {
+    "bt_tags": [2, 20, 47, 10, 29, 28, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 34, "pow": 0, "targ": 0 },
+      { "eff": 2, "pow": 1, "targ": 0 },
+      { "eff": 5, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470bandicraftbash!!!!",
+    "name": "Bandicraft Bash!!!!",
+    "pow": 85,
+    "price": 0,
+    "targ": 13,
+    "type": 2,
+    "use": 2
+  },
+  "2Q1X7BC4618470beam": {
+    "bt_tags": [24, 47, 30, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 86, "pow": 4, "targ": 0 },
+      { "eff": 6, "pow": 1, "targ": 3 },
+      { "eff": 87, "pow": 0, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470beam",
+    "name": "Beam",
+    "pow": 0,
+    "price": 0,
+    "targ": 4,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470becomepubber": {
+    "bt_tags": [47, 29, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 86, "pow": 6, "targ": 0 },
+      { "eff": 16, "pow": 3, "targ": 0 },
+      { "eff": 82, "pow": 100, "targ": 0 },
+      { "eff": 8, "pow": 3, "targ": 0 },
+      { "eff": 87, "pow": 0, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470becomepubber",
+    "name": "Become Pubber",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470block?": {
+    "bt_tags": [23, 20, 47, 42, 38, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 27, "pow": -1, "targ": 3 }],
+    "id": "2Q1X7BC4618470block?",
+    "name": "Block?",
+    "pow": 0,
+    "price": 0,
+    "targ": 4,
+    "type": 3,
+    "use": 2
+  },
+  "2Q1X7BC4618470bodyguard": {
+    "bt_tags": [33, 46, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 53, "pow": 0, "targ": 0 },
+      { "eff": 19, "pow": 1, "targ": 0 },
+      { "eff": 12, "pow": 2, "targ": 0 },
+      { "eff": 38, "pow": 1, "targ": 1 },
+      { "eff": 11, "pow": 0, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470bodyguard",
+    "name": "Bodyguard",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470booyah!": {
+    "bt_tags": [24, 29, 7, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 4, "pow": 1, "targ": 2 }],
+    "id": "2Q1X7BC4618470booyah!",
+    "name": "Booyah!",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470bother": {
+    "bt_tags": [1, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 4, "targ": 0 },
+      { "eff": 96, "pow": 1, "targ": 3 },
+      { "eff": 84, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470bother",
+    "name": "Bother",
+    "pow": 55,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470bottle": {
+    "bt_tags": [2, 8, 20, 47, 10, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 6, "pow": 1, "targ": 0 },
+      { "eff": 12, "pow": 1, "targ": 0 },
+      { "eff": 23, "pow": -1, "targ": 0 },
+      { "eff": 27, "pow": 1, "targ": 0 },
+      { "eff": 80, "pow": 1, "targ": 0 },
+      { "eff": 39, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470bottle",
+    "name": "Bottle",
+    "pow": 105,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 2
+  },
+  "2Q1X7BC4618470breakdance": {
+    "bt_tags": [0, 9],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 23, "pow": -1, "targ": 0 },
+      { "eff": 64, "pow": 2, "targ": 0 },
+      { "eff": 84, "pow": 1.5, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470breakdance",
+    "name": "Breakdance",
+    "pow": 70,
+    "price": 0,
+    "targ": 12,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470buffer": {
+    "bt_tags": [33, 46, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 19, "pow": 2, "targ": 0 },
+      { "eff": 16, "pow": -4, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470buffer",
+    "name": "Buffer",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470bulkshot": {
+    "bt_tags": [9, 33, 46, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 53, "pow": 0, "targ": 0 },
+      { "eff": 19, "pow": 2, "targ": 0 },
+      { "eff": 13, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470bulkshot",
+    "name": "Bulk Shot",
+    "pow": 0,
+    "price": 0,
+    "targ": 4,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470cautiousstrike": {
+    "bt_tags": [2, 10, 33, 46, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 53, "pow": 0, "targ": 0 },
+      { "eff": 19, "pow": 2, "targ": 0 },
+      { "eff": 39, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470cautiousstrike",
+    "name": "Cautious Strike",
+    "pow": 35,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470chloroblast": {
+    "bt_tags": [1, 10, 17, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 35, "targ": 0 },
+      { "eff": 8, "pow": 0.1, "targ": 6 }
+    ],
+    "id": "2Q1X7BC4618470chloroblast",
+    "name": "Chloroblast",
+    "pow": 55,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470claw": {
+    "bt_tags": [0, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 96, "pow": 4, "targ": 3 },
+      { "eff": 84, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470claw",
+    "name": "Claw",
+    "pow": 80,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470coach": {
+    "bt_tags": [24],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 63, "pow": 0, "targ": 1 },
+      { "eff": 81, "pow": 0, "targ": 3 },
+      { "eff": 63, "pow": 0, "targ": 1 }
+    ],
+    "id": "2Q1X7BC4618470coach",
+    "name": "Coach",
+    "pow": 0,
+    "price": 0,
+    "targ": 5,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470coldfront": {
+    "bt_tags": [2, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 28, "targ": 0 },
+      { "eff": 33, "pow": 33, "targ": 0 },
+      { "eff": 33, "pow": 17, "targ": 0 },
+      { "eff": 33, "pow": 14, "targ": 0 },
+      { "eff": 91, "pow": 0, "targ": 7 }
+    ],
+    "id": "2Q1X7BC4618470coldfront",
+    "name": "Cold Front",
+    "pow": 85,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470comfort": {
+    "bt_tags": [],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 95, "pow": 1, "targ": 1 }],
+    "id": "2Q1X7BC4618470comfort",
+    "name": "Comfort",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470concatenate": {
+    "bt_tags": [24, 31, 47, 23, 28, 11, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 40, "pow": 0, "targ": 0 },
+      { "eff": 20, "pow": 1, "targ": 0 },
+      { "eff": 2, "pow": 1, "targ": 0 },
+      { "eff": 42, "pow": 2, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470concatenate",
+    "name": "Concatenate",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470constrict": {
+    "bt_tags": [2, 9, 30, 38, 11, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 6, "pow": 1, "targ": 3 },
+      { "eff": 42, "pow": 2, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470constrict",
+    "name": "Constrict",
+    "pow": 30,
+    "price": 0,
+    "targ": 12,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470cross": {
+    "bt_tags": [23],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 7, "pow": 2, "targ": 1 }],
+    "id": "2Q1X7BC4618470cross",
+    "name": "Cross",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "2Q1X7BC4618470crowd": {
+    "bt_tags": [1, 20, 47, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 64, "pow": 0, "targ": 0 },
+      { "eff": 84, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470crowd",
+    "name": "Crowd",
+    "pow": 50,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 2
+  },
+  "2Q1X7BC4618470dash": {
+    "bt_tags": [24, 28],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 67, "pow": 0, "targ": 0 },
+      { "eff": 7, "pow": 3, "targ": 0 },
+      { "eff": 1, "pow": 1, "targ": 0 },
+      { "eff": 23, "pow": -1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470dash",
+    "name": "Dash",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470drain": {
+    "bt_tags": [1, 10, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 8, "pow": -0.15, "targ": 3 }],
+    "id": "2Q1X7BC4618470drain",
+    "name": "Drain",
+    "pow": 75,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470drill": {
+    "bt_tags": [0, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 82, "pow": -10, "targ": 3 }],
+    "id": "2Q1X7BC4618470drill",
+    "name": "Drill",
+    "pow": 65,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470dropshot": {
+    "bt_tags": [2, 21, 9],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": -38, "pow": 2, "targ": 3 }],
+    "id": "2Q1X7BC4618470dropshot",
+    "name": "Drop Shot",
+    "pow": 20,
+    "price": 0,
+    "targ": 4,
+    "type": 2,
+    "use": 1
+  },
+  "2Q1X7BC4618470dryout": {
+    "bt_tags": [1, 10, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 96, "pow": 6, "targ": 3 },
+      { "eff": 8, "pow": -0.3, "targ": 3 },
+      { "eff": 32, "pow": 0, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470dryout",
+    "name": "Dry Out",
+    "pow": 55,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470echo": {
+    "bt_tags": [2, 10, 34, 49, 15, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 14, "pow": 4, "targ": 0 },
+      { "eff": 12, "pow": 2, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470echo",
+    "name": "Echo",
+    "pow": 10,
+    "price": 0,
+    "targ": 13,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470echolocator": {
+    "bt_tags": [2, 8, 21, 10, 31, 47, 37, 5],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 40, "pow": 0, "targ": 0 },
+      { "eff": 2, "pow": -1, "targ": 7 },
+      { "eff": 5, "pow": -1, "targ": 7 }
+    ],
+    "id": "2Q1X7BC4618470echolocator",
+    "name": "Echolocator",
+    "pow": 120,
+    "price": 0,
+    "targ": 13,
+    "type": 2,
+    "use": 1
+  },
+  "2Q1X7BC4618470electrify": {
+    "bt_tags": [0, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 24, "targ": 0 },
+      { "eff": 3, "pow": -1, "targ": 12 }
+    ],
+    "id": "2Q1X7BC4618470electrify",
+    "name": "Electrify",
+    "pow": 50,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470enclose": {
+    "bt_tags": [1, 21, 10, 26, 29, 19],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 7, "pow": 0, "targ": 3 },
+      { "eff": 56, "pow": 0, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470enclose",
+    "name": "Enclose",
+    "pow": 95,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 1
+  },
+  "2Q1X7BC4618470encore": {
+    "bt_tags": [24, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 29, "pow": 2, "targ": 0 },
+      { "eff": 10, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470encore",
+    "name": "Encore",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470error": {
+    "bt_tags": [24],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 69, "pow": 0, "targ": 0 },
+      { "eff": 89, "pow": "overwrite", "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470error",
+    "name": "ERROR",
+    "pow": 0,
+    "price": 0,
+    "targ": 6,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470excavate": {
+    "bt_tags": [0, 21, 10, 26, 29, 19],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 57, "pow": 0, "targ": 0 },
+      { "eff": 56, "pow": 0, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470excavate",
+    "name": "Excavate",
+    "pow": 25,
+    "price": 0,
+    "targ": 1,
+    "type": 0,
+    "use": 1
+  },
+  "2Q1X7BC4618470fear": {
+    "bt_tags": [2, 10, 41, 48, 38, 12, 29],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 45, "pow": 6, "targ": 7 },
+      { "eff": 39, "pow": 3, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470fear",
+    "name": "Fear",
+    "pow": 20,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470fireball": {
+    "bt_tags": [1, 10, 36, 38, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 23, "pow": -1, "targ": 3 },
+      { "eff": 96, "pow": 6, "targ": 0 },
+      { "eff": 84, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470fireball",
+    "name": "Fireball",
+    "pow": 45,
+    "price": 0,
+    "targ": 13,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470forcefield": {
+    "bt_tags": [21, 31, 42, 38, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 27, "pow": 1, "targ": 7 }],
+    "id": "2Q1X7BC4618470forcefield",
+    "name": "Forcefield",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 1
+  },
+  "2Q1X7BC4618470fossilize": {
+    "bt_tags": [1, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 18, "pow": 0, "targ": 0 },
+      { "eff": -22, "pow": 1, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470fossilize",
+    "name": "Fossilize",
+    "pow": 20,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470frisbee": {
+    "bt_tags": [0, 9],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 1, "pow": 1, "targ": 12 },
+      { "eff": 26, "pow": 2, "targ": 12 },
+      { "eff": 33, "pow": 17, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470frisbee",
+    "name": "Frisbee",
+    "pow": 45,
+    "price": 0,
+    "targ": 12,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470fuel": {
+    "bt_tags": [24, 29],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 34, "pow": 0, "targ": 3 },
+      { "eff": 74, "pow": 1, "targ": 3 },
+      { "eff": 23, "pow": -1, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470fuel",
+    "name": "Fuel",
+    "pow": 0,
+    "price": 0,
+    "targ": 9,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470fumble": {
+    "bt_tags": [23, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 22, "pow": 6, "targ": 0 }],
+    "id": "2Q1X7BC4618470fumble",
+    "name": "Fumble",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "2Q1X7BC4618470gate": {
+    "bt_tags": [20, 47, 42, 38, 46, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 27, "pow": -1, "targ": 8 },
+      { "eff": 12, "pow": 4, "targ": 2 }
+    ],
+    "id": "2Q1X7BC4618470gate",
+    "name": "Gate",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 2
+  },
+  "2Q1X7BC4618470halt": {
+    "bt_tags": [20, 47],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 27, "pow": 2, "targ": 12 },
+      { "eff": 6, "pow": 2, "targ": 12 },
+      { "eff": 12, "pow": 2, "targ": 12 }
+    ],
+    "id": "2Q1X7BC4618470halt",
+    "name": "Halt",
+    "pow": 0,
+    "price": 0,
+    "targ": 4,
+    "type": 5,
+    "use": 2
+  },
+  "2Q1X7BC4618470haunt": {
+    "bt_tags": [10, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 73, "pow": 0, "targ": 0 },
+      { "eff": 8, "pow": -0.25, "targ": 5 }
+    ],
+    "id": "2Q1X7BC4618470haunt",
+    "name": "Haunt",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470heart": {
+    "bt_tags": [1, 10, 29, 7, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 16, "pow": 1, "targ": 2 }],
+    "id": "2Q1X7BC4618470heart",
+    "name": "Heart",
+    "pow": 55,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470heatsink": {
+    "bt_tags": [24, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 96, "pow": 6, "targ": 0 },
+      { "eff": 8, "pow": 0.2, "targ": 0 },
+      { "eff": 95, "pow": 6, "targ": 0 },
+      { "eff": 23, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470heatsink",
+    "name": "Heat Sink",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470highfive?": {
+    "bt_tags": [18, 31, 42, 38, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 31, "pow": 0, "targ": 3 },
+      { "eff": 27, "pow": -1, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470highfive?",
+    "name": "High Five?",
+    "pow": 0,
+    "price": 0,
+    "targ": 5,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470hindsight": {
+    "bt_tags": [24, 31, 47, 29, 16],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 41, "pow": 0, "targ": 0 },
+      { "eff": 34, "pow": 0, "targ": 7 },
+      { "eff": 7, "pow": 0, "targ": 7 },
+      { "eff": 46, "pow": 0, "targ": 7 },
+      { "eff": 10, "pow": 3, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470hindsight",
+    "name": "Hindsight",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470hoprahammer!!!!": {
+    "bt_tags": [1, 9, 18, 28],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 31, "pow": 0, "targ": 1 },
+      { "eff": 1, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470hoprahammer!!!!",
+    "name": "Hopra Hammer!!!!",
+    "pow": 65,
+    "price": 0,
+    "targ": 12,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470hurricane": {
+    "bt_tags": [1, 20, 47, 10, 31, 30, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 7, "pow": 0, "targ": 7 },
+      { "eff": 90, "pow": 0, "targ": 7 },
+      { "eff": 6, "pow": 1, "targ": 7 }
+    ],
+    "id": "2Q1X7BC4618470hurricane",
+    "name": "Hurricane",
+    "pow": 95,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 2
+  },
+  "2Q1X7BC4618470hype": {
+    "bt_tags": [1, 10, 28, 4, 51, 31, 37],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 1, "pow": 1, "targ": 7 },
+      { "eff": 64, "pow": 0, "targ": 12 },
+      { "eff": 2, "pow": -1, "targ": 7 }
+    ],
+    "id": "2Q1X7BC4618470hype",
+    "name": "Hype",
+    "pow": 30,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470icicle": {
+    "bt_tags": [2, 10, 30, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 6, "pow": 2, "targ": 3 },
+      { "eff": 96, "pow": 0, "targ": 0 },
+      { "eff": 84, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470icicle",
+    "name": "Icicle",
+    "pow": 45,
+    "price": 0,
+    "targ": 13,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470imbue": {
+    "bt_tags": [1, 10, 18],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 31, "pow": 0, "targ": 3 }],
+    "id": "2Q1X7BC4618470imbue",
+    "name": "Imbue",
+    "pow": 85,
+    "price": 0,
+    "targ": 1,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470infinitegreed": {
+    "bt_tags": [1, 10, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 13, "pow": -2, "targ": 6 },
+      { "eff": 95, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470infinitegreed",
+    "name": "Infinite Greed",
+    "pow": 85,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470infuriatingstrike": {
+    "bt_tags": [1, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 96, "pow": 1, "targ": 0 },
+      { "eff": 84, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470infuriatingstrike",
+    "name": "Infuriating Strike",
+    "pow": 40,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470joke": {
+    "bt_tags": [24, 46, 17, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 52, "pow": 0, "targ": 7 },
+      { "eff": 90, "pow": 0, "targ": 0 },
+      { "eff": 8, "pow": 0.25, "targ": 7 }
+    ],
+    "id": "2Q1X7BC4618470joke",
+    "name": "Joke",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470kasaleetkick!!!!": {
+    "bt_tags": [0, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 7, "pow": 3, "targ": 0 }],
+    "id": "2Q1X7BC4618470kasaleetkick!!!!",
+    "name": "Kasaleet Kick!!!!",
+    "pow": 95,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470killerwail": {
+    "bt_tags": [1, 8, 10, 31, 47],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 41, "pow": 0, "targ": 0 },
+      { "eff": 33, "pow": 17, "targ": 0 },
+      { "eff": 33, "pow": 14, "targ": 0 },
+      { "eff": 22, "pow": 4, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470killerwail",
+    "name": "Killer Wail",
+    "pow": 300,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470lob": {
+    "bt_tags": [0, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 33, "pow": 35, "targ": 0 }],
+    "id": "2Q1X7BC4618470lob",
+    "name": "Lob",
+    "pow": 95,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470lunge": {
+    "bt_tags": [0, 10, 28, 29, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 1, "pow": 1, "targ": 0 },
+      { "eff": 5, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470lunge",
+    "name": "Lunge",
+    "pow": 75,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470magnetize": {
+    "bt_tags": [2, 10, 21],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": -7, "pow": 1, "targ": 0 },
+      { "eff": -7, "pow": 1, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470magnetize",
+    "name": "Magnetize",
+    "pow": 65,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470meow": {
+    "bt_tags": [24],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 10, "pow": 1, "targ": 0 }],
+    "id": "2Q1X7BC4618470meow",
+    "name": "Meow",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470mindspike": {
+    "bt_tags": [2, 8, 20, 47, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [],
+    "id": "2Q1X7BC4618470mindspike",
+    "name": "Mindspike",
+    "pow": 100,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 2
+  },
+  "2Q1X7BC4618470mix-up": {
+    "bt_tags": [2, 20, 47, 9, 30, 38, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 53, "pow": 0, "targ": 3 },
+      { "eff": 6, "pow": 1, "targ": 3 },
+      { "eff": 13, "pow": 1, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470mix-up",
+    "name": "Mix-up",
+    "pow": 35,
+    "price": 0,
+    "targ": 12,
+    "type": 2,
+    "use": 2
+  },
+  "2Q1X7BC4618470move?": {
+    "bt_tags": [24],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 7, "pow": 3, "targ": 0 }],
+    "id": "2Q1X7BC4618470move?",
+    "name": "Move?",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470nuhuh": {
+    "bt_tags": [24, 20, 47, 15, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 12, "pow": 1, "targ": 3 },
+      { "eff": 10, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470nuhuh",
+    "name": "Nuh Uh",
+    "pow": 0,
+    "price": 0,
+    "targ": 4,
+    "type": 4,
+    "use": 2
+  },
+  "2Q1X7BC4618470nurture": {
+    "bt_tags": [23, 29, 7, 46, 17],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 88, "pow": 50, "targ": 0 },
+      { "eff": 77, "pow": 1, "targ": 1 },
+      { "eff": 52, "pow": 0, "targ": 1 },
+      { "eff": 8, "pow": 0.2, "targ": 1 }
+    ],
+    "id": "2Q1X7BC4618470nurture",
+    "name": "Nurture",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "2Q1X7BC4618470oldbeam": {
+    "bt_tags": [2, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 89, "pow": "wither", "targ": 3 }],
+    "id": "2Q1X7BC4618470oldbeam",
+    "name": "Old Beam",
+    "pow": 45,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470overflow": {
+    "bt_tags": [2, 10, 32],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 26, "pow": 999, "targ": 0 }],
+    "id": "2Q1X7BC4618470overflow",
+    "name": "Overflow",
+    "pow": 30,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470overhype": {
+    "bt_tags": [24, 31, 47, 6, 51],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 40, "pow": 0, "targ": 0 },
+      { "eff": 15, "pow": 3, "targ": 1 },
+      { "eff": 29, "pow": 3, "targ": 1 }
+    ],
+    "id": "2Q1X7BC4618470overhype",
+    "name": "Overhype",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470pacify": {
+    "bt_tags": [2, 8, 10, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 96, "pow": 5, "targ": 3 },
+      { "eff": 8, "pow": -1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470pacify",
+    "name": "Pacify",
+    "pow": 110,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470phase": {
+    "bt_tags": [34, 49],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 89, "pow": "haunted", "targ": 0 },
+      { "eff": 14, "pow": 1, "targ": 1 }
+    ],
+    "id": "2Q1X7BC4618470phase",
+    "name": "Phase",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470piledrive": {
+    "bt_tags": [0, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 17, "targ": 0 },
+      { "eff": 96, "pow": 9, "targ": 0 },
+      { "eff": 84, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470piledrive",
+    "name": "Piledrive",
+    "pow": 50,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470pinpoint": {
+    "bt_tags": [2, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 73, "pow": 0, "targ": 0 },
+      { "eff": 33, "pow": 36, "targ": 0 },
+      { "eff": 33, "pow": 16, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470pinpoint",
+    "name": "Pinpoint",
+    "pow": 70,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470plant": {
+    "bt_tags": [21, 31, 29, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 6, "pow": 99, "targ": 0 },
+      { "eff": 34, "pow": 0, "targ": 0 },
+      { "eff": 16, "pow": 3, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470plant",
+    "name": "Plant",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 1
+  },
+  "2Q1X7BC4618470plunder": {
+    "bt_tags": [0, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 63, "pow": 0, "targ": 3 },
+      { "eff": 89, "pow": "traitless", "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470plunder",
+    "name": "Plunder",
+    "pow": 75,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470pocketsand": {
+    "bt_tags": [0, 10, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 8, "pow": -0.01, "targ": 8 },
+      { "eff": 8, "pow": -0.01, "targ": 8 },
+      { "eff": 8, "pow": -0.01, "targ": 8 },
+      { "eff": 8, "pow": -0.01, "targ": 8 },
+      { "eff": 8, "pow": -0.01, "targ": 8 },
+      { "eff": 8, "pow": -0.01, "targ": 8 },
+      { "eff": 8, "pow": -0.01, "targ": 8 },
+      { "eff": 8, "pow": -0.01, "targ": 8 },
+      { "eff": 8, "pow": -0.01, "targ": 8 },
+      { "eff": 8, "pow": -0.01, "targ": 8 }
+    ],
+    "id": "2Q1X7BC4618470pocketsand",
+    "name": "Pocket Sand",
+    "pow": 1,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470pose": {
+    "bt_tags": [20, 47, 29, 46, 32],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 34, "pow": 0, "targ": 0 },
+      { "eff": 77, "pow": 2, "targ": 0 },
+      { "eff": 26, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470pose",
+    "name": "Pose",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 2
+  },
+  "2Q1X7BC4618470precisionstrike?": {
+    "bt_tags": [48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 8, "pow": -0.3, "targ": 9 }],
+    "id": "2Q1X7BC4618470precisionstrike?",
+    "name": "Precision Strike?",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470prey": {
+    "bt_tags": [2, 10, 30, 38, 51, 12],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 6, "pow": 2, "targ": 3 },
+      { "eff": 38, "pow": 2, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470prey",
+    "name": "Prey",
+    "pow": 25,
+    "price": 0,
+    "targ": 13,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470prismaticvolley": {
+    "bt_tags": [23, 20, 47, 31, 29, 6, 51],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 41, "pow": 0, "targ": 0 },
+      { "eff": 34, "pow": 0, "targ": 1 },
+      { "eff": 15, "pow": 2, "targ": 1 }
+    ],
+    "id": "2Q1X7BC4618470prismaticvolley",
+    "name": "Prismatic Volley",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 2
+  },
+  "2Q1X7BC4618470prod": {
+    "bt_tags": [2, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 3, "targ": 0 },
+      { "eff": -12, "pow": 1, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470prod",
+    "name": "Prod",
+    "pow": 70,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470psywave": {
+    "bt_tags": [2, 10, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 8, "pow": -0.15, "targ": 7 }],
+    "id": "2Q1X7BC4618470psywave",
+    "name": "Psywave",
+    "pow": 50,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470pub": {
+    "bt_tags": [0, 10, 28],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 0, "pow": 1, "targ": 0 },
+      { "eff": 88, "pow": 150, "targ": 0 },
+      { "eff": 84, "pow": 4, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470pub",
+    "name": "Pub",
+    "pow": 45,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470pulse": {
+    "bt_tags": [2, 10, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": -26, "pow": 1, "targ": 0 },
+      { "eff": 95, "pow": 8, "targ": 0 },
+      { "eff": 80, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470pulse",
+    "name": "Pulse",
+    "pow": 90,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470ragdoll": {
+    "bt_tags": [33, 46, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 53, "pow": 0, "targ": 0 },
+      { "eff": 19, "pow": 2, "targ": 0 },
+      { "eff": 29, "pow": 2, "targ": 0 },
+      { "eff": 8, "pow": 0.1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470ragdoll",
+    "name": "Ragdoll",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470ragebait": {
+    "bt_tags": [24, 31, 15, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 12, "pow": -1, "targ": 3 }],
+    "id": "2Q1X7BC4618470ragebait",
+    "name": "Ragebait",
+    "pow": 0,
+    "price": 0,
+    "targ": 5,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470rainmaker": {
+    "bt_tags": [21, 31, 36, 38, 48, 41],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 23, "pow": -1, "targ": 7 },
+      { "eff": 45, "pow": 6, "targ": 7 }
+    ],
+    "id": "2Q1X7BC4618470rainmaker",
+    "name": "Rainmaker",
+    "pow": 20,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 1
+  },
+  "2Q1X7BC4618470reanimate": {
+    "bt_tags": [24, 29, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 34, "pow": 0, "targ": 0 },
+      { "eff": 8, "pow": -1, "targ": 0 },
+      { "eff": 82, "pow": -10, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470reanimate",
+    "name": "Reanimate",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470rebound": {
+    "bt_tags": [28],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 69, "pow": 0, "targ": 0 },
+      { "eff": 20, "pow": 2, "targ": 0 },
+      { "eff": 2, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470rebound",
+    "name": "Rebound",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "2Q1X7BC4618470recollect": {
+    "bt_tags": [23, 27],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 96, "pow": 2, "targ": 0 },
+      { "eff": 10, "pow": 1, "targ": 0 },
+      { "eff": 95, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470recollect",
+    "name": "Recollect",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "2Q1X7BC4618470restless": {
+    "bt_tags": [24, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 61, "pow": 0, "targ": 0 },
+      { "eff": 82, "pow": -25, "targ": 0 },
+      { "eff": 52, "pow": 0, "targ": 0 },
+      { "eff": 10, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470restless",
+    "name": "Restless",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470rev": {
+    "bt_tags": [28],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 74, "pow": 1, "targ": 0 },
+      { "eff": 7, "pow": 0, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470rev",
+    "name": "Rev",
+    "pow": 40,
+    "price": 0,
+    "targ": 13,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470roundabout": {
+    "bt_tags": [2, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 7, "pow": 2, "targ": 3 },
+      { "eff": 7, "pow": 3, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470roundabout",
+    "name": "Roundabout",
+    "pow": 70,
+    "price": 0,
+    "targ": 2,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470seclude": {
+    "bt_tags": [24, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 89, "pow": "shy", "targ": 0 },
+      { "eff": 80, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470seclude",
+    "name": "Seclude",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470set?": {
+    "bt_tags": [24, 23, 32],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 20, "pow": 0, "targ": 0 },
+      { "eff": 72, "pow": 0, "targ": 0 },
+      { "eff": 26, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470set?",
+    "name": "Set?",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470shed": {
+    "bt_tags": [31, 29, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 38, "pow": -3, "targ": 0 },
+      { "eff": 8, "pow": 0.5, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470shed",
+    "name": "Shed",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470shield?": {
+    "bt_tags": [23, 33, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 53, "pow": 0, "targ": 0 },
+      { "eff": 19, "pow": 2, "targ": 0 },
+      { "eff": 12, "pow": 3, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470shield?",
+    "name": "Shield?",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "2Q1X7BC4618470shloomstrike!!!!": {
+    "bt_tags": [0, 10, 28, 29, 46, 17],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 15, "pow": 1, "targ": 0 },
+      { "eff": 16, "pow": 1, "targ": 0 },
+      { "eff": 8, "pow": 0.1, "targ": 2 },
+      { "eff": 32, "pow": 0, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470shloomstrike!!!!",
+    "name": "Shloom Strike!!!!",
+    "pow": 60,
+    "price": 0,
+    "targ": 13,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470shout": {
+    "bt_tags": [1, 8, 9, 47, 34, 49, 35],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 86, "pow": 3, "targ": 0 },
+      { "eff": 14, "pow": 4, "targ": 7 }
+    ],
+    "id": "2Q1X7BC4618470shout",
+    "name": "Shout",
+    "pow": 100,
+    "price": 0,
+    "targ": 4,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470shutup": {
+    "bt_tags": [34, 49],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 95, "pow": 3, "targ": 7 },
+      { "eff": 90, "pow": 0, "targ": 0 },
+      { "eff": 14, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470shutup",
+    "name": "SHUT UP",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470siphon": {
+    "bt_tags": [20, 47, 9, 17, 29, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 92, "pow": 0, "targ": 3 },
+      { "eff": 82, "pow": 25, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470siphon",
+    "name": "Siphon",
+    "pow": 0,
+    "price": 0,
+    "targ": 4,
+    "type": 2,
+    "use": 2
+  },
+  "2Q1X7BC4618470skewer": {
+    "bt_tags": [10, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 73, "pow": 0, "targ": 0 },
+      { "eff": 13, "pow": 4, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470skewer",
+    "name": "Skewer",
+    "pow": -50,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470slackoff": {
+    "bt_tags": [24, 31, 29, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 53, "pow": 0, "targ": 0 },
+      { "eff": 29, "pow": 4, "targ": 0 },
+      { "eff": 6, "pow": 4, "targ": 0 },
+      { "eff": 8, "pow": 1, "targ": 0 },
+      { "eff": 12, "pow": 2, "targ": 1 }
+    ],
+    "id": "2Q1X7BC4618470slackoff",
+    "name": "Slack Off",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470sovereignty": {
+    "bt_tags": [24, 29, 28, 37],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 34, "pow": 0, "targ": 7 },
+      { "eff": 74, "pow": 1, "targ": 0 },
+      { "eff": 74, "pow": -1, "targ": 1 },
+      { "eff": 74, "pow": -1, "targ": 8 }
+    ],
+    "id": "2Q1X7BC4618470sovereignty",
+    "name": "Sovereignty",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470splashdown": {
+    "bt_tags": [0, 8, 20, 47, 10, 31, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 40, "pow": 0, "targ": 0 },
+      { "eff": 8, "pow": -0.12, "targ": 7 }
+    ],
+    "id": "2Q1X7BC4618470splashdown",
+    "name": "Splashdown",
+    "pow": 120,
+    "price": 0,
+    "targ": 13,
+    "type": 0,
+    "use": 2
+  },
+  "2Q1X7BC4618470spotlight": {
+    "bt_tags": [20, 47, 34, 49, 35, 31, 38, 12, 29],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 14, "pow": 1, "targ": 3 },
+      { "eff": 39, "pow": 2, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470spotlight",
+    "name": "Spotlight",
+    "pow": 0,
+    "price": 0,
+    "targ": 6,
+    "type": 5,
+    "use": 2
+  },
+  "2Q1X7BC4618470stageset": {
+    "bt_tags": [24, 13, 41, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 43, "pow": 4, "targ": 7 },
+      { "eff": 45, "pow": 4, "targ": 7 }
+    ],
+    "id": "2Q1X7BC4618470stageset",
+    "name": "Stage Set",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470strain": {
+    "bt_tags": [1, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": -26, "pow": 1, "targ": 0 },
+      { "eff": 90, "pow": 0, "targ": 0 },
+      { "eff": 15, "pow": -2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470strain",
+    "name": "Strain",
+    "pow": 85,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470substitute": {
+    "bt_tags": [19, 17, 29, 48, 34, 49],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 30, "pow": 0, "targ": 3 },
+      { "eff": 92, "pow": 0, "targ": 3 },
+      { "eff": 89, "pow": "decoy2", "targ": 3 },
+      { "eff": 14, "pow": 1, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470substitute",
+    "name": "Substitute",
+    "pow": 0,
+    "price": 0,
+    "targ": 8,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470surprise": {
+    "bt_tags": [23, 6, 51, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 15, "pow": 1, "targ": 1 },
+      { "eff": 13, "pow": 1, "targ": 1 }
+    ],
+    "id": "2Q1X7BC4618470surprise",
+    "name": "Surprise",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "2Q1X7BC4618470sync": {
+    "bt_tags": [1, 10, 14],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 64, "pow": 2, "targ": 12 },
+      { "eff": 44, "pow": 4, "targ": 7 }
+    ],
+    "id": "2Q1X7BC4618470sync",
+    "name": "Sync",
+    "pow": 65,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470tagteam": {
+    "bt_tags": [1, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 11, "pow": 0, "targ": 0 }],
+    "id": "2Q1X7BC4618470tagteam",
+    "name": "Tag Team",
+    "pow": 75,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470tank": {
+    "bt_tags": [20, 47, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 82, "pow": 15, "targ": 0 },
+      { "eff": 8, "pow": 0.15, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470tank",
+    "name": "Tank",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 2
+  },
+  "2Q1X7BC4618470thinktwice": {
+    "bt_tags": [24, 28, 29, 46, 31, 47],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 2, "pow": 2, "targ": 0 },
+      { "eff": 5, "pow": 2, "targ": 0 },
+      { "eff": 40, "pow": 0, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470thinktwice",
+    "name": "Think Twice",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470totalcachewipe": {
+    "bt_tags": [0, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 30, "targ": 0 },
+      { "eff": -22, "pow": 4, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470totalcachewipe",
+    "name": "Total Cache Wipe",
+    "pow": 85,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470trust": {
+    "bt_tags": [1, 10, 28, 29, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 2, "pow": 1, "targ": 0 },
+      { "eff": 3, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470trust",
+    "name": "Trust",
+    "pow": 60,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470tweet": {
+    "bt_tags": [20, 47, 34, 49, 28],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 14, "pow": 1, "targ": 0 },
+      { "eff": 1, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470tweet",
+    "name": "Tweet",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 2
+  },
+  "2Q1X7BC4618470u-turn": {
+    "bt_tags": [0, 8, 20, 47],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 7, "pow": 0, "targ": 0 }],
+    "id": "2Q1X7BC4618470u-turn",
+    "name": "U-Turn",
+    "pow": 120,
+    "price": 0,
+    "targ": 8,
+    "type": 0,
+    "use": 2
+  },
+  "2Q1X7BC4618470unregisteredfirearm": {
+    "bt_tags": [24, 20, 47, 48, 38, 29],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 86, "pow": 8, "targ": 0 },
+      { "eff": 8, "pow": -1, "targ": 3 },
+      { "eff": 22, "pow": -99, "targ": 3 },
+      { "eff": 87, "pow": 0, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470unregisteredfirearm",
+    "name": "Unregistered Firearm",
+    "pow": 0,
+    "price": 0,
+    "targ": 4,
+    "type": 4,
+    "use": 2
+  },
+  "2Q1X7BC4618470unsheath": {
+    "bt_tags": [24, 28, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 0, "pow": 2, "targ": 0 },
+      { "eff": 38, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470unsheath",
+    "name": "Unsheath",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470uproar": {
+    "bt_tags": [23, 31, 43, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 8, "pow": -0.25, "targ": 0 },
+      { "eff": 70, "pow": 3, "targ": 7 }
+    ],
+    "id": "2Q1X7BC4618470uproar",
+    "name": "Uproar",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "2Q1X7BC4618470volley?": {
+    "bt_tags": [0, 10, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 18, "pow": 0, "targ": 0 },
+      { "eff": 64, "pow": 5, "targ": 12 },
+      { "eff": 8, "pow": -0.25, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470volley?",
+    "name": "Volley?",
+    "pow": 50,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470wail": {
+    "bt_tags": [2, 10, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 96, "pow": 13, "targ": 0 },
+      { "eff": 84, "pow": 1.5, "targ": 0 },
+      { "eff": 80, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470wail",
+    "name": "Wail",
+    "pow": 60,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "2Q1X7BC4618470whatever": {
+    "bt_tags": [24, 3, 51, 31, 17, 29, 48, 37, 5, 36, 38, 32, 11, 23],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 67, "pow": 0, "targ": 0 },
+      { "eff": 0, "pow": 1, "targ": 3 },
+      { "eff": 92, "pow": 1, "targ": 3 },
+      { "eff": 5, "pow": -1, "targ": 3 },
+      { "eff": 23, "pow": -1, "targ": 3 },
+      { "eff": 26, "pow": 1, "targ": 3 },
+      { "eff": 42, "pow": 1, "targ": 3 },
+      { "eff": 8, "pow": -0.05, "targ": 3 },
+      { "eff": 95, "pow": 9, "targ": 3 },
+      { "eff": 7, "pow": 3, "targ": 3 },
+      { "eff": 20, "pow": 0, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470whatever",
+    "name": "Whatever",
+    "pow": 0,
+    "price": 0,
+    "targ": 6,
+    "type": 4,
+    "use": 0
+  },
+  "2Q1X7BC4618470whiplash": {
+    "bt_tags": [0, 10, 21, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": -7, "pow": 1, "targ": 0 },
+      { "eff": 7, "pow": 0, "targ": 0 },
+      { "eff": 13, "pow": 2, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470whiplash",
+    "name": "Whiplash",
+    "pow": 95,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470worry": {
+    "bt_tags": [1, 9, 37],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 64, "pow": 3, "targ": 12 },
+      { "eff": 76, "pow": -1, "targ": 3 },
+      { "eff": 79, "pow": -1, "targ": 3 }
+    ],
+    "id": "2Q1X7BC4618470worry",
+    "name": "Worry",
+    "pow": 40,
+    "price": 0,
+    "targ": 12,
+    "type": 1,
+    "use": 0
+  },
+  "2Q1X7BC4618470wraparound": {
+    "bt_tags": [29, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 7, "pow": 2, "targ": 0 },
+      { "eff": 90, "pow": 0, "targ": 0 },
+      { "eff": 7, "pow": 0, "targ": 0 },
+      { "eff": 90, "pow": 0, "targ": 0 },
+      { "eff": 16, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470wraparound",
+    "name": "Wraparound",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "2Q1X7BC4618470wreck": {
+    "bt_tags": [0, 10, 48, 31, 47],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 41, "pow": 0, "targ": 0 }],
+    "id": "2Q1X7BC4618470wreck",
+    "name": "Wreck",
+    "pow": -0.95,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "2Q1X7BC4618470yoga": {
+    "bt_tags": [2, 10, 28, 29, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 0, "pow": 1, "targ": 0 },
+      { "eff": 4, "pow": 1, "targ": 0 }
+    ],
+    "id": "2Q1X7BC4618470yoga",
+    "name": "Yoga",
+    "pow": 55,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "357GW8Q4627187gloomtune": {
+    "bt_tags": [1, 9, 50, 38, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 80, "pow": 1, "targ": 9 }],
+    "id": "357GW8Q4627187gloomtune",
+    "name": "Gloom Tune",
+    "pow": 50,
+    "price": 0,
+    "targ": 12,
+    "type": 1,
+    "use": 0
+  },
   "3actions": {
     "bt_tags": [0, 8, 10, 31, 47],
     "desc_tagids": [],
@@ -13,6 +2604,643 @@
     "type": 0,
     "use": 0
   },
+  "44B86NC4618849beguile": {
+    "bt_tags": [24, 31, 47, 38, 51, 12],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 41, "pow": 0, "targ": 0 },
+      { "eff": 8, "pow": 0.2, "targ": 3 },
+      { "eff": 32, "pow": 0, "targ": 3 },
+      { "eff": 38, "pow": 1, "targ": 3 }
+    ],
+    "id": "44B86NC4618849beguile",
+    "name": "Beguile",
+    "pow": 0,
+    "price": 0,
+    "targ": 4,
+    "type": 4,
+    "use": 0
+  },
+  "44B86NC4618849bewilder": {
+    "bt_tags": [24, 37, 38, 12, 29],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 2, "pow": -2, "targ": 3 },
+      { "eff": 39, "pow": 3, "targ": 3 }
+    ],
+    "id": "44B86NC4618849bewilder",
+    "name": "Bewilder",
+    "pow": 0,
+    "price": 0,
+    "targ": 4,
+    "type": 4,
+    "use": 0
+  },
+  "44B86NC4618849bolster": {
+    "bt_tags": [0, 10, 29, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 16, "pow": 1, "targ": 0 }],
+    "id": "44B86NC4618849bolster",
+    "name": "Bolster",
+    "pow": 60,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "44B86NC4618849copyme": {
+    "bt_tags": [24],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 81, "pow": 1, "targ": 3 }],
+    "id": "44B86NC4618849copyme",
+    "name": "Copy Me",
+    "pow": 0,
+    "price": 0,
+    "targ": 7,
+    "type": 4,
+    "use": 0
+  },
+  "44B86NC4618849crashdown": {
+    "bt_tags": [1, 8, 10, 31, 47],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 40, "pow": 0, "targ": 0 },
+      { "eff": 69, "pow": 0, "targ": 0 },
+      { "eff": 8, "pow": -0.3, "targ": 0 }
+    ],
+    "id": "44B86NC4618849crashdown",
+    "name": "Crashdown",
+    "pow": 120,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "44B86NC4618849easypass": {
+    "bt_tags": [23, 17, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 8, "pow": 0.08, "targ": 2 }],
+    "id": "44B86NC4618849easypass",
+    "name": "Easy Pass",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "44B86NC4618849exertion": {
+    "bt_tags": [1, 10, 31, 38, 51, 12],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 38, "pow": 1, "targ": 0 },
+      { "eff": 38, "pow": 2, "targ": 3 }
+    ],
+    "id": "44B86NC4618849exertion",
+    "name": "Exertion",
+    "pow": 85,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "44B86NC4618849flare": {
+    "bt_tags": [2, 10, 21],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": -7, "pow": 1, "targ": 0 },
+      { "eff": 7, "pow": 0, "targ": 0 }
+    ],
+    "id": "44B86NC4618849flare",
+    "name": "Flare",
+    "pow": 70,
+    "price": 0,
+    "targ": 2,
+    "type": 2,
+    "use": 0
+  },
+  "44B86NC4618849guardup": {
+    "bt_tags": [0, 10, 26, 29, 19],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 56, "pow": 0, "targ": 0 }],
+    "id": "44B86NC4618849guardup",
+    "name": "Guard Up",
+    "pow": 5,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "44B86NC4618849guidance": {
+    "bt_tags": [32, 51, 19],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 26, "pow": 1, "targ": 3 },
+      { "eff": 15, "pow": -1, "targ": 3 },
+      { "eff": 30, "pow": 1, "targ": 3 }
+    ],
+    "id": "44B86NC4618849guidance",
+    "name": "Guidance",
+    "pow": 0,
+    "price": 0,
+    "targ": 8,
+    "type": 5,
+    "use": 0
+  },
+  "44B86NC4618849heavyroll": {
+    "bt_tags": [2, 20, 47, 9, 43, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 70, "pow": 1, "targ": 5 }],
+    "id": "44B86NC4618849heavyroll",
+    "name": "Heavy Roll",
+    "pow": 60,
+    "price": 0,
+    "targ": 12,
+    "type": 2,
+    "use": 2
+  },
+  "44B86NC4618849hut": {
+    "bt_tags": [23, 20, 47, 17, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 15, "pow": -1, "targ": 1 },
+      { "eff": 8, "pow": 0.2, "targ": 1 }
+    ],
+    "id": "44B86NC4618849hut",
+    "name": "Hut",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 2
+  },
+  "44B86NC4618849hypeup": {
+    "bt_tags": [1, 10, 32, 51, 34, 49],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 26, "pow": -2, "targ": 1 },
+      { "eff": 14, "pow": 1, "targ": 1 }
+    ],
+    "id": "44B86NC4618849hypeup",
+    "name": "Hype Up",
+    "pow": 30,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "44B86NC4618849immovableobject": {
+    "bt_tags": [33, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 53, "pow": 0, "targ": 0 },
+      { "eff": 6, "pow": 3, "targ": 0 },
+      { "eff": 19, "pow": 2, "targ": 0 }
+    ],
+    "id": "44B86NC4618849immovableobject",
+    "name": "Immovable Object",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "44B86NC4618849lastlaugh": {
+    "bt_tags": [37, 19],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 15, "pow": -1, "targ": 9 },
+      { "eff": 30, "pow": 1, "targ": 3 }
+    ],
+    "id": "44B86NC4618849lastlaugh",
+    "name": "Last Laugh",
+    "pow": 0,
+    "price": 0,
+    "targ": 8,
+    "type": 5,
+    "use": 0
+  },
+  "44B86NC4618849lockdown": {
+    "bt_tags": [2, 10, 30, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 6, "pow": 1, "targ": 8 }],
+    "id": "44B86NC4618849lockdown",
+    "name": "Lockdown",
+    "pow": 20,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "44B86NC4618849nullify": {
+    "bt_tags": [20, 47],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 89, "pow": "traitless", "targ": 7 }],
+    "id": "44B86NC4618849nullify",
+    "name": "Nullify",
+    "pow": 45,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 2
+  },
+  "44B86NC4618849pancake": {
+    "bt_tags": [33, 46, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 53, "pow": 0, "targ": 0 },
+      { "eff": 19, "pow": 1, "targ": 0 },
+      { "eff": 12, "pow": 3, "targ": 0 },
+      { "eff": 7, "pow": 1, "targ": 0 },
+      { "eff": 90, "pow": 0, "targ": 0 },
+      { "eff": 39, "pow": 2, "targ": 0 }
+    ],
+    "id": "44B86NC4618849pancake",
+    "name": "Pancake",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "44B86NC4618849partinggift": {
+    "bt_tags": [41, 48, 29, 7, 46, 19],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 45, "pow": 4, "targ": 7 },
+      { "eff": 16, "pow": 1, "targ": 3 },
+      { "eff": 30, "pow": 1, "targ": 3 }
+    ],
+    "id": "44B86NC4618849partinggift",
+    "name": "Parting Gift",
+    "pow": 45,
+    "price": 0,
+    "targ": 8,
+    "type": 5,
+    "use": 0
+  },
+  "44B86NC4618849pirouette": {
+    "bt_tags": [24, 37, 4, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 4, "pow": -1, "targ": 8 },
+      { "eff": 13, "pow": -1, "targ": 0 }
+    ],
+    "id": "44B86NC4618849pirouette",
+    "name": "Pirouette",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "44B86NC4618849pointzero": {
+    "bt_tags": [2, 10, 29],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 34, "pow": 0, "targ": 8 }],
+    "id": "44B86NC4618849pointzero",
+    "name": "Point Zero",
+    "pow": 50,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "44B86NC4618849recharge": {
+    "bt_tags": [0, 10, 17, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 8, "pow": 0.06, "targ": 6 }],
+    "id": "44B86NC4618849recharge",
+    "name": "Recharge",
+    "pow": 60,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "44B86NC4618849recklessstance": {
+    "bt_tags": [28, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 15, "pow": 2, "targ": 0 },
+      { "eff": 16, "pow": -1, "targ": 0 },
+      { "eff": 38, "pow": 3, "targ": 0 }
+    ],
+    "id": "44B86NC4618849recklessstance",
+    "name": "Reckless Stance",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "44B86NC4618849resistance": {
+    "bt_tags": [1, 10, 29],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 24, "targ": 0 },
+      { "eff": 34, "pow": 0, "targ": 0 }
+    ],
+    "id": "44B86NC4618849resistance",
+    "name": "Resistance",
+    "pow": 70,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "44B86NC4618849riposte": {
+    "bt_tags": [0, 20, 47, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 69, "pow": 0, "targ": 0 },
+      { "eff": 33, "pow": 18, "targ": 0 }
+    ],
+    "id": "44B86NC4618849riposte",
+    "name": "Riposte",
+    "pow": 70,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 2
+  },
+  "44B86NC4618849roar": {
+    "bt_tags": [1, 10, 28],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 15, "pow": 1, "targ": 0 }],
+    "id": "44B86NC4618849roar",
+    "name": "Roar",
+    "pow": 40,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "44B86NC4618849signaturemove": {
+    "bt_tags": [0, 8, 20, 47, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 91, "pow": 0, "targ": 0 },
+      { "eff": 86, "pow": 5, "targ": 0 },
+      { "eff": 87, "pow": 0, "targ": 0 }
+    ],
+    "id": "44B86NC4618849signaturemove",
+    "name": "Signature Move",
+    "pow": 230,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 2
+  },
+  "44B86NC4618849skyball": {
+    "bt_tags": [2, 10, 25, 38, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 7, "targ": 0 },
+      { "eff": 64, "pow": 3, "targ": 12 },
+      { "eff": 13, "pow": 1, "targ": 3 }
+    ],
+    "id": "44B86NC4618849skyball",
+    "name": "Sky Ball",
+    "pow": 60,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "44B86NC4618849soothingaria": {
+    "bt_tags": [24, 17, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 8, "pow": 0.05, "targ": 6 }],
+    "id": "44B86NC4618849soothingaria",
+    "name": "Soothing Aria",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "44B86NC4618849swansong": {
+    "bt_tags": [29, 17, 46, 31, 19],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 8, "pow": 0.35, "targ": 6 },
+      { "eff": 8, "pow": -1, "targ": 0 },
+      { "eff": 82, "pow": -20, "targ": 0 },
+      { "eff": 30, "pow": 1, "targ": 3 }
+    ],
+    "id": "44B86NC4618849swansong",
+    "name": "Swan Song",
+    "pow": 0,
+    "price": 0,
+    "targ": 8,
+    "type": 5,
+    "use": 0
+  },
+  "44B86NC4618849swerve": {
+    "bt_tags": [23],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 7, "pow": 2, "targ": 1 },
+      { "eff": 7, "pow": 2, "targ": 0 }
+    ],
+    "id": "44B86NC4618849swerve",
+    "name": "Swerve",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
+  "44B86NC4618849switcheroo": {
+    "bt_tags": [2, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 11, "pow": 1, "targ": 0 }],
+    "id": "44B86NC4618849switcheroo",
+    "name": "Switcheroo",
+    "pow": 80,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "44B86NC4618849unstoppableforce": {
+    "bt_tags": [0, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 61, "pow": 1, "targ": 0 },
+      { "eff": 96, "pow": 5, "targ": 0 },
+      { "eff": 84, "pow": 1.5, "targ": 0 }
+    ],
+    "id": "44B86NC4618849unstoppableforce",
+    "name": "Unstoppable Force",
+    "pow": 70,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "44B86NC4618849vertigo": {
+    "bt_tags": [1, 10, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 13, "pow": 2, "targ": 0 }],
+    "id": "44B86NC4618849vertigo",
+    "name": "Vertigo",
+    "pow": 95,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "63XK1CH4629470faetrick": {
+    "bt_tags": [2, 9, 11, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 64, "pow": 3, "targ": 7 },
+      { "eff": 42, "pow": 2, "targ": 3 }
+    ],
+    "id": "63XK1CH4629470faetrick",
+    "name": "Fae Trick",
+    "pow": 55,
+    "price": 0,
+    "targ": 12,
+    "type": 2,
+    "use": 0
+  },
+  "67PJ3604627187dissect": {
+    "bt_tags": [8, 17, 29, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 92, "pow": 50, "targ": 9 }],
+    "id": "67PJ3604627187dissect",
+    "name": "Dissect",
+    "pow": 100,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
+    "use": 0
+  },
+  "67PJ3604627187uppercut": {
+    "bt_tags": [0, 10, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 27, "targ": 0 },
+      { "eff": 61, "pow": 1, "targ": 0 }
+    ],
+    "id": "67PJ3604627187uppercut",
+    "name": "Uppercut",
+    "pow": 65,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
+  },
+  "67WYPGQ4618557swash": {
+    "bt_tags": [0, 20, 47, 9, 16],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 33, "pow": 29, "targ": 0 },
+      { "eff": 46, "pow": 0, "targ": 7 }
+    ],
+    "id": "67WYPGQ4618557swash",
+    "name": "Swash",
+    "pow": 40,
+    "price": 0,
+    "targ": 12,
+    "type": 0,
+    "use": 2
+  },
+  "6WY0C8R4615906strongscent": {
+    "bt_tags": [24, 8, 28, 6, 51, 31, 34, 49],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 15, "pow": 1, "targ": 7 },
+      { "eff": 14, "pow": 1, "targ": 0 }
+    ],
+    "id": "6WY0C8R4615906strongscent",
+    "name": "Strong Scent",
+    "pow": 100,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
   "???": {
     "bt_tags": [],
     "desc_tagids": [],
@@ -25,6 +3253,23 @@
     "price": 10,
     "targ": 0,
     "type": 6,
+    "use": 0
+  },
+  "LD1GRC4623849prismarmor": {
+    "bt_tags": [29, 46, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 93, "pow": 2, "targ": 0 },
+      { "eff": 27, "pow": 2, "targ": 0 }
+    ],
+    "id": "LD1GRC4623849prismarmor",
+    "name": "Prism Armor",
+    "pow": 40,
+    "price": 0,
+    "targ": 0,
+    "type": 5,
     "use": 0
   },
   "alljazzattack": {

@@ -15145,6 +15145,7 @@
       "2Q1X7BC4618470gate",
       "44B86NC4618849heavyroll",
       "44B86NC4618849hut",
+      "44B86NC4618849pancake",
       "44B86NC4618849recklessstance",
       "44B86NC4618849riposte",
       "67PJ3604627187dissect",
@@ -23030,10 +23031,8 @@
       "2Q1X7BC4618470comfort",
       "2Q1X7BC4618470shed",
       "2Q1X7BC4618470thinktwice",
-      "44B86NC4618849crashdown",
       "44B86NC4618849pancake",
       "44B86NC4618849recklessstance",
-      "44B86NC4618849riposte",
       "44B86NC4618849signaturemove",
       "1VY50B84633067desperate",
       "1VY50B84633067fall",
@@ -23270,10 +23269,8 @@
       "catwalk",
       "protectcheer",
       "pushattack",
-      "44B86NC4618849crashdown",
       "44B86NC4618849pancake",
       "44B86NC4618849recklessstance",
-      "44B86NC4618849riposte",
       "44B86NC4618849signaturemove",
       "1VY50B84633067desperate",
       "1VY50B84633067fall",
@@ -25958,9 +25955,9 @@
       "startermind"
     ],
     "attklist_randomize": -1,
-    "ba": 30,
-    "base_exp": 126.85,
-    "bd": 55,
+    "ba": 25,
+    "base_exp": 129.1,
+    "bd": 58,
     "body_color_index": 0,
     "codename": "faad70a25286b64df5817b9028656d7a20717941",
     "colormeta": null,
@@ -26002,8 +25999,8 @@
     "foot_size": 20,
     "foot_type": 0,
     "growth": 1,
-    "ha": 40,
-    "hd": 68,
+    "ha": 46,
+    "hd": 72,
     "hidden": false,
     "hidden_counter": null,
     "id": "sourbloom",
@@ -26051,15 +26048,15 @@
       "squishiness": 0.2,
       "stretchiness": 0.1
     },
-    "ma": 78,
-    "md": 70,
+    "ma": 80,
+    "md": 68,
     "mod_data": {
       "alters_data": true,
       "author": "SamTheCookieLord",
       "author_online": "",
       "beastie_ids": ["sourbloom"],
       "beasties": ["Sourbloom"],
-      "description": "Baby's first Beastieball mod :] Have this cute lemony plant creature! Comes with a unique support move, Strong Scent. I'm sorry in advance for poor balancing LOL",
+      "description": "",
       "description_online": "",
       "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3728814225",
       "finished": 1,
@@ -26119,13 +26116,14 @@
       {
         "array": [
           { "color": 10878804, "x": 0.2633333333 },
-          { "color": 6400480, "x": 0.9666666667 }
+          { "color": 7860410, "x": 0.6733333333 },
+          { "color": 4496864, "x": 0.9666666667 }
         ]
       },
       {
         "array": [
           { "color": 14680018, "x": 0 },
-          { "color": 5294276, "x": 0.9633333333 }
+          { "color": 6075826, "x": 0.9633333333 }
         ]
       }
     ],

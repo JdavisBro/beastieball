@@ -1,69 +1,28 @@
 {
-  "dog": {
-    "boo": 12,
-    "cheer": 4,
-    "hello": 4
-  },
-  "platypus2": {
-    "boo": 5,
-    "cheer": 4,
-    "hello": 4
-  },
-  "sourbloom": {
-    "boo": 2,
-    "cheer": 3,
-    "hello": 3
-  },
-  "bugstie": {
-    "boo": 1,
-    "cheer": 1,
-    "hello": 1
-  },
-  "cramorant": {
-    "boo": 2,
-    "cheer": 2,
-    "hello": 2
-  },
-  "arqua": {
-    "boo": 2,
-    "cheer": 1,
-    "hello": 1
-  },
-  "latias": {
-    "boo": 1,
-    "cheer": 1,
-    "hello": 3
-  },
-  "latios": {
-    "boo": 2,
-    "cheer": 2,
-    "hello": 3
-  },
-  "uppercrust": {
-    "boo": 2,
-    "cheer": 2,
-    "hello": 2
-  },
-  "gloombox": {
-    "boo": 2,
-    "cheer": 2,
-    "hello": 2
-  },
-  "despaireo": {
-    "boo": 2,
-    "cheer": 2,
-    "hello": 2
-  },
-  "metta": {
-    "boo": 1,
-    "cheer": 1,
-    "hello": 2
-  },
-  "hornet": {
-    "boo": 5,
-    "cheer": 9,
-    "hello": 4
-  },
+  "dog": { "boo": 12, "cheer": 4, "hello": 4 },
+  "platypus2": { "boo": 5, "cheer": 4, "hello": 4 },
+  "sourbloom": { "boo": 2, "cheer": 3, "hello": 3 },
+  "bugstie": { "boo": 1, "cheer": 1, "hello": 1 },
+  "cramorant": { "boo": 2, "cheer": 2, "hello": 2 },
+  "arqua": { "boo": 2, "cheer": 1, "hello": 1 },
+  "latias": { "boo": 1, "cheer": 1, "hello": 3 },
+  "latios": { "boo": 2, "cheer": 2, "hello": 3 },
+  "uppercrust": { "boo": 2, "cheer": 2, "hello": 2 },
+  "gloombox": { "boo": 2, "cheer": 2, "hello": 2 },
+  "despaireo": { "boo": 2, "cheer": 2, "hello": 2 },
+  "metta": { "boo": 1, "cheer": 1, "hello": 2 },
+  "hornet": { "boo": 5, "cheer": 9, "hello": 4 },
   "sparky": null,
-  "fawnarch": null
+  "fawnarch": null,
+  "bandit": null,
+  "cobby": null,
+  "daemon": null,
+  "gary": null,
+  "prints": null,
+  "seeker": null,
+  "tent": null,
+  "topple": null,
+  "horseshoe": null,
+  "nylandearie": { "boo": 4, "cheer": 4, "hello": 4 },
+  "millipede": null
 }

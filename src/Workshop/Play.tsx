@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./Workshop.module.css";
 import MoveView from "../shared/MoveView";
 import { WorkshopPlay } from "./types";
-import { loadPlayFromIni, StringDataInput } from "./Workshop";
+import { createPlayIni, loadPlayFromIni, StringDataInput } from "./Workshop";
 import { MoveEffect, MoveEffectType } from "../data/MoveData";
 import abilities from "../data/abilities";
 import useLocalization from "../localization/useLocalization";
@@ -1016,6 +1016,16 @@ export default function WorkshopEditPlay({
             onClick={(event) => (event.currentTarget.value = "")}
             ref={fileInputRef}
           />
+          <button
+            onClick={() => {
+              const a = document.createElement("a");
+              a.href = URL.createObjectURL(new Blob([createPlayIni(play, L)]));
+              a.download = `${play.name}.ini`;
+              a.click();
+            }}
+          >
+            {L("workshop.play.exportIni")}
+          </button>
         </div>
       </div>
       <div className={styles.playBox}>

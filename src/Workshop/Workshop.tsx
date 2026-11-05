@@ -5,7 +5,7 @@ import useLocalization, {
   LocalizationFunction,
 } from "../localization/useLocalization";
 import Header from "../shared/Header";
-import { WorkshopData } from "./types";
+import { WorkshopData, WorkshopPlay } from "./types";
 import InfoTabberHeader from "../shared/InfoTabber";
 import WorkshopEditPlay from "./Play";
 import JSZip from "jszip";
@@ -387,6 +387,36 @@ function sanitizeFilename(name: string, doneFilenames?: string[]) {
   return finalFilename;
 }
 
+export function createPlayIni(play: WorkshopPlay, L: LocalizationFunction) {
+  return createIni({
+    basic: {
+      name: play.name,
+      type: play.type,
+      use: play.use,
+      pow: play.pow,
+      target: play.target,
+    },
+    effects: {
+      effects: play.effects
+        .flatMap((effect) => [
+          effect.eff,
+          effect.targ,
+          effect.eff == MoveEffectType.TraitSet
+            ? L(abilities[effect.pow].name)
+            : effect.pow,
+        ])
+        .join(","),
+    },
+    distribution: {
+      learnedby: play.learnedby
+        .map((beastie) =>
+          L(BEASTIE_DATA.get(beastie)?.name ?? "", undefined, true),
+        )
+        .join(","),
+    },
+  });
+}
+
 function saveZip(workshopData: WorkshopData, L: LocalizationFunction) {
   const zip = new JSZip();
   const base = sanitizeFilename(workshopData.name || "Unnamed Mod");
@@ -409,33 +439,7 @@ function saveZip(workshopData: WorkshopData, L: LocalizationFunction) {
   for (const play of workshopData.plays) {
     zip.file(
       `${base}/${sanitizeFilename(play.name, doneFilenames)}/play_data.ini`,
-      createIni({
-        basic: {
-          name: play.name,
-          type: play.type,
-          use: play.use,
-          pow: play.pow,
-          target: play.target,
-        },
-        effects: {
-          effects: play.effects
-            .flatMap((effect) => [
-              effect.eff,
-              effect.targ,
-              effect.eff == MoveEffectType.TraitSet
-                ? L(abilities[effect.pow].name)
-                : effect.pow,
-            ])
-            .join(","),
-        },
-        distribution: {
-          learnedby: play.learnedby
-            .map((beastie) =>
-              L(BEASTIE_DATA.get(beastie)?.name ?? "", undefined, true),
-            )
-            .join(","),
-        },
-      }),
+      createPlayIni(play, L),
     );
   }
   zip.generateAsync({ type: "blob" }).then(function (content) {

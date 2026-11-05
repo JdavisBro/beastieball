@@ -1,5 +1,8 @@
 # Updates beastie sprite bounds to ignore stray pixels
+import sys
 import json
+import subprocess
+import time
 from pathlib import Path
 
 from PIL import Image, ImageFilter
@@ -13,28 +16,69 @@ beasties = Path("../public/gameassets/beasties/")
 
 donesprites = []
 
+add_modded = len(sys.argv) > 1 and sys.argv[1] == "modded"
+currentProcesses: list[subprocess.Popen] = []
+
+TOTAL_PROCESSES = 12
+
+def wait_for_process():
+  waiting = True
+  while waiting:
+    for process in list(currentProcesses):
+      completed = process.poll()
+      if completed is not None:
+        currentProcesses.remove(process)
+        waiting = False
+        break
+    time.sleep(0.05)
+
 for beastie in beasties.iterdir():
+  convert_webp = False
+  if beastie.name not in spriteinfo:
+    convert_webp = True
+    frames_count = len([i for i in beastie.iterdir() if i.stem != "HITBOX" and i.suffix.endswith("png")])
+    has_hitbox = (beastie / "HITBOX.png").exists()
+    hitbox = Image.open(beastie / "HITBOX.png") if has_hitbox else Image.open([i for i in beastie.iterdir()][2])
+    bbox = hitbox.getbbox()
+    spriteinfo[beastie.name] = {
+      "width": hitbox.width,
+      "height": hitbox.height,
+      "frames": frames_count,
+      "originX": bbox[0] + (bbox[2] - bbox[0]) / 2,
+      "originY": bbox[3],
+      "bboxes": [None for _ in range(frames_count)],
+    }
+  elif add_modded:
+    continue
+  has_zero = (beastie / "0.png").exists()
   print(beastie.name)
   for framefp in beastie.iterdir():
-    frame = int(framefp.stem)
+    print(framefp)
+    if framefp.stem == "HITBOX": continue
+    frame = int(framefp.stem) - (0 if has_zero else 1)
     im = Image.open(framefp)
     pilbbox = im.point(lambda p: p > 0).filter(ImageFilter.MedianFilter(3)).getbbox()
     if pilbbox:
       bbox = {"x": pilbbox[0], "y": pilbbox[1], "width": pilbbox[2] - pilbbox[0], "height": pilbbox[3] - pilbbox[1]}
     else:
       bbox = None
-    for spr in spriteinfo:
-      spr = spriteinfo[beastie.name]
-      if not spr:
-        continue
-      if len(spr["bboxes"]) <= frame:
-        print(f"TOO MANY FRAMES!! {beastie.name}")
-        break
-      if spr["bboxes"][frame] == bbox:
-        continue
-      if beastie.name not in donesprites:
-        donesprites.append(beastie.name)
-      spr["bboxes"][frame] = bbox
+    spr = spriteinfo.get(beastie.name)
+    if not spr:
+      continue
+    if len(spr["bboxes"]) <= frame:
+      print(f"TOO MANY FRAMES!! {beastie.name}")
+      continue
+    if spr["bboxes"][frame] == bbox:
+      continue
+    if beastie.name not in donesprites:
+      donesprites.append(beastie.name)
+    spr["bboxes"][frame] = bbox
+    if len(currentProcesses) == TOTAL_PROCESSES:
+      wait_for_process()
+    currentProcesses.append(subprocess.Popen(["cwebp", "-quiet", "-z", "9", str(framefp), "-o", str(beastie / f"{frame}.webp")]))
+
+while currentProcesses:
+  wait_for_process()
 
 print("Updating main bboxes.")
 for beastie in donesprites:

@@ -21,7 +21,7 @@ export type Condition = {
 
 export type BeastieType = {
   ability: Array<string>;
-  ability_hidden: boolean;
+  ability_hidden: boolean | number;
   allowedInPromo: boolean | number;
   anim_progress: number;
   animator: number | number[];

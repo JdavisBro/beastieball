@@ -28,7 +28,16 @@
       "protect",
       "rest",
       "rattle",
-      "mindup"
+      "mindup",
+      "2Q1X7BC4618470haunt",
+      "2Q1X7BC4618470icicle",
+      "2Q1X7BC4618470pacify",
+      "2Q1X7BC4618470beam",
+      "2Q1X7BC4618470absorb",
+      "2Q1X7BC4618470tweet",
+      "2Q1X7BC4618470fumble",
+      "44B86NC4618849skyball",
+      "44B86NC4618849switcheroo"
     ],
     "attklist_randomize": -1,
     "ba": 33,
@@ -252,7 +261,9 @@
       "protect",
       "rest",
       "rattle",
-      "mindup"
+      "mindup",
+      "44B86NC4618849skyball",
+      "44B86NC4618849switcheroo"
     ],
     "attklist_randomize": -1,
     "ba": 25,
@@ -452,6 +463,251 @@
     "tyield": ["ma", 1],
     "type_focus": 1
   },
+  "arqua": {
+    "ability": ["attentionseeker", "extrovert_1"],
+    "ability_hidden": 1,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "reversal",
+      "dare",
+      "heartup",
+      "rocket",
+      "defheal",
+      "steal",
+      "substitute",
+      "crowd",
+      "powswitch",
+      "damagedattack",
+      "threat",
+      "noisytag",
+      "67WYPGQ4618557swash",
+      "quake",
+      "healhit",
+      "facade",
+      "tailwind",
+      "lowattks",
+      "bounce"
+    ],
+    "attklist_randomize": -1,
+    "ba": 95,
+    "base_exp": 212.5,
+    "bd": 80,
+    "body_color_index": 4,
+    "codename": "0a795a17626c637ff39830b7344901fb114ae0f6",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 13410115, "x": 0 },
+          { "color": 8607281, "x": 0.76 },
+          { "color": 8616232, "x": 0.99 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 6903340, "x": 0 },
+          { "color": 3286045, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 15269877, "x": 0 },
+          { "color": 15728614, "x": 0.7766666667 },
+          { "color": 15204041, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 5433087, "x": 0 },
+          { "color": 5280220, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16755266, "x": 0 },
+          { "color": 12574314, "x": 1 }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 0.8, 70, 8, 3],
+      [0, 0, 1, 31, 1, 0],
+      [1, 0, 1, 43, 7, 3],
+      [52, 1, 0, 46, 7, 0]
+    ],
+    "desc": "Primordial tyrant of the ocean, at least in a different region. Questionably skilled at beastieball.",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 4,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "arqua",
+    "first_frame": -1,
+    "foot_size": 100,
+    "foot_type": 0,
+    "growth": 1,
+    "ha": 65,
+    "hd": 110,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "arqua",
+    "isBaby": false,
+    "learnset": [
+      [0, "bounce"],
+      [1, "lowattks"],
+      [9, "tailwind"],
+      [12, "facade"],
+      [16, "healhit"],
+      [20, "quake"],
+      [24, "67WYPGQ4618557swash"],
+      [27, "noisytag"],
+      [30, "threat"],
+      [37, "damagedattack"],
+      [41, "powswitch"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 166.5,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "float_x": 0,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 20,
+    "md": 40,
+    "mod_data": {
+      "alters_data": true,
+      "author": "",
+      "author_online": "",
+      "beastie_ids": ["arqua", "millipede"],
+      "beasties": ["Arqua"],
+      "description": "",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3777163085",
+      "finished": 1,
+      "imported": true,
+      "internal_id": "67WYPGQ4618557",
+      "major_version": "1",
+      "minor_version": "0",
+      "name": "Arqua in Beastieball!",
+      "name_online": "",
+      "play_ids": { "swash": "67WYPGQ4618557swash" },
+      "plays": ["Swash"],
+      "reskins": ["¦beastiesetup_name_078¦"],
+      "texts": [],
+      "tracks": [],
+      "url": "3777163085"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3777163085\\Beastie_Arqua\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Arqua",
+    "number": 102,
+    "order": 107,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "effect_type": 43,
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 46
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_003¦"
+    },
+    "recruit_value": 3.05,
+    "roamer_style": {
+      "_name": "DASH_IDLE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1.2],
+    "shiny": [
+      {
+        "array": [
+          { "color": 3947689, "x": 0 },
+          { "color": 1254768, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 5669596, "x": 0 },
+          { "color": 4087741, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16382463, "x": 0.0133333333 },
+          { "color": 12895487, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 9592511, "x": 0 },
+          { "color": 14527231, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 7095437, "x": 0 },
+          { "color": 5454195, "x": 0.9933333333 }
+        ]
+      }
+    ],
+    "spr": "sprarqua",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 4,
+    "tex_group_suffix": "",
+    "tyield": ["bd", 1, "hd", 1],
+    "type_focus": 0
+  },
   "bat": {
     "ability": ["nurture", "mom"],
     "ability_hidden": true,
@@ -489,7 +745,18 @@
       "followme",
       "squeeze",
       "lifepass",
-      "burnout"
+      "burnout",
+      "2Q1X7BC4618470heart",
+      "2Q1X7BC4618470hurricane",
+      "2Q1X7BC4618470tagteam",
+      "2Q1X7BC4618470nurture",
+      "2Q1X7BC4618470strain",
+      "2Q1X7BC4618470coach",
+      "6WY0C8R4615906strongscent",
+      "44B86NC4618849easypass",
+      "44B86NC4618849exertion",
+      "44B86NC4618849soothingaria",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 79,
@@ -785,7 +1052,12 @@
       "charm",
       "swarm",
       "followme",
-      "squeeze"
+      "squeeze",
+      "6WY0C8R4615906strongscent",
+      "44B86NC4618849easypass",
+      "44B86NC4618849exertion",
+      "44B86NC4618849soothingaria",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 72,
@@ -1013,7 +1285,18 @@
       "bomb",
       "flatten",
       "wall",
-      "bolt"
+      "bolt",
+      "2Q1X7BC4618470drill",
+      "2Q1X7BC4618470lob",
+      "2Q1X7BC4618470u-turn",
+      "2Q1X7BC4618470wail",
+      "2Q1X7BC4618470uproar",
+      "2Q1X7BC4618470dryout",
+      "2Q1X7BC4618470killerwail",
+      "2Q1X7BC4618470seclude",
+      "2Q1X7BC4618470stageset",
+      "44B86NC4618849soothingaria",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 89,
@@ -1223,7 +1506,16 @@
       "squeeze",
       "share",
       "fortify",
-      "construct"
+      "construct",
+      "2Q1X7BC4618470heart",
+      "2Q1X7BC4618470imbue",
+      "2Q1X7BC4618470sync",
+      "2Q1X7BC4618470tagteam",
+      "2Q1X7BC4618470excavate",
+      "2Q1X7BC4618470comfort",
+      "44B86NC4618849easypass",
+      "44B86NC4618849swansong",
+      "1VY50B84633067desperate"
     ],
     "attklist_randomize": -1,
     "ba": 25,
@@ -1447,7 +1739,18 @@
       "fortify",
       "construct",
       "shieldbreaker",
-      "damagedattack"
+      "damagedattack",
+      "2Q1X7BC4618470drain",
+      "2Q1X7BC4618470enclose",
+      "2Q1X7BC4618470precisionstrike?",
+      "2Q1X7BC4618470substitute",
+      "2Q1X7BC4618470restless",
+      "2Q1X7BC4618470fumble",
+      "44B86NC4618849easypass",
+      "44B86NC4618849roar",
+      "44B86NC4618849swansong",
+      "67PJ3604627187dissect",
+      "1VY50B84633067desperate"
     ],
     "attklist_randomize": -1,
     "ba": 50,
@@ -1666,7 +1969,22 @@
       "passattack",
       "startermind",
       "dig",
-      "nightshade"
+      "nightshade",
+      "2Q1X7BC4618470cautiousstrike",
+      "2Q1X7BC4618470mindspike",
+      "2Q1X7BC4618470yoga",
+      "2Q1X7BC4618470bandicraftbash!!!!",
+      "2Q1X7BC4618470coach",
+      "2Q1X7BC4618470cross",
+      "2Q1X7BC4618470recollect",
+      "2Q1X7BC4618470surprise",
+      "44B86NC4618849easypass",
+      "44B86NC4618849heavyroll",
+      "44B86NC4618849hut",
+      "44B86NC4618849skyball",
+      "44B86NC4618849swerve",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 57,
@@ -1926,7 +2244,14 @@
       "sweep",
       "passattack",
       "startermind",
-      "dig"
+      "dig",
+      "44B86NC4618849easypass",
+      "44B86NC4618849heavyroll",
+      "44B86NC4618849hut",
+      "44B86NC4618849skyball",
+      "44B86NC4618849swerve",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 28,
@@ -2148,7 +2473,14 @@
       "sweep",
       "passattack",
       "startermind",
-      "dig"
+      "dig",
+      "44B86NC4618849easypass",
+      "44B86NC4618849heavyroll",
+      "44B86NC4618849hut",
+      "44B86NC4618849skyball",
+      "44B86NC4618849swerve",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 43,
@@ -2355,6 +2687,243 @@
     "tyield": ["md", 2],
     "type_focus": 2
   },
+  "bugstie": {
+    "ability": ["flee", "shield"],
+    "ability_hidden": 1,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "stress",
+      "rocket",
+      "fieldclear",
+      "tagattack",
+      "juggle",
+      "nice",
+      "protect",
+      "shakenhit",
+      "sensihit",
+      "cover",
+      "dig",
+      "substitute",
+      "sideshot"
+    ],
+    "attklist_randomize": -1,
+    "ba": 90,
+    "base_exp": 88.88,
+    "bd": 80,
+    "body_color_index": 5,
+    "codename": "493522fbda27b4f2a63fd82c2209cae02a981b7f",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 16738633, "x": 0 },
+          { "color": 255, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16777215, "x": 0 },
+          { "color": 65280, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 255, "x": 0 },
+          { "color": 16777215, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 5046163, "x": 0 },
+          { "color": 16777215, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 12757633, "x": 0 },
+          { "color": 14189675, "x": 0.2733333333 },
+          { "color": 12739948, "x": 0.4966666667 },
+          { "color": 11492233, "x": 0.72 },
+          { "color": 11286714, "x": 0.8566666667 },
+          { "color": 12692418, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 15519171, "x": 0 },
+          { "color": 14925789, "x": 0.1933333333 },
+          { "color": 12502499, "x": 0.4066666667 },
+          { "color": 14935789, "x": 0.71 },
+          { "color": 11524079, "x": 1 }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 0.8, 26, 0, -2],
+      [0, 0, 1, 1, 0, 1],
+      [0, 0, 1, 1, 0, 1],
+      [0, 0, 1, 1, 0, 1]
+    ],
+    "desc": "An lonely and anxious beastie-ish creature they want to play ball but feel like something is missing to reach their full potential",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 0,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": [{ "condition": [0], "specie": "tricky", "value": [40] }],
+    "face_color_index": 4,
+    "family": "bugstie",
+    "first_frame": -1,
+    "foot_size": 10,
+    "foot_type": 1,
+    "growth": 0.8,
+    "ha": 10,
+    "hd": 35,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "bugstie",
+    "isBaby": false,
+    "learnset": [
+      [0, "sideshot"],
+      [0, "substitute"],
+      [4, "dig"],
+      [6, "cover"],
+      [8, "sensihit"],
+      [14, "shakenhit"],
+      [20, "protect"],
+      [25, "nice"],
+      [29, "juggle"],
+      [33, "tagattack"],
+      [37, "fieldclear"],
+      [39, "rocket"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 249.75,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "float_x": 0,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 25,
+    "md": 43,
+    "mod_data": {
+      "alters_data": true,
+      "author": "Phoenix",
+      "author_online": "",
+      "beastie_ids": ["bugstie"],
+      "beasties": ["Bugstie"],
+      "description": "",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3746791464",
+      "finished": 0,
+      "imported": true,
+      "internal_id": "3TX86V04615697",
+      "major_version": "0",
+      "minor_version": "2",
+      "name": "Bugstie",
+      "name_online": "",
+      "play_ids": {},
+      "plays": [],
+      "reskins": [],
+      "texts": [],
+      "tracks": [],
+      "url": "3746791464"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3746791464\\Beastie_Bugstie\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Bugstie",
+    "number": 103,
+    "order": 108,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "effect_type": 48,
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 46
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_068¦"
+    },
+    "recruit_value": 3.25,
+    "roamer_style": {
+      "_name": "SKITTISH",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      { "array": [{ "color": 6750072, "x": 0 }] },
+      { "array": [{ "color": 65280, "x": 0 }] },
+      { "array": [{ "color": 16777215, "x": 0.5 }] },
+      { "array": [{ "color": 16777215, "x": 0.5 }] },
+      {
+        "array": [
+          { "color": 16777215, "x": 0 },
+          { "color": 0, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16777215, "x": 0 },
+          { "color": 0, "x": 0.99 }
+        ]
+      }
+    ],
+    "spr": "sprbugstie",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tex_group_suffix": "",
+    "tyield": ["ba", 2, "bd", 2],
+    "type_focus": 0
+  },
   "cassowary": {
     "ability": ["starter_b", "lifeorb"],
     "ability_hidden": true,
@@ -2388,7 +2957,19 @@
       "flykick",
       "substitute",
       "vigor",
-      "starterbody"
+      "starterbody",
+      "2Q1X7BC4618470lob",
+      "2Q1X7BC4618470lunge",
+      "2Q1X7BC4618470u-turn",
+      "2Q1X7BC4618470kasaleetkick!!!!",
+      "2Q1X7BC4618470tweet",
+      "2Q1X7BC4618470coach",
+      "2Q1X7BC4618470restless",
+      "44B86NC4618849unstoppableforce",
+      "1VY50B84633067deep",
+      "1VY50B84633067desperate",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 115,
@@ -2610,7 +3191,12 @@
       "flykick",
       "substitute",
       "vigor",
-      "starterbody"
+      "starterbody",
+      "44B86NC4618849unstoppableforce",
+      "1VY50B84633067deep",
+      "1VY50B84633067desperate",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 75,
@@ -2822,7 +3408,12 @@
       "flykick",
       "substitute",
       "vigor",
-      "starterbody"
+      "starterbody",
+      "44B86NC4618849unstoppableforce",
+      "1VY50B84633067deep",
+      "1VY50B84633067desperate",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 87,
@@ -3031,7 +3622,12 @@
       "dispel",
       "myheartpass",
       "swarm",
-      "starterbody"
+      "starterbody",
+      "2Q1X7BC4618470heart",
+      "2Q1X7BC4618470overhype",
+      "2Q1X7BC4618470coach",
+      "44B86NC4618849hypeup",
+      "44B86NC4618849swansong"
     ],
     "attklist_randomize": -1,
     "ba": 65,
@@ -3266,7 +3862,9 @@
       "dispel",
       "myheartpass",
       "swarm",
-      "starterbody"
+      "starterbody",
+      "44B86NC4618849hypeup",
+      "44B86NC4618849swansong"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -3478,7 +4076,15 @@
       "myheartpass",
       "swarm",
       "starterbody",
-      "stomp"
+      "stomp",
+      "2Q1X7BC4618470lunge",
+      "2Q1X7BC4618470sync",
+      "2Q1X7BC4618470breakdance",
+      "2Q1X7BC4618470backflip",
+      "2Q1X7BC4618470comfort",
+      "2Q1X7BC4618470ragebait",
+      "44B86NC4618849hypeup",
+      "44B86NC4618849swansong"
     ],
     "attklist_randomize": -1,
     "ba": 98,
@@ -3705,7 +4311,18 @@
       "rest",
       "haze",
       "facade",
-      "stretch"
+      "stretch",
+      "2Q1X7BC4618470claw",
+      "2Q1X7BC4618470lob",
+      "2Q1X7BC4618470yoga",
+      "2Q1X7BC4618470backflip",
+      "2Q1X7BC4618470strain",
+      "2Q1X7BC4618470cross",
+      "44B86NC4618849exertion",
+      "44B86NC4618849heavyroll",
+      "44B86NC4618849resistance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 96,
@@ -3930,7 +4547,16 @@
       "shakenmind",
       "kick",
       "followme",
-      "starterside"
+      "starterside",
+      "2Q1X7BC4618470roundabout",
+      "2Q1X7BC4618470yoga",
+      "2Q1X7BC4618470encore",
+      "2Q1X7BC4618470joke",
+      "2Q1X7BC4618470rebound",
+      "2Q1X7BC4618470aim",
+      "2Q1X7BC4618470ragdoll",
+      "44B86NC4618849heavyroll",
+      "1VY50B84633067dance"
     ],
     "attklist_randomize": -1,
     "ba": 80,
@@ -4136,7 +4762,9 @@
       "shakenmind",
       "kick",
       "followme",
-      "starterside"
+      "starterside",
+      "44B86NC4618849heavyroll",
+      "1VY50B84633067dance"
     ],
     "attklist_randomize": -1,
     "ba": 60,
@@ -4389,7 +5017,19 @@
       "alljazzattack",
       "slide",
       "passionstrike",
-      "heartpass"
+      "heartpass",
+      "2Q1X7BC4618470drill",
+      "2Q1X7BC4618470imbue",
+      "2Q1X7BC4618470encore",
+      "2Q1X7BC4618470sovereignty",
+      "2Q1X7BC4618470shed",
+      "2Q1X7BC4618470stageset",
+      "44B86NC4618849pancake",
+      "44B86NC4618849pirouette",
+      "44B86NC4618849swerve",
+      "1VY50B84633067dance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 108,
@@ -4611,6 +5251,247 @@
     "tyield": ["ba", 2, "ha", 1],
     "type_focus": 0
   },
+  "cramorant": {
+    "ability": ["oblivious_1", "gulper"],
+    "ability_hidden": 0,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "steal",
+      "heartup",
+      "distraction",
+      "rush",
+      "followme",
+      "protect",
+      "defheal",
+      "set",
+      "dump",
+      "nice",
+      "stun",
+      "substitute",
+      "moon",
+      "rest",
+      "fieldclear",
+      "superpower",
+      "1PJ2FYF4619276gulpmissile",
+      "whirlwind",
+      "enemylowered",
+      "serve",
+      "allyprotect",
+      "1PJ2FYF4619276spittingpass",
+      "sensihit",
+      "rattle",
+      "juggle",
+      "starterbody",
+      "1PJ2FYF4619276gulpmissile",
+      "1PJ2FYF4619276spittingpass"
+    ],
+    "attklist_randomize": -1,
+    "ba": 70,
+    "base_exp": 145.75,
+    "bd": 55,
+    "body_color_index": 0,
+    "codename": "165e7043c73ebe633f08197e3fa7d015e3e4ec79",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 12020736, "x": 0 },
+          { "color": 7291925, "x": 1 }
+        ]
+      },
+      { "array": [{ "color": 14668732, "x": 0 }] },
+      {
+        "array": [
+          { "color": 4117246, "x": 0 },
+          { "color": 2459605, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 5946221, "x": 0 },
+          { "color": 6587905, "x": 1 }
+        ]
+      },
+      { "array": [{ "color": 5723216, "x": 0 }] }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 1.5, 8, 3, -0.25],
+      [10, 0, 1, 0, 0, 1],
+      [0, 0, 1, 2, 0, 1],
+      [0, 0, 1, 2, 0, 1]
+    ],
+    "desc": "A Beastie from a faraway land. It is known to be difficult to train as it uses the minimum amount of energy for its brainpower.",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 1,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "cramorant",
+    "first_frame": -1,
+    "foot_size": 20,
+    "foot_type": 1,
+    "growth": 1,
+    "ha": 20,
+    "hd": 85,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "cramorant",
+    "isBaby": false,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "juggle"],
+      [8, "rattle"],
+      [12, "sensihit"],
+      [17, "1PJ2FYF4619276spittingpass"],
+      [22, "allyprotect"],
+      [25, "serve"],
+      [29, "enemylowered"],
+      [33, "dump"],
+      [37, "whirlwind"],
+      [41, "1PJ2FYF4619276gulpmissile"],
+      [49, "superpower"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 86.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "float_x": 0,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 85,
+    "md": 95,
+    "mod_data": {
+      "alters_data": true,
+      "author": "Oakin64",
+      "author_online": "",
+      "beastie_ids": ["cramorant"],
+      "beasties": ["Cramorant"],
+      "description": "",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3747913219",
+      "finished": 0,
+      "imported": true,
+      "internal_id": "1PJ2FYF4619276",
+      "major_version": "1",
+      "minor_version": "0",
+      "name": "Cramorant in Beastieball",
+      "name_online": "",
+      "play_ids": {
+        "gulpmissile": "1PJ2FYF4619276gulpmissile",
+        "spittingpass": "1PJ2FYF4619276spittingpass"
+      },
+      "plays": ["Gulp Missile", "Spitting Pass"],
+      "reskins": [],
+      "texts": [],
+      "tracks": [],
+      "url": "3747913219"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3747913219\\Beastie_Cramorant\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Cramorant",
+    "number": 104,
+    "order": 109,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "attack_type": 0,
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 15
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_038¦"
+    },
+    "recruit_value": 3.6,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          { "color": 4746437, "x": 0 },
+          { "color": 1729279, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 3520742, "x": 0 },
+          { "color": 10407405, "x": 0.9966666667 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 4117246, "x": 0 },
+          { "color": 2459605, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 5946221, "x": 0 },
+          { "color": 6587905, "x": 1 }
+        ]
+      },
+      { "array": [{ "color": 5723216, "x": 0 }] }
+    ],
+    "spr": "sprcramorant",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tex_group_suffix": "",
+    "tyield": ["hd", 2, "md", 2],
+    "type_focus": 2
+  },
   "croc": {
     "ability": ["ace", "taghit"],
     "ability_hidden": false,
@@ -4648,7 +5529,16 @@
       "menace",
       "trap",
       "sweep",
-      "netattack"
+      "netattack",
+      "2Q1X7BC4618470claw",
+      "2Q1X7BC4618470dropshot",
+      "2Q1X7BC4618470pacify",
+      "2Q1X7BC4618470prey",
+      "2Q1X7BC4618470constrict",
+      "2Q1X7BC4618470ragdoll",
+      "2Q1X7BC4618470shed",
+      "44B86NC4618849beguile",
+      "44B86NC4618849flare"
     ],
     "attklist_randomize": -1,
     "ba": 80,
@@ -4878,7 +5768,22 @@
       "dodge",
       "backswitch",
       "taunt",
-      "starterheart"
+      "starterheart",
+      "2Q1X7BC4618470hype",
+      "2Q1X7BC4618470infuriatingstrike",
+      "2Q1X7BC4618470tagteam",
+      "2Q1X7BC4618470u-turn",
+      "2Q1X7BC4618470whiplash",
+      "2Q1X7BC4618470rev",
+      "2Q1X7BC4618470dash",
+      "2Q1X7BC4618470fuel",
+      "44B86NC4618849crashdown",
+      "44B86NC4618849pancake",
+      "44B86NC4618849recklessstance",
+      "1VY50B84633067desperate",
+      "1VY50B84633067dodge",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 94,
@@ -5128,7 +6033,14 @@
       "dodge",
       "backswitch",
       "taunt",
-      "starterheart"
+      "starterheart",
+      "44B86NC4618849crashdown",
+      "44B86NC4618849pancake",
+      "44B86NC4618849recklessstance",
+      "1VY50B84633067desperate",
+      "1VY50B84633067dodge",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 68,
@@ -5326,6 +6238,235 @@
     "tyield": ["ha", 1],
     "type_focus": 0
   },
+  "despaireo": {
+    "ability": ["pretentious", "stubborn"],
+    "ability_hidden": 0,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "ego",
+      "followme",
+      "taunt",
+      "scream",
+      "heartdown",
+      "sting",
+      "menace",
+      "netattack",
+      "mindup",
+      "targethp",
+      "snipe",
+      "allnervous",
+      "heart",
+      "cover",
+      "scoreboosted",
+      "eerie",
+      "hex",
+      "mindbomb",
+      "sidespin",
+      "distraction",
+      "sensihit",
+      "hum",
+      "sad",
+      "21MW9NP4627187despairtune",
+      "starterheart"
+    ],
+    "attklist_randomize": -1,
+    "ba": 20,
+    "base_exp": 210.65,
+    "bd": 30,
+    "body_color_index": 0,
+    "codename": "7d8260f2ddbe01675e6ae0f6db5db72cbf67bd1d",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 255, "x": 0.2033333333 },
+          { "color": 11010061, "x": 0.5366666667 },
+          { "color": 16770048, "x": 0.8333333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16713644, "x": 0.2266666667 },
+          { "color": 16758863, "x": 0.5233333333 },
+          { "color": 10178047, "x": 0.84 }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 1.4, 14, 0, 2],
+      [10, 0, 1, 39, 1, 1, 76, 1, 1],
+      [10, 0, 1, 39, 1, 1, 76, 1, 1],
+      [7, 7, 0, 6, 7, 2]
+    ],
+    "desc": "In the rare circumstance that this lone spirit recieves enough negative energy, it embraces the despair of others nearby and channels it into power. This immense energy output requires a larger electrical device to contain it.",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 4,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "despaireo",
+    "first_frame": -1,
+    "foot_size": 30,
+    "foot_type": 1,
+    "growth": 1.1,
+    "ha": 80,
+    "hd": 100,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "despaireo",
+    "isBaby": false,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "21MW9NP4627187despairtune"],
+      [5, "sad"],
+      [8, "hum"],
+      [12, "sensihit"],
+      [15, "distraction"],
+      [17, "sidespin"],
+      [17, "mindbomb"],
+      [20, "hex"],
+      [22, "eerie"],
+      [25, "scoreboosted"],
+      [29, "cover"],
+      [33, "heart"],
+      [35, "allnervous"],
+      [37, "snipe"],
+      [42, "targethp"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 99.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "float_x": 0,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 70,
+    "md": 72,
+    "mod_data": {
+      "alters_data": true,
+      "author": "Equinoxe",
+      "author_online": "",
+      "beastie_ids": ["despaireo"],
+      "beasties": ["Despaireo"],
+      "description": "",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3797110333",
+      "finished": 0,
+      "imported": true,
+      "internal_id": "21MW9NP4627187",
+      "major_version": "1",
+      "minor_version": "0",
+      "name": "Despaireo",
+      "name_online": "",
+      "play_ids": { "despairtune": "21MW9NP4627187despairtune" },
+      "plays": ["Despair Tune"],
+      "reskins": [],
+      "texts": [],
+      "tracks": [],
+      "url": "3797110333"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3797110333\\Despaireo data\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Despaireo",
+    "number": 105,
+    "order": 110,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "attack_type": 0,
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 15
+        },
+        {
+          "attack_type": 1,
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 15
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_082¦"
+    },
+    "recruit_value": 5,
+    "roamer_style": {
+      "_name": "CAMO",
+      "can_react": true,
+      "can_socialize": false,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          { "color": 0, "x": 0.1766666667 },
+          { "color": 16774644, "x": 0.73 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16767160, "x": 0.1733333333 },
+          { "color": 8081758, "x": 0.7366666667 }
+        ]
+      }
+    ],
+    "spr": "sprdespaireo",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 4,
+    "tex_group_suffix": "",
+    "tyield": ["ha", 2, "md", 2],
+    "type_focus": 1
+  },
   "disruptor": {
     "ability": ["redirection", "taunt"],
     "ability_hidden": false,
@@ -5360,7 +6501,20 @@
       "stress",
       "enemylowered",
       "rattle",
-      "scream"
+      "scream",
+      "2Q1X7BC4618470pocketsand",
+      "2Q1X7BC4618470roundabout",
+      "2Q1X7BC4618470wail",
+      "2Q1X7BC4618470shout",
+      "2Q1X7BC4618470echo",
+      "2Q1X7BC4618470substitute",
+      "2Q1X7BC4618470restless",
+      "21MW9NP4627187despairtune",
+      "44B86NC4618849bewilder",
+      "44B86NC4618849swansong",
+      "1VY50B84633067desperate",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 40,
@@ -5598,7 +6752,22 @@
       "myheartpass",
       "allyrush",
       "bolt",
-      "scoreboosted"
+      "scoreboosted",
+      "2Q1X7BC4618470bother",
+      "2Q1X7BC4618470infuriatingstrike",
+      "2Q1X7BC4618470wail",
+      "2Q1X7BC4618470frisbee",
+      "2Q1X7BC4618470meow",
+      "2Q1X7BC4618470totalcachewipe",
+      "2Q1X7BC4618470bodyguard",
+      "2Q1X7BC4618470shed",
+      "44B86NC4618849guardup",
+      "44B86NC4618849guidance",
+      "44B86NC4618849recklessstance",
+      "44B86NC4618849riposte",
+      "1VY50B84633067desperate",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 80,
@@ -5881,7 +7050,13 @@
       "myheartpass",
       "allyrush",
       "bolt",
-      "scoreboosted"
+      "scoreboosted",
+      "44B86NC4618849guidance",
+      "44B86NC4618849recklessstance",
+      "44B86NC4618849riposte",
+      "1VY50B84633067desperate",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 53,
@@ -6152,7 +7327,16 @@
       "protect",
       "hum",
       "freeball",
-      "followme"
+      "followme",
+      "2Q1X7BC4618470bother",
+      "2Q1X7BC4618470heart",
+      "2Q1X7BC4618470magnetize",
+      "2Q1X7BC4618470buffer",
+      "2Q1X7BC4618470prismaticvolley",
+      "2Q1X7BC4618470cross",
+      "44B86NC4618849vertigo",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 28,
@@ -6360,6 +7544,253 @@
     "tyield": ["hd", 1],
     "type_focus": 1
   },
+  "fawnarch": {
+    "ability": ["regal", "unflappable"],
+    "ability_hidden": 0,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "poisonhit",
+      "dropshot",
+      "wall",
+      "sidespin",
+      "starterside",
+      "taunt",
+      "nettle",
+      "markattack",
+      "rush",
+      "refresh",
+      "mindpass",
+      "meditate",
+      "threat",
+      "speech",
+      "splinter",
+      "telekinesis",
+      "mind",
+      "allyrush",
+      "eerie",
+      "63XK1CH4629470faetrick",
+      "recover",
+      "teleport",
+      "heartd",
+      "sweatup",
+      "reign",
+      "startermind"
+    ],
+    "attklist_randomize": -1,
+    "ba": 35,
+    "base_exp": 154.3,
+    "bd": 62,
+    "body_color_index": 0,
+    "codename": "28eb3175cb0e702136510865fff02b1618b2bc6b",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 1201888, "x": 0 },
+          { "color": 1335546, "x": 0.52 },
+          { "color": 3438073, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 4687359, "x": 0 },
+          { "color": 4687359, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 10284826, "x": 0 },
+          { "color": 14567074, "x": 0.15 },
+          { "color": 15669958, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 11927303, "x": 0 },
+          { "color": 15678904, "x": 0.14 },
+          { "color": 16713705, "x": 1 }
+        ]
+      },
+      { "array": [{ "color": 12772095, "x": 0 }] }
+    ],
+    "colors2": null,
+    "combos": [
+      [49, 0, 12],
+      [45, 7, 6],
+      [45, 7, 6, 2, 2, 1],
+      [45, 7, 6]
+    ],
+    "desc": "They have the ability to psychically induce fear in others, though they enjoy the company of other beasties too much to use it very often.",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 0,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "fawnarch",
+    "first_frame": -1,
+    "foot_size": 50,
+    "foot_type": 2,
+    "growth": 1,
+    "ha": 63,
+    "hd": 108,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "fawnarch",
+    "isBaby": false,
+    "learnset": [
+      [0, "startermind"],
+      [4, "reign"],
+      [7, "sweatup"],
+      [9, "heartd"],
+      [11, "teleport"],
+      [14, "recover"],
+      [17, "63XK1CH4629470faetrick"],
+      [19, "eerie"],
+      [20, "allyrush"],
+      [24, "mind"],
+      [30, "telekinesis"],
+      [35, "splinter"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 69.5,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "float_x": 0,
+      "hop_height": 30,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [35, 36, 40, 41],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 97,
+    "md": 84,
+    "mod_data": {
+      "alters_data": true,
+      "author": "",
+      "author_online": "",
+      "beastie_ids": ["fawnarch"],
+      "beasties": ["Fawnarch"],
+      "description": "",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3810450542",
+      "finished": 0,
+      "imported": true,
+      "internal_id": "63XK1CH4629470",
+      "major_version": "1",
+      "minor_version": "0",
+      "name": "fawnarch",
+      "name_online": "",
+      "play_ids": { "faetrick": "63XK1CH4629470faetrick" },
+      "plays": ["Fae Trick"],
+      "reskins": [],
+      "texts": [],
+      "tracks": [],
+      "url": "3810450542"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3810450542\\fawnarch\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Fawnarch",
+    "number": 108,
+    "order": 113,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "effect_type": [23, 29, 39, 38],
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 46
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_080¬0¬[sprStatus,6]¦statuseffectstuff_007¦¬1¬[sprStatus,10]¦statuseffectstuff_011¦¬2¬[sprStatus,12]¦statuseffectstuff_013¦¬3¬[sprStatus,11]¦statuseffectstuff_012¦¦"
+    },
+    "recruit_value": 3.05,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [1, 1],
+    "shiny": [
+      {
+        "array": [
+          { "color": 11411020, "x": 0 },
+          { "color": 11430174, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 9428223, "x": 0 },
+          { "color": 7324159, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 1178868, "x": 0 },
+          { "color": 14539584, "x": 0.2633333333 },
+          { "color": 16768058, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 11206467, "x": 0 },
+          { "color": 8320767, "x": 0.1966666667 },
+          { "color": 16747983, "x": 0.49 },
+          { "color": 16747955, "x": 1 }
+        ]
+      },
+      { "array": [{ "color": 15138763, "x": 0.5 }] }
+    ],
+    "spr": "sprfawnarch",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tex_group_suffix": "",
+    "tyield": ["ma", 1, "hd", 2],
+    "type_focus": 2
+  },
   "football": {
     "ability": ["shield", "fwdpass"],
     "ability_hidden": false,
@@ -6399,7 +7830,19 @@
       "heartd",
       "freeball",
       "wornattack",
-      "lockon"
+      "lockon",
+      "2Q1X7BC4618470piledrive",
+      "2Q1X7BC4618470roundabout",
+      "2Q1X7BC4618470yoga",
+      "2Q1X7BC4618470aircompress",
+      "2Q1X7BC4618470pinpoint",
+      "2Q1X7BC4618470aim",
+      "2Q1X7BC4618470coach",
+      "2Q1X7BC4618470set?",
+      "44B86NC4618849guardup",
+      "44B86NC4618849heavyroll",
+      "44B86NC4618849recharge",
+      "1VY50B84633067fall"
     ],
     "attklist_randomize": -1,
     "ba": 70,
@@ -6648,7 +8091,10 @@
       "callout",
       "tailwind",
       "tagattack",
-      "mark"
+      "mark",
+      "44B86NC4618849guardup",
+      "44B86NC4618849recharge",
+      "1VY50B84633067fall"
     ],
     "attklist_randomize": -1,
     "ba": 48,
@@ -6869,7 +8315,10 @@
       "callout",
       "tailwind",
       "tagattack",
-      "mark"
+      "mark",
+      "44B86NC4618849guardup",
+      "44B86NC4618849recharge",
+      "1VY50B84633067fall"
     ],
     "attklist_randomize": -1,
     "ba": 60,
@@ -7100,7 +8549,19 @@
       "mark",
       "sting",
       "libero",
-      "protect"
+      "protect",
+      "2Q1X7BC4618470coldfront",
+      "2Q1X7BC4618470haunt",
+      "2Q1X7BC4618470icicle",
+      "2Q1X7BC4618470bottle",
+      "2Q1X7BC4618470highfive?",
+      "2Q1X7BC4618470forcefield",
+      "2Q1X7BC4618470block?",
+      "44B86NC4618849pointzero",
+      "44B86NC4618849switcheroo",
+      "1VY50B84633067deep",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 30,
@@ -7316,7 +8777,12 @@
       "mark",
       "sting",
       "libero",
-      "protect"
+      "protect",
+      "44B86NC4618849pointzero",
+      "44B86NC4618849switcheroo",
+      "1VY50B84633067deep",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 21,
@@ -7546,7 +9012,20 @@
       "healhit",
       "jazzattack",
       "alljazzattack",
-      "hum"
+      "hum",
+      "2Q1X7BC4618470bother",
+      "2Q1X7BC4618470heart",
+      "2Q1X7BC4618470infuriatingstrike",
+      "2Q1X7BC4618470lunge",
+      "2Q1X7BC4618470hoprahammer!!!!",
+      "2Q1X7BC4618470crowd",
+      "2Q1X7BC4618470stageset",
+      "44B86NC4618849pirouette",
+      "44B86NC4618849soothingaria",
+      "44B86NC4618849swansong",
+      "1VY50B84633067dance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 64,
@@ -7754,7 +9233,12 @@
       "healhit",
       "jazzattack",
       "alljazzattack",
-      "hum"
+      "hum",
+      "44B86NC4618849pirouette",
+      "44B86NC4618849soothingaria",
+      "1VY50B84633067dance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 37,
@@ -7971,7 +9455,12 @@
       "healhit",
       "jazzattack",
       "alljazzattack",
-      "hum"
+      "hum",
+      "44B86NC4618849pirouette",
+      "44B86NC4618849soothingaria",
+      "1VY50B84633067dance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 48,
@@ -8197,7 +9686,18 @@
       "squeeze",
       "targethp",
       "stun",
-      "shaken"
+      "shaken",
+      "2Q1X7BC4618470haunt",
+      "2Q1X7BC4618470oldbeam",
+      "2Q1X7BC4618470fear",
+      "2Q1X7BC4618470mix-up",
+      "2Q1X7BC4618470substitute",
+      "2Q1X7BC4618470fumble",
+      "357GW8Q4627187gloomtune",
+      "44B86NC4618849lockdown",
+      "44B86NC4618849partinggift",
+      "44B86NC4618849skyball",
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 15,
@@ -8420,7 +9920,12 @@
       "squeeze",
       "targethp",
       "stun",
-      "shaken"
+      "shaken",
+      "357GW8Q4627187gloomtune",
+      "44B86NC4618849lockdown",
+      "44B86NC4618849partinggift",
+      "44B86NC4618849skyball",
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 5,
@@ -8628,7 +10133,12 @@
       "squeeze",
       "targethp",
       "stun",
-      "shaken"
+      "shaken",
+      "357GW8Q4627187gloomtune",
+      "44B86NC4618849lockdown",
+      "44B86NC4618849partinggift",
+      "44B86NC4618849skyball",
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 10,
@@ -8785,6 +10295,216 @@
     "tyield": ["bd", 2],
     "type_focus": 2
   },
+  "gloombox": {
+    "ability": ["fearful", "fragileego"],
+    "ability_hidden": 0,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "ego",
+      "followme",
+      "taunt",
+      "scream",
+      "heartdown",
+      "hex",
+      "defheal",
+      "menace",
+      "netattack",
+      "mindup",
+      "heart",
+      "cover",
+      "scoreboosted",
+      "eerie",
+      "sting",
+      "mindbomb",
+      "sidespin",
+      "distraction",
+      "sensihit",
+      "hum",
+      "sad",
+      "357GW8Q4627187gloomtune",
+      "starterheart"
+    ],
+    "attklist_randomize": -1,
+    "ba": 44,
+    "base_exp": 109.75,
+    "bd": 30,
+    "body_color_index": 0,
+    "codename": "f55190eb63bbc7d66624a6ca7dc85d5f7687d3f1",
+    "colormeta": null,
+    "colors": [
+      { "array": [{ "color": 255, "x": 0 }] },
+      { "array": [{ "color": 8875576, "x": 0 }] },
+      {
+        "array": [
+          { "color": 11796224, "x": 0.1833333333 },
+          { "color": 6143, "x": 0.5133333333 },
+          { "color": 16711742, "x": 0.8333333333 }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 1.4, 14, 0, 2],
+      [10, 0, 1, 39, 1, 1, 76, 1, 1],
+      [10, 0, 1, 39, 1, 1, 76, 1, 1],
+      [7, 7, 0, 6, 7, 2]
+    ],
+    "desc": "A lone spirit has possessed this electrical device, feeding off of the negative energy in its surrounding area. In most cases the energy received is not abundant enough to maintain the form, and may soon collapse without it.",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 1,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": [{ "condition": [0], "specie": "despaireo", "value": [35] }],
+    "face_color_index": 0,
+    "family": "gloombox",
+    "first_frame": -1,
+    "foot_size": 10,
+    "foot_type": 1,
+    "growth": 1,
+    "ha": 75,
+    "hd": 70,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "gloombox",
+    "isBaby": false,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "357GW8Q4627187gloomtune"],
+      [5, "sad"],
+      [8, "hum"],
+      [12, "sensihit"],
+      [15, "distraction"],
+      [17, "sidespin"],
+      [17, "mindbomb"],
+      [20, "sting"],
+      [22, "eerie"],
+      [25, "scoreboosted"],
+      [29, "cover"],
+      [33, "heart"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 99.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "float_x": 0,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 55,
+    "md": 55,
+    "mod_data": {
+      "alters_data": true,
+      "author": "Equinoxe",
+      "author_online": "",
+      "beastie_ids": ["gloombox"],
+      "beasties": ["Gloombox"],
+      "description": "",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3797110156",
+      "finished": 0,
+      "imported": true,
+      "internal_id": "357GW8Q4627187",
+      "major_version": "1",
+      "minor_version": "0",
+      "name": "Gloombox",
+      "name_online": "",
+      "play_ids": { "gloomtune": "357GW8Q4627187gloomtune" },
+      "plays": ["Gloom Tune"],
+      "reskins": [],
+      "texts": [],
+      "tracks": [],
+      "url": "3797110156"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3797110156\\Gloombox data\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Gloombox",
+    "number": 109,
+    "order": 114,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "attack_type": 0,
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 15
+        },
+        {
+          "attack_type": 1,
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 15
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_082¦"
+    },
+    "recruit_value": 5,
+    "roamer_style": {
+      "_name": "CAMO",
+      "can_react": true,
+      "can_socialize": false,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 0.9],
+    "shiny": [
+      { "array": [{ "color": 16767078, "x": 0 }] },
+      { "array": [{ "color": 65280, "x": 0 }] },
+      { "array": [{ "color": 16710399, "x": 0.5 }] }
+    ],
+    "spr": "sprgloombox",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tex_group_suffix": "",
+    "tyield": ["ha", 2, "bd", 2],
+    "type_focus": 1
+  },
   "gremlin": {
     "ability": ["sneaky", "mimically"],
     "ability_hidden": true,
@@ -8818,7 +10538,22 @@
       "bamboozle",
       "hex",
       "poisonhit",
-      "copycat"
+      "copycat",
+      "2Q1X7BC4618470dropshot",
+      "2Q1X7BC4618470mindspike",
+      "2Q1X7BC4618470oldbeam",
+      "2Q1X7BC4618470pocketsand",
+      "2Q1X7BC4618470wraparound",
+      "2Q1X7BC4618470meow",
+      "2Q1X7BC4618470nuhuh",
+      "2Q1X7BC4618470unregisteredfirearm",
+      "2Q1X7BC4618470surprise",
+      "44B86NC4618849bewilder",
+      "44B86NC4618849flare",
+      "44B86NC4618849lastlaugh",
+      "1VY50B84633067deep",
+      "1VY50B84633067echo",
+      "1VY50B84633067fall"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -9025,6 +10760,252 @@
     "tyield": ["md", 2],
     "type_focus": 2
   },
+  "hornet": {
+    "ability": ["taghit", "trappow"],
+    "ability_hidden": 0,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "ricochet",
+      "rocksmash",
+      "heartdown",
+      "stresspass",
+      "recover",
+      "meditate",
+      "nightshade",
+      "tailwind",
+      "shakenmind",
+      "juggle",
+      "rattle",
+      "hyperbeam",
+      "stun",
+      "threat",
+      "tool",
+      "vigor",
+      "dodge",
+      "targethp",
+      "haze",
+      "jump",
+      "sweep",
+      "followme",
+      "sidespin",
+      "healhit2",
+      "defheal",
+      "bolt",
+      "switch",
+      "cover",
+      "lockon",
+      "heartd",
+      "rush",
+      "slide",
+      "blockattack",
+      "netattack",
+      "reign",
+      "breakswipe",
+      "nettle",
+      "brine",
+      "enemylowered",
+      "feint",
+      "chill",
+      "tagattack",
+      "mark",
+      "dig",
+      "trap",
+      "markattack"
+    ],
+    "attklist_randomize": -1,
+    "ba": 96,
+    "base_exp": 156.1,
+    "bd": 90,
+    "body_color_index": 2,
+    "codename": "a006d5601178d08ffadb79815defeeb91e839141",
+    "colormeta": null,
+    "colors": [
+      { "array": [{ "color": 255, "x": 0 }] },
+      { "array": [{ "color": 1315454, "x": 0 }] },
+      { "array": [{ "color": 16777215, "x": 0.43 }] }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 0.8, 6, 3, 1],
+      [15, 1, 2, 6, 0, 2],
+      [20, 0, 1, 7, 0, 1, 42, 3, 2],
+      [42, 3, 4, 16, 2, 1]
+    ],
+    "desc": "A strange creature with the regal bearing of a hunter. She appears to play for a test of skill, rather than a Beastie's instincts.",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 1,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": null,
+    "face_color_index": 1,
+    "family": "hornet",
+    "first_frame": -1,
+    "foot_size": 12,
+    "foot_type": 0,
+    "growth": 1,
+    "ha": 50,
+    "hd": 70,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "hornet",
+    "isBaby": false,
+    "learnset": [
+      [0, "markattack"],
+      [0, "trap"],
+      [5, "dig"],
+      [6, "mark"],
+      [7, "tagattack"],
+      [8, "chill"],
+      [9, "feint"],
+      [11, "enemylowered"],
+      [13, "brine"],
+      [14, "juggle"],
+      [15, "nettle"],
+      [16, "breakswipe"],
+      [17, "reign"],
+      [18, "netattack"],
+      [19, "blockattack"],
+      [20, "slide"],
+      [21, "rush"],
+      [22, "heartd"],
+      [23, "lockon"],
+      [24, "cover"],
+      [25, "switch"],
+      [26, "bolt"],
+      [27, "defheal"],
+      [28, "healhit2"],
+      [29, "sidespin"],
+      [30, "followme"],
+      [31, "sweep"],
+      [33, "jump"],
+      [34, "haze"],
+      [36, "targethp"],
+      [37, "dodge"],
+      [39, "vigor"],
+      [40, "tool"],
+      [42, "threat"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 46.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "float_x": 0,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 105,
+    "md": 98,
+    "mod_data": {
+      "alters_data": true,
+      "author": "",
+      "author_online": "",
+      "beastie_ids": ["hornet"],
+      "beasties": ["Hornet"],
+      "description": "",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3833214868",
+      "finished": 0,
+      "imported": true,
+      "internal_id": "7GCJQY4632902",
+      "major_version": "1",
+      "minor_version": "0",
+      "name": "Hornet",
+      "name_online": "",
+      "play_ids": {},
+      "plays": [],
+      "reskins": [],
+      "texts": [],
+      "tracks": [],
+      "url": "3833214868"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3833214868\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Hornet",
+    "number": 110,
+    "order": 115,
+    "palettes": 0,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 2,
+          "type": 12
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 2,
+          "type": 12
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_026¦"
+    },
+    "recruit_value": 8,
+    "roamer_style": {
+      "_name": "STOP_AND_STARE",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [1, 1],
+    "shiny": [
+      { "array": [{ "color": 6750072, "x": 0 }] },
+      { "array": [{ "color": 65280, "x": 0 }] },
+      { "array": [{ "color": 16777215, "x": 0.43 }] }
+    ],
+    "spr": "sprhornet",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tex_group_suffix": "",
+    "tyield": ["bd", 2],
+    "type_focus": 2
+  },
   "horseshoe": {
     "ability": ["multiscale"],
     "ability_hidden": false,
@@ -9054,7 +11035,20 @@
       "lifepass",
       "protect",
       "cook",
-      "shakeoff"
+      "shakeoff",
+      "2Q1X7BC4618470drain",
+      "2Q1X7BC4618470oldbeam",
+      "2Q1X7BC4618470enclose",
+      "2Q1X7BC4618470fossilize",
+      "2Q1X7BC4618470forcefield",
+      "2Q1X7BC4618470plant",
+      "2Q1X7BC4618470shield?",
+      "44B86NC4618849crashdown",
+      "44B86NC4618849guidance",
+      "44B86NC4618849hut",
+      "44B86NC4618849immovableobject",
+      "67PJ3604627187dissect",
+      "1VY50B84633067desperate"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -9066,41 +11060,237 @@
     "colors": [
       {
         "array": [
-          { "color": 4157875, "x": 0 },
-          { "color": 3825078, "x": 0.4833333333 },
-          { "color": 4868778, "x": 1 }
+          { "color": 8959, "x": 0 },
+          { "color": 9585919, "x": 0.0533333333 },
+          { "color": 7995647, "x": 0.11 },
+          { "color": 11796735, "x": 0.1633333333 },
+          { "color": 9854412, "x": 0.2233333333 },
+          { "color": 6766335, "x": 0.2766666667 },
+          { "color": 30719, "x": 0.3333333333 },
+          { "color": 58111, "x": 0.39 },
+          { "color": 1958655, "x": 0.4433333333 },
+          { "color": 5236249, "x": 0.4966666667 },
+          { "color": 11004756, "x": 0.55 },
+          { "color": 10070535, "x": 0.6033333333 },
+          { "color": 16763136, "x": 0.6566666667 },
+          { "color": 12298122, "x": 0.71 },
+          { "color": 12300171, "x": 0.7633333333 },
+          { "color": 12296862, "x": 0.8166666667 },
+          { "color": 2763833, "x": 0.87 },
+          { "color": 3421237, "x": 0.9233333333 },
+          { "color": 16777215, "x": 0.9766666667 }
         ]
       },
       {
         "array": [
-          { "color": 15195607, "x": 0 },
-          { "color": 15067113, "x": 0.4866666667 },
-          { "color": 12766679, "x": 1 }
+          { "color": 7056124, "x": 0 },
+          { "color": 14548214, "x": 0.0533333333 },
+          { "color": 7930108, "x": 0.1066666667 },
+          { "color": 13967612, "x": 0.16 },
+          { "color": 16569061, "x": 0.22 },
+          { "color": 10783484, "x": 0.2733333333 },
+          { "color": 7064572, "x": 0.3266666667 },
+          { "color": 7074044, "x": 0.38 },
+          { "color": 15266300, "x": 0.4333333333 },
+          { "color": 12648380, "x": 0.49 },
+          { "color": 15203528, "x": 0.5433333333 },
+          { "color": 13099103, "x": 0.5966666667 },
+          { "color": 14059775, "x": 0.65 },
+          { "color": 14907135, "x": 0.7033333333 },
+          { "color": 5948924, "x": 0.7566666667 },
+          { "color": 16576149, "x": 0.81 },
+          { "color": 16777215, "x": 0.8633333333 },
+          { "color": 7434608, "x": 0.9166666667 },
+          { "color": 1882876, "x": 0.9733333333 }
         ]
       },
       {
         "array": [
-          { "color": 2766672, "x": 0 },
-          { "color": 471390, "x": 0.5 },
-          { "color": 2105453, "x": 1 }
+          { "color": 13886207, "x": 0 },
+          { "color": 15544015, "x": 0.0533333333 },
+          { "color": 12865229, "x": 0.1066666667 },
+          { "color": 3202047, "x": 0.1633333333 },
+          { "color": 14869218, "x": 0.2166666667 },
+          { "color": 10471618, "x": 0.27 },
+          { "color": 16769267, "x": 0.3233333333 },
+          { "color": 16724404, "x": 0.3766666667 },
+          { "color": 16732340, "x": 0.43 },
+          { "color": 16777215, "x": 0.4833333333 },
+          { "color": 16252911, "x": 0.54 },
+          { "color": 16777171, "x": 0.5933333333 },
+          { "color": 16773093, "x": 0.6466666667 },
+          { "color": 16777215, "x": 0.7033333333 },
+          { "color": 16777215, "x": 0.7566666667 },
+          { "color": 16777215, "x": 0.81 },
+          { "color": 7399257, "x": 0.8633333333 },
+          { "color": 16777215, "x": 0.92 },
+          { "color": 16759602, "x": 0.9733333333 }
         ]
       },
       {
         "array": [
-          { "color": 7643050, "x": 0 },
-          { "color": 5610396, "x": 0.5 },
-          { "color": 5015974, "x": 1 }
+          { "color": 8866535, "x": 0 },
+          { "color": 2101558, "x": 0.0533333333 },
+          { "color": 10366497, "x": 0.1066666667 },
+          { "color": 14673707, "x": 0.1633333333 },
+          { "color": 12883051, "x": 0.22 },
+          { "color": 16024637, "x": 0.2733333333 },
+          { "color": 15183434, "x": 0.3266666667 },
+          { "color": 4908007, "x": 0.3866666667 },
+          { "color": 2559531, "x": 0.4433333333 },
+          { "color": 10790052, "x": 0.4966666667 },
+          { "color": 10581479, "x": 0.5533333333 },
+          { "color": 13990956, "x": 0.6066666667 },
+          { "color": 13984511, "x": 0.66 },
+          { "color": 13391584, "x": 0.7133333333 },
+          { "color": 4301543, "x": 0.7733333333 },
+          { "color": 16769102, "x": 0.8266666667 },
+          { "color": 14802407, "x": 0.88 },
+          { "color": 15150778, "x": 0.9333333333 },
+          { "color": 255, "x": 0.9866666667 }
         ]
       },
       {
         "array": [
-          { "color": 8443368, "x": 0 },
-          { "color": 53247, "x": 0.5 },
-          { "color": 2734847, "x": 1 }
+          { "color": 8332206, "x": 0 },
+          { "color": 13117500, "x": 0.0533333333 },
+          { "color": 9053980, "x": 0.1066666667 },
+          { "color": 16771635, "x": 0.16 },
+          { "color": 14636845, "x": 0.2133333333 },
+          { "color": 3138815, "x": 0.27 },
+          { "color": 9982765, "x": 0.3233333333 },
+          { "color": 3401215, "x": 0.38 },
+          { "color": 4667473, "x": 0.4333333333 },
+          { "color": 4865361, "x": 0.4866666667 },
+          { "color": 5710766, "x": 0.5433333333 },
+          { "color": 9841964, "x": 0.6033333333 },
+          { "color": 15641904, "x": 0.66 },
+          { "color": 12890256, "x": 0.7133333333 },
+          { "color": 11772038, "x": 0.77 },
+          { "color": 11246722, "x": 0.8233333333 },
+          { "color": 4739410, "x": 0.8766666667 },
+          { "color": 13773508, "x": 0.93 },
+          { "color": 5642357, "x": 0.9833333333 }
         ]
       }
     ],
-    "colors2": null,
+    "colors2": [
+      {
+        "array": [
+          { "color": 255, "x": 0 },
+          { "color": 255, "x": 0.0533333333 },
+          { "color": 255, "x": 0.1066666667 },
+          { "color": 255, "x": 0.16 },
+          { "color": 255, "x": 0.2133333333 },
+          { "color": 255, "x": 0.2666666667 },
+          { "color": 255, "x": 0.32 },
+          { "color": 255, "x": 0.3733333333 },
+          { "color": 255, "x": 0.43 },
+          { "color": 255, "x": 0.4833333333 },
+          { "color": 255, "x": 0.5366666667 },
+          { "color": 255, "x": 0.59 },
+          { "color": 255, "x": 0.6433333333 },
+          { "color": 255, "x": 0.7 },
+          { "color": 255, "x": 0.7566666667 },
+          { "color": 255, "x": 0.81 },
+          { "color": 255, "x": 0.8633333333 },
+          { "color": 255, "x": 0.9166666667 },
+          { "color": 255, "x": 0.9733333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 65280, "x": 0 },
+          { "color": 65280, "x": 0.0633333333 },
+          { "color": 65280, "x": 0.12 },
+          { "color": 65280, "x": 0.1766666667 },
+          { "color": 65280, "x": 0.23 },
+          { "color": 65280, "x": 0.2833333333 },
+          { "color": 65280, "x": 0.3366666667 },
+          { "color": 65280, "x": 0.3933333333 },
+          { "color": 65280, "x": 0.4466666667 },
+          { "color": 65280, "x": 0.5 },
+          { "color": 65280, "x": 0.5566666667 },
+          { "color": 65280, "x": 0.61 },
+          { "color": 65280, "x": 0.6633333333 },
+          { "color": 65280, "x": 0.72 },
+          { "color": 65280, "x": 0.7733333333 },
+          { "color": 65280, "x": 0.8266666667 },
+          { "color": 65280, "x": 0.88 },
+          { "color": 65280, "x": 0.9333333333 },
+          { "color": 65280, "x": 0.9866666667 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16777215, "x": 0 },
+          { "color": 16777215, "x": 0.0533333333 },
+          { "color": 16777215, "x": 0.1066666667 },
+          { "color": 16777215, "x": 0.16 },
+          { "color": 16777215, "x": 0.2133333333 },
+          { "color": 16777215, "x": 0.2666666667 },
+          { "color": 16777215, "x": 0.3266666667 },
+          { "color": 16777215, "x": 0.38 },
+          { "color": 16777215, "x": 0.4333333333 },
+          { "color": 16777215, "x": 0.4866666667 },
+          { "color": 16777215, "x": 0.5433333333 },
+          { "color": 16777215, "x": 0.5966666667 },
+          { "color": 16777215, "x": 0.65 },
+          { "color": 16777215, "x": 0.7066666667 },
+          { "color": 16777215, "x": 0.76 },
+          { "color": 16777215, "x": 0.8133333333 },
+          { "color": 16777215, "x": 0.8733333333 },
+          { "color": 16777215, "x": 0.9266666667 },
+          { "color": 16777215, "x": 0.9833333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16777215, "x": 0 },
+          { "color": 16777215, "x": 0.0533333333 },
+          { "color": 16777215, "x": 0.1066666667 },
+          { "color": 16777215, "x": 0.16 },
+          { "color": 16777215, "x": 0.2133333333 },
+          { "color": 16777215, "x": 0.2666666667 },
+          { "color": 16777215, "x": 0.32 },
+          { "color": 16777215, "x": 0.3733333333 },
+          { "color": 16777215, "x": 0.4266666667 },
+          { "color": 16777215, "x": 0.4833333333 },
+          { "color": 16777215, "x": 0.54 },
+          { "color": 16777215, "x": 0.5933333333 },
+          { "color": 16777215, "x": 0.6466666667 },
+          { "color": 16777215, "x": 0.7 },
+          { "color": 16777215, "x": 0.7533333333 },
+          { "color": 16777215, "x": 0.8066666667 },
+          { "color": 16777215, "x": 0.86 },
+          { "color": 16777215, "x": 0.9133333333 },
+          { "color": 16777215, "x": 0.9666666667 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16777215, "x": 0 },
+          { "color": 16777215, "x": 0.0533333333 },
+          { "color": 16777215, "x": 0.11 },
+          { "color": 16777215, "x": 0.1666666667 },
+          { "color": 16777215, "x": 0.22 },
+          { "color": 16777215, "x": 0.2733333333 },
+          { "color": 16777215, "x": 0.3266666667 },
+          { "color": 16777215, "x": 0.38 },
+          { "color": 16777215, "x": 0.4333333333 },
+          { "color": 16777215, "x": 0.4866666667 },
+          { "color": 16777215, "x": 0.5433333333 },
+          { "color": 16777215, "x": 0.5966666667 },
+          { "color": 16777215, "x": 0.6533333333 },
+          { "color": 16777215, "x": 0.7066666667 },
+          { "color": 16777215, "x": 0.76 },
+          { "color": 16777215, "x": 0.8133333333 },
+          { "color": 16777215, "x": 0.8666666667 },
+          { "color": 16777215, "x": 0.92 },
+          { "color": 16777215, "x": 0.9733333333 }
+        ]
+      }
+    ],
     "combos": [
       [50, 0, 0.9, 33, 0, 11],
       [47, 1, 1, 29, 0, 2],
@@ -9144,10 +11334,10 @@
       [46, "rest"]
     ],
     "learnset_randomize": -1,
-    "linked_colors": {},
+    "linked_colors": { "_1": 0, "_2": 0, "_3": 0, "_4": 0 },
     "loco": {
       "anim_min_speed": 0.2,
-      "char_width": 86,
+      "char_width": 128.5,
       "emote_hop_height": 25,
       "float_dist": 0,
       "float_wave": 0,
@@ -9174,8 +11364,30 @@
     },
     "ma": 29,
     "md": 107,
-    "mod_data": null,
-    "mod_file": "",
+    "mod_data": {
+      "alters_data": false,
+      "author": "",
+      "author_online": "",
+      "beastie_ids": ["horseshoe"],
+      "beasties": [],
+      "description": "A reskin of Xiphosaur! Sometimes the colors can get a bit murky between flags...",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3787575433",
+      "finished": 0,
+      "imported": true,
+      "internal_id": "13TH0104625451",
+      "major_version": "1",
+      "minor_version": "0",
+      "name": "Pride Xiphosaur!",
+      "name_online": "",
+      "play_ids": {},
+      "plays": [],
+      "reskins": ["¦beastiesetup_name_071¦"],
+      "texts": [],
+      "tracks": [],
+      "url": "3787575433"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3787575433\\Reskin_XIphosaur\\beastie_data.ini",
     "modded_stats": false,
     "name": "¦beastiesetup_name_071¦",
     "number": 72,
@@ -9215,27 +11427,42 @@
     "roguelvl": -1,
     "scale": [0.85, 1],
     "shiny": [
-      { "array": [{ "color": 16771174, "x": 0 }] },
       {
         "array": [
-          { "color": 14719515, "x": 0 },
-          { "color": 13019128, "x": 0.5033333333 }
+          { "color": 255, "x": 0 },
+          { "color": 3553023, "x": 1 }
         ]
       },
       {
         "array": [
-          { "color": 16751210, "x": 0 },
-          { "color": 16776880, "x": 0.5 }
+          { "color": 1627135, "x": 0 },
+          { "color": 7716856, "x": 1 }
         ]
       },
-      { "array": [{ "color": 11261439, "x": 0.5 }] },
-      { "array": [{ "color": 16514043, "x": 0.44 }] }
+      {
+        "array": [
+          { "color": 7849984, "x": 0 },
+          { "color": 14155696, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 11296512, "x": 0 },
+          { "color": 16763505, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 12845160, "x": 0 },
+          { "color": 16467641, "x": 1 }
+        ]
+      }
     ],
     "spr": "sprHorseshoe",
     "spr_alt": [],
     "tamecond": null,
     "tamelvl": 2,
-    "tex_group_suffix": "",
+    "tex_group_suffix": "1",
     "tyield": ["bd", 2, "md", 1],
     "type_focus": 1
   },
@@ -9270,7 +11497,20 @@
       "bamboozle",
       "fieldclear",
       "wink",
-      "catwalk"
+      "catwalk",
+      "67WYPGQ4618557swash",
+      "2Q1X7BC4618470heart",
+      "2Q1X7BC4618470magnetize",
+      "2Q1X7BC4618470spotlight",
+      "2Q1X7BC4618470pose",
+      "2Q1X7BC4618470tweet",
+      "2Q1X7BC4618470precisionstrike?",
+      "2Q1X7BC4618470move?",
+      "2Q1X7BC4618470block?",
+      "44B86NC4618849hut",
+      "44B86NC4618849riposte",
+      "1VY50B84633067echo",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 71,
@@ -9567,7 +11807,18 @@
       "sad",
       "swarm",
       "passionstrike",
-      "hum"
+      "hum",
+      "2Q1X7BC4618470drain",
+      "2Q1X7BC4618470imbue",
+      "2Q1X7BC4618470heatsink",
+      "2Q1X7BC4618470reanimate",
+      "2Q1X7BC4618470killerwail",
+      "2Q1X7BC4618470dash",
+      "2Q1X7BC4618470restless",
+      "6WY0C8R4615906strongscent",
+      "44B86NC4618849resistance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 16,
@@ -9774,7 +12025,10 @@
       "teleport",
       "sad",
       "swarm",
-      "passionstrike"
+      "passionstrike",
+      "44B86NC4618849resistance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 14,
@@ -9982,7 +12236,10 @@
       "sad",
       "swarm",
       "passionstrike",
-      "hum"
+      "hum",
+      "44B86NC4618849resistance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 14,
@@ -10177,7 +12434,20 @@
       "rattle",
       "hazeball",
       "kick",
-      "tool"
+      "tool",
+      "2Q1X7BC4618470dropshot",
+      "2Q1X7BC4618470volley?",
+      "2Q1X7BC4618470pocketsand",
+      "2Q1X7BC4618470prey",
+      "2Q1X7BC4618470prod",
+      "2Q1X7BC4618470ragdoll",
+      "2Q1X7BC4618470move?",
+      "2Q1X7BC4618470ragebait",
+      "2Q1X7BC4618470slackoff",
+      "44B86NC4618849bewilder",
+      "44B86NC4618849lastlaugh",
+      "1VY50B84633067comment",
+      "1VY50B84633067deep"
     ],
     "attklist_randomize": -1,
     "ba": 88,
@@ -10419,7 +12689,11 @@
       "rattle",
       "hazeball",
       "kick",
-      "tool"
+      "tool",
+      "44B86NC4618849bewilder",
+      "44B86NC4618849lastlaugh",
+      "1VY50B84633067comment",
+      "1VY50B84633067deep"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -10648,7 +12922,16 @@
       "cook",
       "hum",
       "burnout",
-      "reign"
+      "reign",
+      "2Q1X7BC4618470drain",
+      "2Q1X7BC4618470fireball",
+      "2Q1X7BC4618470heatsink",
+      "2Q1X7BC4618470dryout",
+      "2Q1X7BC4618470fuel",
+      "2Q1X7BC4618470restless",
+      "44B86NC4618849exertion",
+      "44B86NC4618849pointzero",
+      "44B86NC4618849roar"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -10887,7 +13170,10 @@
       "cook",
       "hum",
       "burnout",
-      "reign"
+      "reign",
+      "44B86NC4618849exertion",
+      "44B86NC4618849pointzero",
+      "44B86NC4618849roar"
     ],
     "attklist_randomize": -1,
     "ba": 35,
@@ -11068,6 +13354,524 @@
     "tyield": ["hd", 1],
     "type_focus": 1
   },
+  "latias": {
+    "ability": ["levitate", "jet"],
+    "ability_hidden": 0,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "dropshot",
+      "nightshade",
+      "cover",
+      "refresh",
+      "set",
+      "freeball",
+      "callout",
+      "healbell",
+      "cheer",
+      "bench",
+      "tailwind",
+      "basecover",
+      "backswitch",
+      "wornattack",
+      "lifepass",
+      "mindpass",
+      "moon",
+      "meditate",
+      "protect",
+      "heart",
+      "heartdown",
+      "teleport",
+      "flight",
+      "telekinesis",
+      "lifedew",
+      "swarm",
+      "mdefup",
+      "startermind",
+      "2MYFRYR4626004mistball"
+    ],
+    "attklist_randomize": -1,
+    "ba": 40,
+    "base_exp": 262.625,
+    "bd": 65,
+    "body_color_index": 0,
+    "codename": "d76dc5d64cd9702906b2f50b6faed52389959d78",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 2296292, "x": 0 },
+          { "color": 2296292, "x": 0.6 },
+          { "color": 12289930, "x": 0.9 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 15714139, "x": 0 },
+          { "color": 15714139, "x": 0.6 },
+          { "color": 15724527, "x": 0.9 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 3265265, "x": 0 },
+          { "color": 3265265, "x": 0.6 },
+          { "color": 7454687, "x": 0.9 }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [45, 7, -6],
+      [4, 0, 1, 5, 0, 1],
+      [4, 1, 1, 5, 1, 1],
+      [34, 7, 0, 79, 2, 2]
+    ],
+    "desc": "Its body is covered with a down that can refract light in such a way that it becomes invisible.",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 0,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "latias",
+    "first_frame": -1,
+    "foot_size": 0,
+    "foot_type": 0,
+    "growth": 1.1,
+    "ha": 70,
+    "hd": 90,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "latias",
+    "isBaby": false,
+    "learnset": [
+      [0, "2MYFRYR4626004mistball"],
+      [0, "startermind"],
+      [5, "mdefup"],
+      [9, "swarm"],
+      [10, "lifedew"],
+      [12, "telekinesis"],
+      [20, "flight"],
+      [22, "teleport"],
+      [26, "heartdown"],
+      [27, "heart"],
+      [31, "protect"],
+      [35, "meditate"],
+      [39, "moon"],
+      [43, "mindpass"],
+      [46, "lifepass"],
+      [48, "wornattack"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": { "_1": 0, "_2": 0, "_3": 0 },
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 141.25,
+      "emote_hop_height": 25,
+      "float_dist": 50,
+      "float_wave": 25,
+      "float_wave_freq": 3200,
+      "float_x": 3,
+      "hop_height": 0,
+      "hop_length": 1,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 1,
+      "move_decel": 1,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 8000,
+      "offset_rand_range": 1,
+      "offset_seconds": 3,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.15
+    },
+    "ma": 75,
+    "md": 110,
+    "mod_data": {
+      "alters_data": true,
+      "author": "howdy",
+      "author_online": "",
+      "beastie_ids": ["latias", "latios"],
+      "beasties": ["Latias", "Latios"],
+      "description": "Adds Latias and Latios as beasties with custom art and signature moves.",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3796453392",
+      "finished": 1,
+      "imported": true,
+      "internal_id": "2MYFRYR4626004",
+      "major_version": "1",
+      "minor_version": "3",
+      "name": "Eon Duo - Latias and Latios",
+      "name_online": "",
+      "play_ids": {
+        "lusterpurge": "2MYFRYR4626004lusterpurge",
+        "mistball": "2MYFRYR4626004mistball"
+      },
+      "plays": ["Luster Purge", "Mist Ball"],
+      "reskins": [],
+      "texts": [],
+      "tracks": [],
+      "url": "3796453392"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3796453392\\Beastie_Latias\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Latias",
+    "number": 106,
+    "order": 111,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 15
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 15
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 15
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_020¦"
+    },
+    "recruit_value": 10.8,
+    "roamer_style": {
+      "_name": "FLOAT",
+      "can_react": true,
+      "can_socialize": false,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": false,
+      "default_physics": false,
+      "flying": true,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          { "color": 1883391, "x": 0 },
+          { "color": 1883391, "x": 0.2 },
+          { "color": 7267994, "x": 0.85 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 4715069, "x": 0 },
+          { "color": 4715069, "x": 0.2 },
+          { "color": 16119285, "x": 0.85 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 4715069, "x": 0 },
+          { "color": 4715069, "x": 0.2 },
+          { "color": 12186173, "x": 0.85 }
+        ]
+      }
+    ],
+    "spr": "sprlatias",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 4,
+    "tex_group_suffix": "",
+    "tyield": ["hd", 2, "md", 2],
+    "type_focus": 2
+  },
+  "latios": {
+    "ability": ["levitate_1", "jet_1"],
+    "ability_hidden": 0,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "inferno",
+      "overheat",
+      "dropshot",
+      "enemylowered",
+      "nightshade",
+      "freeball",
+      "feint",
+      "lowattks",
+      "lockon",
+      "bench",
+      "tailwind",
+      "basecover",
+      "backswitch",
+      "wornattack",
+      "flyback",
+      "mindpass",
+      "moon",
+      "meditate",
+      "protect",
+      "heart",
+      "heartdown",
+      "teleport",
+      "flight",
+      "telekinesis",
+      "reversal",
+      "swarm",
+      "mdefup",
+      "startermind",
+      "2MYFRYR4626004lusterpurge"
+    ],
+    "attklist_randomize": -1,
+    "ba": 45,
+    "base_exp": 242,
+    "bd": 60,
+    "body_color_index": 0,
+    "codename": "4b75d1b4f095886b13559de573726b87ca003881",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 15316005, "x": 0 },
+          { "color": 15316005, "x": 0.6 },
+          { "color": 12289930, "x": 0.9 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 2296292, "x": 0 },
+          { "color": 2296292, "x": 0.6 },
+          { "color": 15724527, "x": 0.9 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 3224020, "x": 0 },
+          { "color": 3224020, "x": 0.6 },
+          { "color": 922363, "x": 0.9 }
+        ]
+      },
+      { "array": [{ "color": 2874879, "x": 0 }] }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 1.2, 64, 7, 3, 84, 0, 1.3],
+      [1, 0, 1, 2, 0, 1],
+      [1, 1, 1, 2, 1, 1],
+      [34, 7, 0, 76, 2, 2]
+    ],
+    "desc": "It has the ability to make others see an image of what it has seen or imagines in its head.",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 2,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "latios",
+    "first_frame": -1,
+    "foot_size": 0,
+    "foot_type": 0,
+    "growth": 1.1,
+    "ha": 80,
+    "hd": 90,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "latios",
+    "isBaby": false,
+    "learnset": [
+      [0, "2MYFRYR4626004lusterpurge"],
+      [0, "startermind"],
+      [5, "mdefup"],
+      [9, "swarm"],
+      [10, "reversal"],
+      [12, "telekinesis"],
+      [20, "flight"],
+      [22, "teleport"],
+      [26, "heartdown"],
+      [27, "heart"],
+      [31, "protect"],
+      [35, "meditate"],
+      [39, "moon"],
+      [43, "mindpass"],
+      [46, "flyback"],
+      [48, "wornattack"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": { "_1": 0, "_2": 0, "_3": 0 },
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 149.5,
+      "emote_hop_height": 25,
+      "float_dist": 50,
+      "float_wave": 25,
+      "float_wave_freq": 3500,
+      "float_x": 5,
+      "hop_height": 0,
+      "hop_length": 1,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 1,
+      "move_decel": 1,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 7000,
+      "offset_rand_range": 2,
+      "offset_seconds": 3,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.15
+    },
+    "ma": 85,
+    "md": 90,
+    "mod_data": {
+      "alters_data": true,
+      "author": "howdy",
+      "author_online": "",
+      "beastie_ids": ["latias", "latios"],
+      "beasties": ["Latias", "Latios"],
+      "description": "Adds Latias and Latios as beasties with custom art and signature moves.",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3796453392",
+      "finished": 1,
+      "imported": true,
+      "internal_id": "2MYFRYR4626004",
+      "major_version": "1",
+      "minor_version": "3",
+      "name": "Eon Duo - Latias and Latios",
+      "name_online": "",
+      "play_ids": {
+        "lusterpurge": "2MYFRYR4626004lusterpurge",
+        "mistball": "2MYFRYR4626004mistball"
+      },
+      "plays": ["Luster Purge", "Mist Ball"],
+      "reskins": [],
+      "texts": [],
+      "tracks": [],
+      "url": "3796453392"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3796453392\\Beastie_Latios\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Latios",
+    "number": 107,
+    "order": 112,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 15
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 15
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "type": 15
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_020¦"
+    },
+    "recruit_value": 10.8,
+    "roamer_style": {
+      "_name": "FLOAT",
+      "can_react": true,
+      "can_socialize": false,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": false,
+      "default_physics": false,
+      "flying": true,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          { "color": 13821273, "x": 0 },
+          { "color": 13821273, "x": 0.2 },
+          { "color": 7267994, "x": 0.85 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 3693534, "x": 0 },
+          { "color": 3693534, "x": 0.2 },
+          { "color": 16119285, "x": 0.85 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 3693534, "x": 0 },
+          { "color": 3693534, "x": 0.2 },
+          { "color": 2061554, "x": 0.85 }
+        ]
+      },
+      { "array": [{ "color": 2874879, "x": 0 }] }
+    ],
+    "spr": "sprlatios",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 4,
+    "tex_group_suffix": "",
+    "tyield": ["ha", 2, "ma", 2],
+    "type_focus": 2
+  },
   "lyrebird": {
     "ability": ["moldbreaker", "unmarked"],
     "ability_hidden": true,
@@ -11096,7 +13900,18 @@
       "dragontail",
       "noisytag",
       "swarm",
-      "starterheart"
+      "starterheart",
+      "2Q1X7BC4618470fireball",
+      "2Q1X7BC4618470hurricane",
+      "2Q1X7BC4618470hype",
+      "2Q1X7BC4618470nurture",
+      "2Q1X7BC4618470tweet",
+      "2Q1X7BC4618470restless",
+      "44B86NC4618849vertigo",
+      "1VY50B84633067desperate",
+      "1VY50B84633067fall",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 40,
@@ -11342,7 +14157,12 @@
       "dragontail",
       "noisytag",
       "swarm",
-      "starterheart"
+      "starterheart",
+      "44B86NC4618849vertigo",
+      "1VY50B84633067desperate",
+      "1VY50B84633067fall",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 23,
@@ -11583,7 +14403,25 @@
       "crowd",
       "lockon",
       "kick",
-      "startermind"
+      "startermind",
+      "2Q1X7BC4618470icicle",
+      "2Q1X7BC4618470magnetize",
+      "2Q1X7BC4618470yoga",
+      "2Q1X7BC4618470pinpoint",
+      "2Q1X7BC4618470pose",
+      "2Q1X7BC4618470echolocator",
+      "2Q1X7BC4618470tweet",
+      "2Q1X7BC4618470thinktwice",
+      "2Q1X7BC4618470surprise",
+      "21MW9NP4627187despairtune",
+      "357GW8Q4627187gloomtune",
+      "44B86NC4618849soothingaria",
+      "67PJ3604627187dissect",
+      "1VY50B84633067dance",
+      "1VY50B84633067deep",
+      "1VY50B84633067echo",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 90,
@@ -11853,7 +14691,13 @@
       "crowd",
       "lockon",
       "kick",
-      "startermind"
+      "startermind",
+      "44B86NC4618849soothingaria",
+      "1VY50B84633067dance",
+      "1VY50B84633067deep",
+      "1VY50B84633067echo",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 70,
@@ -12066,7 +14910,21 @@
       "startermind",
       "stomp",
       "swordsdance",
-      "tool"
+      "tool",
+      "2Q1X7BC4618470mindspike",
+      "2Q1X7BC4618470piledrive",
+      "2Q1X7BC4618470halt",
+      "2Q1X7BC4618470shutup",
+      "2Q1X7BC4618470echo",
+      "2Q1X7BC4618470aim",
+      "2Q1X7BC4618470block?",
+      "44B86NC4618849roar",
+      "44B86NC4618849soothingaria",
+      "1VY50B84633067dance",
+      "1VY50B84633067deep",
+      "1VY50B84633067echo",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 93,
@@ -12278,7 +15136,22 @@
       "ricochet",
       "recover",
       "netattack",
-      "enemylowered"
+      "enemylowered",
+      "2Q1X7BC4618470cautiousstrike",
+      "2Q1X7BC4618470magnetize",
+      "2Q1X7BC4618470tank",
+      "2Q1X7BC4618470bodyguard",
+      "2Q1X7BC4618470forcefield",
+      "2Q1X7BC4618470gate",
+      "44B86NC4618849heavyroll",
+      "44B86NC4618849hut",
+      "44B86NC4618849recklessstance",
+      "44B86NC4618849riposte",
+      "67PJ3604627187dissect",
+      "1VY50B84633067deep",
+      "1VY50B84633067net",
+      "1VY50B84633067rush",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 75,
@@ -12469,6 +15342,271 @@
     "tyield": ["md", 2],
     "type_focus": 2
   },
+  "metta": {
+    "ability": ["anticipation", "prismatic"],
+    "ability_hidden": 0,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "shakenmind",
+      "trap",
+      "reign",
+      "tool",
+      "protect",
+      "recover",
+      "burnout",
+      "thrash",
+      "ego",
+      "meditate",
+      "steal",
+      "stresspass",
+      "snipe",
+      "mark",
+      "mindbomb",
+      "telekinesis",
+      "netattack",
+      "LD1GRC4623849prismarmor",
+      "preblock",
+      "markattack",
+      "rush",
+      "lockon",
+      "startermind"
+    ],
+    "attklist_randomize": -1,
+    "ba": 21,
+    "base_exp": 187.75,
+    "bd": 32,
+    "body_color_index": 0,
+    "codename": "a6811ea57ab51cf0a926e8fdcff11c1a63b47dce",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 10329501, "x": 0 },
+          { "color": 3894860, "x": 0.9933333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 6400035, "x": 0 },
+          { "color": 10476623, "x": 0.9933333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 15658565, "x": 0 },
+          { "color": 16671563, "x": 0.9133333333 },
+          { "color": 13208429, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 6603235, "x": 0 },
+          { "color": 8773631, "x": 0.54 },
+          { "color": 6075647, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 15771985, "x": 0 },
+          { "color": 15767596, "x": 0.5133333333 },
+          { "color": 16776981, "x": 0.9966666667 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 11932927, "x": 0 },
+          { "color": 7875823, "x": 0.9966666667 }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 0.8, 33, 0, 27],
+      [15, 0, 1],
+      [2, 1, 1, 16, 0, 1],
+      [93, 2, 2]
+    ],
+    "desc": "A primordial tyrant of.. something, or other. A beastie made of prismatic glass.",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 1,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": null,
+    "face_color_index": 2,
+    "family": "metta",
+    "first_frame": -1,
+    "foot_size": 0,
+    "foot_type": 0,
+    "growth": 1,
+    "ha": 75,
+    "hd": 65,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "metta",
+    "isBaby": false,
+    "learnset": [
+      [1, "startermind"],
+      [1, "lockon"],
+      [5, "rush"],
+      [12, "markattack"],
+      [16, "preblock"],
+      [23, "LD1GRC4623849prismarmor"],
+      [27, "netattack"],
+      [32, "telekinesis"],
+      [36, "mindbomb"],
+      [40, "mark"],
+      [46, "snipe"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 128.5,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "float_x": 0,
+      "hop_height": 30,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "stop",
+      "move_to_idle_transition_frames": [14, 11, 10, 13, 9],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 100,
+    "md": 100,
+    "mod_data": {
+      "alters_data": true,
+      "author": "",
+      "author_online": "",
+      "beastie_ids": ["metta"],
+      "beasties": ["Metta"],
+      "description": "",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3808675299",
+      "finished": 0,
+      "imported": true,
+      "internal_id": "LD1GRC4623849",
+      "major_version": "1",
+      "minor_version": "0",
+      "name": "Metta in Beastieball!",
+      "name_online": "",
+      "play_ids": { "prismarmor": "LD1GRC4623849prismarmor" },
+      "plays": ["Prism Armor"],
+      "reskins": [],
+      "texts": [],
+      "tracks": [],
+      "url": "3808675299"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3808675299\\Beastie_Metta\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Metta",
+    "number": 111,
+    "order": 116,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "attack_pow": ">=75",
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 0,
+          "target_post_hp": ">0",
+          "type": 15
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_071¦"
+    },
+    "recruit_value": 5.45,
+    "roamer_style": {
+      "_name": "CAMO",
+      "can_react": true,
+      "can_socialize": false,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1],
+    "shiny": [
+      {
+        "array": [
+          { "color": 4, "x": 0 },
+          { "color": 2044952, "x": 0.9933333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16776187, "x": 0.02 },
+          { "color": 11645091, "x": 0.95 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 7721113, "x": 0 },
+          { "color": 4970401, "x": 0.6066666667 },
+          { "color": 5358204, "x": 0.9933333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 7853208, "x": 0 },
+          { "color": 7853188, "x": 0.99 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 15990770, "x": 0 },
+          { "color": 12320711, "x": 0.8133333333 },
+          { "color": 11468712, "x": 0.9966666667 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 4934476, "x": 0.0033333333 },
+          { "color": 3618615, "x": 0.9933333333 }
+        ]
+      }
+    ],
+    "spr": "sprmetta",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 4,
+    "tex_group_suffix": "",
+    "tyield": ["ma", 1, "md", 1],
+    "type_focus": 2
+  },
   "millipede": {
     "ability": ["watcher", "breaker"],
     "ability_hidden": false,
@@ -12498,7 +15636,18 @@
       "allyrush",
       "fieldclear",
       "mark",
-      "tagattack"
+      "tagattack",
+      "67WYPGQ4618557swash",
+      "2Q1X7BC4618470drill",
+      "2Q1X7BC4618470volley?",
+      "2Q1X7BC4618470skewer",
+      "2Q1X7BC4618470wreck",
+      "2Q1X7BC4618470excavate",
+      "2Q1X7BC4618470bodyguard",
+      "2Q1X7BC4618470cross",
+      "44B86NC4618849bolster",
+      "44B86NC4618849unstoppableforce",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 88,
@@ -12559,17 +15708,17 @@
     "id": "millipede",
     "isBaby": false,
     "learnset": [
-      [0, "starterbody"],
-      [0, "dig"],
+      [1, "starterbody"],
+      [1, "dig"],
       [10, "sideshot"],
       [14, "quake"],
       [19, "flatten"],
       [25, "fieldclear"],
       [30, "protect"],
+      [32, "67WYPGQ4618557swash"],
       [36, "body"],
       [40, "mark"],
-      [44, "blockattack"],
-      [48, "superpower"]
+      [44, "blockattack"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -12602,9 +15751,31 @@
     },
     "ma": 48,
     "md": 98,
-    "mod_data": null,
-    "mod_file": "",
-    "modded_stats": false,
+    "mod_data": {
+      "alters_data": true,
+      "author": "",
+      "author_online": "",
+      "beastie_ids": ["arqua", "millipede"],
+      "beasties": ["Arqua"],
+      "description": "",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3777163085",
+      "finished": 1,
+      "imported": true,
+      "internal_id": "67WYPGQ4618557",
+      "major_version": "1",
+      "minor_version": "0",
+      "name": "Arqua in Beastieball!",
+      "name_online": "",
+      "play_ids": { "swash": "67WYPGQ4618557swash" },
+      "plays": ["Swash"],
+      "reskins": ["¦beastiesetup_name_078¦"],
+      "texts": [],
+      "tracks": [],
+      "url": "3777163085"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3777163085\\Swash_Demi\\beastie_data.ini",
+    "modded_stats": true,
     "name": "¦beastiesetup_name_078¦",
     "number": 79,
     "order": 78,
@@ -12708,7 +15879,10 @@
       "dig",
       "allyrush",
       "fieldclear",
-      "mark"
+      "mark",
+      "44B86NC4618849bolster",
+      "44B86NC4618849unstoppableforce",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 73,
@@ -12921,7 +16095,17 @@
       "allycover",
       "wink",
       "chill",
-      "distraction"
+      "distraction",
+      "2Q1X7BC4618470drain",
+      "2Q1X7BC4618470infuriatingstrike",
+      "2Q1X7BC4618470worry",
+      "2Q1X7BC4618470shout",
+      "2Q1X7BC4618470set?",
+      "2Q1X7BC4618470recollect",
+      "2Q1X7BC4618470surprise",
+      "44B86NC4618849exertion",
+      "44B86NC4618849roar",
+      "1VY50B84633067comment"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -13162,7 +16346,20 @@
       "startermind",
       "crowd",
       "scream",
-      "passionstrike"
+      "passionstrike",
+      "2Q1X7BC4618470bother",
+      "2Q1X7BC4618470imbue",
+      "2Q1X7BC4618470infuriatingstrike",
+      "2Q1X7BC4618470trust",
+      "2Q1X7BC4618470wail",
+      "2Q1X7BC4618470bottle",
+      "2Q1X7BC4618470seclude",
+      "2Q1X7BC4618470stageset",
+      "44B86NC4618849bewilder",
+      "44B86NC4618849pirouette",
+      "44B86NC4618849skyball",
+      "67PJ3604627187dissect",
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -13389,7 +16586,10 @@
       "bamboozle",
       "rest",
       "healbell",
-      "startermind"
+      "startermind",
+      "44B86NC4618849bewilder",
+      "44B86NC4618849skyball",
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 10,
@@ -13598,7 +16798,10 @@
       "bamboozle",
       "rest",
       "healbell",
-      "startermind"
+      "startermind",
+      "44B86NC4618849bewilder",
+      "44B86NC4618849skyball",
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 5,
@@ -13835,7 +17038,17 @@
       "shakeoff",
       "wink",
       "squeeze",
-      "chill"
+      "chill",
+      "2Q1X7BC4618470fireball",
+      "2Q1X7BC4618470siphon",
+      "2Q1X7BC4618470trust",
+      "2Q1X7BC4618470nuhuh",
+      "2Q1X7BC4618470heatsink",
+      "2Q1X7BC4618470fuel",
+      "44B86NC4618849hut",
+      "44B86NC4618849pancake",
+      "1VY50B84633067dance",
+      "1VY50B84633067deep"
     ],
     "attklist_randomize": -1,
     "ba": 35,
@@ -14053,7 +17266,20 @@
       "dispel",
       "hazeball",
       "mindbomb",
-      "tool"
+      "tool",
+      "2Q1X7BC4618470magnetize",
+      "2Q1X7BC4618470append",
+      "2Q1X7BC4618470buffer",
+      "2Q1X7BC4618470concatenate",
+      "2Q1X7BC4618470error",
+      "2Q1X7BC4618470overflow",
+      "2Q1X7BC4618470totalcachewipe",
+      "2Q1X7BC4618470precisionstrike?",
+      "2Q1X7BC4618470slackoff",
+      "2Q1X7BC4618470thinktwice",
+      "44B86NC4618849bewilder",
+      "44B86NC4618849copyme",
+      "44B86NC4618849guidance"
     ],
     "attklist_randomize": -1,
     "ba": 45,
@@ -14268,7 +17494,10 @@
       "dispel",
       "hazeball",
       "mindbomb",
-      "tool"
+      "tool",
+      "44B86NC4618849bewilder",
+      "44B86NC4618849copyme",
+      "44B86NC4618849guidance"
     ],
     "attklist_randomize": -1,
     "ba": 38,
@@ -14438,6 +17667,270 @@
     "tyield": ["md", 1],
     "type_focus": 2
   },
+  "nylandearie": {
+    "ability": ["unlazy", "breaker"],
+    "ability_hidden": 0,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "pepshot",
+      "nettle",
+      "share",
+      "steal",
+      "lowattks",
+      "cover",
+      "juggle",
+      "menace",
+      "protect",
+      "healhit2",
+      "ego",
+      "minddown",
+      "enemyboosts",
+      "cook",
+      "feint",
+      "haze",
+      "storedpower",
+      "stress",
+      "rush",
+      "swarm",
+      "shaken",
+      "sensihit",
+      "dig",
+      "hum",
+      "starterbody",
+      "construct",
+      "starterheart"
+    ],
+    "attklist_randomize": -1,
+    "ba": 64,
+    "base_exp": 126.72,
+    "bd": 32,
+    "body_color_index": 0,
+    "codename": "ba0353f5b41f0a3510488ed9372a2ecfe0efae9c",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 10192625, "x": 0 },
+          { "color": 10188790, "x": 0.4766666667 },
+          { "color": 13662415, "x": 0.9433333333 },
+          { "color": 14723039, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 8540660, "x": 0 },
+          { "color": 8798943, "x": 0.4866666667 },
+          { "color": 14368707, "x": 0.9266666667 },
+          { "color": 15109848, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 3431742, "x": 0.0133333333 },
+          { "color": 3823661, "x": 0.4666666667 },
+          { "color": 3618574, "x": 0.9733333333 },
+          { "color": 16772325, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 11534292, "x": 0 },
+          { "color": 10549503, "x": 0.1266666667 },
+          { "color": 8702715, "x": 0.4566666667 },
+          { "color": 7580139, "x": 0.9566666667 },
+          { "color": 12084385, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 13369330, "x": 0 },
+          { "color": 11796442, "x": 0.4733333333 },
+          { "color": 10479540, "x": 0.9533333333 },
+          { "color": 16711662, "x": 1 }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [46, 0, 0, 92, 2, 1],
+      [15, 1, 1, 0, 0, 0],
+      [16, 1, 1, 0, 0, 0],
+      [92, 2, 2, 0, 0, 0]
+    ],
+    "desc": "An artificially made Beastie, meant to be a pet for those who want a Beastie without the constant upkeep. Unfortunately, they've become an invasive species and threaten the local Calcroach and Debugly population.",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 0,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": null,
+    "face_color_index": 1,
+    "family": "nylandearie",
+    "first_frame": -1,
+    "foot_size": 20,
+    "foot_type": 1,
+    "growth": 0.9,
+    "ha": 96,
+    "hd": 64,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "nylandearie",
+    "isBaby": false,
+    "learnset": [
+      [0, "starterheart"],
+      [0, "construct"],
+      [0, "starterbody"],
+      [8, "hum"],
+      [12, "dig"],
+      [17, "sensihit"],
+      [22, "shaken"],
+      [25, "swarm"],
+      [29, "rush"],
+      [33, "stress"],
+      [37, "storedpower"],
+      [41, "haze"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": { "_2": 4 },
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 104.75,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "float_x": 0,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 3,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 32,
+    "md": 128,
+    "mod_data": {
+      "alters_data": true,
+      "author": "buster games",
+      "author_online": "",
+      "beastie_ids": ["nylandearie"],
+      "beasties": ["Nylandearie"],
+      "description": "a cute bug!",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3785435938",
+      "finished": 0,
+      "imported": true,
+      "internal_id": "16DYQLX4619052",
+      "major_version": "1",
+      "minor_version": "0",
+      "name": "Nylandearie",
+      "name_online": "",
+      "play_ids": {},
+      "plays": [],
+      "reskins": [],
+      "texts": [],
+      "tracks": [],
+      "url": "3785435938"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3785435938\\Nylandearie\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Nylandearie",
+    "number": 112,
+    "order": 117,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "effect_pow": "<0",
+          "effect_type": [0, 1, 2, 3, 4, 5, 15, 16, 74, 75, 76, 77, 78, 79],
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "target": 0,
+          "type": 46
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_086¦"
+    },
+    "recruit_value": 5.05,
+    "roamer_style": {
+      "_name": "RACER..",
+      "can_react": false,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": true,
+      "checking_player_distance": true,
+      "colliding": true,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.75, 1],
+    "shiny": [
+      {
+        "array": [
+          { "color": 11725186, "x": 0 },
+          { "color": 14281093, "x": 0.4666666667 },
+          { "color": 15319677, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 8629492, "x": 0 },
+          { "color": 8618996, "x": 0.4666666667 },
+          { "color": 10189044, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 2171260, "x": 0 },
+          { "color": 3938439, "x": 0.4733333333 },
+          { "color": 4854627, "x": 1 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 14803455, "x": 0 },
+          { "color": 14735103, "x": 0.4866666667 },
+          { "color": 14994932, "x": 1 }
+        ]
+      },
+      { "array": [{ "color": 16777215, "x": 0.5 }] }
+    ],
+    "spr": "sprnylandearie",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tex_group_suffix": "",
+    "tyield": ["ha", 1, "md", 2],
+    "type_focus": 1
+  },
   "okapi": {
     "ability": ["teleport"],
     "ability_hidden": false,
@@ -14477,7 +17970,20 @@
       "thrash",
       "charm",
       "wink",
-      "reign"
+      "reign",
+      "2Q1X7BC4618470dropshot",
+      "2Q1X7BC4618470haunt",
+      "2Q1X7BC4618470wail",
+      "2Q1X7BC4618470pulse",
+      "2Q1X7BC4618470phase",
+      "2Q1X7BC4618470precisionstrike?",
+      "44B86NC4618849lockdown",
+      "44B86NC4618849pancake",
+      "44B86NC4618849swerve",
+      "44B86NC4618849switcheroo",
+      "1VY50B84633067fall",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 26,
@@ -14700,7 +18206,19 @@
       "ego",
       "bolt",
       "squeeze",
-      "chill"
+      "chill",
+      "2Q1X7BC4618470haunt",
+      "2Q1X7BC4618470siphon",
+      "2Q1X7BC4618470yoga",
+      "2Q1X7BC4618470append",
+      "2Q1X7BC4618470absorb",
+      "2Q1X7BC4618470seclude",
+      "LD1GRC4623849prismarmor",
+      "44B86NC4618849flare",
+      "44B86NC4618849pointzero",
+      "1VY50B84633067deep",
+      "1VY50B84633067fall",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 90,
@@ -14915,7 +18433,13 @@
       "ego",
       "bolt",
       "squeeze",
-      "chill"
+      "chill",
+      "LD1GRC4623849prismarmor",
+      "44B86NC4618849flare",
+      "44B86NC4618849pointzero",
+      "1VY50B84633067deep",
+      "1VY50B84633067fall",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 50,
@@ -15107,7 +18631,19 @@
       "shieldbreaker",
       "wall",
       "heartpass",
-      "kick"
+      "kick",
+      "2Q1X7BC4618470drain",
+      "2Q1X7BC4618470lunge",
+      "2Q1X7BC4618470skewer",
+      "2Q1X7BC4618470pose",
+      "2Q1X7BC4618470bodyguard",
+      "2Q1X7BC4618470shield?",
+      "2Q1X7BC4618470recollect",
+      "44B86NC4618849crashdown",
+      "44B86NC4618849exertion",
+      "44B86NC4618849recklessstance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 95,
@@ -15366,7 +18902,17 @@
       "bamboozle",
       "passattack",
       "threat",
-      "ricochet"
+      "ricochet",
+      "2Q1X7BC4618470coldfront",
+      "2Q1X7BC4618470icicle",
+      "2Q1X7BC4618470electrify",
+      "2Q1X7BC4618470pulse",
+      "2Q1X7BC4618470precisionstrike?",
+      "2Q1X7BC4618470block?",
+      "44B86NC4618849pointzero",
+      "44B86NC4618849roar",
+      "44B86NC4618849switcheroo",
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 40,
@@ -15572,7 +19118,10 @@
       "snipe",
       "sweatup",
       "bamboozle",
-      "passattack"
+      "passattack",
+      "44B86NC4618849pointzero",
+      "44B86NC4618849switcheroo",
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 18,
@@ -15772,7 +19321,16 @@
       "snipe",
       "sweatup",
       "bamboozle",
-      "passattack"
+      "passattack",
+      "2Q1X7BC4618470cautiousstrike",
+      "2Q1X7BC4618470magnetize",
+      "2Q1X7BC4618470mindspike",
+      "2Q1X7BC4618470overflow",
+      "2Q1X7BC4618470hindsight",
+      "2Q1X7BC4618470thinktwice",
+      "44B86NC4618849pointzero",
+      "44B86NC4618849switcheroo",
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 26,
@@ -16026,7 +19584,16 @@
       "allyprotect",
       "taunt",
       "facade",
-      "introduction"
+      "introduction",
+      "2Q1X7BC4618470lob",
+      "2Q1X7BC4618470piledrive",
+      "2Q1X7BC4618470bulkshot",
+      "2Q1X7BC4618470whatever",
+      "2Q1X7BC4618470forcefield",
+      "2Q1X7BC4618470shield?",
+      "44B86NC4618849bolster",
+      "44B86NC4618849guardup",
+      "44B86NC4618849unstoppableforce"
     ],
     "attklist_randomize": -1,
     "ba": 68,
@@ -16260,7 +19827,10 @@
       "body",
       "defheal",
       "construct",
-      "tagattack"
+      "tagattack",
+      "44B86NC4618849bolster",
+      "44B86NC4618849guardup",
+      "44B86NC4618849unstoppableforce"
     ],
     "attklist_randomize": -1,
     "ba": 45,
@@ -16490,7 +20060,10 @@
       "defheal",
       "construct",
       "tagattack",
-      "set"
+      "set",
+      "44B86NC4618849bolster",
+      "44B86NC4618849guardup",
+      "44B86NC4618849unstoppableforce"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -16735,7 +20308,16 @@
       "hex",
       "stun",
       "reign",
-      "chill"
+      "chill",
+      "2Q1X7BC4618470cautiousstrike",
+      "2Q1X7BC4618470coldfront",
+      "2Q1X7BC4618470fear",
+      "2Q1X7BC4618470psywave",
+      "2Q1X7BC4618470forcefield",
+      "2Q1X7BC4618470ragebait",
+      "2Q1X7BC4618470thinktwice",
+      "44B86NC4618849switcheroo",
+      "1VY50B84633067fall"
     ],
     "attklist_randomize": -1,
     "ba": 30,
@@ -16973,7 +20555,20 @@
       "passionstrike",
       "dare",
       "swordsdance",
-      "mimic"
+      "mimic",
+      "2Q1X7BC4618470fireball",
+      "2Q1X7BC4618470imbue",
+      "2Q1X7BC4618470trust",
+      "2Q1X7BC4618470overhype",
+      "2Q1X7BC4618470booyah!",
+      "2Q1X7BC4618470echolocator",
+      "2Q1X7BC4618470killerwail",
+      "2Q1X7BC4618470splashdown",
+      "2Q1X7BC4618470move?",
+      "LD1GRC4623849prismarmor",
+      "44B86NC4618849copyme",
+      "44B86NC4618849hypeup",
+      "1VY50B84633067dance"
     ],
     "attklist_randomize": -1,
     "ba": 89,
@@ -17271,7 +20866,19 @@
       "dare",
       "swordsdance",
       "mimic",
-      "reign"
+      "reign",
+      "2Q1X7BC4618470coldfront",
+      "2Q1X7BC4618470icicle",
+      "2Q1X7BC4618470siphon",
+      "2Q1X7BC4618470rainmaker",
+      "2Q1X7BC4618470bottle",
+      "2Q1X7BC4618470set?",
+      "LD1GRC4623849prismarmor",
+      "44B86NC4618849copyme",
+      "44B86NC4618849hypeup",
+      "44B86NC4618849nullify",
+      "67PJ3604627187dissect",
+      "1VY50B84633067dance"
     ],
     "attklist_randomize": -1,
     "ba": 66,
@@ -17487,7 +21094,23 @@
       "bamboozle",
       "substitute",
       "fortify",
-      "sweep"
+      "sweep",
+      "2Q1X7BC4618470cautiousstrike",
+      "2Q1X7BC4618470volley?",
+      "2Q1X7BC4618470oldbeam",
+      "2Q1X7BC4618470joke",
+      "2Q1X7BC4618470whatever",
+      "2Q1X7BC4618470ragdoll",
+      "2Q1X7BC4618470substitute",
+      "2Q1X7BC4618470coach",
+      "2Q1X7BC4618470move?",
+      "2Q1X7BC4618470cross",
+      "2Q1X7BC4618470surprise",
+      "44B86NC4618849copyme",
+      "44B86NC4618849guardup",
+      "44B86NC4618849lockdown",
+      "1VY50B84633067dance",
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 81,
@@ -17768,7 +21391,18 @@
       "shakeoff",
       "starterbody",
       "quake",
-      "bomb"
+      "bomb",
+      "2Q1X7BC4618470pacify",
+      "2Q1X7BC4618470yoga",
+      "2Q1X7BC4618470tank",
+      "2Q1X7BC4618470halt",
+      "2Q1X7BC4618470aim",
+      "2Q1X7BC4618470bodyguard",
+      "2Q1X7BC4618470plant",
+      "44B86NC4618849bolster",
+      "44B86NC4618849heavyroll",
+      "1VY50B84633067deep",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 86,
@@ -17990,7 +21624,11 @@
       "swordsdance",
       "menace",
       "shakeoff",
-      "starterbody"
+      "starterbody",
+      "44B86NC4618849bolster",
+      "44B86NC4618849heavyroll",
+      "1VY50B84633067deep",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 52,
@@ -18204,7 +21842,11 @@
       "swordsdance",
       "menace",
       "shakeoff",
-      "starterbody"
+      "starterbody",
+      "44B86NC4618849bolster",
+      "44B86NC4618849heavyroll",
+      "1VY50B84633067deep",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 78,
@@ -18417,7 +22059,19 @@
       "scream",
       "healbell",
       "dragontail",
-      "followme"
+      "followme",
+      "2Q1X7BC4618470heart",
+      "2Q1X7BC4618470hurricane",
+      "2Q1X7BC4618470trust",
+      "2Q1X7BC4618470aircompress",
+      "2Q1X7BC4618470overflow",
+      "2Q1X7BC4618470rebound",
+      "2Q1X7BC4618470tweet",
+      "2Q1X7BC4618470recollect",
+      "44B86NC4618849heavyroll",
+      "44B86NC4618849resistance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -18684,7 +22338,11 @@
       "scream",
       "healbell",
       "dragontail",
-      "followme"
+      "followme",
+      "44B86NC4618849heavyroll",
+      "44B86NC4618849resistance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 19,
@@ -18911,7 +22569,17 @@
       "wall",
       "stretch",
       "starterbody",
-      "tailwind"
+      "tailwind",
+      "2Q1X7BC4618470claw",
+      "2Q1X7BC4618470pocketsand",
+      "2Q1X7BC4618470whiplash",
+      "2Q1X7BC4618470bodyguard",
+      "2Q1X7BC4618470shed",
+      "2Q1X7BC4618470set?",
+      "44B86NC4618849riposte",
+      "44B86NC4618849unstoppableforce",
+      "1VY50B84633067dance",
+      "1VY50B84633067deep"
     ],
     "attklist_randomize": -1,
     "ba": 100,
@@ -19132,7 +22800,11 @@
       "slide",
       "wall",
       "stretch",
-      "starterbody"
+      "starterbody",
+      "44B86NC4618849riposte",
+      "44B86NC4618849unstoppableforce",
+      "1VY50B84633067dance",
+      "1VY50B84633067deep"
     ],
     "attklist_randomize": -1,
     "ba": 74,
@@ -19348,7 +23020,25 @@
       "stretch",
       "catwalk",
       "protectcheer",
-      "pushattack"
+      "pushattack",
+      "2Q1X7BC4618470claw",
+      "2Q1X7BC4618470u-turn",
+      "2Q1X7BC4618470meow",
+      "2Q1X7BC4618470unsheath",
+      "2Q1X7BC4618470splashdown",
+      "2Q1X7BC4618470tweet",
+      "2Q1X7BC4618470comfort",
+      "2Q1X7BC4618470shed",
+      "2Q1X7BC4618470thinktwice",
+      "44B86NC4618849crashdown",
+      "44B86NC4618849pancake",
+      "44B86NC4618849recklessstance",
+      "44B86NC4618849riposte",
+      "44B86NC4618849signaturemove",
+      "1VY50B84633067desperate",
+      "1VY50B84633067fall",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 100,
@@ -19579,7 +23269,16 @@
       "stretch",
       "catwalk",
       "protectcheer",
-      "pushattack"
+      "pushattack",
+      "44B86NC4618849crashdown",
+      "44B86NC4618849pancake",
+      "44B86NC4618849recklessstance",
+      "44B86NC4618849riposte",
+      "44B86NC4618849signaturemove",
+      "1VY50B84633067desperate",
+      "1VY50B84633067fall",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 74,
@@ -19805,7 +23504,18 @@
       "powswitch",
       "lowattks",
       "shakeoff",
-      "starterbody"
+      "starterbody",
+      "2Q1X7BC4618470drill",
+      "2Q1X7BC4618470lob",
+      "2Q1X7BC4618470piledrive",
+      "2Q1X7BC4618470pocketsand",
+      "2Q1X7BC4618470pub",
+      "2Q1X7BC4618470plunder",
+      "2Q1X7BC4618470seclude",
+      "2Q1X7BC4618470fumble",
+      "44B86NC4618849bolster",
+      "44B86NC4618849recharge",
+      "1VY50B84633067dance"
     ],
     "attklist_randomize": -1,
     "ba": 105,
@@ -20014,7 +23724,12 @@
       "powswitch",
       "lowattks",
       "shakeoff",
-      "starterbody"
+      "starterbody",
+      "2Q1X7BC4618470pub",
+      "2Q1X7BC4618470becomepubber",
+      "44B86NC4618849bolster",
+      "44B86NC4618849recharge",
+      "1VY50B84633067dance"
     ],
     "attklist_randomize": -1,
     "ba": 70,
@@ -20209,7 +23924,14 @@
       "sweatup",
       "enemyboosts",
       "flatten",
-      "snipe"
+      "snipe",
+      "2Q1X7BC4618470hype",
+      "2Q1X7BC4618470sync",
+      "2Q1X7BC4618470trust",
+      "2Q1X7BC4618470shloomstrike!!!!",
+      "2Q1X7BC4618470surprise",
+      "44B86NC4618849guardup",
+      "67PJ3604627187dissect"
     ],
     "attklist_randomize": -1,
     "ba": 45,
@@ -20445,7 +24167,16 @@
       "stomp",
       "lifedew",
       "allyprotect",
-      "topspin"
+      "topspin",
+      "2Q1X7BC4618470lunge",
+      "2Q1X7BC4618470sync",
+      "2Q1X7BC4618470breakdance",
+      "2Q1X7BC4618470bulkshot",
+      "2Q1X7BC4618470comfort",
+      "2Q1X7BC4618470recollect",
+      "44B86NC4618849easypass",
+      "44B86NC4618849soothingaria",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 75,
@@ -20721,7 +24452,18 @@
       "hazeball",
       "sweep",
       "feint",
-      "distraction"
+      "distraction",
+      "2Q1X7BC4618470coldfront",
+      "2Q1X7BC4618470dropshot",
+      "2Q1X7BC4618470pacify",
+      "2Q1X7BC4618470siphon",
+      "2Q1X7BC4618470prod",
+      "2Q1X7BC4618470constrict",
+      "2Q1X7BC4618470surprise",
+      "44B86NC4618849beguile",
+      "44B86NC4618849flare",
+      "44B86NC4618849pointzero",
+      "44B86NC4618849skyball"
     ],
     "attklist_randomize": -1,
     "ba": 65,
@@ -20978,7 +24720,16 @@
       "snore",
       "taunt",
       "batonpass",
-      "contest"
+      "contest",
+      "2Q1X7BC4618470bother",
+      "2Q1X7BC4618470fireball",
+      "2Q1X7BC4618470hype",
+      "2Q1X7BC4618470tagteam",
+      "2Q1X7BC4618470booyah!",
+      "2Q1X7BC4618470crowd",
+      "2Q1X7BC4618470stageset",
+      "44B86NC4618849pirouette",
+      "44B86NC4618849swansong"
     ],
     "attklist_randomize": -1,
     "ba": 60,
@@ -21251,7 +25002,27 @@
       "3actions",
       "snore",
       "menace",
-      "quake"
+      "quake",
+      "2Q1X7BC4618470volley?",
+      "2Q1X7BC4618470oldbeam",
+      "2Q1X7BC4618470uproar",
+      "2Q1X7BC4618470shloomstrike!!!!",
+      "2Q1X7BC4618470fossilize",
+      "2Q1X7BC4618470gate",
+      "2Q1X7BC4618470stageset",
+      "44B86NC4618849beguile",
+      "44B86NC4618849easypass",
+      "44B86NC4618849flare",
+      "44B86NC4618849heavyroll",
+      "44B86NC4618849pirouette",
+      "44B86NC4618849pointzero",
+      "44B86NC4618849roar",
+      "44B86NC4618849signaturemove",
+      "44B86NC4618849skyball",
+      "44B86NC4618849soothingaria",
+      "44B86NC4618849swansong",
+      "44B86NC4618849unstoppableforce",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 110,
@@ -21482,7 +25253,21 @@
       "basecover",
       "netattack",
       "preblock",
-      "dodge"
+      "dodge",
+      "2Q1X7BC4618470heart",
+      "2Q1X7BC4618470hype",
+      "2Q1X7BC4618470tagteam",
+      "2Q1X7BC4618470frisbee",
+      "2Q1X7BC4618470chloroblast",
+      "2Q1X7BC4618470plant",
+      "2Q1X7BC4618470seclude",
+      "44B86NC4618849hut",
+      "44B86NC4618849pancake",
+      "1VY50B84633067deep",
+      "1VY50B84633067dodge",
+      "1VY50B84633067fall",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 30,
@@ -21695,7 +25480,19 @@
       "stress",
       "batonpass",
       "shakeoff",
-      "bdefup"
+      "bdefup",
+      "2Q1X7BC4618470lob",
+      "2Q1X7BC4618470lunge",
+      "2Q1X7BC4618470electrify",
+      "2Q1X7BC4618470spotlight",
+      "2Q1X7BC4618470highfive?",
+      "2Q1X7BC4618470restless",
+      "2Q1X7BC4618470slackoff",
+      "44B86NC4618849recharge",
+      "1VY50B84633067deep",
+      "1VY50B84633067fall",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 91,
@@ -21918,7 +25715,16 @@
       "bodypass",
       "lifepass",
       "eerie",
-      "kick"
+      "kick",
+      "2Q1X7BC4618470lob",
+      "2Q1X7BC4618470sync",
+      "2Q1X7BC4618470totalcachewipe",
+      "2Q1X7BC4618470shed",
+      "2Q1X7BC4618470fumble",
+      "44B86NC4618849resistance",
+      "44B86NC4618849unstoppableforce",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 105,
@@ -22116,6 +25922,472 @@
     "tyield": ["ba", 3],
     "type_focus": 0
   },
+  "sourbloom": {
+    "ability": ["skittish", "steal"],
+    "ability_hidden": 0,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "careful",
+      "taunt",
+      "followme",
+      "dig",
+      "defheal",
+      "passattack",
+      "set",
+      "skillswap",
+      "protect",
+      "lifedew",
+      "hazeball",
+      "cover",
+      "charm",
+      "recover",
+      "distraction",
+      "menace",
+      "desperate",
+      "spitball",
+      "nettle",
+      "6WY0C8R4615906strongscent",
+      "netattack",
+      "heartpass",
+      "cut",
+      "poisonhit",
+      "bench",
+      "startermind"
+    ],
+    "attklist_randomize": -1,
+    "ba": 30,
+    "base_exp": 126.85,
+    "bd": 55,
+    "body_color_index": 0,
+    "codename": "faad70a25286b64df5817b9028656d7a20717941",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 25599, "x": 0.0233333333 },
+          { "color": 56063, "x": 0.7766666667 },
+          { "color": 3012054, "x": 0.9566666667 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 4313253, "x": 0 },
+          { "color": 5361729, "x": 0.9466666667 }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [7, 2, 0.8, 14, 0, 1],
+      [65, 1, 1, 14, 0, 1],
+      [78, 2, 1, 11, 0, 1],
+      [12, 4, 1, 78, 0, 1]
+    ],
+    "desc": "This skittish flower bud has a distinctly citrus aroma. They have been observed to occasionally show a mischievious side, swiping belongings with their long, extendable leaves.",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 0,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "sourbloom",
+    "first_frame": -1,
+    "foot_size": 20,
+    "foot_type": 0,
+    "growth": 1,
+    "ha": 40,
+    "hd": 68,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "sourbloom",
+    "isBaby": false,
+    "learnset": [
+      [0, "startermind"],
+      [0, "bench"],
+      [5, "poisonhit"],
+      [8, "cut"],
+      [12, "heartpass"],
+      [17, "netattack"],
+      [22, "6WY0C8R4615906strongscent"],
+      [25, "nettle"],
+      [29, "spitball"],
+      [33, "desperate"],
+      [37, "menace"],
+      [41, "distraction"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 60.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "float_x": 0,
+      "hop_height": 25,
+      "hop_length": 2.2,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1.3,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.2,
+      "stretchiness": 0.1
+    },
+    "ma": 78,
+    "md": 70,
+    "mod_data": {
+      "alters_data": true,
+      "author": "SamTheCookieLord",
+      "author_online": "",
+      "beastie_ids": ["sourbloom"],
+      "beasties": ["Sourbloom"],
+      "description": "Baby's first Beastieball mod :] Have this cute lemony plant creature! Comes with a unique support move, Strong Scent. I'm sorry in advance for poor balancing LOL",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3728814225",
+      "finished": 1,
+      "imported": true,
+      "internal_id": "6WY0C8R4615906",
+      "major_version": "1",
+      "minor_version": "0",
+      "name": "Sourbloom",
+      "name_online": "",
+      "play_ids": { "strongscent": "6WY0C8R4615906strongscent" },
+      "plays": ["Strong Scent"],
+      "reskins": [],
+      "texts": [],
+      "tracks": [],
+      "url": "3728814225"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3728814225\\Beastie_Sourbloom\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Sourbloom",
+    "number": 113,
+    "order": 118,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 24
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_014¦"
+    },
+    "recruit_value": 8.4,
+    "roamer_style": {
+      "_name": "SKITTISH",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.65, 1.1],
+    "shiny": [
+      {
+        "array": [
+          { "color": 10878804, "x": 0.2633333333 },
+          { "color": 6400480, "x": 0.9666666667 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 14680018, "x": 0 },
+          { "color": 5294276, "x": 0.9633333333 }
+        ]
+      }
+    ],
+    "spr": "sprsourbloom",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tex_group_suffix": "",
+    "tyield": ["ma", 1, "hd", 1],
+    "type_focus": 2
+  },
+  "sparky": {
+    "ability": ["shy", "biting"],
+    "ability_hidden": 1,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "facade",
+      "protect",
+      "burnout",
+      "scream",
+      "desperate",
+      "tool",
+      "ego",
+      "crowd",
+      "markattack",
+      "feint",
+      "trap",
+      "taunt",
+      "teleport",
+      "reign",
+      "basecover",
+      "backswitch",
+      "bellydrum",
+      "sweatall",
+      "commit",
+      "stress",
+      "cut",
+      "overthink",
+      "mindbomb",
+      "preblock",
+      "cover",
+      "mindup",
+      "pepshot",
+      "shaken",
+      "shakenmind",
+      "starterheart"
+    ],
+    "attklist_randomize": -1,
+    "ba": 50,
+    "base_exp": 123.25,
+    "bd": 35,
+    "body_color_index": 0,
+    "codename": "b94f506da19c54178d6181bc54ee6c4ba04ef0eb",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 3550763, "x": 0.0366666667 },
+          { "color": 3550763, "x": 0.3866666667 },
+          { "color": 4077623, "x": 0.7466666667 },
+          { "color": 1516084, "x": 0.9333333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 7187901, "x": 0 },
+          { "color": 5211037, "x": 0.97 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 1593202, "x": 0.05 },
+          { "color": 727594, "x": 0.5333333333 },
+          { "color": 727594, "x": 0.8566666667 },
+          { "color": 2237737, "x": 0.9933333333 }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [6, 0, 1, 50, 0, 0.8],
+      [3, 2, 1, 8, 0, 0.25],
+      [8, 1, 0.3, 6, 0, 1],
+      [70, 1, 2, 76, 2, 1]
+    ],
+    "desc": "These long, snakelike beasties may seem ferocious, but they are quite scared of people and other beasties. They rely on their wits more than their strength.",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 1,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "sparky",
+    "first_frame": -1,
+    "foot_size": 20,
+    "foot_type": 0,
+    "growth": 1,
+    "ha": 90,
+    "hd": 70,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "sparky",
+    "isBaby": false,
+    "learnset": [
+      [0, "starterheart"],
+      [5, "shakenmind"],
+      [9, "shaken"],
+      [11, "pepshot"],
+      [14, "mindup"],
+      [16, "cover"],
+      [18, "preblock"],
+      [23, "mindbomb"],
+      [25, "overthink"],
+      [30, "cut"],
+      [35, "stress"],
+      [40, "commit"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 140.75,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "float_x": 0,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [57, 58],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 80,
+    "md": 80,
+    "mod_data": {
+      "alters_data": true,
+      "author": "Snekatie",
+      "author_online": "",
+      "beastie_ids": ["sparky"],
+      "beasties": ["Sparky"],
+      "description": "",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3738345087",
+      "finished": 0,
+      "imported": true,
+      "internal_id": "53YF2R44615818",
+      "major_version": "1",
+      "minor_version": "0",
+      "name": "Sparky Mod",
+      "name_online": "",
+      "play_ids": {},
+      "plays": [],
+      "reskins": [],
+      "texts": [],
+      "tracks": [],
+      "url": "3738345087"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3738345087\\Beastie_Sparky\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Sparky",
+    "number": 101,
+    "order": 106,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 48
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 48
+        },
+        {
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "player": 2,
+          "rel_color": -1,
+          "type": 48
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_017¦"
+    },
+    "recruit_value": 4.85,
+    "roamer_style": {
+      "_name": "SKITTISH",
+      "can_react": true,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": false,
+      "checking_player_distance": true,
+      "colliding": false,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.75, 0.9],
+    "shiny": [
+      {
+        "array": [
+          { "color": 5606084, "x": 0.0433333333 },
+          { "color": 3756935, "x": 0.9466666667 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 10142935, "x": 0.76 },
+          { "color": 5683141, "x": 0.9266666667 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 2111323, "x": 0.0266666667 },
+          { "color": 2573473, "x": 0.7866666667 },
+          { "color": 7103046, "x": 0.9666666667 }
+        ]
+      }
+    ],
+    "spr": "sprsparky",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 2,
+    "tex_group_suffix": "",
+    "tyield": ["md", 1, "ha", 1],
+    "type_focus": 1
+  },
   "spirit": {
     "ability": ["avenger", "guts"],
     "ability_hidden": false,
@@ -22148,7 +26420,17 @@
       "jazzattack",
       "inferno",
       "sweatall",
-      "cook"
+      "cook",
+      "2Q1X7BC4618470fireball",
+      "2Q1X7BC4618470hype",
+      "2Q1X7BC4618470lunge",
+      "2Q1X7BC4618470infinitegreed",
+      "2Q1X7BC4618470reanimate",
+      "2Q1X7BC4618470dash",
+      "44B86NC4618849resistance",
+      "44B86NC4618849swansong",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -22370,7 +26652,10 @@
       "rest",
       "sweatup",
       "hum",
-      "swarm"
+      "swarm",
+      "44B86NC4618849resistance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 65,
@@ -22622,7 +26907,24 @@
       "basecover",
       "slide",
       "flight",
-      "swarm"
+      "swarm",
+      "2Q1X7BC4618470volley?",
+      "2Q1X7BC4618470pocketsand",
+      "2Q1X7BC4618470wraparound",
+      "2Q1X7BC4618470hindsight",
+      "2Q1X7BC4618470tweet",
+      "2Q1X7BC4618470gate",
+      "2Q1X7BC4618470dash",
+      "2Q1X7BC4618470set?",
+      "2Q1X7BC4618470cross",
+      "44B86NC4618849crashdown",
+      "44B86NC4618849pancake",
+      "44B86NC4618849riposte",
+      "44B86NC4618849swerve",
+      "1VY50B84633067fall",
+      "1VY50B84633067net",
+      "1VY50B84633067rush",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 94,
@@ -22859,7 +27161,22 @@
       "hazeball",
       "fieldclear",
       "passattack",
-      "starterside"
+      "starterside",
+      "2Q1X7BC4618470coldfront",
+      "2Q1X7BC4618470roundabout",
+      "2Q1X7BC4618470siphon",
+      "2Q1X7BC4618470beam",
+      "2Q1X7BC4618470mix-up",
+      "2Q1X7BC4618470comfort",
+      "2Q1X7BC4618470slackoff",
+      "2Q1X7BC4618470fumble",
+      "44B86NC4618849bewilder",
+      "44B86NC4618849flare",
+      "44B86NC4618849lockdown",
+      "44B86NC4618849switcheroo",
+      "1VY50B84633067dance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 60,
@@ -23123,7 +27440,14 @@
       "hazeball",
       "fieldclear",
       "passattack",
-      "starterside"
+      "starterside",
+      "44B86NC4618849bewilder",
+      "44B86NC4618849flare",
+      "44B86NC4618849lockdown",
+      "44B86NC4618849switcheroo",
+      "1VY50B84633067dance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
     "ba": 40,
@@ -23388,7 +27712,20 @@
       "healbell",
       "heartpass",
       "haze",
-      "dump"
+      "dump",
+      "67WYPGQ4618557swash",
+      "2Q1X7BC4618470dropshot",
+      "2Q1X7BC4618470pacify",
+      "2Q1X7BC4618470buffer",
+      "2Q1X7BC4618470plunder",
+      "2Q1X7BC4618470gate",
+      "2Q1X7BC4618470plant",
+      "44B86NC4618849bolster",
+      "44B86NC4618849guardup",
+      "44B86NC4618849recharge",
+      "44B86NC4618849soothingaria",
+      "1VY50B84633067dance",
+      "1VY50B84633067deep"
     ],
     "attklist_randomize": -1,
     "ba": 70,
@@ -23646,7 +27983,13 @@
       "healbell",
       "heartpass",
       "haze",
-      "dump"
+      "dump",
+      "44B86NC4618849bolster",
+      "44B86NC4618849guardup",
+      "44B86NC4618849recharge",
+      "44B86NC4618849soothingaria",
+      "1VY50B84633067dance",
+      "1VY50B84633067deep"
     ],
     "attklist_randomize": -1,
     "ba": 45,
@@ -23875,7 +28218,14 @@
       "healbell",
       "heartpass",
       "haze",
-      "dump"
+      "dump",
+      "67WYPGQ4618557swash",
+      "44B86NC4618849bolster",
+      "44B86NC4618849guardup",
+      "44B86NC4618849recharge",
+      "44B86NC4618849soothingaria",
+      "1VY50B84633067dance",
+      "1VY50B84633067deep"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -24079,6 +28429,275 @@
     "tyield": ["hd", 2],
     "type_focus": 0
   },
+  "uppercrust": {
+    "ability": ["aware", "drownout"],
+    "ability_hidden": 0,
+    "allowedInPromo": true,
+    "anim_progress": 100,
+    "animator": 0,
+    "assymetric": false,
+    "attklist": [
+      "protect",
+      "defheal",
+      "dodge",
+      "sensihit",
+      "pushattack",
+      "rest",
+      "facade",
+      "superfang",
+      "curse",
+      "backswitch",
+      "rush",
+      "sideshot",
+      "haze",
+      "snore",
+      "rushattack",
+      "3actions",
+      "introduction",
+      "rhythm",
+      "67PJ3604627187dissect",
+      "serve",
+      "sting",
+      "67PJ3604627187uppercut",
+      "swordsdance",
+      "jazzpass",
+      "breakswipe",
+      "cheer",
+      "mark",
+      "libero",
+      "bounce",
+      "substitute",
+      "dig",
+      "nettle",
+      "starterbody",
+      "67PJ3604627187dissect"
+    ],
+    "attklist_randomize": -1,
+    "ba": 76,
+    "base_exp": 186.56,
+    "bd": 88,
+    "body_color_index": 0,
+    "codename": "2840874d284fd656908899be692540fb167d81b0",
+    "colormeta": null,
+    "colors": [
+      {
+        "array": [
+          { "color": 255, "x": 0.3266666667 },
+          { "color": 64767, "x": 0.5733333333 },
+          { "color": 5570080, "x": 0.7533333333 },
+          { "color": 16753408, "x": 0.9733333333 }
+        ]
+      },
+      { "array": [{ "color": 0, "x": 0.4966666667 }] },
+      { "array": [{ "color": 0, "x": 0.49 }] },
+      {
+        "array": [
+          { "color": 19967, "x": 0.2466666667 },
+          { "color": 64767, "x": 0.5133333333 },
+          { "color": 5093888, "x": 0.7066666667 },
+          { "color": 16772096, "x": 0.9233333333 }
+        ]
+      }
+    ],
+    "colors2": null,
+    "combos": [
+      [50, 0, 0.8, 44, 0, 2],
+      [26, 0, -2, 7, 0, 1],
+      [26, 0, -2, 7, 0, 1],
+      [16, 0, 2, 7, 0, 1]
+    ],
+    "desc": "Armed with a pair of stinging anenomes for boxing gloves, Uppercrust can adapt to different playstyles. Some have been seen cheering on allied Beasties, whereas others dominate the field with their powerful uppercuts.",
+    "designer": 9,
+    "dlc": 0,
+    "eat_type": 3,
+    "evo_pose": [
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 },
+      { "anim": "good", "scale": 2, "x": 0, "y": 0 }
+    ],
+    "evolution": null,
+    "face_color_index": 0,
+    "family": "uppercrust",
+    "first_frame": -1,
+    "foot_size": 50,
+    "foot_type": 1,
+    "growth": 1.1,
+    "ha": 50,
+    "hd": 58,
+    "hidden": false,
+    "hidden_counter": null,
+    "id": "uppercrust",
+    "isBaby": false,
+    "learnset": [
+      [0, "starterbody"],
+      [0, "nettle"],
+      [3, "dig"],
+      [4, "substitute"],
+      [5, "bounce"],
+      [7, "libero"],
+      [10, "mark"],
+      [12, "cheer"],
+      [14, "breakswipe"],
+      [18, "jazzpass"],
+      [20, "swordsdance"],
+      [22, "67PJ3604627187uppercut"],
+      [25, "sting"],
+      [30, "serve"],
+      [30, "67PJ3604627187dissect"],
+      [34, "rhythm"],
+      [36, "introduction"],
+      [40, "3actions"]
+    ],
+    "learnset_randomize": -1,
+    "linked_colors": {},
+    "loco": {
+      "anim_min_speed": 0.2,
+      "char_width": 99.25,
+      "emote_hop_height": 25,
+      "float_dist": 0,
+      "float_wave": 0,
+      "float_wave_freq": 1000,
+      "float_x": 0,
+      "hop_height": 25,
+      "hop_length": 1.5,
+      "hop_min_speed": 0.04,
+      "hop_shake": 0,
+      "hop_wobble": 0,
+      "move_accel": 0.4444444444,
+      "move_decel": 0.6666666667,
+      "move_pause_frames": [],
+      "move_speed": 1,
+      "move_speed_start": 0,
+      "move_to_idle_transition_anim": "",
+      "move_to_idle_transition_frames": [],
+      "offset_freq": 2000,
+      "offset_rand_range": 0,
+      "offset_seconds": 0.2,
+      "randomize_idle": true,
+      "squishiness": 0.1,
+      "stretchiness": 0.1
+    },
+    "ma": 30,
+    "md": 70,
+    "mod_data": {
+      "alters_data": true,
+      "author": "Equinoxe",
+      "author_online": "",
+      "beastie_ids": ["uppercrust"],
+      "beasties": ["Uppercrust"],
+      "description": "",
+      "description_online": "",
+      "directory": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3797109701",
+      "finished": 0,
+      "imported": true,
+      "internal_id": "67PJ3604627187",
+      "major_version": "1",
+      "minor_version": "0",
+      "name": "Uppercrust",
+      "name_online": "",
+      "play_ids": {
+        "dissect": "67PJ3604627187dissect",
+        "uppercut": "67PJ3604627187uppercut"
+      },
+      "plays": ["Dissect", "Uppercut"],
+      "reskins": [],
+      "texts": [],
+      "tracks": [],
+      "url": "3797109701"
+    },
+    "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3797109701\\Beastie_Uppercrust\\beastie_data.ini",
+    "modded_stats": true,
+    "name": "Uppercrust",
+    "number": 114,
+    "order": 119,
+    "palettes": 1,
+    "prev_ids": [],
+    "recruit": {
+      "conditions": [
+        {
+          "attack_type": 0,
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 2,
+          "type": 15
+        },
+        {
+          "attack_type": 0,
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 2,
+          "type": 15
+        },
+        {
+          "attack_type": 0,
+          "event": null,
+          "freq": -1,
+          "my_data": null,
+          "rel_color": -1,
+          "target": 2,
+          "type": 15
+        }
+      ],
+      "description": "¦beastiesetup_classrecruit_059¦"
+    },
+    "recruit_value": 8,
+    "roamer_style": {
+      "_name": "RACER..",
+      "can_react": false,
+      "can_socialize": true,
+      "can_volley": true,
+      "cancel_on_player_invincible": true,
+      "checking_player_distance": true,
+      "colliding": true,
+      "default_locomote": true,
+      "default_physics": true,
+      "flying": false,
+      "interact_force": false,
+      "render_go_direction": false,
+      "render_guard_radius": false,
+      "seeking_interact": false
+    },
+    "roguelvl": -1,
+    "scale": [0.85, 1.1],
+    "shiny": [
+      {
+        "array": [
+          { "color": 15846399, "x": 0 },
+          { "color": 16305393, "x": 0.9833333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 14145535, "x": 0 },
+          { "color": 16766193, "x": 0.9733333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16514940, "x": 0.2633333333 },
+          { "color": 16729171, "x": 0.7566666667 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 9540095, "x": 0.3033333333 },
+          { "color": 16748475, "x": 0.5133333333 },
+          { "color": 16362239, "x": 0.87 }
+        ]
+      }
+    ],
+    "spr": "spruppercrust",
+    "spr_alt": [],
+    "tamecond": null,
+    "tamelvl": 3,
+    "tex_group_suffix": "",
+    "tyield": ["bd", 3],
+    "type_focus": 0
+  },
   "wizard": {
     "ability": ["negation", "enchanter"],
     "ability_hidden": false,
@@ -24120,7 +28739,25 @@
       "hum",
       "dragontail",
       "distraction",
-      "starterheart"
+      "starterheart",
+      "67WYPGQ4618557swash",
+      "2Q1X7BC4618470bother",
+      "2Q1X7BC4618470hurricane",
+      "2Q1X7BC4618470imbue",
+      "2Q1X7BC4618470worry",
+      "2Q1X7BC4618470substitute",
+      "2Q1X7BC4618470ragebait",
+      "44B86NC4618849beguile",
+      "44B86NC4618849bewilder",
+      "44B86NC4618849copyme",
+      "44B86NC4618849guidance",
+      "44B86NC4618849partinggift",
+      "44B86NC4618849vertigo",
+      "1VY50B84633067comment",
+      "1VY50B84633067dance",
+      "1VY50B84633067net",
+      "1VY50B84633067rush",
+      "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
     "ba": 60,
@@ -24347,7 +28984,15 @@
       "thrash",
       "wall",
       "menace",
-      "reign"
+      "reign",
+      "2Q1X7BC4618470claw",
+      "2Q1X7BC4618470lunge",
+      "2Q1X7BC4618470piledrive",
+      "2Q1X7BC4618470sovereignty",
+      "2Q1X7BC4618470set?",
+      "2Q1X7BC4618470seclude",
+      "44B86NC4618849exertion",
+      "44B86NC4618849unstoppableforce"
     ],
     "attklist_randomize": -1,
     "ba": 96,

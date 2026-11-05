@@ -30,7 +30,11 @@ export default function Beastiepedia(): React.ReactNode {
   const [beastieid, beastiedata] = useMemo(() => {
     if (beastie) {
       for (const [key, value] of BEASTIE_DATA) {
-        if (
+        if (!value.name.startsWith("¦")) {
+          if (value.name == beastie) {
+            return [key, value];
+          }
+        } else if (
           Object.values(
             beastieNames[value.name.slice(1, value.name.length - 1)],
           ).includes(beastie)

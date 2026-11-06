@@ -67,7 +67,9 @@ export function encounterToTeamBeastie(
   const scale = randomizer.random();
   const vibe = Math.floor(randomizer.random() * VIBES.length);
   let randomSprite = 0;
-  if (beastieData.palettes > 1 && randomizer.random(1) < 0.1) {
+  if (encBeastie.canBeShiny && Math.floor(randomizer.random(1024)) == 0) {
+    randomSprite = 1;
+  } else if (beastieData.palettes > 1 && randomizer.random(1) < 0.1) {
     randomSprite = 2;
   }
   randomizer.random(); // xp

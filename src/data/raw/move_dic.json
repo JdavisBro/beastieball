@@ -599,7 +599,7 @@
     ],
     "id": "1VY50B84633067slam",
     "name": "Slam",
-    "pow": 85,
+    "pow": 75,
     "price": 0,
     "targ": 13,
     "type": 0,
@@ -937,6 +937,23 @@
     "targ": 0,
     "type": 4,
     "use": 0
+  },
+  "3RWX3K34616417summonskull": {
+    "bt_tags": [20, 47, 37, 51],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": -23, "pow": 1, "targ": 8 },
+      { "eff": 16, "pow": -1, "targ": 8 }
+    ],
+    "id": "3RWX3K34616417summonskull",
+    "name": "Summon Skull",
+    "pow": 1,
+    "price": 0,
+    "targ": 4,
+    "type": 5,
+    "use": 2
   },
   "3TX86V04615697annoy": {
     "bt_tags": [24, 37, 3, 4, 31],

@@ -259,6 +259,11 @@
     "id": "gloat",
     "name": "¦abilitiessetup_abilitydefine_182¦"
   },
+  "greedyhog": {
+    "desc": "¦abilitiessetup_abilitydefine_142¦",
+    "id": "greedyhog",
+    "name": "Greedy Hog"
+  },
   "gulper": {
     "desc": "¦abilitiessetup_abilitydefine_021¬0¬[sprStatus,8]¦statuseffectstuff_009¦ ¦statuseffectstuff_022¦¦",
     "id": "gulper",
@@ -763,6 +768,11 @@
     "desc": "¦abilitiessetup_abilitydefine_098¬0¬[sprStatus,9]¦statuseffectstuff_010¦¦",
     "id": "watcher",
     "name": "¦abilitiessetup_abilitydefine_097¦"
+  },
+  "what'syourproblem?": {
+    "desc": "¦abilitiessetup_abilitydefine_051¬4¬1.3¬0¬[sprStatus,6]¦statuseffectstuff_007¦¬1¬[sprStatus,0]¦statuseffectstuff_001¦¬2¬[sprStatus,11]¦statuseffectstuff_012¦¬3¬[sprStatus,18]¦statuseffectstuff_029¦¦",
+    "id": "what'syourproblem?",
+    "name": "What's Your Problem?"
   },
   "wipekiller": {
     "desc": "¦abilitiessetup_abilitydefine_245¬0¬1.3¬1¬[sprStatus,5]¦statuseffectstuff_006¦¦",

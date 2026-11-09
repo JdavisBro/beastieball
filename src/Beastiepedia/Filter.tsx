@@ -347,11 +347,6 @@ export default function Filter({
                 .filter(
                   (ability) =>
                     !search ||
-                    filters.find(
-                      (filter) =>
-                        filter[0] == FilterTypes.Ability &&
-                        filter[1].id == ability.id,
-                    ) ||
                     L(ability.name)
                       .toLowerCase()
                       .includes(search.toLowerCase()),
@@ -377,11 +372,6 @@ export default function Filter({
                 .filter(
                   (move) =>
                     !search ||
-                    filters.find(
-                      (filter) =>
-                        filter[0] == FilterTypes.Move &&
-                        filter[1].id == move.id,
-                    ) ||
                     L(move.name).toLowerCase().includes(search.toLowerCase()),
                 )
                 .map((move) => (

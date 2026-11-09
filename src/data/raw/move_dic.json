@@ -68,6 +68,23 @@
     "type": 5,
     "use": 0
   },
+  "1VY50B84633067boomerang": {
+    "bt_tags": [48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 20, "pow": 2, "targ": 0 },
+      { "eff": 8, "pow": -0.1, "targ": 9 }
+    ],
+    "id": "1VY50B84633067boomerang",
+    "name": "Boomerang",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
+    "use": 0
+  },
   "1VY50B84633067bother": {
     "bt_tags": [1, 10],
     "desc_tagids": [],
@@ -141,6 +158,23 @@
     "pow": 0,
     "price": 0,
     "targ": 5,
+    "type": 4,
+    "use": 0
+  },
+  "1VY50B84633067coolpose": {
+    "bt_tags": [24, 38, 46, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 13, "pow": 2, "targ": 3 },
+      { "eff": 13, "pow": 2, "targ": 1 }
+    ],
+    "id": "1VY50B84633067coolpose",
+    "name": "Cool Pose",
+    "pow": 0,
+    "price": 0,
+    "targ": 4,
     "type": 4,
     "use": 0
   },
@@ -298,6 +332,37 @@
     "type": 2,
     "use": 0
   },
+  "1VY50B84633067fromthefog": {
+    "bt_tags": [2, 10, 41, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 45, "pow": 4, "targ": 7 }],
+    "id": "1VY50B84633067fromthefog",
+    "name": "From The Fog",
+    "pow": 75,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "1VY50B84633067healthyhit": {
+    "bt_tags": [1, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 88, "pow": 75, "targ": 0 },
+      { "eff": 84, "pow": 1.5, "targ": 0 }
+    ],
+    "id": "1VY50B84633067healthyhit",
+    "name": "Healthy Hit",
+    "pow": 60,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
   "1VY50B84633067net": {
     "bt_tags": [2, 20, 47, 10, 30, 38],
     "desc_tagids": [],
@@ -314,6 +379,20 @@
     "targ": 13,
     "type": 2,
     "use": 2
+  },
+  "1VY50B84633067overexertion": {
+    "bt_tags": [0, 8, 10],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 82, "pow": -25, "targ": 0 }],
+    "id": "1VY50B84633067overexertion",
+    "name": "Overexertion",
+    "pow": 110,
+    "price": 0,
+    "targ": 0,
+    "type": 0,
+    "use": 0
   },
   "1VY50B84633067pacify": {
     "bt_tags": [2, 8, 10, 31],
@@ -351,6 +430,20 @@
     "price": 0,
     "targ": 0,
     "type": 5,
+    "use": 0
+  },
+  "1VY50B84633067piercingstrike": {
+    "bt_tags": [10, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 8, "pow": -0.25, "targ": 3 }],
+    "id": "1VY50B84633067piercingstrike",
+    "name": "Piercing Strike",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
     "use": 0
   },
   "1VY50B84633067pirouette": {
@@ -460,6 +553,23 @@
     "type": 1,
     "use": 0
   },
+  "1VY50B84633067siphon": {
+    "bt_tags": [46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 8, "pow": -0.2, "targ": 3 },
+      { "eff": 8, "pow": 0.2, "targ": 0 }
+    ],
+    "id": "1VY50B84633067siphon",
+    "name": "Siphon",
+    "pow": 0,
+    "price": 0,
+    "targ": 8,
+    "type": 5,
+    "use": 0
+  },
   "1VY50B84633067skyball": {
     "bt_tags": [2, 10, 25, 38, 46],
     "desc_tagids": [],
@@ -512,6 +622,40 @@
     "type": 4,
     "use": 0
   },
+  "1VY50B84633067stealingthespotlight": {
+    "bt_tags": [1, 10, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 97, "pow": 1, "targ": 0 },
+      { "eff": 12, "pow": 2, "targ": 1 }
+    ],
+    "id": "1VY50B84633067stealingthespotlight",
+    "name": "Stealing The Spotlight",
+    "pow": 95,
+    "price": 0,
+    "targ": 0,
+    "type": 1,
+    "use": 0
+  },
+  "1VY50B84633067superherolanding": {
+    "bt_tags": [19, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 30, "pow": 1, "targ": 3 },
+      { "eff": 8, "pow": -0.1, "targ": 8 }
+    ],
+    "id": "1VY50B84633067superherolanding",
+    "name": "Superhero Landing",
+    "pow": 0,
+    "price": 0,
+    "targ": 8,
+    "type": 5,
+    "use": 0
+  },
   "1VY50B84633067swansong": {
     "bt_tags": [29, 17, 46, 31, 19],
     "desc_tagids": [],
@@ -546,6 +690,24 @@
     "price": 0,
     "targ": 0,
     "type": 3,
+    "use": 0
+  },
+  "1VY50B84633067theydidit": {
+    "bt_tags": [2, 10, 34, 49, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 53, "pow": 0, "targ": 1 },
+      { "eff": 14, "pow": 1, "targ": 1 },
+      { "eff": 12, "pow": 1, "targ": 1 }
+    ],
+    "id": "1VY50B84633067theydidit",
+    "name": "They Did It",
+    "pow": 70,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
     "use": 0
   },
   "1VY50B84633067unstoppableforce": {
@@ -584,6 +746,75 @@
     "type": 4,
     "use": 1
   },
+  "21MW9NP4627187gloomtune": {
+    "bt_tags": [1, 9, 50, 38, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 80, "pow": 1, "targ": 9 }],
+    "id": "21MW9NP4627187gloomtune",
+    "name": "Gloom Tune",
+    "pow": 50,
+    "price": 0,
+    "targ": 12,
+    "type": 1,
+    "use": 0
+  },
+  "21MW9NP4627187metaltune": {
+    "bt_tags": [24, 31, 47, 32, 51, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 41, "pow": 1, "targ": 0 },
+      { "eff": 26, "pow": 2, "targ": 3 },
+      { "eff": 8, "pow": -0.25, "targ": 3 }
+    ],
+    "id": "21MW9NP4627187metaltune",
+    "name": "Metal Tune",
+    "pow": 0,
+    "price": 0,
+    "targ": 7,
+    "type": 4,
+    "use": 0
+  },
+  "21MW9NP4627187offensivetune": {
+    "bt_tags": [24, 31, 15, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 12, "pow": 2, "targ": 7 },
+      { "eff": 27, "pow": 1, "targ": 0 }
+    ],
+    "id": "21MW9NP4627187offensivetune",
+    "name": "Offensive Tune",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "21MW9NP4627187scratchytune": {
+    "bt_tags": [24, 34, 49, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 7, "pow": 3, "targ": 0 },
+      { "eff": 90, "pow": 0, "targ": 0 },
+      { "eff": 14, "pow": 2, "targ": 0 },
+      { "eff": 39, "pow": 1, "targ": 1 },
+      { "eff": 91, "pow": 1, "targ": 0 }
+    ],
+    "id": "21MW9NP4627187scratchytune",
+    "name": "Scratchy Tune",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
   "2MYFRYR4626004lusterpurge": {
     "bt_tags": [1, 10, 29, 48],
     "desc_tagids": [],
@@ -620,6 +851,24 @@
     "type": 3,
     "use": 0
   },
+  "357GW8Q4627187despairtune": {
+    "bt_tags": [24, 8, 21, 37, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 79, "pow": -1, "targ": 7 },
+      { "eff": 7, "pow": 1, "targ": 0 },
+      { "eff": 27, "pow": -1, "targ": 0 }
+    ],
+    "id": "357GW8Q4627187despairtune",
+    "name": "Despair Tune",
+    "pow": 100,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 1
+  },
   "357GW8Q4627187gloomtune": {
     "bt_tags": [1, 9, 50, 38, 48],
     "desc_tagids": [],
@@ -632,6 +881,61 @@
     "price": 0,
     "targ": 12,
     "type": 1,
+    "use": 0
+  },
+  "357GW8Q4627187metaltune": {
+    "bt_tags": [24, 31, 47, 32, 51, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 41, "pow": 1, "targ": 0 },
+      { "eff": 26, "pow": 2, "targ": 3 },
+      { "eff": 8, "pow": -0.25, "targ": 3 }
+    ],
+    "id": "357GW8Q4627187metaltune",
+    "name": "Metal Tune",
+    "pow": 0,
+    "price": 0,
+    "targ": 7,
+    "type": 4,
+    "use": 0
+  },
+  "357GW8Q4627187offensivetune": {
+    "bt_tags": [24, 31, 15, 38],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 12, "pow": 2, "targ": 7 },
+      { "eff": 27, "pow": 1, "targ": 0 }
+    ],
+    "id": "357GW8Q4627187offensivetune",
+    "name": "Offensive Tune",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "357GW8Q4627187scratchytune": {
+    "bt_tags": [24, 34, 49, 31],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 7, "pow": 3, "targ": 0 },
+      { "eff": 90, "pow": 0, "targ": 0 },
+      { "eff": 14, "pow": 2, "targ": 0 },
+      { "eff": 39, "pow": 1, "targ": 1 },
+      { "eff": 91, "pow": 1, "targ": 0 }
+    ],
+    "id": "357GW8Q4627187scratchytune",
+    "name": "Scratchy Tune",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
     "use": 0
   },
   "3TX86V04615697annoy": {
@@ -1201,13 +1505,13 @@
     "use": 0
   },
   "LD1GRC4623849prismarmor": {
-    "bt_tags": [29, 46, 31],
+    "bt_tags": [29, 46],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 93, "pow": 2, "targ": 0 },
-      { "eff": 27, "pow": 2, "targ": 0 }
+      { "eff": 34, "pow": 1, "targ": 0 },
+      { "eff": 93, "pow": 3, "targ": 0 }
     ],
     "id": "LD1GRC4623849prismarmor",
     "name": "Prism Armor",

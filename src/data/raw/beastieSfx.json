@@ -8,8 +8,8 @@
   "latias": { "boo": 1, "cheer": 1, "hello": 3 },
   "latios": { "boo": 2, "cheer": 2, "hello": 3 },
   "uppercrust": { "boo": 2, "cheer": 2, "hello": 2 },
-  "gloombox": { "boo": 2, "cheer": 2, "hello": 2 },
-  "despaireo": { "boo": 2, "cheer": 2, "hello": 2 },
+  "gloombox": { "boo": 4, "cheer": 4, "hello": 4 },
+  "despaireo": { "boo": 4, "cheer": 4, "hello": 4 },
   "metta": { "boo": 1, "cheer": 1, "hello": 2 },
   "hornet": { "boo": 5, "cheer": 9, "hello": 4 },
   "sparky": null,
@@ -24,5 +24,6 @@
   "topple": null,
   "horseshoe": null,
   "nylandearie": { "boo": 4, "cheer": 4, "hello": 4 },
-  "millipede": null
+  "millipede": null,
+  "bibi": null
 }

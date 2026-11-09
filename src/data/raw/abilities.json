@@ -204,11 +204,6 @@
     "id": "extrovert_1",
     "name": "Extrovert"
   },
-  "fearful": {
-    "desc": "¦abilitiessetup_abilitydefine_109¬0¬[sprStatus,10]¦statuseffectstuff_011¦¦",
-    "id": "fearful",
-    "name": "Fearful"
-  },
   "fetch": {
     "desc": "¦abilitiessetup_abilitydefine_021¬0¬[sprStatus,8]¦statuseffectstuff_009¦ ¦statuseffectstuff_022¦¦",
     "id": "fetch",
@@ -233,11 +228,6 @@
     "desc": "¦abilitiessetup_abilitydefine_308¬0¬12¦",
     "id": "fortress",
     "name": "¦abilitiessetup_abilitydefine_309¦"
-  },
-  "fragileego": {
-    "desc": "¦abilitiessetup_abilitydefine_003¬0¬[sprStatus,9]¦statuseffectstuff_010¦¦",
-    "id": "fragileego",
-    "name": "Fragile Ego"
   },
   "freemove": {
     "desc": "¦abilitiessetup_abilitydefine_112¦",
@@ -464,6 +454,11 @@
     "id": "pretentious",
     "name": "Pretentious"
   },
+  "pretentious_1": {
+    "desc": "¦abilitiessetup_abilitydefine_194¦",
+    "id": "pretentious_1",
+    "name": "Pretentious"
+  },
   "prismatic": {
     "desc": "¦abilitiessetup_abilitydefine_116¦",
     "id": "prismatic",
@@ -622,6 +617,11 @@
   "stubborn": {
     "desc": "¦abilitiessetup_abilitydefine_003¬0¬[sprStatus,9]¦statuseffectstuff_010¦¦",
     "id": "stubborn",
+    "name": "Stubborn"
+  },
+  "stubborn_1": {
+    "desc": "¦abilitiessetup_abilitydefine_003¬0¬[sprStatus,9]¦statuseffectstuff_010¦¦",
+    "id": "stubborn_1",
     "name": "Stubborn"
   },
   "study": {

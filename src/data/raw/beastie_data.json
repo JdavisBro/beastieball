@@ -927,8 +927,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Bandit\\beastie_data.ini",
     "modded_stats": true,
     "name": "Bandit",
-    "number": 115,
-    "order": 120,
+    "number": 107,
+    "order": 112,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -1017,6 +1017,8 @@
       "6WY0C8R4615906strongscent",
       "1VY50B84633067coach",
       "1VY50B84633067exertion",
+      "1VY50B84633067healthyhit",
+      "1VY50B84633067siphon",
       "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
@@ -1316,6 +1318,8 @@
       "squeeze",
       "6WY0C8R4615906strongscent",
       "1VY50B84633067exertion",
+      "1VY50B84633067healthyhit",
+      "1VY50B84633067siphon",
       "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
@@ -1984,7 +1988,6 @@
       "construct",
       "shieldbreaker",
       "damagedattack",
-      "67PJ3604627187dissect",
       "1VY50B84633067desperate",
       "1VY50B84633067swansong"
     ],
@@ -2206,10 +2209,13 @@
       "startermind",
       "dig",
       "nightshade",
+      "1VY50B84633067boomerang",
       "1VY50B84633067coach",
       "1VY50B84633067net",
+      "1VY50B84633067piercingstrike",
       "1VY50B84633067rush",
       "1VY50B84633067skyball",
+      "1VY50B84633067superherolanding",
       "1VY50B84633067swerve"
     ],
     "attklist_randomize": -1,
@@ -2697,6 +2703,7 @@
       "passattack",
       "startermind",
       "dig",
+      "1VY50B84633067boomerang",
       "1VY50B84633067net",
       "1VY50B84633067rush",
       "1VY50B84633067skyball",
@@ -3182,7 +3189,10 @@
       "1VY50B84633067deep",
       "1VY50B84633067desperate",
       "1VY50B84633067net",
+      "1VY50B84633067overexertion",
+      "1VY50B84633067piercingstrike",
       "1VY50B84633067rush",
+      "1VY50B84633067superherolanding",
       "1VY50B84633067unstoppableforce"
     ],
     "attklist_randomize": -1,
@@ -3838,6 +3848,7 @@
       "swarm",
       "starterbody",
       "1VY50B84633067coach",
+      "1VY50B84633067superherolanding",
       "1VY50B84633067swansong"
     ],
     "attklist_randomize": -1,
@@ -4287,6 +4298,7 @@
       "swarm",
       "starterbody",
       "stomp",
+      "1VY50B84633067coolpose",
       "1VY50B84633067swansong"
     ],
     "attklist_randomize": -1,
@@ -4517,8 +4529,10 @@
       "stretch",
       "1VY50B84633067exertion",
       "1VY50B84633067net",
+      "1VY50B84633067overexertion",
       "1VY50B84633067resistance",
-      "1VY50B84633067rush"
+      "1VY50B84633067rush",
+      "1VY50B84633067superherolanding"
     ],
     "attklist_randomize": -1,
     "ba": 96,
@@ -4744,6 +4758,8 @@
       "kick",
       "followme",
       "starterside",
+      "1VY50B84633067boomerang",
+      "1VY50B84633067coolpose",
       "1VY50B84633067dance"
     ],
     "attklist_randomize": -1,
@@ -5427,8 +5443,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Cobby\\beastie_data.ini",
     "modded_stats": true,
     "name": "Cobby",
-    "number": 116,
-    "order": 121,
+    "number": 108,
+    "order": 113,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -6459,8 +6475,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Daemon\\beastie_data.ini",
     "modded_stats": true,
     "name": "Daemon",
-    "number": 117,
-    "order": 122,
+    "number": 109,
+    "order": 114,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -6550,11 +6566,13 @@
       "backswitch",
       "taunt",
       "starterheart",
+      "1VY50B84633067coolpose",
       "1VY50B84633067desperate",
       "1VY50B84633067dodge",
       "1VY50B84633067net",
       "1VY50B84633067pancake",
-      "1VY50B84633067rush"
+      "1VY50B84633067rush",
+      "1VY50B84633067superherolanding"
     ],
     "attklist_randomize": -1,
     "ba": 94,
@@ -7016,24 +7034,22 @@
     "assymetric": false,
     "attklist": [
       "ego",
-      "followme",
-      "taunt",
-      "scream",
       "heartdown",
       "sting",
-      "menace",
       "netattack",
       "mindup",
+      "21MW9NP4627187gloomtune",
+      "libero",
+      "scream",
       "targethp",
       "snipe",
-      "allnervous",
+      "21MW9NP4627187metaltune",
       "heart",
       "cover",
       "scoreboosted",
-      "eerie",
+      "21MW9NP4627187offensivetune",
       "hex",
-      "mindbomb",
-      "sidespin",
+      "21MW9NP4627187scratchytune",
       "distraction",
       "sensihit",
       "hum",
@@ -7100,16 +7116,16 @@
       [8, "hum"],
       [12, "sensihit"],
       [15, "distraction"],
-      [17, "sidespin"],
-      [17, "mindbomb"],
+      [17, "21MW9NP4627187scratchytune"],
       [20, "hex"],
-      [22, "eerie"],
+      [22, "21MW9NP4627187offensivetune"],
       [25, "scoreboosted"],
       [29, "cover"],
       [33, "heart"],
-      [35, "allnervous"],
-      [37, "snipe"],
-      [42, "targethp"]
+      [38, "21MW9NP4627187metaltune"],
+      [42, "snipe"],
+      [45, "targethp"],
+      [50, "scream"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -7158,8 +7174,20 @@
       "minor_version": "0",
       "name": "Despaireo",
       "name_online": "",
-      "play_ids": { "despairtune": "21MW9NP4627187despairtune" },
-      "plays": ["Despair Tune"],
+      "play_ids": {
+        "despairtune": "21MW9NP4627187despairtune",
+        "gloomtune": "21MW9NP4627187gloomtune",
+        "metaltune": "21MW9NP4627187metaltune",
+        "offensivetune": "21MW9NP4627187offensivetune",
+        "scratchytune": "21MW9NP4627187scratchytune"
+      },
+      "plays": [
+        "Despair Tune",
+        "Gloom Tune",
+        "Metal Tune",
+        "Offensive Tune",
+        "Scratchy Tune"
+      ],
       "reskins": [],
       "texts": [],
       "tracks": [],
@@ -7175,27 +7203,17 @@
     "recruit": {
       "conditions": [
         {
-          "attack_type": 0,
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 15
-        },
-        {
-          "attack_type": 1,
-          "event": null,
-          "freq": -1,
-          "my_data": null,
-          "player": 2,
-          "rel_color": -1,
-          "type": 15
+          "type": 24
         }
       ],
-      "description": "¦beastiesetup_classrecruit_082¦"
+      "description": "¦beastiesetup_classrecruit_014¦"
     },
-    "recruit_value": 5,
+    "recruit_value": 8.4,
     "roamer_style": {
       "_name": "CAMO",
       "can_react": true,
@@ -7271,7 +7289,6 @@
       "enemylowered",
       "rattle",
       "scream",
-      "21MW9NP4627187despairtune",
       "1VY50B84633067desperate",
       "1VY50B84633067net",
       "1VY50B84633067pocketsand",
@@ -7517,9 +7534,12 @@
       "scoreboosted",
       "1VY50B84633067bodyguard",
       "1VY50B84633067bother",
+      "1VY50B84633067coolpose",
       "1VY50B84633067desperate",
+      "1VY50B84633067healthyhit",
       "1VY50B84633067net",
-      "1VY50B84633067rush"
+      "1VY50B84633067rush",
+      "1VY50B84633067stealingthespotlight"
     ],
     "attklist_randomize": -1,
     "ba": 80,
@@ -8077,6 +8097,7 @@
       "hum",
       "freeball",
       "followme",
+      "1VY50B84633067boomerang",
       "1VY50B84633067bother",
       "1VY50B84633067net",
       "1VY50B84633067rush"
@@ -8459,8 +8480,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3810450542\\fawnarch\\beastie_data.ini",
     "modded_stats": true,
     "name": "Fawnarch",
-    "number": 107,
-    "order": 112,
+    "number": 115,
+    "order": 120,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -8576,6 +8597,8 @@
       "lockon",
       "1VY50B84633067coach",
       "1VY50B84633067fall",
+      "1VY50B84633067overexertion",
+      "1VY50B84633067piercingstrike",
       "1VY50B84633067recharge"
     ],
     "attklist_randomize": -1,
@@ -9050,6 +9073,7 @@
       "tagattack",
       "mark",
       "1VY50B84633067fall",
+      "1VY50B84633067piercingstrike",
       "1VY50B84633067recharge"
     ],
     "attklist_randomize": -1,
@@ -9286,6 +9310,7 @@
       "1VY50B84633067coldfront",
       "1VY50B84633067deep",
       "1VY50B84633067net",
+      "1VY50B84633067piercingstrike",
       "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
@@ -9737,11 +9762,15 @@
       "alljazzattack",
       "hum",
       "1VY50B84633067bother",
+      "1VY50B84633067coolpose",
       "1VY50B84633067dance",
+      "1VY50B84633067healthyhit",
       "1VY50B84633067net",
       "1VY50B84633067pirouette",
       "1VY50B84633067rush",
       "1VY50B84633067stageset",
+      "1VY50B84633067stealingthespotlight",
+      "1VY50B84633067superherolanding",
       "1VY50B84633067swansong"
     ],
     "attklist_randomize": -1,
@@ -10173,9 +10202,11 @@
       "alljazzattack",
       "hum",
       "1VY50B84633067dance",
+      "1VY50B84633067healthyhit",
       "1VY50B84633067net",
       "1VY50B84633067pirouette",
-      "1VY50B84633067rush"
+      "1VY50B84633067rush",
+      "1VY50B84633067stealingthespotlight"
     ],
     "attklist_randomize": -1,
     "ba": 48,
@@ -10619,8 +10650,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Gary\\beastie_data.ini",
     "modded_stats": true,
     "name": "Gary",
-    "number": 118,
-    "order": 123,
+    "number": 110,
+    "order": 115,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -10708,6 +10739,7 @@
       "shaken",
       "357GW8Q4627187gloomtune",
       "1VY50B84633067echo",
+      "1VY50B84633067fromthefog",
       "1VY50B84633067skyball"
     ],
     "attklist_randomize": -1,
@@ -11145,6 +11177,7 @@
       "shaken",
       "357GW8Q4627187gloomtune",
       "1VY50B84633067echo",
+      "1VY50B84633067fromthefog",
       "1VY50B84633067skyball"
     ],
     "attklist_randomize": -1,
@@ -11303,7 +11336,7 @@
     "type_focus": 2
   },
   "gloombox": {
-    "ability": ["fearful", "fragileego"],
+    "ability": ["pretentious_1", "stubborn_1"],
     "ability_hidden": 0,
     "allowedInPromo": true,
     "anim_progress": 100,
@@ -11311,22 +11344,22 @@
     "assymetric": false,
     "attklist": [
       "ego",
-      "followme",
-      "taunt",
-      "scream",
       "heartdown",
-      "hex",
-      "defheal",
-      "menace",
+      "sting",
       "netattack",
       "mindup",
+      "357GW8Q4627187despairtune",
+      "libero",
+      "scream",
+      "targethp",
+      "snipe",
+      "357GW8Q4627187metaltune",
       "heart",
       "cover",
       "scoreboosted",
-      "eerie",
-      "sting",
-      "mindbomb",
-      "sidespin",
+      "357GW8Q4627187offensivetune",
+      "hex",
+      "357GW8Q4627187scratchytune",
       "distraction",
       "sensihit",
       "hum",
@@ -11336,19 +11369,23 @@
     ],
     "attklist_randomize": -1,
     "ba": 44,
-    "base_exp": 109.75,
-    "bd": 30,
+    "base_exp": 185.075,
+    "bd": 46,
     "body_color_index": 0,
     "codename": "f55190eb63bbc7d66624a6ca7dc85d5f7687d3f1",
     "colormeta": null,
     "colors": [
-      { "array": [{ "color": 255, "x": 0 }] },
-      { "array": [{ "color": 8875576, "x": 0 }] },
+      { "array": [{ "color": 13816530, "x": 0 }] },
       {
         "array": [
-          { "color": 11796224, "x": 0.1833333333 },
-          { "color": 6143, "x": 0.5133333333 },
-          { "color": 16711742, "x": 0.8333333333 }
+          { "color": 16771154, "x": 0.2333333333 },
+          { "color": 16689664, "x": 0.7933333333 }
+        ]
+      },
+      {
+        "array": [
+          { "color": 16772514, "x": 0.26 },
+          { "color": 16773759, "x": 0.78 }
         ]
       }
     ],
@@ -11359,10 +11396,10 @@
       [10, 0, 1, 39, 1, 1, 76, 1, 1],
       [7, 7, 0, 6, 7, 2]
     ],
-    "desc": "A lone spirit has possessed this electrical device, feeding off of the negative energy in its surrounding area. In most cases the energy received is not abundant enough to maintain the form, and may soon collapse without it.",
+    "desc": "A lone spirit has possessed this electrical device, feeding off of the negative energy in its surrounding area. In most cases the energy received is not abundant enough to maintain the form, and will eventually collapse without it.",
     "designer": 9,
     "dlc": 0,
-    "eat_type": 1,
+    "eat_type": 4,
     "evo_pose": [
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
       { "anim": "good", "scale": 2, "x": 0, "y": 0 },
@@ -11372,10 +11409,10 @@
     "face_color_index": 0,
     "family": "gloombox",
     "first_frame": -1,
-    "foot_size": 10,
+    "foot_size": 30,
     "foot_type": 1,
-    "growth": 1,
-    "ha": 75,
+    "growth": 1.1,
+    "ha": 60,
     "hd": 70,
     "hidden": false,
     "hidden_counter": null,
@@ -11388,13 +11425,16 @@
       [8, "hum"],
       [12, "sensihit"],
       [15, "distraction"],
-      [17, "sidespin"],
-      [17, "mindbomb"],
-      [20, "sting"],
-      [22, "eerie"],
+      [17, "357GW8Q4627187scratchytune"],
+      [20, "hex"],
+      [22, "357GW8Q4627187offensivetune"],
       [25, "scoreboosted"],
       [29, "cover"],
-      [33, "heart"]
+      [33, "heart"],
+      [38, "357GW8Q4627187metaltune"],
+      [42, "snipe"],
+      [45, "targethp"],
+      [50, "scream"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -11425,7 +11465,7 @@
       "squishiness": 0.1,
       "stretchiness": 0.1
     },
-    "ma": 55,
+    "ma": 51,
     "md": 55,
     "mod_data": {
       "alters_data": true,
@@ -11443,8 +11483,20 @@
       "minor_version": "0",
       "name": "Gloombox",
       "name_online": "",
-      "play_ids": { "gloomtune": "357GW8Q4627187gloomtune" },
-      "plays": ["Gloom Tune"],
+      "play_ids": {
+        "despairtune": "357GW8Q4627187despairtune",
+        "gloomtune": "357GW8Q4627187gloomtune",
+        "metaltune": "357GW8Q4627187metaltune",
+        "offensivetune": "357GW8Q4627187offensivetune",
+        "scratchytune": "357GW8Q4627187scratchytune"
+      },
+      "plays": [
+        "Despair Tune",
+        "Gloom Tune",
+        "Metal Tune",
+        "Offensive Tune",
+        "Scratchy Tune"
+      ],
       "reskins": [],
       "texts": [],
       "tracks": [],
@@ -11453,34 +11505,24 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3797110156\\Gloombox data\\beastie_data.ini",
     "modded_stats": true,
     "name": "Gloombox",
-    "number": 108,
-    "order": 113,
+    "number": 116,
+    "order": 121,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
       "conditions": [
         {
-          "attack_type": 0,
           "event": null,
           "freq": -1,
           "my_data": null,
           "player": 2,
           "rel_color": -1,
-          "type": 15
-        },
-        {
-          "attack_type": 1,
-          "event": null,
-          "freq": -1,
-          "my_data": null,
-          "player": 2,
-          "rel_color": -1,
-          "type": 15
+          "type": 24
         }
       ],
-      "description": "¦beastiesetup_classrecruit_082¦"
+      "description": "¦beastiesetup_classrecruit_014¦"
     },
-    "recruit_value": 5,
+    "recruit_value": 8.4,
     "roamer_style": {
       "_name": "CAMO",
       "can_react": true,
@@ -11500,16 +11542,17 @@
     "roguelvl": -1,
     "scale": [0.85, 0.9],
     "shiny": [
-      { "array": [{ "color": 16767078, "x": 0 }] },
-      { "array": [{ "color": 65280, "x": 0 }] },
-      { "array": [{ "color": 16710399, "x": 0.5 }] }
+      { "array": [{ "color": 9586725, "x": 0 }] },
+      { "array": [{ "color": 16728908, "x": 0 }] },
+      { "array": [{ "color": 16732783, "x": 0.5 }] },
+      { "array": [{ "color": 16252852, "x": 0.5 }] }
     ],
     "spr": "sprgloombox",
     "spr_alt": [],
     "tamecond": null,
-    "tamelvl": 2,
+    "tamelvl": 4,
     "tex_group_suffix": "",
-    "tyield": ["ha", 2, "bd", 2],
+    "tyield": ["ha", 2, "md", 2],
     "type_focus": 1
   },
   "gremlin": {
@@ -11550,7 +11593,10 @@
       "1VY50B84633067echo",
       "1VY50B84633067fall",
       "1VY50B84633067flare",
-      "1VY50B84633067pocketsand"
+      "1VY50B84633067fromthefog",
+      "1VY50B84633067piercingstrike",
+      "1VY50B84633067pocketsand",
+      "1VY50B84633067theydidit"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -11946,8 +11992,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3833214868\\beastie_data.ini",
     "modded_stats": true,
     "name": "Hornet",
-    "number": 109,
-    "order": 114,
+    "number": 117,
+    "order": 122,
     "palettes": 0,
     "prev_ids": [],
     "recruit": {
@@ -12487,6 +12533,7 @@
       "67WYPGQ4618557swash",
       "1VY50B84633067block?",
       "1VY50B84633067echo",
+      "1VY50B84633067fromthefog",
       "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
@@ -12786,6 +12833,8 @@
       "passionstrike",
       "hum",
       "6WY0C8R4615906strongscent",
+      "1VY50B84633067coolpose",
+      "1VY50B84633067healthyhit",
       "1VY50B84633067net",
       "1VY50B84633067resistance",
       "1VY50B84633067rush"
@@ -13207,6 +13256,7 @@
       "swarm",
       "passionstrike",
       "hum",
+      "1VY50B84633067healthyhit",
       "1VY50B84633067net",
       "1VY50B84633067resistance",
       "1VY50B84633067rush"
@@ -13405,9 +13455,12 @@
       "hazeball",
       "kick",
       "tool",
+      "1VY50B84633067boomerang",
       "1VY50B84633067comment",
       "1VY50B84633067deep",
-      "1VY50B84633067pocketsand"
+      "1VY50B84633067piercingstrike",
+      "1VY50B84633067pocketsand",
+      "1VY50B84633067theydidit"
     ],
     "attklist_randomize": -1,
     "ba": 88,
@@ -13651,7 +13704,9 @@
       "kick",
       "tool",
       "1VY50B84633067comment",
-      "1VY50B84633067deep"
+      "1VY50B84633067deep",
+      "1VY50B84633067piercingstrike",
+      "1VY50B84633067theydidit"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -15344,7 +15399,6 @@
       "lockon",
       "kick",
       "startermind",
-      "21MW9NP4627187despairtune",
       "357GW8Q4627187gloomtune",
       "67PJ3604627187dissect",
       "1VY50B84633067dance",
@@ -15845,7 +15899,8 @@
       "1VY50B84633067deep",
       "1VY50B84633067echo",
       "1VY50B84633067net",
-      "1VY50B84633067rush"
+      "1VY50B84633067rush",
+      "1VY50B84633067superherolanding"
     ],
     "attklist_randomize": -1,
     "ba": 93,
@@ -16434,8 +16489,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3808675299\\Beastie_Metta\\beastie_data.ini",
     "modded_stats": true,
     "name": "Metta",
-    "number": 110,
-    "order": 115,
+    "number": 118,
+    "order": 123,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -16553,6 +16608,7 @@
       "67WYPGQ4618557swash",
       "1VY50B84633067bodyguard",
       "1VY50B84633067drill",
+      "1VY50B84633067overexertion",
       "1VY50B84633067slam",
       "1VY50B84633067unstoppableforce"
     ],
@@ -17245,12 +17301,14 @@
       "crowd",
       "scream",
       "passionstrike",
-      "67PJ3604627187dissect",
       "1VY50B84633067bother",
+      "1VY50B84633067coolpose",
       "1VY50B84633067echo",
+      "1VY50B84633067fromthefog",
       "1VY50B84633067pirouette",
       "1VY50B84633067skyball",
-      "1VY50B84633067stageset"
+      "1VY50B84633067stageset",
+      "1VY50B84633067superherolanding"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -18719,8 +18777,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3785435938\\Nylandearie\\beastie_data.ini",
     "modded_stats": true,
     "name": "Nylandearie",
-    "number": 111,
-    "order": 116,
+    "number": 119,
+    "order": 124,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -19069,6 +19127,8 @@
       "1VY50B84633067deep",
       "1VY50B84633067fall",
       "1VY50B84633067flare",
+      "1VY50B84633067fromthefog",
+      "1VY50B84633067siphon",
       "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
@@ -19289,6 +19349,7 @@
       "1VY50B84633067deep",
       "1VY50B84633067fall",
       "1VY50B84633067flare",
+      "1VY50B84633067siphon",
       "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
@@ -19483,9 +19544,12 @@
       "heartpass",
       "kick",
       "1VY50B84633067bodyguard",
+      "1VY50B84633067coolpose",
       "1VY50B84633067exertion",
       "1VY50B84633067net",
-      "1VY50B84633067rush"
+      "1VY50B84633067rush",
+      "1VY50B84633067stealingthespotlight",
+      "1VY50B84633067superherolanding"
     ],
     "attklist_randomize": -1,
     "ba": 95,
@@ -20410,6 +20474,8 @@
       "taunt",
       "facade",
       "introduction",
+      "1VY50B84633067coolpose",
+      "1VY50B84633067superherolanding",
       "1VY50B84633067unstoppableforce"
     ],
     "attklist_randomize": -1,
@@ -21363,8 +21429,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Prints\\beastie_data.ini",
     "modded_stats": true,
     "name": "Prints",
-    "number": 119,
-    "order": 124,
+    "number": 111,
+    "order": 116,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -22211,8 +22277,10 @@
       "fortify",
       "sweep",
       "1VY50B84633067coach",
+      "1VY50B84633067coolpose",
       "1VY50B84633067dance",
-      "1VY50B84633067echo"
+      "1VY50B84633067echo",
+      "1VY50B84633067theydidit"
     ],
     "attklist_randomize": -1,
     "ba": 81,
@@ -23652,9 +23720,11 @@
       "starterbody",
       "tailwind",
       "1VY50B84633067bodyguard",
+      "1VY50B84633067coolpose",
       "1VY50B84633067dance",
       "1VY50B84633067deep",
       "1VY50B84633067pocketsand",
+      "1VY50B84633067superherolanding",
       "1VY50B84633067unstoppableforce"
     ],
     "attklist_randomize": -1,
@@ -24295,8 +24365,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Seeker\\beastie_data.ini",
     "modded_stats": true,
     "name": "Seeker",
-    "number": 120,
-    "order": 125,
+    "number": 112,
+    "order": 117,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -24404,7 +24474,8 @@
       "1VY50B84633067fall",
       "1VY50B84633067net",
       "1VY50B84633067pancake",
-      "1VY50B84633067rush"
+      "1VY50B84633067rush",
+      "1VY50B84633067stealingthespotlight"
     ],
     "attklist_randomize": -1,
     "ba": 100,
@@ -25278,7 +25349,7 @@
       "enemyboosts",
       "flatten",
       "snipe",
-      "67PJ3604627187dissect"
+      "1VY50B84633067stealingthespotlight"
     ],
     "attklist_randomize": -1,
     "ba": 45,
@@ -25515,6 +25586,7 @@
       "lifedew",
       "allyprotect",
       "topspin",
+      "1VY50B84633067healthyhit",
       "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
@@ -26331,7 +26403,9 @@
       "menace",
       "quake",
       "1VY50B84633067flare",
+      "1VY50B84633067healthyhit",
       "1VY50B84633067pirouette",
+      "1VY50B84633067siphon",
       "1VY50B84633067skyball",
       "1VY50B84633067slam",
       "1VY50B84633067stageset",
@@ -26573,7 +26647,8 @@
       "1VY50B84633067fall",
       "1VY50B84633067net",
       "1VY50B84633067pancake",
-      "1VY50B84633067rush"
+      "1VY50B84633067rush",
+      "1VY50B84633067superherolanding"
     ],
     "attklist_randomize": -1,
     "ba": 30,
@@ -27018,6 +27093,7 @@
       "1VY50B84633067net",
       "1VY50B84633067resistance",
       "1VY50B84633067rush",
+      "1VY50B84633067siphon",
       "1VY50B84633067unstoppableforce"
     ],
     "attklist_randomize": -1,
@@ -27373,8 +27449,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3728814225\\Beastie_Sourbloom\\beastie_data.ini",
     "modded_stats": true,
     "name": "Sourbloom",
-    "number": 112,
-    "order": 117,
+    "number": 120,
+    "order": 125,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -27538,7 +27614,7 @@
       [11, "pepshot"],
       [14, "mindup"],
       [16, "cover"],
-      [18, "preblock"],
+      [19, "preblock"],
       [23, "mindbomb"],
       [25, "overthink"],
       [30, "cut"],
@@ -27602,8 +27678,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3738345087\\Beastie_Sparky\\beastie_data.ini",
     "modded_stats": true,
     "name": "Sparky",
-    "number": 114,
-    "order": 119,
+    "number": 122,
+    "order": 127,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -27719,6 +27795,7 @@
       "1VY50B84633067net",
       "1VY50B84633067resistance",
       "1VY50B84633067rush",
+      "1VY50B84633067stealingthespotlight",
       "1VY50B84633067swansong"
     ],
     "attklist_randomize": -1,
@@ -28640,8 +28717,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Tent\\beastie_data.ini",
     "modded_stats": true,
     "name": "Tent",
-    "number": 121,
-    "order": 126,
+    "number": 113,
+    "order": 118,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -28937,8 +29014,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Topple\\beastie_data.ini",
     "modded_stats": true,
     "name": "Topple",
-    "number": 122,
-    "order": 127,
+    "number": 114,
+    "order": 119,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -29567,11 +29644,13 @@
       "haze",
       "dump",
       "67WYPGQ4618557swash",
+      "1VY50B84633067boomerang",
       "1VY50B84633067dance",
       "1VY50B84633067deep",
       "1VY50B84633067pacify",
       "1VY50B84633067plunder",
-      "1VY50B84633067recharge"
+      "1VY50B84633067recharge",
+      "1VY50B84633067superherolanding"
     ],
     "attklist_randomize": -1,
     "ba": 70,
@@ -30065,7 +30144,8 @@
       "67WYPGQ4618557swash",
       "1VY50B84633067dance",
       "1VY50B84633067deep",
-      "1VY50B84633067recharge"
+      "1VY50B84633067recharge",
+      "1VY50B84633067superherolanding"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -30277,22 +30357,16 @@
     "animator": 0,
     "assymetric": false,
     "attklist": [
-      "protect",
       "defheal",
       "dodge",
-      "sensihit",
       "pushattack",
       "rest",
-      "facade",
       "superfang",
       "curse",
-      "backswitch",
       "rush",
       "sideshot",
-      "haze",
-      "snore",
       "rushattack",
-      "3actions",
+      "hyperbeam",
       "introduction",
       "rhythm",
       "67PJ3604627187dissect",
@@ -30313,29 +30387,28 @@
       "67PJ3604627187dissect"
     ],
     "attklist_randomize": -1,
-    "ba": 76,
-    "base_exp": 186.56,
-    "bd": 88,
+    "ba": 78,
+    "base_exp": 194.48,
+    "bd": 90,
     "body_color_index": 0,
     "codename": "2840874d284fd656908899be692540fb167d81b0",
     "colormeta": null,
     "colors": [
       {
         "array": [
-          { "color": 255, "x": 0.3266666667 },
-          { "color": 64767, "x": 0.5733333333 },
-          { "color": 5570080, "x": 0.7533333333 },
-          { "color": 16753408, "x": 0.9733333333 }
+          { "color": 6711039, "x": 0 },
+          { "color": 6749951, "x": 0.2495238095 },
+          { "color": 14745446, "x": 0.5085714286 },
+          { "color": 15961970, "x": 0.6647619048 },
+          { "color": 14371537, "x": 0.8171428571 },
+          { "color": 6711039, "x": 1 }
         ]
       },
-      { "array": [{ "color": 0, "x": 0.4966666667 }] },
-      { "array": [{ "color": 0, "x": 0.49 }] },
       {
         "array": [
-          { "color": 19967, "x": 0.2466666667 },
-          { "color": 64767, "x": 0.5133333333 },
-          { "color": 5093888, "x": 0.7066666667 },
-          { "color": 16772096, "x": 0.9233333333 }
+          { "color": 15843627, "x": 0 },
+          { "color": 2686723, "x": 0.500952381 },
+          { "color": 16730729, "x": 1 }
         ]
       }
     ],
@@ -30363,7 +30436,7 @@
     "foot_type": 1,
     "growth": 1.1,
     "ha": 50,
-    "hd": 58,
+    "hd": 61,
     "hidden": false,
     "hidden_counter": null,
     "id": "uppercrust",
@@ -30386,7 +30459,7 @@
       [30, "67PJ3604627187dissect"],
       [34, "rhythm"],
       [36, "introduction"],
-      [40, "3actions"]
+      [40, "hyperbeam"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -30418,7 +30491,7 @@
       "stretchiness": 0.1
     },
     "ma": 30,
-    "md": 70,
+    "md": 77,
     "mod_data": {
       "alters_data": true,
       "author": "Equinoxe",
@@ -30448,8 +30521,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3797109701\\Beastie_Uppercrust\\beastie_data.ini",
     "modded_stats": true,
     "name": "Uppercrust",
-    "number": 113,
-    "order": 118,
+    "number": 121,
+    "order": 126,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -30506,27 +30579,14 @@
     "shiny": [
       {
         "array": [
-          { "color": 15846399, "x": 0 },
-          { "color": 16305393, "x": 0.9833333333 }
+          { "color": 13631454, "x": 0.52 },
+          { "color": 16768975, "x": 0.52 }
         ]
       },
       {
         "array": [
-          { "color": 14145535, "x": 0 },
-          { "color": 16766193, "x": 0.9733333333 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 16514940, "x": 0.2633333333 },
-          { "color": 16729171, "x": 0.7566666667 }
-        ]
-      },
-      {
-        "array": [
-          { "color": 9540095, "x": 0.3033333333 },
-          { "color": 16748475, "x": 0.5133333333 },
-          { "color": 16362239, "x": 0.87 }
+          { "color": 14196146, "x": 0 },
+          { "color": 16763127, "x": 0.8433333333 }
         ]
       }
     ],

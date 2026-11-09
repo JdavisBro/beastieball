@@ -7424,5 +7424,27 @@
       { "x": 324, "y": 701, "width": 187, "height": 224 }
     ],
     "bbox": { "x": 324, "y": 701, "width": 294, "height": 297 }
+  },
+  "sprbibi": {
+    "width": 200,
+    "height": 200,
+    "frames": 12,
+    "originX": 102.0,
+    "originY": 193,
+    "bboxes": [
+      { "x": 52, "y": 97, "width": 100, "height": 96 },
+      { "x": 52, "y": 97, "width": 100, "height": 96 },
+      { "x": 52, "y": 97, "width": 100, "height": 96 },
+      { "x": 52, "y": 97, "width": 100, "height": 96 },
+      { "x": 59, "y": 113, "width": 80, "height": 77 },
+      { "x": 52, "y": 97, "width": 100, "height": 96 },
+      { "x": 59, "y": 113, "width": 80, "height": 77 },
+      { "x": 38, "y": 97, "width": 114, "height": 96 },
+      { "x": 52, "y": 97, "width": 100, "height": 96 },
+      { "x": 52, "y": 97, "width": 100, "height": 96 },
+      { "x": 52, "y": 97, "width": 100, "height": 96 },
+      { "x": 52, "y": 97, "width": 100, "height": 96 }
+    ],
+    "bbox": { "x": 38, "y": 97, "width": 114, "height": 96 }
   }
 }

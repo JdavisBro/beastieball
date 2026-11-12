@@ -25,8 +25,8 @@ const COLOR_TYPE: Record<number, "color" | "shiny" | "color2"> = {
   2: "color2",
 };
 
-const MIN_BEASITE_COLOR = 0;
-const MAX_BEASITE_COLOR = 0.999999999999999;
+const MIN_BEASITE_COLOR = 0.00001;
+const MAX_BEASITE_COLOR = 0.99999;
 
 function clampColor(color: number) {
   return Math.max(Math.min(color, MAX_BEASITE_COLOR), MIN_BEASITE_COLOR);

@@ -92,16 +92,21 @@ export default function BeastieRenderProvider(
     if (!img) {
       return null;
     }
+    const isShiny = beastie.colorAlt == "shiny";
     const beastieColors =
       beastie.colorAlt == "colors2" && beastie_data.colors2
         ? beastie_data.colors2
-        : beastie.colorAlt == "shiny"
+        : isShiny
           ? beastie_data.shiny
           : beastie_data.colors;
     const colors = beastie.colors ?? [0.5, 0.5, 0.5, 0.5, 0.5];
     const cols = [...Array(beastieColors.length).keys()].map((value) => {
       const x = colors.length <= value ? 0.5 : colors[value];
-      return getColorInBeastieColors(x, beastieColors[value].array);
+      return getColorInBeastieColors(
+        x,
+        (isShiny && x < 0.00001 ? beastie_data.colors : beastieColors)[value]
+          .array,
+      );
     });
     const sprite_bbox = drawn_sprite.bboxes[beastie_frame];
     canvasRef.current.width = drawn_sprite.width;

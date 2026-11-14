@@ -376,7 +376,7 @@ export default function EditBeastie({
           <input
             type="text"
             maxLength={12}
-            defaultValue={beastie.name}
+            value={beastie.name}
             onChange={(event) => changeValue("name", event.currentTarget.value)}
           />
         </label>

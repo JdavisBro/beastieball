@@ -432,7 +432,9 @@ async function createTeamImage(
         }
         [canvas, bbox] = result;
       } else {
-        canvas = await loadImage(`/icons/${beastie.name}.png`);
+        canvas = await loadImage(
+          `/icons/${L(beastiedata.name, undefined, true)}.png`,
+        );
         bbox = { x: 0, y: 0, width: canvas.width, height: canvas.height };
       }
       if (bbox) {

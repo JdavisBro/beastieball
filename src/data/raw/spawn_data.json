@@ -2559,14 +2559,14 @@
       },
       {
         "freq": 10,
-        "lvlA": 30,
-        "lvlB": 34,
+        "lvlA": 22,
+        "lvlB": 25,
         "percent": 0.0714285714,
         "specie": "hornet",
         "variant": 0.1
       }
     ],
-    "level_max": 34,
+    "level_max": 25,
     "level_min": 16,
     "total": 140
   },

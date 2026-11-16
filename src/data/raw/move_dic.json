@@ -778,23 +778,6 @@
     "type": 4,
     "use": 0
   },
-  "21MW9NP4627187offensivetune": {
-    "bt_tags": [24, 31, 15, 38],
-    "desc_tagids": [],
-    "desc_tags": [],
-    "description": null,
-    "eff": [
-      { "eff": 12, "pow": 2, "targ": 7 },
-      { "eff": 27, "pow": 1, "targ": 0 }
-    ],
-    "id": "21MW9NP4627187offensivetune",
-    "name": "Offensive Tune",
-    "pow": 0,
-    "price": 0,
-    "targ": 0,
-    "type": 4,
-    "use": 0
-  },
   "21MW9NP4627187scratchytune": {
     "bt_tags": [24, 34, 49, 31],
     "desc_tagids": [],
@@ -898,23 +881,6 @@
     "pow": 0,
     "price": 0,
     "targ": 7,
-    "type": 4,
-    "use": 0
-  },
-  "357GW8Q4627187offensivetune": {
-    "bt_tags": [24, 31, 15, 38],
-    "desc_tagids": [],
-    "desc_tags": [],
-    "description": null,
-    "eff": [
-      { "eff": 12, "pow": 2, "targ": 7 },
-      { "eff": 27, "pow": 1, "targ": 0 }
-    ],
-    "id": "357GW8Q4627187offensivetune",
-    "name": "Offensive Tune",
-    "pow": 0,
-    "price": 0,
-    "targ": 0,
     "type": 4,
     "use": 0
   },
@@ -1490,13 +1456,32 @@
     "type": 0,
     "use": 2
   },
-  "6WY0C8R4615906strongscent": {
-    "bt_tags": [24, 8, 28, 6, 51, 31, 34, 49],
+  "6WY0C8R4615906skitter": {
+    "bt_tags": [24, 34, 49, 32],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 15, "pow": 1, "targ": 7 },
+      { "eff": 7, "pow": 2, "targ": 0 },
+      { "eff": 14, "pow": 1, "targ": 0 },
+      { "eff": 26, "pow": 1, "targ": 0 }
+    ],
+    "id": "6WY0C8R4615906skitter",
+    "name": "Skitter",
+    "pow": 0,
+    "price": 0,
+    "targ": 0,
+    "type": 4,
+    "use": 0
+  },
+  "6WY0C8R4615906strongscent": {
+    "bt_tags": [24, 8, 31, 34, 49],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 15, "pow": 0, "targ": 0 },
+      { "eff": 15, "pow": 1, "targ": 9 },
       { "eff": 14, "pow": 1, "targ": 0 }
     ],
     "id": "6WY0C8R4615906strongscent",
@@ -1505,6 +1490,24 @@
     "price": 0,
     "targ": 0,
     "type": 4,
+    "use": 0
+  },
+  "7GCJQY4632902clawline": {
+    "bt_tags": [2, 10, 21],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 91, "pow": 1, "targ": 0 },
+      { "eff": -7, "pow": 1, "targ": 0 },
+      { "eff": 7, "pow": 1, "targ": 3 }
+    ],
+    "id": "7GCJQY4632902clawline",
+    "name": "Clawline",
+    "pow": 60,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
     "use": 0
   },
   "???": {

@@ -25,5 +25,6 @@
   "horseshoe": null,
   "nylandearie": { "boo": 4, "cheer": 4, "hello": 4 },
   "millipede": null,
-  "bibi": null
+  "bibi": null,
+  "mellow": { "boo": 1, "cheer": 1, "hello": 1 }
 }

@@ -7452,5 +7452,24 @@
       { "x": 52, "y": 97, "width": 100, "height": 96 }
     ],
     "bbox": { "x": 38, "y": 97, "width": 114, "height": 96 }
+  },
+  "sprmellow": {
+    "width": 600,
+    "height": 600,
+    "frames": 9,
+    "originX": 304.5,
+    "originY": 578,
+    "bboxes": [
+      { "x": 184, "y": 253, "width": 232, "height": 320 },
+      { "x": 184, "y": 253, "width": 232, "height": 320 },
+      { "x": 157, "y": 228, "width": 333, "height": 345 },
+      { "x": 160, "y": 245, "width": 310, "height": 328 },
+      { "x": 159, "y": 212, "width": 374, "height": 364 },
+      { "x": 210, "y": 178, "width": 264, "height": 395 },
+      { "x": 187, "y": 316, "width": 204, "height": 259 },
+      { "x": 79, "y": 113, "width": 389, "height": 453 },
+      { "x": 59, "y": 36, "width": 232, "height": 320 }
+    ],
+    "bbox": { "x": 59, "y": 36, "width": 474, "height": 540 }
   }
 }

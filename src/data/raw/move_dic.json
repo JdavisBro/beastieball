@@ -205,7 +205,7 @@
     "eff": [{ "eff": 33, "pow": 26, "targ": 0 }],
     "id": "1VY50B84633067deep",
     "name": "Deep",
-    "pow": 75,
+    "pow": 70,
     "price": 0,
     "targ": 8,
     "type": 1,
@@ -905,17 +905,14 @@
     "use": 0
   },
   "3RWX3K34616417summonskull": {
-    "bt_tags": [20, 47, 37, 51],
+    "bt_tags": [20, 47, 36, 38, 48],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": -23, "pow": 1, "targ": 8 },
-      { "eff": 16, "pow": -1, "targ": 8 }
-    ],
+    "eff": [{ "eff": 23, "pow": 1, "targ": 8 }],
     "id": "3RWX3K34616417summonskull",
     "name": "Summon Skull",
-    "pow": 1,
+    "pow": 70,
     "price": 0,
     "targ": 4,
     "type": 5,
@@ -1539,6 +1536,20 @@
     "price": 0,
     "targ": 0,
     "type": 5,
+    "use": 0
+  },
+  "MFHTHQ4633889readyup": {
+    "bt_tags": [23, 42, 38, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 27, "pow": 1, "targ": 9 }],
+    "id": "MFHTHQ4633889readyup",
+    "name": "Ready Up",
+    "pow": 70,
+    "price": 0,
+    "targ": 0,
+    "type": 3,
     "use": 0
   },
   "alljazzattack": {

@@ -1893,7 +1893,7 @@
         "freq": 30,
         "lvlA": 34,
         "lvlB": 35,
-        "percent": 0.2222222222,
+        "percent": 0.1935483871,
         "specie": "ibis",
         "variant": 0.1
       },
@@ -1901,7 +1901,7 @@
         "freq": 20,
         "lvlA": 33,
         "lvlB": 34,
-        "percent": 0.1481481481,
+        "percent": 0.1290322581,
         "specie": "magpie",
         "variant": 0.1
       },
@@ -1909,7 +1909,7 @@
         "freq": 15,
         "lvlA": 33,
         "lvlB": 34,
-        "percent": 0.1111111111,
+        "percent": 0.0967741935,
         "specie": "nerd1",
         "variant": 0.1
       },
@@ -1917,7 +1917,7 @@
         "freq": 10,
         "lvlA": 33,
         "lvlB": 34,
-        "percent": 0.0740740741,
+        "percent": 0.064516129,
         "specie": "football",
         "variant": 0.1
       },
@@ -1925,7 +1925,7 @@
         "freq": 35,
         "lvlA": 34,
         "lvlB": 35,
-        "percent": 0.2592592593,
+        "percent": 0.2258064516,
         "specie": "platypus2",
         "variant": 0.1
       },
@@ -1933,7 +1933,7 @@
         "freq": 20,
         "lvlA": 34,
         "lvlB": 35,
-        "percent": 0.1481481481,
+        "percent": 0.1290322581,
         "specie": "dragonfly",
         "variant": 0.1
       },
@@ -1941,14 +1941,22 @@
         "freq": 5,
         "lvlA": 33,
         "lvlB": 34,
-        "percent": 0.037037037,
+        "percent": 0.0322580645,
         "specie": "shy",
+        "variant": 0.1
+      },
+      {
+        "freq": 20,
+        "lvlA": 33,
+        "lvlB": 36,
+        "percent": 0.1290322581,
+        "specie": "mellow",
         "variant": 0.1
       }
     ],
-    "level_max": 35,
+    "level_max": 36,
     "level_min": 33,
-    "total": 135
+    "total": 155
   },
   "railtrail": {
     "group": [

@@ -12283,8 +12283,8 @@
       "protect",
       "cook",
       "shakeoff",
-      "67PJ3604627187dissect",
-      "1VY50B84633067desperate"
+      "1VY50B84633067desperate",
+      "67PJ3604627187dissect"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -15604,13 +15604,13 @@
       "kick",
       "startermind",
       "357GW8Q4627187gloomtune",
-      "67PJ3604627187dissect",
       "1VY50B84633067dance",
       "1VY50B84633067deep",
       "1VY50B84633067echo",
       "1VY50B84633067net",
       "1VY50B84633067pirouette",
-      "1VY50B84633067rush"
+      "1VY50B84633067rush",
+      "67PJ3604627187dissect"
     ],
     "attklist_randomize": -1,
     "ba": 90,
@@ -16320,13 +16320,13 @@
       "recover",
       "netattack",
       "enemylowered",
-      "67PJ3604627187dissect",
       "1VY50B84633067bodyguard",
       "1VY50B84633067deep",
       "1VY50B84633067net",
       "1VY50B84633067pancake",
       "1VY50B84633067rush",
-      "1VY50B84633067slam"
+      "1VY50B84633067slam",
+      "67PJ3604627187dissect"
     ],
     "attklist_randomize": -1,
     "ba": 75,
@@ -16679,8 +16679,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3841245736\\beastie_data.ini",
     "modded_stats": true,
     "name": "Mellow",
-    "number": 124,
-    "order": 129,
+    "number": 119,
+    "order": 124,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -16909,8 +16909,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3808675299\\Beastie_Metta\\beastie_data.ini",
     "modded_stats": true,
     "name": "Metta",
-    "number": 119,
-    "order": 124,
+    "number": 120,
+    "order": 125,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -19198,8 +19198,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3785435938\\Nylandearie\\beastie_data.ini",
     "modded_stats": true,
     "name": "Nylandearie",
-    "number": 120,
-    "order": 125,
+    "number": 121,
+    "order": 126,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -22479,10 +22479,10 @@
       "mimic",
       "reign",
       "LD1GRC4623849prismarmor",
-      "67PJ3604627187dissect",
       "1VY50B84633067coldfront",
       "1VY50B84633067dance",
-      "1VY50B84633067pirouette"
+      "1VY50B84633067pirouette",
+      "67PJ3604627187dissect"
     ],
     "attklist_randomize": -1,
     "ba": 66,
@@ -27882,8 +27882,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3728814225\\Beastie_Sourbloom\\beastie_data.ini",
     "modded_stats": true,
     "name": "Sourbloom",
-    "number": 121,
-    "order": 126,
+    "number": 122,
+    "order": 127,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -30953,8 +30953,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3797109701\\Beastie_Uppercrust\\beastie_data.ini",
     "modded_stats": true,
     "name": "Uppercrust",
-    "number": 122,
-    "order": 127,
+    "number": 124,
+    "order": 129,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {

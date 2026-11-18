@@ -167,7 +167,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 13, "pow": 2, "targ": 3 },
+      { "eff": 13, "pow": 2, "targ": 9 },
       { "eff": 13, "pow": 2, "targ": 1 }
     ],
     "id": "1VY50B84633067coolpose",
@@ -447,12 +447,12 @@
     "use": 0
   },
   "1VY50B84633067pirouette": {
-    "bt_tags": [24, 37, 4, 31],
+    "bt_tags": [24, 29, 46, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 4, "pow": -1, "targ": 8 },
+      { "eff": 16, "pow": 1, "targ": 0 },
       { "eff": 13, "pow": -1, "targ": 0 }
     ],
     "id": "1VY50B84633067pirouette",

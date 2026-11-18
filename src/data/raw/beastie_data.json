@@ -927,8 +927,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Bandit\\beastie_data.ini",
     "modded_stats": true,
     "name": "Bandit",
-    "number": 109,
-    "order": 114,
+    "number": 108,
+    "order": 113,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -1550,6 +1550,7 @@
       "wall",
       "bolt",
       "1VY50B84633067drill",
+      "1VY50B84633067pirouette",
       "1VY50B84633067slam",
       "1VY50B84633067stageset"
     ],
@@ -5659,8 +5660,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Cobby\\beastie_data.ini",
     "modded_stats": true,
     "name": "Cobby",
-    "number": 110,
-    "order": 115,
+    "number": 109,
+    "order": 114,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -6691,8 +6692,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Daemon\\beastie_data.ini",
     "modded_stats": true,
     "name": "Daemon",
-    "number": 111,
-    "order": 116,
+    "number": 110,
+    "order": 115,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -8688,8 +8689,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3810450542\\fawnarch\\beastie_data.ini",
     "modded_stats": true,
     "name": "Fawnarch",
-    "number": 117,
-    "order": 122,
+    "number": 116,
+    "order": 121,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -10860,8 +10861,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Gary\\beastie_data.ini",
     "modded_stats": true,
     "name": "Gary",
-    "number": 112,
-    "order": 117,
+    "number": 111,
+    "order": 116,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -11708,8 +11709,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3797110156\\Gloombox data\\beastie_data.ini",
     "modded_stats": true,
     "name": "Gloombox",
-    "number": 106,
-    "order": 111,
+    "number": 117,
+    "order": 122,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -14735,8 +14736,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3796453392\\Beastie_Latias\\beastie_data.ini",
     "modded_stats": true,
     "name": "Latias",
-    "number": 107,
-    "order": 112,
+    "number": 106,
+    "order": 111,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -14994,8 +14995,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3796453392\\Beastie_Latios\\beastie_data.ini",
     "modded_stats": true,
     "name": "Latios",
-    "number": 108,
-    "order": 113,
+    "number": 107,
+    "order": 112,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -15608,6 +15609,7 @@
       "1VY50B84633067deep",
       "1VY50B84633067echo",
       "1VY50B84633067net",
+      "1VY50B84633067pirouette",
       "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
@@ -15883,6 +15885,7 @@
       "1VY50B84633067deep",
       "1VY50B84633067echo",
       "1VY50B84633067net",
+      "1VY50B84633067pirouette",
       "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
@@ -16102,6 +16105,7 @@
       "1VY50B84633067deep",
       "1VY50B84633067echo",
       "1VY50B84633067net",
+      "1VY50B84633067pirouette",
       "1VY50B84633067rush",
       "1VY50B84633067superherolanding"
     ],
@@ -21846,8 +21850,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Prints\\beastie_data.ini",
     "modded_stats": true,
     "name": "Prints",
-    "number": 113,
-    "order": 118,
+    "number": 112,
+    "order": 117,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -22174,7 +22178,8 @@
       "swordsdance",
       "mimic",
       "LD1GRC4623849prismarmor",
-      "1VY50B84633067dance"
+      "1VY50B84633067dance",
+      "1VY50B84633067pirouette"
     ],
     "attklist_randomize": -1,
     "ba": 89,
@@ -22476,7 +22481,8 @@
       "LD1GRC4623849prismarmor",
       "67PJ3604627187dissect",
       "1VY50B84633067coldfront",
-      "1VY50B84633067dance"
+      "1VY50B84633067dance",
+      "1VY50B84633067pirouette"
     ],
     "attklist_randomize": -1,
     "ba": 66,
@@ -24781,8 +24787,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Seeker\\beastie_data.ini",
     "modded_stats": true,
     "name": "Seeker",
-    "number": 114,
-    "order": 119,
+    "number": 113,
+    "order": 118,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -29143,8 +29149,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Tent\\beastie_data.ini",
     "modded_stats": true,
     "name": "Tent",
-    "number": 115,
-    "order": 120,
+    "number": 114,
+    "order": 119,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {
@@ -29440,8 +29446,8 @@
     "mod_file": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1864950\\3794802473\\Familiars_Topple\\beastie_data.ini",
     "modded_stats": true,
     "name": "Topple",
-    "number": 116,
-    "order": 121,
+    "number": 115,
+    "order": 120,
     "palettes": 1,
     "prev_ids": [],
     "recruit": {

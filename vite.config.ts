@@ -243,7 +243,8 @@ function generateSitemap(url: string, env: Record<string, string>) {
             beastie: name,
           }),
           description:
-            game_loc[beastie.desc.slice(1, beastie.desc.length - 1)] ?? "??",
+            game_loc[beastie.desc.slice(1, beastie.desc.length - 1)] ??
+            beastie.desc,
           image: `/icons/${name_en}.png`,
           path: `/beastiepedia/${name}`,
           noLoc: true,

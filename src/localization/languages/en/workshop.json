@@ -30,6 +30,7 @@
         "attack": {
           "straight": "Straight Line",
           "ahead": "Straight Ahead",
+          "oppositeLane": "Opposite Lane",
           "front": "Front Row",
           "back": "Back Row",
           "sideways": "Sideways",

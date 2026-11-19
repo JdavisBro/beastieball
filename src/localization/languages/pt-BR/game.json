@@ -828,6 +828,7 @@
   "movedefine_descadd_013": "Mira automaticamente na zona traseira.",
   "movedefine_descadd_014": "Mira nas LATERAIS.",
   "movedefine_descadd_015": "Mira em linha reta.",
+  "movedefine_descadd_016": "Mira na zona oposta.",
   "movedefine_descadd_017": "Dano equivale a {0}% da ENERGIA restante do alvo.",
   "movedefine_descadd_018": "Este ataque inflige {0} de dano.",
   "movedefine_descadd_019": "VOLEIA.",

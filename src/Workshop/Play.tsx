@@ -841,6 +841,9 @@ export default function WorkshopEditPlay({
                 <option value={1}>
                   {L("workshop.play.target.attack.ahead")}
                 </option>
+                <option value={2}>
+                  {L("workshop.play.target.attack.oppositeLane")}
+                </option>
                 <option value={4}>
                   {L("workshop.play.target.attack.front")}
                 </option>

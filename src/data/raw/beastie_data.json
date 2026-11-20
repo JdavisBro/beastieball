@@ -471,9 +471,12 @@
       "steal",
       "substitute",
       "crowd",
+      "nice",
+      "healhit2",
       "powswitch",
       "damagedattack",
       "threat",
+      "stomp",
       "noisytag",
       "67WYPGQ4618557swash",
       "quake",
@@ -562,7 +565,8 @@
       [20, "quake"],
       [24, "67WYPGQ4618557swash"],
       [27, "noisytag"],
-      [30, "threat"],
+      [30, "stomp"],
+      [32, "threat"],
       [37, "damagedattack"],
       [41, "powswitch"]
     ],
@@ -8527,11 +8531,11 @@
     "attklist": [
       "poisonhit",
       "dropshot",
+      "splinter",
       "wall",
       "sidespin",
       "starterside",
       "taunt",
-      "nettle",
       "markattack",
       "rush",
       "refresh",
@@ -8539,7 +8543,7 @@
       "meditate",
       "threat",
       "speech",
-      "splinter",
+      "63XK1CH4629470befuddle",
       "telekinesis",
       "mind",
       "allyrush",
@@ -8630,7 +8634,7 @@
       [20, "allyrush"],
       [24, "mind"],
       [30, "telekinesis"],
-      [35, "splinter"]
+      [35, "63XK1CH4629470befuddle"]
     ],
     "learnset_randomize": -1,
     "linked_colors": {},
@@ -8679,8 +8683,11 @@
       "minor_version": "0",
       "name": "fawnarch",
       "name_online": "",
-      "play_ids": { "faetrick": "63XK1CH4629470faetrick" },
-      "plays": ["Fae Trick"],
+      "play_ids": {
+        "befuddle": "63XK1CH4629470befuddle",
+        "faetrick": "63XK1CH4629470faetrick"
+      },
+      "plays": ["Befuddle", "Fae Trick"],
       "reskins": [],
       "texts": [],
       "tracks": [],
@@ -16714,7 +16721,7 @@
       "seeking_interact": false
     },
     "roguelvl": -1,
-    "scale": [0.85, 1.25],
+    "scale": [0.75, 1],
     "shiny": [
       { "array": [{ "color": 5504915, "x": 0.2 }] },
       { "array": [{ "color": 123220, "x": 0.1333333333 }] },
@@ -16731,7 +16738,7 @@
     "type_focus": 1
   },
   "metta": {
-    "ability": ["anticipation", "prismatic"],
+    "ability": ["avenger_1", "prismatic"],
     "ability_hidden": 0,
     "allowedInPromo": true,
     "anim_progress": 100,

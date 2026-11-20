@@ -365,7 +365,7 @@
         "freq": 45,
         "lvlA": 30,
         "lvlB": 31,
-        "percent": 0.2727272727,
+        "percent": 0.2486187845,
         "specie": "nerd1",
         "variant": 0.1
       },
@@ -373,7 +373,7 @@
         "freq": 20,
         "lvlA": 29,
         "lvlB": 29,
-        "percent": 0.1212121212,
+        "percent": 0.1104972376,
         "specie": "bat1",
         "variant": 0.1
       },
@@ -381,7 +381,7 @@
         "freq": 10,
         "lvlA": 28,
         "lvlB": 30,
-        "percent": 0.0606060606,
+        "percent": 0.0552486188,
         "specie": "rat",
         "variant": 0.1
       },
@@ -389,7 +389,7 @@
         "freq": 15,
         "lvlA": 28,
         "lvlB": 30,
-        "percent": 0.0909090909,
+        "percent": 0.0828729282,
         "specie": "magpie1",
         "variant": 0.1
       },
@@ -397,7 +397,7 @@
         "freq": 35,
         "lvlA": 29,
         "lvlB": 33,
-        "percent": 0.2121212121,
+        "percent": 0.1933701657,
         "specie": "bibi",
         "variant": 0.1
       },
@@ -405,22 +405,30 @@
         "freq": 10,
         "lvlA": 27,
         "lvlB": 31,
-        "percent": 0.0606060606,
+        "percent": 0.0552486188,
         "specie": "topple",
+        "variant": 0.1
+      },
+      {
+        "freq": 16,
+        "lvlA": 28,
+        "lvlB": 31,
+        "percent": 0.0883977901,
+        "specie": "gloombox",
         "variant": 0.1
       },
       {
         "freq": 30,
         "lvlA": 28,
         "lvlB": 31,
-        "percent": 0.1818181818,
+        "percent": 0.1657458564,
         "specie": "nylandearie",
         "variant": 0.1
       }
     ],
     "level_max": 33,
     "level_min": 27,
-    "total": 165
+    "total": 181
   },
   "coral": {
     "group": [

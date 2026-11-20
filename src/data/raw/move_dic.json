@@ -122,22 +122,22 @@
     "use": 0
   },
   "1VY50B84633067coldfront": {
-    "bt_tags": [2, 10],
+    "bt_tags": [2],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
       { "eff": 33, "pow": 28, "targ": 0 },
       { "eff": 33, "pow": 33, "targ": 0 },
-      { "eff": 33, "pow": 17, "targ": 0 },
+      { "eff": 33, "pow": 33, "targ": 0 },
       { "eff": 33, "pow": 14, "targ": 0 },
       { "eff": 91, "pow": 0, "targ": 7 }
     ],
     "id": "1VY50B84633067coldfront",
     "name": "Cold Front",
-    "pow": 85,
+    "pow": 65,
     "price": 0,
-    "targ": 0,
+    "targ": 8,
     "type": 2,
     "use": 0
   },
@@ -1388,8 +1388,22 @@
     "type": 0,
     "use": 0
   },
+  "63XK1CH4629470befuddle": {
+    "bt_tags": [2, 9, 41, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 45, "pow": 6, "targ": 7 }],
+    "id": "63XK1CH4629470befuddle",
+    "name": "Befuddle",
+    "pow": 55,
+    "price": 0,
+    "targ": 12,
+    "type": 2,
+    "use": 0
+  },
   "63XK1CH4629470faetrick": {
-    "bt_tags": [2, 9, 11, 48],
+    "bt_tags": [2, 10, 11, 48],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
@@ -1399,9 +1413,9 @@
     ],
     "id": "63XK1CH4629470faetrick",
     "name": "Fae Trick",
-    "pow": 55,
+    "pow": 70,
     "price": 0,
-    "targ": 12,
+    "targ": 0,
     "type": 2,
     "use": 0
   },

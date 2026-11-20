@@ -34,11 +34,6 @@
     "id": "allyheal",
     "name": "¦abilitiessetup_abilitydefine_042¦"
   },
-  "anticipation": {
-    "desc": "¦abilitiessetup_abilitydefine_129¬0¬1.5¬1¬[sprStatus,9]¦statuseffectstuff_010¦¦",
-    "id": "anticipation",
-    "name": "Anticipation"
-  },
   "attackbadless": {
     "desc": "¦abilitiessetup_abilitydefine_315¬0¬[sprStatus,0]¦statuseffectstuff_001¦¦",
     "id": "attackbadless",
@@ -53,6 +48,11 @@
     "desc": "¦abilitiessetup_abilitydefine_053¬0¬1.2¬1¬[sprStatus,5]¦statuseffectstuff_006¦¦",
     "id": "avenger",
     "name": "¦abilitiessetup_abilitydefine_054¦"
+  },
+  "avenger_1": {
+    "desc": "¦abilitiessetup_abilitydefine_053¬0¬1.2¬1¬[sprStatus,5]¦statuseffectstuff_006¦¦",
+    "id": "avenger_1",
+    "name": "Avenger"
   },
   "aware": {
     "desc": "¦abilitiessetup_abilitydefine_279¦",

@@ -102,11 +102,14 @@ export default function BeastieRenderProvider(
     const colors = beastie.colors ?? [0.5, 0.5, 0.5, 0.5, 0.5];
     const cols = [...Array(beastieColors.length).keys()].map((value) => {
       const x = colors.length <= value ? 0.5 : colors[value];
-      return getColorInBeastieColors(
-        x,
-        (isShiny && x < 0.00001 ? beastie_data.colors : beastieColors)[value]
-          .array,
-      );
+      const chimRight = isShiny && x > 0.99999;
+      const chimLeft = isShiny && x < 0.00001;
+      const colorSet = chimRight
+        ? (beastie_data.colors2 ?? beastie_data.colors)
+        : chimLeft
+          ? beastie_data.colors
+          : beastieColors;
+      return getColorInBeastieColors(x, colorSet[value].array);
     });
     const sprite_bbox = drawn_sprite.bboxes[beastie_frame];
     canvasRef.current.width = drawn_sprite.width;

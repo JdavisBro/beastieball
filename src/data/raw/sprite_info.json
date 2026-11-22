@@ -7211,11 +7211,11 @@
       { "x": 164, "y": 324, "width": 192, "height": 206 },
       { "x": 217, "y": 303, "width": 102, "height": 229 },
       { "x": 169, "y": 369, "width": 182, "height": 172 },
-      { "x": 32, "y": 291, "width": 456, "height": 180 },
+      { "x": 32, "y": 294, "width": 445, "height": 177 },
       { "x": 188, "y": 333, "width": 162, "height": 198 },
       { "x": 178, "y": 314, "width": 182, "height": 215 }
     ],
-    "bbox": { "x": 32, "y": 291, "width": 456, "height": 250 }
+    "bbox": { "x": 32, "y": 294, "width": 445, "height": 247 }
   },
   "sprsparky": {
     "width": 1000,

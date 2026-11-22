@@ -811,7 +811,7 @@
     ],
     "id": "2MYFRYR4626004lusterpurge",
     "name": "Luster Purge",
-    "pow": 45,
+    "pow": 40,
     "price": 0,
     "targ": 0,
     "type": 1,
@@ -1434,21 +1434,18 @@
     "use": 0
   },
   "67PJ3604627187uppercut": {
-    "bt_tags": [0, 10, 31],
+    "bt_tags": [0, 20, 47, 10],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [
-      { "eff": 33, "pow": 27, "targ": 0 },
-      { "eff": 61, "pow": 1, "targ": 0 }
-    ],
+    "eff": [{ "eff": 89, "pow": "nofield", "targ": 3 }],
     "id": "67PJ3604627187uppercut",
     "name": "Uppercut",
-    "pow": 65,
+    "pow": 80,
     "price": 0,
     "targ": 0,
     "type": 0,
-    "use": 0
+    "use": 2
   },
   "67WYPGQ4618557swash": {
     "bt_tags": [0, 20, 47, 9, 16],

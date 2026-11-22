@@ -15477,7 +15477,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -15527,7 +15527,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -15552,7 +15552,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -15602,7 +15602,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -15677,7 +15677,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -15702,7 +15702,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -15727,7 +15727,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -15752,7 +15752,7 @@
         "vibe": -1
       },
       {
-        "ability": 1,
+        "ability": 0,
         "aggro": false,
         "at_net": false,
         "canBeShiny": false,
@@ -15993,7 +15993,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
-        "moves": ["tagattack", "pursuit", "rush"],
+        "moves": ["tagattack", "slide", "rush"],
         "name": "",
         "neverRandomize": false,
         "number": -1,
@@ -16018,7 +16018,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
-        "moves": ["targethp", "reign", "switch"],
+        "moves": ["netattack", "reign", "switch"],
         "name": "",
         "neverRandomize": false,
         "number": -1,
@@ -16068,7 +16068,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
-        "moves": ["sweep", "enemylowered", "feint"],
+        "moves": ["heartdown", "enemylowered", "feint"],
         "name": "",
         "neverRandomize": false,
         "number": -1,
@@ -16093,7 +16093,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
-        "moves": ["sidespin", "cover", "threat"],
+        "moves": ["shakenmind", "cover", "threat"],
         "name": "",
         "neverRandomize": false,
         "number": -1,
@@ -16101,7 +16101,7 @@
         "specie": "hornet",
         "status": -1,
         "trained": 0,
-        "training": [0, 0, 0, 1, 1, 1],
+        "training": [0, 0, 1, 1, 1, 1],
         "variant": -1,
         "vibe": -1
       },
@@ -16943,7 +16943,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
-        "moves": ["jazzpass", "67PJ3604627187dissect", "rushattack"],
+        "moves": ["allyrush", "67PJ3604627187dissect", "rushattack"],
         "name": "",
         "neverRandomize": false,
         "number": -1,
@@ -16993,7 +16993,7 @@
         "from_encounter_index": null,
         "hp": -1,
         "level": 50,
-        "moves": ["jazzpass", "rhythm", "serve"],
+        "moves": ["allyrush", "rhythm", "serve"],
         "name": "",
         "neverRandomize": false,
         "number": -1,

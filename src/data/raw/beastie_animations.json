@@ -19751,8 +19751,8 @@
     },
     "ball": { "x": -62, "y": -165 },
     "colors": [
-      { "_": "class_gradient", "array": [{ "color": 255, "x": 0 }] },
-      { "_": "class_gradient", "array": [{ "color": 1315454, "x": 0 }] },
+      { "_": "class_gradient", "array": [{ "color": 4931705, "x": 0.02 }] },
+      { "_": "class_gradient", "array": [{ "color": 12893383, "x": 0 }] },
       { "_": "class_gradient", "array": [{ "color": 16777215, "x": 0.43 }] }
     ],
     "colors2": null,
@@ -19770,10 +19770,10 @@
     "shiny": [
       {
         "_": "class_gradient",
-        "array": [{ "color": 16777215, "x": 0.1933333333 }]
+        "array": [{ "color": 11579568, "x": 0.1933333333 }]
       },
-      { "_": "class_gradient", "array": [{ "color": 16777215, "x": 0 }] },
-      { "_": "class_gradient", "array": [{ "color": 12500670, "x": 0.43 }] }
+      { "_": "class_gradient", "array": [{ "color": 15263976, "x": 0 }] },
+      { "_": "class_gradient", "array": [{ "color": 16777215, "x": 0.5 }] }
     ],
     "splash": { "angle": 359.9040222168, "anim": "ready", "x": -25, "y": -46 }
   },

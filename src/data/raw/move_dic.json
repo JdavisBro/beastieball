@@ -1553,44 +1553,6 @@
     "type": 2,
     "use": 0
   },
-  "7GFRKL4622557awesomeplay": {
-    "bt_tags": [2, 10, 38, 46],
-    "desc_tagids": [],
-    "desc_tags": [],
-    "description": null,
-    "eff": [
-      { "eff": 13, "pow": 1, "targ": 3 },
-      { "eff": 25, "pow": 4, "targ": 3 },
-      { "eff": 96, "pow": 7, "targ": 3 },
-      { "eff": -95, "pow": 2, "targ": 0 }
-    ],
-    "id": "7GFRKL4622557awesomeplay",
-    "name": "Awesome Play",
-    "pow": 10,
-    "price": 0,
-    "targ": 0,
-    "type": 2,
-    "use": 0
-  },
-  "7GFRKL4622557awesomeplay2": {
-    "bt_tags": [2, 10, 38, 46],
-    "desc_tagids": [],
-    "desc_tags": [],
-    "description": null,
-    "eff": [
-      { "eff": 13, "pow": 1, "targ": 3 },
-      { "eff": 25, "pow": 4, "targ": 3 },
-      { "eff": 96, "pow": 7, "targ": 3 },
-      { "eff": -22, "pow": 8, "targ": 0 }
-    ],
-    "id": "7GFRKL4622557awesomeplay2",
-    "name": "Awesome Play 2",
-    "pow": 10,
-    "price": 0,
-    "targ": 0,
-    "type": 2,
-    "use": 0
-  },
   "???": {
     "bt_tags": [],
     "desc_tagids": [],

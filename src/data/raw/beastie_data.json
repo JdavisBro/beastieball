@@ -2206,8 +2206,7 @@
       "flight",
       "crowd",
       "steal",
-      "starterheart",
-      "3RWX3K34616417summonskull"
+      "starterheart"
     ],
     "attklist_randomize": -1,
     "ba": 60,
@@ -2433,7 +2432,6 @@
       "1VY50B84633067net",
       "1VY50B84633067piercingstrike",
       "1VY50B84633067rush",
-      "1VY50B84633067skyball",
       "1VY50B84633067skyball",
       "1VY50B84633067superherolanding",
       "1VY50B84633067swerve"
@@ -2700,7 +2698,6 @@
       "1VY50B84633067net",
       "1VY50B84633067rush",
       "1VY50B84633067skyball",
-      "1VY50B84633067skyball",
       "1VY50B84633067swerve"
     ],
     "attklist_randomize": -1,
@@ -2927,7 +2924,6 @@
       "1VY50B84633067boomerang",
       "1VY50B84633067net",
       "1VY50B84633067rush",
-      "1VY50B84633067skyball",
       "1VY50B84633067skyball",
       "1VY50B84633067swerve"
     ],
@@ -6018,9 +6014,7 @@
       "sensihit",
       "rattle",
       "juggle",
-      "starterbody",
-      "1PJ2FYF4619276gulpmissile",
-      "1PJ2FYF4619276spittingpass"
+      "starterbody"
     ],
     "attklist_randomize": -1,
     "ba": 70,
@@ -9292,7 +9286,6 @@
       "tailwind",
       "tagattack",
       "mark",
-      "6WY0C8R4615906skitter",
       "1VY50B84633067fall",
       "1VY50B84633067piercingstrike",
       "1VY50B84633067recharge"
@@ -11186,7 +11179,6 @@
       "stun",
       "shaken",
       "357GW8Q4627187gloomtune",
-      "6WY0C8R4615906skitter",
       "1VY50B84633067echo",
       "1VY50B84633067skyball"
     ],
@@ -12059,8 +12051,7 @@
       "mark",
       "dig",
       "trap",
-      "markattack",
-      "7GCJQY4632902clawline"
+      "markattack"
     ],
     "attklist_randomize": -1,
     "ba": 82,
@@ -16541,8 +16532,7 @@
       "cheer",
       "bdefup",
       "mark",
-      "starterheart",
-      "MFHTHQ4633889readyup"
+      "starterheart"
     ],
     "attklist_randomize": -1,
     "ba": 88,
@@ -26284,7 +26274,6 @@
       "1VY50B84633067coldfront",
       "1VY50B84633067flare",
       "1VY50B84633067pacify",
-      "1VY50B84633067skyball",
       "1VY50B84633067skyball"
     ],
     "attklist_randomize": -1,
@@ -26825,7 +26814,6 @@
       "1VY50B84633067lend",
       "1VY50B84633067pirouette",
       "1VY50B84633067siphon",
-      "1VY50B84633067skyball",
       "1VY50B84633067skyball",
       "1VY50B84633067slam",
       "1VY50B84633067stageset",
@@ -30816,8 +30804,7 @@
       "substitute",
       "dig",
       "nettle",
-      "starterbody",
-      "67PJ3604627187dissect"
+      "starterbody"
     ],
     "attklist_randomize": -1,
     "ba": 78,

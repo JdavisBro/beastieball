@@ -19536,10 +19536,10 @@
           {
             "_": "class_canim_frames",
             "bpm_paired": [],
-            "endFrame": 11,
+            "endFrame": 9,
             "holds": { "10": 2, "12": 2, "_": "class_map" },
             "startFrame": 9,
-            "transitions": [0, 0, 1]
+            "transitions": [2, 1, 0, 0, 0, 0, 0]
           },
           {
             "_": "class_canim_frames",
@@ -19559,10 +19559,16 @@
             },
             "sounds": { "12": -1, "13": 4, "_": "class_map" },
             "startFrame": 11,
-            "transitions": [1, 1, 0]
+            "transitions": [2, 1, 0]
+          },
+          {
+            "_": "class_canim_frames",
+            "bpm_paired": [],
+            "endFrame": 11,
+            "startFrame": 9,
+            "transitions": [0, 2]
           }
-        ],
-        "speed": 0.5
+        ]
       },
       "menu": {
         "_": "class_char_animationdata",

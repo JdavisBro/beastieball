@@ -439,6 +439,11 @@
     "id": "overwrite",
     "name": "¦abilitiessetup_abilitydefine_159¦"
   },
+  "perfectblock": {
+    "desc": "¦abilitiessetup_abilitydefine_183¬0¬2¬1¬[sprStatus,2]¦statuseffectstuff_003¦¦",
+    "id": "perfectblock",
+    "name": "Perfect Block"
+  },
   "prankster": {
     "desc": "¦abilitiessetup_abilitydefine_010¦",
     "id": "prankster",
@@ -548,6 +553,11 @@
     "desc": "¦abilitiessetup_abilitydefine_153¬1¬1.5¬0¬[sprStatus,3]¦statuseffectstuff_004¦¦",
     "id": "silencer",
     "name": "¦abilitiessetup_abilitydefine_154¦"
+  },
+  "sillyboy": {
+    "desc": "¦abilitiessetup_abilitydefine_007¬0¬1.3¦",
+    "id": "sillyboy",
+    "name": "Silly Boy"
   },
   "skittish": {
     "desc": "¦abilitiessetup_abilitydefine_037¬0¬50¦",

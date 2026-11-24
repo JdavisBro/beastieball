@@ -1020,7 +1020,6 @@
       "burnout",
       "6WY0C8R4615906strongscent",
       "1VY50B84633067coach",
-      "1VY50B84633067exertion",
       "1VY50B84633067healthyhit",
       "1VY50B84633067siphon",
       "1VY50B84633067slam"
@@ -1321,7 +1320,6 @@
       "followme",
       "squeeze",
       "6WY0C8R4615906strongscent",
-      "1VY50B84633067exertion",
       "1VY50B84633067healthyhit",
       "1VY50B84633067siphon",
       "1VY50B84633067slam"
@@ -1768,6 +1766,7 @@
       "fortify",
       "construct",
       "1VY50B84633067desperate",
+      "1VY50B84633067lend",
       "1VY50B84633067swansong"
     ],
     "attklist_randomize": -1,
@@ -2435,6 +2434,7 @@
       "1VY50B84633067piercingstrike",
       "1VY50B84633067rush",
       "1VY50B84633067skyball",
+      "1VY50B84633067skyball",
       "1VY50B84633067superherolanding",
       "1VY50B84633067swerve"
     ],
@@ -2700,6 +2700,7 @@
       "1VY50B84633067net",
       "1VY50B84633067rush",
       "1VY50B84633067skyball",
+      "1VY50B84633067skyball",
       "1VY50B84633067swerve"
     ],
     "attklist_randomize": -1,
@@ -2926,6 +2927,7 @@
       "1VY50B84633067boomerang",
       "1VY50B84633067net",
       "1VY50B84633067rush",
+      "1VY50B84633067skyball",
       "1VY50B84633067skyball",
       "1VY50B84633067swerve"
     ],
@@ -3409,7 +3411,6 @@
       "1VY50B84633067deep",
       "1VY50B84633067desperate",
       "1VY50B84633067net",
-      "1VY50B84633067overexertion",
       "1VY50B84633067piercingstrike",
       "1VY50B84633067rush",
       "1VY50B84633067superherolanding",
@@ -4747,7 +4748,6 @@
       "haze",
       "facade",
       "stretch",
-      "1VY50B84633067exertion",
       "1VY50B84633067net",
       "1VY50B84633067overexertion",
       "1VY50B84633067resistance",
@@ -4980,7 +4980,9 @@
       "starterside",
       "1VY50B84633067boomerang",
       "1VY50B84633067coolpose",
-      "1VY50B84633067dance"
+      "1VY50B84633067dance",
+      "1VY50B84633067foreshadow",
+      "1VY50B84633067skyball"
     ],
     "attklist_randomize": -1,
     "ba": 80,
@@ -5188,7 +5190,8 @@
       "followme",
       "starterside",
       "6WY0C8R4615906skitter",
-      "1VY50B84633067dance"
+      "1VY50B84633067dance",
+      "1VY50B84633067skyball"
     ],
     "attklist_randomize": -1,
     "ba": 60,
@@ -6787,7 +6790,6 @@
       "backswitch",
       "taunt",
       "starterheart",
-      "1VY50B84633067coolpose",
       "1VY50B84633067desperate",
       "1VY50B84633067dodge",
       "1VY50B84633067net",
@@ -7503,10 +7505,11 @@
       "rattle",
       "scream",
       "1VY50B84633067desperate",
+      "1VY50B84633067exertion",
       "1VY50B84633067net",
       "1VY50B84633067pocketsand",
       "1VY50B84633067rush",
-      "1VY50B84633067swansong"
+      "1VY50B84633067theydidit"
     ],
     "attklist_randomize": -1,
     "ba": 40,
@@ -11804,6 +11807,7 @@
       "1VY50B84633067echo",
       "1VY50B84633067fall",
       "1VY50B84633067flare",
+      "1VY50B84633067foreshadow",
       "1VY50B84633067fromthefog",
       "1VY50B84633067piercingstrike",
       "1VY50B84633067pocketsand",
@@ -13648,9 +13652,9 @@
       "1VY50B84633067boomerang",
       "1VY50B84633067comment",
       "1VY50B84633067deep",
+      "1VY50B84633067foreshadow",
       "1VY50B84633067piercingstrike",
-      "1VY50B84633067pocketsand",
-      "1VY50B84633067theydidit"
+      "1VY50B84633067pocketsand"
     ],
     "attklist_randomize": -1,
     "ba": 88,
@@ -13895,8 +13899,7 @@
       "tool",
       "1VY50B84633067comment",
       "1VY50B84633067deep",
-      "1VY50B84633067piercingstrike",
-      "1VY50B84633067theydidit"
+      "1VY50B84633067piercingstrike"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -14125,8 +14128,7 @@
       "cook",
       "hum",
       "burnout",
-      "reign",
-      "1VY50B84633067exertion"
+      "reign"
     ],
     "attklist_randomize": -1,
     "ba": 20,
@@ -14365,8 +14367,7 @@
       "cook",
       "hum",
       "burnout",
-      "reign",
-      "1VY50B84633067exertion"
+      "reign"
     ],
     "attklist_randomize": -1,
     "ba": 35,
@@ -16504,7 +16505,7 @@
     "type_focus": 2
   },
   "mellow": {
-    "ability": ["superblock", "vertical"],
+    "ability": ["perfectblock", "sillyboy"],
     "ability_hidden": 0,
     "allowedInPromo": true,
     "anim_progress": 100,
@@ -16545,8 +16546,8 @@
     ],
     "attklist_randomize": -1,
     "ba": 88,
-    "base_exp": 133.15,
-    "bd": 40,
+    "base_exp": 135.85,
+    "bd": 46,
     "body_color_index": 2,
     "codename": "3822db7ebe17e36f25dc45a0884c7f05ac4e7d59",
     "colormeta": null,
@@ -17464,8 +17465,7 @@
       "wink",
       "chill",
       "distraction",
-      "1VY50B84633067comment",
-      "1VY50B84633067exertion"
+      "1VY50B84633067comment"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -17710,6 +17710,7 @@
       "1VY50B84633067bother",
       "1VY50B84633067coolpose",
       "1VY50B84633067echo",
+      "1VY50B84633067foreshadow",
       "1VY50B84633067fromthefog",
       "1VY50B84633067pirouette",
       "1VY50B84633067skyball",
@@ -19535,6 +19536,7 @@
       "1VY50B84633067fall",
       "1VY50B84633067flare",
       "1VY50B84633067fromthefog",
+      "1VY50B84633067lend",
       "1VY50B84633067siphon",
       "1VY50B84633067slam"
     ],
@@ -19952,7 +19954,6 @@
       "kick",
       "1VY50B84633067bodyguard",
       "1VY50B84633067coolpose",
-      "1VY50B84633067exertion",
       "1VY50B84633067net",
       "1VY50B84633067rush",
       "1VY50B84633067stealingthespotlight",
@@ -20218,7 +20219,8 @@
       "ricochet",
       "1VY50B84633067block?",
       "1VY50B84633067coldfront",
-      "1VY50B84633067echo"
+      "1VY50B84633067echo",
+      "1VY50B84633067flare"
     ],
     "attklist_randomize": -1,
     "ba": 40,
@@ -20425,7 +20427,8 @@
       "sweatup",
       "bamboozle",
       "passattack",
-      "1VY50B84633067echo"
+      "1VY50B84633067echo",
+      "1VY50B84633067flare"
     ],
     "attklist_randomize": -1,
     "ba": 18,
@@ -20626,7 +20629,8 @@
       "sweatup",
       "bamboozle",
       "passattack",
-      "1VY50B84633067echo"
+      "1VY50B84633067echo",
+      "1VY50B84633067flare"
     ],
     "attklist_randomize": -1,
     "ba": 26,
@@ -22165,6 +22169,8 @@
       "mimic",
       "LD1GRC4623849prismarmor",
       "1VY50B84633067dance",
+      "1VY50B84633067exertion",
+      "1VY50B84633067foreshadow",
       "1VY50B84633067pirouette"
     ],
     "attklist_randomize": -1,
@@ -22467,6 +22473,8 @@
       "LD1GRC4623849prismarmor",
       "1VY50B84633067coldfront",
       "1VY50B84633067dance",
+      "1VY50B84633067exertion",
+      "1VY50B84633067foreshadow",
       "1VY50B84633067pirouette",
       "67PJ3604627187dissect"
     ],
@@ -22687,8 +22695,7 @@
       "sweep",
       "1VY50B84633067coach",
       "1VY50B84633067dance",
-      "1VY50B84633067echo",
-      "1VY50B84633067theydidit"
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 81,
@@ -24128,9 +24135,9 @@
       "starterbody",
       "tailwind",
       "1VY50B84633067bodyguard",
-      "1VY50B84633067coolpose",
       "1VY50B84633067dance",
       "1VY50B84633067deep",
+      "1VY50B84633067foreshadow",
       "1VY50B84633067pocketsand",
       "1VY50B84633067superherolanding",
       "1VY50B84633067unstoppableforce"
@@ -25994,6 +26001,8 @@
       "lifedew",
       "allyprotect",
       "topspin",
+      "7GFRKL4622557awesomeplay",
+      "7GFRKL4622557awesomeplay2",
       "1VY50B84633067healthyhit",
       "1VY50B84633067slam"
     ],
@@ -26275,6 +26284,7 @@
       "1VY50B84633067coldfront",
       "1VY50B84633067flare",
       "1VY50B84633067pacify",
+      "1VY50B84633067skyball",
       "1VY50B84633067skyball"
     ],
     "attklist_randomize": -1,
@@ -26812,8 +26822,10 @@
       "quake",
       "1VY50B84633067flare",
       "1VY50B84633067healthyhit",
+      "1VY50B84633067lend",
       "1VY50B84633067pirouette",
       "1VY50B84633067siphon",
+      "1VY50B84633067skyball",
       "1VY50B84633067skyball",
       "1VY50B84633067slam",
       "1VY50B84633067stageset",
@@ -29527,7 +29539,8 @@
       "1VY50B84633067dance",
       "1VY50B84633067flare",
       "1VY50B84633067net",
-      "1VY50B84633067rush"
+      "1VY50B84633067rush",
+      "1VY50B84633067skyball"
     ],
     "attklist_randomize": -1,
     "ba": 60,
@@ -29795,7 +29808,8 @@
       "1VY50B84633067dance",
       "1VY50B84633067flare",
       "1VY50B84633067net",
-      "1VY50B84633067rush"
+      "1VY50B84633067rush",
+      "1VY50B84633067skyball"
     ],
     "attklist_randomize": -1,
     "ba": 40,
@@ -31063,6 +31077,7 @@
       "1VY50B84633067bother",
       "1VY50B84633067comment",
       "1VY50B84633067dance",
+      "1VY50B84633067exertion",
       "1VY50B84633067net",
       "1VY50B84633067rush",
       "1VY50B84633067slam"
@@ -31293,7 +31308,6 @@
       "wall",
       "menace",
       "reign",
-      "1VY50B84633067exertion",
       "1VY50B84633067unstoppableforce"
     ],
     "attklist_randomize": -1,

@@ -75,7 +75,8 @@
     "description": null,
     "eff": [
       { "eff": 20, "pow": 2, "targ": 0 },
-      { "eff": 8, "pow": -0.1, "targ": 9 }
+      { "eff": 72, "pow": 0, "targ": 0 },
+      { "eff": 8, "pow": -0.15, "targ": 9 }
     ],
     "id": "1VY50B84633067boomerang",
     "name": "Boomerang",
@@ -162,11 +163,12 @@
     "use": 0
   },
   "1VY50B84633067coolpose": {
-    "bt_tags": [24, 38, 46, 31],
+    "bt_tags": [24, 47, 38, 46, 31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
+      { "eff": 86, "pow": 3, "targ": 0 },
       { "eff": 13, "pow": 2, "targ": 9 },
       { "eff": 13, "pow": 2, "targ": 1 }
     ],
@@ -212,15 +214,13 @@
     "use": 1
   },
   "1VY50B84633067desperate": {
-    "bt_tags": [32, 31],
+    "bt_tags": [31],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
       { "eff": 20, "pow": 2, "targ": 0 },
       { "eff": 69, "pow": 0, "targ": 0 },
-      { "eff": 53, "pow": 1, "targ": 0 },
-      { "eff": 26, "pow": 1, "targ": 0 },
       { "eff": 39, "pow": 1, "targ": 0 }
     ],
     "id": "1VY50B84633067desperate",
@@ -292,7 +292,7 @@
     ],
     "id": "1VY50B84633067exertion",
     "name": "Exertion",
-    "pow": 85,
+    "pow": 65,
     "price": 0,
     "targ": 0,
     "type": 1,
@@ -332,6 +332,20 @@
     "type": 2,
     "use": 0
   },
+  "1VY50B84633067foreshadow": {
+    "bt_tags": [],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [{ "eff": 65, "pow": 1, "targ": 3 }],
+    "id": "1VY50B84633067foreshadow",
+    "name": "Foreshadow",
+    "pow": 0,
+    "price": 0,
+    "targ": 8,
+    "type": 5,
+    "use": 0
+  },
   "1VY50B84633067fromthefog": {
     "bt_tags": [2, 10, 41, 48],
     "desc_tagids": [],
@@ -352,7 +366,7 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 88, "pow": 75, "targ": 0 },
+      { "eff": 88, "pow": 50, "targ": 0 },
       { "eff": 84, "pow": 1.5, "targ": 0 }
     ],
     "id": "1VY50B84633067healthyhit",
@@ -361,6 +375,23 @@
     "price": 0,
     "targ": 0,
     "type": 1,
+    "use": 0
+  },
+  "1VY50B84633067lend": {
+    "bt_tags": [46, 17, 29, 48],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 8, "pow": 0.15, "targ": 0 },
+      { "eff": 92, "pow": 1, "targ": 3 }
+    ],
+    "id": "1VY50B84633067lend",
+    "name": "Lend",
+    "pow": 0,
+    "price": 0,
+    "targ": 8,
+    "type": 5,
     "use": 0
   },
   "1VY50B84633067net": {
@@ -452,7 +483,8 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 16, "pow": 1, "targ": 0 },
+      { "eff": 4, "pow": 2, "targ": 0 },
+      { "eff": 78, "pow": 1, "targ": 0 },
       { "eff": 13, "pow": -1, "targ": 0 }
     ],
     "id": "1VY50B84633067pirouette",
@@ -577,11 +609,11 @@
     "description": null,
     "eff": [
       { "eff": 33, "pow": 7, "targ": 0 },
-      { "eff": 64, "pow": 3, "targ": 12 },
+      { "eff": 88, "pow": 100, "targ": 0 },
       { "eff": 13, "pow": 1, "targ": 3 }
     ],
     "id": "1VY50B84633067skyball",
-    "name": "Sky Ball",
+    "name": "Skyball",
     "pow": 60,
     "price": 0,
     "targ": 0,
@@ -657,15 +689,15 @@
     "use": 0
   },
   "1VY50B84633067swansong": {
-    "bt_tags": [29, 17, 46, 31, 19],
+    "bt_tags": [31, 19, 29, 17, 46],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 8, "pow": 0.35, "targ": 6 },
       { "eff": 8, "pow": -1, "targ": 0 },
       { "eff": 82, "pow": -20, "targ": 0 },
-      { "eff": 30, "pow": 1, "targ": 3 }
+      { "eff": 30, "pow": 1, "targ": 3 },
+      { "eff": 8, "pow": 0.4, "targ": 11 }
     ],
     "id": "1VY50B84633067swansong",
     "name": "Swan Song",
@@ -693,18 +725,21 @@
     "use": 0
   },
   "1VY50B84633067theydidit": {
-    "bt_tags": [2, 10, 34, 49, 31],
+    "bt_tags": [2, 10, 31, 34, 49],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 53, "pow": 0, "targ": 1 },
+      { "eff": 13, "pow": 2, "targ": 0 },
+      { "eff": 6, "pow": 2, "targ": 0 },
+      { "eff": 53, "pow": 1, "targ": 0 },
+      { "eff": 12, "pow": 1, "targ": 1 },
       { "eff": 14, "pow": 1, "targ": 1 },
-      { "eff": 12, "pow": 1, "targ": 1 }
+      { "eff": 53, "pow": 2, "targ": 1 }
     ],
     "id": "1VY50B84633067theydidit",
     "name": "They Did It",
-    "pow": 70,
+    "pow": 45,
     "price": 0,
     "targ": 0,
     "type": 2,
@@ -1518,6 +1553,44 @@
     "type": 2,
     "use": 0
   },
+  "7GFRKL4622557awesomeplay": {
+    "bt_tags": [2, 10, 38, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 13, "pow": 1, "targ": 3 },
+      { "eff": 25, "pow": 4, "targ": 3 },
+      { "eff": 96, "pow": 7, "targ": 3 },
+      { "eff": -95, "pow": 2, "targ": 0 }
+    ],
+    "id": "7GFRKL4622557awesomeplay",
+    "name": "Awesome Play",
+    "pow": 10,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
+  "7GFRKL4622557awesomeplay2": {
+    "bt_tags": [2, 10, 38, 46],
+    "desc_tagids": [],
+    "desc_tags": [],
+    "description": null,
+    "eff": [
+      { "eff": 13, "pow": 1, "targ": 3 },
+      { "eff": 25, "pow": 4, "targ": 3 },
+      { "eff": 96, "pow": 7, "targ": 3 },
+      { "eff": -22, "pow": 8, "targ": 0 }
+    ],
+    "id": "7GFRKL4622557awesomeplay2",
+    "name": "Awesome Play 2",
+    "pow": 10,
+    "price": 0,
+    "targ": 0,
+    "type": 2,
+    "use": 0
+  },
   "???": {
     "bt_tags": [],
     "desc_tagids": [],
@@ -1550,11 +1623,11 @@
     "use": 0
   },
   "MFHTHQ4633889readyup": {
-    "bt_tags": [23, 42, 38, 46],
+    "bt_tags": [23, 29, 46],
     "desc_tagids": [],
     "desc_tags": [],
     "description": null,
-    "eff": [{ "eff": 27, "pow": 1, "targ": 9 }],
+    "eff": [{ "eff": 93, "pow": 1, "targ": 0 }],
     "id": "MFHTHQ4633889readyup",
     "name": "Ready Up",
     "pow": 70,

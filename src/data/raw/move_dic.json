@@ -118,7 +118,7 @@
     "name": "Coach",
     "pow": 0,
     "price": 0,
-    "targ": 5,
+    "targ": 4,
     "type": 4,
     "use": 0
   },
@@ -129,7 +129,6 @@
     "description": null,
     "eff": [
       { "eff": 33, "pow": 28, "targ": 0 },
-      { "eff": 33, "pow": 33, "targ": 0 },
       { "eff": 33, "pow": 33, "targ": 0 },
       { "eff": 33, "pow": 14, "targ": 0 },
       { "eff": 91, "pow": 0, "targ": 7 }
@@ -463,20 +462,6 @@
     "type": 5,
     "use": 0
   },
-  "1VY50B84633067piercingstrike": {
-    "bt_tags": [10, 48],
-    "desc_tagids": [],
-    "desc_tags": [],
-    "description": null,
-    "eff": [{ "eff": 8, "pow": -0.25, "targ": 3 }],
-    "id": "1VY50B84633067piercingstrike",
-    "name": "Piercing Strike",
-    "pow": 0,
-    "price": 0,
-    "targ": 0,
-    "type": 2,
-    "use": 0
-  },
   "1VY50B84633067pirouette": {
     "bt_tags": [24, 29, 46, 31],
     "desc_tagids": [],
@@ -585,23 +570,6 @@
     "type": 1,
     "use": 0
   },
-  "1VY50B84633067siphon": {
-    "bt_tags": [46],
-    "desc_tagids": [],
-    "desc_tags": [],
-    "description": null,
-    "eff": [
-      { "eff": 8, "pow": -0.2, "targ": 3 },
-      { "eff": 8, "pow": 0.2, "targ": 0 }
-    ],
-    "id": "1VY50B84633067siphon",
-    "name": "Siphon",
-    "pow": 0,
-    "price": 0,
-    "targ": 8,
-    "type": 5,
-    "use": 0
-  },
   "1VY50B84633067skyball": {
     "bt_tags": [2, 10, 25, 38, 46],
     "desc_tagids": [],
@@ -643,8 +611,8 @@
     "desc_tags": [],
     "description": null,
     "eff": [
-      { "eff": 43, "pow": 4, "targ": 7 },
-      { "eff": 45, "pow": 4, "targ": 7 }
+      { "eff": 43, "pow": 2, "targ": 7 },
+      { "eff": 45, "pow": 2, "targ": 7 }
     ],
     "id": "1VY50B84633067stageset",
     "name": "Stage Set",

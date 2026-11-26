@@ -29,8 +29,7 @@
       "rest",
       "rattle",
       "mindup",
-      "1VY50B84633067pacify",
-      "1VY50B84633067skyball"
+      "1VY50B84633067pacify"
     ],
     "attklist_randomize": -1,
     "ba": 33,
@@ -254,8 +253,7 @@
       "protect",
       "rest",
       "rattle",
-      "mindup",
-      "1VY50B84633067skyball"
+      "mindup"
     ],
     "attklist_randomize": -1,
     "ba": 25,
@@ -1021,7 +1019,6 @@
       "6WY0C8R4615906strongscent",
       "1VY50B84633067coach",
       "1VY50B84633067healthyhit",
-      "1VY50B84633067siphon",
       "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
@@ -1321,7 +1318,6 @@
       "squeeze",
       "6WY0C8R4615906strongscent",
       "1VY50B84633067healthyhit",
-      "1VY50B84633067siphon",
       "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
@@ -2430,7 +2426,6 @@
       "1VY50B84633067boomerang",
       "1VY50B84633067coach",
       "1VY50B84633067net",
-      "1VY50B84633067piercingstrike",
       "1VY50B84633067rush",
       "1VY50B84633067skyball",
       "1VY50B84633067superherolanding",
@@ -3407,7 +3402,6 @@
       "1VY50B84633067deep",
       "1VY50B84633067desperate",
       "1VY50B84633067net",
-      "1VY50B84633067piercingstrike",
       "1VY50B84633067rush",
       "1VY50B84633067superherolanding",
       "1VY50B84633067unstoppableforce"
@@ -8811,7 +8805,6 @@
       "1VY50B84633067coach",
       "1VY50B84633067fall",
       "1VY50B84633067overexertion",
-      "1VY50B84633067piercingstrike",
       "1VY50B84633067recharge"
     ],
     "attklist_randomize": -1,
@@ -9287,7 +9280,6 @@
       "tagattack",
       "mark",
       "1VY50B84633067fall",
-      "1VY50B84633067piercingstrike",
       "1VY50B84633067recharge"
     ],
     "attklist_randomize": -1,
@@ -9524,7 +9516,6 @@
       "1VY50B84633067coldfront",
       "1VY50B84633067deep",
       "1VY50B84633067net",
-      "1VY50B84633067piercingstrike",
       "1VY50B84633067rush"
     ],
     "attklist_randomize": -1,
@@ -10953,8 +10944,7 @@
       "shaken",
       "357GW8Q4627187gloomtune",
       "1VY50B84633067echo",
-      "1VY50B84633067fromthefog",
-      "1VY50B84633067skyball"
+      "1VY50B84633067fromthefog"
     ],
     "attklist_randomize": -1,
     "ba": 15,
@@ -11179,8 +11169,7 @@
       "stun",
       "shaken",
       "357GW8Q4627187gloomtune",
-      "1VY50B84633067echo",
-      "1VY50B84633067skyball"
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 5,
@@ -11391,8 +11380,7 @@
       "shaken",
       "357GW8Q4627187gloomtune",
       "1VY50B84633067echo",
-      "1VY50B84633067fromthefog",
-      "1VY50B84633067skyball"
+      "1VY50B84633067fromthefog"
     ],
     "attklist_randomize": -1,
     "ba": 10,
@@ -11801,7 +11789,6 @@
       "1VY50B84633067flare",
       "1VY50B84633067foreshadow",
       "1VY50B84633067fromthefog",
-      "1VY50B84633067piercingstrike",
       "1VY50B84633067pocketsand",
       "1VY50B84633067theydidit"
     ],
@@ -13644,7 +13631,6 @@
       "1VY50B84633067comment",
       "1VY50B84633067deep",
       "1VY50B84633067foreshadow",
-      "1VY50B84633067piercingstrike",
       "1VY50B84633067pocketsand"
     ],
     "attklist_randomize": -1,
@@ -13889,8 +13875,7 @@
       "kick",
       "tool",
       "1VY50B84633067comment",
-      "1VY50B84633067deep",
-      "1VY50B84633067piercingstrike"
+      "1VY50B84633067deep"
     ],
     "attklist_randomize": -1,
     "ba": 55,
@@ -17703,7 +17688,6 @@
       "1VY50B84633067foreshadow",
       "1VY50B84633067fromthefog",
       "1VY50B84633067pirouette",
-      "1VY50B84633067skyball",
       "1VY50B84633067stageset",
       "1VY50B84633067superherolanding"
     ],
@@ -17934,8 +17918,7 @@
       "healbell",
       "startermind",
       "6WY0C8R4615906skitter",
-      "1VY50B84633067echo",
-      "1VY50B84633067skyball"
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 10,
@@ -18145,8 +18128,7 @@
       "rest",
       "healbell",
       "startermind",
-      "1VY50B84633067echo",
-      "1VY50B84633067skyball"
+      "1VY50B84633067echo"
     ],
     "attklist_randomize": -1,
     "ba": 5,
@@ -19527,7 +19509,6 @@
       "1VY50B84633067flare",
       "1VY50B84633067fromthefog",
       "1VY50B84633067lend",
-      "1VY50B84633067siphon",
       "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
@@ -19748,7 +19729,6 @@
       "1VY50B84633067deep",
       "1VY50B84633067fall",
       "1VY50B84633067flare",
-      "1VY50B84633067siphon",
       "1VY50B84633067slam"
     ],
     "attklist_randomize": -1,
@@ -26811,7 +26791,6 @@
       "1VY50B84633067healthyhit",
       "1VY50B84633067lend",
       "1VY50B84633067pirouette",
-      "1VY50B84633067siphon",
       "1VY50B84633067skyball",
       "1VY50B84633067slam",
       "1VY50B84633067stageset",
@@ -27499,7 +27478,6 @@
       "1VY50B84633067net",
       "1VY50B84633067resistance",
       "1VY50B84633067rush",
-      "1VY50B84633067siphon",
       "1VY50B84633067unstoppableforce"
     ],
     "attklist_randomize": -1,
